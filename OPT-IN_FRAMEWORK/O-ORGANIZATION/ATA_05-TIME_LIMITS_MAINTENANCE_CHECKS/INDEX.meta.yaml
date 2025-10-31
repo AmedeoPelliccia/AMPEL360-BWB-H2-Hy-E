@@ -1,0 +1,182 @@
+---
+chapter_id: ATA_05
+chapter_name: Time Limits / Maintenance Checks
+chapter_scope: Scheduled maintenance tasks, inspection intervals, and time limits
+ata_standard: ATA iSpec 2200
+regulatory_framework:
+  - EASA Part-M.A.302 (Aircraft Maintenance Programme)
+  - FAA AC 120-16F (Air Carrier Maintenance Programs)
+  - MSG-3 Revision 2019.1
+  - IATA Maintenance Cost Task Force
+  - EASA Part-145
+
+sections:
+  - section_id: "05-10"
+    section_name: "Maintenance Check Packages"
+    description: "Letter checks (A, 2A, B, C, D) and hydrogen-specific supplemental checks"
+    components:
+      - "05-10-01_A_Check_Package"
+      - "05-10-02_2A_Check_Package"
+      - "05-10-03_B_Check_Package"
+      - "05-10-04_C_Check_Package"
+      - "05-10-05_D_Check_Package"
+      - "05-10-06_HS_Check_H2_Supplemental"
+      - "05-10-07_Check_Interval_Optimization"
+
+  - section_id: "05-20"
+    section_name: "Task Card Index"
+    description: "Individual maintenance tasks organized by aircraft system"
+    components:
+      - "05-20-01_LH2_System_Tasks"
+      - "05-20-02_Fuel_Cell_System_Tasks"
+      - "05-20-03_CO2_Capture_System_Tasks"
+      - "05-20-04_BWB_Structure_Tasks"
+      - "05-20-05_Propulsion_System_Tasks"
+      - "05-20-06_Flight_Control_System_Tasks"
+      - "05-20-07_Electrical_Power_System_Tasks"
+      - "05-20-08_Environmental_Control_System_Tasks"
+      - "05-20-09_Landing_Gear_Tasks"
+      - "05-20-10_Avionics_System_Tasks"
+
+  - section_id: "05-30"
+    section_name: "Structural Inspection Program"
+    description: "Zonal inspections, SSIP, CPCP, and composite-specific inspection programs"
+    components:
+      - "05-30-01_Zonal_Inspection_Schedule"
+      - "05-30-02_Supplemental_Structural_Inspection_Program_SSIP"
+      - "05-30-03_Corrosion_Prevention_Control_Program_CPCP"
+      - "05-30-04_BWB_Composite_Inspection_Program"
+      - "05-30-05_Cryogenic_Cold_Zone_Inspection"
+      - "05-30-06_Damage_Tolerance_Inspection_Intervals"
+      - "05-30-07_NDT_Inspection_Schedule"
+
+  - section_id: "05-40"
+    section_name: "Powerplant Time Limits"
+    description: "Time limits for propulsion system components"
+    components:
+      - "05-40-01_Turbine_Engine_Shop_Visit_Intervals"
+      - "05-40-02_Propulsor_Overhaul_Intervals"
+      - "05-40-03_Fuel_Cell_Stack_Replacement_Schedule"
+      - "05-40-04_Electric_Motor_Bearing_Inspection_Intervals"
+      - "05-40-05_Gearbox_Inspection_Intervals"
+      - "05-40-06_H2_Fuel_System_Component_Intervals"
+
+  - section_id: "05-50"
+    section_name: "Systems Component Time Limits"
+    description: "Time limits for aircraft systems components"
+    components:
+      - "05-50-01_Hydraulic_Component_Overhaul_Intervals"
+      - "05-50-02_Flight_Control_Actuator_Intervals"
+      - "05-50-03_Landing_Gear_Overhaul_Intervals"
+      - "05-50-04_Oxygen_System_Component_Intervals"
+      - "05-50-05_Fire_Extinguisher_Replacement_Intervals"
+      - "05-50-06_Emergency_Equipment_Inspection_Intervals"
+      - "05-50-07_CO2_Battery_Module_Replacement"
+      - "05-50-08_High_Voltage_System_Component_Intervals"
+
+  - section_id: "05-60"
+    section_name: "Life Limited Parts Replacement"
+    description: "Mandatory retirement intervals for life-limited parts"
+    components:
+      - "05-60-01_Life_Limited_Parts_Index"
+      - "05-60-02_LH2_Tank_Replacement_Schedule"
+      - "05-60-03_Turbine_Disc_Replacement"
+      - "05-60-04_Landing_Gear_Life_Limited_Parts"
+      - "05-60-05_Flight_Control_Life_Limited_Parts"
+      - "05-60-06_Cryogenic_Line_Flexible_Joint_Replacement"
+
+  - section_id: "05-70"
+    section_name: "Sampling Programs"
+    description: "Fluid and material analysis programs for condition monitoring"
+    components:
+      - "05-70-01_Engine_Oil_Analysis_Program"
+      - "05-70-02_Hydraulic_Fluid_Analysis_Program"
+      - "05-70-03_Fuel_Cell_Coolant_Analysis_Program"
+      - "05-70-04_Composite_Material_Moisture_Sampling"
+      - "05-70-05_EWIS_Connector_Sampling_Program"
+      - "05-70-06_H2_Purity_Analysis_Program"
+
+  - section_id: "05-80"
+    section_name: "Condition Based Maintenance"
+    description: "On-condition tasks and predictive maintenance triggers"
+    components:
+      - "05-80-01_On_Condition_Task_Index"
+      - "05-80-02_Condition_Monitoring_Thresholds"
+      - "05-80-03_Real_Time_Health_Monitoring_Integration"
+      - "05-80-04_Predictive_Maintenance_Task_Triggers"
+      - "05-80-05_Fuel_Cell_Performance_Monitoring"
+      - "05-80-06_Battery_State_of_Health_Monitoring"
+
+  - section_id: "05-90"
+    section_name: "Special Inspections"
+    description: "Event-driven and conditional inspection requirements"
+    components:
+      - "05-90-01_Post_Heavy_Landing_Inspection_Tasks"
+      - "05-90-02_Lightning_Strike_Inspection_Tasks"
+      - "05-90-03_Overweight_Landing_Inspection_Tasks"
+      - "05-90-04_Cryogenic_System_Leak_Event_Tasks"
+      - "05-90-05_Fuel_Cell_Failure_Inspection_Tasks"
+      - "05-90-06_Thermal_Exceedance_Inspection_Tasks"
+
+interfaces:
+  - ata_chapter: "ATA_01"
+    interface_type: "Policy Framework"
+    description: "Maintenance policy defines strategic framework for ATA 05 intervals"
+  
+  - ata_chapter: "ATA_04"
+    interface_type: "Airworthiness Limitations"
+    description: "Hard limits that ATA 05 tasks must execute"
+  
+  - ata_chapter: "ATA_06-09,12"
+    interface_type: "Servicing Procedures"
+    description: "Referenced by ATA 05 maintenance tasks"
+  
+  - ata_chapter: "ATA_20-90"
+    interface_type: "System Chapters"
+    description: "Detailed maintenance procedures for each task"
+  
+  - ata_chapter: "ATA_45"
+    interface_type: "Health Monitoring"
+    description: "Real-time monitoring data for condition-based tasks"
+  
+  - ata_chapter: "ATA_92"
+    interface_type: "Predictive Analytics"
+    description: "AI optimization of maintenance intervals"
+
+metadata:
+  version: "1.0.0"
+  created_date: "2024-10-31"
+  last_modified: "2024-10-31"
+  status: "Active"
+  owner: "AMPEL360 Maintenance Engineering"
+  approving_authority: "EASA Part-M"
+  revision_history:
+    - revision: "1.0.0"
+      date: "2024-10-31"
+      author: "AMPEL360 Engineering Team"
+      description: "Initial ATA 05 structure creation"
+      approval: "Pending"
+
+document_references:
+  - ref_id: "MPD-AMPEL360-Rev-F"
+    title: "AMPEL360 Maintenance Planning Document"
+    type: "External"
+  
+  - ref_id: "MSG3-AMPEL-FC-001"
+    title: "Fuel Cell MSG-3 Analysis Report"
+    type: "Internal"
+  
+  - ref_id: "EASA-Part-M"
+    title: "EASA Part-M.A.302 Requirements"
+    type: "Regulatory"
+  
+  - ref_id: "FAA-AC-120-16F"
+    title: "FAA AC 120-16F"
+    type: "Regulatory"
+
+notes: |
+  This ATA 05 chapter structure is specifically adapted for the AMPEL360 
+  hydrogen-electric BWB aircraft. It includes hydrogen-specific maintenance 
+  requirements, composite structure inspection programs, and advanced condition 
+  monitoring integration. All components follow the 14-folder lifecycle skeleton 
+  for complete traceability from requirements through operations.
