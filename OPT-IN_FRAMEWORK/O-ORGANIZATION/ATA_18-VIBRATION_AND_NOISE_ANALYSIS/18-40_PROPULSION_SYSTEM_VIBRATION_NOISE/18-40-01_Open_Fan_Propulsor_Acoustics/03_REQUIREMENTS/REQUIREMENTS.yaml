@@ -1,0 +1,174 @@
+---
+component_id: 18-40-01
+component_name: Open-Fan Propulsor Acoustics
+component_description: >
+  Noise analysis, prediction, and mitigation framework for AMPEL360's 
+  unducted open-fan propulsors - the primary noise source and critical 
+  certification challenge.
+
+requirements:
+  - req_id: REQ-18-40-01-001
+    description: "Propulsor noise shall comply with ICAO Annex 16 Stage 5 limits with ≥10 EPNdB cumulative margin."
+    source: "CS-36, ICAO Annex 16 Volume I"
+    verification_method: "Flight test per FAA AC 36-4C"
+    status: "Under Certification"
+    approval_authority: "EASA Certification"
+    priority: "Critical"
+    
+  - req_id: REQ-18-40-01-002
+    description: "Lateral (sideline) noise shall not exceed 90.0 EPNdB at 450m measurement point."
+    source: "ICAO Annex 16, Chapter 4"
+    verification_method: "Noise certification flight test"
+    status: "Under Analysis"
+    approval_authority: "EASA/FAA"
+    priority: "Critical"
+    
+  - req_id: REQ-18-40-01-003
+    description: "Flyover noise shall not exceed 85.0 EPNdB at 6,500m from brake release."
+    source: "ICAO Annex 16, Chapter 4"
+    verification_method: "Noise certification flight test"
+    status: "Under Analysis"
+    approval_authority: "EASA/FAA"
+    priority: "Critical"
+    
+  - req_id: REQ-18-40-01-004
+    description: "Approach noise shall not exceed 94.0 EPNdB at 2,000m from runway threshold."
+    source: "ICAO Annex 16, Chapter 4"
+    verification_method: "Noise certification flight test"
+    status: "Under Analysis"
+    approval_authority: "EASA/FAA"
+    priority: "Critical"
+    
+  - req_id: REQ-18-40-01-005
+    description: "Cabin noise level shall not exceed 65 dBA during cruise and 75 dBA during takeoff."
+    source: "ATA 44 Cabin Systems, ISO 1999"
+    verification_method: "Flight test with calibrated microphones"
+    status: "Under Design"
+    approval_authority: "Chief Engineer"
+    priority: "High"
+    
+  - req_id: REQ-18-40-01-006
+    description: "Ground operations noise shall not exceed 95 dBA at 100m distance."
+    source: "FAA Part 36, Local airport regulations"
+    verification_method: "Ground test with far-field microphones"
+    status: "Under Design"
+    approval_authority: "Airport Authority"
+    priority: "High"
+    
+  - req_id: REQ-18-40-01-007
+    description: "Computational Aeroacoustics (CAA) analysis shall predict far-field noise within ±2 dB SPL."
+    source: "Engineering Standards ES-18-001"
+    verification_method: "Comparison with wind tunnel test data"
+    status: "In Progress"
+    approval_authority: "Chief Acoustics Engineer"
+    priority: "High"
+    
+  - req_id: REQ-18-40-01-008
+    description: "Wind tunnel acoustic testing shall validate CAA predictions with >95% correlation."
+    source: "Test Plan TP-18-40-01"
+    verification_method: "Wind tunnel test report"
+    status: "Planned"
+    approval_authority: "Test Director"
+    priority: "High"
+    
+  - req_id: REQ-18-40-01-009
+    description: "Propulsor blade design shall achieve minimum -7 dB noise reduction vs. unoptimized baseline."
+    source: "Design Requirements DR-61-10"
+    verification_method: "CFD/CAA analysis + wind tunnel validation"
+    status: "Under Design"
+    approval_authority: "Propulsion System Engineer"
+    priority: "High"
+    
+  - req_id: REQ-18-40-01-010
+    description: "Variable speed operation shall avoid structural resonant frequencies (BPF ≠ structural modes)."
+    source: "ATA 18-30 Structural Vibration Analysis"
+    verification_method: "Modal analysis + operational testing"
+    status: "Under Analysis"
+    approval_authority: "Structures Engineer"
+    priority: "Critical"
+    
+  - req_id: REQ-18-40-01-011
+    description: "Noise Abatement Procedures (NAP) shall reduce community noise by minimum 5 dB at sensitive receptors."
+    source: "ATA 02-20 Operations Information"
+    verification_method: "Flight test with community noise monitoring"
+    status: "Under Development"
+    approval_authority: "Flight Operations"
+    priority: "Medium"
+    
+  - req_id: REQ-18-40-01-012
+    description: "Acoustic liner on BWB upper surface shall provide -2 dB reflected noise reduction at BPF."
+    source: "ATA 57 Wings, Design Specification DS-18-40-01"
+    verification_method: "Acoustic impedance tube testing + flight test"
+    status: "Under Design"
+    approval_authority: "Structures Engineer"
+    priority: "High"
+    
+  - req_id: REQ-18-40-01-013
+    description: "Flight test instrumentation shall include minimum 12 cabin microphones and 8 external microphones."
+    source: "Test Plan TP-18-40-01, FAA AC 36-4C"
+    verification_method: "Instrumentation installation verification"
+    status: "Planned"
+    approval_authority: "Flight Test Engineer"
+    priority: "High"
+    
+  - req_id: REQ-18-40-01-014
+    description: "ACMS shall monitor real-time cabin noise level and propulsor RPM for noise signature analysis."
+    source: "ATA 45 Onboard Maintenance Systems"
+    verification_method: "ACMS integration test"
+    status: "Under Integration"
+    approval_authority: "Avionics Engineer"
+    priority: "Medium"
+    
+  - req_id: REQ-18-40-01-015
+    description: "Noise complaint rate shall not exceed 1 per 10,000 departures."
+    source: "Operational Requirements OR-02-01"
+    verification_method: "In-service fleet data monitoring"
+    status: "Target"
+    approval_authority: "Customer Support"
+    priority: "Medium"
+
+verification_matrix:
+  analysis:
+    - REQ-18-40-01-007 (CAA analysis)
+    - REQ-18-40-01-009 (Blade design CFD)
+    - REQ-18-40-01-010 (Modal analysis)
+  
+  test:
+    - REQ-18-40-01-008 (Wind tunnel test)
+    - REQ-18-40-01-012 (Acoustic liner testing)
+    - REQ-18-40-01-013 (Flight test instrumentation)
+  
+  inspection:
+    - REQ-18-40-01-013 (Instrumentation verification)
+  
+  demonstration:
+    - REQ-18-40-01-001 (Stage 5 compliance)
+    - REQ-18-40-01-002 (Lateral noise)
+    - REQ-18-40-01-003 (Flyover noise)
+    - REQ-18-40-01-004 (Approach noise)
+    - REQ-18-40-01-005 (Cabin noise)
+    - REQ-18-40-01-006 (Ground noise)
+    - REQ-18-40-01-011 (NAP effectiveness)
+
+traceability:
+  parent_requirements:
+    - ATA 00-50 (Limitations)
+    - ATA 61-10 (Propulsor design)
+    - CS-36 (Noise certification)
+  
+  derived_requirements:
+    - ATA 44-30 (Active noise cancellation)
+    - ATA 45-31 (ACMS noise monitoring)
+    - ATA 57-20 (Acoustic treatment)
+  
+  interface_requirements:
+    - ATA 02-20 (Flight operations NAP)
+    - ATA 71-20 (Engine control)
+    - ATA 92-30 (Predictive maintenance)
+
+change_history:
+  - version: 1.0
+    date: 2025-10-31
+    author: Acoustics Engineering Team
+    description: Initial requirements baseline
+    approved_by: Chief Engineer
