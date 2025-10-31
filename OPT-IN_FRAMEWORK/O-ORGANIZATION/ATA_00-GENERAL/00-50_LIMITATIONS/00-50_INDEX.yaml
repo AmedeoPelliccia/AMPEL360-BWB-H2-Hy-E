@@ -1,0 +1,38 @@
+---
+section_id: 00-50
+section_name: 00-50_LIMITATIONS
+ata_chapter: 00
+component_count: 8
+date: 2025-10-31
+status: initial
+
+components:
+  - id: 00-50-01_Airspeed_Limitations
+    name: Airspeed_Limitations
+    status: initial
+  - id: 00-50-02_Altitude_Limitations
+    name: Altitude_Limitations
+    status: initial
+  - id: 00-50-03_Temperature_Limitations
+    name: Temperature_Limitations
+    status: initial
+  - id: 00-50-04_Weight_Limitations
+    name: Weight_Limitations
+    status: initial
+  - id: 00-50-05_Maneuver_Limitations
+    name: Maneuver_Limitations
+    status: initial
+  - id: 00-50-06_Powerplant_Limitations
+    name: Powerplant_Limitations
+    status: initial
+  - id: 00-50-07_System_Limitations
+    name: System_Limitations
+    status: initial
+  - id: 00-50-08_Operational_Limitations
+    name: Operational_Limitations
+    status: initial
+
+governance:
+  methodology: 14-folder lifecycle skeleton
+  version_control: git with csv tracking
+  documentation_format: markdown, yaml, csv

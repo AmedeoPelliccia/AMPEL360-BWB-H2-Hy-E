@@ -1,0 +1,38 @@
+---
+section_id: 00-90
+section_name: 00-90_GENERAL_INFORMATION_MISCELLANEOUS
+ata_chapter: 00
+component_count: 8
+date: 2025-10-31
+status: initial
+
+components:
+  - id: 00-90-01_Type_Certificate_Data_Sheet
+    name: Type_Certificate_Data_Sheet
+    status: initial
+  - id: 00-90-02_Special_Conditions
+    name: Special_Conditions
+    status: initial
+  - id: 00-90-03_Equivalent_Safety_Findings
+    name: Equivalent_Safety_Findings
+    status: initial
+  - id: 00-90-04_Exemptions
+    name: Exemptions
+    status: initial
+  - id: 00-90-05_Noise_Certification
+    name: Noise_Certification
+    status: initial
+  - id: 00-90-06_Emissions_Certification
+    name: Emissions_Certification
+    status: initial
+  - id: 00-90-07_Continued_Airworthiness
+    name: Continued_Airworthiness
+    status: initial
+  - id: 00-90-08_Service_Experience_Database
+    name: Service_Experience_Database
+    status: initial
+
+governance:
+  methodology: 14-folder lifecycle skeleton
+  version_control: git with csv tracking
+  documentation_format: markdown, yaml, csv

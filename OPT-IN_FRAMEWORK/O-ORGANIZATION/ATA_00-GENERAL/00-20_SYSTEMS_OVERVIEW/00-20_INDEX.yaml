@@ -1,0 +1,38 @@
+---
+section_id: 00-20
+section_name: 00-20_SYSTEMS_OVERVIEW
+ata_chapter: 00
+component_count: 8
+date: 2025-10-31
+status: initial
+
+components:
+  - id: 00-20-01_Systems_Architecture
+    name: Systems_Architecture
+    status: initial
+  - id: 00-20-02_OPT-IN_Framework_Overview
+    name: OPT-IN_Framework_Overview
+    status: initial
+  - id: 00-20-03_Major_Systems_List
+    name: Major_Systems_List
+    status: initial
+  - id: 00-20-04_System_Integration_Philosophy
+    name: System_Integration_Philosophy
+    status: initial
+  - id: 00-20-05_AMEDEOPELLICCIA_Domains
+    name: AMEDEOPELLICCIA_Domains
+    status: initial
+  - id: 00-20-06_Technology_Readiness_Levels
+    name: Technology_Readiness_Levels
+    status: initial
+  - id: 00-20-07_Innovation_Highlights
+    name: Innovation_Highlights
+    status: initial
+  - id: 00-20-08_System_Interdependencies
+    name: System_Interdependencies
+    status: initial
+
+governance:
+  methodology: 14-folder lifecycle skeleton
+  version_control: git with csv tracking
+  documentation_format: markdown, yaml, csv

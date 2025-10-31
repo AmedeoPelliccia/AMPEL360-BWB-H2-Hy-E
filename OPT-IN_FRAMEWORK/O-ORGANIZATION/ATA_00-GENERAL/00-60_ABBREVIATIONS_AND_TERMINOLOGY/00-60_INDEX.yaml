@@ -1,0 +1,29 @@
+---
+section_id: 00-60
+section_name: 00-60_ABBREVIATIONS_AND_TERMINOLOGY
+ata_chapter: 00
+component_count: 5
+date: 2025-10-31
+status: initial
+
+components:
+  - id: 00-60-01_Standard_Abbreviations
+    name: Standard_Abbreviations
+    status: initial
+  - id: 00-60-02_Technical_Terminology
+    name: Technical_Terminology
+    status: initial
+  - id: 00-60-03_Units_of_Measurement
+    name: Units_of_Measurement
+    status: initial
+  - id: 00-60-04_Glossary
+    name: Glossary
+    status: initial
+  - id: 00-60-05_Symbol_Definitions
+    name: Symbol_Definitions
+    status: initial
+
+governance:
+  methodology: 14-folder lifecycle skeleton
+  version_control: git with csv tracking
+  documentation_format: markdown, yaml, csv
