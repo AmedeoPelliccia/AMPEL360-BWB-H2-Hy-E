@@ -1,0 +1,38 @@
+---
+section_id: 00-30
+section_name: 00-30_AIRCRAFT_PERFORMANCE
+ata_chapter: 00
+component_count: 8
+date: 2025-10-31
+status: initial
+
+components:
+  - id: 00-30-01_Takeoff_Performance
+    name: Takeoff_Performance
+    status: initial
+  - id: 00-30-02_Climb_Performance
+    name: Climb_Performance
+    status: initial
+  - id: 00-30-03_Cruise_Performance
+    name: Cruise_Performance
+    status: initial
+  - id: 00-30-04_Descent_Performance
+    name: Descent_Performance
+    status: initial
+  - id: 00-30-05_Landing_Performance
+    name: Landing_Performance
+    status: initial
+  - id: 00-30-06_Range_and_Endurance
+    name: Range_and_Endurance
+    status: initial
+  - id: 00-30-07_Fuel_Efficiency_Metrics
+    name: Fuel_Efficiency_Metrics
+    status: initial
+  - id: 00-30-08_Environmental_Performance
+    name: Environmental_Performance
+    status: initial
+
+governance:
+  methodology: 14-folder lifecycle skeleton
+  version_control: git with csv tracking
+  documentation_format: markdown, yaml, csv
