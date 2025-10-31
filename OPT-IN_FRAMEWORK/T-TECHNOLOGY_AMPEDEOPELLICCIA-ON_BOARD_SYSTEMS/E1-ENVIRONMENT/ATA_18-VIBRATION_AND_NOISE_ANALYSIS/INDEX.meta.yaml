@@ -1,10 +1,12 @@
 ---
 ata_chapter: 18
 title: VIBRATION AND NOISE ANALYSIS
-domain: O-ORGANIZATION
+domain: T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS
+subdomain: E1-ENVIRONMENT
+cross_reference: E2-ENERGY (vibration monitoring and energy harvesting aspects)
 aircraft_platform: AMPEL360 BWB H2 Hy-E Q100 INTEGRA
 framework: OPT-IN AMEDEOPELLICCIA
-version: 1.0
+version: 1.1
 date: 2025-10-31
 status: Active Development
 provisional: true
@@ -13,6 +15,8 @@ provisional_justification: >
   Established as provisional chapter for AMPEL360 program to centralize 
   vibration and noise analysis activities critical for certification, 
   safety, and operational performance of hydrogen-electric BWB aircraft.
+  Moved to E1-ENVIRONMENT as primary location (noise/environmental focus) 
+  with cross-reference to E2-ENERGY (vibration monitoring/energy harvesting).
 
 sections:
   - id: 18-10
