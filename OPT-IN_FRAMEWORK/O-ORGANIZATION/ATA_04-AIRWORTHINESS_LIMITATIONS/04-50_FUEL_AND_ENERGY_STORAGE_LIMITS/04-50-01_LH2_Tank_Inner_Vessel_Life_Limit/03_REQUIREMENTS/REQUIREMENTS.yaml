@@ -1,0 +1,255 @@
+---
+component_id: "04-50-01"
+component_name: "LH₂ Tank Inner Vessel Life Limit"
+classification: "SAFE-LIFE COMPONENT"
+criticality: "FLIGHT CRITICAL"
+
+requirements:
+  - req_id: "REQ-04-50-01-001"
+    description: "The LH₂ tank inner vessel shall be retired from service at 50,000 flight cycles."
+    source: "CS-25.571 Damage Tolerance and Fatigue Evaluation"
+    rationale: "Full-scale fatigue test demonstrated failure at 147,350 cycles. 50,000 cycle limit provides 3× safety factor per AC 23.573-1C."
+    verification_method: "Analysis + Test"
+    verification_status: "VERIFIED"
+    test_report: "AMPEL-TEST-H2-TANK-FSFT Rev C"
+    analysis_report: "AMPEL-STRESS-H2-TANK-001 Rev D"
+    status: "CERTIFIED"
+    approval_authority: "EASA TC Amendment 001"
+    approval_date: "2024-09-15"
+    compliance_method: "Cycle counting via ACMS"
+    
+  - req_id: "REQ-04-50-01-002"
+    description: "The LH₂ tank inner vessel shall be retired from service at 20 calendar years from date of manufacture."
+    source: "EASA SC-Hydrogen Para 4.2.3"
+    rationale: "Accelerated aging tests show 9% fracture toughness degradation at 20 years (equivalent). 2.5× safety margin on critical K_IC threshold."
+    verification_method: "Analysis (environmental degradation)"
+    verification_status: "VERIFIED"
+    test_report: "AMPEL-ENV-H2-TANK-002 Rev A"
+    status: "CERTIFIED"
+    approval_authority: "EASA TC Amendment 001"
+    approval_date: "2024-09-15"
+    compliance_method: "Calendar tracking from date of manufacture"
+    
+  - req_id: "REQ-04-50-01-003"
+    description: "A thermal cycle counter shall be implemented to track cryogenic fill/drain cycles independently of flight cycles."
+    source: "Internal Design Requirement"
+    parent_req: "REQ-04-50-01-001"
+    rationale: "Thermal cycling contributes to fatigue damage. Each thermal cycle = 0.67 equivalent flight cycles per Palmgren-Miner rule."
+    verification_method: "Test (FMS software validation)"
+    verification_status: "VERIFIED"
+    test_report: "AMPEL-SW-FMS-VAL-003"
+    status: "VERIFIED"
+    
+  - req_id: "REQ-04-50-01-004"
+    description: "The thermal cycle limit shall be 75,000 cycles."
+    source: "AMPEL-STRESS-H2-TANK-001"
+    parent_req: "REQ-04-50-01-003"
+    rationale: "75,000 thermal cycles × 0.67 = 50,250 equivalent flight cycles, maintaining 3× safety factor."
+    verification_method: "Analysis"
+    verification_status: "VERIFIED"
+    status: "CERTIFIED"
+    approval_authority: "EASA TC Amendment 001"
+    approval_date: "2024-09-15"
+    
+  - req_id: "REQ-04-50-01-005"
+    description: "If annular vacuum pressure exceeds 10⁻³ torr, the tank shall be removed for inspection within 50 flight hours."
+    source: "EASA SC-Hydrogen Para 4.2.5"
+    rationale: "Vacuum loss indicates possible insulation damage or inner vessel micro-leak. 10⁻³ torr threshold = 10× margin to thermal performance degradation."
+    verification_method: "Inspection procedure validation"
+    verification_status: "VERIFIED"
+    status: "CERTIFIED"
+    approval_authority: "EASA TC Amendment 001"
+    approval_date: "2024-09-15"
+    compliance_method: "Continuous vacuum pressure monitoring"
+    
+  - req_id: "REQ-04-50-01-006"
+    description: "Any detected hydrogen leak from the inner vessel shall mandate immediate tank removal and retirement."
+    source: "CS-25.981 Fuel Tank Ignition Prevention"
+    rationale: "Through-wall leak indicates structural failure. Component cannot be repaired and must be retired."
+    verification_method: "Leak detection system test"
+    verification_status: "VERIFIED"
+    test_report: "AMPEL-TEST-LEAK-DETECT-H2-001"
+    status: "CERTIFIED"
+    approval_authority: "EASA TC Amendment 001"
+    approval_date: "2024-09-15"
+    compliance_method: "Continuous H₂ leak monitoring + pre-flight check"
+    
+  - req_id: "REQ-04-50-01-007"
+    description: "Flight cycle count shall be automatically recorded by ACMS with manual backup in aircraft logbook."
+    source: "Internal Design Requirement"
+    parent_req: "REQ-04-50-01-001"
+    rationale: "Dual tracking prevents loss of cycle history and ensures compliance continuity."
+    verification_method: "ACMS software validation"
+    verification_status: "VERIFIED"
+    status: "VERIFIED"
+    
+  - req_id: "REQ-04-50-01-008"
+    description: "Tank serial number and installation date shall be recorded in aircraft permanent records."
+    source: "CS-25.1529 Instructions for Continued Airworthiness"
+    rationale: "Enables traceability for life limit enforcement and fleet safety monitoring."
+    verification_method: "Document review"
+    verification_status: "VERIFIED"
+    status: "CERTIFIED"
+    approval_authority: "EASA TC Amendment 001"
+    approval_date: "2024-09-15"
+    
+  - req_id: "REQ-04-50-01-009"
+    description: "Retired tanks shall be shipped to OEM facility for post-service analysis."
+    source: "Internal Lessons Learned Process"
+    rationale: "Teardown analysis validates life prediction models and identifies unexpected degradation modes."
+    verification_method: "Procedure implementation"
+    verification_status: "VERIFIED"
+    status: "ACTIVE"
+    
+  - req_id: "REQ-04-50-01-010"
+    description: "Replacement tank installation shall include zero-time logbook entry and ACMS cycle counter reset."
+    source: "Internal Maintenance Procedure"
+    rationale: "Ensures new tank starts with clean cycle history."
+    verification_method: "AMM Task Card validation"
+    verification_status: "VERIFIED"
+    amm_reference: "28-11-00-400-802"
+    status: "ACTIVE"
+
+derived_requirements:
+  - req_id: "REQ-04-50-01-D001"
+    description: "ACMS shall provide cycle count alert at 47,500 flight cycles (95% of limit)."
+    parent_req: "REQ-04-50-01-001"
+    rationale: "Early warning enables operators to plan replacement tank procurement."
+    verification_method: "ACMS software test"
+    status: "VERIFIED"
+    
+  - req_id: "REQ-04-50-01-D002"
+    description: "ACMS shall inhibit engine start if cycle count exceeds 50,000."
+    parent_req: "REQ-04-50-01-001"
+    rationale: "Hard interlock prevents inadvertent operation beyond life limit."
+    verification_method: "ACMS software test + flight test"
+    status: "VERIFIED"
+    
+  - req_id: "REQ-04-50-01-D003"
+    description: "Tank P/N shall include manufacturing date code in part number suffix."
+    parent_req: "REQ-04-50-01-002"
+    rationale: "Enables visual verification of calendar age during inspections."
+    verification_method: "Part numbering specification review"
+    status: "IMPLEMENTED"
+
+interface_requirements:
+  - req_id: "REQ-04-50-01-IF001"
+    description: "ACMS shall interface with FMS to receive flight cycle count."
+    interface_spec: "ARINC 429 data bus, Label 271"
+    verification_method: "Interface control document validation"
+    status: "VERIFIED"
+    
+  - req_id: "REQ-04-50-01-IF002"
+    description: "FMS shall interface with cryogenic level sensor to detect fill/drain events."
+    interface_spec: "4-20mA analog input"
+    verification_method: "Hardware integration test"
+    status: "VERIFIED"
+    
+  - req_id: "REQ-04-50-01-IF003"
+    description: "Vacuum pressure sensor shall provide continuous reading to ACMS."
+    interface_spec: "0-5V analog output, 10⁻⁶ to 10⁻² torr range"
+    verification_method: "Sensor qualification test"
+    status: "VERIFIED"
+
+traceability:
+  certification_basis:
+    - "CS-25.571 Damage Tolerance and Fatigue Evaluation"
+    - "CS-25.981 Fuel Tank Ignition Prevention"
+    - "CS-25.963 Fuel Tank Tests"
+    - "CS-25.1309 Equipment, Systems, and Installations"
+    - "CS-25.1529 Instructions for Continued Airworthiness"
+    - "EASA SC-Hydrogen Section 4.2 Cryogenic Tank Requirements"
+    
+  supporting_documents:
+    - doc_id: "AMPEL-STRESS-H2-TANK-001 Rev D"
+      title: "LH₂ Tank Structural Analysis Report"
+      
+    - doc_id: "AMPEL-TEST-H2-TANK-FSFT Rev C"
+      title: "Full-Scale Fatigue Test Report"
+      
+    - doc_id: "AMPEL-ENV-H2-TANK-002 Rev A"
+      title: "Environmental Qualification Report"
+      
+    - doc_id: "AMPEL-SSA-H2-002"
+      title: "H₂ Fuel System Safety Assessment"
+      
+    - doc_id: "EASA TC Amendment 001"
+      title: "Type Certificate Amendment - Airworthiness Limitations"
+      date: "2024-09-15"
+
+verification_matrix:
+  - requirement: "REQ-04-50-01-001"
+    method: "Test"
+    evidence: "AMPEL-TEST-H2-TANK-FSFT"
+    result: "PASS - Failure at 147,350 cycles, 3× margin verified"
+    
+  - requirement: "REQ-04-50-01-002"
+    method: "Analysis"
+    evidence: "AMPEL-ENV-H2-TANK-002"
+    result: "PASS - Degradation rate supports 20-year limit with 2.5× margin"
+    
+  - requirement: "REQ-04-50-01-005"
+    method: "Test"
+    evidence: "Thermal analysis + vacuum system qual"
+    result: "PASS - 10⁻³ torr threshold validated"
+    
+  - requirement: "REQ-04-50-01-006"
+    method: "Test"
+    evidence: "AMPEL-TEST-LEAK-DETECT-H2-001"
+    result: "PASS - Leak detection sensitivity < 0.1 ppm confirmed"
+
+compliance_tracking:
+  operator_responsibilities:
+    - "Track flight cycles via ACMS"
+    - "Track thermal cycles via FMS logs"
+    - "Record tank S/N at installation"
+    - "Maintain continuous logbook chain"
+    - "Ground aircraft if limit exceeded"
+    - "Report limit exceedance to authorities within 24 hours"
+    
+  maintenance_organization_responsibilities:
+    - "Perform tank removal per AMM 28-11-00-400-801"
+    - "Perform tank installation per AMM 28-11-00-400-802"
+    - "Reset ACMS counter for new tank"
+    - "Ship retired tank to OEM per shipping procedure"
+    - "Complete logbook entries per ATA 05 requirements"
+    
+  oem_responsibilities:
+    - "Maintain service bulletin program"
+    - "Analyze retired tanks for lessons learned"
+    - "Monitor fleet leader aircraft data"
+    - "Issue life limit revisions if service data warrants"
+    - "Provide technical support for compliance questions"
+
+penalties_non_compliance:
+  easa:
+    - "Certificate of Airworthiness: Immediate revocation"
+    - "Operator certificate: Suspension pending corrective action"
+    - "Civil penalty: Up to €4,000 per day of operation beyond limit"
+    
+  faa:
+    - "Certificate of Airworthiness: Immediate revocation"
+    - "Air carrier certificate: Emergency revocation authority per 14 CFR 119.51"
+    - "Civil penalty: Up to $50,000 per violation"
+    
+  criminal_liability:
+    - "Willful violation resulting in death: Up to 15 years imprisonment (EASA member states)"
+    - "Willful violation resulting in death: Up to 15 years imprisonment (US 49 USC 46316)"
+
+document_control:
+  version: "1.0.0"
+  last_updated: "2024-10-31"
+  author: "Dr. Elena Rodriguez, Principal Stress Engineer"
+  reviewer: "Hans Schmidt, Chief Engineer Airworthiness"
+  approver: "EASA Certification Authority"
+  classification: "CONTROLLED - REGULATORY DOCUMENT"
+  change_history:
+    - version: "0.1"
+      date: "2024-03-15"
+      change: "Initial draft for TC application"
+    - version: "0.5"
+      date: "2024-06-30"
+      change: "Updated with FSFT results"
+    - version: "1.0.0"
+      date: "2024-09-15"
+      change: "Certified version per EASA TC Amendment 001"
