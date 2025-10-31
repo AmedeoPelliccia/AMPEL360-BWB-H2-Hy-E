@@ -1,0 +1,46 @@
+---
+component_id: 05-40-03
+component_name: Fuel Cell Stack Replacement Schedule
+requirements:
+  - req_id: REQ-05-40-03-001
+    description: "Fuel cell stacks shall be replaced at 18,000 flight hours or 12 calendar years, whichever occurs first."
+    source: "ATA 04-40-04 (Airworthiness Limitation)"
+    verification_method: "Compliance tracking via AMTS"
+    status: "Certified"
+    approval_authority: "EASA Part-M.A.302"
+    approval_date: "2024-09-15"
+    
+  - req_id: REQ-05-40-03-002
+    description: "Fuel cell performance validation shall be performed every 600 FH using impedance spectroscopy."
+    source: "MSG-3 Analysis Report AMPEL-MSG3-FC-001"
+    verification_method: "Test procedure validation"
+    status: "Approved"
+    parent_req: "REQ-05-40-03-001"
+    
+  - req_id: REQ-05-40-03-003
+    description: "If fuel cell voltage drops below 0.65V/cell at rated current, stack shall be replaced within 100 FH."
+    source: "System Safety Assessment AMPEL-SSA-49-002"
+    verification_method: "ACMS monitoring threshold"
+    status: "Certified"
+    approval_authority: "EASA Part-M.A.302"
+    approval_date: "2024-09-15"
+    
+  - req_id: REQ-05-40-03-004
+    description: "Stack replacement shall include mandatory leak test and functional test per AMM 49-21-00."
+    source: "Quality Assurance Procedure QAP-49-001"
+    verification_method: "Test report review"
+    status: "Approved"
+    parent_req: "REQ-05-40-03-001"
+    
+  - req_id: REQ-05-40-03-005
+    description: "Thermal cycle counter shall be monitored; replacement mandatory if 24,000 cycles reached before 18,000 FH."
+    source: "Component Manufacturer Recommendation (Ballard Power Systems)"
+    verification_method: "ACMS thermal cycle tracking"
+    status: "Approved"
+    parent_req: "REQ-05-40-03-001"
+    
+  - req_id: REQ-05-40-03-006
+    description: "Personnel performing fuel cell replacement shall hold Type Rating + Fuel Cell Systems qualification."
+    source: "ATA 01-70-02 (Training Requirements)"
+    verification_method: "Training records audit"
+    status: "Approved"
