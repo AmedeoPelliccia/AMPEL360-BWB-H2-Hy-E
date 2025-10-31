@@ -2,8 +2,9 @@
 
 **Aircraft Platform**: AMPEL360 BWB H₂ Hy-E Q100 INTEGRA  
 **Framework**: OPT-IN AMEDEOPELLICCIA  
-**Domain**: O-ORGANIZATION  
-**Revision**: 1.0  
+**Domain**: T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS  
+**Subdomain**: E1-ENVIRONMENT (primary) | E2-ENERGY (cross-reference)  
+**Revision**: 1.1  
 **Date**: 2025-10-31  
 
 ## ⚠️ PROVISIONAL CHAPTER STATUS
