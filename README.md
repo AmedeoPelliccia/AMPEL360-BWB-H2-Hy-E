@@ -50,7 +50,6 @@ Of course. Here is the complete, final, and fully populated `README.md` for the 
 
 ---
 
-```markdown
 # OPT-IN Framework
 ### Amedeo Pelliccia's Development and Documentation Methodology for the AMPEL360 Program
 
