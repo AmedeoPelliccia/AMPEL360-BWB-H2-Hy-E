@@ -115,7 +115,7 @@ High-voltage electrical systems (540 VDC) present shock and fire hazards if isol
 ---
 
 ## Compliance References
-- **Certification basis:** ../ALR/[**ALR-024.md**](../ALR/ALR-024.md) – Electrical system safety  
+- **Certification basis:** ../ALR/[**ALR-024.md**](../ALR-024.md) – Electrical system safety  
 - **Electrical standards:** **DO-160G** (environmental qualification), **SAE ARP5412** (aircraft electrical installation practices)  
 - **Safety:** **ARP4761** (safety assessment), **CS-25.1351** (electrical system safety)  
 - **Software:** **DO-178C Level A** (isolation monitor software, EMS fault handling)  
