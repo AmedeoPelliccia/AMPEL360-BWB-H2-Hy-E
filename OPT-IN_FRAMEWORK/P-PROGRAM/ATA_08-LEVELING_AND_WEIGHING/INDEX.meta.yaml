@@ -1,0 +1,157 @@
+---
+ata_chapter: 08
+title: LEVELING AND WEIGHING
+domain: P-PROGRAM
+aircraft_platform: AMPEL360 BWB H2 Hy-E Q100 INTEGRA
+framework: OPT-IN AMEDEOPELLICCIA
+version: 1.0
+date: 2025-11-02
+status: Active Development
+
+sections:
+  - id: 08-10
+    name: Leveling Procedures
+    subject_count: 6
+  - id: 08-20
+    name: Weighing Procedures
+    subject_count: 7
+  - id: 08-30
+    name: Weight and CG Calculation
+    subject_count: 7
+  - id: 08-40
+    name: Hydrogen System Corrections
+    subject_count: 6
+  - id: 08-50
+    name: Equipment Specifications
+    subject_count: 6
+  - id: 08-60
+    name: Weight and Balance Limits
+    subject_count: 6
+  - id: 08-70
+    name: Documentation Requirements
+    subject_count: 7
+  - id: 08-80
+    name: Special Weighing Scenarios
+    subject_count: 6
+  - id: 08-90
+    name: Quality Assurance
+    subject_count: 6
+
+statistics:
+  total_sections: 9
+  total_subjects: 57
+  total_folders: 798
+  estimated_files: 1200-2800
+
+governance:
+  methodology: 14-folder lifecycle skeleton
+  version_control: Git with CSV tracking
+  documentation_format: Markdown (primary), YAML (metadata), CSV (data)
+  
+certification_standards:
+  - CS-25.25 (Weight Limits)
+  - CS-25.27 (Center of Gravity Limits)
+  - CS-25.1583 (Operating Limitations)
+  - CS-25.1589 (Loading Information)
+  - FAA AC 120-27F (Aircraft Weight and Balance Control)
+  - EASA Part-M.A.306 (Aircraft Continuing Airworthiness Records)
+  - ATA iSpec 2200 Chapter 08
+  - SAE AIR1845 (Weighing and CG Determination)
+  - MIL-STD-1374 (Weighing and Balancing)
+  - ISO 17025 (Testing and Calibration Laboratories)
+  - ASTM E74 (Calibration of Force-Measuring Instruments)
+
+compliance:
+  easa: CS-25
+  faa: 14 CFR Part 25
+  special_conditions:
+    - Hydrogen fuel system weight corrections (LH2 boil-off)
+    - BWB configuration (unique leveling challenges)
+    - Composite structure weight distribution
+    - Upper-surface propulsors weight/CG impact
+
+unique_characteristics:
+  - Blended Wing Body geometry
+  - Cryogenic hydrogen fuel density
+  - Carbon fiber composite structure
+  - Wide center body leveling requirements
+  - Digital inclinometer network
+  - LH2 boil-off corrections
+
+safety_critical_items:
+  - Leveling accuracy (±0.05° tolerance)
+  - Scale/load cell calibration
+  - Hydrogen system defuel procedure
+  - CG limits verification
+  - Weight and balance documentation
+
+equipment_requirements:
+  platform_scales:
+    nose_gear:
+      capacity: 25000 kg
+      accuracy: ±10 kg
+      platform_size: 1.2m x 1.2m
+    main_gear:
+      capacity: 60000 kg each
+      accuracy: ±25 kg
+      platform_size: 1.5m x 2.0m
+  load_cells:
+    nose_jack:
+      capacity: 250 kN
+      accuracy: ±0.1% FS
+    main_jacks:
+      capacity: 600 kN each
+      accuracy: ±0.1% FS
+  inclinometers:
+    quantity: 5
+    accuracy: ±0.01°
+    type: Wireless MEMS
+
+weight_data:
+  manufacturer_empty_weight: 64000 kg
+  operating_empty_weight: 70000 kg
+  max_zero_fuel_weight: 96000 kg
+  max_takeoff_weight: 120000 kg
+  max_landing_weight: 105000 kg
+  max_taxi_weight: 121000 kg
+
+cg_limits:
+  takeoff:
+    forward: 25% MAC
+    aft: 40% MAC
+  landing:
+    forward: 20% MAC
+    aft: 45% MAC
+  zero_fuel:
+    forward: 30% MAC
+    aft: 65% MAC
+  flight_envelope:
+    forward: 20% MAC
+    aft: 40% MAC
+
+mac_reference:
+  lemac: FS 18000
+  mac_length: 17000 mm
+  temac: FS 35000
+
+key_contacts:
+  technical_lead: TBD
+  weights_engineer: TBD
+  certification_liaison: TBD
+  documentation_manager: TBD
+
+cross_references:
+  - ATA 00: General (TCDS weight data)
+  - ATA 06: Dimensions (datum reference system)
+  - ATA 07: Lifting and Shoring (jack weighing)
+  - ATA 09: Towing (CG limits for towing)
+  - ATA 12: Servicing (H2 defueling)
+  - ATA 25: Equipment/Furnishings (equipment list)
+  - ATA 28: Fuel System (residual H2 measurement)
+  - ATA 51: Structures (jack point loads)
+
+change_history:
+  - version: 1.0
+    date: 2025-11-02
+    author: AMEDEOPELLICCIA
+    description: Initial structure deployment with complete directory hierarchy
