@@ -27,18 +27,28 @@ scope:
 
 regulatory_framework:
   certification_requirements:
+    # EASA CS-25: https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27
     - CS-25.783: "Doors (minimum dimensions, emergency egress)"
     - CS-25.1359: "Electrical System Fire Protection (compartment dimensions)"
+    # FAA Advisory Circular: https://www.faa.gov/airports/resources/advisory_circulars/
     - FAA AC 150/5300-13B: "Airport Design (aircraft parking envelope)"
+    # ICAO Standards: https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf
     - ICAO Annex 14: "Aerodromes (aircraft reference code dimensions)"
+    # IATA AHM: https://www.iata.org/en/publications/manuals/airport-handling-manual/
     - AHM 560: "Airplane Characteristics for Airport Planning"
   
   industry_standards:
+    # ATA Spec: https://www.ataspec2200.org/
     - ATA iSpec 2200 Chapter 06: "Standard dimensional data format"
+    # SAE Standards: https://www.sae.org/standards/
     - SAE ARP6116: "Aircraft Ground Support Equipment Clearances"
+    # ISO Standards: https://www.iso.org/
     - ISO 3977: "Aircraft Dimensions and Masses"
+    # IATA: https://www.iata.org/
     - IATA AHM: "Standard dimensional data exchange"
+    # SAE AS8015: https://www.sae.org/standards/content/as8015c/
     - SAE AS8015: "Aircraft Coordinate System"
+    # ASME: https://www.asme.org/codes-standards/
     - ASME Y14.5: "Geometric Dimensioning and Tolerancing (GD&T)"
 
 ampel360_unique_features:

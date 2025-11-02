@@ -101,16 +101,16 @@ verification_frequency: "D-Check (36,000 FH)"
 ## Compliance and Standards
 
 ### Regulatory Compliance
-- **CS-25:** Large Aeroplane Certification Specification
-- **ICAO Annex 14:** Aerodrome Standards
-- **FAA AC 150/5300-13B:** Airport Design
-- **EASA Part 21:** Type Design Approval
+- **[CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Large Aeroplane Certification Specification
+- **[ICAO Annex 14](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf):** Aerodrome Standards
+- **[FAA AC 150/5300-13B](https://www.faa.gov/airports/resources/advisory_circulars/index.cfm/go/document.current/documentNumber/150_5300-13):** Airport Design
+- **[EASA Part 21](https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-7482012):** Type Design Approval
 
 ### Industry Standards
-- **ATA iSpec 2200:** Technical Publications Specification
-- **SAE AS8015:** Aircraft Coordinate System
-- **ASME Y14.5:** Geometric Dimensioning and Tolerancing
-- **ISO 3977:** Aircraft Dimensions and Masses
+- **[ATA iSpec 2200](https://www.ataspec2200.org/):** Technical Publications Specification
+- **[SAE AS8015](https://www.sae.org/standards/content/as8015c/):** Aircraft Coordinate System
+- **[ASME Y14.5](https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing):** Geometric Dimensioning and Tolerancing
+- **[ISO 3977](https://www.iso.org/standard/9605.html):** Aircraft Dimensions and Masses
 
 ### Internal Standards
 - **AMPEL-STD-CAD-001:** CAD Modeling Standards

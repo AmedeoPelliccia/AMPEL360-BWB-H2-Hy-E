@@ -6,18 +6,18 @@ This folder contains all certification-related documentation for the overall dim
 ## Certification Basis
 
 ### EASA CS-25 (Primary)
-- **CS-25.783:** Doors - Dimension requirements met
-- **CS-25.803:** Emergency evacuation - 90-second analysis complete
-- **CS-25.109:** Accelerate-stop distance - Verified for 2,500m field length
-- **CS-25.1359:** Electrical system fire protection - Compartment dimensions verified
+- **[CS-25.783](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Doors - Dimension requirements met
+- **[CS-25.803](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Emergency evacuation - 90-second analysis complete
+- **[CS-25.109](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Accelerate-stop distance - Verified for 2,500m field length
+- **[CS-25.1359](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Electrical system fire protection - Compartment dimensions verified
 
 ### FAA 14 CFR Part 25 (Bilateral Agreement)
-- Equivalent standards to EASA CS-25
-- FAA acceptance under bilateral aviation safety agreement
+- Equivalent standards to [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)
+- FAA acceptance under [bilateral aviation safety agreement](https://www.faa.gov/aircraft/air_cert/international/bilateral_agreements)
 
 ### ICAO Standards
-- **Annex 14:** Aerodromes - Code 4E classification verified
-- **Doc 9157:** Aerodrome Design Manual - Compliance demonstrated
+- **[Annex 14](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf):** Aerodromes - Code 4E classification verified
+- **[Doc 9157](https://www.icao.int/publications/Pages/catalogue.aspx):** Aerodrome Design Manual - Compliance demonstrated
 
 ## Certification Plan
 

@@ -17,17 +17,17 @@ Every 6-digit component within this chapter represents a formal dimensional spec
 ## Regulatory Framework
 
 ### Certification Requirements
-- **CS-25.783:** Doors (minimum dimensions, emergency egress)
-- **CS-25.1359:** Electrical System Fire Protection (compartment dimensions)
-- **FAA AC 150/5300-13B:** Airport Design (aircraft parking envelope)
-- **ICAO Annex 14:** Aerodromes (aircraft reference code dimensions)
-- **AHM 560:** Airplane Characteristics for Airport Planning
+- **[CS-25.783](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Doors (minimum dimensions, emergency egress)
+- **[CS-25.1359](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Electrical System Fire Protection (compartment dimensions)
+- **[FAA AC 150/5300-13B](https://www.faa.gov/airports/resources/advisory_circulars/index.cfm/go/document.current/documentNumber/150_5300-13):** Airport Design (aircraft parking envelope)
+- **[ICAO Annex 14](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf):** Aerodromes (aircraft reference code dimensions)
+- **[AHM 560](https://www.iata.org/en/publications/manuals/airport-handling-manual/):** Airplane Characteristics for Airport Planning
 
 ### Industry Standards
-- **ATA iSpec 2200 Chapter 06:** Standard dimensional data format
-- **SAE ARP6116:** Aircraft Ground Support Equipment Clearances
-- **ISO 3977:** Aircraft Dimensions and Masses
-- **IATA Airport Handling Manual (AHM):** Standard dimensional data exchange
+- **[ATA iSpec 2200 Chapter 06](https://www.ataspec2200.org/):** Standard dimensional data format
+- **[SAE ARP6116](https://www.sae.org/standards/content/arp6116/):** Aircraft Ground Support Equipment Clearances
+- **[ISO 3977](https://www.iso.org/standard/9605.html):** Aircraft Dimensions and Masses
+- **[IATA Airport Handling Manual (AHM)](https://www.iata.org/en/publications/manuals/airport-handling-manual/):** Standard dimensional data exchange
 
 ## AMPEL360 Unique Characteristics
 
@@ -43,7 +43,7 @@ The AMPEL360 has no conventional fuselage-wing distinction, presenting unique di
 **Solution Approach:**
 - Define **BWB Reference System (BRS):** X-axis (longitudinal), Y-axis (lateral), Z-axis (vertical)
 - Origin at nose apex, X+ aft, Y+ right, Z+ up
-- All dimensions referenced to BRS per SAE AS8015 (Aircraft Coordinate System)
+- All dimensions referenced to BRS per [SAE AS8015](https://www.sae.org/standards/content/as8015c/) (Aircraft Coordinate System)
 
 ### 2. **Cryogenic Hydrogen Tanks**
 LH₂ storage tanks occupy significant internal volume requiring precise documentation:
@@ -180,7 +180,7 @@ Safe operating and maintenance clearances:
 
 ### CAD Model Integration
 - **Master Geometry:** CATIA V6 digital mockup (DMU)
-- **Dimensional Drawings:** 2D engineering drawings per ASME Y14.5 (GD&T)
+- **Dimensional Drawings:** 2D engineering drawings per [ASME Y14.5](https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing) (GD&T)
 - **3D PDF:** Interactive 3D models for maintenance documentation
 - **Model-Based Definition (MBD):** Full 3D annotations (no 2D drawings required)
 
@@ -191,9 +191,9 @@ Safe operating and maintenance clearances:
 - Operator notification via Service Bulletin (if affects operations)
 
 ### Data Exchange Formats
-- **STEP AP242:** 3D CAD exchange (ISO 10303-242)
+- **[STEP AP242](https://www.iso.org/standard/66654.html):** 3D CAD exchange (ISO 10303-242)
 - **IGES:** Legacy format for older systems
-- **ATA iSpec 2200 XML:** Standard dimensional data exchange
+- **[ATA iSpec 2200 XML](https://www.ataspec2200.org/):** Standard dimensional data exchange
 - **Airport Planning Database:** Standardized format for airport design tools
 
 ## Document Hierarchy

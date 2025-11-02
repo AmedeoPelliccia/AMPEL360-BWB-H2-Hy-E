@@ -5,10 +5,10 @@
 ### 1.1 Certification Requirements
 | Requirement | Source | Dimension Impact |
 |-------------|--------|------------------|
-| Emergency egress (90 seconds) | CS-25.803 | Door spacing: max 18m between Type-A exits |
-| Runway overrun distance | CS-25.109 | Length affects rejected takeoff calculations |
-| Airport compatibility | ICAO Annex 14 | Wingspan determines aerodrome code (4E) |
-| Hangar fire protection | NFPA 409 | Height determines sprinkler system design |
+| Emergency egress (90 seconds) | [CS-25.803](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | Door spacing: max 18m between Type-A exits |
+| Runway overrun distance | [CS-25.109](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | Length affects rejected takeoff calculations |
+| Airport compatibility | [ICAO Annex 14](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf) | Wingspan determines aerodrome code (4E) |
+| Hangar fire protection | [NFPA 409](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=409) | Height determines sprinkler system design |
 
 ### 1.2 Operational Requirements
 | Requirement | Source | Dimension Impact |
@@ -189,10 +189,10 @@
 
 | Requirement | Specification | AMPEL360 Compliance |
 |-------------|---------------|---------------------|
-| CS-25.783(c) | Type-A exit: 42" × 72" min | 48" × 78" (8 exits) ✓ |
-| CS-25.803(b) | 90-sec evacuation | Analysis shows 82 sec ✓ |
-| CS-25.109 | Accelerate-stop distance | 2,450m (field length 2,500m) ✓ |
-| ICAO Annex 14 | Code E wingspan 52-65m | 65.0m (at limit) ✓ |
+| [CS-25.783(c)](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | Type-A exit: 42" × 72" min | 48" × 78" (8 exits) ✓ |
+| [CS-25.803(b)](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | 90-sec evacuation | Analysis shows 82 sec ✓ |
+| [CS-25.109](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | Accelerate-stop distance | 2,450m (field length 2,500m) ✓ |
+| [ICAO Annex 14](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf) | Code E wingspan 52-65m | 65.0m (at limit) ✓ |
 
 ## 6.0 Design Changes and Configuration Control
 
@@ -245,7 +245,7 @@
 
 **Objective Function:**
 - Minimize DOC = f(fuel_burn, maintenance, acquisition_cost)
-- Subject to: Gate compatibility, hangar compatibility, CS-25 compliance
+- Subject to: Gate compatibility, hangar compatibility, [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) compliance
 
 **Optimizer:** Multi-objective genetic algorithm (MOGA)
 - Population: 500 candidate configurations
@@ -312,10 +312,10 @@
 - AMPEL-CDR-GEOM-001: Critical Design Review (Geometry Package)
 
 ### 10.2 External Standards
-- SAE AS8015: Aircraft Coordinate System
-- ASME Y14.5: Geometric Dimensioning and Tolerancing
-- ICAO Annex 14: Aerodromes (Design Standards)
-- CS-25: Certification Specifications for Large Aeroplanes
+- [SAE AS8015](https://www.sae.org/standards/content/as8015c/): Aircraft Coordinate System
+- [ASME Y14.5](https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing): Geometric Dimensioning and Tolerancing
+- [ICAO Annex 14](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf): Aerodromes (Design Standards)
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27): Certification Specifications for Large Aeroplanes
 
 ### 10.3 Related ATA Chapters
 - ATA 51-57: Structural Component Dimensions (detailed breakout)

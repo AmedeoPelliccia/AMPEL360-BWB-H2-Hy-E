@@ -145,14 +145,14 @@ This component documents the volumetric capacity and dimensional specifications 
 ## Certification Requirements
 
 ### CS-25 (Applicable)
-- **CS-25.963:** Fuel tanks (general requirements)
-- **CS-25.965:** Fuel tank tests (pressure, leak, structural)
-- **CS-25.967:** Fuel tank installation (crashworthiness)
+- **[CS-25.963](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Fuel tanks (general requirements)
+- **[CS-25.965](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Fuel tank tests (pressure, leak, structural)
+- **[CS-25.967](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Fuel tank installation (crashworthiness)
 
 ### Hydrogen-Specific Standards
-- **ISO 21013:** Cryogenic vessels (design requirements)
-- **SAE AS6858:** Cryogenic Hydrogen Storage for Aircraft
-- **NFPA 2:** Hydrogen Technologies Code
+- **[ISO 21013](https://www.iso.org/standard/61595.html):** Cryogenic vessels (design requirements)
+- **[SAE AS6858](https://www.sae.org/standards/content/as6858/):** Cryogenic Hydrogen Storage for Aircraft
+- **[NFPA 2](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2):** Hydrogen Technologies Code
 
 ## Document Status
 **Status:** In Development  

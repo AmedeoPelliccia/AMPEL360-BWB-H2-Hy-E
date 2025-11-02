@@ -52,7 +52,7 @@ This component establishes the official principal dimensions of the AMPEL360 air
 ## 3.0 BWB Reference System (BRS)
 
 ### 3.1 Coordinate System Definition
-The AMPEL360 uses a Body-Fixed Reference System per SAE AS8015:
+The AMPEL360 uses a Body-Fixed Reference System per [SAE AS8015](https://www.sae.org/standards/content/as8015c/):
 
 **Origin:** Nose apex (intersection of nose cone with forward pressure bulkhead)
 
@@ -140,7 +140,7 @@ The AMPEL360 uses a Body-Fixed Reference System per SAE AS8015:
 **AMPEL360 Classification:**
 - **Code Letter:** E (wingspan 52m - 65m)
 - **Code Number:** 4 (Reference Field Length ≥1800m)
-- **Designation:** 4E
+- **Designation:** 4E (per [ICAO Annex 14](https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf))
 
 **Airport Requirements:**
 - **Runway Width:** Minimum 45m (typically 60m for Code E)

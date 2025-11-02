@@ -12,7 +12,7 @@ This folder contains safety-related documentation for the overall dimensions of 
 - Hydrogen fueling safety zones
 
 ### 2. Emergency Egress
-- Emergency exit spacing verification (CS-25.803)
+- Emergency exit spacing verification ([CS-25.803](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27))
 - Evacuation path analysis (90-second requirement)
 - Door clearance verification
 
@@ -29,10 +29,10 @@ This folder contains safety-related documentation for the overall dimensions of 
 - Emergency Egress Dimensional Verification
 
 ## Related Standards
-- CS-25.783: Door dimensions and emergency egress
-- CS-25.803: Emergency evacuation requirements
-- NFPA 2: Hydrogen Technologies Code
-- SAE ARP6116: Aircraft Ground Support Equipment Clearances
+- [CS-25.783](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27): Door dimensions and emergency egress
+- [CS-25.803](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27): Emergency evacuation requirements
+- [NFPA 2](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2): Hydrogen Technologies Code
+- [SAE ARP6116](https://www.sae.org/standards/content/arp6116/): Aircraft Ground Support Equipment Clearances
 
 ## Document Status
 **Status:** In Development  
