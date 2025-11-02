@@ -121,13 +121,14 @@
 ### 4.1 Mass Properties Impact
 **Dimensional Changes → Mass Effects:**
 
-| Parameter | Baseline | Optimized | Mass Change |
-|-----------|----------|-----------|-------------|
-| Wingspan | 60m | 65m | +1,200 kg (wing structure) |
-| Length | 48m | 52.5m | +800 kg (aft body structure) |
-| Height | 9.8m | 11.2m | +200 kg (propulsor pylons) |
-| **Total** | - | - | +2,200 kg |
+| Parameter   | Baseline | Rev A   | Rev B   | Rev C   | Change (per step)         | Mass Change (per step)      |
+|-------------|----------|---------|---------|---------|---------------------------|-----------------------------|
+| Wingspan    | 60m      | 65m     | 65m     | 65m     | +5m (Baseline → Rev A)    | +1,200 kg (wing structure)  |
+| Length      | 48m      | 48m     | 52.5m   | 52.5m   | +4.5m (Rev A → Rev B)     | +800 kg (aft body structure)|
+| Height      | 9.8m     | 9.8m    | 9.8m    | 11.2m   | +1.4m (Rev B → Rev C)     | +200 kg (propulsor pylons)  |
+| **Total**   |          |         |         |         |                           | **+2,200 kg**               |
 
+*Note: Mass changes are cumulative and reflect sequential design iterations (Rev A → Rev B → Rev C), not simultaneous modifications.*
 **Mass Penalty Justification:**
 - +2,200 kg structural mass penalty
 - -1,800 kg fuel burn reduction (7,500 nm mission, improved L/D)
