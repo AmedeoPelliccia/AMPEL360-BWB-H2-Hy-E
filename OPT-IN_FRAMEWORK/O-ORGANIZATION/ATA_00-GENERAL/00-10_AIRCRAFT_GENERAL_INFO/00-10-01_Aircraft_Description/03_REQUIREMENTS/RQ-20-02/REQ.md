@@ -41,7 +41,7 @@ The aircraft's **liquid hydrogen (LH₂) refueling system** shall comply with **
 🔗 Test artefacts:  
 - Analysis: ../../V_AND_V/cases/[**TEST-REFU-001**](../../V_AND_V/cases/TEST-REFU-001.md)  
 - Ground test: ../../V_AND_V/cases/[**TEST-REFU-GT-001**](../../V_AND_V/cases/TEST-REFU-GT-001.md)  
-- Operational validation: ../../V_AND_V/cases/[**TEST-REFU-OPS-001**](../../V_AND_V/cases/TEST-REFU-OPS-OPS-001.md)
+- Operational validation: ../../V_AND_V/cases/[**TEST-REFU-OPS-001**](../../V_AND_V/cases/TEST-REFU-OPS-001.md)
 
 ---
 
