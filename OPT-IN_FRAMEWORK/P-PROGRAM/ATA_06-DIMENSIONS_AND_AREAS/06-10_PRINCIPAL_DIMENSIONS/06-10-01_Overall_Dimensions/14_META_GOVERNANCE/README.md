@@ -9,7 +9,7 @@ This folder contains metadata, governance rules, configuration management, and q
 - **Component ID:** 06-10-01
 - **Component Name:** Overall Dimensions
 - **Current Revision:** C
-- **Revision Date:** 2022-02-20
+- **Revision Date:** 2025-11-01
 - **Next Review Date:** 2026-05-01
 - **Document Owner:** Chief Engineer, AMPEL360 Program
 
