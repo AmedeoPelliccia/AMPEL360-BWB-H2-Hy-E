@@ -18,7 +18,7 @@ The aircraft shall incorporate a **closed-loop CO₂ battery system** as hybrid 
    - CO₂ capture and regeneration system integrated per **ATA 21-80** (provisional).  
    - Operates as reversible electrochemical or thermochemical battery.  
    - No net CO₂ vented to atmosphere during normal operations.  
-   - CO₂ working fluid循環 closed within aircraft systems.
+   - CO₂ working fluid is circulated in a closed loop within aircraft systems.
 
 3. **Power Electronics and Electrical Integration**  
    - Bidirectional DC/DC converters interfaced with **HVDC bus (540 VDC nominal)** per **E2-24**.  
