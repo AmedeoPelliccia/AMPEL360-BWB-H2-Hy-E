@@ -1,0 +1,259 @@
+---
+chapter:
+  number: "06"
+  title: "Dimensions and Areas"
+  category: "P-PROGRAM"
+  version: "1.0.0"
+  status: "Active"
+  last_updated: "2025-11-01"
+  
+description: |
+  ATA Chapter 06 establishes the official dimensional data for the AMPEL360 
+  Blended Wing Body (BWB) aircraft. This chapter provides comprehensive 
+  documentation of all physical dimensions, surface areas, volumes, and 
+  geometric characteristics required for ground handling, hangar planning, 
+  maintenance access, regulatory compliance, and operational procedures.
+
+scope:
+  - Principal dimensions (length, wingspan, height)
+  - Surface areas (wing, control surfaces, wetted area)
+  - Internal volumes (fuel, cargo, equipment bays)
+  - Cabin dimensions and configurations
+  - Cargo compartment dimensions
+  - Access dimensions (doors, hatches, panels)
+  - Zonal definitions for maintenance
+  - Ground handling envelopes
+  - Airport compatibility data
+
+regulatory_framework:
+  certification_requirements:
+    # EASA CS-25: https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27
+    - CS-25.783: "Doors (minimum dimensions, emergency egress)"
+    - CS-25.1359: "Electrical System Fire Protection (compartment dimensions)"
+    # FAA Advisory Circular: https://www.faa.gov/airports/resources/advisory_circulars/
+    - FAA AC 150/5300-13B: "Airport Design (aircraft parking envelope)"
+    # ICAO Standards: https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf
+    - ICAO Annex 14: "Aerodromes (aircraft reference code dimensions)"
+    # IATA AHM: https://www.iata.org/en/publications/manuals/airport-handling-manual/
+    - AHM 560: "Airplane Characteristics for Airport Planning"
+  
+  industry_standards:
+    # ATA Spec: https://www.ataspec2200.org/
+    - ATA iSpec 2200 Chapter 06: "Standard dimensional data format"
+    # SAE Standards: https://www.sae.org/standards/
+    - SAE ARP6116: "Aircraft Ground Support Equipment Clearances"
+    # ISO Standards: https://www.iso.org/
+    - ISO 3977: "Aircraft Dimensions and Masses"
+    # IATA: https://www.iata.org/
+    - IATA AHM: "Standard dimensional data exchange"
+    # SAE AS8015: https://www.sae.org/standards/content/as8015c/
+    - SAE AS8015: "Aircraft Coordinate System"
+    # ASME: https://www.asme.org/codes-standards/
+    - ASME Y14.5: "Geometric Dimensioning and Tolerancing (GD&T)"
+
+ampel360_unique_features:
+  blended_wing_body:
+    description: "No conventional fuselage-wing distinction"
+    reference_system: "BWB Reference System (BRS)"
+    coordinate_origin: "Nose apex"
+    axes:
+      x_axis: "Longitudinal (X+ aft)"
+      y_axis: "Lateral (Y+ right)"
+      z_axis: "Vertical (Z+ up)"
+  
+  cryogenic_hydrogen:
+    inner_vessel_volume: "13,000 L (12,500 L usable + 500 L ullage)"
+    outer_vessel_dimensions: "6.2m length × 3.8m diameter"
+    insulation_thickness: "150mm multi-layer insulation (MLI)"
+    clearance_envelope: "500mm minimum from structure"
+    temperature_range: "-253°C to +20°C"
+  
+  upper_surface_propulsors:
+    propulsor_diameter: "5.2m (blade tip to tip)"
+    ground_clearance: "3.8m (blade tip to ground, static)"
+    nacelle_length: "4.5m (inlet to exhaust)"
+    lateral_spacing: "18m (centerline to centerline)"
+  
+  distributed_cabin:
+    max_cabin_width: "22.5m (BWB center section)"
+    min_cabin_width: "8.2m (nose/tail sections)"
+    cabin_height: "2.3m (constant)"
+    floor_area: "485 m²"
+    seating_capacity:
+      three_class: "300 passengers"
+      high_density: "350 passengers"
+
+principal_dimensions:
+  wingspan: "65.0 m ±50mm"
+  overall_length: "52.5 m ±50mm"
+  overall_height: "11.2 m ±50mm"
+  wheelbase: "23.8 m"
+  main_gear_track: "15.6 m"
+  
+icao_classification:
+  aerodrome_code: "4E"
+  code_letter: "E (wingspan 52m - 65m)"
+  code_number: "4 (Reference Field Length ≥1800m)"
+
+subsections:
+  "06-10":
+    title: "Principal Dimensions"
+    components:
+      - "06-10-01: Overall Dimensions"
+      - "06-10-02: Wingspan and Wing Geometry"
+      - "06-10-03: Aircraft Length"
+      - "06-10-04: Aircraft Height"
+      - "06-10-05: Ground Clearances"
+      - "06-10-06: Wheelbase and Track"
+      - "06-10-07: Reference Datum System"
+  
+  "06-20":
+    title: "Surface Areas"
+    components:
+      - "06-20-01: Wing Reference Area"
+      - "06-20-02: Wetted Area Total"
+      - "06-20-03: Control Surface Areas"
+      - "06-20-04: BWB Planform Area"
+      - "06-20-05: Composite Panel Areas"
+      - "06-20-06: Aerodynamic Reference Areas"
+  
+  "06-30":
+    title: "Internal Volumes"
+    components:
+      - "06-30-01: Fuel Tank Volumes (LH2)"
+      - "06-30-02: Cargo Hold Volumes"
+      - "06-30-03: Cabin Pressurized Volume"
+      - "06-30-04: Equipment Bay Volumes"
+      - "06-30-05: Battery Compartment Volumes"
+      - "06-30-06: Fuel Cell Compartment Volume"
+  
+  "06-40":
+    title: "Cabin Dimensions"
+    components:
+      - "06-40-01: Cabin Length and Width"
+      - "06-40-02: Cabin Height and Floor Area"
+      - "06-40-03: Seating Arrangement Dimensions"
+      - "06-40-04: Aisle Width and Configuration"
+      - "06-40-05: Emergency Exit Dimensions"
+      - "06-40-06: Galley and Lavatory Dimensions"
+  
+  "06-50":
+    title: "Cargo Compartment Dimensions"
+    components:
+      - "06-50-01: Forward Cargo Hold"
+      - "06-50-02: Aft Cargo Hold"
+      - "06-50-03: Bulk Cargo Compartment"
+      - "06-50-04: Cargo Door Dimensions"
+      - "06-50-05: Container and Pallet Positions"
+      - "06-50-06: Cargo Loading System Dimensions"
+  
+  "06-60":
+    title: "Access Dimensions"
+    components:
+      - "06-60-01: Passenger Door Dimensions"
+      - "06-60-02: Service Door Dimensions"
+      - "06-60-03: Access Panel Index"
+      - "06-60-04: Maintenance Hatch Dimensions"
+      - "06-60-05: Equipment Bay Access"
+      - "06-60-06: H2 Tank Access Envelope"
+  
+  "06-70":
+    title: "Zonal Definitions"
+    components:
+      - "06-70-01: Zone Numbering System"
+      - "06-70-02: Nose Section Zones (100-200)"
+      - "06-70-03: Center Body Zones (300-600)"
+      - "06-70-04: Wing Zones (700-800)"
+      - "06-70-05: Aft Section Zones (900)"
+      - "06-70-06: Propulsor Zones (400)"
+      - "06-70-07: H2 System Safety Zones"
+  
+  "06-80":
+    title: "Ground Handling Envelope"
+    components:
+      - "06-80-01: Aircraft Parking Envelope"
+      - "06-80-02: Wingtip Clearance Requirements"
+      - "06-80-03: Towing Clearance Envelope"
+      - "06-80-04: Turning Radius Data"
+      - "06-80-05: Jetway Compatibility Dimensions"
+      - "06-80-06: Ground Support Equipment Clearances"
+      - "06-80-07: Propulsor Safety Zone"
+  
+  "06-90":
+    title: "Airport Characteristics Data"
+    components:
+      - "06-90-01: ICAO Aerodrome Reference Code"
+      - "06-90-02: Airport Planning Document"
+      - "06-90-03: Gate Compatibility Matrix"
+      - "06-90-04: Pavement Classification Number (PCN)"
+      - "06-90-05: Special Handling Requirements (H2)"
+      - "06-90-06: AHM 560 Data Package"
+
+measurement_standards:
+  precision_requirements:
+    overall_dimensions: "±25mm (±1 inch)"
+    critical_interfaces: "±5mm (±0.2 inch)"
+    tank_volumes: "±0.5% of nominal capacity"
+    surface_areas: "±1% of calculated value"
+  
+  measurement_methods:
+    - "Laser Scanning: Full aircraft 3D scan (±2mm accuracy)"
+    - "Photogrammetry: Large dimension verification"
+    - "CMM: Critical interface dimensions"
+    - "Tank Calibration: Volumetric flow measurement"
+
+data_management:
+  cad_system: "CATIA V6 digital mockup (DMU)"
+  plm_system: "Product Lifecycle Management for revision control"
+  exchange_formats:
+    - "STEP AP242 (ISO 10303-242)"
+    - "IGES (legacy)"
+    - "ATA iSpec 2200 XML"
+    - "Airport Planning Database format"
+
+interfaces:
+  ata_chapters:
+    - "ATA 00-10: Aircraft General Information"
+    - "ATA 02-30: Airport Facilities"
+    - "ATA 05-30: Zonal Inspection"
+    - "ATA 07: Lifting and Shoring"
+    - "ATA 08: Leveling and Weighing"
+    - "ATA 09: Towing and Taxiing"
+    - "ATA 12: Servicing"
+    - "ATA 28: Fuel System"
+    - "ATA 50: Cargo Compartments"
+    - "ATA 51-57: Structures"
+
+revision_history:
+  - version: "1.0.0"
+    date: "2025-11-01"
+    author: "AMPEL360 Program Office"
+    changes: "Initial release of ATA 06 chapter structure and documentation"
+    status: "Active"
+
+authors:
+  - name: "Amedeo Pelliccia"
+    role: "Chief Architect"
+    organization: "AMPEL360 Program"
+  - name: "Technical Documentation Team"
+    role: "Documentation"
+    organization: "AMPEL360 Program"
+
+keywords:
+  - dimensions
+  - areas
+  - volumes
+  - BWB geometry
+  - hydrogen tanks
+  - ground handling
+  - airport compatibility
+  - zonal definitions
+  - reference coordinates
+  - clearances
+
+notes: |
+  This chapter is foundational to the entire P-PROGRAM axis and provides 
+  critical data for multiple downstream systems and documentation. All 
+  dimensional data must be verified through formal measurement procedures 
+  and maintained under strict configuration control. Changes to dimensional 
+  data may require regulatory notification and operator service bulletins.
