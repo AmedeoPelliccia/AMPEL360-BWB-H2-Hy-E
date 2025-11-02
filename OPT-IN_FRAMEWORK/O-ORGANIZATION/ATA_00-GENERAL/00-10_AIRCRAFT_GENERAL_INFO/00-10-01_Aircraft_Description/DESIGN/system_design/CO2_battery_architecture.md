@@ -150,32 +150,27 @@ The integrated CO₂ battery comprises the following major subsystems:
 
 ```mermaid
 flowchart TB
-    %% System Titles
-    title["AIRCRAFT ELECTRICAL POWER SYSTEM<br><sub>Flight Management System (FMS) [Altitude, Speed, Phase]</sub>"]:::block
-    title --> CAN["CAN Bus<br>ARINC 825"]:::sig
+    title["AIRCRAFT ELECTRICAL POWER SYSTEM\nFlight Management System (FMS) [Altitude, Speed, Phase]"]
+    title --> CAN["CAN Bus\nARINC 825"]
 
-    %% Main distrib
-    CAN --> EPMS["EPMS<br'Electrical Power Mgmt, 540 VDC Bus"]:::main
-    CAN --> BCU["BCU<br>Battery Control Unit"]:::ctrl
-    CAN --> SENS["Sensors & Diagnostic<br>Subsystem<br>P, T, Flow"]:::sens
+    CAN --> EPMS["EPMS\nElectrical Power Mgmt, 540 VDC Bus"]
+    CAN --> BCU["BCU\nBattery Control Unit"]
+    CAN --> SENS["Sensors & Diagnostic Subsystem\nP, T, Flow"]
 
-    %% EPMS, BCU, Sensor connections
     BCU -->|CB1| EPMS
     BCU -->|CB2| EPMS
-    BCU -->|Proportional<br>Pressure<br>Relief Valve PV1| EPMS
+    BCU -->|"Proportional\nPressure Relief Valve PV1"| EPMS
     BCU --> SENS
 
-    %% EPMS to storage/cycle
-    EPMS --> VDC["540 VDC<br>Main Bus"]:::main
-    VDC --> CO2SYS["CO₂ STORAGE &<br>CYCLE SYSTEM"]:::unit
+    EPMS --> VDC["540 VDC\nMain Bus"]
+    VDC --> CO2SYS["CO2 STORAGE &\nCYCLE SYSTEM"]
 
-    %% CO2 Cycle Subcomponents
-    CO2SYS --> HP["High-Pressure Tanks<br>(×, 250 bar"]:::unit
-    CO2SYS --> VALVES["Isolation Valves<br>(SV1, SV2)<br>Check Valves<br>one-way"]:::unit
-    CO2SYS --> ACC["Accumulator<br>surge dampening"]:::unit
+    CO2SYS --> HP["High-Pressure Tanks\n(x, 250 bar)"]
+    CO2SYS --> VALVES["Isolation Valves (SV1, SV2)\nCheck Valves one-way"]
+    CO2SYS --> ACC["Accumulator\nsurge dampening"]
 
-    CO2SYS --> ETU["Expansion Turbine ETU"]:::unit
-    ETU -->|Output| SGEN["Synchronous
+    CO2SYS --> ETU["Expansion Turbine ETU"]
+    ETU -->|Output| SGEN["Synchronous Generator"]
 ```
 
 ---
