@@ -1,0 +1,6 @@
+Tag,Version,Date,Baseline,Status,Description
+v1.0.0-CONCEPTUAL,1.0.0,2025-11-03,Conceptual,Active,Initial conceptual design baseline
+v2.0.0-PDR,2.0.0,2026-03-15,PDR,Planned,Preliminary Design Review baseline
+v3.0.0-CDR,3.0.0,2026-09-20,CDR,Planned,Critical Design Review baseline
+v3.1.0-TRR,3.1.0,2026-12-10,TRR,Planned,Test Readiness Review baseline
+v4.0.0-PRODUCTION,4.0.0,2027-06-30,Production,Planned,Production release baseline

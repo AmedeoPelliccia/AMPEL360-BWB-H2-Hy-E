@@ -1,0 +1,9 @@
+Document_ID,Document_Name,Type,Owner,Status,Version,Last_Updated
+DOC-52-10-01-001,Door_L1_Overview,Technical,Design_Lead,Released,1.0,2025-11-03
+DOC-52-10-01-002,Safety_Assessment,Technical,Safety_Engineer,In_Review,1.0,2025-11-03
+DOC-52-10-01-003,Requirements_Specification,Technical,Systems_Engineer,Released,2.0,2025-11-03
+DOC-52-10-01-004,Design_Description,Technical,Design_Engineer,Draft,1.2,2025-11-03
+DOC-52-10-01-005,Interface_Control_Document,Technical,Interface_Engineer,In_Review,1.0,2025-11-03
+DOC-52-10-01-006,Material_Selection,Technical,Materials_Engineer,Released,1.0,2025-11-03
+DOC-52-10-01-007,Structural_Analysis,Technical,Analysis_Engineer,Draft,0.5,2025-11-03
+DOC-52-10-01-008,Modal_Analysis_Report,Technical,Dynamics_Engineer,Draft,0.3,2025-11-03

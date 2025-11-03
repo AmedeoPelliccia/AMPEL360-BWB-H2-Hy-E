@@ -1,0 +1,16 @@
+Risk_ID,Category,Description,Probability,Impact,Score,Owner,Mitigation,Status
+RSK-001,Technical,No_FEA_capability,High,Critical,15,Chief_Eng,Contract_FEA_services,Open
+RSK-002,Technical,Mode_1_resonance_25Hz,Medium,Critical,12,Design_Lead,Early_GVT_required,Critical
+RSK-003,Financial,Funding_gap_$2M,High,Critical,15,Program_Mgr,Phased_funding_approach,Open
+RSK-004,Schedule,Prototype_delay,Medium,High,9,Production,Parallel_activities,Monitoring
+RSK-005,Documentation,AI_analysis_only,High,High,12,Chief_Eng,Validate_with_FEA,Open
+RSK-006,Compliance,No_test_data,High,High,12,Cert_Lead,Plan_test_campaign,Open
+RSK-007,Technical,Material_properties,Low,Medium,4,Materials,Coupon_testing,Planned
+RSK-008,Supply_Chain,Long_lead_items,Medium,Medium,6,Procurement,Early_ordering,Monitoring
+RSK-009,Knowledge,SME_availability,Low,High,6,HR,Knowledge_capture,Active
+RSK-010,Quality,Documentation_errors,Medium,Low,3,QA,Review_process,Controlled
+RSK-011,Technical,Interface_compatibility,Medium,High,9,Interface_Eng,Early_integration_testing,Open
+RSK-012,Safety,Emergency_egress_timing,High,Critical,15,Safety_Eng,Full_scale_evacuation_demo,Planned
+RSK-013,Certification,Novel_design_acceptance,Medium,High,9,Cert_Lead,Early_authority_engagement,Active
+RSK-014,Manufacturing,Tooling_complexity,Medium,Medium,6,Mfg_Eng,Supplier_capability_assessment,Planned
+RSK-015,Operational,Maintenance_access,Low,Medium,4,Maint_Eng,Mockup_validation,Planned
