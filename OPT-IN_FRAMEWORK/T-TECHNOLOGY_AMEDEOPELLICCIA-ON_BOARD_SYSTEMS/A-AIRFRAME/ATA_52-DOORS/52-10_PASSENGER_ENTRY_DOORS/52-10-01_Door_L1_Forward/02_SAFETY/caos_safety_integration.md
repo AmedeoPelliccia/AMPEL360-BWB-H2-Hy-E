@@ -14,7 +14,7 @@
 
 ### 1.1 Purpose
 
-This document describes how the **Cosmic Adaptive Operating System (CAOS)** enhances safety for Door L1 Forward through:
+This document describes how **CAOS (Computer Aided Operations and Services)** enhances safety for Door L1 Forward through:
 - Real-time monitoring and health management
 - Predictive maintenance and failure prevention
 - Fleet-level learning and continuous improvement
@@ -22,7 +22,7 @@ This document describes how the **Cosmic Adaptive Operating System (CAOS)** enha
 
 ### 1.2 CAOS Philosophy
 
-**CAOS (Cosmic Adaptive Operating System)** is the AMPEL360 intelligent monitoring and decision-making framework that:
+**CAOS (Computer Aided Operations and Services)** is the AMPEL360 intelligent monitoring and decision-making framework that:
 - Monitors all aircraft systems in real-time
 - Learns from fleet-wide operational data
 - Predicts failures before they occur
