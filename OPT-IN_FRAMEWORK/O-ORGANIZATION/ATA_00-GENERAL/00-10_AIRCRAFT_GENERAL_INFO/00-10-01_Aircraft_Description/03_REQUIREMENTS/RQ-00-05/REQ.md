@@ -29,14 +29,14 @@ The blended-wing-body (BWB) primary structure shall be designed to meet all **li
 🔗 Artefacts:  
 - Mass baseline: ../../ENGINEERING/analyses/structural/[**mass_properties_baseline.md**](../../ENGINEERING/analyses/structural/mass_properties_baseline.md)  
 - FEM model: ../../ENGINEERING/simulations/[**FEA_models/structural_baseline/**](../../ENGINEERING/simulations/FEA_models/structural_baseline/)  
-- Load envelopes: ../../DESIGN/system_design/[**load_envelope_overview.md**](../../DESIGN/system_design/load_envelope_overview.md)
+- Load envelopes: ../../04_DESIGN/system_design/[**load_envelope_overview.md**](../../04_DESIGN/system_design/load_envelope_overview.md)
 
 ---
 
 ## Rationale
 High structural efficiency is fundamental to offset the additional weight of hybrid-electric systems and cryogenic tanks.  
 BWB architecture enables distributed load paths and reduced bending moments compared to tube-and-wing, allowing thinner skins and integrated spars.  
-🔗 Concept reference: ../../DESIGN/system_design/[**BWB_primary_structure_concept.md**](../../DESIGN/system_design/BWB_primary_structure_concept.md)
+🔗 Concept reference: ../../04_DESIGN/system_design/[**BWB_primary_structure_concept.md**](../../04_DESIGN/system_design/BWB_primary_structure_concept.md)
 
 ---
 

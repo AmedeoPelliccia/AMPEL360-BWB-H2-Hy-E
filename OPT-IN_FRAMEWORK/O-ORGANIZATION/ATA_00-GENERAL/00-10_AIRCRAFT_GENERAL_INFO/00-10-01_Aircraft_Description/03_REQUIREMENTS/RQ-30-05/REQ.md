@@ -41,7 +41,7 @@ Complete bidirectional traceability shall be maintained between **requirements**
 ## Rationale
 Regulatory safety case requires demonstrating that all hazards are identified, mitigated, and verified. Traceability provides evidence chain from requirements through safety analysis to verification, essential for **ARP4754A** and **ARP4761** compliance and certification approval.
 
-🔗 Safety methodology: ../../DESIGN/system_design/[**safety_traceability_framework.md**](../../DESIGN/system_design/safety_traceability_framework.md)
+🔗 Safety methodology: ../../04_DESIGN/system_design/[**safety_traceability_framework.md**](../../04_DESIGN/system_design/safety_traceability_framework.md)
 
 ---
 

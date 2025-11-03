@@ -46,7 +46,7 @@ The aircraft shall incorporate a **secondary fuel interface** capable of utilizi
 ## Rationale
 The SAF interface provides operational flexibility, regulatory compliance for contingency power, and backward compatibility with existing airport fuel infrastructure. This hybrid approach de-risks hydrogen adoption during the transition period while maintaining zero-emission capability as the primary operational mode.
 
-🔗 Background: ../../DESIGN/system_design/[**hybrid_fuel_strategy.md**](../../DESIGN/system_design/hybrid_fuel_strategy.md)
+🔗 Background: ../../04_DESIGN/system_design/[**hybrid_fuel_strategy.md**](../../04_DESIGN/system_design/hybrid_fuel_strategy.md)
 
 ---
 

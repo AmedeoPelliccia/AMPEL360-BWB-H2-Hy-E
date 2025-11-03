@@ -57,7 +57,7 @@ The aircraft shall incorporate an **autonomous fire detection and suppression sy
 ## Rationale
 Hydrogen fuel-cells, high-voltage batteries, and electric propulsion systems introduce novel fire hazards requiring advanced autonomous suppression. HALT logic ensures rapid, reliable fire knockdown without reliance on crew response time. Inerting is particularly effective for enclosed electrical/battery fires where traditional Halon may be less effective.
 
-🔗 Fire safety design: ../../DESIGN/system_design/[**fire_protection_architecture.md**](../../DESIGN/system_design/fire_protection_architecture.md)
+🔗 Fire safety design: ../../04_DESIGN/system_design/[**fire_protection_architecture.md**](../../04_DESIGN/system_design/fire_protection_architecture.md)
 
 ---
 

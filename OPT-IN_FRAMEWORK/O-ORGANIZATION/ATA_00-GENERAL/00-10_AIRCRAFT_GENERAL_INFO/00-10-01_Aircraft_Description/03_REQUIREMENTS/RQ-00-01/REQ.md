@@ -25,7 +25,7 @@ The aircraft shall achieve a **cruise Mach number ≥ 0.78** at **FL350 (≈10.7
 
 ## Rationale
 Mach 0.78 ensures competitive block times versus tube-and-wing benchmarks while preserving BWB aero efficiency and open-fan acoustic margins.  
-🔗 Background analysis: ../../DESIGN/system_design/[**performance_rationale.md**](../../DESIGN/system_design/performance_rationale.md)
+🔗 Background analysis: ../../04_DESIGN/system_design/[**performance_rationale.md**](../../04_DESIGN/system_design/performance_rationale.md)
 
 ---
 

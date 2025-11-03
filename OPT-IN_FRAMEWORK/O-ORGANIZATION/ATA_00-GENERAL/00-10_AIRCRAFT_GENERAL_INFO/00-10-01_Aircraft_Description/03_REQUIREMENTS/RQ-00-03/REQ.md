@@ -25,7 +25,7 @@ The aircraft shall accommodate **up to 220 passengers** in a **single-class high
    - Emergency lighting per ATA 33, oxygen per ATA 35.
 
 🔗 Linked artefacts:  
-- Layout: ../../DESIGN/system_design/[**cabin_layout_overview.md**](../../DESIGN/system_design/cabin_layout_overview.md)  
+- Layout: ../../04_DESIGN/system_design/[**cabin_layout_overview.md**](../../04_DESIGN/system_design/cabin_layout_overview.md)  
 - Evacuation model: ../../ENGINEERING/analyses/structural/[**evacuation_simulation.md**](../../ENGINEERING/analyses/structural/evacuation_simulation.md)  
 - ECS data: ../../ENGINEERING/analyses/thermal/[**ECS_load_balance.md**](../../ENGINEERING/analyses/thermal/ECS_load_balance.md)
 
@@ -34,7 +34,7 @@ The aircraft shall accommodate **up to 220 passengers** in a **single-class high
 ## Rationale
 The BWB internal volume allows for greater usable area and lower pressurization loads; however, cabin egress and comfort must satisfy existing regulatory metrics despite the novel layout.
 
-🔗 Reference studies: ../../DESIGN/system_design/[**BWB_cabin_integration.md**](../../DESIGN/system_design/BWB_cabin_integration.md)
+🔗 Reference studies: ../../04_DESIGN/system_design/[**BWB_cabin_integration.md**](../../04_DESIGN/system_design/BWB_cabin_integration.md)
 
 ---
 

@@ -12,17 +12,17 @@ Range demonstration is accepted when the following are **all** satisfied for the
 
 1. **Mission Profile Definition (baseline)**  
    - Taxi-out, takeoff, climb, **cruise**, descent, approach/landing.  
-   - **Reserves & contingencies** per certification/ops basis (alternate + holding + final reserve), documented in [mission_profile.md](../../DESIGN/system_design/mission_profile.md).  
+   - **Reserves & contingencies** per certification/ops basis (alternate + holding + final reserve), documented in [mission_profile.md](../../04_DESIGN/system_design/mission_profile.md).  
    - **Zero in-flight CO₂** (H₂ mode) throughout planned segments; SAF TG may be **armed but not used** unless contingency criteria are met.
 
 2. **Performance & Energy**  
-   - Net mission distance ≥ **3,500 km** (GNSS-equivalent great-circle + procedures) per [range_methodology.md](../../DESIGN/system_design/range_methodology.md).  
+   - Net mission distance ≥ **3,500 km** (GNSS-equivalent great-circle + procedures) per [range_methodology.md](../../04_DESIGN/system_design/range_methodology.md).  
    - Energy balance closes with ≥ **5% hydrogen mass margin** at landing (post-reserve).  
    - CO₂ buffer cyclic depth within limits (±SOC bands) per EMS spec [SR-CTRL-007](../SR/SR-CTRL-007.md).  
    - Propulsor efficiency within validated map envelopes per [SR-PROP-004](../SR/SR-PROP-004.md).
 
 3. **Environmental & Handling**  
-   - Winds and temperatures per mission envelope in [performance_rationale.md](../../DESIGN/system_design/performance_rationale.md).  
+   - Winds and temperatures per mission envelope in [performance_rationale.md](../../04_DESIGN/system_design/performance_rationale.md).  
    - Handling qualities and protections nominal (no abnormal law triggers) per autoflight requirements.
 
 4. **Evidence Set**  
@@ -39,7 +39,7 @@ Range demonstration is accepted when the following are **all** satisfied for the
 
 ## Rationale
 A ≥3,500 km zero-emission design range secures competitive network coverage while maintaining BWB efficiency, hydrogen safety margins, and open-fan acoustic constraints.  
-🔗 Background: ../../DESIGN/system_design/[**range_methodology.md**](../../DESIGN/system_design/range_methodology.md)
+🔗 Background: ../../04_DESIGN/system_design/[**range_methodology.md**](../../04_DESIGN/system_design/range_methodology.md)
 
 ---
 

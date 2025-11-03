@@ -46,7 +46,7 @@ Aircraft configuration management shall be automated through **Digital Product P
 ## Rationale
 Traditional paper-based or spreadsheet configuration management is error-prone, labor-intensive, and difficult to audit. DPP + blockchain automation reduces human error, accelerates configuration changes, and provides real-time visibility to all stakeholders. Blockchain ensures tamper-evident audit trail meeting regulatory traceability requirements.
 
-🔗 DPP concept: ../../DESIGN/system_design/[**DPP_blockchain_architecture.md**](../../DESIGN/system_design/DPP_blockchain_architecture.md)
+🔗 DPP concept: ../../04_DESIGN/system_design/[**DPP_blockchain_architecture.md**](../../04_DESIGN/system_design/DPP_blockchain_architecture.md)
 
 ---
 
