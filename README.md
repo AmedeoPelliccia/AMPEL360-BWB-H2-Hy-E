@@ -10,8 +10,9 @@ Hybrid-electric **Blended-Wing-Body** (BWB) aircraft using:
 - **Closed-loop CO₂ battery** for reversible carbon buffering.  
 - **SAF compatibility** for hybrid range extension.  
 - **Digital twin and DPP integration** for lifecycle traceability.  
+- **CAOS (Computer Aided Operations & Services)** for autonomous operations.  
 
-Objective: aerodynamic efficiency, full-cycle sustainability, and certifiable hybrid-hydrogen operation.
+Objective: aerodynamic efficiency, full-cycle sustainability, and certifiable hybrid-hydrogen operation enabled by AI-driven intelligent services.
 
 ---
 
@@ -22,7 +23,7 @@ Objective: aerodynamic efficiency, full-cycle sustainability, and certifiable hy
 | **P** | **Program** | Geometry, mission, configuration management |
 | **T** | **Technology** | On-board systems (A-M-E-D-E-O-P-E-L-I-C-C-I-A₂) |
 | **I** | **Infrastructures** | Airports, supply chains, operations |
-| **N** | **Neural Networks** | Traceability, AI, Digital Product Passport |
+| **N** | **Neural Networks** | Traceability, AI, Digital Product Passport, CAOS |
 
 Each component uses a **six-digit ATA code (XX-YY-ZZ)** and the **standard 14-folder skeleton**:
 ```
@@ -61,7 +62,7 @@ The framework is organized into five principal axes, each decomposed into subdom
 | **P** | **Program** | Aircraft-level configuration, geometry, ground handling, and servicing specifications. |
 | **T** | **Technology** | All on-board systems, organized by the `A-M-E-D-E-O-P-E-L-I-C-C-I-A₂` taxonomy. |
 | **I** | **Infrastructures** | Ground support, airport interfaces, supply chains, and flight simulators. |
-| **N** | **Neural Networks**| Data lineage, traceability, and AI/ML models for the Digital Product Passport. |
+| **N** | **Neural Networks**| Data lineage, traceability, AI/ML models for the Digital Product Passport, and **CAOS (Computer Aided Operations & Services)** for autonomous operations. |
 
 ### The 14-Folder Subsystem Skeleton
 Every component and system indexed within the OPT-IN framework is developed and documented using a standard, 14-folder lifecycle skeleton. This ensures that every part of the aircraft follows the same rigorous path from concept to in-service management.
@@ -92,7 +93,39 @@ Every component and system indexed within the OPT-IN framework is developed and 
 
 ---
 
-## 3. Framework Overview
+## 3. CAOS — The Fourth Pillar of Digital Engineering
+
+**CAOS (Computer Aided Operations and Services)** completes the digital engineering lifecycle alongside CAD, CAE, and CAM. While traditional tools focus on design, validation, and manufacturing, CAOS digitizes **cognition and decision-making** in real-time operations.
+
+### The Evolution: CAD → CAE → CAM → CAOS
+
+| Pillar | Focus | Outcome |
+|--------|-------|---------|
+| **CAD** | Design (Geometry) | 3D models as authoritative product definition |
+| **CAE** | Engineering (Physics) | Digital validation via FEA, CFD, multi-physics |
+| **CAM** | Manufacturing (Production) | Direct link from digital to physical via CNC, robotics |
+| **CAOS** | Operations (Cognition) | Autonomous optimization and lifecycle management |
+
+### CAOS in AMPEL360
+
+For the hybrid hydrogen aircraft, CAOS enables:
+
+- **Predictive Maintenance:** AI-driven health monitoring and failure prediction
+- **Energy Optimization:** Real-time fuel cell and battery management
+- **Fleet Intelligence:** Federated learning across operational aircraft
+- **Service Twins:** Operational simulation before decision deployment
+- **PaaSI (Product-as-Intelligent-Service):** Guaranteed outcomes, not just hardware
+- **Circular Economy:** Data-driven end-of-life and remanufacturing decisions
+
+### Key Documents
+
+- [**CAOS Manifesto**](./CAOS_MANIFESTO.md) — Strategic vision and principles
+- [**CAOS Operations Framework**](./CAOS_OPERATIONS_FRAMEWORK.md) — Implementation architecture
+- [**N-Axis: Neural Networks & CAOS**](./OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/) — Integration with OPT-IN
+
+---
+
+## 4. Framework Overview
 
 ```mermaid
 graph TD
@@ -129,7 +162,7 @@ graph TD
 
 ---
 
-## 4. Master Directory Structure & Hyperlinked Index
+## 5. Master Directory Structure & Hyperlinked Index
 
 ### O - ORGANIZATION
 -   [`ATA_00-GENERAL`](./O-ORGANIZATION/ATA_00-GENERAL/)
@@ -254,14 +287,17 @@ graph TD
 -   [`ATA_116-FLIGHT_SIMULATOR_CUING_SYSTEM`](./I-INFRASTRUCTURES/ATA_116-FLIGHT_SIMULATOR_CUING_SYSTEM/)
 
 ### N - NEURAL NETWORKS, USERS, TRACEABILITY
--   [`ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY`](./N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/)
+-   [`N-NEURAL_NETWORKS_USERS_TRACEABILITY`](./OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/) — CAOS integration axis
+-   [`ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY`](./OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/)
+-   `ATA 40` (Reserved) - AI INTEGRATION (CAOS cognitive operations)
+-   `ATA 92` (Prov) - MODEL BASED MAINTENANCE (CAOS-enabled)
 
 ```
 ```
 
 ---
 
-## 4. Expanded Example — ATA 28 Fuel / H₂ / SAF / Cryogenic Systems
+## 6. Expanded Example — ATA 28 Fuel / H₂ / SAF / Cryogenic Systems
 
 ```
 
