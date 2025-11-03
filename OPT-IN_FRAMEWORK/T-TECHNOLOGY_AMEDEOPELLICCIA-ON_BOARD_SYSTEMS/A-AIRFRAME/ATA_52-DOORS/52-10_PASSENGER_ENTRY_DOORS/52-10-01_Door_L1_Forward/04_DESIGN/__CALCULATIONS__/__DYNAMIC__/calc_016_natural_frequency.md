@@ -115,7 +115,7 @@ Effective (including voids): 85 kg/m³ (used in FEA for volume-based formulation
 For sandwich panels, in-plane shear is **core-dominated**:
 ```
 G₁₂_sandwich = G_core × (t_core / t_total)
-G₁₂_sandwich ≈ 41.4 MPa × (40mm / 48mm) ≈ 35 MPa
+G₁₂_sandwich ≈ 41.4 MPa × (40mm / 48mm) ≈ 34.5 MPa
 ```
 
 Face sheet contribution (4,500 MPa) is negligible due to thin gauge relative to core.
