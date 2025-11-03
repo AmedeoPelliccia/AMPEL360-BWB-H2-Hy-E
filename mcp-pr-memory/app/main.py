@@ -56,7 +56,7 @@ async def webhook(request: Request, x_hub_signature_256: Optional[str] = Header(
     payload = await request.json()
     # handle pull_request closed/merged
     action = payload.get("action")
-    if action in ("closed", "merged") and "pull_request" in payload:
+    if action == "closed" and "pull_request" in payload:
         pr = payload["pull_request"]
         number = pr["number"]
         title = pr.get("title", "")
