@@ -1,0 +1,8 @@
+Component,CMR_Type,Interval_Flights,Interval_Time,Inspection_Method,Notes
+Door_Assembly,Detailed_Inspection,1000,12_months,Visual+NDI,Initial_interval
+Door_Seals,Operational_Check,500,6_months,Visual+Function,Check_integrity
+Door_Hinges,Lubrication,1000,12_months,Service,Per_AMM
+Door_Latch,Functional_Check,500,6_months,Operation,Check_interlock
+Composite_Doublers,NDI,3000,36_months,Ultrasonic,Critical_areas
+Attachment_Fittings,Detailed_Inspection,3000,36_months,Visual+Eddy_Current,Crack_check
+Window_Seals,Operational_Check,500,6_months,Visual,Pressure_check
