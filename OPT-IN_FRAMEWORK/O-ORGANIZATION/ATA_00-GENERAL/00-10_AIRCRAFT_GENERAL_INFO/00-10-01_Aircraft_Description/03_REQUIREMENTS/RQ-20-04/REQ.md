@@ -46,7 +46,7 @@ The aircraft shall achieve an **acoustic signature 25 dB below ICAO Annex 16 Vol
 ## Rationale
 The -25 dB target represents a transformative reduction in aircraft noise, enabling operations at noise-restricted airports and supporting community acceptance of aviation growth. Distributed electric propulsion + BWB shielding are key enablers. Achieving this target differentiates the aircraft for urban/regional operations.
 
-🔗 Acoustic design basis: ../../DESIGN/system_design/[**noise_reduction_strategy.md**](../../DESIGN/system_design/noise_reduction_strategy.md)
+🔗 Acoustic design basis: ../../04_DESIGN/system_design/[**noise_reduction_strategy.md**](../../04_DESIGN/system_design/noise_reduction_strategy.md)
 
 ---
 

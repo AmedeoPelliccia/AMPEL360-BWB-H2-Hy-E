@@ -40,7 +40,7 @@ The aircraft shall use **liquid hydrogen (LH₂)** as the primary energy source 
 ## Rationale
 Liquid hydrogen combined with PEM fuel cells provides the highest gravimetric energy density among practical zero-emission energy sources, enabling long-range operations while meeting sustainability targets. PEM technology offers fast response, high efficiency, and proven scalability for aerospace applications.
 
-🔗 Background analysis: ../../DESIGN/system_design/[**hydrogen_energy_rationale.md**](../../DESIGN/system_design/hydrogen_energy_rationale.md)
+🔗 Background analysis: ../../04_DESIGN/system_design/[**hydrogen_energy_rationale.md**](../../04_DESIGN/system_design/hydrogen_energy_rationale.md)
 
 ---
 

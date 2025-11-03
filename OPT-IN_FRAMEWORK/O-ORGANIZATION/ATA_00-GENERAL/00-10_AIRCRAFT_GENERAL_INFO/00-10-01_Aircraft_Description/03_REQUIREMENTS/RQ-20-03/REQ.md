@@ -45,7 +45,7 @@ The liquid hydrogen (LH₂) storage system shall maintain a **boil-off rate ≤ 
 ## Rationale
 Minimizing boil-off is critical for fuel efficiency, operational economics, and mission reliability. Target ≤ 0.1%/h is achievable with state-of-the-art vacuum insulation and represents a practical balance between insulation complexity/weight and fuel losses. Lower boil-off reduces hydrogen venting (safety) and improves range predictability.
 
-🔗 Cryogenic design basis: ../../DESIGN/system_design/[**cryogenic_tank_design.md**](../../DESIGN/system_design/cryogenic_tank_design.md)
+🔗 Cryogenic design basis: ../../04_DESIGN/system_design/[**cryogenic_tank_design.md**](../../04_DESIGN/system_design/cryogenic_tank_design.md)
 
 ---
 

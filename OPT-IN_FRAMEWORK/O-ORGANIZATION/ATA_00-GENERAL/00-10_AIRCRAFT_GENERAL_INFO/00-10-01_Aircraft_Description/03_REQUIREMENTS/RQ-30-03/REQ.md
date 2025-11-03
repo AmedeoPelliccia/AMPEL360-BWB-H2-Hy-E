@@ -41,7 +41,7 @@ Aircraft maintenance shall transition from fixed-interval schedules to **conditi
 ## Rationale
 Condition-based maintenance reduces unnecessary maintenance (replacing components with remaining life) and prevents surprise failures (catching degradation early). For novel H₂/electric propulsion systems with limited operational history, condition-based approach allows adaptive maintenance intervals as fleet data accumulates.
 
-🔗 Maintenance strategy: ../../DESIGN/system_design/[**condition_based_maintenance_strategy.md**](../../DESIGN/system_design/condition_based_maintenance_strategy.md)
+🔗 Maintenance strategy: ../../04_DESIGN/system_design/[**condition_based_maintenance_strategy.md**](../../04_DESIGN/system_design/condition_based_maintenance_strategy.md)
 
 ---
 

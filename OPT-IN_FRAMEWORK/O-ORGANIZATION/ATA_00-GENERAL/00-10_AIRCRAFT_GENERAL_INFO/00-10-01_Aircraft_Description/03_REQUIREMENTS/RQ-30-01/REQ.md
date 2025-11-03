@@ -47,7 +47,7 @@ The aircraft **digital twin** shall maintain **≥ 99.5% parameter synchronizati
 ## Rationale
 High-fidelity digital twin enables transition from reactive to predictive maintenance, reduces aircraft downtime, and improves safety through continuous health monitoring. 99.5% sync fidelity ensures digital twin accurately represents physical aircraft state, enabling trustworthy predictions and operational decisions.
 
-🔗 Digital thread concept: ../../DESIGN/system_design/[**digital_twin_architecture.md**](../../DESIGN/system_design/digital_twin_architecture.md)
+🔗 Digital thread concept: ../../04_DESIGN/system_design/[**digital_twin_architecture.md**](../../04_DESIGN/system_design/digital_twin_architecture.md)
 
 ---
 

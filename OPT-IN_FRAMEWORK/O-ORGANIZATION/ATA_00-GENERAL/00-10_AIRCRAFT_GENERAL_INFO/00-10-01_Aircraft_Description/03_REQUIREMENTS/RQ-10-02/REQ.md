@@ -46,7 +46,7 @@ The aircraft shall incorporate a **closed-loop CO₂ battery system** as hybrid 
 ## Rationale
 The closed-loop CO₂ battery decouples transient power demands from the fuel-cell system, which has slower response dynamics. This reduces fuel-cell oversizing, extends stack lifetime, and enables regenerative energy capture during descent and braking. The CO₂ working fluid provides high energy density while avoiding lithium-ion fire risks and supply chain constraints.
 
-🔗 Concept background: ../../DESIGN/system_design/[**CO2_battery_architecture.md**](../../DESIGN/system_design/CO2_battery_architecture.md)
+🔗 Concept background: ../../04_DESIGN/system_design/[**CO2_battery_architecture.md**](../../04_DESIGN/system_design/CO2_battery_architecture.md)
 
 ---
 

@@ -48,7 +48,7 @@ The aircraft's **liquid hydrogen (LH₂) refueling system** shall comply with **
 ## Rationale
 Safe LH₂ refueling is critical to operational acceptance and public confidence in hydrogen aviation. ISO 19880-1 compliance ensures interoperability with emerging hydrogen infrastructure and adherence to international safety best practices. Automated safety interlocks minimize human error risks.
 
-🔗 Safety rationale: ../../DESIGN/system_design/[**H2_infrastructure_safety.md**](../../DESIGN/system_design/H2_infrastructure_safety.md)
+🔗 Safety rationale: ../../04_DESIGN/system_design/[**H2_infrastructure_safety.md**](../../04_DESIGN/system_design/H2_infrastructure_safety.md)
 
 ---
 

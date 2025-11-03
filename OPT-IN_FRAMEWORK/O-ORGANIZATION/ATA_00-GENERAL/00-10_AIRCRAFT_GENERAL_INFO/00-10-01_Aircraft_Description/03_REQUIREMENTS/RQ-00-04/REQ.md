@@ -27,7 +27,7 @@ The integrated **hybrid-electric propulsion system** — composed of **H₂ PEM 
 
 🔗 Artefacts:
 - Efficiency model: ../../ENGINEERING/analyses/electrical/[**hybrid_efficiency_model.md**](../../ENGINEERING/analyses/electrical/hybrid_efficiency_model.md)  
-- Powertrain block diagram: ../../DESIGN/system_design/[**hybrid_architecture_overview.md**](../../DESIGN/system_design/hybrid_architecture_overview.md)  
+- Powertrain block diagram: ../../04_DESIGN/system_design/[**hybrid_architecture_overview.md**](../../04_DESIGN/system_design/hybrid_architecture_overview.md)  
 - Thermal map: ../../ENGINEERING/analyses/thermal/[**thermal_balance_map.md**](../../ENGINEERING/analyses/thermal/thermal_balance_map.md)
 
 ---
@@ -35,7 +35,7 @@ The integrated **hybrid-electric propulsion system** — composed of **H₂ PEM 
 ## Rationale
 Target efficiency ensures compliance with zero-emission mission energy constraints while keeping hydrogen consumption and waste heat manageable.  
 The closed-loop CO₂ battery minimizes transient hydrogen draw and enhances regenerative braking recovery.  
-🔗 Reference concept: ../../DESIGN/system_design/[**hybrid_energy_management.md**](../../DESIGN/system_design/hybrid_energy_management.md)
+🔗 Reference concept: ../../04_DESIGN/system_design/[**hybrid_energy_management.md**](../../04_DESIGN/system_design/hybrid_energy_management.md)
 
 ---
 

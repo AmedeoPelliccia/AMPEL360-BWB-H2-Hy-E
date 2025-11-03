@@ -45,7 +45,7 @@ The hybrid-electric propulsion system shall provide a **total installed power of
 ## Rationale
 The 15 MW nominal power target is derived from propulsion thrust requirements (8 × 2 MW propulsors) plus non-propulsive electrical loads. This sizing ensures adequate margins for takeoff, climb, and contingency scenarios while maintaining cruise efficiency. The multi-source architecture (fuel cells + battery + turbogenerator) provides redundancy and operational flexibility.
 
-🔗 Sizing background: ../../DESIGN/system_design/[**power_system_sizing.md**](../../DESIGN/system_design/power_system_sizing.md)
+🔗 Sizing background: ../../04_DESIGN/system_design/[**power_system_sizing.md**](../../04_DESIGN/system_design/power_system_sizing.md)
 
 ---
 

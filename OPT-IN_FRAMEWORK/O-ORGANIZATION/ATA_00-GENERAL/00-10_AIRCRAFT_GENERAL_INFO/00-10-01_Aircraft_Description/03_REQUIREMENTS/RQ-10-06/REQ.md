@@ -45,7 +45,7 @@ The **closed-loop CO₂ battery system** shall provide **±20% power buffering**
 ## Rationale
 Buffering transient power demands via the CO₂ battery decouples the fuel-cell system from rapid load changes, extending fuel-cell lifetime and improving efficiency by keeping the fuel cells operating in their optimal efficiency band. The battery's fast response time (< 100 ms) complements the slower fuel-cell dynamics (seconds), enabling a synergistic hybrid architecture. Regenerative energy capture during descent further improves mission energy efficiency.
 
-🔗 Concept background: ../../DESIGN/system_design/[**energy_management_strategy.md**](../../DESIGN/system_design/energy_management_strategy.md)
+🔗 Concept background: ../../04_DESIGN/system_design/[**energy_management_strategy.md**](../../04_DESIGN/system_design/energy_management_strategy.md)
 
 ---
 

@@ -53,7 +53,7 @@ The aircraft shall utilize **eight (8) distributed open-fan electric propulsors*
 ## Rationale
 Distributed open-fan electric propulsion exploits the BWB's large aft surface for propulsor integration, enabling boundary layer ingestion and reducing installation drag. Electric drive eliminates gearbox losses and enables precise thrust modulation. The 8-propulsor configuration provides redundancy, acoustic benefits (lower tip speed per unit), and scalability.
 
-🔗 Concept background: ../../DESIGN/system_design/[**distributed_propulsion_rationale.md**](../../DESIGN/system_design/distributed_propulsion_rationale.md)
+🔗 Concept background: ../../04_DESIGN/system_design/[**distributed_propulsion_rationale.md**](../../04_DESIGN/system_design/distributed_propulsion_rationale.md)
 
 ---
 

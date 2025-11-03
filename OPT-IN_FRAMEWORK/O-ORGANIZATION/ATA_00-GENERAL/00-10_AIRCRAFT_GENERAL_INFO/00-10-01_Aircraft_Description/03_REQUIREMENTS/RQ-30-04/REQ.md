@@ -44,7 +44,7 @@ All technical documentation shall comply with **S1000D Issue 6** (International 
 ## Rationale
 S1000D and STE are aerospace industry standards for technical documentation, ensuring consistency, interoperability, and clarity. Compliance reduces documentation costs, improves maintenance efficiency, and facilitates regulatory approval and operator training.
 
-🔗 Documentation strategy: ../../DESIGN/system_design/[**S1000D_documentation_framework.md**](../../DESIGN/system_design/S1000D_documentation_framework.md)
+🔗 Documentation strategy: ../../04_DESIGN/system_design/[**S1000D_documentation_framework.md**](../../04_DESIGN/system_design/S1000D_documentation_framework.md)
 
 ---
 

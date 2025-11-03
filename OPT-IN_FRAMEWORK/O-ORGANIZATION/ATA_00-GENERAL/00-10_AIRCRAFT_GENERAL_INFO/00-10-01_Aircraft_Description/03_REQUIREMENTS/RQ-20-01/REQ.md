@@ -39,7 +39,7 @@ The aircraft shall achieve **zero direct CO₂ emissions (0 g/km)** during fligh
 ## Rationale
 Achieving zero in-flight CO₂ emissions addresses aviation's climate impact, aligning with ICAO's Carbon Neutral Growth (CNG) goals and supporting regional/national net-zero aviation commitments. Hydrogen fuel cells produce only water vapor, eliminating carbon emissions at the source without reliance on offsetting mechanisms.
 
-🔗 Sustainability framework: ../../DESIGN/system_design/[**sustainability_framework.md**](../../DESIGN/system_design/sustainability_framework.md)
+🔗 Sustainability framework: ../../04_DESIGN/system_design/[**sustainability_framework.md**](../../04_DESIGN/system_design/sustainability_framework.md)
 
 ---
 

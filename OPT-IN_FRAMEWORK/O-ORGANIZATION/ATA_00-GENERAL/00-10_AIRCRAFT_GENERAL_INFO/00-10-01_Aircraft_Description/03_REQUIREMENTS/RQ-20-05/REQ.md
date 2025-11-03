@@ -46,7 +46,7 @@ The high-voltage DC (HVDC) electrical power system shall incorporate **dual-chan
 ## Rationale
 High-voltage electrical systems (540 VDC) present shock and fire hazards if isolation degrades. Dual-channel monitoring with fast detection (< 10 ms) ensures crew awareness and enables protective actions before hazards escalate. DO-160G qualification ensures system reliability across aircraft environmental extremes.
 
-🔗 Electrical safety design: ../../DESIGN/system_design/[**HVDC_safety_architecture.md**](../../DESIGN/system_design/HVDC_safety_architecture.md)
+🔗 Electrical safety design: ../../04_DESIGN/system_design/[**HVDC_safety_architecture.md**](../../04_DESIGN/system_design/HVDC_safety_architecture.md)
 
 ---
 
