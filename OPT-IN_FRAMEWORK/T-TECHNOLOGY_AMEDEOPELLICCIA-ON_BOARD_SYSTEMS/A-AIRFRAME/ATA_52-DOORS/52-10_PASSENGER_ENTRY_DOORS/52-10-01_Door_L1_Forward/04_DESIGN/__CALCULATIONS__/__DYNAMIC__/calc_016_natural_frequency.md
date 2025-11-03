@@ -132,7 +132,7 @@ From [Hexcel HRH-10 Datasheet](https://dhsutherland.com/wp-content/uploads/2019/
 Out-of-plane shear modulus (transverse to ribbon direction):
 ```
 G₁₃ ≈ 0.4 × G_L = 0.4 × 41.4 MPa ≈ 17 MPa → use 18 MPa
-G₂₃ ≈ 0.4 × G_W = 0.4 × 24.1 MPa ≈ 10 MPa → use 18 MPa (conservative)
+G₂₃ ≈ 0.4 × G_W = 0.4 × 24.1 MPa ≈ 10 MPa → use 10 MPa
 ```
 
 **Reference:** Hexcel HRH-10 Technical Data Sheet, 2019 edition
