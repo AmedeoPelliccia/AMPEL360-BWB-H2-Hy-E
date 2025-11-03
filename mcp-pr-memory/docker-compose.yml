@@ -1,6 +1,6 @@
 services:
   mcp-server:
-    build: ./.
+    build: .
     container_name: mcp-pr-memory
     restart: unless-stopped
     environment:
