@@ -1,0 +1,9 @@
+Issue_ID,Date,Category,Description,Impact,Resolution,Status,Prevention
+DI-001,2025-11-03,Analysis,No_FEA_only_AI_predictions,High_uncertainty,Need_professional_FEA,Open,Establish_FEA_capability
+DI-002,2025-11-03,Dynamic,Mode_1_resonance_25Hz,Potential_redesign,GVT_required,Critical,Earlier_modal_analysis
+DI-003,2025-11-03,Material,Properties_not_validated,Analysis_uncertainty,Coupon_testing,Planned,Material_database
+DI-004,2025-11-03,Manufacturing,No_AFP_access,Quality_risk,Hand_layup_initially,Accepted,Partner_identification
+DI-005,2025-11-03,Cost,Limited_budget,Schedule_risk,Phased_approach,Mitigation,Better_cost_planning
+DI-006,2025-11-03,Tooling,Long_lead_mold,Critical_path,Early_order_required,Planning,Advance_procurement
+DI-007,2025-11-03,Testing,GVT_critical_gate,Program_risk,Mandatory_test,Identified,Risk_reduction_focus
+DI-008,2025-11-03,Integration,Interface_uncertainties,Rework_risk,Early_mockup_recommended,Planning,Interface_control_docs
