@@ -1,0 +1,7 @@
+Part_Number,Description,Storage_Conditions,Shelf_Life_Months,Expiry_Monitoring,Rotation_Policy
+PN-52-10-01-204001,Primary_Seal,Climate_Controlled_15-25C_40-60_RH,60,Monthly_inspection,FIFO
+PN-52-10-01-204002,Secondary_Seal,Climate_Controlled_15-25C_40-60_RH,48,Monthly_inspection,FIFO
+PN-52-10-01-501001,Seal_Lubricant,Room_Temperature_Dry,36,Quarterly_check,FIFO
+PN-52-10-01-501002,IPA_Cleaner,Flammable_Storage,24,Monthly_check,FIFO
+PN-52-10-01-501003,Epoxy_Adhesive,Refrigerated_5-15C,18,Weekly_check,FIFO
+PN-52-10-01-303003,Load_Cells_with_Battery,Room_Temperature_Dry,120,Quarterly_check,FIFO
