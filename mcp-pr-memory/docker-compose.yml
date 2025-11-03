@@ -1,0 +1,14 @@
+services:
+  mcp-server:
+    build: .
+    container_name: mcp-pr-memory
+    restart: unless-stopped
+    environment:
+      - GITHUB_SECRET=${GITHUB_SECRET}
+      - MCP_TOKEN=${MCP_TOKEN}
+      - HOST=0.0.0.0
+      - PORT=8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
