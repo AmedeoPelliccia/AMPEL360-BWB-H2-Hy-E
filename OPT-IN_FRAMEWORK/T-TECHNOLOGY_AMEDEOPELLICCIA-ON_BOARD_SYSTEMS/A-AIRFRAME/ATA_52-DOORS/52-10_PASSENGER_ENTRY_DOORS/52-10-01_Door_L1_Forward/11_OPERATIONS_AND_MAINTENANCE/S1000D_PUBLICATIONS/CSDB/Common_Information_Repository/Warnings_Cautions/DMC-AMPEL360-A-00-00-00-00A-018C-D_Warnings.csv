@@ -1,0 +1,11 @@
+Warning_ID,Category,Description,Hazard_Level,Consequences,Applicable_To
+WARN-52-001,Electrical,DO NOT operate door with aircraft power ON unless specifically instructed,HIGH,Electric shock injury; Equipment damage,All door maintenance
+WARN-52-002,Structural,Ensure door is properly supported before removing hinge pins,HIGH,Door falling; Personnel injury; Equipment damage,Door removal procedures
+WARN-52-003,Pressurization,DO NOT open door when cabin is pressurized,CRITICAL,Rapid decompression; Personnel injury; Aircraft damage,Door operation
+WARN-52-004,Mechanical,Keep hands clear of latch mechanism during operation,MEDIUM,Pinch injury; Finger amputation,Latch maintenance
+WARN-52-005,Chemical,Wear appropriate PPE when working with sealants and adhesives,MEDIUM,Skin irritation; Respiratory issues; Chemical burns,Seal replacement
+WARN-52-006,Emergency,DO NOT block or obstruct emergency exit doors,CRITICAL,Evacuation delay; Loss of life in emergency,Door vicinity operations
+WARN-52-007,Fall,Use fall protection when working at door opening,HIGH,Fall from aircraft; Personnel injury or death,Door area work at height
+WARN-52-008,Fire,Keep fire extinguisher accessible during electrical work,HIGH,Electrical fire; Equipment damage; Personnel injury,Electrical testing
+WARN-52-009,Tools,Use only approved tools and torque values,MEDIUM,Equipment damage; Improper installation; Safety compromise,All maintenance
+WARN-52-010,CAOS,Verify CAOS system is in maintenance mode before testing,MEDIUM,False alerts; System confusion; Operational disruption,CAOS-enabled procedures

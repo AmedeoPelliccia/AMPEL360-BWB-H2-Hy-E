@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMPEL360 Door L1 Forward - IETP</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/caos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AMPEL360 BWB H₂ Hy-E</h1>
+            <p>Interactive Electronic Technical Publication</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#procedures">Procedures</a></li>
+                <li><a href="#diagnostics">Diagnostics</a></li>
+                <li><a href="#caos">CAOS Dashboard</a></li>
+                <li><a href="#digital-twin">Digital Twin</a></li>
+            </ul>
+        </nav>
+        <div class="aircraft-selector">
+            <label for="aircraft">Aircraft:</label>
+            <select id="aircraft">
+                <option value="">Select Aircraft...</option>
+                <option value="N12345">N12345 (SN: AMPEL360-042)</option>
+                <option value="N12346">N12346 (SN: AMPEL360-043)</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <h2>ATA 52-10-01</h2>
+            <h3>Door L1 Forward</h3>
+            
+            <div class="toc">
+                <h4>Data Modules</h4>
+                <ul>
+                    <li class="dm-category">
+                        <strong>Descriptive</strong>
+                        <ul>
+                            <li><a href="#dm-000">000 - Description</a></li>
+                            <li><a href="#dm-001">001 - General Info</a></li>
+                            <li><a href="#dm-002">002 - Technical Data</a></li>
+                            <li><a href="#dm-003">003 - Components</a></li>
+                            <li><a href="#dm-100">100 - CAOS Overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="dm-category">
+                        <strong>Procedural</strong>
+                        <ul>
+                            <li><a href="#dm-210">210 - Normal Operation</a></li>
+                            <li><a href="#dm-211">211 - Pre-Flight Check</a></li>
+                            <li><a href="#dm-212">212 - Post-Flight Check</a></li>
+                            <li><a href="#dm-520">520 - Door Removal</a></li>
+                            <li><a href="#dm-530">530 - Door Installation</a></li>
+                            <li><a href="#dm-710">710 - Functional Test</a></li>
+                            <li><a href="#dm-720">720 - Visual Inspection</a></li>
+                        </ul>
+                    </li>
+                    <li class="dm-category">
+                        <strong>Process</strong>
+                        <ul>
+                            <li><a href="#dm-910">910 - Troubleshooting</a></li>
+                            <li><a href="#dm-912">912 - CAOS Diagnostics</a></li>
+                            <li><a href="#dm-913">913 - Digital Twin Analysis</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="quick-status">
+                <h4>System Status</h4>
+                <div class="status-indicator" id="door-status">
+                    <span class="status-light green"></span>
+                    <span>SERVICEABLE</span>
+                </div>
+                <div class="caos-connection" id="caos-connection">
+                    <span class="status-light yellow"></span>
+                    <span>CAOS: Connecting...</span>
+                </div>
+            </div>
+        </aside>
+
+        <section class="content">
+            <div id="overview" class="section active">
+                <h2>Door L1 Forward - Operations and Maintenance</h2>
+                
+                <div class="info-box">
+                    <h3>System Information</h3>
+                    <table>
+                        <tr><td><strong>ATA Chapter:</strong></td><td>52-10-01</td></tr>
+                        <tr><td><strong>Description:</strong></td><td>Type A Passenger Entry Door, Left Forward</td></tr>
+                        <tr><td><strong>Location:</strong></td><td>Fuselage Station 15-18, Left Side</td></tr>
+                        <tr><td><strong>CAOS Enabled:</strong></td><td>Yes (Full Integration)</td></tr>
+                    </table>
+                </div>
+
+                <div class="info-box caos-box">
+                    <h3>CAOS Real-Time Monitoring</h3>
+                    <div id="caos-summary">
+                        <p>Connect to aircraft to view real-time data...</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h3>Maintenance Schedule</h3>
+                    <table id="upcoming-maintenance">
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Due</th>
+                                <th>Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Visual Inspection</td>
+                                <td>45 FH</td>
+                                <td><span class="priority normal">Normal</span></td>
+                            </tr>
+                            <tr>
+                                <td>CAOS Sensor Calibration</td>
+                                <td>120 Days</td>
+                                <td><span class="priority normal">Normal</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="procedures" class="section">
+                <h2>Procedures</h2>
+                <div class="procedure-grid">
+                    <div class="procedure-card">
+                        <h3>Normal Operation</h3>
+                        <p>DMC-AMPEL360-A-52-10-01-00A-210A-D</p>
+                        <button onclick="loadProcedure('210')">View Procedure</button>
+                    </div>
+                    <div class="procedure-card">
+                        <h3>Pre-Flight Check</h3>
+                        <p>DMC-AMPEL360-A-52-10-01-00A-211A-D</p>
+                        <button onclick="loadProcedure('211')">View Procedure</button>
+                    </div>
+                    <div class="procedure-card">
+                        <h3>Functional Test</h3>
+                        <p>DMC-AMPEL360-A-52-10-01-00A-710A-D</p>
+                        <button onclick="loadProcedure('710')">View Procedure</button>
+                    </div>
+                    <div class="procedure-card">
+                        <h3>Visual Inspection</h3>
+                        <p>DMC-AMPEL360-A-52-10-01-00A-720A-D</p>
+                        <button onclick="loadProcedure('720')">View Procedure</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="diagnostics" class="section">
+                <h2>Diagnostics</h2>
+                <div class="diagnostic-tools">
+                    <button onclick="runDiagnostic('basic')">Run Basic Diagnostic</button>
+                    <button onclick="runDiagnostic('full')">Run Full Diagnostic</button>
+                    <button onclick="showTroubleshooting()">Troubleshooting Guide</button>
+                </div>
+                <div id="diagnostic-results"></div>
+            </div>
+
+            <div id="caos" class="section">
+                <h2>CAOS Dashboard</h2>
+                <div id="caos-dashboard">
+                    <div class="dashboard-widget">
+                        <h3>System Health</h3>
+                        <canvas id="health-gauge"></canvas>
+                    </div>
+                    <div class="dashboard-widget">
+                        <h3>Sensor Readings</h3>
+                        <div id="sensor-data"></div>
+                    </div>
+                    <div class="dashboard-widget">
+                        <h3>Predictive Maintenance</h3>
+                        <div id="predictions"></div>
+                    </div>
+                    <div class="dashboard-widget">
+                        <h3>Recent Alerts</h3>
+                        <div id="alerts"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="digital-twin" class="section">
+                <h2>Digital Twin</h2>
+                <div class="twin-container">
+                    <div id="twin-viewer">
+                        <p>3D Digital Twin Viewer</p>
+                        <p>Loading digital twin model...</p>
+                    </div>
+                    <div class="twin-controls">
+                        <button onclick="syncTwin()">Sync with Aircraft</button>
+                        <button onclick="runSimulation()">Run Simulation</button>
+                        <button onclick="showHistory()">View History</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 AMPEL360. All rights reserved.</p>
+            <p>S1000D Issue 5.0 Compliant | CAOS Enabled</p>
+            <p>Document: DMC-AMPEL360-A-52-10-01-00A-000A-D | Issue: 001 | Date: 2025-11-03</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/caos_integration.js"></script>
+    <script src="js/digital_twin_viewer.js"></script>
+</body>
+</html>

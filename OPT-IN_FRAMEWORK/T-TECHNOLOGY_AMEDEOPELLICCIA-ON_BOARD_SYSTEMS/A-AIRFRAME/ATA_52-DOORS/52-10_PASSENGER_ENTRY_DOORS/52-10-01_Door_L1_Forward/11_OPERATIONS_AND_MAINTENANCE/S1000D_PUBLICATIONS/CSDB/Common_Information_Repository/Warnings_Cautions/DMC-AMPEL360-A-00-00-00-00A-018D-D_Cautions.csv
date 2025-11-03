@@ -1,0 +1,13 @@
+Caution_ID,Category,Description,Impact_Level,Preventive_Action,Applicable_To
+CAUT-52-001,Handling,Support door weight properly to prevent damage to hinges,MEDIUM,Use proper lifting equipment and techniques,Door handling
+CAUT-52-002,Calibration,Recalibrate CAOS sensors after any door adjustment,MEDIUM,Follow calibration procedure in DMC-*-722A-D,Adjustment procedures
+CAUT-52-003,Cleanliness,Keep seal areas clean and free from contamination,LOW,Clean with approved solvent before installation,Seal maintenance
+CAUT-52-004,Torque,Use calibrated torque wrench for all fasteners,MEDIUM,Verify torque wrench calibration before use,All fastener installation
+CAUT-52-005,Lubrication,Use only approved lubricants on door mechanisms,MEDIUM,Refer to consumables list DMC-*-943A-D,Lubrication tasks
+CAUT-52-006,Testing,Perform leak test after any seal work,MEDIUM,Complete procedure in DMC-*-711A-D,Seal replacement/adjustment
+CAUT-52-007,Documentation,Update CAOS digital twin after maintenance,LOW,Sync changes via CAOS interface,All maintenance actions
+CAUT-52-008,Environment,Protect door components from extreme temperatures during storage,MEDIUM,Store in climate-controlled area per specs,Component storage
+CAUT-52-009,Sequence,Follow procedure steps in exact order,MEDIUM,Do not skip or reorder steps,All procedures
+CAUT-52-010,Inspection,Inspect adjacent components when replacing seals,LOW,Visual inspection per DMC-*-720A-D,Seal replacement
+CAUT-52-011,Software,Ensure CAOS software is current version before diagnostics,MEDIUM,Check version and update if required,CAOS diagnostics
+CAUT-52-012,Personnel,Minimum two technicians required for door removal,HIGH,Do not attempt single-person door removal,Door removal

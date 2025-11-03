@@ -1,0 +1,15 @@
+Tool_ID,Tool_Name,Part_Number,Description,Specification,Calibration_Required,Applicable_Procedures
+TOOL-52-001,Door Rigging Fixture,AMPEL360-TOOL-52-001,Alignment fixture for door installation and rigging,Custom fixture per drawing 52-001,No,DMC-*-530A-D; DMC-*-540A-D
+TOOL-52-002,Torque Wrench (0-50 in-lbs),STD-TW-050,Digital torque wrench for fasteners,±2% accuracy,Yes - Annual,All fastener installations
+TOOL-52-003,Torque Wrench (0-100 ft-lbs),STD-TW-100,Digital torque wrench for hinge bolts,±2% accuracy,Yes - Annual,Hinge installation
+TOOL-52-004,Seal Compression Gauge,AMPEL360-TOOL-52-004,Thickness gauge for seal compression measurement,0.001" resolution,No,Seal inspection and adjustment
+TOOL-52-005,Pressure Test Kit,AMPEL360-TEST-52-001,Portable pressure test equipment for leak testing,0-15 psi range,Yes - Annual,DMC-*-711A-D; DMC-*-712A-D
+TOOL-52-006,CAOS Diagnostic Tablet,CAOS-TABLET-01,Ruggedized tablet with CAOS software,WiFi 6; IP67 rated,No,All CAOS procedures
+TOOL-52-007,Multimeter (Digital),STD-DMM-001,Digital multimeter for electrical testing,True RMS; 0.5% accuracy,Yes - Annual,Electrical testing
+TOOL-52-008,Door Lift Sling,STD-SLING-52,Lifting sling rated for door weight,150 lb capacity; 3:1 safety factor,No,Door removal/installation
+TOOL-52-009,Hinge Pin Removal Tool,AMPEL360-TOOL-52-009,Special tool for hinge pin extraction,Custom design,No,Hinge maintenance
+TOOL-52-010,Seal Installation Tool Set,AMPEL360-TOOL-52-010,Tools for seal groove cleaning and installation,5-piece set,No,Seal replacement
+TOOL-52-011,Gap Measurement Tool,STD-FEELER-001,Feeler gauge set for gap measurement,0.001" to 0.050" range,No,Rigging and alignment
+TOOL-52-012,AR Headset (Optional),AR-HOLOLENS-02,Augmented reality headset for CAOS visualization,HoloLens 2 or equivalent,No,Advanced CAOS diagnostics
+TOOL-52-013,Inspection Mirror,STD-MIRROR-001,Telescoping inspection mirror,360° rotation; LED light,No,Visual inspections
+TOOL-52-014,Borescope,STD-BORE-001,Digital borescope for internal inspection,5mm diameter; 1m length; HD camera,No,Internal inspection
