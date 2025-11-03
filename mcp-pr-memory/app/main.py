@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request, Header, HTTPException, Depends
 from fastapi.responses import JSONResponse
-import hmac, hashlib, os, sqlite3, json
+import hmac, hashlib, os, sqlite3
 from typing import Optional
 from pathlib import Path
 
