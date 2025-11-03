@@ -1,0 +1,13 @@
+# RQ-53-10-01-051: Surface Roughness
+
+## Requirement Statement
+The nose cone surface shall maintain smoothness for low drag.
+
+## Acceptance Criteria
+- Surface roughness Ra < 3.2 μm
+- No waviness > 3mm per meter
+- Paint application does not increase roughness
+- Surface quality maintained over service life
+
+## Compliance Status
+Manufacturing process control established

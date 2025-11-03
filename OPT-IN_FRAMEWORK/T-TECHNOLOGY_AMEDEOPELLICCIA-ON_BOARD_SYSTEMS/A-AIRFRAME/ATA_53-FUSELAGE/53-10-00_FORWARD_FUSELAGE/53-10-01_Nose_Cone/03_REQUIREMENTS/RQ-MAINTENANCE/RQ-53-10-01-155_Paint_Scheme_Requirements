@@ -1,0 +1,13 @@
+# RQ-53-10-01-155: Paint Scheme Requirements
+
+## Requirement Statement
+Nose cone paint shall meet durability and weight requirements without affecting radar performance.
+
+## Acceptance Criteria
+- Paint weight < 2 kg total
+- No metallic paint on radome (RF interference)
+- Erosion-resistant topcoat
+- Service life 5 years between repaints
+
+## Compliance Status
+Paint specification released

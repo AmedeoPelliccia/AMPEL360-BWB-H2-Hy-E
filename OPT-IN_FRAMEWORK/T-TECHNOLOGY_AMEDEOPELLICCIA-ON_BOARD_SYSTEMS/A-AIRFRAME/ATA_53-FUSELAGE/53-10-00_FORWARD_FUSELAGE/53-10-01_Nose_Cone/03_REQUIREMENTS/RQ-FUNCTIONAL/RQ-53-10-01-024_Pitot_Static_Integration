@@ -1,0 +1,16 @@
+# RQ-53-10-01-024: Pitot Static Integration
+
+## Requirement Statement
+The nose cone shall integrate 3 pitot probes and 3 static ports with proper mounting and drainage.
+
+## Acceptance Criteria
+- Minimum 500mm separation between probes
+- Heated pitot tubes (anti-ice)
+- Drain holes prevent water accumulation
+- Position error < 5 knots at all airspeeds
+
+## Compliance Status
+Design complete, wind tunnel testing planned
+
+## Traceability
+Parent: ATA 34 (Air Data System)
