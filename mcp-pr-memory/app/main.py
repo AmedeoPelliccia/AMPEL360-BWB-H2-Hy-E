@@ -75,10 +75,18 @@ async def webhook(request: Request, x_hub_signature_256: Optional[str] = Header(
 
 @app.get("/search_prs")
 async def search_prs(q: str = "", limit: int = 10, _: bool = Depends(require_token)):
+    def escape_like(s: str) -> str:
+        # Escape backslash first, then % and _
+        return s.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
+
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-    like = f"%{q}%"
-    cur.execute("SELECT number, title, summary, state, closed_at, url FROM prs WHERE title LIKE ? OR summary LIKE ? ORDER BY closed_at DESC LIMIT ?", (like, like, limit))
+    escaped_q = escape_like(q)
+    like = f"%{escaped_q}%"
+    cur.execute(
+        "SELECT number, title, summary, state, closed_at, url FROM prs WHERE title LIKE ? ESCAPE '\\' OR summary LIKE ? ESCAPE '\\' ORDER BY closed_at DESC LIMIT ?",
+        (like, like, limit)
+    )
     rows = cur.fetchall()
     conn.close()
     results = []
