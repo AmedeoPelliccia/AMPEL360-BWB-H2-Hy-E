@@ -1,0 +1,438 @@
+---
+chapter:
+  number: "09"
+  title: "Towing and Taxiing"
+  category: "P-PROGRAM"
+  version: "1.0.0"
+  status: "Active"
+  last_updated: "2025-11-02"
+  
+description: |
+  ATA Chapter 09 establishes the procedures, equipment specifications, and 
+  safety requirements for towing the AMPEL360 Blended Wing Body (BWB) aircraft 
+  and defines taxiing capabilities and limitations. This chapter is essential 
+  for safe ground operations, airport compatibility, and operational efficiency, 
+  with special considerations for hydrogen safety and electric taxi systems.
+
+scope:
+  - Towing procedures (powerback, long-distance, emergency)
+  - Tow bar specifications and tow fitting design
+  - Taxiing procedures (normal, electric, one-engine, emergency)
+  - Turning radius data and maneuvering envelope
+  - Ground clearances (propulsor, wingtip, tail)
+  - CG limitations for towing
+  - Hydrogen system safety during ground operations
+  - Electric taxi system capability
+  - Ground equipment requirements
+  - Special procedures (contaminated surfaces, hangar operations)
+
+regulatory_framework:
+  certification_requirements:
+    # EASA CS-25: https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27
+    - CS-25.735: "Brakes and Braking Systems (taxi braking performance)"
+    - CS-25.1519: "Weight and Center of Gravity (loading limitations)"
+    # FAA Advisory Circulars: https://www.faa.gov/airports/resources/advisory_circulars/
+    - FAA AC 00-65: "Runway Length Requirements for Airport Design"
+    - FAA AC 150/5210-20A: "Ground Vehicle Operations on Airports"
+    # ICAO Standards: https://www.icao.int/safety/airnavigation/nationalitymarks/annexes_booklet_en.pdf
+    - ICAO Annex 14 Volume I: "Aerodrome Design and Operations"
+    # EASA Part-M: https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-13212014
+    - EASA Part-M.A.801: "Aircraft Continuing Airworthiness Monitoring"
+  
+  industry_standards:
+    # ATA Spec: https://www.ataspec2200.org/
+    - ATA iSpec 2200 Chapter 09: "Standard towing/taxiing procedures"
+    # SAE Standards: https://www.sae.org/standards/
+    - SAE AS8015: "Ground Support Equipment"
+    - SAE ARP1247: "Aircraft Nose Wheel Steering Systems"
+    # IATA: https://www.iata.org/
+    - IATA Airport Handling Manual (AHM): "Ground Operations Standards"
+
+ampel360_unique_features:
+  blended_wing_body_ground_handling:
+    wingspan: "65.0m (wide lateral envelope)"
+    overall_length: "52.5m (no tail cone overhand)"
+    wheelbase: "23.8m (nose to main gear)"
+    main_gear_track: "15.6m (wide lateral stance)"
+    advantages:
+      - "Wide main gear track provides excellent lateral stability"
+      - "Low center of gravity (4.5m) reduces tipback risk"
+      - "No tail overhand simplifies parking/maneuvering"
+    challenges:
+      - "Wide wingspan requires increased taxiway/apron clearances"
+      - "Propulsor ground clearance limits operations on uneven surfaces"
+      - "No conventional vertical stabilizer for visual reference"
+      - "Wide center body creates unique visibility challenges"
+  
+  upper_surface_propulsor:
+    propulsor_diameter: "5.2m (blade tip to tip)"
+    ground_clearance: "3.8m (minimum, static condition)"
+    dynamic_clearance: "3.6m (compressed struts during taxi)"
+    overhead_clearance_required: "12m minimum"
+    max_pavement_slope: "±3° (beyond this, propulsor strike risk)"
+    ground_equipment_height_limit: "3.5m when operating within 10m"
+  
+  hydrogen_system_safety:
+    safety_zones:
+      no_smoking_zone: "25m radius from aircraft"
+      hot_work_prohibited: "15m radius"
+      vehicle_restrictions: "Only H₂-rated equipment within 10m during fueling"
+    boil_off_rate: "4.8 kg/hour vented safely to atmosphere"
+    monitoring: "Continuous H₂ monitoring via aircraft health system"
+    pre_tow_checks:
+      - "LH₂ tank status check (pressure <3.5 bar)"
+      - "Leak detection walk-around"
+      - "Vent system check"
+      - "Hot work clearance verification"
+      - "Fire equipment on tug (minimum 20 kg capacity)"
+  
+  composite_structure:
+    tow_bar_attach_point: "Metal fitting bonded into composite structure"
+    protection_measures:
+      - "Rubber protectors prevent metal-on-composite contact"
+      - "Strict FOD control"
+      - "Chemical protection (avoid hydraulic fluid/fuel spills)"
+    inspection: "Post-tow inspection for accidental damage (visual + tap test)"
+  
+  taxi_visibility:
+    challenges:
+      - "Wingtips not visible from cockpit (32.5m from centerline)"
+      - "No vertical stabilizer for aft reference"
+      - "Wide cabin creates blind spots"
+    solutions:
+      wing_walkers: "Required for tight maneuvering"
+      taxi_cameras: "4× cameras (left/right wingtip, nose, tail)"
+      camera_features:
+        - "Real-time display on cockpit MFD"
+        - "Fish-eye lens (180° field of view)"
+        - "Infrared capability for night/low visibility"
+  
+  electric_taxi_system:
+    power_source: "Fuel cells (no turbine combustion)"
+    noise_level: "<70 dBA at 25m"
+    emissions: "Zero (no CO₂, no NOₓ)"
+    max_taxi_speed: "15 knots (27 km/h)"
+    max_taxi_distance: "5 km (fuel cell thermal management limit)"
+    thrust_available: "20 kN per propulsor (total 40 kN)"
+    fuel_savings: "~30 kg H₂ saved per taxi vs. turbine idle"
+    cost_savings: "~$50/flight vs. $200 turbine taxi"
+
+towing_procedures:
+  power_back_towing:
+    definition: "Aircraft pushed backwards from gate using tug"
+    max_speed: "5 km/h"
+    typical_distance: "30-50m"
+    tug_capacity_required: "600 kN (60 metric tons) drawbar pull minimum"
+    tow_bar: "AMPEL-09-TB-001"
+  
+  long_distance_towing:
+    definition: "Aircraft towed between hangars or to remote parking"
+    max_speed_taxiway: "8 km/h"
+    max_speed_apron: "5 km/h"
+    tug_capacity_required: "1,000 kN capacity for MTOW towing"
+    tow_bar: "AMPEL-09-TB-002 (heavy-duty version)"
+    blade_locks_required: "P/N AMPEL-61-BL-001 (2 required)"
+    logbook_entry_required: "If towed >500m distance"
+  
+  emergency_towing:
+    definition: "Towing aircraft with inoperative systems"
+    special_considerations:
+      - "No brakes: Use external brake system or chocks"
+      - "No steering: Tug must control direction entirely"
+      - "No electrical: Install external power"
+      - "Damaged gear: May require lifting/shoring (ATA 07)"
+
+tow_bar_specifications:
+  standard_tow_bar:
+    part_number: "AMPEL-09-TB-001"
+    application: "Normal push-back and short towing (<500m)"
+    type: "Rigid tow bar with shear-pin safety disconnect"
+    length: "4.8m"
+    capacity: "600 kN (60 metric tons) static pull"
+    weight: "380 kg"
+    material: "High-strength steel (AISI 4340)"
+    shear_pin_rating: "650 kN (fail before damaging aircraft)"
+  
+  heavy_duty_tow_bar:
+    part_number: "AMPEL-09-TB-002"
+    application: "Long-distance towing, MTOW operations"
+    length: "4.8m"
+    capacity: "1,000 kN (100 metric tons) static pull"
+    weight: "650 kg"
+    material: "High-strength steel with fatigue-rated welds"
+    features:
+      - "Hydraulic dampers"
+      - "Load cell (0-1000 kN range)"
+      - "Wireless monitoring"
+  
+  tow_fitting:
+    part_number: "AMPEL-09-TF-001"
+    location: "Nose landing gear strut, forward side"
+    coordinates: "FS 6,200 / BL 0 / WL 2,900"
+    material: "Titanium 6Al-4V forging"
+    attach_points: "4× M24 bolts (torque 450 Nm)"
+    load_rating: "1,200 kN ultimate"
+    inspection_interval:
+      visual: "Every 100 towing events"
+      ndt: "Every 1,000 events"
+
+taxiing_procedures:
+  normal_taxiing:
+    max_speed_straight: "30 knots (55 km/h)"
+    max_speed_turns: "10 knots (18 km/h) for 90° turns"
+    max_speed_congested: "5 knots (9 km/h)"
+    brake_pressure_required: ">3,000 psi accumulator pressure"
+    steering_range: "±70°"
+  
+  electric_taxi_mode:
+    activation_requirements:
+      - "Fuel cell system operational (400 kW available)"
+      - "Battery state of charge >30%"
+      - "Select E-TAXI mode on propulsor control panel"
+    max_speed: "15 knots (27 km/h)"
+    max_distance: "5 km"
+    slope_limit: "±2% grade"
+    restrictions:
+      - "Not available above 2,000m elevation"
+      - "Not available in icing conditions"
+  
+  one_engine_taxi:
+    definition: "Taxiing with one propulsor operating"
+    procedure: "Start only left propulsor"
+    thrust_available: "50%"
+    max_weight: "100,000 kg (reduced from MTOW 120,000 kg)"
+    slope_limit: "±1% grade"
+    max_speed: "20 knots"
+
+turning_radius_data:
+  nosewheel_steering_limits:
+    steering_range: "±70° (±1.22 radians)"
+    minimum_turning_radius:
+      70_degree_steering:
+        outside_wingtip_radius: "42.5m"
+        inside_wingtip_radius: "10.2m"
+      45_degree_steering:
+        outside_wingtip_radius: "58.3m"
+        inside_wingtip_radius: "25.9m"
+      30_degree_steering:
+        outside_wingtip_radius: "83.7m"
+        inside_wingtip_radius: "51.3m"
+    practical_minimum: "45m (outside wingtip) at 70° steering"
+    180_degree_turn_width: "85m (2× outside radius)"
+  
+  taxiway_compatibility:
+    icao_code: "Code E"
+    min_taxiway_width: "23m (typical: 25m)"
+    safety_margin_each_side: "4.5m"
+    required_taxiway_width: "41.5m (32.5m half-wingspan + 2×4.5m)"
+    standard_code_e_width: "44m (adequate clearance)"
+
+cg_limitations:
+  towing_cg_envelope:
+    forward_limit: "25% MAC (FS 22,250)"
+    aft_limit: "45% MAC (FS 25,650)"
+    tipback_threshold: "34.1% MAC"
+    safety_margin: "10.9% MAC"
+  
+  calculations:
+    lemac: "FS 18,000"
+    mac: "17,000mm"
+    main_gear_position: "FS 23,800"
+  
+  tail_stand:
+    required_when: "CG >42% MAC during loading/unloading"
+    not_required: "During towing (45% MAC limit prevents tipback)"
+
+ground_clearances:
+  propulsor:
+    static_clearance: "3.8m (blade tip to ground)"
+    dynamic_clearance_mtow: "3.6m (during taxi)"
+    pavement_slope_limits:
+      level: "No restriction"
+      one_degree: "3.6m minimum (adequate)"
+      two_degrees: "3.4m minimum (adequate)"
+      three_degrees: "3.1m minimum (approach with caution)"
+      over_three_degrees: "NOT APPROVED (propulsor strike risk)"
+  
+  wingtip:
+    vertical_position: "WL 4,800 (4.8m above ground)"
+    clearance_status: "Well clear of ground equipment"
+  
+  tail:
+    ground_clearance: "3.8m (aft-most point to ground)"
+    tail_strike_angle: "11.5° pitch up"
+    takeoff_rotation: "8.5° (adequate clearance, 3° margin)"
+
+subsections:
+  "09-10":
+    title: "Towing Procedures"
+    components:
+      - "09-10-01: Standard Power Back Towing"
+      - "09-10-02: Long Distance Towing"
+      - "09-10-03: Emergency Disabled Aircraft Towing"
+      - "09-10-04: Hangar Towing Procedures"
+      - "09-10-05: Contaminated Surface Towing"
+      - "09-10-06: Night Operations Towing"
+      - "09-10-07: First Tow After Maintenance"
+  
+  "09-20":
+    title: "Tow Bar Specifications"
+    components:
+      - "09-20-01: Standard Tow Bar AMPEL-09-TB-001"
+      - "09-20-02: Heavy Duty Tow Bar AMPEL-09-TB-002"
+      - "09-20-03: Tow Fitting Aircraft Interface"
+      - "09-20-04: Tow Bar Inspection Requirements"
+      - "09-20-05: Shear Pin Specifications"
+      - "09-20-06: Tow Bar Attachment Procedure"
+  
+  "09-30":
+    title: "Taxiing Procedures"
+    components:
+      - "09-30-01: Normal Propulsor Taxiing"
+      - "09-30-02: Electric Taxi Mode"
+      - "09-30-03: One Propulsor Taxi"
+      - "09-30-04: High Speed Taxi Procedures"
+      - "09-30-05: Low Visibility Taxi"
+      - "09-30-06: Contaminated Surface Taxi"
+      - "09-30-07: Emergency Abnormal Taxi Procedures"
+  
+  "09-40":
+    title: "Turning Radius and Clearances"
+    components:
+      - "09-40-01: Minimum Turning Radius Data"
+      - "09-40-02: Nosewheel Steering Limits"
+      - "09-40-03: Wingtip Clearance Envelope"
+      - "09-40-04: Propulsor Ground Clearance"
+      - "09-40-05: Tail Strike Limitations"
+      - "09-40-06: Taxiway Width Requirements"
+      - "09-40-07: Turn Fillet Requirements"
+  
+  "09-50":
+    title: "CG Limitations for Towing"
+    components:
+      - "09-50-01: Towing CG Envelope"
+      - "09-50-02: Forward CG Limit Justification"
+      - "09-50-03: Aft CG Limit Tipback Analysis"
+      - "09-50-04: Pre Tow CG Verification"
+      - "09-50-05: Tail Stand Requirements"
+      - "09-50-06: Loading for Towing Compliance"
+  
+  "09-60":
+    title: "Hydrogen System Safety Protocol"
+    components:
+      - "09-60-01: Ground Operations H2 Safety Zones"
+      - "09-60-02: Pre Towing H2 System Checks"
+      - "09-60-03: H2 Leak Detection Procedures"
+      - "09-60-04: Boil Off Management During Ground Ops"
+      - "09-60-05: Emergency H2 Procedures Ground"
+      - "09-60-06: H2 Fueling Coordination with Towing"
+      - "09-60-07: H2 Safety Training for Ground Crew"
+  
+  "09-70":
+    title: "Ground Equipment Requirements"
+    components:
+      - "09-70-01: Tug Specifications and Certification"
+      - "09-70-02: Ground Power Unit Requirements"
+      - "09-70-03: H2 Detection Equipment"
+      - "09-70-04: Communication Equipment"
+      - "09-70-05: Blade Locks and Propulsor Covers"
+      - "09-70-06: Tail Stand Specifications"
+      - "09-70-07: Ground Support Equipment Clearances"
+  
+  "09-80":
+    title: "Electric Taxi System"
+    components:
+      - "09-80-01: Electric Taxi System Architecture"
+      - "09-80-02: Fuel Cell Taxi Power Management"
+      - "09-80-03: Electric Taxi Operating Procedures"
+      - "09-80-04: Electric Taxi Performance Envelope"
+      - "09-80-05: Electric Taxi System Limitations"
+      - "09-80-06: Electric Taxi Thermal Management"
+      - "09-80-07: Electric Taxi Cost Benefit Analysis"
+  
+  "09-90":
+    title: "Special Procedures"
+    components:
+      - "09-90-01: First Tow After Maintenance Check"
+      - "09-90-02: Contaminated Surface Operations"
+      - "09-90-03: Hangar Door Transit Procedures"
+      - "09-90-04: Night and Low Visibility Operations"
+      - "09-90-05: Emergency Recovery Procedures"
+      - "09-90-06: Adverse Weather Towing"
+      - "09-90-07: Post Tow Inspection Procedures"
+
+quality_assurance:
+  pre_tow_checklist:
+    - "Tow clearance obtained"
+    - "Aircraft weight and CG within towing limits (25-45% MAC)"
+    - "Parking brake released, wheel chocks removed"
+    - "Tow bar attached (torque 450 Nm, safety pin installed)"
+    - "Communication established (tug ↔ cockpit)"
+    - "Wing walkers positioned (if required)"
+    - "H₂ system status verified"
+    - "Propulsor blade locks installed (if applicable)"
+    - "Taxi cameras operational"
+    - "Ground equipment cleared from tow path"
+  
+  post_tow_documentation:
+    - "Tow bar removed and stowed"
+    - "Propulsor blade locks removed"
+    - "Visual inspection completed"
+    - "Logbook entry (if tow >500m or abnormal conditions)"
+    - "Towing log updated"
+
+interfaces:
+  ata_chapters:
+    - "ATA 02-30: Airport Facilities"
+    - "ATA 06-80: Ground Handling Envelope"
+    - "ATA 07-20: Jacking"
+    - "ATA 08-30: CG Calculation"
+    - "ATA 12-40: Ground Power"
+    - "ATA 24-30: Fuel Cell Power"
+    - "ATA 28-00: H₂ System Safety"
+    - "ATA 31: Taxi Cameras"
+    - "ATA 32-40: Nosewheel Steering System"
+    - "ATA 32-50: Brakes"
+
+data_management:
+  procedures: "AMM (Aircraft Maintenance Manual) format"
+  specifications: "Engineering drawings and data sheets"
+  safety_protocols: "Safety Management System (SMS) integration"
+  training: "Ground crew certification requirements"
+
+revision_history:
+  - version: "1.0.0"
+    date: "2025-11-02"
+    author: "AMPEL360 Program Office"
+    changes: "Initial release of ATA 09 chapter structure and documentation"
+    status: "Active"
+
+authors:
+  - name: "Amedeo Pelliccia"
+    role: "Chief Architect"
+    organization: "AMPEL360 Program"
+  - name: "Technical Documentation Team"
+    role: "Documentation"
+    organization: "AMPEL360 Program"
+
+keywords:
+  - towing
+  - taxiing
+  - ground operations
+  - tow bar
+  - electric taxi
+  - hydrogen safety
+  - ground clearances
+  - turning radius
+  - CG limitations
+  - BWB ground handling
+  - propulsor clearance
+  - airport compatibility
+
+notes: |
+  This chapter is critical for safe ground operations and must be coordinated 
+  with airport authorities, ground handling service providers, and maintenance 
+  organizations. Special attention must be paid to hydrogen safety protocols 
+  and BWB-specific ground handling requirements. Changes to towing procedures 
+  or equipment specifications may require regulatory notification and operator 
+  service bulletins.
