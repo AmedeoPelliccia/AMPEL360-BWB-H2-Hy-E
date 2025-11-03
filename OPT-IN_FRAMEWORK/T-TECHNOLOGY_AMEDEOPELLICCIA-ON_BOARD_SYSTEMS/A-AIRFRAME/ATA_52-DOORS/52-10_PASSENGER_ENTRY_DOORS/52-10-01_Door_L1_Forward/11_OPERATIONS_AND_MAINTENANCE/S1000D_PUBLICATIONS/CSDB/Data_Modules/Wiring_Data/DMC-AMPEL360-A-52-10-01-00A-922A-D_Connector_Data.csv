@@ -1,0 +1,16 @@
+Connector_ID,Location,Type,Pin_Count,Wire_Gauge,Mating_Connector,Function,Torque_Spec
+J1,Lower Section - Main Power,MS3106A20-29S,29,16 AWG,P1 (Aircraft Side),28V DC Power Input,15-20 in-lbs
+J2,Lower Section - Data,RJ45 Ethernet,8,24 AWG,P2 (Aircraft Network),ARINC 664 / Ethernet Data,Hand tight + 1/8 turn
+J3,Latch Sensor Array,Circular MS,16,22 AWG,P3 (Latch Harness),8x Proximity Sensors + Power,10-12 in-lbs
+J4,Strain Gauge Array,Circular MS,12,20 AWG,P4 (Strain Harness),4x Strain Gauges (Wheatstone),10-12 in-lbs
+J5,Pressure Sensor Array,Circular MS,20,22 AWG,P5 (Pressure Harness),6x Pressure Sensors + Power,10-12 in-lbs
+J6,Temperature Sensors,Circular MS,12,24 AWG,P6 (Temp Harness),4x RTD Sensors + Power,10-12 in-lbs
+J7,Accelerometer Array,Circular MS,12,22 AWG,P7 (Accel Harness),2x 3-axis Accelerometers,10-12 in-lbs
+J8,Actuator Power,MS3106A16-10S,10,14 AWG,P8 (Actuator),Actuator Motor Power,15-20 in-lbs
+J9,Emergency Handle,MS3106A14-6S,6,20 AWG,P9 (Handle Sw),Emergency Release Switch,10-12 in-lbs
+J10,Door Status Indicators,MS3106A12-3S,3,22 AWG,P10 (Indicators),Door Position Switches,10-12 in-lbs
+J11,CAOS Edge Computer - Power,USB-C PD,24,18 AWG,P11 (Edge Comp),Edge Computer 28V Input,N/A (USB-C)
+J12,CAOS Edge Computer - Sensors,USB 3.0,9,28 AWG,P12 (Edge Comp),Sensor Data Acquisition,N/A (USB)
+J13,WiFi Antenna,U.FL Connector,2,Coax,P13 (Antenna),WiFi 6 Communication,Hand tight
+J14,ARINC 429 Interface,D-Sub 9-pin,9,22 AWG,P14 (Avionics),Legacy Avionics Interface,Thumbscrew 5 in-lbs
+J15,Spare / Test Port,MS3106A10-6P,6,20 AWG,P15 (Test),Maintenance Test Interface,10-12 in-lbs
