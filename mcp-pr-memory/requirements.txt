@@ -4,7 +4,5 @@ httpx
 pydantic
 python-dotenv
 requests
-sqlalchemy
-alembic
 python-multipart
 Jinja2
