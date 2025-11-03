@@ -1,0 +1,15 @@
+# RQ-53-10-01-020: Aerodynamic Shape Maintenance
+
+## Requirement Statement
+The nose cone shall maintain its aerodynamic shape within ±5 mm of design contour under all operational loads.
+
+## Rationale
+Shape deviations increase drag and affect airflow to air data sensors.
+
+## Acceptance Criteria
+- Maximum deflection < 5 mm at limit load
+- Surface waviness < 3 mm per meter
+- No visible surface defects
+
+## Compliance Status
+Analysis complete - max deflection 3.2 mm

@@ -1,0 +1,19 @@
+# RQ-53-20-03-150: Visual Inspection Pre-flight
+
+## Requirement Statement
+The BWB outer skin panels shall be visually inspectable for damage during pre-flight walk-around inspection.
+
+## Rationale
+Early detection of impact damage, surface defects, or delamination.
+
+## Acceptance Criteria
+- All panel surfaces visible from ground or access platform
+- Damage criteria defined in AMM (visible damage > 25mm)
+- Lighting adequate for inspection
+- Inspection time < 15 minutes (all panels)
+
+## Compliance Status
+Inspection procedure drafted
+
+## Traceability
+Parent: AMM Chapter 53-20

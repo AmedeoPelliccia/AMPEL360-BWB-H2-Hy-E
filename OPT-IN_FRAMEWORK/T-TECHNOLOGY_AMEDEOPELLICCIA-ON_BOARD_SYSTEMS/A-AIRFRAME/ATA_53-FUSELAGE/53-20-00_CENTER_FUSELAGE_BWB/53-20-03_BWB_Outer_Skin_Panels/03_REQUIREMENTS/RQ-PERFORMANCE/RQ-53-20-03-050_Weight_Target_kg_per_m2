@@ -1,0 +1,18 @@
+# RQ-53-20-03-050: Weight Target 4.67 kg/m²
+
+## Requirement Statement
+The BWB outer skin panels shall not exceed weight target of 4.67 kg/m² (2,100 kg total).
+
+## Rationale
+Weight control essential for aircraft performance and fuel efficiency.
+
+## Acceptance Criteria
+- Panel weight ≤ 4.67 kg/m² (as-built)
+- Total skin panel weight ≤ 2,100 kg
+- Weight tracked through manufacturing
+
+## Compliance Status
+Estimated weight 4.52 kg/m² (3% under target)
+
+## Traceability
+Parent: Aircraft-level weight budget

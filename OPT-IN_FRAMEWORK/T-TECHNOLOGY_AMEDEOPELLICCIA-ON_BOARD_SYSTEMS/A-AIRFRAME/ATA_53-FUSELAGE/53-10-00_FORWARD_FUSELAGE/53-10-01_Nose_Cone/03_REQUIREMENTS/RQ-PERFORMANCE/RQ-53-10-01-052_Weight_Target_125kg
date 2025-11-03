@@ -1,0 +1,15 @@
+# RQ-53-10-01-052: Weight Target 125 kg
+
+## Requirement Statement
+The nose cone structure weight shall not exceed 125 kg.
+
+## Rationale
+Weight control essential for overall aircraft performance and efficiency.
+
+## Acceptance Criteria
+- As-built weight ≤ 125 kg
+- Weight tracked through manufacturing
+- Weight and balance documentation complete
+
+## Compliance Status
+Estimated weight 123 kg (2 kg margin)
