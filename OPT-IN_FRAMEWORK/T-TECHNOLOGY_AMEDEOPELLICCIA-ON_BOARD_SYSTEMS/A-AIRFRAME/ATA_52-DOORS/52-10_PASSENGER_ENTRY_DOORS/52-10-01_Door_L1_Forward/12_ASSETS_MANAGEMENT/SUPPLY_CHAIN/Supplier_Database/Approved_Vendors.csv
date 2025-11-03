@@ -1,0 +1,17 @@
+Supplier_ID,Supplier_Name,Category,Location,AS9100_Cert,ISO9001_Cert,Quality_Rating,Last_Audit,Status
+SUP-001,Hexcel Corporation,Materials_Composites,"Dagneux, France",AS9100D-2023,ISO9001-2023,A+,2025-09-15,Approved
+SUP-002,DuPont Advanced Materials,Materials_Core,"Geneva, Switzerland",AS9100D-2024,ISO9001-2024,A,2025-08-20,Approved
+SUP-003,3M Aerospace,Materials_Adhesives,"St Paul, MN, USA",AS9100D-2023,ISO9001-2023,A,2025-10-05,Approved
+SUP-004,TitaniumWorks GmbH,Materials_Metals,"Munich, Germany",AS9100D-2024,ISO9001-2024,A+,2025-07-12,Approved
+SUP-005,DexmetAero,Materials_EMI,"Wallingford, CT, USA",AS9100D-2023,ISO9001-2023,B+,2025-06-18,Approved
+SUP-006,AeroSeals International,Components_Seals,"Toulouse, France",AS9100D-2024,ISO9001-2024,A,2025-09-28,Approved
+SUP-007,AeroLatch Systems,Components_Latches,"Seattle, WA, USA",AS9100D-2023,ISO9001-2023,A+,2025-08-10,Approved
+SUP-008,PowerDrive Actuation,Components_Actuators,"Hamburg, Germany",AS9100D-2024,ISO9001-2024,A,2025-10-22,Approved
+SUP-009,SiemensAero,Components_Motors,"Munich, Germany",AS9100D-2024,ISO9001-2024,A+,2025-09-05,Approved
+SUP-010,HoneywellAero,Components_Sensors,"Phoenix, AZ, USA",AS9100D-2023,ISO9001-2023,A+,2025-07-30,Approved
+SUP-011,StrainGauge Tech,Components_Sensors,"Cambridge, UK",AS9100D-2024,ISO9001-2024,A,2025-08-25,Approved
+SUP-012,Thermotech Systems,Components_Sensors,"Stuttgart, Germany",AS9100D-2023,ISO9001-2023,B+,2025-06-05,Approved
+SUP-013,PiezoTech Solutions,Components_Sensors,"Zurich, Switzerland",AS9100D-2024,ISO9001-2024,A,2025-10-10,Approved
+SUP-014,AeroHinge Manufacturing,Components_Hardware,"Bristol, UK",AS9100D-2023,ISO9001-2023,A,2025-09-18,Approved
+SUP-015,FastenerSupply Europe,Components_Hardware,"Frankfurt, Germany",AS9100D-2024,ISO9001-2024,B+,2025-07-08,Approved
+SUP-016,MicroActuation Corp,Components_Actuators,"San Jose, CA, USA",AS9100D-2023,ISO9001-2023,A,2025-08-15,Approved

@@ -1,0 +1,45 @@
+{
+  "digital_passport": {
+    "id": "DP-MAT-52-10-01-002",
+    "version": "1.0",
+    "created": "2025-11-03T10:00:00Z",
+    "type": "Material",
+    "classification": "Honeycomb Core",
+    "status": "Active",
+    "identification": {
+      "trade_name": "Nomex HRH-10",
+      "manufacturer": "DuPont Advanced Materials",
+      "part_number": "HRH-10-1/8-3.0",
+      "batch_number": "DN2025-C5678",
+      "specification": "AMS-C-7438 Type I Class 1"
+    },
+    "composition": {
+      "material": "Aramid paper (Nomex)",
+      "phenolic_resin": "5-7% by weight",
+      "cell_size": "1/8 inch (3.2 mm)",
+      "density": "48 kg/m³"
+    },
+    "properties": {
+      "mechanical": {
+        "compression_strength": "1.38 MPa",
+        "shear_strength": "0.69 MPa",
+        "shear_modulus": "34.5 MPa"
+      },
+      "thermal": {
+        "service_temp_max": "177°C",
+        "thermal_conductivity": "0.045 W/m·K"
+      }
+    },
+    "sustainability": {
+      "recyclability": {
+        "method": "Chemical solvolysis",
+        "recovery_rate": "60%"
+      },
+      "carbon_footprint": "12.5 kg CO2e/kg"
+    },
+    "blockchain": {
+      "contract_address": "0xDEF456...",
+      "ipfs_link": "ipfs://QmNomexCore..."
+    }
+  }
+}

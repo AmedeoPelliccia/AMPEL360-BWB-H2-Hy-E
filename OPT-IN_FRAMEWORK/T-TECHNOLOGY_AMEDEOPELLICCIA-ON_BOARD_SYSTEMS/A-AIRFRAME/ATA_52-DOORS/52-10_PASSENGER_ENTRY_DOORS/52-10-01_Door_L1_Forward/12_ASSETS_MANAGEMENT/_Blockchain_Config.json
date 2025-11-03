@@ -1,0 +1,137 @@
+{
+  "blockchain_configuration": {
+    "network": {
+      "type": "Hyperledger Fabric",
+      "version": "2.5.0",
+      "channel": "ampel360-supply-chain",
+      "consortium": "AMPEL360-Aerospace-Consortium"
+    },
+    "nodes": {
+      "peers": [
+        {
+          "organization": "AMPEL360",
+          "endpoint": "peer0.ampel360.aerospace.network:7051",
+          "msp_id": "AMPEL360MSP"
+        },
+        {
+          "organization": "Hexcel",
+          "endpoint": "peer0.hexcel.aerospace.network:7051",
+          "msp_id": "HexcelMSP"
+        },
+        {
+          "organization": "EASA",
+          "endpoint": "peer0.easa.aerospace.network:7051",
+          "msp_id": "EASAMSP"
+        }
+      ],
+      "orderers": [
+        {
+          "endpoint": "orderer.aerospace.network:7050",
+          "tls_cert": "/crypto/ordererOrganizations/orderer.pem"
+        }
+      ]
+    },
+    "consensus": {
+      "algorithm": "PBFT",
+      "block_timeout": "2s",
+      "batch_size": 500,
+      "max_message_count": 100
+    },
+    "smart_contracts": {
+      "digital_passport": {
+        "name": "digital-passport-chaincode",
+        "version": "1.2.0",
+        "language": "Go",
+        "path": "github.com/ampel360/chaincode/digital-passport",
+        "endorsement_policy": "AND('AMPEL360MSP.peer', 'HexcelMSP.peer')"
+      },
+      "traceability": {
+        "name": "supply-chain-traceability",
+        "version": "1.1.0",
+        "language": "Go",
+        "path": "github.com/ampel360/chaincode/traceability",
+        "endorsement_policy": "OR('AMPEL360MSP.peer', 'HexcelMSP.peer', 'EASAMSP.peer')"
+      },
+      "asset_management": {
+        "name": "asset-lifecycle-management",
+        "version": "1.0.5",
+        "language": "JavaScript",
+        "path": "github.com/ampel360/chaincode/asset-mgmt",
+        "endorsement_policy": "AND('AMPEL360MSP.peer')"
+      }
+    },
+    "data_schemas": {
+      "material_passport": "ipfs://QmMaterialPassportSchema-v1.0",
+      "software_passport": "ipfs://QmSoftwarePassportSchema-v1.0",
+      "component_passport": "ipfs://QmComponentPassportSchema-v1.0",
+      "process_passport": "ipfs://QmProcessPassportSchema-v1.0"
+    },
+    "storage": {
+      "on_chain": [
+        "passport_hash",
+        "timestamp",
+        "owner",
+        "status",
+        "version"
+      ],
+      "off_chain": {
+        "provider": "IPFS",
+        "gateway": "https://ipfs.ampel360.aerospace",
+        "pinning_service": "Pinata",
+        "redundancy": 3
+      }
+    },
+    "access_control": {
+      "read_public": [
+        "passport_id",
+        "type",
+        "status",
+        "blockchain_hash"
+      ],
+      "read_restricted": [
+        "supplier_details",
+        "pricing",
+        "proprietary_processes"
+      ],
+      "write_permissions": [
+        "AMPEL360MSP.admin",
+        "AMPEL360MSP.quality"
+      ]
+    },
+    "compliance": {
+      "gdpr_compliant": true,
+      "data_retention_years": 25,
+      "right_to_erasure": "Hash-only after retention",
+      "audit_trail": "Immutable",
+      "regulatory_reporting": [
+        "EASA",
+        "FAA",
+        "EU-DPP"
+      ]
+    },
+    "integration": {
+      "rest_api": {
+        "endpoint": "https://api.ampel360.aerospace/blockchain/v1",
+        "authentication": "OAuth2 + mTLS",
+        "rate_limit": "1000/hour"
+      },
+      "web3_provider": {
+        "endpoint": "wss://web3.ampel360.aerospace",
+        "chain_id": "ampel360-mainnet"
+      },
+      "event_streaming": {
+        "kafka_topic": "blockchain-events",
+        "broker": "kafka.ampel360.internal:9092"
+      }
+    },
+    "monitoring": {
+      "prometheus_endpoint": "http://blockchain-metrics.ampel360.internal:9090",
+      "grafana_dashboard": "https://monitoring.ampel360.aerospace/d/blockchain",
+      "alerting": {
+        "consensus_failure": "critical",
+        "peer_down": "warning",
+        "transaction_delay": "info"
+      }
+    }
+  }
+}
