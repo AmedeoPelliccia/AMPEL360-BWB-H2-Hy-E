@@ -19,8 +19,8 @@ RQ-52-20-01-191,Lightning_Direct,Strike,200kA_Zone_1A,Waveform_A,Test,Defined
 RQ-52-20-01-192,Lightning_Indirect,Effects,Level_3,All_pins,Test,Defined
 RQ-52-20-01-193,HIRF,Protection,DO-160_Cat_Y,All_bands,Analysis,Defined
 RQ-52-20-01-194,Fluid_Susceptibility,Hydraulic,Skydrol,Immersion,Test,Defined
-RQ-52-20-01-180,Acoustic_Noise,Operating,130_dB,Takeoff,Test,Defined
-RQ-52-20-01-181,Thermal_Shock,Cycling,-55_to_+70°C,10_cycles,Test,Defined
-RQ-52-20-01-182,Fungus_Resistance,Tropical,MIL-STD-810,28_days,Test,Defined
-RQ-52-20-01-183,Rain_Erosion,High_Speed,300_KTAS,Exposure,Test,Defined
-RQ-52-20-01-184,Chemical_Resistance,Cleaning,Approved_agents,Contact,Test,Defined
+RQ-52-20-01-195,Acoustic_Noise,Operating,130_dB,Takeoff,Test,Defined
+RQ-52-20-01-196,Thermal_Shock,Cycling,-55_to_+70°C,10_cycles,Test,Defined
+RQ-52-20-01-197,Fungus_Resistance,Tropical,MIL-STD-810,28_days,Test,Defined
+RQ-52-20-01-198,Rain_Erosion,High_Speed,300_KTAS,Exposure,Test,Defined
+RQ-52-20-01-199,Chemical_Resistance,Cleaning,Approved_agents,Contact,Test,Defined
