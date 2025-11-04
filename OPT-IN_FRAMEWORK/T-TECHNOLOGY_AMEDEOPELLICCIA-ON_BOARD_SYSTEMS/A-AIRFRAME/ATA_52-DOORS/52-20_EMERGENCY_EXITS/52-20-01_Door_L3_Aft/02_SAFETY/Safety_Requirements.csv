@@ -16,7 +16,7 @@ SR-014,Slide shall withstand 30kt wind,CS_25.810,Test,B,Draft,Engineering,H-03.3
 SR-015,Emergency lighting shall operate on battery backup,CS_25.812,Test,C,Draft,Electrical,H-04.1
 SR-016,Handle shall be RED with clear markings,CS_25.809,Inspection,C,Draft,Engineering,Human_Factors
 SR-017,No single failure shall prevent emergency opening,CS_25.1309,Analysis,A,Draft,Safety,H-01.1
-SR-018,Inadvertent opening probability <10E-9 per FH,CS_25.1309,Analysis,A,Draft,Safety,H-02.1
+SR-018,Inadvertent opening probability <1E-9 per FH,CS_25.1309,Analysis,A,Draft,Safety,H-02.1
 SR-019,System shall operate -65°C to +85°C,CS_25.1309,Test,A,Draft,Engineering,Environmental
 SR-020,System shall withstand lightning strike,CS_25.1316,Test,A,Draft,Electrical,Environmental
 SR-021,Control software shall meet DO-178C Level A,DO-178C,Review_and_Test,A,Draft,Software,H-01.1
