@@ -153,10 +153,10 @@ This folder contains comprehensive asset management documentation for the Door L
 
 ### Digital Passport System
 - **Complete traceability** from raw materials to end-of-life
-- **Blockchain-secured** records for authenticity
+- **Blockchain-secured** records for authenticity with [Hyperledger Fabric](https://www.hyperledger.org/use/fabric)
 - **AI/ML software** documentation and ethics
 - **Circular economy** integration
-- **Regulatory compliance** for EU Digital Product Passport
+- **Regulatory compliance** for [EU Digital Product Passport](https://ec.europa.eu/info/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products_en)
 
 ### Asset Management Capabilities
 - Real-time tracking of all materials, components, and software
@@ -179,9 +179,37 @@ This folder contains comprehensive asset management documentation for the Door L
 
 ## Related Documents
 
+### Internal Documentation
+- [Digital Passport Overview](./DIGITAL_PASSPORTS/DP_Overview.md)
+- [Digital Passport Index](./_Digital_Passport_Index.csv)
+- [Asset Registry](./_Asset_Registry.csv)
+- [Blockchain Configuration](./_Blockchain_Config.json)
+- [BOM Master](./CONFIGURATION_MANAGEMENT/BOM_Master.csv)
+- [Circular Economy - Recyclability Score](./LIFECYCLE_TRACKING/Circular_Economy/Recyclability_Score.md)
+- [Material Recovery Plan](./LIFECYCLE_TRACKING/Circular_Economy/Material_Recovery_Plan.md)
+- [Approved Vendors](./SUPPLY_CHAIN/Supplier_Database/Approved_Vendors.csv)
+
+### Digital Passport Files
+- [DP-MAT-52-10-01-001: CFRP Face Sheet](./DIGITAL_PASSPORTS/Material_Passports/DP-MAT-52-10-01-001_CFRP_FaceSheet.json)
+- [DP-MAT-52-10-01-002: Nomex Core](./DIGITAL_PASSPORTS/Material_Passports/DP-MAT-52-10-01-002_Nomex_Core.json)
+- [DP-SW-52-10-01-001: CAOS Core](./DIGITAL_PASSPORTS/Software_Passports/DP-SW-52-10-01-001_CAOS_Core.json)
+- [DP-CMP-52-10-01-001: Complete Door](./DIGITAL_PASSPORTS/Component_Passports/DP-CMP-52-10-01-001_Complete_Door.json)
+- [DP-PRC-52-10-01-001: Autoclave Cure](./DIGITAL_PASSPORTS/Process_Passports/DP-PRC-52-10-01-001_Autoclave_Cure.json)
+
+### OPT-IN Framework
 - [ATA 95 - Digital Product Passport and Traceability](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/)
 - [CAOS Operations Framework](../../../../../../../CAOS_OPERATIONS_FRAMEWORK.md)
 - [CAOS Manifesto](../../../../../../../CAOS_MANIFESTO.md)
+
+### Standards & Regulations
+- [EU Digital Product Passport (ESPR)](https://ec.europa.eu/info/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products_en)
+- [Hyperledger Fabric](https://www.hyperledger.org/use/fabric)
+- [DO-178C Software Considerations](https://www.rtca.org/content/standards-guidance-materials)
+- [EASA Regulations](https://www.easa.europa.eu/regulations)
+- [REACH Regulation](https://echa.europa.eu/regulations/reach/understanding-reach)
+- [RoHS Directive](https://environment.ec.europa.eu/topics/waste-and-recycling/rohs-directive_en)
+- [ISO 9001:2015 Quality Management](https://www.iso.org/iso-9001-quality-management.html)
+- [AS9100D Aerospace Quality](https://www.sae.org/standards/content/as9100d/)
 
 ---
 

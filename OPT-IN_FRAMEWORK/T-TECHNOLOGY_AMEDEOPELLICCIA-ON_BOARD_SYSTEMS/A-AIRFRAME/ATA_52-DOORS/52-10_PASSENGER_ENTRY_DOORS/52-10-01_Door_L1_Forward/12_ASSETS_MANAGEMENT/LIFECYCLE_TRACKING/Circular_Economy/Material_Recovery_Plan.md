@@ -193,17 +193,17 @@ Total CO₂ saved:     2,491 kg CO₂e
 ## Regulatory Compliance
 
 ### EU Requirements
-- ✅ REACH Article 33 communication
-- ✅ RoHS Directive compliance
-- ✅ Waste Framework Directive (2008/98/EC)
+- ✅ [REACH Article 33](https://echa.europa.eu/regulations/reach/understanding-reach) communication
+- ✅ [RoHS Directive](https://environment.ec.europa.eu/topics/waste-and-recycling/rohs-directive_en) compliance
+- ✅ [Waste Framework Directive (2008/98/EC)](https://environment.ec.europa.eu/topics/waste-and-recycling/waste-framework-directive_en)
 - ✅ End-of-Life Vehicles Directive (adapted)
-- ✅ EU Digital Product Passport requirements
+- ✅ [EU Digital Product Passport](https://ec.europa.eu/info/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products_en) requirements
 
 ### Aviation Regulations
-- ✅ EASA Part 145 decommissioning procedures
+- ✅ [EASA Part 145](https://www.easa.europa.eu/regulations) decommissioning procedures
 - ✅ Controlled parts documentation
 - ✅ Hazardous material declarations
-- ✅ Export control compliance (ITAR/EAR)
+- ✅ Export control compliance ([ITAR](https://www.pmddtc.state.gov/ddtc_public?id=ddtc_public_portal_itar_landing)/[EAR](https://www.bis.doc.gov/index.php/regulations/export-administration-regulations-ear))
 
 ### Documentation Required
 1. End-of-Life Certificate (EASA Form 1)
@@ -273,3 +273,10 @@ Version: 1.0
 Author: Circular Economy Team  
 Approved: COO & Sustainability Officer  
 Next Review: 2026-05-03
+
+**Related Documents**
+- [Recyclability Score](./Recyclability_Score.md)
+- [Sustainability Metrics](./Sustainability_Metrics.csv)
+- [Asset Management README](../../README.md)
+- [Digital Passport Overview](../../DIGITAL_PASSPORTS/DP_Overview.md)
+- [DP-CMP-52-10-01-001: Complete Door Assembly](../../DIGITAL_PASSPORTS/Component_Passports/DP-CMP-52-10-01-001_Complete_Door.json)

@@ -255,11 +255,11 @@ Total Value Extracted:   €467,500 (55% of original)
 
 ## Certifications & Standards
 
-- ✅ **ISO 14001:2015**: Environmental Management System
-- ✅ **ISO 14040:2006**: Life Cycle Assessment
-- ✅ **EU Ecodesign Directive**: Compliance documented
-- ✅ **Cradle to Cradle**: Silver certification (target Gold by 2027)
-- ✅ **Ellen MacArthur Foundation**: MCI methodology applied
+- ✅ **[ISO 14001:2015](https://www.iso.org/iso-14001-environmental-management.html)**: Environmental Management System
+- ✅ **[ISO 14040:2006](https://www.iso.org/standard/37456.html)**: Life Cycle Assessment
+- ✅ **[EU Ecodesign Directive](https://ec.europa.eu/info/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products_en)**: Compliance documented
+- ✅ **[Cradle to Cradle](https://www.c2ccertified.org/)**: Silver certification (target Gold by 2027)
+- ✅ **[Ellen MacArthur Foundation](https://ellenmacarthurfoundation.org/)**: MCI methodology applied
 
 ## Comparison to Industry
 
@@ -297,7 +297,14 @@ Approved: Dr. Elena Rodriguez, Chief Sustainability Officer
 Next Review: 2026-11-03  
 
 **References**  
-- Ellen MacArthur Foundation MCI Calculator
-- ISO 14040:2006 LCA Methodology
-- EU Digital Product Passport Requirements (ESPR)
-- EASA Circular Economy Guidelines 2024
+- [Ellen MacArthur Foundation MCI Calculator](https://ellenmacarthurfoundation.org/material-circularity-indicator)
+- [ISO 14040:2006 LCA Methodology](https://www.iso.org/standard/37456.html)
+- [EU Digital Product Passport Requirements (ESPR)](https://ec.europa.eu/info/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products_en)
+- [EASA Circular Economy Guidelines 2024](https://www.easa.europa.eu/)
+
+**Related Documents**
+- [Asset Management README](../../README.md)
+- [Digital Passport Overview](../../DIGITAL_PASSPORTS/DP_Overview.md)
+- [Material Recovery Plan](./Material_Recovery_Plan.md)
+- [Sustainability Metrics](./Sustainability_Metrics.csv)
+- [DP-CMP-52-10-01-001: Complete Door Assembly](../../DIGITAL_PASSPORTS/Component_Passports/DP-CMP-52-10-01-001_Complete_Door.json)
