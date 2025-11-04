@@ -1,0 +1,51 @@
+Req_ID,Requirement_Description,Source,Verification_Method,DAL,Status,Owner,Related_Hazard
+SR-001,Emergency exit shall open in <3 seconds (powered mode),CS_25.807,Test,A,Draft,Engineering,H-01.2
+SR-002,Emergency exit shall open in <8 seconds (manual mode),CS_25.807,Test,A,Draft,Engineering,H-01.2
+SR-003,Opening force shall not exceed 50 lbf,CS_25.807,Test,A,Draft,Engineering,H-01.1
+SR-004,Manual system shall be independent of electrical power,CS_25.1309,Analysis_and_Test,A,Draft,Engineering,H-01.1
+SR-005,Door shall withstand cabin pressure differential,CS_25.365,Test,A,Draft,Structures,H-02.1
+SR-006,Dual locking mechanisms required,CS_25.783,Inspection,A,Draft,Engineering,H-02.1
+SR-007,Slide shall deploy automatically when door opens,CS_25.810,Test,B,Draft,Engineering,H-03.1
+SR-008,Slide shall inflate in <6 seconds,CS_25.810,Test,B,Draft,Engineering,H-03.2
+SR-009,Slide shall support dual-lane evacuation,CS_25.810,Test,B,Draft,Engineering,H-03.1
+SR-010,Armed indicator shall be visible to crew,CS_25.791,Inspection,C,Draft,Engineering,H-04.1
+SR-011,Door position shall be indicated in cockpit,CS_25.729,Test,C,Draft,Avionics,H-04.3
+SR-012,System shall provide manual slide deployment backup,CS_25.810,Test,B,Draft,Engineering,H-03.1
+SR-013,Girt bar shall attach automatically,Internal,Test,B,Draft,Engineering,H-03.1
+SR-014,Slide shall withstand 30kt wind,CS_25.810,Test,B,Draft,Engineering,H-03.3
+SR-015,Emergency lighting shall operate on battery backup,CS_25.812,Test,C,Draft,Electrical,H-04.1
+SR-016,Handle shall be RED with clear markings,CS_25.809,Inspection,C,Draft,Engineering,Human_Factors
+SR-017,No single failure shall prevent emergency opening,CS_25.1309,Analysis,A,Draft,Safety,H-01.1
+SR-018,Inadvertent opening probability <10E-9 per FH,CS_25.1309,Analysis,A,Draft,Safety,H-02.1
+SR-019,System shall operate -65°C to +85°C,CS_25.1309,Test,A,Draft,Engineering,Environmental
+SR-020,System shall withstand lightning strike,CS_25.1316,Test,A,Draft,Electrical,Environmental
+SR-021,Control software shall meet DO-178C Level A,DO-178C,Review_and_Test,A,Draft,Software,H-01.1
+SR-022,Mechanical components shall be fail-safe,CS_25.1309,Analysis,A,Draft,Engineering,H-01.1
+SR-023,Spring assist shall aid manual opening,Internal,Test,A,Draft,Engineering,H-01.1
+SR-024,Hinges shall support 150% ultimate load,CS_25.305,Test,A,Draft,Structures,H-02.4
+SR-025,Seals shall maintain pressure to 8000ft cabin altitude,CS_25.841,Test,B,Draft,Engineering,H-02.3
+SR-026,Door shall be operable from inside and outside,CS_25.807,Test,A,Draft,Engineering,H-01.1
+SR-027,Visual and tactile feedback required for handle operation,Internal,Inspection,C,Draft,Human_Factors,Human_Factors
+SR-028,Slide lanes shall be independently inflatable,Internal,Test,B,Draft,Engineering,H-03.1
+SR-029,System shall include self-test capability,CS_25.1309,Test,D,Draft,Engineering,H-04.1
+SR-030,Arming system shall prevent ground slide deployment,CS_25.810,Test,B,Draft,Engineering,H-05.2
+SR-031,Pressure locks shall engage above 12000ft cabin pressure,Internal,Test,A,Draft,Engineering,H-02.2
+SR-032,Evacuation capacity shall exceed 70 pax/min,CS_25.803,Analysis_and_Test,A,Draft,Safety,Evacuation
+SR-033,Slide shall function as life raft in ditching,CS_25.807,Test,B,Draft,Engineering,Ditching
+SR-034,Emergency exit dimensions shall meet Type A requirements,CS_25.807,Inspection,A,Draft,Engineering,Regulatory
+SR-035,Structure shall withstand bird strike,CS_25.571,Test,A,Draft,Structures,Environmental
+SR-036,All fasteners shall have locking features,Internal,Inspection,A,Draft,Engineering,Manufacturing
+SR-037,NDT inspection required for critical structure,Internal,Inspection,A,Draft,QA,Maintenance
+SR-038,Photoluminescent marking required,CS_25.812,Inspection,C,Draft,Engineering,Emergency
+SR-039,Handle force shall be testable without door opening,Internal,Test,D,Draft,Engineering,Maintenance
+SR-040,CAOS interface shall monitor door health,Internal,Test,E,Draft,Software,Predictive
+SR-041,Slide pressure monitoring required,Internal,Test,C,Draft,Engineering,H-03.4
+SR-042,Power actuator shall have speed limiting,Internal,Test,B,Draft,Engineering,H-01.3
+SR-043,Manual cables shall be dual-redundant,Internal,Inspection,A,Draft,Engineering,H-01.1
+SR-044,Sensors shall be voting redundant,CS_25.1309,Test,C,Draft,Engineering,H-04.2
+SR-045,System shall withstand crash loads,CS_25.561,Test,A,Draft,Structures,Emergency
+SR-046,All materials shall be fire-resistant,CS_25.853,Test,A,Draft,Materials,Fire
+SR-047,Slide deployment shall not injure passengers,CS_25.810,Test,B,Draft,Safety,H-03.5
+SR-048,Door shall remain secure in turbulence,CS_25.365,Test,A,Draft,Structures,H-02.2
+SR-049,Indicators shall be redundant,Internal,Test,C,Draft,Engineering,H-04.1
+SR-050,System shall record usage and faults,Internal,Test,E,Draft,Software,Maintenance
