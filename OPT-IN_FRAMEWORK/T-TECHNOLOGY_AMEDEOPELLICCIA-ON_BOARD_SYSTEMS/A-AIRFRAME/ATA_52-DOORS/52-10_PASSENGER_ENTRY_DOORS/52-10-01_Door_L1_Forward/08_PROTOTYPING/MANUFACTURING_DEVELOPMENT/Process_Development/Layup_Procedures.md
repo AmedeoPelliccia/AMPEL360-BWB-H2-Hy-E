@@ -18,15 +18,15 @@
    - Debulk 5 minutes vacuum (>26 inHg)
    - Photo documentation
    
-3. **Ply 2: +45° orientation**
-   - Template alignment
-   - Overlap control: 3-6mm
-   - Avoid wrinkles at edges
-   
-4. **ECF layer** (outer face only, between ply 1-2)
+3. **ECF layer** (outer face only, between ply 1-2)
    - Expanded copper foil (lightning protection)
    - Electrical continuity check
    - Overlap: 25mm minimum
+   
+4. **Ply 2: +45° orientation**
+   - Template alignment
+   - Overlap control: 3-6mm
+   - Avoid wrinkles at edges
    
 5. **Continue plies 3-8**
    - Follow stacking sequence: [0/+45/90/-45]s
