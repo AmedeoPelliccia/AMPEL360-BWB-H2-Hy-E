@@ -1,0 +1,36 @@
+Requirement_ID,Regulatory_Body,Regulation_Standard,Section_Reference,Requirement_Description,Compliance_Status,Evidence_Document,Responsible_Party,Due_Date,Notes
+REG-001,EASA,CS-25,25.1309,Software/hardware development assurance,Compliant,DO-178C_Compliance_Report.pdf,Certification_Lead,2027-12-31,ML extensions applied
+REG-002,EASA,CS-25,25.1302,Installed systems - crew interface,In_Progress,Human_Factors_Validation.pdf,HF_Lead,2027-06-30,NN display requirements
+REG-003,EASA,AI Roadmap 2.0,Section 3.2,Explainability requirements,Compliant,Explainability_Report.pdf,ML_Team,2027-03-31,SHAP/LIME implemented
+REG-004,EASA,AI Roadmap 2.0,Section 3.3,Traceability requirements,Compliant,Traceability_Framework.md,Systems_Engineer,2027-03-31,Seven-layer model
+REG-005,EASA,AI Roadmap 2.0,Section 3.4,Robustness testing,In_Progress,Robustness_Test_Report.pdf,Test_Lead,2027-09-30,Adversarial testing ongoing
+REG-006,FAA,14 CFR Part 25,25.1309,Equipment systems and installations,Planned,FAA_Compliance_Plan.pdf,Certification_Lead,2028-06-30,Special conditions expected
+REG-007,FAA,AI Assurance Framework,Objective 1,Define and document AI system,Compliant,System_Description_Document.pdf,Systems_Engineer,2027-03-31,All NN systems documented
+REG-008,FAA,AI Assurance Framework,Objective 2,Develop with appropriate assurance,In_Progress,Development_Assurance_Report.pdf,Quality_Lead,2027-12-31,DO-178C + ML supplements
+REG-009,FAA,AI Assurance Framework,Objective 3,Verify AI system performance,Planned,Verification_Test_Plan.pdf,Test_Lead,2028-03-31,Test campaign scheduled
+REG-010,FAA,AI Assurance Framework,Objective 4,Demonstrate continued safety,Planned,Continued_Airworthiness_Plan.pdf,Safety_Manager,2029-01-01,Post-certification monitoring
+REG-011,EU,AI Act (2024/1689),Article 9,Risk management system,Compliant,Risk_Management_System.pdf,Safety_Manager,2027-12-31,Integrated with SMS
+REG-012,EU,AI Act (2024/1689),Article 10,Data governance,Compliant,Data_Governance_Framework.pdf,Data_Manager,2027-12-31,Quality metrics defined
+REG-013,EU,AI Act (2024/1689),Article 11,Technical documentation,In_Progress,Technical_Documentation_Package.pdf,Documentation_Lead,2027-12-31,Model and dataset cards
+REG-014,EU,AI Act (2024/1689),Article 12,Record-keeping and logging,Compliant,Audit_Trail_System.pdf,IT_Lead,2027-12-31,20-year retention
+REG-015,EU,AI Act (2024/1689),Article 13,Transparency to users,Compliant,User_Interface_Spec.pdf,HF_Lead,2027-12-31,Crew displays defined
+REG-016,EU,AI Act (2024/1689),Article 14,Human oversight,Compliant,User_Accountability_Model.md,Operations_Lead,2027-12-31,Human-in-the-loop
+REG-017,EU,AI Act (2024/1689),Article 15,Accuracy robustness cybersecurity,In_Progress,Security_Assessment.pdf,Security_Lead,2027-12-31,Penetration testing planned
+REG-018,RTCA,DO-178C,All Objectives,Software development assurance,In_Progress,DO-178C_Plan.pdf,Software_Lead,2027-12-31,ML extensions documented
+REG-019,RTCA,DO-254,All Objectives,Hardware development assurance,Planned,DO-254_Plan.pdf,Hardware_Lead,2027-12-31,Neural processors
+REG-020,RTCA,DO-200B,Data Quality,Processing aeronautical data,Compliant,Data_Quality_Procedures.pdf,Data_Manager,2027-03-31,Training data quality
+REG-021,SAE,ARP4761,All Sections,Safety assessment process,In_Progress,Safety_Assessment.pdf,Safety_Lead,2027-09-30,FHA FTA FMEA ongoing
+REG-022,SAE,ARP4754A,All Sections,Civil aircraft system development,In_Progress,Development_Plan.pdf,Systems_Engineer,2027-12-31,ML lifecycle integrated
+REG-023,EUROCAE,WG-114 (Draft),TBD,AI assurance guidance,Monitoring,N/A,Standards_Lead,TBD,Tracking WG-114 progress
+REG-024,SAE,G-34 (Draft),TBD,AI in aviation guidance,Monitoring,N/A,Standards_Lead,TBD,Participating in committee
+REG-025,ISO,ISO/IEC 42001:2023,All Clauses,AI management system,Planned,AI_Management_System.pdf,Quality_Lead,2028-06-30,Certification planned
+REG-026,EASA,CS-25,25.1322,Flight crew alerting,In_Progress,Alerting_Philosophy.pdf,HF_Lead,2027-06-30,NN-specific alerts
+REG-027,FAA,AC 25-11B,All Sections,Electronic flight deck displays,In_Progress,Display_Design_Spec.pdf,HF_Lead,2027-06-30,NN status displays
+REG-028,EASA,AMC 25.1309,All Sections,System safety assessment,In_Progress,System_Safety_Assessment.pdf,Safety_Lead,2027-09-30,NN-specific hazards
+REG-029,FAA,AC 20-115D,All Sections,Airborne software assurance,In_Progress,Software_Assurance_Plan.pdf,Software_Lead,2027-12-31,ML adaptations documented
+REG-030,ICAO,Annex 6,Part I Operations,Aircraft operations requirements,Planned,Operations_Compliance.pdf,Operations_Lead,2028-12-31,Post-certification ops
+REG-031,EASA,Part-M,Continuing Airworthiness,Maintenance organization requirements,Planned,Maintenance_Program.pdf,Maintenance_Lead,2028-12-31,NN-specific procedures
+REG-032,FAA,Part 121,Subpart J,Flight operations requirements,Planned,Part_121_Compliance.pdf,Operations_Lead,2029-06-30,Operator certification
+REG-033,EASA,Part-145,Approved Maintenance,Maintenance organization approval,Planned,Part_145_Procedures.pdf,Maintenance_Lead,2029-03-31,NN maintenance capability
+REG-034,Cyber,DO-326A,All Sections,Airworthiness security process,In_Progress,Cybersecurity_Plan.pdf,Security_Lead,2027-12-31,NN-specific threats
+REG-035,Privacy,GDPR (EU),All Articles,Data protection and privacy,Compliant,Privacy_Impact_Assessment.pdf,Legal_Lead,2027-12-31,Training data anonymization
