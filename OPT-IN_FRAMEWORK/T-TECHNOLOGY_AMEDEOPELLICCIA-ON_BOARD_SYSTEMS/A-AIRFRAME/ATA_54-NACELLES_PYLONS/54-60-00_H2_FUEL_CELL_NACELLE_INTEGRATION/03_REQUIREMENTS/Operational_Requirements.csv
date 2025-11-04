@@ -1,0 +1,11 @@
+Requirement_ID,Description,Crew_Action,Time_Limit,Training_Required,Verification,Status
+RQ-54-60-00-140,Pre_Flight_H2_System_Check,Flight_Crew,5,minutes,Yes,Demo,Defined
+RQ-54-60-00-141,Fuel_Cell_Startup_Procedure,Flight_Crew,3,minutes,Yes,Demo,Defined
+RQ-54-60-00-142,Normal_Shutdown_Procedure,Flight_Crew,2,minutes,Yes,Demo,Defined
+RQ-54-60-00-143,Emergency_Shutdown_Procedure,Flight_Crew,30,seconds,Yes,Demo,Defined
+RQ-54-60-00-144,Ground_H2_Refueling_Interface,Ground_Crew,Variable,Yes,Demo,Defined
+RQ-54-60-00-145,Nacelle_Access_For_Inspection,Maintenance,15,minutes,Yes,Demo,Defined
+RQ-54-60-00-146,H2_Leak_Response_Procedure,Any_Crew,Immediate,Yes,Demo,Defined
+RQ-54-60-00-147,Cold_Weather_Starting_Procedure,Flight_Crew,5,minutes,Yes,Demo,Defined
+RQ-54-60-00-148,High_Altitude_Operation_Limits,Flight_Crew,Continuous,Yes,Analysis,Defined
+RQ-54-60-00-149,CAOS_Monitoring_Interpretation,Flight_Crew,Continuous,Yes,Demo,Defined
