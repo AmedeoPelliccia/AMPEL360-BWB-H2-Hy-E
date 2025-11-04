@@ -38,11 +38,11 @@ Sensors → Edge Computer → CAOS Cloud → S1000D CSDB
 
 | CAOS Function | S1000D Update | DMC Reference |
 |--------------|---------------|---------------|
-| Sensor Alert | Warning/Caution | DMC-AMPEL360-A-00-00-00-00A-018C-D |
-| Life Tracking | LLP Update | DMC-AMPEL360-A-52-10-01-00A-020A-D |
-| New Fault | Troubleshooting | DMC-AMPEL360-A-52-10-01-00A-910A-D |
-| Interval Change | Schedule Update | DMC-AMPEL360-A-52-10-01-00A-019A-D |
-| Fleet Learning | Process Update | DMC-AMPEL360-A-52-10-01-00A-912A-D |
+| Sensor Alert | Warning/Caution | [DMC-AMPEL360-A-00-00-00-00A-018C-D](../../Common_Information_Repository/Warnings_Cautions/DMC-AMPEL360-A-00-00-00-00A-018C-D_Warnings.csv) |
+| Life Tracking | LLP Update | [DMC-AMPEL360-A-52-10-01-00A-020A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-020A-D_Life_Limited_Parts.md) |
+| New Fault | Troubleshooting | [DMC-AMPEL360-A-52-10-01-00A-910A-D](../Process/DMC-AMPEL360-A-52-10-01-00A-910A-D_Troubleshooting.md) |
+| Interval Change | Schedule Update | [DMC-AMPEL360-A-52-10-01-00A-019A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-019A-D_Maintenance_Schedule.md) |
+| Fleet Learning | Process Update | [DMC-AMPEL360-A-52-10-01-00A-912A-D](../Process/DMC-AMPEL360-A-52-10-01-00A-912A-D_CAOS_Diagnostics.md) |
 
 ---
 
@@ -50,10 +50,10 @@ Sensors → Edge Computer → CAOS Cloud → S1000D CSDB
 
 | Parameter | Sensor | Rate | S1000D Link |
 |-----------|--------|------|-------------|
-| Latch Force | Strain Gauge | 100 Hz | DMC-AMPEL360-A-52-10-01-00A-710A-D |
-| Seal Pressure | Pressure | 10 Hz | DMC-AMPEL360-A-52-10-01-00A-711A-D |
-| Cycles | Software | Event | DMC-AMPEL360-A-52-10-01-00A-020A-D |
-| Vibration | Accelerometer | 5 kHz | DMC-AMPEL360-A-52-10-01-00A-722A-D |
+| Latch Force | Strain Gauge | 100 Hz | [DMC-AMPEL360-A-52-10-01-00A-710A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-710A-D_Functional_Test.md) |
+| Seal Pressure | Pressure | 10 Hz | [DMC-AMPEL360-A-52-10-01-00A-711A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-711A-D_Leak_Test.md) |
+| Cycles | Software | Event | [DMC-AMPEL360-A-52-10-01-00A-020A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-020A-D_Life_Limited_Parts.md) |
+| Vibration | Accelerometer | 5 kHz | [DMC-AMPEL360-A-52-10-01-00A-722A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-722A-D_CAOS_Self_Test.md) |
 
 ### 4.1 Sensor Network Architecture
 
@@ -101,7 +101,7 @@ The Door L1 Forward CAOS implementation includes:
 ## 5. PREDICTIVE MAINTENANCE
 
 CAOS generates dynamic maintenance tasks:
-- Updates DMC-AMPEL360-A-52-10-01-00A-021A-D
+- Updates [DMC-AMPEL360-A-52-10-01-00A-021A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-021A-D_CAOS_Intervals.md)
 - Modifies intervals based on condition
 - Creates new procedural data modules as needed
 - Links to fleet-wide best practices
@@ -420,27 +420,27 @@ Refer to DMC-AMPEL360-A-52-10-01-00A-722A-D for CAOS self-test procedures.
 ## 15. REFERENCES
 
 ### 15.1 Related CAOS Data Modules
-- DMC-AMPEL360-A-52-10-01-00A-912A-D (CAOS Diagnostics)
-- DMC-AMPEL360-A-52-10-01-00A-913A-D (Digital Twin Analysis)
-- DMC-AMPEL360-A-52-10-01-00A-914A-D (Predictive Alerts)
-- DMC-AMPEL360-A-52-10-01-00A-021A-D (CAOS Intervals)
-- DMC-AMPEL360-A-52-10-01-00A-022A-D (Reliability Data)
+- [DMC-AMPEL360-A-52-10-01-00A-912A-D](../Process/DMC-AMPEL360-A-52-10-01-00A-912A-D_CAOS_Diagnostics.md) (CAOS Diagnostics)
+- [DMC-AMPEL360-A-52-10-01-00A-913A-D](../Process/DMC-AMPEL360-A-52-10-01-00A-913A-D_Digital_Twin_Analysis.md) (Digital Twin Analysis)
+- [DMC-AMPEL360-A-52-10-01-00A-914A-D](../Process/DMC-AMPEL360-A-52-10-01-00A-914A-D_Predictive_Alerts.md) (Predictive Alerts)
+- [DMC-AMPEL360-A-52-10-01-00A-021A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-021A-D_CAOS_Intervals.md) (CAOS Intervals)
+- [DMC-AMPEL360-A-52-10-01-00A-022A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-022A-D_Reliability_Data.md) (Reliability Data)
 
 ### 15.2 System Data Modules
-- DMC-AMPEL360-A-52-10-01-00A-000A-D (Door Description)
-- DMC-AMPEL360-A-52-10-01-00A-710A-D (Functional Test)
-- DMC-AMPEL360-A-52-10-01-00A-711A-D (Leak Test)
-- DMC-AMPEL360-A-52-10-01-00A-722A-D (CAOS Self Test)
+- [DMC-AMPEL360-A-52-10-01-00A-000A-D](DMC-AMPEL360-A-52-10-01-00A-000A-D_Description.md) (Door Description)
+- [DMC-AMPEL360-A-52-10-01-00A-710A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-710A-D_Functional_Test.md) (Functional Test)
+- [DMC-AMPEL360-A-52-10-01-00A-711A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-711A-D_Leak_Test.md) (Leak Test)
+- [DMC-AMPEL360-A-52-10-01-00A-722A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-722A-D_CAOS_Self_Test.md) (CAOS Self Test)
 
 ### 15.3 Publication Modules
-- PM-AMPEL360-52-00002-00 (CAOS Dashboard)
-- PM-AMPEL360-52-00003-00 (Digital Twin)
-- PM-AMPEL360-52-00004-00 (Fleet Analytics)
+- [PM-AMPEL360-52-00002-00](../../Publication_Modules/PM-AMPEL360-52-00002-00_CAOS_Dashboard.md) (CAOS Dashboard)
+- [PM-AMPEL360-52-00003-00](../../Publication_Modules/PM-AMPEL360-52-00003-00_Digital_Twin.md) (Digital Twin)
+- [PM-AMPEL360-52-00004-00](../../Publication_Modules/PM-AMPEL360-52-00004-00_Fleet_Analytics.md) (Fleet Analytics)
 
 ### 15.4 External References
-- CAOS Manifesto (AMPEL360-DOC-CAOS-001)
-- CAOS Operations Framework (AMPEL360-DOC-CAOS-002)
-- S1000D Specification Issue 5.0
+- [CAOS Manifesto](../../../../../../../../CAOS_MANIFESTO.md) (AMPEL360-DOC-CAOS-001)
+- [CAOS Operations Framework](../../../../../../../../CAOS_OPERATIONS_FRAMEWORK.md) (AMPEL360-DOC-CAOS-002)
+- [S1000D Specification Issue 5.0](http://www.s1000d.org)
 - ASD-STAN prEN 9132 (CAOS Integration Standard)
 
 ---

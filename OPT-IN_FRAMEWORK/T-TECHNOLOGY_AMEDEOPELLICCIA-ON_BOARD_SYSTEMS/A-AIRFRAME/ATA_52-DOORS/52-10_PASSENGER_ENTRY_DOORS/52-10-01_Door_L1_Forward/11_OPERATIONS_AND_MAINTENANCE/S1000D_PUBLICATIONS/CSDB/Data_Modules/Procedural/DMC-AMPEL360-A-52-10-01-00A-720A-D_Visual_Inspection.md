@@ -45,9 +45,9 @@ This procedural data module provides visual inspection procedures for Door L1 Fo
 - Digital camera for discrepancy documentation
 
 ### 3.4 References
-- DMC-AMPEL360-A-52-10-01-00A-000A-D (Door Description)
-- DMC-AMPEL360-A-00-00-00-00A-018C-D (Warnings)
-- DMC-AMPEL360-A-00-00-00-00A-018D-D (Cautions)
+- [DMC-AMPEL360-A-52-10-01-00A-000A-D](../Descriptive/DMC-AMPEL360-A-52-10-01-00A-000A-D_Description.md) (Door Description)
+- [DMC-AMPEL360-A-00-00-00-00A-018C-D](../../Common_Information_Repository/Warnings_Cautions/DMC-AMPEL360-A-00-00-00-00A-018C-D_Warnings.csv) (Warnings)
+- [DMC-AMPEL360-A-00-00-00-00A-018D-D](../../Common_Information_Repository/Warnings_Cautions/DMC-AMPEL360-A-00-00-00-00A-018D-D_Cautions.csv) (Cautions)
 
 ---
 
@@ -266,7 +266,7 @@ Status: CAUTION - Schedule detailed inspection
 Recommendation: Replace within 100 FH
 ```
 
-**Action:** If CAOS indicates <85% effectiveness, perform detailed seal measurement and document findings. Consider seal replacement per DMC-*-540A-D.
+**Action:** If CAOS indicates <85% effectiveness, perform detailed seal measurement and document findings. Consider seal replacement per [DMC-AMPEL360-A-52-10-01-00A-540A-D](DMC-AMPEL360-A-52-10-01-00A-540A-D_Adjustment_Rigging.md).
 
 ---
 
@@ -286,7 +286,7 @@ Recommendation: Replace within 100 FH
 
 **Unacceptable:** Gaps out of tolerance (indicates misrigging)
 
-**Action:** If gaps out of tolerance, refer to DMC-*-540A-D (Adjustment/Rigging)
+**Action:** If gaps out of tolerance, refer to [DMC-AMPEL360-A-52-10-01-00A-540A-D](DMC-AMPEL360-A-52-10-01-00A-540A-D_Adjustment_Rigging.md) (Adjustment/Rigging)
 
 ---
 

@@ -10,11 +10,11 @@
 ## 1. REGULATORY STANDARDS
 
 ### 1.1 Airworthiness Standards
-- **FAA 14 CFR Part 25.783** - Doors
-- **FAA 14 CFR Part 25.807** - Emergency exits
-- **FAA 14 CFR Part 25.809** - Emergency exit arrangement
-- **EASA CS-25.783** - Doors
-- **EASA CS-25.807** - Emergency exits
+- **[FAA 14 CFR Part 25.783](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/section-25.783)** - Doors
+- **[FAA 14 CFR Part 25.807](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/section-25.807)** - Emergency exits
+- **[FAA 14 CFR Part 25.809](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/section-25.809)** - Emergency exit arrangement
+- **[EASA CS-25.783](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)** - Doors
+- **[EASA CS-25.807](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)** - Emergency exits
 
 ### 1.2 Special Conditions
 - **FAA Special Conditions SC-52-10-01** - Composite Door Structure
@@ -25,10 +25,10 @@
 ## 2. DESIGN STANDARDS
 
 ### 2.1 Structural Standards
-- **ASTM D3039** - Tensile Properties of Polymer Matrix Composites
-- **ASTM D7137** - Compressive Residual Strength Properties
+- **[ASTM D3039](https://www.astm.org/d3039)** - Tensile Properties of Polymer Matrix Composites
+- **[ASTM D7137](https://www.astm.org/d7137)** - Compressive Residual Strength Properties
 - **MIL-HDBK-17** - Composite Materials Handbook
-- **ASTM E1820** - Fracture Toughness Testing
+- **[ASTM E1820](https://www.astm.org/e1820)** - Fracture Toughness Testing
 
 ### 2.2 Material Standards
 - **AMS 4911** - Titanium Alloy Ti-6Al-4V Sheet, Strip, and Plate
@@ -41,10 +41,10 @@
 ## 3. MANUFACTURING STANDARDS
 
 ### 3.1 Quality Standards
-- **AS9100** - Quality Management Systems - Aerospace
-- **ISO 9001** - Quality Management Systems
-- **AS9102** - First Article Inspection
-- **AS9003** - Inspection and Testing
+- **[AS9100](https://www.sae.org/standards/content/as9100/)** - Quality Management Systems - Aerospace
+- **[ISO 9001](https://www.iso.org/standard/62085.html)** - Quality Management Systems
+- **[AS9102](https://www.sae.org/standards/content/as9102/)** - First Article Inspection
+- **[AS9003](https://www.sae.org/standards/content/as9003/)** - Inspection and Testing
 
 ### 3.2 Process Standards
 - **AMS 2750** - Temperature Control for Heat Treatment
@@ -87,9 +87,9 @@
 ## 6. MAINTENANCE STANDARDS
 
 ### 6.1 Maintenance Planning
-- **ATA MSG-3** - Operator/Manufacturer Scheduled Maintenance Development
-- **SAE JA1011** - Reliability-Centered Maintenance
-- **SAE JA1012** - RCM Guide
+- **[ATA MSG-3](https://www.ata.org/)** - Operator/Manufacturer Scheduled Maintenance Development
+- **[SAE JA1011](https://www.sae.org/standards/content/ja1011/)** - Reliability-Centered Maintenance
+- **[SAE JA1012](https://www.sae.org/standards/content/ja1012/)** - RCM Guide
 - **AC 120-16** - Continuous Airworthiness Maintenance Programs
 
 ### 6.2 Inspection Standards
@@ -103,9 +103,9 @@
 ## 7. DOCUMENTATION STANDARDS
 
 ### 7.1 S1000D Standards
-- **S1000D Issue 5.0** - International specification for technical publications
+- **[S1000D Issue 5.0](http://www.s1000d.org)** - International specification for technical publications
 - **ASD-STAN prEN 9132** - CAOS Integration Standard
-- **ATA iSpec 2200** - Information Standards for Aviation Maintenance
+- **[ATA iSpec 2200](https://www.ataebiz.org/)** - Information Standards for Aviation Maintenance
 
 ### 7.2 Quality Documentation
 - **AS9102** - Aerospace First Article Inspection Requirement
@@ -123,7 +123,7 @@
 - **NIST Cybersecurity Framework** - Cybersecurity Standards
 
 ### 8.2 Digital Twin Standards
-- **ISO 23247** - Digital Twin Framework for Manufacturing
+- **[ISO 23247](https://www.iso.org/standard/75066.html)** - Digital Twin Framework for Manufacturing
 - **IEC 63278** - Asset Administration Shell for Industrial Applications
 - **IEEE 1872** - Ontologies for Robotics and Automation
 

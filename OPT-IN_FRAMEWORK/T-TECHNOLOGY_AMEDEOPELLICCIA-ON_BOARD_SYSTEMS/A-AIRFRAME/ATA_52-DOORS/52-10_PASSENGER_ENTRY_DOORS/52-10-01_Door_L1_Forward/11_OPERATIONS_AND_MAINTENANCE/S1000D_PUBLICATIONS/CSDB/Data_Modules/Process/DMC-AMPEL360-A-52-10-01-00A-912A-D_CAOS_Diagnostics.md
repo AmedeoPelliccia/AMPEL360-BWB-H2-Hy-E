@@ -25,7 +25,7 @@ This process data module provides CAOS-enhanced diagnostic procedures for Door L
 ### 2.2 Tools
 - CAOS diagnostic tablet
 - AR headset (optional)
-- Standard tools per DMC-AMPEL360-A-00-00-00-00A-040A-D
+- Standard tools per [DMC-AMPEL360-A-00-00-00-00A-040A-D](../../Common_Information_Repository/Tools_Equipment/DMC-AMPEL360-A-00-00-00-00A-040A-D_Tools.csv)
 
 ### 2.3 Personnel Qualifications
 - Licensed aircraft maintenance technician
@@ -478,23 +478,23 @@ CAOS Contribution:
 ## 6. RELATED DATA MODULES
 
 ### 6.1 CAOS System
-- DMC-AMPEL360-A-52-10-01-00A-100A-D (CAOS Overview)
-- DMC-AMPEL360-A-52-10-01-00A-913A-D (Digital Twin Analysis)
-- DMC-AMPEL360-A-52-10-01-00A-914A-D (Predictive Alerts)
-- DMC-AMPEL360-A-52-10-01-00A-022A-D (Reliability Data)
+- [DMC-AMPEL360-A-52-10-01-00A-100A-D](../Descriptive/DMC-AMPEL360-A-52-10-01-00A-100A-D_CAOS_Overview.md) (CAOS Overview)
+- [DMC-AMPEL360-A-52-10-01-00A-913A-D](DMC-AMPEL360-A-52-10-01-00A-913A-D_Digital_Twin_Analysis.md) (Digital Twin Analysis)
+- [DMC-AMPEL360-A-52-10-01-00A-914A-D](DMC-AMPEL360-A-52-10-01-00A-914A-D_Predictive_Alerts.md) (Predictive Alerts)
+- [DMC-AMPEL360-A-52-10-01-00A-022A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-022A-D_Reliability_Data.md) (Reliability Data)
 
 ### 6.2 Manual Troubleshooting
-- DMC-AMPEL360-A-52-10-01-00A-910A-D (Manual Troubleshooting)
-- DMC-AMPEL360-A-52-10-01-00A-911A-D (Fault Isolation)
+- [DMC-AMPEL360-A-52-10-01-00A-910A-D](DMC-AMPEL360-A-52-10-01-00A-910A-D_Troubleshooting.md) (Manual Troubleshooting)
+- [DMC-AMPEL360-A-52-10-01-00A-911A-D](DMC-AMPEL360-A-52-10-01-00A-911A-D_Fault_Isolation.md) (Fault Isolation)
 
 ### 6.3 Maintenance Procedures
-- DMC-AMPEL360-A-52-10-01-00A-540A-D (Adjustment/Rigging)
-- DMC-AMPEL360-A-52-10-01-00A-720A-D (Visual Inspection)
-- DMC-AMPEL360-A-52-10-01-00A-711A-D (Leak Test)
+- [DMC-AMPEL360-A-52-10-01-00A-540A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-540A-D_Adjustment_Rigging.md) (Adjustment/Rigging)
+- [DMC-AMPEL360-A-52-10-01-00A-720A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-720A-D_Visual_Inspection.md) (Visual Inspection)
+- [DMC-AMPEL360-A-52-10-01-00A-711A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-711A-D_Leak_Test.md) (Leak Test)
 
 ### 6.4 Planning Documents
-- DMC-AMPEL360-A-52-10-01-00A-019A-D (Maintenance Schedule)
-- DMC-AMPEL360-A-52-10-01-00A-021A-D (CAOS Intervals)
+- [DMC-AMPEL360-A-52-10-01-00A-019A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-019A-D_Maintenance_Schedule.md) (Maintenance Schedule)
+- [DMC-AMPEL360-A-52-10-01-00A-021A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-021A-D_CAOS_Intervals.md) (CAOS Intervals)
 
 ---
 

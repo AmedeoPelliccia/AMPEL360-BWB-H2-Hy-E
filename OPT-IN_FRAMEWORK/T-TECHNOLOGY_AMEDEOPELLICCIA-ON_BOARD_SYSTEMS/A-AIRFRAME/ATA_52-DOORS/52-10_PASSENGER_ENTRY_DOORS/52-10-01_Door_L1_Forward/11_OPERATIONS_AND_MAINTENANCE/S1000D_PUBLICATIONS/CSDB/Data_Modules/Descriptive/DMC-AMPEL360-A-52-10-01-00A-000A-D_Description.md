@@ -134,8 +134,8 @@ The Door L1 Forward is fully integrated with the CAOS (Computer Aided Operations
 ## 6. REGULATORY COMPLIANCE
 
 ### 6.1 Certification Basis
-- **FAA:** 14 CFR Part 25.783 (Doors)
-- **EASA:** CS-25.783 (Doors)
+- **FAA:** [14 CFR Part 25.783](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/section-25.783) (Doors)
+- **EASA:** [CS-25.783](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Doors)
 - **Special Conditions:** Composite door structure approval
 
 ### 6.2 Emergency Evacuation
@@ -144,9 +144,9 @@ The Door L1 Forward is fully integrated with the CAOS (Computer Aided Operations
 - **Emergency Slide:** Dual-lane slide/raft combination
 
 ### 6.3 Maintenance Requirements
-- **MSG-3 Analysis:** Completed (see DMC-*-018A-D)
-- **Inspection Program:** Defined (see DMC-*-019A-D)
-- **Life-Limited Parts:** Identified (see DMC-*-020A-D)
+- **MSG-3 Analysis:** Completed (see [DMC-AMPEL360-A-52-10-01-00A-018A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-018A-D_MSG3_Analysis.md))
+- **Inspection Program:** Defined (see [DMC-AMPEL360-A-52-10-01-00A-019A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-019A-D_Maintenance_Schedule.md))
+- **Life-Limited Parts:** Identified (see [DMC-AMPEL360-A-52-10-01-00A-020A-D](../Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-020A-D_Life_Limited_Parts.md))
 
 ---
 
@@ -169,10 +169,10 @@ The Door L1 Forward is fully integrated with the CAOS (Computer Aided Operations
 ## 8. REFERENCES
 
 ### 8.1 Related Data Modules
-- DMC-AMPEL360-A-52-10-01-00A-001A-D (General Information)
-- DMC-AMPEL360-A-52-10-01-00A-002A-D (Technical Data)
-- DMC-AMPEL360-A-52-10-01-00A-003A-D (Components)
-- DMC-AMPEL360-A-52-10-01-00A-100A-D (CAOS Overview)
+- [DMC-AMPEL360-A-52-10-01-00A-001A-D](DMC-AMPEL360-A-52-10-01-00A-001A-D_General_Info.md) (General Information)
+- [DMC-AMPEL360-A-52-10-01-00A-002A-D](DMC-AMPEL360-A-52-10-01-00A-002A-D_Technical_Data.md) (Technical Data)
+- [DMC-AMPEL360-A-52-10-01-00A-003A-D](DMC-AMPEL360-A-52-10-01-00A-003A-D_Components.md) (Components)
+- [DMC-AMPEL360-A-52-10-01-00A-100A-D](DMC-AMPEL360-A-52-10-01-00A-100A-D_CAOS_Overview.md) (CAOS Overview)
 
 ### 8.2 Engineering Documents
 - Drawing: AMPEL360-52-10-01-001 (Door Assembly)

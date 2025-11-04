@@ -106,10 +106,10 @@ Refer to: DMC-AMPEL360-A-52-10-01-00A-912A-D (CAOS Diagnostics)
 
 ## Related Documents
 
-- DMC-AMPEL360-A-52-10-01-00A-100A-D (CAOS Overview)
-- DMC-AMPEL360-A-52-10-01-00A-912A-D (CAOS Diagnostics)
-- DMC-AMPEL360-A-52-10-01-00A-913A-D (Digital Twin Analysis)
-- _CAOS_Integration_Status.csv (Status tracking)
+- [DMC-AMPEL360-A-52-10-01-00A-100A-D](../S1000D_PUBLICATIONS/CSDB/Data_Modules/Descriptive/DMC-AMPEL360-A-52-10-01-00A-100A-D_CAOS_Overview.md) (CAOS Overview)
+- [DMC-AMPEL360-A-52-10-01-00A-912A-D](../S1000D_PUBLICATIONS/CSDB/Data_Modules/Process/DMC-AMPEL360-A-52-10-01-00A-912A-D_CAOS_Diagnostics.md) (CAOS Diagnostics)
+- [DMC-AMPEL360-A-52-10-01-00A-913A-D](../S1000D_PUBLICATIONS/CSDB/Data_Modules/Process/DMC-AMPEL360-A-52-10-01-00A-913A-D_Digital_Twin_Analysis.md) (Digital Twin Analysis)
+- [_CAOS_Integration_Status.csv](../_CAOS_Integration_Status.csv) (Status tracking)
 
 ---
 

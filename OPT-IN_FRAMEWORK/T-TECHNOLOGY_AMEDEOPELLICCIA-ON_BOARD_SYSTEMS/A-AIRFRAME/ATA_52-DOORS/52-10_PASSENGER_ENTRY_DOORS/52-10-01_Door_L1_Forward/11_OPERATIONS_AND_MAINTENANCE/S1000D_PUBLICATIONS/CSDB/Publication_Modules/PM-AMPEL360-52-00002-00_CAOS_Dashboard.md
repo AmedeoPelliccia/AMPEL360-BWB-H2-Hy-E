@@ -241,11 +241,11 @@ Documentation: https://api.caos.ampel360.com/docs
 
 ## 13. RELATED MODULES
 
-- PM-AMPEL360-52-00001-00 (Front Matter)
-- PM-AMPEL360-52-00003-00 (Digital Twin)
-- PM-AMPEL360-52-00004-00 (Fleet Analytics)
-- DMC-AMPEL360-A-52-10-01-00A-100A-D (CAOS Overview)
-- DMC-AMPEL360-A-52-10-01-00A-912A-D (CAOS Diagnostics)
+- [PM-AMPEL360-52-00001-00](PM-AMPEL360-52-00001-00_Front_Matter.md) (Front Matter)
+- [PM-AMPEL360-52-00003-00](PM-AMPEL360-52-00003-00_Digital_Twin.md) (Digital Twin)
+- [PM-AMPEL360-52-00004-00](PM-AMPEL360-52-00004-00_Fleet_Analytics.md) (Fleet Analytics)
+- [DMC-AMPEL360-A-52-10-01-00A-100A-D](../Data_Modules/Descriptive/DMC-AMPEL360-A-52-10-01-00A-100A-D_CAOS_Overview.md) (CAOS Overview)
+- [DMC-AMPEL360-A-52-10-01-00A-912A-D](../Data_Modules/Process/DMC-AMPEL360-A-52-10-01-00A-912A-D_CAOS_Diagnostics.md) (CAOS Diagnostics)
 
 ---
 

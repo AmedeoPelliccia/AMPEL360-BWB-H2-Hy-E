@@ -192,12 +192,12 @@ Approval required: Engineering (for >25% extension)
 
 ## Related Documents
 
-- DMC-AMPEL360-A-52-10-01-00A-018A-D (MSG-3 Analysis)
-- DMC-AMPEL360-A-52-10-01-00A-019A-D (Maintenance Schedule)
-- DMC-AMPEL360-A-52-10-01-00A-020A-D (Life-Limited Parts)
-- DMC-AMPEL360-A-52-10-01-00A-021A-D (CAOS Intervals)
-- DMC-AMPEL360-A-52-10-01-00A-022A-D (Reliability Data)
-- _Maintenance_Schedule.csv (Current schedule)
+- [DMC-AMPEL360-A-52-10-01-00A-018A-D](../S1000D_PUBLICATIONS/CSDB/Data_Modules/Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-018A-D_MSG3_Analysis.md) (MSG-3 Analysis)
+- [DMC-AMPEL360-A-52-10-01-00A-019A-D](../S1000D_PUBLICATIONS/CSDB/Data_Modules/Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-019A-D_Maintenance_Schedule.md) (Maintenance Schedule)
+- [DMC-AMPEL360-A-52-10-01-00A-020A-D](../S1000D_PUBLICATIONS/CSDB/Data_Modules/Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-020A-D_Life_Limited_Parts.md) (Life-Limited Parts)
+- [DMC-AMPEL360-A-52-10-01-00A-021A-D](../S1000D_PUBLICATIONS/CSDB/Data_Modules/Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-021A-D_CAOS_Intervals.md) (CAOS Intervals)
+- [DMC-AMPEL360-A-52-10-01-00A-022A-D](../S1000D_PUBLICATIONS/CSDB/Data_Modules/Maintenance_Planning/DMC-AMPEL360-A-52-10-01-00A-022A-D_Reliability_Data.md) (Reliability Data)
+- [_Maintenance_Schedule.csv](../_Maintenance_Schedule.csv) (Current schedule)
 
 ---
 

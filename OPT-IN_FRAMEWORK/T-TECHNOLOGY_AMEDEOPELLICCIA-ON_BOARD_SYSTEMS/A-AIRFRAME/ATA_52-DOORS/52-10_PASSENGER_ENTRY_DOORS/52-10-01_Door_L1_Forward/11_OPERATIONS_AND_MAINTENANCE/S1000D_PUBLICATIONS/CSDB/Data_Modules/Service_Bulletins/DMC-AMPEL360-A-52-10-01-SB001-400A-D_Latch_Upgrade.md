@@ -130,7 +130,7 @@ Cycle count: [recorded]
 
 **WARNING:** Support door properly before removing latches. Minimum 2 personnel required.
 
-**Refer to:** DMC-AMPEL360-A-52-10-01-00A-520A-D for door support procedures
+**Refer to:** [DMC-AMPEL360-A-52-10-01-00A-520A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-520A-D_Removal_Door.md) for door support procedures
 
 1. Open Door L1 Forward to service position
 2. Disconnect electrical connectors J3 (latch sensor array)
@@ -202,7 +202,7 @@ Cycle count: [recorded]
 
 ### 8.6 Functional Testing
 
-**Refer to:** DMC-AMPEL360-A-52-10-01-00A-710A-D for complete functional test procedures
+**Refer to:** [DMC-AMPEL360-A-52-10-01-00A-710A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-710A-D_Functional_Test.md) for complete functional test procedures
 
 1. Perform door operation test:
    - Normal opening: < 5 seconds
@@ -233,9 +233,9 @@ Cycle count: [recorded]
 
 ### 8.7 Rigging Verification
 
-1. Verify door rigging per DMC-AMPEL360-A-52-10-01-00A-540A-D
+1. Verify door rigging per [DMC-AMPEL360-A-52-10-01-00A-540A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-540A-D_Adjustment_Rigging.md)
 2. Check door-to-frame gaps (should be within tolerance)
-3. Perform leak test per DMC-AMPEL360-A-52-10-01-00A-711A-D
+3. Perform leak test per [DMC-AMPEL360-A-52-10-01-00A-711A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-711A-D_Leak_Test.md)
 
 ---
 
@@ -251,10 +251,10 @@ Cycle count: [recorded]
 
 The following technical publications require revision:
 
-- DMC-AMPEL360-A-52-10-01-00A-003A-D (Components List)
-- DMC-AMPEL360-A-52-10-01-00A-942A-D (Parts List)
-- DMC-AMPEL360-A-52-10-01-00A-710A-D (Functional Test)
-- DMC-AMPEL360-A-52-10-01-00A-100A-D (CAOS Overview)
+- [DMC-AMPEL360-A-52-10-01-00A-003A-D](../Descriptive/DMC-AMPEL360-A-52-10-01-00A-003A-D_Components.md) (Components List)
+- [DMC-AMPEL360-A-52-10-01-00A-942A-D](../Parts_Information/DMC-AMPEL360-A-52-10-01-00A-942A-D_Parts_List.csv) (Parts List)
+- [DMC-AMPEL360-A-52-10-01-00A-710A-D](../Procedural/DMC-AMPEL360-A-52-10-01-00A-710A-D_Functional_Test.md) (Functional Test)
+- [DMC-AMPEL360-A-52-10-01-00A-100A-D](../Descriptive/DMC-AMPEL360-A-52-10-01-00A-100A-D_CAOS_Overview.md) (CAOS Overview)
 
 **Note:** Revised data modules will be issued separately.
 
