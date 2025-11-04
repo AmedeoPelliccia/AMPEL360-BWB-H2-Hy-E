@@ -1,0 +1,50 @@
+---
+chapter:
+  number: "115"
+  title: "Flight Simulator Systems"
+  category: "I-INFRASTRUCTURES"
+  version: "1.0.0"
+  status: "Active"
+  last_updated: "2025-11-04"
+
+description: |
+  ATA Chapter 115 contains the technical basis for the Full Flight Simulator (FFS)
+  used for crew training and certification of the AMPEL360 aircraft.
+
+scope:
+  - FFS qualification and certification
+  - OEM aircraft data package
+  - Simulator systems architecture
+  - Operations and maintenance procedures
+  - Aerodynamic and systems databases
+  - Configuration and software management
+  - Registry and operational logs
+
+subsections:
+  "115-01":
+    title: "Qualification and Certification"
+  
+  "115-02":
+    title: "Aircraft Data Package OEM"
+  
+  "115-03":
+    title: "Simulator Systems Architecture"
+  
+  "115-04":
+    title: "Operations and Maintenance"
+  
+  "115-05":
+    title: "Databases"
+  
+  "115-06":
+    title: "Configuration and Software"
+  
+  "115-07":
+    title: "Registry and Logs"
+
+revision_history:
+  - version: "1.0.0"
+    date: "2025-11-04"
+    author: "AMPEL360 Program Office"
+    changes: "Initial structure creation"
+    status: "Active"

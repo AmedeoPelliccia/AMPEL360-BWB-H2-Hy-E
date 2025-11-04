@@ -1,0 +1,46 @@
+---
+chapter:
+  number: "85-90"
+  title: "Infrastructure Interface Standards"
+  category: "I-INFRASTRUCTURES"
+  version: "1.0.0"
+  status: "Active"
+  last_updated: "2025-11-04"
+
+description: |
+  ATA Chapters 85-90 contain normative standards for infrastructure interfaces
+  that ensure global interoperability of the AMPEL360 aircraft.
+
+scope:
+  - Fluid interfaces and servicing standards
+  - Electrical and data interface standards
+  - Physical and airframe interface standards
+  - Ground operations automation standards
+  - Infrastructure compliance and certification
+  - Reserved for future expansion
+
+subsections:
+  "85":
+    title: "Fluid Interfaces and Servicing"
+  
+  "86":
+    title: "Electrical and Data Interfaces"
+  
+  "87":
+    title: "Physical and Airframe Interfaces"
+  
+  "88":
+    title: "Ground Operations Automation"
+  
+  "89":
+    title: "Infrastructure Compliance and Certification"
+  
+  "90":
+    title: "Reserved"
+
+revision_history:
+  - version: "1.0.0"
+    date: "2025-11-04"
+    author: "AMPEL360 Program Office"
+    changes: "Initial structure creation"
+    status: "Active"

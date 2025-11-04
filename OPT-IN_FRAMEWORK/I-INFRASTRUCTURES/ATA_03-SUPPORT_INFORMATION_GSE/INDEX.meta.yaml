@@ -1,0 +1,58 @@
+---
+chapter:
+  number: "03"
+  title: "Support Information GSE"
+  category: "I-INFRASTRUCTURES"
+  version: "1.0.0"
+  status: "Active"
+  last_updated: "2025-11-04"
+
+description: |
+  ATA Chapter 03 contains all documentation related to Ground Support Equipment
+  for the AMPEL360 aircraft, including specifications, manuals, and certification.
+
+scope:
+  - GSE interface specifications
+  - Operating and maintenance manuals
+  - Software and firmware documentation
+  - Acceptance and certification criteria
+  - Safety procedures
+  - Training requirements
+  - Maintenance and calibration
+  - Spare parts management
+  - Equipment registry
+
+subsections:
+  "03-01":
+    title: "Interfaces"
+  
+  "03-02":
+    title: "GSE Manuals"
+  
+  "03-03":
+    title: "Software and Firmware"
+  
+  "03-04":
+    title: "Acceptance and Certification"
+  
+  "03-05":
+    title: "Safety"
+  
+  "03-06":
+    title: "Training"
+  
+  "03-07":
+    title: "Maintenance and Calibration"
+  
+  "03-08":
+    title: "Spares"
+  
+  "03-09":
+    title: "Registry"
+
+revision_history:
+  - version: "1.0.0"
+    date: "2025-11-04"
+    author: "AMPEL360 Program Office"
+    changes: "Initial structure creation"
+    status: "Active"
