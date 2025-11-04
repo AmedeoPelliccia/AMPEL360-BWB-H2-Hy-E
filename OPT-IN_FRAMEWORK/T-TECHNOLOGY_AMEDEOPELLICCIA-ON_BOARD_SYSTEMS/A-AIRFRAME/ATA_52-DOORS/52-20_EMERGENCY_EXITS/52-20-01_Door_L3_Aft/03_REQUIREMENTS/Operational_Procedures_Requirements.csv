@@ -1,0 +1,11 @@
+Requirement_ID,Description,Crew_Action,Time_Limit,Training_Required,Verification,Status
+RQ-52-20-01-140,Normal_Door_Arming_Procedure,Cabin_Crew,10 seconds,Yes,Demo,Defined
+RQ-52-20-01-141,Normal_Door_Disarming_Procedure,Cabin_Crew,10 seconds,Yes,Demo,Defined
+RQ-52-20-01-142,Emergency_Opening_Procedure,Any_Person,8 seconds,No,Demo,Defined
+RQ-52-20-01-143,Manual_Slide_Deployment_Backup,Cabin_Crew,15 seconds,Yes,Demo,Defined
+RQ-52-20-01-144,Door_Status_Verification,Cabin_Crew,5 seconds,Yes,Demo,Defined
+RQ-52-20-01-145,Pre_Flight_Door_Check,Ground_Crew,2 minutes,Yes,Demo,Defined
+RQ-52-20-01-146,Ground_Door_Opening_External,Ground_Crew,30 seconds,Yes,Demo,Defined
+RQ-52-20-01-147,Abnormal_Door_Recovery,Maintenance,Variable,Yes,Demo,Defined
+RQ-52-20-01-148,Evacuation_Command_Protocol,Cabin_Crew,3 seconds,Yes,Demo,Defined
+RQ-52-20-01-149,Door_Winterization_Procedure,Ground_Crew,10 minutes,Yes,Demo,Defined

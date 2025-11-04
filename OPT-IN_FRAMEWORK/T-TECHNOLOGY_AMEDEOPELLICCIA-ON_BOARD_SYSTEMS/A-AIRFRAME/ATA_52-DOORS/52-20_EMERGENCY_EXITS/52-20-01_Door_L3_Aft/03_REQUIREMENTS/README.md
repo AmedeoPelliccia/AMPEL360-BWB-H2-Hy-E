@@ -16,6 +16,7 @@ This directory contains all requirements for the L3 Aft Emergency Exit system, o
 | Safety_Requirements.csv | Released | 1.0 | 2025-11-04 | Approved |
 | Environmental_Requirements.csv | Released | 1.0 | 2025-11-04 | Approved |
 | Human_Factors_Requirements.md | Draft | 0.9 | 2025-11-04 | Pending |
+| Operational_Procedures_Requirements.csv | Released | 1.0 | 2025-11-04 | Approved |
 | CAOS_Requirements.md | Draft | 0.9 | 2025-11-04 | Pending |
 | Verification_Matrix.csv | Draft | 0.9 | 2025-11-04 | Pending |
 | Requirements_Traceability.csv | Active | 0.9 | 2025-11-04 | In Work |
@@ -75,18 +76,19 @@ This directory contains all requirements for the L3 Aft Emergency Exit system, o
 
 ```
 03_REQUIREMENTS/
-├── README.md                           (This file)
-├── Requirements_Hierarchy.md           (Requirements organization)
-├── Regulatory_Requirements.csv         (CS25, TSO, DO-160 compliance)
-├── Functional_Requirements.csv         (Emergency functions)
-├── Performance_Requirements.csv        (Timing, capacity, reliability)
-├── Interface_Requirements.md           (System interfaces)
-├── Safety_Requirements.csv             (Safety-critical requirements)
-├── Environmental_Requirements.csv      (Operating conditions)
-├── Human_Factors_Requirements.md       (Ergonomics, usability)
-├── CAOS_Requirements.md                (Digital twin, AI/ML)
-├── Verification_Matrix.csv             (Test planning)
-├── Requirements_Traceability.csv       (Source traceability)
+├── README.md                                (This file)
+├── Requirements_Hierarchy.md                (Requirements organization)
+├── Regulatory_Requirements.csv              (CS25, TSO, DO-160 compliance)
+├── Functional_Requirements.csv              (Emergency functions)
+├── Performance_Requirements.csv             (Timing, capacity, reliability)
+├── Interface_Requirements.md                (System interfaces)
+├── Safety_Requirements.csv                  (Safety-critical requirements)
+├── Environmental_Requirements.csv           (Operating conditions)
+├── Human_Factors_Requirements.md            (Ergonomics, usability)
+├── Operational_Procedures_Requirements.csv  (Crew procedures and timings)
+├── CAOS_Requirements.md                     (Digital twin, AI/ML)
+├── Verification_Matrix.csv                  (Test planning)
+├── Requirements_Traceability.csv            (Source traceability)
 └── RQ_Categories/
     ├── RQ-STRUCTURAL/
     ├── RQ-FUNCTIONAL/
