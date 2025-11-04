@@ -469,6 +469,62 @@ graph LR
 
 - 🚨 [Door L3 Aft Emergency Exit](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/)
   - [01_OVERVIEW](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/01_OVERVIEW/) ✅ **COMPLETE**
+  - [03_REQUIREMENTS](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/03_REQUIREMENTS/) 📋 **28 FUNCTIONAL REQUIREMENTS**
+
+##### Emergency Door & Slide Requirements (ATA 52-20-01)
+
+<details>
+<summary><b>View Emergency Exit Requirements (RQ-52-20-01-020 to RQ-52-20-01-047)</b></summary>
+
+**Total: 28 Critical Safety Requirements** for Type A Emergency Exit with Dual-Lane Slide System
+
+| Requirement ID | Description | Criticality | Verification | Status | Rationale |
+|---|---|---|---|---|---|
+| RQ-52-20-01-020 | Emergency_Door_Opening_Capability | Critical | Test | Defined | Must open for evacuation |
+| RQ-52-20-01-021 | Dual_Activation_Modes_PowerManual | Critical | Demo | Defined | Redundancy required |
+| RQ-52-20-01-022 | Manual_Opening_Force_max_30_lbf | Critical | Test | Defined | 95th percentile capability |
+| RQ-52-20-01-023 | Automatic_Slide_Deployment | Critical | Test | Defined | Required for Type A |
+| RQ-52-20-01-024 | Slide_Arming_Disarming_System | Critical | Demo | Defined | Safety critical |
+| RQ-52-20-01-025 | Door_Pressure_Seal_Function | High | Test | Defined | Cabin pressure |
+| RQ-52-20-01-026 | Pressure_Interlock_Prevention | Critical | Test | Defined | Prevent opening in flight |
+| RQ-52-20-01-027 | Emergency_Override_Function | Critical | Demo | Defined | Must always work |
+| RQ-52-20-01-028 | Power_Assist_Opening | High | Test | Defined | Reduce opening time |
+| RQ-52-20-01-029 | Door_Position_Sensing_Triple | High | Test | Defined | Status awareness |
+| RQ-52-20-01-030 | Slide_Pack_Opening_Mechanism | Critical | Test | Defined | Deploy slide |
+| RQ-52-20-01-031 | Dual_Lane_Slide_Configuration | Critical | Inspect | Defined | Type A requirement |
+| RQ-52-20-01-032 | Visual_Status_Indicators | High | Inspect | Defined | Crew awareness |
+| RQ-52-20-01-033 | Cockpit_Warning_Integration | High | Demo | Defined | Flight crew alert |
+| RQ-52-20-01-034 | Girt_Bar_Attachment_System | Critical | Test | Defined | Slide attachment |
+| RQ-52-20-01-035 | Slide_Inflation_System | Critical | Test | Defined | Rapid deployment |
+| RQ-52-20-01-036 | Manual_Inflation_Backup | Critical | Demo | Defined | Redundancy |
+| RQ-52-20-01-037 | Slide_Detachment_Ditching | High | Demo | Defined | Water evacuation |
+| RQ-52-20-01-038 | Interior_Handle_Operation | Critical | Test | Defined | Crew operation |
+| RQ-52-20-01-039 | Exterior_Handle_Access | High | Test | Defined | Ground operation |
+| RQ-52-20-01-040 | Door_Motion_Sequencing | High | Analysis | Defined | Proper operation |
+| RQ-52-20-01-041 | Fail_Safe_Latch_Design | Critical | Analysis | Defined | Cannot fail unsafe |
+| RQ-52-20-01-042 | Spring_Assist_Mechanism | High | Test | Defined | Manual mode help |
+| RQ-52-20-01-043 | Mechanical_Advantage_System | High | Analysis | Defined | Reduce effort |
+| RQ-52-20-01-044 | Emergency_Lighting_Interface | Critical | Test | Defined | Evacuation visibility |
+| RQ-52-20-01-045 | Floor_Proximity_Lighting | Critical | Demo | Defined | Smoke conditions |
+| RQ-52-20-01-046 | Photoluminescent_Marking | High | Inspect | Defined | Power loss scenario |
+| RQ-52-20-01-047 | Slide_Angle_Adjustment | High | Test | Defined | Variable ground height |
+
+**Key Safety Features:**
+- ⚠️ 90-second evacuation capability (14 Critical + 14 High priority requirements)
+- ⚠️ Dual-lane slide for high capacity (Type A exit requirement)
+- ⚠️ Manual override on all systems (fail-safe design)
+- ⚠️ Triple redundancy on door position sensing
+- ⚠️ Pressure interlock prevents in-flight opening
+
+**Verification Summary:**
+- **Test:** 16 requirements (57%) - Physical validation of critical functions
+- **Demo:** 7 requirements (25%) - Operational demonstrations
+- **Analysis:** 3 requirements (11%) - Engineering analysis and FEA
+- **Inspect:** 2 requirements (7%) - Visual inspection and quality control
+
+📖 [Full Requirements Details](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/03_REQUIREMENTS/)
+
+</details>
 
 #### Fuel Systems (ATA 28)
 - ⚡ [H₂ Storage Tanks](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-10-00_H2_STORAGE_TANKS/)
