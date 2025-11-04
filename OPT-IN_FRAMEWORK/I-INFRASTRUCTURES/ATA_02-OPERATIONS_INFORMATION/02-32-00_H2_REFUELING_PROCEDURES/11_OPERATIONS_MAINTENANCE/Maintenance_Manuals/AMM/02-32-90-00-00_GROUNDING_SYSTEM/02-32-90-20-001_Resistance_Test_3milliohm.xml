@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/procedural.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="90"
+                disassyCode="20" disassyCodeVariant="00" infoCode="520"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="04"/>
+        <dmTitle>
+          <techName>H2 REFUELING GROUNDING - RESISTANCE TEST 3 MILLIOHM</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>GENERAL</title>
+        <para>This procedure verifies the grounding system resistance for the H2 refueling 
+              system. Maximum allowable resistance is 3 milliohm (0.003 Ω) to ensure 
+              effective static discharge protection. This test is required monthly and 
+              before every refueling operation. Supported by CAOS Real-Time Decision tree 
+              model RTD-02-32-GROUND-v1.0.yaml.</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>PERSONNEL REQUIREMENTS</title>
+        <para>1 technician (Mechanic certified)</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TIME REQUIRED</title>
+        <para>30 minutes</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TOOLS AND EQUIPMENT</title>
+        <para>
+          <randomList>
+            <listItem><para>Digital milliohm meter P/N 02-32-90-METER-001 (±0.1 milliohm accuracy)</para></listItem>
+            <listItem><para>Test leads (4-wire Kelvin connection)</para></listItem>
+            <listItem><para>Contact cleaner (approved for aircraft use)</para></listItem>
+            <listItem><para>Brass wire brush</para></listItem>
+            <listItem><para>Torque wrench (0-50 Nm)</para></listItem>
+            <listItem><para>Safety glasses</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="RC001"/>
+            <reqCondText>Aircraft parked and secured</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC002"/>
+            <reqCondText>Milliohm meter calibrated (within 90 days)</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC003"/>
+            <reqCondText>Weather conditions: No rain, humidity &lt;85%</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </preliminaryRqmts>
+
+      <mainProcedure>
+        <proceduralStep id="step01">
+          <para>Don safety glasses.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step02">
+          <para>Locate aircraft grounding point. Location: Forward fuselage, 
+                station 180, below refueling panel. Marked with yellow triangle 
+                and "GROUND" label.</para>
+          <figure>
+            <graphic infoEntityIdent="ICN-02-32-90-20-001"/>
+          </figure>
+        </proceduralStep>
+
+        <proceduralStep id="step03">
+          <para>Visually inspect grounding point for:</para>
+          <para>
+            <randomList>
+              <listItem><para>Corrosion or oxidation</para></listItem>
+              <listItem><para>Damage or deformation</para></listItem>
+              <listItem><para>Loose or missing hardware</para></listItem>
+              <listItem><para>Paint contamination on contact surfaces</para></listItem>
+            </randomList>
+          </para>
+          <para>If any defects found, clean or repair before proceeding.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step04">
+          <para>If grounding point shows contamination:</para>
+          <para>Clean contact surface with brass wire brush.</para>
+          <para>Apply contact cleaner.</para>
+          <para>Wipe dry with clean, lint-free cloth.</para>
+          <caution>
+            <warningAndCautionPara>
+              Do NOT use steel wire brush. May cause galvanic corrosion. 
+              Use ONLY brass or bronze brush.
+            </warningAndCautionPara>
+          </caution>
+        </proceduralStep>
+
+        <proceduralStep id="step05">
+          <para>Configure milliohm meter for 4-wire (Kelvin) measurement.</para>
+          <para>Zero the meter with test leads shorted together.</para>
+          <para>Verify zero reading: 0.0 ± 0.1 milliohm.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step06">
+          <para>Connect meter test leads:</para>
+          <para>
+            <sequentialList>
+              <listItem>
+                <para>RED current lead to aircraft grounding point</para>
+              </listItem>
+              <listItem>
+                <para>RED voltage sense lead to aircraft grounding point 
+                      (close to current lead)</para>
+              </listItem>
+              <listItem>
+                <para>BLACK current lead to aircraft structure (bare metal, 
+                      minimum 2 meters from grounding point)</para>
+              </listItem>
+              <listItem>
+                <para>BLACK voltage sense lead to aircraft structure 
+                      (close to current lead)</para>
+              </listItem>
+            </sequentialList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step07">
+          <para>Ensure good electrical contact at all connection points.</para>
+          <para>Scrape through paint or anodizing if necessary to reach bare metal.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step08">
+          <para>Take resistance measurement.</para>
+          <para>Wait for reading to stabilize (typically 2-3 seconds).</para>
+          <para>Record reading in maintenance log.</para>
+          <para>
+            <emphasis emphasisType="em01">ACCEPTANCE CRITERIA:</emphasis>
+            Resistance must be ≤ 3.0 milliohm (0.003 Ω).
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step09">
+          <para>Take three measurements at different angles around grounding point 
+                (0°, 120°, 240°).</para>
+          <para>Record all three readings.</para>
+          <para>Calculate average resistance.</para>
+          <para>Average must be ≤ 3.0 milliohm.</para>
+          <para>Maximum reading must be ≤ 3.5 milliohm.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step10">
+          <para>If resistance &gt; 3.0 milliohm:</para>
+          <para>
+            <sequentialList>
+              <listItem>
+                <para>Clean grounding point more thoroughly</para>
+              </listItem>
+              <listItem>
+                <para>Check bonding jumper connections</para>
+              </listItem>
+              <listItem>
+                <para>Inspect bonding strap for corrosion or damage</para>
+              </listItem>
+              <listItem>
+                <para>Re-test after corrective action</para>
+              </listItem>
+              <listItem>
+                <para>If still &gt; 3.0 milliohm, refer to troubleshooting TS-02-32-07</para>
+              </listItem>
+            </sequentialList>
+          </para>
+          <warning>
+            <warningAndCautionPara>
+              Do NOT perform H2 refueling if grounding resistance &gt; 3.0 milliohm. 
+              Static discharge protection is inadequate. Risk of ignition.
+            </warningAndCautionPara>
+          </warning>
+        </proceduralStep>
+
+        <proceduralStep id="step11">
+          <para>TEST BONDING JUMPERS (if applicable)</para>
+          <para>Aircraft has 4 bonding jumpers connecting major fuel system components:</para>
+          <para>
+            <sequentialList>
+              <listItem>
+                <para>Jumper 1: Refueling receptacle to fuselage structure</para>
+              </listItem>
+              <listItem>
+                <para>Jumper 2: Main refueling valve to fuel tank</para>
+              </listItem>
+              <listItem>
+                <para>Jumper 3: Fuel line support clamp to structure</para>
+              </listItem>
+              <listItem>
+                <para>Jumper 4: Leak detection sensor panel to structure</para>
+              </listItem>
+            </sequentialList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step12">
+          <para>For each bonding jumper:</para>
+          <para>Connect milliohm meter across jumper (component to structure).</para>
+          <para>Measure resistance.</para>
+          <para>Record reading.</para>
+          <para>
+            <emphasis emphasisType="em01">ACCEPTANCE CRITERIA:</emphasis>
+            Each jumper resistance must be ≤ 2.0 milliohm.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step13">
+          <para>If any jumper resistance &gt; 2.0 milliohm:</para>
+          <para>Inspect jumper for:</para>
+          <para>
+            <randomList>
+              <listItem><para>Corrosion at terminations</para></listItem>
+              <listItem><para>Loose mounting hardware</para></listItem>
+              <listItem><para>Frayed or damaged braid</para></listItem>
+              <listItem><para>Paint or anodizing at contact points</para></listItem>
+            </randomList>
+          </para>
+          <para>Clean, tighten, or replace jumper as required per procedure 02-32-90-40-001.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step14">
+          <para>GROUND CABLE CONNECTION TEST (during refueling setup)</para>
+          <para>This test is performed when ground refueling equipment is connected.</para>
+          <para>Connect ground cable from refueling truck to aircraft grounding point.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step15">
+          <para>Verify ground cable lug is clean and tight.</para>
+          <para>Torque ground cable lug to 25 ± 3 Nm.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step16">
+          <para>Measure resistance from aircraft grounding point to ground equipment frame.</para>
+          <para>
+            <emphasis emphasisType="em01">ACCEPTANCE CRITERIA:</emphasis>
+            Total circuit resistance (aircraft + cable + equipment) must be ≤ 10 milliohm.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step17">
+          <para>If total resistance &gt; 10 milliohm:</para>
+          <para>
+            <sequentialList>
+              <listItem>
+                <para>Check ground cable for damage</para>
+              </listItem>
+              <listItem>
+                <para>Clean cable terminations</para>
+              </listItem>
+              <listItem>
+                <para>Verify ground equipment frame is properly grounded</para>
+              </listItem>
+              <listItem>
+                <para>Replace ground cable if necessary</para>
+              </listItem>
+            </sequentialList>
+          </para>
+          <warning>
+            <warningAndCautionPara>
+              Do NOT proceed with refueling if ground circuit resistance &gt; 10 milliohm.
+            </warningAndCautionPara>
+          </warning>
+        </proceduralStep>
+
+        <proceduralStep id="step18">
+          <para>Disconnect milliohm meter test leads.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step19">
+          <para>Complete maintenance record entry with:</para>
+          <para>
+            <randomList>
+              <listItem><para>Date and time of test</para></listItem>
+              <listItem><para>Milliohm meter serial number and calibration due date</para></listItem>
+              <listItem><para>Aircraft grounding point resistance (3 readings + average)</para></listItem>
+              <listItem><para>Bonding jumper resistances (all 4)</para></listItem>
+              <listItem><para>Ground cable resistance (if tested)</para></listItem>
+              <listItem><para>Test result: PASS or FAIL</para></listItem>
+              <listItem><para>Any corrective actions taken</para></listItem>
+              <listItem><para>Technician name and certificate number</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step20">
+          <para>If monthly test PASSED, apply or update test sticker at grounding point:</para>
+          <para>"GROUND RESISTANCE TEST - [DATE] - [VALUE] mΩ - NEXT DUE [DATE]"</para>
+        </proceduralStep>
+
+        <proceduralStep id="step21">
+          <para>Update CAOS database with test results.</para>
+          <para>System tracks resistance trends and predicts when maintenance will be needed.</para>
+        </proceduralStep>
+      </mainProcedure>
+
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="CL001"/>
+            <reqCondText>Grounding system resistance ≤ 3.0 milliohm</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL002"/>
+            <reqCondText>All bonding jumpers ≤ 2.0 milliohm</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL003"/>
+            <reqCondText>Test results recorded</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL004"/>
+            <reqCondText>CAOS database updated</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL005"/>
+            <reqCondText>Test sticker applied</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>
