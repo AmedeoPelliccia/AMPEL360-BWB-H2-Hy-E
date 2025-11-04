@@ -131,6 +131,7 @@ gantt
 ### Current Phase: **CONCEPTUAL DESIGN**
 - ✅ Requirements defined (137 items)
 - ✅ AI preliminary analysis complete
+- ✅ **ATA 02-00-00 Operations Design Complete** (12 documents, 4 templates, assets)
 - ⚠️ FEA validation required ($150k)
 - ⚠️ Mode 1 resonance risk (25Hz)
 - ❌ No physical prototype yet
@@ -335,6 +336,19 @@ graph LR
 
 ### I - INFRASTRUCTURES
 - [`ATA 02 - OPERATIONS INFO`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/)
+  - [`02-00-00 GENERAL / 04_DESIGN`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/04_DESIGN/) ⭐ **COMPLETE OPERATIONS DESIGN**
+    - Operations Concept Design
+    - Procedures Design Philosophy
+    - Checklist Design Standards
+    - Flight Deck Operations Design
+    - Ground Operations Design (H₂ refueling)
+    - Emergency Procedures Design
+    - CAOS Integration Design
+    - Human-Machine Interface Design
+    - Crew Workload Analysis (NASA-TLX)
+    - Documentation Design Standards (S1000D, ATA iSpec 2200)
+    - Training Program Design
+    - Safety By Design Operations
 - [`ATA 03 - SUPPORT/GSE`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/)
 - [`ATA 10 - PARKING/STORAGE`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS/)
 - [`ATA 13 - HARDWARE/TOOLS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/)
