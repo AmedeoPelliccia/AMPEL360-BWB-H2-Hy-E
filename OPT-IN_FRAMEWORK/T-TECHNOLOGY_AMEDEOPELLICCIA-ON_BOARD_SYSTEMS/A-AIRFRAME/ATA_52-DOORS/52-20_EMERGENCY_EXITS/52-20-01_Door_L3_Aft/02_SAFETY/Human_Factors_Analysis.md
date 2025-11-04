@@ -29,7 +29,8 @@ Analyze human factors aspects of the L3 Aft Emergency Exit to ensure safe and ef
 
 | Requirement | Specification | Rationale |
 |------------|---------------|-----------|
-| Handle force | <50 lbf (222 N) | 5th percentile female |
+| Handle force (max) | <50 lbf (222 N) | 5th percentile female capability |
+| Handle force (design target) | 30-40 lbf | Optimal ergonomic range |
 | Handle height | 48-60 inches | Reach zone |
 | Visual indication | >20/40 vision | Standard requirement |
 | Reaction time | <2 seconds | Emergency response |

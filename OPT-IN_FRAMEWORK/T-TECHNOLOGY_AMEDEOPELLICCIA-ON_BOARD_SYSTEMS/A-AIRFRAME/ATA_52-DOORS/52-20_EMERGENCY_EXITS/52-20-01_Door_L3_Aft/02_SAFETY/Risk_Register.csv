@@ -1,3 +1,10 @@
+# Risk_Level Legend (from probability-severity matrix in Functional_Hazard_Assessment.md):
+# Level 1-3: Unacceptable - Must be reduced
+# Level 4: Undesirable - Management decision required
+# Level 5: Acceptable with monitoring - Regular review
+# Level 6-7: Acceptable - Routine management
+# Level 8-9: Acceptable - No action required
+# Risk Matrix: Probability (Frequent/Probable/Remote/Ext.Remote/Ext.Improb) x Severity (Catastrophic/Hazardous/Major/Minor/No Effect)
 Risk_ID,Risk_Description,Category,Probability,Severity,Risk_Level,Mitigation_Strategy,Owner,Status,Review_Date,Residual_Risk
 R-001,Door fails to open in emergency,Technical,Extremely_Remote,Catastrophic,5,Dual activation + manual backup + testing,Engineering,Active,2025-11-11,Very_Low
 R-002,Door opens inadvertently in flight,Technical,Extremely_Improbable,Catastrophic,5,Dual locks + pressure differential + monitoring,Engineering,Active,2025-11-11,Very_Low
