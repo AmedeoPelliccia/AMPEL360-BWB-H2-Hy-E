@@ -102,7 +102,7 @@ Hydrogen fuel system proximity to passenger cabin creates potential fire and exp
    - H2 accumulation prevention (venting)
    - Explosion-resistant construction (if applicable)
    - Pressure relief provisions
-   - Igni tion source elimination
+   - Ignition source elimination
 
 3. **System integration**
    - H2 leak detection near door
