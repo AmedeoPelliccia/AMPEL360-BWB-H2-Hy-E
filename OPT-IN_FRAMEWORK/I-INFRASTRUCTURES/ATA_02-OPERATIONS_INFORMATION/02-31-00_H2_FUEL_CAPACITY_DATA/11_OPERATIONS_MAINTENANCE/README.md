@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This folder contains comprehensive operations and maintenance documentation for h2 fuel capacity data on the AMPEL360 BWB H2 Hy-E aircraft. It includes S1000D data modules, operational procedures, CAOS integration artifacts, and training materials.
+This folder contains comprehensive operations and maintenance documentation for H2 fuel capacity data on the AMPEL360 BWB H2 Hy-E aircraft. It includes S1000D data modules, operational procedures, CAOS integration artifacts, and training materials.
 
 ## Status
 
