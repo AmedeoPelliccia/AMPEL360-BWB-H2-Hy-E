@@ -36,7 +36,7 @@ This ICD defines the integration of Door L1 Forward with the CAOS (Contextual Aw
 
 ```json
 {
-  "timestamp": "2025-11-03T22:50:47.752Z",
+  "timestamp": "YYYY-MM-DDTHH:MM:SS.sssZ",
   "doorID": "52-10-01-L1FWD",
   "position": {
     "state": "closed|open|transit|fault",
