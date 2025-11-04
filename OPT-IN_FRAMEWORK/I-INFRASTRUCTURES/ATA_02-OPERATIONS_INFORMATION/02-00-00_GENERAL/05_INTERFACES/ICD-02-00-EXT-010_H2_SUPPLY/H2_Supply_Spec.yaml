@@ -1,0 +1,24 @@
+---
+interface_id: ICD-02-00-EXT-010
+version: 1.0.0
+protocol: ISO-19881
+
+fuel_quality:
+  purity_pct: 99.97
+  moisture_ppm: 5
+  contaminants_ppm: 1
+  temperature_c: -253
+  temperature_tolerance_c: 2
+
+refueling_equipment:
+  capacity_kg: 10000
+  transfer_rate_kg_per_min: [100, 150]
+  pressure_bar: [5, 8]
+  connection: SAE_J2600
+  
+safety:
+  exclusion_zone_m: 50
+  restricted_zone_m: 100
+  monitoring_zone_m: 200
+  personnel_training: H2_Safety_Certified
+---

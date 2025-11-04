@@ -1,0 +1,32 @@
+---
+interface_id: ICD-02-00-21-001
+version: 1.0.0
+protocol: ARINC-664
+
+ventilation_modes:
+  NORMAL:
+    ach: 15
+    power_kw: 2.5
+  ENHANCED:
+    ach: 25
+    power_kw: 4.0
+  HIGH:
+    ach: 35
+    power_kw: 5.5
+  EMERGENCY:
+    ach: 50
+    power_kw: 8.0
+    activation_time_sec: 30
+
+h2_compartment_pressure:
+  differential_psi: -0.2
+  tolerance_psi: 0.1
+  monitoring_rate_hz: 10
+
+commands:
+  SET_VENTILATION_MODE:
+    response_time_ms: 5000
+  EMERGENCY_VENT_ACTIVATE:
+    response_time_ms: 1000
+    auto_trigger_lel: 75
+---
