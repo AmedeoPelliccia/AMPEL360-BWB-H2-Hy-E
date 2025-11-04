@@ -1,0 +1,16 @@
+Requirement_ID,Description,Interval,Task_Type,Verification,Status,Rationale
+RQ-52-20-01-150,Daily_Visual_Inspection,Daily,Inspection,Inspect,Defined,Damage detection
+RQ-52-20-01-151,Pre_Flight_Functional_Check,Pre-Flight,Functional,Demo,Defined,Operational readiness
+RQ-52-20-01-152,A_Check_Door_Operation_Test,500_FH,Functional,Test,Defined,System verification
+RQ-52-20-01-153,B_Check_Seal_Inspection,2000_FH,Inspection,Inspect,Defined,Pressure integrity
+RQ-52-20-01-154,C_Check_Actuator_Lubrication,6000_FH,Servicing,Demo,Defined,System longevity
+RQ-52-20-01-155,D_Check_Major_Inspection,24000_FH,Overhaul,Inspect,Defined,Structural integrity
+RQ-52-20-01-156,Slide_Repack_Service,12_Months,Servicing,Test,Defined,FAA requirement
+RQ-52-20-01-157,NDT_Inspection_Critical_Areas,6000_FH,NDT,NDT,Defined,Crack detection
+RQ-52-20-01-158,Hinge_Pin_Inspection,12000_FH,Inspection,Inspect,Defined,Wear monitoring
+RQ-52-20-01-159,Latch_Mechanism_Rigging,6000_FH,Adjustment,Test,Defined,Proper engagement
+RQ-52-20-01-160,Sensor_Calibration_Check,3000_FH,Calibration,Test,Defined,Accuracy maintenance
+RQ-52-20-01-161,Electrical_Connector_Inspection,2000_FH,Inspection,Inspect,Defined,Corrosion prevention
+RQ-52-20-01-162,Emergency_Light_Battery_Test,Monthly,Functional,Test,Defined,Readiness verification
+RQ-52-20-01-163,Slide_Inflation_System_Test,Annual,Functional,Test,Defined,Deployment readiness
+RQ-52-20-01-164,CAOS_Data_Download_Analysis,Post-Flight,Data,Analysis,Defined,Predictive maintenance
