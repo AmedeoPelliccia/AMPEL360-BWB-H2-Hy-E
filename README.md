@@ -414,10 +414,10 @@ The following safety requirements ensure the highest level of safety for emergen
 
 ### Requirements Summary
 - **Total:** 35 Safety Requirements
-- **Catastrophic (5):** RQ-100, RQ-101, RQ-102, RQ-105, RQ-111, RQ-124
-- **Hazardous (9):** RQ-103, RQ-104, RQ-108, RQ-109, RQ-115, RQ-121, RQ-122, RQ-126, RQ-127, RQ-130, RQ-131
+- **Catastrophic (6):** RQ-100, RQ-101, RQ-102, RQ-105, RQ-111, RQ-124
+- **Hazardous (11):** RQ-103, RQ-104, RQ-108, RQ-109, RQ-115, RQ-121, RQ-122, RQ-126, RQ-127, RQ-130, RQ-131
 - **Critical (3):** RQ-114, RQ-116, RQ-118
-- **Major (16):** RQ-106, RQ-107, RQ-110, RQ-112, RQ-113, RQ-117, RQ-119, RQ-120, RQ-123, RQ-125, RQ-132, RQ-133, RQ-134
+- **Major (13):** RQ-106, RQ-107, RQ-110, RQ-112, RQ-113, RQ-117, RQ-119, RQ-120, RQ-123, RQ-125, RQ-132, RQ-133, RQ-134
 - **Minor (2):** RQ-128, RQ-129
 
 📋 **Full Documentation:** [Emergency Exit Requirements](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/03_REQUIREMENTS/)
