@@ -32,4 +32,5 @@ PN-52-10-01-401001,Digital,Digital_Archival,N/A,No,Data_Erasure,None,0
 PN-52-10-01-401002,Digital,Digital_Archival,N/A,No,Data_Erasure,None,0
 PN-52-10-01-402001,Digital,Digital_Archival,N/A,No,Data_Erasure,None,0
 PN-52-10-01-402002,Digital,Digital_Archival,N/A,No,Data_Erasure,None,0
-PN-52-10-01-501001,Silicone,Chemical_Treatment,0%,Yes,Ventilation_Required,High,0
+PN-52-10-01-501001,Silicone,Chemical_Processing,0%,Yes,Ventilation_Required,High,0
+PN-52-10-01-501004,Copper_Based,Chemical_Processing,0%,No,Standard,Low,0

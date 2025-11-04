@@ -59,6 +59,7 @@ Regular replacement items:
 | PN-52-10-01-501001 | Seal Lubricant | €12 | 12 units | 120 units |
 | PN-52-10-01-501002 | IPA Cleaner | €8 | 18 units | 180 units |
 | PN-52-10-01-501003 | Epoxy Adhesive | €45 | 6 units | 60 units |
+| PN-52-10-01-501004 | Anti-Seize | €18 | 8 units | 80 units |
 
 ### Provisioning Models
 

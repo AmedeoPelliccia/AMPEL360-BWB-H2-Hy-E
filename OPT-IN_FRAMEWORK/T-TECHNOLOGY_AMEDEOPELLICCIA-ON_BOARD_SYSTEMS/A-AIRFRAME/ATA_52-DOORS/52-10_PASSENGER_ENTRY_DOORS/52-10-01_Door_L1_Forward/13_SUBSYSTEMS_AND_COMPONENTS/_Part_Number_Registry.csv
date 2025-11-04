@@ -2,11 +2,12 @@ Part_Number,Description,Category,Material,Weight_kg,Recyclable,Hazmat,Disposal_M
 PN-52-10-01-000000,Door_L1_Complete_Assembly,Assembly,Mixed,114.0,Partial,Yes,Disassembly,Active
 PN-52-10-01-101001,Outer_Face_Sheet,Structural,CFRP,25.8,Yes,No,Pyrolysis,Active
 PN-52-10-01-101002,Inner_Face_Sheet,Structural,CFRP,25.8,Yes,No,Pyrolysis,Active
-PN-52-10-01-101003,Honeycomb_Core,Structural,Nomex,4.0,Partial,No,Chemical,Active
-PN-52-10-01-201001,Latch_Hook,Mechanical,17-4PH_SS,1.2,Yes,No,Metal_Recycle,Active
-PN-52-10-01-202001,Hinge_Arm,Mechanical,Ti-6Al-4V,3.5,Yes,No,Metal_Recycle,Active
+PN-52-10-01-101003,Honeycomb_Core,Structural,Nomex,4.0,Partial,No,Chemical_Processing,Active
+PN-52-10-01-201001,Latch_Hook,Mechanical,17-4PH_SS,1.2,Yes,No,Metal_Recycling,Active
+PN-52-10-01-202001,Hinge_Arm,Mechanical,Ti-6Al-4V,3.5,Yes,No,Metal_Recycling,Active
 PN-52-10-01-301001,Junction_Box,Electrical,Aluminum,0.8,Yes,No,WEEE,Active
 PN-52-10-01-302001,Door_Controller,Electrical,PCB,0.3,Partial,Yes,WEEE_Special,Active
 PN-52-10-01-303001,Position_Sensor,Electrical,Mixed,0.15,Partial,No,WEEE,Active
-PN-52-10-01-401001,Door_Firmware,Software,N/A,0,N/A,No,Digital,v2.0.1
-PN-52-10-01-501001,Seal_Lubricant,Consumable,Silicone,0.05,No,Yes,Chemical,Active
+PN-52-10-01-401001,Door_Firmware,Software,N/A,0,N/A,No,Digital_Archival,v2.0.1
+PN-52-10-01-501001,Seal_Lubricant,Consumable,Silicone,0.05,No,Yes,Chemical_Processing,Active
+PN-52-10-01-501004,Anti_Seize_Compound,Consumable,Copper_Based,0.25,No,No,Chemical_Processing,Active
