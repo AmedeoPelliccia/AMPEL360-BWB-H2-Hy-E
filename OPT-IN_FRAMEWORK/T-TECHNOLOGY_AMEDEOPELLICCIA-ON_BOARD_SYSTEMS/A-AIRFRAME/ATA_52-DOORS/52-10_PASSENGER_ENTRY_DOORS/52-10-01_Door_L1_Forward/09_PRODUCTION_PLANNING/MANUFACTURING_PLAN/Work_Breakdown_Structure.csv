@@ -49,4 +49,4 @@ WBS_Code,Task_Name,Duration_Days,Labor_Hours,Skill_Level,Dependencies,Cost_USD
 11.1,Install_Protection,0.25,2,Basic,10.0,60
 11.2,Pack_Documentation,0.125,1,Basic,11.1,30
 11.3,Crate_and_Ship,0.25,2,Basic,11.2,60
-TOTAL,Complete_Door_Assembly,12,86,Mixed,All,5900
+TOTAL,Complete_Door_Assembly,12,86,Mixed,All,5400
