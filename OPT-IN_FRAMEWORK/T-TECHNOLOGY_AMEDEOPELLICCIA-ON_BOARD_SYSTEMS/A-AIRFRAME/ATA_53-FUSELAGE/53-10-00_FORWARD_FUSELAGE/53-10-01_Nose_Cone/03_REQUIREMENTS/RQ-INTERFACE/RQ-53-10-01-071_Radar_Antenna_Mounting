@@ -1,0 +1,13 @@
+# RQ-53-10-01-071: Radar Antenna Mounting
+
+## Requirement Statement
+The nose cone shall provide mounting interface for weather radar antenna with precise alignment.
+
+## Acceptance Criteria
+- Mounting bracket bolted to forward bulkhead
+- Alignment tolerance ±0.5 degrees
+- Vibration isolation to protect radar
+- Load capacity 20 kg (radar antenna weight)
+
+## Compliance Status
+ICD with radar supplier released

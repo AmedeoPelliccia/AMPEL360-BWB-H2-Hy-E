@@ -1,0 +1,13 @@
+# RQ-53-10-01-073: Lightning Diverter Strips
+
+## Requirement Statement
+The nose cone shall incorporate conductive lightning diverter strips bonded to fuselage structure.
+
+## Acceptance Criteria
+- Copper mesh or aluminum strips embedded in composite
+- Bonding resistance < 2.5 milliohm
+- Current path to fuselage ground plane
+- Segmented design to minimize RF interference
+
+## Compliance Status
+Design complete, test planned

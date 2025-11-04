@@ -1,0 +1,13 @@
+# RQ-53-10-01-154: Bird Strike Assessment
+
+## Requirement Statement
+After bird strike event, nose cone damage shall be assessed and repair actions determined.
+
+## Acceptance Criteria
+- Damage assessment criteria defined
+- < 25mm: Continue service, monitor
+- 25-50mm: NDT inspection required
+- > 50mm: Repair or replacement required
+
+## Compliance Status
+Assessment procedure in AMM

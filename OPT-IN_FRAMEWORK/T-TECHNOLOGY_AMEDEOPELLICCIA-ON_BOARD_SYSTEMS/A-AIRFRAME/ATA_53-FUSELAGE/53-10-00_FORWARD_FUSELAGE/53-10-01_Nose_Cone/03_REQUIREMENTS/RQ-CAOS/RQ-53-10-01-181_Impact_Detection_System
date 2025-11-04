@@ -1,0 +1,16 @@
+# RQ-53-10-01-181: Impact Detection System
+
+## Requirement Statement
+The nose cone shall detect and log bird strike, hail, or other impact events with timestamp and g-level data.
+
+## Rationale
+Automated impact detection triggers maintenance inspection.
+
+## Acceptance Criteria
+- Impact threshold: 10g acceleration (3σ above flight loads)
+- Event logging with timestamp
+- Automatic alert generation
+- Data retention for 5 years
+
+## Compliance Status
+System design complete, testing planned

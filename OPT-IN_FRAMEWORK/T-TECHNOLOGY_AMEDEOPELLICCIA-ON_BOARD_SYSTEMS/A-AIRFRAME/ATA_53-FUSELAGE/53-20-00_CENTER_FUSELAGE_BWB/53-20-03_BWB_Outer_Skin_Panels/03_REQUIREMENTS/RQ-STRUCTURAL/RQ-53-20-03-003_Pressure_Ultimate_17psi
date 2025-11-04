@@ -1,0 +1,18 @@
+# RQ-53-20-03-003: Pressure Ultimate 17 psi
+
+## Requirement Statement
+The BWB outer skin panels shall withstand cabin pressure ultimate of 17 psi (2× operating pressure) without rupture.
+
+## Rationale
+Pressure proof test requirement per CS-25.365.
+
+## Acceptance Criteria
+- Proof pressure test to 17 psi for 3 seconds
+- No permanent deformation after test
+- No leaks detected
+
+## Compliance Status
+Analysis complete, test planned Q3 2026
+
+## Traceability
+Parent: CS-25.365
