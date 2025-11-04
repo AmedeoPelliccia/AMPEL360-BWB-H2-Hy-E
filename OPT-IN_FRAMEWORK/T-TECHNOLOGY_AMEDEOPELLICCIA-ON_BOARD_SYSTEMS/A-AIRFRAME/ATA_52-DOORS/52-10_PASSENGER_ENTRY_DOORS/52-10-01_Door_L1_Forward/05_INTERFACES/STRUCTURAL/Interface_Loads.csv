@@ -21,9 +21,9 @@ Ultimate_Pressure,Latch_AFT,0,20.0,0,0,0,0,Ultimate_latch_load
 Ultimate_Pressure,Latch_BTM-1,0,20.0,0,0,0,0,Ultimate_latch_load
 Ultimate_Pressure,Latch_BTM-2,0,20.0,0,0,0,0,Ultimate_latch_load
 Ultimate_Pressure,Latch_BTM-3,0,20.0,0,0,0,0,Ultimate_latch_load
-Emergency_Landing_Forward,All_Interfaces,16g,0,0,0,0,0,CS25.561_emergency_landing
-Emergency_Landing_Lateral,All_Interfaces,0,3g,0,0,0,0,CS25.561_emergency_landing
-Emergency_Landing_Vertical,All_Interfaces,0,0,9g,0,0,0,CS25.561_emergency_landing
+Emergency_Landing_Forward,All_Interfaces,18.82,0,0,0,0,0,CS25.561_emergency_landing (16g converted to 18.82kN using 120kg mass)
+Emergency_Landing_Lateral,All_Interfaces,0,3.53,0,0,0,0,CS25.561_emergency_landing (3g converted to 3.53kN using 120kg mass)
+Emergency_Landing_Vertical,All_Interfaces,0,0,10.59,0,0,0,CS25.561_emergency_landing (9g converted to 10.59kN using 120kg mass)
 Bird_Strike,Door_Panel_Center,0,4.0,0,0,0,0,1.8kg_bird_at_230kts_per_CS25.631
 Gust_Load,Hinge_1,2.0,1.0,5.0,1.0,0.3,0.5,66fps_gust_at_cruise
 Gust_Load,Hinge_2,2.0,1.0,5.0,1.0,0.3,0.5,66fps_gust_at_cruise
