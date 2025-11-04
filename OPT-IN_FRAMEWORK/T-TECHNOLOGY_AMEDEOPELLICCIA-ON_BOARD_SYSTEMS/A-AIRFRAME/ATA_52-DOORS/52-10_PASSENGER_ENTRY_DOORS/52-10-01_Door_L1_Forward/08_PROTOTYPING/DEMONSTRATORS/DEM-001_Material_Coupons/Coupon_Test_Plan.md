@@ -189,9 +189,9 @@ EA9396 film adhesive
 | Materials (prepreg, core, adhesive) | $3,000 |
 | Autoclave time (8 hours) | $1,000 |
 | Specimen preparation (machining) | $2,000 |
-| Testing services | $5,000 |
+| Testing services | $3,000 |
 | Analysis and reporting | $2,000 |
-| **Total** | **$13,000** |
+| **Total** | **$11,000** |
 
 **Schedule:**
 - Week 1: Material procurement

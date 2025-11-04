@@ -1,5 +1,5 @@
 Prototype_ID,Name,Purpose,Design_Status,Build_Status,Test_Status,Cost_Actual,Cost_Budget,Schedule_Status,Issues
-DEM-001,Material_Coupons,Property_validation,Complete,Not_Started,Not_Started,0,5000,Not_Funded,Awaiting_funding
+DEM-001,Material_Coupons,Property_validation,Complete,Not_Started,Not_Started,0,11000,Not_Funded,Awaiting_funding
 DEM-002,Corner_Section,Manufacturing_trial,Conceptual,Not_Started,Not_Started,0,15000,Not_Funded,Need_tool_design
 DEM-003,Latch_Mechanism,Function_demo,Conceptual,Not_Started,Not_Started,0,25000,Not_Funded,Supplier_TBD
 DEM-004,Seal_Section,Leak_test,Conceptual,Not_Started,Not_Started,0,10000,Not_Funded,Awaiting_funding

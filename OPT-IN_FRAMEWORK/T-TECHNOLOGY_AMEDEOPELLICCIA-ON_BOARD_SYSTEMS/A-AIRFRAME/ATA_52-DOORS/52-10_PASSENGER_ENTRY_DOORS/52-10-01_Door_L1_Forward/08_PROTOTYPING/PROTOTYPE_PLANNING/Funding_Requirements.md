@@ -30,6 +30,11 @@ This document outlines funding requirements for the Door L1 Forward prototype de
 - Phase 4 (Flight Article): $600,000
 - Overhead & Contingency: $569,000
 
+**Total Verification:**
+- Sum of Phases 1-4: $1,691,000
+- Plus Overhead & Contingency: $569,000
+- **Grand Total: $2,260,000** ✓
+
 ---
 
 ## PHASED FUNDING APPROACH
