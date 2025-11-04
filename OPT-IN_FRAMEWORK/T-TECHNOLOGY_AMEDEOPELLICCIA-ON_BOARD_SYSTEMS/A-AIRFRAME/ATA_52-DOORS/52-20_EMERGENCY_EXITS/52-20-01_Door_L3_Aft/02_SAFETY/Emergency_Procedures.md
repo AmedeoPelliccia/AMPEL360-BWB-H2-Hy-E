@@ -68,7 +68,7 @@
 
 **PROCEDURE:**
 1. **PULL** handle with maximum force
-2. **PUSH** door manually (30 lbf required)
+2. **PUSH** door manually (30-40 lbf required)
 3. **ALLOW** spring assist to help
 4. Door opens in 6-8 seconds
 5. Continue with normal evacuation
