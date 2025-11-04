@@ -1,0 +1,15 @@
+Part_Number,Description,Assembly_Level,Qty_Per_Aircraft,Weight_kg,Lead_Time_Days,Manufacturer,Status,DPP_ID
+PN-52-10-01-000000,Door_L1_Complete_Assembly,0,1,114.0,180,AMPEL360,Active,DPP-52-10-01-000000
+PN-52-10-01-101000,Door_Panel_Assembly,1,1,55.6,90,AMPEL360,Active,DPP-52-10-01-101000
+PN-52-10-01-102000,Frame_Assembly,1,1,28.4,75,AMPEL360,Active,DPP-52-10-01-102000
+PN-52-10-01-103000,Reinforcements,1,1,12.8,60,AMPEL360,Active,DPP-52-10-01-103000
+PN-52-10-01-201000,Latch_System,1,1,4.2,45,LatchTech_GmbH,Active,DPP-52-10-01-201000
+PN-52-10-01-202000,Hinge_System,1,1,8.5,60,TitanHinge_Systems,Active,DPP-52-10-01-202000
+PN-52-10-01-203000,Actuation_System,1,1,6.8,90,AeroActuators_Ltd,Active,DPP-52-10-01-203000
+PN-52-10-01-204000,Seal_System,1,1,4.8,30,SealDynamics_Inc,Active,DPP-52-10-01-204000
+PN-52-10-01-301000,Power_Distribution,1,1,1.2,45,ElectroPower_Systems,Active,DPP-52-10-01-301000
+PN-52-10-01-302000,Control_Electronics,1,1,0.8,60,AvionicsControl_Corp,Active,DPP-52-10-01-302000
+PN-52-10-01-303000,Sensors,1,1,0.6,45,SmartSensor_Tech,Active,DPP-52-10-01-303000
+PN-52-10-01-304000,Wiring_Harness,1,1,2.1,30,AeroWiring_Solutions,Active,DPP-52-10-01-304000
+PN-52-10-01-401000,Embedded_Software,1,1,0,120,AMPEL360_Software,Active,DPP-52-10-01-401000
+PN-52-10-01-402000,CAOS_Modules,1,1,0,90,AMPEL360_CAOS,Active,DPP-52-10-01-402000

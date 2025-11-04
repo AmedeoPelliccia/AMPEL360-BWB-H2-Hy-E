@@ -1,0 +1,8 @@
+Part_Number,Material,Hazard_Class,UN_Number,Quantity,Location,Disposal_Method,Special_Handling
+PN-52-10-01-101001,CFRP_Uncured,Class_9,UN3082,25.8kg,Panel,Pyrolysis,Dust_mask_required
+PN-52-10-01-203001,Motor_Oil,Class_3,UN1993,0.2L,Gearbox,Recycling,Spill_kit_required
+PN-52-10-01-302001,Lead_Solder,Class_6.1,UN2291,5g,PCB,WEEE_Special,RoHS_exempt_aviation
+PN-52-10-01-303003,Lithium_Battery,Class_9,UN3090,20g,Sensor,Battery_Recycling,No_crushing
+PN-52-10-01-501001,Silicone_Lube,Class_3,UN1993,50ml,Seals,Chemical_Treatment,Ventilation_required
+PN-52-10-01-501002,IPA_Cleaner,Class_3,UN1219,100ml,Cleaning,Evaporation,Flammable_storage
+PN-52-10-01-501003,Epoxy_Adhesive,Class_9,UN3082,1kg,Bonding,Cured_landfill,Skin_protection

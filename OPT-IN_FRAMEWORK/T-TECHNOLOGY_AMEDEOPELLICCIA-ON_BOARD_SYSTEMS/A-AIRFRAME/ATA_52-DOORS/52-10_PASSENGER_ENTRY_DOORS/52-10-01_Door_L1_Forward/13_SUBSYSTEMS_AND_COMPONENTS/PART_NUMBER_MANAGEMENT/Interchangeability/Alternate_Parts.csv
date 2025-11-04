@@ -1,0 +1,5 @@
+Primary_PN,Alternate_PN,Manufacturer,Form_Fit_Function,Qualification_Status,Effectivity,Notes
+PN-52-10-01-204001,PN-52-10-01-204001-ALT1,SealTech_Europe,Equivalent,Qualified,All_aircraft,Same_material_different_supplier
+PN-52-10-01-303001,PN-52-10-01-303001-ALT1,UniversalSensors,Compatible,Testing,Future_aircraft,Requires_software_update
+PN-52-10-01-201003,PN-52-10-01-201003-ALT1,SpringMasters_Inc,Equivalent,Qualified,All_aircraft,Interchangeable_spring_rates
+PN-52-10-01-301002,MS25244-5,Military_Standard,Equivalent,Qualified,All_aircraft,COTS_circuit_breaker
