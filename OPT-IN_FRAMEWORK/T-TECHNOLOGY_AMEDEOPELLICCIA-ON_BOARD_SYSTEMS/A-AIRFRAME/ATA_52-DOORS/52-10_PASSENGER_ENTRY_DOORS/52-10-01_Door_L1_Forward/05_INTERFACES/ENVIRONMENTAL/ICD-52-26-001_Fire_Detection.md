@@ -66,7 +66,6 @@ This ICD defines the fire detection and protection interface for Door L1 Forward
 
 ### 5.1 Door Materials Compliance
 - Interior panels: Pass vertical burn test
-- Seat cushions (if applicable): Pass oil burner test  
 - Carpeting: Class I flame spread
 - Insulation: Non-combustible or self-extinguishing
 
