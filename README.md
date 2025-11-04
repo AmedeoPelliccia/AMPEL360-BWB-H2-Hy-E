@@ -1,4 +1,4 @@
-# AMPEL360 BWB H₂ Hy-E Q100 INTEGRA
+# AMPEL360 BWB H₂ Hy-E Q100 
 ## Next-Generation Zero-Emission Blended Wing Body Aircraft
 
 [![Documentation](https://img.shields.io/badge/Documentation-65%25-yellow)](docs)
