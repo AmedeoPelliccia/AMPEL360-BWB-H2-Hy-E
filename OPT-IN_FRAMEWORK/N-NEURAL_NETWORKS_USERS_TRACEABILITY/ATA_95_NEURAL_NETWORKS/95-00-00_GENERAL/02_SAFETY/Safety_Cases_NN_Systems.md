@@ -25,6 +25,18 @@ Each safety case follows the Goal Structuring Notation (GSN) pattern:
 - **Strategies**: Approach to decompose claims
 - **Context**: Assumptions and environment
 
+### 1.4 Related Documents
+
+- [Safety_Framework_Overview.md](Safety_Framework_Overview.md)
+- [Hazard_Analysis_Methodology.md](Hazard_Analysis_Methodology.md)
+- [Functional_Hazard_Assessment.csv](Functional_Hazard_Assessment.csv)
+- [Failure_Modes_Effects_Analysis.csv](Failure_Modes_Effects_Analysis.csv)
+- [Fault_Tree_Analysis.md](Fault_Tree_Analysis.md)
+- [Safety_Requirements.csv](Safety_Requirements.csv)
+- [Safety_Validation_Tests.csv](Safety_Validation_Tests.csv)
+- [EASA CS 25.1309](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)
+- [14 CFR 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/section-25.1309)
+
 ---
 
 ## 2. TOP-LEVEL SAFETY CLAIM

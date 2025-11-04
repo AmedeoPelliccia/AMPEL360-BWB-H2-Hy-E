@@ -4,6 +4,15 @@
 
 ---
 
+## Related Documents
+
+- [../../Fault_Tree_Analysis.md](../../Fault_Tree_Analysis.md) - FTA Methodology
+- [../../Hazard_Analysis_Methodology.md](../../Hazard_Analysis_Methodology.md)
+- [../../Common_Cause_Analysis.md](../../Common_Cause_Analysis.md)
+- [ARP4761](https://www.sae.org/standards/content/arp4761/) - FTA Guidelines
+
+---
+
 ## Templates
 
 ### 1. Generic NN Fault Tree Template

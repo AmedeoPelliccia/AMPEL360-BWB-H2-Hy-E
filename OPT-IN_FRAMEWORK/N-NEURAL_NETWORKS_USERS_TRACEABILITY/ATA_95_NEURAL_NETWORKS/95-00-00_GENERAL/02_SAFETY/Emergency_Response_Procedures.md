@@ -23,6 +23,14 @@ This document provides emergency response procedures specific to neural network 
 
 **NN in Emergencies**: Neural networks are tools. If they help, use them. If they hinder or add workload, disable them. When in doubt, revert to conventional systems and proven procedures.
 
+### 1.3 Related Documents
+
+- [Operational_Safety_Procedures.md](Operational_Safety_Procedures.md)
+- [Runtime_Safety_Monitoring.md](Runtime_Safety_Monitoring.md)
+- [Human_Factors_Safety.md](Human_Factors_Safety.md)
+- [Safety_Framework_Overview.md](Safety_Framework_Overview.md)
+- [Fault_Tree_Analysis.md](Fault_Tree_Analysis.md)
+
 ---
 
 ## 2. MEMORY ITEMS

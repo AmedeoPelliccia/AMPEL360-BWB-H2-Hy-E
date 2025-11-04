@@ -25,6 +25,15 @@ This document addresses human factors considerations for neural network systems 
 
 Covers crew interface design, training, procedures, and operational considerations for all NN systems.
 
+### 1.4 Related Documents
+
+- [Safety_Framework_Overview.md](Safety_Framework_Overview.md)
+- [Runtime_Safety_Monitoring.md](Runtime_Safety_Monitoring.md)
+- [Operational_Safety_Procedures.md](Operational_Safety_Procedures.md)
+- [Emergency_Response_Procedures.md](Emergency_Response_Procedures.md)
+- [EASA CS 25.1302](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) - Installed systems and equipment
+- [FAA AC 25.1302-1](https://www.faa.gov/regulations_policies/advisory_circulars/) - Design Considerations for Minimizing Crew Errors
+
 ---
 
 ## 2. AUTOMATION SURPRISE PREVENTION

@@ -17,6 +17,16 @@ This document presents fault tree analyses for critical neural network failure s
 
 Covers top-level safety events for DAL A and B neural network systems.
 
+### 1.3 Related Documents
+
+- [Hazard_Analysis_Methodology.md](Hazard_Analysis_Methodology.md)
+- [Functional_Hazard_Assessment.csv](Functional_Hazard_Assessment.csv)
+- [Failure_Modes_Effects_Analysis.csv](Failure_Modes_Effects_Analysis.csv)
+- [Common_Cause_Analysis.md](Common_Cause_Analysis.md)
+- [Safety_Requirements.csv](Safety_Requirements.csv)
+- [ARP4761](https://www.sae.org/standards/content/arp4761/) - Fault Tree Analysis Guidelines
+- [ASSETS/FTA_Templates/](ASSETS/FTA_Templates/) - Fault Tree Templates
+
 ---
 
 ## 2. TOP EVENT 1: UNSAFE FLIGHT CONTROL COMMAND FROM NN

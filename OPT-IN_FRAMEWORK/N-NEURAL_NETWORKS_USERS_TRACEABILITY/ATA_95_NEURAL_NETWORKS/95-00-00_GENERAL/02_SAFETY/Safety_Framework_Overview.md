@@ -518,10 +518,12 @@ Runtime safety is assured
 
 ### 7.1 Certification Basis
 
-- **EASA CS-25**: Airworthiness requirements
-- **CS 25.1309**: System safety requirements
-- **AMC 20-115C**: Software (extended for ML)
-- **EASA AI Roadmap**: ML-specific guidance
+- **EASA [CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)**: Airworthiness requirements
+- **[CS 25.1309](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)**: System safety requirements
+- **[AMC 20-115C](https://www.easa.europa.eu/document-library/acceptable-means-of-compliance-and-guidance-materials/amc-20-115c)**: Software (extended for ML)
+- **[EASA AI Roadmap](https://www.easa.europa.eu/en/domains/artificial-intelligence)**: ML-specific guidance
+- **[14 CFR 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/section-25.1309)**: FAA System safety requirements
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)**: Software Considerations in Airborne Systems
 
 ### 7.2 Means of Compliance
 

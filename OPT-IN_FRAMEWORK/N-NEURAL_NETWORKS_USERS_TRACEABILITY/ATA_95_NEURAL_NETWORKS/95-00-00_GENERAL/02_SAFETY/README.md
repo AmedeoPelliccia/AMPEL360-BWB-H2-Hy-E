@@ -93,44 +93,44 @@ Common Cause Analysis (CCA)
 
 ### Safety Analysis Documents
 
-1. **Safety_Framework_Overview.md**
+1. **[Safety_Framework_Overview.md](Safety_Framework_Overview.md)**
    - Safety objectives for NN systems
    - Safety architecture principles
    - Regulatory compliance mapping
 
-2. **Hazard_Analysis_Methodology.md**
-   - Adapted ARP4761 methodology for AI/ML
+2. **[Hazard_Analysis_Methodology.md](Hazard_Analysis_Methodology.md)**
+   - Adapted [ARP4761](https://www.sae.org/standards/content/arp4761/) methodology for AI/ML
    - NN-specific hazard identification
    - Risk assessment criteria
 
-3. **Functional_Hazard_Assessment.csv**
+3. **[Functional_Hazard_Assessment.csv](Functional_Hazard_Assessment.csv)**
    - System-level hazards
    - Severity classifications
    - Safety objectives
 
-4. **Failure_Modes_Effects_Analysis.csv**
+4. **[Failure_Modes_Effects_Analysis.csv](Failure_Modes_Effects_Analysis.csv)**
    - Component-level failure modes
    - Effects on aircraft/crew
    - Detection methods
    - Mitigation strategies
 
-5. **Fault_Tree_Analysis.md**
+5. **[Fault_Tree_Analysis.md](Fault_Tree_Analysis.md)**
    - Top-level safety events
    - Logical fault combinations
    - Probability calculations
 
-6. **Common_Cause_Analysis.md**
+6. **[Common_Cause_Analysis.md](Common_Cause_Analysis.md)**
    - Training data bias
    - Model architecture vulnerabilities
    - Environmental factors
    - Software/hardware common causes
 
-7. **Runtime_Safety_Monitoring.md**
+7. **[Runtime_Safety_Monitoring.md](Runtime_Safety_Monitoring.md)**
    - Safety monitor architecture
    - Anomaly detection algorithms
    - Alert and degradation strategies
 
-8. **Human_Factors_Safety.md**
+8. **[Human_Factors_Safety.md](Human_Factors_Safety.md)**
    - Crew interface safety
    - Automation surprise prevention
    - Workload management
@@ -196,17 +196,17 @@ Common Cause Analysis (CCA)
 ## Regulatory Compliance
 
 ### EASA Requirements
-- ✅ CS 25.1309 (System Safety)
-- ✅ AMC 20-115C (Software - extended for ML)
-- ✅ EASA AI Roadmap Phase 2 (ML Applications)
+- ✅ [CS 25.1309](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) (System Safety)
+- ✅ [AMC 20-115C](https://www.easa.europa.eu/document-library/acceptable-means-of-compliance-and-guidance-materials/amc-20-115c) (Software - extended for ML)
+- ✅ [EASA AI Roadmap](https://www.easa.europa.eu/en/domains/artificial-intelligence) Phase 2 (ML Applications)
 
 ### FAA Requirements
-- ✅ 14 CFR 25.1309 (Equipment, Systems, and Installations)
-- ✅ AC 20-115D (Airborne Software)
-- ✅ FAA AI Assurance Framework
+- ✅ [14 CFR 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/section-25.1309) (Equipment, Systems, and Installations)
+- ✅ [AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1027390) (Airborne Software)
+- ✅ [FAA AI Assurance Framework](https://www.faa.gov/aircraft/air_cert/design_approvals/air_software/cast/cast_papers)
 
 ### EU AI Act
-- ✅ High-Risk AI System requirements
+- ✅ [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206) High-Risk AI System requirements
 - ✅ Transparency obligations
 - ✅ Human oversight requirements
 - ✅ Accuracy, robustness, cybersecurity

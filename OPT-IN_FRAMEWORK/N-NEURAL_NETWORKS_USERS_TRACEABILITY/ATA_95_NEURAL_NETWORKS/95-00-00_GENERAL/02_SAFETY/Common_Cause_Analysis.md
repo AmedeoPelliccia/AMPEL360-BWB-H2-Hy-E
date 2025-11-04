@@ -21,6 +21,15 @@ Covers all redundant and diverse neural network systems in the AMPEL360 aircraft
 
 **Common Cause Failure**: A single event or condition that causes multiple systems/channels to fail simultaneously, defeating redundancy.
 
+### 1.4 Related Documents
+
+- [Safety_Framework_Overview.md](Safety_Framework_Overview.md)
+- [Fault_Tree_Analysis.md](Fault_Tree_Analysis.md)
+- [Failure_Modes_Effects_Analysis.csv](Failure_Modes_Effects_Analysis.csv)
+- [Runtime_Safety_Monitoring.md](Runtime_Safety_Monitoring.md)
+- [ARP4761](https://www.sae.org/standards/content/arp4761/) - Common Cause Analysis Guidelines
+- [ARP4754A](https://www.sae.org/standards/content/arp4754a/) - Development Guidelines
+
 ---
 
 ## 2. NN-SPECIFIC COMMON CAUSE CATEGORIES

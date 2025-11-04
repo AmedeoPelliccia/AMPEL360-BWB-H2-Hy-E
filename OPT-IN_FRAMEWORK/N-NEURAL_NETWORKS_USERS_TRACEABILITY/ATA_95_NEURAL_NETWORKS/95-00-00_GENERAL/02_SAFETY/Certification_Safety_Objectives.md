@@ -16,19 +16,25 @@ This document defines the certification strategy and safety objectives for neura
 ### 1.2 Regulatory Basis
 
 **EASA Requirements**:
-- CS-25: Large Aeroplanes
-- CS 25.1309: Equipment, systems, and installations
-- AMC 20-115C: Airborne Software
-- EASA AI Roadmap (Machine Learning Applications)
+- [CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27): Large Aeroplanes
+- [CS 25.1309](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27): Equipment, systems, and installations
+- [AMC 20-115C](https://www.easa.europa.eu/document-library/acceptable-means-of-compliance-and-guidance-materials/amc-20-115c): Airborne Software
+- [EASA AI Roadmap](https://www.easa.europa.eu/en/domains/artificial-intelligence) (Machine Learning Applications)
 
 **FAA Requirements**:
-- 14 CFR Part 25: Airworthiness Standards
-- 14 CFR 25.1309: Equipment, systems, and installations  
-- AC 20-115D: Airborne Software Assurance
-- FAA AI Assurance Framework (Draft)
+- [14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25): Airworthiness Standards
+- [14 CFR 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-F/section-25.1309): Equipment, systems, and installations  
+- [AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1027390): Airborne Software Assurance
+- [FAA AI Assurance Framework](https://www.faa.gov/aircraft/air_cert/design_approvals/air_software/cast/cast_papers) (Draft)
 
 **EU Regulations**:
-- EU AI Act: High-Risk AI Systems requirements
+- [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206): High-Risk AI Systems requirements
+
+**Related Documents**:
+- [Safety_Framework_Overview.md](Safety_Framework_Overview.md)
+- [Hazard_Analysis_Methodology.md](Hazard_Analysis_Methodology.md)
+- [Safety_Requirements.csv](Safety_Requirements.csv)
+- [Safety_Validation_Tests.csv](Safety_Validation_Tests.csv)
 
 ---
 

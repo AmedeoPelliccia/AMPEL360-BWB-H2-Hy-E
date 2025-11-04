@@ -19,11 +19,15 @@ Applies to all neural network systems across all Design Assurance Levels (DAL A 
 
 ### 1.3 References
 
-- ARP4761: Guidelines and Methods for Conducting the Safety Assessment Process
-- ARP4754A: Guidelines for Development of Civil Aircraft and Systems
-- DO-178C: Software Considerations in Airborne Systems
-- EASA AI Roadmap
-- FAA AI Assurance Framework
+- [ARP4761](https://www.sae.org/standards/content/arp4761/): Guidelines and Methods for Conducting the Safety Assessment Process
+- [ARP4754A](https://www.sae.org/standards/content/arp4754a/): Guidelines for Development of Civil Aircraft and Systems
+- [DO-178C](https://www.rtca.org/content/standards-guidance-materials): Software Considerations in Airborne Systems
+- [EASA AI Roadmap](https://www.easa.europa.eu/en/domains/artificial-intelligence)
+- [FAA AI Assurance Framework](https://www.faa.gov/aircraft/air_cert/design_approvals/air_software/cast/cast_papers)
+- [Functional_Hazard_Assessment.csv](Functional_Hazard_Assessment.csv)
+- [Failure_Modes_Effects_Analysis.csv](Failure_Modes_Effects_Analysis.csv)
+- [Fault_Tree_Analysis.md](Fault_Tree_Analysis.md)
+- [Common_Cause_Analysis.md](Common_Cause_Analysis.md)
 
 ---
 

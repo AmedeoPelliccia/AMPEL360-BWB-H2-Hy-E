@@ -24,6 +24,16 @@ This document specifies the runtime safety monitoring architecture for neural ne
 
 Applies to all DAL A, B, and C neural network systems.
 
+### 1.4 Related Documents
+
+- [Safety_Framework_Overview.md](Safety_Framework_Overview.md)
+- [Common_Cause_Analysis.md](Common_Cause_Analysis.md)
+- [Fault_Tree_Analysis.md](Fault_Tree_Analysis.md)
+- [Safety_Requirements.csv](Safety_Requirements.csv)
+- [Human_Factors_Safety.md](Human_Factors_Safety.md)
+- [ARP4761](https://www.sae.org/standards/content/arp4761/) - Safety Assessment Process
+- [DO-178C](https://www.rtca.org/content/standards-guidance-materials) - Software Considerations
+
 ---
 
 ## 2. SAFETY MONITOR ARCHITECTURE

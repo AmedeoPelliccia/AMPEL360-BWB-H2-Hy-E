@@ -5,6 +5,15 @@
 
 ---
 
+## Related Documents
+
+- [../README.md](../README.md) - Main Safety Documentation
+- [../Fault_Tree_Analysis.md](../Fault_Tree_Analysis.md)
+- [../Failure_Modes_Effects_Analysis.csv](../Failure_Modes_Effects_Analysis.csv)
+- [../Safety_Validation_Tests.csv](../Safety_Validation_Tests.csv)
+
+---
+
 ## Directory Contents
 
 ### Documents (Placeholders for PDF/SVG files)
@@ -28,16 +37,32 @@ The following documents are referenced in the safety documentation but are store
 
 ### Subdirectories
 
-#### FTA_Templates/
+#### [FTA_Templates/](FTA_Templates/)
 Fault Tree Analysis templates for neural network systems:
 - Generic NN fault tree template
 - Flight control NN specific template
 - Collision avoidance NN template
 - Propulsion NN template
 - Instructions for completing FTA for new NN systems
+- See [FTA_Templates/README.md](FTA_Templates/README.md) for details
 
-#### FMEA_Worksheets/
+#### [FMEA_Worksheets/](FMEA_Worksheets/)
 Failure Modes and Effects Analysis worksheets:
+- FMEA template adapted for neural networks
+- Component-level failure mode checklists
+- Severity and probability assessment guidelines
+- Examples from completed FMEAs
+- See [FMEA_Worksheets/README.md](FMEA_Worksheets/README.md) for details
+
+#### [Safety_Validation_Reports/](Safety_Validation_Reports/)
+Test reports and validation evidence:
+- Performance test results
+- Corner case test results
+- Adversarial robustness test results
+- Hardware-in-loop test results
+- Pilot-in-loop test results
+- Independent validation reports
+- See [Safety_Validation_Reports/README.md](Safety_Validation_Reports/README.md) for details
 - FMEA template adapted for neural networks
 - Component-level failure mode checklists
 - Severity and probability assessment guidelines
