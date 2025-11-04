@@ -1,0 +1,287 @@
+{
+  "digital_passport": {
+    "id": "DP-MAT-52-10-01-001",
+    "version": "1.0",
+    "created": "2025-11-03T10:00:00Z",
+    "last_updated": "2025-11-03T10:00:00Z",
+    "type": "Material",
+    "classification": "Composite",
+    "status": "Active",
+    
+    "identification": {
+      "trade_name": "HexPly M21E",
+      "manufacturer": "Hexcel Corporation",
+      "manufacturer_location": "Dagneux, France",
+      "part_number": "M21E-34%-268-T800S",
+      "batch_number": "HX2025-B1234",
+      "specification": "BMS8-212 Type VII Class 2",
+      "cas_number": "N/A (Mixture)",
+      "un_number": "UN3082"
+    },
+    
+    "composition": {
+      "fiber": {
+        "type": "Carbon T800S",
+        "content": "60% by volume",
+        "manufacturer": "Toray Industries",
+        "specification": "Toray T800S-12K",
+        "lot_number": "T800S-2025-CF001"
+      },
+      "resin": {
+        "type": "Epoxy M21E",
+        "content": "40% by volume",
+        "manufacturer": "Hexcel",
+        "tg_dry": "195°C",
+        "tg_wet": "177°C",
+        "batch": "M21E-2025-R001"
+      },
+      "hazardous_materials": {
+        "reach_compliant": true,
+        "reach_registration": "01-2119459370-35",
+        "rohs_compliant": true,
+        "rohs_exemptions": [],
+        "svhc_substances": [],
+        "restricted_substances": "None detected"
+      }
+    },
+    
+    "properties": {
+      "mechanical": {
+        "tensile_strength_0deg": "2724 MPa",
+        "tensile_strength_90deg": "72 MPa",
+        "tensile_modulus_0deg": "148 GPa",
+        "tensile_modulus_90deg": "9.8 GPa",
+        "compression_strength_0deg": "1620 MPa",
+        "compression_strength_90deg": "268 MPa",
+        "interlaminar_shear_strength": "102 MPa",
+        "flexural_strength": "1850 MPa",
+        "fracture_toughness_g1c": "280 J/m²"
+      },
+      "physical": {
+        "density": "1600 kg/m³",
+        "thickness_per_ply": "0.263 mm",
+        "fiber_areal_weight": "268 g/m²",
+        "resin_content": "34% by weight",
+        "void_content": "<1%"
+      },
+      "thermal": {
+        "glass_transition_temp_dry": "195°C",
+        "glass_transition_temp_wet": "177°C",
+        "coefficient_thermal_expansion_x": "0.3 × 10⁻⁶ /°C",
+        "coefficient_thermal_expansion_y": "28.0 × 10⁻⁶ /°C",
+        "thermal_conductivity": "0.5 W/m·K"
+      },
+      "environmental": {
+        "service_temp_min": "-55°C",
+        "service_temp_max": "+85°C",
+        "moisture_absorption_sat": "1.1%",
+        "flammability": "FAR 25.853(a) Compliant",
+        "smoke_density": "Ds < 200",
+        "heat_release": "Pass OSU 65/65 kW"
+      }
+    },
+    
+    "sustainability": {
+      "carbon_footprint": {
+        "raw_materials": "35.2 kg CO2e/kg",
+        "manufacturing": "10.0 kg CO2e/kg",
+        "transport": "2.1 kg CO2e/kg",
+        "total_cradle_to_gate": "47.3 kg CO2e/kg",
+        "methodology": "ISO 14067:2018"
+      },
+      "recyclability": {
+        "recyclable": true,
+        "method": "Pyrolysis",
+        "recovery_rate": "85%",
+        "recovered_fiber_strength": "85% of virgin",
+        "end_of_life_options": [
+          "Pyrolysis fiber reclamation",
+          "Energy recovery (incineration)",
+          "Mechanical grinding (filler)"
+        ]
+      },
+      "bio_content": "0%",
+      "renewable_content": "0%",
+      "water_usage": "12.5 L/kg",
+      "voc_emissions": "< 50 g/kg"
+    },
+    
+    "traceability": {
+      "raw_materials": {
+        "carbon_fiber": {
+          "supplier": "Toray Industries",
+          "origin": "Japan",
+          "lot_number": "T800S-2025-CF001",
+          "manufacturing_date": "2025-09-01",
+          "traceability_cert": "TRC-TORAY-2025-001"
+        },
+        "resin": {
+          "supplier": "Hexcel",
+          "origin": "France",
+          "batch_number": "M21E-2025-R001",
+          "manufacturing_date": "2025-09-15",
+          "shelf_life": "12 months at -18°C"
+        }
+      },
+      "manufacturing": {
+        "date": "2025-10-15",
+        "facility": "Hexcel Dagneux, France",
+        "process": "Hot melt prepreg",
+        "equipment_id": "HMP-LINE-3",
+        "operator": "QC-Certified Team A",
+        "quality_cert": "AS9100D",
+        "batch_size": "500 kg"
+      },
+      "supply_chain": [
+        {
+          "stage": "Fiber production",
+          "organization": "Toray Japan",
+          "location": "Ehime, Japan",
+          "date": "2025-09-01",
+          "certification": "ISO 9001:2015"
+        },
+        {
+          "stage": "Prepreg manufacture",
+          "organization": "Hexcel France",
+          "location": "Dagneux, France",
+          "date": "2025-10-15",
+          "certification": "AS9100D"
+        },
+        {
+          "stage": "Transport",
+          "organization": "AirBridge Cargo",
+          "mode": "Air freight",
+          "date": "2025-10-20",
+          "conditions": "Climate controlled -18°C"
+        },
+        {
+          "stage": "Receipt & Inspection",
+          "organization": "AMPEL360",
+          "location": "Munich, Germany",
+          "date": "2025-10-25",
+          "inspector": "QC-001-MH"
+        }
+      ],
+      "chain_of_custody": {
+        "complete": true,
+        "gaps": "None",
+        "verification_method": "Blockchain + Physical seals"
+      }
+    },
+    
+    "certifications": {
+      "material_qualification": {
+        "cert_number": "EASA-ETSO-C69-M21E",
+        "issuing_authority": "EASA",
+        "issue_date": "2024-03-15",
+        "valid_until": "2029-03-15"
+      },
+      "quality_standards": [
+        {
+          "standard": "AS9100D",
+          "cert_number": "AS9100-HEX-2023",
+          "auditor": "NQA",
+          "valid_until": "2026-06-30"
+        },
+        {
+          "standard": "ISO 9001:2015",
+          "cert_number": "ISO9001-HEX-2023",
+          "auditor": "BSI",
+          "valid_until": "2026-06-30"
+        }
+      ],
+      "test_reports": [
+        {
+          "type": "Mechanical properties",
+          "report_number": "TR-2025-10-001",
+          "date": "2025-10-16",
+          "laboratory": "Hexcel Test Lab",
+          "standard": "ASTM D3039"
+        },
+        {
+          "type": "Flammability",
+          "report_number": "TR-2025-10-002",
+          "date": "2025-10-17",
+          "laboratory": "Fire Testing Services",
+          "standard": "FAR 25.853"
+        },
+        {
+          "type": "Environmental aging",
+          "report_number": "TR-2025-10-003",
+          "date": "2025-10-18",
+          "laboratory": "Hexcel Materials Lab",
+          "standard": "ASTM D5229"
+        }
+      ]
+    },
+    
+    "usage_in_aircraft": {
+      "application": "Door panel face sheets",
+      "component_reference": "DP-CMP-52-10-01-002",
+      "layup_specification": "[0/45/-45/90]4s",
+      "total_plies": 32,
+      "cured_thickness": "8.4 mm",
+      "area_used": "4.2 m²",
+      "total_weight": "6.7 kg"
+    },
+    
+    "lifecycle": {
+      "design_life": "90,000 flight cycles",
+      "inspection_intervals": {
+        "visual": "Every 1000 flight hours",
+        "ultrasonic": "Every 15000 flight hours",
+        "detailed": "Every 30000 flight hours"
+      },
+      "maintenance_actions": [
+        "Visual inspection for impact damage",
+        "Moisture content measurement",
+        "Ultrasonic C-scan if damage suspected"
+      ],
+      "retirement_criteria": [
+        "Delamination > 25 mm diameter",
+        "Through-thickness crack",
+        "Moisture > 1.5% by weight",
+        "Impact damage not repairable"
+      ]
+    },
+    
+    "blockchain": {
+      "network": "Hyperledger Fabric",
+      "channel": "ampel360-supply-chain",
+      "contract_address": "0xABC123DEF456789",
+      "transaction_id": "8f3e4d5c2a1b9876543210fedcba",
+      "genesis_block": "2025-11-03T10:00:00Z",
+      "consensus": "PBFT",
+      "immutable_hash": "SHA256:a3f5e8d2c9b4f1e6d8c5a7b9f2e4d6c8a1b3f5e7d9c2b4f6e8d1c3b5f7e9d2c4",
+      "ipfs_link": "ipfs://QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG"
+    },
+    
+    "contacts": {
+      "manufacturer_technical_support": {
+        "name": "Hexcel Technical Service",
+        "email": "technical.service@hexcel.com",
+        "phone": "+33 4 72 20 70 70"
+      },
+      "ampel360_material_engineer": {
+        "name": "Dr. Maria Schmidt",
+        "email": "m.schmidt@ampel360.aerospace",
+        "phone": "+49 89 1234-5601"
+      }
+    },
+    
+    "metadata": {
+      "created_by": "system-admin@ampel360.aerospace",
+      "approved_by": "materials-chief@ampel360.aerospace",
+      "approval_date": "2025-11-03",
+      "next_review_date": "2026-11-03",
+      "revision_history": [
+        {
+          "version": "1.0",
+          "date": "2025-11-03",
+          "changes": "Initial creation",
+          "author": "system-admin"
+        }
+      ]
+    }
+  }
+}
