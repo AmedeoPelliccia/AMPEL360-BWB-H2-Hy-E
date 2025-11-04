@@ -1,0 +1,47 @@
+Req_ID,Verification_Method,Test_Procedure,Acceptance_Criteria,Verification_Status,Verified_By,Verification_Date,Notes
+RQ-02-00-01-001,Analysis,TP-REG-001,AFM compliant with CS-25.1581,Verified,Certification Team,2025-09-15,Documentation reviewed and approved
+RQ-02-00-01-002,Analysis,TP-REG-002,AFM compliant with FAR 25.1581,Verified,FAA Liaison,2025-09-15,Cross-compliance with CS-25
+RQ-02-00-01-015,Test,TP-H2-TANK-001,Tank meets ISO 19881:2018 pressure test,Verified,Test Lab,2025-08-20,Pressure cycling completed successfully
+RQ-02-00-02-001,Demonstration,TP-SAFETY-001,Zero accidents in development phase,In Progress,Safety Manager,N/A,Ongoing monitoring
+RQ-02-00-02-009,Inspection,TP-H2-LEAK-001,8 sensors per zone installed and operational,Verified,Installation Team,2025-09-01,Sensor array configuration confirmed
+RQ-02-00-02-010,Test,TP-H2-VENT-001,50 ACH measured in emergency mode,Verified,Environmental Test,2025-08-25,CFD validated with physical test
+RQ-02-00-02-017,Test,TP-CAOS-SAFETY-001,Independent safety monitor functional,Verified,AI Safety Team,2025-10-01,Redundant monitoring system operational
+RQ-02-00-02-018,Test,TP-CAOS-OVERRIDE-001,Override activated within 1 second,Verified,Human Factors Lab,2025-09-28,Single-action override tested successfully
+RQ-02-00-03-001,Test,TP-PERF-RANGE-001,3500 NM range at design cruise,In Progress,Flight Test,N/A,Awaiting prototype flight test
+RQ-02-00-03-007,Test,TP-PERF-EFF-001,30% fuel efficiency improvement measured,In Progress,Performance Analysis,N/A,Simulation shows 32% improvement
+RQ-02-00-03-008,Test,TP-FC-EFF-001,Fuel cell efficiency 55-60% verified,Verified,Fuel Cell Lab,2025-09-10,Stack efficiency tested at 57%
+RQ-02-00-03-015,Test,TP-CAOS-OPT-001,5% CAOS optimization demonstrated,In Progress,CAOS Test Team,N/A,Simulation shows 6% improvement
+RQ-02-00-04-010,Demonstration,TP-OPS-REL-001,99.5% dispatch reliability over 6 months,Planned,Operations,N/A,Requires operational data collection
+RQ-02-00-05-001,Inspection,TP-H2-CAP-001,8000 kg capacity verified by measurement,Verified,Tank Manufacturer,2025-08-15,Volumetric capacity confirmed
+RQ-02-00-05-003,Test,TP-H2-TEMP-001,Storage temperature -253C maintained,Verified,Cryogenic Test,2025-08-18,24-hour temperature stability test passed
+RQ-02-00-05-006,Demonstration,TP-H2-REFUEL-001,45-minute refueling demonstrated,In Progress,Ground Ops,N/A,Awaiting ground test facility
+RQ-02-00-06-001,Test,TP-BWB-CG-001,CG range 15-42% MAC validated,Verified,Flight Control Lab,2025-09-20,Wind tunnel and simulation validated
+RQ-02-00-06-005,Test,TP-BWB-LAT-001,500 kg lateral imbalance limit tested,Verified,Flight Control Lab,2025-09-20,Control authority confirmed
+RQ-02-00-07-001,Test,TP-FC-POWER-001,10 MW total power output measured,Verified,Fuel Cell Test,2025-09-12,Four stacks tested in parallel
+RQ-02-00-07-002,Test,TP-FC-STACK-001,2.5 MW per stack verified,Verified,Fuel Cell Test,2025-09-12,Individual stack performance confirmed
+RQ-02-00-07-009,Test,TP-FC-THERMAL-001,Thermal management system functional,Verified,Thermal Test Lab,2025-09-15,Temperature control within specs
+RQ-02-00-08-001,Test,TP-CAOS-DT-001,Digital twin integration tested,In Progress,CAOS Integration,N/A,Lab environment integration complete
+RQ-02-00-08-002,Test,TP-CAOS-SYNC-001,100ms synchronization verified,In Progress,CAOS Integration,N/A,Latency measurements in progress
+RQ-02-00-08-006,Test,TP-CAOS-ROUTE-001,Route optimization 3-7% demonstrated,In Progress,CAOS Test,N/A,Simulation shows 5% average
+RQ-02-00-08-007,Test,TP-CAOS-FUEL-001,Fuel optimization 8-15% demonstrated,In Progress,CAOS Test,N/A,Simulation shows 12% average
+RQ-02-00-08-016,Demonstration,TP-HF-AUTH-001,Human authority priority demonstrated,Verified,Human Factors Lab,2025-09-28,Override scenarios tested successfully
+RQ-02-00-08-017,Test,TP-HF-OVER-001,Single-action override functional,Verified,Human Factors Lab,2025-09-28,Response time under 1 second
+RQ-02-00-09-001,Demonstration,TP-HF-WL-001,Workload management effective,In Progress,Human Factors Lab,N/A,Simulator studies ongoing
+RQ-02-00-09-020,Demonstration,TP-HF-TRUST-001,Trust calibration appropriate,In Progress,Human Factors Lab,N/A,Pilot trust studies in progress
+RQ-02-00-10-001,Demonstration,TP-TRN-TYPE-001,40-hour ground school completed,Planned,Training Dept,N/A,Curriculum under development
+RQ-02-00-10-004,Demonstration,TP-TRN-H2-001,3-hour H2 training completed,Planned,Training Dept,N/A,H2 training module in development
+RQ-02-00-10-006,Demonstration,TP-TRN-CAOS-001,3-hour CAOS training completed,Planned,Training Dept,N/A,CAOS training module in development
+RQ-02-00-11-001,Inspection,TP-DOC-AFM-001,AFM structure review,Verified,Tech Publications,2025-09-30,Structure complies with CS-25.1581
+RQ-02-00-11-006,Inspection,TP-DOC-S1000D-001,S1000D compliance check,Verified,Tech Publications,2025-09-30,Data modules formatted correctly
+RQ-02-00-11-007,Inspection,TP-DOC-ISPEC-001,ATA iSpec 2200 compliance check,Verified,Tech Publications,2025-09-30,Chapter structure validated
+RQ-02-00-12-001,Test,TP-ENV-ZERO-001,Zero direct emissions measured,In Progress,Environmental Test,N/A,Awaiting operational testing
+RQ-02-00-12-002,Test,TP-ENV-NEG-001,Net negative carbon demonstrated,In Progress,Environmental Test,N/A,CO2 capture system under test
+RQ-02-00-12-011,Test,TP-ENV-CAP-001,100 kg/FH CO2 capture measured,In Progress,Environmental Test,N/A,Sorbent capacity testing ongoing
+RQ-02-00-13-001,Analysis,TP-INT-ATA05-001,ATA 05 interface analysis complete,Verified,Integration Team,2025-10-05,Interface control document approved
+RQ-02-00-13-005,Analysis,TP-INT-ATA28-001,ATA 28 interface analysis complete,Verified,Integration Team,2025-10-05,H2 system interfaces defined
+RQ-02-00-13-007,Analysis,TP-INT-ATA71-001,ATA 71 interface analysis complete,Verified,Integration Team,2025-10-05,Fuel cell interfaces defined
+RQ-02-00-13-008,Analysis,TP-INT-ATA95-001,ATA 95 interface analysis complete,In Progress,Integration Team,N/A,CAOS interfaces under review
+RQ-02-00-14-001,Test,TP-FUNC-FP-001,Flight planning function tested,Verified,Software Test,2025-10-10,All flight planning scenarios passed
+RQ-02-00-14-004,Test,TP-FUNC-H2-001,H2 fuel calculation tested,Verified,Software Test,2025-10-10,Calculation accuracy within 1%
+RQ-02-00-14-016,Test,TP-FUNC-MON-001,Real-time monitoring tested,Verified,Software Test,2025-10-10,All monitoring functions operational
+RQ-02-00-14-020,Test,TP-FUNC-FLEET-001,Fleet data sharing tested,In Progress,Software Test,N/A,Integration testing in progress
