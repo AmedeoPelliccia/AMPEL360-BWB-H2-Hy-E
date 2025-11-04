@@ -5,7 +5,6 @@ Aggregates component weights and calculates CG
 """
 
 import pandas as pd
-import numpy as np
 
 def load_weight_budget(csv_file):
     """Load weight budget from CSV file"""

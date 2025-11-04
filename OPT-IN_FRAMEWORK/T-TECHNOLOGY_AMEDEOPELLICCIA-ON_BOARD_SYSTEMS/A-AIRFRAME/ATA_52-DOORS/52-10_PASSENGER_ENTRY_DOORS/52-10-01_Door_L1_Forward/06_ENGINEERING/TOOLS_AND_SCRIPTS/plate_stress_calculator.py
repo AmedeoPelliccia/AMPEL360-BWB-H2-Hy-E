@@ -6,7 +6,6 @@ WARNING: Results require FEA validation
 """
 
 import numpy as np
-import pandas as pd
 
 class PlateStressCalculator:
     """

@@ -5,7 +5,6 @@ Calculates structural margins with uncertainty
 """
 
 import pandas as pd
-import numpy as np
 
 def margin_of_safety(allowable, applied, factor_of_safety=1.0):
     """
@@ -78,7 +77,6 @@ def process_margin_summary(csv_file):
         for _, row in df.iterrows():
             component = row['Component']
             ms = row['Margin_of_Safety']
-            status = row['Status']
             
             # Parse MS (handle +/- and numeric values)
             try:
@@ -92,7 +90,7 @@ def process_margin_summary(csv_file):
                 print(f"  MS: {ms}")
                 print(f"  Status: {evaluation}")
                 
-            except:
+            except (ValueError, TypeError):
                 print(f"\n{component}: MS = {ms} (non-numeric)")
         
         # Summary statistics

@@ -5,8 +5,6 @@ Based on Classical Laminate Theory (CLT)
 WARNING: Simplified approximations only
 """
 
-import numpy as np
-
 class CompositeLaminate:
     """
     Calculate equivalent properties for composite laminates
