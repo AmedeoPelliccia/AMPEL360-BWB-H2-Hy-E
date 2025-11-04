@@ -1,0 +1,5 @@
+Standard,Requirement,Status,Gap_Description,Action_Required,Due_Date
+ATA_Spec_52,Chapter_structure,Complete,None,None,Complete
+ATA_Spec_52,Documentation_format,Complete,None,None,Complete
+ATA_iSpec2200,Data_modules,In_Progress,70%_complete,Continue_DMC_development,2026-Q2
+ATA_Numbering,Component_codes,Complete,None,None,Complete
