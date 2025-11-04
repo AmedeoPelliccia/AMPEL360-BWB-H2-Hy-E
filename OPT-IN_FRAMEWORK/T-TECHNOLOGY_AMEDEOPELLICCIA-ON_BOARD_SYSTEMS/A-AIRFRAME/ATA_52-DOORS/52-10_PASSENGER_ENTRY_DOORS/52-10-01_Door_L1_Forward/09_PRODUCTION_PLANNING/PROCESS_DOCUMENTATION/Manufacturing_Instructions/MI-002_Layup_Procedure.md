@@ -93,11 +93,11 @@ Check and record on traveler:
 
 ### Ply 2: +45° Orientation
 1. Position per laser guide
-2. **⚠️ INSERT ECF (Electromagnetic Compatibility Foil) HERE (outer face only)**
-3. Ensure ECF extends to edge trimline +10mm
+2. **⚠️ INSERT EMC FOIL (Electromagnetic Compatibility Foil) HERE (outer face only)**
+3. Ensure EMC Foil extends to edge trimline +10mm
 4. Check electrical continuity: Resistance should be <10Ω
 5. Record resistance on traveler: ___________Ω
-6. Consolidate ply over ECF
+6. Consolidate ply over EMC Foil
 7. **Photo documentation required**
 
 ### Ply 3: -45° Orientation
