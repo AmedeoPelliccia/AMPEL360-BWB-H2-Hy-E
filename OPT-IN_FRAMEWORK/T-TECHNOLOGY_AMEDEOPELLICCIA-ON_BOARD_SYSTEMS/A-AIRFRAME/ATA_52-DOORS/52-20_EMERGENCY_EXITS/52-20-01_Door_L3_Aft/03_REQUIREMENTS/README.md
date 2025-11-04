@@ -12,7 +12,7 @@ This directory contains all requirements for the L3 Aft Emergency Exit system, o
 | Regulatory_Requirements.csv | Released | 1.0 | 2025-11-04 | Approved |
 | Functional_Requirements.csv | Released | 1.0 | 2025-11-04 | Approved |
 | Performance_Requirements.csv | Released | 1.0 | 2025-11-04 | Approved |
-| Interface_Requirements.md | Draft | 0.9 | 2025-11-04 | Pending |
+| Interface_Requirements.md | Released | 1.0 | 2025-11-04 | Approved |
 | Safety_Requirements.csv | Released | 1.0 | 2025-11-04 | Approved |
 | Environmental_Requirements.csv | Released | 1.0 | 2025-11-04 | Approved |
 | Human_Factors_Requirements.md | Draft | 0.9 | 2025-11-04 | Pending |

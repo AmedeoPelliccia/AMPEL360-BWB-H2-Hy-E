@@ -235,7 +235,39 @@ graph LR
   - [`52-10 - Passenger Entry Doors`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-10_PASSENGER_ENTRY_DOORS/)
     - [`52-10-01 - Door L1 Forward`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-10_PASSENGER_ENTRY_DOORS/52-10-01_Door_L1_Forward/) 📋 **COMPLETE WITH 14 FOLDERS**
   - [`52-20 - Emergency Exits`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/)
-    - [`52-20-01 - Door L3 Aft`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/) 🆕 **01_OVERVIEW COMPLETE**
+    - [`52-20-01 - Door L3 Aft`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/) 🆕 **INTERFACE REQUIREMENTS COMPLETE**
+
+#### 🔌 Door L3 Aft - Interface Requirements
+
+Complete interface requirements for the Door L3 Aft Emergency Exit system:
+
+| Requirement_ID | Description | Interface_Type | Standard | Criticality | Verification | Status |
+|---|---|---|---|---|---|---|
+| RQ-52-20-01-070 | Fuselage_Structural_Interface | Mechanical | ATA_53 | Critical | FEA+Test | Defined |
+| RQ-52-20-01-071 | Door_Frame_Mounting | Mechanical | AMPEL360 | Critical | Analysis | Defined |
+| RQ-52-20-01-072 | Floor_Beam_Interface | Mechanical | ATA_53 | Critical | Test | Defined |
+| RQ-52-20-01-073 | Electrical_Power_28VDC | Electrical | MIL-STD-704 | High | Test | Defined |
+| RQ-52-20-01-074 | Emergency_Power_Bus | Electrical | ATA_24 | Critical | Demo | Defined |
+| RQ-52-20-01-075 | ARINC_429_Data_Bus | Data | ARINC_429 | High | Test | Defined |
+| RQ-52-20-01-076 | Latch_Striker_Interface | Mechanical | ATA_52 | Critical | Inspect | Defined |
+| RQ-52-20-01-077 | Hinge_System_Interface | Mechanical | ATA_52 | Critical | Test | Defined |
+| RQ-52-20-01-078 | Seal_Interface | Mechanical | ATA_52 | High | Test | Defined |
+| RQ-52-20-01-079 | ECS_Interface | Environmental | ATA_21 | High | Analysis | Defined |
+| RQ-52-20-01-080 | Drainage_Interface | Environmental | ATA_52 | Medium | Test | Defined |
+| RQ-52-20-01-081 | Slide_Bustle_Interface | Mechanical | TSO-C69c | Critical | Demo | Defined |
+| RQ-52-20-01-082 | Girt_Bar_Floor_Interface | Mechanical | TSO-C69c | Critical | Test | Defined |
+| RQ-52-20-01-083 | Cockpit_Display_Interface | Data | ATA_31 | High | Demo | Defined |
+| RQ-52-20-01-084 | Cabin_Crew_Panel | Operational | ATA_44 | High | Inspect | Defined |
+| RQ-52-20-01-085 | Ground_Interface | Operational | Ground_Ops | Medium | Demo | Defined |
+| RQ-52-20-01-086 | Lightning_Bonding | Electrical | CS_25.581 | Critical | Test | Defined |
+| RQ-52-20-01-087 | EMI_Shielding | Electrical | DO-160G | High | Test | Defined |
+| RQ-52-20-01-088 | Emergency_Lighting | Electrical | CS_25.812 | Critical | Test | Defined |
+| RQ-52-20-01-089 | Escape_Path_Interface | Operational | CS_25.809 | Critical | Inspect | Defined |
+| RQ-52-20-01-090 | CAOS_Data_Interface | Data | AMPEL360 | Medium | Test | Defined |
+| RQ-52-20-01-091 | Sensor_Network | Data | AMPEL360 | Medium | Demo | Defined |
+
+📖 [Full Interface Requirements Documentation](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/03_REQUIREMENTS/Interface_Requirements.md)
+
 - [`ATA 53 - FUSELAGE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_53-FUSELAGE/)
 - [`ATA 54 - NACELLES/PYLONS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/)
 - [`ATA 55 - STABILIZERS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_55-STABILIZERS/)
