@@ -60,13 +60,13 @@ This document describes the Safety Management System (SMS) for AMPEL360 operatio
 
 ### 3.2 Safety Objectives
 
-See Operations_Safety_Framework.md Section 2.1
+See [Operations_Safety_Framework.md Section 2.1](Operations_Safety_Framework.md#21-top-level-safety-objectives)
 
 ---
 
 ## 4. SAFETY RISK MANAGEMENT
 
-See Risk_Assessment_Methodology.md for detailed procedures.
+See [Risk_Assessment_Methodology.md](Risk_Assessment_Methodology.md) for detailed procedures.
 
 **Key Elements:**
 - Hazard identification process
@@ -89,7 +89,7 @@ See Risk_Assessment_Methodology.md for detailed procedures.
 - Regulatory correspondence
 
 **Performance Indicators:**
-- See Operations_Safety_Framework.md Section 2.2
+- See [Operations_Safety_Framework.md Section 2.2](Operations_Safety_Framework.md#22-safety-performance-indicators)
 - Leading and lagging indicators
 - Trending and analysis
 
@@ -118,7 +118,7 @@ See Risk_Assessment_Methodology.md for detailed procedures.
 
 ### 6.1 Safety Training
 
-See Operations_Safety_Framework.md Section on Training Requirements
+See [Operations_Safety_Framework.md](Operations_Safety_Framework.md) Section on Training Requirements
 
 ### 6.2 Safety Communication
 
@@ -126,6 +126,8 @@ See Operations_Safety_Framework.md Section on Training Requirements
 **Safety Notices:** Important information  
 **Safety Newsletter:** Monthly updates  
 **Safety Meetings:** Quarterly forums
+
+**Reference:** [Safety_Reporting_Investigation.md Section 5](Safety_Reporting_Investigation.md#5-lessons-learned)
 
 ---
 

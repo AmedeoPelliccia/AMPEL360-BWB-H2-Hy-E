@@ -169,33 +169,39 @@ This document establishes the comprehensive emergency response framework for AMP
 
 ### 5.1 H2-Related Emergencies
 
-See H2_Operational_Safety.md Section 5 for detailed procedures:
+See [H2_Operational_Safety.md Section 5](H2_Operational_Safety.md#5-emergency-procedures) for detailed procedures:
 - H2 leak ground/flight
 - H2 fire ground/flight
 - Cryogenic exposure
 - Refueling emergencies
 
+**Visual Aid:** [ASSETS/Emergency_Response_Flowcharts.md](ASSETS/Emergency_Response_Flowcharts.md)
+
 ### 5.2 Fuel Cell Emergencies
 
-See Fuel_Cell_Safety_Operations.md Section 5 for detailed procedures:
+See [Fuel_Cell_Safety_Operations.md Section 5](Fuel_Cell_Safety_Operations.md#5-emergency-procedures) for detailed procedures:
 - Overtemperature
 - Stack failure
 - Fire
 - Total power loss
 
+**Visual Aid:** [ASSETS/Emergency_Response_Flowcharts.md](ASSETS/Emergency_Response_Flowcharts.md)
+
 ### 5.3 BWB-Specific Emergencies
 
-See BWB_Operational_Safety.md Section 3.3 for:
+See [BWB_Operational_Safety.md Section 3.3](BWB_Operational_Safety.md#33-emergency-procedures) for:
 - Handling emergencies
 - Evacuation procedures
 - CG emergencies
 
 ### 5.4 CAOS Emergencies
 
-See CAOS_Safety_Integration.md Section 4.2-4.3 for:
+See [CAOS_Safety_Integration.md Section 4.2-4.3](CAOS_Safety_Integration.md#42-abnormal-operations) for:
 - CAOS malfunction
 - Conflicting recommendations
 - Manual reversion
+
+**Visual Aid:** [ASSETS/Emergency_Response_Flowcharts.md](ASSETS/Emergency_Response_Flowcharts.md)
 
 ---
 
