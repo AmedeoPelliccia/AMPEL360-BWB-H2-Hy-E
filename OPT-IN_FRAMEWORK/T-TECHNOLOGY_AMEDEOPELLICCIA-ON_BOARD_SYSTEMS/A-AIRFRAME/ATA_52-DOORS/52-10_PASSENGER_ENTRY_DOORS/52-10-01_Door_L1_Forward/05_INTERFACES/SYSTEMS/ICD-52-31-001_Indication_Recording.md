@@ -42,7 +42,7 @@ This ICD defines the interface between Door L1 Forward and aircraft indication/r
 - Word rate: 2 Hz continuous, 10 Hz during operation
 
 ### 3.2 Maintenance Data
-- Cycle counter (累積開閉回数)
+- Cycle counter (cumulative open/close count)
 - Fault history (last 100 events)
 - Temperature exceedances
 - Power consumption trends
