@@ -5,6 +5,11 @@
 **Date:** 2025-11-04  
 **Classification:** Safety Critical
 
+## Related Documents
+- [Functional_Hazard_Assessment.md](./Functional_Hazard_Assessment.md) - Combined failure scenarios
+- [FMEA_Emergency_Exit.csv](./FMEA_Emergency_Exit.csv) - Individual failure modes
+- [Safety_Assessment_Plan.md](./Safety_Assessment_Plan.md) - Independence principles
+
 ## 1. INTRODUCTION
 
 ### 1.1 Purpose
@@ -18,9 +23,9 @@ Identify and analyze common cause failures that could affect multiple redundant 
 - BWB-specific considerations
 
 ### 1.3 Regulatory Basis
-- CS 25.1309 - Common Cause Analysis
-- AMC 25.1309 - Independence requirements
-- SAE ARP4761 - CCA methodology
+- [CS 25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) - Common Cause Analysis
+- [AMC 25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) - Independence requirements
+- [SAE ARP4761](https://www.sae.org/standards/content/arp4761a/) - CCA methodology
 
 ## 2. COMMON CAUSE CATEGORIES
 
@@ -127,7 +132,7 @@ Identify and analyze common cause failures that could affect multiple redundant 
 | Diagnostics | All systems | Missed faults | Conservative design |
 
 **Mitigation:**
-- DO-178C Level A for critical functions
+- [DO-178C](https://www.rtca.org/content/standards-guidance-materials) Level A for critical functions
 - Formal verification methods
 - Independent testing
 - Partitioning and isolation

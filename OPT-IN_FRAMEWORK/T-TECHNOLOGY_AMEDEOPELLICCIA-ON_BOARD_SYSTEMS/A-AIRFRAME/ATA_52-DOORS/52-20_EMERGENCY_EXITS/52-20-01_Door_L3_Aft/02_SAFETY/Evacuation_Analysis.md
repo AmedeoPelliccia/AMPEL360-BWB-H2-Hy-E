@@ -5,13 +5,19 @@
 **Date:** 2025-11-04  
 **Classification:** Safety Critical
 
+## Related Documents
+- [Emergency_Procedures.md](./Emergency_Procedures.md) - Crew evacuation procedures
+- [Human_Factors_Analysis.md](./Human_Factors_Analysis.md) - Passenger behavior analysis
+- [Functional_Hazard_Assessment.md](./Functional_Hazard_Assessment.md) - Evacuation hazards
+- [Safety_Requirements.csv](./Safety_Requirements.csv) - Evacuation requirements
+
 ## 1. EVACUATION REQUIREMENTS
 
 ### 1.1 Regulatory Requirements
-- **CS 25.803:** 90-second evacuation, half exits
-- **CS 25.807:** Type A exit minimum dimensions
-- **CS 25.810:** Emergency egress assist means
-- **CS 25.813:** Emergency exit access
+- **[CS 25.803](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** 90-second evacuation, half exits
+- **[CS 25.807](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Type A exit minimum dimensions
+- **[CS 25.810](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Emergency egress assist means
+- **[CS 25.813](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27):** Emergency exit access
 
 ### 1.2 Performance Targets
 
@@ -220,7 +226,7 @@ Optimal Crew Positions:
 - [ ] CFD smoke propagation
 - [ ] FEA structural loads
 - [ ] Monte Carlo evacuation
-- [ ] Human factors studies
+- [ ] Human factors studies (see [Human_Factors_Analysis.md](./Human_Factors_Analysis.md))
 
 ### 10.2 Physical Validation
 - [ ] Component testing

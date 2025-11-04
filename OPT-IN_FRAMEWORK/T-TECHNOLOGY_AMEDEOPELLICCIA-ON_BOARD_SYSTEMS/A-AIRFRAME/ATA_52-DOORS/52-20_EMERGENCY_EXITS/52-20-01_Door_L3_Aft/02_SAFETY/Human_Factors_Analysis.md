@@ -5,6 +5,11 @@
 **Date:** 2025-11-04  
 **Classification:** Safety Critical
 
+## Related Documents
+- [Emergency_Procedures.md](./Emergency_Procedures.md) - Operational procedures
+- [Evacuation_Analysis.md](./Evacuation_Analysis.md) - Passenger flow dynamics
+- [Functional_Hazard_Assessment.md](./Functional_Hazard_Assessment.md) - Human error hazards
+
 ## 1. INTRODUCTION
 
 ### 1.1 Purpose

@@ -5,10 +5,17 @@
 **Date:** 2025-11-04  
 **Classification:** Safety Critical
 
+## Related Documents
+- [Functional_Hazard_Assessment.md](./Functional_Hazard_Assessment.md) - FHA analysis
+- [FMEA_Emergency_Exit.csv](./FMEA_Emergency_Exit.csv) - FMEA analysis
+- [Common_Cause_Analysis.md](./Common_Cause_Analysis.md) - CCA analysis
+- [Safety_Requirements.csv](./Safety_Requirements.csv) - Requirements traceability
+- [Risk_Register.csv](./Risk_Register.csv) - Risk management
+
 ## 1. INTRODUCTION
 
 ### 1.1 Purpose
-Define the safety assessment approach for the L3 Aft Emergency Exit to demonstrate compliance with CS 25.1309 and achieve probability targets for catastrophic failure conditions.
+Define the safety assessment approach for the L3 Aft Emergency Exit to demonstrate compliance with [CS 25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) and achieve probability targets for catastrophic failure conditions.
 
 ### 1.2 Scope
 Comprehensive safety assessment covering normal operation, emergency activation, and all failure modes affecting evacuation capability.
@@ -46,11 +53,11 @@ graph TD
 ```
 
 ### 3.2 Analysis Tools
-- **FHA:** Functional Hazard Assessment
+- **[FHA](./Functional_Hazard_Assessment.md):** Functional Hazard Assessment
 - **PSSA:** Preliminary System Safety Assessment
-- **FMEA:** Failure Modes and Effects Analysis
+- **[FMEA](./FMEA_Emergency_Exit.csv):** Failure Modes and Effects Analysis
 - **FTA:** Fault Tree Analysis
-- **CCA:** Common Cause Analysis
+- **[CCA](./Common_Cause_Analysis.md):** Common Cause Analysis
 - **SSA:** System Safety Assessment
 
 ## 4. SYSTEM ARCHITECTURE FOR SAFETY
@@ -100,11 +107,11 @@ graph TD
 ## 6. SAFETY REQUIREMENTS TRACEABILITY
 
 ### 6.1 Requirements Sources
-- CS 25.1309 - System safety
-- CS 25.803 - Emergency evacuation
-- CS 25.807 - Emergency exits
-- CS 25.810 - Emergency egress assist
-- CS 25.813 - Emergency exit access
+- [CS 25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) - System safety
+- [CS 25.803](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) - Emergency evacuation
+- [CS 25.807](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) - Emergency exits
+- [CS 25.810](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) - Emergency egress assist
+- [CS 25.813](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) - Emergency exit access
 
 ### 6.2 Traceability Matrix
 All safety requirements must be traceable to:

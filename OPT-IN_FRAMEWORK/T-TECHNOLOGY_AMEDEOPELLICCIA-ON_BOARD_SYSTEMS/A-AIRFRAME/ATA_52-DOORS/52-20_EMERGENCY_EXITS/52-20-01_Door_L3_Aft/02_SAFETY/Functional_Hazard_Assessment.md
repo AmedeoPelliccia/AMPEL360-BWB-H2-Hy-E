@@ -5,6 +5,12 @@
 **Date:** 2025-11-04  
 **Classification:** Safety Critical
 
+## Related Documents
+- [Safety_Assessment_Plan.md](./Safety_Assessment_Plan.md) - Overall safety approach
+- [FMEA_Emergency_Exit.csv](./FMEA_Emergency_Exit.csv) - Detailed failure analysis
+- [Common_Cause_Analysis.md](./Common_Cause_Analysis.md) - Common mode failures
+- [Risk_Register.csv](./Risk_Register.csv) - Risk tracking
+
 ## 1. SYSTEM FUNCTIONS
 
 ### 1.1 Primary Functions
@@ -171,9 +177,9 @@ H-03.1: Level 5 (Must improve to Level 6)
 
 ### 7.2 Procedural Mitigations
 - Regular inspection
-- Crew training
+- Crew training (see [Human_Factors_Analysis.md](./Human_Factors_Analysis.md))
 - Passenger briefing
-- Maintenance procedures
+- Maintenance procedures (see [Emergency_Procedures.md](./Emergency_Procedures.md))
 - Emergency drills
 
 ### 7.3 CAOS Mitigations
@@ -205,13 +211,13 @@ H-03.1: Level 5 (Must improve to Level 6)
 
 ## 9. REGULATORY COMPLIANCE
 
-### 9.1 CS 25.1309 Compliance
+### 9.1 [CS 25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) Compliance
 - System safety assessment complete
 - Probability targets met
 - Independence demonstrated
 - Common cause analysis complete
 
-### 9.2 CS 25.803 Compliance
+### 9.2 [CS 25.803](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) Compliance
 - 90-second evacuation capability
 - Type A exit dimensions
 - Dual lane slide
