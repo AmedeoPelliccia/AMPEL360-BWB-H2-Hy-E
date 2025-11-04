@@ -162,8 +162,8 @@ For testing, provide:
 | NDT | $3,000 |
 | Inspection | $2,000 |
 | **Subtotal** | **$61,000** |
-| Contingency (20%) | $12,000 |
-| **Total** | **$73,000** |
+| Contingency (20%) | $12,200 |
+| **Total** | **$73,200** |
 
 ### 10. LESSONS LEARNED CAPTURE
 
