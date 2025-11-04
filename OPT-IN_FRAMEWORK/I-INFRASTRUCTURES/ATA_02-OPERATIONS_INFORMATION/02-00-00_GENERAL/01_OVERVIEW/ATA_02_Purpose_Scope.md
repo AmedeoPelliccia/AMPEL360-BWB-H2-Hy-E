@@ -23,13 +23,19 @@ This chapter serves as the **authoritative source** for:
 - Operational procedures
 - Flight planning information
 
+**Related Documents:**
+- [AMPEL360_Operations_Overview.md](AMPEL360_Operations_Overview.md) - Platform-specific operational details
+- [Regulatory_Framework.md](Regulatory_Framework.md) - Complete regulatory compliance information
+- [Cross_ATA_Integration.md](Cross_ATA_Integration.md) - Integration with other ATA chapters
+- [Document_Organization.md](Document_Organization.md) - How documentation is structured
+
 ### 1.2 Regulatory Compliance
 
 ATA 02 supports compliance with:
-- **CS-25/FAR 25**: Aircraft Flight Manual (AFM) requirements
-- **CS-OPS/FAR 121**: Air carrier operating requirements
-- **ICAO Annex 6**: Aircraft operations standards
-- **EU Regulation 965/2012**: Air operations regulations
+- **[CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-large-aeroplanes)/[FAR 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)**: Aircraft Flight Manual (AFM) requirements
+- **CS-OPS/[FAR 121](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-121)**: Air carrier operating requirements
+- **[ICAO Annex 6](https://www.icao.int/safety/airnavigation/Operations/Pages/AnnexCertificationSpecifications.aspx)**: Aircraft operations standards
+- **[EU Regulation 965/2012](https://www.easa.europa.eu/document-library/regulations/regulation-eu-no-9652012)**: Air operations regulations
 
 ### 1.3 User Base
 

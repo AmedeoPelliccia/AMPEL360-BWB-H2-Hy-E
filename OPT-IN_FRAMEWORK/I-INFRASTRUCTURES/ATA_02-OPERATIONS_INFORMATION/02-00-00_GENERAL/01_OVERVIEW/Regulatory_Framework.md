@@ -20,11 +20,11 @@ This document outlines the regulatory framework governing operations of the AMPE
 
 **Authority:** Primary certification authority  
 **Jurisdiction:** European Union member states  
-**Website:** www.easa.europa.eu
+**Website:** [www.easa.europa.eu](https://www.easa.europa.eu)
 
 **Key Regulations:**
-- **CS-25** (Certification Specifications for Large Aeroplanes)
-- **EU Regulation 965/2012** (Air Operations)
+- **[CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-large-aeroplanes)** (Certification Specifications for Large Aeroplanes)
+- **[EU Regulation 965/2012](https://www.easa.europa.eu/document-library/regulations/regulation-eu-no-9652012)** (Air Operations)
 - **Part-ORO** (Organisation Requirements for Air Operations)
 - **Part-CAT** (Commercial Air Transport)
 
@@ -32,22 +32,22 @@ This document outlines the regulatory framework governing operations of the AMPE
 
 **Authority:** Validation authority (US operations)  
 **Jurisdiction:** United States  
-**Website:** www.faa.gov
+**Website:** [www.faa.gov](https://www.faa.gov)
 
 **Key Regulations:**
-- **14 CFR Part 25** (Airworthiness Standards: Transport Category Airplanes)
-- **14 CFR Part 121** (Operating Requirements: Domestic, Flag, and Supplemental Operations)
-- **14 CFR Part 91** (General Operating and Flight Rules)
+- **[14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)** (Airworthiness Standards: Transport Category Airplanes)
+- **[14 CFR Part 121](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-121)** (Operating Requirements: Domestic, Flag, and Supplemental Operations)
+- **[14 CFR Part 91](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91)** (General Operating and Flight Rules)
 
 ### 2.3 International Civil Aviation Organization (ICAO)
 
 **Authority:** International standards setting  
 **Jurisdiction:** Global (193 member states)  
-**Website:** www.icao.int
+**Website:** [www.icao.int](https://www.icao.int)
 
 **Key Standards:**
-- **Annex 6** (Operation of Aircraft)
-- **Annex 8** (Airworthiness of Aircraft)
+- **[Annex 6](https://www.icao.int/safety/airnavigation/Operations/Pages/AnnexCertificationSpecifications.aspx)** (Operation of Aircraft)
+- **[Annex 8](https://www.icao.int/safety/airnavigation/NationalityMarks/Annexes_Booklet_en.pdf)** (Airworthiness of Aircraft)
 - **Doc 8168** (PANS-OPS)
 - **Doc 9859** (Safety Management Manual)
 
@@ -187,12 +187,14 @@ This document outlines the regulatory framework governing operations of the AMPE
 ### 6.1 Hydrogen Fuel Standards
 
 **ISO Standards:**
-- **ISO 19881**: Gaseous hydrogen - Land vehicle fuel containers
-- **ISO 19880-1**: Gaseous hydrogen - Fueling stations - Part 1: General requirements
-- **ISO 14687**: Hydrogen fuel quality - Product specification
+- **[ISO 19881](https://www.iso.org/standard/66845.html)**: Gaseous hydrogen - Land vehicle fuel containers
+- **[ISO 19880-1](https://www.iso.org/standard/71940.html)**: Gaseous hydrogen - Fueling stations - Part 1: General requirements
+- **[ISO 14687](https://www.iso.org/standard/69539.html)**: Hydrogen fuel quality - Product specification
 
 **SAE Standards:**
-- **SAE J2719**: Hydrogen Fuel Quality for Fuel Cell Vehicles
+- **[SAE J2719](https://www.sae.org/standards/content/j2719_201109/)**: Hydrogen Fuel Quality for Fuel Cell Vehicles
+- **[SAE J2601](https://www.sae.org/standards/content/j2601_201612/)**: Fueling Protocols for Light Duty Gaseous Hydrogen Surface Vehicles
+- **[SAE J2578](https://www.sae.org/standards/content/j2578_201408/)**: Recommended Practice for General Fuel Cell Vehicle Safety
 - **SAE J2601**: Fueling Protocols for Light Duty Gaseous Hydrogen Surface Vehicles
 - **SAE J2578**: Recommended Practice for General Fuel Cell Vehicle Safety
 
@@ -233,6 +235,8 @@ This document outlines the regulatory framework governing operations of the AMPE
 - Human oversight
 - Accuracy, robustness, and cybersecurity
 
+**Reference:** [EU AI Act (Regulation 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+
 **Compliance for CAOS:**
 - Documented risk assessment
 - Training data quality requirements
@@ -243,7 +247,7 @@ This document outlines the regulatory framework governing operations of the AMPE
 
 ### 7.2 EASA AI Roadmap
 
-**EASA AI Roadmap 2.0 (2023):**
+**[EASA AI Roadmap 2.0 (2023)](https://www.easa.europa.eu/en/domains/innovation-digitalization/artificial-intelligence/ai-roadmap):**
 - Level 1: AI Assistance to Humans (CAOS is here)
 - Level 2: AI Human Assistance
 - Level 3: AI Automation
