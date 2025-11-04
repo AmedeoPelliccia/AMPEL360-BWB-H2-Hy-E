@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure xmlns="http://www.ampel360.aero/procedures" version="1.0">
+  <header>
+    <title>EMERGENCY CONDITION TITLE</title>
+    <procedureId>XX-XX-XX</procedureId>
+    <procedureType>Emergency</procedureType>
+    <alertLevel>WARNING</alertLevel>
+    <revision>1.0</revision>
+    <effectiveDate>YYYY-MM-DD</effectiveDate>
+  </header>
+  
+  <applicability>
+    <aircraftType>AMPEL360 BWB H2 Hy-E Q100</aircraftType>
+  </applicability>
+  
+  <condition>
+    <severity>WARNING</severity>
+    <indication>
+      <masterWarning>true</masterWarning>
+      <auralAlert>continuous</auralAlert>
+      <display>Red warning message</display>
+    </indication>
+  </condition>
+  
+  <memoryItems maxItems="6">
+    <note>⚠️ COMMIT TO MEMORY - Perform immediately without checklist reference</note>
+    <item number="1">
+      <subject>System Master Switch</subject>
+      <action>OFF</action>
+      <critical>true</critical>
+    </item>
+    <item number="2">
+      <subject>Emergency System</subject>
+      <action>ACTIVATE</action>
+      <critical>true</critical>
+    </item>
+    <item number="3">
+      <subject>Isolation Valves</subject>
+      <action>CLOSE</action>
+      <critical>true</critical>
+    </item>
+    <item number="4">
+      <subject>Backup System</subject>
+      <action>ON</action>
+      <critical>true</critical>
+    </item>
+  </memoryItems>
+  
+  <subsequentActions>
+    <note>Reference checklist - perform after memory items complete</note>
+    
+    <section title="Verification">
+      <step number="1">
+        <subject>Emergency Condition</subject>
+        <action>Verify condition and memory items complete</action>
+        <verification>System isolated, emergency systems active</verification>
+      </step>
+    </section>
+    
+    <section title="Isolation">
+      <step number="2">
+        <subject>Affected Systems</subject>
+        <action>Verify all affected systems isolated</action>
+        <verification>No further deterioration</verification>
+      </step>
+      
+      <step number="3">
+        <subject>Leak Detection / Monitoring</subject>
+        <action>Monitor situation continuously</action>
+        <verification>Situation stabilized or improving</verification>
+      </step>
+    </section>
+    
+    <section title="Assessment">
+      <step number="4">
+        <subject>Aircraft Capability</subject>
+        <action>Assess remaining aircraft capability</action>
+        <verification>Safe flight possible</verification>
+      </step>
+      
+      <step number="5">
+        <subject>Performance Impact</subject>
+        <action>Calculate performance impact (CAOS assisted)</action>
+        <verification>Performance adequate for landing</verification>
+      </step>
+    </section>
+    
+    <section title="Landing Planning">
+      <step number="6">
+        <subject>Landing Site Selection</subject>
+        <action>Select nearest suitable airport (CAOS recommendations)</action>
+        <verification>Emergency services notified</verification>
+      </step>
+      
+      <step number="7">
+        <subject>ATC Coordination</subject>
+        <action>Declare emergency, request priority handling</action>
+        <verification>ATC acknowledges</verification>
+      </step>
+      
+      <step number="8">
+        <subject>Cabin Preparation</subject>
+        <action>Brief cabin crew and passengers</action>
+        <verification>Cabin secured for landing</verification>
+      </step>
+    </section>
+  </subsequentActions>
+  
+  <landingAction>
+    <urgency>LAND AS SOON AS POSSIBLE</urgency>
+    <considerations>
+      <consideration>Do not delay landing for non-essential tasks</consideration>
+      <consideration>Emergency services standing by</consideration>
+      <consideration>Prepare for possible evacuation</consideration>
+      <consideration>Brief passengers on brace position if required</consideration>
+    </considerations>
+  </landingAction>
+  
+  <notes>
+    <note type="warning">
+      <content>⚠️ This is an immediate threat to aircraft or occupants</content>
+    </note>
+    <note type="caution">
+      <content>⚠ Do not attempt to troubleshoot or resolve - mitigate and land</content>
+    </note>
+    <note type="information">
+      <content>CAOS provides emergency landing site recommendations and performance calculations</content>
+    </note>
+  </notes>
+  
+  <caos>
+    <support enabled="true">
+      <automation level="2">CAOS provides emergency support but does not take control</automation>
+      <emergencyAssistance>
+        <assistance>Automatic emergency procedure display</assistance>
+        <assistance>Landing site recommendations with emergency services capability</assistance>
+        <assistance>Performance calculations for emergency conditions</assistance>
+        <assistance>ATC coordination support (if data link available)</assistance>
+        <assistance>Evacuation planning assistance</assistance>
+      </emergencyAssistance>
+    </support>
+  </caos>
+  
+  <postLanding>
+    <action>Do not start APU or fuel cells after landing</action>
+    <action>Evacuate if directed by captain</action>
+    <action>Emergency services inspection required before taxi</action>
+  </postLanding>
+  
+  <references>
+    <reference>Related procedure: XX-XX-XX</reference>
+    <reference>System description: ATA XX</reference>
+    <reference>Emergency response coordination: Ground Ops Manual</reference>
+  </references>
+</procedure>
