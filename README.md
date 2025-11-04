@@ -236,6 +236,27 @@ graph LR
     - [`52-10-01 - Door L1 Forward`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-10_PASSENGER_ENTRY_DOORS/52-10-01_Door_L1_Forward/) 📋 **COMPLETE WITH 14 FOLDERS**
   - [`52-20 - Emergency Exits`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/)
     - [`52-20-01 - Door L3 Aft`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/) 🆕 **01_OVERVIEW COMPLETE**
+    
+#### Emergency Exit Maintenance Schedule (ATA 52-20-01)
+
+| Requirement_ID | Description | Task_Type | Interval | Duration | Skill_Level | Verification | Status |
+|---|---|---|---|---|---|---|---|
+| RQ-52-20-01-150 | Visual_Door_Inspection | Check | Daily | 5 min | Line_Mech | Inspect | Defined |
+| RQ-52-20-01-151 | Door_Operation_Functional_Test | Test | 500_FH | 30 min | Cert_Mech | Test | Defined |
+| RQ-52-20-01-152 | Seal_Condition_Inspection | Inspect | 1000_FH | 15 min | Line_Mech | Inspect | Defined |
+| RQ-52-20-01-153 | Latch_Rigging_Check | Adjust | 2000_FH | 1 hour | Cert_Mech | Test | Defined |
+| RQ-52-20-01-154 | Hinge_Lubrication | Service | 3000_FH | 30 min | Line_Mech | Inspect | Defined |
+| RQ-52-20-01-155 | Slide_Pressure_Check | Test | Monthly | 10 min | Cert_Mech | Test | Defined |
+| RQ-52-20-01-156 | Emergency_Lighting_Test | Test | Quarterly | 15 min | Avionics | Test | Defined |
+| RQ-52-20-01-157 | Full_Function_Test_Powered | Test | Annual | 2 hours | Cert_Mech | Test | Defined |
+| RQ-52-20-01-158 | Structural_Detailed_Inspection | Inspect | 5000_FH | 4 hours | Inspector | NDT | Defined |
+| RQ-52-20-01-159 | Slide_Repacking | Service | 12_months | 8 hours | Certified | Demo | Defined |
+| RQ-52-20-01-160 | Door_Removal_Major_Inspection | Heavy_Maint | 10_years | 24 hours | Specialist | Inspect | Defined |
+| RQ-52-20-01-161 | CAOS_Sensor_Calibration | Calibrate | 6000_FH | 1 hour | Avionics | Test | Defined |
+| RQ-52-20-01-162 | Power_Assist_Motor_Test | Test | 4000_FH | 45 min | Cert_Mech | Test | Defined |
+| RQ-52-20-01-163 | Emergency_System_Annual_Demo | Demo | Annual | 3 hours | Cert_Mech | Demo | Defined |
+| RQ-52-20-01-164 | Predictive_Maintenance_Review | Analysis | Continuous | Variable | Engineer | Analysis | Defined |
+
 - [`ATA 53 - FUSELAGE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_53-FUSELAGE/)
 - [`ATA 54 - NACELLES/PYLONS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/)
 - [`ATA 55 - STABILIZERS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_55-STABILIZERS/)
