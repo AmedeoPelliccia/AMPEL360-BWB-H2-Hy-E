@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descriptive.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="00"
+                disassyCode="00" disassyCodeVariant="00" infoCode="941"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="004" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <dmTitle>
+          <techName>H2 REFUELING SYSTEM - CONSUMABLES AND MATERIALS</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>CONSUMABLE MATERIALS LIST</title>
+        <para>This document lists consumable materials and supplies required for H2 refueling system maintenance.</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>SEALS AND GASKETS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-20-SEAL-001</listItemTerm>
+              <listItemDefinition>
+                <para>Receptacle Primary Seal (PTFE)</para>
+                <para>Replacement interval: 2000 FH or at leak indication</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-20-SEAL-002</listItemTerm>
+              <listItemDefinition>
+                <para>Receptacle Secondary Seal (Viton)</para>
+                <para>Replacement interval: 2000 FH or 24 months</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-30-SEAL-001</listItemTerm>
+              <listItemDefinition>
+                <para>Valve Seat Seals (PTFE, set of 3)</para>
+                <para>Replacement interval: 1000 FH or at leak indication</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-40-GASKET-001</listItemTerm>
+              <listItemDefinition>
+                <para>Line Flange Gaskets (Spiral wound, set of 10)</para>
+                <para>Single use, replace at each disassembly</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>CALIBRATION GASES</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-CAL-H2-000</listItemTerm>
+              <listItemDefinition>
+                <para>Zero Gas (Pure Nitrogen)</para>
+                <para>Cylinder size: 2 liters, Purity: 99.999%</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-CAL-H2-010</listItemTerm>
+              <listItemDefinition>
+                <para>Calibration Gas 10 ppm H2 in N2</para>
+                <para>Certified accuracy: ±2%, Certificate valid 6 months</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-CAL-H2-050</listItemTerm>
+              <listItemDefinition>
+                <para>Calibration Gas 50 ppm H2 in N2</para>
+                <para>Certified accuracy: ±2%, Certificate valid 6 months</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-CAL-H2-100</listItemTerm>
+              <listItemDefinition>
+                <para>Calibration Gas 100 ppm H2 in N2</para>
+                <para>Certified accuracy: ±2%, Certificate valid 6 months</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TEST GASES</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>Industrial Nitrogen (GN2)</listItemTerm>
+              <listItemDefinition>
+                <para>For pressure testing and purging</para>
+                <para>Purity: 99.9% minimum, Dew point: -40°C maximum</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Helium (Grade 4.5)</listItemTerm>
+              <listItemDefinition>
+                <para>For leak testing</para>
+                <para>Purity: 99.995% minimum</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>CLEANING MATERIALS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>Isopropyl Alcohol (IPA)</listItemTerm>
+              <listItemDefinition>
+                <para>99% purity, for cleaning sensors and electrical contacts</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Lint-Free Wipes</listItemTerm>
+              <listItemDefinition>
+                <para>Approved for cryogenic service, non-shedding</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Contact Cleaner</listItemTerm>
+              <listItemDefinition>
+                <para>Electronics-grade, for electrical connectors</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>LEAK DETECTION CONSUMABLES</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>Leak Detection Solution</listItemTerm>
+              <listItemDefinition>
+                <para>Soap-based, H2-compatible, non-corrosive</para>
+                <para>Apply to joints and fittings during pressure testing</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>LUBRICANTS AND GREASES</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-LUBE-001</listItemTerm>
+              <listItemDefinition>
+                <para>Cryogenic Grease (PTFE-based)</para>
+                <para>Temperature range: -253°C to +200°C</para>
+                <para>Use on valve stems and threaded connections</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+        <caution>
+          <warningAndCautionPara>
+            Do NOT use petroleum-based lubricants on H2 systems. Use only approved cryogenic lubricants.
+          </warningAndCautionPara>
+        </caution>
+      </levelledPara>
+
+      <levelledPara>
+        <title>FILTERS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-80-FILTER-001</listItemTerm>
+              <listItemDefinition>
+                <para>Ventilation System Air Filter</para>
+                <para>Type: HEPA H13, Size: 600 × 600 × 290 mm</para>
+                <para>Replacement interval: 1000 FH or 12 months</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>PROCUREMENT</title>
+        <para>All consumables must be procured through approved suppliers listed in the AMPEL360 Qualified Suppliers List (QSL). Shelf life and storage requirements must be observed.</para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

@@ -1,0 +1,261 @@
+Req_ID,Category,Subcategory,Title,Priority,Status,Source,Parent_ATA,Verification_Method,Criticality
+RQ-02-00-01-001,Regulatory,CS-25,CS25 Airworthiness Compliance,Critical,Approved,EASA CS-25.1581,02-00-00,Analysis,Safety
+RQ-02-00-01-002,Regulatory,FAR-25,FAR25 Airworthiness Compliance,Critical,Approved,FAA 14 CFR 25.1581,02-00-00,Analysis,Safety
+RQ-02-00-01-003,Regulatory,ICAO,ICAO Annex 6 Operations Compliance,Critical,Approved,ICAO Annex 6,02-00-00,Analysis,Safety
+RQ-02-00-01-004,Regulatory,EU,EU 965/2012 Air Operations Compliance,Critical,Approved,EU 965/2012,02-00-00,Analysis,Safety
+RQ-02-00-01-005,Regulatory,SMS,Safety Management System Implementation,Critical,Approved,ICAO Annex 19,02-00-00,Demonstration,Safety
+RQ-02-00-01-006,Regulatory,Documentation,Aircraft Flight Manual Requirements,Critical,Approved,CS-25.1581,02-00-00,Inspection,Safety
+RQ-02-00-01-007,Regulatory,Documentation,Flight Crew Operating Manual Requirements,High,Approved,Ops Requirements,02-00-00,Inspection,Operations
+RQ-02-00-01-008,Regulatory,Documentation,Minimum Equipment List Requirements,Critical,Approved,CS-25.1581,02-00-00,Inspection,Safety
+RQ-02-00-01-009,Regulatory,Extended Ops,ETOPS 180min Approval,High,Approved,CS-25 Appendix K,02-00-00,Test,Performance
+RQ-02-00-01-010,Regulatory,Low Visibility,CAT II/III Approach Approval,High,Approved,CS-AWO,02-00-00,Test,Performance
+RQ-02-00-01-011,Regulatory,Airspace,RVSM Compliance,High,Approved,ICAO Doc 9574,02-00-00,Test,Performance
+RQ-02-00-01-012,Regulatory,Avionics,TCAS II v7.1 Compliance,Critical,Approved,TSO-C119c,02-00-00,Test,Safety
+RQ-02-00-01-013,Regulatory,Avionics,ADS-B Out Capability,Critical,Approved,DO-260B,02-00-00,Test,Safety
+RQ-02-00-01-014,Regulatory,Avionics,CPDLC Datalink Capability,High,Approved,DO-258A,02-00-00,Test,Operations
+RQ-02-00-01-015,Regulatory,H2,ISO 19881 H2 Fuel Container Compliance,Critical,Approved,ISO 19881:2018,02-30-00,Test,Safety
+RQ-02-00-01-016,Regulatory,H2,SAE J2719 Hydrogen Fuel Quality,Critical,Approved,SAE J2719,02-30-00,Test,Safety
+RQ-02-00-01-017,Regulatory,H2,NFPA 2 Hydrogen Technologies Code,Critical,Approved,NFPA 2:2020,02-30-00,Analysis,Safety
+RQ-02-00-01-018,Regulatory,AI,EU AI Act Compliance,High,In Review,EU AI Act Draft,02-90-00,Analysis,Safety
+RQ-02-00-01-019,Regulatory,AI,EASA AI Roadmap Compliance,High,In Review,EASA AI Roadmap,02-90-00,Analysis,Safety
+RQ-02-00-01-020,Regulatory,Environmental,Environmental Regulations Compliance,High,Approved,ICAO Annex 16,02-00-00,Test,Environmental
+RQ-02-00-02-001,Safety,Target,Zero Accident Target,Critical,Approved,SMS Safety Objectives,02-00-00,Demonstration,Safety
+RQ-02-00-02-002,Safety,Target,Incident Rate Below 1 per Million FH,Critical,Approved,SMS Safety Objectives,02-00-00,Demonstration,Safety
+RQ-02-00-02-003,Safety,H2,H2 Leak Rate Target Below 0.1% Volume,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-02-004,Safety,Fuel Cell,Fuel Cell Reliability 99.9% per FH,Critical,Approved,Safety Analysis,02-90-00,Analysis,Safety
+RQ-02-00-02-005,Safety,Emergency,Emergency Evacuation 90 Seconds,Critical,Approved,CS-25.803,02-00-00,Test,Safety
+RQ-02-00-02-006,Safety,Emergency,Crew Escape Provisions,Critical,Approved,CS-25.807,02-00-00,Demonstration,Safety
+RQ-02-00-02-007,Safety,H2,H2-Specific Fire Detection System,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-02-008,Safety,H2,H2-Capable Fire Suppression System,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-02-009,Safety,H2,H2 Leak Detection 8 Sensors per Zone,Critical,Approved,Safety Analysis,02-30-00,Inspection,Safety
+RQ-02-00-02-010,Safety,H2,Emergency Ventilation 50 Air Changes/Hour,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-02-011,Safety,Reporting,Safety Reporting System Implementation,Critical,Approved,SMS Requirements,02-00-00,Demonstration,Safety
+RQ-02-00-02-012,Safety,Culture,Just Culture Policy Implementation,High,Approved,SMS Requirements,02-00-00,Demonstration,Safety
+RQ-02-00-02-013,Safety,Monitoring,Flight Data Monitoring Program,High,Approved,ICAO Annex 6,02-00-00,Demonstration,Safety
+RQ-02-00-02-014,Safety,Assessment,Line Operations Safety Audit Program,High,Approved,ICAO Doc 9803,02-00-00,Demonstration,Safety
+RQ-02-00-02-015,Safety,Risk,Safety Risk Assessment Process,Critical,Approved,SMS Requirements,02-00-00,Analysis,Safety
+RQ-02-00-02-016,Safety,H2,Defense in Depth H2 Safety Design,Critical,Approved,Safety Analysis,02-30-00,Analysis,Safety
+RQ-02-00-02-017,Safety,CAOS,Independent Safety Monitor for CAOS,Critical,Approved,AI Safety Requirements,02-90-00,Test,Safety
+RQ-02-00-02-018,Safety,CAOS,CAOS Override Capability,Critical,Approved,Human Factors Analysis,02-90-00,Test,Safety
+RQ-02-00-02-019,Safety,Authority,Crew Final Authority Over Automation,Critical,Approved,Human Factors Analysis,02-90-00,Demonstration,Safety
+RQ-02-00-02-020,Safety,Audit,Annual Safety Audit Program,High,Approved,SMS Requirements,02-00-00,Demonstration,Safety
+RQ-02-00-03-001,Performance,Range,Maximum Range 3500 NM,High,Approved,Market Requirements,02-40-00,Test,Performance
+RQ-02-00-03-002,Performance,Speed,Cruise Speed Mach 0.82,High,Approved,Design Specification,02-40-00,Test,Performance
+RQ-02-00-03-003,Performance,Altitude,Service Ceiling FL450,High,Approved,Design Specification,02-40-00,Test,Performance
+RQ-02-00-03-004,Performance,Takeoff,Takeoff Distance 2500m at MTOW,High,Approved,Design Specification,02-40-00,Test,Performance
+RQ-02-00-03-005,Performance,Landing,Landing Distance 2000m at MLW,High,Approved,Design Specification,02-40-00,Test,Performance
+RQ-02-00-03-006,Performance,Climb,Climb Gradient 3% Minimum,Critical,Approved,CS-25.121,02-40-00,Test,Safety
+RQ-02-00-03-007,Performance,Efficiency,Fuel Efficiency 30% Better Than Baseline,High,Approved,Design Specification,02-40-00,Test,Performance
+RQ-02-00-03-008,Performance,Fuel Cell,Fuel Cell System Efficiency 55-60%,High,Approved,Design Specification,02-90-00,Test,Performance
+RQ-02-00-03-009,Performance,Wind,Crosswind Capability 35 Knots,High,Approved,Design Specification,02-40-00,Test,Performance
+RQ-02-00-03-010,Performance,Temperature,Hot Day Performance ISA+15C,High,Approved,Design Specification,02-40-00,Test,Performance
+RQ-02-00-03-011,Performance,Temperature,Cold Day Performance ISA-40C,High,Approved,Design Specification,02-40-00,Test,Performance
+RQ-02-00-03-012,Performance,Icing,Icing Conditions Performance,Critical,Approved,CS-25.1419,02-40-00,Test,Safety
+RQ-02-00-03-013,Performance,Altitude,High Altitude Airport 10000ft Operations,High,Approved,Market Requirements,02-40-00,Test,Performance
+RQ-02-00-03-014,Performance,Runway,Contaminated Runway Performance,Critical,Approved,CS-25.1591,02-40-00,Test,Safety
+RQ-02-00-03-015,Performance,CAOS,CAOS Performance Optimization 5%,High,Approved,CAOS Requirements,02-90-00,Test,Performance
+RQ-02-00-04-001,Operational,Procedures,Standard Operating Procedures Complete,Critical,Approved,Operations Manual,02-00-00,Inspection,Operations
+RQ-02-00-04-002,Operational,Checklists,Normal Checklist Structure Defined,Critical,Approved,Operations Manual,02-00-00,Inspection,Operations
+RQ-02-00-04-003,Operational,Checklists,Abnormal Checklist Structure Defined,Critical,Approved,Operations Manual,02-00-00,Inspection,Operations
+RQ-02-00-04-004,Operational,Checklists,Emergency Checklist Structure Defined,Critical,Approved,Operations Manual,02-00-00,Inspection,Operations
+RQ-02-00-04-005,Operational,Memory Items,Memory Items Clearly Defined,Critical,Approved,Operations Manual,02-00-00,Inspection,Safety
+RQ-02-00-04-006,Operational,Crew,Crew Composition Requirements Met,Critical,Approved,Operations Manual,02-00-00,Demonstration,Operations
+RQ-02-00-04-007,Operational,Crew,Minimum Crew 2 Pilots,Critical,Approved,CS-25.1523,02-00-00,Analysis,Safety
+RQ-02-00-04-008,Operational,Crew,Flight Duty Period Limits Defined,Critical,Approved,EU 965/2012,02-00-00,Analysis,Safety
+RQ-02-00-04-009,Operational,Crew,Rest Requirements Defined,Critical,Approved,EU 965/2012,02-00-00,Analysis,Safety
+RQ-02-00-04-010,Operational,Reliability,Dispatch Reliability 99.5% Target,High,Approved,Operations Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-04-011,Operational,Ground Ops,Turnaround Time 45 Minutes,High,Approved,Operations Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-04-012,Operational,Utilization,Daily Utilization 11 Hours Target,High,Approved,Operations Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-04-013,Operational,Weather,Weather Minima Compliance,Critical,Approved,Operations Manual,02-00-00,Inspection,Safety
+RQ-02-00-04-014,Operational,Fuel,Fuel Planning Procedures Defined,Critical,Approved,Operations Manual,02-00-00,Inspection,Safety
+RQ-02-00-04-015,Operational,Weight,Weight & Balance Procedures Defined,Critical,Approved,Operations Manual,02-00-00,Inspection,Safety
+RQ-02-00-04-016,Operational,Performance,Performance Calculations Defined,Critical,Approved,Operations Manual,02-00-00,Inspection,Safety
+RQ-02-00-04-017,Operational,MEL,MEL Dispatch Compliance,Critical,Approved,MEL Document,02-00-00,Inspection,Safety
+RQ-02-00-04-018,Operational,Inspection,Pre-Flight Inspection Procedure,Critical,Approved,Operations Manual,02-00-00,Inspection,Operations
+RQ-02-00-04-019,Operational,Inspection,Post-Flight Inspection Procedure,High,Approved,Operations Manual,02-00-00,Inspection,Operations
+RQ-02-00-04-020,Operational,Maintenance,Maintenance Status Verification,Critical,Approved,Operations Manual,02-00-00,Demonstration,Safety
+RQ-02-00-05-001,H2 Operations,Capacity,H2 Total Capacity 8000 kg,Critical,Approved,Design Specification,02-30-00,Inspection,Performance
+RQ-02-00-05-002,H2 Operations,Capacity,H2 Usable Fuel 7850 kg Minimum,Critical,Approved,Design Specification,02-30-00,Inspection,Performance
+RQ-02-00-05-003,H2 Operations,Temperature,H2 Storage Temperature -253C,Critical,Approved,Design Specification,02-30-00,Test,Safety
+RQ-02-00-05-004,H2 Operations,Pressure,H2 Storage Pressure 2.8-3.2 bar,Critical,Approved,Design Specification,02-30-00,Test,Safety
+RQ-02-00-05-005,H2 Operations,Boiloff,H2 Boiloff Rate 0.3% per Day Maximum,High,Approved,Design Specification,02-30-00,Test,Performance
+RQ-02-00-05-006,H2 Operations,Refueling,Refueling Time 45 Minutes Maximum,High,Approved,Operations Requirements,02-30-00,Demonstration,Operations
+RQ-02-00-05-007,H2 Operations,Refueling,Refueling Flow Rate 120 kg/min,High,Approved,Operations Requirements,02-30-00,Test,Operations
+RQ-02-00-05-008,H2 Operations,Safety,Safety Zone 50m Radius During Refueling,Critical,Approved,Safety Analysis,02-30-00,Demonstration,Safety
+RQ-02-00-05-009,H2 Operations,Safety,Grounding Resistance 3 milliohm Maximum,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-05-010,H2 Operations,Safety,Fire Equipment on Standby During Refueling,Critical,Approved,Safety Analysis,02-30-00,Demonstration,Safety
+RQ-02-00-05-011,H2 Operations,Training,Personnel H2 Certification 8 Hours Minimum,Critical,Approved,Training Requirements,02-30-00,Demonstration,Safety
+RQ-02-00-05-012,H2 Operations,Safety,Leak Detection Operational Before Refueling,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-05-013,H2 Operations,Ventilation,Normal Ventilation 10 Air Changes/Hour,High,Approved,Design Specification,02-30-00,Test,Safety
+RQ-02-00-05-014,H2 Operations,Ventilation,Emergency Ventilation 50 Air Changes/Hour,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-05-015,H2 Operations,Monitoring,LEL Monitoring Continuous During Ops,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-05-016,H2 Operations,Testing,Pressure Test 5 bar for 30 Seconds,Critical,Approved,Maintenance Requirements,02-30-00,Test,Safety
+RQ-02-00-05-017,H2 Operations,Procedures,Cooldown Period 10 Minutes Post-Refuel,High,Approved,Operations Requirements,02-30-00,Demonstration,Operations
+RQ-02-00-05-018,H2 Operations,Emergency,Emergency Defueling 60 Minutes Maximum,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-05-019,H2 Operations,Quality,H2 Quality per SAE J2719 Standard,Critical,Approved,Operations Requirements,02-30-00,Test,Safety
+RQ-02-00-05-020,H2 Operations,Monitoring,Tank Integrity Continuous Monitoring,Critical,Approved,Safety Analysis,02-30-00,Test,Safety
+RQ-02-00-06-001,BWB Operations,CG,CG Range 15-42% MAC,Critical,Approved,Flight Control Analysis,02-00-00,Test,Safety
+RQ-02-00-06-002,BWB Operations,Loading,Loading Distribution Critical Management,Critical,Approved,Operations Requirements,02-00-00,Analysis,Safety
+RQ-02-00-06-003,BWB Operations,Seating,Passenger Seating Control System,High,Approved,Operations Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-06-004,BWB Operations,Cargo,Cargo Distribution Limits Defined,Critical,Approved,Operations Requirements,02-00-00,Inspection,Safety
+RQ-02-00-06-005,BWB Operations,Balance,Lateral Imbalance Limit 500 kg,Critical,Approved,Flight Control Analysis,02-00-00,Test,Safety
+RQ-02-00-06-006,BWB Operations,Rotation,Rotation Rate 5 deg/sec Maximum,Critical,Approved,Flight Control Analysis,02-00-00,Test,Safety
+RQ-02-00-06-007,BWB Operations,Landing,BWB-Specific Flare Technique,Critical,Approved,Flight Test Data,02-00-00,Demonstration,Safety
+RQ-02-00-06-008,BWB Operations,Ground,Ground Clearance Monitoring System,Critical,Approved,Design Specification,02-00-00,Test,Safety
+RQ-02-00-06-009,BWB Operations,Dimensions,Wingspan 80m Code F Compliance,High,Approved,Design Specification,02-00-00,Analysis,Operations
+RQ-02-00-06-010,BWB Operations,Ground,Wide Taxiway Required for Turning,High,Approved,Operations Requirements,02-00-00,Analysis,Operations
+RQ-02-00-06-011,BWB Operations,Ground,BWB Gate Compatibility Requirements,High,Approved,Operations Requirements,02-00-00,Analysis,Operations
+RQ-02-00-06-012,BWB Operations,Ground,BWB-Specific Towing Procedures,High,Approved,Operations Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-06-013,BWB Operations,Emergency,Evacuation Time 90 Seconds,Critical,Approved,CS-25.803,02-00-00,Test,Safety
+RQ-02-00-06-014,BWB Operations,Emergency,Emergency Exit Distribution Optimized,Critical,Approved,CS-25.807,02-00-00,Analysis,Safety
+RQ-02-00-06-015,BWB Operations,Cabin,Wide Body Cabin Procedures,High,Approved,Operations Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-07-001,Fuel Cell Ops,Power,Total Power Output 10 MW,Critical,Approved,Design Specification,02-90-00,Test,Performance
+RQ-02-00-07-002,Fuel Cell Ops,Power,Individual Stack Power 2.5 MW,Critical,Approved,Design Specification,02-90-00,Test,Performance
+RQ-02-00-07-003,Fuel Cell Ops,Efficiency,Stack Efficiency 55-60%,High,Approved,Design Specification,02-90-00,Test,Performance
+RQ-02-00-07-004,Fuel Cell Ops,Temperature,Operating Temperature 60-80C,Critical,Approved,Design Specification,02-90-00,Test,Safety
+RQ-02-00-07-005,Fuel Cell Ops,Start,Cold Start Time 3 Minutes Maximum,High,Approved,Operations Requirements,02-90-00,Test,Operations
+RQ-02-00-07-006,Fuel Cell Ops,Start,Hot Start Time 30 Seconds Maximum,High,Approved,Operations Requirements,02-90-00,Test,Operations
+RQ-02-00-07-007,Fuel Cell Ops,Response,Power Response Time 3 Seconds,Critical,Approved,Design Specification,02-90-00,Test,Safety
+RQ-02-00-07-008,Fuel Cell Ops,Safety,Emergency Shutdown 30 Seconds Maximum,Critical,Approved,Safety Analysis,02-90-00,Test,Safety
+RQ-02-00-07-009,Fuel Cell Ops,Thermal,Thermal Management System Mandatory,Critical,Approved,Design Specification,02-90-00,Test,Safety
+RQ-02-00-07-010,Fuel Cell Ops,Distribution,Load Distribution Optimized Across Stacks,High,Approved,CAOS Requirements,02-90-00,Test,Performance
+RQ-02-00-07-011,Fuel Cell Ops,Monitoring,Stack Monitoring Continuous,Critical,Approved,Operations Requirements,02-90-00,Test,Safety
+RQ-02-00-07-012,Fuel Cell Ops,Monitoring,Degradation Monitoring System,High,Approved,Maintenance Requirements,02-90-00,Test,Operations
+RQ-02-00-07-013,Fuel Cell Ops,Degradation,Graceful Degradation Capability,Critical,Approved,Safety Analysis,02-90-00,Test,Safety
+RQ-02-00-07-014,Fuel Cell Ops,Isolation,Stack Isolation Capability,Critical,Approved,Safety Analysis,02-90-00,Test,Safety
+RQ-02-00-07-015,Fuel Cell Ops,Maintenance,Predictive Maintenance via CAOS,High,Approved,CAOS Requirements,02-90-00,Demonstration,Operations
+RQ-02-00-08-001,CAOS,Integration,Digital Twin Real-Time Integration,High,Approved,CAOS Architecture,02-90-00,Test,Performance
+RQ-02-00-08-002,CAOS,Integration,Real-Time Synchronization 100ms,High,Approved,CAOS Architecture,02-90-00,Test,Performance
+RQ-02-00-08-003,CAOS,Analytics,Predictive Analytics Enabled,High,Approved,CAOS Architecture,02-90-00,Demonstration,Performance
+RQ-02-00-08-004,CAOS,AI,Neural Network Models 20+ Active,High,Approved,CAOS Architecture,02-90-00,Demonstration,Performance
+RQ-02-00-08-005,CAOS,Learning,Fleet Learning Enabled,High,Approved,CAOS Architecture,02-90-00,Demonstration,Performance
+RQ-02-00-08-006,CAOS,Optimization,Route Optimization 3-7% Improvement,High,Approved,CAOS Requirements,02-90-00,Test,Performance
+RQ-02-00-08-007,CAOS,Optimization,Fuel Optimization 8-15% Improvement,High,Approved,CAOS Requirements,02-90-00,Test,Performance
+RQ-02-00-08-008,CAOS,Optimization,Altitude Optimization Continuous,High,Approved,CAOS Requirements,02-90-00,Demonstration,Performance
+RQ-02-00-08-009,CAOS,Optimization,Speed Optimization Real-Time,High,Approved,CAOS Requirements,02-90-00,Demonstration,Performance
+RQ-02-00-08-010,CAOS,Weather,Weather Avoidance AI System,High,Approved,CAOS Requirements,02-90-00,Demonstration,Performance
+RQ-02-00-08-011,CAOS,Weather,Turbulence Prediction and Avoidance,High,Approved,CAOS Requirements,02-90-00,Demonstration,Performance
+RQ-02-00-08-012,CAOS,Prediction,Fuel Burn Prediction Within 2%,High,Approved,CAOS Requirements,02-90-00,Test,Performance
+RQ-02-00-08-013,CAOS,Prediction,Arrival Time Prediction Within 2 Minutes,High,Approved,CAOS Requirements,02-90-00,Test,Performance
+RQ-02-00-08-014,CAOS,Prediction,Maintenance Prediction 500 FH Advance,High,Approved,CAOS Requirements,02-90-00,Test,Operations
+RQ-02-00-08-015,CAOS,Detection,Anomaly Detection 85% Accuracy,High,Approved,CAOS Requirements,02-90-00,Test,Safety
+RQ-02-00-08-016,CAOS,Authority,Human Authority Final Decision,Critical,Approved,Human Factors Analysis,02-90-00,Demonstration,Safety
+RQ-02-00-08-017,CAOS,Override,Override Capability Single Action,Critical,Approved,Human Factors Analysis,02-90-00,Test,Safety
+RQ-02-00-08-018,CAOS,Transparency,AI Transparency with Explanations,High,Approved,Human Factors Analysis,02-90-00,Demonstration,Safety
+RQ-02-00-08-019,CAOS,Transparency,Confidence Levels Displayed,High,Approved,Human Factors Analysis,02-90-00,Demonstration,Safety
+RQ-02-00-08-020,CAOS,Safety,Independent Safety Monitor,Critical,Approved,AI Safety Requirements,02-90-00,Test,Safety
+RQ-02-00-08-021,CAOS,Validation,Continuous Validation of AI Models,High,Approved,AI Safety Requirements,02-90-00,Demonstration,Safety
+RQ-02-00-08-022,CAOS,Audit,Decision Audit Trail Complete,Critical,Approved,Regulatory Requirements,02-90-00,Test,Safety
+RQ-02-00-08-023,CAOS,Updates,Model Updates Monthly Maximum,High,Approved,AI Safety Requirements,02-90-00,Demonstration,Operations
+RQ-02-00-08-024,CAOS,Monitoring,Performance Monitoring Continuous,High,Approved,CAOS Requirements,02-90-00,Demonstration,Performance
+RQ-02-00-08-025,CAOS,Workload,Crew Workload Reduction 30%,High,Approved,Human Factors Analysis,02-90-00,Demonstration,Performance
+RQ-02-00-09-001,Human Factors,Workload,Crew Workload Management System,Critical,Approved,Human Factors Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-09-002,Human Factors,Awareness,Situational Awareness Design,Critical,Approved,Human Factors Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-09-003,Human Factors,Support,Decision Support Appropriate Level,High,Approved,Human Factors Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-09-004,Human Factors,Automation,Automation Surprise Prevention,Critical,Approved,Human Factors Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-09-005,Human Factors,Automation,Mode Awareness Clear Indication,Critical,Approved,Human Factors Analysis,02-00-00,Test,Safety
+RQ-02-00-09-006,Human Factors,Alerts,Alerting Hierarchy Defined,Critical,Approved,Human Factors Analysis,02-00-00,Inspection,Safety
+RQ-02-00-09-007,Human Factors,Alerts,Alarm Management Effective,Critical,Approved,Human Factors Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-09-008,Human Factors,Communication,Crew Communication Facilitated,High,Approved,Human Factors Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-09-009,Human Factors,CRM,CRM Procedures Integrated,Critical,Approved,Training Requirements,02-00-00,Demonstration,Safety
+RQ-02-00-09-010,Human Factors,Fatigue,Fatigue Management Program,Critical,Approved,EU 965/2012,02-00-00,Demonstration,Safety
+RQ-02-00-09-011,Human Factors,Ergonomics,Ergonomics Optimized for Crew,High,Approved,Human Factors Analysis,02-00-00,Inspection,Operations
+RQ-02-00-09-012,Human Factors,Visibility,Visibility Requirements Met,Critical,Approved,CS-25.773,02-00-00,Test,Safety
+RQ-02-00-09-013,Human Factors,Reachability,Controls Reachable by All Crew,Critical,Approved,CS-25.777,02-00-00,Test,Safety
+RQ-02-00-09-014,Human Factors,Labeling,Labeling Clear and Consistent,High,Approved,Human Factors Analysis,02-00-00,Inspection,Operations
+RQ-02-00-09-015,Human Factors,Error,Error Tolerance in Design,High,Approved,Human Factors Analysis,02-00-00,Analysis,Safety
+RQ-02-00-09-016,Human Factors,Error,Error Recovery Facilitated,High,Approved,Human Factors Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-09-017,Human Factors,Training,Training Effectiveness Measured,High,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-09-018,Human Factors,Cognitive,Cognitive Load Appropriate,High,Approved,Human Factors Analysis,02-00-00,Analysis,Safety
+RQ-02-00-09-019,Human Factors,Mental Models,Mental Models Supported,High,Approved,Human Factors Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-09-020,Human Factors,Trust,Trust Calibration with CAOS,Critical,Approved,Human Factors Analysis,02-90-00,Demonstration,Safety
+RQ-02-00-10-001,Training,Type Rating,Type Rating 40 Hours Ground School,Critical,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-10-002,Training,Simulator,Simulator Training 16 Hours Minimum,Critical,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-10-003,Training,BWB,BWB Handling Training 5 Hours,Critical,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-10-004,Training,H2,H2 Systems Training 3 Hours,Critical,Approved,Training Requirements,02-30-00,Demonstration,Safety
+RQ-02-00-10-005,Training,Fuel Cell,Fuel Cell Systems Training 2 Hours,Critical,Approved,Training Requirements,02-90-00,Demonstration,Operations
+RQ-02-00-10-006,Training,CAOS,CAOS Operations Training 3 Hours,Critical,Approved,Training Requirements,02-90-00,Demonstration,Operations
+RQ-02-00-10-007,Training,Emergency,Emergency Procedures Training 4 Hours,Critical,Approved,Training Requirements,02-00-00,Demonstration,Safety
+RQ-02-00-10-008,Training,H2 Safety,H2 Safety Training Mandatory,Critical,Approved,Safety Analysis,02-30-00,Demonstration,Safety
+RQ-02-00-10-009,Training,Cabin Crew,Cabin Crew Training 16 Hours,Critical,Approved,Training Requirements,02-00-00,Demonstration,Safety
+RQ-02-00-10-010,Training,Evacuation,H2 Evacuation Training Specific,Critical,Approved,Training Requirements,02-30-00,Demonstration,Safety
+RQ-02-00-10-011,Training,Dispatch,Dispatcher Training 24 Hours,High,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-10-012,Training,Fuel Planning,H2 Fuel Planning Training 6 Hours,Critical,Approved,Training Requirements,02-30-00,Demonstration,Operations
+RQ-02-00-10-013,Training,Ground Ops,Ground Operations H2 Training,Critical,Approved,Training Requirements,02-30-00,Demonstration,Safety
+RQ-02-00-10-014,Training,Refueling,H2 Refueling Certification 8 Hours,Critical,Approved,Safety Analysis,02-30-00,Demonstration,Safety
+RQ-02-00-10-015,Training,Recurrent,Recurrent Training Annual,Critical,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-10-016,Training,Emergency Drills,Emergency Response Drills Quarterly,Critical,Approved,Safety Analysis,02-00-00,Demonstration,Safety
+RQ-02-00-10-017,Training,Assessment,Competency Assessment Standards,Critical,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-10-018,Training,Instructors,Instructor Qualification Standards,Critical,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-10-019,Training,CBT,CBT Effectiveness Measured,High,Approved,Training Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-10-020,Training,Records,Training Records Maintained,Critical,Approved,Regulatory Requirements,02-00-00,Inspection,Operations
+RQ-02-00-11-001,Documentation,AFM,AFM CS25.1581 Compliant,Critical,Approved,CS-25.1581,02-00-00,Inspection,Safety
+RQ-02-00-11-002,Documentation,FCOM,FCOM Structure Standard Format,Critical,Approved,Documentation Standards,02-00-00,Inspection,Operations
+RQ-02-00-11-003,Documentation,QRH,QRH Format Approved,Critical,Approved,Documentation Standards,02-00-00,Inspection,Safety
+RQ-02-00-11-004,Documentation,W&B,Weight & Balance Manual Accurate,Critical,Approved,CS-25.1583,02-00-00,Inspection,Safety
+RQ-02-00-11-005,Documentation,MEL,MEL Based on MMEL,Critical,Approved,Regulatory Requirements,02-00-00,Inspection,Safety
+RQ-02-00-11-006,Documentation,S1000D,S1000D Specification Compliance,High,Approved,S1000D Standard,02-00-00,Inspection,Operations
+RQ-02-00-11-007,Documentation,ATA iSpec,ATA iSpec 2200 Compliance,High,Approved,ATA iSpec 2200,02-00-00,Inspection,Operations
+RQ-02-00-11-008,Documentation,Version Control,Document Version Control System,Critical,Approved,Quality Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-11-009,Documentation,Configuration,Configuration Management System,Critical,Approved,Quality Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-11-010,Documentation,Change Control,Change Control Process Defined,Critical,Approved,Quality Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-11-011,Documentation,History,Revision History Complete,High,Approved,Quality Requirements,02-00-00,Inspection,Operations
+RQ-02-00-11-012,Documentation,Distribution,Document Distribution Controlled,High,Approved,Quality Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-11-013,Documentation,Digital,Digital Access via EFB,High,Approved,Operations Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-11-014,Documentation,Accessibility,Accessibility Requirements Met,High,Approved,Documentation Standards,02-00-00,Inspection,Operations
+RQ-02-00-11-015,Documentation,Language,Multi-Language Support,High,Approved,Market Requirements,02-00-00,Inspection,Operations
+RQ-02-00-11-016,Documentation,Graphics,Graphics Standards Clear,High,Approved,Documentation Standards,02-00-00,Inspection,Operations
+RQ-02-00-11-017,Documentation,Units,Units Consistency SI and Imperial,High,Approved,Documentation Standards,02-00-00,Inspection,Operations
+RQ-02-00-11-018,Documentation,Terminology,Terminology Standardized,High,Approved,Documentation Standards,02-00-00,Inspection,Operations
+RQ-02-00-11-019,Documentation,Abbreviations,Abbreviations Approved List,High,Approved,Documentation Standards,02-00-00,Inspection,Operations
+RQ-02-00-11-020,Documentation,Lifecycle,Document Lifecycle Managed,High,Approved,Quality Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-12-001,Environmental,Emissions,Zero Direct Emissions Operation,Critical,Approved,Environmental Policy,02-00-00,Test,Environmental
+RQ-02-00-12-002,Environmental,Carbon,Net Negative CO2 via Capture,High,Approved,Environmental Policy,02-00-00,Test,Environmental
+RQ-02-00-12-003,Environmental,Noise,Noise Reduction 50% Below Chapter 4,High,Approved,ICAO Annex 16,02-00-00,Test,Environmental
+RQ-02-00-12-004,Environmental,Certification,Noise Certification Chapter 14,Critical,Approved,ICAO Annex 16,02-00-00,Test,Environmental
+RQ-02-00-12-005,Environmental,Contrails,Contrail Reduction System,High,Approved,Environmental Policy,02-00-00,Demonstration,Environmental
+RQ-02-00-12-006,Environmental,H2 Source,Sustainable H2 Source Required,High,Approved,Environmental Policy,02-30-00,Analysis,Environmental
+RQ-02-00-12-007,Environmental,Lifecycle,Lifecycle Emissions Tracking,High,Approved,Environmental Policy,02-00-00,Demonstration,Environmental
+RQ-02-00-12-008,Environmental,Reporting,Environmental Reporting Annual,High,Approved,Environmental Policy,02-00-00,Demonstration,Environmental
+RQ-02-00-12-009,Environmental,Procedures,Noise Abatement Procedures,High,Approved,Operations Manual,02-00-00,Demonstration,Environmental
+RQ-02-00-12-010,Environmental,Taxiing,Green Taxiing Electric Drive,High,Approved,Design Specification,02-00-00,Test,Environmental
+RQ-02-00-12-011,Environmental,CO2 Capture,CO2 Capture 100 kg per Flight Hour,High,Approved,Design Specification,02-00-00,Test,Environmental
+RQ-02-00-12-012,Environmental,CO2 Storage,CO2 Storage Capacity 1000 kg,High,Approved,Design Specification,02-00-00,Test,Performance
+RQ-02-00-12-013,Environmental,Regeneration,Sorbent Regeneration on Ground,High,Approved,Operations Requirements,02-00-00,Demonstration,Operations
+RQ-02-00-12-014,Environmental,EMS,Environmental Management System,High,Approved,ISO 14001,02-00-00,Demonstration,Environmental
+RQ-02-00-12-015,Environmental,KPIs,Sustainability KPIs Tracked,High,Approved,Environmental Policy,02-00-00,Demonstration,Environmental
+RQ-02-00-13-001,Interface,Maintenance,ATA 05 Maintenance Checks Interface,Critical,Approved,Integration Requirements,02-00-00,Analysis,Operations
+RQ-02-00-13-002,Interface,Servicing,ATA 12 Servicing Interface,Critical,Approved,Integration Requirements,02-00-00,Analysis,Operations
+RQ-02-00-13-003,Interface,ECS,ATA 21 ECS Operations Interface,High,Approved,Integration Requirements,02-00-00,Analysis,Operations
+RQ-02-00-13-004,Interface,Electrical,ATA 24 Electrical Operations Interface,Critical,Approved,Integration Requirements,02-00-00,Analysis,Safety
+RQ-02-00-13-005,Interface,Fuel,ATA 28 H2 Fuel System Interface,Critical,Approved,Integration Requirements,02-30-00,Analysis,Safety
+RQ-02-00-13-006,Interface,Inerting,ATA 47 Inerting System Interface,Critical,Approved,Integration Requirements,02-30-00,Analysis,Safety
+RQ-02-00-13-007,Interface,Power Plant,ATA 71 Fuel Cell Interface,Critical,Approved,Integration Requirements,02-90-00,Analysis,Safety
+RQ-02-00-13-008,Interface,CAOS,ATA 95 CAOS Operations Interface,High,Approved,Integration Requirements,02-90-00,Analysis,Performance
+RQ-02-00-13-009,Interface,GSE,Ground Support Equipment Interface,High,Approved,Operations Requirements,02-00-00,Analysis,Operations
+RQ-02-00-13-010,Interface,Airport,Airport Infrastructure Interface,High,Approved,Operations Requirements,02-00-00,Analysis,Operations
+RQ-02-00-13-011,Interface,ATC,ATC Systems Interface,Critical,Approved,Operations Requirements,02-00-00,Test,Safety
+RQ-02-00-13-012,Interface,Weather,Weather Services Interface,High,Approved,Operations Requirements,02-00-00,Test,Operations
+RQ-02-00-13-013,Interface,OCC,Company OCC Interface,High,Approved,Operations Requirements,02-00-00,Test,Operations
+RQ-02-00-13-014,Interface,Maintenance Sys,Maintenance Systems Interface,High,Approved,Operations Requirements,02-00-00,Analysis,Operations
+RQ-02-00-13-015,Interface,Flight Planning,Flight Planning Systems Interface,High,Approved,Operations Requirements,02-00-00,Test,Operations
+RQ-02-00-14-001,Functional,Flight Planning,Flight Planning Function Complete,Critical,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-002,Functional,Weight Balance,Weight & Balance Calculation Real-Time,Critical,Approved,Functional Requirements,02-00-00,Test,Safety
+RQ-02-00-14-003,Functional,Performance,Performance Calculation Accurate,Critical,Approved,Functional Requirements,02-00-00,Test,Safety
+RQ-02-00-14-004,Functional,Fuel Calc,H2 Fuel Calculation Function,Critical,Approved,Functional Requirements,02-30-00,Test,Safety
+RQ-02-00-14-005,Functional,CG,CG Calculation Real-Time,Critical,Approved,Functional Requirements,02-00-00,Test,Safety
+RQ-02-00-14-006,Functional,Takeoff,Takeoff Data Generation Automated,Critical,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-007,Functional,Landing,Landing Data Generation Automated,Critical,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-008,Functional,Route,Route Planning Function,High,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-009,Functional,Altitude,Altitude Planning Function,High,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-010,Functional,Speed,Speed Planning Function,High,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-011,Functional,Weather,Weather Integration Function,High,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-012,Functional,NOTAM,NOTAM Integration Function,High,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-013,Functional,Airport Data,Airport Data Function,High,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-014,Functional,Checklist,Electronic Checklist Function,Critical,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-015,Functional,Procedures,Digital Procedures Function,High,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-016,Functional,Monitoring,Real-Time Monitoring Function,Critical,Approved,Functional Requirements,02-00-00,Test,Safety
+RQ-02-00-14-017,Functional,Alerting,Alerting Function Complete,Critical,Approved,Functional Requirements,02-00-00,Test,Safety
+RQ-02-00-14-018,Functional,Decision Support,Decision Support Function,High,Approved,Functional Requirements,02-00-00,Test,Operations
+RQ-02-00-14-019,Functional,Recording,Data Recording Function,Critical,Approved,Functional Requirements,02-00-00,Test,Safety
+RQ-02-00-14-020,Functional,Fleet Sharing,Fleet Data Sharing Function,High,Approved,Functional Requirements,02-90-00,Test,Performance

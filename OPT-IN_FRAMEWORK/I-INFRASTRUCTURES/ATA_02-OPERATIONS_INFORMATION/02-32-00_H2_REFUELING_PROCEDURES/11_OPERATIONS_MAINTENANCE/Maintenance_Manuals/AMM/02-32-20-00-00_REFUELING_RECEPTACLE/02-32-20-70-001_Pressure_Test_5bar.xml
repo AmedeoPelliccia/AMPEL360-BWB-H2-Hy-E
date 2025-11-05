@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/procedural.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="20"
+                disassyCode="70" disassyCodeVariant="00" infoCode="520"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="04"/>
+        <dmTitle>
+          <techName>H2 REFUELING RECEPTACLE - PRESSURE TEST 5 BAR</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>GENERAL</title>
+        <para>This procedure tests the pressure integrity of the H2 refueling 
+              receptacle assembly at 5 bar (72.5 psi) for 30 seconds.</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>PERSONNEL REQUIREMENTS</title>
+        <para>2 technicians (1 certified H2 systems, 1 assistant)</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TIME REQUIRED</title>
+        <para>45 minutes</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TOOLS AND EQUIPMENT</title>
+        <para>
+          <randomList>
+            <listItem><para>Pressure test kit P/N 02-32-20-TEST-001</para></listItem>
+            <listItem><para>Nitrogen bottle (min 100 bar)</para></listItem>
+            <listItem><para>Pressure regulator (0-10 bar)</para></listItem>
+            <listItem><para>Digital pressure gauge (±0.01 bar accuracy)</para></listItem>
+            <listItem><para>Leak detection solution</para></listItem>
+            <listItem><para>Safety glasses</para></listItem>
+            <listItem><para>Cryogenic gloves</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="RC001"/>
+            <reqCondText>Aircraft electrical power OFF</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC002"/>
+            <reqCondText>H2 tanks completely defueled and purged</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC003"/>
+            <reqCondText>Refueling panel closed and secured</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC004"/>
+            <reqCondText>Area clear of ignition sources (50m radius)</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </preliminaryRqmts>
+
+      <mainProcedure>
+        <proceduralStep id="step01">
+          <para>Don safety glasses and cryogenic gloves.</para>
+          <warning>
+            <warningAndCautionPara>
+              Cryogenic temperatures can cause severe frostbite. Always wear 
+              appropriate PPE when working on H2 fuel systems.
+            </warningAndCautionPara>
+          </warning>
+        </proceduralStep>
+
+        <proceduralStep id="step02">
+          <para>Open refueling panel door.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step03">
+          <para>Connect pressure test kit to receptacle test port.</para>
+          <figure>
+            <graphic infoEntityIdent="ICN-02-32-20-70-001"/>
+          </figure>
+        </proceduralStep>
+
+        <proceduralStep id="step04">
+          <para>Connect nitrogen bottle with regulator to test kit.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step05">
+          <para>Slowly increase pressure to 2 bar. Hold for 5 seconds.</para>
+          <para>Check for obvious leaks using leak detection solution.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step06">
+          <para>Increase pressure to 5.0 bar (±0.1 bar).</para>
+        </proceduralStep>
+
+        <proceduralStep id="step07">
+          <para>Close regulator valve to isolate system.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step08">
+          <para>Monitor pressure gauge for 30 seconds.</para>
+          <para>
+            <emphasis emphasisType="em01">ACCEPTANCE CRITERIA:</emphasis>
+            Pressure drop shall not exceed 0.05 bar in 30 seconds.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step09">
+          <para>Apply leak detection solution to all seals and connections.</para>
+          <para>Check for bubbles indicating leaks.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step10">
+          <para>If test PASSED: Record results. Proceed to step 11.</para>
+          <para>If test FAILED: Refer to Troubleshooting TS-02-32-11.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step11">
+          <para>Slowly release pressure to zero.</para>
+          <caution>
+            <warningAndCautionPara>
+              Do not release pressure rapidly. May damage seals.
+            </warningAndCautionPara>
+          </caution>
+        </proceduralStep>
+
+        <proceduralStep id="step12">
+          <para>Disconnect test equipment.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step13">
+          <para>Install test port cap. Torque to 5 Nm.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step14">
+          <para>Close and secure refueling panel door.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step15">
+          <para>Complete maintenance record entry.</para>
+        </proceduralStep>
+      </mainProcedure>
+
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="CL001"/>
+            <reqCondText>Test equipment removed and stowed</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL002"/>
+            <reqCondText>Refueling panel secured</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL003"/>
+            <reqCondText>Maintenance record updated</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>
