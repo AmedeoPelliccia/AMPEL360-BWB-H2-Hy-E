@@ -1,0 +1,7 @@
+DMC,Title,Info_Code,Type,Status,Issue_Date,File_Path
+DMC-AMP-A-02-00-00-00A-941A-A,General - System Description,941A,Descriptive,Active,2025-11-05,02-00-00_GENERAL/DMC-AMP-A-02-00-00-00A-941A-A.xml
+DMC-AMP-A-02-00-00-00A-018A-A,General - Technical Data,018A,Descriptive,Active,2025-11-05,02-00-00_GENERAL/DMC-AMP-A-02-00-00-00A-018A-A.xml
+DMC-AMP-A-02-00-00-00A-012A-A,General - Special Tools,012A,Procedural,Active,2025-11-05,02-00-00_GENERAL/DMC-AMP-A-02-00-00-00A-012A-A.xml
+DMC-AMP-A-02-00-00-00A-014A-A,General - Consumables/Materials,014A,Procedural,Active,2025-11-05,02-00-00_GENERAL/DMC-AMP-A-02-00-00-00A-014A-A.xml
+DMC-AMP-A-02-00-00-00A-720A-A,General - Access Requirements,720A,Fault Isolation,Active,2025-11-05,02-00-00_GENERAL/DMC-AMP-A-02-00-00-00A-720A-A.xml
+DMC-AMP-A-02-00-00-00A-013A-A,General - Safety Precautions H₂,013A,Procedural,Active,2025-11-05,02-00-00_GENERAL/DMC-AMP-A-02-00-00-00A-013A-A.xml

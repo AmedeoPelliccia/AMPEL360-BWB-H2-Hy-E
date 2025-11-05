@@ -1,0 +1,7 @@
+ATA_Chapter,Task_Number,Task_Description,DMC_Reference,Interval,Man_Hours,Skill_Level
+02-00-00,02-00-00-001,General System Overview,DMC-AMP-A-02-00-00-00A-941A-A,N/A,0.5,2
+02-00-00,02-00-00-002,Technical Data Review,DMC-AMP-A-02-00-00-00A-018A-A,N/A,0.25,2
+02-00-00,02-00-00-003,Special Tools Identification,DMC-AMP-A-02-00-00-00A-012A-A,N/A,0.1,1
+02-00-00,02-00-00-004,Consumables and Materials,DMC-AMP-A-02-00-00-00A-014A-A,N/A,0.1,1
+02-00-00,02-00-00-005,Access Panel Removal/Installation,DMC-AMP-A-02-00-00-00A-720A-A,As Required,0.5,2
+02-00-00,02-00-00-006,H₂ Safety Precautions Review,DMC-AMP-A-02-00-00-00A-013A-A,Before H₂ Work,0.5,2

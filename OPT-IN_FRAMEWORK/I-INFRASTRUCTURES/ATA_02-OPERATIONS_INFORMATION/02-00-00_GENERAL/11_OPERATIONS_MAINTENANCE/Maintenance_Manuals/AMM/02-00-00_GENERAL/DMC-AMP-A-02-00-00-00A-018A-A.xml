@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_6-0/xml_schema_flat/descript.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02" 
+                subSystemCode="0" subSubSystemCode="0" assyCode="00" 
+                disassyCode="00" disassyCodeVariant="A" infoCode="018" 
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <dmTitle>
+          <techName>GENERAL - Operations Information</techName>
+          <infoName>Technical Data</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360 Aerospace</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 BWB H₂ Hy-E Q100 aircraft</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <firstVerification verificationType="tabtop"/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <levelledPara>
+        <title>Aircraft Dimensions</title>
+        <table>
+          <tgroup cols="2">
+            <colspec colname="c1"/>
+            <colspec colname="c2"/>
+            <thead>
+              <row>
+                <entry>Parameter</entry>
+                <entry>Value</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Wing Span</entry>
+                <entry>70 m (229.7 ft)</entry>
+              </row>
+              <row>
+                <entry>Overall Length</entry>
+                <entry>48 m (157.5 ft)</entry>
+              </row>
+              <row>
+                <entry>Overall Height</entry>
+                <entry>12 m (39.4 ft)</entry>
+              </row>
+              <row>
+                <entry>Wing Area</entry>
+                <entry>1,250 m² (13,455 ft²)</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </levelledPara>
+      <levelledPara>
+        <title>Weights</title>
+        <table>
+          <tgroup cols="2">
+            <colspec colname="c1"/>
+            <colspec colname="c2"/>
+            <thead>
+              <row>
+                <entry>Weight Category</entry>
+                <entry>Value</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Maximum Takeoff Weight (MTOW)</entry>
+                <entry>95,000 kg (209,440 lb)</entry>
+              </row>
+              <row>
+                <entry>Maximum Landing Weight (MLW)</entry>
+                <entry>80,000 kg (176,370 lb)</entry>
+              </row>
+              <row>
+                <entry>Maximum Zero Fuel Weight (MZFW)</entry>
+                <entry>72,000 kg (158,733 lb)</entry>
+              </row>
+              <row>
+                <entry>Operating Empty Weight (OEW)</entry>
+                <entry>54,000 kg (119,050 lb)</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </levelledPara>
+      <levelledPara>
+        <title>Performance</title>
+        <table>
+          <tgroup cols="2">
+            <colspec colname="c1"/>
+            <colspec colname="c2"/>
+            <thead>
+              <row>
+                <entry>Performance Parameter</entry>
+                <entry>Value</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Maximum Cruise Speed</entry>
+                <entry>Mach 0.82 (470 kts TAS)</entry>
+              </row>
+              <row>
+                <entry>Design Range</entry>
+                <entry>4,000 km (2,160 NM)</entry>
+              </row>
+              <row>
+                <entry>Service Ceiling</entry>
+                <entry>41,000 ft</entry>
+              </row>
+              <row>
+                <entry>H₂ Fuel Capacity</entry>
+                <entry>1,200 kg (2,646 lb)</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

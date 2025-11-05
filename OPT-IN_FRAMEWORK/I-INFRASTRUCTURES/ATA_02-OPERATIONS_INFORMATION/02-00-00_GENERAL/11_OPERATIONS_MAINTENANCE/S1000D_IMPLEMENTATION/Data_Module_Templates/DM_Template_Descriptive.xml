@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- S1000D Data Module Template - Descriptive -->
+<!-- Info Code: 941A - System Description -->
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_6-0/xml_schema_flat/descript.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" 
+                systemCode="XX" subSystemCode="X" subSubSystemCode="X"
+                assyCode="XXX" disassyCode="XX" disassyCodeVariant="A"
+                infoCode="941" infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <dmTitle>
+          <techName>SYSTEM NAME</techName>
+          <infoName>System Description</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360 Aerospace</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 BWB H₂ Hy-E Q100 aircraft</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <levelledPara>
+        <title>System Overview</title>
+        <para>
+          Insert system description here...
+        </para>
+      </levelledPara>
+      <levelledPara>
+        <title>Components</title>
+        <para>
+          The system consists of the following components:
+        </para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Component 1</para>
+            </listItem>
+            <listItem>
+              <para>Component 2</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      <levelledPara>
+        <title>Operation</title>
+        <para>
+          Insert operational description here...
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>
