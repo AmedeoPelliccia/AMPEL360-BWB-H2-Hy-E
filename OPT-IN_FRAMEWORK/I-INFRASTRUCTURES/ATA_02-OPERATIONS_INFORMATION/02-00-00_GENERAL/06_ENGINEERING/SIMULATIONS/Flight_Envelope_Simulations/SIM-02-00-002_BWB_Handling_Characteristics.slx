@@ -1,0 +1,28 @@
+% MATLAB/Simulink Model: BWB Handling Characteristics
+% File: SIM-02-00-002_BWB_Handling_Characteristics.slx
+% Purpose: BWB-specific handling qualities and pilot control characteristics
+%
+% This is a placeholder for the actual Simulink model file.
+%
+% Model Components:
+% - BWB aerodynamic derivatives
+% - Control surface effectiveness
+% - Stability augmentation system
+% - Pilot control inputs
+% - Response characteristics
+%
+% Analysis Areas:
+% - Pitch handling
+% - Roll handling
+% - Yaw/directional control
+% - Dutch roll characteristics
+% - PIO (Pilot Induced Oscillation) susceptibility
+%
+% Validation:
+% - Flight test correlation
+% - Pilot-in-the-loop simulation
+% - Cooper-Harper ratings
+%
+% Author: AMPEL360 Flight Dynamics Team
+% Date: 2025-11-05
+% Version: 1.0

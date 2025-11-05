@@ -1,0 +1,18 @@
+Parameter,Value,Unit,Condition,Notes
+MTOW,95000,kg,Maximum,Design maximum takeoff weight
+Takeoff Distance,2400,m,SL ISA,Sea level standard conditions
+V1 Decision Speed,145,KIAS,MTOW,Takeoff decision speed
+VR Rotation Speed,155,KIAS,MTOW,Rotation speed
+V2 Takeoff Safety Speed,165,KIAS,MTOW,Takeoff safety speed
+Liftoff Speed,160,KIAS,MTOW,Actual liftoff speed
+Climb Gradient,4.5,%,AEO,All engines operating
+Climb Gradient OEI,2.8,%,OEI,One engine inoperative (1 fuel cell stack)
+Temperature Limit,ISA+35,°C,Maximum,Hot day performance
+Altitude Limit,8000,ft,Maximum,High altitude airports
+Runway Slope Effect,1,%,Maximum,Upslope limitation
+Headwind Benefit,10,kt,Standard,Typical headwind component
+Tailwind Penalty,5,kt,Maximum,Tailwind limitation
+BWB Lift Advantage,30,%,vs Conv,Aerodynamic efficiency gain
+Ground Effect Factor,1.15,ratio,Enhancement,BWB ground effect enhancement
+Acceleration Time,35,s,MTOW,Takeoff roll time
+Fuel Burn Takeoff,9,kg,Typical,H2 fuel consumed during takeoff

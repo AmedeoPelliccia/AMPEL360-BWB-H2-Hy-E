@@ -1,0 +1,21 @@
+Parameter,Value,Unit,Condition,Notes
+Temperature Range Min,-54,°C,Standard Atm,Standard atmosphere minimum
+Temperature Range Max,ISA+35,°C,Hot Day,Maximum operating temperature
+Altitude Range Min,-1000,ft,Below SL,Below sea level capability
+Altitude Range Max,41000,ft,Service Ceiling,Maximum service ceiling
+Pressure Altitude Max,43000,ft,Density Alt,Maximum density altitude
+Humidity Effect,Minimal,qualitative,H2 System,Minimal humidity effect on H2 system
+Icing Conditions,Capable,qualitative,Anti-Ice,Full icing capability
+Thunderstorm Avoidance,Required,procedure,Standard,Thunderstorm avoidance required
+Turbulence Capability,Moderate,qualitative,Structure,Moderate turbulence capability
+Wind Shear Detection,CAOS,system,Enhanced,CAOS enhanced wind shear detection
+Crosswind Limit,35,kt,Landing,Maximum crosswind component
+Tailwind Limit,15,kt,TO/Land,Maximum tailwind component
+Headwind Benefit,Unlimited,qualitative,Operations,No headwind limitation
+Visibility Minimum CAT I,550,m,RVR,Category I minima
+Visibility Minimum CAT II,300,m,RVR,Category II minima with equipment
+Visibility Minimum CAT III,50,m,RVR,Category III with full equipment
+Rain Operations,Full,capability,Certified,Full capability in rain
+Snow Operations,Limited,capability,Procedures,Limited snow operations
+Contaminated Runway,Capable,qualitative,Procedures,Contaminated runway capability
+Salt Air Operations,Capable,qualitative,Corrosion,Salt air operations with maintenance

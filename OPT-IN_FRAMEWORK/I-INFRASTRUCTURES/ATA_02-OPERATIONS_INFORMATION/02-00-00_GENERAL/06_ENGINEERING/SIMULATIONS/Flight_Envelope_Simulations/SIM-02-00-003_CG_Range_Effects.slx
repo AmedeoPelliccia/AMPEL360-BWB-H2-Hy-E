@@ -1,0 +1,27 @@
+% MATLAB/Simulink Model: CG Range Effects
+% File: SIM-02-00-003_CG_Range_Effects.slx
+% Purpose: Analysis of CG position effects on aircraft performance and handling
+%
+% This is a placeholder for the actual Simulink model file.
+%
+% Model Components:
+% - Variable CG position (25-42% MAC)
+% - Stability derivatives vs CG
+% - Control authority vs CG
+% - Performance metrics vs CG
+%
+% Simulated Scenarios:
+% - Forward CG operations
+% - Aft CG operations
+% - CG shift during flight
+% - Fuel burn effects
+%
+% Outputs:
+% - Stability margins
+% - Control requirements
+% - Performance impacts
+% - Safety margins
+%
+% Author: AMPEL360 Weight & Balance Team
+% Date: 2025-11-05
+% Version: 1.0

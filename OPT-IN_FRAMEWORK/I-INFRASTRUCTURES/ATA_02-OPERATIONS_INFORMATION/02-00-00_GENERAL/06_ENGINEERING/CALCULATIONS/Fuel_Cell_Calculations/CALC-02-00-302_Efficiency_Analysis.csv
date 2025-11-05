@@ -1,0 +1,9 @@
+Operating_Point,Load_%,Efficiency_%,H2_Rate_kg_kWh,Power_Output_kW,Notes
+Idle,10,45,0.080,250,Minimum power
+Low_Power,25,52,0.069,625,Taxi/descent
+Cruise,72,60,0.060,1800,Normal cruise
+High_Power,90,58,0.062,2250,Climb
+Maximum,100,55,0.065,2500,Maximum continuous
+Optimal_Efficiency,75,61,0.059,1875,Best efficiency point
+Part_Load_Penalty,50,54,0.067,1250,Part load operation
+CAOS_Optimized,Variable,65,0.055,Variable,CAOS optimization benefit
