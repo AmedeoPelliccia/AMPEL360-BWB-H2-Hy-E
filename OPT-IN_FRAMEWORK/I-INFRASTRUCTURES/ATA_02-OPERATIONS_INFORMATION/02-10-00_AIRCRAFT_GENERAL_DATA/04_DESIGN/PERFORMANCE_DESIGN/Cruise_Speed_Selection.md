@@ -75,7 +75,7 @@ L/D = CL / CD = 0.52 / 0.0235 = 22.1 ✓
 Mach Number vs Drag Coefficient:
 
 M0.70: CD = 0.0220 (pure subsonic)
-M0.75: CD = 0.0230 (mild compress ibility)
+M0.75: CD = 0.0230 (mild compressibility)
 M0.78: CD = 0.0235 (design point) ✓
 M0.80: CD = 0.0245 (wave drag begins)
 M0.82: CD = 0.0265 (significant wave drag)
