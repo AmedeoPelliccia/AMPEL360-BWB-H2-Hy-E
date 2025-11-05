@@ -73,7 +73,7 @@ CONDITION (symptoms)
 └── Notes and Cautions
 ```
 
-## H2-Specific Design Elements
+## H₂-Specific Design Elements
 
 **Leak Response:**
 - Immediate isolation steps in memory items
