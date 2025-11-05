@@ -235,7 +235,8 @@ data_logging:
     retention: Lifetime of aircraft
 
 safety_integrity_level:
-  leak_detection: ASIL-D (automotive) / DAL-A (aviation)
+  leak_detection_automotive_sil: ASIL-D
+  leak_detection_aviation_dal: DAL-A
   emergency_isolation: DAL-A
   quantity_indication: DAL-B
   tank_sequencing: DAL-C
