@@ -7,21 +7,9 @@ This file represents a placeholder for the CAOS Advisory Display mockup.
 The CAOS Advisory Display shows:
 
 ### Advisory Window
-```
-┌─────────────────────────────────────────┐
-│ CAOS ADVISORY               [Override]  │
-├─────────────────────────────────────────┤
-│ ALTITUDE CHANGE RECOMMENDED             │
-│                                         │
-│ Current: FL370                          │
-│ Recommended: FL390                      │
-│ Reason: Favorable winds +15kt          │
-│ Fuel Savings: 42 kg (3.2%)             │
-│ Confidence: 87%                        │
-│                                         │
-│ [More Info] [Accept] [Defer] [Reject]  │
-└─────────────────────────────────────────┘
-```
+
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/7b5fb452-9397-4c63-b214-f57af748f6f7" />
+
 
 ### Components
 - Advisory title (clear, concise)
