@@ -1,0 +1,9 @@
+SME_Type,Name,Specialty,Start_Date,End_Date,Allocation_Pct,Availability,Status
+Pilot_SME,Captain_Jones,Operations_BWB,2025-11-01,2026-07-31,40,Mon_Wed_Fri,Assigned
+Engineer_SME,Engineer_Smith,H2_Systems,2025-11-01,2026-07-31,30,Tue_Thu,Assigned
+Engineer_SME,Engineer_Brown,Fuel_Cells,2026-01-01,2026-07-31,30,Mon_Wed,Planning
+Maintenance_SME,Technician_Lee,Reliability,2026-01-01,2026-07-31,25,Wed_Fri,Planning
+Safety_SME,Safety_Officer_White,Emergency_Proc,2026-01-15,2026-05-31,50,Mon_Tue_Wed,Planning
+Performance_SME,Analyst_Green,Weight_Balance,2025-11-15,2026-03-31,60,All_Week,Assigned
+CAOS_SME,Developer_Blue,CAOS_System,2025-12-01,2026-07-31,40,Tue_Thu_Fri,Assigned
+Regulatory_SME,Specialist_Gray,Certification,2026-02-01,2026-07-31,20,As_Needed,Planning

@@ -1,0 +1,16 @@
+Resource_Type,Resource_Name,Allocation_Percentage,Start_Date,End_Date,Cost_Center,Status
+Technical_Writer,Lead_Writer_AFM,100,2025-11-01,2026-04-30,Tech_Pubs,Assigned
+Technical_Writer,Writer_FCOM_1,100,2025-12-01,2026-06-30,Tech_Pubs,Planning
+Technical_Writer,Writer_FCOM_2,100,2025-12-01,2026-06-30,Tech_Pubs,Planning
+SME_Pilot,Operations_Expert,40,2025-11-01,2026-06-30,Operations,Assigned
+SME_Engineer,H2_Systems_Expert,30,2025-11-01,2026-07-01,Engineering,Assigned
+SME_Maintenance,Reliability_Expert,25,2026-01-01,2026-07-01,Maintenance,Planning
+Illustrator,Technical_Illustrator_1,100,2025-11-01,2026-06-30,Tech_Pubs,Assigned
+Software_Developer,CAOS_Lead_Dev,100,2025-11-01,2026-07-31,CAOS_Team,Assigned
+Software_Developer,CAOS_Frontend_Dev,100,2025-12-01,2026-07-31,CAOS_Team,Planning
+Training_Developer,CBT_Developer_1,100,2025-12-15,2026-05-15,Training,Assigned
+Training_Developer,Simulator_Specialist,50,2026-01-01,2026-03-31,Training,Planning
+Translator,French_Translator,80,2026-03-01,2026-07-31,Tech_Pubs,Planning
+Translator,German_Translator,80,2026-03-01,2026-07-31,Tech_Pubs,Planning
+QA_Specialist,Documentation_QA,60,2025-11-01,2026-07-31,Quality,Assigned
+Project_Manager,Production_Manager,100,2025-11-01,2026-07-31,PMO,Assigned
