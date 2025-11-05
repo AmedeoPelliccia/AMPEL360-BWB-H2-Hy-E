@@ -1,0 +1,50 @@
+# Cross Section Geometry
+
+## Overview
+
+This document would contain detailed SVG drawings of AMPEL360 BWB cross-sections.
+
+## Key Cross-Sections
+
+### Forward Section (Station 5.0m)
+- **Width:** 18.0 m
+- **Height:** 4.2 m
+- **Purpose:** Flight deck and forward cabin
+
+### Center Section (Station 15.0m)
+- **Width:** 38.0 m
+- **Height:** 5.8 m
+- **Purpose:** Main passenger cabin and H2 tanks
+
+### Aft Section (Station 25.0m)
+- **Width:** 28.0 m
+- **Height:** 4.5 m
+- **Purpose:** Aft cabin and systems
+
+### Outer Wing Section (Station Y=20.0m)
+- **Chord:** 8.5 m
+- **Thickness:** 0.85 m (10% t/c)
+- **Purpose:** Fuel cells and systems
+
+## Structural Features
+
+### Center Body
+- Double-bubble pressure vessel concept
+- Upper deck: H2 tanks and systems
+- Lower deck: Passenger cabin
+- Cargo: Below cabin floor
+
+### Wing Structure
+- Multi-spar design
+- Composite construction
+- Integrated fuel cell bays
+
+### Aerodynamic Shaping
+- Optimized pressure distribution
+- Natural laminar flow sections
+- Boundary layer control provisions
+
+---
+
+**Note:** Detailed SVG cross-section drawings to be added during engineering phase.
+**Reference:** ATA 53-00-00 Fuselage, ATA 57-00-00 Wings
