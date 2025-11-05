@@ -1,0 +1,3 @@
+DPP_ID,Hardware_Name,Serial_Number,Manufacturer,Installation_Date,Status
+DPP-CAOS-001,Processing Unit,SN001,AMPEL360 Hardware,2025-10-10,Active
+DPP-CAOS-002,Sensor Array,SN001,SensorTech Inc,2025-10-12,Active
