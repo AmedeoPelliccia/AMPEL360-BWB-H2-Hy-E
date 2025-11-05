@@ -68,7 +68,8 @@ This interface ensures:
 - Primary H2 leak detection system
 - Tank pressure control system
 - Emergency vent system
-- Fuel quantity indication (both channels)
+- Fuel quantity indication (complete loss of both primary and backup channels)  
+  (If only the backup channel is inoperative, dispatch is permitted provided the CAOS predictive model is used and the aircraft lands at the earliest suitable airport, per ICD-02-00-28-003_Quantity_Indication_Interface.md.)
 
 ### Category B (3 days)
 - Single H2 temperature sensor (with redundancy)
