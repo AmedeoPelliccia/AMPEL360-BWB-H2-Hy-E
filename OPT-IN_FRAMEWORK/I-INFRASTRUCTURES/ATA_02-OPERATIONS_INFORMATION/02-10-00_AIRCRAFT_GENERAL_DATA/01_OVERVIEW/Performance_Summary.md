@@ -44,7 +44,7 @@
 
 | Metric | Value | Comparison |
 |--------|-------|------------|
-| **Fuel Consumption** | 0.8 kg H₂/100 ASK | vs 2.5 kg Jet-A conventional |
+| **Fuel Consumption** | 0.8 kg H₂/100 ASK | vs 2.5 kg Jet-A/100 ASK conventional |
 | **Energy Efficiency** | 68% better | vs conventional turbofan |
 | **Lift-to-Drag Ratio (L/D)** | 22 | vs 17 conventional |
 | **Specific Range** | 8.1 km/kg H₂ | At optimum cruise |
