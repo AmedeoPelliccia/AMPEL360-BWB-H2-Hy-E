@@ -218,7 +218,7 @@ The AMPEL360 H2 system architecture provides safe, efficient storage, distributi
 **Special Conditions:**
 - EASA/FAA: Equivalent level of safety to Jet-A
 - Additional requirements for H2 specific hazards
-- Demonst ration of safety systems
+- Demonstration of safety systems
 - Testing beyond conventional fuel
 
 ### Compliance Strategy
