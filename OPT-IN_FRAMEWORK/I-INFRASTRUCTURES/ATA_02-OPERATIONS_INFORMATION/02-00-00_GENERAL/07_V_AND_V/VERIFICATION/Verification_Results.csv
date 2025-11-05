@@ -1,0 +1,8 @@
+Ver_ID,Test_Description,Method,Status,Pass_Fail,Date_Completed,Evidence,Notes
+VER-02-00-001,Requirements Review,Analysis,Complete,Pass,2025-11-01,Compliance_Report.md,889 requirements verified
+VER-02-00-002,Design Review,Analysis,In Progress,TBD,TBD,Design_Package,Target 2025-11-30
+VER-02-00-003,Procedures Inspection,Inspection,Complete,Pass,2025-10-15,Tank_Inspection,H2 capacity verified 8400kg
+VER-02-00-004,Checklist Verification,Analysis,In Progress,TBD,TBD,Checklist_Package,75% complete
+VER-02-00-005,Interface Verification,Test,In Progress,TBD,TBD,Interface_Tests,40% complete
+VER-02-00-006,CAOS Algorithm Verification,Simulation,Active,Pass,2025-11-05,Sim_Results,87% accuracy achieved
+VER-02-00-007,Safety Analysis Review,Analysis,In Progress,TBD,TBD,Safety_Reports,Target 2025-12-31

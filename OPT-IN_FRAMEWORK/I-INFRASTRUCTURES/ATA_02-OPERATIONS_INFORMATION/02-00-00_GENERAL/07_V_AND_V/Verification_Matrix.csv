@@ -1,0 +1,6 @@
+Req_ID,Requirement,Verification_Method,Test_ID,Status,Evidence,Date_Verified,Verified_By
+RQ-02-00-01-001,CS-25 Compliance,Analysis,VER-02-00-001,Complete,Compliance_Report.md,2025-11-01,Regulatory
+RQ-02-00-02-001,Zero Accident Target,Demonstration,VAL-02-00-401,Planned,LOSA_Results,TBD,Safety
+RQ-02-00-03-001,Range 3500 NM,Test,VAL-02-00-302,Planned,Flight_Test,TBD,Flight_Test
+RQ-02-00-05-001,H2 Capacity 8000kg,Inspection,VER-02-00-003,Complete,Tank_Inspection,2025-10-15,Structures
+RQ-02-00-08-001,Digital Twin Integration,Test,VAL-02-00-304,Active,Sim_Results,2025-11-05,CAOS
