@@ -1,0 +1,7 @@
+Door_ID,Door_Type,Station_m,Buttock_Line_m,Sill_Height_m,Width_m,Height_m,Capacity_pax_per_90s,Slide_Required,GSE_Type
+L1,Type_A_Entry,10.5,-6.2,4.2,1.07,1.83,110,Yes,Jetway/Stairs
+R1,Type_A_Entry,10.5,6.2,4.2,1.07,1.83,110,Yes,Jetway/Stairs
+L3,Type_III_Emergency,45.0,-5.8,3.8,0.51,1.07,55,Yes,Stairs
+R3,Type_III_Emergency,45.0,5.8,3.8,0.51,1.07,55,Yes,Stairs
+FWD_Cargo,Class_B_Cargo,6.0,-7.5,2.8,1.83,1.42,N/A,No,Scissor_Lift
+AFT_Cargo,Class_B_Cargo,48.0,-7.5,2.8,1.83,1.42,N/A,No,Scissor_Lift

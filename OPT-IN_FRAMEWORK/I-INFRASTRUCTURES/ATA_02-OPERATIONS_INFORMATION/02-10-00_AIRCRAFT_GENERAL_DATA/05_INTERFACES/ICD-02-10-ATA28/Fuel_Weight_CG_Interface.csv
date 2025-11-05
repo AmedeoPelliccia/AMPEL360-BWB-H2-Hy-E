@@ -1,0 +1,5 @@
+Tank_ID,Tank_Type,Length_m,Diameter_m,Volume_L,Capacity_kg,Station_Start,Station_End,Buttock_Line,CG_Full_Station,CG_Full_BL,Weight_Empty_kg
+FCT,Cylindrical,12.5,2.8,33800,2400,15.0,27.5,0.0,21.25,0.0,480
+ACT,Cylindrical,12.5,2.8,33800,2400,30.0,42.5,0.0,36.25,0.0,480
+LWT,Conformal,8.0,N/A,22550,1600,20.0,28.0,-8.0,24.0,-8.0,320
+RWT,Conformal,8.0,N/A,22550,1600,20.0,28.0,8.0,24.0,8.0,320
