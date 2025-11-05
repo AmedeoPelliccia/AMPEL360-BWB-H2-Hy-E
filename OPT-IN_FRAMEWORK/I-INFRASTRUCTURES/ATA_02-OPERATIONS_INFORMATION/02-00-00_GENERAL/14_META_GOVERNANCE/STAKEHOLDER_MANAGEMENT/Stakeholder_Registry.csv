@@ -1,0 +1,7 @@
+Stakeholder_ID,Name,Organization,Role,Interest_Level,Influence_Level,Contact_Email
+SH-001,Director_Operations,AMPEL360,Internal_Sponsor,High,High,dir.ops@ampel360.aero
+SH-002,Chief_Engineer,AMPEL360,Internal_Key,High,High,chief.eng@ampel360.aero
+SH-003,Safety_Manager,AMPEL360,Internal_Key,High,High,safety@ampel360.aero
+SH-004,EASA_Liaison,EASA,External_Regulator,High,High,liaison@easa.europa.eu
+SH-005,FAA_Liaison,FAA,External_Regulator,High,High,liaison@faa.gov
+SH-006,Launch_Customer_Rep,AirlineX,External_Customer,High,Medium,customer@airlinex.com

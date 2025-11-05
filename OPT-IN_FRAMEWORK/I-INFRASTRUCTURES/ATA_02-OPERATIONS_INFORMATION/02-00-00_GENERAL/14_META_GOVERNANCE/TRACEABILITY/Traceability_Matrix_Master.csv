@@ -1,0 +1,5 @@
+Requirement_ID,Document_ID,Section,Test_ID,Status,Verified_By,Date
+RQ-02-00-01-001,02-00-10-CERT,CS-25.1581,VER-02-00-001,Verified,Cert_Team,2025-11-01
+RQ-02-00-02-009,02-00-02-SAFETY,H2_Leak,VER-28-00-045,Verified,Safety,2025-10-25
+RQ-02-00-05-001,02-30-01-FUEL,H2_Capacity,VER-28-10-001,Verified,Systems,2025-10-20
+RQ-02-00-08-001,02-00-11-OPS,Digital_Twin,VER-95-10-001,Active,CAOS,2025-11-05

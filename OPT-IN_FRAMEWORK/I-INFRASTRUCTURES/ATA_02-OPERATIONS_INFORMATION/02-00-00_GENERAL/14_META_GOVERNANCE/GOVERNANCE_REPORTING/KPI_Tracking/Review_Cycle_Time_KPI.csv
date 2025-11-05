@@ -1,0 +1,5 @@
+Month,Target_Days,Actual_Days,Delta,Status,Trend
+2025-09,14,13,-1,Exceeding,Stable
+2025-10,14,12,-2,Exceeding,Improving
+2025-11,14,12,-2,Exceeding,Stable
+2025-12,14,TBD,TBD,Forecasted,TBD

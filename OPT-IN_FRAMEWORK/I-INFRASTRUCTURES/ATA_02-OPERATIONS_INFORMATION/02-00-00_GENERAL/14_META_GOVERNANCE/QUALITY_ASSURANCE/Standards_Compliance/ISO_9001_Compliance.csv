@@ -1,0 +1,6 @@
+ISO_Clause,Requirement,Compliance_Status,Evidence,Last_Audit
+4.2.3,Document control,Compliant,Document_Control_Procedures.md,2025-10-15
+4.2.4,Records control,Compliant,Archive_procedures,2025-10-15
+8.2.3,Monitoring of processes,Compliant,Quality_Metrics/,2025-10-15
+8.2.4,Product monitoring,Compliant,Review_procedures,2025-10-15
+8.5.2,Corrective action,Compliant,Corrective_Actions_Tracker.csv,2025-10-15

@@ -1,0 +1,4 @@
+Supplier,Interface_Type,Document_Reference,Status,Contact
+H2_Tank_Supplier,Technical_Spec,ICD-02-00-28-001,Active,supplier@h2tanks.com
+Fuel_Cell_Supplier,Operational_Interface,ICD-02-00-24-001,Active,supplier@fuelcells.com
+CAOS_Software_Vendor,System_Interface,ICD-02-00-95-001,Active,vendor@caosai.com

@@ -1,0 +1,4 @@
+CA_ID,Finding_ID,Corrective_Action,Root_Cause,Preventive_Action,Responsible,Due_Date,Status
+CA-001,F-001,Add review date to all documents,Checklist gap,Update metadata checklist,Doc_Control,2025-10-10,Complete
+CA-002,F-002,Correct version number,Manual entry error,Implement automated versioning,Doc_Control,2025-10-10,Complete
+CA-003,F-003,Fix DMC business rule,Insufficient validation,Enhanced automated validation,S1000D_Team,2025-10-25,Complete

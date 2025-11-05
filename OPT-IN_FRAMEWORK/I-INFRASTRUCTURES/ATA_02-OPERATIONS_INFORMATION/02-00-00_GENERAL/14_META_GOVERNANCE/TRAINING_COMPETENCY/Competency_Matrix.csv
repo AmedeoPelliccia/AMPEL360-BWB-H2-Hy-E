@@ -1,0 +1,6 @@
+Employee_ID,Name,Role,S1000D_Cert,ATA_Cert,Tool_Prof,Doc_Control,Last_Assessed,Next_Assessment,Status
+E001,J.Smith,Author,Yes,Yes,Yes,Yes,2025-09-15,2027-09-15,Current
+E002,M.Garcia,Author,Yes,Yes,Yes,Yes,2025-09-20,2027-09-20,Current
+E003,D.Lee,Reviewer,No,Yes,Yes,Yes,2025-10-01,2027-10-01,Current
+E004,E.Brown,Author,Yes,Yes,Yes,Yes,2025-10-05,2027-10-05,Current
+E005,S.Johnson,Auditor,Yes,Yes,Yes,Yes,2025-10-10,2027-10-10,Current

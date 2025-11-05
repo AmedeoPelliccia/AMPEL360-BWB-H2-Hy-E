@@ -1,0 +1,5 @@
+CAOS_Standard,Requirement,Compliance_Status,Document_Reference
+CAOS-OPS-001,Digital_twin_procedures,Compliant,02-00-11-OPS
+CAOS-OPS-002,Predictive_maintenance_workflows,Compliant,02-00-11-OPS
+CAOS-OPS-003,Human-AI_interaction_protocols,Compliant,02-00-04-DESIGN
+CAOS-INT-001,System_interfaces_documented,Compliant,02-00-05-INTERFACES
