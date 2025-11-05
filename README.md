@@ -666,15 +666,6 @@ This project stands on the shoulders of:
 **Aviation contributed 2.5% of global CO₂ in 2019.  
 AMPEL360 will make aviation carbon-negative by 2035.**
 
----
-
-### 📞 **Contact**
-
-**General Inquiries**: [info@ampel360.aero](mailto:info@ampel360.aero)  
-**Investments**: [invest@ampel360.aero](mailto:invest@ampel360.aero)  
-**Partnerships**: [partnerships@ampel360.aero](mailto:partnerships@ampel360.aero)  
-**Careers**: [careers@ampel360.aero](mailto:careers@ampel360.aero)  
-**Press**: [press@ampel360.aero](mailto:press@ampel360.aero)
 
 ---
 
