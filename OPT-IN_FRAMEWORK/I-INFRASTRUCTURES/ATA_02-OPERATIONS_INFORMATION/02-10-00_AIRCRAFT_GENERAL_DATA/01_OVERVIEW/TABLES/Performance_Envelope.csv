@@ -1,0 +1,30 @@
+Performance_Parameter,Value,Unit,Condition,Notes
+Design_Range,6500,km,Full payload,3500 NM
+Maximum_Range,7200,km,Reduced payload,3900 NM
+Maximum_Endurance,12.5,hours,Max fuel,Cruise power
+Typical_Mission_Range,5500,km,With reserves,3000 NM
+Maximum_Operating_Speed,470,kt,M0.82,VMO
+Normal_Cruise_Speed,450,kt,M0.79,Optimal efficiency
+Long_Range_Cruise,430,kt,M0.76,Maximum range
+Approach_Speed,145,kt,—,At MLW
+Stall_Speed_Clean,125,kt,—,At MTOW
+Service_Ceiling,13700,m,—,FL450
+Optimum_Cruise_Altitude,11900,m,—,FL390
+Maximum_Certified_Altitude,14300,m,Emergency,FL470
+Rate_of_Climb_SL,18,m/s,MTOW,3540 ft/min
+Takeoff_Distance_MTOW,2600,m,Sea level ISA,—
+Landing_Distance_MLW,1900,m,Dry runway,—
+Balanced_Field_Length,2800,m,MTOW sea level,—
+Fuel_Consumption,0.8,kg H₂/100 ASK,—,vs 2.5 kg Jet-A
+Energy_Efficiency,68,%,Better vs conventional,Turbofan comparison
+Lift_to_Drag_Ratio,22,—,Cruise,vs 17 conventional
+Specific_Range,8.1,km/kg H₂,Optimum cruise,—
+CO2_Emissions_Direct,0,kg,—,Zero emissions
+CO2_Capture,100,kg/FH,—,Net carbon negative
+NOx_Emissions,0,kg,—,No combustion
+Noise_Level_Takeoff,65,dB,—,vs 85 dB conventional
+Noise_Level_Approach,62,dB,—,ICAO Chapter 14
+Turnaround_Time,45,min,—,H₂ refueling critical
+Daily_Utilization,11-13,hours,—,2.5-3 rotations
+Dispatch_Reliability,99.5,%,Target,With CAOS
+MTBF_Fuel_Cells,18000,FH,—,Fuel cell stacks

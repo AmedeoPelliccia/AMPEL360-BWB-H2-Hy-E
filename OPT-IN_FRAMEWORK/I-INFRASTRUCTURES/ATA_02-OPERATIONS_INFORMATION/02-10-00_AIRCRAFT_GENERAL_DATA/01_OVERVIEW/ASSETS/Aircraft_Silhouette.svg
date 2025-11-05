@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <title>AMPEL360 BWB Aircraft Silhouette</title>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff"/>
+  
+  <!-- Aircraft Silhouette (side view) -->
+  <g transform="translate(100, 150)">
+    <!-- Main body/wing -->
+    <path d="M 50 100 
+             L 150 60 
+             L 350 60 
+             L 450 80
+             L 500 100
+             L 490 140
+             L 450 150
+             L 350 150
+             L 150 150
+             L 60 130
+             Z" 
+          fill="#1a1a1a" 
+          stroke="none"/>
+    
+    <!-- Nose -->
+    <ellipse cx="50" cy="115" rx="15" ry="25" fill="#1a1a1a"/>
+    
+    <!-- Tail -->
+    <path d="M 490 100 L 540 90 L 545 95 L 540 110 L 490 120 Z" fill="#1a1a1a"/>
+    
+    <!-- Landing gear (main) -->
+    <rect x="200" y="150" width="8" height="35" fill="#1a1a1a"/>
+    <circle cx="204" cy="195" r="12" fill="#1a1a1a"/>
+    <rect x="350" y="150" width="8" height="35" fill="#1a1a1a"/>
+    <circle cx="354" cy="195" r="12" fill="#1a1a1a"/>
+    
+    <!-- Landing gear (nose) -->
+    <rect x="80" y="140" width="6" height="25" fill="#1a1a1a"/>
+    <circle cx="83" cy="172" r="8" fill="#1a1a1a"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">
+    AMPEL360 BWB H₂ Hy-E Q100 INTEGRA
+  </text>
+  <text x="400" y="345" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">
+    Blended Wing Body • Hydrogen Fuel Cell • Carbon Negative
+  </text>
+  
+  <!-- Document info -->
+  <text x="750" y="385" font-family="Arial, sans-serif" font-size="9" text-anchor="end" fill="#999">
+    AMPEL360-02-10-00-SIL-001 | Rev 1.0
+  </text>
+</svg>

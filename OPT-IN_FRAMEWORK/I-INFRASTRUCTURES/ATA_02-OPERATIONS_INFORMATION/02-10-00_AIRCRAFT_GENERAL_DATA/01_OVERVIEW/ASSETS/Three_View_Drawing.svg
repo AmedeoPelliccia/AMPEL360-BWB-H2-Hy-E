@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <title>AMPEL360 BWB H2 Hy-E Three View Drawing</title>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">
+    AMPEL360 BWB H₂ Hy-E Q100 INTEGRA
+  </text>
+  <text x="600" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#666">
+    Three View Drawing - Blended Wing Body Configuration
+  </text>
+  
+  <!-- Top View -->
+  <g transform="translate(200, 150)">
+    <text x="200" y="-10" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">TOP VIEW</text>
+    <ellipse cx="200" cy="100" rx="160" ry="80" fill="none" stroke="#000" stroke-width="2"/>
+    <line x1="40" y1="100" x2="0" y2="100" stroke="#000" stroke-width="2"/>
+    <line x1="360" y1="100" x2="400" y2="100" stroke="#000" stroke-width="2"/>
+    <text x="200" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      Wingspan: 80m | Length: 55m
+    </text>
+  </g>
+  
+  <!-- Front View -->
+  <g transform="translate(200, 400)">
+    <text x="200" y="-10" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">FRONT VIEW</text>
+    <path d="M 40 50 L 200 20 L 360 50 L 360 120 L 200 140 L 40 120 Z" fill="none" stroke="#000" stroke-width="2"/>
+    <rect x="180" y="140" width="40" height="30" fill="none" stroke="#000" stroke-width="2"/>
+    <text x="200" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      Height: 14.5m | Wing Area: 845m²
+    </text>
+  </g>
+  
+  <!-- Side View -->
+  <g transform="translate(650, 150)">
+    <text x="200" y="-10" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">SIDE VIEW</text>
+    <path d="M 20 100 L 100 70 L 300 70 L 380 100 L 370 120 L 100 120 Z" fill="none" stroke="#000" stroke-width="2"/>
+    <circle cx="100" cy="140" r="15" fill="none" stroke="#000" stroke-width="2"/>
+    <circle cx="300" cy="140" r="15" fill="none" stroke="#000" stroke-width="2"/>
+    <text x="200" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      Overall Length: 55m
+    </text>
+  </g>
+  
+  <!-- Specifications Box -->
+  <rect x="50" y="650" width="1100" height="120" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="600" y="680" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">
+    KEY SPECIFICATIONS
+  </text>
+  <text x="70" y="710" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    • ICAO Code: F (52m &lt; Wingspan ≤ 65m)
+  </text>
+  <text x="70" y="730" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    • Propulsion: 4 × 2.5 MW Hydrogen Fuel Cells
+  </text>
+  <text x="70" y="750" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    • MTOW: 185,000 kg | Passengers: 220
+  </text>
+  <text x="600" y="710" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    • Design Range: 6,500 km (3,500 NM)
+  </text>
+  <text x="600" y="730" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    • Cruise Speed: M0.82 (470 kt)
+  </text>
+  <text x="600" y="750" font-family="Arial, sans-serif" font-size="11" fill="#333">
+    • Service Ceiling: FL450 (13,700 m)
+  </text>
+  
+  <!-- Document Info -->
+  <text x="1150" y="790" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">
+    Doc: AMPEL360-02-10-00-DWG-001 | Rev: 1.0 | Date: 2025-11-05
+  </text>
+</svg>
