@@ -1,0 +1,3 @@
+# 03 REQUIREMENTS
+
+This directory contains 03 REQUIREMENTS documentation for 55-80_STRUCTURAL_JOINTS_AND_FITTINGS.

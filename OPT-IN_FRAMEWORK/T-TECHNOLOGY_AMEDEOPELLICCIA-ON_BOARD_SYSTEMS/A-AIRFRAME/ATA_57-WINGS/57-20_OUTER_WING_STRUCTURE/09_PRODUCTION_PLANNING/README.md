@@ -1,0 +1,3 @@
+# 09 PRODUCTION PLANNING
+
+This directory contains 09 PRODUCTION PLANNING documentation for 57-20_OUTER_WING_STRUCTURE.

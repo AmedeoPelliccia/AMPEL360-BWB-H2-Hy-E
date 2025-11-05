@@ -1,0 +1,3 @@
+# 06 ENGINEERING
+
+This directory contains 06 ENGINEERING documentation for 56-90_MONITORING_AND_INSPECTION_SYSTEMS.

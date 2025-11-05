@@ -1,0 +1,3 @@
+# 10 CERTIFICATION
+
+This directory contains 10 CERTIFICATION documentation for 57-80_WING_STRUCTURAL_JOINTS.
