@@ -1,0 +1,5 @@
+DPP_ID,Asset_Name,Serial_Number,Manufacturer,Installation_Date,Status,Blockchain_Hash
+DPP-H2-001,Refueling Receptacle,SN001,HydroTech Systems,2025-10-15,Active,0x7a3f2b1c9d4e6f8a
+DPP-H2-002,Main Valve Assembly,SN001,ValveTech GmbH,2025-10-16,Active,0x8b4g3c2d0e5f7a9b
+DPP-H2-003,Leak Sensor Array,SN001,SafeSense Inc,2025-10-17,Active,0x9c5h4d3e1f6g8b0c
+DPP-H2-004,Pressure Transducer,SN001,PressureTech Ltd,2025-10-18,Active,0x0d6i5e4f2g7h9c1d
