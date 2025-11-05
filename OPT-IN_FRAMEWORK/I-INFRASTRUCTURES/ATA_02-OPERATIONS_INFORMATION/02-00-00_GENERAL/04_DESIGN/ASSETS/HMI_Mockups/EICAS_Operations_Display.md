@@ -2,6 +2,9 @@
 
 This file represents a placeholder for the EICAS (Engine Indicating and Crew Alerting System) Operations Display mockup.
 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/6b4f0687-cff8-44af-bac9-838f003a8201" />
+
+
 ## Display Content
 
 The EICAS Operations Display shows:
