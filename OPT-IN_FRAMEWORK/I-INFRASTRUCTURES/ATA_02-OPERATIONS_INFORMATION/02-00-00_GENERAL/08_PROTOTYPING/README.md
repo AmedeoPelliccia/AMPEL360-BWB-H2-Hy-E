@@ -109,7 +109,7 @@ The prototyping phase validates operational concepts, procedures, and interfaces
 ### Training Materials (Complete)
 - ✅ Type rating syllabus (42 days, 168 hours)
 - ✅ H₂ safety training (1 day, 8 hours)
-- ✅ CAOS training course (2 days, 16-20 hours)
+- ✅ CAOS training course (2 days, 16 hours initially, extended to 20 hours)
 - ✅ CBT modules outline (10 modules planned)
 
 ### Simulator Scenarios (Complete)

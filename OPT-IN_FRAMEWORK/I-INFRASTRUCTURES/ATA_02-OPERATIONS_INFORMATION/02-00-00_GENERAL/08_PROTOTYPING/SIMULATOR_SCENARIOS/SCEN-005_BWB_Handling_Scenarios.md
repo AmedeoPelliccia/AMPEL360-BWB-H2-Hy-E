@@ -149,8 +149,8 @@
 
 ## Scenario 5.6: BWB Unusual Attitude Recovery
 
-**Phase:** Various
-**Surprise element
+**Phase:** Various  
+**Surprise element:** Introduced without warning
 
 **Training Objectives:**
 - Recognize unusual attitude
