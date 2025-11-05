@@ -1,0 +1,3 @@
+# 12 ASSETS MANAGEMENT
+
+This directory contains 12 ASSETS MANAGEMENT documentation for 57-40_TRAILING_EDGE_SYSTEMS.

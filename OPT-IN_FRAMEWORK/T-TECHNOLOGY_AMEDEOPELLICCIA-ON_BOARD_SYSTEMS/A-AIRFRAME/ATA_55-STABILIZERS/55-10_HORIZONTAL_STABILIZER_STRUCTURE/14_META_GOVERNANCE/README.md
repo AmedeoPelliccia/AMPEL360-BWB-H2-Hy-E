@@ -1,0 +1,3 @@
+# 14 META GOVERNANCE
+
+This directory contains 14 META GOVERNANCE documentation for 55-10_HORIZONTAL_STABILIZER_STRUCTURE.
