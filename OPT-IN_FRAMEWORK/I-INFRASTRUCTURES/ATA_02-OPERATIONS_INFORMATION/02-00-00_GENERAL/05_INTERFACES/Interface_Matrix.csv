@@ -1,0 +1,11 @@
+ICD_ID,From_System,To_System,Interface_Type,Data_Rate,Criticality,Protocol,Status
+ICD-02-00-05-001,ATA-02,ATA-05,Scheduled Data,Daily,Medium,Manual/Digital,Active
+ICD-02-00-12-001,ATA-02,ATA-12,Operational,Real-time,Critical,Digital,Active
+ICD-02-00-21-001,ATA-02,ATA-21,Control,100ms,Critical,ARINC-664,Active
+ICD-02-00-24-001,ATA-02,ATA-24,Monitoring,10ms,Critical,ARINC-664,Active
+ICD-02-00-28-001,ATA-02,ATA-28,Control/Monitor,10ms,Critical,ARINC-664,Active
+ICD-02-00-47-001,ATA-02,ATA-47,Control,100ms,Critical,ARINC-664,Active
+ICD-02-00-71-001,ATA-02,ATA-71,Control/Monitor,10ms,Critical,ARINC-664,Active
+ICD-02-00-95-001,ATA-02,ATA-95,Bidirectional,100ms,High,CAOS-API,Active
+ICD-02-00-EXT-010,ATA-02,H2-Supply,Procedural,Manual,Critical,ISO-19881,Active
+ICD-02-00-EXT-020,ATA-02,ATC,Data Exchange,Real-time,Critical,CPDLC/ACARS,Active

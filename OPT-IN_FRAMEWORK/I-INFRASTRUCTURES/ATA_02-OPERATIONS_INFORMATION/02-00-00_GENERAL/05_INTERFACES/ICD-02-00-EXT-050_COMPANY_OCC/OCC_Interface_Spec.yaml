@@ -1,0 +1,28 @@
+---
+interface_id: ICD-02-00-EXT-050
+version: 1.0.0
+protocol: ACARS/SATCOM
+
+operations_control:
+  position_reports_minutes: 15
+  emergency_notification: IMMEDIATE
+  data_sharing: REAL_TIME
+  
+dispatch:
+  release_time_minutes: 60
+  h2_fuel_verification: REQUIRED
+  h2_alternates: CONFIRMED
+  flight_plan: COMPUTERIZED
+  
+maintenance_control:
+  fault_reporting: REAL_TIME
+  caos_integration: PREDICTIVE_ALERTS
+  mel_tracking: AUTOMATIC
+  fleet_trends: ANALYZED
+
+caos_integration:
+  aircraft_state_sharing: ENABLED
+  predictive_analytics: SHARED
+  fleet_optimization: ACTIVE
+  automated_alerting: ENABLED
+---

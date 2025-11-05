@@ -1,0 +1,25 @@
+---
+interface_id: ICD-02-00-EXT-030
+version: 1.0.0
+protocol: IWXXM/JSON
+
+weather_sources:
+  METAR:
+    update_frequency_minutes: 30
+    format: IWXXM_3.0
+  TAF:
+    update_frequency_hours: 6
+    forecast_hours: 30
+  SIGMET:
+    update_frequency_minutes: 15
+    priority: HIGH
+  winds_aloft:
+    update_frequency_hours: 6
+    altitudes_ft: [FL050, FL100, FL180, FL240, FL300, FL340, FL390, FL410]
+
+integration:
+  pre_flight: FULL_BRIEFING
+  in_flight: DATALINK_UPDATES
+  caos_optimization: ENABLED
+  turbulence_prediction: ML_ENHANCED
+---

@@ -1,0 +1,38 @@
+---
+interface_id: ICD-02-00-EXT-040
+version: 1.0.0
+protocol: JSON/REST
+
+fms_interface:
+  capabilities:
+    - ROUTE_PLANNING
+    - PERFORMANCE_CALCULATION
+    - FUEL_PLANNING_H2
+    - 4D_TRAJECTORY
+    - VNAV_LNAV
+  
+  h2_specific:
+    fuel_weight_tracking: CRYOGENIC
+    fuel_cell_modeling: ENABLED
+    diversion_airports: H2_CAPABLE_ONLY
+    boil_off_compensation: AUTOMATIC
+
+performance_database:
+  takeoff:
+    mtow_kg: 150000
+    runway_m: [2200, 3500]
+    temperature_c: [-40, 50]
+  cruise:
+    altitude_ft: [25000, 41000]
+    speed_mach: [0.74, 0.84]
+    fuel_burn_kg_per_hr: [400, 800]
+  landing:
+    mlw_kg: 130000
+    runway_m: [1800, 2500]
+
+caos_integration:
+  route_optimization: AI_DRIVEN
+  performance_updates: REAL_TIME
+  fuel_management: PREDICTIVE
+  fleet_learning: ENABLED
+---
