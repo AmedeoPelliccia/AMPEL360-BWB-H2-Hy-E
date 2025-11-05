@@ -15,13 +15,13 @@
 
 ## Fuel Capacity
 
-| Tank | Capacity (kg H₂) | Location |
-|------|------------------|----------|
+| Tank | Capacity (kg) | Location |
+|------|---------------|----------|
 | Center Tank 1 | 2,500 | Forward center body |
 | Center Tank 2 | 2,000 | Aft center body |
 | Left Outboard | 1,750 | Left wing |
 | Right Outboard | 1,750 | Right wing |
-| **Total Usable** | **8,000** | All tanks |
+| **Total Usable** | **8,000** | All tanks (H₂) |
 
 ## Payload
 

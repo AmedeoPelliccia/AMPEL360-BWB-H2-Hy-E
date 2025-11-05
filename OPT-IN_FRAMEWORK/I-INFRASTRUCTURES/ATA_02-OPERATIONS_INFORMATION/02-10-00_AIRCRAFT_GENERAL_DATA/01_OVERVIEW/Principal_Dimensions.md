@@ -32,7 +32,8 @@
 
 ## Airport Compatibility
 
-**ICAO Code:** F (52m < Wingspan ≤ 65m)  
+**ICAO Code:** F (65m < Wingspan ≤ 80m)  
+**Note:** 80m wingspan is at upper limit of Code F  
 **Taxiway Width Required:** 25 m minimum  
 **Gate Position:** Wide-body stands, special BWB adapter required  
 **Turning Radius:** 42 m (wingtip to centerline)

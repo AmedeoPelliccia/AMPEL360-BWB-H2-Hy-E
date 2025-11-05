@@ -15,7 +15,7 @@ Rate_of_Climb_SL,18,m/s,MTOW,3540 ft/min
 Takeoff_Distance_MTOW,2600,m,Sea level ISA,—
 Landing_Distance_MLW,1900,m,Dry runway,—
 Balanced_Field_Length,2800,m,MTOW sea level,—
-Fuel_Consumption,0.8,kg H₂/100 ASK,—,vs 2.5 kg Jet-A
+Fuel_Consumption,0.8,kg H₂/100 ASK,—,vs 2.5 kg Jet-A/100 ASK
 Energy_Efficiency,68,%,Better vs conventional,Turbofan comparison
 Lift_to_Drag_Ratio,22,—,Cruise,vs 17 conventional
 Specific_Range,8.1,km/kg H₂,Optimum cruise,—
