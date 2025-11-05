@@ -1,0 +1,8 @@
+Req_ID,Category,Title,Priority,Status,Source,Verification
+RQ-02-10-00-001,General,Aircraft Model Designation,Critical,Approved,Type_Certificate,Inspection
+RQ-02-10-10-001,Dimensions,Wingspan 80m ±0.5m,Critical,Approved,Design_Spec,Measurement
+RQ-02-10-20-001,Weights,MTOW 185000 kg,Critical,Approved,CS-25.25,Test
+RQ-02-10-20-005,Weights,CG Range 15-42% MAC,Critical,Approved,Stability_Analysis,Analysis
+RQ-02-10-30-003,Capacities,H2 Capacity 8000 kg usable,Critical,Approved,Mission_Profile,Inspection
+RQ-02-10-40-001,Performance,Range 3500 NM @ 220 pax,High,Approved,Market_Req,Flight_Test
+RQ-02-10-50-003,Systems,CAOS Digital Twin <100ms sync,High,Approved,CAOS_Spec,Test
