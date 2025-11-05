@@ -1,0 +1,11 @@
+Task_Number,Task_Description,Interval_FH,Interval_Calendar,Duration_Hours,Zone,Skill_Required
+TC-001,Pre-Flight Inspection,Before_Flight,N/A,0.5,All,Licensed Mechanic
+TC-002,H₂ System Daily Check,Every_24hr,N/A,0.5,Fuel Area,H₂ Qualified
+TC-003,Fuel Cell Performance Test,500,90_days,2.0,Power Bay,Electrical
+TC-004,H₂ Leak Detection Test,500,90_days,1.0,Fuel Area,H₂ Qualified
+TC-005,Digital Twin Sync Verification,500,90_days,0.5,Flight Deck,Avionics
+TC-006,Cryogenic Tank Inspection,3000,18_months,8.0,Fuel Area,H₂ Specialist
+TC-007,Pressure Relief Device Test,N/A,Annual,2.0,Fuel Area,H₂ Qualified
+TC-008,Fuel Cell Stack Overhaul,5000,36_months,40.0,Shop,Fuel Cell Tech
+TC-009,CAOS System Software Update,N/A,Quarterly,1.0,Flight Deck,Avionics
+TC-010,Structural NDT Inspection,3000,18_months,12.0,Structure,NDT Level II
