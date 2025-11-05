@@ -1,0 +1,6 @@
+Supply_Chain_ID,DPP_ID,Manufacturer,Manufacturing_Date,Shipment_Date,Received_Date,Status
+SC-001,DPP-H2-001,HydroTech Systems,2025-09-15,2025-09-20,2025-09-25,Complete
+SC-002,DPP-MAT-H2-001,CompositeTech Inc,2025-09-10,2025-09-12,2025-09-15,Complete
+SC-003,DPP-CAOS-001,AMPEL360 AI Team,2025-09-05,2025-09-08,2025-09-10,Complete
+SC-004,DPP-H2-002,ValveTech GmbH,2025-09-18,2025-09-22,2025-09-27,Complete
+SC-005,DPP-MAT-STR-001,FiberTech SA,2025-09-08,2025-09-10,2025-09-12,Complete

@@ -1,0 +1,4 @@
+Asset_ID,Change_Date,Change_Type,Description,Changed_By,Blockchain_Tx
+DPP-H2-001,2025-10-20,Configuration,Updated pressure thresholds,Maintenance Team,0x2f8k7g6h4i9j1e3f
+DPP-SW-CAOS-001,2025-11-03,Configuration,Updated neural network parameters,AI Team,0x3g9l8h7i5j0k2f4g
+DPP-CAOS-001,2025-10-12,Firmware,Firmware update to v1.5,IT Team,0x4h0m9i8j6k1l3g5h

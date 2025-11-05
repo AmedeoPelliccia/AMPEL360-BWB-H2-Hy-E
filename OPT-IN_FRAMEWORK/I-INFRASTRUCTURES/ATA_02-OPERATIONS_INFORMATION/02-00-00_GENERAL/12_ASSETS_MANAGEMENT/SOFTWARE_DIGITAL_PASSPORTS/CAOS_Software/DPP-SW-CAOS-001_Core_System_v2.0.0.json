@@ -1,0 +1,53 @@
+{
+  "digitalProductPassport": {
+    "version": "1.0",
+    "id": "DPP-SW-CAOS-001",
+    "blockchainHash": "0x9c4e8d7f3a2b1c5e8f4d9a6b3c7e2f1a8d5b9c4e",
+    "timestamp": "2025-11-01T10:00:00Z",
+    
+    "product": {
+      "name": "CAOS Core System",
+      "type": "Software",
+      "version": "v2.0.0",
+      "manufacturer": "AMPEL360 AI Team",
+      "partNumber": "CAOS-CORE-2.0",
+      "description": "Computer Aided Operations & Services - Core AI System"
+    },
+    
+    "technical": {
+      "platform": "Linux x86_64",
+      "language": "Python 3.11 / C++",
+      "dependencies": "See SBOM",
+      "certifications": ["DO-178C Level B", "EU AI Act Compliant"],
+      "securityLevel": "High",
+      "encryptionStandard": "AES-256"
+    },
+    
+    "lifecycle": {
+      "developmentStart": "2024-06-01",
+      "firstRelease": "2025-11-01",
+      "expectedEOL": "2035-11-01",
+      "supportLevel": "Active Development"
+    },
+    
+    "verification": {
+      "codeReview": "Complete",
+      "securityAudit": "Complete - 2025-10-25",
+      "functionalTests": "Pass - 100% coverage",
+      "integrationTests": "Pass",
+      "certificationStatus": "In Progress"
+    },
+    
+    "compliance": {
+      "openSourceLicenses": ["Apache-2.0", "MIT"],
+      "exportControl": "EAR99",
+      "dataPrivacy": "GDPR Compliant"
+    },
+    
+    "linkedAssets": [
+      "DPP-CAOS-001 (Hardware)",
+      "DPP-SW-CAOS-002 (Neural Network Models)",
+      "DPP-SW-CAOS-003 (Digital Twin Engine)"
+    ]
+  }
+}
