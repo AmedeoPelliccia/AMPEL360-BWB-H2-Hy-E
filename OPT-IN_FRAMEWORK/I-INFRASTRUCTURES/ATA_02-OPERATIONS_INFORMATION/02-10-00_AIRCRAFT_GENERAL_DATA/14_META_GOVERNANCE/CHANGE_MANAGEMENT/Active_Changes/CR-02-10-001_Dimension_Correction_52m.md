@@ -20,9 +20,9 @@ The initial aircraft design specifies a wingspan of 80 meters, which was based o
 Correct the wingspan dimension from 80m to 52m to reflect refined design analysis and operational requirements.
 
 ### Rationale
-1. **Airport Compatibility:** 52m wingspan aligns with ICAO Code Letter C, enabling access to a wider range of airports worldwide
+1. **Airport Compatibility:** 52m wingspan qualifies for ICAO Code Letter D (36m-52m range), enabling access to a wider range of airports worldwide compared to Code E (52m-65m) or Code F (65m-80m)
 2. **Structural Efficiency:** Optimized span reduces structural weight while maintaining aerodynamic performance
-3. **Gate Compatibility:** Standard airport gates can accommodate 52m wingspan without special handling
+3. **Gate Compatibility:** Code D airports are more widely available than Code E/F facilities
 4. **Manufacturing Feasibility:** Reduced span simplifies manufacturing and assembly processes
 5. **Regulatory Compliance:** Better alignment with existing certification standards
 
