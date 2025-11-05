@@ -1,0 +1,9 @@
+Recipient_Group,AFM,FCOM,QRH,WBM,MEL,Training,CAOS_Docs,Format,Update_Frequency
+Flight_Crew,Required,Required,Required,Required,Reference,Required,Required,Digital_Primary,Automatic
+Dispatchers,Reference,Required,Reference,Required,Required,Optional,Required,Digital,Automatic
+Maintenance,Reference,Optional,Reference,Reference,Required,Required,Required,Digital,Automatic
+Management,Required,Required,Optional,Reference,Reference,Optional,Required,Digital,Monthly
+Regulatory_Authorities,Required,Required,Required,Required,Required,Optional,Reference,Print_Digital,As_Required
+Training_Centers,Required,Required,Required,Required,Required,Required,Required,Digital_Print,Quarterly
+Ground_Operations,Reference,Reference,Optional,Required,Reference,Required,Required,Digital,Automatic
+Simulator_Facilities,Reference,Required,Required,Reference,Reference,Required,Required,Digital,Automatic
