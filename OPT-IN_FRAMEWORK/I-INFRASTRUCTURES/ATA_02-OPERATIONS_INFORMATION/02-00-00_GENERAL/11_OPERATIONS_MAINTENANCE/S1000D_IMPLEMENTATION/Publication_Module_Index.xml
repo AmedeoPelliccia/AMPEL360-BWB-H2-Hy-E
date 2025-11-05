@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_6-0/xml_schema_flat/pm.xsd">
+  <identAndStatusSection>
+    <pmAddress>
+      <pmIdent>
+        <pmCode modelIdentCode="AMP" pmIssuer="AMPEL360" pmNumber="00001" pmVolume="00"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </pmIdent>
+      <pmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <pmTitle>AMPEL360 BWB H₂ Hy-E Q100 - Aircraft Maintenance Manual</pmTitle>
+      </pmAddressItems>
+    </pmAddress>
+    <pmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360 Aerospace</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Technical Publications</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 BWB H₂ Hy-E Q100 aircraft</simplePara>
+        </displayText>
+      </applic>
+    </pmStatus>
+  </identAndStatusSection>
+  <content>
+    <pmEntry>
+      <pmEntryTitle>ATA 02 - OPERATIONS INFORMATION</pmEntryTitle>
+      <pmEntry>
+        <pmEntryTitle>02-00-00 - GENERAL</pmEntryTitle>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02" 
+                    subSystemCode="0" subSubSystemCode="0" assyCode="00" 
+                    disassyCode="00" disassyCodeVariant="A" 
+                    infoCode="941" infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02" 
+                    subSystemCode="0" subSubSystemCode="0" assyCode="00" 
+                    disassyCode="00" disassyCodeVariant="A" 
+                    infoCode="018" infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </pmEntry>
+    </pmEntry>
+  </content>
+</pm>

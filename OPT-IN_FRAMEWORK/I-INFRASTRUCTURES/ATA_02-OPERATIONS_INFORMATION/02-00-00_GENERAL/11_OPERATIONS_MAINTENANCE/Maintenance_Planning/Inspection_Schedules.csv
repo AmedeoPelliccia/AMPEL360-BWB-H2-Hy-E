@@ -1,0 +1,8 @@
+Inspection_Type,Interval_FH,Interval_Calendar,Items_Inspected,Estimated_Duration
+Pre-Flight,Before_Flight,N/A,External/Internal Visual,30_min
+Daily,N/A,24_hours,Systems Status/Fluids,2_hours
+A-Check,500,90_days,Detailed Inspection/Tests,10_hours
+C-Check,3000,18_months,Comprehensive/Overhauls,1_week
+D-Check,25000,5_years,Complete Teardown,4_weeks
+H₂_Special,N/A,Annual,Cryogenic System,4_hours
+CAOS_Health,250,Quarterly,CAOS System/Digital Twin,2_hours
