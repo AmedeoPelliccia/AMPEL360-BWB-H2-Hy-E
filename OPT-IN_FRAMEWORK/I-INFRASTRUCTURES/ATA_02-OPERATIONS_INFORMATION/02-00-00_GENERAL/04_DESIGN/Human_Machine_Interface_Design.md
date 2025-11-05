@@ -76,7 +76,7 @@
 - ⚪ White: Advisory/information
 - 🔵 Blue: System status/mode
 
-**H2 System Specific:**
+**H₂ System Specific:**
 - 🟢 Green: No leaks detected, parameters normal
 - 🟡 Amber: Minor leak detected OR parameter caution
 - 🔴 Red: Major leak OR emergency condition
