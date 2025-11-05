@@ -1,0 +1,11 @@
+Part_Number,Description,Current_Status,Obsolescence_Risk,Manufacturer_Status,Estimated_EOL_Date,Mitigation_Strategy,Alternative_Part,Action_Required,Owner
+PNR-02-EFB-001,EFB Tablet Hardware,Active,Medium,Production,2028-12-31,Dual_Source,PNR-02-EFB-001B,Monitor,Procurement
+PNR-CAOS-HW-001-01,CPU Module,Active,Low,Production,2030-06-30,Technology_Refresh,Under_Development,None,Engineering
+PNR-02-32-001-02,Locking Mechanism,Active,Low,Production,2032-12-31,Standard,None,None,Engineering
+PNR-02-GSE-002-01,Power Generator,Active,Medium,Mature,2027-12-31,Last_Time_Buy,Under_Evaluation,Plan_Purchase,Procurement
+PNR-CAOS-HW-002-01,Temperature Sensors,Active,Low,Production,2029-12-31,Multi_Source,Available,None,Procurement
+PNR-02-EMG-002-01,Fire Extinguisher (Halon),Active,High,Phase_Out,2026-06-30,Substitute_Material,PNR-02-EMG-002-01A,Immediate,Safety
+PNR-CAOS-HW-001-02,Memory Module,Active,Medium,Production,2028-12-31,Technology_Upgrade,PNR-CAOS-HW-001-02C,Monitor,Engineering
+PNR-02-32-003-01,H2 Leak Detector,Active,Low,Production,2031-12-31,Standard,None,None,Engineering
+PNR-02-PUB-001,CSDB Server,Active,Medium,Mature,2027-12-31,Cloud_Migration,In_Development,Plan,IT
+PNR-02-EFB-001-02,Battery Pack,Active,Medium,Production,2028-06-30,Technology_Refresh,PNR-02-EFB-001-02A,Monitor,Procurement

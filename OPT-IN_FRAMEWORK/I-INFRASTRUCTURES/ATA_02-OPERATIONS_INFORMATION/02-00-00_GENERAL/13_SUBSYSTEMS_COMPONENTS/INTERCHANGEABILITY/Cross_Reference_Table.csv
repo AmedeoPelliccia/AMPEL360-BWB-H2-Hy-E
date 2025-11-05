@@ -1,0 +1,11 @@
+Primary_PNR,Description,Alternate_PNR,Alternate_Description,Cross_Reference_Type,Notes
+PNR-02-32-001,Refueling Panel Assembly,N/A,N/A,OEM_Part,AMPEL360 proprietary design
+PNR-02-32-001-01,Panel Door,PNR-02-32-001-01A,Panel Door (Improved),Upgrade,Improved UV resistance
+PNR-02-EFB-001,EFB Tablet Hardware,PNR-02-EFB-001B,EFB Tablet Hardware (Panasonic),Alternate_Manufacturer,Software update required
+PNR-CAOS-HW-001-02,Memory Module,PNR-CAOS-HW-001-02C,Memory Module (128GB),Capacity_Upgrade,Requires firmware v2.1+
+PNR-02-EMG-002-01,Fire Extinguisher (Halon),PNR-02-EMG-002-01A,Fire Extinguisher (Clean Agent),Environmental_Substitute,Clean agent alternative
+PNR-02-32-002-03,Check Valve,PNR-02-32-002-03A,Check Valve (Enhanced),Performance_Upgrade,Improved flow characteristics
+PNR-CAOS-HW-002-01,Temperature Sensors,PNR-CAOS-HW-002-01B,Temperature Sensors (Type-J),Alternate_Type,Same accuracy different thermocouple
+PNR-02-GSE-001-01,Towbar Assembly,PNR-02-GSE-001-01A,Towbar Assembly (Lightweight),Design_Improvement,Reduced operator strain
+PNR-02-EFB-001-02,Battery Pack,PNR-02-EFB-001-02A,Battery Pack (12000mAh),Capacity_Upgrade,Extended runtime
+PNR-02-32-001-03,Seal Kit,PNR-02-32-001-03B,Seal Kit (Extended Temp),Temperature_Range_Extension,Wider operating temperature
