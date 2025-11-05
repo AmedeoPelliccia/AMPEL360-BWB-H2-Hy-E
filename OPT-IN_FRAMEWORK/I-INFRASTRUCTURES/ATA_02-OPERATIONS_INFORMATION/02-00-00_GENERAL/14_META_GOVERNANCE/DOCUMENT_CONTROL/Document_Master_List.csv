@@ -1,0 +1,8 @@
+Doc_ID,Title,Type,Version,Status,Owner,Last_Updated,Next_Review,Approval_Status
+02-00-00-README,ATA 02-00-00 Overview,Technical,1.0.0,Released,Ops_Team,2025-11-05,2026-05-05,Approved
+02-00-01-OVERVIEW,Operations Philosophy,Technical,1.2.0,Released,Ops_Team,2025-10-20,2026-04-20,Approved
+02-00-02-SAFETY,Safety Framework,Safety,2.0.0,Released,Safety_Team,2025-10-25,2026-04-25,Approved
+02-00-03-REQUIREMENTS,Requirements Master,Requirements,1.5.0,Released,Systems_Eng,2025-11-01,2026-05-01,Approved
+02-00-04-DESIGN,Design Standards,Design,1.3.0,Released,Design_Team,2025-11-03,2026-05-03,Approved
+02-00-05-INTERFACES,Interface Control,Interface,1.1.0,Released,Integration,2025-11-04,2026-05-04,Approved
+02-00-06-ENGINEERING,Engineering Analysis,Engineering,1.0.0,Active,Analysis_Team,2025-11-05,2026-05-05,In_Review

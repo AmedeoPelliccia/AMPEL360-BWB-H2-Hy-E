@@ -1,0 +1,11 @@
+Doc_ID,Title,Status,Progress_Pct,Owner,Priority,Due_Date,Issues
+02-00-00-README,ATA 02-00-00 Overview,Released,100,Ops_Team,High,2025-11-05,None
+02-00-01-OVERVIEW,Operations Philosophy,Released,100,Ops_Team,High,2025-10-20,None
+02-00-02-SAFETY,Safety Framework,Released,100,Safety_Team,Critical,2025-10-25,None
+02-00-03-REQUIREMENTS,Requirements Master,Released,100,Systems_Eng,High,2025-11-01,None
+02-00-04-DESIGN,Design Standards,Released,100,Design_Team,High,2025-11-03,None
+02-00-05-INTERFACES,Interface Control,Released,100,Integration,Medium,2025-11-04,None
+02-00-06-ENGINEERING,Engineering Analysis,In_Review,85,Analysis_Team,Medium,2025-11-15,Minor_revisions_needed
+02-00-07-V_AND_V,Verification Plan,Draft,60,V&V_Team,High,2025-11-20,Awaiting_test_data
+02-00-08-PROTOTYPING,Prototype Procedures,Draft,40,Proto_Team,Low,2025-12-01,Resource_constraints
+02-00-09-PRODUCTION,Production Plan,Not_Started,0,Production,Medium,2025-12-15,Pending_design_freeze
