@@ -42,7 +42,7 @@
 - Airport info
 - CAOS detailed explanations
 
-## H2 System Synoptic Design
+## H₂ System Synoptic Design
 
 ```
 ┌────────────────────────────────────────┐
