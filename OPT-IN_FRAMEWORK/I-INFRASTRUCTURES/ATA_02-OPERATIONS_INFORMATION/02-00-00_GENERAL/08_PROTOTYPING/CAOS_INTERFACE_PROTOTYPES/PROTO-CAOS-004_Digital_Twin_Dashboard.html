@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTO-CAOS-004 - Digital Twin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 20px;
+        }
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #1f6feb 0%, #0969da 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .metric-card {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+        .metric-label {
+            color: #8b949e;
+            margin-top: 5px;
+        }
+        .twin-visual {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .system-status {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .status-panel {
+            background: #161b22;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #21262d;
+        }
+        .status-ok { color: #3fb950; }
+        .status-warning { color: #d29922; }
+        .status-critical { color: #f85149; }
+        .prediction-panel {
+            background: #1c2128;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #1f6feb;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>✈️ Digital Twin Dashboard - AMPEL360 BWB H2 Hy-E</h1>
+            <p>Real-time physics simulation | Flight BWB-360-042 | Sync: 45ms latency</p>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">580</div>
+                <div class="metric-label">H₂ Tank Pressure (bar)</div>
+                <div class="metric-label" style="color: #3fb950;">▲ Stable</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">97%</div>
+                <div class="metric-label">Fuel Cell Efficiency</div>
+                <div class="metric-label" style="color: #3fb950;">▲ Optimal</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">78%</div>
+                <div class="metric-label">Battery SOC</div>
+                <div class="metric-label" style="color: #d29922;">▼ Monitoring</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">350</div>
+                <div class="metric-label">True Airspeed (kt)</div>
+                <div class="metric-label" style="color: #3fb950;">→ Cruise</div>
+            </div>
+        </div>
+
+        <div class="twin-visual">
+            <h2>3D Aircraft Model Visualization</h2>
+            <svg width="600" height="300" viewBox="0 0 600 300">
+                <!-- Simplified BWB representation -->
+                <defs>
+                    <linearGradient id="bwbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#1f6feb;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#0969da;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Wing body -->
+                <ellipse cx="300" cy="150" rx="250" ry="80" fill="url(#bwbGrad)" opacity="0.8"/>
+                <!-- Winglets -->
+                <path d="M 50 150 L 30 120 L 40 140 Z" fill="#58a6ff"/>
+                <path d="M 550 150 L 570 120 L 560 140 Z" fill="#58a6ff"/>
+                <!-- Center fuselage highlight -->
+                <ellipse cx="300" cy="150" rx="100" ry="60" fill="#1f6feb" opacity="0.6"/>
+                <!-- H2 tank indicators -->
+                <circle cx="280" cy="120" r="12" fill="#3fb950"/>
+                <circle cx="320" cy="120" r="12" fill="#3fb950"/>
+                <text x="300" y="200" text-anchor="middle" fill="#c9d1d9" font-size="14">
+                    Digital Twin - Real-time Simulation
+                </text>
+            </svg>
+            <p style="color: #8b949e;">Live aerodynamic model | Updated every 100ms</p>
+        </div>
+
+        <div class="system-status">
+            <div class="status-panel">
+                <h3>System Health Status</h3>
+                <div class="status-item">
+                    <span>H₂ System</span>
+                    <span class="status-ok">● NORMAL</span>
+                </div>
+                <div class="status-item">
+                    <span>Fuel Cell Stack 1</span>
+                    <span class="status-ok">● OPTIMAL</span>
+                </div>
+                <div class="status-item">
+                    <span>Fuel Cell Stack 2</span>
+                    <span class="status-ok">● OPTIMAL</span>
+                </div>
+                <div class="status-item">
+                    <span>Battery System</span>
+                    <span class="status-warning">● CAUTION</span>
+                </div>
+                <div class="status-item">
+                    <span>BWB Flight Controls</span>
+                    <span class="status-ok">● NORMAL</span>
+                </div>
+            </div>
+
+            <div class="status-panel">
+                <h3>Performance Metrics</h3>
+                <div class="status-item">
+                    <span>Fuel Consumption Rate</span>
+                    <span>4.2 kg/min</span>
+                </div>
+                <div class="status-item">
+                    <span>Range Remaining</span>
+                    <span>2,847 km</span>
+                </div>
+                <div class="status-item">
+                    <span>Endurance</span>
+                    <span>3h 42min</span>
+                </div>
+                <div class="status-item">
+                    <span>L/D Ratio</span>
+                    <span>18.3 (excellent)</span>
+                </div>
+                <div class="status-item">
+                    <span>CO₂ Net Balance</span>
+                    <span class="status-ok">-2.1 kg (negative)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="prediction-panel">
+            <h2>🔮 Predictive Analytics</h2>
+            <div class="status-item">
+                <span><strong>Maintenance Prediction:</strong> Fuel cell stack 1 scheduled maintenance in 487 flight hours</span>
+                <span class="status-ok">No action required</span>
+            </div>
+            <div class="status-item">
+                <span><strong>Weather Impact:</strong> Turbulence expected in 12 minutes (light)</span>
+                <span class="status-ok">Prepare cabin</span>
+            </div>
+            <div class="status-item">
+                <span><strong>Fuel Optimization:</strong> Alternative route available saving 1.8 kg H₂</span>
+                <span style="color: #58a6ff;">Review suggested</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

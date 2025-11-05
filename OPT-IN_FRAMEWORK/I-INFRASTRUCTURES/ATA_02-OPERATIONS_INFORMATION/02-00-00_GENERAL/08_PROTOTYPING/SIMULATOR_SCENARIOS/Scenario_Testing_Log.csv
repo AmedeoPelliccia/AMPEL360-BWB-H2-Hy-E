@@ -1,0 +1,11 @@
+Scenario_ID,Date_Tested,Test_Pilot,Scenario_Type,Result,Issues_Found,Realism_Score,Training_Value,Comments
+SCEN-001,2025-10-01,Capt. Wilson,Normal Ops,Pass,None,9,9,Excellent baseline training
+SCEN-001,2025-10-02,FO Chen,Normal Ops,Pass,Minor CAOS display issue,8,9,Good overall
+SCEN-002,2025-11-04,Safety Team,H2 Emergency,Pass,None,10,10,Essential training - well designed
+SCEN-002,2025-11-04,Capt. Rodriguez,H2 Emergency,Pass,None,9,10,Realistic and valuable
+SCEN-003,2025-10-10,FO Martinez,Fuel Cell Failure,Pass,Stack 2 temp model needs adjustment,8,9,Good but needs refinement
+SCEN-003,2025-10-11,Capt. Anderson,Fuel Cell Failure,Pass,Battery discharge model excellent,9,10,Very realistic
+SCEN-004,2025-10-20,Line Pilot Lee,CAOS Integration,Pass,Advisory timing needs work,7,8,Good concept - refine timing
+SCEN-004,2025-10-21,Training Capt. Davis,CAOS Integration,Pass,Explanation system excellent,9,9,Outstanding CAOS demonstration
+SCEN-005,2025-10-05,Check Pilot Thompson,BWB Handling,Pass,Ground effect perfect,10,10,Captures BWB characteristics well
+SCEN-005,2025-10-06,FO Williams,BWB Handling,Pass,Landing flare needs adjustment,8,9,Good training value

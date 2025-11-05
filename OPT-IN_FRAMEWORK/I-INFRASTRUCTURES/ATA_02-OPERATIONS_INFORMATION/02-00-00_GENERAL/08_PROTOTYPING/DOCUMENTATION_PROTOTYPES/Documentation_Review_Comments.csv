@@ -1,0 +1,9 @@
+Document_ID,Reviewer,Date,Content_Quality,Format,Clarity,Completeness,Usability,Comments,Recommendation
+PROTO-DOC-001,Chief Pilot,2025-10-18,5,5,5,4,5,AFM chapter excellent - minor additions needed,Approve with minor revisions
+PROTO-DOC-001,Regulatory Specialist,2025-10-19,5,5,5,5,5,EASA compliant format,Approve for submission
+PROTO-DOC-002,Line Pilot Chen,2025-10-20,5,4,5,4,5,FCOM section clear and practical,Approve with format updates
+PROTO-DOC-002,Training Captain,2025-10-21,5,5,5,5,5,Excellent startup procedure,Approve for production
+PROTO-DOC-003,Safety Officer,2025-10-22,5,5,5,5,5,QRH procedures clear and actionable,Approve
+PROTO-DOC-003,Check Pilot,2025-10-23,5,5,5,4,5,Memory items well defined,Minor additions then approve
+PROTO-DOC-004,Load Master,2025-10-24,4,4,5,4,4,WBM format good - needs more examples,Add examples then approve
+PROTO-DOC-004,Operations Manager,2025-10-25,5,5,5,5,5,Excellent W&B manual format,Approve
