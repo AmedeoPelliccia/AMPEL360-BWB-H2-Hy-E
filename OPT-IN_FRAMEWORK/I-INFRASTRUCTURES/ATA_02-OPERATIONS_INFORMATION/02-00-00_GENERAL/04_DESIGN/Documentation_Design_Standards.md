@@ -235,16 +235,16 @@ Warnings:
 - Helpful hints
 - Additional context
 
-### H2-Specific Documentation
+### H₂-Specific Documentation
 
 **Safety Information:**
-- H2 properties and hazards
+- H₂ properties and hazards
 - Safety procedures
 - Emergency response
 - PPE requirements
 
 **Procedures:**
-- Normal H2 operations
+- Normal H₂ operations
 - Refueling procedures
 - Emergency procedures
 - Maintenance procedures
