@@ -15,8 +15,6 @@ Date: 2025-11-05
 Version: 1.0
 """
 
-import numpy as np
-import tensorflow as tf
 from typing import List, Dict
 
 class FleetLearningSystem:
@@ -45,15 +43,15 @@ class FleetLearningSystem:
         """
         Share learned insights with fleet
         (anonymized and aggregated)
-        """
-        insight_types = [
-            'optimal_fuel_cell_loading',
-            'efficient_flight_profiles',
-            'maintenance_patterns',
-            'operational_best_practices'
-        ]
         
+        Supported insight types:
+        - optimal_fuel_cell_loading
+        - efficient_flight_profiles
+        - maintenance_patterns
+        - operational_best_practices
+        """
         print(f"Aircraft {aircraft_id} sharing insights...")
+        print(f"  Insights received: {len(insights)} items")
         # Placeholder for insight aggregation
         return None
         
@@ -81,7 +79,10 @@ class FleetLearningSystem:
         return metrics
 
 if __name__ == "__main__":
-    fleet_system = FleetLearningSystem()
     print("CAOS Fleet Learning System - Placeholder Implementation")
     print("Enables continuous improvement across entire aircraft fleet")
     print("Privacy-preserving federated learning approach")
+    
+    # Example usage
+    fleet_system = FleetLearningSystem()
+    fleet_system.share_insights("AMPEL360-001", {"fuel_efficiency": 0.95})

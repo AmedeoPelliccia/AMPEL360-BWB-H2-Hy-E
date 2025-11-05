@@ -13,8 +13,6 @@ Version: 1.0
 """
 
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 from datetime import datetime
 
 class DigitalTwinValidator:
@@ -61,6 +59,9 @@ class DigitalTwinValidator:
             print(f"  {param}: {acc:.2%}")
 
 if __name__ == "__main__":
-    validator = DigitalTwinValidator()
     print("CAOS Digital Twin Validation - Placeholder Implementation")
     print("Actual implementation would validate against flight test data")
+    
+    # Example usage
+    validator = DigitalTwinValidator()
+    validator.load_flight_data("FLIGHT-001")

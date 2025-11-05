@@ -14,11 +14,7 @@ Date: 2025-11-05
 Version: 1.0
 """
 
-import numpy as np
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingRegressor
-from sklearn.neural_network import MLPClassifier
-import joblib
+from sklearn.ensemble import RandomForestClassifier
 
 class PredictiveMaintenanceModel:
     """Predictive maintenance ML model"""
@@ -74,6 +70,9 @@ class PredictiveMaintenanceModel:
         return None
 
 if __name__ == "__main__":
-    model = PredictiveMaintenanceModel()
     print("CAOS Predictive Maintenance Model - Placeholder Implementation")
     print("Predicts failures 500 flight hours in advance with 85% accuracy")
+    
+    # Example usage
+    model = PredictiveMaintenanceModel()
+    model.predict_rul("FUEL_CELL_1", {})

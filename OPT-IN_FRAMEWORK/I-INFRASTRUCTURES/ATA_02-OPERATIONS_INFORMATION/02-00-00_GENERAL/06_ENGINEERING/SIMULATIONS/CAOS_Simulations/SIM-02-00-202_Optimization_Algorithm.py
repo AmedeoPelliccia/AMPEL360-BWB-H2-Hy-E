@@ -16,8 +16,6 @@ Version: 1.0
 """
 
 import numpy as np
-from scipy.optimize import minimize
-import matplotlib.pyplot as plt
 
 class CAOSOptimizer:
     """CAOS multi-objective optimization engine"""
@@ -59,13 +57,15 @@ class CAOSOptimizer:
         Optimize CG position through fuel sequencing
         for best performance in current flight phase
         """
-        # Target CG for different flight phases
-        target_cg = {
-            'cruise': 33.5,  # % MAC
+        # Target CG for different flight phases (% MAC)
+        target_cg_values = {
+            'cruise': 33.5,
             'climb': 32.0,
             'descent': 34.0
         }
         # Placeholder for actual CG optimization
+        # Would use target_cg_values[flight_phase] to optimize fuel sequencing
+        print(f"Optimizing CG for {flight_phase} phase (target: {target_cg_values.get(flight_phase, 33.5)}% MAC)")
         return None
 
 def objective_function(x, *args):
@@ -74,6 +74,9 @@ def objective_function(x, *args):
     return np.sum(x**2)
 
 if __name__ == "__main__":
-    optimizer = CAOSOptimizer()
     print("CAOS Optimization Algorithm - Placeholder Implementation")
     print("8-15% efficiency improvement over baseline operations")
+    
+    # Example usage
+    optimizer = CAOSOptimizer()
+    optimizer.optimize_route("KJFK", "EGLL", {})
