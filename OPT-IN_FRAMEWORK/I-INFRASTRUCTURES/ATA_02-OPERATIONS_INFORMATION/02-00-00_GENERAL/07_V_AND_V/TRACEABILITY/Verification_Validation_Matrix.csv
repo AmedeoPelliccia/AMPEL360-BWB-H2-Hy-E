@@ -1,0 +1,19 @@
+Item_Type,Item_ID,Item_Description,Verification_Method,Verification_Status,Validation_Method,Validation_Status,Overall_Status
+Requirement,RQ-02-00-01-001,CS-25 Compliance,Analysis,Complete,Demonstration,Complete,Complete
+Requirement,RQ-02-00-02-001,Zero Accident Target,Analysis,In Progress,LOSA,Planned,In Progress
+Requirement,RQ-02-00-03-001,Range 3500 NM,Analysis,Complete,Flight Test,Planned,In Progress
+Requirement,RQ-02-00-05-001,H2 Capacity 8000kg,Inspection,Complete,Ground Test,Complete,Complete
+Requirement,RQ-02-00-08-001,Digital Twin Integration,Simulation,Active,Flight Test,Planned,In Progress
+Design,DES-02-00-001,Flight Deck Layout,Review,In Progress,Simulator,Complete,In Progress
+Design,DES-02-00-002,H2 System Interface,Review,Complete,Ground Test,Complete,Complete
+Design,DES-02-00-003,CAOS Integration,Analysis,Active,Simulator,Active,In Progress
+Procedure,PROC-02-00-001,Normal Procedures,Inspection,Complete,Simulator,Complete,Complete
+Procedure,PROC-02-00-002,Abnormal Procedures,Inspection,Complete,Simulator,Complete,Complete
+Procedure,PROC-02-00-003,Emergency Procedures,Inspection,Complete,Simulator,In Progress,In Progress
+Procedure,PROC-02-00-004,H2 Refueling,Inspection,Complete,Ground Test,Complete,Complete
+System,SYS-CAOS-001,CAOS Advisory,Algorithm Test,Active,Simulator,Active,In Progress
+System,SYS-CAOS-002,Digital Twin Sync,Analysis,Active,Simulator,Active,In Progress
+System,SYS-H2-001,H2 Storage,Inspection,Complete,Ground Test,Complete,Complete
+System,SYS-H2-002,H2 Refueling,Test,Complete,Ground Test,Complete,Complete
+Interface,INT-02-00-001,Flight Control Interface,Analysis,In Progress,Simulator,Complete,In Progress
+Interface,INT-02-00-002,CAOS Interface,Test,Active,Simulator,Active,In Progress

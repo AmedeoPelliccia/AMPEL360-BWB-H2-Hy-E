@@ -1,0 +1,4 @@
+Issue_ID,Date_Opened,Severity,Category,Description,Impact,Assigned_To,Status,Target_Closure
+ISS-001,2025-10-28,Low,Documentation,CAOS backup procedure clarity needs improvement,Training material update needed,CAOS Team,In Review,2025-11-15
+ISS-002,2025-10-25,Low,Procedure,Ground crew refueling checklist order optimization,Minor efficiency improvement,Operations Team,Corrective Action Defined,2025-11-20
+ISS-003,2025-11-02,Medium,Simulator,Simulator fidelity for H2 leak sound needs enhancement,Training effectiveness,Simulator Team,Under Investigation,2025-12-01
