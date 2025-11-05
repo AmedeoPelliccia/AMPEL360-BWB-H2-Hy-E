@@ -125,12 +125,12 @@ This directory contains comprehensive certification documentation for the AMPEL3
 
 | Milestone | Authority | Target Date | Status | Critical Path |
 |-----------|-----------|-------------|--------|---------------|
-| Initial Consultation | EASA | 2026-01-15 | Complete | Yes |
-| Special Conditions H₂ | EASA | 2026-03-30 | Active | Yes |
-| AI Certification Approach | EASA/FAA | 2026-04-15 | Planning | Yes |
-| Ground Test Campaign | Both | 2026-06-30 | Planning | Yes |
-| Flight Test Campaign | Both | 2027-03-31 | Planning | Yes |
-| Type Certificate Approval | EASA | 2028-12-31 | Planning | Yes |
+| Initial Consultation | EASA | 2026-01-15 | Planned | Yes |
+| Special Conditions H₂ | EASA | 2026-03-30 | Planned | Yes |
+| AI Certification Approach | EASA/FAA | 2026-04-15 | Planned | Yes |
+| Ground Test Campaign | Both | 2026-06-30 | Planned | Yes |
+| Flight Test Campaign | Both | 2027-03-31 | Planned | Yes |
+| Type Certificate Approval | EASA | 2028-12-31 | Planned | Yes |
 
 **Detailed schedule:** See `Certification_Schedule.csv`
 
@@ -216,16 +216,16 @@ This directory contains comprehensive certification documentation for the AMPEL3
 ## 🤝 Authority Coordination
 
 ### EASA Engagement
-- ✅ Initial consultation complete (2026-01-15)
-- 🔄 Technical working groups active (BWB, H₂, AI)
-- 📅 Quarterly progress reviews scheduled
-- 📝 Special conditions under negotiation
+- 📅 Initial consultation scheduled (2026-01-15)
+- 📋 Technical working groups planned (BWB, H₂, AI)
+- 📅 Quarterly progress reviews to be scheduled
+- 📝 Special conditions proposals in development
 
 ### FAA Coordination
-- ✅ Coordination meeting complete (2026-03-01)
+- 📅 Coordination meeting scheduled (2026-03-01)
 - 📄 Issue papers in development (H₂, BWB, CAOS)
-- 🔄 Concurrent validation approach
-- 🤝 Bilateral agreement leveraged
+- 🔄 Concurrent validation approach planned
+- 🤝 Bilateral agreement framework established
 
 **Meeting records:** `AUTHORITY_MEETINGS/` directory
 
