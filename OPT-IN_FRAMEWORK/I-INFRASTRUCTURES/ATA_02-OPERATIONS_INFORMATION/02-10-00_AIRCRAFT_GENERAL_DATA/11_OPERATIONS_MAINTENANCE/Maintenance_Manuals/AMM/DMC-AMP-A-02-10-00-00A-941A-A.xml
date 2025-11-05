@@ -218,16 +218,17 @@
         <para>
           For additional technical data and procedures, refer to:
         </para>
-        <para>
-          - DMC-AMP-A-02-10-00-00A-018A-A (Technical Data)<randomList>
-            <listItem>
-              <para>DMC-AMP-A-02-10-10-00A-520A-A (Dimension Verification)</para>
-            </listItem>
-            <listItem>
-              <para>DMC-AMP-A-02-10-20-00A-520A-A (Weight Verification)</para>
-            </listItem>
-          </randomList>
-        </para>
+        <randomList>
+          <listItem>
+            <para>DMC-AMP-A-02-10-00-00A-018A-A (Technical Data)</para>
+          </listItem>
+          <listItem>
+            <para>DMC-AMP-A-02-10-10-00A-520A-A (Dimension Verification)</para>
+          </listItem>
+          <listItem>
+            <para>DMC-AMP-A-02-10-20-00A-520A-A (Weight Verification)</para>
+          </listItem>
+        </randomList>
       </levelledPara>
 
     </description>
