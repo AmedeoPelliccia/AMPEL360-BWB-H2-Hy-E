@@ -1,0 +1,10 @@
+Decision_ID,Meeting,CR_Number,Decision,Vote_For,Vote_Against,Abstain,Conditions,Notes
+DEC-001,CCB_Meeting_001,CR-02-00-015,Approved,5,0,0,None,Unanimous approval
+DEC-002,CCB_Meeting_001,CR-02-00-018,Approved,5,0,0,None,Unanimous approval
+DEC-003,CCB_Meeting_002,CR-02-00-028,Approved,4,1,0,Minor_revisions,One member concern re scope
+DEC-004,CCB_Meeting_002,CR-02-00-035,Approved,5,0,0,EASA_notification,Critical safety update
+DEC-005,CCB_Meeting_002,CR-02-00-042,Approved,5,0,0,None,Unanimous approval
+DEC-006,CCB_Meeting_003,CR-02-00-048,Approved,5,0,0,None,Unanimous approval
+DEC-007,CCB_Meeting_003,CR-02-00-051,Approved,5,0,0,None,Unanimous approval
+DEC-008,CCB_Meeting_003,CR-02-00-001,Approved,5,0,0,High_priority,CAOS integration important
+DEC-009,Emergency,CR-02-00-002,Approved,5,0,0,EASA_review_required,Critical safety issue

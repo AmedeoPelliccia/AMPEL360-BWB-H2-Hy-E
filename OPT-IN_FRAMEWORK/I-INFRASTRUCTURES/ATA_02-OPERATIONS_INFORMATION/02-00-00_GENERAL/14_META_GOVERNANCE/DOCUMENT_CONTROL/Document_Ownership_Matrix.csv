@@ -1,0 +1,11 @@
+Doc_ID,Title,Owner_Name,Owner_Role,Owner_Email,Backup_Owner,Department
+02-00-00-README,ATA 02-00-00 Overview,John Smith,Operations Manager,j.smith@ampel360.aero,Jane Doe,Operations
+02-00-01-OVERVIEW,Operations Philosophy,John Smith,Operations Manager,j.smith@ampel360.aero,Jane Doe,Operations
+02-00-02-SAFETY,Safety Framework,Maria Garcia,Safety Manager,m.garcia@ampel360.aero,Robert Chen,Safety
+02-00-03-REQUIREMENTS,Requirements Master,David Lee,Systems Engineer,d.lee@ampel360.aero,Sarah Johnson,Systems Engineering
+02-00-04-DESIGN,Design Standards,Emily Brown,Design Lead,e.brown@ampel360.aero,Michael Wilson,Design
+02-00-05-INTERFACES,Interface Control,Thomas Anderson,Integration Lead,t.anderson@ampel360.aero,Lisa Martinez,Integration
+02-00-06-ENGINEERING,Engineering Analysis,Robert Chen,Analysis Lead,r.chen@ampel360.aero,David Lee,Engineering
+02-00-07-V_AND_V,Verification Plan,Sarah Johnson,V&V Manager,s.johnson@ampel360.aero,Emily Brown,Quality
+02-00-08-PROTOTYPING,Prototype Procedures,Michael Wilson,Prototype Lead,m.wilson@ampel360.aero,Thomas Anderson,Manufacturing
+02-00-09-PRODUCTION,Production Plan,Jane Doe,Production Manager,j.doe@ampel360.aero,John Smith,Operations

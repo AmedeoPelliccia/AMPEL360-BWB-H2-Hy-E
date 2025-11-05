@@ -1,0 +1,3 @@
+TSO_Number,Equipment,Applicability,Compliance_Status,Evidence
+TSO-C129,GPS,CAOS_Navigation,Compliant,Supplier_certification
+TSO-C145,Integrated_Avionics,CAOS_Core,In_Progress,Development_phase

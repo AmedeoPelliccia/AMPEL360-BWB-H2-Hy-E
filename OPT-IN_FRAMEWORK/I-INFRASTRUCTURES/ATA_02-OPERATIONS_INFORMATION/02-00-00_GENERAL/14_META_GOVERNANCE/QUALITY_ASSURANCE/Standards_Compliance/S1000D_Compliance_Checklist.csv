@@ -1,0 +1,6 @@
+S1000D_Element,Requirement,Compliance_Status,Automated_Check,Last_Verified
+DMC_Coding,Data module code format,Compliant,Yes,2025-11-01
+Info_Code,Information code structure,Compliant,Yes,2025-11-01
+Business_Rules,Business rule validation,98%_Compliant,Yes,2025-11-01
+XML_Schema,Schema validation,Compliant,Yes,2025-11-01
+CSDB,Common source database,Compliant,Yes,2025-11-01

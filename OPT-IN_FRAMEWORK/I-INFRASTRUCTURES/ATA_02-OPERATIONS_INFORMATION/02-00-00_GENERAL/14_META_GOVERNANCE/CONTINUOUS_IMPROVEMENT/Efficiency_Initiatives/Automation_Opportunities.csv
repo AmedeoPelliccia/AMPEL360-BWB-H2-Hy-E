@@ -1,0 +1,6 @@
+Opportunity_ID,Process_Area,Description,Potential_Benefit,Effort,Priority,Status
+AO-001,Metadata_Validation,Automated_checks,80%_error_reduction,Low,High,Implemented
+AO-002,Version_Numbering,Auto-increment_versions,Time_saving,Low,Medium,Implemented
+AO-003,Traceability,Auto-link_requirements_to_tests,50%_time_saving,High,High,Planned
+AO-004,Standards_Check,Automated_S1000D_validation,Quality_improvement,Medium,High,In_Progress
+AO-005,Document_Distribution,Auto-notify_stakeholders,Admin_time_saving,Low,Medium,Planned

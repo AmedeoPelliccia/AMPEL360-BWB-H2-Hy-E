@@ -1,0 +1,5 @@
+Record_ID,Employee_ID,Employee_Name,Course,Date,Duration_Hours,Result,Instructor,Certificate_ID
+TR-001,E001,J.Smith,S1000D_Authoring,2025-08-15,16,Pass,Ext_Instructor,S1000D-2025-001
+TR-002,E001,J.Smith,ATA_iSpec2200,2025-08-20,8,Pass,Doc_Manager,ATA-2025-001
+TR-003,E002,M.Garcia,S1000D_Authoring,2025-08-22,16,Pass,Ext_Instructor,S1000D-2025-002
+TR-004,E005,S.Johnson,QA_Auditor,2025-09-01,16,Pass,Quality_Manager,QA-2025-001

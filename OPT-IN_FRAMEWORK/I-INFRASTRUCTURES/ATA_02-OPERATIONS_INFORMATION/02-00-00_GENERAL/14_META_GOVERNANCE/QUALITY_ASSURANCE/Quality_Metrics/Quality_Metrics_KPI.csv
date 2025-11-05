@@ -1,0 +1,8 @@
+KPI,Target,Current,Status,Trend,Last_Updated
+Documentation_Completeness,100%,75%,On_Track,Improving,2025-11-05
+Review_Cycle_Time_Days,14,12,Exceeding,Stable,2025-11-05
+Defect_Density_per_100_pages,<5,3.2,Exceeding,Improving,2025-11-01
+S1000D_Compliance,100%,98%,On_Track,Improving,2025-11-01
+Change_Request_Resolution_Days,30,25,Exceeding,Stable,2025-10-30
+Stakeholder_Satisfaction,>4.0/5.0,4.3,Exceeding,Improving,2025-10-31
+Training_Completion_Rate,100%,95%,On_Track,Stable,2025-11-01
