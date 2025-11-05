@@ -1,4 +1,4 @@
-# AMPEL360 BWB H₂ Hy-E Q100 INTEGRA
+# AMPEL360 BWB H₂ Hy-E Q100 
 ## World's First Carbon-Negative Commercial Aircraft
 
 <div align="center">
