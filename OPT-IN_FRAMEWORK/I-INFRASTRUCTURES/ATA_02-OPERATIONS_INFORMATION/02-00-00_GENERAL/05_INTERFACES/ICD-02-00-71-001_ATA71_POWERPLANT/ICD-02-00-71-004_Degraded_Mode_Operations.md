@@ -28,7 +28,7 @@ Operations procedures and limitations with degraded fuel cell capability.
 
 **One Stack Inoperative:**
 - Maximum altitude: FL350 (vs FL410 normal)
-- Reduced MTOW: 90% normal
+- Reduced MTOW: 90% normal (135,000 kg vs 150,000 kg normal)
 - Increased takeoff distance: +15%
 - Extended flight planning required
 

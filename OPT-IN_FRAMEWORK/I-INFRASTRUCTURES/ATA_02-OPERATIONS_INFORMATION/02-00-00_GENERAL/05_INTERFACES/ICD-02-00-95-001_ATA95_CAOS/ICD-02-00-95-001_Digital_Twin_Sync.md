@@ -73,7 +73,7 @@ sync_message:
 - Local CAOS models continue advisory function
 - Fleet learning suspended
 
-**Twin Desync:**
+**Twin Desynchronization:**
 - Automatic resync attempt
-- If >5 min desync, advisory confidence reduced
+- If >5 min desynchronization, advisory confidence reduced
 - Manual resync available to crew

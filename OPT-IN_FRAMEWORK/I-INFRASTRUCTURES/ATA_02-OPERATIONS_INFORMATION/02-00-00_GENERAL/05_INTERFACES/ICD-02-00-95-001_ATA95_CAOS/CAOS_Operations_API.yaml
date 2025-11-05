@@ -187,10 +187,22 @@ compliance:
   standards:
     - EASA CS-25
     - FAA 14 CFR Part 25
-    - EU AI Act (High-Risk AI)
+    - EU AI Act (High-Risk AI System - Annex III(1)(a) Safety Components)
     - GDPR (Data Protection)
     - DO-178C (Software)
     - DO-326A (Cybersecurity)
+  
+  eu_ai_act_compliance:
+    classification: High-Risk AI System
+    annex: Annex III, Section 1(a) - Safety components of aircraft
+    requirements:
+      - Risk management system (Article 9)
+      - Data governance (Article 10)
+      - Technical documentation (Article 11)
+      - Record-keeping (Article 12)
+      - Transparency and user information (Article 13)
+      - Human oversight (Article 14)
+      - Accuracy, robustness, cybersecurity (Article 15)
   
   certification:
     dal_level: DAL-C (advisory functions)

@@ -36,9 +36,9 @@ Critical safety interface for hydrogen leak detection, monitoring, and alerting 
 
 | Level | Concentration | Action | Response Time |
 |-------|--------------|--------|---------------|
-| **Advisory** | 10-25% LEL | Crew notification, increased monitoring | <1 sec |
-| **Caution** | 25-50% LEL | Caution alert, activate enhanced ventilation | <500 ms |
-| **Warning** | 50-75% LEL | Warning alert, isolate affected zone | <200 ms |
+| **Advisory** | 10-25% LEL | Crew notification, increased monitoring | <100 ms |
+| **Caution** | 25-50% LEL | Caution alert, activate enhanced ventilation | <100 ms |
+| **Warning** | 50-75% LEL | Warning alert, isolate affected zone | <100 ms |
 | **Critical** | >75% LEL | Emergency alert, automatic isolation, 50 ACH vent | <100 ms |
 
 ## Data Flows
