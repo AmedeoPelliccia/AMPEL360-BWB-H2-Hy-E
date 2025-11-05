@@ -1,0 +1,9 @@
+Flight_Phase,Tank_A_Feed_%,Tank_B_Feed_%,Reason,CG_Impact,Notes
+Taxi,50,50,Symmetry,Neutral,Balanced fuel usage
+Takeoff,50,50,Symmetry,Neutral,Equal feed for safety
+Climb,50,50,Symmetry,Neutral,Balanced climb
+Early_Cruise,60,40,CG_Forward,Forward,Move CG forward slightly
+Mid_Cruise,50,50,Optimum,Neutral,Optimal CG maintained
+Late_Cruise,40,60,CG_Forward,Forward,Compensate fuel burn
+Descent,50,50,Symmetry,Neutral,Balanced descent
+Landing,50,50,Symmetry,Neutral,Balanced for landing

@@ -1,0 +1,21 @@
+Parameter,Value,Unit,Condition,Notes
+Cruise Speed,Mach 0.78,Mach,Long Range,Optimum long range cruise
+Maximum Speed,Mach 0.85,Mach,High Speed,Maximum operating Mach
+Cruise Altitude Optimum,35000-39000,ft,Variable,Best fuel efficiency altitude
+Range Maximum,4000,km,Full Fuel,Maximum design range
+Endurance,5.5,hr,Typical,Cruise endurance
+Fuel Consumption Rate,650,kg/hr,Cruise,H2 fuel flow in cruise
+Specific Range,6.15,km/kg,Optimum,Distance per kg H2
+Lift to Drag Ratio,20,ratio,Cruise,BWB L/D advantage
+BWB Efficiency Gain,30,%,vs Conv,Aerodynamic advantage
+H2 Efficiency Gain,68,%,vs Jet-A,Fuel efficiency advantage
+CAOS Optimization,8-15,%,Additional,AI optimization benefit
+CG Optimum Position,33-35,%MAC,Best L/D,Optimum CG for minimum drag
+Altitude Optimization,Continuous,qualitative,CAOS,Real-time altitude selection
+Wind Optimization,4D Traj,qualitative,CAOS,4D trajectory optimization
+Temperature Effect ISA+10,98,%,Performance,Performance at ISA+10
+Temperature Effect ISA-10,102,%,Performance,Performance at ISA-10
+Step Climb Strategy,Every 4000ft,strategy,Typical,Step climb intervals
+Fuel Cell Efficiency,60,%,Electrical,Fuel cell electrical efficiency
+Total System Efficiency,52,%,Overall,Overall propulsion efficiency
+Carbon Negative,Yes,boolean,With CO2 Cap,Net carbon negative with capture

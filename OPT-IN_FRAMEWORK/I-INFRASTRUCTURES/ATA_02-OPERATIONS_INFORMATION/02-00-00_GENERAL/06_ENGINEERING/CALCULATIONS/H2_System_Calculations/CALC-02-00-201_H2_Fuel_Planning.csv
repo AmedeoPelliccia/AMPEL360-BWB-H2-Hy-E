@@ -1,0 +1,13 @@
+Parameter,Value,Unit,Mission_Phase,Notes
+Mission_Distance,4000,km,Total,Design mission distance
+Mission_Fuel,3200,kg,Cruise,Fuel for mission
+Taxi_Fuel,4,kg,Ground,Taxi fuel allowance
+Takeoff_Fuel,9,kg,Takeoff,Takeoff fuel
+Climb_Fuel,180,kg,Climb,Climb to cruise
+Descent_Fuel,32,kg,Descent,Descent fuel
+Approach_Landing,11,kg,Landing,Approach and landing
+Reserve_45min,488,kg,Reserve,45-minute reserve at cruise
+Alternate_200km,325,kg,Alternate,Alternate airport fuel
+Total_Required,4249,kg,Total,Total fuel required
+Tank_Capacity,4200,kg,Available,Actual tank capacity
+Margin,-49,kg,Shortfall,Requires mission adjustment or capacity increase

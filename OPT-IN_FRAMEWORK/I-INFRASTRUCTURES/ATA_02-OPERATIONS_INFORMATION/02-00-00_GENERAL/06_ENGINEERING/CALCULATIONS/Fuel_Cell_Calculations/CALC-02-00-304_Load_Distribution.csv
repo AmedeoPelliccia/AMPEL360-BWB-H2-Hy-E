@@ -1,0 +1,11 @@
+Flight_Phase,Stack_1_kW,Stack_2_kW,Stack_3_kW,Stack_4_kW,Total_kW,Load_Balance
+Taxi,125,125,125,125,500,Equal
+Takeoff,625,625,625,625,2500,Equal
+Climb,625,625,625,625,2500,Equal
+Cruise,450,450,450,450,1800,Equal
+Descent,125,125,125,125,500,Equal
+Landing,156,156,156,156,624,Equal
+Emergency_3_Stack,625,625,625,0,1875,Unequal
+Emergency_2_Stack,625,625,0,0,1250,Unequal
+Degradation_Comp,600,600,650,650,2500,Compensated
+CAOS_Optimized,Variable,Variable,Variable,Variable,Variable,Optimized

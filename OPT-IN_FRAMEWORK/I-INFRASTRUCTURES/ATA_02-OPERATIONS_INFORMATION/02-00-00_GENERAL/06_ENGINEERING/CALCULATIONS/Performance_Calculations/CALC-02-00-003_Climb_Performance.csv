@@ -1,0 +1,21 @@
+Parameter,Value,Unit,Condition,Notes
+Initial Climb Rate,2500,ft/min,MTOW SL,Sea level maximum takeoff weight
+Service Ceiling,41000,ft,Maximum,Maximum operating altitude
+Time to FL350,22,min,MTOW,Standard climb profile
+Fuel to FL350,180,kg H2,Typical,Fuel consumed in climb
+Optimum Climb Speed,250-280,KIAS,Variable,Speed schedule with altitude
+Climb Gradient AEO,4.5,%,All Engines,All engines operating
+Climb Gradient OEI,2.8,%,One Out,One fuel cell stack inoperative
+Maximum Climb Angle,8,deg,MTOW,Steepest climb angle available
+Acceleration Altitude,10000,ft,Standard,Acceleration to climb speed
+Step Climb Benefit,3-5,%,Typical,Fuel savings from step climbs
+BWB Climb Advantage,20,%,vs Conv,Better climb performance
+H2 Weight Reduction,Significant,qualitative,Progressive,Weight reduces during climb
+CG Effect on Climb,2-3,%,Variation,CG position impact on climb
+CAOS Optimization,8-12,%,Improvement,CAOS climb profile optimization
+Temperature Derating,2%/10C,ratio,Hot Day,Performance reduction in heat
+Altitude Derating,0.5%/1000ft,ratio,High Alt,Performance reduction with altitude
+Cruise Climb Option,Available,boolean,Long Range,Continuous cruise climb capability
+Maximum Rate Climb,2800,ft/min,Light Wt,Best rate of climb at light weight
+Maximum Angle Climb,10,deg,Light Wt,Best angle of climb at light weight
+Engine-Out Ceiling,25000,ft,OEI,Single engine service ceiling

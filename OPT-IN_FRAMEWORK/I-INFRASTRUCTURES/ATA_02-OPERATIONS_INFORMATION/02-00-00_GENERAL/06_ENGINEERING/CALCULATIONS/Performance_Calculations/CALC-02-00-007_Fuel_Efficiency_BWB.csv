@@ -1,0 +1,21 @@
+Parameter,Value,Unit,Comparison,Notes
+Fuel per ASK AMPEL360,0.015,kg/ASK,H2,Available seat kilometer fuel consumption
+Fuel per ASK Conventional,0.045,kg/ASK,Jet-A,Conventional aircraft equivalent
+Fuel Efficiency Improvement,68,%,Better,Percentage improvement
+BWB Aerodynamic Gain,30,%,Contribution,BWB configuration advantage
+H2 Propulsion Gain,25,%,Contribution,H2 fuel cell efficiency advantage
+CAOS Optimization Gain,8-15,%,Contribution,AI optimization contribution
+Lift to Drag Ratio BWB,20,ratio,AMPEL360,BWB L/D ratio
+Lift to Drag Ratio Conv,17,ratio,Typical,Conventional aircraft L/D
+Drag Coefficient,0.018,Cd,BWB,BWB drag coefficient
+Wetted Area Efficiency,Superior,qualitative,BWB,Lower wetted area per passenger
+Fuel Cell Efficiency,60,%,Electrical,PEM fuel cell electrical efficiency
+Motor Efficiency,95,%,Electrical,Electric motor efficiency
+Overall Efficiency,52,%,Propulsion,Overall propulsion system efficiency
+Turbofan Efficiency,35,%,Reference,Conventional turbofan efficiency
+Energy per Passenger km,0.45,MJ/pax-km,AMPEL360,Energy per passenger kilometer
+Energy per Passenger km Conv,1.35,MJ/pax-km,Typical,Conventional energy consumption
+Operating Cost per ASK,0.04,$/ASK,AMPEL360,Direct operating cost
+Operating Cost per ASK Conv,0.06,$/ASK,Typical,Conventional operating cost
+Cost Advantage,33,%,Better,Operating cost advantage
+Environmental Advantage,100,%,Emissions,Zero direct emissions advantage

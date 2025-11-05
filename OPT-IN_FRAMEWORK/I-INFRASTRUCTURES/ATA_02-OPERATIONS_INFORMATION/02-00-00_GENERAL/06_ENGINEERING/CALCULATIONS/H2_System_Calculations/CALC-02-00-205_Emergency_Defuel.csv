@@ -1,0 +1,6 @@
+Scenario,Fuel_Amount_kg,Method,Time_min,Rate_kg_min,Notes
+Maintenance_Defuel,4200,Transfer_to_Ground,84,50,Normal maintenance defuel
+Partial_Defuel,2000,Transfer_to_Ground,40,50,Partial defuel for repair
+Emergency_Defuel,4200,Emergency_Vent,20,210,Emergency defuel (rare)
+Tank_Inspection,4200,Transfer_Warm_Purge,120,35,Full procedure for inspection
+System_Test,500,Transfer_to_Ground,10,50,Minor defuel for testing
