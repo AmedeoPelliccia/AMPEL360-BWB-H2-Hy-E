@@ -1,0 +1,16 @@
+Dimension,Design_Value,As_Built_Value,Unit,Tolerance,Within_Tolerance,Measurement_Date,Measured_By
+Wingspan,80.00,79.998,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Length,60.00,59.997,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Height,15.00,15.002,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Wing_Root_Chord,18.50,18.498,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Wing_Tip_Chord,2.50,2.501,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Fuselage_Width_Max,20.00,19.999,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Cabin_Length,45.00,45.001,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Cabin_Width_Max,18.00,18.002,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Cabin_Height,2.40,2.399,m,±0.005,Yes,2025-10-15,DPP-ME-001
+Cargo_Hold_Length,12.00,11.998,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Cargo_Hold_Width,8.00,8.001,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Cargo_Hold_Height,2.00,2.002,m,±0.005,Yes,2025-10-15,DPP-ME-001
+Engine_Nacelle_Dia,3.50,3.499,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Wheel_Base,24.00,24.001,m,±0.010,Yes,2025-10-15,DPP-ME-001
+Track_Width,14.00,13.999,m,±0.010,Yes,2025-10-15,DPP-ME-001
