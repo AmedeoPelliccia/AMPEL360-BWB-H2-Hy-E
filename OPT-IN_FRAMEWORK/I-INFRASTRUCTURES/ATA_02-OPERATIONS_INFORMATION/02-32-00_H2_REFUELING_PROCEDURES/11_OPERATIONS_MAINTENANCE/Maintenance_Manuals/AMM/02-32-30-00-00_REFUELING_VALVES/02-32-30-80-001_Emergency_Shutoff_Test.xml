@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/procedural.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="30"
+                disassyCode="80" disassyCodeVariant="00" infoCode="520"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="04"/>
+        <dmTitle>
+          <techName>H2 REFUELING VALVES - EMERGENCY SHUTOFF TEST</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>GENERAL</title>
+        <para>This procedure tests the emergency shutoff function of the H2 refueling 
+              system. The emergency shutoff system must close all refueling valves within 
+              2 seconds of activation. Test interval: 500 flight hours or 6 months. 
+              Supported by CAOS Real-Time Decision tree model RTD-02-32-EMERG-v1.0.yaml.</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>PERSONNEL REQUIREMENTS</title>
+        <para>2 technicians (1 H2 certified, 1 assistant for timing/observation)</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TIME REQUIRED</title>
+        <para>1 hour</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TOOLS AND EQUIPMENT</title>
+        <para>
+          <randomList>
+            <listItem><para>Laptop with CAOS software v2.5 or later</para></listItem>
+            <listItem><para>Stopwatch or timer (±0.1 second accuracy)</para></listItem>
+            <listItem><para>Nitrogen bottle (for system pressurization)</para></listItem>
+            <listItem><para>Pressure gauge (0-10 bar, ±0.1 bar accuracy)</para></listItem>
+            <listItem><para>Multimeter for valve position sensors</para></listItem>
+            <listItem><para>Safety glasses</para></listItem>
+            <listItem><para>Cryogenic gloves</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="RC001"/>
+            <reqCondText>Aircraft in hangar or maintenance area</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC002"/>
+            <reqCondText>H2 tanks completely defueled and purged</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC003"/>
+            <reqCondText>Aircraft electrical power ON (28 VDC)</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC004"/>
+            <reqCondText>Fire suppression equipment available</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC005"/>
+            <reqCondText>Area clear of personnel (except test crew)</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </preliminaryRqmts>
+
+      <mainProcedure>
+        <proceduralStep id="step01">
+          <para>Don PPE (safety glasses and cryogenic gloves).</para>
+        </proceduralStep>
+
+        <proceduralStep id="step02">
+          <para>Connect laptop to aircraft CAOS system via ethernet.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step03">
+          <para>Launch CAOS Maintenance Software.</para>
+          <para>Navigate to: Maintenance → H2 Systems → Emergency Shutoff Test</para>
+        </proceduralStep>
+
+        <proceduralStep id="step04">
+          <para>CAOS performs automatic system health check:</para>
+          <para>
+            <randomList>
+              <listItem><para>Valve actuator power available</para></listItem>
+              <listItem><para>Position sensors operational</para></listItem>
+              <listItem><para>Emergency stop button circuit continuity</para></listItem>
+              <listItem><para>Leak detection system active</para></listItem>
+              <listItem><para>Ventilation system running</para></listItem>
+            </randomList>
+          </para>
+          <para>Verify all checks PASSED before proceeding.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step05">
+          <para>SYSTEM PRESSURIZATION (for valve closure verification)</para>
+          <para>Connect nitrogen bottle to refueling receptacle test port.</para>
+          <para>Slowly pressurize refueling line to 2.0 bar.</para>
+          <caution>
+            <warningAndCautionPara>
+              Use ONLY nitrogen for testing. Never use compressed air or oxygen in H2 systems.
+            </warningAndCautionPara>
+          </caution>
+        </proceduralStep>
+
+        <proceduralStep id="step06">
+          <para>BASELINE VALVE STATUS CHECK</para>
+          <para>In CAOS, verify current valve positions:</para>
+          <para>
+            <randomList>
+              <listItem><para>Main Refueling Valve: CLOSED</para></listItem>
+              <listItem><para>Isolation Valve 1: CLOSED</para></listItem>
+              <listItem><para>Isolation Valve 2: CLOSED</para></listItem>
+              <listItem><para>Check Valve: CLOSED (one-way, shows pressure)</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step07">
+          <para>VALVE OPENING SEQUENCE (to prepare for emergency test)</para>
+          <para>In CAOS, click "Open Refueling Valves" to simulate refueling mode.</para>
+          <para>Valves open in sequence:</para>
+          <para>
+            <sequentialList>
+              <listItem><para>Isolation Valve 1 opens (1 second delay)</para></listItem>
+              <listItem><para>Isolation Valve 2 opens (1 second delay)</para></listItem>
+              <listItem><para>Main Refueling Valve opens (1 second delay)</para></listItem>
+            </sequentialList>
+          </para>
+          <para>Total opening time: approximately 3 seconds.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step08">
+          <para>Verify all valves showing OPEN status in CAOS.</para>
+          <para>Verify nitrogen pressure reading on gauge (should be approximately 2.0 bar).</para>
+        </proceduralStep>
+
+        <proceduralStep id="step09">
+          <para>EMERGENCY SHUTOFF TEST - Method 1: Manual Button</para>
+          <para>Position assistant with stopwatch at refueling panel.</para>
+          <para>Technician monitors CAOS display.</para>
+          <para>When ready, assistant presses red emergency stop button and starts stopwatch.</para>
+          <para>Technician records valve closure times from CAOS display.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step10">
+          <para>CAOS automatically records:</para>
+          <para>
+            <randomList>
+              <listItem><para>Main Valve closure time</para></listItem>
+              <listItem><para>Isolation Valve 1 closure time</para></listItem>
+              <listItem><para>Isolation Valve 2 closure time</para></listItem>
+              <listItem><para>Total system isolation time</para></listItem>
+            </randomList>
+          </para>
+          <para>
+            <emphasis emphasisType="em01">ACCEPTANCE CRITERIA:</emphasis>
+            ALL valves must indicate CLOSED within 2.0 seconds of button press.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step11">
+          <para>Verify pressure drop on gauge (indicates valves actually closed).</para>
+          <para>Pressure should remain stable after valve closure (no leakage).</para>
+        </proceduralStep>
+
+        <proceduralStep id="step12">
+          <para>RESET EMERGENCY STOP</para>
+          <para>Rotate emergency stop button clockwise to reset (button pops out).</para>
+          <para>Verify CAOS shows "EMERGENCY STOP CLEARED".</para>
+        </proceduralStep>
+
+        <proceduralStep id="step13">
+          <para>EMERGENCY SHUTOFF TEST - Method 2: Leak Detection Trip</para>
+          <para>Re-open valves using CAOS (repeat Step 7).</para>
+        </proceduralStep>
+
+        <proceduralStep id="step14">
+          <para>In CAOS, navigate to: Test Functions → Simulate Leak Alarm</para>
+          <para>Click "Trigger Leak Alarm - Sensor 1".</para>
+          <para>CAOS simulates H2 leak detection at 15 ppm.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step15">
+          <para>Verify automatic emergency shutoff:</para>
+          <para>
+            <sequentialList>
+              <listItem><para>Audible alarm sounds</para></listItem>
+              <listItem><para>Visual alarm (red lights) activate</para></listItem>
+              <listItem><para>All valves close automatically</para></listItem>
+            </sequentialList>
+          </para>
+          <para>Record valve closure times from CAOS.</para>
+          <para>
+            <emphasis emphasisType="em01">ACCEPTANCE CRITERIA:</emphasis>
+            ALL valves must close within 2.0 seconds of leak detection.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step16">
+          <para>Acknowledge and clear simulated leak alarm in CAOS.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step17">
+          <para>EMERGENCY SHUTOFF TEST - Method 3: High Pressure Trip</para>
+          <para>Re-open valves using CAOS.</para>
+          <para>In CAOS, navigate to: Test Functions → Simulate Overpressure</para>
+          <para>Click "Trigger Overpressure Alarm - 4.5 bar".</para>
+        </proceduralStep>
+
+        <proceduralStep id="step18">
+          <para>Verify automatic emergency shutoff on high pressure condition.</para>
+          <para>Record valve closure times.</para>
+          <para>
+            <emphasis emphasisType="em01">ACCEPTANCE CRITERIA:</emphasis>
+            ALL valves must close within 2.0 seconds of overpressure detection.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step19">
+          <para>Clear simulated overpressure alarm.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step20">
+          <para>CAOS ANALYSIS AND REPORT</para>
+          <para>CAOS RTD-02-32-EMERG-v1.0.yaml model automatically analyzes test results:</para>
+          <para>
+            <randomList>
+              <listItem><para>Valve response time trends (compared to previous tests)</para></listItem>
+              <listItem><para>Actuator performance degradation prediction</para></listItem>
+              <listItem><para>Recommended maintenance actions</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step21">
+          <para>Review CAOS analysis results:</para>
+          <para>If all tests PASSED and no degradation trends:</para>
+          <para>
+            <sequentialList>
+              <listItem><para>Test PASSED - proceed to step 22</para></listItem>
+            </sequentialList>
+          </para>
+          <para>If any test FAILED or significant degradation detected:</para>
+          <para>
+            <sequentialList>
+              <listItem><para>Investigate cause per troubleshooting TS-02-32-12</para></listItem>
+              <listItem><para>Inspect valve actuators per procedure 02-32-30-70-001</para></listItem>
+              <listItem><para>Repair or replace defective components</para></listItem>
+              <listItem><para>Re-test before return to service</para></listItem>
+            </sequentialList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step22">
+          <para>Depressurize system (vent nitrogen to atmosphere slowly).</para>
+        </proceduralStep>
+
+        <proceduralStep id="step23">
+          <para>Disconnect nitrogen bottle and test equipment.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step24">
+          <para>Close and secure refueling panel.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step25">
+          <para>Generate test report in CAOS.</para>
+          <para>Report includes:</para>
+          <para>
+            <randomList>
+              <listItem><para>Test date and aircraft hours</para></listItem>
+              <listItem><para>Valve closure times (all three test methods)</para></listItem>
+              <listItem><para>PASS/FAIL status for each test</para></listItem>
+              <listItem><para>Trend analysis and predictions</para></listItem>
+              <listItem><para>Next test due date (500 FH or 6 months)</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step26">
+          <para>Print test report and file in aircraft maintenance records.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step27">
+          <para>Update aircraft technical log:</para>
+          <para>"Emergency shutoff system tested and verified serviceable. 
+                All valves close within 2 seconds. Next test due [DATE]."</para>
+        </proceduralStep>
+
+        <proceduralStep id="step28">
+          <para>Apply test sticker at refueling panel:</para>
+          <para>"EMERGENCY SHUTOFF TESTED - [DATE] - PASSED - NEXT DUE [DATE]"</para>
+        </proceduralStep>
+      </mainProcedure>
+
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="CL001"/>
+            <reqCondText>All three emergency shutoff tests PASSED</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL002"/>
+            <reqCondText>System depressurized and secured</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL003"/>
+            <reqCondText>Test report filed</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL004"/>
+            <reqCondText>CAOS database updated</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL005"/>
+            <reqCondText>Test sticker applied</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>

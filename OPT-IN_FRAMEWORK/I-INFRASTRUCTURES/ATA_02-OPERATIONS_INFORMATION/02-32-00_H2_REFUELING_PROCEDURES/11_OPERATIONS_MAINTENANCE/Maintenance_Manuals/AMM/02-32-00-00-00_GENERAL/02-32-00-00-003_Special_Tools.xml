@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descriptive.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="00"
+                disassyCode="00" disassyCodeVariant="00" infoCode="941"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="003" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <dmTitle>
+          <techName>H2 REFUELING SYSTEM - SPECIAL TOOLS</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>SPECIAL TOOLS LIST</title>
+        <para>This document lists special tools required for maintenance of the H2 refueling system.</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>PRESSURE TESTING TOOLS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-20-TEST-001</listItemTerm>
+              <listItemDefinition>
+                <para>Pressure Test Kit for Receptacle</para>
+                <para>Includes: Pressure regulator (0-10 bar), digital gauge (±0.01 bar), test hoses, adaptors</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-40-TEST-001</listItemTerm>
+              <listItemDefinition>
+                <para>Line Pressure Test Kit</para>
+                <para>Includes: High-pressure nitrogen regulator, test manifold, pressure transducers</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>LEAK DETECTION TOOLS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-50-LEAK-001</listItemTerm>
+              <listItemDefinition>
+                <para>Helium Mass Spectrometer Leak Detector</para>
+                <para>Sensitivity: 1×10⁻⁹ mbar·l/s minimum</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-50-H2-001</listItemTerm>
+              <listItemDefinition>
+                <para>Portable H2 Detector</para>
+                <para>Range: 0-1000 ppm, Resolution: 1 ppm, Response time: &lt;3 seconds</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>CALIBRATION TOOLS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-50-CAL-001</listItemTerm>
+              <listItemDefinition>
+                <para>Leak Sensor Calibration Gas Kit</para>
+                <para>Includes: 0, 10, 50, 100 ppm H2 calibration gas cylinders, flow regulators, calibration hood</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-60-CAL-001</listItemTerm>
+              <listItemDefinition>
+                <para>Pressure Sensor Calibrator</para>
+                <para>Range: 0-10 bar, Accuracy: ±0.01% FS</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-70-CAL-001</listItemTerm>
+              <listItemDefinition>
+                <para>Cryogenic Temperature Calibrator</para>
+                <para>Range: -270°C to +100°C, Accuracy: ±0.1°C</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>ELECTRICAL TEST EQUIPMENT</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-90-METER-001</listItemTerm>
+              <listItemDefinition>
+                <para>Digital Milliohm Meter</para>
+                <para>4-wire Kelvin measurement, Range: 0-2000 milliohm, Accuracy: ±0.1 milliohm</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-50-CABLE-001</listItemTerm>
+              <listItemDefinition>
+                <para>RS-485 Interface Cable</para>
+                <para>For connection to CAOS system, 5 meters length</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>MECHANICAL TOOLS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-10-WRENCH-001</listItemTerm>
+              <listItemDefinition>
+                <para>Panel Mounting Wrench Set</para>
+                <para>Torque range: 0-50 Nm, includes various socket sizes</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-20-TOOL-001</listItemTerm>
+              <listItemDefinition>
+                <para>Receptacle Removal/Installation Tool</para>
+                <para>Special tool for coupling mechanism alignment</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>P/N 02-32-30-TOOL-001</listItemTerm>
+              <listItemDefinition>
+                <para>Valve Actuator Adjustment Tool</para>
+                <para>For valve timing and position adjustment</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>VENTILATION TEST EQUIPMENT</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>Standard Anemometer</listItemTerm>
+              <listItemDefinition>
+                <para>Hot-wire or vane type, Range: 0-20 m/s, Accuracy: ±2% of reading</para>
+                <para>Calibration required every 12 months</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Smoke Generator</listItemTerm>
+              <listItemDefinition>
+                <para>For airflow visualization, non-toxic smoke</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TOOL CALIBRATION</title>
+        <para>All special tools requiring calibration must be certified within the following intervals:</para>
+        <para>
+          <randomList>
+            <listItem><para>Pressure measurement devices: 6 months</para></listItem>
+            <listItem><para>Temperature measurement devices: 6 months</para></listItem>
+            <listItem><para>Electrical measurement devices: 12 months</para></listItem>
+            <listItem><para>Leak detection equipment: 12 months</para></listItem>
+            <listItem><para>Torque wrenches: 12 months</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

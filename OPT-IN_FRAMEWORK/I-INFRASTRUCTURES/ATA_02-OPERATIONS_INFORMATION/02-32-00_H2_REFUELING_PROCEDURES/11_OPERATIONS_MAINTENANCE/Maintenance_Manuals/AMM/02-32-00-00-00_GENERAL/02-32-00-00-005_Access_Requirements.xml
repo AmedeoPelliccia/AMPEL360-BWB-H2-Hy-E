@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/procedural.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="00"
+                disassyCode="00" disassyCodeVariant="00" infoCode="520"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="005" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <dmTitle>
+          <techName>H2 REFUELING SYSTEM - ACCESS REQUIREMENTS</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>GENERAL</title>
+        <para>This procedure provides instructions for H2 REFUELING SYSTEM - ACCESS REQUIREMENTS on the H2 refueling system.</para>
+      </levelledPara>
+      <levelledPara>
+        <title>PERSONNEL REQUIREMENTS</title>
+        <para>1 technician (appropriately certified for H2 systems)</para>
+      </levelledPara>
+      <levelledPara>
+        <title>TIME REQUIRED</title>
+        <para>Refer to AMM_Index.csv for estimated time</para>
+      </levelledPara>
+    </description>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="RC001"/>
+            <reqCondText>Safety precautions observed per 02-32-00-00-006</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </preliminaryRqmts>
+      <mainProcedure>
+        <proceduralStep id="step01">
+          <para>Follow detailed procedure as per AMM_Index.csv and CAOS system guidance.</para>
+        </proceduralStep>
+      </mainProcedure>
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="CL001"/>
+            <reqCondText>Procedure completed and maintenance records updated</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>

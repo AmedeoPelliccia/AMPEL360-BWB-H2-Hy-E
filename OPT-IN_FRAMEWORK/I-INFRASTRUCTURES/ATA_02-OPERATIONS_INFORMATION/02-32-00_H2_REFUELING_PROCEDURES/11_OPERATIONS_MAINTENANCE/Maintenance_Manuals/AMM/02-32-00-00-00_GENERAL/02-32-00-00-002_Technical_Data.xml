@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descriptive.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="00"
+                disassyCode="00" disassyCodeVariant="00" infoCode="941"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="002" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <dmTitle>
+          <techName>H2 REFUELING SYSTEM - TECHNICAL DATA</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>TECHNICAL DATA SUMMARY</title>
+        <para>This document provides technical specifications and performance data 
+              for the H2 refueling system ATA 02-32-00.</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>SYSTEM PERFORMANCE DATA</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>Maximum Refueling Rate</listItemTerm>
+              <listItemDefinition>
+                <para>180 kg/min (396 lb/min)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Normal Refueling Rate</listItemTerm>
+              <listItemDefinition>
+                <para>120 kg/min (264 lb/min)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Typical Refueling Time (Full)</listItemTerm>
+              <listItemDefinition>
+                <para>45 minutes for 4500 kg</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>System Operating Pressure</listItemTerm>
+              <listItemDefinition>
+                <para>2.8 to 3.2 bar (40 to 46 psi)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Maximum Operating Pressure</listItemTerm>
+              <listItemDefinition>
+                <para>4.0 bar (58 psi)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Relief Valve Setting</listItemTerm>
+              <listItemDefinition>
+                <para>4.5 bar (65 psi)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Burst Pressure</listItemTerm>
+              <listItemDefinition>
+                <para>15.0 bar (218 psi) minimum</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>COMPONENT SPECIFICATIONS</title>
+        <levelledPara>
+          <title>Refueling Receptacle</title>
+          <para>
+            <randomList>
+              <listItem><para>Type: Quick-disconnect coupling</para></listItem>
+              <listItem><para>Bore: 25.4 mm (1.0 inch)</para></listItem>
+              <listItem><para>Material: Stainless steel 316L</para></listItem>
+              <listItem><para>Seal: PTFE with spring energizer</para></listItem>
+              <listItem><para>Weight: 2.3 kg</para></listItem>
+            </randomList>
+          </para>
+        </levelledPara>
+
+        <levelledPara>
+          <title>Main Refueling Valve</title>
+          <para>
+            <randomList>
+              <listItem><para>Type: Ball valve with pneumatic actuator</para></listItem>
+              <listItem><para>Size: DN 25 (1 inch)</para></listItem>
+              <listItem><para>Cv factor: 24</para></listItem>
+              <listItem><para>Operating time: Open 2s, Close 1s</para></listItem>
+              <listItem><para>Fail-safe: Spring return to closed</para></listItem>
+            </randomList>
+          </para>
+        </levelledPara>
+
+        <levelledPara>
+          <title>Refueling Lines</title>
+          <para>
+            <randomList>
+              <listItem><para>Material: Stainless steel 316L, vacuum insulated</para></listItem>
+              <listItem><para>Nominal bore: 25.4 mm (1.0 inch)</para></listItem>
+              <listItem><para>Wall thickness: 2.0 mm</para></listItem>
+              <listItem><para>Insulation: Multilayer vacuum insulation (MLI)</para></listItem>
+              <listItem><para>Total length: Approximately 12 meters</para></listItem>
+            </randomList>
+          </para>
+        </levelledPara>
+      </levelledPara>
+
+      <levelledPara>
+        <title>ELECTRICAL DATA</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>System Voltage</listItemTerm>
+              <listItemDefinition>
+                <para>28 VDC ± 4V</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Maximum Current Draw</listItemTerm>
+              <listItemDefinition>
+                <para>5 A (all valves operating simultaneously)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Leak Detection Sensors</listItemTerm>
+              <listItemDefinition>
+                <para>12 VDC, 200 mA each (8 sensors total)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Ventilation Fan</listItemTerm>
+              <listItemDefinition>
+                <para>115 VAC, 3-phase, 2.5 A</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>ENVIRONMENTAL LIMITS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>Operating Temperature Range</listItemTerm>
+              <listItemDefinition>
+                <para>-253°C to +65°C (-423°F to +150°F)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Storage Temperature Range</listItemTerm>
+              <listItemDefinition>
+                <para>-55°C to +85°C (-67°F to +185°F)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Humidity</listItemTerm>
+              <listItemDefinition>
+                <para>0 to 95% RH non-condensing</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Altitude</listItemTerm>
+              <listItemDefinition>
+                <para>-300m to +3000m during refueling operations</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>WEIGHT AND DIMENSIONS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>Total System Weight (Dry)</listItemTerm>
+              <listItemDefinition>
+                <para>85 kg (187 lb)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Refueling Panel Dimensions</listItemTerm>
+              <listItemDefinition>
+                <para>450 mm × 350 mm × 150 mm (17.7 × 13.8 × 5.9 inches)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Equipment Compartment Volume</listItemTerm>
+              <listItemDefinition>
+                <para>18.0 m³ (635 ft³)</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

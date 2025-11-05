@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descriptive.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="00"
+                disassyCode="00" disassyCodeVariant="00" infoCode="941"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="04"/>
+        <dmTitle>
+          <techName>H2 REFUELING SYSTEM - DESCRIPTION</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>SYSTEM OVERVIEW</title>
+        <para>The H2 Refueling System (ATA 02-32-00) provides safe and efficient 
+              transfer of liquid hydrogen fuel from ground equipment to the aircraft 
+              fuel tanks. The system is designed for cryogenic operation at -253°C 
+              (-423°F) and operates at pressures up to 5 bar (72.5 psi).</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>SYSTEM COMPONENTS</title>
+        <para>The refueling system consists of the following major components:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para><emphasis emphasisType="em02">Refueling Panel (02-32-10)</emphasis> - 
+                    External access panel with receptacle door and status indicators</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Refueling Receptacle (02-32-20)</emphasis> - 
+                    Quick-disconnect coupling mechanism compatible with ground equipment</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Refueling Valves (02-32-30)</emphasis> - 
+                    Main shutoff, isolation, and check valves</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Refueling Lines (02-32-40)</emphasis> - 
+                    Cryogenic-rated stainless steel lines with vacuum insulation</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Leak Detection System (02-32-50)</emphasis> - 
+                    H2 sensors with neural network processing for leak identification</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Pressure Monitoring (02-32-60)</emphasis> - 
+                    High-accuracy pressure sensors and relief valves</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Temperature Monitoring (02-32-70)</emphasis> - 
+                    Cryogenic temperature sensors (-253°C rated)</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Ventilation System (02-32-80)</emphasis> - 
+                    50 ACH (Air Changes per Hour) forced ventilation for safety</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Grounding System (02-32-90)</emphasis> - 
+                    Static discharge protection (≤3 milliohm resistance)</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>DESIGN SPECIFICATIONS</title>
+        <para>
+          <definitionList>
+            <definitionListItem>
+              <listItemTerm>Maximum Flow Rate</listItemTerm>
+              <listItemDefinition>
+                <para>180 kg/min (396 lb/min) at 3.0 bar</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Normal Flow Rate</listItemTerm>
+              <listItemDefinition>
+                <para>120 kg/min (264 lb/min)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Operating Pressure</listItemTerm>
+              <listItemDefinition>
+                <para>2.8 to 3.2 bar (40 to 46 psi)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Test Pressure</listItemTerm>
+              <listItemDefinition>
+                <para>5.0 bar (72.5 psi) for 30 seconds</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Operating Temperature</listItemTerm>
+              <listItemDefinition>
+                <para>-253°C (-423°F) liquid H2</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Leak Detection Threshold</listItemTerm>
+              <listItemDefinition>
+                <para>10 ppm H2 concentration (25% LEL)</para>
+              </listItemDefinition>
+            </definitionListItem>
+            <definitionListItem>
+              <listItemTerm>Safety Zone Radius</listItemTerm>
+              <listItemDefinition>
+                <para>50 meters (164 feet) during refueling</para>
+              </listItemDefinition>
+            </definitionListItem>
+          </definitionList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>OPERATIONAL MODES</title>
+        <para>The refueling system operates in the following modes:</para>
+        <para>
+          <sequentialList>
+            <listItem>
+              <para><emphasis emphasisType="em02">Pre-Refueling</emphasis> - 
+                    System checks, grounding connection, leak detection verification</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Connection</emphasis> - 
+                    Coupling engagement, pressure test, line cooldown</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Refueling</emphasis> - 
+                    Progressive flow rate increase, continuous monitoring</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Post-Refueling</emphasis> - 
+                    Flow shutdown, line purge, disconnect sequence</para>
+            </listItem>
+            <listItem>
+              <para><emphasis emphasisType="em02">Emergency Defuel</emphasis> - 
+                    Rapid fuel removal at 150 kg/min if required</para>
+            </listItem>
+          </sequentialList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>SAFETY FEATURES</title>
+        <para>The system incorporates multiple safety features:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Redundant leak detection with AI-powered pattern recognition</para>
+            </listItem>
+            <listItem>
+              <para>Automatic emergency shutoff on leak detection (&lt;2 seconds)</para>
+            </listItem>
+            <listItem>
+              <para>Pressure relief valves (set at 4.5 bar)</para>
+            </listItem>
+            <listItem>
+              <para>Forced ventilation system (50 ACH minimum)</para>
+            </listItem>
+            <listItem>
+              <para>Static grounding verification before refueling</para>
+            </listItem>
+            <listItem>
+              <para>Interlocks preventing operation with open panel door</para>
+            </listItem>
+            <listItem>
+              <para>Thermal protection for personnel and equipment</para>
+            </listItem>
+            <listItem>
+              <para>CAOS real-time monitoring and predictive alerts</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>CAOS INTEGRATION</title>
+        <para>The refueling system integrates with the CAOS (Computer Aided Operations 
+              and Services) digital twin platform, providing:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Real-time decision tree (RTD) support for test procedures</para>
+            </listItem>
+            <listItem>
+              <para>Neural network (NN) models for leak detection and diagnostics</para>
+            </listItem>
+            <listItem>
+              <para>Predictive maintenance algorithms</para>
+            </listItem>
+            <listItem>
+              <para>Digital procedure execution tracking</para>
+            </listItem>
+            <listItem>
+              <para>Fleet-wide learning and optimization</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>MAINTENANCE REQUIREMENTS</title>
+        <para>Regular maintenance intervals are defined in AMM_Index.csv. 
+              Critical systems require H2-certified personnel. Quarterly calibration 
+              is required for leak detection sensors. Monthly grounding resistance 
+              testing is mandatory.</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>RELATED DOCUMENTATION</title>
+        <para>
+          <randomList>
+            <listItem>
+              <para>AMM 02-32-00 - Aircraft Maintenance Manual procedures</para>
+            </listItem>
+            <listItem>
+              <para>FCOM 02-32-00 - Flight Crew Operating Manual</para>
+            </listItem>
+            <listItem>
+              <para>TSM 02-32-00 - Troubleshooting Manual</para>
+            </listItem>
+            <listItem>
+              <para>WDM 02-32-00 - Wiring Diagram Manual</para>
+            </listItem>
+            <listItem>
+              <para>SRM 02-32-00 - Structural Repair Manual</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>
