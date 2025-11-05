@@ -1,17 +1,17 @@
-# RQ-02-00-01-018: EU AI Act Compliance
+# [RQ-02-00-01-018](./RQ-02-00-01-018_*.md): [EU AI Act](https://artificialintelligenceact.eu/) Compliance
 
 ## Requirement Details
 
-**ID:** RQ-02-00-01-018  
+**ID:** [RQ-02-00-01-018](./RQ-02-00-01-018_*.md)  
 **Category:** Regulatory  
 **Subcategory:** AI  
-**Title:** EU AI Act Compliance  
+**Title:** [EU AI Act](https://artificialintelligenceact.eu/) Compliance  
 **Priority:** High  
 **Status:** In Review
 
 ## Description
 
-The aircraft and its operations shall comply with all applicable requirements of EU AI Act Draft regarding eu ai act compliance.
+The aircraft and its operations shall comply with all applicable requirements of [EU AI Act](https://artificialintelligenceact.eu/) Draft regarding eu ai act compliance.
 
 ## Rationale
 
@@ -19,7 +19,7 @@ Compliance with AI is mandatory for aircraft certification and legal operation i
 
 ## Source
 
-- **Document:** EU AI Act Draft
+- **Document:** [EU AI Act](https://artificialintelligenceact.eu/) Draft
 - **Parent ATA:** 02-90-00
 - **Criticality:** Safety
 

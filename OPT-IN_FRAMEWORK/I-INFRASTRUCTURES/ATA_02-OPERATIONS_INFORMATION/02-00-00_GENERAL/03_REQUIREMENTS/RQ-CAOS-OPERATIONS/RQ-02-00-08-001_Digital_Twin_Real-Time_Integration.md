@@ -1,8 +1,8 @@
-# RQ-02-00-08-001: Digital Twin Real-Time Integration
+# [RQ-02-00-08-001](./RQ-02-00-08-001_*.md): Digital Twin Real-Time Integration
 
 ## Requirement Details
 
-**ID:** RQ-02-00-08-001  
+**ID:** [RQ-02-00-08-001](./RQ-02-00-08-001_*.md)  
 **Category:** CAOS  
 **Subcategory:** Integration  
 **Title:** Digital Twin Real-Time Integration  

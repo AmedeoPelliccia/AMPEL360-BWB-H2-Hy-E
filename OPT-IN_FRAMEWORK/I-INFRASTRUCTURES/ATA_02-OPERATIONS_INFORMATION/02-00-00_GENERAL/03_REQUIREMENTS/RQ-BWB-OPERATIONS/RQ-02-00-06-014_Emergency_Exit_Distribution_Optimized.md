@@ -1,8 +1,8 @@
-# RQ-02-00-06-014: Emergency Exit Distribution Optimized
+# [RQ-02-00-06-014](./RQ-02-00-06-014_*.md): Emergency Exit Distribution Optimized
 
 ## Requirement Details
 
-**ID:** RQ-02-00-06-014  
+**ID:** [RQ-02-00-06-014](./RQ-02-00-06-014_*.md)  
 **Category:** BWB Operations  
 **Subcategory:** Emergency  
 **Title:** Emergency Exit Distribution Optimized  
@@ -19,7 +19,7 @@ This requirement addresses unique operational characteristics of the Blended Win
 
 ## Source
 
-- **Document:** CS-25.807
+- **Document:** [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes).807
 - **Parent ATA:** 02-00-00
 - **Criticality:** Safety
 

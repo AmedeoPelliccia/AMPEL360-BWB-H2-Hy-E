@@ -1,8 +1,8 @@
-# RQ-02-00-01-014: CPDLC Datalink Capability
+# [RQ-02-00-01-014](./RQ-02-00-01-014_*.md): CPDLC Datalink Capability
 
 ## Requirement Details
 
-**ID:** RQ-02-00-01-014  
+**ID:** [RQ-02-00-01-014](./RQ-02-00-01-014_*.md)  
 **Category:** Regulatory  
 **Subcategory:** Avionics  
 **Title:** CPDLC Datalink Capability  
@@ -11,7 +11,7 @@
 
 ## Description
 
-The aircraft and its operations shall comply with all applicable requirements of DO-258A regarding cpdlc datalink capability.
+The aircraft and its operations shall comply with all applicable requirements of [DO-258A](https://www.rtca.org/) regarding cpdlc datalink capability.
 
 ## Rationale
 
@@ -19,7 +19,7 @@ Compliance with Avionics is mandatory for aircraft certification and legal opera
 
 ## Source
 
-- **Document:** DO-258A
+- **Document:** [DO-258A](https://www.rtca.org/)
 - **Parent ATA:** 02-00-00
 - **Criticality:** Operations
 

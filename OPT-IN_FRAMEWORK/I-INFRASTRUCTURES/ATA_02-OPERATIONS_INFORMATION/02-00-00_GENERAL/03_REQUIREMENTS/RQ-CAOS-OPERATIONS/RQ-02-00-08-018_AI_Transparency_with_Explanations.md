@@ -1,8 +1,8 @@
-# RQ-02-00-08-018: AI Transparency with Explanations
+# [RQ-02-00-08-018](./RQ-02-00-08-018_*.md): AI Transparency with Explanations
 
 ## Requirement Details
 
-**ID:** RQ-02-00-08-018  
+**ID:** [RQ-02-00-08-018](./RQ-02-00-08-018_*.md)  
 **Category:** CAOS  
 **Subcategory:** Transparency  
 **Title:** AI Transparency with Explanations  

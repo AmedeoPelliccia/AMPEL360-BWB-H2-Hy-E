@@ -1,8 +1,8 @@
-# RQ-02-00-11-010: Change Control Process Defined
+# [RQ-02-00-11-010](./RQ-02-00-11-010_*.md): Change Control Process Defined
 
 ## Requirement Details
 
-**ID:** RQ-02-00-11-010  
+**ID:** [RQ-02-00-11-010](./RQ-02-00-11-010_*.md)  
 **Category:** Documentation  
 **Subcategory:** Change Control  
 **Title:** Change Control Process Defined  

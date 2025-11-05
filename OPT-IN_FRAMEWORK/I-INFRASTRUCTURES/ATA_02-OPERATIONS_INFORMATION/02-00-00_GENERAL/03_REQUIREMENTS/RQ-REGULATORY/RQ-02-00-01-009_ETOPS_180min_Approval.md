@@ -1,8 +1,8 @@
-# RQ-02-00-01-009: ETOPS 180min Approval
+# [RQ-02-00-01-009](./RQ-02-00-01-009_*.md): ETOPS 180min Approval
 
 ## Requirement Details
 
-**ID:** RQ-02-00-01-009  
+**ID:** [RQ-02-00-01-009](./RQ-02-00-01-009_*.md)  
 **Category:** Regulatory  
 **Subcategory:** Extended Ops  
 **Title:** ETOPS 180min Approval  
@@ -11,7 +11,7 @@
 
 ## Description
 
-The aircraft and its operations shall comply with all applicable requirements of CS-25 Appendix K regarding etops 180min approval.
+The aircraft and its operations shall comply with all applicable requirements of [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) Appendix K regarding etops 180min approval.
 
 ## Rationale
 
@@ -19,7 +19,7 @@ Compliance with Extended Ops is mandatory for aircraft certification and legal o
 
 ## Source
 
-- **Document:** CS-25 Appendix K
+- **Document:** [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) Appendix K
 - **Parent ATA:** 02-00-00
 - **Criticality:** Performance
 

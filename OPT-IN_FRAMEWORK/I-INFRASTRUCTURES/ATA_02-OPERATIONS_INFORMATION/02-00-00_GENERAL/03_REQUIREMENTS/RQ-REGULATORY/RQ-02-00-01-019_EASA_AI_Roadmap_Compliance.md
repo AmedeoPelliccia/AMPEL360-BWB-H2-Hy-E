@@ -1,17 +1,17 @@
-# RQ-02-00-01-019: EASA AI Roadmap Compliance
+# [RQ-02-00-01-019](./RQ-02-00-01-019_*.md): [EASA](https://www.easa.europa.eu/) AI Roadmap Compliance
 
 ## Requirement Details
 
-**ID:** RQ-02-00-01-019  
+**ID:** [RQ-02-00-01-019](./RQ-02-00-01-019_*.md)  
 **Category:** Regulatory  
 **Subcategory:** AI  
-**Title:** EASA AI Roadmap Compliance  
+**Title:** [EASA](https://www.easa.europa.eu/) AI Roadmap Compliance  
 **Priority:** High  
 **Status:** In Review
 
 ## Description
 
-The aircraft and its operations shall comply with all applicable requirements of EASA AI Roadmap regarding easa ai roadmap compliance.
+The aircraft and its operations shall comply with all applicable requirements of [EASA](https://www.easa.europa.eu/) AI Roadmap regarding easa ai roadmap compliance.
 
 ## Rationale
 
@@ -19,7 +19,7 @@ Compliance with AI is mandatory for aircraft certification and legal operation i
 
 ## Source
 
-- **Document:** EASA AI Roadmap
+- **Document:** [EASA](https://www.easa.europa.eu/) AI Roadmap
 - **Parent ATA:** 02-90-00
 - **Criticality:** Safety
 

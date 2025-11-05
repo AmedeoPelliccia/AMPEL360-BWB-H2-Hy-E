@@ -1,8 +1,8 @@
-# RQ-02-00-04-008: Flight Duty Period Limits Defined
+# [RQ-02-00-04-008](./RQ-02-00-04-008_*.md): Flight Duty Period Limits Defined
 
 ## Requirement Details
 
-**ID:** RQ-02-00-04-008  
+**ID:** [RQ-02-00-04-008](./RQ-02-00-04-008_*.md)  
 **Category:** Operational  
 **Subcategory:** Crew  
 **Title:** Flight Duty Period Limits Defined  
@@ -19,7 +19,7 @@ This operational requirement ensures reliable, efficient daily operations and me
 
 ## Source
 
-- **Document:** EU 965/2012
+- **Document:** [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965)
 - **Parent ATA:** 02-00-00
 - **Criticality:** Safety
 

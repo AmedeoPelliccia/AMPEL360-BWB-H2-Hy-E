@@ -1,11 +1,11 @@
-# RQ-02-00-13-004: ATA 24 Electrical Operations Interface
+# [RQ-02-00-13-004](./RQ-02-00-13-004_*.md): [ATA 24](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_24-ELECTRICAL_POWER/) Electrical Operations Interface
 
 ## Requirement Details
 
-**ID:** RQ-02-00-13-004  
+**ID:** [RQ-02-00-13-004](./RQ-02-00-13-004_*.md)  
 **Category:** Interface  
 **Subcategory:** Electrical  
-**Title:** ATA 24 Electrical Operations Interface  
+**Title:** [ATA 24](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_24-ELECTRICAL_POWER/) Electrical Operations Interface  
 **Priority:** Critical  
 **Status:** Approved
 

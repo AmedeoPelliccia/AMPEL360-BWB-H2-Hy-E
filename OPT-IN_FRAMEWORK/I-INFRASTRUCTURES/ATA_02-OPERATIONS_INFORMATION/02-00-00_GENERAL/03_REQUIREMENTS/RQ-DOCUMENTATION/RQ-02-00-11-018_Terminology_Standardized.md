@@ -1,8 +1,8 @@
-# RQ-02-00-11-018: Terminology Standardized
+# [RQ-02-00-11-018](./RQ-02-00-11-018_*.md): Terminology Standardized
 
 ## Requirement Details
 
-**ID:** RQ-02-00-11-018  
+**ID:** [RQ-02-00-11-018](./RQ-02-00-11-018_*.md)  
 **Category:** Documentation  
 **Subcategory:** Terminology  
 **Title:** Terminology Standardized  

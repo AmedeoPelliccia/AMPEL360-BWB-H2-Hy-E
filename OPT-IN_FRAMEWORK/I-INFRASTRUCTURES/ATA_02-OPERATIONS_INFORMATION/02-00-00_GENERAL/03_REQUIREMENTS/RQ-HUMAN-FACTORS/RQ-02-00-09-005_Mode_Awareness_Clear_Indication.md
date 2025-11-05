@@ -1,8 +1,8 @@
-# RQ-02-00-09-005: Mode Awareness Clear Indication
+# [RQ-02-00-09-005](./RQ-02-00-09-005_*.md): Mode Awareness Clear Indication
 
 ## Requirement Details
 
-**ID:** RQ-02-00-09-005  
+**ID:** [RQ-02-00-09-005](./RQ-02-00-09-005_*.md)  
 **Category:** Human Factors  
 **Subcategory:** Automation  
 **Title:** Mode Awareness Clear Indication  

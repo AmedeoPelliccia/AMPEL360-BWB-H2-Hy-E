@@ -49,14 +49,14 @@ This category contains all regulatory compliance requirements for the AMPEL360 B
 
 | Standard | Authority | Application |
 |----------|-----------|-------------|
-| CS-25 | EASA | European Airworthiness |
-| FAR-25 (14 CFR 25) | FAA | US Airworthiness |
-| ICAO Annex 6 | ICAO | International Operations |
-| ISO 19881:2018 | ISO | H₂ Fuel Containers |
-| SAE J2719 | SAE | H₂ Fuel Quality |
-| NFPA 2:2020 | NFPA | Hydrogen Technologies |
-| EU AI Act | European Commission | AI Safety & Ethics |
-| ICAO Annex 16 | ICAO | Environmental Protection |
+| [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) | [EASA](https://www.easa.europa.eu/) | European Airworthiness |
+| [FAR-25 (14 CFR 25)](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) | [FAA](https://www.faa.gov/) | US Airworthiness |
+| [ICAO Annex 6](https://www.icao.int/safety/airnavigation/NationalityMarks/annexes_booklet_en.pdf) | [ICAO](https://www.icao.int/) | International Operations |
+| [ISO 19881:2018](https://www.iso.org/standard/66482.html) | [ISO](https://www.iso.org/) | H₂ Fuel Containers |
+| [SAE J2719](https://www.sae.org/standards/content/j2719_202009/) | [SAE](https://www.sae.org/) | H₂ Fuel Quality |
+| [NFPA 2:2020](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2) | [NFPA](https://www.nfpa.org/) | Hydrogen Technologies |
+| [EU AI Act](https://artificialintelligenceact.eu/) | European Commission | AI Safety & Ethics |
+| [ICAO Annex 16](https://www.icao.int/environmental-protection/Pages/default.aspx) | [ICAO](https://www.icao.int/) | Environmental Protection |
 
 ## Compliance Status
 

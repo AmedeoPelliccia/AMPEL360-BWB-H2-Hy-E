@@ -1,8 +1,8 @@
-# RQ-02-00-08-001: Digital Twin Real-Time Integration
+# [RQ-02-00-08-001](./RQ-02-00-08-001_*.md): Digital Twin Real-Time Integration
 
 ## Requirement Details
 
-**ID:** RQ-02-00-08-001  
+**ID:** [RQ-02-00-08-001](./RQ-02-00-08-001_*.md)  
 **Category:** CAOS Operations  
 **Subcategory:** Integration  
 **Title:** Digital Twin Real-Time Integration  
@@ -48,17 +48,17 @@ A real-time digital twin is the foundation of CAOS capabilities, enabling:
 ## Traceability
 
 - **Parent ATA:** 02-90-00 (CAOS Operations Integration)
-- **Design Implementation:** ATA 95-10-00 Digital Twin Module
+- **Design Implementation:** [ATA 95-10-00](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/) Digital Twin Module
 - **Verification Doc:** VER-95-10-001
 - **Validation Doc:** VAL-95-10-001
 
 ## Related Requirements
 
-- RQ-02-00-08-002: Real-Time Synchronization 100ms
-- RQ-02-00-08-003: Predictive Analytics Enabled
-- RQ-02-00-08-005: Fleet Learning Enabled
-- RQ-02-00-08-020: Independent Safety Monitor
-- RQ-02-00-08-024: Performance Monitoring Continuous
+- [RQ-02-00-08-002](./RQ-02-00-08-002_*.md): Real-Time Synchronization 100ms
+- [RQ-02-00-08-003](./RQ-02-00-08-003_*.md): Predictive Analytics Enabled
+- [RQ-02-00-08-005](./RQ-02-00-08-005_*.md): Fleet Learning Enabled
+- [RQ-02-00-08-020](./RQ-02-00-08-020_*.md): Independent Safety Monitor
+- [RQ-02-00-08-024](./RQ-02-00-08-024_*.md): Performance Monitoring Continuous
 
 ## Impact Areas
 
@@ -115,7 +115,7 @@ A real-time digital twin is the foundation of CAOS capabilities, enabling:
 
 ## AI Safety Considerations
 
-Digital twin predictions are advisory only. Crew retains final authority per RQ-02-00-08-016. Independent safety monitor (RQ-02-00-08-020) validates twin outputs before presentation to crew.
+Digital twin predictions are advisory only. Crew retains final authority per [RQ-02-00-08-016](./RQ-02-00-08-016_*.md). Independent safety monitor (RQ-02-00-08-020) validates twin outputs before presentation to crew.
 
 ## Notes
 

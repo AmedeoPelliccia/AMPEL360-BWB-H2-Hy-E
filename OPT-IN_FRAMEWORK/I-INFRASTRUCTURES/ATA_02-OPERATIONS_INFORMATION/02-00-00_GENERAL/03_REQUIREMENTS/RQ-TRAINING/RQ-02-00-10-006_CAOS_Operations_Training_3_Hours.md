@@ -1,8 +1,8 @@
-# RQ-02-00-10-006: CAOS Operations Training 3 Hours
+# [RQ-02-00-10-006](./RQ-02-00-10-006_*.md): CAOS Operations Training 3 Hours
 
 ## Requirement Details
 
-**ID:** RQ-02-00-10-006  
+**ID:** [RQ-02-00-10-006](./RQ-02-00-10-006_*.md)  
 **Category:** Training  
 **Subcategory:** CAOS  
 **Title:** CAOS Operations Training 3 Hours  

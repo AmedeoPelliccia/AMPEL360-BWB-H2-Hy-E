@@ -1,8 +1,8 @@
-# RQ-02-00-11-012: Document Distribution Controlled
+# [RQ-02-00-11-012](./RQ-02-00-11-012_*.md): Document Distribution Controlled
 
 ## Requirement Details
 
-**ID:** RQ-02-00-11-012  
+**ID:** [RQ-02-00-11-012](./RQ-02-00-11-012_*.md)  
 **Category:** Documentation  
 **Subcategory:** Distribution  
 **Title:** Document Distribution Controlled  

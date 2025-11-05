@@ -1,8 +1,8 @@
-# RQ-02-00-07-010: Load Distribution Optimized Across Stacks
+# [RQ-02-00-07-010](./RQ-02-00-07-010_*.md): Load Distribution Optimized Across Stacks
 
 ## Requirement Details
 
-**ID:** RQ-02-00-07-010  
+**ID:** [RQ-02-00-07-010](./RQ-02-00-07-010_*.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Distribution  
 **Title:** Load Distribution Optimized Across Stacks  

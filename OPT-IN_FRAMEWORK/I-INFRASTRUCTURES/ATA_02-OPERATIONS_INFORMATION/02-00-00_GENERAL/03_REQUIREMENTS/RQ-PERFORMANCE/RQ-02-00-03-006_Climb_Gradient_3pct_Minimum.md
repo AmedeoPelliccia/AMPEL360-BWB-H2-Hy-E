@@ -1,8 +1,8 @@
-# RQ-02-00-03-006: Climb Gradient 3% Minimum
+# [RQ-02-00-03-006](./RQ-02-00-03-006_*.md): Climb Gradient 3% Minimum
 
 ## Requirement Details
 
-**ID:** RQ-02-00-03-006  
+**ID:** [RQ-02-00-03-006](./RQ-02-00-03-006_*.md)  
 **Category:** Performance  
 **Subcategory:** Climb  
 **Title:** Climb Gradient 3% Minimum  
@@ -19,7 +19,7 @@ This performance parameter is critical to meet market requirements and operation
 
 ## Source
 
-- **Document:** CS-25.121
+- **Document:** [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes).121
 - **Parent ATA:** 02-40-00
 - **Criticality:** Safety
 

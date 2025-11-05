@@ -1,8 +1,8 @@
-# RQ-02-00-10-011: Dispatcher Training 24 Hours
+# [RQ-02-00-10-011](./RQ-02-00-10-011_*.md): Dispatcher Training 24 Hours
 
 ## Requirement Details
 
-**ID:** RQ-02-00-10-011  
+**ID:** [RQ-02-00-10-011](./RQ-02-00-10-011_*.md)  
 **Category:** Training  
 **Subcategory:** Dispatch  
 **Title:** Dispatcher Training 24 Hours  

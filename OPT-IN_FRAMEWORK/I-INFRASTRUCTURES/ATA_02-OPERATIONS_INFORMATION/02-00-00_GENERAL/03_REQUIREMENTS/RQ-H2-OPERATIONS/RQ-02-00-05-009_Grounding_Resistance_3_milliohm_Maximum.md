@@ -1,8 +1,8 @@
-# RQ-02-00-05-009: Grounding Resistance 3 milliohm Maximum
+# [RQ-02-00-05-009](./RQ-02-00-05-009_*.md): Grounding Resistance 3 milliohm Maximum
 
 ## Requirement Details
 
-**ID:** RQ-02-00-05-009  
+**ID:** [RQ-02-00-05-009](./RQ-02-00-05-009_*.md)  
 **Category:** H2 Operations  
 **Subcategory:** Safety  
 **Title:** Grounding Resistance 3 milliohm Maximum  

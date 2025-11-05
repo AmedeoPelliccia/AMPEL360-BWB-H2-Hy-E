@@ -1,11 +1,11 @@
-# RQ-02-00-13-006: ATA 47 Inerting System Interface
+# [RQ-02-00-13-006](./RQ-02-00-13-006_*.md): [ATA 47](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_47-INERTING_SYSTEM/) Inerting System Interface
 
 ## Requirement Details
 
-**ID:** RQ-02-00-13-006  
+**ID:** [RQ-02-00-13-006](./RQ-02-00-13-006_*.md)  
 **Category:** Interface  
 **Subcategory:** Inerting  
-**Title:** ATA 47 Inerting System Interface  
+**Title:** [ATA 47](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_47-INERTING_SYSTEM/) Inerting System Interface  
 **Priority:** Critical  
 **Status:** Approved
 

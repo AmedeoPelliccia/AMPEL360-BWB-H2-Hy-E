@@ -1,8 +1,8 @@
-# RQ-02-00-07-013: Graceful Degradation Capability
+# [RQ-02-00-07-013](./RQ-02-00-07-013_*.md): Graceful Degradation Capability
 
 ## Requirement Details
 
-**ID:** RQ-02-00-07-013  
+**ID:** [RQ-02-00-07-013](./RQ-02-00-07-013_*.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Degradation  
 **Title:** Graceful Degradation Capability  

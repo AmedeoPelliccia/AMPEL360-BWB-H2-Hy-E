@@ -1,8 +1,8 @@
-# RQ-02-00-10-017: Competency Assessment Standards
+# [RQ-02-00-10-017](./RQ-02-00-10-017_*.md): Competency Assessment Standards
 
 ## Requirement Details
 
-**ID:** RQ-02-00-10-017  
+**ID:** [RQ-02-00-10-017](./RQ-02-00-10-017_*.md)  
 **Category:** Training  
 **Subcategory:** Assessment  
 **Title:** Competency Assessment Standards  

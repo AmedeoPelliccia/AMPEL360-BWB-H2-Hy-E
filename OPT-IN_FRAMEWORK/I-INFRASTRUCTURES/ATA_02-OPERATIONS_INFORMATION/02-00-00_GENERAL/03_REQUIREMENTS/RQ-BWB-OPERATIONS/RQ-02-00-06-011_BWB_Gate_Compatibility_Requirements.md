@@ -1,8 +1,8 @@
-# RQ-02-00-06-011: BWB Gate Compatibility Requirements
+# [RQ-02-00-06-011](./RQ-02-00-06-011_*.md): BWB Gate Compatibility Requirements
 
 ## Requirement Details
 
-**ID:** RQ-02-00-06-011  
+**ID:** [RQ-02-00-06-011](./RQ-02-00-06-011_*.md)  
 **Category:** BWB Operations  
 **Subcategory:** Ground  
 **Title:** BWB Gate Compatibility Requirements  

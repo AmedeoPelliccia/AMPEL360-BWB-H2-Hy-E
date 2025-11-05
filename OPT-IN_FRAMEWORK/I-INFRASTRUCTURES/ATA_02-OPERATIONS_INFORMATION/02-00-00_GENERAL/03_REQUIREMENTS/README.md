@@ -246,25 +246,27 @@ Categories:
 ## Cross-References
 
 ### Related ATA Chapters
-- **ATA 05**: Time Limits / Maintenance Checks
-- **ATA 12**: Servicing (H₂ Refueling)
-- **ATA 21**: Air Conditioning (CO₂ Capture)
-- **ATA 24**: Electrical Power (Fuel Cells)
-- **ATA 28**: Fuel Systems (H₂ Storage)
-- **ATA 47**: Inerting System
-- **ATA 71**: Power Plant (Fuel Cell System)
-- **ATA 95**: CAOS / Digital Twin / Neural Networks
+- **[ATA 05](../../../O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/)**: Time Limits / Maintenance Checks
+- **[ATA 12](../../../P-PROGRAM/ATA_12-SERVICING/)**: Servicing (H₂ Refueling)
+- **[ATA 21](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/)**: Air Conditioning (CO₂ Capture)
+- **[ATA 24](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_24-ELECTRICAL_POWER/)**: Electrical Power (Fuel Cells)
+- **[ATA 28](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/)**: Fuel Systems (H₂ Storage)
+- **[ATA 47](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_47-INERTING_SYSTEM/)**: Inerting System
+- **[ATA 71](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_71-POWER_PLANT/)**: Power Plant (Fuel Cell System)
+- **[ATA 95](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/)**: CAOS / Digital Twin / Neural Networks
 
 ### External Standards
-- **EASA CS-25**: European Airworthiness Standards
-- **FAA 14 CFR Part 25**: US Airworthiness Standards
-- **ISO 19881:2018**: Gaseous hydrogen — Land vehicle fuel containers
-- **SAE J2719**: Hydrogen Fuel Quality for Fuel Cell Vehicles
-- **NFPA 2**: Hydrogen Technologies Code
-- **EU Regulation 2018/1139**: Aviation Safety
-- **EU AI Act**: Artificial Intelligence Regulation
-- **S1000D**: International specification for technical publications
-- **ATA iSpec 2200**: Information Standards for Aviation Maintenance
+- **[EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)**: European Airworthiness Standards
+- **[FAA 14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)**: US Airworthiness Standards
+- **[ISO 19881:2018](https://www.iso.org/standard/66482.html)**: Gaseous hydrogen — Land vehicle fuel containers
+- **[SAE J2719](https://www.sae.org/standards/content/j2719_202009/)**: Hydrogen Fuel Quality for Fuel Cell Vehicles
+- **[NFPA 2](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2)**: Hydrogen Technologies Code
+- **[EU Regulation 2018/1139](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R1139)**: Aviation Safety
+- **[EU AI Act](https://artificialintelligenceact.eu/)**: Artificial Intelligence Regulation
+- **[S1000D](http://www.s1000d.org/)**: International specification for technical publications
+- **[ATA iSpec 2200](https://www.ataebiz.org/)**: Information Standards for Aviation Maintenance
+- **[ICAO Annexes](https://www.icao.int/)**: International Civil Aviation Organization Standards
+- **[RTCA Standards](https://www.rtca.org/)**: Radio Technical Commission for Aeronautics
 
 ## Usage Guidelines
 

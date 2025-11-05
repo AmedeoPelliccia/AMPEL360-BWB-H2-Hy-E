@@ -1,8 +1,8 @@
-# RQ-02-00-04-007: Minimum Crew 2 Pilots
+# [RQ-02-00-04-007](./RQ-02-00-04-007_*.md): Minimum Crew 2 Pilots
 
 ## Requirement Details
 
-**ID:** RQ-02-00-04-007  
+**ID:** [RQ-02-00-04-007](./RQ-02-00-04-007_*.md)  
 **Category:** Operational  
 **Subcategory:** Crew  
 **Title:** Minimum Crew 2 Pilots  
@@ -19,7 +19,7 @@ This operational requirement ensures reliable, efficient daily operations and me
 
 ## Source
 
-- **Document:** CS-25.1523
+- **Document:** [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes).1523
 - **Parent ATA:** 02-00-00
 - **Criticality:** Safety
 

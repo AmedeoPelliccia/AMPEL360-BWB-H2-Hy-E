@@ -1,17 +1,17 @@
-# RQ-02-00-01-004: EU 965/2012 Air Operations Compliance
+# [RQ-02-00-01-004](./RQ-02-00-01-004_*.md): [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965) Air Operations Compliance
 
 ## Requirement Details
 
-**ID:** RQ-02-00-01-004  
+**ID:** [RQ-02-00-01-004](./RQ-02-00-01-004_*.md)  
 **Category:** Regulatory  
 **Subcategory:** EU  
-**Title:** EU 965/2012 Air Operations Compliance  
+**Title:** [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965) Air Operations Compliance  
 **Priority:** Critical  
 **Status:** Approved
 
 ## Description
 
-The aircraft and its operations shall comply with all applicable requirements of EU 965/2012 regarding eu 965/2012 air operations compliance.
+The aircraft and its operations shall comply with all applicable requirements of [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965) regarding eu 965/2012 air operations compliance.
 
 ## Rationale
 
@@ -19,7 +19,7 @@ Compliance with EU is mandatory for aircraft certification and legal operation i
 
 ## Source
 
-- **Document:** EU 965/2012
+- **Document:** [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965)
 - **Parent ATA:** 02-00-00
 - **Criticality:** Safety
 

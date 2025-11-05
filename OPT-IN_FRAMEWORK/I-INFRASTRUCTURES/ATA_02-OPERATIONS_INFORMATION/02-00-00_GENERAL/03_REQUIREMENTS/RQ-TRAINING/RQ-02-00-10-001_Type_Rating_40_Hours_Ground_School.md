@@ -1,8 +1,8 @@
-# RQ-02-00-10-001: Type Rating 40 Hours Ground School
+# [RQ-02-00-10-001](./RQ-02-00-10-001_*.md): Type Rating 40 Hours Ground School
 
 ## Requirement Details
 
-**ID:** RQ-02-00-10-001  
+**ID:** [RQ-02-00-10-001](./RQ-02-00-10-001_*.md)  
 **Category:** Training  
 **Subcategory:** Type Rating  
 **Title:** Type Rating 40 Hours Ground School  

@@ -1,8 +1,8 @@
-# RQ-02-00-01-013: ADS-B Out Capability
+# [RQ-02-00-01-013](./RQ-02-00-01-013_*.md): ADS-B Out Capability
 
 ## Requirement Details
 
-**ID:** RQ-02-00-01-013  
+**ID:** [RQ-02-00-01-013](./RQ-02-00-01-013_*.md)  
 **Category:** Regulatory  
 **Subcategory:** Avionics  
 **Title:** ADS-B Out Capability  
@@ -11,7 +11,7 @@
 
 ## Description
 
-The aircraft and its operations shall comply with all applicable requirements of DO-260B regarding ads-b out capability.
+The aircraft and its operations shall comply with all applicable requirements of [DO-260B](https://www.rtca.org/) regarding ads-b out capability.
 
 ## Rationale
 
@@ -19,7 +19,7 @@ Compliance with Avionics is mandatory for aircraft certification and legal opera
 
 ## Source
 
-- **Document:** DO-260B
+- **Document:** [DO-260B](https://www.rtca.org/)
 - **Parent ATA:** 02-00-00
 - **Criticality:** Safety
 

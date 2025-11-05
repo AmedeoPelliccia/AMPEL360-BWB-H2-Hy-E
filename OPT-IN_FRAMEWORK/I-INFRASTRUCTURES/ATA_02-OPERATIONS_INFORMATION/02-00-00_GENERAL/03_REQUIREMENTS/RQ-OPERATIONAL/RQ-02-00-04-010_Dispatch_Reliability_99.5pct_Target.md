@@ -1,8 +1,8 @@
-# RQ-02-00-04-010: Dispatch Reliability 99.5% Target
+# [RQ-02-00-04-010](./RQ-02-00-04-010_*.md): Dispatch Reliability 99.5% Target
 
 ## Requirement Details
 
-**ID:** RQ-02-00-04-010  
+**ID:** [RQ-02-00-04-010](./RQ-02-00-04-010_*.md)  
 **Category:** Operational  
 **Subcategory:** Reliability  
 **Title:** Dispatch Reliability 99.5% Target  

@@ -1,8 +1,8 @@
-# RQ-02-00-06-001: CG Range 15-42% MAC
+# [RQ-02-00-06-001](./RQ-02-00-06-001_*.md): CG Range 15-42% MAC
 
 ## Requirement Details
 
-**ID:** RQ-02-00-06-001  
+**ID:** [RQ-02-00-06-001](./RQ-02-00-06-001_*.md)  
 **Category:** BWB Operations  
 **Subcategory:** CG  
 **Title:** CG Range 15-42% MAC  

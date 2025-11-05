@@ -1,8 +1,8 @@
-# RQ-02-00-09-010: Fatigue Management Program
+# [RQ-02-00-09-010](./RQ-02-00-09-010_*.md): Fatigue Management Program
 
 ## Requirement Details
 
-**ID:** RQ-02-00-09-010  
+**ID:** [RQ-02-00-09-010](./RQ-02-00-09-010_*.md)  
 **Category:** Human Factors  
 **Subcategory:** Fatigue  
 **Title:** Fatigue Management Program  
@@ -19,7 +19,7 @@ This human factors requirement optimizes the human-machine interface and reduces
 
 ## Source
 
-- **Document:** EU 965/2012
+- **Document:** [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965)
 - **Parent ATA:** 02-00-00
 - **Criticality:** Safety
 

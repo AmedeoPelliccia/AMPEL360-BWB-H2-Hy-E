@@ -1,17 +1,17 @@
-# RQ-02-00-01-017: NFPA 2 Hydrogen Technologies Code
+# [RQ-02-00-01-017](./RQ-02-00-01-017_*.md): [NFPA 2](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2) Hydrogen Technologies Code
 
 ## Requirement Details
 
-**ID:** RQ-02-00-01-017  
+**ID:** [RQ-02-00-01-017](./RQ-02-00-01-017_*.md)  
 **Category:** Regulatory  
 **Subcategory:** H2  
-**Title:** NFPA 2 Hydrogen Technologies Code  
+**Title:** [NFPA 2](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2) Hydrogen Technologies Code  
 **Priority:** Critical  
 **Status:** Approved
 
 ## Description
 
-The aircraft and its operations shall comply with all applicable requirements of NFPA 2:2020 regarding nfpa 2 hydrogen technologies code.
+The aircraft and its operations shall comply with all applicable requirements of [NFPA 2:2020](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2) regarding nfpa 2 hydrogen technologies code.
 
 ## Rationale
 
@@ -19,7 +19,7 @@ Compliance with H2 is mandatory for aircraft certification and legal operation i
 
 ## Source
 
-- **Document:** NFPA 2:2020
+- **Document:** [NFPA 2:2020](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2)
 - **Parent ATA:** 02-30-00
 - **Criticality:** Safety
 

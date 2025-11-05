@@ -1,8 +1,8 @@
-# RQ-02-00-08-016: Human Authority Final Decision
+# [RQ-02-00-08-016](./RQ-02-00-08-016_*.md): Human Authority Final Decision
 
 ## Requirement Details
 
-**ID:** RQ-02-00-08-016  
+**ID:** [RQ-02-00-08-016](./RQ-02-00-08-016_*.md)  
 **Category:** CAOS  
 **Subcategory:** Authority  
 **Title:** Human Authority Final Decision  
