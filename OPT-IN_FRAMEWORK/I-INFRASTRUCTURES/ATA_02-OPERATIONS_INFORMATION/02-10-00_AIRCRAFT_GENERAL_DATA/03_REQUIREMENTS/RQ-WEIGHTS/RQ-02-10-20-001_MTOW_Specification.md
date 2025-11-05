@@ -20,7 +20,7 @@ The aircraft Maximum Takeoff Weight (MTOW) shall not exceed 185,000 kg to ensure
 | Operating Empty Weight (OEW) | 95,000 | 51.4% |
 | Payload (max) | 22,000 | 11.9% |
 | H₂ Fuel (max usable) | 8,000 | 4.3% |
-| Reserves & Margins | 60,000 | 32.4% |
+| Reserves & Margins | 50,000 | 27.0% |
 
 ## Rationale
 
