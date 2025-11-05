@@ -1,0 +1,62 @@
+# CAOS Advisory Display Mockup
+
+This file represents a placeholder for the CAOS Advisory Display mockup.
+
+## Display Content
+
+The CAOS Advisory Display shows:
+
+### Advisory Window
+```
+┌─────────────────────────────────────────┐
+│ CAOS ADVISORY               [Override]  │
+├─────────────────────────────────────────┤
+│ ALTITUDE CHANGE RECOMMENDED             │
+│                                         │
+│ Current: FL370                          │
+│ Recommended: FL390                      │
+│ Reason: Favorable winds +15kt          │
+│ Fuel Savings: 42 kg (3.2%)             │
+│ Confidence: 87%                        │
+│                                         │
+│ [More Info] [Accept] [Defer] [Reject]  │
+└─────────────────────────────────────────┘
+```
+
+### Components
+- Advisory title (clear, concise)
+- Current vs Recommended comparison
+- Reasoning explanation
+- Impact quantification
+- Confidence level (0-100%)
+- Action buttons (Accept/Defer/Reject)
+- Override option (always available)
+- More Info expansion button
+
+### Color Coding
+- Normal advisory: White background, black text
+- Time-sensitive: Amber border, single chime
+- Critical: Integrated with master warning/caution
+- Accepted: Green confirmation
+- Rejected: Gray with timestamp
+
+### Display States
+1. **Advisory Presented:** Full information with actions
+2. **Advisory Accepted:** Confirmation with execution status
+3. **Advisory Deferred:** Minimized with reminder option
+4. **Advisory Rejected:** Logged with reason option
+5. **Advisory Expired:** Auto-dismissed if no longer relevant
+
+## Image Specification
+- Resolution: 1024x768 pixels
+- Format: PNG with transparency
+- Color depth: 24-bit
+- Display ratio: 4:3
+
+**Note:** This is a placeholder. Actual mockup should be created using:
+- Professional UI design tools (Figma, Sketch, Adobe XD)
+- Aviation display standards (ARINC 661)
+- Human factors guidelines (EASA AMC 20-26)
+- Touch-screen friendly design
+
+**File:** CAOS_Advisory_Display.png (to be created by design team)

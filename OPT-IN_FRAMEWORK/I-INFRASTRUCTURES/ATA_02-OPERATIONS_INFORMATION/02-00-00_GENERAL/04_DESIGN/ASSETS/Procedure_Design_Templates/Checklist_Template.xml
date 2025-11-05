@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checklist xmlns="http://www.ampel360.aero/checklists" version="1.0">
+  <header>
+    <title>CHECKLIST TITLE</title>
+    <checklistId>CL-XX-XX</checklistId>
+    <checklistType>Challenge-Response</checklistType>
+    <revision>1.0</revision>
+    <effectiveDate>YYYY-MM-DD</effectiveDate>
+  </header>
+  
+  <applicability>
+    <aircraftType>AMPEL360 BWB H&#8322; Hy-E Q100</aircraftType>
+    <phase>Flight phase (e.g., Before Start, Before Takeoff)</phase>
+  </applicability>
+  
+  <format>
+    <type>Challenge-Response</type>
+    <description>Pilot Flying reads challenge, Pilot Monitoring responds with status</description>
+  </format>
+  
+  <items>
+    <item number="1" type="verify">
+      <challenge>Flight Controls</challenge>
+      <response>CHECKED</response>
+      <verification method="visual">Control surfaces move correctly</verification>
+    </item>
+    
+    <item number="2" type="verify">
+      <challenge>Fuel Quantity</challenge>
+      <response>_____ KG</response>
+      <verification method="callout">Pilot Monitoring states actual quantity</verification>
+    </item>
+    
+    <item number="3" type="switch">
+      <challenge>Fuel Pumps</challenge>
+      <response>ON</response>
+      <verification method="indication">Pump indicators show ON</verification>
+    </item>
+    
+    <item number="4" type="verify">
+      <challenge>H2 System Temperature</challenge>
+      <response>NORMAL</response>
+      <verification method="indication">Temperature within normal range (-253°C ±5°C)</verification>
+    </item>
+    
+    <item number="5" type="verify">
+      <challenge>H2 System Pressure</challenge>
+      <response>NORMAL</response>
+      <verification method="indication">Pressure within normal range (2.8-3.2 bar)</verification>
+    </item>
+    
+    <item number="6" type="conditional" condition="if_anti_ice_required">
+      <challenge>Anti-Ice</challenge>
+      <response>ON AS REQUIRED</response>
+      <verification method="indication">Anti-ice systems active if conditions require</verification>
+    </item>
+    
+    <item number="7" type="verify">
+      <challenge>Fuel Cell Status</challenge>
+      <response>4 OPERATING</response>
+      <verification method="indication">All four fuel cell stacks showing normal operation</verification>
+      <caos>
+        <assistance>CAOS auto-populates actual fuel cell count</assistance>
+        <anomalyDetection>Flags if fuel cell performance degraded</anomalyDetection>
+      </caos>
+    </item>
+    
+    <item number="8" type="verify">
+      <challenge>CAOS System</challenge>
+      <response>OPERATIONAL</response>
+      <verification method="indication">CAOS showing green status</verification>
+    </item>
+    
+    <item number="9" type="confirm" critical="true">
+      <challenge>Takeoff Data</challenge>
+      <response>SET AND CROSS-CHECKED</response>
+      <verification method="manual">Both pilots verify V-speeds and thrust settings</verification>
+    </item>
+    
+    <item number="10" type="verify">
+      <challenge>Flight Instruments</challenge>
+      <response>CHECKED</response>
+      <verification method="visual">All instruments showing valid data</verification>
+    </item>
+  </items>
+  
+  <completion>
+    <announcement>Checklist Complete</announcement>
+    <verification>Both pilots confirm checklist completion</verification>
+  </completion>
+  
+  <notes>
+    <note type="procedure">
+      <content>Challenge-response items: PF reads challenge, PM responds with actual status</content>
+    </note>
+    <note type="caos">
+      <content>CAOS-enhanced checklist auto-populates values and flags anomalies in yellow</content>
+    </note>
+    <note type="backup">
+      <content>Paper backup checklist available in QRH with identical content</content>
+    </note>
+  </notes>
+  
+  <caos>
+    <digitalChecklist enabled="true">
+      <features>
+        <feature>Auto-population of actual values</feature>
+        <feature>Conditional logic hides N/A items</feature>
+        <feature>Yellow flag for anomalies</feature>
+        <feature>Manual crew confirmation required for each item</feature>
+        <feature>Progress tracking</feature>
+      </features>
+    </digitalChecklist>
+  </caos>
+  
+  <references>
+    <reference>Related procedure: Normal Procedures Manual Section XX</reference>
+    <reference>QRH page: XX</reference>
+  </references>
+</checklist>
