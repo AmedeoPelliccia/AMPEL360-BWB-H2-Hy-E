@@ -88,7 +88,7 @@ Correct the wingspan dimension from 80m to 52m to reflect refined design analysi
   - Easier transportation of components
 
 ### 2.7 Operational Impact
-- **Airport Accessibility:** Significantly improved (Code C vs Code E)
+- **Airport Accessibility:** Significantly improved (Code D vs Code E)
 - **Ground Handling:** Simplified operations
 - **Maintenance Access:** Enhanced accessibility
 - **Training:** Minor updates to training materials
