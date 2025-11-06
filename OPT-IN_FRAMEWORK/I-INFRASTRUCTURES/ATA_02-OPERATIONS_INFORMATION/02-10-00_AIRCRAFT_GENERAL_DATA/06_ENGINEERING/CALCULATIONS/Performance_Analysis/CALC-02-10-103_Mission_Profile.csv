@@ -16,7 +16,7 @@ Phase_14,Final_Approach,300,0,10,5,140585,12,30,5445,Final approach and landing
 Phase_15,Landing_Rollout,0,0,3,2,140555,0,10,5455,Reverse thrust and braking
 Phase_16,Taxi_In,0,0,0,10,140545,0,8,5463,Taxi to gate
 Phase_17,Ground_Operations,0,0,0,5,140537,0,7,5470,APU operations at gate
-Mission_Summary,Design_Mission,0,11000,6963,905,144235,19.2,5470,5470,Complete design mission profile
+Mission_Summary,Design_Mission,0,11000,6465,905,144235,19.2,5470,5470,Complete design mission profile
 Reserve_Phase,Holding_Reserve,3000,3000,150,45,140537,15,200,5670,45-minute reserve at alternate
 Reserve_Phase,Diversion,3000,0,300,50,140337,17,250,5920,Fly to alternate airport 300 km
 Reserve_Phase,Approach_Alternate,300,0,10,5,140087,12,20,5940,Land at alternate
