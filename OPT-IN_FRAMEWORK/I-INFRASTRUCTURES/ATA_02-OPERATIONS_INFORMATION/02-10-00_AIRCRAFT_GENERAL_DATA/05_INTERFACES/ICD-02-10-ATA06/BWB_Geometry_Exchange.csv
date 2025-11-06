@@ -1,0 +1,14 @@
+Dimension,Value,Unit,Reference_Point,Airport_Code,Notes
+Overall_Length,54.5,m,Nose_Datum,All,Tip to tail
+Wingspan,65.0,m,Centerline,Code_E,Wing tip to wing tip
+Height,15.2,m,Ground_Level,All,Maximum height with gear extended
+Cabin_Length,42.0,m,Forward_Bulkhead,All,Internal usable length
+Cabin_Max_Width,12.5,m,Centerline,All,At widest point of BWB
+Wing_Area,750.0,m²,Reference,All,Total lifting surface
+MAC,8.2,m,Wing_Root,All,Mean Aerodynamic Chord
+Door_L1_Height,4.2,m,Ground_Level,All,Forward entry door sill
+Door_L3_Height,3.8,m,Ground_Level,All,Aft emergency exit sill
+Cargo_Door_Height,3.5,m,Ground_Level,All,Cargo compartment access
+Wheel_Base,22.5,m,Main_Gear,All,Nose to main gear
+Main_Gear_Track,12.0,m,Centerline,All,Left to right main gear
+Tail_Clearance_Angle,15.5,deg,Main_Gear,All,Minimum ground clearance angle

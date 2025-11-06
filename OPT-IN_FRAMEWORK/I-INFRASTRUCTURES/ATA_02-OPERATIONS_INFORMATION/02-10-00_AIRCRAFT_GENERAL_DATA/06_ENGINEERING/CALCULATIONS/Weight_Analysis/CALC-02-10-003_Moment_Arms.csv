@@ -1,0 +1,39 @@
+Component,Station_ID,Longitudinal_m,Lateral_m,Vertical_m,Reference_Datum,Weight_kg,Moment_Arm_Notes
+Nose,STA-000,0.0,0.0,0.0,Forward reference point,0,Nose tip datum
+Cockpit,STA-050,5.0,0.0,2.5,Forward fuselage,2500,Flight deck equipment
+Forward Passenger Door L1,STA-120,12.0,-3.5,1.5,Port side,150,Entry door assembly
+Forward Passenger Cabin Start,STA-150,15.0,0.0,1.8,Cabin zone,0,Row 1 reference
+Passenger Cabin Zone 1,STA-180,18.0,0.0,1.8,Forward cabin,15000,Rows 1-10 full capacity
+Wing Leading Edge Center,STA-200,20.0,0.0,0.0,Structural datum,0,Wing reference point
+Forward H2 Tank Center,STA-210,21.0,0.0,-1.5,Below cabin floor,2667,Forward cryogenic tank
+Center H2 Tank Center,STA-240,24.0,0.0,-1.5,Below cabin floor,2667,Center cryogenic tank
+Passenger Cabin Zone 2,STA-250,25.0,0.0,1.8,Center cabin,15000,Rows 11-20 full capacity
+Main Landing Gear,STA-260,26.0,4.5,-2.0,Main gear bay,5000,MLG pivot point
+Wing Trailing Edge Center,STA-280,28.0,0.0,0.0,Structural datum,0,TE reference point
+Aft H2 Tank Center,STA-290,29.0,0.0,-1.5,Below cabin floor,2667,Aft cryogenic tank
+Passenger Cabin Zone 3,STA-320,32.0,0.0,1.8,Aft cabin,15000,Rows 21-25 full capacity
+Aft Passenger Door L3,STA-350,35.0,-3.5,1.5,Port side,150,Emergency exit
+Vertical Stabilizer Root,STA-380,38.0,0.0,3.0,Twin vertical tails,1250,Port vertical tail root
+Fuel Cell Stack 1,STA-220,22.0,3.0,0.5,Starboard side,1167,Forward fuel cell module
+Fuel Cell Stack 2,STA-240,24.0,3.0,0.5,Starboard side,1167,Center fuel cell module
+Fuel Cell Stack 3,STA-260,26.0,3.0,0.5,Starboard side,1167,Aft fuel cell module
+Electric Motor 1,STA-285,28.5,6.0,0.0,Starboard wingtip,167,Distributed propulsion motor 1
+Electric Motor 2,STA-285,28.5,-6.0,0.0,Port wingtip,167,Distributed propulsion motor 2
+Electric Motor 3,STA-285,28.5,4.0,0.0,Starboard mid-wing,167,Distributed propulsion motor 3
+CO2 Capture Unit,STA-230,23.0,0.0,-0.5,Below cabin,3000,Solid-state CO2 system
+Avionics Bay,STA-080,8.0,0.0,-1.0,Forward lower lobe,2000,Electronics equipment bay
+Forward Cargo Compartment,STA-110,11.0,0.0,-1.5,Forward cargo,8000,Containerized cargo zone
+Aft Cargo Compartment,STA-330,33.0,0.0,-1.5,Aft cargo,7000,Containerized cargo zone
+Battery System,STA-245,24.5,0.0,-1.0,Center lower lobe,4500,Main electrical storage
+Environmental Control,STA-200,20.0,2.5,0.5,Starboard equipment bay,3500,HVAC and pressurization
+Hydraulic System Center,STA-250,25.0,-2.5,0.0,Port equipment bay,2000,Flight control hydraulics
+APU,STA-370,37.0,0.0,2.0,Tail cone,800,Auxiliary power unit
+Galley Forward,STA-140,14.0,2.0,1.5,Forward cabin,1500,Food service area
+Galley Aft,STA-310,31.0,2.0,1.5,Aft cabin,1500,Food service area
+Lavatory Forward,STA-160,16.0,-2.0,1.5,Forward cabin,500,Passenger facilities
+Lavatory Aft,STA-300,30.0,-2.0,1.5,Aft cabin,500,Passenger facilities
+Nose Landing Gear,STA-070,7.0,0.0,-2.5,Forward gear bay,500,NLG pivot point
+Reference_MAC,MAC-LE,13.0,0.0,0.0,MAC leading edge,0,Mean aerodynamic chord start
+Reference_MAC,MAC-TE,21.5,0.0,0.0,MAC trailing edge,0,Mean aerodynamic chord end
+Wing_Span,WINGTIP-PORT,25.0,-15.0,0.0,Port wingtip,0,35m half-span (70m total span)
+Wing_Span,WINGTIP-STBD,25.0,15.0,0.0,Starboard wingtip,0,35m half-span (70m total span)

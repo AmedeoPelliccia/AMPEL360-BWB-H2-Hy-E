@@ -1,0 +1,35 @@
+Surface_Component,Type,Area_m2,Percentage_Total,Wetted_Area_m2,Reference_Notes
+Wing_Upper_Surface,Lifting,850,45.3,850,BWB upper surface - includes blended body
+Wing_Lower_Surface,Lifting,850,45.3,850,BWB lower surface - full pressure differential
+Fuselage_Forward,Non-Lifting,45,2.4,45,Forward fuselage nose section
+Fuselage_Aft,Non-Lifting,35,1.9,35,Aft fuselage tail cone
+Vertical_Stabilizer_Port,Control,28,1.5,56,Port vertical tail - both sides
+Vertical_Stabilizer_Stbd,Control,28,1.5,56,Starboard vertical tail - both sides
+Total_Vertical_Stabilizer,Control,56,3.0,112,Combined vertical tail surfaces
+Leading_Edge_Devices,High-Lift,45,2.4,90,Variable camber leading edge
+Trailing_Edge_Flaps,High-Lift,120,6.4,240,Trailing edge high-lift system
+Elevons,Control,80,4.3,160,Combined elevator and aileron surfaces
+Rudders,Control,18,1.0,36,Directional control surfaces
+Winglets,Efficiency,12,0.6,24,Wingtip devices for drag reduction
+Access_Doors,Service,25,1.3,50,Passenger doors and cargo doors
+Landing_Gear_Doors,Service,18,1.0,36,Main and nose gear bay doors
+Total_Lifting_Surface,Lifting,1700,90.6,1700,Wing and body lifting surfaces
+Total_Wetted_Surface,Total,1875,100.0,2594,Total aircraft wetted area
+Reference_Wing_Area,Reference,1700,N/A,N/A,Gross wing area for performance calculations
+Reference_Aspect_Ratio,Reference,2.88,N/A,N/A,Calculated as b²/S (70²/1700)
+Reference_Span,Reference,70.0,m,N/A,Tip to tip wingspan
+Reference_Length,Reference,42.0,m,N/A,Overall aircraft length
+Reference_Height,Reference,12.5,m,N/A,Overall aircraft height to VTP tip
+Surface_to_Volume_Ratio,Efficiency,0.42,m²/m³,N/A,Low ratio indicates efficient volume utilization
+Comparison_Conventional_A320,Reference,122.6,m² wing area,360,m² wetted,Baseline comparison
+Comparison_Area_Advantage,Efficiency,38.7,% less wetted area per pax,,,Better than conventional for same capacity
+Drag_Analysis,Parasite,0.0165,CD0 estimate,,,Low parasite drag coefficient
+Drag_Analysis,Induced,0.0185,CDi at cruise CL,,,Efficient span loading
+Drag_Analysis,Total_Cruise,0.0350,CD total,,,L/D = 21 at cruise
+Passenger_Cabin_Floor_Area,Interior,280,m²,N/A,Total cabin floor space
+Passenger_Density,Interior,1.27,m²/pax,N/A,220 passengers - spacious configuration
+Cargo_Volume_Forward,Interior,45,m³,N/A,Forward cargo compartment
+Cargo_Volume_Aft,Interior,38,m³,N/A,Aft cargo compartment
+Total_Cargo_Volume,Interior,83,m³,N/A,Total cargo capacity
+H2_Tank_Volume,Fuel,112,m³,N/A,Combined cryogenic tank volume for 8000 kg LH2
+Equipment_Bay_Volume,Systems,65,m³,N/A,Avionics and systems installation space
