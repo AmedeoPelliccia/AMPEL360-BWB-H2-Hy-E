@@ -1,0 +1,10 @@
+Station,Load_Limit_kg,Load_Type,Critical,Safety_Factor,Notes
+STA_8m_BL_0,25000,Concentrated,YES,1.5,Nose gear support area
+STA_12m_BL_±8m,50000,Jacking,YES,2.0,Forward jack points
+STA_18m_BL_0,75000,Distributed,YES,1.5,Center body main structure
+STA_22m_BL_±10m,30000,Service,NO,1.5,H2 refueling panel area
+STA_28m_BL_±12m,50000,Jacking,YES,2.0,Aft jack points
+STA_32m_BL_0,20000,Concentrated,NO,1.5,Aft equipment bay
+STA_12m_BL_±5m,60000,Towing,YES,2.0,Tow bar attachment points
+STA_18m_BL_±8m,45000,Landing_Gear,YES,3.0,Main gear attachment
+STA_24m_BL_±8m,40000,Landing_Gear,YES,3.0,Aft main gear attachment
