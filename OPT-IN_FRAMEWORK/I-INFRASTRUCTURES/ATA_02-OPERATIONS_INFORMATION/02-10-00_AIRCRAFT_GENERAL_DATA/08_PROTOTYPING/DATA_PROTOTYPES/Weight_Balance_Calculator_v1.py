@@ -13,7 +13,6 @@ Version: 1.0 (Prototype)
 
 import sys
 from typing import Dict, Tuple
-import json
 
 
 class WeightBalanceCalculator:
