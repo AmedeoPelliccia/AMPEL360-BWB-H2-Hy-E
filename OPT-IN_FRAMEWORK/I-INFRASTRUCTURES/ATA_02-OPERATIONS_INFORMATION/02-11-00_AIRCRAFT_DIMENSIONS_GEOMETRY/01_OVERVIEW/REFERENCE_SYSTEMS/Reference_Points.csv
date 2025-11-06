@@ -1,0 +1,36 @@
+System,Coordinate,Value,Unit,Description
+Station,STA 0,0.0,m,Nose apex (datum point)
+Station,STA 2.5,2.5,m,Nose landing gear centerline
+Station,STA 5,5.0,m,Cockpit forward bulkhead
+Station,STA 10,10.0,m,Cockpit aft bulkhead / cabin begins
+Station,STA 15,15.0,m,Maximum width location
+Station,STA 18,18.0,m,Main landing gear centerline
+Station,STA 20,20.0,m,Forward H₂ tank center
+Station,STA 25,25.0,m,Wing spar carrythrough
+Station,STA 30,30.0,m,Aft H₂ tank center
+Station,STA 35,35.0,m,Aft pressure bulkhead
+Station,STA 38.2,38.2,m,Aft extremity (trailing edge root)
+Buttline,BL 0,0.0,m,Aircraft centerline
+Buttline,BL ±5,±5.0,m,Inner cabin edge
+Buttline,BL ±8.5,±8.5,m,MAC spanwise location
+Buttline,BL ±10,±10.0,m,Cabin edge / systems begin
+Buttline,BL ±15,±15.0,m,Main landing gear attachment
+Buttline,BL ±19,±19.0,m,Center body edge / wing begins
+Buttline,BL ±22,±22.0,m,Mid wing
+Buttline,BL ±24,±24.0,m,Outer wing
+Buttline,BL ±26,±26.0,m,Wingtip
+Waterline,WL 0,0.0,m,Ground datum
+Waterline,WL 1.8,1.8,m,Belly (lowest structural point)
+Waterline,WL 2.2,2.2,m,Cargo floor level
+Waterline,WL 4.0,4.0,m,Cabin floor level
+Waterline,WL 4.3,4.3,m,Door sill height
+Waterline,WL 6.5,6.5,m,Empty aircraft CG (typical)
+Waterline,WL 8.5,8.5,m,Cabin ceiling
+Waterline,WL 10.0,10.0,m,Upper deck floor (H₂ tanks)
+Waterline,WL 14.5,14.5,m,Top of fuselage (highest point)
+CG_Reference,CG Empty,STA 22.5 / WL 6.5,—,Typical empty CG location
+CG_Reference,CG Forward Limit,STA 12.5 (20% MAC),—,Forward CG limit
+CG_Reference,CG Aft Limit,STA 16.3 (35% MAC),—,Aft CG limit
+Aerodynamic,MAC LE,STA 8.0 / BL ±8.5,—,Mean aerodynamic chord leading edge
+Aerodynamic,MAC Length,22.5,m,Mean aerodynamic chord
+Aerodynamic,Aerodynamic Center,STA 13.6 (25% MAC),—,Neutral point (approx.)
