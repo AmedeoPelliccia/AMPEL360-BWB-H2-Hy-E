@@ -24,6 +24,7 @@ This document demonstrates compliance of the AMPEL360 BWB H₂ Q100 ground clear
 ### 2.1 CS-25.731 - Wheels and Tyres: Retraction System
 **Reference:** CS-25.731(a)
 
+> **Note:** The following quote uses British English spelling ("aeroplane") as per the original CS-25 regulation.
 *"Retraction system must be designed so that during any probable failure condition, the landing gear and doors do not contact the ground when the aeroplane is on the ground."*
 
 **Interpretation:** Adequate ground clearance must be maintained under all loading conditions.
