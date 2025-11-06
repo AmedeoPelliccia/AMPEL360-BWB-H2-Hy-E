@@ -30,7 +30,7 @@ Complete set of fuselage station marking decals for the AMPEL360 BWB H2 Hy-E air
 ### Fuselage Stations (FS)
 - Marked on left side of fuselage
 - Measured from aircraft datum point
-- Interval: 50mm for accessible areas
+- Interval: At each station number as listed in kit contents (FS 0, FS 50, FS 100, etc.)
 
 ### Waterlines (WL)
 - Marked on forward and aft bulkheads
