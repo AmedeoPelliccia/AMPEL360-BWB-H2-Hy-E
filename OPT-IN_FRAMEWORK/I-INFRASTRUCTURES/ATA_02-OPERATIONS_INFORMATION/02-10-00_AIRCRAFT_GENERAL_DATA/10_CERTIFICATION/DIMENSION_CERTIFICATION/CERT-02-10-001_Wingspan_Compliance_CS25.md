@@ -40,7 +40,7 @@ CS-25 does not specify maximum wingspan limitations but requires that dimensions
 **Code E Classification:**
 - **Wingspan Range:** 52 m to 65 m
 - **AMPEL360 Wingspan:** 65.0 m ✅
-- **Outer Main Gear Wheel Span:** 9 m (design) ✅
+- **Outer Main Gear Wheel Span:** 9.0 m (certified, see Dimension_Certification_Evidence.csv line 13) ✅
 
 **Airport Infrastructure Requirements:**
 - Runway width: Minimum 45 m
