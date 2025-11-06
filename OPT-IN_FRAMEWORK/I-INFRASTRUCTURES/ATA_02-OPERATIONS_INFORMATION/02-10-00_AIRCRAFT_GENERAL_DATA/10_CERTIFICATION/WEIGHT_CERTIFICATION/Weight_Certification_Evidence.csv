@@ -1,0 +1,31 @@
+Evidence_ID,Document_ID,Parameter,Value,Unit,Requirement,Status,Verification_Method,Reference
+WGT-001,CERT-02-10-101,MTOW,180000,kg,CS-25.25 compliance,Compliant,Analysis + Test,CS-25.25
+WGT-002,CERT-02-10-101,Operating Empty Weight,95000,kg,Weight breakdown,Compliant,Weight Report,Design Spec
+WGT-003,CERT-02-10-101,Maximum Payload,40000,kg,220 pax + cargo,Compliant,Analysis,Requirements
+WGT-004,CERT-02-10-101,Maximum Fuel Weight,3000,kg,LH₂ capacity,Compliant,Tank Design,ATA 28
+WGT-005,CERT-02-10-101,Wing Loading,142.9,kg/m²,Structural design,Compliant,Calculation,Aero Analysis
+WGT-006,CERT-02-10-101,Positive Load Factor,+2.5,g,CS-25.337,Compliant,FEA,CS-25.337
+WGT-007,CERT-02-10-101,Negative Load Factor,-1.0,g,CS-25.337,Compliant,FEA,CS-25.337
+WGT-008,CERT-02-10-101,Takeoff Field Length,2400,m,At MTOW ISA+15,Compliant,Performance,CS-25.105
+WGT-009,CERT-02-10-101,Cruise Altitude,33000,ft,Initial at MTOW,Compliant,Performance,Design Spec
+WGT-010,CERT-02-10-102,MLW,150000,kg,CS-25.25 compliance,Compliant,Analysis + Test,CS-25.25
+WGT-011,CERT-02-10-102,MLW/MTOW Ratio,83.3,%,Typical transport,Compliant,Calculation,Industry Standard
+WGT-012,CERT-02-10-102,Landing Sink Rate,3.05,m/s,CS-25.473 requirement,Compliant,Analysis,CS-25.473
+WGT-013,CERT-02-10-102,Landing Load Factor,2.8,g,Limit load,Compliant,Analysis,CS-25.473
+WGT-014,CERT-02-10-102,Landing Distance Dry,1650,m,At MLW,Compliant,Performance,CS-25.125
+WGT-015,CERT-02-10-102,Landing Distance Wet,1850,m,At MLW,Compliant,Performance,CS-25.125
+WGT-016,CERT-02-10-102,Brake Energy Capacity,400,MJ,Carbon brakes,Compliant,Analysis,CS-25.735
+WGT-017,CERT-02-10-102,Tire Load Rating,35000,kg,Per tire at MLW,Compliant,Landing Gear Design,CS-25.733
+WGT-018,CERT-02-10-102,Gear Stroke,0.45,m,Energy absorption,Compliant,Landing Gear Design,CS-25.723
+WGT-019,CERT-02-10-103,CG Forward Limit,15,% MAC,Takeoff/Landing,Special Condition,Analysis,CS-25.27 + SC
+WGT-020,CERT-02-10-103,CG Aft Limit,42,% MAC,Takeoff/Landing,Special Condition,Analysis,CS-25.27 + SC
+WGT-021,CERT-02-10-103,CG Range Span,27,% MAC,BWB configuration,Special Condition,Analysis,SC-BWB-002
+WGT-022,CERT-02-10-103,Mean Aerodynamic Chord,12.5,m,Reference length,Compliant,CAD Model,Aero Analysis
+WGT-023,CERT-02-10-103,Static Margin Forward,+8,%,At 15% MAC,Compliant,Flight Dynamics,CS-25.173
+WGT-024,CERT-02-10-103,Static Margin Aft,+2,%,At 42% MAC,Compliant,Flight Dynamics,CS-25.173
+WGT-025,CERT-02-10-103,H₂ CG Control Authority,5.6,% MAC,Fuel positioning,Compliant,Fuel System Design,ATA 28
+WGT-026,CERT-02-10-103,Zero Fuel CG Forward,18,% MAC,MZFW condition,Compliant,Loading Analysis,CS-25.27
+WGT-027,CERT-02-10-103,Zero Fuel CG Aft,40,% MAC,MZFW condition,Compliant,Loading Analysis,CS-25.27
+WGT-028,CERT-02-10-101,Structure Weight,42000,kg,BWB composite,Compliant,Weight Report,Design Spec
+WGT-029,CERT-02-10-101,Propulsion Weight,12000,kg,Fuel cells + motors,Compliant,Weight Report,ATA 71/80
+WGT-030,CERT-02-10-101,Systems Weight,18000,kg,All aircraft systems,Compliant,Weight Report,Design Spec
