@@ -1,0 +1,13 @@
+Requirement_ID,CS25_Section,Requirement_Description,Compliance_Method,Evidence_Location,Status,Notes
+RQ-02-10-COMP-001,CS 25.25,Weight Limits,Test & Analysis,VAL-02-10-101,Planned,MTOW validation
+RQ-02-10-COMP-002,CS 25.27,Center of Gravity Limits,Test,VAL-02-10-103,Planned,CG envelope validation
+RQ-02-10-COMP-003,CS 25.29,Empty Weight and CG,Test,VAL-02-10-102,Planned,OEW weighing
+RQ-02-10-COMP-004,CS 25.103,Stalling Speed,Flight Test,Flight Test Program,Planned,To be tested
+RQ-02-10-COMP-005,CS 25.105,Takeoff,Flight Test,Flight Test Program,Planned,To be tested
+RQ-02-10-COMP-006,CS 25.111,Climb Performance,Flight Test & Analysis,VAL-02-10-203,Planned,Service ceiling test
+RQ-02-10-COMP-007,CS 25.119,Landing Climb,Flight Test,Flight Test Program,Planned,To be tested
+RQ-02-10-COMP-008,CS 25.1501,Operating Limitations,Documentation,Flight Manual,Planned,All limitations documented
+RQ-02-10-COMP-009,CS 25.1581,Flight Manual,Documentation,AFM Complete,Planned,CS-25 compliant format
+RQ-02-10-COMP-010,CS 25.1585,Operating Procedures,Documentation,AFM Chapter 4,Planned,Normal & abnormal procedures
+RQ-02-10-COMP-011,CS 25.1587,Performance Information,Test & Analysis,VAL-02-10-201/202/203,Planned,Range cruise ceiling tests
+RQ-02-10-COMP-012,CS 25.1589,Loading Information,Test & Documentation,VAL-02-10-103 WB Manual,Planned,Weight balance loading
