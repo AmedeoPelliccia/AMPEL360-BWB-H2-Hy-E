@@ -56,11 +56,11 @@ This folder contains comprehensive certification documentation for the AMPEL360 
 
 ### Dimensional Compliance
 - **CS-25.25:** Weight limits - MTOW/MLW/MZFW approval
-- **CS-25.27:** CG limits - 15-42% MAC special condition (BWB)
 - **CS-25.731:** Ground clearance - 3.8 m minimum
 - **ICAO Annex 14:** Code E airport compatibility (65.0 m wingspan)
 
 ### Weight and Balance
+- **CS-25.27:** CG limits - 15-42% MAC special condition (BWB)
 - **MTOW:** 180,000 kg (396,832 lb) ✅
 - **MLW:** 150,000 kg (330,693 lb) ✅
 - **CG Range:** 15-42% MAC (27% span - Special Condition SC-BWB-002)
