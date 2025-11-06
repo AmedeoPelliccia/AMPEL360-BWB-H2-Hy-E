@@ -21,7 +21,7 @@ This Interface Control Document defines the critical weight and balance data exc
 - **MLW (Maximum Landing Weight):** 155,000 kg
 - **MZFW (Maximum Zero Fuel Weight):** 145,000 kg
 - **Operating Empty Weight:** 105,000 kg
-- **Maximum Fuel Weight:** 40,000 kg (H₂)
+- **Maximum Fuel Weight:** 8,000 kg (H₂)
 - **Maximum Payload:** 40,000 kg (220 passengers + cargo)
 
 **Data Format:** Weight statement with detailed breakdown  
