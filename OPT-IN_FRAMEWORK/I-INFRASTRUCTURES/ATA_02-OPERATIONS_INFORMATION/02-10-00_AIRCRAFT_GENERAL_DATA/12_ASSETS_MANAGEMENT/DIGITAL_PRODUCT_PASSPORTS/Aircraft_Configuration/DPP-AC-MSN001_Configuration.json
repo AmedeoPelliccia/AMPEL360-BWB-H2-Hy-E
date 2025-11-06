@@ -24,7 +24,7 @@
         "height": "15 m",
         "cruiseSpeed": "Mach 0.85",
         "range": "8000 nm",
-        "serviceceiling": "43000 ft",
+        "serviceCeiling": "43000 ft",
         "passengerCapacity": "400",
         "fuelType": "Liquid Hydrogen (LH2)",
         "fuelCapacity": "30000 kg LH2"
