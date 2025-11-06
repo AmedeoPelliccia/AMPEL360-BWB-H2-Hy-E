@@ -36,7 +36,7 @@ This component follows the 14-folder SKELETON methodology:
 
 ✅ **08_PROTOTYPING Complete** - Prototyping documentation, scale models, mockups, software tools, and validation hardware specifications developed
 
-## # ATA 02-10-00 AIRCRAFT GENERAL DATA / 08_PROTOTYPING
+## ATA 02-10-00 AIRCRAFT GENERAL DATA / 08_PROTOTYPING
 
 ```
 08_PROTOTYPING/
