@@ -12,7 +12,7 @@ Version: 1.0 (Prototype)
 """
 
 import sys
-from typing import List, Tuple
+from typing import Tuple
 
 
 class CGEnvelopeTool:
