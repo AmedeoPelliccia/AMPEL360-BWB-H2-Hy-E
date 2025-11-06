@@ -20,7 +20,7 @@ Complete set of fuselage station marking decals for the AMPEL360 BWB H2 Hy-E air
 
 ## Kit Contents
 
-- Station markers: 0, 50, 100, 150, ... 1000 (increments of 50mm)
+- Station markers: 0, 50, 100, 150, ... 1000 (increments of 50 stations)
 - Quantity: 21 decals per set
 - Waterline reference markers: WL 0 to WL 500
 - Buttock line reference markers: BL 0 (centerline) to BL ±500
