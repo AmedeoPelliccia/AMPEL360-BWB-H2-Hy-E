@@ -325,7 +325,7 @@ The three-tank centerline configuration leverages the BWB's unique geometry to p
 - Lowest lifecycle cost
 - Clear certification pathway
 
-**Decision: Proceed with three-tank centerline configuration as baselinedesign**
+**Decision: Proceed with three-tank centerline configuration as baseline design**
 
 ---
 
