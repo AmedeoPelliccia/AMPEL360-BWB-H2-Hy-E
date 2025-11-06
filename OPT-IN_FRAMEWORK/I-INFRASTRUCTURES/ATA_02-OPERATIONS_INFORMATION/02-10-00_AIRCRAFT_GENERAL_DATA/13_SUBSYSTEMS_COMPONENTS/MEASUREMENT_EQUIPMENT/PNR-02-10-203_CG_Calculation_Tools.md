@@ -93,7 +93,7 @@ CG Position (% MAC) = (Total Moment / Total Weight - LEMAC Station) / MAC Length
 Where:
 - Total Moment = Σ(Weight × Arm)
 - LEMAC (Leading Edge MAC) = Station 450 for BWB
-- MAC Length = 300mm (Station 450 to 750)
+- MAC Length = 300 stations/units (Station 450 to 750)  <!-- If stations are unitless or not defined as mm -->
 ```
 
 ### Loading Stations Reference
