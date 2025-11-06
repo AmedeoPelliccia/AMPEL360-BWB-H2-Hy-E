@@ -12,7 +12,7 @@ Version: 1.0 (Prototype)
 """
 
 import math
-from typing import Dict, Tuple
+from typing import Dict
 
 
 class PerformanceCalculator:
