@@ -1,0 +1,73 @@
+# Aircraft Birth Certificate - Blockchain Verification
+# AMPEL360 BWB H2 Hy-E Q100 INTEGRA - MSN001
+
+## Blockchain Network
+Network: Ethereum (Private)
+Chain ID: 360001
+Contract Address: 0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb6
+
+## Birth Certificate Hash
+Primary Hash: 0x8f3d2a1b5c7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a
+Block Number: 1547892
+Block Timestamp: 2024-01-15T08:30:45Z
+Transaction Hash: 0x9a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
+
+## Certificate Data Structure
+{
+  "aircraft": {
+    "serialNumber": "MSN001",
+    "manufacturer": "AMPEL360 Aviation",
+    "model": "BWB H2 Hy-E Q100 INTEGRA",
+    "manufacturingDate": "2024-01-15",
+    "registrationMark": "D-AMPEL001"
+  },
+  "configuration": {
+    "emptyWeight": "120000 kg",
+    "cgPosition": "40.2% MAC",
+    "typeDesign": "AMPEL360-BWB-H2-001"
+  },
+  "certifications": [
+    "EASA Part 21 Production Organization Approval",
+    "Quality System AS9100D",
+    "Type Design AMPEL360-BWB-H2-001"
+  ],
+  "digitalPassport": "DPP-AC-MSN001"
+}
+
+## Verification Signatures
+Manufacturer: 0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b
+Quality Control: 0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c
+Certification Authority: 0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d
+
+## Merkle Tree Root
+Root Hash: 0x7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f
+Tree Depth: 10
+Total Leaves: 847
+
+## IPFS Storage
+Certificate Document: ipfs://QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG
+Supporting Data: ipfs://QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco
+
+## Notarization
+Notary Service: DigiCert Blockchain Notary
+Notarization Time: 2024-01-15T08:35:00Z
+Notary Certificate: 0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e
+
+## Immutability Proof
+Previous Block Hash: 0x5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f
+Next Block Hash: 0x6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a
+
+## Audit Trail
+Created: 2024-01-15T08:30:45Z
+Last Verified: 2025-11-05T22:00:00Z
+Verification Count: 247
+Status: Valid and Immutable
+
+## Regulatory Compliance
+EASA Part 21: Compliant
+FAA Part 21: Compliant (pending)
+EU Digital Product Passport: Compliant
+Blockchain Standard: ISO/TC 307
+
+---
+END OF BIRTH CERTIFICATE HASH

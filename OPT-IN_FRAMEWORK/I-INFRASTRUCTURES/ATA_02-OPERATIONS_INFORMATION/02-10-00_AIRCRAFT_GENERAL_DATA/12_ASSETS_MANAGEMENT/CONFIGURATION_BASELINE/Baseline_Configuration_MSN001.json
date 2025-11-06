@@ -1,0 +1,155 @@
+{
+  "baselineConfiguration": {
+    "aircraft": {
+      "serialNumber": "MSN001",
+      "model": "AMPEL360 BWB H2 Hy-E Q100 INTEGRA",
+      "configurationDate": "2025-10-15",
+      "configurationStatus": "Flight Test Configuration"
+    },
+    
+    "weights": {
+      "basicEmptyWeight": "120000 kg",
+      "operatingEmptyWeight": "125000 kg",
+      "maxZeroFuelWeight": "175000 kg",
+      "maxTakeoffWeight": "220000 kg",
+      "maxLandingWeight": "185000 kg",
+      "maxPayload": "50000 kg",
+      "maxFuelCapacity": "30000 kg LH2"
+    },
+    
+    "centerOfGravity": {
+      "emptyWeightCG": {
+        "longitudinal": "40.2% MAC",
+        "lateral": "0.0 mm (centerline)",
+        "vertical": "3800 mm above datum"
+      },
+      "limits": {
+        "maxForwardCG": "15.0% MAC",
+        "maxAftCG": "40.0% MAC"
+      },
+      "datum": {
+        "location": "Nose reference point",
+        "coordinates": "0, 0, 0"
+      }
+    },
+    
+    "dimensions": {
+      "wingspan": "80.00 m",
+      "length": "60.00 m",
+      "height": "15.00 m",
+      "wingArea": "1200.0 m²",
+      "aspectRatio": "5.33",
+      "sweepAngle": "35°",
+      "cabinLength": "45.0 m",
+      "cabinWidth": "18.0 m",
+      "cabinHeight": "2.4 m",
+      "cargoVolume": "280 m³"
+    },
+    
+    "propulsion": {
+      "engines": [
+        {
+          "position": "Left",
+          "type": "Hydrogen Fuel Cell + Electric Motor",
+          "powerOutput": "15 MW",
+          "manufacturer": "AMPEL360 Propulsion",
+          "serialNumber": "ENG-L-001"
+        },
+        {
+          "position": "Right",
+          "type": "Hydrogen Fuel Cell + Electric Motor",
+          "powerOutput": "15 MW",
+          "manufacturer": "AMPEL360 Propulsion",
+          "serialNumber": "ENG-R-001"
+        }
+      ],
+      "auxiliaryPowerUnit": {
+        "type": "Hydrogen Fuel Cell APU",
+        "powerOutput": "200 kW",
+        "serialNumber": "APU-001"
+      }
+    },
+    
+    "fuelSystem": {
+      "fuelType": "Liquid Hydrogen (LH2)",
+      "totalCapacity": "30000 kg",
+      "tanks": [
+        {
+          "tankID": "Tank-1-Forward",
+          "capacity": "10000 kg",
+          "location": "Forward fuselage",
+          "cgStation": "18.5 m"
+        },
+        {
+          "tankID": "Tank-2-Center",
+          "capacity": "12000 kg",
+          "location": "Center fuselage",
+          "cgStation": "24.0 m"
+        },
+        {
+          "tankID": "Tank-3-Aft",
+          "capacity": "8000 kg",
+          "location": "Aft fuselage",
+          "cgStation": "32.5 m"
+        }
+      ]
+    },
+    
+    "systems": {
+      "avionics": {
+        "flightManagementSystem": "Honeywell Aerospace FMS-9000",
+        "autopilot": "Advanced Digital Autopilot System",
+        "communication": "VHF, HF, SATCOM",
+        "navigation": "GPS, IRS, VOR/DME, ADS-B"
+      },
+      "hydraulics": {
+        "system1Pressure": "3000 psi",
+        "system2Pressure": "3000 psi",
+        "backupPressure": "3000 psi"
+      },
+      "electrical": {
+        "mainBusVoltage": "115V AC, 400Hz",
+        "dcBusVoltage": "28V DC",
+        "batteryCapacity": "500 Ah"
+      },
+      "environmental": {
+        "cabinPressure": "8000 ft equivalent",
+        "airConditioning": "Dual-zone climate control",
+        "oxygenSystem": "Chemical oxygen generators"
+      }
+    },
+    
+    "equipment": {
+      "emergencyEquipment": [
+        "Life rafts (8x 50-person)",
+        "Emergency slides (12)",
+        "Fire extinguishers (25)",
+        "Emergency lighting system"
+      ],
+      "cabinEquipment": [
+        "Passenger seats (400)",
+        "Galleys (4)",
+        "Lavatories (12)",
+        "In-flight entertainment system"
+      ]
+    },
+    
+    "modifications": [],
+    
+    "compliance": {
+      "typeDesign": "AMPEL360-BWB-H2-001",
+      "certificationBasis": "CS-25, 14 CFR Part 25",
+      "noiseLevel": "Chapter 14 compliant",
+      "emissionsLevel": "Zero CO2 (operational)"
+    },
+    
+    "metadata": {
+      "createdBy": "Configuration Management Team",
+      "createdDate": "2025-10-15T10:00:00Z",
+      "approvedBy": "Chief Engineer",
+      "approvalDate": "2025-10-15T14:00:00Z",
+      "revision": "1.0",
+      "status": "Approved"
+    }
+  }
+}

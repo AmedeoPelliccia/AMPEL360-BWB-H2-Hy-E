@@ -1,0 +1,19 @@
+Aircraft_SN,Manufacturing_Phase,Start_Date,End_Date,Location,Responsible_Team,Status,Quality_Check
+MSN001,Structure Assembly,2023-10-01,2023-12-15,Hamburg Facility,Structures Team,Complete,Pass
+MSN001,Wing Assembly,2023-11-01,2024-01-10,Hamburg Facility,Wing Team,Complete,Pass
+MSN001,Systems Installation,2024-01-15,2024-03-20,Hamburg Facility,Systems Team,Complete,Pass
+MSN001,Propulsion Integration,2024-03-01,2024-04-30,Munich Facility,Propulsion Team,Complete,Pass
+MSN001,Avionics Installation,2024-04-01,2024-05-15,Munich Facility,Avionics Team,Complete,Pass
+MSN001,Interior Installation,2024-05-01,2024-05-30,Hamburg Facility,Interior Team,Complete,Pass
+MSN001,Final Assembly,2024-05-15,2024-06-15,Munich Facility,Final Assembly,Complete,Pass
+MSN001,Ground Testing,2024-06-15,2024-08-30,Munich Test Center,Test Team,Complete,Pass
+MSN001,Flight Testing,2024-09-01,In Progress,Munich Test Center,Flight Test Team,Active,Ongoing
+MSN002,Structure Assembly,2024-04-01,2024-07-15,Hamburg Facility,Structures Team,Complete,Pass
+MSN002,Wing Assembly,2024-06-01,2024-08-10,Hamburg Facility,Wing Team,Complete,Pass
+MSN002,Systems Installation,2024-08-15,2024-10-30,Hamburg Facility,Systems Team,Complete,Pass
+MSN002,Propulsion Integration,2024-10-01,In Progress,Munich Facility,Propulsion Team,Active,Ongoing
+MSN002,Avionics Installation,2024-11-01,In Progress,Munich Facility,Avionics Team,Active,Ongoing
+MSN002,Interior Installation,Planned,Planned,Hamburg Facility,Interior Team,Planned,Pending
+MSN002,Final Assembly,Planned,Planned,Munich Facility,Final Assembly,Planned,Pending
+MSN002,Ground Testing,Planned,Planned,Munich Test Center,Test Team,Planned,Pending
+MSN002,Flight Testing,Planned,Planned,Munich Test Center,Flight Test Team,Planned,Pending

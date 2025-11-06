@@ -1,0 +1,4 @@
+DPP_ID,Asset_Type,Description,Serial,Blockchain_Hash,Status
+DPP-AC-MSN001,Aircraft,AMPEL360 Aircraft SN001,MSN001,0x8f3d2a...,Active
+DPP-ME-001,Equipment,Laser Scanner Faro Focus,LS-4721,0x2b7e9c...,Active
+DPP-DS-001,Software,W&B Calculator v3.2,v3.2.0,0x5a1c8d...,Active

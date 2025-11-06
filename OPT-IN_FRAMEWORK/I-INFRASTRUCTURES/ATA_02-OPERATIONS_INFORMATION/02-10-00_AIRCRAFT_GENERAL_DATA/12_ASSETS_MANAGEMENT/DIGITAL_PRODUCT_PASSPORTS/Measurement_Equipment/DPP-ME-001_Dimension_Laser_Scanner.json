@@ -1,0 +1,137 @@
+{
+  "digitalProductPassport": {
+    "version": "1.0",
+    "id": "DPP-ME-001",
+    "blockchainHash": "0x2b7e9c4f1a3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f",
+    "timestamp": "2025-11-05T22:00:00Z",
+    
+    "product": {
+      "name": "Faro Focus Premium Laser Scanner",
+      "type": "Measurement Equipment",
+      "serialNumber": "LS-4721",
+      "manufacturer": "FARO Technologies Inc.",
+      "partNumber": "FARO-FP-2024",
+      "description": "High-precision 3D laser scanner for aircraft dimensional measurement and verification. Certified for aerospace metrology applications."
+    },
+    
+    "technical": {
+      "specifications": {
+        "measurementAccuracy": "±1mm @ 25m",
+        "rangeAccuracy": "±0.5mm",
+        "scanningRange": "0.6m to 350m",
+        "scanSpeed": "976,000 points/second",
+        "fieldOfView": "360° horizontal, 300° vertical",
+        "resolution": "0.009° (40,960 pts/360°)",
+        "laserClass": "Class 1 (eye-safe)",
+        "operatingTemperature": "5°C to 40°C",
+        "weight": "5.2 kg",
+        "dataFormat": "PTX, E57, LAS, XYZ"
+      },
+      "certifications": [
+        "ISO 17025 Accredited",
+        "ASME B89.4.19 Compliant",
+        "Aerospace Metrology Certified",
+        "CE Marking"
+      ],
+      "standards": [
+        "ISO 10360-8",
+        "ASTM E2544",
+        "VDI/VDE 2634"
+      ],
+      "calibration": {
+        "lastCalibration": "2025-09-15",
+        "nextCalibration": "2026-03-15",
+        "calibrationInterval": "6 months",
+        "calibrationAuthority": "FARO Authorized Service Center",
+        "certificateNumber": "CAL-2025-09-4721"
+      }
+    },
+    
+    "lifecycle": {
+      "purchaseDate": "2024-01-10",
+      "commissioningDate": "2024-01-20",
+      "status": "Active",
+      "location": "Quality Assurance Lab - Munich",
+      "usageHours": 450,
+      "numberOfScans": 1250,
+      "nextMaintenance": "2026-01-20"
+    },
+    
+    "verification": {
+      "qualityControl": "Pass",
+      "testing": {
+        "accuracyVerification": "Pass - 2025-09-15",
+        "rangeTest": "Pass - ±0.45mm",
+        "repeatabilityTest": "Pass - 0.2mm std dev",
+        "environmentalTest": "Pass"
+      },
+      "performanceMetrics": {
+        "measurementUncertainty": "±0.8mm",
+        "scanningReliability": "99.8%",
+        "dataQuality": "Excellent"
+      }
+    },
+    
+    "compliance": {
+      "regulatory": [
+        "ISO 17025 Laboratory Accreditation",
+        "AS9100D Quality Management",
+        "NADCAP Accredited Measurement"
+      ],
+      "environmental": [
+        "RoHS Compliant",
+        "WEEE Registered"
+      ],
+      "safety": [
+        "Laser Safety IEC 60825-1",
+        "Electromagnetic Compatibility EMC Directive 2014/30/EU"
+      ]
+    },
+    
+    "maintenanceHistory": [
+      {
+        "date": "2025-09-15",
+        "type": "Calibration",
+        "description": "6-month calibration and accuracy verification",
+        "performedBy": "FARO Service Munich",
+        "result": "Pass"
+      },
+      {
+        "date": "2025-03-15",
+        "type": "Calibration",
+        "description": "6-month calibration and accuracy verification",
+        "performedBy": "FARO Service Munich",
+        "result": "Pass"
+      }
+    ],
+    
+    "linkedAssets": [
+      "DPP-AC-MSN001 (Measured Aircraft)",
+      "DPP-AC-MSN002 (Measured Aircraft)",
+      "DPP-DS-001 (Data Processing Software)"
+    ],
+    
+    "supplier": {
+      "name": "FARO Technologies Inc.",
+      "certifications": ["ISO 9001:2015"],
+      "location": "Lake Mary, FL, USA",
+      "supportContact": "support@faro.com"
+    },
+    
+    "warranty": {
+      "period": "2 years",
+      "coverage": "Manufacturing defects, hardware failures",
+      "expiryDate": "2026-01-10",
+      "extendedWarranty": "Yes - until 2029-01-10"
+    },
+    
+    "metadata": {
+      "createdBy": "Metrology Lab Manager",
+      "createdDate": "2024-01-20T10:00:00Z",
+      "lastModifiedBy": "Calibration Technician",
+      "lastModified": "2025-11-05T22:00:00Z",
+      "dataClassification": "Internal",
+      "retentionPeriod": "15 years"
+    }
+  }
+}
