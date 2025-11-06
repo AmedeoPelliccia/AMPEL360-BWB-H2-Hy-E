@@ -3,8 +3,8 @@ Aircraft Structure,AMP-BWB-0001,MSN-0001,N/A,78500,16.2,2027-03-15,Installed,MSN
 Fuel Cell Stack 1,AMP-FC-3000-A,FC-S1-001,Station 18.0 Left,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
 Fuel Cell Stack 2,AMP-FC-3000-A,FC-S2-001,Station 18.0 Center-Left,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
 Fuel Cell Stack 3,AMP-FC-3000-A,FC-S3-001,Station 18.0 Center-Right,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
-Fuel Cell Stack 4,AMP-FC-3000-A,FC-S4-001,Station 18.0 Center-Right,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
-Fuel Cell Stack 5,AMP-FC-3000-A,FC-S5-001,Station 18.0 Center-Left,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
+Fuel Cell Stack 4,AMP-FC-3000-A,FC-S4-001,Station 18.0 Center-Left,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
+Fuel Cell Stack 5,AMP-FC-3000-A,FC-S5-001,Station 18.0 Center-Right,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
 Fuel Cell Stack 6,AMP-FC-3000-A,FC-S6-001,Station 18.0 Right,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
 Electric Motor 1,AMP-EM-1250-A,EM-01-001,Station 25.0 Port Outboard,245,25.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
 Electric Motor 2,AMP-EM-1250-A,EM-02-001,Station 24.0 Port Mid-Out,245,24.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
