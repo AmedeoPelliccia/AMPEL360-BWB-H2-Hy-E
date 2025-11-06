@@ -1,0 +1,35 @@
+Parameter,Value,Unit,Station,Buttline,Notes
+Center_Body_Width,38.0,m,STA 15,BL ±19,Maximum width
+Center_Body_Length,28.5,m,STA 10-35,BL 0,Pressurized section
+Root_Chord,35.0,m,Various,BL 0,Centerline chord
+Chord_at_BL10,32.0,m,Various,BL ±10,Mid center body
+Chord_at_BL19,28.5,m,Various,BL ±19,Center body edge
+Leading_Edge_Sweep_Root,37,deg,—,BL 0,Average sweep
+Trailing_Edge_Sweep_Center,0,deg,—,BL 0 to ±12,Straight section
+Trailing_Edge_Sweep_Transition,-5,deg,—,BL ±12 to ±19,Forward sweep
+Wing_Sweep_LE_Inner,38,deg,—,BL ±19 to ±22,Inner wing
+Wing_Sweep_LE_Outer,42,deg,—,BL ±24 to ±26,Outer wing
+Thickness_to_Chord_Center,15,%,STA 15,BL 0,Center body
+Thickness_to_Chord_Midwing,12,%,STA 25,BL ±15,Transition
+Thickness_to_Chord_Outerwing,8,%,STA 25,BL ±24,Outer wing
+Dihedral_Inner,2,deg,—,BL ±19 to ±22,Inner wing
+Dihedral_Outer,4,deg,—,BL ±24 to ±26,Outer wing
+Twist_Root,0,deg,—,BL ±19,Reference (no twist)
+Twist_Mid,-1,deg,—,BL ±22,Washout
+Twist_Tip,-3,deg,—,BL ±26,Maximum washout
+Winglet_Height,3.5,m,—,BL ±26,Above wing plane
+Winglet_Cant,75,deg,—,BL ±26,From horizontal
+Winglet_Sweep,35,deg,—,BL ±26,Leading edge
+Planform_Area_Total,845,m²,—,—,Total reference area
+Planform_Area_Center_Body,520,m²,—,BL 0 to ±19,Center lifting body
+Planform_Area_Wings,325,m²,—,BL ±19 to ±26,Outer wings
+MAC_Length,22.5,m,—,BL ±8.5,Mean aerodynamic chord
+MAC_Leading_Edge,STA 8.0,—,—,BL ±8.5,MAC LE location
+Aspect_Ratio,3.2,—,—,—,b²/S
+Wetted_Area,1850,m²,—,—,Total external surface
+Volume_Pressurized,1850,m³,—,—,Cabin + systems
+Volume_H2_Tanks,350,m³,STA 18-32,—,Upper deck
+Volume_Cargo,150,m³,WL 2-4,—,Lower deck
+Cabin_Width_Max,36.0,m,STA 15,BL 0,Usable cabin width
+Cabin_Height,2.4,m,WL 4.0-8.5,—,Floor to ceiling
+Upper_Deck_Height,2.5,m,WL 8.5-12.5,—,H₂ tank deck
