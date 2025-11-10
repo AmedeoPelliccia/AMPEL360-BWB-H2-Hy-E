@@ -85,7 +85,7 @@ yes
 ; ---------------------------
 ; 5. Solution methods
 ; ---------------------------
-/solve/set/p-v-coupling coupled
+/solve/set/p-v-coupling 24
 /solve/set/discretization-scheme pressure second-order
 /solve/set/discretization-scheme momentum second-order-upwind
 /solve/set/discretization-scheme turbulent-kinetic-energy second-order-upwind
