@@ -96,9 +96,11 @@ The AMPEL360 BWB requires specific jacking procedures due to its unique structur
 
 **Monitoring:**
 - Load cells: Verify load distribution
-- No single jack: >27% of aircraft weight
+- No single jack: >27% of aircraft weight[^1]
 - Level attitude: ±0.5° tolerance
 
+
+[^1]: The 27% threshold is based on engineering analysis to allow for minor load imbalances and dynamic effects during jacking. It provides a safety margin above the ideal 25% (for four jacks) and is consistent with [Ref: AMPEL360 Structural Jacking Analysis, Section 4.2].
 ### Lowering Sequence
 
 **Critical: Forward jacks first, then aft**
