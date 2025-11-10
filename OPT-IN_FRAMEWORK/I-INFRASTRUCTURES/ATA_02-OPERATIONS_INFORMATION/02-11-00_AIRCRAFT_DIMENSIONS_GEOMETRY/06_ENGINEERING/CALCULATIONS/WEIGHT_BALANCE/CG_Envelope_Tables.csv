@@ -1,0 +1,12 @@
+Loading_Condition,Weight_kg,CG_X_m,CG_Y_m,CG_Z_m,CG_Percent_MAC,Within_Limits,Notes
+OEW,120000,25.5,0.0,2.8,23.8,Yes,Operating Empty Weight baseline
+OEW_Plus_Crew,120480,25.6,0.0,2.8,24.1,Yes,4 crew members at 120 kg each
+OEW_Plus_Max_Payload,160000,26.2,0.0,2.9,26.5,Yes,400 passengers + baggage
+MZFW,170000,26.4,0.0,2.9,27.2,Yes,Maximum Zero Fuel Weight
+MZFW_Plus_Fuel_10Percent,183000,26.1,0.0,2.9,26.3,Yes,10% fuel loaded
+MZFW_Plus_Fuel_50Percent,195000,25.8,0.0,2.9,25.2,Yes,50% fuel loaded
+MTOW,220000,25.2,0.0,2.9,23.5,Yes,Maximum Take-Off Weight full fuel
+MTOW_Mid_Cruise,200000,25.4,0.0,2.9,24.0,Yes,Mid-cruise fuel state
+MLW,190000,25.9,0.0,2.9,25.5,Yes,Maximum Landing Weight with reserves
+Forward_CG_Limit,,,,,,22.0,Design limit forward CG
+Aft_CG_Limit,,,,,,32.0,Design limit aft CG

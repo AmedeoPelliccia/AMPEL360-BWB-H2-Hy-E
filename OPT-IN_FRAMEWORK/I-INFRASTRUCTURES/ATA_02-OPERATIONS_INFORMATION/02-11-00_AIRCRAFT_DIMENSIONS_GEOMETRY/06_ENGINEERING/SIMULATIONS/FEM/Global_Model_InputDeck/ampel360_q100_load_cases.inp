@@ -1,0 +1,10 @@
+$ AMPEL360 Q100 - Load Case Definitions
+$ CS-25 Structural Load Cases
+$
+$ LC-01: Symmetric Pull-Up 2.5g at VC
+$ LC-02: Symmetric Push-Over -1.0g at VC
+$ LC-03: Vertical Gust +56 fps at VC
+$ LC-04: Landing Impact 3.0g
+$ LC-05: Cabin Pressurization 8.0 psi differential
+$
+$ To be developed with actual load vectors
