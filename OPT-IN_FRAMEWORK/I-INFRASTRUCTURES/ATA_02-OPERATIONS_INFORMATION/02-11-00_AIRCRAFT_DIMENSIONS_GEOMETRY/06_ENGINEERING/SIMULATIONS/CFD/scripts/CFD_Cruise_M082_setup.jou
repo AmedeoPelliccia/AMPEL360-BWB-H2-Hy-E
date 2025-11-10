@@ -102,14 +102,20 @@ yes
 ; ---------------------------
 ; Lift, drag, moment on aircraft wall
 
-/report/force-surface-setup
-force-monitor yes
-"wall-aircraft"
-lift-direction 0 1 0
-drag-direction 1 0 0
-moment-center 0 0 0
+/solve/monitors/force/lift
 yes
+"wall-aircraft"
+0 1 0
 
+/solve/monitors/force/drag
+yes
+"wall-aircraft"
+1 0 0
+
+/solve/monitors/force/moment
+yes
+"wall-aircraft"
+0 0 0
 /solve/monitors/lift-coefficient-monitor yes
 /solve/monitors/drag-coefficient-monitor yes
 /solve/monitors/moment-coefficient-monitor yes
