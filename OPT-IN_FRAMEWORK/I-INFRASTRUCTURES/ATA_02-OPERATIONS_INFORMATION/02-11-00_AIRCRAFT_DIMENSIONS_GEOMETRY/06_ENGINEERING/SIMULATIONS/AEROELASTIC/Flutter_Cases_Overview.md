@@ -103,7 +103,7 @@ Each simulation case shall reference:
 - **Flutter methodology:**
   `ANALYSIS_REPORTS/AERODYNAMIC/Flutter_Analysis.md`
 - **FEM definition:**
-  `ANALYSIS_REPORTS/STRUCTURAL/FEM_Global_Model.md`
+  `./ANALYSIS_REPORTS/STRUCTURAL/FEM_Global_Model.md`
 - **Relevant design changes / ECRs** affecting stiffness or mass.
 
 This ensures consistent linkage between numerical results, structural models,
