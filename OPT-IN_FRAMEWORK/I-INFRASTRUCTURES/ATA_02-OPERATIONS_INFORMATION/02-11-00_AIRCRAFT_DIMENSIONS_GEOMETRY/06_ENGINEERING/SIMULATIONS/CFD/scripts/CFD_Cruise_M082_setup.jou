@@ -86,10 +86,10 @@ yes
 ; 5. Solution methods
 ; ---------------------------
 /solve/set/p-v-coupling 24
-/solve/set/discretization-scheme pressure second-order
-/solve/set/discretization-scheme momentum second-order-upwind
-/solve/set/discretization-scheme turbulent-kinetic-energy second-order-upwind
-/solve/set/discretization-scheme specific-dissipation-rate second-order-upwind
+/solve/set/discretization-scheme pressure 14
+/solve/set/discretization-scheme momentum 1
+/solve/set/discretization-scheme turbulent-kinetic-energy 1
+/solve/set/discretization-scheme specific-dissipation-rate 1
 /solve/set/under-relaxation-factors
 pressure 0.3
 momentum 0.7
