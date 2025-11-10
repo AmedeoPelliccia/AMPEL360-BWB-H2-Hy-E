@@ -58,7 +58,7 @@ Where:
 
 All flutter cases are based on the following inputs:
 
-- **FEM:** `ANALYSIS_REPORTS/STRUCTURAL/FEM_Global_Model.md`  
+- **FEM:** `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ANALYSIS_REPORTS/STRUCTURAL/FEM_Global_Model.md`  
 - **Frozen geometry baseline:**  
   `02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/01_OVERVIEW/baseline_dimensions.json`  
 - **Flight envelope and speeds:** Performance / certification documentation (TBD)
