@@ -1,0 +1,111 @@
+Standard ID,Standard Title,Version,Domain,Owner,Last Reviewed,Impacts Which Docs,Coverage Status,Notes
+CS-25.301,Loads - General,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-002, STR-003, STR-004, TN-003, CERT-002",Required,Primary airworthiness standard for loads
+CS-25.303,Factor of Safety,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-002, STR-003, STR-004, CERT-002",Required,Ultimate load = 1.5 × limit load
+CS-25.305,Strength and Deformation,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-002, STR-003, CERT-002",Required,Deformation limits under limit load
+CS-25.307,Proof of Structure,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, CERT-002",Required,Analysis and/or test requirements
+CS-25.321,General Flight Loads,Amendment 27,STRUCTURAL,Aero Lead,2025-11-10,"TN-003, CERT-001",Required,Flight envelope definition
+CS-25.331,Symmetric Maneuvering,Amendment 27,STRUCTURAL,Aero Lead,2025-11-10,"AERO-001, TN-003, CERT-001",Required,"VA, VC, VD speed definitions"
+CS-25.333,Flight Maneuver Envelope,Amendment 27,STRUCTURAL,Aero Lead,2025-11-10,"AERO-001, TN-003",Required,V-n diagram
+CS-25.335,Design Airspeeds,Amendment 27,STRUCTURAL,Aero Lead,2025-11-10,"AERO-001, PERF-001, TN-003",Required,"VD, VC, VA, VS definitions"
+CS-25.337,Limit Maneuvering Factors,Amendment 27,STRUCTURAL,Aero Lead,2025-11-10,"TN-003, CERT-001",Required,"n_z limits (+2.5/-1.0 to +3.8/-1.5)"
+CS-25.341,Gust and Turbulence Loads,Amendment 27,STRUCTURAL,Aero Lead,2025-11-10,"AERO-001, TN-003",Required,Discrete and continuous gust
+CS-25.345,High-Lift Devices,Amendment 27,AERO,Aero Lead,2025-11-10,"AERO-004, PERF-002, PERF-003",Required,Flap/slat loads and performance
+CS-25.349,Rolling Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-002, TN-003",Required,Aileron deflection loads
+CS-25.351,Yaw Maneuver Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Rudder deflection loads
+CS-25.363,Side Load on Engine Mount,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Adapt for fuel cell nacelles
+CS-25.365,Pressurization Loads,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-003, TN-003",Required,Cabin pressure differential
+CS-25.369,Rear Lifting Surface,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,N/A,N/A,BWB configuration - no conventional tail
+CS-25.371,Gyroscopic Loads,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",N/A,Not applicable to fuel cell propulsion
+CS-25.391,Control Surface Loads,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Hinge moments and deflections
+CS-25.415,Ground Gust Conditions,Amendment 27,STRUCTURAL,Aero Lead,2025-11-10,"TN-003",Required,Control surface on ground
+CS-25.427,Unsymmetrical Loads,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-002, TN-003",Required,Lateral load distribution
+CS-25.441,Maneuvering Loads,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-002, TN-003",Required,Wing torsion and bending
+CS-25.445,Outboard Fins or Wing-Lets,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,N/A,N/A,No winglets in current design
+CS-25.453,Landing Gear - General,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, CLR-001, TN-003",Required,Ground loads overview
+CS-25.471,Ground Loads,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, CLR-001, TN-003",Required,Landing gear design loads
+CS-25.473,Landing Load Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, CLR-002, TN-003",Required,Level and tail-down landings
+CS-25.477,Landing Gear Arrangement,Amendment 27,CLEARANCE,Geom Lead,2025-11-10,"CLR-001, CLR-002, TS-001",Required,Rotation and tip-over angles
+CS-25.479,Level Landing Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, TN-003",Required,Symmetric landing loads
+CS-25.481,Tail-Down Landing Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, CLR-001, TN-003",Required,Rotation landing loads
+CS-25.483,One-Gear Landing Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, TN-003",Required,Asymmetric landing loads
+CS-25.485,Side Load Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, TN-003",Required,Drift landing loads
+CS-25.493,Braked Roll Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, TN-003",Required,Braking loads
+CS-25.495,Turning,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, CLR-002, TN-003",Required,Ground turning loads
+CS-25.497,Tail-Wheel Yawing,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,N/A,N/A,Nose-wheel configuration
+CS-25.499,Nose-Wheel Yawing,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, TN-003",Required,Nose gear steering loads
+CS-25.503,Pivoting,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-004, CLR-002",Required,Sharp turn on ground
+CS-25.507,Jacking and Tie-Down Loads,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Maintenance loads
+CS-25.519,Jacking Loads,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Jacking point design
+CS-25.521,General Emergency Landing,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-003, TN-003, CERT-002",Required,Ditching and crash loads
+CS-25.523,Design Landing Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-003, TN-003",Required,Emergency landing loads
+CS-25.525,Damaged Structure,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-006, CERT-002",Required,Residual strength after damage
+CS-25.529,Hull and Main Float Conditions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,N/A,N/A,Land-based aircraft only
+CS-25.561,Emergency Landing Dynamics,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-003, TN-003, CERT-002",Required,Occupant protection
+CS-25.571,Damage Tolerance,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-006, CERT-002",Required,DT for metallic and composite
+CS-25.603,Materials - General,Amendment 27,STRUCTURAL,Materials Lead,2025-11-10,"TN-004, CERT-002",Required,Material qualification
+CS-25.605,Fabrication Methods,Amendment 27,STRUCTURAL,Materials Lead,2025-11-10,"TN-004",Required,Process control requirements
+CS-25.607,Fasteners,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-004",Required,Fastener selection and design
+CS-25.609,Protection of Structure,Amendment 27,STRUCTURAL,Materials Lead,2025-11-10,"STR-001, STR-003",Required,Corrosion and environmental
+CS-25.611,Accessibility Provisions,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, CERT-002",Required,Inspection access
+CS-25.613,Material Strength Properties,Amendment 27,STRUCTURAL,Materials Lead,2025-11-10,"TN-004, CERT-002",Required,A/B-basis allowables
+CS-25.619,Special Factors,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-004, CERT-002",Required,Casting and fitting factors
+CS-25.621,Casting and Bearing Factors,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-004",Required,Load factors for castings
+CS-25.623,Bearing Factors,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-004",Required,Pin/lug bearing allowables
+CS-25.625,Fitting Factors,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-004",Required,Ultimate load on fittings
+CS-25.629,Aeroelastic Stability,Amendment 27,AERO,Aero Lead,2025-11-10,"AERO-005, CERT-001",Required,Flutter clearance
+CS-25.631,Bird Strike Damage,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, CERT-002",Required,Windscreen and structure
+CS-25.671,Control Systems - General,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"STR-001, TN-003",Required,Control loads and deflections
+CS-25.675,Stops,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Control surface stops
+CS-25.677,Trim Systems,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"STR-001",Required,Trim actuator loads
+CS-25.679,Control System Locks,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,N/A,N/A,Not used in Q100 design
+CS-25.683,Operation Tests,Amendment 27,STRUCTURAL,Test Lead,2025-11-10,"TN-005, CERT-002",Required,Control system functional tests
+CS-25.685,Control System Details,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Cable and rod design
+CS-25.697,Lift and Drag Devices,Amendment 27,AERO,Aero Lead,2025-11-10,"AERO-004, STR-001, TN-003",Required,High-lift system loads
+CS-25.699,Lift and Drag Device Indicator,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,N/A,Required,Control surface position indication
+CS-25.721,General Powerplant Installation,Amendment 27,STRUCTURAL,Propulsion Lead,2025-11-10,"STR-001, TN-003",Adapted,For fuel cell nacelles
+CS-25.723,Shock Absorption Tests,Amendment 27,STRUCTURAL,Test Lead,2025-11-10,"TN-005, CERT-002",Required,Landing gear drop tests
+CS-25.725,Limit Drop Test,Amendment 27,STRUCTURAL,Test Lead,2025-11-10,"STR-004, TN-005",Required,Gear and structure validation
+CS-25.727,Reserve Energy Absorption,Amendment 27,STRUCTURAL,Test Lead,2025-11-10,"STR-004, TN-005",Required,Ultimate drop test
+CS-25.729,Retracting Mechanism,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"CLR-002, TN-003",Required,Gear retraction loads
+CS-25.731,Wheels,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"STR-004",Required,Wheel structural design
+CS-25.733,Tires,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"STR-004, PERF-002, PERF-003",Required,Tire selection and loads
+CS-25.735,Brakes and Braking Systems,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"STR-004, PERF-003, TN-003",Required,Braking energy and loads
+CS-25.737,Skis,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,N/A,N/A,Wheel landing gear only
+CS-25.771,Pilot Compartment,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-003",Required,Cockpit structure
+CS-25.773,Pilot Compartment View,Amendment 27,CLEARANCE,Geom Lead,2025-11-10,"CLR-001",Required,Vision angles and obstructions
+CS-25.775,Windshields and Windows,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-003",Required,Transparency loads and bird strike
+CS-25.777,Cockpit Controls,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"STR-001",Required,Control force and displacement
+CS-25.783,Doors,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-003",Required,Door structural design
+CS-25.785,Seats Berths Safety Belts,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Occupant loads
+CS-25.787,Stowage Compartments,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Cargo and baggage loads
+CS-25.789,Retention of Items,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, TN-003",Required,Equipment and cargo retention
+CS-25.791,Passenger Information Signs,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,N/A,Required,Sign structural mounting
+CS-25.793,Floor Surfaces,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, STR-003",Required,Floor panel design
+CS-25.795,Security Considerations,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, CERT-003",Required,Cockpit door reinforcement
+CS-25.803,Emergency Evacuation,Amendment 27,CLEARANCE,Safety Lead,2025-11-10,"CERT-001, CERT-003",Required,Passenger evacuation times
+CS-25.807,Emergency Exits,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, CERT-001",Required,Exit number size and location
+CS-25.809,Emergency Exit Arrangement,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-001, CERT-001",Required,Exit accessibility
+CS-25.811,Emergency Exit Marking,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,N/A,Required,Exit signage
+CS-25.813,Emergency Exit Access,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"CERT-001",Required,Aisle and passageway widths
+CS-25.831,Ventilation,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"STR-003",Required,Pressurization system
+CS-25.841,Pressurized Cabins,Amendment 27,STRUCTURAL,Structures Lead,2025-11-10,"STR-003, TN-003, CERT-002",Required,Pressure vessel design
+CS-25.843,Proof of Pressure,Amendment 27,STRUCTURAL,Test Lead,2025-11-10,"STR-003, TN-005, CERT-002",Required,Pressure vessel testing
+CS-25.851,Fire Extinguishers,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,N/A,Required,Extinguisher mounting
+CS-25.853,Compartment Interiors,Amendment 27,STRUCTURAL,Materials Lead,2025-11-10,"STR-001",Required,Flammability requirements
+CS-25.855,Cargo Compartment Classification,Amendment 27,STRUCTURAL,Safety Lead,2025-11-10,"CERT-001, CERT-003",Required,Cargo fire protection
+CS-25.865,Fire Protection of Flight Controls,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"STR-001, CERT-003",Required,Control system fireproofing
+CS-25.869,Fire Protection - Systems,Amendment 27,STRUCTURAL,Systems Lead,2025-11-10,"CERT-003",Required,System fire protection
+AC 25.571-1D,Damage Tolerance and Fatigue,Revision D,STRUCTURAL,Structures Lead,2025-11-10,"STR-005, STR-006, CERT-002",Required,DT/Fatigue guidance
+AC 25.1309-1A,System Safety Assessment,Revision A,CERT,Cert Lead,2025-11-10,"CERT-001, CERT-003",Required,SSA process and methods
+ARP-4754A,Development of Civil Aircraft,Rev A,CERT,Cert Lead,2025-11-10,"CERT-001, TN-005",Required,Development assurance
+ARP-4761,Safety Assessment Process,Rev 1996,CERT,Cert Lead,2025-11-10,"CERT-003, TN-005",Required,"FHA, PSSA, SSA methods"
+ASTM E1049,Rainflow Counting,Current,STRUCTURAL,Structures Lead,2025-11-10,"STR-005",Required,Fatigue cycle counting
+NASGRO,Fracture Mechanics,Version 9.x,STRUCTURAL,Structures Lead,2025-11-10,"STR-006",Required,Crack growth analysis
+MMPDS,Metallic Materials Properties,MMPDS-16,STRUCTURAL,Materials Lead,2025-11-10,"TN-004, CERT-002",Required,Material allowables database
+CMH-17,Composite Materials Handbook,Rev G,STRUCTURAL,Materials Lead,2025-11-10,"TN-004, CERT-002",Required,Composite allowables
+ESDU,Engineering Sciences Data,Current,AERO,Aero Lead,2025-11-10,"AERO-003, TN-001",Reference,Drag estimation methods
+NASA TN,Aerodynamic References,Various,AERO,Aero Lead,2025-11-10,"AERO-001, AERO-002",Reference,BWB aerodynamics
+AIAA Papers,Technical References,Various,AERO,Aero Lead,2025-11-10,"AERO-001, AERO-005",Reference,BWB and flutter studies
+ISO 19881,Gaseous Hydrogen - Land Vehicle,2018,STRUCTURAL,Safety Lead,2025-11-10,"STR-003, CERT-001",Adapted,H₂ tank standards (aviation adapted)
+SAE AIR,Aerospace Information Reports,Various,WB,W&B Lead,2025-11-10,"WB-001, WB-002, WB-003",Reference,Weight engineering practices
+GAMA Spec 1,Specification for Pilot's,Rev 1,WB,W&B Lead,2025-11-10,"WB-004",Reference,Weight and balance procedures

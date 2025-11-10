@@ -1,0 +1,57 @@
+Load Case ID,Description,CS-25 Reference,Category,Load Type,Load Factor nz,Load Factor nx,Load Factor ny,Airspeed,Altitude,Config,Mass Case,Symmetry,Priority,Governing Component,Status,Notes
+LC-F-001,Positive Maneuvering at VA,CS-25.337(b),Flight,Maneuver,3.8,0,0,VA,TBD,Clean,MTOW,Symmetric,High,Wing upper skin,Planned,Design maneuver speed
+LC-F-002,Positive Maneuvering at VC,CS-25.337(a),Flight,Maneuver,2.5,0,0,VC,Cruise,Clean,MCW,Symmetric,High,Wing root,Planned,Design cruise speed
+LC-F-003,Negative Maneuvering at VA,CS-25.337(b),Flight,Maneuver,-1.5,0,0,VA,TBD,Clean,MTOW,Symmetric,High,Wing lower skin,Planned,Design maneuver speed negative
+LC-F-004,Negative Maneuvering at VC,CS-25.337(a),Flight,Maneuver,-1.0,0,0,VC,Cruise,Clean,MCW,Symmetric,Medium,Wing lower skin,Planned,Design cruise speed negative
+LC-F-005,Positive Gust at VC (50 ft/s),CS-25.341(a),Flight,Gust,TBD,0,0,VC,Cruise,Clean,MCW,Symmetric,High,Wing root,Planned,Cruise vertical gust
+LC-F-006,Negative Gust at VC (50 ft/s),CS-25.341(a),Flight,Gust,TBD,0,0,VC,Cruise,Clean,MCW,Symmetric,High,Wing lower skin,Planned,Cruise negative gust
+LC-F-007,Positive Gust at VD (25 ft/s),CS-25.341(a),Flight,Gust,TBD,0,0,VD,TBD,Clean,MTOW,Symmetric,High,Wing structure,Planned,Dive speed gust
+LC-F-008,Negative Gust at VD (25 ft/s),CS-25.341(a),Flight,Gust,TBD,0,0,VD,TBD,Clean,MTOW,Symmetric,Medium,Wing structure,Planned,Dive speed negative gust
+LC-F-009,Positive Gust at VB (66 ft/s),CS-25.341(a),Flight,Gust,TBD,0,0,VB,TBD,Clean,MTOW,Symmetric,Medium,Wing structure,Planned,Design speed for max gust intensity
+LC-F-010,Flaps Extended Maneuver,CS-25.345,Flight,Maneuver,2.0,0,0,VF,TBD,TO Flaps,MTOW,Symmetric,Medium,Flap structure,Planned,Flaps extended positive maneuver
+LC-F-011,Flaps Extended Gust,CS-25.345,Flight,Gust,TBD,0,0,VF,TBD,LDG Flaps,MLW,Symmetric,Medium,Flap structure,Planned,Landing config with gust
+LC-F-012,Maximum Cabin Pressure at 1g,CS-25.365,Flight,Pressure,1.0,0,0,VC,Cruise,Clean,MCW,Symmetric,High,Fuselage crown,Planned,Max operating pressure differential
+LC-F-013,Pressure + Positive Maneuver,CS-25.365,Flight,Combined,2.5,0,0,VC,Cruise,Clean,MCW,Symmetric,High,Fuselage frames,Planned,Pressure + 2.5g maneuver
+LC-F-014,Pressure + Negative Maneuver,CS-25.365,Flight,Combined,-1.0,0,0,VC,Cruise,Clean,MCW,Symmetric,Medium,Fuselage keel,Planned,Pressure + -1.0g maneuver
+LC-F-101,Rolling Maneuver - Full Aileron,CS-25.349,Flight,Maneuver,TBD,0,TBD,VA,TBD,Clean,MTOW,Asymmetric,High,Aileron hinge,Planned,Maximum aileron deflection
+LC-F-102,Yaw Maneuver - Full Rudder,CS-25.351,Flight,Maneuver,TBD,TBD,TBD,VA,TBD,Clean,MTOW,Asymmetric,High,Vertical stabilizer,Planned,Maximum rudder deflection
+LC-F-103,Lateral Gust,CS-25.341(a),Flight,Gust,1.0,0,TBD,VC,Cruise,Clean,MCW,Asymmetric,Medium,Fuselage side,Planned,Side gust at cruise
+LC-F-104,Engine Out (Asymmetric Thrust),CS-25.363,Flight,Maneuver,1.0,0,TBD,TBD,Climb,Clean,MTOW,Asymmetric,High,Engine mount,Planned,One fuel cell inoperative
+LC-F-105,Asymmetric Flap,CS-25.345,Flight,Maneuver,TBD,TBD,TBD,VF,TBD,TO Flaps,MTOW,Asymmetric,Medium,Wing torsion,Planned,Flap asymmetry condition
+LC-F-106,Rolling Pullout,CS-25.349,Flight,Maneuver,TBD,0,TBD,VC,TBD,Clean,MCW,Asymmetric,Medium,Wing attach,Planned,Combined roll and pitch
+LC-G-001,Level Landing - Limit,CS-25.479(a),Ground,Landing,TBD,0,0,VTD,0,LDG Flaps,MLW,Symmetric,High,Landing gear attach,Planned,Level attitude landing
+LC-G-002,Level Landing - Ultimate,CS-25.479(a),Ground,Landing,1.5×Limit,0,0,VTD,0,LDG Flaps,MLW,Symmetric,High,Landing gear attach,Planned,1.5 × limit load factor
+LC-G-003,Tail-Down Landing,CS-25.481,Ground,Landing,TBD,TBD,0,VTD,0,LDG Flaps,MLW,Symmetric,High,Aft fuselage,Planned,Maximum rotation angle
+LC-G-004,One-Gear Landing (Single MLG),CS-25.483,Ground,Landing,TBD,0,TBD,VTD,0,LDG Flaps,MLW,Asymmetric,High,Main gear attach,Planned,Single main gear takes full load
+LC-G-005,Side Load (Drift) Landing,CS-25.485,Ground,Landing,TBD,0,TBD,VTD,0,LDG Flaps,MLW,Asymmetric,High,Landing gear,Planned,Landing with drift angle
+LC-G-006,Spin-Up Condition,CS-25.479,Ground,Landing,TBD,TBD,0,VTD,0,LDG Flaps,MLW,Symmetric,Medium,Tire/wheel,Planned,Wheel spin-up at touchdown
+LC-G-007,Spring-Back Landing,CS-25.479,Ground,Landing,TBD,TBD,0,VTD,0,LDG Flaps,MLW,Symmetric,Medium,Landing gear strut,Planned,Gear rebound after touchdown
+LC-G-008,Braked Roll - Maximum Braking,CS-25.493,Ground,Taxi,TBD,TBD,0,V_brake,0,Clean,MTOW,Symmetric,High,Nose gear,Planned,Maximum brake torque application
+LC-G-009,Turning on Ground,CS-25.495,Ground,Taxi,1.0,0,TBD,V_taxi,0,Clean,MTOW,Asymmetric,Medium,Main gear,Planned,Minimum radius turn
+LC-G-010,Nose Gear Yawing,CS-25.499,Ground,Taxi,1.0,TBD,TBD,V_taxi,0,Clean,MTOW,Asymmetric,Medium,Nose gear,Planned,Nose gear steering loads
+LC-G-011,Pivoting,CS-25.503,Ground,Taxi,1.0,0,TBD,V_pivot,0,Clean,MTOW,Asymmetric,Medium,Main/nose gear,Planned,Sharp turn about one main gear
+LC-G-012,Reverse Braking,CS-25.493,Ground,Taxi,TBD,-TBD,0,V_brake,0,Clean,MLW,Symmetric,Low,Gear attach,Planned,Reverse thrust or braking
+LC-G-013,Unsymmetrical Braking,CS-25.493,Ground,Taxi,TBD,TBD,TBD,V_brake,0,Clean,MTOW,Asymmetric,Medium,Main gear,Planned,Braking with μ difference left/right
+LC-G-014,Towing Forward,CS-25.509,Ground,Towing,1.0,TBD,0,0,0,Clean,OEW,Symmetric,Low,Tow attach,Planned,Forward tow condition
+LC-G-015,Towing Reverse,CS-25.509,Ground,Towing,1.0,-TBD,0,0,0,Clean,OEW,Symmetric,Low,Tow attach,Planned,Reverse tow condition
+LC-G-016,Jacking - Three Points,CS-25.519,Ground,Jacking,1.0,0,0,0,0,Clean,OEW,Symmetric,Low,Jack pad attach,Planned,Aircraft on three jacks
+LC-G-017,Jacking - One Point Failure,CS-25.519,Ground,Jacking,TBD,0,0,0,0,Clean,OEW,Asymmetric,Low,Jack pad,Planned,One jack fails (worst case)
+LC-G-018,Tie-Down,CS-25.519,Ground,Tiedown,TBD,TBD,TBD,0,0,Clean,OEW,Symmetric,Low,Tiedown attach,Planned,Wind gust on tiedown
+LC-P-001,Max Operating Pressure,CS-25.841,Pressure,Pressure,1.0,0,0,VC,Cruise,Clean,MCW,Symmetric,High,Fuselage skin,Planned,ΔP = TBD psi
+LC-P-002,Proof Pressure Test,CS-25.843,Pressure,Test,1.0,0,0,0,0,Clean,OEW,Symmetric,High,Fuselage skin,Planned,1.33 × max operating pressure
+LC-P-003,Combined Pressure + Gust,CS-25.365 + 25.341,Pressure,Combined,TBD,0,0,VC,Cruise,Clean,MCW,Symmetric,High,Fuselage crown,Planned,Simultaneous pressure and gust
+LC-E-001,Emergency Landing - Forward,CS-25.561(b)(2),Emergency,Crash,3.0,9.0,0,0,0,Clean,MLW,Symmetric,High,Floor structure,Planned,Forward crash pulse
+LC-E-002,Emergency Landing - Aft,CS-25.561(b)(2),Emergency,Crash,3.0,-1.5,0,0,0,Clean,MLW,Symmetric,High,Seat attachments,Planned,Aft crash pulse
+LC-E-003,Emergency Landing - Lateral,CS-25.561(b)(3),Emergency,Crash,3.0,0,3.0,0,0,Clean,MLW,Asymmetric,High,Fuselage frames,Planned,Side crash pulse
+LC-E-004,Emergency Landing - Downward,CS-25.561(b)(1),Emergency,Crash,6.0,0,0,0,0,Clean,MLW,Symmetric,High,Floor beams,Planned,Vertical crash pulse (occupant protection)
+LC-E-005,Ditching,CS-25.801,Emergency,Ditching,TBD,TBD,TBD,V_ditch,0,Clean,MLW,Symmetric,Low,Lower fuselage,Planned,Water impact loads
+LC-D-001,Door Opening - Normal Pressure,CS-25.783,Door,Operation,1.0,0,0,0,0,Clean,OEW,Symmetric,Medium,Door frame,Planned,Pax door opening with cabin pressure
+LC-D-002,Door Slam,CS-25.783,Door,Operation,TBD,0,0,0,0,Clean,OEW,Symmetric,Medium,Door hinge,Planned,Door suddenly closed (wind gust)
+LC-D-003,Cargo Door - Max Load,CS-25.787,Door,Operation,TBD,0,0,0,0,Clean,OEW,Symmetric,Medium,Cargo door,Planned,Cargo loading operation
+LC-S-001,Bird Strike - Windscreen,CS-25.631,Special,Bird Strike,1.0,0,0,VC,TBD,Clean,MCW,Symmetric,High,Windscreen,Planned,4 lb bird at VC
+LC-S-002,Bird Strike - Leading Edge,CS-25.631,Special,Bird Strike,1.0,0,0,VC,TBD,Clean,MCW,Symmetric,Medium,Wing LE,Planned,8 lb bird at VC
+LC-S-003,Lightning Strike,CS-25.581,Special,Lightning,1.0,0,0,TBD,TBD,Clean,MCW,Symmetric,Medium,All structure,Planned,Lightning attachment zones
+LC-S-004,Hail Impact,CS-25 App D,Special,Hail,1.0,0,0,TBD,TBD,Clean,MCW,Symmetric,Low,Nacelle inlet,Planned,Hail ingestion and impact
+LC-S-005,Extreme Gust (Continuous Turbulence),CS-25.341(b),Special,Gust,TBD,0,0,VC,Cruise,Clean,MCW,Symmetric,Medium,Wing attach,Planned,Continuous turbulence per PSD
+LC-S-006,High Speed Buffet,Airworthiness,Special,Buffet,TBD,0,0,1.3×V_stall,TBD,Clean,MCW,Symmetric,Low,Empennage,Planned,Flow separation buffeting loads
+LC-S-007,Control Surface Flutter,CS-25.629,Special,Flutter,1.0,0,0,VD,TBD,Clean,MCW,Symmetric,High,Control surfaces,Planned,Aeroelastic stability margin
