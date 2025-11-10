@@ -30,7 +30,7 @@ Waterline,WL 10.0,10.0,m,Upper deck floor (H₂ tanks)
 Waterline,WL 14.5,14.5,m,Top of fuselage (highest point)
 CG_Reference,CG Empty,STA 22.5 / WL 6.5,—,Typical empty CG location
 CG_Reference,CG Forward Limit,STA 12.5 (20% MAC),—,Forward CG limit
-CG_Reference,CG Aft Limit,STA 16.3 (35% MAC),—,Aft CG limit
+CG_Reference,CG Aft Limit,STA 15.88 (35% MAC),—,Aft CG limit
 Aerodynamic,MAC LE,STA 8.0 / BL ±8.5,—,Mean aerodynamic chord leading edge
 Aerodynamic,MAC Length,22.5,m,Mean aerodynamic chord
 Aerodynamic,Aerodynamic Center,STA 13.6 (25% MAC),—,Neutral point (approx.)
