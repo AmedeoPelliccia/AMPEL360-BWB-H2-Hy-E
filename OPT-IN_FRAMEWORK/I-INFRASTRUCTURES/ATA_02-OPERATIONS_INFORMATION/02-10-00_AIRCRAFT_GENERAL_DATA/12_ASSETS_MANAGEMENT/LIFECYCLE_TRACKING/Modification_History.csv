@@ -1,0 +1,9 @@
+Modification_ID,Aircraft_SN,Date,Type,Description,Weight_Impact_kg,CG_Impact,Approved_By,Status
+MOD-MSN001-001,MSN001,2024-03-20,Equipment Addition,Flight test instrumentation package,+500,Negligible,Flight Test Director,Implemented
+MOD-MSN001-002,MSN001,2024-05-10,Software Upgrade,Avionics software v2.1.0,0,None,Avionics Lead,Implemented
+MOD-MSN001-003,MSN001,2024-07-15,Equipment Addition,Additional telemetry sensors,+200,Negligible,Flight Test Engineer,Implemented
+MOD-MSN001-004,MSN001,2024-09-01,System Upgrade,Enhanced hydrogen leak detection,+150,None,Systems Engineer,Implemented
+MOD-MSN001-005,MSN001,2024-11-05,Equipment Removal,Temporary test equipment removal,-300,+0.1% MAC,Flight Test Engineer,Implemented
+MOD-MSN001-006,MSN001,2025-02-15,Planned,Enhanced avionics suite,+400,Under Review,Avionics Lead,Planned
+MOD-MSN002-001,MSN002,Planned,Design Improvement,Improved cabin layout optimization,0,None,Interior Design,Planned
+MOD-MSN002-002,MSN002,Planned,System Enhancement,Advanced fuel management system,+100,Negligible,Systems Engineer,Planned

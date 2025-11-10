@@ -1,0 +1,19 @@
+Item_ID,Special_Condition,Authority,Status,Contact_Point,Submission_Date,Review_Date,Approval_Target,Notes
+SC-001,SC-BWB-001 Geometry,EASA,Proposed,Novel Aircraft Section,2026-Q1,2026-Q2,2026-Q3,First BWB transport aircraft
+SC-002,SC-BWB-002 CG Range,EASA,Proposed,Flight Test Section,2026-Q1,2026-Q2,2026-Q3,Wide CG envelope 15-42% MAC
+SC-003,SC-H2-001 Hydrogen Fuel,EASA,Proposed,Propulsion Section,2026-Q1,2026-Q2,2026-Q3,Coordination with ISO 19881
+SC-004,SC-CO2-001 CO2 Capture,EASA,Proposed,Systems Section,2026-Q2,2026-Q3,2026-Q4,Optional system
+SC-005,FAA Validation BWB,FAA,Planning,Transport Standards,2026-Q3,2026-Q4,2027-Q1,Bilateral agreement with EASA
+SC-006,FAA Validation H2,FAA,Planning,Propulsion Branch,2026-Q3,2026-Q4,2027-Q1,Follow EASA lead
+COORD-001,Pre-Application Meeting,EASA,Scheduled,Certification Department,2026-01-15,N/A,N/A,Initial consultation
+COORD-002,Technical Discussion BWB,EASA,Planning,Structures Section,2026-02-01,N/A,N/A,Composite BWB structure
+COORD-003,Technical Discussion H2,EASA,Planning,Propulsion Section,2026-02-15,N/A,N/A,Fuel cell certification
+COORD-004,Flight Test Plan Review,EASA,Planning,Flight Test Section,2026-03-01,N/A,N/A,Test program approval
+COORD-005,Type Certificate Application,EASA,Planning,Certification Department,2026-Q3,N/A,N/A,Formal application submission
+COORD-006,FAA Bilateral Meeting,FAA,Planning,International Branch,2026-Q3,N/A,N/A,US market validation
+WG-001,EASA Working Group BWB,EASA,Active,Novel Aircraft,2025-Q4,Ongoing,N/A,Industry consultation
+WG-002,ISO 19881 H2 Aviation,ISO,Active,TC 197,2025-Q3,Ongoing,2027,Adapt ground vehicle std to aviation
+WG-003,ICAO H2 Standards,ICAO,Active,Committee,2025-Q4,Ongoing,2028,Global H2 aircraft standards
+REG-001,European Green Deal,EU,Monitoring,DG MOVE,N/A,N/A,N/A,Policy alignment
+REG-002,US IRA Clean Aviation,US,Monitoring,DOE,N/A,N/A,N/A,Funding opportunities
+REG-003,Airport H2 Infrastructure,EASA/ICAO,Monitoring,Aerodrome Panel,N/A,N/A,N/A,Ground operations standards

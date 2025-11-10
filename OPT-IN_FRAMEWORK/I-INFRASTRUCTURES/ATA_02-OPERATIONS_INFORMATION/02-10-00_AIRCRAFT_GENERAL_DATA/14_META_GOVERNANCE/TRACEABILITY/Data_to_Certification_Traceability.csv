@@ -1,0 +1,11 @@
+Data_Item,Document_ID,Certification_Requirement,Regulation_Reference,Compliance_Status,Evidence_Location,Verification_Method
+Aircraft_Description,02-10-01-OVW,Type Certificate Data Sheet,CS-25.1581 / FAR 25.1581,Compliant,Section 1-6,Documentation Review
+Dimensions,02-10-01-OVW,Aircraft Limitations,CS-25.1583 / FAR 25.1583,Compliant,Section 3.0,Measurement and Validation
+Performance_Data,02-10-03-REQ,Operating Limitations,CS-25.1581 / FAR 25.1581,In Progress,Section 3.0,Flight Testing Required
+Weight_Balance,02-10-01-OVW,Weight and Balance,CS-25.25 / FAR 25.25,In Progress,TBD,Calculation and Testing
+Emergency_Exits,02-10-02-SAF,Emergency Provisions,CS-25.807 / FAR 25.807,Compliant,Section 4.2,Design Review
+Fuel_System,02-10-01-OVW,Fuel System,CS-25.951-979 / FAR 25.951-979,In Progress,Section 5.1,Analysis and Testing
+H2_Safety,02-10-02-SAF,Novel Systems Safety,CS-25.1309 / FAR 25.1309,In Progress,All Sections,Safety Assessment Required
+CO2_Capture,02-10-01-OVW,Novel Systems,Special Condition Required,Under Review,Section 5.2,EASA/FAA Coordination
+CAOS_Integration,02-10-01-OVW,Software Systems,CS-25.1301 / FAR 25.1301,In Progress,Section 6.0,DO-178C Compliance Required
+Airport_Compatibility,02-10-01-OVW,Operations,ICAO Annex 14,Compliant,Section 3.2,Analysis Complete

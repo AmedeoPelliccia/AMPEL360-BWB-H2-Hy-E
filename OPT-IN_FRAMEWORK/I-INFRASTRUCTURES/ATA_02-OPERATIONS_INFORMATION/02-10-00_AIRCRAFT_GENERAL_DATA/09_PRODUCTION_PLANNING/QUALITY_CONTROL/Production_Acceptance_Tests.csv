@@ -1,0 +1,21 @@
+Test_ID,Test_Name,Test_Type,Stage,Frequency,Duration,Acceptance_Criteria,Responsible
+PAT-001,Dimensional Verification,Measurement,Final_Assembly,Every_Aircraft,2_days,All critical dimensions within tolerance,Quality Inspection
+PAT-002,Weight and Balance,Measurement,Final_Assembly,Every_Aircraft,1_day,Weight within 2% of prediction; CG within limits,Weight_Balance Team
+PAT-003,H2 System Pressure Test,Functional,Systems_Integration,Every_Aircraft,4_hours,Hold pressure for 24hr; leak rate < spec,H2 Systems Team
+PAT-004,Fuel Cell Power Output,Functional,Systems_Integration,Every_Aircraft,8_hours,Power output meets spec at all conditions,Propulsion Team
+PAT-005,Electrical System Test,Functional,Systems_Integration,Every_Aircraft,6_hours,All buses powered; no faults; load test passed,Electrical Team
+PAT-006,Hydraulic System Test,Functional,Systems_Integration,Every_Aircraft,4_hours,Pressure maintained; no leaks; actuator function OK,Hydraulics Team
+PAT-007,Flight Control Rigging,Functional,Final_Assembly,Every_Aircraft,1_day,Full deflection achieved; forces within limits,Flight Controls
+PAT-008,Avionics Systems Test,Functional,Systems_Integration,Every_Aircraft,2_days,All systems functional; communication OK; navigation OK,Avionics Team
+PAT-009,CAOS Digital Twin Sync,Functional,Systems_Integration,Every_Aircraft,4_hours,Digital twin matches aircraft; sensors functional,CAOS Team
+PAT-010,Ground Run Test,Functional,Pre-Flight,Every_Aircraft,2_hours,Fuel cells reach rated power; no anomalies,Flight Test
+PAT-011,High-Speed Taxi Test,Functional,Pre-Flight,Every_Aircraft,1_hour,Steering OK; braking OK; no vibrations,Flight Test
+PAT-012,First Flight,Flight_Test,Flight_Test,Every_Aircraft,2_hours,Aircraft airworthy; handling acceptable; systems OK,Flight Test
+PAT-013,Production Acceptance Flight,Flight_Test,Pre-Delivery,Every_Aircraft,3_hours,Performance meets spec; no squawks; customer acceptance,Flight Test
+PAT-014,Systems Integration Test,Functional,Systems_Integration,First_10_Aircraft,3_days,All system interfaces functional; no conflicts,Systems Engineering
+PAT-015,Structural Load Test,Structural,Prototype,Prototype_Only,4_weeks,Structure meets limit loads; no permanent deformation,Structures Team
+PAT-016,Lightning Strike Test,Environmental,Certification,Prototype_Only,1_week,Aircraft protected from lightning; systems survive,Certification
+PAT-017,EMI/EMC Testing,Environmental,Certification,Prototype_Only,2_weeks,No electromagnetic interference; systems compatible,Avionics/Certification
+PAT-018,Icing Certification,Environmental,Certification,Prototype_Only,3_weeks,Aircraft safe in icing conditions per regulations,Flight Test/Certification
+PAT-019,Performance Validation,Flight_Test,Production,Every_10th_Aircraft,1_day,Performance consistent with certified data,Flight Test
+PAT-020,Configuration Audit,Documentation,Pre-Delivery,Every_Aircraft,1_day,As-built matches documentation; traceability complete,Configuration Mgmt

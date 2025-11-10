@@ -1,0 +1,8 @@
+Document_Type,Level,Technical_Review,Safety_Review,Certification_Review,QA_Review,Program_Approval,Chief_Engineer_Approval
+System_Spec,1,Required,Required,Required,Required,Required,Required
+Subsystem_Design,2,Required,Required,Optional,Required,Optional,Required
+Component_Spec,3,Required,Optional,Optional,Required,Not_Required,Optional
+Analysis_Report,4,Required,As_Needed,As_Needed,Optional,Not_Required,Not_Required
+Change_Request_Critical,N/A,Required,Required,Required,Required,Required,Required
+Change_Request_Major,N/A,Required,Required,Optional,Required,Required,Optional
+Change_Request_Minor,N/A,Required,As_Needed,Not_Required,Optional,Optional,Not_Required

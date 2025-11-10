@@ -1,0 +1,139 @@
+{
+  "digitalProductPassport": {
+    "version": "1.0",
+    "id": "DPP-ME-002",
+    "blockchainHash": "0x3c8f0a2d4e6f8a0b2c4e6f8a0b2d4e6f8a0b2c4e",
+    "timestamp": "2025-11-05T22:00:00Z",
+    
+    "product": {
+      "name": "Aircraft Weighing Platform System",
+      "type": "Measurement Equipment",
+      "serialNumber": "WP-8934",
+      "manufacturer": "Intercomp Company",
+      "partNumber": "INT-AWP-150K",
+      "description": "High-capacity aircraft weighing platform with wireless load cell system. Certified for commercial aircraft weight and balance measurements."
+    },
+    
+    "technical": {
+      "specifications": {
+        "maxCapacity": "68000 kg (150,000 lbs) per platform",
+        "numberOfPlatforms": "6",
+        "totalSystemCapacity": "408000 kg",
+        "accuracy": "±0.1% of applied load",
+        "resolution": "0.5 kg (1 lb)",
+        "platformSize": "1830mm x 1830mm",
+        "displayType": "Wireless digital indicator",
+        "operatingTemperature": "-10°C to 50°C",
+        "totalWeight": "890 kg (system)",
+        "dataInterface": "Wireless, USB, Ethernet"
+      },
+      "certifications": [
+        "ISO 17025 Accredited",
+        "NIST Handbook 44 Compliant",
+        "FAA AC 120-27E Compliant",
+        "EASA AMC 25.29 Compliant"
+      ],
+      "standards": [
+        "SAE AIR 1845A",
+        "FAA AC 120-27E",
+        "ISO 9001:2015"
+      ],
+      "calibration": {
+        "lastCalibration": "2025-10-01",
+        "nextCalibration": "2026-04-01",
+        "calibrationInterval": "6 months",
+        "calibrationAuthority": "NIST Traceable Weights",
+        "certificateNumber": "CAL-2025-10-8934"
+      }
+    },
+    
+    "lifecycle": {
+      "purchaseDate": "2024-01-05",
+      "commissioningDate": "2024-01-15",
+      "status": "Active",
+      "location": "Hangar 1 - Munich Facility",
+      "usageCount": 89,
+      "aircraftWeighed": 89,
+      "nextMaintenance": "2026-01-15"
+    },
+    
+    "verification": {
+      "qualityControl": "Pass",
+      "testing": {
+        "accuracyVerification": "Pass - 2025-10-01",
+        "linearity": "Pass - R² = 0.9999",
+        "repeatability": "Pass - 0.05% variation",
+        "cornerLoadTest": "Pass",
+        "wirelessCommunication": "Pass - 100% reliability"
+      },
+      "performanceMetrics": {
+        "measurementUncertainty": "±0.08%",
+        "systemReliability": "99.9%",
+        "calibrationStability": "Excellent"
+      }
+    },
+    
+    "compliance": {
+      "regulatory": [
+        "FAA AC 120-27E Aircraft Weight and Balance Control",
+        "EASA AMC 25.29",
+        "ISO 17025 Laboratory Accreditation"
+      ],
+      "environmental": [
+        "RoHS Compliant",
+        "REACH Compliant"
+      ],
+      "safety": [
+        "Load Cell Safety Factor: 5:1",
+        "Overload Protection",
+        "Wireless Safety per EN 300 328"
+      ]
+    },
+    
+    "maintenanceHistory": [
+      {
+        "date": "2025-10-01",
+        "type": "Calibration",
+        "description": "6-month calibration with NIST traceable weights up to 68000 kg",
+        "performedBy": "Intercomp Service Team",
+        "result": "Pass - All platforms within spec"
+      },
+      {
+        "date": "2025-04-01",
+        "type": "Calibration",
+        "description": "6-month calibration with NIST traceable weights",
+        "performedBy": "Intercomp Service Team",
+        "result": "Pass"
+      }
+    ],
+    
+    "linkedAssets": [
+      "DPP-AC-MSN001 (Weighed Aircraft)",
+      "DPP-AC-MSN002 (Weighed Aircraft)",
+      "DPP-DS-001 (Weight & Balance Software)"
+    ],
+    
+    "supplier": {
+      "name": "Intercomp Company",
+      "certifications": ["ISO 9001:2015", "NIST Traceable"],
+      "location": "Medina, MN, USA",
+      "supportContact": "info@intercompcompany.com"
+    },
+    
+    "warranty": {
+      "period": "3 years",
+      "coverage": "Load cells, electronics, platforms",
+      "expiryDate": "2027-01-05",
+      "extendedWarranty": "Available"
+    },
+    
+    "metadata": {
+      "createdBy": "Weight & Balance Engineer",
+      "createdDate": "2024-01-15T09:00:00Z",
+      "lastModifiedBy": "Calibration Technician",
+      "lastModified": "2025-11-05T22:00:00Z",
+      "dataClassification": "Internal",
+      "retentionPeriod": "15 years"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+Evidence_ID,Document_ID,Parameter,Value,Unit,Requirement,Status,Verification_Method,Reference
+PERF-001,CERT-02-10-201,Design Range,4000,km,Design requirement,Compliant,Analysis,Requirements
+PERF-002,CERT-02-10-201,Maximum Range,4500,km,Reduced payload,Compliant,Analysis,Performance Model
+PERF-003,CERT-02-10-201,Payload,40000,kg,220 passengers,Compliant,Weight Analysis,Design Spec
+PERF-004,CERT-02-10-201,Fuel Capacity,3000,kg LH₂,Mission requirement,Compliant,Tank Design,ATA 28
+PERF-005,CERT-02-10-201,Cruise Altitude,39000,ft,Optimum FL390,Compliant,Analysis,Performance
+PERF-006,CERT-02-10-201,Fuel Consumption,850,kg/hr,At cruise power,Compliant,Fuel Cell Test,ATA 71
+PERF-007,CERT-02-10-201,Specific Range,1.33,km/kg,H₂ efficiency,Compliant,Calculation,Performance
+PERF-008,CERT-02-10-201,Lift-to-Drag Ratio,21,-,At cruise M0.78,Compliant,CFD + Wind Tunnel,Aero Analysis
+PERF-009,CERT-02-10-201,Fuel Cell Efficiency,60,%,PEM LHV basis,Compliant,Test Data,ATA 71
+PERF-010,CERT-02-10-201,Reserve Fuel,500,kg,30 min + alternate,Compliant,CS-25.1013,CS-25.1013
+PERF-011,CERT-02-10-202,Design Cruise Speed,0.78,Mach,At FL390,Compliant,Analysis,Requirements
+PERF-012,CERT-02-10-202,VMO,350,KIAS,Maximum operating,Compliant,Analysis,CS-25.1505
+PERF-013,CERT-02-10-202,MMO,0.82,Mach,Maximum operating,Compliant,Analysis,CS-25.1505
+PERF-014,CERT-02-10-202,Cruise TAS,450,kt,At FL390 M0.78,Compliant,Calculation,Performance
+PERF-015,CERT-02-10-202,VLE,250,KIAS,Landing gear extended,Compliant,Analysis,CS-25.1515
+PERF-016,CERT-02-10-202,VLO Extend,220,KIAS,Gear extension,Compliant,Landing Gear Design,ATA 32
+PERF-017,CERT-02-10-202,VLO Retract,200,KIAS,Gear retraction,Compliant,Landing Gear Design,ATA 32
+PERF-018,CERT-02-10-202,VS Landing Config,112,KIAS,At MLW 150000 kg,Compliant,Analysis,CS-25.103
+PERF-019,CERT-02-10-202,VREF,146,KIAS,1.3 × VS at MLW,Compliant,Calculation,CS-25.125
+PERF-020,CERT-02-10-202,Drag Divergence Mach,0.83,Mach,Transonic performance,Compliant,CFD,Aero Analysis
+PERF-021,CERT-02-10-202,Critical Flutter Speed,0.95,Mach,Structural safety,Compliant,Analysis,CS-25.629
+PERF-022,CERT-02-10-202,VD Design Dive,0.89,Mach,1.08 × VMO,Compliant,Analysis,CS-25.335
+PERF-023,CERT-02-10-201,Takeoff Field Length,2400,m,MTOW ISA+15,Compliant,Analysis,CS-25.105
+PERF-024,CERT-02-10-201,Landing Distance Dry,1650,m,MLW dry runway,Compliant,Analysis,CS-25.125
+PERF-025,CERT-02-10-201,Landing Distance Wet,1850,m,MLW wet runway,Compliant,Analysis,CS-25.125
+PERF-026,CERT-02-10-201,Climb Gradient,2.8,%,At MTOW takeoff,Compliant,Analysis,CS-25.121
+PERF-027,CERT-02-10-202,Stall Warning Margin,10,KIAS,Above VS,Compliant,Analysis,CS-25.207
+PERF-028,CERT-02-10-202,Buffet Margin High Speed,0.02,Mach,Above MMO,Compliant,Wind Tunnel,Aero Analysis
+PERF-029,CERT-02-10-202,Buffet Margin Low Speed,15,%,Above VS,Compliant,Analysis,CS-25.251
+PERF-030,CERT-02-10-201,Energy Efficiency,0.30,MJ/seat-km,vs 0.44 conventional,Compliant,Calculation,Performance

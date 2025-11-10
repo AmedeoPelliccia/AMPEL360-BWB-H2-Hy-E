@@ -6,18 +6,33 @@
 
 ## Purpose
 
-Defines the complete dimensional and geometric characteristics of the AMPEL360 BWB H₂ aircraft, including reference systems, measurement standards, and geometric definitions unique to the blended wing body configuration.
+This folder contains overview documentation and the **frozen geometry baseline** for the AMPEL360 BWB H₂ Hy-E Q100 INTEGRA aircraft configuration.
 
-## Scope
+## Contents
 
-- Overall aircraft dimensions
-- BWB-specific geometry definitions
-- Reference coordinate systems
-- Station, waterline, and buttline systems
-- Critical clearances and tolerances
-- Airport compatibility dimensions
+### baseline_dimensions.json
 
-## Key Documents
+**Single source of truth for frozen geometry dimensions.**
+
+This file contains the type-design baseline dimensions that are monitored by the Geometry Baseline Watchdog CI system. Any deviation from these values requires an Engineering Change Request (ECR).
+
+**Monitored parameters:**
+- Aerodynamic geometry (wingspan, wing area, aspect ratio, sweep)
+- Structural geometry (overall length, center body depth, pressure vessel radius)
+- Landing gear geometry (MLG/NLG heights, wheelbase, gear track)
+
+**⚠️ IMPORTANT**: Changes to this file must be accompanied by:
+1. An approved ECR document
+2. Updates to all affected engineering analysis documents
+3. Impact assessment on FEM, clearance, CG envelope, and performance analyses
+
+The CI watchdog automatically verifies that values in engineering documents match this baseline. Deviations trigger automatic ECR issue creation.
+
+For more information, see: `tools/README.md`
+
+## Status
+
+✅ **Baseline Established** - Geometry baseline file created and CI watchdog active.
 
 | Document | Purpose | Status |
 |----------|---------|--------|

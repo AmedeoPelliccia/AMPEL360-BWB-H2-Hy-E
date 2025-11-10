@@ -1,0 +1,12 @@
+Component,Wetted_Area_m2,Reference_Area_m2,Friction_Coefficient_Cf,Form_Factor_FF,Wave_Drag_Coeff,Interference_Factor,Component_CD_counts,Percentage,Notes
+Wing,1245.5,845.0,0.00265,1.18,0.00025,1.00,48.2,21.9,Including wing box and control surfaces
+Center_Body,2850.3,845.0,0.00280,1.22,0.00015,1.05,112.5,51.1,BWB center body main wetted area
+Vertical_Stabilizers,185.6,845.0,0.00270,1.15,0.00010,1.08,6.8,3.1,Twin vertical tails
+Engine_Nacelles,420.8,845.0,0.00275,1.35,0.00030,1.12,28.4,12.9,Four H2 turbofan nacelles
+Wing-Body_Junction,,,,,,,3.2,1.5,Interference drag at wing-body junction
+Nacelle-Wing_Junction,,,,,,,4.1,1.9,Interference drag at nacelle-wing junction
+Gaps_and_Excrescences,,,,,,,8.5,3.9,Doors gaps antennas probes
+Control_Surfaces,,,,,,,5.8,2.6,Ailerons elevons rudders
+Landing_Gear_Doors,,,,,,,2.5,1.1,Gear door gaps and fairings
+Total_Zero_Lift_Drag,CD0,,,,,,220.0,100.0,Sum of all components at cruise CL=0.52
+Induced_Drag,CDi,,,,,,,Computed separately,Based on span efficiency e=0.87 and AR=3.2

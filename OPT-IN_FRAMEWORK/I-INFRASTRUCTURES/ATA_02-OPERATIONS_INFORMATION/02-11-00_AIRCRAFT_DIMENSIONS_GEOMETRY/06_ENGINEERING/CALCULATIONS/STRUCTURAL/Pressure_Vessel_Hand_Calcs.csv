@@ -1,0 +1,26 @@
+Parameter,Symbol,Value,Unit,Formula,Notes
+Cabin_Altitude,h_cabin,8000,ft,Design requirement,Maximum cabin altitude per CS-25.841
+Cruise_Altitude,h_cruise,41000,ft,Design point,Typical cruise altitude
+Cabin_Pressure,P_cabin,75.2,kPa,ISA at 8000 ft,Absolute cabin pressure
+Ambient_Pressure,P_ambient,18.8,kPa,ISA at 41000 ft,Absolute ambient pressure at cruise
+Differential_Pressure,ΔP,56.4,kPa,P_cabin - P_ambient,Design differential pressure (8.18 psi)
+Proof_Pressure,P_proof,75.0,kPa,1.33 × ΔP,Proof test pressure per CS-25.365
+Equivalent_Radius,r,2.1,m,Geometric approximation,Local radius of BWB center body
+Skin_Thickness,t,4.5,mm,Design value,Aluminum 7075-T6 skin thickness
+Hoop_Stress,σ_hoop,26.3,MPa,(ΔP × r) / t,Circumferential stress in cylindrical approximation
+Longitudinal_Stress,σ_long,13.2,MPa,(ΔP × r) / (2t),Longitudinal stress
+Material_Yield,σ_yield,503,MPa,MIL-HDBK-5J,7075-T6 Fty (tension yield)
+Material_Ultimate,σ_ult,572,MPa,MIL-HDBK-5J,7075-T6 Ftu (tension ultimate)
+Safety_Factor,SF,1.5,-,CS-25.303,Ultimate load factor
+Allowable_Stress,σ_allow,335,MPa,σ_yield / SF,Allowable stress at ultimate load
+Margin_of_Safety_Hoop,MS_hoop,11.74,-,(σ_allow / σ_hoop) - 1,Positive margin indicates compliance
+Margin_of_Safety_Long,MS_long,24.39,-,(σ_allow / σ_long) - 1,Positive margin indicates compliance
+Von_Mises_Stress,σ_vm,22.8,MPa,√(σ_hoop² - σ_hoop×σ_long + σ_long²),Equivalent stress for combined loading
+Margin_of_Safety_VM,MS_vm,13.70,-,(σ_allow / σ_vm) - 1,Overall combined stress margin
+Frame_Spacing,s_frame,0.6,m,Typical value,Distance between circumferential frames
+Stringer_Spacing,s_stringer,0.25,m,Typical value,Distance between longitudinal stringers
+Number_of_Frames,n_frame,88,-,52.5 / 0.6,Total frames along center body length
+Number_of_Stringers,n_stringer,48,-,Circumference / spacing,Longitudinal stiffeners
+Pressurization_Cycles,N_cycles,60000,-,Design life,1 cycle per flight
+Fatigue_Life_Factor,SF_fatigue,4,-,CS-25.571,Scatter factor on fatigue life
+Required_Fatigue_Life,N_req,240000,cycles,N_cycles × SF_fatigue,Required cycles for certification

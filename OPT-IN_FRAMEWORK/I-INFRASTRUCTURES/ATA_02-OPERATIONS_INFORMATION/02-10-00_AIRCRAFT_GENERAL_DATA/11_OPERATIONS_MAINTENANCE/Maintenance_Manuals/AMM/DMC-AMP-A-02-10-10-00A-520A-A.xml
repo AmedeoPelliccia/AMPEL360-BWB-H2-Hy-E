@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- S1000D Data Module Code: DMC-AMP-A-02-10-10-00A-520A-A -->
+<!-- Dimension Verification Procedures -->
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_6-0/xml_schema_flat/proced.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02" 
+                subSystemCode="1" subSubSystemCode="0" assyCode="10" 
+                disassyCode="00" disassyCodeVariant="A" infoCode="520" 
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <dmTitle>
+          <techName>Aircraft Dimensions</techName>
+          <infoName>Dimension Verification</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL360">
+        <enterpriseName>AMPEL360 Technologies</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="AMPEL360">
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 BWB H₂ Hy-E Q100 aircraft</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="00"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <procedure>
+      
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        
+        <reqSupportEquips>
+          <noSupportEquips/>
+        </reqSupportEquips>
+        
+        <reqSupplies>
+          <noSupplies/>
+        </reqSupplies>
+        
+        <reqSpares>
+          <noSpares/>
+        </reqSpares>
+        
+        <reqSafety>
+          <noSafety/>
+        </reqSafety>
+      </preliminaryRqmts>
+
+      <mainProcedure>
+        
+        <proceduralStep>
+          <title>Purpose and Scope</title>
+          <para>
+            This procedure provides instructions for verifying the principal dimensions of the 
+            AMPEL360 BWB H₂ Hy-E Q100 aircraft. Dimension verification is required every 5,000 
+            flight hours or 5 years, whichever occurs first, or after any structural modification 
+            or incident that may have affected aircraft dimensions.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Required Tools and Equipment</title>
+          <para>The following tools and equipment are required for dimension verification:</para>
+          <randomList>
+            <listItem>
+              <para>Laser measurement system (accuracy: ±2 mm)</para>
+            </listItem>
+            <listItem>
+              <para>Certified steel measuring tapes (50 m, ±1 mm accuracy)</para>
+            </listItem>
+            <listItem>
+              <para>Digital inclinometer (±0.1° accuracy)</para>
+            </listItem>
+            <listItem>
+              <para>Plumb lines and datum markers</para>
+            </listItem>
+            <listItem>
+              <para>CAOS tablet interface for digital twin data recording</para>
+            </listItem>
+            <listItem>
+              <para>Work stands and safety equipment</para>
+            </listItem>
+          </randomList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Preparation</title>
+          
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 1:</emphasis> Position aircraft on level ground 
+              (±0.5° maximum slope).
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 2:</emphasis> Verify landing gear is in normal 
+              position with proper tire inflation:
+            </para>
+            <randomList>
+              <listItem>
+                <para>Nose gear: 180 psi ±5 psi</para>
+              </listItem>
+              <listItem>
+                <para>Main gear: 220 psi ±5 psi</para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 3:</emphasis> Ensure all flight control surfaces 
+              are in neutral position and properly rigged.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 4:</emphasis> Close all doors and access panels 
+              unless specifically required to be open for measurements.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 5:</emphasis> Initialize CAOS digital twin 
+              dimension verification module for data recording.
+            </para>
+          </proceduralStep>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Wing Span Verification</title>
+          
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 1:</emphasis> Establish reference datum at 
+              aircraft centerline using plumb lines from fuselage station markings.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 2:</emphasis> Measure from centerline datum to 
+              left wingtip (tip of winglet):
+            </para>
+            <randomList>
+              <listItem>
+                <para>
+                  <emphasis emphasisType="em01">Required:</emphasis> 26.0 m ±10 mm
+                </para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 3:</emphasis> Measure from centerline datum to 
+              right wingtip (tip of winglet):
+            </para>
+            <randomList>
+              <listItem>
+                <para>
+                  <emphasis emphasisType="em01">Required:</emphasis> 26.0 m ±10 mm
+                </para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 4:</emphasis> Calculate total wing span:
+            </para>
+            <randomList>
+              <listItem>
+                <para>
+                  <emphasis emphasisType="em01">Required Total Span:</emphasis> 52.0 m ±20 mm
+                </para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 5:</emphasis> Verify symmetry: Left and right 
+              measurements must be within 5 mm of each other.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 6:</emphasis> Record measurements in CAOS system 
+              with date, time, and technician identification.
+            </para>
+          </proceduralStep>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Overall Length Verification</title>
+          
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 1:</emphasis> Establish forward reference datum 
+              at nose cone tip (fuselage station 0).
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 2:</emphasis> Establish aft reference datum at 
+              aft pressure bulkhead centerpoint.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 3:</emphasis> Measure overall length from nose 
+              tip to aft-most point of fuselage:
+            </para>
+            <randomList>
+              <listItem>
+                <para>
+                  <emphasis emphasisType="em01">Required:</emphasis> 48.5 m ±30 mm
+                </para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 4:</emphasis> Verify fuselage station markings 
+              are present and legible at 1-meter intervals.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 5:</emphasis> Record measurements in CAOS system.
+            </para>
+          </proceduralStep>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Overall Height Verification</title>
+          
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 1:</emphasis> Establish ground reference datum 
+              (ground plane beneath aircraft centerline).
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 2:</emphasis> Measure vertical height from ground 
+              datum to highest point of vertical fin:
+            </para>
+            <randomList>
+              <listItem>
+                <para>
+                  <emphasis emphasisType="em01">Required:</emphasis> 12.8 m ±20 mm
+                </para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 3:</emphasis> Verify measurement with landing 
+              gear compressed to static position (aircraft at MTOW equivalent weight).
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 4:</emphasis> Record measurements in CAOS system.
+            </para>
+          </proceduralStep>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Center Body Width Verification</title>
+          
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 1:</emphasis> Measure maximum width of BWB center 
+              body section at fuselage station 20.0 m:
+            </para>
+            <randomList>
+              <listItem>
+                <para>
+                  <emphasis emphasisType="em01">Required:</emphasis> 18.5 m ±15 mm
+                </para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 2:</emphasis> Verify center body width symmetry 
+              (left/right from centerline within 5 mm).
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 3:</emphasis> Record measurements in CAOS system.
+            </para>
+          </proceduralStep>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>MAC (Mean Aerodynamic Chord) Location Verification</title>
+          
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 1:</emphasis> Verify MAC leading edge (LEMAC) 
+              location at fuselage station 9.5 m ±5 mm.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 2:</emphasis> Verify MAC trailing edge (TEMAC) 
+              location at fuselage station 22.0 m ±5 mm.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 3:</emphasis> Calculate MAC length: 
+              TEMAC - LEMAC = 12.5 m ±10 mm
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 4:</emphasis> Verify MAC reference markings are 
+              clearly visible on fuselage exterior.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 5:</emphasis> Update CAOS digital twin with 
+              verified MAC data for CG calculations.
+            </para>
+          </proceduralStep>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Ground Clearance Verification</title>
+          
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 1:</emphasis> Measure ground clearance at 
+              critical points:
+            </para>
+            <randomList>
+              <listItem>
+                <para>Nose gear: 2.8 m ±20 mm (minimum clearance)</para>
+              </listItem>
+              <listItem>
+                <para>Center body minimum: 1.2 m ±15 mm</para>
+              </listItem>
+              <listItem>
+                <para>Engine nacelles: 0.95 m ±10 mm</para>
+              </listItem>
+              <listItem>
+                <para>Wingtips (static): 3.5 m ±25 mm</para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 2:</emphasis> Verify tail strike angle: 
+              minimum 12° ±0.5° at maximum rotation during takeoff.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 3:</emphasis> Record measurements in CAOS system.
+            </para>
+          </proceduralStep>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Acceptance Criteria and Reporting</title>
+          
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 1:</emphasis> Compare all measurements to 
+              tolerance specifications in this procedure.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 2:</emphasis> If any measurement is outside 
+              tolerances:
+            </para>
+            <randomList>
+              <listItem>
+                <para>Repeat measurement to confirm discrepancy</para>
+              </listItem>
+              <listItem>
+                <para>Document discrepancy in CAOS system</para>
+              </listItem>
+              <listItem>
+                <para>Notify maintenance engineering for corrective action</para>
+              </listItem>
+              <listItem>
+                <para>Do not return aircraft to service until corrective action completed</para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 3:</emphasis> Generate dimension verification 
+              report from CAOS system including:
+            </para>
+            <randomList>
+              <listItem>
+                <para>All measured dimensions with tolerances</para>
+              </listItem>
+              <listItem>
+                <para>Date, time, and location of verification</para>
+              </listItem>
+              <listItem>
+                <para>Technician name and certification number</para>
+              </listItem>
+              <listItem>
+                <para>Digital twin correlation data</para>
+              </listItem>
+              <listItem>
+                <para>Any discrepancies and corrective actions</para>
+              </listItem>
+            </randomList>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 4:</emphasis> Update aircraft maintenance 
+              records with verification completion.
+            </para>
+          </proceduralStep>
+
+          <proceduralStep>
+            <para>
+              <emphasis emphasisType="em02">Step 5:</emphasis> File report in aircraft permanent 
+              records and CAOS database.
+            </para>
+          </proceduralStep>
+        </proceduralStep>
+
+      </mainProcedure>
+
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+
+    </procedure>
+  </content>
+
+</dmodule>

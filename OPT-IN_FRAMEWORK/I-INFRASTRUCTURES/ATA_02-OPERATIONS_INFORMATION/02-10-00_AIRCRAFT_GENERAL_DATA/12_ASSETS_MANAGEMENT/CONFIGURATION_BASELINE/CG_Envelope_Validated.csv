@@ -1,0 +1,16 @@
+Configuration,Weight_kg,CG_Position_MAC_percent,Within_Envelope,Validation_Date,Validated_By,Notes
+Empty_Weight,120000,40.2,Yes,2025-09-30,Flight Test Engineer,Baseline configuration
+Operating_Empty,125000,39.8,Yes,2025-09-30,Flight Test Engineer,Crew + operational items
+Max_Zero_Fuel_Weight,175000,35.5,Yes,2025-09-30,Flight Test Engineer,Full passenger + cargo
+MZFW_Forward_CG,175000,15.0,Yes,2025-09-30,Flight Test Engineer,Forward limit validation
+MZFW_Aft_CG,175000,40.0,Yes,2025-09-30,Flight Test Engineer,Aft limit validation
+Max_Takeoff_Weight,220000,28.5,Yes,2025-09-30,Flight Test Engineer,Full fuel + payload
+MTOW_Forward_CG,220000,18.0,Yes,2025-09-30,Flight Test Engineer,Forward tank full
+MTOW_Aft_CG,220000,38.0,Yes,2025-09-30,Flight Test Engineer,Aft tank full
+Max_Landing_Weight,185000,32.0,Yes,2025-09-30,Flight Test Engineer,Typical landing config
+MLW_Forward_CG,185000,20.0,Yes,2025-09-30,Flight Test Engineer,Emergency landing
+MLW_Aft_CG,185000,37.0,Yes,2025-09-30,Flight Test Engineer,Emergency landing
+Critical_Loading_1,200000,25.0,Yes,2025-09-30,Flight Test Engineer,Full pax + partial fuel
+Critical_Loading_2,150000,22.0,Yes,2025-09-30,Flight Test Engineer,Cargo only
+Critical_Loading_3,195000,35.0,Yes,2025-09-30,Flight Test Engineer,Max cargo + fuel
+Flight_Test_Config,130000,38.5,Yes,2025-09-30,Flight Test Engineer,Test equipment installed
