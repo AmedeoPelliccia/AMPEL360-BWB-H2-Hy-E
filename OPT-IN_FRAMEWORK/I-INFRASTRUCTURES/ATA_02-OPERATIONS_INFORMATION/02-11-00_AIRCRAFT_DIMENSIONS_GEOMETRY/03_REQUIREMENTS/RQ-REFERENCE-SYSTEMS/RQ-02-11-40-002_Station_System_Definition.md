@@ -6,7 +6,7 @@
 
 ## Requirement Statement
 
-The aircraft station system (X-axis) shall be defined as longitudinal measurements in meters from the nose apex (Station 0), positive forward direction, following the aircraft centerline.
+The aircraft station system (X-axis) shall be defined as longitudinal measurements in meters from the nose apex (Station 0), with positive values increasing aft (toward the tail), following the aircraft centerline.
 
 ## Rationale
 

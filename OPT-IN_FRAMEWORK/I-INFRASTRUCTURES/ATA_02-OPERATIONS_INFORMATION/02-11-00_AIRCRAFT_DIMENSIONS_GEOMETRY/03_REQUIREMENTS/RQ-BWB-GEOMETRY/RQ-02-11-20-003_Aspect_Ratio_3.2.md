@@ -40,6 +40,7 @@ Where:
 AR = (52.0)² / 845 = 2704 / 845 = 3.2
 ```
 
+
 ## Verification Method
 
 **Calculation:**

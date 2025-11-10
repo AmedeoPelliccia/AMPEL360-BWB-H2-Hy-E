@@ -6,7 +6,7 @@
 
 ## Requirement Statement
 
-The aircraft shall be compatible with ICAO Code E taxiways having a minimum width of 23 meters, maintaining adequate wingtip clearance margins during normal taxi operations.
+The aircraft shall be compatible with ICAO Code E taxiways having a minimum width of 23 meters, with enhanced operational procedures required at this minimum width to maintain adequate wingtip clearance margins. Standard operations are preferred on taxiways ≥25m width.
 
 ## Rationale
 
