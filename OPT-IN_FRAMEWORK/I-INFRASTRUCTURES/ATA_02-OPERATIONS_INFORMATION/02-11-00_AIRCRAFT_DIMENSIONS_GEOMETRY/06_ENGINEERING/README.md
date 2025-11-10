@@ -4,7 +4,38 @@
 **Component Name:** AIRCRAFT_DIMENSIONS_GEOMETRY – ENGINEERING  
 **Folder:** `06_ENGINEERING`  
 **Platform:** AMPEL360 BWB H₂ Hy-E Q100  
-**Status:** In Development (supports frozen 04_DESIGN baseline)
+**Status:** In Development (supports frozen 04_DESIGN baseline)  
+**Reference Figure:** 06-ENGINEERING-FIG-01_Folder_Structure.png
+
+---
+
+## Quick Navigation Guide
+
+**For Engineering Analysis Overview:** See [`Engineering_Analysis_Overview.md`](./Engineering_Analysis_Overview.md) (Document ID: 02-11-00-ENG-OV-001)  
+**For Standards & Compliance:** See [`Analysis_Standards_Applied.csv`](./Analysis_Standards_Applied.csv)  
+**For Visual Dataflow:** See Figure 02-11-00-ENG-OV-001-FIG-01_Analysis_Dataflow.png  
+
+### Navigation by Role
+
+| Your Role | Start Here | Key Folders |
+|-----------|------------|-------------|
+| **Structural Engineer** | `ANALYSIS_REPORTS/STRUCTURAL/` | `CALCULATIONS/STRUCTURAL/`, `SIMULATIONS/FEM/` |
+| **Aerodynamics Engineer** | `ANALYSIS_REPORTS/AERODYNAMIC/` | `CALCULATIONS/AERODYNAMIC/`, `SIMULATIONS/CFD/` |
+| **Weights Engineer** | `ANALYSIS_REPORTS/WEIGHT_BALANCE/` | `CALCULATIONS/WEIGHT_BALANCE/` |
+| **Performance Engineer** | `ANALYSIS_REPORTS/PERFORMANCE/` | `CALCULATIONS/PERFORMANCE/`, `SIMULATIONS/FLIGHT_MECHANICS/` |
+| **Certification Engineer** | `ANALYSIS_REPORTS/CERTIFICATION/` | `CALCULATIONS/CERTIFICATION/`, All reports for compliance |
+| **Program Manager** | `Engineering_Analysis_Overview.md` | See critical path and blockers in Section 5 |
+
+### Discipline Ownership
+
+| Domain | Responsible Engineer | Deputy | Contact |
+|--------|---------------------|--------|---------|
+| STRUCTURAL | Chief Structural Engineer | Structures Lead | structures@ampel360.aero |
+| AERODYNAMIC | Chief Aerodynamicist | Aero Lead | aero@ampel360.aero |
+| WEIGHT_BALANCE | Weights & Balance Lead | Mass Properties Engineer | weights@ampel360.aero |
+| CLEARANCE | Landing Gear Lead | Kinematics Engineer | gear@ampel360.aero |
+| PERFORMANCE | Performance Lead | Mission Analysis Engineer | performance@ampel360.aero |
+| CERTIFICATION | Certification Lead | Compliance Engineer | cert@ampel360.aero |
 
 ---
 

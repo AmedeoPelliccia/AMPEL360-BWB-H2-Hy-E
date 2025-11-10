@@ -1,0 +1,107 @@
+Standard,Title,Application,Compliance,Status,Notes
+CS-25.301,Loads,Definition of limit and ultimate loads,Full,Active,Applied to all structural analyses
+CS-25.305,Strength and Deformation,Strength and deformation criteria,Full,Active,Wing and fuselage structural substantiation
+CS-25.331,Symmetric Maneuvering,Maneuver envelope load cases,Full,Active,Flight envelope definition
+CS-25.333,Flight Maneuvering Envelope,Maneuvering load factors,Full,Active,Design dive speed and load factors
+CS-25.335,Design Airspeeds,Design airspeeds and speeds for structural design,Full,Active,VD VC VA VS definition
+CS-25.337,Limit Maneuvering Load Factors,Limit load factors for design conditions,Full,Active,Applied in FEM global model
+CS-25.341,Gust and Turbulence Loads,Gust load criteria,Full,Active,Dynamic gust analysis pending
+CS-25.345,High Lift Devices,High-lift loads and configurations,Full,Active,Slat and flap load cases
+CS-25.349,Rolling Conditions,Aileron and spoiler rolling moments,Full,Active,Lateral control surface loads
+CS-25.351,Yaw Maneuver Conditions,Rudder and vertical tail loads,Full,Active,Directional control loads
+CS-25.365,Pressurization Loads,Differential pressure loads on fuselage,Full,Active,Cabin pressurization 8000 psi
+CS-25.367,Unsymmetrical Loads,Unsymmetrical loading conditions,Full,Active,Engine-out and asymmetric cases
+CS-25.391,Control Surface Loads,Control surface hinge moments and loads,Full,Active,Flight control system integration
+CS-25.415,Ground Gust Conditions,Ground wind loads on parked aircraft,Full,Active,Ground handling and parking loads
+CS-25.427,Unsymmetrical Loads Due to Engine Failure,Engine-out loads,Full,Active,Critical engine failure cases
+CS-25.445,Auxiliary Aerofoil Surfaces,Loads on auxiliary surfaces (winglets),Full,Active,If winglets are implemented
+CS-25.471,Ground Loads General,General requirements for landing gear loads,Full,Active,Landing gear design basis
+CS-25.473,Ground Load Conditions and Assumptions,Landing conditions and assumptions,Full,Active,Level landing vertical drop cases
+CS-25.477,Landing Gear Arrangement,Geometric arrangement requirements,Full,Active,Tip-back and tail-down angles
+CS-25.479,Level Landing Conditions,Symmetric landing loads,Full,Active,Vertical and drag loads at touchdown
+CS-25.481,Tail-Down Landing Conditions,Tail strike scenarios,Full,Active,Rotation angle and clearance
+CS-25.483,One-Gear Landing Conditions,Single main gear landing,Full,Active,Asymmetric landing cases
+CS-25.485,Side Load Conditions,Lateral landing loads,Full,Active,Drift and crosswind landings
+CS-25.487,Rebound Landing Conditions,Gear rebound scenarios,Full,Active,Energy absorption system design
+CS-25.491,Taxi and Ground Handling Loads,Taxi bump and turning loads,Full,Active,Ground maneuvering and taxi loads
+CS-25.493,Braked Roll Conditions,Braking loads on landing gear,Full,Active,Max braking and RTO scenarios
+CS-25.495,Turning Conditions,Nose gear steering loads,Full,Active,Minimum turning radius analysis
+CS-25.497,Tail-Wheel Yawing,N/A for BWB configuration,N/A,N/A,Not applicable - no tail wheel
+CS-25.499,Nose-Wheel Yaw and Steering,Nose gear lateral loads,Full,Active,Steering system loads
+CS-25.561,Emergency Landing Dynamic Conditions,Crash safety requirements,Full,Active,Energy absorption design
+CS-25.571,Damage Tolerance and Fatigue Evaluation,Fatigue and damage tolerance,Full,Active,Slow crack growth and residual strength
+CS-25.603,Materials,Material selection and qualification,Full,Active,Material allowables database
+CS-25.605,Fabrication Methods,Manufacturing quality control,Full,Active,Composite and metallic fabrication
+CS-25.607,Fasteners,Fastener design and selection,Full,Active,Joint design and analysis
+CS-25.609,Protection of Structure,Corrosion protection,Full,Active,Coating and cathodic protection
+CS-25.611,Accessibility Provisions,Maintenance access,Full,Active,Inspection and maintenance planning
+CS-25.613,Material Strength Properties,Basis for material properties,Full,Active,A-basis and B-basis values
+CS-25.619,Special Factors,Special factors for fittings and castings,Full,Active,Casting factors applied
+CS-25.621,Casting Factors,Factors for cast components,Full,Active,If cast components are used
+CS-25.623,Bearing Factors,Bearing allowables for joints,Full,Active,Bearing stress analysis
+CS-25.625,Fitting Factors,Fitting factors for critical joints,Full,Active,1.15 fitting factor applied
+CS-25.629,Aeroelastic Stability,Flutter and divergence,Full,Active,Flutter analysis required
+CS-25.671,Control Systems General,Flight control system requirements,Full,Active,FCS integration with geometry
+CS-25.677,Trim Systems,Trim system requirements,Full,Active,Trim authority and rates
+CS-25.683,Operation Tests,Control system functional tests,Full,Active,Ground and flight test planning
+CS-25.697,Lift and Drag Devices,High-lift and drag device requirements,Full,Active,Flap and slat certification
+CS-25.771,Pilot Compartment,Cockpit geometry and ergonomics,Partial,Active,Cockpit design in 02-10-00
+CS-25.773,Pilot Compartment View,Visibility requirements,Partial,Active,BWB-specific visibility assessment
+CS-25.783,Doors,Door design and emergency exits,Partial,Active,Passenger door sizing and location
+CS-25.785,Seats Berths and Safety Belts,Cabin layout constraints,Partial,Active,Seat pitch and row spacing
+CS-25.787,Stowage Compartments,Overhead bin and cargo sizing,Partial,Active,Volume allocation in center body
+CS-25.791,Passenger Information Signs,Emergency lighting and signage,Partial,Active,Cabin interior design
+CS-25.803,Emergency Evacuation,Emergency exit requirements,Full,Active,Exit sizing and spacing for 400 pax
+CS-25.807,Emergency Exits,Exit dimensions and accessibility,Full,Active,Type A exits required
+CS-25.813,Emergency Exit Access,Aisle width and access requirements,Full,Active,Cabin layout and seat spacing
+CS-25.831,Ventilation,Cabin air distribution,Partial,Active,ECS integration with cabin geometry
+CS-25.841,Pressurized Cabins,Cabin pressure and altitude,Full,Active,Max cabin altitude 8000 ft
+CS-25.851,Fire Extinguishers,Fire safety equipment placement,Partial,Active,Equipment location in cabin
+CS-25.853,Cargo Compartments,Cargo bay design and fire protection,Partial,Active,Lower deck cargo volume
+CS-25.855,Cargo and Baggage Compartments,Cargo loading and restraint,Partial,Active,Cargo door and loading system
+CS-25.901,Installation General,Powerplant installation,Partial,Active,H2 propulsion system integration
+CS-25.903,Engines,Engine mounting and clearances,Partial,Active,Wing-mounted engine pylons
+CS-25.905,Propellers,Propeller clearances,N/A,N/A,Not applicable - turbofan engines
+CS-25.925,Propeller Clearance,Propeller tip clearance,N/A,N/A,Not applicable - turbofan engines
+CS-25.929,Propeller Characteristics,Propeller design,N/A,N/A,Not applicable - turbofan engines
+CS-25.939,Turbine Engine Operating Characteristics,Engine operating envelope,Full,Active,Engine performance integration
+CS-25.943,Negative Acceleration,Fuel system in negative G,Partial,Active,H2 fuel system design
+CS-25.951,Fuel System General,Fuel system requirements,Full,Active,Liquid H2 system design
+CS-25.953,Fuel System Independence,Fuel system redundancy,Full,Active,Tank and feed system segregation
+CS-25.954,Fuel System Lightning Protection,Lightning protection for fuel system,Full,Active,H2 tank lightning protection
+CS-25.963,Fuel Tanks General,Fuel tank design,Full,Active,Cryogenic H2 tank design
+CS-25.965,Fuel Tank Tests,Fuel tank qualification tests,Full,Active,H2 tank pressure and thermal cycling
+CS-25.967,Fuel Tank Installations,Fuel tank installation requirements,Full,Active,H2 tank integration in wing and center body
+CS-25.975,Fuel Tank Vents and Carburetor Vapor Vents,Tank venting,Full,Active,H2 boil-off venting system
+CS-25.981,Fuel Tank Ignition Prevention,Ignition source prevention,Full,Active,Explosion prevention in H2 system
+CS-25.991,Fuel Pumps,Fuel pump requirements,Full,Active,Cryogenic H2 pump design
+CS-25.993,Fuel System Lines and Fittings,Fuel line design,Full,Active,H2 transfer lines and fittings
+CS-25.994,Fuel System Components,Fuel system component qualification,Full,Active,H2-compatible components
+CS-25.995,Fuel Valves,Fuel valve requirements,Full,Active,H2 shutoff and control valves
+CS-25.997,Fuel Strainer or Filter,Fuel filtration,Full,Active,H2 filtration if required
+CS-25.999,Fuel System Drains,Fuel drainage,Partial,Active,H2 boil-off management
+CS-25.1001,Fuel Jettisoning System,Fuel jettison requirements,Full,Active,H2 safe jettison system design
+CS-25.1011,Engines General,Engine system requirements,Full,Active,H2 combustion turbofan engines
+CS-25.1041,General Powerplant Installation,Powerplant integration,Full,Active,Wing-mounted engine installation
+CS-25.1091,Air Induction,Engine air intake design,Full,Active,Intake geometry and boundary layer ingestion
+CS-25.1093,Induction System Icing Protection,Intake anti-icing,Full,Active,Ice protection system design
+ASTM E1049,Cycle Counting for Fatigue Analysis,Rainflow counting method,Full,Active,Fatigue analysis methodology
+ASTM E647,Fatigue Crack Growth Rate Testing,da/dN testing for damage tolerance,Full,Active,Crack growth data for materials
+MIL-HDBK-5J,Metallic Materials Properties,Material allowables for metals,Full,Active,Aluminum and titanium alloys
+CMH-17,Composite Materials Handbook,Composite material properties,Full,Active,Carbon fiber composite allowables
+NASGRO,Crack Growth Analysis,Fracture mechanics software,Full,Active,Damage tolerance analysis tool
+MSC Nastran,Finite Element Analysis,FEM solver for structural analysis,Full,Active,Global and local FEM models
+ANSYS,Multiphysics Simulation,CFD and structural analysis,Full,Active,CFD cruise and high-lift analysis
+MATLAB/Simulink,Flight Mechanics Simulation,Performance and mission analysis,Full,Active,Range climb and descent models
+Adams,Multibody Dynamics,Landing gear kinematics and dynamics,Full,Active,Gear stroke and taxi simulations
+CATIA V5,CAD and Geometry,3D geometric modeling,Full,Active,Master geometry definition
+SAE AIR1168,Flight Test Engineering,Flight test planning,Partial,Planned,Flight test program development
+SAE AS8015,Jacking and Tiedown Provisions,Ground handling fittings,Full,Active,Jack point and tiedown design
+ISO 2768,General Tolerances,Manufacturing tolerances,Full,Active,Geometric tolerancing standards
+ISO 9001,Quality Management,Quality system requirements,Full,Active,Design and manufacturing QMS
+EN 9100,Aerospace Quality Management,Aerospace-specific quality,Full,Active,AS9100 equivalent certification
+MIL-STD-483B,Configuration Management,Configuration control procedures,Full,Active,Document and design change control
+ATA iSpec 2200,Information Standards,Technical publication standards,Full,Active,Document structure and format
+SAE ARP 4754A,Development of Civil Aircraft,Systems development process,Full,Active,Integrated aircraft development
+SAE ARP 4761,Safety Assessment,Safety analysis methods (FHA FTA FMEA),Full,Active,Safety analysis and risk assessment
+SAE AS 94900,Quality Management Systems,Aerospace quality requirements,Full,Active,Supplier quality management

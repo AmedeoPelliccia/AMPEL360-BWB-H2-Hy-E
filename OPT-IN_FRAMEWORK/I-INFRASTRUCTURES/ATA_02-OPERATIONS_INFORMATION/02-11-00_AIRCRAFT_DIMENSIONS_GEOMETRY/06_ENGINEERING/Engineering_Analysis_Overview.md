@@ -1,10 +1,12 @@
 # Engineering Analysis Overview – 02-11-00 AIRCRAFT_DIMENSIONS_GEOMETRY
 
+**Document ID:** 02-11-00-ENG-OV-001  
 **Platform:** AMPEL360 BWB H₂ Hy-E Q100  
 **Component:** 02-11-00 Aircraft Dimensions & Geometry  
 **Document Type:** Engineering Analysis Overview & Traceability  
 **Status:** In Development  
-**Date:** 2025-11-10
+**Date:** 2025-11-10  
+**Reference Figure:** 02-11-00-ENG-OV-001-FIG-01_Analysis_Dataflow.png
 
 ---
 
@@ -15,6 +17,8 @@ This document provides:
 1. A **high-level overview** of all engineering analyses performed to substantiate the geometric design decisions in `04_DESIGN`.
 2. A **traceability matrix** linking design decisions to required analyses and their status.
 3. References to detailed analysis reports, calculations, simulations, and trade studies.
+4. **Critical path analyses** and blockers tracking for certification readiness.
+5. **Cross-links** between each analysis and its supporting CALC/SIM/TN/TS inputs.
 
 ---
 
@@ -105,34 +109,77 @@ This table shows the mapping between key geometric design decisions (from `04_DE
 
 ---
 
-## 5. Critical Path Analyses
+## 5. Critical Path Analyses & Blockers
+
+### 5.1 Critical Path Items
 
 The following analyses are on the critical path for design freeze and certification:
 
 1. **Global FEM Model** (`ANALYSIS_REPORTS/STRUCTURAL/FEM_Global_Model.md`)
-   - Required for all structural substantiation
-   - Baseline for load distribution and stress analysis
-   - Prerequisite for fatigue and damage tolerance
+   - **Required for:** All structural substantiation
+   - **Baseline for:** Load distribution and stress analysis
+   - **Prerequisite for:** Fatigue and damage tolerance
+   - **Supporting inputs:**
+     - `CALCULATIONS/STRUCTURAL/Wing_Box_Section_Calcs.csv`
+     - `SIMULATIONS/FEM/Global_Model_InputDeck/ampel360_q100_global_model.dat`
+     - `TECHNICAL_NOTES/Load_Case_Definition_and_Combinations.md`
+     - `TECHNICAL_NOTES/Materials_Allowables_Selection.md`
 
 2. **CG Envelope Calculation** (`ANALYSIS_REPORTS/WEIGHT_BALANCE/CG_Envelope_Calculation.md`)
-   - Required for stability and control analysis
-   - Input to flight control system design
-   - Prerequisite for performance calculations
+   - **Required for:** Stability and control analysis
+   - **Input to:** Flight control system design
+   - **Prerequisite for:** Performance calculations
+   - **Supporting inputs:**
+     - `CALCULATIONS/WEIGHT_BALANCE/CG_Envelope_Tables.csv`
+     - `CALCULATIONS/WEIGHT_BALANCE/Inertia_Tensor_Calc.csv`
+     - `TRADE_STUDIES/H2_Tank_Layout_Trade_Study.md`
 
 3. **CFD Cruise Analysis** (`ANALYSIS_REPORTS/AERODYNAMIC/CFD_Cruise_Analysis.md`)
-   - Required for drag budget and performance predictions
-   - Input to propulsion system sizing
-   - Validation of aerodynamic design
+   - **Required for:** Drag budget and performance predictions
+   - **Input to:** Propulsion system sizing
+   - **Validation of:** Aerodynamic design
+   - **Supporting inputs:**
+     - `SIMULATIONS/CFD/Cruise_M082_CFD_Setup.md`
+     - `CALCULATIONS/AERODYNAMIC/Drag_Breakdown_Calc.csv`
+     - `TRADE_STUDIES/Wing_Sweep_and_AR_Trade_Study.md`
 
 4. **Ground Clearance Calculations** (`ANALYSIS_REPORTS/CLEARANCE/Ground_Clearance_Calculations.md`)
-   - Required for landing gear design freeze
-   - Input to airport compatibility assessment
-   - Prerequisite for certification demonstrations
+   - **Required for:** Landing gear design freeze
+   - **Input to:** Airport compatibility assessment
+   - **Prerequisite for:** Certification demonstrations
+   - **Supporting inputs:**
+     - `CALCULATIONS/CLEARANCE/Ground_Clearance_Geom_Calc.csv`
+     - `TRADE_STUDIES/Gear_Height_Trade_Study.md`
+     - `SIMULATIONS/GROUND_DYNAMICS/Dynamic_Clearance_Sim_Models.md`
 
 5. **CS-25 Compliance Matrix** (`ANALYSIS_REPORTS/CERTIFICATION/CS25_Compliance_Matrix.md`)
-   - Required for certification basis establishment
-   - Input to certification planning
-   - Foundation for compliance demonstrations
+   - **Required for:** Certification basis establishment
+   - **Input to:** Certification planning
+   - **Foundation for:** Compliance demonstrations
+   - **Supporting inputs:**
+     - `CALCULATIONS/CERTIFICATION/CS25_Load_Case_List.csv`
+     - `Analysis_Standards_Applied.csv`
+     - All ANALYSIS_REPORTS across domains
+
+### 5.2 Current Blockers
+
+| Blocker ID | Description | Impact | Domain | Mitigation Plan | Owner | Target Date |
+|------------|-------------|--------|--------|-----------------|-------|-------------|
+| BLK-001 | 04_DESIGN geometry not yet frozen | Cannot start final FEM/CFD analyses | All | Coordinate with design team for freeze date | Chief Engineer | TBD |
+| BLK-002 | H₂ engine SFC data not available | Cannot finalize range performance | PERFORMANCE | Coordinate with propulsion team | Aero Lead | TBD |
+| BLK-003 | Material allowables for cryogenic H₂ tanks | Cannot complete structural analysis | STRUCTURAL | Initiate material testing program | Structures Lead | TBD |
+| BLK-004 | BWB-specific special conditions not defined | Cannot finalize certification basis | CERTIFICATION | Engage with certification authority | Cert Lead | TBD |
+
+### 5.3 Analysis Synchronization Requirements
+
+To maintain traceability, the following synchronization points are required:
+
+1. **Quarterly Review:** Update all analysis status in traceability matrix
+2. **Design Change Impact:** Any 04_DESIGN change triggers impact assessment across all linked analyses
+3. **Data Freeze Milestones:**
+   - Geometry freeze → FEM/CFD mesh generation
+   - Mass properties freeze → Performance calculations
+   - Materials freeze → Structural allowables update
 
 ---
 
