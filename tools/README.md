@@ -100,6 +100,8 @@ The script currently parses geometry from these analysis reports:
 - `ANALYSIS_REPORTS/STRUCTURAL/Pressure_Vessel_Analysis.md`
 - `ANALYSIS_REPORTS/CLEARANCE/Ground_Clearance_Calculations.md`
 
+**Important:** These documents must follow specific formatting patterns for proper parsing. See `ANALYSIS_REPORTS/GEOMETRY_DIMENSION_TEMPLATES.md` for required format templates and examples.
+
 ### Extending the Watchdog
 
 To monitor additional dimensions:
