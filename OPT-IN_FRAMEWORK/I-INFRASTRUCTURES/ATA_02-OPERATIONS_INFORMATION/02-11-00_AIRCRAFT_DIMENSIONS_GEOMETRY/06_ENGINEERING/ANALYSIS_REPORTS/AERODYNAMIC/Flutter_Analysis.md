@@ -23,6 +23,9 @@ The analysis is based on:
 
 Any geometry or stiffness changes affecting the aeroelastic model must follow the ECR process and remain consistent with the frozen geometry baseline.
 
+For the detailed list of numerical test cases and solver input decks,
+see `SIMULATIONS/AEROELASTIC/Flutter_Cases_Overview.md`.
+
 ---
 
 ## 1. Objective
