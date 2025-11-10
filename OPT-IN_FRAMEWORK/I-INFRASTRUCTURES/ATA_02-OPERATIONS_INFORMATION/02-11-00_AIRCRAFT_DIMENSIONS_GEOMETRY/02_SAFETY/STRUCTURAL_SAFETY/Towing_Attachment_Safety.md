@@ -18,7 +18,7 @@ The AMPEL360 BWB features a dual tow bar attachment system due to its wide cente
 
 **Design Load:**
 - Each attachment: 60,000 kg capacity
-- Combined system: 120,000 kg (>MTOW of 185,000 kg)
+- Combined system: 120,000 kg (<MTOW of 185,000 kg; see safety factor below)
 - Safety factor: 2.0 applied
 
 ### Attachment Design
