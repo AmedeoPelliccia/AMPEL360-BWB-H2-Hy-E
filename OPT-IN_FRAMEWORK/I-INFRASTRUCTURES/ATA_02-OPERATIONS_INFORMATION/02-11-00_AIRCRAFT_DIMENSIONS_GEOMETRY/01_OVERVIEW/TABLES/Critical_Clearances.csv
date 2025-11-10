@@ -1,0 +1,16 @@
+Location,Station,Buttline,Waterline,Clearance_m,Condition,Critical_Phase
+Nose (lowest),STA 3,BL 0,WL 2.1,2.1,Rotation,Takeoff
+Belly (minimum),STA 18,BL 0,WL 1.8,1.8,Level,Ground ops
+Tail (aft body),STA 36,BL 0,WL 2.5,2.5,Level,Landing
+Engine intake left,STA 25,BL -12,WL 2.8,2.8,Level,Ground ops
+Engine intake right,STA 25,BL +12,WL 2.8,2.8,Level,Ground ops
+Wingtip left,STA 20,BL -26,WL 1.2,1.2,MTOW loaded,Taxiing
+Wingtip right,STA 20,BL +26,WL 1.2,1.2,MTOW loaded,Taxiing
+Nose at 12° rotation,STA 3,BL 0,WL 2.0,0.5,Max rotation,Takeoff limit
+Tail at 12° rotation,STA 36,BL 0,WL 2.3,0.3,Max rotation,Tail strike warning
+Door sill to ground,STA 12,BL -6,WL 4.3,4.3,Boarding,Passenger access
+Cargo door to ground,STA 32,BL 0,WL 2.2,2.2,Loading,Cargo operations
+H₂ connection,STA 20,BL -5,WL 2.5,2.5,Refueling,Ground servicing
+Overhead clearance,STA 15,BL 0,WL 14.5,2.0,Hangar,Facility requirement
+Lateral clearance left,Various,BL -26,Various,4.0,Taxiing,Wingtip safety
+Lateral clearance right,Various,BL +26,Various,4.0,Taxiing,Wingtip safety

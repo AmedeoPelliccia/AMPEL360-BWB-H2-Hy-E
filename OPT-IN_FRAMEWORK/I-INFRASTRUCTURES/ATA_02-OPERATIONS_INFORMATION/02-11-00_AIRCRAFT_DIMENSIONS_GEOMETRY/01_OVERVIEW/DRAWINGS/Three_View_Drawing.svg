@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <title>AMPEL360 BWB H₂ - Three View Drawing</title>
+  
+  <!-- Top View -->
+  <g id="top-view">
+    <text x="100" y="50" font-size="16" font-weight="bold">TOP VIEW</text>
+    <text x="100" y="70" font-size="12">Planform showing BWB configuration</text>
+    
+    <!-- Center body outline (simplified) -->
+    <path d="M 300,150 Q 350,130 400,120 L 600,120 Q 650,130 700,150 L 700,200 Q 650,220 600,230 L 400,230 Q 350,220 300,200 Z" 
+          fill="none" stroke="black" stroke-width="2"/>
+    
+    <!-- Wingtips -->
+    <line x1="300" y1="175" x2="100" y2="175" stroke="black" stroke-width="2"/>
+    <line x1="700" y1="175" x2="900" y2="175" stroke="black" stroke-width="2"/>
+    
+    <!-- Dimensions -->
+    <text x="450" y="270" font-size="10" text-anchor="middle">Wingspan: 52.0 m</text>
+    <text x="750" y="175" font-size="10">Length: 38.2 m</text>
+    
+    <!-- Station markers -->
+    <text x="100" y="290" font-size="10">BL -26</text>
+    <text x="450" y="290" font-size="10">BL 0</text>
+    <text x="880" y="290" font-size="10">BL +26</text>
+  </g>
+  
+  <!-- Side View -->
+  <g id="side-view">
+    <text x="100" y="380" font-size="16" font-weight="bold">SIDE VIEW</text>
+    <text x="100" y="400" font-size="12">Profile showing height and ground clearance</text>
+    
+    <!-- Ground line -->
+    <line x1="100" y1="600" x2="900" y2="600" stroke="black" stroke-width="1"/>
+    
+    <!-- Aircraft profile (simplified) -->
+    <path d="M 150,600 L 150,580 Q 150,450 300,430 L 700,430 Q 800,440 850,520 L 850,600" 
+          fill="none" stroke="black" stroke-width="2"/>
+    
+    <!-- Landing gear -->
+    <line x1="250" y1="600" x2="250" y2="580" stroke="black" stroke-width="3"/>
+    <line x1="450" y1="600" x2="450" y2="580" stroke="black" stroke-width="3"/>
+    <line x1="650" y1="600" x2="650" y2="580" stroke="black" stroke-width="3"/>
+    
+    <!-- Dimensions -->
+    <line x1="120" y1="600" x2="120" y2="430" stroke="gray" stroke-width="1" stroke-dasharray="5,5"/>
+    <text x="70" y="515" font-size="10">14.5 m</text>
+    
+    <text x="150" y="630" font-size="10">STA 0</text>
+    <text x="450" y="630" font-size="10">STA 20</text>
+    <text x="850" y="630" font-size="10">STA 38.2</text>
+  </g>
+  
+  <!-- Front View -->
+  <g id="front-view">
+    <text x="100" y="700" font-size="16" font-weight="bold">FRONT VIEW</text>
+    <text x="100" y="720" font-size="12">Forward looking aft, showing span</text>
+    
+    <!-- Ground line -->
+    <line x1="100" y1="800" x2="900" y2="800" stroke="black" stroke-width="1"/>
+    
+    <!-- Aircraft front view (simplified) -->
+    <ellipse cx="500" cy="775" rx="400" ry="25" fill="none" stroke="black" stroke-width="2"/>
+    
+    <!-- Landing gear indication -->
+    <line x1="300" y1="800" x2="300" y2="775" stroke="black" stroke-width="3"/>
+    <line x1="700" y1="800" x2="700" y2="775" stroke="black" stroke-width="3"/>
+    
+    <!-- Dimensions -->
+    <text x="450" y="765" font-size="10" text-anchor="middle">52.0 m span</text>
+  </g>
+  
+  <!-- Drawing info block -->
+  <rect x="950" y="50" width="230" height="150" fill="none" stroke="black" stroke-width="1"/>
+  <text x="960" y="70" font-size="12" font-weight="bold">AMPEL360 BWB H₂</text>
+  <text x="960" y="90" font-size="10">Three View Drawing</text>
+  <text x="960" y="110" font-size="9">Document: AMPEL360-02-11-00-DWG-001</text>
+  <text x="960" y="125" font-size="9">Version: 1.0.0</text>
+  <text x="960" y="140" font-size="9">Date: 2025-11-06</text>
+  <text x="960" y="155" font-size="9">Scale: NTS (Not To Scale)</text>
+  <text x="960" y="175" font-size="8">Note: Simplified representation</text>
+  <text x="960" y="190" font-size="8">For concept illustration only</text>
+</svg>
