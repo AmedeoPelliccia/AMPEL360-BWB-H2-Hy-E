@@ -183,7 +183,7 @@ CG Station = Σ(Weight × Station) / Σ(Weight)
 
 **Operational CG Range:**
 - Forward limit: 20% MAC = STA 12.5
-- Aft limit: 35% MAC = STA 16.3
+- Aft limit: 35% MAC = STA 15.9
 - Normal range: 22% to 32% MAC
 
 Note: MAC (Mean Aerodynamic Chord) has leading edge at STA 8.0
