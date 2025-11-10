@@ -116,9 +116,11 @@ yes
 yes
 "wall-aircraft"
 0 0 0
-/solve/monitors/lift-coefficient-monitor yes
-/solve/monitors/drag-coefficient-monitor yes
-/solve/monitors/moment-coefficient-monitor yes
+; Set up force coefficient monitors with explicit parameters
+/solve/monitors/force/set-lift-monitor "Lift" "wall-aircraft" (0 1 0) 1.0
+/solve/monitors/force/set-drag-monitor "Drag" "wall-aircraft" (1 0 0) 1.0
+/solve/monitors/force/set-moment-monitor "Moment" "wall-aircraft" (0 0 1) (0 0 0) 1.0
+; NOTE: Replace 1.0 with the correct reference area for your aircraft
 
 /solve/monitors/residual
 convergence-criteria 1e-5
