@@ -1,0 +1,15 @@
+Zone,Description,Clearance_Required_m,Access_Type,Priority,Equipment_Needed
+Forward_Approach,Nose area forward access,15x20,ARFF_Vehicle,High,Ladder_4.5m
+Aft_Approach,Tail area aft access,12x15,ARFF_Vehicle,High,Ladder_4.5m
+Left_Side_Forward,Left side forward doors,5x15,Personnel,Critical,Ladder_4.5m
+Left_Side_Mid,Left side mid exits,5x12,Personnel,Critical,Ladder_4.5m
+Left_Side_Aft,Left side aft doors,5x15,Personnel,Critical,Ladder_4.5m
+Right_Side_Forward,Right side forward doors,5x15,Personnel,Critical,Ladder_4.5m
+Right_Side_Mid,Right side mid exits,5x12,Personnel,Critical,Ladder_4.5m
+Right_Side_Aft,Right side aft doors,5x15,Personnel,Critical,Ladder_4.5m
+Forward_Belly,Forward belly access panel,4x3,ARFF_Specialist,High,Opening_Tool
+Aft_Belly,Aft belly access panel,3.5x2.5,ARFF_Specialist,High,Opening_Tool
+Cargo_Forward,Forward cargo door,2.5x2,ARFF_Personnel,Medium,Ladder_2m
+Cargo_Aft,Aft cargo door,2.5x2,ARFF_Personnel,Medium,Ladder_2m
+H2_Panel_Left,H2 service panel left,1x1,ARFF_Specialist,Critical,H2_Tools
+H2_Panel_Right,H2 service panel right,1x1,ARFF_Specialist,Critical,H2_Tools

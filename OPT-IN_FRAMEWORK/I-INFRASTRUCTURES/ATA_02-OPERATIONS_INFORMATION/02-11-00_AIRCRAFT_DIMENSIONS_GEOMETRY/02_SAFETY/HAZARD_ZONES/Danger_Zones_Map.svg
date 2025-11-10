@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <title>AMPEL360 BWB Ground Operations Danger Zones</title>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f0f0f0"/>
+  
+  <!-- Grid -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ddd" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  
+  <!-- Aircraft outline (top view) - BWB shape -->
+  <g id="aircraft" transform="translate(400, 200)">
+    <!-- Center body -->
+    <ellipse cx="0" cy="0" rx="80" ry="130" fill="#c0c0c0" stroke="#333" stroke-width="2"/>
+    
+    <!-- Wings (blended) -->
+    <path d="M -80,-60 Q -200,-40 -260,0 Q -200,40 -80,60 Z" fill="#d0d0d0" stroke="#333" stroke-width="2"/>
+    <path d="M 80,-60 Q 200,-40 260,0 Q 200,40 80,60 Z" fill="#d0d0d0" stroke="#333" stroke-width="2"/>
+    
+    <!-- Vertical stabilizers -->
+    <rect x="-8" y="-130" width="16" height="20" fill="#b0b0b0" stroke="#333" stroke-width="1"/>
+    
+    <!-- Nose -->
+    <ellipse cx="0" cy="-130" rx="15" ry="20" fill="#b0b0b0" stroke="#333" stroke-width="1"/>
+  </g>
+  
+  <!-- Danger Zones -->
+  
+  <!-- Engine Intake Zones (red - highest danger) -->
+  <ellipse cx="280" cy="200" rx="40" ry="60" fill="#ff0000" opacity="0.4" stroke="#ff0000" stroke-width="2"/>
+  <ellipse cx="520" cy="200" rx="40" ry="60" fill="#ff0000" opacity="0.4" stroke="#ff0000" stroke-width="2"/>
+  
+  <!-- Exhaust Zones (orange) -->
+  <ellipse cx="330" cy="200" rx="35" ry="55" fill="#ff6600" opacity="0.4" stroke="#ff6600" stroke-width="2"/>
+  <ellipse cx="470" cy="200" rx="35" ry="55" fill="#ff6600" opacity="0.4" stroke="#ff6600" stroke-width="2"/>
+  
+  <!-- Propeller/Propulsor Safety Zones (red hatched) -->
+  <circle cx="280" cy="200" r="80" fill="none" stroke="#ff0000" stroke-width="3" stroke-dasharray="10,5"/>
+  <circle cx="520" cy="200" r="80" fill="none" stroke="#ff0000" stroke-width="3" stroke-dasharray="10,5"/>
+  
+  <!-- Wingtip Clearance Zones (yellow) -->
+  <ellipse cx="140" cy="200" rx="30" ry="40" fill="#ffff00" opacity="0.3" stroke="#ffaa00" stroke-width="2"/>
+  <ellipse cx="660" cy="200" rx="30" ry="40" fill="#ffff00" opacity="0.3" stroke="#ffaa00" stroke-width="2"/>
+  
+  <!-- Belly Clearance Zone (amber) -->
+  <ellipse cx="400" cy="200" rx="70" ry="100" fill="#ffaa00" opacity="0.3" stroke="#ffaa00" stroke-width="2"/>
+  
+  <!-- H2 Refueling Safety Zone (red - large radius) -->
+  <circle cx="360" cy="240" r="100" fill="none" stroke="#ff0000" stroke-width="3" stroke-dasharray="15,10" opacity="0.6"/>
+  <circle cx="440" cy="240" r="100" fill="none" stroke="#ff0000" stroke-width="3" stroke-dasharray="15,10" opacity="0.6"/>
+  
+  <!-- Forward Danger Zone (blue - equipment) -->
+  <rect x="340" y="40" width="120" height="60" fill="#0066ff" opacity="0.3" stroke="#0066ff" stroke-width="2" rx="10"/>
+  
+  <!-- Aft Danger Zone (blue - equipment) -->
+  <rect x="340" y="310" width="120" height="60" fill="#0066ff" opacity="0.3" stroke="#0066ff" stroke-width="2" rx="10"/>
+  
+  <!-- Labels -->
+  <text x="400" y="20" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">AMPEL360 BWB - Ground Operations Danger Zones</text>
+  
+  <!-- Zone labels -->
+  <text x="280" y="140" text-anchor="middle" font-size="11" fill="#cc0000" font-weight="bold">ENGINE INTAKE</text>
+  <text x="520" y="140" text-anchor="middle" font-size="11" fill="#cc0000" font-weight="bold">ENGINE INTAKE</text>
+  
+  <text x="330" y="170" text-anchor="middle" font-size="10" fill="#cc4400">EXHAUST</text>
+  <text x="470" y="170" text-anchor="middle" font-size="10" fill="#cc4400">EXHAUST</text>
+  
+  <text x="140" y="180" text-anchor="middle" font-size="10" fill="#cc8800">WINGTIP</text>
+  <text x="660" y="180" text-anchor="middle" font-size="10" fill="#cc8800">WINGTIP</text>
+  
+  <text x="400" y="190" text-anchor="middle" font-size="10" fill="#cc8800">BELLY</text>
+  
+  <text x="400" y="60" text-anchor="middle" font-size="10" fill="#0055cc">FORWARD ZONE</text>
+  <text x="400" y="350" text-anchor="middle" font-size="10" fill="#0055cc">AFT ZONE</text>
+  
+  <!-- Legend -->
+  <g transform="translate(20, 320)">
+    <text x="0" y="0" font-size="12" font-weight="bold" fill="#333">LEGEND:</text>
+    
+    <circle cx="10" cy="15" r="8" fill="#ff0000" opacity="0.4"/>
+    <text x="25" y="20" font-size="10" fill="#333">High Danger (No Entry)</text>
+    
+    <circle cx="10" cy="35" r="8" fill="#ff6600" opacity="0.4"/>
+    <text x="25" y="40" font-size="10" fill="#333">Exhaust Zone (Caution)</text>
+    
+    <circle cx="10" cy="55" r="8" fill="#ffff00" opacity="0.4"/>
+    <text x="25" y="60" font-size="10" fill="#333">Clearance Zone</text>
+    
+    <circle cx="160" cy="15" r="8" fill="none" stroke="#ff0000" stroke-width="2" stroke-dasharray="3,2"/>
+    <text x="175" y="20" font-size="10" fill="#333">Safety Perimeter</text>
+    
+    <circle cx="160" cy="35" r="8" fill="#0066ff" opacity="0.3"/>
+    <text x="175" y="40" font-size="10" fill="#333">Equipment Zone</text>
+  </g>
+  
+  <!-- Measurements -->
+  <text x="700" y="380" font-size="9" fill="#666">Wingspan: 52m | Length: 36m | Width: 38m</text>
+  <text x="700" y="395" font-size="9" fill="#666">H₂ Safety Zone: 50m radius</text>
+</svg>
