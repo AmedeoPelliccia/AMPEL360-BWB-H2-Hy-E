@@ -41,13 +41,13 @@ The aircraft overall height shall be 14.5 meters ±0.05 meter, measured from gro
 ## Compliance
 
 **Standards:**
-- ICAO Annex 14
-- CS-25.25
+- [ICAO Annex 14](https://www.icao.int/safety/pages/annex-14.aspx)
+- [CS-25.25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)
 - Airport Design Standards
 
 **Related Requirements:**
-- RQ-02-11-30-003 (Tail Clearance)
-- RQ-02-11-50-003 (Gate Compatibility)
+- [RQ-02-11-30-003](../RQ-CLEARANCES/RQ-02-11-30-003_Tail_Clearance_2.5m_Min.md) (Tail Clearance)
+- [RQ-02-11-50-003](../RQ-AIRPORT-COMPATIBILITY/RQ-02-11-50-003_Gate_Compatibility.md) (Gate Compatibility)
 - RQ-02-11-16-001 (Ground Clearance)
 
 ## Traceability

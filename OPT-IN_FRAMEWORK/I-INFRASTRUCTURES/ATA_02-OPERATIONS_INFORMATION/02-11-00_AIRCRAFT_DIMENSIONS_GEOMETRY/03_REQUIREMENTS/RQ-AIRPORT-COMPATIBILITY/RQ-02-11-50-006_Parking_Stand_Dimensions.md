@@ -134,12 +134,12 @@ The aircraft shall fit within standard ICAO Code E parking stand dimensions of 8
 ## Compliance
 
 **Standards:**
-- ICAO Annex 14 (Apron design - Code E)
-- IATA AHM 904 (Stand design)
-- FAA AC 150/5300-13A
+- [ICAO Annex 14](https://www.icao.int/safety/pages/annex-14.aspx) (Apron design - Code E)
+- [IATA AHM 904](https://www.iata.org/en/publications/store/airport-handling-manual/) (Stand design)
+- [FAA AC 150/5300-13A](https://www.faa.gov/airports/resources/advisory_circulars/)
 
 **Related Requirements:**
-- RQ-02-11-50-003 (Gate Compatibility)
-- RQ-02-11-10-001 (Wingspan)
-- RQ-02-11-10-002 (Overall Length)
-- RQ-02-11-50-005 (Pavement Strength)
+- [RQ-02-11-50-003](RQ-02-11-50-003_Gate_Compatibility.md) (Gate Compatibility)
+- [RQ-02-11-10-001](../RQ-DIMENSIONS/RQ-02-11-10-001_Wingspan_52m.md) (Wingspan)
+- [RQ-02-11-10-002](../RQ-DIMENSIONS/RQ-02-11-10-002_Overall_Length_38.2m.md) (Overall Length)
+- [RQ-02-11-50-005](RQ-02-11-50-005_Pavement_Strength_PCN80.md) (Pavement Strength)

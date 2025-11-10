@@ -67,11 +67,11 @@ The wing leading edge sweep angle shall be 37 degrees ±0.5 degrees, measured at
 ## Compliance
 
 **Standards:**
-- CS-25.143 (Controllability)
-- CS-25.103 (Stall speed)
+- [CS-25.143](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Controllability)
+- [CS-25.103](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Stall speed)
 - Aerodynamic design criteria
 
 **Related Requirements:**
-- RQ-02-11-20-003 (Aspect Ratio)
-- RQ-02-11-20-005 (Planform Continuity)
-- RQ-02-11-20-007 (Thickness Distribution)
+- [RQ-02-11-20-003](RQ-02-11-20-003_Aspect_Ratio_3.2.md) (Aspect Ratio)
+- [RQ-02-11-20-005](RQ-02-11-20-005_Planform_Continuity.md) (Planform Continuity)
+- [RQ-02-11-20-007](RQ-02-11-20-007_Wing_Thickness_Distribution.md) (Thickness Distribution)

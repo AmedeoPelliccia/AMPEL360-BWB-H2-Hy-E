@@ -68,11 +68,11 @@ AR = (52.0)² / 845 = 2704 / 845 = 3.2
 ## Compliance
 
 **Standards:**
-- CS-25.103 (Stall characteristics)
-- CS-25.143 (Controllability and maneuverability)
+- [CS-25.103](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Stall characteristics)
+- [CS-25.143](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Controllability and maneuverability)
 - Aerodynamic design standards
 
 **Related Requirements:**
-- RQ-02-11-10-001 (Wingspan)
-- RQ-02-11-10-004 (Wing Area)
-- RQ-02-11-20-005 (Planform Continuity)
+- [RQ-02-11-10-001](../RQ-DIMENSIONS/RQ-02-11-10-001_Wingspan_52m.md) (Wingspan)
+- [RQ-02-11-10-004](../RQ-DIMENSIONS/RQ-02-11-10-004_Wing_Area_845m2.md) (Wing Area)
+- [RQ-02-11-20-005](RQ-02-11-20-005_Planform_Continuity.md) (Planform Continuity)

@@ -42,14 +42,14 @@ The aircraft overall length shall be 38.2 meters ±0.1 meter, measured from the 
 ## Compliance
 
 **Standards:**
-- ICAO Annex 14
-- CS-25.25
-- ATA iSpec 2200
+- [ICAO Annex 14](https://www.icao.int/safety/pages/annex-14.aspx)
+- [CS-25.25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)
+- [ATA iSpec 2200](https://www.ataebooks.org/product-category/ispec-2200/)
 
 **Related Requirements:**
-- RQ-02-11-10-001 (Wingspan)
-- RQ-02-11-50-002 (Turning Radius)
-- RQ-02-11-40-002 (Station System)
+- [RQ-02-11-10-001](RQ-02-11-10-001_Wingspan_52m.md) (Wingspan)
+- [RQ-02-11-50-002](../RQ-AIRPORT-COMPATIBILITY/RQ-02-11-50-002_Turning_Radius_42m.md) (Turning Radius)
+- [RQ-02-11-40-002](../RQ-REFERENCE-SYSTEMS/RQ-02-11-40-002_Station_System_Definition.md) (Station System)
 
 ## Traceability
 

@@ -151,13 +151,13 @@ Thermal expansion and contraction of aircraft structure shall be analyzed and ac
 ## Compliance
 
 **Standards:**
-- CS-25.571 (Damage tolerance and fatigue)
-- CS-25.603 (Materials)
-- CS-25.613 (Material strength properties)
-- MIL-HDBK-5 (Material properties)
+- [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Damage tolerance and fatigue)
+- [CS-25.603](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Materials)
+- [CS-25.613](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Material strength properties)
+- [MIL-HDBK-5](https://www.militaryhandbooks.com/MIL-HDBK-5) (Material properties)
 
 **Related Requirements:**
-- RQ-02-11-60-001 (Manufacturing Tolerances)
-- RQ-02-11-60-003 (Operational Deflections)
+- [RQ-02-11-60-001](RQ-02-11-60-001_Manufacturing_Tolerances.md) (Manufacturing Tolerances)
+- [RQ-02-11-60-003](RQ-02-11-60-003_Operational_Deflections.md) (Operational Deflections)
 - H₂ system thermal requirements
 - All structural requirements

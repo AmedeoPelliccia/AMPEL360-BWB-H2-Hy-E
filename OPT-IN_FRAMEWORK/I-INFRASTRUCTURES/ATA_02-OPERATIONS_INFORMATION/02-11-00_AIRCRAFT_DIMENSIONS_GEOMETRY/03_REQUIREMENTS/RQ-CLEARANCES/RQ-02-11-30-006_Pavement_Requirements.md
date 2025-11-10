@@ -102,11 +102,11 @@ The aircraft shall be compatible with pavements having a minimum Pavement Classi
 ## Compliance
 
 **Standards:**
-- ICAO Annex 14 (Aerodrome Design)
-- ICAO Doc 9157 (ACN-PCN method)
-- FAA AC 150/5320-6 (Aircraft classification)
+- [ICAO Annex 14](https://www.icao.int/safety/pages/annex-14.aspx) (Aerodrome Design)
+- [ICAO Doc 9157](https://www.icao.int/publications/pages/publication.aspx?docnum=9157) (ACN-PCN method)
+- [FAA AC 150/5320-6](https://www.faa.gov/airports/resources/advisory_circulars/) (Aircraft classification)
 
 **Related Requirements:**
-- RQ-02-11-50-005 (Pavement Strength PCN80)
-- RQ-02-11-10-001 (Wingspan - Code E)
+- [RQ-02-11-50-005](../RQ-AIRPORT-COMPATIBILITY/RQ-02-11-50-005_Pavement_Strength_PCN80.md) (Pavement Strength PCN80)
+- [RQ-02-11-10-001](../RQ-DIMENSIONS/RQ-02-11-10-001_Wingspan_52m.md) (Wingspan - Code E)
 - Landing gear design requirements

@@ -177,14 +177,14 @@ All dimensional measurements shall achieve specified accuracy levels using calib
 ## Compliance
 
 **Standards:**
-- ISO 17025 (Testing and calibration laboratories)
-- ISO 1101 (Geometrical tolerancing)
-- ISO 10360 (CMM acceptance tests)
-- VDI/VDE 2617 (Accuracy of CMMs)
-- ASME B89 (Dimensional metrology)
+- [ISO 17025](https://www.iso.org/standard/66912.html) (Testing and calibration laboratories)
+- [ISO 1101](https://www.iso.org/standard/66777.html) (Geometrical tolerancing)
+- [ISO 10360](https://www.iso.org/standard/56660.html) (CMM acceptance tests)
+- [VDI/VDE 2617](https://www.vdi.de/en/home/vdi-standards/details/vdivde-2617-blatt-4-accuracy-of-coordinate-measuring-machines-characteristics-and-their-testing-application-of-coordinate-measuring-machines-for-measuring-workpieces) (Accuracy of CMMs)
+- [ASME B89](https://www.asme.org/codes-standards/find-codes-standards/b89-committee-dimensional-metrology) (Dimensional metrology)
 
 **Related Requirements:**
-- RQ-02-11-40-006 (Measurement Standards)
-- RQ-02-11-60-001 (Manufacturing Tolerances)
-- RQ-02-11-60-002 (Assembly Tolerances)
+- [RQ-02-11-40-006](../RQ-REFERENCE-SYSTEMS/RQ-02-11-40-006_Measurement_Standards.md) (Measurement Standards)
+- [RQ-02-11-60-001](RQ-02-11-60-001_Manufacturing_Tolerances.md) (Manufacturing Tolerances)
+- [RQ-02-11-60-002](RQ-02-11-60-002_Assembly_Tolerances.md) (Assembly Tolerances)
 - All dimensional requirements

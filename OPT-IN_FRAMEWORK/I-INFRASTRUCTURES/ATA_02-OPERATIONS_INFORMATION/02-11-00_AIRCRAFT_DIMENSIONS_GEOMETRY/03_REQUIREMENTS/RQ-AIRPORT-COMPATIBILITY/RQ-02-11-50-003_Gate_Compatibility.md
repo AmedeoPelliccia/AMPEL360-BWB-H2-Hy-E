@@ -124,12 +124,12 @@ The aircraft shall be compatible with ICAO Code E gates having minimum stand dim
 ## Compliance
 
 **Standards:**
-- ICAO Annex 14 (Gate design - Code E)
-- IATA AHM (Airport Handling Manual)
-- SAE AIR1845 (Boarding bridge interface)
+- [ICAO Annex 14](https://www.icao.int/safety/pages/annex-14.aspx) (Gate design - Code E)
+- [IATA AHM](https://www.iata.org/en/publications/store/airport-handling-manual/) (Airport Handling Manual)
+- [SAE AIR1845](https://www.sae.org/standards/content/air1845/) (Boarding bridge interface)
 
 **Related Requirements:**
-- RQ-02-11-20-001 (Center Body Width)
-- RQ-02-11-10-001 (Wingspan)
-- RQ-02-11-50-001 (Taxiway Width)
-- RQ-02-11-50-006 (Parking Stand)
+- [RQ-02-11-20-001](../RQ-BWB-GEOMETRY/RQ-02-11-20-001_Center_Body_Width_38m.md) (Center Body Width)
+- [RQ-02-11-10-001](../RQ-DIMENSIONS/RQ-02-11-10-001_Wingspan_52m.md) (Wingspan)
+- [RQ-02-11-50-001](RQ-02-11-50-001_Taxiway_Width_23m_Min.md) (Taxiway Width)
+- [RQ-02-11-50-006](RQ-02-11-50-006_Parking_Stand_Dimensions.md) (Parking Stand)

@@ -120,14 +120,14 @@ Manufacturing tolerances for aircraft structural components shall be maintained 
 ## Compliance
 
 **Standards:**
-- ISO 2768 (General tolerances)
-- ASME Y14.5 (GD&T)
-- AS9100 (Quality management - aerospace)
-- ATA iSpec 2200 (Tolerancing practices)
+- [ISO 2768](https://www.iso.org/standard/79442.html) (General tolerances)
+- [ASME Y14.5](https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing) (GD&T)
+- [AS9100](https://www.sae.org/standards/content/as9100d/) (Quality management - aerospace)
+- [ATA iSpec 2200](https://www.ataebooks.org/product-category/ispec-2200/) (Tolerancing practices)
 - Composite-specific: Industry standards
 
 **Related Requirements:**
-- RQ-02-11-10-006 (Dimensional Tolerances)
-- RQ-02-11-60-002 (Assembly Tolerances)
-- RQ-02-11-60-005 (Measurement Accuracy)
+- [RQ-02-11-10-006](../RQ-DIMENSIONS/RQ-02-11-10-006_Dimensional_Tolerances.md) (Dimensional Tolerances)
+- [RQ-02-11-60-002](RQ-02-11-60-002_Assembly_Tolerances.md) (Assembly Tolerances)
+- [RQ-02-11-60-005](RQ-02-11-60-005_Measurement_Accuracy.md) (Measurement Accuracy)
 - All dimensional requirements

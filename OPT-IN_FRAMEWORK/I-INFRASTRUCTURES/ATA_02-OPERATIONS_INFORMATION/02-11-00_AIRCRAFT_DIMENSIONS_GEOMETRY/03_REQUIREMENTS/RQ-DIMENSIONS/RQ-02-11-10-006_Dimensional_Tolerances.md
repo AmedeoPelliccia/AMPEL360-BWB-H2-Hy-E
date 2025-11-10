@@ -63,14 +63,14 @@ All aircraft primary dimensions shall be maintained within specified tolerances 
 ## Compliance
 
 **Standards:**
-- ATA iSpec 2200 (Tolerancing)
-- ISO 2768 (General Tolerances)
-- AS9100 (Quality Management)
+- [ATA iSpec 2200](https://www.ataebooks.org/product-category/ispec-2200/) (Tolerancing)
+- [ISO 2768](https://www.iso.org/standard/79442.html) (General Tolerances)
+- [AS9100](https://www.sae.org/standards/content/as9100d/) (Quality Management)
 - Manufacturing specifications
 
 **Related Requirements:**
-- RQ-02-11-60-001 (Manufacturing Tolerances)
-- RQ-02-11-60-002 (Assembly Tolerances)
+- [RQ-02-11-60-001](../RQ-TOLERANCES/RQ-02-11-60-001_Manufacturing_Tolerances.md) (Manufacturing Tolerances)
+- [RQ-02-11-60-002](../RQ-TOLERANCES/RQ-02-11-60-002_Assembly_Tolerances.md) (Assembly Tolerances)
 - All dimensional requirements (RQ-02-11-10-xxx)
 
 ## Traceability

@@ -93,11 +93,11 @@ The minimum engine intake ground clearance shall be 2.8 meters with landing gear
 ## Compliance
 
 **Regulatory:**
-- CS-25.231 (Ground clearance)
-- CS-E (Engine certification)
+- [CS-25.231](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Ground clearance)
+- [CS-E](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-e-amendment-5) (Engine certification)
 - FOD prevention standards
 
 **Related Requirements:**
-- RQ-02-11-30-002 (Belly Clearance)
-- RQ-02-11-10-003 (Overall Height)
+- [RQ-02-11-30-002](RQ-02-11-30-002_Belly_Clearance_1.8m_Min.md) (Belly Clearance)
+- [RQ-02-11-10-003](../RQ-DIMENSIONS/RQ-02-11-10-003_Overall_Height_14.5m.md) (Overall Height)
 - Engine installation requirements

@@ -99,12 +99,12 @@ The aircraft ground attitude limits shall be defined and enforced to prevent str
 ## Compliance
 
 **Regulatory:**
-- CS-25.231 (Ground clearance)
-- CS-25.107 (Takeoff)
-- CS-25.125 (Landing)
-- CS-25.237 (Wind velocities)
+- [CS-25.231](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Ground clearance)
+- [CS-25.107](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Takeoff)
+- [CS-25.125](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Landing)
+- [CS-25.237](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Wind velocities)
 
 **Related Requirements:**
-- RQ-02-11-30-001 (Wingtip Clearance)
-- RQ-02-11-30-002 (Belly Clearance)
-- RQ-02-11-30-003 (Tail Clearance)
+- [RQ-02-11-30-001](RQ-02-11-30-001_Wingtip_Clearance_1.2m_Min.md) (Wingtip Clearance)
+- [RQ-02-11-30-002](RQ-02-11-30-002_Belly_Clearance_1.8m_Min.md) (Belly Clearance)
+- [RQ-02-11-30-003](RQ-02-11-30-003_Tail_Clearance_2.5m_Min.md) (Tail Clearance)

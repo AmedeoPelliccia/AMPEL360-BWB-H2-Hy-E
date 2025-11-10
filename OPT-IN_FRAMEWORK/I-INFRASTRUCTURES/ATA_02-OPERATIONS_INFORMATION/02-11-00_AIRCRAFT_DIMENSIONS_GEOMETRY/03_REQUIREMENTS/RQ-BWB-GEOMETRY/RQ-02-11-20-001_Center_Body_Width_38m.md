@@ -58,11 +58,11 @@ The BWB center body maximum width shall be 38.0 meters ±0.1 meter, measured at 
 ## Compliance
 
 **Standards:**
-- CS-25.841 (Pressurized Cabins)
-- CS-25.365 (Pressurization loads)
-- ICAO Annex 14 (Code E compatibility)
+- [CS-25.841](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Pressurized Cabins)
+- [CS-25.365](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Pressurization loads)
+- [ICAO Annex 14](https://www.icao.int/safety/pages/annex-14.aspx) (Code E compatibility)
 
 **Related Requirements:**
-- RQ-02-11-20-002 (Center Body Length)
-- RQ-02-11-10-001 (Wingspan)
-- RQ-02-11-50-003 (Gate Compatibility)
+- [RQ-02-11-20-002](RQ-02-11-20-002_Center_Body_Length_28.5m.md) (Center Body Length)
+- [RQ-02-11-10-001](../RQ-DIMENSIONS/RQ-02-11-10-001_Wingspan_52m.md) (Wingspan)
+- [RQ-02-11-50-003](../RQ-AIRPORT-COMPATIBILITY/RQ-02-11-50-003_Gate_Compatibility.md) (Gate Compatibility)

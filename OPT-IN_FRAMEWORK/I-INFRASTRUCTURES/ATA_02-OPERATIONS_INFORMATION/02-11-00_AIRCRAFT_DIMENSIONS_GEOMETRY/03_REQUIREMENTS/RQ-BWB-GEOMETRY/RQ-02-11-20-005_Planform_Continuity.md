@@ -79,12 +79,12 @@ The BWB planform shall maintain continuous curvature (Class A surface continuity
 ## Compliance
 
 **Standards:**
-- ATA iSpec 2200 (Surface quality)
+- [ATA iSpec 2200](https://www.ataebooks.org/product-category/ispec-2200/) (Surface quality)
 - Aerospace surface quality standards
 - Composite manufacturing standards
 - Class A surface requirements
 
 **Related Requirements:**
-- RQ-02-11-20-001 (Center Body Width)
-- RQ-02-11-20-006 (Cross Section Geometry)
-- RQ-02-11-60-001 (Manufacturing Tolerances)
+- [RQ-02-11-20-001](RQ-02-11-20-001_Center_Body_Width_38m.md) (Center Body Width)
+- [RQ-02-11-20-006](RQ-02-11-20-006_Cross_Section_Geometry.md) (Cross Section Geometry)
+- [RQ-02-11-60-001](../RQ-TOLERANCES/RQ-02-11-60-001_Manufacturing_Tolerances.md) (Manufacturing Tolerances)

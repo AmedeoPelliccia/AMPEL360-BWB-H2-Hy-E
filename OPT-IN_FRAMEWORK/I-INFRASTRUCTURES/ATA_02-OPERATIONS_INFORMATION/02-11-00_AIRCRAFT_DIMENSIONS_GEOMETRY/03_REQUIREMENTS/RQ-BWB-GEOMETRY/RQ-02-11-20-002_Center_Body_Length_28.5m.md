@@ -57,11 +57,11 @@ The BWB center body length shall be 28.5 meters ±0.1 meter, measured from the f
 ## Compliance
 
 **Standards:**
-- CS-25.365 (Pressurization)
-- CS-25.841 (Cabin Design)
-- ATA iSpec 2200
+- [CS-25.365](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Pressurization)
+- [CS-25.841](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Cabin Design)
+- [ATA iSpec 2200](https://www.ataebooks.org/product-category/ispec-2200/)
 
 **Related Requirements:**
-- RQ-02-11-20-001 (Center Body Width)
-- RQ-02-11-40-002 (Station System)
-- RQ-02-11-10-002 (Overall Length)
+- [RQ-02-11-20-001](RQ-02-11-20-001_Center_Body_Width_38m.md) (Center Body Width)
+- [RQ-02-11-40-002](../RQ-REFERENCE-SYSTEMS/RQ-02-11-40-002_Station_System_Definition.md) (Station System)
+- [RQ-02-11-10-002](../RQ-DIMENSIONS/RQ-02-11-10-002_Overall_Length_38.2m.md) (Overall Length)

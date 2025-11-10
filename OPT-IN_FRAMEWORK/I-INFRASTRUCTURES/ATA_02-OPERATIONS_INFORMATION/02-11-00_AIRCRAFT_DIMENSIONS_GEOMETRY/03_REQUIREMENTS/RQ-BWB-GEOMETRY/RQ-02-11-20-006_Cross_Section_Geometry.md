@@ -79,11 +79,11 @@ The BWB cross-sectional geometry shall transition smoothly from the pressurized 
 ## Compliance
 
 **Standards:**
-- CS-25.365 (Pressurization loads)
-- CS-25.841 (Pressurized cabins)
-- CS-25.571 (Damage tolerance)
+- [CS-25.365](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Pressurization loads)
+- [CS-25.841](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Pressurized cabins)
+- [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Damage tolerance)
 
 **Related Requirements:**
-- RQ-02-11-20-001 (Center Body Width)
-- RQ-02-11-20-005 (Planform Continuity)
-- RQ-02-11-20-007 (Wing Thickness Distribution)
+- [RQ-02-11-20-001](RQ-02-11-20-001_Center_Body_Width_38m.md) (Center Body Width)
+- [RQ-02-11-20-005](RQ-02-11-20-005_Planform_Continuity.md) (Planform Continuity)
+- [RQ-02-11-20-007](RQ-02-11-20-007_Wing_Thickness_Distribution.md) (Wing Thickness Distribution)

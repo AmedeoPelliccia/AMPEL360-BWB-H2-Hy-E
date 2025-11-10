@@ -90,11 +90,11 @@ The wing thickness distribution shall vary from 14% at the center body edge (BL 
 ## Compliance
 
 **Standards:**
-- CS-25.143 (Controllability)
-- CS-25.251 (Vibration and buffeting)
+- [CS-25.143](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Controllability)
+- [CS-25.251](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Vibration and buffeting)
 - Aerodynamic design standards
 
 **Related Requirements:**
-- RQ-02-11-20-004 (LE Sweep)
-- RQ-02-11-20-005 (Planform Continuity)
-- RQ-02-11-20-006 (Cross Section Geometry)
+- [RQ-02-11-20-004](RQ-02-11-20-004_Leading_Edge_Sweep_37deg.md) (LE Sweep)
+- [RQ-02-11-20-005](RQ-02-11-20-005_Planform_Continuity.md) (Planform Continuity)
+- [RQ-02-11-20-006](RQ-02-11-20-006_Cross_Section_Geometry.md) (Cross Section Geometry)

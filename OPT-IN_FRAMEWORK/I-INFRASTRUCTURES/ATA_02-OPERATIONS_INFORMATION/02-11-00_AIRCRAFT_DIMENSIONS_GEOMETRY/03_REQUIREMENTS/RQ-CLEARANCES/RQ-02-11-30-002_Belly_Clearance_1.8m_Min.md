@@ -72,11 +72,11 @@ The minimum belly ground clearance shall be 1.8 meters at Maximum Takeoff Weight
 ## Compliance
 
 **Regulatory:**
-- CS-25.231 (Ground clearance)
-- CS-25.25 (Weight limits)
-- CS-25.107 (Takeoff speeds and distances)
+- [CS-25.231](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Ground clearance)
+- [CS-25.25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Weight limits)
+- [CS-25.107](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Takeoff speeds and distances)
 
 **Related Requirements:**
-- RQ-02-11-30-003 (Tail Clearance)
-- RQ-02-11-30-005 (Ground Attitude Limits)
-- RQ-02-11-10-003 (Overall Height)
+- [RQ-02-11-30-003](RQ-02-11-30-003_Tail_Clearance_2.5m_Min.md) (Tail Clearance)
+- [RQ-02-11-30-005](RQ-02-11-30-005_Ground_Attitude_Limits.md) (Ground Attitude Limits)
+- [RQ-02-11-10-003](../RQ-DIMENSIONS/RQ-02-11-10-003_Overall_Height_14.5m.md) (Overall Height)

@@ -116,14 +116,14 @@ All aircraft dimensional measurements shall be performed using calibrated equipm
 ## Compliance
 
 **Standards:**
-- ISO 1101 (Geometric tolerancing)
-- ISO 17025 (Calibration laboratories)
-- ATA iSpec 2200 (Documentation)
-- ASME Y14.5 (Dimensioning and tolerancing)
-- VDI/VDE 2617 (Accuracy of CMMs)
+- [ISO 1101](https://www.iso.org/standard/66777.html) (Geometric tolerancing)
+- [ISO 17025](https://www.iso.org/standard/66912.html) (Calibration laboratories)
+- [ATA iSpec 2200](https://www.ataebooks.org/product-category/ispec-2200/) (Documentation)
+- [ASME Y14.5](https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing) (Dimensioning and tolerancing)
+- [VDI/VDE 2617](https://www.vdi.de/en/home/vdi-standards/details/vdivde-2617-blatt-4-accuracy-of-coordinate-measuring-machines-characteristics-and-their-testing-application-of-coordinate-measuring-machines-for-measuring-workpieces) (Accuracy of CMMs)
 
 **Related Requirements:**
-- RQ-02-11-40-001 through RQ-02-11-40-005 (Reference systems)
-- RQ-02-11-60-001 (Manufacturing Tolerances)
-- RQ-02-11-60-005 (Measurement Accuracy)
+- [RQ-02-11-40-001](RQ-02-11-40-001_Body_Axis_System.md) through [RQ-02-11-40-005](RQ-02-11-40-005_Datum_Point_Definition.md) (Reference systems)
+- [RQ-02-11-60-001](../RQ-TOLERANCES/RQ-02-11-60-001_Manufacturing_Tolerances.md) (Manufacturing Tolerances)
+- [RQ-02-11-60-005](../RQ-TOLERANCES/RQ-02-11-60-005_Measurement_Accuracy.md) (Measurement Accuracy)
 - All dimensional requirements

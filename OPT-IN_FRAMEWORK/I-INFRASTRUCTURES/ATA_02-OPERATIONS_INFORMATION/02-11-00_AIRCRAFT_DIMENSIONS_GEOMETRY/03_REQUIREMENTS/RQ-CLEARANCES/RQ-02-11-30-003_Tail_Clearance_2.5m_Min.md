@@ -79,11 +79,11 @@ The minimum tail ground clearance shall be 2.5 meters at Maximum Landing Weight 
 ## Compliance
 
 **Regulatory:**
-- CS-25.231 (Ground clearance)
-- CS-25.107 (Takeoff performance)
-- CS-25.125 (Landing)
+- [CS-25.231](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Ground clearance)
+- [CS-25.107](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Takeoff performance)
+- [CS-25.125](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Landing)
 
 **Related Requirements:**
-- RQ-02-11-30-002 (Belly Clearance)
-- RQ-02-11-30-005 (Ground Attitude Limits)
-- RQ-02-11-10-003 (Overall Height)
+- [RQ-02-11-30-002](RQ-02-11-30-002_Belly_Clearance_1.8m_Min.md) (Belly Clearance)
+- [RQ-02-11-30-005](RQ-02-11-30-005_Ground_Attitude_Limits.md) (Ground Attitude Limits)
+- [RQ-02-11-10-003](../RQ-DIMENSIONS/RQ-02-11-10-003_Overall_Height_14.5m.md) (Overall Height)

@@ -113,12 +113,12 @@ The aircraft shall be compatible with ICAO Code E runways having a minimum width
 ## Compliance
 
 **Regulatory:**
-- ICAO Annex 14 (Runway design - Code E)
-- CS-25.237 (Wind velocities)
-- CS-25.125 (Landing)
+- [ICAO Annex 14](https://www.icao.int/safety/pages/annex-14.aspx) (Runway design - Code E)
+- [CS-25.237](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Wind velocities)
+- [CS-25.125](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Landing)
 
 **Related Requirements:**
-- RQ-02-11-10-001 (Wingspan)
-- RQ-02-11-50-001 (Taxiway Width)
-- RQ-02-11-50-005 (Pavement Strength)
+- [RQ-02-11-10-001](../RQ-DIMENSIONS/RQ-02-11-10-001_Wingspan_52m.md) (Wingspan)
+- [RQ-02-11-50-001](RQ-02-11-50-001_Taxiway_Width_23m_Min.md) (Taxiway Width)
+- [RQ-02-11-50-005](RQ-02-11-50-005_Pavement_Strength_PCN80.md) (Pavement Strength)
 - Flight control system requirements

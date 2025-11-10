@@ -153,13 +153,13 @@ Operational deflections of aircraft structure under load shall be analyzed, pred
 ## Compliance
 
 **Regulatory:**
-- CS-25.305 (Strength and deformation)
-- CS-25.341 (Gust loads)
-- CS-25.345 (High lift devices)
-- CS-25.629 (Aeroelastic stability - flutter)
+- [CS-25.305](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Strength and deformation)
+- [CS-25.341](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Gust loads)
+- [CS-25.345](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (High lift devices)
+- [CS-25.629](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Aeroelastic stability - flutter)
 
 **Related Requirements:**
-- RQ-02-11-30-001 (Wingtip Clearance)
-- RQ-02-11-30-002 (Belly Clearance)
-- RQ-02-11-60-004 (Thermal Expansion)
+- [RQ-02-11-30-001](../RQ-CLEARANCES/RQ-02-11-30-001_Wingtip_Clearance_1.2m_Min.md) (Wingtip Clearance)
+- [RQ-02-11-30-002](../RQ-CLEARANCES/RQ-02-11-30-002_Belly_Clearance_1.8m_Min.md) (Belly Clearance)
+- [RQ-02-11-60-004](RQ-02-11-60-004_Thermal_Expansion_Limits.md) (Thermal Expansion)
 - Structural design requirements

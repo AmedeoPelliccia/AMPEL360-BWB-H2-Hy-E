@@ -127,13 +127,13 @@ The aircraft shall operate on pavements with a minimum Pavement Classification N
 ## Compliance
 
 **Standards:**
-- ICAO Annex 14 (Pavement design)
-- ICAO Doc 9157 (ACN-PCN Method)
-- FAA AC 150/5320-6 (Aircraft classification)
-- EASA CS-25 (Landing gear design)
+- [ICAO Annex 14](https://www.icao.int/safety/pages/annex-14.aspx) (Pavement design)
+- [ICAO Doc 9157](https://www.icao.int/publications/pages/publication.aspx?docnum=9157) (ACN-PCN Method)
+- [FAA AC 150/5320-6](https://www.faa.gov/airports/resources/advisory_circulars/) (Aircraft classification)
+- [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Landing gear design)
 
 **Related Requirements:**
-- RQ-02-11-30-006 (Pavement Requirements)
-- RQ-02-11-50-001 (Taxiway Width)
-- RQ-02-11-50-004 (Runway Width)
+- [RQ-02-11-30-006](../RQ-CLEARANCES/RQ-02-11-30-006_Pavement_Requirements.md) (Pavement Requirements)
+- [RQ-02-11-50-001](RQ-02-11-50-001_Taxiway_Width_23m_Min.md) (Taxiway Width)
+- [RQ-02-11-50-004](RQ-02-11-50-004_Runway_Width_45m_Min.md) (Runway Width)
 - Landing gear design requirements
