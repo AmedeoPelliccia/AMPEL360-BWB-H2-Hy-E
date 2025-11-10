@@ -37,20 +37,136 @@
 
 ## Seating Configuration
 
+### Seat Map Overview
+
+**Total Capacity:** 220 passengers
+- Business Class: 30 seats (Rows 1-5)
+- Economy Class: 190 seats (Rows 6-24)
+
+![Q100 BWB Seat Map](images/Q100_BWB_SeatMap_220pax.png)
+
+*Figure: AMPEL360 Q100 BWB complete seat map showing 220-passenger configuration*
+
+### Seat Designation System
+
+**Column Nomenclature:**
+- **AB** – Left side (2 seats)
+- *Aisle 1*
+- **CDE** – Left-center (3 seats)
+- *Aisle 2*
+- **FGH** – Right-center (3 seats)
+- *Aisle 3*
+- **JK** – Right side (2 seats)
+
+**Note:** Letter "I" is omitted per aviation standard to avoid confusion with "1"
+
+### Business Class Configuration (Rows 1-5)
+
+**Layout:** 2-2-2 (30 seats total)
+
+| Row | Class | Seats Installed | Layout | Seats per Row |
+|-----|-------|----------------|---------|---------------|
+| 1 | Business | A, B, D, E, J, K | 2-2-2 | 6 |
+| 2 | Business | A, B, D, E, J, K | 2-2-2 | 6 |
+| 3 | Business | A, B, D, E, J, K | 2-2-2 | 6 |
+| 4 | Business | A, B, D, E, J, K | 2-2-2 | 6 |
+| 5 | Business | A, B, D, E, J, K | 2-2-2 | 6 |
+
+**Business Class Features:**
+- Seat width: 0.51m (20")
+- Seat pitch: 1.02m (40")
+- Recline: Full-flat capability
+- Unused columns (C, F, G, H): Side consoles, storage, tables
+- Aisle width: 0.51m (20") - 3 aisles
+
+**Total Business:** 5 rows × 6 seats = **30 passengers**
+
+### Economy Class Configuration (Rows 6-24)
+
+**Layout:** 2-3-3-2 (190 seats total)
+
+#### Forward Economy (Rows 6-15)
+
+| Row | Class | Seats Installed | Layout | Seats per Row |
+|-----|-------|----------------|---------|---------------|
+| 6 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 7 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 8 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 9 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 10 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 11 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 12 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 13 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 14 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 15 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+
+**Subtotal Forward:** 10 rows × 10 seats = **100 passengers**
+
+#### Aft Economy (Rows 16-24)
+
+| Row | Class | Seats Installed | Layout | Seats per Row |
+|-----|-------|----------------|---------|---------------|
+| 16 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 17 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 18 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 19 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 20 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 21 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 22 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 23 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+| 24 | Economy | A, B, C, D, E, F, G, H, J, K | 2-3-3-2 | 10 |
+
+**Subtotal Aft:** 9 rows × 10 seats = **90 passengers**
+
+**Economy Class Features:**
+- Seat width: 0.46m (18")
+- Seat pitch: 0.81m (32")
+- Recline: Standard
+- Aisle width: 0.51m (20") - 3 aisles
+
+**Total Economy:** 19 rows × 10 seats = **190 passengers**
+
+### Cabin Zoning
+
+**Zone 1 (Business):** Rows 1-5
+- Forward galley and lavatories
+- Premium boarding door
+- Quiet zone designation
+
+**Zone 2 (Forward Economy):** Rows 6-15
+- Main entry doors (2)
+- Forward lavatories (3)
+- Exit rows: 6, 10, 15
+
+**Mid-Cabin Services:** Between Rows 15-16
+- Central galley complex
+- Additional lavatories (2)
+- Crew rest area access
+
+**Zone 3 (Aft Economy):** Rows 16-24
+- Aft galley complex
+- Aft lavatories (3)
+- Exit rows: 20, 24
+- Aft service doors (2)
+
 ### Center Section (Maximum Width)
 
-**8-Abreast Layout:**
-- Seats: 2-2-2-2 (Business) or 3-3-3 (Economy center)
+**Maximum Width Configuration:**
+- Full 10-abreast: Rows 10-20 (at maximum width section)
 - Seat width: 0.46m (18", Economy) / 0.51m (20", Business)
 - Aisle width: 0.51m (20")
-- Total utilized width: 18m (center section)
+- Total utilized width: 18m (maximum width section)
 
 ### Transition Sections
 
-**Tapered Width:**
-- 6-abreast: 2-2-2 layout
-- 5-abreast: 2-3 layout
-- Smooth capacity taper
+**Forward Taper (Rows 1-9):**
+- Gradual width reduction from nose
+- Business class in optimal position
+- Smooth structural transition
+
+**Aft Taper (Rows 21-24):**
+- Width reduction toward tail
+- Maintains 10-abreast until Row 24
 - Exit distribution optimized
 
 ## Structural Features
