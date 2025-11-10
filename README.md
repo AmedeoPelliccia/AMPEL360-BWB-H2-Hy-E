@@ -190,6 +190,8 @@ graph LR
     - ✅ [03_REQUIREMENTS](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/03_REQUIREMENTS/)
     - ✅ [04_DESIGN](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/04_DESIGN/)
     - ✅ [05_INTERFACES](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/05_INTERFACES/)
+  - [`02-11-00 AIRCRAFT DIMENSIONS GEOMETRY`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/) ⭐ **NEW**
+    - ✅ [03_REQUIREMENTS](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/03_REQUIREMENTS/) - **47 Requirements Defined**
   - [`02-32-00 H₂ REFUELING PROCEDURES`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-32-00_H2_REFUELING_PROCEDURES/)
 - [`ATA 03 - SUPPORT INFORMATION & GSE`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/)
 - [`ATA 10 - PARKING, MOORING, STORAGE, RTS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS/)
@@ -391,6 +393,13 @@ graph LR
     - Ground Operations Design (H₂ refueling)
     - Emergency Procedures Design
     - CAOS Integration Design
+  - [`02-11-00 AIRCRAFT DIMENSIONS GEOMETRY / 03_REQUIREMENTS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/03_REQUIREMENTS/) ⭐ **47 REQUIREMENTS COMPLETE**
+    - 6 Dimensional Requirements (Wingspan, Length, Height, Wing Area, ICAO Code E, Tolerances)
+    - 7 BWB Geometry Requirements (Center Body, Aspect Ratio, Sweep, Continuity, Cross-Section, Thickness)
+    - 6 Ground Clearance Requirements (Wingtip, Belly, Tail, Engine Intake, Attitude Limits, Pavement)
+    - 6 Reference System Requirements (Body Axis, Station, Waterline, Buttline, Datum, Measurement Standards)
+    - 6 Airport Compatibility Requirements (Taxiway, Turning Radius, Gate, Runway, Pavement Strength, Parking)
+    - 5 Tolerance Requirements (Manufacturing, Assembly, Deflections, Thermal Expansion, Measurement Accuracy)
     - Human-Machine Interface Design
     - Crew Workload Analysis (NASA-TLX)
     - Documentation Design Standards (S1000D, ATA iSpec 2200)
