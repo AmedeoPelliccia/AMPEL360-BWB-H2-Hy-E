@@ -1,28 +1,26 @@
-# 09_PRODUCTION_PLANNING - AIRCRAFT_DIMENSIONS_GEOMETRY
-
-**Component Code:** 02-11-00  
-**Component Name:** AIRCRAFT_DIMENSIONS_GEOMETRY  
-**Folder:** 09_PRODUCTION_PLANNING
+# 09_PRODUCTION_PLANNING – Dimensions & Geometry
 
 ## Purpose
 
-This folder contains 09_PRODUCTION_PLANNING documentation and data for AIRCRAFT_DIMENSIONS_GEOMETRY.
+This folder defines how production, inspection and documentation processes handle
+the **02-11-00 Aircraft Dimensions Geometry** data set, from as-built measurements
+to certified documentation and MSN-specific tracking.
 
-## Status
+## Structure
 
-⚠️ **To Be Developed**
+- `DATA_GENERATION/` – Processes to generate as-built geometry and dimensional data.
+- `DOCUMENTATION_PRODUCTION/` – Inputs from 02-11-00 into AFM, TCDS and production planning.
+- `QUALITY_CONTROL/` – Dimensional inspection and data accuracy verification in production.
+- `SERIAL_NUMBER_MANAGEMENT/` – MSN-level tracking of dimensional configuration and data sets.
 
-This section is part of the ATA 02 - Operations Information chapter structure and will be populated with detailed technical content during the implementation phase.
+## Interfaces
 
-## Related Documents
+- Upstream:
+  - `01_OVERVIEW/` – baseline_dimensions.json and principal dimensions tables
+  - `07_V_AND_V/` – verified/validated dimensions and geometry
+- Downstream:
+  - `10_CERTIFICATION/` – certified dimension data package
+  - `11_OPERATIONS_MAINTENANCE/` – operational dimension data (AFM, WBM, manuals)
 
-- Parent Component: 02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY
-- ATA Chapter: 02 - Operations Information
-- AMPEL360 Platform: BWB H2 Hy-E Q100 INTEGRA
-
----
-
-**Document Control:**
-- Version: 1.0
-- Status: Structure Created
-- Last Updated: 2025-11-04
+**Status:** Templates to be completed once production processes for geometry and
+dimensions are baselined.
