@@ -194,7 +194,6 @@ def generate_missing_doc_with_ai(file_path: pathlib.Path, context: Dict[str, any
         
         # Extract context
         path_str = str(file_path.relative_to(REPO_ROOT))
-        parent_docs = context.get('parent_docs', [])
         related_docs = context.get('related_docs', [])
         
         # Build prompt
