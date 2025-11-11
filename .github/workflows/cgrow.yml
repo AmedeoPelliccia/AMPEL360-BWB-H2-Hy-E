@@ -1,0 +1,188 @@
+name: C-GROW Lifecycle
+
+on:
+  schedule:
+    # Run nightly at 2 AM UTC
+    - cron: '0 2 * * *'
+  
+  issue_comment:
+    types: [created]
+  
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: 'C-GROW phase to run'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - cg
+          - cr
+          - co
+          - cw
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  check-trigger:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '/cgrow'))
+    outputs:
+      should_run: ${{ steps.check.outputs.result }}
+      phase: ${{ steps.check.outputs.phase }}
+    steps:
+      - id: check
+        run: |
+          if [[ "${{ github.event_name }}" == "issue_comment" ]]; then
+            # Check if user has write permission
+            # For now, allow all comments with /cgrow
+            if [[ "${{ github.event.comment.body }}" == *"/cgrow"* ]]; then
+              echo "result=true" >> $GITHUB_OUTPUT
+              # Extract phase if specified
+              if [[ "${{ github.event.comment.body }}" == *"/cgrow cg"* ]]; then
+                echo "phase=cg" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.comment.body }}" == *"/cgrow cr"* ]]; then
+                echo "phase=cr" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.comment.body }}" == *"/cgrow co"* ]]; then
+                echo "phase=co" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.comment.body }}" == *"/cgrow cw"* ]]; then
+                echo "phase=cw" >> $GITHUB_OUTPUT
+              else
+                echo "phase=all" >> $GITHUB_OUTPUT
+              fi
+            else
+              echo "result=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "result=true" >> $GITHUB_OUTPUT
+            echo "phase=${{ github.event.inputs.phase || 'all' }}" >> $GITHUB_OUTPUT
+          fi
+
+  cgrow-cycle:
+    needs: check-trigger
+    if: needs.check-trigger.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Install any required dependencies here
+      
+      - name: Configure Git
+        run: |
+          git config --global user.name "C-GROW Bot"
+          git config --global user.email "cgrow-bot@ampel360.dev"
+      
+      - name: CG - Continuous Generation
+        if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'cg'
+        run: |
+          echo "=== Running CG Phase ==="
+          python tools/cgrow/cg_generate.py --verbose
+      
+      - name: CR - Continuous Review
+        if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'cr'
+        run: |
+          echo "=== Running CR Phase ==="
+          python tools/cgrow/cr_review.py --verbose
+      
+      - name: CO - Continuous Optimization
+        if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'co'
+        run: |
+          echo "=== Running CO Phase ==="
+          python tools/cgrow/co_optimize.py --verbose
+      
+      - name: CW - Continuous Workflow Integration
+        if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'cw'
+        run: |
+          echo "=== Running CW Phase ==="
+          python tools/cgrow/cw_integrate.py --verbose
+      
+      - name: Commit and Push Changes
+        if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'cw'
+        run: |
+          if [[ -n $(git status -s) ]]; then
+            git add .
+            git commit -m "chore(cgrow): continuous intelligence lifecycle update [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+      
+      - name: Upload C-GROW Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cgrow-reports-${{ github.run_number }}
+          path: cd/reports/
+          retention-days: 30
+      
+      - name: Comment on PR/Issue
+        if: github.event_name == 'issue_comment'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            // Read reports if they exist
+            const reportsDir = 'cd/reports';
+            let reportSummary = '## C-GROW Cycle Complete\n\n';
+            reportSummary += `Phase: **${{ needs.check-trigger.outputs.phase }}**\n\n`;
+            
+            if (fs.existsSync(reportsDir)) {
+              const files = fs.readdirSync(reportsDir);
+              reportSummary += '### Reports Generated:\n';
+              files.forEach(file => {
+                reportSummary += `- ${file}\n`;
+              });
+            }
+            
+            reportSummary += '\nArtifacts are available in the workflow run.';
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: reportSummary
+            });
+
+  summary:
+    needs: [check-trigger, cgrow-cycle]
+    if: always() && needs.check-trigger.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job Summary
+        run: |
+          echo "# C-GROW Lifecycle Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Phase:** ${{ needs.check-trigger.outputs.phase }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ${{ needs.cgrow-cycle.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## C-GROW Method" >> $GITHUB_STEP_SUMMARY
+          echo "- **CG**: Continuous Generation" >> $GITHUB_STEP_SUMMARY
+          echo "- **CR**: Continuous Review" >> $GITHUB_STEP_SUMMARY
+          echo "- **CO**: Continuous Optimization" >> $GITHUB_STEP_SUMMARY
+          echo "- **CW**: Continuous Workflow Integration" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "> C-GROW enables Continuous Computing — so the aircraft does not merely fly. It learns. It remembers. It improves." >> $GITHUB_STEP_SUMMARY
