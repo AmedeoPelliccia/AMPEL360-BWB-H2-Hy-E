@@ -62,7 +62,7 @@ def extract_internal_links(content: str) -> List[str]:
 def extract_ata_references(content: str) -> Set[str]:
     """Extract ATA chapter references from content."""
     # Match patterns like ATA_02, ATA_95, 02-11-00, etc.
-    ata_pattern = r'\b(?:ATA[_\s-]?)?(\d{2})(?:[_\s-](\d{2})(?:[_\s-](\d{2}))?)?\b'
+    ata_pattern = r'\bATA[_\s-]?(\d{2})(?:[_\s-](\d{2})(?:[_\s-](\d{2}))?)?\b'
     references = set()
     
     for match in re.finditer(ata_pattern, content):
