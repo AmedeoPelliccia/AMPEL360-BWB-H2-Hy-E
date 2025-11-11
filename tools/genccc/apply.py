@@ -456,7 +456,7 @@ def apply_fixes() -> int:
     print("")
     
     # Update total files modified
-    files_modified = max(files_modified, pass2_files_modified)
+    files_modified += pass2_files_modified
     
     # Pass 3: Generate missing documentation (limited scope for safety)
     print("📝 Pass 3: Checking for critical missing documentation...")
