@@ -110,11 +110,19 @@ jobs:
             core.setOutput('ref', pr.data.head.ref);
             core.setOutput('sha', pr.data.head.sha);
 
-      - name: Checkout PR branch
+      - name: Checkout base branch (for scripts)
+        if: steps.check-permissions.outputs.has_permission == 'true'
+        uses: actions/checkout@v4
+        with:
+          path: base
+          fetch-depth: 0
+
+      - name: Checkout PR branch (for content)
         if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.get-branch.outputs.ref }}
+          path: pr
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
@@ -128,15 +136,17 @@ jobs:
         if: steps.check-permissions.outputs.has_permission == 'true'
         run: pip install openai
 
-      - name: Run GenCCC Apply
+      - name: Run GenCCC Apply (using scripts from base branch)
         if: steps.check-permissions.outputs.has_permission == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        working-directory: pr
         run: |
-          python tools/genccc/apply.py
+          python ../base/tools/genccc/apply.py
 
       - name: Commit & Push Changes
         if: steps.check-permissions.outputs.has_permission == 'true'
+        working-directory: pr
         run: |
           git config user.name "GenCCC Bot"
           git config user.email "genccc-bot@local"
