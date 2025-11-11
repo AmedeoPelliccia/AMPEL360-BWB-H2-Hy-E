@@ -12,12 +12,18 @@ import re
 import sys
 from typing import Dict, Any, List, Tuple
 
-REPO_ROOT = pathlib.Path(__file__).resolve().parents[1]
+# Script is now in tools/ci/, so repo root is two levels up
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
 
 # Update path to match actual repository structure
 BASELINE_PATH = (
-    REPO_ROOT / "OPT-IN_FRAMEWORK" / "I-INFRASTRUCTURES" / "ATA_02-OPERATIONS_INFORMATION"
-    / "02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY" / "01_OVERVIEW" / "baseline_dimensions.json"
+    REPO_ROOT
+    / "OPT-IN_FRAMEWORK"
+    / "I-INFRASTRUCTURES"
+    / "ATA_02-OPERATIONS_INFORMATION"
+    / "02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY"
+    / "01_OVERVIEW"
+    / "baseline_dimensions.json"
 )
 REPORT_PATH = REPO_ROOT / "geometry_deviations_report.md"
 
@@ -48,7 +54,9 @@ def parse_float_from_regex(text: str, pattern: str, key: str) -> float:
     try:
         return float(m.group("val"))
     except ValueError as e:
-        raise CheckError(f"Could not parse float for '{key}' from '{m.group('val')}'") from e
+        raise CheckError(
+            f"Could not parse float for '{key}' from '{m.group('val')}'"
+        ) from e
 
 
 def collect_current_values() -> Dict[str, float]:
@@ -59,8 +67,13 @@ def collect_current_values() -> Dict[str, float]:
     values: Dict[str, float] = {}
 
     base_path = (
-        REPO_ROOT / "OPT-IN_FRAMEWORK" / "I-INFRASTRUCTURES" / "ATA_02-OPERATIONS_INFORMATION"
-        / "02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY" / "06_ENGINEERING" / "ANALYSIS_REPORTS"
+        REPO_ROOT
+        / "OPT-IN_FRAMEWORK"
+        / "I-INFRASTRUCTURES"
+        / "ATA_02-OPERATIONS_INFORMATION"
+        / "02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY"
+        / "06_ENGINEERING"
+        / "ANALYSIS_REPORTS"
     )
 
     # 1) Aerodynamic geometry from Lift_Distribution_Analysis.md
@@ -170,8 +183,14 @@ def write_report(deviations: List[Tuple[str, float, float]]) -> None:
     lines.append("## Next Actions")
     lines.append("")
     lines.append("- Raise / update the ECR document for 02-11-00 geometry.")
-    lines.append("- Assess impacts on: FEM global model, ground clearance, CG envelope, performance, certification.")
-    lines.append("- Once the ECR is approved, update `baseline_dimensions.json` to the new frozen values.")
+    lines.append(
+        "- Assess impacts on: FEM global model, ground clearance, CG envelope, "
+        "performance, certification."
+    )
+    lines.append(
+        "- Once the ECR is approved, update `baseline_dimensions.json` to the new "
+        "frozen values."
+    )
 
     REPORT_PATH.write_text("\n".join(lines), encoding="utf-8")
 
@@ -203,3 +222,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
