@@ -136,18 +136,27 @@ jobs:
         if: steps.check-permissions.outputs.has_permission == 'true'
         run: pip install openai
 
-      - name: Run GenCCC Apply (using scripts from base branch)
+      # Security: Run trusted script from base branch, with PR directory as target
+      # This prevents execution of any code from the untrusted PR while still
+      # allowing the script to read and modify PR content files.
+      - name: Copy GenCCC scripts from base to safe location
+        if: steps.check-permissions.outputs.has_permission == 'true'
+        run: |
+          mkdir -p /tmp/genccc_scripts
+          cp -r base/tools/genccc/* /tmp/genccc_scripts/
+          
+      - name: Run GenCCC Apply on PR content
         if: steps.check-permissions.outputs.has_permission == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        working-directory: pr
         run: |
-          python ../base/tools/genccc/apply.py
+          cd pr
+          python /tmp/genccc_scripts/apply.py
 
       - name: Commit & Push Changes
         if: steps.check-permissions.outputs.has_permission == 'true'
-        working-directory: pr
         run: |
+          cd pr
           git config user.name "GenCCC Bot"
           git config user.email "genccc-bot@local"
           git add .
