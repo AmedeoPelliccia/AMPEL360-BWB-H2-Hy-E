@@ -34,7 +34,6 @@ import json
 import pathlib
 import re
 import sys
-import time
 from typing import List, Tuple
 
 # This script lives in repo_root/tools/ci/
@@ -420,8 +419,8 @@ def main() -> int:
 
     print(f"[doc-meta] Processed {processed_count} markdown files")
     
-    # Generate SARIF report if requested
-    if args.sarif and all_issues:
+    # Generate SARIF report if requested (even when empty for workflow consistency)
+    if args.sarif:
         args.sarif.parent.mkdir(parents=True, exist_ok=True)
         sarif_data = to_sarif(all_issues)
         args.sarif.write_text(json.dumps(sarif_data, indent=2), encoding="utf-8")
