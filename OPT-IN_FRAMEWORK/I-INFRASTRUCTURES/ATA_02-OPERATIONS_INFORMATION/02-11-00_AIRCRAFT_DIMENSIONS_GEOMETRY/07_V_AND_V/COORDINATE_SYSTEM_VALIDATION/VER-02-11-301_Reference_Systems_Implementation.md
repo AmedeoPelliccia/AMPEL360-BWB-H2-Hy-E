@@ -1,4 +1,4 @@
-# VER-02-11-301: Reference Systems Implementation Verification
+# [VER-02-11-301](VER-02-11-301_Reference_Systems_Implementation.md): Reference Systems Implementation Verification
 
 **Verification ID:** VER-02-11-301  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -152,7 +152,7 @@ Verify correct implementation and consistent use of aircraft coordinate referenc
 
 - REQ-02-11-019: Reference system implementation requirements
 - REQ-02-11-020: Coordinate system consistency
-- Related: VER-02-11-302 (Consistency Check)
+- Related: [VER-02-11-302](VER-02-11-302_Station_Buttline_Waterline_Consistency.md) (Consistency Check)
 
 ---
 

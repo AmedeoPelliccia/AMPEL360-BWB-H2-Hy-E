@@ -1,4 +1,4 @@
-# VAL-02-11-102: Cross-Section Geometry Validation
+# [VAL-02-11-102](VAL-02-11-102_Cross_Section_Geometry_Validation.md): Cross-Section Geometry Validation
 
 **Validation ID:** VAL-02-11-102  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -99,7 +99,7 @@ t/c = max_thickness / local_chord
 
 - REQ-02-11-011: BWB airfoil thickness distribution
 - REQ-02-11-012: Center body cross-section geometry
-- Related: VAL-02-11-104 (Center Body Geometry)
+- Related: [VAL-02-11-104](VAL-02-11-104_Center_Body_Geometry_Validation.md) (Center Body Geometry)
 
 ---
 

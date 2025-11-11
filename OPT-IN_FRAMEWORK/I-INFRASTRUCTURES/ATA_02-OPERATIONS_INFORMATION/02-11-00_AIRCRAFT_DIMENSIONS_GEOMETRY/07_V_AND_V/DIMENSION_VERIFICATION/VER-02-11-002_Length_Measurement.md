@@ -1,4 +1,4 @@
-# VER-02-11-002: Overall Length Measurement Verification
+# [VER-02-11-002](VER-02-11-002_Length_Measurement.md): Overall Length Measurement Verification
 
 **Verification ID:** VER-02-11-002  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -162,8 +162,8 @@ Standard Deviation = sqrt(Σ(Length_i - Mean)² / (n-1))
 - REQ-02-11-002: Overall Length = 38.2 m ± 0.1 m
 
 ### 11.2 Related Verifications
-- VER-02-11-005: Principal Dimensions Table Check
-- VAL-02-11-101: Planform Geometry Validation
+- [VER-02-11-005](VER-02-11-005_Principal_Dimensions_Table_Check.md): Principal Dimensions Table Check
+- [VAL-02-11-101](../GEOMETRY_VALIDATION/VAL-02-11-101_Planform_Geometry_Validation.md): Planform Geometry Validation
 
 ---
 

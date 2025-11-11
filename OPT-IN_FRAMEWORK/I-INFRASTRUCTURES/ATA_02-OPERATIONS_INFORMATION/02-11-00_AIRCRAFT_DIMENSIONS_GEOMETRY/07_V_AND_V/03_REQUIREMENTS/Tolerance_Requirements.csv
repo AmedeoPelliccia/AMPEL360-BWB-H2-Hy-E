@@ -1,0 +1,6 @@
+Requirement_ID,Description,Parameter,Tolerance,Type,Verification_Method,Priority
+REQ-02-11-031,Manufacturing Tolerance,Dimensional,±0.1_m,Manufacturing,VER-02-11-005,High
+REQ-02-11-032,Assembly Tolerance,Alignment,±0.05_m,Assembly,VER-02-11-005,High
+REQ-02-11-033,Measurement Accuracy,Instruments,±0.015_mm,Metrology,All_VER,Critical
+REQ-02-11-034,Coordinate Consistency,Data,±0.05_m,Documentation,VER-02-11-302,Medium
+REQ-02-11-035,Deflection Limits,Structural,Per_Analysis,Operational,VER-02-11-202,High

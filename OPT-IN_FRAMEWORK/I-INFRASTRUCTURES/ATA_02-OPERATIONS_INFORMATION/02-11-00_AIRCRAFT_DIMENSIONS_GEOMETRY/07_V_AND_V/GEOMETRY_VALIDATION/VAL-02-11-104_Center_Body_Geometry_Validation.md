@@ -1,4 +1,4 @@
-# VAL-02-11-104: Center Body Geometry Validation
+# [VAL-02-11-104](VAL-02-11-104_Center_Body_Geometry_Validation.md): Center Body Geometry Validation
 
 **Validation ID:** VAL-02-11-104  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -35,7 +35,7 @@ Validate center body geometry including:
 ## 3. Validation Methods
 
 ### 3.1 Dimensional Verification
-- Measure width at STA 15 (cross-reference VER-02-11-004)
+- Measure width at STA 15 (cross-reference [VER-02-11-004](../DIMENSION_VERIFICATION/VER-02-11-004_Center_Body_Width_Measurement.md))
 - Verify pressurized section length (STA 10 to STA 35)
 - Measure maximum depth at centerline
 
@@ -117,7 +117,7 @@ Validate center body geometry including:
 - REQ-02-11-007: Center body width requirement
 - REQ-02-11-012: Center body depth and volume
 - REQ-02-11-014: Surface continuity requirements
-- Related: VER-02-11-004, VAL-02-11-102
+- Related: VER-02-11-004, [VAL-02-11-102](VAL-02-11-102_Cross_Section_Geometry_Validation.md)
 
 ---
 

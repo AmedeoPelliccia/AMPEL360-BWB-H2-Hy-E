@@ -81,7 +81,7 @@ For each cross-reference that exists, GenCCC:
 
 **Before:**
 ```markdown
-- VER-02-11-005: Principal Dimensions Table Check
+- [VER-02-11-005](DIMENSION_VERIFICATION/VER-02-11-005_Principal_Dimensions_Table_Check.md): Principal Dimensions Table Check
 - Principal_Dimensions_Table.csv
 ```
 
@@ -114,7 +114,7 @@ Based on the requirement number ranges and usage context, GenCCC creates:
 **Structure:**
 ```csv
 Requirement_ID,Description,Parameter,Value,Unit,Tolerance,Source,Verification_Method,Priority
-REQ-02-11-001,Wingspan Specification,Wingspan,52.0,m,±0.1,Principal_Dimensions_Table.csv,VER-02-11-001,High
+REQ-02-11-001,Wingspan Specification,Wingspan,52.0,m,±0.1,Principal_Dimensions_Table.csv,[VER-02-11-001](DIMENSION_VERIFICATION/VER-02-11-001_Wingspan_Measurement.md),High
 ```
 
 #### B. Missing CSV Templates

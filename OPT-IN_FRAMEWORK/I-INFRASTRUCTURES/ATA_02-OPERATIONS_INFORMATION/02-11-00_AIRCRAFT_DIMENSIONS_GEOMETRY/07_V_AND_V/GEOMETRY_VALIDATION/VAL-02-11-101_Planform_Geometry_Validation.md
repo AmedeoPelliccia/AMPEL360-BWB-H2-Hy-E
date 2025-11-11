@@ -1,4 +1,4 @@
-# VAL-02-11-101: Planform Geometry Validation
+# [VAL-02-11-101](VAL-02-11-101_Planform_Geometry_Validation.md): Planform Geometry Validation
 
 **Validation ID:** VAL-02-11-101  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -203,7 +203,7 @@ Where:
 - REQ-02-11-007: Wing Area 845 m²
 - REQ-02-11-008: Aspect Ratio 3.2
 - REQ-02-11-010: Leading edge sweep
-- VAL-02-11-103: Wing Geometry Validation (related)
+- [VAL-02-11-103](VAL-02-11-103_Wing_Geometry_Validation.md): Wing Geometry Validation (related)
 
 ---
 

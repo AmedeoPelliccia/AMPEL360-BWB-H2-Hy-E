@@ -1,4 +1,4 @@
-# VER-02-11-003: Overall Height Measurement Verification
+# [VER-02-11-003](VER-02-11-003_Height_Measurement.md): Overall Height Measurement Verification
 
 **Verification ID:** VER-02-11-003  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -160,8 +160,8 @@ Standard Deviation = sqrt(Σ(Height_i - Mean)² / (n-1))
 - REQ-02-11-013: Overhead clearance requirements
 
 ### 11.2 Related Verifications
-- VER-02-11-005: Principal Dimensions Table Check
-- VER-02-11-201: Ground Clearance Test
+- [VER-02-11-005](VER-02-11-005_Principal_Dimensions_Table_Check.md): Principal Dimensions Table Check
+- [VER-02-11-201](../CLEARANCE_VERIFICATION/VER-02-11-201_Ground_Clearance_Test.md): Ground Clearance Test
 
 ---
 

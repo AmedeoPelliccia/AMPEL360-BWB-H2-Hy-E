@@ -1,4 +1,4 @@
-# VER-02-11-004: Center Body Width Measurement Verification
+# [VER-02-11-004](VER-02-11-004_Center_Body_Width_Measurement.md): Center Body Width Measurement Verification
 
 **Verification ID:** VER-02-11-004  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -167,8 +167,8 @@ Pass if: Asymmetry < 0.05 m
 - REQ-02-11-007: BWB center body geometry requirements
 
 ### 11.2 Related Verifications
-- VER-02-11-005: Principal Dimensions Table Check
-- VAL-02-11-104: Center Body Geometry Validation
+- [VER-02-11-005](VER-02-11-005_Principal_Dimensions_Table_Check.md): Principal Dimensions Table Check
+- [VAL-02-11-104](../GEOMETRY_VALIDATION/VAL-02-11-104_Center_Body_Geometry_Validation.md): Center Body Geometry Validation
 
 ---
 

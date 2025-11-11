@@ -1,4 +1,4 @@
-# VER-02-11-202: Wingtip Clearance Test
+# [VER-02-11-202](VER-02-11-202_Wingtip_Clearance_Test.md): Wingtip Clearance Test
 
 **Verification ID:** VER-02-11-202  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  

@@ -1,4 +1,4 @@
-# VAL-02-11-103: Wing Geometry Validation
+# [VAL-02-11-103](VAL-02-11-103_Wing_Geometry_Validation.md): Wing Geometry Validation
 
 **Validation ID:** VAL-02-11-103  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -112,7 +112,7 @@ Validate detailed wing geometry including:
 
 - REQ-02-11-009: Wing chord distribution
 - REQ-02-11-010: Wing sweep and dihedral
-- Related: VAL-02-11-101 (Planform), VAL-02-11-102 (Cross-Section)
+- Related: [VAL-02-11-101](VAL-02-11-101_Planform_Geometry_Validation.md) (Planform), [VAL-02-11-102](VAL-02-11-102_Cross_Section_Geometry_Validation.md) (Cross-Section)
 
 ---
 

@@ -1,4 +1,4 @@
-# VER-02-11-005: Principal Dimensions Table Consistency Check
+# [VER-02-11-005](VER-02-11-005_Principal_Dimensions_Table_Check.md): Principal Dimensions Table Consistency Check
 
 **Verification ID:** VER-02-11-005  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -10,7 +10,7 @@
 ## 1. Objective
 
 Verify consistency and accuracy of all dimensional data in the `Principal_Dimensions_Table.csv` against:
-- Physical measurements (VER-02-11-001 through VER-02-11-004)
+- Physical measurements ([VER-02-11-001](VER-02-11-001_Wingspan_Measurement.md) through [VER-02-11-004](VER-02-11-004_Center_Body_Width_Measurement.md))
 - `baseline_dimensions.json` data
 - `Dimension_Summary.csv` data
 - CAD model measurements
@@ -35,8 +35,8 @@ This verification provides an overall consistency check across:
 | — | Baseline Dimensions | `01_OVERVIEW/baseline_dimensions.json` |
 | — | Dimension Summary | `01_OVERVIEW/TABLES/Dimension_Summary.csv` |
 | VER-02-11-001 | Wingspan Measurement | `07_V_AND_V/DIMENSION_VERIFICATION/` |
-| VER-02-11-002 | Length Measurement | `07_V_AND_V/DIMENSION_VERIFICATION/` |
-| VER-02-11-003 | Height Measurement | `07_V_AND_V/DIMENSION_VERIFICATION/` |
+| [VER-02-11-002](VER-02-11-002_Length_Measurement.md) | Length Measurement | `07_V_AND_V/DIMENSION_VERIFICATION/` |
+| [VER-02-11-003](VER-02-11-003_Height_Measurement.md) | Height Measurement | `07_V_AND_V/DIMENSION_VERIFICATION/` |
 | VER-02-11-004 | Center Body Width Measurement | `07_V_AND_V/DIMENSION_VERIFICATION/` |
 
 ---
@@ -208,7 +208,7 @@ Expected y-position: ~8.5 m from centerline
 - VER-02-11-002: Length
 - VER-02-11-003: Height
 - VER-02-11-004: Center Body Width
-- VER-02-11-402: Data Consistency and Traceability
+- [VER-02-11-402](../COMPLIANCE_VERIFICATION/VER-02-11-402_Data_Consistency_and_Traceability.md): Data Consistency and Traceability
 
 ---
 

@@ -1,4 +1,4 @@
-# VER-02-11-001: Wingspan Measurement Verification
+# [VER-02-11-001](VER-02-11-001_Wingspan_Measurement.md): Wingspan Measurement Verification
 
 **Verification ID:** VER-02-11-001  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -113,7 +113,7 @@ This verification procedure covers:
 3. Verify semi-span difference < 0.05 m
 
 **Step 5: Data Recording**
-1. Record all raw measurement data in `Dimension_Verification_Results.csv`
+1. Record all raw measurement data in `[Dimension_Verification_Results.csv](Dimension_Verification_Results.csv)`
 2. Calculate mean, standard deviation, and confidence interval
 3. Document environmental conditions and any deviations from procedure
 4. Photograph measurement setup and SMR target positions
@@ -218,8 +218,8 @@ Pass if: Asymmetry < 0.05 m
 - REQ-02-11-025: ICAO Code E compatibility (Airport Compatibility Requirements)
 
 ### 11.2 Related Verifications
-- VER-02-11-005: Principal Dimensions Table Check
-- VAL-02-11-101: Planform Geometry Validation
+- [VER-02-11-005](VER-02-11-005_Principal_Dimensions_Table_Check.md): Principal Dimensions Table Check
+- [VAL-02-11-101](../GEOMETRY_VALIDATION/VAL-02-11-101_Planform_Geometry_Validation.md): Planform Geometry Validation
 - COMP-401: CS-25 and ICAO compliance verification
 
 ---

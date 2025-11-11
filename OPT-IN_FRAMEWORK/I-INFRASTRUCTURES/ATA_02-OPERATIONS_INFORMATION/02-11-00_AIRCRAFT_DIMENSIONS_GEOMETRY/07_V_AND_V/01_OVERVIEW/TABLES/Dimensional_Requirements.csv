@@ -1,0 +1,7 @@
+Requirement_ID,Description,Parameter,Value,Unit,Tolerance,Source,Verification_Method,Priority
+REQ-02-11-001,Wingspan Specification,Wingspan,52.0,m,±0.1,Principal_Dimensions_Table.csv,VER-02-11-001,High
+REQ-02-11-002,Overall Length Specification,Overall_Length,38.2,m,±0.1,Principal_Dimensions_Table.csv,VER-02-11-002,High
+REQ-02-11-003,Overall Height Specification,Overall_Height,14.5,m,±0.05,Principal_Dimensions_Table.csv,VER-02-11-003,High
+REQ-02-11-004,Center Body Width Specification,Center_Body_Width,38.0,m,±0.1,Principal_Dimensions_Table.csv,VER-02-11-004,High
+REQ-02-11-005,Wing Area Specification,Wing_Area,845,m²,±5,Geometry_Parameters.csv,VAL-02-11-101,High
+REQ-02-11-006,ICAO Code E Compliance,Wingspan_Range,52-65,m,—,ICAO_Annex_14,VER-02-11-401,High

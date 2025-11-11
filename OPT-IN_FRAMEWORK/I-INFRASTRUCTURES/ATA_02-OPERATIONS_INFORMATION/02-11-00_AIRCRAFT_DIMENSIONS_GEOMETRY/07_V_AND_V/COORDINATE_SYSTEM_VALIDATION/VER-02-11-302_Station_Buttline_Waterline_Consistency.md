@@ -1,4 +1,4 @@
-# VER-02-11-302: Station/Buttline/Waterline Consistency Verification
+# [VER-02-11-302](VER-02-11-302_Station_Buttline_Waterline_Consistency.md): Station/Buttline/Waterline Consistency Verification
 
 **Verification ID:** VER-02-11-302  
 **Component:** 02-11-00 Aircraft Dimensions Geometry  
@@ -161,7 +161,7 @@ Perform comprehensive cross-reference audit of Station, Buttline, and Waterline 
 
 - REQ-02-11-020: Data consistency requirements
 - REQ-02-11-021: Traceability requirements
-- Related: VER-02-11-301, VER-02-11-402
+- Related: [VER-02-11-301](VER-02-11-301_Reference_Systems_Implementation.md), [VER-02-11-402](../COMPLIANCE_VERIFICATION/VER-02-11-402_Data_Consistency_and_Traceability.md)
 
 ---
 
