@@ -85,6 +85,12 @@ MAC = (2/S) × ∫₀^(b/2) c²(y) dy
 y_MAC = (2/S) × ∫₀^(b/2) y×c(y) dy
 ```
 
+Where:
+- `S` is the total wing area in m²
+- `b` is the total wingspan in m
+- `c(y)` is the local chord length in m at spanwise position `y`
+- `y` is the spanwise position in m, with the integration performed from 0 to `b/2` (i.e., from the centerline to the wing tip for one semi-span)
+- The result for `MAC` is in meters (m)
 ### 5.4 Sweep Angle Measurement
 - Extract leading edge line from CAD
 - Extract quarter-chord line from CAD
