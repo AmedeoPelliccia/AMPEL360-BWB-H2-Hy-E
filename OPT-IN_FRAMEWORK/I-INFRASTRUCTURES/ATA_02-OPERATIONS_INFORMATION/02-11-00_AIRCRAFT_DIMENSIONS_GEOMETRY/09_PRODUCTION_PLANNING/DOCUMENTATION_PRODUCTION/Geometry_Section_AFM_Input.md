@@ -271,3 +271,4 @@ The AFM geometry-related content is distributed across multiple sections per EAS
 - Status: Template
 - Last Updated: 2025-11-11
 - Classification: Flight Operations Critical
+- Author: COPILOT agent prompted by Amedeo Pelliccia

@@ -348,3 +348,4 @@ At aircraft delivery:
 - Status: Template
 - Last Updated: 2025-11-11
 - Classification: Production Critical
+- Author: COPILOT agent prompted by Amedeo Pelliccia

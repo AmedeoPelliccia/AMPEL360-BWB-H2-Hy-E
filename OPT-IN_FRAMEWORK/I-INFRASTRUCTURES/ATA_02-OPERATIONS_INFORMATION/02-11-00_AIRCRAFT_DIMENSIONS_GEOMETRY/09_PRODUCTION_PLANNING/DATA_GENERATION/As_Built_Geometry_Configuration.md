@@ -170,3 +170,4 @@ The as-built geometry configuration represents the actual physical dimensions an
 - Status: Template
 - Last Updated: 2025-11-11
 - Classification: Production Critical
+- Author: COPILOT agent prompted by Amedeo Pelliccia

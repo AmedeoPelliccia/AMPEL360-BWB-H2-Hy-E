@@ -380,3 +380,4 @@ This document implements verification requirements defined in `07_V_AND_V/VER-02
 - Status: Template
 - Last Updated: 2025-11-11
 - Classification: Quality Critical
+- Author: COPILOT agent prompted by Amedeo Pelliccia
