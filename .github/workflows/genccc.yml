@@ -1,0 +1,122 @@
+name: GenCCC Cross-Reference Intelligence
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "tools/genccc/**"
+      - ".github/workflows/genccc.yml"
+
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write         # to push fixes on request
+  pull-requests: write    # to post PR comments
+  actions: read
+  checks: read
+
+jobs:
+  report:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate Cross-Reference Report
+        run: |
+          mkdir -p cd/reports
+          python tools/genccc/report.py
+
+      - name: Upload Audit Report Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: genccc-cross-reference-audit
+          path: cd/reports/cross_reference_audit.md
+          retention-days: 30
+
+      - name: Post PR Comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('cd/reports/cross_reference_audit.md', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `📄 **GenCCC Cross-Reference Audit Report Generated**\n\nDownload artifact:\n> **genccc-cross-reference-audit**\n\nTo apply auto-fixes and generate contextual documents, comment:\n\n\`/genccc apply\`\n`
+            });
+
+  apply:
+    if: |
+      github.event_name == 'issue_comment' &&
+      github.event.issue.pull_request &&
+      contains(github.event.comment.body, '/genccc apply')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Get PR branch
+        id: get-branch
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            });
+            core.setOutput('ref', pr.data.head.ref);
+            core.setOutput('sha', pr.data.head.sha);
+
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.get-branch.outputs.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install OpenAI Client
+        run: pip install openai
+
+      - name: Run GenCCC Apply
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python tools/genccc/apply.py
+
+      - name: Commit & Push Changes
+        run: |
+          git config user.name "GenCCC Bot"
+          git config user.email "genccc-bot@local"
+          git add .
+          git commit -m "GenCCC: Apply auto-linking and contextual document generation" || echo "No changes to commit."
+          git push
+
+      - name: Post success comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ **GenCCC Apply completed!**\n\nAutomatic fixes have been applied and committed to this PR.\n\nPlease review the changes before merging.'
+            });
