@@ -254,35 +254,25 @@ def extract_plain_text_ata_references(content: str) -> List[Tuple[str, str, int,
     - ATA_02-11 -> Section  
     - ATA_02-11-00 -> Subsection index
     """
-    # Pattern to match ATA references not inside markdown links
-    # Negative lookbehind to avoid matching text inside [text](url)
-    ata_pattern = r'(?<!\]\()(?<!\[)\b(?:ATA[_\s-]?)?(\d{2})(?:[_\s-](\d{2})(?:[_\s-](\d{2}))?)?\b'
+    # Mask all markdown links to avoid matching ATA references inside them
+    link_pattern = r'\[[^\]]+\]\([^)]+\)'
+    def mask_link(match):
+        return ' ' * (match.end() - match.start())
+    masked_content = re.sub(link_pattern, mask_link, content)
+
+    # Pattern to match ATA references (no negative lookbehind needed)
+    ata_pattern = r'\b(?:ATA[_\s-]?)?(\d{2})(?:[_\s-](\d{2})(?:[_\s-](\d{2}))?)?\b'
     
     references = []
     
-    # Find all matches
-    for match in re.finditer(ata_pattern, content):
-        full_match = match.group(0)
+    # Find all matches in masked content
+    for match in re.finditer(ata_pattern, masked_content):
+        start_pos = match.start()
+        end_pos = match.end()
+        full_match = content[start_pos:end_pos]
         chapter = match.group(1)
         section = match.group(2)
         subsection = match.group(3)
-        
-        # Check if this is inside a markdown link
-        # Look backwards for [ and ]( pattern
-        start_pos = match.start()
-        end_pos = match.end()
-        
-        # Simple check: if there's a '](' within 50 chars before this match, skip it
-        check_start = max(0, start_pos - 50)
-        preceding_text = content[check_start:start_pos]
-        if '](' in preceding_text:
-            # Check if we're inside the link
-            last_bracket = preceding_text.rfind('](')
-            if last_bracket != -1:
-                # Check for closing )
-                following_text = content[start_pos:min(len(content), end_pos + 50)]
-                if ')' in following_text:
-                    continue  # Skip, this is likely inside a link
         
         # Normalize the reference (mode 2: standard structure)
         if subsection:
