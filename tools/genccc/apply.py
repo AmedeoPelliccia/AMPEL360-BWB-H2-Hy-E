@@ -181,7 +181,7 @@ This document is part of the AMPEL360 BWB H₂ Hy-E aircraft documentation frame
     return template
 
 
-def generate_missing_doc_with_ai(file_path: pathlib.Path, context: Dict[str, any]) -> str:
+def generate_missing_doc_with_ai(file_path: pathlib.Path, context: Dict[str, Any]) -> str:
     """Generate missing documentation using AI (OpenAI API)."""
     api_key = os.environ.get('OPENAI_API_KEY')
     
@@ -302,15 +302,12 @@ def find_ata_document_path(ata_ref: str) -> Optional[pathlib.Path]:
     if len(parts) == 1:
         # Chapter level (e.g., ATA_02)
         chapter = parts[0]
-        # pattern = f"ATA_{chapter}*/README.md"
     elif len(parts) == 2:
         # Section level (e.g., ATA_02-11)
         chapter, section = parts
-        # pattern = f"ATA_{chapter}*/{chapter}-{section}*/README.md"
     else:
         # Subsection level (e.g., ATA_02-11-00)
         chapter, section, subsection = parts
-        # pattern = f"ATA_{chapter}*/{chapter}-{section}-{subsection}*/README.md"
     
     # Search for matching files
     if FRAMEWORK_ROOT.exists():
@@ -370,7 +367,8 @@ def auto_link_plain_text_references(content: str, source_file: pathlib.Path, agg
             # For STANDARD mode, add a comment but don't generate
             # For AGGRESSIVE mode, we would generate the document
             # For now, STANDARD just adds a link with a note
-            link = f"[{ref_text}](# \"Reference: {normalized_ref} - Document pending\")"
+            # Create a placeholder link with proper markdown syntax
+            link = f"[{ref_text}](#'{normalized_ref}' \"Document pending\")"
             modified_content = modified_content[:start_pos] + link + modified_content[end_pos:]
             links_added += 1
     
