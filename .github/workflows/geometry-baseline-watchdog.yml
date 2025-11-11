@@ -5,14 +5,14 @@ on:
     paths:
       - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/**"
       - ".github/workflows/geometry-baseline-watchdog.yml"
-      - "tools/ci/check_dimensions.py"
+      - "tools/ci/check_dimensions.py"      # ← aquí
   push:
     branches:
       - main
     paths:
       - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/**"
       - ".github/workflows/geometry-baseline-watchdog.yml"
-      - "tools/ci/check_dimensions.py"
+      - "tools/ci/check_dimensions.py"      # ← y aquí
 
 jobs:
   geometry-watchdog:
@@ -38,7 +38,7 @@ jobs:
         id: check_geom
         continue-on-error: true   # allow next step to inspect result
         run: |
-          python tools/check_dimensions.py
+          python tools/ci/check_dimensions.py   # ← ruta correcta
 
       - name: Fail PR if deviations found
         if: steps.check_geom.outcome == 'failure'
@@ -90,3 +90,4 @@ jobs:
               });
               core.info(`Created new ECR issue #${newIssue.number}`);
             }
+
