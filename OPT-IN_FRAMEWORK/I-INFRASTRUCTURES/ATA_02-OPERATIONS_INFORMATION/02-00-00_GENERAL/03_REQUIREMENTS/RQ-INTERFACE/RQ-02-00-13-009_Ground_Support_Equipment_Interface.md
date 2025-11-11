@@ -1,8 +1,8 @@
-# [RQ-02-00-13-009](./RQ-02-00-13-009_*.md): Ground Support Equipment Interface
+# [RQ-02-00-13-009](RQ-02-00-13-009_Ground_Support_Equipment_Interface.md): Ground Support Equipment Interface
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-13-009](./RQ-02-00-13-009_*.md)  
+**ID:** [RQ-02-00-13-009](RQ-02-00-13-009_Ground_Support_Equipment_Interface.md)  
 **Category:** Interface  
 **Subcategory:** GSE  
 **Title:** Ground Support Equipment Interface  

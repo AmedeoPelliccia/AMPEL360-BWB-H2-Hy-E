@@ -1,8 +1,8 @@
-# [RQ-02-00-01-005](./RQ-02-00-01-005_*.md): Safety Management System Implementation
+# [RQ-02-00-01-005](RQ-02-00-01-005_Safety_Management_System_Implementation.md): Safety Management System Implementation
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-005](./RQ-02-00-01-005_*.md)  
+**ID:** [RQ-02-00-01-005](RQ-02-00-01-005_Safety_Management_System_Implementation.md)  
 **Category:** Regulatory  
 **Subcategory:** SMS  
 **Title:** Safety Management System Implementation  

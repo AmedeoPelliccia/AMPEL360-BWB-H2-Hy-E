@@ -1,8 +1,8 @@
-# [RQ-02-00-10-016](./RQ-02-00-10-016_*.md): Emergency Response Drills Quarterly
+# [RQ-02-00-10-016](RQ-02-00-10-016_Emergency_Response_Drills_Quarterly.md): Emergency Response Drills Quarterly
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-016](./RQ-02-00-10-016_*.md)  
+**ID:** [RQ-02-00-10-016](RQ-02-00-10-016_Emergency_Response_Drills_Quarterly.md)  
 **Category:** Training  
 **Subcategory:** Emergency Drills  
 **Title:** Emergency Response Drills Quarterly  

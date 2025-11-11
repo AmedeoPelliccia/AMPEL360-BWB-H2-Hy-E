@@ -1,8 +1,8 @@
-# [RQ-02-00-08-013](./RQ-02-00-08-013_*.md): Arrival Time Prediction Within 2 Minutes
+# [RQ-02-00-08-013](RQ-02-00-08-013_Arrival_Time_Prediction_Within_2_Minutes.md): Arrival Time Prediction Within 2 Minutes
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-013](./RQ-02-00-08-013_*.md)  
+**ID:** [RQ-02-00-08-013](RQ-02-00-08-013_Arrival_Time_Prediction_Within_2_Minutes.md)  
 **Category:** CAOS  
 **Subcategory:** Prediction  
 **Title:** Arrival Time Prediction Within 2 Minutes  

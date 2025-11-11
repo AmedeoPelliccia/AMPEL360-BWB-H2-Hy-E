@@ -1,8 +1,8 @@
-# [RQ-02-00-14-016](./RQ-02-00-14-016_*.md): Real-Time Monitoring Function
+# [RQ-02-00-14-016](RQ-02-00-14-016_Real-Time_Monitoring_Function.md): Real-Time Monitoring Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-016](./RQ-02-00-14-016_*.md)  
+**ID:** [RQ-02-00-14-016](RQ-02-00-14-016_Real-Time_Monitoring_Function.md)  
 **Category:** Functional  
 **Subcategory:** Monitoring  
 **Title:** Real-Time Monitoring Function  

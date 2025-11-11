@@ -1,8 +1,8 @@
-# [RQ-02-00-13-010](./RQ-02-00-13-010_*.md): Airport Infrastructure Interface
+# [RQ-02-00-13-010](RQ-02-00-13-010_Airport_Infrastructure_Interface.md): Airport Infrastructure Interface
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-13-010](./RQ-02-00-13-010_*.md)  
+**ID:** [RQ-02-00-13-010](RQ-02-00-13-010_Airport_Infrastructure_Interface.md)  
 **Category:** Interface  
 **Subcategory:** Airport  
 **Title:** Airport Infrastructure Interface  

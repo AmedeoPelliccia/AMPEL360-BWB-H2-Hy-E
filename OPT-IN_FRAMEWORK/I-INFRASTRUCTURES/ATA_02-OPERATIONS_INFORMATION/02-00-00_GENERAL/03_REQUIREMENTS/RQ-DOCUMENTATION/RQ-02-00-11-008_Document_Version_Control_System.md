@@ -1,8 +1,8 @@
-# [RQ-02-00-11-008](./RQ-02-00-11-008_*.md): Document Version Control System
+# [RQ-02-00-11-008](RQ-02-00-11-008_Document_Version_Control_System.md): Document Version Control System
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-008](./RQ-02-00-11-008_*.md)  
+**ID:** [RQ-02-00-11-008](RQ-02-00-11-008_Document_Version_Control_System.md)  
 **Category:** Documentation  
 **Subcategory:** Version Control  
 **Title:** Document Version Control System  

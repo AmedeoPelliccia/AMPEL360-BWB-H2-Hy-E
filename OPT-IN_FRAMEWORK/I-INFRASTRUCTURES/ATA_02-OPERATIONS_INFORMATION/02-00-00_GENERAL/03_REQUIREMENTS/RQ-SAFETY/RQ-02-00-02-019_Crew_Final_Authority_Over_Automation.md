@@ -1,8 +1,8 @@
-# [RQ-02-00-02-019](./RQ-02-00-02-019_*.md): Crew Final Authority Over Automation
+# [RQ-02-00-02-019](RQ-02-00-02-019_Crew_Final_Authority_Over_Automation.md): Crew Final Authority Over Automation
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-019](./RQ-02-00-02-019_*.md)  
+**ID:** [RQ-02-00-02-019](RQ-02-00-02-019_Crew_Final_Authority_Over_Automation.md)  
 **Category:** Safety  
 **Subcategory:** Authority  
 **Title:** Crew Final Authority Over Automation  

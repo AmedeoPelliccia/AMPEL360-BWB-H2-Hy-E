@@ -1,8 +1,8 @@
-# [RQ-02-00-09-015](./RQ-02-00-09-015_*.md): Error Tolerance in Design
+# [RQ-02-00-09-015](RQ-02-00-09-015_Error_Tolerance_in_Design.md): Error Tolerance in Design
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-015](./RQ-02-00-09-015_*.md)  
+**ID:** [RQ-02-00-09-015](RQ-02-00-09-015_Error_Tolerance_in_Design.md)  
 **Category:** Human Factors  
 **Subcategory:** Error  
 **Title:** Error Tolerance in Design  

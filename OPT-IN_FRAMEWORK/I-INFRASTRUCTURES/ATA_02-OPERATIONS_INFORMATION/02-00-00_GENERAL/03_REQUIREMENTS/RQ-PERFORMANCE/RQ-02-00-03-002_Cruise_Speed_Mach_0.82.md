@@ -1,8 +1,8 @@
-# [RQ-02-00-03-002](./RQ-02-00-03-002_*.md): Cruise Speed Mach 0.82
+# [RQ-02-00-03-002](RQ-02-00-03-002_Cruise_Speed_Mach_0.82.md): Cruise Speed Mach 0.82
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-03-002](./RQ-02-00-03-002_*.md)  
+**ID:** [RQ-02-00-03-002](RQ-02-00-03-002_Cruise_Speed_Mach_0.82.md)  
 **Category:** Performance  
 **Subcategory:** Speed  
 **Title:** Cruise Speed Mach 0.82  

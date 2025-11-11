@@ -1,8 +1,8 @@
-# [RQ-02-00-05-002](./RQ-02-00-05-002_*.md): H2 Usable Fuel 7850 kg Minimum
+# [RQ-02-00-05-002](RQ-02-00-05-002_H2_Usable_Fuel_7850_kg_Minimum.md): H2 Usable Fuel 7850 kg Minimum
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-05-002](./RQ-02-00-05-002_*.md)  
+**ID:** [RQ-02-00-05-002](RQ-02-00-05-002_H2_Usable_Fuel_7850_kg_Minimum.md)  
 **Category:** H2 Operations  
 **Subcategory:** Capacity  
 **Title:** H2 Usable Fuel 7850 kg Minimum  

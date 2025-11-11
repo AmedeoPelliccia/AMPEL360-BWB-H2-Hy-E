@@ -1,8 +1,8 @@
-# [RQ-02-00-07-002](./RQ-02-00-07-002_*.md): Individual Stack Power 2.5 MW
+# [RQ-02-00-07-002](RQ-02-00-07-002_Individual_Stack_Power_2.5_MW.md): Individual Stack Power 2.5 MW
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-07-002](./RQ-02-00-07-002_*.md)  
+**ID:** [RQ-02-00-07-002](RQ-02-00-07-002_Individual_Stack_Power_2.5_MW.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Power  
 **Title:** Individual Stack Power 2.5 MW  

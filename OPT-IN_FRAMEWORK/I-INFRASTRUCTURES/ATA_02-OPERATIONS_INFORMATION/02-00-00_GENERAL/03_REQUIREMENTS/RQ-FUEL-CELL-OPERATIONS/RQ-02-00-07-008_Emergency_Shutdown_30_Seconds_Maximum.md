@@ -1,8 +1,8 @@
-# [RQ-02-00-07-008](./RQ-02-00-07-008_*.md): Emergency Shutdown 30 Seconds Maximum
+# [RQ-02-00-07-008](RQ-02-00-07-008_Emergency_Shutdown_30_Seconds_Maximum.md): Emergency Shutdown 30 Seconds Maximum
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-07-008](./RQ-02-00-07-008_*.md)  
+**ID:** [RQ-02-00-07-008](RQ-02-00-07-008_Emergency_Shutdown_30_Seconds_Maximum.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Safety  
 **Title:** Emergency Shutdown 30 Seconds Maximum  

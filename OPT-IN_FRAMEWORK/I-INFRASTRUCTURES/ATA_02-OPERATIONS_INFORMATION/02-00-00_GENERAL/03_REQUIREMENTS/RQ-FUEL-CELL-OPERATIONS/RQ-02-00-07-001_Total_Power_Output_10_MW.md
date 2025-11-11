@@ -1,8 +1,8 @@
-# [RQ-02-00-07-001](./RQ-02-00-07-001_*.md): Total Power Output 10 MW
+# [RQ-02-00-07-001](RQ-02-00-07-001_Total_Power_Output_10_MW.md): Total Power Output 10 MW
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-07-001](./RQ-02-00-07-001_*.md)  
+**ID:** [RQ-02-00-07-001](RQ-02-00-07-001_Total_Power_Output_10_MW.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Power  
 **Title:** Total Power Output 10 MW  

@@ -1,8 +1,8 @@
-# [RQ-02-00-09-010](./RQ-02-00-09-010_*.md): Fatigue Management Program
+# [RQ-02-00-09-010](RQ-02-00-09-010_Fatigue_Management_Program.md): Fatigue Management Program
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-010](./RQ-02-00-09-010_*.md)  
+**ID:** [RQ-02-00-09-010](RQ-02-00-09-010_Fatigue_Management_Program.md)  
 **Category:** Human Factors  
 **Subcategory:** Fatigue  
 **Title:** Fatigue Management Program  

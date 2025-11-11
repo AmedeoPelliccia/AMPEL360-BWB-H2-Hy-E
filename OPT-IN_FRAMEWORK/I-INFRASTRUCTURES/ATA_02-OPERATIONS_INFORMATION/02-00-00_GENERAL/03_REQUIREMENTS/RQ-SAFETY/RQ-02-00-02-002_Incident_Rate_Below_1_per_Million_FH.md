@@ -1,8 +1,8 @@
-# [RQ-02-00-02-002](./RQ-02-00-02-002_*.md): Incident Rate Below 1 per Million FH
+# [RQ-02-00-02-002](RQ-02-00-02-002_Incident_Rate_Below_1_per_Million_FH.md): Incident Rate Below 1 per Million FH
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-002](./RQ-02-00-02-002_*.md)  
+**ID:** [RQ-02-00-02-002](RQ-02-00-02-002_Incident_Rate_Below_1_per_Million_FH.md)  
 **Category:** Safety  
 **Subcategory:** Target  
 **Title:** Incident Rate Below 1 per Million FH  

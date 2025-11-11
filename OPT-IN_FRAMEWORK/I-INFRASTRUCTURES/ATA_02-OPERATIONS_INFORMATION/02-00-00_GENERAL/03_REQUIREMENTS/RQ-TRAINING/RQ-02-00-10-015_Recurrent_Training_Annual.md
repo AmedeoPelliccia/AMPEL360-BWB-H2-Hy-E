@@ -1,8 +1,8 @@
-# [RQ-02-00-10-015](./RQ-02-00-10-015_*.md): Recurrent Training Annual
+# [RQ-02-00-10-015](RQ-02-00-10-015_Recurrent_Training_Annual.md): Recurrent Training Annual
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-015](./RQ-02-00-10-015_*.md)  
+**ID:** [RQ-02-00-10-015](RQ-02-00-10-015_Recurrent_Training_Annual.md)  
 **Category:** Training  
 **Subcategory:** Recurrent  
 **Title:** Recurrent Training Annual  

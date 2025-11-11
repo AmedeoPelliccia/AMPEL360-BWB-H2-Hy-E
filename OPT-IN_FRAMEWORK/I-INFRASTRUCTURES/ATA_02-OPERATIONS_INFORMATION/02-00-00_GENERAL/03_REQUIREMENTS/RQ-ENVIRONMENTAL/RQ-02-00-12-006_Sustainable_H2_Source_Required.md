@@ -1,8 +1,8 @@
-# [RQ-02-00-12-006](./RQ-02-00-12-006_*.md): Sustainable H2 Source Required
+# [RQ-02-00-12-006](RQ-02-00-12-006_Sustainable_H2_Source_Required.md): Sustainable H2 Source Required
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-006](./RQ-02-00-12-006_*.md)  
+**ID:** [RQ-02-00-12-006](RQ-02-00-12-006_Sustainable_H2_Source_Required.md)  
 **Category:** Environmental  
 **Subcategory:** H2 Source  
 **Title:** Sustainable H2 Source Required  

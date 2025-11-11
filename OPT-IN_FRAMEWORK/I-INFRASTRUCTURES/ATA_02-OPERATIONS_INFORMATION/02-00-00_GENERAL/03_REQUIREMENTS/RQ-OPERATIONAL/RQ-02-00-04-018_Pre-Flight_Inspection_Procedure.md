@@ -1,8 +1,8 @@
-# [RQ-02-00-04-018](./RQ-02-00-04-018_*.md): Pre-Flight Inspection Procedure
+# [RQ-02-00-04-018](RQ-02-00-04-018_Pre-Flight_Inspection_Procedure.md): Pre-Flight Inspection Procedure
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-018](./RQ-02-00-04-018_*.md)  
+**ID:** [RQ-02-00-04-018](RQ-02-00-04-018_Pre-Flight_Inspection_Procedure.md)  
 **Category:** Operational  
 **Subcategory:** Inspection  
 **Title:** Pre-Flight Inspection Procedure  

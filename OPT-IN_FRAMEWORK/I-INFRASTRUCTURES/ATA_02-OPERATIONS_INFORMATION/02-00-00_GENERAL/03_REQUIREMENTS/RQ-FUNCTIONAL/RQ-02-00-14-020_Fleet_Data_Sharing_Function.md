@@ -1,8 +1,8 @@
-# [RQ-02-00-14-020](./RQ-02-00-14-020_*.md): Fleet Data Sharing Function
+# [RQ-02-00-14-020](RQ-02-00-14-020_Fleet_Data_Sharing_Function.md): Fleet Data Sharing Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-020](./RQ-02-00-14-020_*.md)  
+**ID:** [RQ-02-00-14-020](RQ-02-00-14-020_Fleet_Data_Sharing_Function.md)  
 **Category:** Functional  
 **Subcategory:** Fleet Sharing  
 **Title:** Fleet Data Sharing Function  

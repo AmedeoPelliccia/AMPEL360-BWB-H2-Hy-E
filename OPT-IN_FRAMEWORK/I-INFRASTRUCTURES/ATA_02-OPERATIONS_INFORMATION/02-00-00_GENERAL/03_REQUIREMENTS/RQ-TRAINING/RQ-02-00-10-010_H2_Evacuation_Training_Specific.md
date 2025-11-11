@@ -1,8 +1,8 @@
-# [RQ-02-00-10-010](./RQ-02-00-10-010_*.md): H2 Evacuation Training Specific
+# [RQ-02-00-10-010](RQ-02-00-10-010_H2_Evacuation_Training_Specific.md): H2 Evacuation Training Specific
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-010](./RQ-02-00-10-010_*.md)  
+**ID:** [RQ-02-00-10-010](RQ-02-00-10-010_H2_Evacuation_Training_Specific.md)  
 **Category:** Training  
 **Subcategory:** Evacuation  
 **Title:** H2 Evacuation Training Specific  

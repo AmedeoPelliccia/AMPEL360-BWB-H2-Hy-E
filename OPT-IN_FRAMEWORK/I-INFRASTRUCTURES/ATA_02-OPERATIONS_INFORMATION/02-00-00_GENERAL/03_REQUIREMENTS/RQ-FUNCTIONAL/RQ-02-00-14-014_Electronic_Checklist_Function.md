@@ -1,8 +1,8 @@
-# [RQ-02-00-14-014](./RQ-02-00-14-014_*.md): Electronic Checklist Function
+# [RQ-02-00-14-014](RQ-02-00-14-014_Electronic_Checklist_Function.md): Electronic Checklist Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-014](./RQ-02-00-14-014_*.md)  
+**ID:** [RQ-02-00-14-014](RQ-02-00-14-014_Electronic_Checklist_Function.md)  
 **Category:** Functional  
 **Subcategory:** Checklist  
 **Title:** Electronic Checklist Function  

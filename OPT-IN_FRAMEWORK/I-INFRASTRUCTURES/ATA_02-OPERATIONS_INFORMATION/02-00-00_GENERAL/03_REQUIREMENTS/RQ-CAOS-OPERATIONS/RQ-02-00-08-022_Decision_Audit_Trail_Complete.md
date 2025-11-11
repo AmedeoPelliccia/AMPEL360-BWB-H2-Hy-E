@@ -1,8 +1,8 @@
-# [RQ-02-00-08-022](./RQ-02-00-08-022_*.md): Decision Audit Trail Complete
+# [RQ-02-00-08-022](RQ-02-00-08-022_Decision_Audit_Trail_Complete.md): Decision Audit Trail Complete
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-022](./RQ-02-00-08-022_*.md)  
+**ID:** [RQ-02-00-08-022](RQ-02-00-08-022_Decision_Audit_Trail_Complete.md)  
 **Category:** CAOS  
 **Subcategory:** Audit  
 **Title:** Decision Audit Trail Complete  

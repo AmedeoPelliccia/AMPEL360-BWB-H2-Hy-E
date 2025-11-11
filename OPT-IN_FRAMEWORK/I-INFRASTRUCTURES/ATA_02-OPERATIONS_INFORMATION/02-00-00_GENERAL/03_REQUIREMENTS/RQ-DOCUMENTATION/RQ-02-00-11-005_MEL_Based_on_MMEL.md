@@ -1,8 +1,8 @@
-# [RQ-02-00-11-005](./RQ-02-00-11-005_*.md): MEL Based on MMEL
+# [RQ-02-00-11-005](RQ-02-00-11-005_MEL_Based_on_MMEL.md): MEL Based on MMEL
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-005](./RQ-02-00-11-005_*.md)  
+**ID:** [RQ-02-00-11-005](RQ-02-00-11-005_MEL_Based_on_MMEL.md)  
 **Category:** Documentation  
 **Subcategory:** MEL  
 **Title:** MEL Based on MMEL  

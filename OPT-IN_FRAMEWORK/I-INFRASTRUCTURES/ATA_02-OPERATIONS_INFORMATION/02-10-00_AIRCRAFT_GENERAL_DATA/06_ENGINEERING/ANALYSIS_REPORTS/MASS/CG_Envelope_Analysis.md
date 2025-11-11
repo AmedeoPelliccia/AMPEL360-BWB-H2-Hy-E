@@ -94,5 +94,5 @@ Any change to these frozen limits requires ECR approval and flight test validati
 - Verification: Wind Tunnel + CFD + 6-DOF Simulation
 - Next Review: After GVT and first flight
 - Related Documentation:
-  - [Verification & Validation Plan](../../../../../../../02-00-00_GENERAL/07_V_AND_V/Verification_Validation_Plan.md)
-  - [Configuration Management Plan](../../../../../../../02-00-00_GENERAL/13_SUBSYSTEMS_COMPONENTS/CONFIGURATION_CONTROL/Configuration_Management_Plan.md)
+  - [Verification & Validation Plan](../../../../02-00-00_GENERAL/07_V_AND_V/Verification_Validation_Plan.md)
+  - [Configuration Management Plan](../../../../02-00-00_GENERAL/13_SUBSYSTEMS_COMPONENTS/CONFIGURATION_CONTROL/Configuration_Management_Plan.md)

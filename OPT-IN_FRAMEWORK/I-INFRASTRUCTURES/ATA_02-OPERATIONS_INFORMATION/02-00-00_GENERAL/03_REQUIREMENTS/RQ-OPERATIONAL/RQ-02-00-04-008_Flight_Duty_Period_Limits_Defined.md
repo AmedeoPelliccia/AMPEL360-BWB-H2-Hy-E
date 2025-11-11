@@ -1,8 +1,8 @@
-# [RQ-02-00-04-008](./RQ-02-00-04-008_*.md): Flight Duty Period Limits Defined
+# [RQ-02-00-04-008](RQ-02-00-04-008_Flight_Duty_Period_Limits_Defined.md): Flight Duty Period Limits Defined
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-008](./RQ-02-00-04-008_*.md)  
+**ID:** [RQ-02-00-04-008](RQ-02-00-04-008_Flight_Duty_Period_Limits_Defined.md)  
 **Category:** Operational  
 **Subcategory:** Crew  
 **Title:** Flight Duty Period Limits Defined  

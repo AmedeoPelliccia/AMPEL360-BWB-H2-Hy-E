@@ -1,8 +1,8 @@
-# [RQ-02-00-08-001](./RQ-02-00-08-001_*.md): Digital Twin Real-Time Integration
+# [RQ-02-00-08-001](RQ-02-00-08-001_Digital_Twin_Real-Time_Integration.md): Digital Twin Real-Time Integration
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-001](./RQ-02-00-08-001_*.md)  
+**ID:** [RQ-02-00-08-001](RQ-02-00-08-001_Digital_Twin_Real-Time_Integration.md)  
 **Category:** CAOS Operations  
 **Subcategory:** Integration  
 **Title:** Digital Twin Real-Time Integration  
@@ -54,11 +54,11 @@ A real-time digital twin is the foundation of CAOS capabilities, enabling:
 
 ## Related Requirements
 
-- [RQ-02-00-08-002](./RQ-02-00-08-002_*.md): Real-Time Synchronization 100ms
-- [RQ-02-00-08-003](./RQ-02-00-08-003_*.md): Predictive Analytics Enabled
-- [RQ-02-00-08-005](./RQ-02-00-08-005_*.md): Fleet Learning Enabled
-- [RQ-02-00-08-020](./RQ-02-00-08-020_*.md): Independent Safety Monitor
-- [RQ-02-00-08-024](./RQ-02-00-08-024_*.md): Performance Monitoring Continuous
+- [RQ-02-00-08-002](RQ-02-00-08-002_Real-Time_Synchronization_100ms.md): Real-Time Synchronization 100ms
+- [RQ-02-00-08-003](RQ-02-00-08-003_Predictive_Analytics_Enabled.md): Predictive Analytics Enabled
+- [RQ-02-00-08-005](RQ-02-00-08-005_Fleet_Learning_Enabled.md): Fleet Learning Enabled
+- [RQ-02-00-08-020](RQ-02-00-08-020_Independent_Safety_Monitor.md): Independent Safety Monitor
+- [RQ-02-00-08-024](RQ-02-00-08-024_Performance_Monitoring_Continuous.md): Performance Monitoring Continuous
 
 ## Impact Areas
 
@@ -115,7 +115,7 @@ A real-time digital twin is the foundation of CAOS capabilities, enabling:
 
 ## AI Safety Considerations
 
-Digital twin predictions are advisory only. Crew retains final authority per [RQ-02-00-08-016](./RQ-02-00-08-016_*.md). Independent safety monitor (RQ-02-00-08-020) validates twin outputs before presentation to crew.
+Digital twin predictions are advisory only. Crew retains final authority per [RQ-02-00-08-016](RQ-02-00-08-016_Human_Authority_Final_Decision.md). Independent safety monitor (RQ-02-00-08-020) validates twin outputs before presentation to crew.
 
 ## Notes
 

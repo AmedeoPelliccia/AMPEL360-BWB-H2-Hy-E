@@ -1,8 +1,8 @@
-# [RQ-02-00-08-004](./RQ-02-00-08-004_*.md): Neural Network Models 20+ Active
+# [RQ-02-00-08-004](RQ-02-00-08-004_Neural_Network_Models_20+_Active.md): Neural Network Models 20+ Active
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-004](./RQ-02-00-08-004_*.md)  
+**ID:** [RQ-02-00-08-004](RQ-02-00-08-004_Neural_Network_Models_20+_Active.md)  
 **Category:** CAOS  
 **Subcategory:** AI  
 **Title:** Neural Network Models 20+ Active  

@@ -1,8 +1,8 @@
-# [RQ-02-00-01-020](./RQ-02-00-01-020_*.md): Environmental Regulations Compliance
+# [RQ-02-00-01-020](RQ-02-00-01-020_Environmental_Regulations_Compliance.md): Environmental Regulations Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-020](./RQ-02-00-01-020_*.md)  
+**ID:** [RQ-02-00-01-020](RQ-02-00-01-020_Environmental_Regulations_Compliance.md)  
 **Category:** Regulatory  
 **Subcategory:** Environmental  
 **Title:** Environmental Regulations Compliance  

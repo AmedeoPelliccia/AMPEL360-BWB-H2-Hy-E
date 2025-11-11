@@ -1,8 +1,8 @@
-# [RQ-02-00-11-015](./RQ-02-00-11-015_*.md): Multi-Language Support
+# [RQ-02-00-11-015](RQ-02-00-11-015_Multi-Language_Support.md): Multi-Language Support
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-015](./RQ-02-00-11-015_*.md)  
+**ID:** [RQ-02-00-11-015](RQ-02-00-11-015_Multi-Language_Support.md)  
 **Category:** Documentation  
 **Subcategory:** Language  
 **Title:** Multi-Language Support  

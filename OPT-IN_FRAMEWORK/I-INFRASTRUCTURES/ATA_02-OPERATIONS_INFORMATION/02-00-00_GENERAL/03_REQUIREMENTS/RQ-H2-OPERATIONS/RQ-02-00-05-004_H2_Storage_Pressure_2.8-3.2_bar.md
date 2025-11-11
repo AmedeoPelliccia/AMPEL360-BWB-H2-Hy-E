@@ -1,8 +1,8 @@
-# [RQ-02-00-05-004](./RQ-02-00-05-004_*.md): H2 Storage Pressure 2.8-3.2 bar
+# [RQ-02-00-05-004](RQ-02-00-05-004_H2_Storage_Pressure_2.8-3.2_bar.md): H2 Storage Pressure 2.8-3.2 bar
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-05-004](./RQ-02-00-05-004_*.md)  
+**ID:** [RQ-02-00-05-004](RQ-02-00-05-004_H2_Storage_Pressure_2.8-3.2_bar.md)  
 **Category:** H2 Operations  
 **Subcategory:** Pressure  
 **Title:** H2 Storage Pressure 2.8-3.2 bar  

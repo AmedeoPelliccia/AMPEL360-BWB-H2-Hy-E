@@ -1,8 +1,8 @@
-# [RQ-02-00-14-013](./RQ-02-00-14-013_*.md): Airport Data Function
+# [RQ-02-00-14-013](RQ-02-00-14-013_Airport_Data_Function.md): Airport Data Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-013](./RQ-02-00-14-013_*.md)  
+**ID:** [RQ-02-00-14-013](RQ-02-00-14-013_Airport_Data_Function.md)  
 **Category:** Functional  
 **Subcategory:** Airport Data  
 **Title:** Airport Data Function  

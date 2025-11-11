@@ -1,8 +1,8 @@
-# [RQ-02-00-04-007](./RQ-02-00-04-007_*.md): Minimum Crew 2 Pilots
+# [RQ-02-00-04-007](RQ-02-00-04-007_Minimum_Crew_2_Pilots.md): Minimum Crew 2 Pilots
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-007](./RQ-02-00-04-007_*.md)  
+**ID:** [RQ-02-00-04-007](RQ-02-00-04-007_Minimum_Crew_2_Pilots.md)  
 **Category:** Operational  
 **Subcategory:** Crew  
 **Title:** Minimum Crew 2 Pilots  

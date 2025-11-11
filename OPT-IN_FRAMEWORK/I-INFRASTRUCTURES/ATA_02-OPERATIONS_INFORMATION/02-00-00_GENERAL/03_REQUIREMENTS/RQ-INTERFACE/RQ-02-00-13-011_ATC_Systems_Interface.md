@@ -1,8 +1,8 @@
-# [RQ-02-00-13-011](./RQ-02-00-13-011_*.md): ATC Systems Interface
+# [RQ-02-00-13-011](RQ-02-00-13-011_ATC_Systems_Interface.md): ATC Systems Interface
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-13-011](./RQ-02-00-13-011_*.md)  
+**ID:** [RQ-02-00-13-011](RQ-02-00-13-011_ATC_Systems_Interface.md)  
 **Category:** Interface  
 **Subcategory:** ATC  
 **Title:** ATC Systems Interface  

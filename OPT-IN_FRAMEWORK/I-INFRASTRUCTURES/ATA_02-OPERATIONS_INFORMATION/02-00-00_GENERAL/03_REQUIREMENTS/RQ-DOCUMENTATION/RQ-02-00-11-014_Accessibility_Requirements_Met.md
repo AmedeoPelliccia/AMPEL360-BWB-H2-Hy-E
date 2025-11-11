@@ -1,8 +1,8 @@
-# [RQ-02-00-11-014](./RQ-02-00-11-014_*.md): Accessibility Requirements Met
+# [RQ-02-00-11-014](RQ-02-00-11-014_Accessibility_Requirements_Met.md): Accessibility Requirements Met
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-014](./RQ-02-00-11-014_*.md)  
+**ID:** [RQ-02-00-11-014](RQ-02-00-11-014_Accessibility_Requirements_Met.md)  
 **Category:** Documentation  
 **Subcategory:** Accessibility  
 **Title:** Accessibility Requirements Met  

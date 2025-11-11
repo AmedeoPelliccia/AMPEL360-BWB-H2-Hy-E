@@ -1,8 +1,8 @@
-# [RQ-02-00-14-012](./RQ-02-00-14-012_*.md): NOTAM Integration Function
+# [RQ-02-00-14-012](RQ-02-00-14-012_NOTAM_Integration_Function.md): NOTAM Integration Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-012](./RQ-02-00-14-012_*.md)  
+**ID:** [RQ-02-00-14-012](RQ-02-00-14-012_NOTAM_Integration_Function.md)  
 **Category:** Functional  
 **Subcategory:** NOTAM  
 **Title:** NOTAM Integration Function  

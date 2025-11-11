@@ -1,8 +1,8 @@
-# [RQ-02-00-08-005](./RQ-02-00-08-005_*.md): Fleet Learning Enabled
+# [RQ-02-00-08-005](RQ-02-00-08-005_Fleet_Learning_Enabled.md): Fleet Learning Enabled
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-005](./RQ-02-00-08-005_*.md)  
+**ID:** [RQ-02-00-08-005](RQ-02-00-08-005_Fleet_Learning_Enabled.md)  
 **Category:** CAOS  
 **Subcategory:** Learning  
 **Title:** Fleet Learning Enabled  

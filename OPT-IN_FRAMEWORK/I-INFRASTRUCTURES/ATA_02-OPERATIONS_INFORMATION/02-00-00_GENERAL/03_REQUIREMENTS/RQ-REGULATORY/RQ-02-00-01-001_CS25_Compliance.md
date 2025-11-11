@@ -1,8 +1,8 @@
-# [RQ-02-00-01-001](./RQ-02-00-01-001_*.md): CS25 Airworthiness Compliance
+# [RQ-02-00-01-001](RQ-02-00-01-001_CS25_Airworthiness_Compliance.md): CS25 Airworthiness Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-001](./RQ-02-00-01-001_*.md)  
+**ID:** [RQ-02-00-01-001](RQ-02-00-01-001_CS25_Airworthiness_Compliance.md)  
 **Category:** Regulatory  
 **Subcategory:** [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)  
 **Title:** CS25 Airworthiness Compliance  
@@ -46,8 +46,8 @@ The aircraft shall comply with all applicable requirements of [EASA](https://www
 
 ## Related Requirements
 
-- [RQ-02-00-01-002](./RQ-02-00-01-002_*.md): FAR25 Compliance
-- [RQ-02-00-11-001](../RQ-DOCUMENTATION/RQ-02-00-11-001_*.md): AFM CS25.1581 Compliant
+- [RQ-02-00-01-002](RQ-02-00-01-002_FAR25_Airworthiness_Compliance.md): FAR25 Compliance
+- [RQ-02-00-11-001](../RQ-DOCUMENTATION/RQ-02-00-11-001_AFM_CS25.1581_Compliant.md): AFM CS25.1581 Compliant
 
 ## Impact Areas
 

@@ -1,8 +1,8 @@
-# [RQ-02-00-10-007](./RQ-02-00-10-007_*.md): Emergency Procedures Training 4 Hours
+# [RQ-02-00-10-007](RQ-02-00-10-007_Emergency_Procedures_Training_4_Hours.md): Emergency Procedures Training 4 Hours
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-007](./RQ-02-00-10-007_*.md)  
+**ID:** [RQ-02-00-10-007](RQ-02-00-10-007_Emergency_Procedures_Training_4_Hours.md)  
 **Category:** Training  
 **Subcategory:** Emergency  
 **Title:** Emergency Procedures Training 4 Hours  

@@ -1,8 +1,8 @@
-# [RQ-02-00-04-006](./RQ-02-00-04-006_*.md): Crew Composition Requirements Met
+# [RQ-02-00-04-006](RQ-02-00-04-006_Crew_Composition_Requirements_Met.md): Crew Composition Requirements Met
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-006](./RQ-02-00-04-006_*.md)  
+**ID:** [RQ-02-00-04-006](RQ-02-00-04-006_Crew_Composition_Requirements_Met.md)  
 **Category:** Operational  
 **Subcategory:** Crew  
 **Title:** Crew Composition Requirements Met  

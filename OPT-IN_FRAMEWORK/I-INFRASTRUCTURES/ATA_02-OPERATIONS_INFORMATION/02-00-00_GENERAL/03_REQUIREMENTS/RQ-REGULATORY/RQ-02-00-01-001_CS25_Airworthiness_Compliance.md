@@ -1,8 +1,8 @@
-# [RQ-02-00-01-001](./RQ-02-00-01-001_*.md): CS25 Airworthiness Compliance
+# [RQ-02-00-01-001](RQ-02-00-01-001_CS25_Airworthiness_Compliance.md): CS25 Airworthiness Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-001](./RQ-02-00-01-001_*.md)  
+**ID:** [RQ-02-00-01-001](RQ-02-00-01-001_CS25_Airworthiness_Compliance.md)  
 **Category:** Regulatory  
 **Subcategory:** [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)  
 **Title:** CS25 Airworthiness Compliance  

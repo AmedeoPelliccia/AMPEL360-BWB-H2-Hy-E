@@ -1,8 +1,8 @@
-# [RQ-02-00-12-010](./RQ-02-00-12-010_*.md): Green Taxiing Electric Drive
+# [RQ-02-00-12-010](RQ-02-00-12-010_Green_Taxiing_Electric_Drive.md): Green Taxiing Electric Drive
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-010](./RQ-02-00-12-010_*.md)  
+**ID:** [RQ-02-00-12-010](RQ-02-00-12-010_Green_Taxiing_Electric_Drive.md)  
 **Category:** Environmental  
 **Subcategory:** Taxiing  
 **Title:** Green Taxiing Electric Drive  

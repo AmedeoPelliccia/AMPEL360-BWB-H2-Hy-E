@@ -1,8 +1,8 @@
-# [RQ-02-00-14-018](./RQ-02-00-14-018_*.md): Decision Support Function
+# [RQ-02-00-14-018](RQ-02-00-14-018_Decision_Support_Function.md): Decision Support Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-018](./RQ-02-00-14-018_*.md)  
+**ID:** [RQ-02-00-14-018](RQ-02-00-14-018_Decision_Support_Function.md)  
 **Category:** Functional  
 **Subcategory:** Decision Support  
 **Title:** Decision Support Function  

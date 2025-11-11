@@ -1,8 +1,8 @@
-# [RQ-02-00-07-007](./RQ-02-00-07-007_*.md): Power Response Time 3 Seconds
+# [RQ-02-00-07-007](RQ-02-00-07-007_Power_Response_Time_3_Seconds.md): Power Response Time 3 Seconds
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-07-007](./RQ-02-00-07-007_*.md)  
+**ID:** [RQ-02-00-07-007](RQ-02-00-07-007_Power_Response_Time_3_Seconds.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Response  
 **Title:** Power Response Time 3 Seconds  

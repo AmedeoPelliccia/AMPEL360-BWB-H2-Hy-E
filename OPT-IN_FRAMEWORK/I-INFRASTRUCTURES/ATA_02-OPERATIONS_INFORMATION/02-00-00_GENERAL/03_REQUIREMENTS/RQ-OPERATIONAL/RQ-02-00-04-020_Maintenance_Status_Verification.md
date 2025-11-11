@@ -1,8 +1,8 @@
-# [RQ-02-00-04-020](./RQ-02-00-04-020_*.md): Maintenance Status Verification
+# [RQ-02-00-04-020](RQ-02-00-04-020_Maintenance_Status_Verification.md): Maintenance Status Verification
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-020](./RQ-02-00-04-020_*.md)  
+**ID:** [RQ-02-00-04-020](RQ-02-00-04-020_Maintenance_Status_Verification.md)  
 **Category:** Operational  
 **Subcategory:** Maintenance  
 **Title:** Maintenance Status Verification  

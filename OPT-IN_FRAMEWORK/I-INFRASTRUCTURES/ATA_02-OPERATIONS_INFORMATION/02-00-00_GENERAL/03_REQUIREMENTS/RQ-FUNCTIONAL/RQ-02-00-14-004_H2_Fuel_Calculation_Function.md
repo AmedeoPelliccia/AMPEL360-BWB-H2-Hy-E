@@ -1,8 +1,8 @@
-# [RQ-02-00-14-004](./RQ-02-00-14-004_*.md): H2 Fuel Calculation Function
+# [RQ-02-00-14-004](RQ-02-00-14-004_H2_Fuel_Calculation_Function.md): H2 Fuel Calculation Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-004](./RQ-02-00-14-004_*.md)  
+**ID:** [RQ-02-00-14-004](RQ-02-00-14-004_H2_Fuel_Calculation_Function.md)  
 **Category:** Functional  
 **Subcategory:** Fuel Calc  
 **Title:** H2 Fuel Calculation Function  

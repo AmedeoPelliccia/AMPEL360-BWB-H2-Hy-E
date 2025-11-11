@@ -1,8 +1,8 @@
-# [RQ-02-00-01-009](./RQ-02-00-01-009_*.md): ETOPS 180min Approval
+# [RQ-02-00-01-009](RQ-02-00-01-009_ETOPS_180min_Approval.md): ETOPS 180min Approval
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-009](./RQ-02-00-01-009_*.md)  
+**ID:** [RQ-02-00-01-009](RQ-02-00-01-009_ETOPS_180min_Approval.md)  
 **Category:** Regulatory  
 **Subcategory:** Extended Ops  
 **Title:** ETOPS 180min Approval  

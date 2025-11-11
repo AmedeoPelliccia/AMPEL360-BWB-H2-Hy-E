@@ -1,8 +1,8 @@
-# [RQ-02-00-09-017](./RQ-02-00-09-017_*.md): Training Effectiveness Measured
+# [RQ-02-00-09-017](RQ-02-00-09-017_Training_Effectiveness_Measured.md): Training Effectiveness Measured
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-017](./RQ-02-00-09-017_*.md)  
+**ID:** [RQ-02-00-09-017](RQ-02-00-09-017_Training_Effectiveness_Measured.md)  
 **Category:** Human Factors  
 **Subcategory:** Training  
 **Title:** Training Effectiveness Measured  

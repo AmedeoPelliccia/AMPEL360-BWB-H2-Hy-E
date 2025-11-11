@@ -1,8 +1,8 @@
-# [RQ-02-00-04-002](./RQ-02-00-04-002_*.md): Normal Checklist Structure Defined
+# [RQ-02-00-04-002](RQ-02-00-04-002_Normal_Checklist_Structure_Defined.md): Normal Checklist Structure Defined
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-002](./RQ-02-00-04-002_*.md)  
+**ID:** [RQ-02-00-04-002](RQ-02-00-04-002_Normal_Checklist_Structure_Defined.md)  
 **Category:** Operational  
 **Subcategory:** Checklists  
 **Title:** Normal Checklist Structure Defined  

@@ -1,8 +1,8 @@
-# [RQ-02-00-02-008](./RQ-02-00-02-008_*.md): H2-Capable Fire Suppression System
+# [RQ-02-00-02-008](RQ-02-00-02-008_H2-Capable_Fire_Suppression_System.md): H2-Capable Fire Suppression System
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-008](./RQ-02-00-02-008_*.md)  
+**ID:** [RQ-02-00-02-008](RQ-02-00-02-008_H2-Capable_Fire_Suppression_System.md)  
 **Category:** Safety  
 **Subcategory:** H2  
 **Title:** H2-Capable Fire Suppression System  

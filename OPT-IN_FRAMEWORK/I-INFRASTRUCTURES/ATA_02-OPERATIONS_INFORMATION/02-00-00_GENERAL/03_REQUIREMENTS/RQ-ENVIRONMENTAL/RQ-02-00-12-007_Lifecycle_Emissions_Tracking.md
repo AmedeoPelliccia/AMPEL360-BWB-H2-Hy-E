@@ -1,8 +1,8 @@
-# [RQ-02-00-12-007](./RQ-02-00-12-007_*.md): Lifecycle Emissions Tracking
+# [RQ-02-00-12-007](RQ-02-00-12-007_Lifecycle_Emissions_Tracking.md): Lifecycle Emissions Tracking
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-007](./RQ-02-00-12-007_*.md)  
+**ID:** [RQ-02-00-12-007](RQ-02-00-12-007_Lifecycle_Emissions_Tracking.md)  
 **Category:** Environmental  
 **Subcategory:** Lifecycle  
 **Title:** Lifecycle Emissions Tracking  

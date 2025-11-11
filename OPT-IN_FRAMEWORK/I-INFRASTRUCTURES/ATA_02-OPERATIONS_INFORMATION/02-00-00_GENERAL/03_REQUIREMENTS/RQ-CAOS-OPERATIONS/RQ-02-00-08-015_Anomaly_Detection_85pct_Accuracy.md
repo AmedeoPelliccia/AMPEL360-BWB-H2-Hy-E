@@ -1,8 +1,8 @@
-# [RQ-02-00-08-015](./RQ-02-00-08-015_*.md): Anomaly Detection 85% Accuracy
+# [RQ-02-00-08-015](RQ-02-00-08-015_Anomaly_Detection_85pct_Accuracy.md): Anomaly Detection 85% Accuracy
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-015](./RQ-02-00-08-015_*.md)  
+**ID:** [RQ-02-00-08-015](RQ-02-00-08-015_Anomaly_Detection_85pct_Accuracy.md)  
 **Category:** CAOS  
 **Subcategory:** Detection  
 **Title:** Anomaly Detection 85% Accuracy  

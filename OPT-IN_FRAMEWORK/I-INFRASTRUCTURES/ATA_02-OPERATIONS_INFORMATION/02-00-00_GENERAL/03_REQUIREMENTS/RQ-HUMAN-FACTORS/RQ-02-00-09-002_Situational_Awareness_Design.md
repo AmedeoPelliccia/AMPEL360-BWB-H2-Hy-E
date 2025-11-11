@@ -1,8 +1,8 @@
-# [RQ-02-00-09-002](./RQ-02-00-09-002_*.md): Situational Awareness Design
+# [RQ-02-00-09-002](RQ-02-00-09-002_Situational_Awareness_Design.md): Situational Awareness Design
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-002](./RQ-02-00-09-002_*.md)  
+**ID:** [RQ-02-00-09-002](RQ-02-00-09-002_Situational_Awareness_Design.md)  
 **Category:** Human Factors  
 **Subcategory:** Awareness  
 **Title:** Situational Awareness Design  

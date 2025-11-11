@@ -1,8 +1,8 @@
-# [RQ-02-00-01-010](./RQ-02-00-01-010_*.md): CAT II/III Approach Approval
+# [RQ-02-00-01-010](RQ-02-00-01-010_CAT_II_III_Approach_Approval.md): CAT II/III Approach Approval
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-010](./RQ-02-00-01-010_*.md)  
+**ID:** [RQ-02-00-01-010](RQ-02-00-01-010_CAT_II_III_Approach_Approval.md)  
 **Category:** Regulatory  
 **Subcategory:** Low Visibility  
 **Title:** CAT II/III Approach Approval  

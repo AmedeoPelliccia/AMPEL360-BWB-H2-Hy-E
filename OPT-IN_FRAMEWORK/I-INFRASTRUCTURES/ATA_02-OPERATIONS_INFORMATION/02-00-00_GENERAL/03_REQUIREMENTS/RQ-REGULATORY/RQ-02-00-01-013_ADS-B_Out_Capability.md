@@ -1,8 +1,8 @@
-# [RQ-02-00-01-013](./RQ-02-00-01-013_*.md): ADS-B Out Capability
+# [RQ-02-00-01-013](RQ-02-00-01-013_ADS-B_Out_Capability.md): ADS-B Out Capability
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-013](./RQ-02-00-01-013_*.md)  
+**ID:** [RQ-02-00-01-013](RQ-02-00-01-013_ADS-B_Out_Capability.md)  
 **Category:** Regulatory  
 **Subcategory:** Avionics  
 **Title:** ADS-B Out Capability  

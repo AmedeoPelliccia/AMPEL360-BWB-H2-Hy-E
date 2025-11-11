@@ -1,8 +1,8 @@
-# [RQ-02-00-01-017](./RQ-02-00-01-017_*.md): [NFPA 2](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2) Hydrogen Technologies Code
+# [RQ-02-00-01-017](RQ-02-00-01-017_NFPA_2_Hydrogen_Technologies_Code.md): [NFPA 2](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2) Hydrogen Technologies Code
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-017](./RQ-02-00-01-017_*.md)  
+**ID:** [RQ-02-00-01-017](RQ-02-00-01-017_NFPA_2_Hydrogen_Technologies_Code.md)  
 **Category:** Regulatory  
 **Subcategory:** H2  
 **Title:** [NFPA 2](https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=2) Hydrogen Technologies Code  

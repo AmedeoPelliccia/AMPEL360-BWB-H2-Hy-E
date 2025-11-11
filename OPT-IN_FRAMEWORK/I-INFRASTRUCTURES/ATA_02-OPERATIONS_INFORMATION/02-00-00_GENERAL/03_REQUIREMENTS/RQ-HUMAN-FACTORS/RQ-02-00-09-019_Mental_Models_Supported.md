@@ -1,8 +1,8 @@
-# [RQ-02-00-09-019](./RQ-02-00-09-019_*.md): Mental Models Supported
+# [RQ-02-00-09-019](RQ-02-00-09-019_Mental_Models_Supported.md): Mental Models Supported
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-019](./RQ-02-00-09-019_*.md)  
+**ID:** [RQ-02-00-09-019](RQ-02-00-09-019_Mental_Models_Supported.md)  
 **Category:** Human Factors  
 **Subcategory:** Mental Models  
 **Title:** Mental Models Supported  

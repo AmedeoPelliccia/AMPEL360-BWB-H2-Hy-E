@@ -1,8 +1,8 @@
-# [RQ-02-00-06-002](./RQ-02-00-06-002_*.md): Loading Distribution Critical Management
+# [RQ-02-00-06-002](RQ-02-00-06-002_Loading_Distribution_Critical_Management.md): Loading Distribution Critical Management
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-002](./RQ-02-00-06-002_*.md)  
+**ID:** [RQ-02-00-06-002](RQ-02-00-06-002_Loading_Distribution_Critical_Management.md)  
 **Category:** BWB Operations  
 **Subcategory:** Loading  
 **Title:** Loading Distribution Critical Management  

@@ -1,8 +1,8 @@
-# [RQ-02-00-10-002](./RQ-02-00-10-002_*.md): Simulator Training 16 Hours Minimum
+# [RQ-02-00-10-002](RQ-02-00-10-002_Simulator_Training_16_Hours_Minimum.md): Simulator Training 16 Hours Minimum
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-002](./RQ-02-00-10-002_*.md)  
+**ID:** [RQ-02-00-10-002](RQ-02-00-10-002_Simulator_Training_16_Hours_Minimum.md)  
 **Category:** Training  
 **Subcategory:** Simulator  
 **Title:** Simulator Training 16 Hours Minimum  

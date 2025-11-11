@@ -1,8 +1,8 @@
-# [RQ-02-00-08-012](./RQ-02-00-08-012_*.md): Fuel Burn Prediction Within 2%
+# [RQ-02-00-08-012](RQ-02-00-08-012_Fuel_Burn_Prediction_Within_2pct.md): Fuel Burn Prediction Within 2%
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-012](./RQ-02-00-08-012_*.md)  
+**ID:** [RQ-02-00-08-012](RQ-02-00-08-012_Fuel_Burn_Prediction_Within_2pct.md)  
 **Category:** CAOS  
 **Subcategory:** Prediction  
 **Title:** Fuel Burn Prediction Within 2%  

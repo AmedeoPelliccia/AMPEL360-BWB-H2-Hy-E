@@ -1,8 +1,8 @@
-# [RQ-02-00-14-001](./RQ-02-00-14-001_*.md): Flight Planning Function Complete
+# [RQ-02-00-14-001](RQ-02-00-14-001_Flight_Planning_Function_Complete.md): Flight Planning Function Complete
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-001](./RQ-02-00-14-001_*.md)  
+**ID:** [RQ-02-00-14-001](RQ-02-00-14-001_Flight_Planning_Function_Complete.md)  
 **Category:** Functional  
 **Subcategory:** Flight Planning  
 **Title:** Flight Planning Function Complete  

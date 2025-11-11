@@ -1,8 +1,8 @@
-# [RQ-02-00-02-006](./RQ-02-00-02-006_*.md): Crew Escape Provisions
+# [RQ-02-00-02-006](RQ-02-00-02-006_Crew_Escape_Provisions.md): Crew Escape Provisions
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-006](./RQ-02-00-02-006_*.md)  
+**ID:** [RQ-02-00-02-006](RQ-02-00-02-006_Crew_Escape_Provisions.md)  
 **Category:** Safety  
 **Subcategory:** Emergency  
 **Title:** Crew Escape Provisions  

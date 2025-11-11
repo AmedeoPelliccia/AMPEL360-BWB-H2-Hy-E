@@ -1,8 +1,8 @@
-# [RQ-02-00-11-003](./RQ-02-00-11-003_*.md): QRH Format Approved
+# [RQ-02-00-11-003](RQ-02-00-11-003_QRH_Format_Approved.md): QRH Format Approved
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-003](./RQ-02-00-11-003_*.md)  
+**ID:** [RQ-02-00-11-003](RQ-02-00-11-003_QRH_Format_Approved.md)  
 **Category:** Documentation  
 **Subcategory:** QRH  
 **Title:** QRH Format Approved  

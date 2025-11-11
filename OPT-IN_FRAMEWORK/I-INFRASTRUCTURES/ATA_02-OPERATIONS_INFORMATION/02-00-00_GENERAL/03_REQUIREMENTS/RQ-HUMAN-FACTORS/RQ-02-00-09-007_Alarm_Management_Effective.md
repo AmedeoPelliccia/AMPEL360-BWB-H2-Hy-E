@@ -1,8 +1,8 @@
-# [RQ-02-00-09-007](./RQ-02-00-09-007_*.md): Alarm Management Effective
+# [RQ-02-00-09-007](RQ-02-00-09-007_Alarm_Management_Effective.md): Alarm Management Effective
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-007](./RQ-02-00-09-007_*.md)  
+**ID:** [RQ-02-00-09-007](RQ-02-00-09-007_Alarm_Management_Effective.md)  
 **Category:** Human Factors  
 **Subcategory:** Alerts  
 **Title:** Alarm Management Effective  

@@ -1,8 +1,8 @@
-# [RQ-02-00-09-020](./RQ-02-00-09-020_*.md): Trust Calibration with CAOS
+# [RQ-02-00-09-020](RQ-02-00-09-020_Trust_Calibration_with_CAOS.md): Trust Calibration with CAOS
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-020](./RQ-02-00-09-020_*.md)  
+**ID:** [RQ-02-00-09-020](RQ-02-00-09-020_Trust_Calibration_with_CAOS.md)  
 **Category:** Human Factors  
 **Subcategory:** Trust  
 **Title:** Trust Calibration with CAOS  

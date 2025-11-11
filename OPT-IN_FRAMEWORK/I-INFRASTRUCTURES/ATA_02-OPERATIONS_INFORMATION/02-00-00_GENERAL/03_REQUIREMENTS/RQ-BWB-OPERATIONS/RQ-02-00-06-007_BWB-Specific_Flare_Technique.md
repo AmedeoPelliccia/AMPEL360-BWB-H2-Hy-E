@@ -1,8 +1,8 @@
-# [RQ-02-00-06-007](./RQ-02-00-06-007_*.md): BWB-Specific Flare Technique
+# [RQ-02-00-06-007](RQ-02-00-06-007_BWB-Specific_Flare_Technique.md): BWB-Specific Flare Technique
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-007](./RQ-02-00-06-007_*.md)  
+**ID:** [RQ-02-00-06-007](RQ-02-00-06-007_BWB-Specific_Flare_Technique.md)  
 **Category:** BWB Operations  
 **Subcategory:** Landing  
 **Title:** BWB-Specific Flare Technique  

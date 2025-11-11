@@ -1,8 +1,8 @@
-# [RQ-02-00-01-018](./RQ-02-00-01-018_*.md): [EU AI Act](https://artificialintelligenceact.eu/) Compliance
+# [RQ-02-00-01-018](RQ-02-00-01-018_EU_AI_Act_Compliance.md): [EU AI Act](https://artificialintelligenceact.eu/) Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-018](./RQ-02-00-01-018_*.md)  
+**ID:** [RQ-02-00-01-018](RQ-02-00-01-018_EU_AI_Act_Compliance.md)  
 **Category:** Regulatory  
 **Subcategory:** AI  
 **Title:** [EU AI Act](https://artificialintelligenceact.eu/) Compliance  

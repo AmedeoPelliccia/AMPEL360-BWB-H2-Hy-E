@@ -1,8 +1,8 @@
-# [RQ-02-00-09-012](./RQ-02-00-09-012_*.md): Visibility Requirements Met
+# [RQ-02-00-09-012](RQ-02-00-09-012_Visibility_Requirements_Met.md): Visibility Requirements Met
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-012](./RQ-02-00-09-012_*.md)  
+**ID:** [RQ-02-00-09-012](RQ-02-00-09-012_Visibility_Requirements_Met.md)  
 **Category:** Human Factors  
 **Subcategory:** Visibility  
 **Title:** Visibility Requirements Met  

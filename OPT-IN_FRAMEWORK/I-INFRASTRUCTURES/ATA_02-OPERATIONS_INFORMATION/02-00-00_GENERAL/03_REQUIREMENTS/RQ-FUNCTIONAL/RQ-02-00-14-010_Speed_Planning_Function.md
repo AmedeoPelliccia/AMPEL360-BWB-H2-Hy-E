@@ -1,8 +1,8 @@
-# [RQ-02-00-14-010](./RQ-02-00-14-010_*.md): Speed Planning Function
+# [RQ-02-00-14-010](RQ-02-00-14-010_Speed_Planning_Function.md): Speed Planning Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-010](./RQ-02-00-14-010_*.md)  
+**ID:** [RQ-02-00-14-010](RQ-02-00-14-010_Speed_Planning_Function.md)  
 **Category:** Functional  
 **Subcategory:** Speed  
 **Title:** Speed Planning Function  

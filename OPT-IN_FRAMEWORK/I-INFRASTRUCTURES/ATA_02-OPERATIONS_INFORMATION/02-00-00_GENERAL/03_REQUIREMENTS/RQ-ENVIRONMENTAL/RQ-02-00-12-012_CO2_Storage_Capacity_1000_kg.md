@@ -1,8 +1,8 @@
-# [RQ-02-00-12-012](./RQ-02-00-12-012_*.md): CO2 Storage Capacity 1000 kg
+# [RQ-02-00-12-012](RQ-02-00-12-012_CO2_Storage_Capacity_1000_kg.md): CO2 Storage Capacity 1000 kg
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-012](./RQ-02-00-12-012_*.md)  
+**ID:** [RQ-02-00-12-012](RQ-02-00-12-012_CO2_Storage_Capacity_1000_kg.md)  
 **Category:** Environmental  
 **Subcategory:** CO2 Storage  
 **Title:** CO2 Storage Capacity 1000 kg  

@@ -1,8 +1,8 @@
-# [RQ-02-00-07-005](./RQ-02-00-07-005_*.md): Cold Start Time 3 Minutes Maximum
+# [RQ-02-00-07-005](RQ-02-00-07-005_Cold_Start_Time_3_Minutes_Maximum.md): Cold Start Time 3 Minutes Maximum
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-07-005](./RQ-02-00-07-005_*.md)  
+**ID:** [RQ-02-00-07-005](RQ-02-00-07-005_Cold_Start_Time_3_Minutes_Maximum.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Start  
 **Title:** Cold Start Time 3 Minutes Maximum  

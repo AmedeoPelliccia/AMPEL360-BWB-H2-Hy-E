@@ -1,8 +1,8 @@
-# [RQ-02-00-14-019](./RQ-02-00-14-019_*.md): Data Recording Function
+# [RQ-02-00-14-019](RQ-02-00-14-019_Data_Recording_Function.md): Data Recording Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-019](./RQ-02-00-14-019_*.md)  
+**ID:** [RQ-02-00-14-019](RQ-02-00-14-019_Data_Recording_Function.md)  
 **Category:** Functional  
 **Subcategory:** Recording  
 **Title:** Data Recording Function  

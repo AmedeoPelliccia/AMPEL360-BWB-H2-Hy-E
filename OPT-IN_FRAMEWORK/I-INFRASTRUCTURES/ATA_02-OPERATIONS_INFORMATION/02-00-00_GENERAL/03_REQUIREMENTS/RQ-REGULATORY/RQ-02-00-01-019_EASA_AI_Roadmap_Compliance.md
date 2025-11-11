@@ -1,8 +1,8 @@
-# [RQ-02-00-01-019](./RQ-02-00-01-019_*.md): [EASA](https://www.easa.europa.eu/) AI Roadmap Compliance
+# [RQ-02-00-01-019](RQ-02-00-01-019_EASA_AI_Roadmap_Compliance.md): [EASA](https://www.easa.europa.eu/) AI Roadmap Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-019](./RQ-02-00-01-019_*.md)  
+**ID:** [RQ-02-00-01-019](RQ-02-00-01-019_EASA_AI_Roadmap_Compliance.md)  
 **Category:** Regulatory  
 **Subcategory:** AI  
 **Title:** [EASA](https://www.easa.europa.eu/) AI Roadmap Compliance  

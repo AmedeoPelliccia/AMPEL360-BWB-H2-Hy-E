@@ -1,8 +1,8 @@
-# [RQ-02-00-14-007](./RQ-02-00-14-007_*.md): Landing Data Generation Automated
+# [RQ-02-00-14-007](RQ-02-00-14-007_Landing_Data_Generation_Automated.md): Landing Data Generation Automated
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-007](./RQ-02-00-14-007_*.md)  
+**ID:** [RQ-02-00-14-007](RQ-02-00-14-007_Landing_Data_Generation_Automated.md)  
 **Category:** Functional  
 **Subcategory:** Landing  
 **Title:** Landing Data Generation Automated  

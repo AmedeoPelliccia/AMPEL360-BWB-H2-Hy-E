@@ -1,8 +1,8 @@
-# [RQ-02-00-02-016](./RQ-02-00-02-016_*.md): Defense in Depth H2 Safety Design
+# [RQ-02-00-02-016](RQ-02-00-02-016_Defense_in_Depth_H2_Safety_Design.md): Defense in Depth H2 Safety Design
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-016](./RQ-02-00-02-016_*.md)  
+**ID:** [RQ-02-00-02-016](RQ-02-00-02-016_Defense_in_Depth_H2_Safety_Design.md)  
 **Category:** Safety  
 **Subcategory:** H2  
 **Title:** Defense in Depth H2 Safety Design  

@@ -1,8 +1,8 @@
-# [RQ-02-00-01-014](./RQ-02-00-01-014_*.md): CPDLC Datalink Capability
+# [RQ-02-00-01-014](RQ-02-00-01-014_CPDLC_Datalink_Capability.md): CPDLC Datalink Capability
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-014](./RQ-02-00-01-014_*.md)  
+**ID:** [RQ-02-00-01-014](RQ-02-00-01-014_CPDLC_Datalink_Capability.md)  
 **Category:** Regulatory  
 **Subcategory:** Avionics  
 **Title:** CPDLC Datalink Capability  

@@ -1,8 +1,8 @@
-# [RQ-02-00-10-019](./RQ-02-00-10-019_*.md): CBT Effectiveness Measured
+# [RQ-02-00-10-019](RQ-02-00-10-019_CBT_Effectiveness_Measured.md): CBT Effectiveness Measured
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-019](./RQ-02-00-10-019_*.md)  
+**ID:** [RQ-02-00-10-019](RQ-02-00-10-019_CBT_Effectiveness_Measured.md)  
 **Category:** Training  
 **Subcategory:** CBT  
 **Title:** CBT Effectiveness Measured  

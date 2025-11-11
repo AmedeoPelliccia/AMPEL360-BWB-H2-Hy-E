@@ -1,8 +1,8 @@
-# [RQ-02-00-04-017](./RQ-02-00-04-017_*.md): MEL Dispatch Compliance
+# [RQ-02-00-04-017](RQ-02-00-04-017_MEL_Dispatch_Compliance.md): MEL Dispatch Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-017](./RQ-02-00-04-017_*.md)  
+**ID:** [RQ-02-00-04-017](RQ-02-00-04-017_MEL_Dispatch_Compliance.md)  
 **Category:** Operational  
 **Subcategory:** MEL  
 **Title:** MEL Dispatch Compliance  

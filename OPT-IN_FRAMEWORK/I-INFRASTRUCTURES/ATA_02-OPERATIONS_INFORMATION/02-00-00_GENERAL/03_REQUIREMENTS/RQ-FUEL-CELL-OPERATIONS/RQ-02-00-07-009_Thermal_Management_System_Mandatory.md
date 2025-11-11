@@ -1,8 +1,8 @@
-# [RQ-02-00-07-009](./RQ-02-00-07-009_*.md): Thermal Management System Mandatory
+# [RQ-02-00-07-009](RQ-02-00-07-009_Thermal_Management_System_Mandatory.md): Thermal Management System Mandatory
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-07-009](./RQ-02-00-07-009_*.md)  
+**ID:** [RQ-02-00-07-009](RQ-02-00-07-009_Thermal_Management_System_Mandatory.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Thermal  
 **Title:** Thermal Management System Mandatory  

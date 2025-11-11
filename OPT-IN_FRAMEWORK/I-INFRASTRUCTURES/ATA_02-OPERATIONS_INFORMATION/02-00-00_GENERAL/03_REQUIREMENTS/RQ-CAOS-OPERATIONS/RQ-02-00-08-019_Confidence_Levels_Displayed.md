@@ -1,8 +1,8 @@
-# [RQ-02-00-08-019](./RQ-02-00-08-019_*.md): Confidence Levels Displayed
+# [RQ-02-00-08-019](RQ-02-00-08-019_Confidence_Levels_Displayed.md): Confidence Levels Displayed
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-019](./RQ-02-00-08-019_*.md)  
+**ID:** [RQ-02-00-08-019](RQ-02-00-08-019_Confidence_Levels_Displayed.md)  
 **Category:** CAOS  
 **Subcategory:** Transparency  
 **Title:** Confidence Levels Displayed  

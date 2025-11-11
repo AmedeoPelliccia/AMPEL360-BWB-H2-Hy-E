@@ -1,8 +1,8 @@
-# [RQ-02-00-08-008](./RQ-02-00-08-008_*.md): Altitude Optimization Continuous
+# [RQ-02-00-08-008](RQ-02-00-08-008_Altitude_Optimization_Continuous.md): Altitude Optimization Continuous
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-008](./RQ-02-00-08-008_*.md)  
+**ID:** [RQ-02-00-08-008](RQ-02-00-08-008_Altitude_Optimization_Continuous.md)  
 **Category:** CAOS  
 **Subcategory:** Optimization  
 **Title:** Altitude Optimization Continuous  

@@ -1,8 +1,8 @@
-# [RQ-02-00-06-015](./RQ-02-00-06-015_*.md): Wide Body Cabin Procedures
+# [RQ-02-00-06-015](RQ-02-00-06-015_Wide_Body_Cabin_Procedures.md): Wide Body Cabin Procedures
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-015](./RQ-02-00-06-015_*.md)  
+**ID:** [RQ-02-00-06-015](RQ-02-00-06-015_Wide_Body_Cabin_Procedures.md)  
 **Category:** BWB Operations  
 **Subcategory:** Cabin  
 **Title:** Wide Body Cabin Procedures  

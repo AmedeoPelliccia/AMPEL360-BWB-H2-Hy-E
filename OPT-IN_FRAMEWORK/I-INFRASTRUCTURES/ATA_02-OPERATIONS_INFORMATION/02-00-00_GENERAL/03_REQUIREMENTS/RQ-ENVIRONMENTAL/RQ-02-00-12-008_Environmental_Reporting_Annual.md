@@ -1,8 +1,8 @@
-# [RQ-02-00-12-008](./RQ-02-00-12-008_*.md): Environmental Reporting Annual
+# [RQ-02-00-12-008](RQ-02-00-12-008_Environmental_Reporting_Annual.md): Environmental Reporting Annual
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-008](./RQ-02-00-12-008_*.md)  
+**ID:** [RQ-02-00-12-008](RQ-02-00-12-008_Environmental_Reporting_Annual.md)  
 **Category:** Environmental  
 **Subcategory:** Reporting  
 **Title:** Environmental Reporting Annual  

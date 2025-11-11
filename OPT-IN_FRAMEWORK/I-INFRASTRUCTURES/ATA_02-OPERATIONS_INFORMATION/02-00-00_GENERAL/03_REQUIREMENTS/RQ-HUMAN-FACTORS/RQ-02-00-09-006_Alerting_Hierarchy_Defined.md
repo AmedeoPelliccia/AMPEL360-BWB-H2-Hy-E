@@ -1,8 +1,8 @@
-# [RQ-02-00-09-006](./RQ-02-00-09-006_*.md): Alerting Hierarchy Defined
+# [RQ-02-00-09-006](RQ-02-00-09-006_Alerting_Hierarchy_Defined.md): Alerting Hierarchy Defined
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-006](./RQ-02-00-09-006_*.md)  
+**ID:** [RQ-02-00-09-006](RQ-02-00-09-006_Alerting_Hierarchy_Defined.md)  
 **Category:** Human Factors  
 **Subcategory:** Alerts  
 **Title:** Alerting Hierarchy Defined  

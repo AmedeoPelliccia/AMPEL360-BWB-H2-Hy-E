@@ -1,8 +1,8 @@
-# [RQ-02-00-10-009](./RQ-02-00-10-009_*.md): Cabin Crew Training 16 Hours
+# [RQ-02-00-10-009](RQ-02-00-10-009_Cabin_Crew_Training_16_Hours.md): Cabin Crew Training 16 Hours
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-009](./RQ-02-00-10-009_*.md)  
+**ID:** [RQ-02-00-10-009](RQ-02-00-10-009_Cabin_Crew_Training_16_Hours.md)  
 **Category:** Training  
 **Subcategory:** Cabin Crew  
 **Title:** Cabin Crew Training 16 Hours  

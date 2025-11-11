@@ -1,8 +1,8 @@
-# [RQ-02-00-02-015](./RQ-02-00-02-015_*.md): Safety Risk Assessment Process
+# [RQ-02-00-02-015](RQ-02-00-02-015_Safety_Risk_Assessment_Process.md): Safety Risk Assessment Process
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-015](./RQ-02-00-02-015_*.md)  
+**ID:** [RQ-02-00-02-015](RQ-02-00-02-015_Safety_Risk_Assessment_Process.md)  
 **Category:** Safety  
 **Subcategory:** Risk  
 **Title:** Safety Risk Assessment Process  

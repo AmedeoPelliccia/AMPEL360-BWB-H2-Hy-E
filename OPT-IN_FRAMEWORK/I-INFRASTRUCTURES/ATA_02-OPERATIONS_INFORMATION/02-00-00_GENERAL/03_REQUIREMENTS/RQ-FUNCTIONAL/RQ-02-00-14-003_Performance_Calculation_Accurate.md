@@ -1,8 +1,8 @@
-# [RQ-02-00-14-003](./RQ-02-00-14-003_*.md): Performance Calculation Accurate
+# [RQ-02-00-14-003](RQ-02-00-14-003_Performance_Calculation_Accurate.md): Performance Calculation Accurate
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-003](./RQ-02-00-14-003_*.md)  
+**ID:** [RQ-02-00-14-003](RQ-02-00-14-003_Performance_Calculation_Accurate.md)  
 **Category:** Functional  
 **Subcategory:** Performance  
 **Title:** Performance Calculation Accurate  

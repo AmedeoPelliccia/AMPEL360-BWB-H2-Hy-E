@@ -1,8 +1,8 @@
-# [RQ-02-00-01-004](./RQ-02-00-01-004_*.md): [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965) Air Operations Compliance
+# [RQ-02-00-01-004](RQ-02-00-01-004_EU_965_2012_Air_Operations_Compliance.md): [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965) Air Operations Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-004](./RQ-02-00-01-004_*.md)  
+**ID:** [RQ-02-00-01-004](RQ-02-00-01-004_EU_965_2012_Air_Operations_Compliance.md)  
 **Category:** Regulatory  
 **Subcategory:** EU  
 **Title:** [EU 965/2012](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0965) Air Operations Compliance  

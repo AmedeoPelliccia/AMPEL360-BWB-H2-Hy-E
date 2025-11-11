@@ -1,8 +1,8 @@
-# [RQ-02-00-11-006](./RQ-02-00-11-006_*.md): [S1000D](http://www.s1000d.org/) Specification Compliance
+# [RQ-02-00-11-006](RQ-02-00-11-006_S1000D_Specification_Compliance.md): [S1000D](http://www.s1000d.org/) Specification Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-006](./RQ-02-00-11-006_*.md)  
+**ID:** [RQ-02-00-11-006](RQ-02-00-11-006_S1000D_Specification_Compliance.md)  
 **Category:** Documentation  
 **Subcategory:** [S1000D](http://www.s1000d.org/)  
 **Title:** [S1000D](http://www.s1000d.org/) Specification Compliance  

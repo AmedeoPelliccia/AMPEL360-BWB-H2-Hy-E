@@ -1,8 +1,8 @@
-# [RQ-02-00-08-020](./RQ-02-00-08-020_*.md): Independent Safety Monitor
+# [RQ-02-00-08-020](RQ-02-00-08-020_Independent_Safety_Monitor.md): Independent Safety Monitor
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-020](./RQ-02-00-08-020_*.md)  
+**ID:** [RQ-02-00-08-020](RQ-02-00-08-020_Independent_Safety_Monitor.md)  
 **Category:** CAOS  
 **Subcategory:** Safety  
 **Title:** Independent Safety Monitor  

@@ -1,8 +1,8 @@
-# [RQ-02-00-12-013](./RQ-02-00-12-013_*.md): Sorbent Regeneration on Ground
+# [RQ-02-00-12-013](RQ-02-00-12-013_Sorbent_Regeneration_on_Ground.md): Sorbent Regeneration on Ground
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-013](./RQ-02-00-12-013_*.md)  
+**ID:** [RQ-02-00-12-013](RQ-02-00-12-013_Sorbent_Regeneration_on_Ground.md)  
 **Category:** Environmental  
 **Subcategory:** Regeneration  
 **Title:** Sorbent Regeneration on Ground  

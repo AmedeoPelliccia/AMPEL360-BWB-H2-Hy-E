@@ -1,8 +1,8 @@
-# [RQ-02-00-11-007](./RQ-02-00-11-007_*.md): [ATA iSpec 2200](https://www.ataebiz.org/) Compliance
+# [RQ-02-00-11-007](RQ-02-00-11-007_ATA_iSpec_2200_Compliance.md): [ATA iSpec 2200](https://www.ataebiz.org/) Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-007](./RQ-02-00-11-007_*.md)  
+**ID:** [RQ-02-00-11-007](RQ-02-00-11-007_ATA_iSpec_2200_Compliance.md)  
 **Category:** Documentation  
 **Subcategory:** ATA iSpec  
 **Title:** [ATA iSpec 2200](https://www.ataebiz.org/) Compliance  

@@ -1,8 +1,8 @@
-# [RQ-02-00-13-012](./RQ-02-00-13-012_*.md): Weather Services Interface
+# [RQ-02-00-13-012](RQ-02-00-13-012_Weather_Services_Interface.md): Weather Services Interface
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-13-012](./RQ-02-00-13-012_*.md)  
+**ID:** [RQ-02-00-13-012](RQ-02-00-13-012_Weather_Services_Interface.md)  
 **Category:** Interface  
 **Subcategory:** Weather  
 **Title:** Weather Services Interface  

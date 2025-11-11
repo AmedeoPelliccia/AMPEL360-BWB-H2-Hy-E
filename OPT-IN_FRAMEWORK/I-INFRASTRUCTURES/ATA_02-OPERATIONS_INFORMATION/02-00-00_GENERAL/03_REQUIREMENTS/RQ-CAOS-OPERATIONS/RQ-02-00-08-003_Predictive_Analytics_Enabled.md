@@ -1,8 +1,8 @@
-# [RQ-02-00-08-003](./RQ-02-00-08-003_*.md): Predictive Analytics Enabled
+# [RQ-02-00-08-003](RQ-02-00-08-003_Predictive_Analytics_Enabled.md): Predictive Analytics Enabled
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-003](./RQ-02-00-08-003_*.md)  
+**ID:** [RQ-02-00-08-003](RQ-02-00-08-003_Predictive_Analytics_Enabled.md)  
 **Category:** CAOS  
 **Subcategory:** Analytics  
 **Title:** Predictive Analytics Enabled  

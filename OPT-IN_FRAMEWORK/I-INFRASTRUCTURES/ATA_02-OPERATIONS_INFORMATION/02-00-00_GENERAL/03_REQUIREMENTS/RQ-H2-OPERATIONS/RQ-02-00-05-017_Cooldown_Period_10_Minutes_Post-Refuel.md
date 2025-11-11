@@ -1,8 +1,8 @@
-# [RQ-02-00-05-017](./RQ-02-00-05-017_*.md): Cooldown Period 10 Minutes Post-Refuel
+# [RQ-02-00-05-017](RQ-02-00-05-017_Cooldown_Period_10_Minutes_Post-Refuel.md): Cooldown Period 10 Minutes Post-Refuel
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-05-017](./RQ-02-00-05-017_*.md)  
+**ID:** [RQ-02-00-05-017](RQ-02-00-05-017_Cooldown_Period_10_Minutes_Post-Refuel.md)  
 **Category:** H2 Operations  
 **Subcategory:** Procedures  
 **Title:** Cooldown Period 10 Minutes Post-Refuel  

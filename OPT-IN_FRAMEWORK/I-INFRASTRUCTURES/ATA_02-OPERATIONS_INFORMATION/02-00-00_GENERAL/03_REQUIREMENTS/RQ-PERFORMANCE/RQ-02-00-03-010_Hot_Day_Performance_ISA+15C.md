@@ -1,8 +1,8 @@
-# [RQ-02-00-03-010](./RQ-02-00-03-010_*.md): Hot Day Performance ISA+15C
+# [RQ-02-00-03-010](RQ-02-00-03-010_Hot_Day_Performance_ISA+15C.md): Hot Day Performance ISA+15C
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-03-010](./RQ-02-00-03-010_*.md)  
+**ID:** [RQ-02-00-03-010](RQ-02-00-03-010_Hot_Day_Performance_ISA+15C.md)  
 **Category:** Performance  
 **Subcategory:** Temperature  
 **Title:** Hot Day Performance ISA+15C  

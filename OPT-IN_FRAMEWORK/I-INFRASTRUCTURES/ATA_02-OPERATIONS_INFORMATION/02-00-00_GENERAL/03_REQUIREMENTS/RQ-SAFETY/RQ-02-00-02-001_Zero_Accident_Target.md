@@ -1,8 +1,8 @@
-# [RQ-02-00-02-001](./RQ-02-00-02-001_*.md): Zero Accident Target
+# [RQ-02-00-02-001](RQ-02-00-02-001_Zero_Accident_Target.md): Zero Accident Target
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-001](./RQ-02-00-02-001_*.md)  
+**ID:** [RQ-02-00-02-001](RQ-02-00-02-001_Zero_Accident_Target.md)  
 **Category:** Safety  
 **Subcategory:** Target  
 **Title:** Zero Accident Target  

@@ -1,8 +1,8 @@
-# [RQ-02-00-12-015](./RQ-02-00-12-015_*.md): Sustainability KPIs Tracked
+# [RQ-02-00-12-015](RQ-02-00-12-015_Sustainability_KPIs_Tracked.md): Sustainability KPIs Tracked
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-015](./RQ-02-00-12-015_*.md)  
+**ID:** [RQ-02-00-12-015](RQ-02-00-12-015_Sustainability_KPIs_Tracked.md)  
 **Category:** Environmental  
 **Subcategory:** KPIs  
 **Title:** Sustainability KPIs Tracked  

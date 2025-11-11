@@ -1,8 +1,8 @@
-# [RQ-02-00-02-017](./RQ-02-00-02-017_*.md): Independent Safety Monitor for CAOS
+# [RQ-02-00-02-017](RQ-02-00-02-017_Independent_Safety_Monitor_for_CAOS.md): Independent Safety Monitor for CAOS
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-017](./RQ-02-00-02-017_*.md)  
+**ID:** [RQ-02-00-02-017](RQ-02-00-02-017_Independent_Safety_Monitor_for_CAOS.md)  
 **Category:** Safety  
 **Subcategory:** CAOS  
 **Title:** Independent Safety Monitor for CAOS  

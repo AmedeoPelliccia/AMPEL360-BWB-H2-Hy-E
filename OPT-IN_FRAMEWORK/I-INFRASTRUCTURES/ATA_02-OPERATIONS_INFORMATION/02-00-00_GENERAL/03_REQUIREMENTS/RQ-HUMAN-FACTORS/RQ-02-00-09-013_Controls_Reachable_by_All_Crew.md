@@ -1,8 +1,8 @@
-# [RQ-02-00-09-013](./RQ-02-00-09-013_*.md): Controls Reachable by All Crew
+# [RQ-02-00-09-013](RQ-02-00-09-013_Controls_Reachable_by_All_Crew.md): Controls Reachable by All Crew
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-013](./RQ-02-00-09-013_*.md)  
+**ID:** [RQ-02-00-09-013](RQ-02-00-09-013_Controls_Reachable_by_All_Crew.md)  
 **Category:** Human Factors  
 **Subcategory:** Reachability  
 **Title:** Controls Reachable by All Crew  

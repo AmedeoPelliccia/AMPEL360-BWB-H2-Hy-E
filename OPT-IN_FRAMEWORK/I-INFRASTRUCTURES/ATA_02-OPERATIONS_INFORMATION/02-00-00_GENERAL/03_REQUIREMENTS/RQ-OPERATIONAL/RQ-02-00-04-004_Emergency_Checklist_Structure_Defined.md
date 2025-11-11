@@ -1,8 +1,8 @@
-# [RQ-02-00-04-004](./RQ-02-00-04-004_*.md): Emergency Checklist Structure Defined
+# [RQ-02-00-04-004](RQ-02-00-04-004_Emergency_Checklist_Structure_Defined.md): Emergency Checklist Structure Defined
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-004](./RQ-02-00-04-004_*.md)  
+**ID:** [RQ-02-00-04-004](RQ-02-00-04-004_Emergency_Checklist_Structure_Defined.md)  
 **Category:** Operational  
 **Subcategory:** Checklists  
 **Title:** Emergency Checklist Structure Defined  

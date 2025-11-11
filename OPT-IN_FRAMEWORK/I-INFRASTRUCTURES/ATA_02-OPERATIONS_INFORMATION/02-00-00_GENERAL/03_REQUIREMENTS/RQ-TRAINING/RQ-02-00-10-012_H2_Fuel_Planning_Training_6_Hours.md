@@ -1,8 +1,8 @@
-# [RQ-02-00-10-012](./RQ-02-00-10-012_*.md): H2 Fuel Planning Training 6 Hours
+# [RQ-02-00-10-012](RQ-02-00-10-012_H2_Fuel_Planning_Training_6_Hours.md): H2 Fuel Planning Training 6 Hours
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-012](./RQ-02-00-10-012_*.md)  
+**ID:** [RQ-02-00-10-012](RQ-02-00-10-012_H2_Fuel_Planning_Training_6_Hours.md)  
 **Category:** Training  
 **Subcategory:** Fuel Planning  
 **Title:** H2 Fuel Planning Training 6 Hours  

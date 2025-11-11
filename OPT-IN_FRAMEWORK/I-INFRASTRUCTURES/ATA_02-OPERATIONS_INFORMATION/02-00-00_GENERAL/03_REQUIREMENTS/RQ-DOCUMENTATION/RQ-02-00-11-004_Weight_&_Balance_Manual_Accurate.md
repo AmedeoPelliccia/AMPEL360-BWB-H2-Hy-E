@@ -1,8 +1,8 @@
-# [RQ-02-00-11-004](./RQ-02-00-11-004_*.md): Weight & Balance Manual Accurate
+# [RQ-02-00-11-004](RQ-02-00-11-004_Weight_&_Balance_Manual_Accurate.md): Weight & Balance Manual Accurate
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-004](./RQ-02-00-11-004_*.md)  
+**ID:** [RQ-02-00-11-004](RQ-02-00-11-004_Weight_&_Balance_Manual_Accurate.md)  
 **Category:** Documentation  
 **Subcategory:** W&B  
 **Title:** Weight & Balance Manual Accurate  

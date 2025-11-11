@@ -1,8 +1,8 @@
-# [RQ-02-00-13-013](./RQ-02-00-13-013_*.md): Company OCC Interface
+# [RQ-02-00-13-013](RQ-02-00-13-013_Company_OCC_Interface.md): Company OCC Interface
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-13-013](./RQ-02-00-13-013_*.md)  
+**ID:** [RQ-02-00-13-013](RQ-02-00-13-013_Company_OCC_Interface.md)  
 **Category:** Interface  
 **Subcategory:** OCC  
 **Title:** Company OCC Interface  

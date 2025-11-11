@@ -1,8 +1,8 @@
-# [RQ-02-00-14-015](./RQ-02-00-14-015_*.md): Digital Procedures Function
+# [RQ-02-00-14-015](RQ-02-00-14-015_Digital_Procedures_Function.md): Digital Procedures Function
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-015](./RQ-02-00-14-015_*.md)  
+**ID:** [RQ-02-00-14-015](RQ-02-00-14-015_Digital_Procedures_Function.md)  
 **Category:** Functional  
 **Subcategory:** Procedures  
 **Title:** Digital Procedures Function  

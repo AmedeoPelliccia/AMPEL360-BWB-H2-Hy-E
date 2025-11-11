@@ -1,8 +1,8 @@
-# [RQ-02-00-13-006](./RQ-02-00-13-006_*.md): [ATA 47](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_47-INERTING_SYSTEM/) Inerting System Interface
+# [RQ-02-00-13-006](RQ-02-00-13-006_ATA_47_Inerting_System_Interface.md): [ATA 47](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_47-INERTING_SYSTEM/) Inerting System Interface
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-13-006](./RQ-02-00-13-006_*.md)  
+**ID:** [RQ-02-00-13-006](RQ-02-00-13-006_ATA_47_Inerting_System_Interface.md)  
 **Category:** Interface  
 **Subcategory:** Inerting  
 **Title:** [ATA 47](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_47-INERTING_SYSTEM/) Inerting System Interface  

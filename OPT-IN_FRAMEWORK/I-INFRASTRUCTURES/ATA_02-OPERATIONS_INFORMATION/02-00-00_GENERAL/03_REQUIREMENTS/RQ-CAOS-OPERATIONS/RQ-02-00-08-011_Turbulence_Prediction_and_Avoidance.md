@@ -1,8 +1,8 @@
-# [RQ-02-00-08-011](./RQ-02-00-08-011_*.md): Turbulence Prediction and Avoidance
+# [RQ-02-00-08-011](RQ-02-00-08-011_Turbulence_Prediction_and_Avoidance.md): Turbulence Prediction and Avoidance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-011](./RQ-02-00-08-011_*.md)  
+**ID:** [RQ-02-00-08-011](RQ-02-00-08-011_Turbulence_Prediction_and_Avoidance.md)  
 **Category:** CAOS  
 **Subcategory:** Weather  
 **Title:** Turbulence Prediction and Avoidance  

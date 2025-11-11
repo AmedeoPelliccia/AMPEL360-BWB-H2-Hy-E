@@ -1,8 +1,8 @@
-# [RQ-02-00-03-013](./RQ-02-00-03-013_*.md): High Altitude Airport 10000ft Operations
+# [RQ-02-00-03-013](RQ-02-00-03-013_High_Altitude_Airport_10000ft_Operations.md): High Altitude Airport 10000ft Operations
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-03-013](./RQ-02-00-03-013_*.md)  
+**ID:** [RQ-02-00-03-013](RQ-02-00-03-013_High_Altitude_Airport_10000ft_Operations.md)  
 **Category:** Performance  
 **Subcategory:** Altitude  
 **Title:** High Altitude Airport 10000ft Operations  

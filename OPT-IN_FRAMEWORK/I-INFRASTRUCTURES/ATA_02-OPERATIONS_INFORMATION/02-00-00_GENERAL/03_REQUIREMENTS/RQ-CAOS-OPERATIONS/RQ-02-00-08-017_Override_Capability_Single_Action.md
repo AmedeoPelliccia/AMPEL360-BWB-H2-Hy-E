@@ -1,8 +1,8 @@
-# [RQ-02-00-08-017](./RQ-02-00-08-017_*.md): Override Capability Single Action
+# [RQ-02-00-08-017](RQ-02-00-08-017_Override_Capability_Single_Action.md): Override Capability Single Action
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-017](./RQ-02-00-08-017_*.md)  
+**ID:** [RQ-02-00-08-017](RQ-02-00-08-017_Override_Capability_Single_Action.md)  
 **Category:** CAOS  
 **Subcategory:** Override  
 **Title:** Override Capability Single Action  

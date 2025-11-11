@@ -1,8 +1,8 @@
-# [RQ-02-00-03-009](./RQ-02-00-03-009_*.md): Crosswind Capability 35 Knots
+# [RQ-02-00-03-009](RQ-02-00-03-009_Crosswind_Capability_35_Knots.md): Crosswind Capability 35 Knots
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-03-009](./RQ-02-00-03-009_*.md)  
+**ID:** [RQ-02-00-03-009](RQ-02-00-03-009_Crosswind_Capability_35_Knots.md)  
 **Category:** Performance  
 **Subcategory:** Wind  
 **Title:** Crosswind Capability 35 Knots  

@@ -1,8 +1,8 @@
-# [RQ-02-00-08-002](./RQ-02-00-08-002_*.md): Real-Time Synchronization 100ms
+# [RQ-02-00-08-002](RQ-02-00-08-002_Real-Time_Synchronization_100ms.md): Real-Time Synchronization 100ms
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-002](./RQ-02-00-08-002_*.md)  
+**ID:** [RQ-02-00-08-002](RQ-02-00-08-002_Real-Time_Synchronization_100ms.md)  
 **Category:** CAOS  
 **Subcategory:** Integration  
 **Title:** Real-Time Synchronization 100ms  

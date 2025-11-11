@@ -1,8 +1,8 @@
-# [RQ-02-00-10-020](./RQ-02-00-10-020_*.md): Training Records Maintained
+# [RQ-02-00-10-020](RQ-02-00-10-020_Training_Records_Maintained.md): Training Records Maintained
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-020](./RQ-02-00-10-020_*.md)  
+**ID:** [RQ-02-00-10-020](RQ-02-00-10-020_Training_Records_Maintained.md)  
 **Category:** Training  
 **Subcategory:** Records  
 **Title:** Training Records Maintained  

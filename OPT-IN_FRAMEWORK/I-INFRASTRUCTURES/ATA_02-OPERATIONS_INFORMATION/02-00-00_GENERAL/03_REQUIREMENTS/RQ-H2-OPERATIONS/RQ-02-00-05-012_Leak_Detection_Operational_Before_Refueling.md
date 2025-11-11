@@ -1,8 +1,8 @@
-# [RQ-02-00-05-012](./RQ-02-00-05-012_*.md): Leak Detection Operational Before Refueling
+# [RQ-02-00-05-012](RQ-02-00-05-012_Leak_Detection_Operational_Before_Refueling.md): Leak Detection Operational Before Refueling
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-05-012](./RQ-02-00-05-012_*.md)  
+**ID:** [RQ-02-00-05-012](RQ-02-00-05-012_Leak_Detection_Operational_Before_Refueling.md)  
 **Category:** H2 Operations  
 **Subcategory:** Safety  
 **Title:** Leak Detection Operational Before Refueling  

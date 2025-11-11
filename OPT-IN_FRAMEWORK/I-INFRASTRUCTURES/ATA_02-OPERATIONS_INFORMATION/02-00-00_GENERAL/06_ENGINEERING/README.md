@@ -265,7 +265,7 @@ Technical notes (TN-02-00-001 to 005) documenting:
 - Parent Component: [02-00-00_GENERAL](../)
 - ATA Chapter: [02 - Operations Information](../../)
 - AMPEL360 Platform: BWB H₂ Hy-E Q100
-- Main Project: [README.md](../../../../../../README.md)
+- Main Project: [README.md](../../../../../README.md)
 
 ---
 

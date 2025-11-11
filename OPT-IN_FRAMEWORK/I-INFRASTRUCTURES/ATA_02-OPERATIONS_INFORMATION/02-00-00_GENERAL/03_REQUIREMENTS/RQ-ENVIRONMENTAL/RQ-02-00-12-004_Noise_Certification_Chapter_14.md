@@ -1,8 +1,8 @@
-# [RQ-02-00-12-004](./RQ-02-00-12-004_*.md): Noise Certification Chapter 14
+# [RQ-02-00-12-004](RQ-02-00-12-004_Noise_Certification_Chapter_14.md): Noise Certification Chapter 14
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-004](./RQ-02-00-12-004_*.md)  
+**ID:** [RQ-02-00-12-004](RQ-02-00-12-004_Noise_Certification_Chapter_14.md)  
 **Category:** Environmental  
 **Subcategory:** Certification  
 **Title:** Noise Certification Chapter 14  

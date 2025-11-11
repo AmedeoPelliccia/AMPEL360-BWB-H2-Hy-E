@@ -1,8 +1,8 @@
-# [RQ-02-00-05-010](./RQ-02-00-05-010_*.md): Fire Equipment on Standby During Refueling
+# [RQ-02-00-05-010](RQ-02-00-05-010_Fire_Equipment_on_Standby_During_Refueling.md): Fire Equipment on Standby During Refueling
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-05-010](./RQ-02-00-05-010_*.md)  
+**ID:** [RQ-02-00-05-010](RQ-02-00-05-010_Fire_Equipment_on_Standby_During_Refueling.md)  
 **Category:** H2 Operations  
 **Subcategory:** Safety  
 **Title:** Fire Equipment on Standby During Refueling  

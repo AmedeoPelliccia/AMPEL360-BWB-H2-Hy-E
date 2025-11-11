@@ -1,8 +1,8 @@
-# [RQ-02-00-11-011](./RQ-02-00-11-011_*.md): Revision History Complete
+# [RQ-02-00-11-011](RQ-02-00-11-011_Revision_History_Complete.md): Revision History Complete
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-011](./RQ-02-00-11-011_*.md)  
+**ID:** [RQ-02-00-11-011](RQ-02-00-11-011_Revision_History_Complete.md)  
 **Category:** Documentation  
 **Subcategory:** History  
 **Title:** Revision History Complete  

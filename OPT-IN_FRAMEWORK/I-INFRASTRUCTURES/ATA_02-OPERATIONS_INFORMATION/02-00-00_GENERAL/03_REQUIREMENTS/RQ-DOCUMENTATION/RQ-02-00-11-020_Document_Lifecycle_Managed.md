@@ -1,8 +1,8 @@
-# [RQ-02-00-11-020](./RQ-02-00-11-020_*.md): Document Lifecycle Managed
+# [RQ-02-00-11-020](RQ-02-00-11-020_Document_Lifecycle_Managed.md): Document Lifecycle Managed
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-020](./RQ-02-00-11-020_*.md)  
+**ID:** [RQ-02-00-11-020](RQ-02-00-11-020_Document_Lifecycle_Managed.md)  
 **Category:** Documentation  
 **Subcategory:** Lifecycle  
 **Title:** Document Lifecycle Managed  

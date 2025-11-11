@@ -1,8 +1,8 @@
-# [RQ-02-00-09-014](./RQ-02-00-09-014_*.md): Labeling Clear and Consistent
+# [RQ-02-00-09-014](RQ-02-00-09-014_Labeling_Clear_and_Consistent.md): Labeling Clear and Consistent
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-014](./RQ-02-00-09-014_*.md)  
+**ID:** [RQ-02-00-09-014](RQ-02-00-09-014_Labeling_Clear_and_Consistent.md)  
 **Category:** Human Factors  
 **Subcategory:** Labeling  
 **Title:** Labeling Clear and Consistent  

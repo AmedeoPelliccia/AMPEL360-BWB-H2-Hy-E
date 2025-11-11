@@ -1,8 +1,8 @@
-# [RQ-02-00-12-014](./RQ-02-00-12-014_*.md): Environmental Management System
+# [RQ-02-00-12-014](RQ-02-00-12-014_Environmental_Management_System.md): Environmental Management System
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-014](./RQ-02-00-12-014_*.md)  
+**ID:** [RQ-02-00-12-014](RQ-02-00-12-014_Environmental_Management_System.md)  
 **Category:** Environmental  
 **Subcategory:** EMS  
 **Title:** Environmental Management System  

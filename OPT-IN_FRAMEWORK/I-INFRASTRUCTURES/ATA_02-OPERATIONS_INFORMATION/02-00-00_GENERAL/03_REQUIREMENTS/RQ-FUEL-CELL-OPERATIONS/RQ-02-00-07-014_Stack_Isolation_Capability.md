@@ -1,8 +1,8 @@
-# [RQ-02-00-07-014](./RQ-02-00-07-014_*.md): Stack Isolation Capability
+# [RQ-02-00-07-014](RQ-02-00-07-014_Stack_Isolation_Capability.md): Stack Isolation Capability
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-07-014](./RQ-02-00-07-014_*.md)  
+**ID:** [RQ-02-00-07-014](RQ-02-00-07-014_Stack_Isolation_Capability.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Isolation  
 **Title:** Stack Isolation Capability  

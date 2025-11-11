@@ -1,8 +1,8 @@
-# [RQ-02-00-02-007](./RQ-02-00-02-007_*.md): H2-Specific Fire Detection System
+# [RQ-02-00-02-007](RQ-02-00-02-007_H2-Specific_Fire_Detection_System.md): H2-Specific Fire Detection System
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-007](./RQ-02-00-02-007_*.md)  
+**ID:** [RQ-02-00-02-007](RQ-02-00-02-007_H2-Specific_Fire_Detection_System.md)  
 **Category:** Safety  
 **Subcategory:** H2  
 **Title:** H2-Specific Fire Detection System  

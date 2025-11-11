@@ -236,8 +236,8 @@ All designs meet requirements and human factors standards per CS-25, FAA AC 120-
 - [ATA 40 - AI Integration (CAOS)](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-ID/ATA_40-AI_INTEGRATION/)
 
 ### Framework Documents
-- [CAOS Manifesto](../../../../../../CAOS_MANIFESTO.md)
-- [CAOS Operations Framework](../../../../../../CAOS_OPERATIONS_FRAMEWORK.md)
+- [CAOS Manifesto](../../../../../CAOS_MANIFESTO.md)
+- [CAOS Operations Framework](../../../../../CAOS_OPERATIONS_FRAMEWORK.md)
 - [OPT-IN Framework](../../../../../README.md)
 
 ## Document Control

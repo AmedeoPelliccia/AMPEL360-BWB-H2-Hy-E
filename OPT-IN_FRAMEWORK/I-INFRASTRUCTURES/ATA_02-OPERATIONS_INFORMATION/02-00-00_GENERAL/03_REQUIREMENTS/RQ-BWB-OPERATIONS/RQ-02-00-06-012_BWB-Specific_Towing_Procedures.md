@@ -1,8 +1,8 @@
-# [RQ-02-00-06-012](./RQ-02-00-06-012_*.md): BWB-Specific Towing Procedures
+# [RQ-02-00-06-012](RQ-02-00-06-012_BWB-Specific_Towing_Procedures.md): BWB-Specific Towing Procedures
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-012](./RQ-02-00-06-012_*.md)  
+**ID:** [RQ-02-00-06-012](RQ-02-00-06-012_BWB-Specific_Towing_Procedures.md)  
 **Category:** BWB Operations  
 **Subcategory:** Ground  
 **Title:** BWB-Specific Towing Procedures  

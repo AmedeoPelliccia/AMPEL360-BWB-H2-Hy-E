@@ -1,8 +1,8 @@
-# [RQ-02-00-07-006](./RQ-02-00-07-006_*.md): Hot Start Time 30 Seconds Maximum
+# [RQ-02-00-07-006](RQ-02-00-07-006_Hot_Start_Time_30_Seconds_Maximum.md): Hot Start Time 30 Seconds Maximum
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-07-006](./RQ-02-00-07-006_*.md)  
+**ID:** [RQ-02-00-07-006](RQ-02-00-07-006_Hot_Start_Time_30_Seconds_Maximum.md)  
 **Category:** Fuel Cell Ops  
 **Subcategory:** Start  
 **Title:** Hot Start Time 30 Seconds Maximum  

@@ -1,8 +1,8 @@
-# [RQ-02-00-02-010](./RQ-02-00-02-010_*.md): Emergency Ventilation 50 Air Changes/Hour
+# [RQ-02-00-02-010](RQ-02-00-02-010_Emergency_Ventilation_50_Air_Changes_Hour.md): Emergency Ventilation 50 Air Changes/Hour
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-010](./RQ-02-00-02-010_*.md)  
+**ID:** [RQ-02-00-02-010](RQ-02-00-02-010_Emergency_Ventilation_50_Air_Changes_Hour.md)  
 **Category:** Safety  
 **Subcategory:** H2  
 **Title:** Emergency Ventilation 50 Air Changes/Hour  

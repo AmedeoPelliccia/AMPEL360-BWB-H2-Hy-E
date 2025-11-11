@@ -1,8 +1,8 @@
-# [RQ-02-00-04-001](./RQ-02-00-04-001_*.md): Standard Operating Procedures Complete
+# [RQ-02-00-04-001](RQ-02-00-04-001_Standard_Operating_Procedures_Complete.md): Standard Operating Procedures Complete
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-001](./RQ-02-00-04-001_*.md)  
+**ID:** [RQ-02-00-04-001](RQ-02-00-04-001_Standard_Operating_Procedures_Complete.md)  
 **Category:** Operational  
 **Subcategory:** Procedures  
 **Title:** Standard Operating Procedures Complete  

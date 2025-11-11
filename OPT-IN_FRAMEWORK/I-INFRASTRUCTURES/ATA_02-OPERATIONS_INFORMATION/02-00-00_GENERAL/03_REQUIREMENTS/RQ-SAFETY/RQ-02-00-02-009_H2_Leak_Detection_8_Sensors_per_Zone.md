@@ -1,8 +1,8 @@
-# [RQ-02-00-02-009](./RQ-02-00-02-009_*.md): H2 Leak Detection 8 Sensors per Zone
+# [RQ-02-00-02-009](RQ-02-00-02-009_H2_Leak_Detection_8_Sensors_per_Zone.md): H2 Leak Detection 8 Sensors per Zone
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-009](./RQ-02-00-02-009_*.md)  
+**ID:** [RQ-02-00-02-009](RQ-02-00-02-009_H2_Leak_Detection_8_Sensors_per_Zone.md)  
 **Category:** Safety  
 **Subcategory:** H2  
 **Title:** H2 Leak Detection 8 Sensors per Zone  

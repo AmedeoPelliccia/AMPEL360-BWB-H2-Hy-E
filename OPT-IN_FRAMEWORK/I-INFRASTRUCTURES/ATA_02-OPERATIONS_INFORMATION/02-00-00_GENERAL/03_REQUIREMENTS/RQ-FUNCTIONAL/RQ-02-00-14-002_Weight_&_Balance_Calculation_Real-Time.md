@@ -1,8 +1,8 @@
-# [RQ-02-00-14-002](./RQ-02-00-14-002_*.md): Weight & Balance Calculation Real-Time
+# [RQ-02-00-14-002](RQ-02-00-14-002_Weight_&_Balance_Calculation_Real-Time.md): Weight & Balance Calculation Real-Time
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-002](./RQ-02-00-14-002_*.md)  
+**ID:** [RQ-02-00-14-002](RQ-02-00-14-002_Weight_&_Balance_Calculation_Real-Time.md)  
 **Category:** Functional  
 **Subcategory:** Weight Balance  
 **Title:** Weight & Balance Calculation Real-Time  

@@ -1,8 +1,8 @@
-# [RQ-02-00-08-010](./RQ-02-00-08-010_*.md): Weather Avoidance AI System
+# [RQ-02-00-08-010](RQ-02-00-08-010_Weather_Avoidance_AI_System.md): Weather Avoidance AI System
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-010](./RQ-02-00-08-010_*.md)  
+**ID:** [RQ-02-00-08-010](RQ-02-00-08-010_Weather_Avoidance_AI_System.md)  
 **Category:** CAOS  
 **Subcategory:** Weather  
 **Title:** Weather Avoidance AI System  

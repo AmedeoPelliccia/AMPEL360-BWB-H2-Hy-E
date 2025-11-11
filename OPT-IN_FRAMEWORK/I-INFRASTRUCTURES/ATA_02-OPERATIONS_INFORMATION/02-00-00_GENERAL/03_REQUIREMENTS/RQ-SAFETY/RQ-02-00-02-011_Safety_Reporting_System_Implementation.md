@@ -1,8 +1,8 @@
-# [RQ-02-00-02-011](./RQ-02-00-02-011_*.md): Safety Reporting System Implementation
+# [RQ-02-00-02-011](RQ-02-00-02-011_Safety_Reporting_System_Implementation.md): Safety Reporting System Implementation
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-011](./RQ-02-00-02-011_*.md)  
+**ID:** [RQ-02-00-02-011](RQ-02-00-02-011_Safety_Reporting_System_Implementation.md)  
 **Category:** Safety  
 **Subcategory:** Reporting  
 **Title:** Safety Reporting System Implementation  

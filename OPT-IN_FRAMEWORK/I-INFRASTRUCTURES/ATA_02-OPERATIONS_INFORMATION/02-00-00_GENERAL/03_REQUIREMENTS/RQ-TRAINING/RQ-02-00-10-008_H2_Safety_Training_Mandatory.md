@@ -1,8 +1,8 @@
-# [RQ-02-00-10-008](./RQ-02-00-10-008_*.md): H2 Safety Training Mandatory
+# [RQ-02-00-10-008](RQ-02-00-10-008_H2_Safety_Training_Mandatory.md): H2 Safety Training Mandatory
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-008](./RQ-02-00-10-008_*.md)  
+**ID:** [RQ-02-00-10-008](RQ-02-00-10-008_H2_Safety_Training_Mandatory.md)  
 **Category:** Training  
 **Subcategory:** H2 Safety  
 **Title:** H2 Safety Training Mandatory  

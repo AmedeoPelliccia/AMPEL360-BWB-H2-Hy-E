@@ -1,8 +1,8 @@
-# [RQ-02-00-11-009](./RQ-02-00-11-009_*.md): Configuration Management System
+# [RQ-02-00-11-009](RQ-02-00-11-009_Configuration_Management_System.md): Configuration Management System
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-009](./RQ-02-00-11-009_*.md)  
+**ID:** [RQ-02-00-11-009](RQ-02-00-11-009_Configuration_Management_System.md)  
 **Category:** Documentation  
 **Subcategory:** Configuration  
 **Title:** Configuration Management System  

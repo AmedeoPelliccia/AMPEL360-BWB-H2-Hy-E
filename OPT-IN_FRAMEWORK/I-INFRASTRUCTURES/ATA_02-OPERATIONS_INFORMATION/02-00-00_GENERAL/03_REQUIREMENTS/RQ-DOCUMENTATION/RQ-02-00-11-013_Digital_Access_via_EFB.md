@@ -1,8 +1,8 @@
-# [RQ-02-00-11-013](./RQ-02-00-11-013_*.md): Digital Access via EFB
+# [RQ-02-00-11-013](RQ-02-00-11-013_Digital_Access_via_EFB.md): Digital Access via EFB
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-11-013](./RQ-02-00-11-013_*.md)  
+**ID:** [RQ-02-00-11-013](RQ-02-00-11-013_Digital_Access_via_EFB.md)  
 **Category:** Documentation  
 **Subcategory:** Digital  
 **Title:** Digital Access via EFB  

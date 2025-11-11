@@ -1,8 +1,8 @@
-# [RQ-02-00-03-015](./RQ-02-00-03-015_*.md): CAOS Performance Optimization 5%
+# [RQ-02-00-03-015](RQ-02-00-03-015_CAOS_Performance_Optimization_5pct.md): CAOS Performance Optimization 5%
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-03-015](./RQ-02-00-03-015_*.md)  
+**ID:** [RQ-02-00-03-015](RQ-02-00-03-015_CAOS_Performance_Optimization_5pct.md)  
 **Category:** Performance  
 **Subcategory:** CAOS  
 **Title:** CAOS Performance Optimization 5%  

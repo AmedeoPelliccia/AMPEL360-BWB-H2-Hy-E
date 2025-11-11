@@ -1,8 +1,8 @@
-# [RQ-02-00-03-001](./RQ-02-00-03-001_*.md): Maximum Range 3500 NM
+# [RQ-02-00-03-001](RQ-02-00-03-001_Maximum_Range_3500_NM.md): Maximum Range 3500 NM
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-03-001](./RQ-02-00-03-001_*.md)  
+**ID:** [RQ-02-00-03-001](RQ-02-00-03-001_Maximum_Range_3500_NM.md)  
 **Category:** Performance  
 **Subcategory:** Range  
 **Title:** Maximum Range 3500 NM  

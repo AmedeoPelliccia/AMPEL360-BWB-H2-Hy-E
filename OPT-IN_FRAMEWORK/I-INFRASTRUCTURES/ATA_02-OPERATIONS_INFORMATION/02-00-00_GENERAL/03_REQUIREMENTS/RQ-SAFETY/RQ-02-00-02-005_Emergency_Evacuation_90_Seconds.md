@@ -1,8 +1,8 @@
-# [RQ-02-00-02-005](./RQ-02-00-02-005_*.md): Emergency Evacuation 90 Seconds
+# [RQ-02-00-02-005](RQ-02-00-02-005_Emergency_Evacuation_90_Seconds.md): Emergency Evacuation 90 Seconds
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-005](./RQ-02-00-02-005_*.md)  
+**ID:** [RQ-02-00-02-005](RQ-02-00-02-005_Emergency_Evacuation_90_Seconds.md)  
 **Category:** Safety  
 **Subcategory:** Emergency  
 **Title:** Emergency Evacuation 90 Seconds  

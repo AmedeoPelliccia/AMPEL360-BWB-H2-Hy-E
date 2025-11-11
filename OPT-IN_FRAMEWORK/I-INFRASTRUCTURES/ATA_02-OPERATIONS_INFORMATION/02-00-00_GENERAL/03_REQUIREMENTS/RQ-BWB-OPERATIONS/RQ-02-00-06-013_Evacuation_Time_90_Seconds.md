@@ -1,8 +1,8 @@
-# [RQ-02-00-06-013](./RQ-02-00-06-013_*.md): Evacuation Time 90 Seconds
+# [RQ-02-00-06-013](RQ-02-00-06-013_Evacuation_Time_90_Seconds.md): Evacuation Time 90 Seconds
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-013](./RQ-02-00-06-013_*.md)  
+**ID:** [RQ-02-00-06-013](RQ-02-00-06-013_Evacuation_Time_90_Seconds.md)  
 **Category:** BWB Operations  
 **Subcategory:** Emergency  
 **Title:** Evacuation Time 90 Seconds  

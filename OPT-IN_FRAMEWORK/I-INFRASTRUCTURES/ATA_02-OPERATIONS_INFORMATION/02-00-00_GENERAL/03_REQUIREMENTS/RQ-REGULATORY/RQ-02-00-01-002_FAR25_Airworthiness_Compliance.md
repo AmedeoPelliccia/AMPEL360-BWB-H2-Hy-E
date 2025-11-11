@@ -1,8 +1,8 @@
-# [RQ-02-00-01-002](./RQ-02-00-01-002_*.md): FAR25 Airworthiness Compliance
+# [RQ-02-00-01-002](RQ-02-00-01-002_FAR25_Airworthiness_Compliance.md): FAR25 Airworthiness Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-002](./RQ-02-00-01-002_*.md)  
+**ID:** [RQ-02-00-01-002](RQ-02-00-01-002_FAR25_Airworthiness_Compliance.md)  
 **Category:** Regulatory  
 **Subcategory:** [FAR-25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)  
 **Title:** FAR25 Airworthiness Compliance  

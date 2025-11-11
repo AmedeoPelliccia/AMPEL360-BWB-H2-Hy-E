@@ -1,8 +1,8 @@
-# [RQ-02-00-13-001](./RQ-02-00-13-001_*.md): [ATA 05](../../../ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/) Maintenance Checks Interface
+# [RQ-02-00-13-001](RQ-02-00-13-001_ATA_05_Maintenance_Checks_Interface.md): [ATA 05](../../../ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/) Maintenance Checks Interface
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-13-001](./RQ-02-00-13-001_*.md)  
+**ID:** [RQ-02-00-13-001](RQ-02-00-13-001_ATA_05_Maintenance_Checks_Interface.md)  
 **Category:** Interface  
 **Subcategory:** Maintenance  
 **Title:** [ATA 05](../../../ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/) Maintenance Checks Interface  

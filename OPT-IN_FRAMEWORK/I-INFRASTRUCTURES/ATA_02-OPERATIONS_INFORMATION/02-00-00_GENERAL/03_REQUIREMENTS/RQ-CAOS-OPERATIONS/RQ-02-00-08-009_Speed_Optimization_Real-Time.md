@@ -1,8 +1,8 @@
-# [RQ-02-00-08-009](./RQ-02-00-08-009_*.md): Speed Optimization Real-Time
+# [RQ-02-00-08-009](RQ-02-00-08-009_Speed_Optimization_Real-Time.md): Speed Optimization Real-Time
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-009](./RQ-02-00-08-009_*.md)  
+**ID:** [RQ-02-00-08-009](RQ-02-00-08-009_Speed_Optimization_Real-Time.md)  
 **Category:** CAOS  
 **Subcategory:** Optimization  
 **Title:** Speed Optimization Real-Time  

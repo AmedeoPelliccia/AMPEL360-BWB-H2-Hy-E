@@ -1,8 +1,8 @@
-# [RQ-02-00-01-008](./RQ-02-00-01-008_*.md): Minimum Equipment List Requirements
+# [RQ-02-00-01-008](RQ-02-00-01-008_Minimum_Equipment_List_Requirements.md): Minimum Equipment List Requirements
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-01-008](./RQ-02-00-01-008_*.md)  
+**ID:** [RQ-02-00-01-008](RQ-02-00-01-008_Minimum_Equipment_List_Requirements.md)  
 **Category:** Regulatory  
 **Subcategory:** Documentation  
 **Title:** Minimum Equipment List Requirements  

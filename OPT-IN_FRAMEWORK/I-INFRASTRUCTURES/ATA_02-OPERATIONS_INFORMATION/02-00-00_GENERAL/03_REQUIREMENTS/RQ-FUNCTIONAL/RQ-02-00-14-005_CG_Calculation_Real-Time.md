@@ -1,8 +1,8 @@
-# [RQ-02-00-14-005](./RQ-02-00-14-005_*.md): CG Calculation Real-Time
+# [RQ-02-00-14-005](RQ-02-00-14-005_CG_Calculation_Real-Time.md): CG Calculation Real-Time
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-005](./RQ-02-00-14-005_*.md)  
+**ID:** [RQ-02-00-14-005](RQ-02-00-14-005_CG_Calculation_Real-Time.md)  
 **Category:** Functional  
 **Subcategory:** CG  
 **Title:** CG Calculation Real-Time  

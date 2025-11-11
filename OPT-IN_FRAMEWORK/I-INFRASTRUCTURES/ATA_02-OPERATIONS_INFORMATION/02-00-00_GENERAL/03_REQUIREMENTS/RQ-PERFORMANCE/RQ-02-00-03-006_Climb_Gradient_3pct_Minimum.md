@@ -1,8 +1,8 @@
-# [RQ-02-00-03-006](./RQ-02-00-03-006_*.md): Climb Gradient 3% Minimum
+# [RQ-02-00-03-006](RQ-02-00-03-006_Climb_Gradient_3pct_Minimum.md): Climb Gradient 3% Minimum
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-03-006](./RQ-02-00-03-006_*.md)  
+**ID:** [RQ-02-00-03-006](RQ-02-00-03-006_Climb_Gradient_3pct_Minimum.md)  
 **Category:** Performance  
 **Subcategory:** Climb  
 **Title:** Climb Gradient 3% Minimum  

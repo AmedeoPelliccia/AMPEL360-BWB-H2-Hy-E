@@ -1,8 +1,8 @@
-# [RQ-02-00-09-016](./RQ-02-00-09-016_*.md): Error Recovery Facilitated
+# [RQ-02-00-09-016](RQ-02-00-09-016_Error_Recovery_Facilitated.md): Error Recovery Facilitated
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-016](./RQ-02-00-09-016_*.md)  
+**ID:** [RQ-02-00-09-016](RQ-02-00-09-016_Error_Recovery_Facilitated.md)  
 **Category:** Human Factors  
 **Subcategory:** Error  
 **Title:** Error Recovery Facilitated  

@@ -1,8 +1,8 @@
-# [RQ-02-00-06-010](./RQ-02-00-06-010_*.md): Wide Taxiway Required for Turning
+# [RQ-02-00-06-010](RQ-02-00-06-010_Wide_Taxiway_Required_for_Turning.md): Wide Taxiway Required for Turning
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-010](./RQ-02-00-06-010_*.md)  
+**ID:** [RQ-02-00-06-010](RQ-02-00-06-010_Wide_Taxiway_Required_for_Turning.md)  
 **Category:** BWB Operations  
 **Subcategory:** Ground  
 **Title:** Wide Taxiway Required for Turning  

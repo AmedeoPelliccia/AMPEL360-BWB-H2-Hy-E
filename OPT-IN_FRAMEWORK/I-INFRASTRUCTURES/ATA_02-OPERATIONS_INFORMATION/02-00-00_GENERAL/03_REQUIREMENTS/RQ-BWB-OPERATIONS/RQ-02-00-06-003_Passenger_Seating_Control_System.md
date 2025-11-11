@@ -1,8 +1,8 @@
-# [RQ-02-00-06-003](./RQ-02-00-06-003_*.md): Passenger Seating Control System
+# [RQ-02-00-06-003](RQ-02-00-06-003_Passenger_Seating_Control_System.md): Passenger Seating Control System
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-003](./RQ-02-00-06-003_*.md)  
+**ID:** [RQ-02-00-06-003](RQ-02-00-06-003_Passenger_Seating_Control_System.md)  
 **Category:** BWB Operations  
 **Subcategory:** Seating  
 **Title:** Passenger Seating Control System  

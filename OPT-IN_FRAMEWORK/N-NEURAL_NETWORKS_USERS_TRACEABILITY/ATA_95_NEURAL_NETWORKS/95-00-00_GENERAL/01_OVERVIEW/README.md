@@ -234,8 +234,8 @@ Total: **22 integrated neural network systems** across **15 ATA chapters**
 
 **Framework Documentation:**
 - [N-Axis Overview](../../../README.md)
-- [CAOS Manifesto](../../../../../../CAOS_MANIFESTO.md)
-- [Main Project README](../../../../../../README.md)
+- [CAOS Manifesto](../../../../../CAOS_MANIFESTO.md)
+- [Main Project README](../../../../../README.md)
 
 ---
 

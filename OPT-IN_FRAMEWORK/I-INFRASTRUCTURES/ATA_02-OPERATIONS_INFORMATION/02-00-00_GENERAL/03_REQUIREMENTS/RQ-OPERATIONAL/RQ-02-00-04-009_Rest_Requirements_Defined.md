@@ -1,8 +1,8 @@
-# [RQ-02-00-04-009](./RQ-02-00-04-009_*.md): Rest Requirements Defined
+# [RQ-02-00-04-009](RQ-02-00-04-009_Rest_Requirements_Defined.md): Rest Requirements Defined
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-009](./RQ-02-00-04-009_*.md)  
+**ID:** [RQ-02-00-04-009](RQ-02-00-04-009_Rest_Requirements_Defined.md)  
 **Category:** Operational  
 **Subcategory:** Crew  
 **Title:** Rest Requirements Defined  

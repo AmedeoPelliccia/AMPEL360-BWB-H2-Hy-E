@@ -1,8 +1,8 @@
-# [RQ-02-00-08-025](./RQ-02-00-08-025_*.md): Crew Workload Reduction 30%
+# [RQ-02-00-08-025](RQ-02-00-08-025_Crew_Workload_Reduction_30pct.md): Crew Workload Reduction 30%
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-08-025](./RQ-02-00-08-025_*.md)  
+**ID:** [RQ-02-00-08-025](RQ-02-00-08-025_Crew_Workload_Reduction_30pct.md)  
 **Category:** CAOS  
 **Subcategory:** Workload  
 **Title:** Crew Workload Reduction 30%  

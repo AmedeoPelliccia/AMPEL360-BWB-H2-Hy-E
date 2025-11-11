@@ -1,8 +1,8 @@
-# [RQ-02-00-03-011](./RQ-02-00-03-011_*.md): Cold Day Performance ISA-40C
+# [RQ-02-00-03-011](RQ-02-00-03-011_Cold_Day_Performance_ISA-40C.md): Cold Day Performance ISA-40C
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-03-011](./RQ-02-00-03-011_*.md)  
+**ID:** [RQ-02-00-03-011](RQ-02-00-03-011_Cold_Day_Performance_ISA-40C.md)  
 **Category:** Performance  
 **Subcategory:** Temperature  
 **Title:** Cold Day Performance ISA-40C  

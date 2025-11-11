@@ -1,8 +1,8 @@
-# [RQ-02-00-02-012](./RQ-02-00-02-012_*.md): Just Culture Policy Implementation
+# [RQ-02-00-02-012](RQ-02-00-02-012_Just_Culture_Policy_Implementation.md): Just Culture Policy Implementation
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-012](./RQ-02-00-02-012_*.md)  
+**ID:** [RQ-02-00-02-012](RQ-02-00-02-012_Just_Culture_Policy_Implementation.md)  
 **Category:** Safety  
 **Subcategory:** Culture  
 **Title:** Just Culture Policy Implementation  

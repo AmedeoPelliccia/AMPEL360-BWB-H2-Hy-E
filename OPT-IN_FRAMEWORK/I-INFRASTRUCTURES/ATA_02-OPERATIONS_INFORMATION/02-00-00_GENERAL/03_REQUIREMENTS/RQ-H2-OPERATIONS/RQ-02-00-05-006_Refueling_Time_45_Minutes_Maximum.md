@@ -1,8 +1,8 @@
-# [RQ-02-00-05-006](./RQ-02-00-05-006_*.md): Refueling Time 45 Minutes Maximum
+# [RQ-02-00-05-006](RQ-02-00-05-006_Refueling_Time_45_Minutes_Maximum.md): Refueling Time 45 Minutes Maximum
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-05-006](./RQ-02-00-05-006_*.md)  
+**ID:** [RQ-02-00-05-006](RQ-02-00-05-006_Refueling_Time_45_Minutes_Maximum.md)  
 **Category:** H2 Operations  
 **Subcategory:** Refueling  
 **Title:** Refueling Time 45 Minutes Maximum  

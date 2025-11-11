@@ -1,8 +1,8 @@
-# [RQ-02-00-05-008](./RQ-02-00-05-008_*.md): Safety Zone 50m Radius During Refueling
+# [RQ-02-00-05-008](RQ-02-00-05-008_Safety_Zone_50m_Radius_During_Refueling.md): Safety Zone 50m Radius During Refueling
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-05-008](./RQ-02-00-05-008_*.md)  
+**ID:** [RQ-02-00-05-008](RQ-02-00-05-008_Safety_Zone_50m_Radius_During_Refueling.md)  
 **Category:** H2 Operations  
 **Subcategory:** Safety  
 **Title:** Safety Zone 50m Radius During Refueling  

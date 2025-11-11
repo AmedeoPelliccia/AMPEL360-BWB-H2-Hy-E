@@ -1,8 +1,8 @@
-# [RQ-02-00-02-018](./RQ-02-00-02-018_*.md): CAOS Override Capability
+# [RQ-02-00-02-018](RQ-02-00-02-018_CAOS_Override_Capability.md): CAOS Override Capability
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-02-018](./RQ-02-00-02-018_*.md)  
+**ID:** [RQ-02-00-02-018](RQ-02-00-02-018_CAOS_Override_Capability.md)  
 **Category:** Safety  
 **Subcategory:** CAOS  
 **Title:** CAOS Override Capability  

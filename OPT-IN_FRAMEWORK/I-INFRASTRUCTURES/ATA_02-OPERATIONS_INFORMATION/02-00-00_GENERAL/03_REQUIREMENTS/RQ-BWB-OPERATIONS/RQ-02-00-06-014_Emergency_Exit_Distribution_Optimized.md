@@ -1,8 +1,8 @@
-# [RQ-02-00-06-014](./RQ-02-00-06-014_*.md): Emergency Exit Distribution Optimized
+# [RQ-02-00-06-014](RQ-02-00-06-014_Emergency_Exit_Distribution_Optimized.md): Emergency Exit Distribution Optimized
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-014](./RQ-02-00-06-014_*.md)  
+**ID:** [RQ-02-00-06-014](RQ-02-00-06-014_Emergency_Exit_Distribution_Optimized.md)  
 **Category:** BWB Operations  
 **Subcategory:** Emergency  
 **Title:** Emergency Exit Distribution Optimized  

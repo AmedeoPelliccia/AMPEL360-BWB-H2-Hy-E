@@ -1,8 +1,8 @@
-# [RQ-02-00-06-009](./RQ-02-00-06-009_*.md): Wingspan 80m Code F Compliance
+# [RQ-02-00-06-009](RQ-02-00-06-009_Wingspan_80m_Code_F_Compliance.md): Wingspan 80m Code F Compliance
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-06-009](./RQ-02-00-06-009_*.md)  
+**ID:** [RQ-02-00-06-009](RQ-02-00-06-009_Wingspan_80m_Code_F_Compliance.md)  
 **Category:** BWB Operations  
 **Subcategory:** Dimensions  
 **Title:** Wingspan 80m Code F Compliance  

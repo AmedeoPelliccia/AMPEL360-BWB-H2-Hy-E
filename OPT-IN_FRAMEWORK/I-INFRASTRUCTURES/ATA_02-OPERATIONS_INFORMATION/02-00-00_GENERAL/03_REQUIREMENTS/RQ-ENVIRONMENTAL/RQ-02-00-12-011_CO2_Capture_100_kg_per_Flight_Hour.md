@@ -1,8 +1,8 @@
-# [RQ-02-00-12-011](./RQ-02-00-12-011_*.md): CO2 Capture 100 kg per Flight Hour
+# [RQ-02-00-12-011](RQ-02-00-12-011_CO2_Capture_100_kg_per_Flight_Hour.md): CO2 Capture 100 kg per Flight Hour
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-011](./RQ-02-00-12-011_*.md)  
+**ID:** [RQ-02-00-12-011](RQ-02-00-12-011_CO2_Capture_100_kg_per_Flight_Hour.md)  
 **Category:** Environmental  
 **Subcategory:** CO2 Capture  
 **Title:** CO2 Capture 100 kg per Flight Hour  

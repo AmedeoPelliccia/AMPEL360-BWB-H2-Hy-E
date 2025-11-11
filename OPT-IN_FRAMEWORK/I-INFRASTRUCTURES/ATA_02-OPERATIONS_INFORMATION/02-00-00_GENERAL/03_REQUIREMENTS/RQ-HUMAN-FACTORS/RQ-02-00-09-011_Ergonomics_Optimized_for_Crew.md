@@ -1,8 +1,8 @@
-# [RQ-02-00-09-011](./RQ-02-00-09-011_*.md): Ergonomics Optimized for Crew
+# [RQ-02-00-09-011](RQ-02-00-09-011_Ergonomics_Optimized_for_Crew.md): Ergonomics Optimized for Crew
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-09-011](./RQ-02-00-09-011_*.md)  
+**ID:** [RQ-02-00-09-011](RQ-02-00-09-011_Ergonomics_Optimized_for_Crew.md)  
 **Category:** Human Factors  
 **Subcategory:** Ergonomics  
 **Title:** Ergonomics Optimized for Crew  

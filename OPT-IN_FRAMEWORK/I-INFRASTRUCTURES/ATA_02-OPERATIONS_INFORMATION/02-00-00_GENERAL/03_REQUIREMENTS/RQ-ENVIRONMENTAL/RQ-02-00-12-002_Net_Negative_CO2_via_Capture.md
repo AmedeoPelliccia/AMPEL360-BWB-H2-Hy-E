@@ -1,8 +1,8 @@
-# [RQ-02-00-12-002](./RQ-02-00-12-002_*.md): Net Negative CO2 via Capture
+# [RQ-02-00-12-002](RQ-02-00-12-002_Net_Negative_CO2_via_Capture.md): Net Negative CO2 via Capture
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-12-002](./RQ-02-00-12-002_*.md)  
+**ID:** [RQ-02-00-12-002](RQ-02-00-12-002_Net_Negative_CO2_via_Capture.md)  
 **Category:** Environmental  
 **Subcategory:** Carbon  
 **Title:** Net Negative CO2 via Capture  

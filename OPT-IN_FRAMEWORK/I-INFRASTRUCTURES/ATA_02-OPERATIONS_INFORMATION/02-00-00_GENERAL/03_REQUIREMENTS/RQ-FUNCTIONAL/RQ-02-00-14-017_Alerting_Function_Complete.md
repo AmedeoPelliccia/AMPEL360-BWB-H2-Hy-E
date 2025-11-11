@@ -1,8 +1,8 @@
-# [RQ-02-00-14-017](./RQ-02-00-14-017_*.md): Alerting Function Complete
+# [RQ-02-00-14-017](RQ-02-00-14-017_Alerting_Function_Complete.md): Alerting Function Complete
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-14-017](./RQ-02-00-14-017_*.md)  
+**ID:** [RQ-02-00-14-017](RQ-02-00-14-017_Alerting_Function_Complete.md)  
 **Category:** Functional  
 **Subcategory:** Alerting  
 **Title:** Alerting Function Complete  

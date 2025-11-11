@@ -1,8 +1,8 @@
-# [RQ-02-00-10-003](./RQ-02-00-10-003_*.md): BWB Handling Training 5 Hours
+# [RQ-02-00-10-003](RQ-02-00-10-003_BWB_Handling_Training_5_Hours.md): BWB Handling Training 5 Hours
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-003](./RQ-02-00-10-003_*.md)  
+**ID:** [RQ-02-00-10-003](RQ-02-00-10-003_BWB_Handling_Training_5_Hours.md)  
 **Category:** Training  
 **Subcategory:** BWB  
 **Title:** BWB Handling Training 5 Hours  

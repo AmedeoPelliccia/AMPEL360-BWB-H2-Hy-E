@@ -1,8 +1,8 @@
-# [RQ-02-00-10-018](./RQ-02-00-10-018_*.md): Instructor Qualification Standards
+# [RQ-02-00-10-018](RQ-02-00-10-018_Instructor_Qualification_Standards.md): Instructor Qualification Standards
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-10-018](./RQ-02-00-10-018_*.md)  
+**ID:** [RQ-02-00-10-018](RQ-02-00-10-018_Instructor_Qualification_Standards.md)  
 **Category:** Training  
 **Subcategory:** Instructors  
 **Title:** Instructor Qualification Standards  

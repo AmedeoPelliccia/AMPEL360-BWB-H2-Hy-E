@@ -1,8 +1,8 @@
-# [RQ-02-00-04-015](./RQ-02-00-04-015_*.md): Weight & Balance Procedures Defined
+# [RQ-02-00-04-015](RQ-02-00-04-015_Weight_&_Balance_Procedures_Defined.md): Weight & Balance Procedures Defined
 
 ## Requirement Details
 
-**ID:** [RQ-02-00-04-015](./RQ-02-00-04-015_*.md)  
+**ID:** [RQ-02-00-04-015](RQ-02-00-04-015_Weight_&_Balance_Procedures_Defined.md)  
 **Category:** Operational  
 **Subcategory:** Weight  
 **Title:** Weight & Balance Procedures Defined  
