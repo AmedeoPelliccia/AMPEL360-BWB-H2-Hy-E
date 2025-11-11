@@ -593,8 +593,8 @@ Planned or possible additions:
 Dimensions & Geometry V&V / DevOps / Configuration Management
 
 **Related Documentation:**
-* V&V Plan (14_META_GOVERNANCE)
-* Configuration Management Plan (14_META_GOVERNANCE)
+* [Verification & Validation Plan](../OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/07_V_AND_V/Verification_Validation_Plan.md) (14_META_GOVERNANCE)
+* [Configuration Management Plan](../OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/13_SUBSYSTEMS_COMPONENTS/CONFIGURATION_CONTROL/Configuration_Management_Plan.md) (14_META_GOVERNANCE)
 * Quality Manual / [AS9100](https://www.sae.org/standards/content/as9100d/) QMS documentation
 
-For process and governance details, see the Configuration Management Plan.
+For process and governance details, see the [Configuration Management Plan](../OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/13_SUBSYSTEMS_COMPONENTS/CONFIGURATION_CONTROL/Configuration_Management_Plan.md).
