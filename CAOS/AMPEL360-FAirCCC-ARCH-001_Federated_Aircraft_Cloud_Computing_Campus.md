@@ -1,4 +1,4 @@
-# AMPEL360-AirCCC-ARCH-001
+# AMPEL360-FAirCCC-ARCH-001
 
 **Federated Aircraft Cloud Computing Campus**
 **System Architecture & Interoperability Standard**
@@ -18,7 +18,7 @@
 
 ## 1. Executive Summary
 
-AirCCC establishes a **safe, certifiable federation of edge intelligences** across aircraft, ground stations, regional hubs, and fleet HQ. Each aircraft participates as a **protected compute citizen**, contributing **privacy-preserving updates** for **non-safety** models while **never** self-modifying in flight.
+FAirCCC establishes a **safe, certifiable federation of edge intelligences** across aircraft, ground stations, regional hubs, and fleet HQ. Each aircraft participates as a **protected compute citizen**, contributing **privacy-preserving updates** for **non-safety** models while **never** self-modifying in flight.
 This standard defines the **governance (O3)**, **update authority (S0)**, and **data sovereignty (D3)** for global OEM–operator ecosystems.
 
 **Design axioms**
@@ -35,10 +35,10 @@ This standard defines the **governance (O3)**, **update authority (S0)**, and **
 
 ### 2.1 Nodes
 
-* **AirCCC-A (Aircraft Edge Node)**: Real-time inference; optional DP-bounded micro-learning for **non-safety** models; exports masked gradient deltas.
-* **AirCCC-G (Ground Station)**: Envelope validation, staging, technician tools; no training decisions.
-* **AirCCC-R (Regional Hub)**: Secure aggregation cluster; cohort analytics; no release authority.
-* **AirCCC-F (Fleet Core / OEM+Operator Joint)**: Master training, verification, **sole signer** for model releases (S0).
+* **FAirCCC-A (Aircraft Edge Node)**: Real-time inference; optional DP-bounded micro-learning for **non-safety** models; exports masked gradient deltas.
+* **FAirCCC-G (Ground Station)**: Envelope validation, staging, technician tools; no training decisions.
+* **FAirCCC-R (Regional Hub)**: Secure aggregation cluster; cohort analytics; no release authority.
+* **FAirCCC-F (Fleet Core / OEM+Operator Joint)**: Master training, verification, **sole signer** for model releases (S0).
 
 ### 2.2 Trust & Governance (O3)
 
@@ -192,7 +192,7 @@ All schemas versioned; backward-compatible field deprecation policy.
 
 ## 12. Interop & Multi-Operator (D3)
 
-* Per-operator **AirCCC-F silo**; models and data do not cross.
+* Per-operator **FAirCCC-F silo**; models and data do not cross.
 * OEM may distribute **reference baselines** and **hardening updates** universally.
 * Optional **Meta-Consortium Model** built from operator-approved aggregates or synthetic data; delivered as independent baseline only.
 
