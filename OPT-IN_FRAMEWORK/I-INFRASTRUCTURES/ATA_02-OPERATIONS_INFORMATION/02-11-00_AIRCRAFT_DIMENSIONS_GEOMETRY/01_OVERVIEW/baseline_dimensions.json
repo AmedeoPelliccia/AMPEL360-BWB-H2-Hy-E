@@ -1,15 +1,73 @@
 {
+  "version": "2.0",
+  "last_updated": "2025-11-11",
+
   "wingspan_m": 52.0,
+  "overall_length_m": 38.2,
+  "overall_height_m": 14.5,
+
   "wing_area_m2": 845.0,
   "aspect_ratio": 3.2,
+  "taper_ratio": 0.1,
+
+  "leading_edge_sweep_deg": 37.0,
+  "quarter_chord_sweep_deg": 32.0,
   "cruise_sweep_deg": 35.0,
 
-  "overall_length_m": 52.5,
-  "center_body_depth_m": 4.2,
-  "pressure_vessel_equiv_radius_m": 2.1,
+  "root_chord_m": 35.0,
+  "tip_chord_m": 3.5,
+  "mac_length_m": 22.5,
+  "mac_y_position_m": 8.5,
 
-  "mlg_height_m": 3.2,
-  "nlg_height_m": 2.8,
-  "wheelbase_m": 18.0,
-  "mlg_track_m": 12.5
+  "wetted_area_m2": 1850.0,
+
+  "center_body_width_m": 38.0,
+  "center_body_length_m": 28.5,
+  "center_body_depth_m": 4.2,
+  "center_body_volume_m3": 2800.0,
+  "cabin_floor_area_m2": 850.0,
+
+  "pressure_vessel_radius_m": 2.1,
+
+  "wheelbase_m": 15.5,
+  "main_gear_track_m": 30.0,
+  "turning_radius_m": 42.0,
+
+  "cabin_internal_height_m": 2.4,
+  "cabin_floor_height_m": 4.0,
+  "pax_door_sill_height_m": 4.3,
+  "nose_gear_height_m": 2.1,
+
+  "ground_clearance_mtow_m": 1.8,
+  "ground_clearance_empty_m": 2.4,
+  "wingtip_ground_clearance_m": 1.2,
+  "engine_intake_ground_clearance_m": 2.8,
+  "h2_refuel_point_height_m": 2.5,
+  "tail_strike_angle_deg": 14.0,
+
+  "coordinate_system": {
+    "x_axis": "forward_positive",
+    "y_axis": "starboard_positive",
+    "z_axis": "downward_positive",
+    "station_origin": "STA 0 at nose datum",
+    "buttline_origin": "BL 0 at aircraft centerline",
+    "waterline_origin": "WL 0 at ground plane (gear extended)",
+    "key_stations_m": {
+      "nose_gear": 3.0,
+      "center_body_max_width": 15.0,
+      "main_gear": 18.0,
+      "tail": 36.0
+    },
+    "key_buttlines_m": {
+      "wingtip": 26.0,
+      "engine_centerline": 12.0,
+      "pax_door": -6.0
+    },
+    "key_waterlines_m": {
+      "cabin_floor": 4.0,
+      "aircraft_top": 14.5
+    }
+  }
+
+  /* keep your existing mass, performance, capacity, etc. fields below */
 }
