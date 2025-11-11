@@ -303,15 +303,15 @@ def find_ata_document_path(ata_ref: str) -> Optional[pathlib.Path]:
     if len(parts) == 1:
         # Chapter level (e.g., ATA_02)
         chapter = parts[0]
-        pattern = f"ATA_{chapter}*/README.md"
+        # pattern = f"ATA_{chapter}*/README.md"
     elif len(parts) == 2:
         # Section level (e.g., ATA_02-11)
         chapter, section = parts
-        pattern = f"ATA_{chapter}*/{chapter}-{section}*/README.md"
+        # pattern = f"ATA_{chapter}*/{chapter}-{section}*/README.md"
     else:
         # Subsection level (e.g., ATA_02-11-00)
         chapter, section, subsection = parts
-        pattern = f"ATA_{chapter}*/{chapter}-{section}-{subsection}*/README.md"
+        # pattern = f"ATA_{chapter}*/{chapter}-{section}-{subsection}*/README.md"
     
     # Search for matching files
     if FRAMEWORK_ROOT.exists():
