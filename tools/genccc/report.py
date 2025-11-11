@@ -14,7 +14,7 @@ Output: cd/reports/cross_reference_audit.md
 
 import pathlib
 import re
-from typing import Dict, List, Set, Tuple
+from typing import List, Set, Tuple
 import sys
 
 # Repository root
