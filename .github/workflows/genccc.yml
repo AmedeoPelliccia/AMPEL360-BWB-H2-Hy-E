@@ -124,15 +124,17 @@ jobs:
           path: base
           fetch-depth: 0
 
-      # Note: To allow pushing to PR branches from forks, a Personal Access Token (PAT) with 'repo' scope
-      # must be stored in repository secrets as GENCCC_PAT. GITHUB_TOKEN cannot push to forked PR branches.
+      # Note: GITHUB_TOKEN works for PRs from the same repository.
+      # For PRs from forks, a Personal Access Token (PAT) with 'repo' scope
+      # can be stored in repository secrets as GENCCC_PAT.
+      # Fallback to GITHUB_TOKEN if GENCCC_PAT is not set.
       - name: Checkout PR branch (for content)
         if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.get-branch.outputs.ref }}
           path: pr
-          token: ${{ secrets.GENCCC_PAT }}
+          token: ${{ secrets.GENCCC_PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: Set up Python
