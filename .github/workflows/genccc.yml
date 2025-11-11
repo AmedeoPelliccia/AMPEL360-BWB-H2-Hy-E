@@ -132,7 +132,7 @@ jobs:
         if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/checkout@v4
         with:
-          ref: ${{ steps.get-branch.outputs.ref }}
+          ref: ${{ github.event.pull_request.head.sha }}
           path: pr
           token: ${{ secrets.GENCCC_PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
