@@ -1,9 +1,9 @@
-# C-GROW™ Method – Continuous Intelligence Lifecycle Standard
+# C-GROWTH™ Method – Circular Intelligence Lifecycle Standard
 
-**Continuous Generation → Continuous Review → Continuous Optimization → Continuous Workflow Integration**
+**Circular Growing, Reviewing, Optimizing, Workflowing, Testing, Healing**
 
 **Standard ID:** AMPEL360-CC-METH-001  
-**Version:** 1.0  
+**Version:** 2.0  
 **Status:** Draft for Partner Review  
 **Date:** 2025-11-11  
 **Applies to:** AMPEL360 BWB H₂ programs, FAirCCC architecture, and derivative intelligent aerospace systems
@@ -25,15 +25,21 @@
 
 ## 1. Executive Summary
 
-The **C-GROW Method** defines the lifecycle by which AMPEL360 documentation, engineering knowledge, and adaptive fleet intelligence evolve safely and traceably over time. It embodies the principle of **Continuous Computing (CC)** — the systemic capability for knowledge, models, documentation, and operational intelligence to evolve continuously through controlled and traceable cycles.
+**C-GROWTH** is a closed-loop Circular Intelligence Lifecycle enabling Continuous Computing. It ensures the aircraft, documentation, models, workflows, and operations evolve safely over time through a self-maintaining organism of six interconnected phases.
 
-**C-GROW ensures:**
-- **Continuous knowledge growth** (CG – Generation)
-- **Continuous validation and organizational authority** (CR – Review)
-- **Continuous performance improvement** (CO – Optimization)
-- **Continuous operational integration** (CW – Workflow Integration)
+The **C-GROWTH Method** defines the complete lifecycle by which AMPEL360 documentation, engineering knowledge, and adaptive fleet intelligence evolve safely and traceably over time. It embodies the principle of **Continuous Computing (CC)** — the systemic capability for knowledge, models, documentation, and operational intelligence to evolve continuously through controlled and traceable cycles.
 
-C-GROW is implemented across documentation, AI models, aircraft systems, ground systems, and fleet digital twin environments in alignment with:
+**C-GROWTH ensures:**
+- **CG** – Continuous Generation (knowledge growth)
+- **CR** – Continuous Review (validation & authority)
+- **CO** – Continuous Optimization (performance improvement)
+- **CW** – Continuous Workflow Integration (operational deployment)
+- **CT** – Continuous Testing (verification & validation)
+- **CH** – Circular Healing (resilience & drift recovery)
+
+**CH provides resilience, drift recovery, and traceability healing**, ensuring the system remains coherent, auditable, and certifiable throughout its lifecycle.
+
+C-GROWTH is implemented across documentation, AI models, aircraft systems, ground systems, and fleet digital twin environments in alignment with:
 * ARP4754A system lifecycle process
 * DO-178C software verification standards
 * EASA AI Trustworthiness Framework (2023–2025 roadmap)
@@ -65,15 +71,21 @@ Collectively referred to as the **C-GROW Method**.
 
 ### 2.3 Core Principle
 
-> **C-GROW = the mechanism**  
+> **C-GROWTH = the mechanism**  
 > **CC = the property it enables**
 
-* **C-GROW** = how the system learns
+* **C-GROWTH** = how the system learns, tests itself, and heals
 * **CC** = the system having *the ability* to learn continuously
+
+### 2.4 The Living Fleet Intelligence
+
+> **C-GROWTH™ — The Living Fleet Intelligence Cycle.**  
+> The aircraft does not just operate.  
+> **It grows. It tests itself. It heals.**
 
 ---
 
-## 3. C-GROW Phases (Core Definitions)
+## 3. C-GROWTH Phases (Core Definitions)
 
 | Phase | Name | Primary Purpose | Source of Truth | Output Type |
 |-------|------|----------------|-----------------|-------------|
@@ -81,10 +93,26 @@ Collectively referred to as the **C-GROW Method**.
 | **CR** | **Continuous Review** | Validate correctness, safety, consistency | Engineering Authorities + Automated Checkers | Verified documentation + release candidate AI models |
 | **CO** | **Continuous Optimization** | Improve efficiency, clarity & performance | Fleet-wide trend data + past evaluations | Improved models + simplified documentation |
 | **CW** | **Continuous Workflow Integration** | Flow improvements back into engineering & operations pipelines | DevOps / MLOps / Documentation pipelines | Updated repo + deployment + configuration state |
+| **CT** | **Continuous Testing** | Constant validation under real & synthetic conditions | Digital twin + shadow deployment + scenario libraries | Verified operational safety envelope |
+| **CH** | **Circular Healing** | Detect drift & repair system state automatically | Drift monitors + anomaly filters + self-regeneration | Restored correctness & continuity |
 
 ---
 
 ## 4. System Flow (High-Level)
+
+```
+      CG ──▶ CR ──▶ CO ──▶ CW
+      ▲                     │
+      │                     ▼
+     CH ◀───── CT ◀────────
+```
+
+**This is not a workflow. This is a self-maintaining organism.**
+
+* **CT** keeps the ecosystem *honest* through continuous validation
+* **CH** keeps the ecosystem *alive* through automatic healing and drift recovery
+
+**Expanded Flow:**
 
 ```
 Aircraft / Engineers / Systems
@@ -105,36 +133,46 @@ CO – Continuous Optimization
 CW – Continuous Workflow Integration
     (GitHub Workflows, Packaging, Deployment, Fleet Sync)
          │
-         └──► Returns to CG (Closed Loop)
+         ▼
+CT – Continuous Testing
+    (Digital Twin Validation, Shadow Deployment, Scenario Testing)
+         │
+         ▼
+CH – Circular Healing
+    (Drift Detection, Anomaly Correction, Traceability Restoration)
+         │
+         └──► Returns to CG (Circular Loop)
 ```
 
-**This loop never stops** — it runs as the aircraft evolves across prototypes, validation, serial production, fleet operations, and lifetime support.
+**This circular loop never stops** — it runs as the aircraft evolves across prototypes, validation, serial production, fleet operations, and lifetime support.
 
 ---
 
 ## 5. Integration with FAirCCC Architecture (O3/S0/D3)
 
-| C-GROW Phase | FAirCCC Role | Mechanism |
-|--------------|--------------|-----------|
+| C-GROWTH Phase | FAirCCC Role | Mechanism |
+|----------------|--------------|-----------|
 | **CG** | Aircraft & Operator Silos (D3) | CFLF-GRAD masked deltas + GenCCC doc generation |
 | **CR** | Neutral Trust Layer (O3) | SARIF-lint, expert sign-off, cert-compliance gates |
 | **CO** | Fleet Core (S0) | Optimization + retraining under *single signing authority* |
 | **CW** | Ground + Regional + Fleet Pipelines | Signed model bundles + PR auto-linking integration |
+| **CT** | Digital Twin Infrastructure (all nodes) | Shadow deployment + scenario validation across fleet |
+| **CH** | Fleet Core + Regional Hubs (S0/O3) | Drift detection, anomaly correction, auto-regeneration |
 
 ### 5.1 Safety Assurance Through S0
 
-**Critical:** All CO-generated model improvements must pass through the **S0 centralized signing authority** at Fleet Core (FAirCCC-F). This ensures that continuous learning remains **certifiable and safe**.
+**Critical:** All CO-generated model improvements and CH-healed artifacts must pass through the **S0 centralized signing authority** at Fleet Core (FAirCCC-F). This ensures that continuous learning and healing remain **certifiable and safe**.
 
 ---
 
 ## 6. Where CC Operates in the AMPEL360 Ecosystem
 
-| Layer | CC Applies? | Description |
-|-------|-------------|-------------|
-| Aircraft Edge AI (FAirCCC-A) | ✅ | Generates masked deltas & operational insights |
-| Ground Maintenance Hubs (FAirCCC-G) | ✅ | Runs CR + CW integration |
-| Regional Aggregation Clusters (FAirCCC-R) | ✅ | Performs CO via secure aggregation |
-| Fleet Core Neutral Trust Layer (FAirCCC-F) | ✅ | Signs and enforces update boundaries (S0) |
+| Layer | CC Applies? | C-GROWTH Phases | Description |
+|-------|-------------|-----------------|-------------|
+| Aircraft Edge AI (FAirCCC-A) | ✅ | CG, CT | Generates masked deltas & operational insights; runs local tests |
+| Ground Maintenance Hubs (FAirCCC-G) | ✅ | CR, CW, CT | Runs review + integration; validates changes |
+| Regional Aggregation Clusters (FAirCCC-R) | ✅ | CO, CH | Performs optimization via secure aggregation; detects regional drift |
+| Fleet Core Neutral Trust Layer (FAirCCC-F) | ✅ | CR, CO, CH | Signs and enforces update boundaries (S0); orchestrates fleet-wide healing |
 
 **CC is global**, but **always under S0 centralized release authority**, maintaining certification safety.
 
@@ -281,26 +319,113 @@ tools/cgrow/
 
 ---
 
+### 8.5 CT – Continuous Testing
+
+**Inputs:**
+* Deployed models and documentation
+* Digital twin simulations
+* Real fleet operational data
+* Scenario test libraries
+
+**Processes:**
+* Shadow deployment testing (parallel execution without affecting operations)
+* Digital twin validation (physics-based + data-driven)
+* Scenario library execution (normal, edge, fault conditions)
+* Performance regression testing
+* Safety envelope verification
+* A/B test orchestration
+
+**Outputs:**
+* Test execution reports
+* Safety envelope validation
+* Performance benchmarks
+* Regression test results
+* Failure case documentation
+
+**Tools:**
+* `tools/cgrow/ct_test.py`
+* Digital twin infrastructure
+* Shadow deployment framework
+* Scenario generation engines
+
+**Safety-Critical Features:**
+* CT validates that all changes remain within certified operational envelopes
+* Automated rollback triggers on test failures
+* Safety property verification before fleet-wide deployment
+* Continuous monitoring of operational margins
+
+---
+
+### 8.6 CH – Circular Healing
+
+**Inputs:**
+* Drift detection alerts
+* Broken cross-references
+* Outdated documentation
+* Model performance degradation signals
+* Traceability gaps
+
+**Processes:**
+* **Documentation Chain Healing:** Automatic re-linking after file moves/renames
+* **Model Drift Correction:** Re-anchor models when operational conditions change
+* **Traceability Restoration:** Rebuild dependency graphs after system updates
+* **Workflow Rule Alignment:** Adjust CI/CD rules to match operational reality
+* **Fleet-Wide Re-stabilization:** Coordinate healing across all nodes
+
+**Outputs:**
+* Healed documentation links
+* Re-aligned models
+* Restored traceability chains
+* Updated workflow rules
+* Healing audit logs
+
+**Tools:**
+* `tools/cgrow/ch_heal.py`
+* Drift detection monitors
+* Anomaly filters
+* Self-regeneration engines
+
+**CH as the Immune System:**
+
+> **CH is not "fixing software". It is the immune system of the fleet intelligence.**
+
+CH automatically:
+* Detects when documentation becomes inconsistent with reality
+* Repairs broken cross-references after restructuring
+* Re-establishes traceability when dependencies shift
+* Corrects model drift before it affects operations
+* Restores system coherence without human intervention
+
+**Safety Assurance:**
+* All CH repairs must pass through CR validation
+* Critical healing operations require expert approval
+* Healing actions are logged for audit trail
+* Rollback capability maintained for all healing operations
+
+---
+
 ## 9. Certification & Compliance Mapping
 
 ### 9.1 ARP4754A Alignment
 
-| ARP4754A Phase | C-GROW Phase | Mapping |
-|----------------|--------------|---------|
+| ARP4754A Phase | C-GROWTH Phase | Mapping |
+|----------------|----------------|---------|
 | System Development | CG, CO | Generate and optimize system artifacts |
-| Safety Assessment | CR | Validate safety properties |
-| Verification | CR | Formal verification activities |
-| Configuration Management | CW | Track and control changes |
+| Safety Assessment | CR, CT | Validate safety properties and test scenarios |
+| Verification | CR, CT | Formal verification + continuous testing |
+| Configuration Management | CW, CH | Track, control changes, and heal inconsistencies |
+| Change Impact Assessment | CH | Automatic drift detection and correction |
 
 ### 9.2 DO-178C Integration
 
-| DO-178C Activity | C-GROW Phase | Implementation |
-|------------------|--------------|----------------|
+| DO-178C Activity | C-GROWTH Phase | Implementation |
+|------------------|----------------|----------------|
 | Software Planning | CG, CW | Automated planning updates |
 | Development | CG, CO | Continuous development cycles |
-| Verification | CR | Automated + manual verification |
-| Configuration Management | CW | Git-based traceability |
-| Quality Assurance | CR, CO | Continuous quality checks |
+| Verification | CR, CT | Automated + manual verification + testing |
+| Configuration Management | CW, CH | Git-based traceability + healing |
+| Quality Assurance | CR, CO, CT | Continuous quality checks + testing |
+| Return-to-Baseline Logic | CH | Automatic drift correction |
 
 ### 9.3 DO-326A Security Assurance
 
@@ -308,14 +433,27 @@ tools/cgrow/
 * **CR**: Threat model validation, penetration testing gates
 * **CO**: Security hardening through optimization
 * **CW**: Secure deployment pipelines, signed releases
+* **CT**: Continuous security testing and vulnerability scanning
+* **CH**: Security integrity post-attack resilience and recovery
 
 ### 9.4 EASA AI Framework
 
-| EASA AI Level | C-GROW Support | Mechanism |
-|---------------|----------------|-----------|
-| Level 1 (Assistance) | Full | Traceable generation + review |
-| Level 2 (Advisory) | Full | Human-in-the-loop CR gates |
-| Level 3 (Automation) | Partial | Enhanced CR + explainability |
+| EASA AI Level | C-GROWTH Support | Mechanism |
+|---------------|------------------|-----------|
+| Level 1 (Assistance) | Full | Traceable generation + review + testing |
+| Level 2 (Advisory) | Full | Human-in-the-loop CR gates + CT validation + CH monitoring |
+| Level 3 (Automation) | Partial | Enhanced CR + CT + CH + explainability |
+
+**CH and EASA AI Level 2 Safety Pillar:**
+CH ensures the *Monitoring + Corrective Action* pillar required by EASA AI Level 2 through automatic drift detection and healing.
+
+### 9.5 ARP4761 Fault Accommodation
+
+| ARP4761 Principle | C-GROWTH Phase | Implementation |
+|-------------------|----------------|----------------|
+| Fault Detection | CT, CH | Continuous testing detects faults; CH identifies drift |
+| Fault Accommodation | CH | Automatic healing and restoration |
+| Fault Reversion | CH | Return-to-baseline logic |
 
 ---
 
@@ -361,6 +499,22 @@ Every artifact generated through C-GROW must maintain:
 * Deployment success rate
 * Mean time to production
 * Rollback frequency
+
+### 11.5 CT Metrics
+
+* Test coverage (%)
+* Test execution frequency
+* Failure detection rate
+* Shadow deployment validation success rate
+* Safety envelope verification completeness
+
+### 11.6 CH Metrics
+
+* Drift detection latency
+* Healing success rate
+* Mean time to healing (MTTH)
+* Traceability restoration completeness
+* Auto-correction accuracy
 
 ---
 
@@ -414,9 +568,13 @@ Every artifact generated through C-GROW must maintain:
 
 ## 14. Slogan & Vision
 
-> **C-GROW enables Continuous Computing —  
+> **C-GROWTH™ — The Living Fleet Intelligence Cycle.**  
+> The aircraft does not just operate.  
+> **It grows. It tests itself. It heals.**
+
+> **C-GROWTH enables Continuous Computing —  
 > so the aircraft does not merely fly.  
-> It learns. It remembers. It improves.**
+> It learns. It remembers. It improves. It validates itself. It self-corrects.**
 
 And thanks to **S0 centralized authority**, it learns *safely*.
 
@@ -452,7 +610,8 @@ And thanks to **S0 centralized authority**, it learns *safely*.
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | 2025-11-11 | AI (A. Pelliccia) | Initial C-GROW methodology specification |
+| 1.0 | 2025-11-11 | AI (A. Pelliccia) | Initial C-GROW methodology specification (4 phases) |
+| 2.0 | 2025-11-11 | AI (A. Pelliccia) | Expanded to C-GROWTH™ with CT and CH phases (6 phases total) |
 
 ---
 

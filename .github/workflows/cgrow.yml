@@ -1,4 +1,4 @@
-name: C-GROW Lifecycle
+name: C-GROWTH Circular Lifecycle
 
 on:
   schedule:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       phase:
-        description: 'C-GROW phase to run'
+        description: 'C-GROWTH phase to run'
         required: false
         default: 'all'
         type: choice
@@ -21,6 +21,8 @@ on:
           - cr
           - co
           - cw
+          - ct
+          - ch
 
 permissions:
   contents: write
@@ -54,6 +56,10 @@ jobs:
                 echo "phase=co" >> $GITHUB_OUTPUT
               elif [[ "${{ github.event.comment.body }}" == *"/cgrow cw"* ]]; then
                 echo "phase=cw" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.comment.body }}" == *"/cgrow ct"* ]]; then
+                echo "phase=ct" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.comment.body }}" == *"/cgrow ch"* ]]; then
+                echo "phase=ch" >> $GITHUB_OUTPUT
               else
                 echo "phase=all" >> $GITHUB_OUTPUT
               fi
@@ -118,6 +124,18 @@ jobs:
           echo "=== Running CW Phase ==="
           python tools/cgrow/cw_integrate.py --verbose
       
+      - name: CT - Continuous Testing
+        if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'ct'
+        run: |
+          echo "=== Running CT Phase ==="
+          python tools/cgrow/ct_test.py --verbose
+      
+      - name: CH - Circular Healing
+        if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'ch'
+        run: |
+          echo "=== Running CH Phase ==="
+          python tools/cgrow/ch_heal.py --verbose
+      
       - name: Commit and Push Changes
         if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'cw'
         run: |
@@ -179,10 +197,15 @@ jobs:
           echo "**Phase:** ${{ needs.check-trigger.outputs.phase }}" >> $GITHUB_STEP_SUMMARY
           echo "**Status:** ${{ needs.cgrow-cycle.result }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "## C-GROW Method" >> $GITHUB_STEP_SUMMARY
+          echo "## C-GROWTH Method" >> $GITHUB_STEP_SUMMARY
+          echo "**Circular Growing, Reviewing, Optimizing, Workflowing, Testing, Healing**" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **CG**: Continuous Generation" >> $GITHUB_STEP_SUMMARY
           echo "- **CR**: Continuous Review" >> $GITHUB_STEP_SUMMARY
           echo "- **CO**: Continuous Optimization" >> $GITHUB_STEP_SUMMARY
           echo "- **CW**: Continuous Workflow Integration" >> $GITHUB_STEP_SUMMARY
+          echo "- **CT**: Continuous Testing" >> $GITHUB_STEP_SUMMARY
+          echo "- **CH**: Circular Healing" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "> C-GROW enables Continuous Computing — so the aircraft does not merely fly. It learns. It remembers. It improves." >> $GITHUB_STEP_SUMMARY
+          echo "> **C-GROWTH™ — The Living Fleet Intelligence Cycle.**" >> $GITHUB_STEP_SUMMARY
+          echo "> The aircraft does not just operate. It grows. It tests itself. It heals." >> $GITHUB_STEP_SUMMARY

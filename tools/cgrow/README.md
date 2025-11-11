@@ -1,12 +1,20 @@
-# C-GROW Tools – Continuous Intelligence Lifecycle
+# C-GROWTH Tools – Circular Intelligence Lifecycle
 
-Implementation of the **C-GROW™ Method** (Continuous Generation → Continuous Review → Continuous Optimization → Continuous Workflow Integration) for maintaining living technical documentation and fleet learning intelligence.
+Implementation of the **C-GROWTH™ Method** (Circular Growing, Reviewing, Optimizing, Workflowing, Testing, Healing) for maintaining living technical documentation and fleet learning intelligence.
 
 ## Overview
 
-C-GROW enables **Continuous Computing (CC)** — a systemic capability where knowledge, models, documentation, and operational intelligence evolve continuously through controlled and traceable cycles.
+> **C-GROWTH™ — The Living Fleet Intelligence Cycle.**  
+> The aircraft does not just operate. **It grows. It tests itself. It heals.**
 
-## The Four Phases
+C-GROWTH enables **Continuous Computing (CC)** — a systemic capability where knowledge, models, documentation, and operational intelligence evolve continuously through controlled and traceable cycles.
+
+**This is not a workflow. This is a self-maintaining organism.**
+
+* **CT** keeps the ecosystem *honest* through continuous validation
+* **CH** keeps the ecosystem *alive* through automatic healing and drift recovery
+
+## The Six Phases
 
 ### CG – Continuous Generation (`cg_generate.py`)
 
@@ -135,9 +143,78 @@ python tools/cgrow/cw_integrate.py --verbose
 
 ---
 
-## Complete C-GROW Cycle
+### CT – Continuous Testing (`ct_test.py`)
 
-Run all phases in sequence:
+**Purpose:** Constant validation under real and synthetic conditions
+
+**Features:**
+- Shadow deployment testing (parallel execution)
+- Digital twin validation (physics-based + data-driven)
+- Scenario library execution (normal, edge, fault)
+- Performance regression testing
+- Safety envelope verification
+- A/B test orchestration
+
+**Usage:**
+```bash
+# Run all tests
+python tools/cgrow/ct_test.py
+
+# Run specific test mode
+python tools/cgrow/ct_test.py --test-mode shadow
+python tools/cgrow/ct_test.py --test-mode digital_twin
+python tools/cgrow/ct_test.py --test-mode scenarios
+python tools/cgrow/ct_test.py --test-mode safety
+
+# Verbose output
+python tools/cgrow/ct_test.py --verbose
+```
+
+**Output:** Test report in `cd/reports/ct_testing_*.md`
+
+**Critical:** CT validates that all changes remain within certified operational envelopes.
+
+---
+
+### CH – Circular Healing (`ch_heal.py`)
+
+**Purpose:** Detect drift and repair system state automatically (The Immune System)
+
+**Features:**
+- Documentation chain healing (auto-relink after moves/renames)
+- Model drift correction (re-anchor when conditions change)
+- Traceability restoration (rebuild dependency graphs)
+- Workflow rule alignment (adjust CI/CD to reality)
+- Fleet-wide re-stabilization
+
+**Usage:**
+```bash
+# Run all healing
+python tools/cgrow/ch_heal.py
+
+# Heal specific areas
+python tools/cgrow/ch_heal.py --heal-mode docs
+python tools/cgrow/ch_heal.py --heal-mode models
+python tools/cgrow/ch_heal.py --heal-mode traceability
+python tools/cgrow/ch_heal.py --heal-mode workflows
+python tools/cgrow/ch_heal.py --heal-mode fleet
+
+# Verbose output
+python tools/cgrow/ch_heal.py --verbose
+```
+
+**Output:** Healing report in `cd/reports/ch_healing_*.md`
+
+**CH as the Immune System:**
+> **CH is not "fixing software". It is the immune system of the fleet intelligence.**
+
+**Critical:** All CH healing operations require CR approval for critical changes.
+
+---
+
+## Complete C-GROWTH Circular Cycle
+
+Run all phases in circular sequence:
 
 ```bash
 # Phase 1: Generate new content
@@ -151,18 +228,36 @@ python tools/cgrow/co_optimize.py --verbose
 
 # Phase 4: Integrate and deploy
 python tools/cgrow/cw_integrate.py --commit --verbose
+
+# Phase 5: Test continuously
+python tools/cgrow/ct_test.py --verbose
+
+# Phase 6: Heal and stabilize
+python tools/cgrow/ch_heal.py --verbose
+
+# Returns to Phase 1 (Circular Loop)
+```
+
+**System Flow:**
+```
+      CG ──▶ CR ──▶ CO ──▶ CW
+      ▲                     │
+      │                     ▼
+     CH ◀───── CT ◀────────
 ```
 
 ---
 
 ## Integration with FAirCCC (O3/S0/D3)
 
-| C-GROW Phase | FAirCCC Node | Role |
-|--------------|--------------|------|
+| C-GROWTH Phase | FAirCCC Node | Role |
+|----------------|--------------|------|
 | CG | Aircraft (A), Operator Silos (D3) | Generate masked deltas + docs |
 | CR | Neutral Trust Layer (O3) | Validate with expert approval |
 | CO | Fleet Core (F, S0) | Optimize under single authority |
 | CW | Ground (G), Regional (R), Fleet (F) | Deploy signed bundles |
+| CT | Digital Twin Infrastructure (all nodes) | Shadow deployment + validation |
+| CH | Fleet Core + Regional Hubs (S0/O3) | Drift detection + auto-healing |
 
 ---
 
@@ -284,9 +379,13 @@ ls -la cd/reports/
 
 ## Slogan
 
-> **C-GROW enables Continuous Computing —  
+> **C-GROWTH™ — The Living Fleet Intelligence Cycle.**  
+> The aircraft does not just operate.  
+> **It grows. It tests itself. It heals.**
+
+> **C-GROWTH enables Continuous Computing —  
 > so the aircraft does not merely fly.  
-> It learns. It remembers. It improves.**
+> It learns. It remembers. It improves. It validates itself. It self-corrects.**
 
 And thanks to **S0 centralized authority**, it learns *safely*.
 
