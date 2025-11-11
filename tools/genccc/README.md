@@ -138,6 +138,30 @@ python tools/genccc/apply.py
 - Artifacts are retained for 30 days in GitHub Actions
 - Workflow runs have timeout protection (10 min for report, 20 min for apply)
 
+## Security Considerations
+
+### Apply Job Security Model
+
+The `/genccc apply` command triggers automated modifications to PR branches. This requires special security considerations:
+
+**Protection Layers:**
+1. **Permission Validation**: Only repository collaborators with write/admin/maintain access can trigger the command
+2. **Trusted Scripts**: Scripts are loaded from the base branch (trusted code), not from the PR
+3. **Script Isolation**: Scripts are copied to `/tmp` before execution to prevent import hijacking
+4. **Markdown-Only**: The tool only processes markdown files; it does not execute any code from PRs
+5. **Review Required**: All changes are committed to the PR for review before merge
+
+**Known Limitations:**
+- CodeQL may flag the workflow with `untrusted-checkout-toctou` warning
+- This is a known pattern for comment-triggered PR automation
+- The mitigations above address the security concerns while maintaining functionality
+
+**Risk Assessment:**
+- **Threat**: Malicious PR could include Python code that gets executed
+- **Mitigation**: Scripts run from isolated `/tmp` location, not from PR directory
+- **Residual Risk**: Low - PR content is only read as data, not executed
+- **Acceptance**: Standard pattern for GitHub Actions automation with proper controls
+
 ## Support
 
 For issues or questions:
