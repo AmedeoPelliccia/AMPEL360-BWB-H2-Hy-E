@@ -2,11 +2,13 @@
 
 This directory contains utility scripts and tools for maintaining the AMPEL360 BWB H₂ Hy-E Q100 INTEGRA aircraft design repository.
 
+ci/
+
 ## Geometry Baseline Watchdog
 
 ### Overview
 
-The Geometry Baseline Watchdog is an automated system that monitors frozen geometry dimensions and prevents unauthorized changes to the aircraft's type-design baseline.
+The Geometry Baseline Watchdog ci/check_dimensions.py is an automated system that monitors frozen geometry dimensions and prevents unauthorized changes to the aircraft's type-design baseline.
 
 ### Components
 
