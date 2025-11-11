@@ -222,7 +222,7 @@ Format as markdown with appropriate headers, lists, and structure."""
         client = openai.OpenAI(api_key=api_key)
         
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-oss",
             messages=[
                 {"role": "system", "content": "You are a technical documentation expert specializing in aerospace engineering and ATA iSpec 2200 standards."},
                 {"role": "user", "content": prompt}
@@ -242,6 +242,150 @@ Format as markdown with appropriate headers, lists, and structure."""
         print(f"⚠️  AI generation failed for {file_path.name}: {str(e)}")
         print(f"   Using template instead.")
         return generate_missing_doc_template(file_path)
+
+
+def extract_plain_text_ata_references(content: str) -> List[Tuple[str, str, int, int]]:
+    """
+    Extract plain text ATA references that are not already linked.
+    Returns list of (reference_text, normalized_ref, start_pos, end_pos)
+    
+    Path normalization mode 2: Standard ATA structure
+    - ATA_02 -> Chapter root
+    - ATA_02-11 -> Section  
+    - ATA_02-11-00 -> Subsection index
+    """
+    # Pattern to match ATA references not inside markdown links
+    # Negative lookbehind to avoid matching text inside [text](url)
+    ata_pattern = r'(?<!\]\()(?<!\[)\b(?:ATA[_\s-]?)?(\d{2})(?:[_\s-](\d{2})(?:[_\s-](\d{2}))?)?\b'
+    
+    references = []
+    
+    # Find all matches
+    for match in re.finditer(ata_pattern, content):
+        full_match = match.group(0)
+        chapter = match.group(1)
+        section = match.group(2)
+        subsection = match.group(3)
+        
+        # Check if this is inside a markdown link
+        # Look backwards for [ and ]( pattern
+        start_pos = match.start()
+        end_pos = match.end()
+        
+        # Simple check: if there's a '](' within 50 chars before this match, skip it
+        check_start = max(0, start_pos - 50)
+        preceding_text = content[check_start:start_pos]
+        if '](' in preceding_text:
+            # Check if we're inside the link
+            last_bracket = preceding_text.rfind('](')
+            if last_bracket != -1:
+                # Check for closing )
+                following_text = content[start_pos:min(len(content), end_pos + 50)]
+                if ')' in following_text:
+                    continue  # Skip, this is likely inside a link
+        
+        # Normalize the reference (mode 2: standard structure)
+        if subsection:
+            normalized = f"ATA_{chapter}-{section}-{subsection}"
+        elif section:
+            normalized = f"ATA_{chapter}-{section}"
+        else:
+            normalized = f"ATA_{chapter}"
+        
+        references.append((full_match, normalized, start_pos, end_pos))
+    
+    return references
+
+
+def find_ata_document_path(ata_ref: str) -> Optional[pathlib.Path]:
+    """
+    Find the file path for an ATA reference.
+    Path normalization mode 2: Standard ATA structure
+    
+    Examples:
+    - ATA_02 -> finds chapter root README
+    - ATA_02-11 -> finds section README
+    - ATA_02-11-00 -> finds subsection README
+    """
+    # Parse the ATA reference
+    parts = ata_ref.replace('ATA_', '').split('-')
+    
+    if len(parts) == 1:
+        # Chapter level (e.g., ATA_02)
+        chapter = parts[0]
+        pattern = f"ATA_{chapter}*/README.md"
+    elif len(parts) == 2:
+        # Section level (e.g., ATA_02-11)
+        chapter, section = parts
+        pattern = f"ATA_{chapter}*/{chapter}-{section}*/README.md"
+    else:
+        # Subsection level (e.g., ATA_02-11-00)
+        chapter, section, subsection = parts
+        pattern = f"ATA_{chapter}*/{chapter}-{section}-{subsection}*/README.md"
+    
+    # Search for matching files
+    if FRAMEWORK_ROOT.exists():
+        for md_file in FRAMEWORK_ROOT.rglob("*.md"):
+            rel_path = str(md_file.relative_to(FRAMEWORK_ROOT))
+            
+            # Simple pattern matching
+            if 'ATA' in rel_path:
+                # Check if path contains the reference
+                if len(parts) == 1 and f"ATA_{chapter}" in rel_path and md_file.name == "README.md":
+                    # Make sure it's at the right level (not too deep)
+                    if rel_path.count('/') <= 2:
+                        return md_file
+                elif len(parts) == 2 and f"{chapter}-{section}" in rel_path and md_file.name == "README.md":
+                    return md_file
+                elif len(parts) == 3 and f"{chapter}-{section}-{subsection}" in rel_path and md_file.name == "README.md":
+                    return md_file
+    
+    return None
+
+
+def auto_link_plain_text_references(content: str, source_file: pathlib.Path, aggressiveness: str = "STANDARD") -> Tuple[str, int]:
+    """
+    Auto-link plain text ATA references in content.
+    
+    Aggressiveness levels:
+    - SAFE: Only link if target exists
+    - STANDARD: Link if target exists, or create placeholder with note
+    - AGGRESSIVE: Link all references, generate missing docs
+    
+    Returns: (modified_content, links_added)
+    """
+    references = extract_plain_text_ata_references(content)
+    
+    if not references:
+        return content, 0
+    
+    links_added = 0
+    modified_content = content
+    
+    # Process references in reverse order to maintain position indices
+    for ref_text, normalized_ref, start_pos, end_pos in reversed(references):
+        target_path = find_ata_document_path(normalized_ref)
+        
+        if target_path:
+            # Calculate relative path
+            try:
+                rel_path = os.path.relpath(target_path, source_file.parent)
+                # Create markdown link
+                link = f"[{ref_text}]({rel_path})"
+                modified_content = modified_content[:start_pos] + link + modified_content[end_pos:]
+                links_added += 1
+            except Exception:
+                # If we can't calculate relative path, skip this reference
+                continue
+        elif aggressiveness in ["STANDARD", "AGGRESSIVE"]:
+            # For STANDARD mode, add a comment but don't generate
+            # For AGGRESSIVE mode, we would generate the document
+            # For now, STANDARD just adds a link with a note
+            link = f"[{ref_text}](# \"Reference: {normalized_ref} - Document pending\")"
+            modified_content = modified_content[:start_pos] + link + modified_content[end_pos:]
+            links_added += 1
+    
+    return modified_content, links_added
 
 
 def apply_fixes() -> int:
@@ -296,8 +440,40 @@ def apply_fixes() -> int:
     print(f"✅ Fixed {links_fixed} broken links in {files_modified} files")
     print("")
     
-    # Pass 2: Generate missing documentation (limited scope for safety)
-    print("📝 Pass 2: Checking for critical missing documentation...")
+    # Pass 2: Auto-link plain text ATA references (STANDARD mode)
+    print("🔗 Pass 2: Auto-linking plain text ATA references...")
+    print("   Mode: STANDARD (path normalization mode 2)")
+    
+    refs_linked = 0
+    pass2_files_modified = 0
+    
+    for md_file in md_files:
+        try:
+            content = md_file.read_text(encoding='utf-8')
+            original_content = content
+            
+            # Auto-link plain text references with STANDARD aggressiveness
+            modified_content, links_added = auto_link_plain_text_references(
+                content, md_file, aggressiveness="STANDARD"
+            )
+            
+            if links_added > 0:
+                md_file.write_text(modified_content, encoding='utf-8')
+                refs_linked += links_added
+                pass2_files_modified += 1
+                print(f"  ✓ Linked {links_added} references in {md_file.name}")
+                
+        except Exception as e:
+            print(f"  ⚠️  Error processing {md_file.name}: {str(e)}")
+    
+    print(f"✅ Auto-linked {refs_linked} plain text references in {pass2_files_modified} files")
+    print("")
+    
+    # Update total files modified
+    files_modified = max(files_modified, pass2_files_modified)
+    
+    # Pass 3: Generate missing documentation (limited scope for safety)
+    print("📝 Pass 3: Checking for critical missing documentation...")
     print("   (Generation is conservative to avoid unwanted files)")
     print("")
     
@@ -311,7 +487,8 @@ def apply_fixes() -> int:
     print("=" * 80)
     print("📊 Summary:")
     print(f"  - Files modified: {files_modified}")
-    print(f"  - Links fixed: {links_fixed}")
+    print(f"  - Broken links fixed: {links_fixed}")
+    print(f"  - Plain text references auto-linked: {refs_linked}")
     print(f"  - Docs generated: {docs_generated}")
     print("")
     
