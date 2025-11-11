@@ -33,13 +33,13 @@ Verify compliance of aircraft dimensions and geometry with:
 | Parameter | Code E Requirement | AMPEL360 Design | Status |
 |-----------|-------------------|-----------------|--------|
 | **Wingspan** | 52 m to < 65 m | 52.0 m | TBD |
-| **Outer Main Gear Wheel Span** | 9 m to < 15 m | 15.5 m (wheelbase) | TBD (*) |
+| **Outer Main Gear Wheel Span** | 9 m to < 15 m | TBD (track width required) | TBD (*) |
 | **Taxiway Width** | 23 m minimum | 52 m span + clearance | TBD |
 | **Runway Width** | 45 m minimum | Compatible | TBD |
 | **Taxiway Center Line to Object** | 21.5 m | Requires analysis | TBD |
 | **Aircraft Stand Width** | 44 m typical | 52 m + clearance = ~60 m | TBD |
 
-**Note (*):** Code E specifies outer main gear wheel span 9-15 m. AMPEL360 wheelbase is 15.5 m. Clarification needed on whether this refers to wheelbase or track.
+**Note (*):** ICAO Code E specifies "outer main gear wheel span" (the lateral distance between the outer edges of the main gear wheels), which must be 9-15 m. The value previously listed (15.5 m) refers to "wheelbase" (longitudinal distance between nose and main gear), not the required track width. The actual main gear track width must be provided to verify compliance. If the track width is 30.0 m (as suggested elsewhere), this would exceed Code E limits and affect airport compatibility. Compliance cannot be verified until the correct parameter is supplied.
 
 ---
 
