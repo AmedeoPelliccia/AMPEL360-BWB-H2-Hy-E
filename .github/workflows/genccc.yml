@@ -66,8 +66,38 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Check commenter permissions
+        id: check-permissions
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // Check if commenter has write or admin permissions
+            const { data: permission } = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              username: context.actor
+            });
+            
+            const hasPermission = ['write', 'admin', 'maintain'].includes(permission.permission);
+            
+            if (!hasPermission) {
+              core.setFailed(`User ${context.actor} does not have write permission to trigger /genccc apply`);
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `❌ @${context.actor} does not have permission to run \`/genccc apply\`. Only repository collaborators with write access can trigger this command.`
+              });
+              return false;
+            }
+            
+            core.setOutput('has_permission', 'true');
+            return true;
+
       - name: Get PR branch
         id: get-branch
+        if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -81,6 +111,7 @@ jobs:
             core.setOutput('sha', pr.data.head.sha);
 
       - name: Checkout PR branch
+        if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.get-branch.outputs.ref }}
@@ -88,20 +119,24 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
+        if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install OpenAI Client
+        if: steps.check-permissions.outputs.has_permission == 'true'
         run: pip install openai
 
       - name: Run GenCCC Apply
+        if: steps.check-permissions.outputs.has_permission == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python tools/genccc/apply.py
 
       - name: Commit & Push Changes
+        if: steps.check-permissions.outputs.has_permission == 'true'
         run: |
           git config user.name "GenCCC Bot"
           git config user.email "genccc-bot@local"
@@ -110,6 +145,7 @@ jobs:
           git push
 
       - name: Post success comment
+        if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
