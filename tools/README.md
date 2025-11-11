@@ -265,14 +265,29 @@ The **Document Metadata Enforcer** automates three critical documentation mainte
 **Check mode** (reports issues without making changes):
 
 ```bash
+# Default: Check ATA_02-OPERATIONS_INFORMATION only (CI-friendly)
 python3 tools/ci/doc_meta_enforcer.py --check
+
+# Check entire OPT-IN_FRAMEWORK directory (retrofit mode)
+python3 tools/ci/doc_meta_enforcer.py --check --scope entire
 ```
 
 **Fix mode** (applies all corrections and creates stubs):
 
 ```bash
+# Default: Fix ATA_02-OPERATIONS_INFORMATION only
 python3 tools/ci/doc_meta_enforcer.py --fix
+
+# Retrofit entire repository (15,000+ markdown files)
+python3 tools/ci/doc_meta_enforcer.py --fix --scope entire
+
+# Alternative: use 'full' instead of 'entire'
+python3 tools/ci/doc_meta_enforcer.py --fix --scope full
 ```
+
+**Scope Options:**
+- `--scope ata02` (default): Processes only `ATA_02-OPERATIONS_INFORMATION/` directory (CI-friendly, ~500 files)
+- `--scope entire` or `--scope full`: Processes entire `OPT-IN_FRAMEWORK/` directory (retrofit mode, ~15,000 files)
 
 Expected output when issues are found:
 
@@ -293,20 +308,47 @@ Expected output when everything is compliant:
 
 The tool runs automatically in GitHub Actions (`.github/workflows/doc-meta.yml`) and:
 
-- Checks all markdown files under `ATA_02-OPERATIONS_INFORMATION/`
+- Checks all markdown files under `ATA_02-OPERATIONS_INFORMATION/` (default scope for CI performance)
 - Fails the CI check if any issues are found
 - Provides clear error messages for local fixes
+
+**Note:** CI uses default scope (`--scope ata02`) to keep build times reasonable. For repository-wide retrofits, run locally with `--scope entire`.
 
 To resolve CI failures:
 
 ```bash
-# Run fix locally
+# Run fix locally (matches CI scope)
 python3 tools/ci/doc_meta_enforcer.py --fix
+
+# For comprehensive repository-wide retrofit
+python3 tools/ci/doc_meta_enforcer.py --fix --scope entire
 
 # Commit the changes
 git add .
 git commit -m "Fix document metadata and references"
 ```
+
+#### Repository-Wide Retrofit
+
+To apply metadata standards across the entire repository (all ~15,000 markdown files):
+
+```bash
+# Dry run first - see what would be changed
+python3 tools/ci/doc_meta_enforcer.py --check --scope entire 2>&1 | tee retrofit-check.log
+
+# Apply changes (may take several minutes)
+python3 tools/ci/doc_meta_enforcer.py --fix --scope entire 2>&1 | tee retrofit-fix.log
+
+# Review changes before committing
+git status
+git diff --stat
+
+# Commit in manageable chunks if needed
+git add OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY
+git commit -m "Add AI attribution to Neural Networks documentation"
+```
+
+**Performance Note:** Processing the entire repository (~15,000 files) takes 5-10 minutes depending on system performance. The default `--scope ata02` processes ~500 files in under 30 seconds.
 
 #### Use Cases
 
@@ -315,6 +357,7 @@ git commit -m "Fix document metadata and references"
 * **Prevents Broken Links**: Creates stubs for missing referenced documents
 * **Quality Gates**: Enforces documentation standards in CI
 * **Developer Productivity**: Automates manual documentation maintenance tasks
+* **Repository Retrofit**: Apply standards to existing documentation at scale
 
 ---
 
