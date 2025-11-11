@@ -5,14 +5,14 @@ on:
     paths:
       - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/**"
       - ".github/workflows/geometry-baseline-watchdog.yml"
-      - "tools/check_dimensions.py"
+      - "tools/ci/check_dimensions.py"
   push:
     branches:
       - main
     paths:
       - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/**"
       - ".github/workflows/geometry-baseline-watchdog.yml"
-      - "tools/check_dimensions.py"
+      - "tools/ci/check_dimensions.py"
 
 jobs:
   geometry-watchdog:
