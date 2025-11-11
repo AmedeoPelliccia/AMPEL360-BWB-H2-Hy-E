@@ -164,23 +164,33 @@ jobs:
 
       - name: Commit & Push Changes
         if: steps.check-permissions.outputs.has_permission == 'true'
+        id: commit_push
         run: |
           cd pr
           git config user.name "GenCCC Bot"
           git config user.email "genccc-bot@local"
           git add .
-          git commit -m "GenCCC: Apply auto-linking and contextual document generation" || echo "No changes to commit."
-          git push
+          if git commit -m "GenCCC: Apply auto-linking and contextual document generation"; then
+            echo "changes_committed=true" >> $GITHUB_OUTPUT
+            git push
+          else
+            echo "No changes to commit."
+            echo "changes_committed=false" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Post success comment
+      - name: Post result comment
         if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const committed = steps.commit_push.outputs.changes_committed === 'true';
+            const body = committed
+              ? '✅ **GenCCC Apply completed!**\n\nAutomatic fixes have been applied and committed to this PR.\n\nPlease review the changes before merging.'
+              : 'ℹ️ **GenCCC Apply completed.**\n\nNo changes were necessary, so nothing was committed.';
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '✅ **GenCCC Apply completed!**\n\nAutomatic fixes have been applied and committed to this PR.\n\nPlease review the changes before merging.'
+              body
             });
