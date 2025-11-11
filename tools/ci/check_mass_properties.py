@@ -142,7 +142,7 @@ def write_report(deviations: List[Tuple[str, float, float]]) -> None:
     lines = [
         "# Mass Properties Baseline Deviation Detected",
         "",
-        "One or more *frozen* mass properties have changed with respect to "
+        "One or more *frozen* mass properties have changed with respect to ",
         "`baseline_mass_properties.json`. This requires an **Engineering Change Request (ECR)**.",
         "",
         "## Deviations",
