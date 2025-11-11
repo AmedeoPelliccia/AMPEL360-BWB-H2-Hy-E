@@ -53,8 +53,12 @@ This verification provides an overall consistency check across:
 | Center Body Width | 38.0 m ±0.1 | — | VER-02-11-004 | TBD | TBD |
 | Wing Area | 845 m² ±5 | 845 m² | CAD Analysis | TBD | TBD |
 
-**Note (*):** The baseline_dimensions.json shows overall_length_m: 52.5, which differs from Principal_Dimensions_Table (38.2 m). This requires investigation and documentation of the different measurement conventions.
+**Note (*):** The baseline_dimensions.json shows `overall_length_m: 52.5`, which differs from the Principal_Dimensions_Table value (38.2 m).  
 
+- The value in `baseline_dimensions.json` (52.5 m) represents the *maximum overall length* of the aircraft, measured from the foremost point of the nose (including radome) to the aftmost point of the tail (including tailcone and any protrusions).  
+- The value in `Principal_Dimensions_Table.csv` (38.2 m) represents the *fuselage length*, measured from the forward pressure bulkhead to the aft pressure bulkhead, and does **not** include the radome or tailcone.  
+
+This difference is a result of differing measurement conventions between the two sources and is a known issue. For verification, ensure that comparisons are made between like-for-like definitions, and document which convention is used in each context.
 ### 4.2 Calculated Dimensions
 
 | Dimension | Formula | Input Values | Calculated Result | Table Value | Status |
