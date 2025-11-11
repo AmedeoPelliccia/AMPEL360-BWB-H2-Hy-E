@@ -19,6 +19,7 @@ jobs:
     permissions:
       contents: read
       actions: write  # for uploading artifacts
+      security-events: write  # for uploading SARIF results
 
     steps:
       - name: Checkout
@@ -34,7 +35,7 @@ jobs:
         continue-on-error: true
         run: |
           set -e
-          python tools/ci/doc_meta_enforcer.py --check | tee doc_meta_log.txt
+          python tools/ci/doc_meta_enforcer.py --check --sarif doc_meta_results.sarif | tee doc_meta_log.txt
 
       - name: Upload doc-meta log
         if: always()
@@ -43,6 +44,13 @@ jobs:
           name: doc-meta-log
           path: doc_meta_log.txt
           retention-days: 30
+
+      - name: Upload SARIF results to GitHub Code Scanning
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: doc_meta_results.sarif
+          category: doc-metadata
 
       - name: Add job summary
         if: steps.check_doc_meta.outcome == 'failure'

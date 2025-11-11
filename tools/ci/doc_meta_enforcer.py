@@ -30,9 +30,11 @@ Usage:
 """
 
 import argparse
+import json
 import pathlib
 import re
 import sys
+import time
 from typing import List, Tuple
 
 # This script lives in repo_root/tools/ci/
@@ -275,6 +277,82 @@ def process_file(path: pathlib.Path, fix: bool, doc_root: pathlib.Path, add_caos
     return issues
 
 
+def to_sarif(issues: List[str]) -> dict:
+    """
+    Convert issues list to SARIF format for GitHub Code Scanning integration.
+    
+    SARIF (Static Analysis Results Interchange Format) enables inline annotations
+    in GitHub PRs, showing issues directly on the files/lines in the diff.
+    """
+    runs = [{
+        "tool": {
+            "driver": {
+                "name": "doc_meta_enforcer",
+                "version": "1.0",
+                "informationUri": "https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/blob/main/tools/README.md#document-metadata-enforcer",
+                "rules": [
+                    {
+                        "id": "missing-ai-attribution",
+                        "name": "Missing AI Attribution",
+                        "shortDescription": {"text": "Document Control section missing AI generation attribution"},
+                        "helpUri": "https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/blob/main/tools/README.md#ai-attribution-management"
+                    },
+                    {
+                        "id": "unlinked-internal-reference",
+                        "name": "Unlinked Internal Reference",
+                        "shortDescription": {"text": "Internal document reference not converted to hyperlink"},
+                        "helpUri": "https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/blob/main/tools/README.md#internal-reference-linking"
+                    },
+                    {
+                        "id": "missing-referenced-document",
+                        "name": "Missing Referenced Document",
+                        "shortDescription": {"text": "Referenced internal document does not exist"},
+                        "helpUri": "https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/blob/main/tools/README.md#stub-generation"
+                    }
+                ]
+            }
+        },
+        "results": []
+    }]
+    
+    for msg in issues:
+        # Parse issue message: "path: detail..."
+        parts = str(msg).split(":", 1)
+        if len(parts) < 2:
+            continue
+            
+        file_path = parts[0].strip()
+        detail = parts[1].strip()
+        
+        # Skip sub-messages (indented with "->")
+        if file_path.startswith("->") or file_path.startswith(" "):
+            continue
+        
+        # Determine rule ID based on message content
+        rule_id = "missing-ai-attribution"
+        if "markdown links" in detail or "internal document references" in detail:
+            rule_id = "unlinked-internal-reference"
+        elif "missing internal document" in detail:
+            rule_id = "missing-referenced-document"
+        
+        runs[0]["results"].append({
+            "ruleId": rule_id,
+            "level": "warning",
+            "message": {"text": detail},
+            "locations": [{
+                "physicalLocation": {
+                    "artifactLocation": {"uri": file_path},
+                    "region": {
+                        "startLine": 1,
+                        "startColumn": 1
+                    }
+                }
+            }]
+        })
+    
+    return {"version": "2.1.0", "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json", "runs": runs}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Enforce document metadata standards across the repository"
@@ -298,6 +376,11 @@ def main() -> int:
             "'ata02': ATA_02-OPERATIONS_INFORMATION only (default, CI-friendly). "
             "'entire' or 'full': Entire OPT-IN_FRAMEWORK directory (retrofit mode)."
         ),
+    )
+    parser.add_argument(
+        "--sarif",
+        type=pathlib.Path,
+        help="Write SARIF report to this path for GitHub Code Scanning integration.",
     )
     args = parser.parse_args()
 
@@ -336,6 +419,13 @@ def main() -> int:
         processed_count += 1
 
     print(f"[doc-meta] Processed {processed_count} markdown files")
+    
+    # Generate SARIF report if requested
+    if args.sarif and all_issues:
+        args.sarif.parent.mkdir(parents=True, exist_ok=True)
+        sarif_data = to_sarif(all_issues)
+        args.sarif.write_text(json.dumps(sarif_data, indent=2), encoding="utf-8")
+        print(f"[doc-meta] SARIF report written to {args.sarif}")
 
     if check:
         if all_issues:

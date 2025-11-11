@@ -330,6 +330,18 @@ The tool runs automatically in GitHub Actions (`.github/workflows/doc-meta.yml`)
 - Checks all markdown files under `ATA_02-OPERATIONS_INFORMATION/` (default scope for CI performance)
 - Fails the CI check if any issues are found
 - Provides clear error messages for local fixes
+- **Uploads SARIF results** to GitHub Code Scanning for inline PR annotations
+- **Creates job summaries** with first 50 lines of issues
+- **Uploads full logs** as artifacts (30-day retention)
+
+**SARIF Integration:**
+
+The tool generates [SARIF](https://sarifweb.azurewebsites.net/) (Static Analysis Results Interchange Format) output that integrates with GitHub Code Scanning:
+
+- **Inline annotations**: Issues appear directly on files in PR diffs
+- **Three rule types**: `missing-ai-attribution`, `unlinked-internal-reference`, `missing-referenced-document`
+- **Clickable help**: Each annotation links to relevant documentation
+- **Professional UI**: Same experience as CodeQL and other security scanners
 
 **Note:** CI uses default scope (`--scope ata02`) to keep build times reasonable. For repository-wide retrofits, run locally with `--scope entire`.
 
@@ -341,6 +353,9 @@ python3 tools/ci/doc_meta_enforcer.py --fix
 
 # For comprehensive repository-wide retrofit
 python3 tools/ci/doc_meta_enforcer.py --fix --scope entire
+
+# Generate SARIF report for local inspection
+python3 tools/ci/doc_meta_enforcer.py --check --sarif results.sarif
 
 # Commit the changes
 git add .
