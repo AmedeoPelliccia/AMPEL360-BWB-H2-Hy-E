@@ -1,0 +1,42 @@
+name: Doc Meta Enforcement
+
+on:
+  pull_request:
+    paths:
+      - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/**"
+      - "tools/ci/doc_meta_enforcer.py"
+      - ".github/workflows/doc-meta.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/**"
+      - "tools/ci/doc_meta_enforcer.py"
+      - ".github/workflows/doc-meta.yml"
+
+jobs:
+  doc-meta:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run doc meta check
+        id: check_doc_meta
+        continue-on-error: true
+        run: |
+          python tools/ci/doc_meta_enforcer.py --check
+
+      - name: Fail if issues found
+        if: steps.check_doc_meta.outcome == 'failure'
+        run: |
+          echo "::error title=Document metadata issues::Run 'python tools/ci/doc_meta_enforcer.py --fix' locally to resolve."
+          exit 1
