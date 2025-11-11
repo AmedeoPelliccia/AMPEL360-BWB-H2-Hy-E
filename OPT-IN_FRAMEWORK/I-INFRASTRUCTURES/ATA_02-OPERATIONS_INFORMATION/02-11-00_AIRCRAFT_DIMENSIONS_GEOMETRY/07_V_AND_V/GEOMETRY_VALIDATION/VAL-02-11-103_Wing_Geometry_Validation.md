@@ -47,7 +47,7 @@ Validate detailed wing geometry including:
 ### 3.3 Twist Measurement
 - Extract airfoil sections at multiple span stations
 - Measure incidence angle at each station
-- Verify linear twist distribution: twist(y) = -3° × (y/26)
+- Verify linear twist distribution: twist(y) = -3° × (y / semi-span), where semi-span = 26 m (see table above)
 
 ### 3.4 Edge Contour Analysis
 - Generate curvature plots for LE and TE
