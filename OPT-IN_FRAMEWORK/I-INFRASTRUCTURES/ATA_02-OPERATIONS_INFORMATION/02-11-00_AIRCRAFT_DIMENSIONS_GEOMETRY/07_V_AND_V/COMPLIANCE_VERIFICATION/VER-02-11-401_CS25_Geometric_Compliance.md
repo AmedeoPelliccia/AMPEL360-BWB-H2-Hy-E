@@ -84,13 +84,13 @@ Verify compliance of aircraft dimensions and geometry with:
 
 ### 4.2 ICAO Annex 14 Compliance
 
-| Item | Requirement | AMPEL360 Value | Compliant? | Notes |
-|------|------------|---------------|-----------|-------|
-| Wingspan | 52-65 m (Code E) | 52.0 m | TBD | At lower limit |
-| Main Gear Span | 9-15 m (Code E) | 15.5 m wheelbase | TBD | Needs clarification |
-| Taxiway Width | 23 m (Code E) | 60 m required | **NO** | Exceeds Code E, needs Code F |
-| Runway Width | 45 m (Code E) | Compatible | TBD | OK |
-| Gate Width | 44 m (Code E) | 60 m required | **NO** | Needs Code F gate |
+| Item | Requirement | AMPEL360 Value | Dimensional Compliance | Operational Envelope Compatibility | Notes |
+|------|------------|---------------|------------------------|------------------------------------|-------|
+| Wingspan | 52-65 m (Code E) | 52.0 m | **YES** | **NO** (60 m with clearance) | Aircraft fits Code E, but ops require Code F clearance |
+| Main Gear Span | 9-15 m (Code E) | 15.5 m wheelbase | **NO** (if track) / TBD (if wheelbase) | TBD | Needs clarification: track vs. wheelbase |
+| Taxiway Width | 23 m (Code E) | 60 m required | **YES** (aircraft width) | **NO** | Operational envelope exceeds Code E, needs Code F |
+| Runway Width | 45 m (Code E) | Compatible | **YES** | **YES** | OK |
+| Gate Width | 44 m (Code E) | 60 m required | **YES** (aircraft width) | **NO** | Needs Code F gate for operational clearance |
 
 ---
 
