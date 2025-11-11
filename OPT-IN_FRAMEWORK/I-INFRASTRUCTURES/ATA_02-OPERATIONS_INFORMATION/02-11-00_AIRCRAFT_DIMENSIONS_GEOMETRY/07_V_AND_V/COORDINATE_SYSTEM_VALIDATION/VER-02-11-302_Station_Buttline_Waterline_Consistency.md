@@ -97,10 +97,14 @@ Perform comprehensive cross-reference audit of Station, Buttline, and Waterline 
 
 ## 5. Acceptance Criteria
 
-- **Pass:** All coordinates consistent within ±0.05 m across sources, or documented reasons for differences
-- **Conditional:** Minor discrepancies (±0.05 to ±0.1 m) with low impact
-- **Fail:** Major discrepancies (> ±0.1 m) or undocumented inconsistencies
+- **Pass:** All coordinates are consistent across sources within the following tolerances, or have documented reasons for differences:
+    - **Station:** ±0.02 m
+    - **Buttline:** ±0.05 m
+    - **Waterline:** ±0.10 m
+- **Conditional:** Minor discrepancies (within 2x the above tolerances) with low impact and documented justification
+- **Fail:** Major discrepancies (exceeding 2x the above tolerances) or undocumented inconsistencies
 
+> **Note:** These tolerances are for data consistency verification only and do not represent manufacturing or build tolerances. Tolerances reflect typical documentation and measurement precision for each coordinate type.
 ---
 
 ## 6. Data Recording
