@@ -124,12 +124,7 @@ This verification procedure covers:
 
 ### 7.1 Wingspan Calculation
 ```
-Wingspan = sqrt((X_right - X_left)² + (Y_right - Y_left)² + (Z_right - Z_left)²)
-```
-
-Where:
-- (X_left, Y_left, Z_left) = left wingtip coordinates
-- (X_right, Y_right, Z_right) = right wingtip coordinates
+Wingspan = |Y_right - Y_left|
 
 ### 7.2 Statistical Analysis
 ```
