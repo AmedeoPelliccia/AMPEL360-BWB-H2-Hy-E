@@ -151,7 +151,7 @@ This folder contains Verification and Validation (V&V) documentation and test re
 
 **Scope:**
 - CS-25 geometric requirements compliance
-- ICAO Annex 14 airport compatibility (Code E verification)
+- ICAO Annex 14 airport compatibility (Wingspan: Code E compliant; however, operational envelope with clearances may require Code F infrastructure—see VER-02-11-401 for details)
 - Taxiway, gate, and parking compatibility
 - Pavement strength classification requirements
 - Data consistency across all 02-11-00 documents
