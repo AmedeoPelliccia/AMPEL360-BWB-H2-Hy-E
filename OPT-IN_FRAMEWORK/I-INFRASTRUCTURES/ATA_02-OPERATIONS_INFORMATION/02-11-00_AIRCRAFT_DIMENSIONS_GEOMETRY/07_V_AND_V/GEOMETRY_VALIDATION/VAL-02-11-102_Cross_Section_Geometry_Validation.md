@@ -103,4 +103,4 @@ t/c = max_thickness / local_chord
 
 ---
 
-**Revision:** 1.0 | **Date:** 2025-11-11 | **Author:** V&V Team
+**Revision:** 1.0 | **Date:** 2025-11-11 | **Author:** COPILOT Agent prompted by Amedeo Pelliccia

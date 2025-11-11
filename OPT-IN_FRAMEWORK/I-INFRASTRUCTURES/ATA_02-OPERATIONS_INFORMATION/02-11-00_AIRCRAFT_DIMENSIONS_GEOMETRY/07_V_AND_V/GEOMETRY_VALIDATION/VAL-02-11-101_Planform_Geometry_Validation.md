@@ -205,4 +205,4 @@ y_MAC = (2/S) × ∫₀^(b/2) y×c(y) dy
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | 2025-11-11 | V&V Team | Initial template creation |
+| 1.0 | 2025-11-11 | COPILOT Agent prompted by Amedeo Pelliccia | Initial template creation |

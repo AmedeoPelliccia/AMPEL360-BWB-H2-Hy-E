@@ -264,6 +264,22 @@ All V&V activities generate quality records that shall be:
 **Lead Engineer, Dimensions & Geometry:** TBD  
 **Quality Assurance Representative:** TBD
 
+### Validation Team
+
+The validation team for this V&V framework consists of:
+
+| Role | Name | Responsibility |
+|------|------|----------------|
+| **V&V Manager** | TBD | Overall V&V program management and coordination |
+| **Lead Dimensions Engineer** | TBD | Dimensional verification oversight |
+| **Lead Geometry Engineer** | TBD | Geometric validation oversight |
+| **Clearance Test Engineer** | TBD | Ground and operational clearance testing |
+| **Coordinate Systems Specialist** | TBD | Reference system consistency verification |
+| **Compliance Engineer** | TBD | Regulatory compliance verification (CS-25, ICAO) |
+| **Quality Assurance Representative** | TBD | QA oversight and audit of V&V activities |
+| **Metrology Specialist** | TBD | Measurement system analysis and calibration |
+| **CAD/Configuration Manager** | TBD | Model consistency and version control |
+
 For questions regarding V&V activities, refer to:
 - Project V&V Plan (14_META_GOVERNANCE)
 - Configuration Management Plan (14_META_GOVERNANCE)
@@ -285,3 +301,4 @@ For questions regarding V&V activities, refer to:
 - Status: Structure Implemented, Templates Ready
 - Last Updated: 2025-11-11
 - Previous Version: 1.0 (2025-11-04)
+- Author: COPILOT Agent prompted by Amedeo Pelliccia

@@ -111,4 +111,4 @@ All measured clearances must meet or exceed minimum required values.
 
 ---
 
-**Revision:** 1.0 | **Date:** 2025-11-11 | **Author:** V&V Team
+**Revision:** 1.0 | **Date:** 2025-11-11 | **Author:** COPILOT Agent prompted by Amedeo Pelliccia
