@@ -11,6 +11,7 @@ It maintains cross-document coherence and grows technical documents gradually.
 | `generate.py` | Create missing documents + convert references to hyperlinks |
 | `expand.py` | Expand underdeveloped sections with controlled depth |
 | `score_relevance.py` | Ranks related documents (context inference, no embeddings) |
+| `apply_neural_networks.py` | Orchestrated CG chain for Neural Networks directory |
 
 ## Usage
 
@@ -49,6 +50,23 @@ CG_MODE=BALANCED python tools/cg/expand.py
 |---|---|---|
 | `CG_MAX_EDITS` | 25 | Max edits per run |
 | `CG_SECTION_MIN_WORDS` | 120 | Threshold for expanding a section |
+
+### 4) Orchestrated Chain for Specific Directories
+```bash
+# Apply full CG chain to Neural Networks directory
+python tools/cg/apply_neural_networks.py
+
+# Scan only (no modifications)
+python tools/cg/apply_neural_networks.py --scan-only
+
+# Skip generation step
+python tools/cg/apply_neural_networks.py --no-generate
+
+# Custom expansion mode
+python tools/cg/apply_neural_networks.py --mode DEEPENING --max-edits 50
+```
+
+This orchestrated workflow runs scan → generate → expand in sequence for the Neural Networks directory.
 
 ## Notes
 
