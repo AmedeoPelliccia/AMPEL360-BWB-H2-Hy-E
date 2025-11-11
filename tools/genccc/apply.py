@@ -439,7 +439,6 @@ def apply_fixes() -> int:
     for md_file in md_files:
         try:
             content = md_file.read_text(encoding='utf-8')
-            original_content = content
             
             # Auto-link plain text references with STANDARD aggressiveness
             modified_content, links_added = auto_link_plain_text_references(
