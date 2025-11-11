@@ -14,19 +14,32 @@ tools/
 │   ├── check_dimensions.py
 │   ├── check_mass_properties.py
 │   └── doc_meta_enforcer.py
-├── package_geometry_data.py
+├── genccc/
+│   ├── README.md
+│   ├── apply.py
+│   └── report.py
+├── cg/
+│   ├── README.md
+│   ├── scan.py
+│   ├── generate.py
+│   ├── expand.py
+│   ├── score_relevance.py
+│   └── context_index.json
 ├── create_release_bundle.py
 ├── generate_summary_tables.py
-└── README.md
+└── package_geometry_data.py
 
 /cd/ (at repo root)
 ├── api.py
 ├── geometry/                   # Generated geometry reports
 ├── mass/                       # Generated mass properties reports
+├── reports/                    # CG scan reports and cross-reference audits
 └── publications/               # Release bundles and packages
 ```
 
 * `ci/` – Continuous Integration watchdog scripts and documentation automation
+* `genccc/` – GenCCC cross-reference audit and enforcement tools
+* `cg/` – Continuous Generation framework for documentation evolution
 * `cd/` – Continuous Delivery artifacts and API (at repo root)
 * Root level scripts – Packaging, release, and summary generation tools
 
