@@ -566,7 +566,7 @@ Planned or possible additions:
   * Configuration items
 * Enhanced packaging:
   * Docker container builder for analysis tools
-  * S1000D publication packager
+  * [S1000D](http://www.s1000d.org/) publication packager
   * Automated changelog generation
 * Deployment automation:
   * Rollback scripts
@@ -595,6 +595,6 @@ Dimensions & Geometry V&V / DevOps / Configuration Management
 **Related Documentation:**
 * V&V Plan (14_META_GOVERNANCE)
 * Configuration Management Plan (14_META_GOVERNANCE)
-* Quality Manual / AS9100 QMS documentation
+* Quality Manual / [AS9100](https://www.sae.org/standards/content/as9100d/) QMS documentation
 
 For process and governance details, see the Configuration Management Plan.

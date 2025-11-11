@@ -55,9 +55,9 @@ The following mass values represent the certified design baseline:
 ## 4. Compliance
 
 These mass properties satisfy:
-- CS-25.25 (Weight Limits)
-- CS-25.1581 (General - Weight and Balance)
-- Structural design loads per CS-25.301
+- [CS-25.25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Weight Limits)
+- [CS-25.1581](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (General - Weight and Balance)
+- Structural design loads per [CS-25.301](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)
 
 Any change to these frozen values requires ECR approval.
 

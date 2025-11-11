@@ -402,7 +402,7 @@ graph LR
     - 5 Tolerance Requirements (Manufacturing, Assembly, Deflections, Thermal Expansion, Measurement Accuracy)
     - Human-Machine Interface Design
     - Crew Workload Analysis (NASA-TLX)
-    - Documentation Design Standards (S1000D, ATA iSpec 2200)
+    - Documentation Design Standards ([S1000D](http://www.s1000d.org/), [ATA iSpec 2200](https://www.ata.org/resources/specifications))
     - Training Program Design
     - Safety By Design Operations
 - [`ATA 03 - SUPPORT/GSE`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/)

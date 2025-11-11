@@ -80,9 +80,9 @@ CG envelope verified through:
 ## 5. Compliance
 
 CG limits satisfy:
-- CS-25.21 (Proof of Compliance - Weights)
-- CS-25.143 (General - Controllability and Maneuverability)
-- CS-25.173 (Static Longitudinal Stability)
+- [CS-25.21](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Proof of Compliance - Weights)
+- [CS-25.143](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (General - Controllability and Maneuverability)
+- [CS-25.173](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) (Static Longitudinal Stability)
 
 Any change to these frozen limits requires ECR approval and flight test validation.
 
