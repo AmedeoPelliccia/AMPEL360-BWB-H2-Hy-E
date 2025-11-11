@@ -214,26 +214,205 @@ All schemas versioned; backward-compatible field deprecation policy.
 
 ---
 
-## 15. Diagrams (ASCII)
+## 15. Diagrams
 
-### 15.1 Logical Fabric
+### 15.1 Logical Fabric Architecture
 
-```
- [Aircraft A]--\
- [Aircraft B]---\        (CFLF-GRAD: DP + masks)        /--[Regional Hub(s)]--[Fleet Core HSM Signer]
- [Aircraft C]----> Ground Validator ---> Secure-Agg ----/
-          ^                                  |
-          |                                  v
-         (CUC: Signed bundles, on-ground install; S0 authority)
+```mermaid
+graph TB
+    subgraph Aircraft["Aircraft Fleet (FAirCCC-A)"]
+        A1[Aircraft A]
+        A2[Aircraft B]
+        A3[Aircraft C]
+    end
+    
+    subgraph Ground["Ground Stations (FAirCCC-G)"]
+        GV[Ground Validator]
+        GS[Ground Staging]
+    end
+    
+    subgraph Regional["Regional Hubs (FAirCCC-R)"]
+        SA[Secure Aggregation]
+        RH[Regional Analytics]
+    end
+    
+    subgraph FleetCore["Fleet Core (FAirCCC-F)"]
+        HSM[HSM Signer<br/>S0 Authority]
+        MT[Model Training]
+        VE[Verification Engine]
+    end
+    
+    A1 -->|CFLF-GRAD<br/>DP + masks| GV
+    A2 -->|CFLF-GRAD<br/>DP + masks| GV
+    A3 -->|CFLF-GRAD<br/>DP + masks| GV
+    
+    GV -->|Validated<br/>Gradients| SA
+    SA -->|Aggregated<br/>Updates| MT
+    MT -->|Model<br/>Candidate| VE
+    VE -->|Signed<br/>Bundle| HSM
+    
+    HSM -->|CUC<br/>Signed Release| GS
+    GS -->|Ground-Only<br/>Install| A1
+    GS -->|Ground-Only<br/>Install| A2
+    GS -->|Ground-Only<br/>Install| A3
+    
+    style HSM fill:#ff9999
+    style SA fill:#99ccff
+    style GV fill:#99ff99
+    style A1 fill:#ffff99
+    style A2 fill:#ffff99
+    style A3 fill:#ffff99
 ```
 
 ### 15.2 Separation of Concerns
 
+```mermaid
+graph LR
+    subgraph SafetyDomain["Safety Domain (DAL A/B)"]
+        FC[Flight Control<br/>Laws]
+        FP[Flight<br/>Protections]
+    end
+    
+    subgraph AnalyticsDomain["Analytics Domain (Advisory)"]
+        MA[Maintenance<br/>AI]
+        OA[Operations<br/>AI]
+        HE[H₂ Efficiency<br/>Models]
+    end
+    
+    FC -->|One-way<br/>Metrics| MA
+    FP -->|One-way<br/>Metrics| MA
+    
+    FC -.->|No Control<br/>Path Back| MA
+    FP -.->|No Control<br/>Path Back| OA
+    
+    MA -->|Advisory<br/>Only| OA
+    OA -->|Advisory<br/>Only| HE
+    
+    style FC fill:#ff6666
+    style FP fill:#ff6666
+    style MA fill:#6699ff
+    style OA fill:#6699ff
+    style HE fill:#6699ff
 ```
- Safety Domain (DAL A/B) -> one-way metrics -> Analytics Domain (Advisory)
-            ^                                            |
-            |                (no control back)           v
-        Flight Control                             Maint / Ops AI
+
+### 15.3 O3/S0/D3 Configuration Overview
+
+```mermaid
+graph TB
+    subgraph O3["O3 - Joint Control (Governance)"]
+        OEM[OEM]
+        OPS[Operators]
+        MRO[MROs]
+        NTL[Neutral Trust Layer<br/>HSM-Anchored PKI]
+        
+        OEM --- NTL
+        OPS --- NTL
+        MRO --- NTL
+    end
+    
+    subgraph S0["S0 - Central Authority (Updates)"]
+        FC[Fleet Core<br/>SOLE SIGNER]
+        HSM2[HSM Signature<br/>Authority]
+        
+        FC --> HSM2
+    end
+    
+    subgraph D3["D3 - Airline Isolation (Data)"]
+        OP1[Operator 1<br/>Data Silo]
+        OP2[Operator 2<br/>Data Silo]
+        OP3[Operator 3<br/>Data Silo]
+        
+        OP1 -.->|Model Deltas<br/>Only| OP2
+        OP2 -.->|Model Deltas<br/>Only| OP3
+    end
+    
+    NTL ==>|Governs| FC
+    FC ==>|Distributes<br/>Signed Models| OP1
+    FC ==>|Distributes<br/>Signed Models| OP2
+    FC ==>|Distributes<br/>Signed Models| OP3
+    
+    style NTL fill:#ffcc99
+    style FC fill:#ff9999
+    style HSM2 fill:#ff9999
+    style OP1 fill:#99ccff
+    style OP2 fill:#99ccff
+    style OP3 fill:#99ccff
+```
+
+### 15.4 Channel Data Flow
+
+```mermaid
+sequenceDiagram
+    participant A as Aircraft (A)
+    participant G as Ground (G)
+    participant R as Regional (R)
+    participant F as Fleet Core (F)
+    
+    Note over A,G: OFEC & PMT (Telemetry)
+    A->>G: Flight envelope data (OFEC)
+    A->>G: Maintenance telemetry (PMT)
+    
+    Note over A,F: CFLF-GRAD (Learning)
+    A->>A: DP-SGD + Compression
+    A->>G: Masked gradients
+    G->>G: Validate & Check
+    G->>R: Forward to aggregation
+    R->>R: Secure aggregation (N≥T)
+    R->>F: Aggregated update
+    F->>F: Train + Evaluate
+    
+    Note over F,A: CUC (Updates - Ground Only)
+    F->>F: Sign with HSM
+    F->>R: Distribute bundle
+    R->>G: Stage for install
+    G->>A: Install (Parked/Maintenance ONLY)
+    A->>G: Acknowledge + Health check
+```
+
+### 15.5 Security & Privacy Stack
+
+```mermaid
+graph TB
+    subgraph Application["Application Layer"]
+        ML[ML Models<br/>Advisory Only]
+        OPS[Operations<br/>Analytics]
+    end
+    
+    subgraph Privacy["Privacy Layer"]
+        DP[Differential Privacy<br/>ε,δ Budget]
+        SA[Secure Aggregation<br/>Masked Sums]
+        ANON[Anonymization<br/>PII Removal]
+    end
+    
+    subgraph Security["Security Layer"]
+        MTLS[mTLS<br/>TLS 1.3]
+        ATTEST[Attestation<br/>SBOM + Provenance]
+        PKI[HSM-Anchored PKI<br/>Device Certs]
+    end
+    
+    subgraph Hardware["Hardware Trust"]
+        TPM[TPM<br/>Key Storage]
+        HSM[HSM<br/>Signing]
+    end
+    
+    ML --> DP
+    OPS --> DP
+    DP --> SA
+    SA --> ANON
+    
+    ANON --> MTLS
+    MTLS --> ATTEST
+    ATTEST --> PKI
+    
+    PKI --> TPM
+    PKI --> HSM
+    
+    style DP fill:#ffcccc
+    style SA fill:#ffcccc
+    style MTLS fill:#ccffcc
+    style PKI fill:#ccffcc
+    style TPM fill:#ccccff
+    style HSM fill:#ccccff
 ```
 
 ---
@@ -290,9 +469,9 @@ All schemas versioned; backward-compatible field deprecation policy.
 
 ## Bonus: Drop-in repo wiring
 
-* Add these channel IDs to your ontology index:
-
-  * `channels/ofec.md`, `channels/pmt.md`, `channels/cflf-grad.md`, `channels/cuc.md` (stubs are fine—GenCCC will auto-link/expand).
+* Channel specification stubs are available in `CAOS/channels/`:
+  * `channels/ofec.md` – Operational Flight Envelope Channel
+  * `channels/pmt.md` – Predictive Maintenance Telemetry
+  * `channels/cflf-grad.md` – Collaborative Federated Learning Fabric (Gradient)
+  * `channels/cuc.md` – Config & Update Channel
 * Add **CG** scheduled job later to keep docs cross-linked and matured.
-
-If you want, I can also create **PowerPoint slides** + **draw.io diagrams** from this spec.
