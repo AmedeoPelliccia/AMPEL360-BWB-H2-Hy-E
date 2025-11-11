@@ -119,7 +119,6 @@ def generate_report() -> str:
     # Track statistics
     total_links = 0
     broken_links = 0
-    missing_ata_docs = set()
     files_with_issues = []
     
     # Scan each file
