@@ -25,7 +25,7 @@ BASELINE_PATH = (
     / "01_OVERVIEW"
     / "baseline_dimensions.json"
 )
-REPORT_PATH = REPO_ROOT / "geometry_deviations_report.md"
+REPORT_PATH = REPO_ROOT / "cd" / "geometry" / "geometry_deviations_report.md"
 
 TOLERANCE_ABS = 1e-6  # strict: any numerical change is detected
 
@@ -154,7 +154,14 @@ def compare_values(
     current: Dict[str, float],
 ) -> List[Tuple[str, float, float]]:
     deviations: List[Tuple[str, float, float]] = []
+    # Skip metadata keys
+    metadata_keys = {"version", "last_updated", "coordinate_system"}
     for key, base_val in baseline.items():
+        if key in metadata_keys:
+            continue
+        # Skip nested dicts (like coordinate_system)
+        if isinstance(base_val, dict):
+            continue
         if key not in current:
             raise CheckError(f"Current values missing key '{key}' defined in baseline")
         cur_val = current[key]
@@ -192,6 +199,7 @@ def write_report(deviations: List[Tuple[str, float, float]]) -> None:
         "frozen values."
     )
 
+    REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text("\n".join(lines), encoding="utf-8")
 
 

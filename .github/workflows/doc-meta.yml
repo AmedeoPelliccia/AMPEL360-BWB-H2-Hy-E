@@ -1,0 +1,79 @@
+name: Doc Meta Enforcement
+
+on:
+  pull_request:
+    paths:
+      - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/**"
+      - "tools/ci/doc_meta_enforcer.py"
+      - ".github/workflows/doc-meta.yml"
+  push:
+    branches: [main]
+    paths:
+      - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/**"
+      - "tools/ci/doc_meta_enforcer.py"
+      - ".github/workflows/doc-meta.yml"
+
+jobs:
+  doc-meta:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write  # for uploading artifacts
+      security-events: write  # for uploading SARIF results
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run doc meta check
+        id: check_doc_meta
+        continue-on-error: true
+        run: |
+          python tools/ci/doc_meta_enforcer.py --check --sarif doc_meta_results.sarif | tee doc_meta_log.txt
+
+      - name: Upload doc-meta log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: doc-meta-log
+          path: doc_meta_log.txt
+          retention-days: 30
+
+      - name: Upload SARIF results to GitHub Code Scanning
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: doc_meta_results.sarif
+          category: doc-metadata
+
+      - name: Add job summary
+        if: steps.check_doc_meta.outcome == 'failure'
+        run: |
+          echo "## 📋 Document Metadata Issues Found" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The doc_meta_enforcer found documentation that needs attention." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔧 How to fix locally:" >> $GITHUB_STEP_SUMMARY
+          echo '```bash' >> $GITHUB_STEP_SUMMARY
+          echo 'python tools/ci/doc_meta_enforcer.py --fix' >> $GITHUB_STEP_SUMMARY
+          echo 'git add .' >> $GITHUB_STEP_SUMMARY
+          echo 'git commit -m "Fix document metadata and references"' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📄 Details:" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          head -50 doc_meta_log.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📎 Full log available in workflow artifacts." >> $GITHUB_STEP_SUMMARY
+
+      - name: Fail if issues found
+        if: steps.check_doc_meta.outcome == 'failure'
+        run: |
+          echo "::error title=Document metadata issues::Run 'python tools/ci/doc_meta_enforcer.py --fix' locally to resolve."
+          exit 1

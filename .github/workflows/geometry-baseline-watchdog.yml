@@ -43,7 +43,7 @@ jobs:
       - name: Fail PR if deviations found
         if: steps.check_geom.outcome == 'failure'
         run: |
-          echo "::error title=Geometry baseline changed::See geometry_deviations_report.md for details."
+          echo "::error title=Geometry baseline changed::See cd/geometry/geometry_deviations_report.md for details."
           exit 1
 
       - name: Open / update ECR issue on deviation
@@ -53,7 +53,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require("fs");
-            const path = "geometry_deviations_report.md";
+            const path = "cd/geometry/geometry_deviations_report.md";
             let body = "";
             if (fs.existsSync(path)) {
               body = fs.readFileSync(path, "utf8");
