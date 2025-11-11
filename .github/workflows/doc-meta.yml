@@ -34,7 +34,6 @@ jobs:
         id: check_doc_meta
         continue-on-error: true
         run: |
-          set -e
           python tools/ci/doc_meta_enforcer.py --check --sarif doc_meta_results.sarif | tee doc_meta_log.txt
 
       - name: Upload doc-meta log
