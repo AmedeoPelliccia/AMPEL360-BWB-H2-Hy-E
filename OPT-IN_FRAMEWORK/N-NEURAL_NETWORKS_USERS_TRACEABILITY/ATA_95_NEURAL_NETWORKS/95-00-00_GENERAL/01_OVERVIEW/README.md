@@ -1,3 +1,80 @@
+---
+Title: "ATA 95 Neural Networks – Overview Documentation"
+Identifier: "95-00-00"
+DocumentID: "AMPEL360-95-00-00-OVR-001"
+
+Version: "1.0"
+Author: "AI Systems Team"
+Approver: "Chief Engineer – AI Systems"
+
+CreationDate: "2025-09-15"
+ModificationDate: "2025-11-04"
+NextReviewDate: "2026-05-04"
+
+Status: "Released"
+Classification: "Technical Documentation"
+AccessLevel: "Internal"
+
+Scope: >
+  Foundational overview documentation for ATA 95 – Neural Networks systems
+  within the AMPEL360 BWB H2 Hy-E Q100 INTEGRA program, defining the
+  framework for safe, certifiable and traceable integration of neural
+  networks across multiple ATA chapters.
+
+Abstract: >
+  Summarizes the purpose, scope, regulatory context, cross-chapter
+  integration and implementation status of ATA 95 neural network systems,
+  including applicability matrices, terminology, certification framework,
+  traceability requirements, interfaces and user accountability model.
+
+Keywords:
+  - ATA 95
+  - Neural Networks
+  - AI
+  - Machine Learning
+  - Traceability
+  - Certification
+  - CAOS
+  - AMPEL360
+  - High-Risk AI
+  - Aviation
+
+Compliance:
+  - "EASA AI Roadmap 2.0 – Machine Learning Applications"
+  - "FAA AI Assurance Framework (2024)"
+  - "EU AI Act – High-Risk AI Systems (Aviation)"
+  - "ICAO Annex 6 – Operation of Aircraft (autonomous/AI-related amendments)"
+  - "DO-178C – Software Considerations in Airborne Systems"
+  - "DO-254 – Hardware Considerations for Airborne Systems"
+  - "ATA iSpec 2200 – Information Standards for Aviation Maintenance"
+  - "S1000D – Technical Publications Specification"
+
+Metrics:
+  TotalDocumentationPages: 400
+  NeuralNetworkSystems: 24
+  ATAChaptersIntegrated: 15
+  RegulatoryRequirementsTracked: 35
+  TermsDefined: 200
+  TraceabilityLayers: 7
+  CertificationCostEstimateUSD: 57000000
+  TargetCertificationYear: 2028
+
+ChangeLog:
+  - version: "0.1"
+    date: "2025-09-15"
+    author: "AI Systems Team"
+    change: "Initial draft of ATA 95 overview documentation."
+  - version: "0.5"
+    date: "2025-10-10"
+    author: "Certification Lead"
+    change: "Regulatory framework and certification aspects added."
+  - version: "1.0"
+    date: "2025-11-04"
+    author: "Chief Engineer – AI Systems"
+    change: "Released version; documentation suite completed."
+---
+
+
 # ATA 95 Neural Networks - Overview Documentation
 
 ## Document Control
