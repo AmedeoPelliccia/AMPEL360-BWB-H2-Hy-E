@@ -73,10 +73,10 @@ ATA 02 → ATA 05
 
 | ATA 05 Item | ATA 02 Reference | Operational Consideration |
 |-------------|------------------|---------------------------|
-| Fuel Cell TBO (20,000 hrs) | 02-20-26 Fuel Cell Performance (in 02-20-00_SYSTEMS) | Performance degradation monitoring |
+| Fuel Cell TBO (20,000 hrs) | 02-46-00 Fuel Cell Performance | Performance degradation monitoring |
 | H2 Leak Check (Daily) | 02-38-02 Leak Detection | Pre-flight requirement |
 | CAOS System Check (72 hrs) | 02-90-07 CAOS Monitoring | Can dispatch in degraded mode |
-| Weight & Balance (Empty weight) | 02-20-11 Empty Weight Data (in 02-20-00_SYSTEMS) | After any mod affecting weight |
+| Weight & Balance (Empty weight) | 02-21-00 Empty Weight Data | After any mod affecting weight |
 
 **Examples:**
 ```
@@ -191,14 +191,14 @@ ATA 02 → ATA 12
 ```
 ATA 12: H2 Refueling Equipment and Procedures
     ↓
-ATA 02-70-30: Operational H2 Refueling (in 02-70-00_PROPULSION) Procedures
+ATA 02-32-00: Operational H2 Refueling Procedures
     ├── 02-32-01: Equipment requirements
     ├── 02-32-02: Pre-refueling checks
     ├── 02-32-03: Refueling operation
     ├── 02-32-04: Post-refueling checks
     └── 02-32-05: Emergency defueling
     ↓
-ATA 02-70-14: H2 Fuel Planning (in 02-70-00_PROPULSION) Data
+ATA 02-35-00: H2 Fuel Planning Data
     └── Fuel required for flight
 ```
 
@@ -239,13 +239,13 @@ ATA 02 → ATA 28
 ATA 28-10-00: H2 Storage Tanks
     → System description, capacities
     
-ATA 02-70-11: H2 Fuel Capacity Data (in 02-70-00_PROPULSION)
+ATA 02-31-00: H2 Fuel Capacity Data
     → Operational capacities, usable vs unusable
     
-ATA 02-70-14: H2 Fuel Planning (in 02-70-00_PROPULSION) Data
+ATA 02-35-00: H2 Fuel Planning Data
     → How to plan fuel for flights
     
-ATA 02-20-42: Fuel Planning H2 (in 02-20-00_SYSTEMS)
+ATA 02-62-00: Fuel Planning Procedures
     → Step-by-step fuel planning
 ```
 
@@ -292,7 +292,7 @@ ATA 02-46-00: Fuel Cell Performance Data
     ├── 02-46-03: Thermal management
     └── 02-46-04: Degradation tracking
     
-ATA 02-20-54: Fuel Cell Emergency (in 02-20-00_SYSTEMS) Data
+ATA 02-74-00: Fuel Cell Emergency Data
     ├── Single stack failure procedures
     ├── Multiple stack failure procedures
     └── Emergency power management
@@ -356,18 +356,18 @@ ATA 02 → ATA 95
 
 | ATA 95 CAOS System | ATA 02 Operations Data | Integration Detail |
 |--------------------|------------------------|-------------------|
-| Flight Planning NN | 02-40-90 Automated Flight Planning (in 02-40-00_PROGRAMMING_ALGORITHMS) | AI-generated flight plans |
-| Performance NN | 02-20-29 CAOS Performance Opt (in 02-20-00_SYSTEMS) Opt | Real-time optimization |
+| Flight Planning NN | 02-96-00 Automated Flight Planning | AI-generated flight plans |
+| Performance NN | 02-49-00 CAOS Performance Opt | Real-time optimization |
 | Fuel Management NN | 02-35-05 CAOS Fuel Planning | Predictive fuel management |
-| Digital Twin | 02-40-40 Digital Twin Interface (in 02-40-00_PROGRAMMING_ALGORITHMS) | Real-time aircraft model |
-| Fleet Learning | 02-40-70 Fleet Data Sharing (in 02-40-00_PROGRAMMING_ALGORITHMS) | Cross-aircraft optimization |
+| Digital Twin | 02-91-00 Digital Twin Interface | Real-time aircraft model |
+| Fleet Learning | 02-94-00 Fleet Data Sharing | Cross-aircraft optimization |
 
 **CAOS Integration Architecture:**
 ```
 ATA 95: CAOS Neural Network Systems
     ↓
 ATA 02-90-00: CAOS Operations Integration
-    ├── 02-40-40: Digital Twin Operations (in 02-40-00_PROGRAMMING_ALGORITHMS) Interface
+    ├── 02-91-00: Digital Twin Operations Interface
     ├── 02-92-00: Predictive Operations Analytics
     ├── 02-93-00: Real-Time Performance Monitoring
     ├── 02-94-00: Fleet Operations Data Sharing
@@ -609,7 +609,7 @@ ATA 28 Update: H2 Tank Capacity Change
     
 Cascading Updates Required:
     → 02-31-01: H2 Capacity Data
-    → 02-70-14: H2 Fuel Planning (in 02-70-00_PROPULSION) Data
+    → 02-35-00: H2 Fuel Planning Data
     → 02-47-01: Range Data
     → 02-62-02: Fuel Planning Procedures
     → 02-96-03: CAOS Flight Planning

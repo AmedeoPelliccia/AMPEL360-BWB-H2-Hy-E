@@ -2,15 +2,19 @@
 ## Numbering System Guide
 
 **Document ID:** AMPEL360-02-00-00-OVR-NS  
-**Version:** 1.0.0  
-**Date:** 2025-11-04  
+**Version:** 2.0.0  
+**Date:** 2025-11-12  
 **Classification:** Operations Critical
+
+> **Update Note:** Restructured per AMPEL360_DOCUMENTATION_STANDARD v1.4 on 2025-11-12
 
 ---
 
 ## 1. PURPOSE
 
 This guide explains the ATA numbering system used throughout AMPEL360 operational documentation, ensuring consistent identification and organization of all operational information.
+
+**IMPORTANT:** ATA 02 was restructured on 2025-11-12 per AMPEL360_DOCUMENTATION_STANDARD v1.4. The new structure uses **origin blocks** instead of the previous flat structure.
 
 ---
 
@@ -37,67 +41,66 @@ This guide explains the ATA numbering system used throughout AMPEL360 operationa
 
 ---
 
-## 3. ATA 02 NUMBERING STRUCTURE
+## 3. ATA 02 NUMBERING STRUCTURE (NEW)
 
-### 3.1 Primary Level: Systems (02-XX-00)
+### 3.1 Origin Block Structure (AMPEL360_DOCUMENTATION_STANDARD v1.4)
 
-**Format:** `02-XX-00` where XX = 10-99
-
-**Structure:**
+**NEW Structure (as of 2025-11-12):**
 
 ```
-02-00-00  GENERAL
-02-10-00  AIRCRAFT GENERAL DATA
-02-20-00  WEIGHT AND BALANCE
-02-30-00  HYDROGEN FUEL DATA
-02-40-00  PERFORMANCE DATA
-02-50-00  OPERATING LIMITATIONS
-02-60-00  FLIGHT PLANNING DATA
-02-70-00  EMERGENCY PROCEDURES DATA
-02-80-00  OPERATIONAL PROCEDURES
-02-90-00  CAOS OPERATIONS INTEGRATION
+02-00-00_GENERAL/              → Overall operations framework (14-folder SKELETON)
+02-20-00_SYSTEMS/              → Functional operations systems
+02-40-00_PROGRAMMING_ALGORITHMS/ → CAOS, AI, Digital Twin
+02-50-00_STRUCTURES/           → Infrastructure, GSE requirements
+02-70-00_PROPULSION/           → H₂ fuel operations
+02-90-00_TABLES_SCHEMAS_DIAGRAMS/ → Reference data, schemas
 ```
 
-**Numbering Logic:**
-- **00-09**: General, overview, introductory
-- **10-19**: Aircraft physical data
-- **20-29**: Weight, balance, loading
-- **30-39**: Fuel system (H2-specific for AMPEL360)
-- **40-49**: Performance data
-- **50-59**: Limitations
-- **60-69**: Flight planning
-- **70-79**: Emergency procedures
-- **80-89**: Normal operations
-- **90-99**: Advanced systems (CAOS, neural networks)
+**Origin Block Numbering Logic:**
+- **00**: General (mandatory 14-folder SKELETON)
+- **20**: Functional systems (aircraft data, W&B, performance, limitations, planning, procedures)
+- **40**: Programming/algorithms (CAOS, AI, neural networks)
+- **50**: Physical structures (dimensions, clearances, GSE interfaces)
+- **70**: Propulsion (H₂ fuel data, refueling, emergency procedures)
+- **90**: Reference data (schemas, tables, catalogs, training)
 
-### 3.2 Secondary Level: Subsystems (02-XX-YY-00)
+### 3.2 System Numbering Within Origin Blocks
 
-**Format:** `02-XX-YY-00` where YY = 00-99
+**Format:** `02-XX-YY_SYSTEM_NAME` where:
+- XX = Origin block (20, 40, 50, 70, 90)
+- YY = System number within that block
 
-**Example: 02-30-00 HYDROGEN FUEL DATA**
+**Example: 02-20-00_SYSTEMS (Functional Operations)**
 
 ```
-02-30-00  HYDROGEN FUEL DATA (System Level)
-    ├── 02-31-00  H2 Fuel Capacity Data
-    ├── 02-32-00  H2 Refueling Procedures
-    ├── 02-33-00  H2 Weight and CG Effects
-    ├── 02-34-00  H2 System Limitations
-    ├── 02-35-00  H2 Fuel Planning Data
-    ├── 02-36-00  H2 Temperature Effects
-    ├── 02-37-00  H2 Quantity Indication
-    ├── 02-38-00  H2 Emergency Procedures
-    └── 02-39-00  H2 Ground Operations
+02-20-00_SYSTEMS/
+    ├── 02-20-01_AIRCRAFT_GENERAL_DATA
+    ├── 02-20-02_AIRCRAFT_DIMENSIONS_GEOMETRY
+    ├── 02-20-10_WEIGHT_AND_BALANCE
+    ├── 02-20-20_PERFORMANCE_DATA
+    ├── 02-20-30_OPERATING_LIMITATIONS
+    ├── 02-20-40_FLIGHT_PLANNING_DATA
+    ├── 02-20-50_EMERGENCY_PROCEDURES_DATA
+    └── 02-20-60_OPERATIONAL_PROCEDURES
 ```
 
-**Subsystem Numbering Logic:**
-- **X0**: General/overview for that system
-- **X1**: Primary data (capacity, specifications)
-- **X2**: Procedures (normal operations)
-- **X3**: Effects and interactions
-- **X4**: Limitations and constraints
-- **X5**: Planning data
-- **X6**: Environmental factors
-- **X7**: Indications and monitoring
+**Example: 02-70-00_PROPULSION (H₂ Fuel Operations)**
+
+```
+02-70-00_PROPULSION/
+    ├── 02-70-10_HYDROGEN_FUEL_DATA
+    ├── 02-70-11_H2_FUEL_CAPACITY_DATA
+    ├── 02-70-30_H2_REFUELING_PROCEDURES
+    ├── 02-70-12_H2_WEIGHT_CG_EFFECTS
+    ├── 02-70-13_H2_SYSTEM_LIMITATIONS
+    └── ... (10 H₂ systems total)
+```
+
+**Subsystem Numbering Logic (within origin blocks):**
+- **X0-X9**: Primary systems in category
+- **X0**: General/overview for that category
+- **X1-X9**: Specific systems
+- Grouped by function (e.g., 10-19 for W&B, 20-29 for performance)
 - **X8**: Emergency procedures
 - **X9**: Ground/special operations
 

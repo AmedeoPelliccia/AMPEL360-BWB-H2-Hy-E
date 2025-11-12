@@ -7,9 +7,9 @@
 | Attribute | Value |
 |-----------|-------|
 | **Document ID** | AMPEL360-02-00-00-MAS-001 |
-| **Version** | 1.0 |
-| **Date** | 2025-11-04 |
-| **Status** | Released |
+| **Version** | 2.0 |
+| **Date** | 2025-11-12 |
+| **Status** | Active |
 | **Classification** | Operations Critical |
 
 ## Overview
@@ -22,34 +22,57 @@ ATA Chapter 02 provides comprehensive operational information essential for safe
 - **CO₂ Capture System**: Operational impacts, weight considerations
 - **CAOS Integration**: Real-time performance monitoring, predictive operations, AI-assisted flight planning
 
-## Chapter Structure
+## Standard Structure (Per AMPEL360_DOCUMENTATION_STANDARD v1.4)
 
-### 02-10-00 Aircraft General Data
-Dimensions, configurations, and identification data specific to BWB design
+This ATA chapter follows the mandatory structure defined in AMPEL360_DOCUMENTATION_STANDARD.md:
 
-### 02-20-00 Weight and Balance
-Comprehensive W&B procedures addressing unique BWB characteristics and H2 fuel weight effects
+### 02-00-00_GENERAL
+**Mandatory 14-folder SKELETON structure** covering all lifecycle aspects:
+- 01_OVERVIEW through 14_META_GOVERNANCE
+- Contains the overall operations framework, safety strategy, requirements methodology, and governance
 
-### 02-30-00 Hydrogen Fuel Data
-Complete operational data for cryogenic hydrogen fuel system operations
+### 02-20-00_SYSTEMS - Functional Operations Systems
+**Origin block** containing all functional operational systems:
+- Aircraft general data and BWB configuration
+- Weight and balance systems
+- Performance data (takeoff, cruise, landing)
+- Operating limitations
+- Flight planning procedures
+- Emergency and operational procedures
 
-### 02-40-00 Performance Data
-Takeoff, climb, cruise, descent, landing performance including fuel cell efficiency
+### 02-40-00_PROGRAMMING_ALGORITHMS - CAOS and AI Operations
+**Origin block** for software, algorithms, and neural networks:
+- Digital Twin flight planning
+- CAOS enhanced operations
+- Predictive analytics and monitoring
+- Neural network operations support
+- Automated flight planning
+- Crew decision support systems
 
-### 02-50-00 Operating Limitations
-All operational limits including H2 system and environmental constraints
+### 02-50-00_STRUCTURES - Infrastructure and GSE Requirements
+**Origin block** for physical infrastructure:
+- Reference systems and coordinate datums
+- Physical dimensions and clearances
+- Ground support equipment interfaces
+- Airport compatibility requirements
+- Door opening dimensions and layouts
 
-### 02-60-00 Flight Planning Data
-Advanced flight planning incorporating neural network optimization and digital twin predictions
+### 02-70-00_PROPULSION - Hydrogen Fuel Operations
+**Origin block** for H2 fuel and propulsion operations:
+- Hydrogen fuel data and capacity
+- H2 refueling procedures
+- Weight and CG effects
+- System limitations
+- Emergency procedures
+- Ground operations
 
-### 02-70-00 Emergency Procedures Data
-Emergency and abnormal procedures with emphasis on H2 safety
-
-### 02-80-00 Operational Procedures
-Normal, supplementary, and special operations procedures
-
-### 02-90-00 CAOS Operations Integration
-Digital twin operations, AI-assisted decision making, predictive analytics
+### 02-90-00_TABLES_SCHEMAS_DIAGRAMS - Reference Data
+**Origin block** for catalogs, schemas, and meta-documentation:
+- Data model schemas
+- Operations data recording
+- Reference tables and catalogs
+- Training materials
+- Compliance documentation
 
 ## Key AMPEL360 Operational Characteristics
 
@@ -114,45 +137,69 @@ Digital twin operations, AI-assisted decision making, predictive analytics
 - Optimal performance guidance
 - Automated compliance checking
 
+## Origin Block Responsibilities
+
+| Origin Block | Prefix | Content Type | Examples |
+|--------------|--------|--------------|----------|
+| **SYSTEMS** | 02-20-XX | Functional operations systems | Aircraft data, W&B, performance, flight planning, procedures |
+| **PROGRAMMING** | 02-40-XX | Software, AI, algorithms | CAOS, Digital Twin, neural networks, predictive analytics |
+| **STRUCTURES** | 02-50-XX | Physical infrastructure | Dimensions, clearances, GSE interfaces, airport compatibility |
+| **PROPULSION** | 02-70-XX | H2 fuel operations | Fuel data, refueling, limitations, emergency procedures |
+| **TABLES_SCHEMAS** | 02-90-XX | Reference data, catalogs | Schemas, tables, diagrams, training, compliance |
+
 ## Regulatory Compliance
 
 - **EASA CS-25**: Large Aircraft Certification
 - **FAA 14 CFR Part 25**: Airworthiness Standards
 - **ICAO Annex 6**: Aircraft Operations
-- **EU AI Act**: High-risk AI systems in aviation
-- **Hydrogen Safety Standards**: ISO 19881, SAE J2719
+- **EU AI Act**: High-risk AI systems in aviation (02-40-00)
+- **Hydrogen Safety**: ISO 19881, SAE J2719 (02-70-00)
+- **ATA iSpec 2200**: Documentation standards
+- **S1000D v6.0**: Technical publications
+- **AMPEL360_DOCUMENTATION_STANDARD v1.4**: Repository structure
 
 ## Cross-ATA Integration
 
 ATA 02 integrates with:
 - **ATA 05**: Time Limits/Maintenance Checks
-- **ATA 06**: Dimensions and Areas
-- **ATA 07**: Lifting and Shoring
-- **ATA 28**: Fuel (H2 Storage)
-- **ATA 71-73**: Power Plant (Fuel Cells)
-- **ATA 95**: Neural Networks (Operations Support)
+- **ATA 06**: Dimensions and Areas (↔ 02-50-00)
+- **ATA 07**: Lifting and Shoring (↔ 02-50-00)
+- **ATA 28**: Fuel - H2 Storage (↔ 02-70-00)
+- **ATA 40**: AI Integration (↔ 02-40-00)
+- **ATA 71-73**: Power Plant - Fuel Cells (↔ 02-70-00)
+- **ATA 92**: Model-Based Maintenance (↔ 02-40-00)
+- **ATA 95**: Neural Networks and Digital Passport (↔ 02-40-00)
 
-## Document Organization
+## Documentation Structure Philosophy
 
-Each component (02-XX-00) follows the 14-folder SKELETON methodology:
+Per AMPEL360_DOCUMENTATION_STANDARD v1.4:
 
+### GENERAL Layer (02-00-00)
+**Follows 14-folder SKELETON**:
 ```
-02-XX-00_COMPONENT_NAME/
-├── 01_OVERVIEW/              # Component description
-├── 02_SAFETY/                # Safety considerations
-├── 03_REQUIREMENTS/          # Operational requirements
-├── 04_DESIGN/                # Data presentation design
-├── 05_INTERFACES/            # System interfaces
-├── 06_ENGINEERING/           # Supporting calculations
-├── 07_V_AND_V/              # Data validation
-├── 08_PROTOTYPING/          # Preliminary data
-├── 09_PRODUCTION_PLANNING/  # Data production
-├── 10_CERTIFICATION/        # Certification data
-├── 11_OPERATIONS_MAINTENANCE/# Operations manuals
-├── 12_ASSETS_MANAGEMENT/    # Data version control
-├── 13_SUBSYSTEMS_COMPONENTS/# Detailed breakdowns
-└── 14_META_GOVERNANCE/      # Change control
+02-00-00_GENERAL/
+├── 01_OVERVIEW/              # Operations domain description
+├── 02_SAFETY/                # Safety framework
+├── 03_REQUIREMENTS/          # Requirements methodology
+├── 04_DESIGN/                # Reference architectures
+├── 05_INTERFACES/            # Interface rules and templates
+├── 06_ENGINEERING/           # Analysis approach
+├── 07_V_AND_V/              # V&V strategy
+├── 08_PROTOTYPING/          # Prototyping policy
+├── 09_PRODUCTION_PLANNING/  # Deployment strategy
+├── 10_CERTIFICATION/        # Certification strategy
+├── 11_OPERATIONS_MAINTENANCE/# MRO framework
+├── 12_ASSETS_MANAGEMENT/    # Version control
+├── 13_SUBSYSTEMS_COMPONENTS/# Component management
+└── 14_META_GOVERNANCE/      # Governance and change control
 ```
+
+### Origin Blocks (20/40/50/70/90)
+**Design-driven structure** - organized by how systems are conceived, designed, and evolved:
+- Each specific system has its own optimal folder structure
+- Not bound to the 14-folder skeleton
+- Traceability ensured through metadata and RTM (Requirements Traceability Matrix)
+- Freedom to organize by system architecture, implementation phases, or functional decomposition
 
 ## Operations Manuals Produced
 
