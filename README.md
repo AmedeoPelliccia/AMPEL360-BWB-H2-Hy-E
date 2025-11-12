@@ -456,6 +456,72 @@ graph LR
 }
 ```
 
+#### Metadata Validation & Publishing Checklist
+
+| **Category**              | **Rule**                                                                   | **Validation Mechanism**    | **Outcome if Failed**      |
+| ------------------------- | -------------------------------------------------------------------------- | --------------------------- | -------------------------- |
+| **Identification**        | `Title`, `Identifier`, `Version` present and valid (`^\d{2}-\d{2}-\d{2}$`) | Regex + Required fields     | Reject submission          |
+| **Responsibility**        | `Author` must be declared (no "TBD")                                       | Non-empty string check      | Warning / block if missing |
+| **Dates**                 | `CreationDate` < `ModificationDate`                                        | ISO-8601 check + comparison | Block                      |
+| **Status**                | Must be `Draft`, `Approved`, or `Superseded`                               | Enum validation             | Block                      |
+| **Scope & Abstract**      | Must exist, min. 50 characters                                             | Length validation           | Warning                    |
+| **Keywords**              | ≥ 1 keyword                                                                | Count check                 | Block                      |
+| **Compliance**            | At least one industry reference                                            | Array non-empty             | Warning                    |
+| **AccessLevel**           | Must be `Public`, `Internal`, or `Confidential`                            | Enum validation             | Block                      |
+| **ChangeLog**             | ≥ 1 entry with full tuple `{version,date,author,change}`                   | Nested object check         | Block                      |
+| **Identifier uniqueness** | No duplicate `Identifier` in CSDB registry                                 | DB lookup                   | Block                      |
+
+Once all rules pass, the CSDB automatically:
+- Generates a **BREX (Business Rules Exchange)** entry for traceability
+- Publishes metadata to the **Cross-ATA Integration Registry**
+- Exports XML or JSON header for DMC packaging
+
+#### YAML Front-Matter for Markdown Documents
+
+For markdown files in the ATA hierarchy, use this front-matter block:
+
+```yaml
+---
+Title: "ATA 02-00-00 – Operations Information – General"
+Identifier: "02-00-00"
+Version: "v1.0"
+Author: "Amedeo Pelliccia"
+CreationDate: "2025-11-12"
+ModificationDate: "2025-11-12"
+Status: "Draft"
+Scope: "Applicable to AMPEL360 BWB H₂ Hy-E operational documentation structure."
+Abstract: "Defines purpose, applicability, and metadata structure for Operations Information within the ATA framework."
+Keywords: ["Operations", "ATA02", "General"]
+Compliance: ["ATA iSpec 2200 v6.0", "EASA Part-M"]
+AccessLevel: "Internal"
+ChangeLog:
+  - version: "v1.0"
+    date: "2025-11-12"
+    author: "Amedeo Pelliccia"
+    change: "Initial creation of metadata template."
+---
+```
+
+**Validation commands:**
+
+```bash
+# JSON metadata validation
+python tools/ci/validate_metadata.py --path OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/metadata.json
+
+# Markdown with YAML front-matter validation
+python tools/ci/validate_metadata.py --path OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/README.md --frontmatter
+```
+
+#### Integration Reference Mapping
+
+| **ATA Reference**      | **Metadata Mapping**       | **Destination System**      |
+| ---------------------- | -------------------------- | --------------------------- |
+| ATA iSpec 2200 § 2.3.1 | Title, Identifier, Version | CSDB core                   |
+| ATA iSpec 2200 § 3.1.5 | Author, Status, Dates      | Revision Control Module     |
+| ATA iSpec 2200 § 5.2.1 | Scope, Abstract, Keywords  | Search / Index              |
+| ATA iSpec 2200 § 6.1.2 | Compliance, AccessLevel    | Quality & Publication Rules |
+| ATA iSpec 2200 § 7.3.4 | ChangeLog                  | BREX traceability           |
+
 ---
 
 ### 1. Purpose and Scope
