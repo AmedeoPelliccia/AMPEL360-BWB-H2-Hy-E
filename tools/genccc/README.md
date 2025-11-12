@@ -4,7 +4,7 @@ GenCCC is an automated tool for maintaining cross-reference integrity and genera
 
 ## Overview
 
-This tool provides two main functions:
+This tool provides three main functions:
 
 1. **Report Mode** (`report.py`): Generates audit reports identifying:
    - Broken internal links
@@ -17,6 +17,13 @@ This tool provides two main functions:
    - Generating missing documentation with AI-powered contextual content
    - Adding cross-references between related documents
    - Maintaining ATA structure consistency
+
+3. **Generate Mode** (`generate.py`): Continuous generation and expansion:
+   - Auto-expands stub documents with comprehensive content
+   - Generates detailed channel specifications from stubs
+   - Creates cross-references between related documents
+   - Maintains consistency across CAOS/FAirCCC architecture
+   - Template-based or AI-powered content generation
 
 ## Usage
 
@@ -34,6 +41,22 @@ python tools/genccc/apply.py
 ```
 Note: Set `OPENAI_API_KEY` environment variable for AI-powered content generation.
 
+#### Generate & Expand Documentation
+```bash
+# Expand all stub documents
+python tools/genccc/generate.py
+
+# Expand only channel specifications
+python tools/genccc/generate.py --target CAOS/channels
+
+# Generate cross-references only
+python tools/genccc/generate.py --mode crossref
+
+# Dry run to preview changes
+python tools/genccc/generate.py --dry-run --verbose
+```
+Note: Set `OPENAI_API_KEY` environment variable for AI-powered content generation (optional).
+
 ### CI/CD Integration
 
 The GenCCC workflow runs automatically on:
@@ -49,6 +72,12 @@ The GenCCC workflow runs automatically on:
    - Applies automatic fixes to broken links
    - Generates missing documentation with contextual content
    - Commits changes back to the PR
+
+3. **Comment `/cg` or `/genccc generate`** (Generate Mode):
+   - Triggered by commenting `/cg` or `/genccc generate` on a PR
+   - Expands stub documents with comprehensive content
+   - Generates channel specifications and cross-references
+   - Commits expanded documentation back to the PR
 
 ## Workflow
 
@@ -130,6 +159,16 @@ python tools/genccc/apply.py
 # Test apply (with AI)
 export OPENAI_API_KEY="your-key-here"
 python tools/genccc/apply.py
+
+# Test generate (dry run)
+python tools/genccc/generate.py --dry-run --verbose
+
+# Test generate on specific target
+python tools/genccc/generate.py --target CAOS/channels --mode expand
+
+# Test generate with AI
+export OPENAI_API_KEY="your-key-here"
+python tools/genccc/generate.py --verbose
 ```
 
 ## Maintenance
