@@ -429,6 +429,35 @@ graph LR
 **Status:** Draft – Architecture Baseline  
 **Last Updated:** 2025-11-12  
 
+### Document Metadata
+
+```json
+{
+  "Title": "ATA 02 - Operations Information - General",
+  "Identifier": "02-00-00",
+  "Version": "v1.0",
+  "Author": "Amedeo Pelliccia",
+  "CreationDate": "2025-11-12",
+  "ModificationDate": "2025-11-12",
+  "Status": "Draft",
+  "Scope": "Applicable to AMPEL360 BWB H₂ Hy-E operational documentation structure.",
+  "Abstract": "Defines purpose, applicability, and metadata structure for Operations Information within the ATA framework.",
+  "Keywords": ["Operations", "ATA02", "General"],
+  "Compliance": ["ATA iSpec 2200 v6.0", "EASA Part-M"],
+  "AccessLevel": "Internal",
+  "ChangeLog": [
+    {
+      "version": "v1.0",
+      "date": "2025-11-12",
+      "author": "Amedeo Pelliccia",
+      "change": "Initial creation of metadata template."
+    }
+  ]
+}
+```
+
+---
+
 ### 1. Purpose and Scope
 
 This document defines the **general framework for Operations Information (ATA 02-00-00)** for the AMPEL360 BWB H₂ Hy-E aircraft, in alignment with **ATA iSpec 2200**.
