@@ -1,0 +1,39 @@
+MSN,Phase,Milestone,Dataset_Type,Dataset_Name,Responsible,Planned_Date,Actual_Date,Status,Predecessor,Notes
+MSN-P001,Design,Design Baseline Complete,Design,baseline_dimensions.json v1.0,Engineering,2026-12-15,2026-12-20,Complete,None,Initial design freeze
+MSN-P001,Manufacturing,Component Measurements,Measurement,CMM_Reports_Components,Production QA,2027-03-30,2027-04-05,Complete,Manufacturing Start,All major components measured
+MSN-P001,Manufacturing,Wing Assembly Measurement,Measurement,Laser_Tracker_Wing_Assembly,Production QA,2027-05-15,2027-05-18,Complete,Wing Assembly Complete,Wing geometry verified
+MSN-P001,Manufacturing,Center Body Measurement,Measurement,Optical_Scan_Center_Body,Production QA,2027-05-20,2027-05-25,Complete,Center Body Assembly,BWB surface scanned
+MSN-P001,Final Assembly,Overall Dimensions Measurement,Measurement,Photogrammetry_Final_Assembly,Production QA,2027-06-25,2027-06-30,Complete,Final Assembly Complete,Full aircraft photogrammetry
+MSN-P001,Final Assembly,Ground Clearance Verification,Measurement,Ground_Clearance_Report,Production QA,2027-06-28,2027-07-02,Complete,Final Assembly Complete,All clearances verified
+MSN-P001,As-Built,As-Built Configuration Freeze,As-Built,as_built_geometry_MSN-P001.json,Production QA,2027-07-05,2027-07-08,Complete,All Measurements Complete,Configuration locked
+MSN-P001,As-Built,Principal Dimensions Data,As-Built,Principal_Dimensions_MSN-P001.csv,Engineering,2027-07-05,2027-07-08,Complete,As-Built Configuration Freeze,Dimensional summary
+MSN-P001,As-Built,Deviation Analysis Report,As-Built,Deviation_Analysis_Report_MSN-P001.pdf,Engineering,2027-07-10,2027-07-12,Complete,As-Built Configuration Freeze,Design vs as-built comparison
+MSN-P001,Certification,TCDS Dimension Data,Certification,TCDS_Dimension_Data_MSN-P001.xlsx,Certification,2027-12-01,2027-12-15,Complete,Type Certification,Certified dimensions
+MSN-P001,Certification,AFM Dimension Data,Certification,AFM_Dimension_Data_MSN-P001.xlsx,Flight Ops,2027-12-01,2027-12-18,Complete,Type Certification,AFM geometry section
+MSN-PP001,Design,Pre-Production Baseline,Design,baseline_dimensions.json v2.0,Engineering,2027-08-01,2027-08-05,Complete,MSN-P001 Lessons Learned,Updated design
+MSN-PP001,Manufacturing,Component Measurements,Measurement,CMM_Reports_Components,Production QA,2027-11-15,TBD,Planned,Manufacturing Start,
+MSN-PP001,Manufacturing,Wing Assembly Measurement,Measurement,Laser_Tracker_Wing_Assembly,Production QA,2027-12-20,TBD,Planned,Wing Assembly Complete,
+MSN-PP001,Final Assembly,Overall Dimensions Measurement,Measurement,Photogrammetry_Final_Assembly,Production QA,2028-01-10,TBD,Planned,Final Assembly Complete,
+MSN-PP001,As-Built,As-Built Configuration Freeze,As-Built,as_built_geometry_MSN-PP001.json,Production QA,2028-01-20,TBD,Planned,All Measurements Complete,
+MSN-PP001,Delivery,Customer Delivery Package,Delivery,Delivery_Package_Dimensional_Data,Customer Support,2028-02-25,TBD,Planned,As-Built Configuration Freeze,
+MSN-PP002,Manufacturing,Component Measurements,Measurement,CMM_Reports_Components,Production QA,2027-12-15,TBD,Planned,Manufacturing Start,
+MSN-PP002,Final Assembly,Overall Dimensions Measurement,Measurement,Photogrammetry_Final_Assembly,Production QA,2028-02-15,TBD,Planned,Final Assembly Complete,
+MSN-PP002,As-Built,As-Built Configuration Freeze,As-Built,as_built_geometry_MSN-PP002.json,Production QA,2028-02-25,TBD,Planned,All Measurements Complete,
+MSN-PP002,Delivery,Customer Delivery Package,Delivery,Delivery_Package_Dimensional_Data,Customer Support,2028-04-10,TBD,Planned,As-Built Configuration Freeze,
+MSN-PP003,Manufacturing,Component Measurements,Measurement,CMM_Reports_Components,Production QA,2028-01-15,TBD,Planned,Manufacturing Start,
+MSN-PP003,Final Assembly,Overall Dimensions Measurement,Measurement,Photogrammetry_Final_Assembly,Production QA,2028-03-20,TBD,Planned,Final Assembly Complete,
+MSN-PP003,As-Built,As-Built Configuration Freeze,As-Built,as_built_geometry_MSN-PP003.json,Production QA,2028-03-30,TBD,Planned,All Measurements Complete,
+MSN-PP004,Manufacturing,Component Measurements,Measurement,CMM_Reports_Components,Production QA,2028-02-15,TBD,Planned,Manufacturing Start,
+MSN-PP004,Final Assembly,Overall Dimensions Measurement,Measurement,Photogrammetry_Final_Assembly,Production QA,2028-04-25,TBD,Planned,Final Assembly Complete,
+MSN-PP004,As-Built,As-Built Configuration Freeze,As-Built,as_built_geometry_MSN-PP004.json,Production QA,2028-05-05,TBD,Planned,All Measurements Complete,
+MSN-PP005,Manufacturing,Component Measurements,Measurement,CMM_Reports_Components,Production QA,2028-03-15,TBD,Planned,Manufacturing Start,
+MSN-PP005,Final Assembly,Overall Dimensions Measurement,Measurement,Photogrammetry_Final_Assembly,Production QA,2028-05-30,TBD,Planned,Final Assembly Complete,
+MSN-PP005,As-Built,As-Built Configuration Freeze,As-Built,as_built_geometry_MSN-PP005.json,Production QA,2028-06-10,TBD,Planned,All Measurements Complete,
+MSN-001,Design,Production Standard Baseline,Design,baseline_dimensions.json v3.0,Engineering,2029-01-15,TBD,Planned,Type Certification Complete,Certified design
+MSN-001,Manufacturing,Component Measurements,Measurement,CMM_Reports_Components,Production QA,2029-05-15,TBD,Planned,Manufacturing Start,First production aircraft
+MSN-001,Final Assembly,Overall Dimensions Measurement,Measurement,Photogrammetry_Final_Assembly,Production QA,2029-07-10,TBD,Planned,Final Assembly Complete,
+MSN-001,As-Built,As-Built Configuration Freeze,As-Built,as_built_geometry_MSN-001.json,Production QA,2029-07-20,TBD,Planned,All Measurements Complete,
+MSN-001,Delivery,Customer Delivery Package,Delivery,Delivery_Package_Dimensional_Data,Customer Support,2029-09-05,TBD,Planned,As-Built Configuration Freeze,
+MSN-002,Manufacturing,Component Measurements,Measurement,CMM_Reports_Components,Production QA,2029-06-15,TBD,Planned,Manufacturing Start,
+MSN-002,Final Assembly,Overall Dimensions Measurement,Measurement,Photogrammetry_Final_Assembly,Production QA,2029-08-15,TBD,Planned,Final Assembly Complete,
+MSN-002,As-Built,As-Built Configuration Freeze,As-Built,as_built_geometry_MSN-002.json,Production QA,2029-08-25,TBD,Planned,All Measurements Complete,

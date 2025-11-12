@@ -1,0 +1,30 @@
+Phase,Activity,Deliverable,Responsible,Lead_Time_Days,Predecessor,Status
+Design,Extract baseline dimensions,baseline_dimensions.json,Engineering,5,None,Complete
+Design,Generate principal dimensions table,Principal_Dimensions_Table.xlsx,Engineering,3,Extract baseline dimensions,Complete
+Design,Create three-view drawing,Three_View_Drawing_02-11-00.pdf,Engineering,10,Extract baseline dimensions,Complete
+Design,Define dimensional tolerances,Dimensional_Tolerances_Specification.pdf,Engineering,5,Generate principal dimensions table,Complete
+Prototype,Measure as-built geometry MSN-P001,As_Built_Geometry_MSN-P001.json,Production QA,14,Final assembly MSN-P001,Planned
+Prototype,Generate as-built dimension report,As_Built_Dimension_Report_MSN-P001.pdf,Production QA,3,Measure as-built geometry MSN-P001,Planned
+Prototype,Compare as-built vs nominal,Deviation_Analysis_Report_MSN-P001.pdf,Engineering,5,Generate as-built dimension report,Planned
+Prototype,Update dimension data for TCDS,TCDS_Dimension_Data_MSN-P001.xlsx,Certification,3,Compare as-built vs nominal,Planned
+Prototype,Update dimension data for AFM,AFM_Dimension_Data_MSN-P001.xlsx,Flight Ops,3,Compare as-built vs nominal,Planned
+Prototype,Verify ground clearances,Ground_Clearance_Verification_Report_MSN-P001.pdf,Production QA,2,Measure as-built geometry MSN-P001,Planned
+Prototype,CMM measurement of critical junctions,CMM_Report_Critical_Junctions_MSN-P001.pdf,Production QA,5,Final assembly MSN-P001,Planned
+Prototype,Photogrammetry full aircraft,Photogrammetry_Report_MSN-P001.pdf,Production QA,3,Final assembly MSN-P001,Planned
+Pre-Production,Measure as-built geometry per aircraft,As_Built_Geometry_MSN-PPXXX.json,Production QA,7,Final assembly per MSN,Planned
+Pre-Production,Generate as-built dimension report per aircraft,As_Built_Dimension_Report_MSN-PPXXX.pdf,Production QA,2,Measure as-built geometry per aircraft,Planned
+Pre-Production,Statistical analysis of dimensional trends,Dimensional_Trend_Analysis_Pre-Production.pdf,Engineering,5,10 aircraft measured,Planned
+Pre-Production,Update AFM with production average dimensions,AFM_Rev_A_Production_Dimensions.pdf,Flight Ops,10,Statistical analysis of dimensional trends,Planned
+Serial_Production,Measure as-built geometry per aircraft,As_Built_Geometry_MSN-XXX.json,Production QA,3,Final assembly per MSN,Planned
+Serial_Production,Automated as-built data upload to CAOS,CAOS_Digital_Twin_Update_MSN-XXX,Production QA,1,Measure as-built geometry per aircraft,Planned
+Serial_Production,Quarterly dimensional SPC analysis,SPC_Dimensional_Control_Charts_QYYYY.pdf,Quality,5,End of quarter,Planned
+Serial_Production,Annual AFM dimensional review,AFM_Annual_Review_Dimensional_Data.pdf,Flight Ops,10,End of year,Planned
+Certification,Compile certified dimension data package,Certified_Dimension_Data_Package_02-11-00.pdf,Certification,20,Prototype as-built data available,Planned
+Certification,Submit dimension data to authority,Dimension_Data_Submission_EASA_FAA.pdf,Certification,5,Compile certified dimension data package,Planned
+Certification,Incorporate authority comments on dimensions,Dimension_Data_Rev_A_Authority_Comments.pdf,Certification,10,Authority review complete,Planned
+Certification,Final TCDS dimension data approval,TCDS_Final_Dimension_Data_Approved.pdf,Certification,5,Incorporate authority comments on dimensions,Planned
+Operations,Publish AFM with certified dimensions,AFM_Rev_1_Certified_Dimensions.pdf,Flight Ops,15,Final TCDS dimension data approval,Planned
+Operations,Publish WBM with certified dimensions and MAC,WBM_Rev_1_Certified_Dimensions_MAC.pdf,Flight Ops,10,Final TCDS dimension data approval,Planned
+Operations,Distribute dimension data to customer,Customer_Dimension_Data_Package_MSN-XXX.pdf,Customer Support,3,Aircraft delivery,Planned
+Maintenance,Generate maintenance manual dimension data,AMM_02-11-00_Dimension_Data.xml,Tech Pubs,20,Certified dimension data available,Planned
+Maintenance,Create illustrated parts catalog dimensional refs,IPC_02-11-00_Dimensional_References.xml,Tech Pubs,15,Certified dimension data available,Planned
