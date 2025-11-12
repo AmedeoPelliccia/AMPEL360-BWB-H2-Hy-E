@@ -180,7 +180,7 @@ This system follows the OPT-IN 14-folder structure:
 
 ```
 95-00-00_GENERAL/
-├── 01_OVERVIEW/              # System description and architecture
+├── 95-00-01_Overview/        # System description and architecture
 ├── 02_SAFETY/                # Hazard analysis and safety requirements
 ├── 03_REQUIREMENTS/          # Functional and non-functional requirements
 ├── 04_DESIGN/                # Neural network model design
