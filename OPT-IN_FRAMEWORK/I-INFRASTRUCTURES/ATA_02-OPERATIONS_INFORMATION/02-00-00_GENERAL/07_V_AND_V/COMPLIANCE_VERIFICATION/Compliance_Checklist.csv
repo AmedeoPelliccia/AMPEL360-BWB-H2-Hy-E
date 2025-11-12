@@ -1,9 +1,0 @@
-Standard,Description,Status,Compliance_Level,Date_Verified,Next_Review,Notes
-EASA CS-25,Airworthiness standards,Complete,100%,2025-11-01,2026-05-01,Full compliance demonstrated
-FAA Part 25,US airworthiness standards,In Progress,85%,TBD,2025-12-31,Harmonization with EASA
-ICAO Annex 6,International operations,Scheduled,TBD,TBD,2025-12-31,Review planned Dec 2025
-ISO 19881,H2 fuel containers,Active,95%,2025-10-15,2026-02-01,Tank certification complete
-SAE AIR7558,H2 aircraft design,Active,90%,TBD,2026-01-31,Refueling validated
-EASA AI Guidance,ML applications,Active,80%,TBD,2026-03-31,CAOS assessment ongoing
-EU AI Act,High-risk AI systems,Active,75%,TBD,2026-06-30,Documentation in progress
-DO-178C,Software certification,Planned,TBD,TBD,2026-12-31,For CAOS software

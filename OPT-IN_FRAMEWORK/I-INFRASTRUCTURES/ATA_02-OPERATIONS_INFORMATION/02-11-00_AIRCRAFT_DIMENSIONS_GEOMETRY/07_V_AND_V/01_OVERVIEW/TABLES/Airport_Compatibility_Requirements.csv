@@ -1,7 +1,0 @@
-Requirement_ID,Description,Parameter,Requirement,Source,Verification_Method,Priority
-REQ-02-11-025,ICAO Code E Wingspan,Wingspan,52-65_m,ICAO_Annex_14,VER-02-11-401,Critical
-REQ-02-11-026,Taxiway Width Compatibility,Taxiway_Width,23_m_Code_E,ICAO_Annex_14,VER-02-11-401,High
-REQ-02-11-027,Gate Compatibility,Gate_Width,Compatible_Code_E_F,Airport_Standards,VER-02-11-401,High
-REQ-02-11-028,Turning Radius,Min_Turning_Radius,42_m,Design_Requirement,VER-02-11-401,Medium
-REQ-02-11-029,Runway Width Compatibility,Runway_Width,45_m_min,ICAO_Annex_14,VER-02-11-401,High
-REQ-02-11-030,Pavement Strength,ACN_PCN,Code_E_Compatible,ICAO_Annex_14,VER-02-11-401,Medium

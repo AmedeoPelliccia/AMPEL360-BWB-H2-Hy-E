@@ -1,3 +1,0 @@
-# 12 ASSETS MANAGEMENT
-
-This directory contains 12 ASSETS MANAGEMENT documentation for 56-40_WINDOW_FRAMES_AND_STRUCTURE.

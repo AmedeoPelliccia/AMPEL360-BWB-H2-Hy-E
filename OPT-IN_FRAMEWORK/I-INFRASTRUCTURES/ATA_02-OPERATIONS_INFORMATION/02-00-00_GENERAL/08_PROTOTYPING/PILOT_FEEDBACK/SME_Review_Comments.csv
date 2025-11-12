@@ -1,9 +1,0 @@
-SME_Name,Role,Date,Area_Reviewed,Rating,Comments,Specific_Recommendations
-Capt. Anderson,Chief Pilot,2025-10-30,All Procedures,8.5,Comprehensive and well-designed,Format consistency needed
-Inspector Kim,Safety Officer,2025-10-25,H2 Safety,9.5,Excellent safety focus,Approve H2 safety training as-is
-Dr. Martinez,CAOS Lead,2025-11-04,CAOS Interfaces,8.7,Outstanding explanation system,Add customization options
-Load Master Brown,W&B Specialist,2025-10-24,W&B Procedures,8.0,Good BWB integration,Add more calculation examples
-Training Capt. Lee,Training Manager,2025-11-01,Training Materials,8.3,Good structure,Extend CAOS training to 20h
-Regulatory Specialist,EASA Liaison,2025-10-19,AFM Chapter,9.0,EASA compliant,Minor additions then approve
-Ground Supervisor Chen,Refueling Lead,2025-10-12,H2 Refueling,8.0,Comprehensive procedure,Create simplified reference
-Check Pilot Thompson,Standards,2025-10-28,Checklists,8.6,Well designed,Add cooldown timer reference

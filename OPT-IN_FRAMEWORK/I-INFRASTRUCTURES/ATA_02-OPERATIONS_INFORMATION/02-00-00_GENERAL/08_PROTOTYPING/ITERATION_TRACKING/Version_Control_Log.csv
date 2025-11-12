@@ -1,9 +1,0 @@
-Prototype_ID,Version,Date_Created,Date_Modified,Current_Status,Changes_Made,Tested_By,Next_Version
-PROTO-PROC-001,v1.0,2025-09-01,2025-10-20,Released,Initial version,Check Pilots,v1.1 planned
-PROTO-PROC-002,v1.0,2025-09-05,2025-10-25,In Review,Added detail to H2 procedures,Safety Team,v1.1 in progress
-PROTO-CAOS-001,v1.0,2025-08-15,2025-09-20,Superseded,Initial layout,Flight Crew,Superseded by v1.1
-PROTO-CAOS-001,v1.1,2025-09-20,2025-10-20,Superseded,Improved clarity,Flight Crew,Superseded by v1.2
-PROTO-CAOS-001,v1.2,2025-10-20,2025-11-01,Released,Major improvements,Flight Crew,v2.0 planned
-PROTO-TRN-001,v1.0,2025-10-01,2025-10-01,Active,Initial syllabus,Training Dept,v1.1 planned
-SCEN-002,v1.0,2025-09-15,2025-10-01,Superseded,Initial H2 scenarios,Safety Team,Superseded by v2.0
-SCEN-002,v2.0,2025-10-01,2025-11-03,Released,Enhanced with CAOS,Safety Team,Production ready

@@ -1,6 +1,0 @@
-Metric,Value,Target,Status,Trend,Last_Updated
-Document_Completion_Rate,65%,80%,Below_Target,Improving,2025-11-03
-Review_Cycle_Time_Days,12,10,Below_Target,Improving,2025-11-03
-Error_Rate_Per_Document,2.3,1.0,Below_Target,Stable,2025-11-03
-Update_Frequency_Days,15,14,On_Target,Stable,2025-11-03
-Version_Control_Compliance,98%,100%,Near_Target,Stable,2025-11-03

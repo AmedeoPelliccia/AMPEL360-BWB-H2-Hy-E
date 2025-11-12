@@ -1,7 +1,0 @@
-Requirement_ID,Description,Parameter,Value,Unit,Tolerance,Source,Verification_Method,Priority
-REQ-02-11-007,Wing Area Requirement,Wing_Area,845,m²,±5,Design_Specification,VAL-02-11-101,High
-REQ-02-11-008,Aspect Ratio Requirement,Aspect_Ratio,3.2,—,±0.05,Design_Specification,VAL-02-11-101,High
-REQ-02-11-009,Wing Chord Distribution,Taper_Ratio,0.1,—,±0.01,Design_Specification,VAL-02-11-103,Medium
-REQ-02-11-010,Wing Sweep Angles,LE_Sweep,37,deg,±0.5,Design_Specification,VAL-02-11-103,Medium
-REQ-02-11-011,Airfoil Thickness Ratio,Root_t_c,0.18,—,±0.01,Design_Specification,VAL-02-11-102,Medium
-REQ-02-11-012,Center Body Depth,Max_Depth,4.2,m,±0.05,Design_Specification,VAL-02-11-104,High

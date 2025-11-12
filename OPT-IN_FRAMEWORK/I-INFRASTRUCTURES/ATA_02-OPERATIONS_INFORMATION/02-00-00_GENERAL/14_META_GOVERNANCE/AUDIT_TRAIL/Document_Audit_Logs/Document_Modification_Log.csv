@@ -1,3 +1,0 @@
-Timestamp,User_ID,Document_ID,Action,Version_From,Version_To,Change_Summary,CR_Reference
-2025-10-15T14:00:00Z,U001,02-00-01-OVERVIEW,Update,1.0.0,1.1.0,Added_CAOS_section,CR-02-00-015
-2025-10-25T10:30:00Z,U002,02-00-02-SAFETY,Update,1.0.0,2.0.0,Major_H2_safety_update,CR-02-00-035

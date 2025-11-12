@@ -1,8 +1,0 @@
-Supplier,Material_Product,Specification,Lead_Time_Weeks,Unit_Cost,MOQ,Status,Contact,Notes
-Hexcel,CFRP_Prepreg_M21E,AMS_3863,8,150_USD/kg,50_kg,Quote_Requested,sales@hexcel.com,Standard_product
-DuPont,Nomex_Core_HRH10,AMS_3711,6,500_USD/m2,10_m2,Quote_Requested,aerospace@dupont.com,Custom_sizes
-Henkel,Adhesive_EA9396,Henkel_EA9396_Technical_Data_Sheet,4,200_USD/kg,5_kg,Available,aerospace@henkel.com,Stock_item
-Cytec,Alternative_Prepreg,CYCOM_977-2,10,140_USD/kg,50_kg,Alternate,TBD,Backup_option
-3M,Release_Agent,Frekote_700-NC,2,50_USD/can,1_case,Available,industrial@3m.com,Stock_item
-Airtech,Vacuum_Bag_Materials,Various,2,varies,kit,Available,sales@airtechonline.com,Consumables
-TBD,Titanium_Inserts,Ti-6Al-4V,12,100_USD/pc,48_pcs,Not_Quoted,TBD,Special_order_required

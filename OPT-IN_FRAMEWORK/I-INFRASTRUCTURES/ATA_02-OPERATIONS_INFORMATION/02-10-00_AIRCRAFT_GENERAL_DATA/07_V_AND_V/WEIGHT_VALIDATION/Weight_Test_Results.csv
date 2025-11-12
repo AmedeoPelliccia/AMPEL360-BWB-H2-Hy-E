@@ -1,8 +1,0 @@
-Test_ID,Parameter,Configuration,Target,Unit,Status,Result,CG_MAC_%,Date,Notes
-VAL-02-10-101,MTOW,Maximum Load,185000,kg,Planned,TBD,TBD,2026-Q3,Full fuel + max payload
-VAL-02-10-102,OEW,Empty Weight,115000,kg,Planned,TBD,TBD,2026-Q3,Operating empty weight baseline
-VAL-02-10-103,CG Range,Forward CG,15-42,% MAC,Planned,TBD,TBD,2026-Q3,Min fuel + fwd loading
-VAL-02-10-103,CG Range,Aft CG,15-42,% MAC,Planned,TBD,TBD,2026-Q3,Max fuel + aft loading
-VAL-02-10-103,CG Range,Typical Takeoff,15-42,% MAC,Planned,TBD,TBD,2026-Q3,Full fuel + std loading
-VAL-02-10-103,CG Range,Typical Landing,15-42,% MAC,Planned,TBD,TBD,2026-Q3,Reserve fuel + std loading
-VAL-02-10-103,CG Range,Ferry Flight,15-42,% MAC,Planned,TBD,TBD,2026-Q3,Full fuel + no payload

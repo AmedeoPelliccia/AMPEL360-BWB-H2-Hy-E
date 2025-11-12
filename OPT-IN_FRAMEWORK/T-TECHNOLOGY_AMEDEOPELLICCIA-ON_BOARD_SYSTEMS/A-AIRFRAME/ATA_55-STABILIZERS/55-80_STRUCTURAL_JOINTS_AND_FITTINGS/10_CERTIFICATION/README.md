@@ -1,3 +1,0 @@
-# 10 CERTIFICATION
-
-This directory contains 10 CERTIFICATION documentation for 55-80_STRUCTURAL_JOINTS_AND_FITTINGS.

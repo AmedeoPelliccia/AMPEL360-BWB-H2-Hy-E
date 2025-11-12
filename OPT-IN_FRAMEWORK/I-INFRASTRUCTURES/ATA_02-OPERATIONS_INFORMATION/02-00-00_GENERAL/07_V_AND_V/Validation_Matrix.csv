@@ -1,6 +1,0 @@
-Val_ID,Test_Description,Test_Type,Success_Criteria,Status,Result,Date,Notes
-VAL-02-00-101,Normal Takeoff Procedure,Simulator,100% completion in <5min,Complete,Pass,2025-10-20,All crews successful
-VAL-02-00-102,H2 Leak Response,Simulator,Memory items <30sec,Complete,Pass,2025-10-22,Average 28sec
-VAL-02-00-201,Ground Refueling Test,Ground,45min full refuel,Complete,Pass,2025-10-25,43min achieved
-VAL-02-00-301,Performance Flight Test,Flight,Range validation,Planned,TBD,2026-Q2,Awaiting prototype
-VAL-02-00-304,CAOS Flight Test,Flight,Advisory accuracy >85%,Planned,TBD,2026-Q3,Digital twin ready

@@ -1,4 +1,0 @@
-CA_ID,Finding_ID,Action_Description,Responsible,Target_Date,Status,Verification_Method
-CA-001,FIND-001,Add_ventilation_test_to_ground_test_plan,Test_Team,2026-03-30,Active,Test_plan_update
-CA-002,FIND-002,Complete_H2_AFM_procedures_section,Ops_Team,2026-04-15,Active,AFM_revision
-CA-003,FIND-003,Develop_ground_clearance_procedures,Flight_Ops,2026-04-30,Planning,Procedure_review

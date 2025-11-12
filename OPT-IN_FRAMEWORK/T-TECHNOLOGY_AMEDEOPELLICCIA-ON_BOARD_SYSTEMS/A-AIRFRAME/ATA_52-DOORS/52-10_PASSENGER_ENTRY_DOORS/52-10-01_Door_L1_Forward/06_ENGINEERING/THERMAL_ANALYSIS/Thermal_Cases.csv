@@ -1,6 +1,0 @@
-Temperature_C,Condition,Thermal_Expansion_mm,Seal_Compression_mm,Stress_MPa,Status
--55,Cold_Soak,0.0,3.0,50,Design_Point
--40,Cold_Operating,-0.3,3.3,55,Acceptable
-23,Room_Temp,0.0,3.0,50,Nominal
-45,Hot_Ground,0.5,2.5,45,Acceptable
-85,Hot_Operating,1.2,1.8,35,Marginal

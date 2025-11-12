@@ -1,6 +1,0 @@
-Audit_ID,Date,Type,Auditor,Scope,Findings,Status
-AUD-2025-001,2025-10-15,Internal,QA_Team,Document_Control,8_minor_observations,Closed
-AUD-2025-002,2025-11-01,Process,QA_Lead,Change_Management,5_recommendations,Open
-AUD-2026-001,2026-01-15,Internal,QA_Team,Full_System,Planned,Scheduled
-AUD-2026-002,2026-04-01,External,ISO_Auditor,ISO_9001,Planned,Scheduled
-AUD-2026-003,2026-06-15,Regulatory,EASA,Certification_Readiness,Planned,Scheduled

@@ -1,6 +1,0 @@
-Station,Spanwise_Location_y_m,Chord_m,Box_Depth_m,Upper_Skin_Thickness_mm,Lower_Skin_Thickness_mm,Spar_Cap_Area_cm2,Number_of_Stringers,Stringer_Area_cm2,Total_Section_Area_cm2,Section_Ixx_m4,Section_Iyy_m4,Section_Weight_kg_m,Notes
-Root,0.0,16.2,1.8,12.0,14.0,250,24,18.5,1244.0,1.245,0.855,198.6,Maximum depth and thickness at root
-25% Span,6.5,13.5,1.5,10.0,12.0,200,20,15.2,944.0,0.682,0.518,150.6,First intermediate station
-50% Span,13.0,10.8,1.2,8.0,10.0,150,16,12.1,664.8,0.324,0.285,106.1,Mid-span section
-75% Span,19.5,6.5,0.8,6.0,8.0,90,12,8.5,374.0,0.108,0.095,59.7,Outboard section
-Tip,26.0,2.8,0.4,4.0,5.0,40,8,5.2,158.4,0.018,0.012,25.3,Minimum section at tip

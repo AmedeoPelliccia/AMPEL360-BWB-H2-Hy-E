@@ -1,9 +1,0 @@
-Load_Case,Description,Pressure_psi,Pressure_kPa,Total_Force_kN,Factor_of_Safety,Regulation
-LC-1,Normal_Operation,8.5,58.6,123.5,1.0,CS-25.365(a)
-LC-2,Limit_Load,8.5,58.6,123.5,1.0,CS-25.365(a)
-LC-3,Proof_Pressure,12.75,87.9,185.2,1.5,CS-25.365(d)
-LC-4,Ultimate_Pressure,17.0,117.2,247.0,2.0,CS-25.365(b)
-LC-5,Rapid_Decompression,17.0,117.2,247.0,2.0,CS-25.365(c)
-LC-6,Emergency_Opening,0.0,0.0,0.0,N/A,CS-25.783
-LC-7,Ground_Load,0.0,0.0,0.5,N/A,Handling
-LC-8,Combined_Pressure_Temp,-55C,58.6,123.5,1.0,CS-25.365(e)

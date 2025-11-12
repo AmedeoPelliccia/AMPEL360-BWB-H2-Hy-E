@@ -1,6 +1,0 @@
-Mode,Frequency_Hz,Uncertainty_Hz,Damping_Percent,Shape_Description,Participation_Factor,Status
-1,27.5,8.25,2.0,Fundamental_Bending,0.65,CRITICAL_GVT_Required
-2,40.0,16.0,2.0,First_Torsion,0.25,Test_Required
-3,70.0,35.0,2.5,Second_Bending,0.08,Monitor
-4,95.0,47.5,3.0,Complex_Mode,0.02,Monitor
-5,120.0,60.0,3.0,Higher_Order,0.01,Monitor

@@ -1,5 +1,0 @@
-Audit_ID,Audit_Type,Scheduled_Date,Lead_Auditor,Scope,Status
-QA-2025-Q3,Comprehensive,2025-09-30,Quality_Manager,All_documents,Complete
-QA-2025-Q4,Comprehensive,2025-12-15,Quality_Manager,All_documents,Scheduled
-QA-2025-10,Spot_Check,2025-10-15,Lead_Auditor,Random_sample,Complete
-QA-2025-11,Spot_Check,2025-11-15,Lead_Auditor,Random_sample,Scheduled

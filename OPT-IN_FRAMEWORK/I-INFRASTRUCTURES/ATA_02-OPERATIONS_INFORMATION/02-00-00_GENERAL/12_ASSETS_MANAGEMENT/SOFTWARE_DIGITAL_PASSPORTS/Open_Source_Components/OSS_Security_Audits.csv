@@ -1,9 +1,0 @@
-Component_ID,Software_Name,Version,Audit_Date,Auditor,Vulnerabilities_Found,Status
-OSS-001,TensorFlow,2.14.0,2025-10-01,Security Firm A,0,Pass
-OSS-002,PyTorch,2.1.0,2025-10-05,Security Firm A,0,Pass
-OSS-003,NumPy,1.26.0,2025-09-20,Security Firm B,0,Pass
-OSS-004,Pandas,2.1.1,2025-09-22,Security Firm B,0,Pass
-OSS-005,Scikit-learn,1.3.1,2025-09-25,Security Firm A,0,Pass
-OSS-006,FastAPI,0.104.0,2025-10-10,Security Firm C,0,Pass
-OSS-007,PostgreSQL,16.0,2025-10-12,Security Firm C,0,Pass
-OSS-008,Redis,7.2,2025-10-15,Security Firm B,0,Pass

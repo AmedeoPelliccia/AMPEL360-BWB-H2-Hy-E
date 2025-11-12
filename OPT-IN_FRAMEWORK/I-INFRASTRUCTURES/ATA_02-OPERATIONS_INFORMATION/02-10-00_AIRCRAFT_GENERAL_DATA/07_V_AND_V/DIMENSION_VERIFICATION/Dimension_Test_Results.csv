@@ -1,7 +1,0 @@
-Test_ID,Parameter,Method,Value,Unit,Tolerance,Status,Date,Notes
-VER-02-10-001,Wingspan,Laser Measurement,52.02,m,±0.1,Complete,2026-Q2,Within tolerance
-VER-02-10-002,Length,Laser Measurement,TBD,m,±0.1,Planned,2026-Q2,Awaiting aircraft assembly
-VER-02-10-003,Ground Clearance - Tail Static,Measurement,TBD,m,≥0.35,Planned,2026-Q2,MTOW condition
-VER-02-10-003,Ground Clearance - Tail Rotation,Measurement,TBD,m,≥0.15,Planned,2026-Q2,At rotation angle
-VER-02-10-003,Ground Clearance - Engine,Measurement,TBD,m,≥0.60,Planned,2026-Q2,Static condition
-VER-02-10-003,Ground Clearance - Wingtip,Measurement,TBD,m,≥1.20,Planned,2026-Q2,Static condition

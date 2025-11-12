@@ -1,3 +1,0 @@
-# 14 META GOVERNANCE
-
-This directory contains 14 META GOVERNANCE documentation for 57-10_WING_CENTER_SECTION_BWB_INTEGRATION.

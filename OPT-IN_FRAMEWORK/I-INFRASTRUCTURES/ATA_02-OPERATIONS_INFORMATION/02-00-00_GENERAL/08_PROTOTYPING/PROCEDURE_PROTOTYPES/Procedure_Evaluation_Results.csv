@@ -1,7 +1,0 @@
-Prototype_ID,Evaluator,Date,Rating,Comments,Issues_Found,Status
-PROTO-PROC-001,Capt. Smith,2025-10-20,5,Clear and concise,None,Approved
-PROTO-PROC-001,FO Johnson,2025-10-20,5,Easy to follow,None,Approved
-PROTO-PROC-001,Capt. Rodriguez,2025-10-21,4,Good but needs minor formatting,Formatting,Approved with notes
-PROTO-PROC-002,Safety Inspector Lee,2025-10-18,3,Needs more detail on H2 leak response,Insufficient detail,Revisions needed
-PROTO-PROC-003,Ground Supervisor Chen,2025-10-12,4,Comprehensive but complex,Training time needed,In review
-PROTO-PROC-004,Load Master Brown,2025-10-08,3,BWB CG envelope needs validation,Data incomplete,Pending validation

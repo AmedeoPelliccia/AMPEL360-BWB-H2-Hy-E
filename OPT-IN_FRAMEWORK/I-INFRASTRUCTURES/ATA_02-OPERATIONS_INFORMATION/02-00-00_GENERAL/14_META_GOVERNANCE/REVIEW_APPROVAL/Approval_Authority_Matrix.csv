@@ -1,7 +1,0 @@
-Document_Type,Approval_Authority,Backup_Authority,Delegation_Allowed
-Technical,Chief_Engineer,Lead_Engineer,Yes
-Safety,Safety_Manager,Deputy_Safety_Manager,No
-Operational,Operations_Manager,Deputy_Operations,Yes
-Quality,Quality_Manager,Lead_Quality_Auditor,Yes
-Regulatory,Certification_Manager,Regulatory_Liaison,No
-Interface,Integration_Manager,Systems_Engineer,Yes

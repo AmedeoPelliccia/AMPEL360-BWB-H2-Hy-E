@@ -1,6 +1,0 @@
-DPP_ID,Material_Name,Batch_Number,Supplier,Manufacturing_Date,Status,Blockchain_Hash
-DPP-MAT-H2-001,Tank Composite,Batch_A001,CompositeTech Inc,2025-09-15,Active,0x1b6f3a5c7d9e1f3a
-DPP-MAT-H2-002,Insulation Foam,Batch_B001,CryoFoam Ltd,2025-09-20,Active,0x2c7g4b6d8e0f2g4b
-DPP-MAT-H2-003,Sealing Material,Batch_C001,SealPro GmbH,2025-09-25,Active,0x3d8h5c7e9f1g3h5c
-DPP-MAT-STR-001,Carbon Fiber,Batch_X001,FiberTech SA,2025-09-10,Active,0x4e9i6d8f0g2h4i6d
-DPP-MAT-STR-002,Aluminum Alloy,Batch_Y001,MetalWorks Inc,2025-09-12,Active,0x5f0j7e9g1h3i5j7e

@@ -1,5 +1,0 @@
-Risk_ID,Mitigation_Action,Responsible,Target_Date,Status,Effectiveness
-R-001,Secure_additional_resources_if_needed,Doc_Manager,2025-11-30,In_Progress,TBD
-R-002,Monthly_EASA_coordination_calls,Cert_Manager,Ongoing,Active,Effective
-R-003,Strict_change_control_process,Systems_Eng,Implemented,Active,Effective
-R-004,Quarterly_disaster_recovery_test,IT_Manager,Quarterly,Active,Effective

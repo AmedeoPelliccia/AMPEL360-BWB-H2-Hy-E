@@ -1,3 +1,0 @@
-# 10 CERTIFICATION
-
-This directory contains 10 CERTIFICATION documentation for 56-80_WINDOW_INSTALLATION_AND_RETENTION.

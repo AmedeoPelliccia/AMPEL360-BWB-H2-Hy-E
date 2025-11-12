@@ -1,5 +1,0 @@
-Document_ID,Document_Name,Type,Owner,Status,Version,Last_Updated
-SW-52-10-01-001,CAOS_Integration_Spec,Software,Software_Lead,Draft,0.5,2025-11-03
-SW-52-10-01-002,Door_Control_Algorithm,Software,Control_Engineer,In_Review,0.8,2025-11-03
-SW-52-10-01-003,Sensor_Interface_Software,Software,Embedded_Engineer,Draft,0.4,2025-11-03
-SW-52-10-01-004,Diagnostic_Module,Software,Test_Engineer,Draft,0.3,2025-11-03

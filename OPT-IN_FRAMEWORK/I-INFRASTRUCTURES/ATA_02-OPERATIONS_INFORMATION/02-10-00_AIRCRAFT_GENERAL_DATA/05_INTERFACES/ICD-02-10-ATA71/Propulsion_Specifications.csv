@@ -1,7 +1,0 @@
-Stack_ID,Power_Rating_MW,Location_Station_m,Location_BL_m,Weight_kg,Voltage_VDC,Current_Max_A,Efficiency_Percent,Propulsor,Status
-Stack_1,2.0,20.0,-3.5,900,700,2857,58,Left,Active
-Stack_2,2.0,25.0,-3.5,900,700,2857,58,Left,Active
-Stack_3,2.0,20.0,3.5,900,700,2857,58,Right,Active
-Stack_4,2.0,25.0,3.5,900,700,2857,58,Right,Active
-Stack_5,2.0,22.5,0.0,900,700,2857,58,Center,Active
-Total,10.0,N/A,N/A,4500,700,14285,58,All,Active

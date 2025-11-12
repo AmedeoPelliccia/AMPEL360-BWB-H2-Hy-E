@@ -1,5 +1,0 @@
-Item_ID,Category,Description,Priority,Responsible,Target_Date,Status
-OI-001,H2_Standards,Refueling_standardization_industry_wide,Medium,H2_Team,2026-Q3,Active
-OI-002,Testing,Flight_test_campaign_schedule,High,Test_Team,2026-Q2,Planning
-OI-003,AI_Cert,CAOS_model_update_process_approval,Medium,CAOS_Team,2026-Q3,Active
-OI-004,Performance,Final_performance_data_from_tests,High,Flight_Test,2027-Q4,Planning

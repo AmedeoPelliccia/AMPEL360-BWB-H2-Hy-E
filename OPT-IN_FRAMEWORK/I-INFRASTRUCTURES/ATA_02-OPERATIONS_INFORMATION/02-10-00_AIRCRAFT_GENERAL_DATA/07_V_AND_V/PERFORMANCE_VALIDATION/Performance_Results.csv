@@ -1,6 +1,0 @@
-Test_ID,Parameter,Target,Unit,Status,Result,Flight_Conditions,Date,Notes
-VAL-02-10-201,Range,6500,km,Planned,TBD,FL410 M0.85 Full payload,2027-Q1,Fuel consumption method preferred
-VAL-02-10-202,Cruise Speed,0.85,Mach,Planned,TBD,FL410 ISA Max continuous power,2027-Q1,Design cruise speed
-VAL-02-10-202,Max Operating Speed,0.89,Mach,Planned,TBD,FL410 ISA,2027-Q1,Vmo validation
-VAL-02-10-203,Service Ceiling,43000,ft,Planned,TBD,ISA Mid-cruise weight,2027-Q1,100 ft/min climb
-VAL-02-10-203,Operational Ceiling,41000,ft,Planned,TBD,ISA Typical weight,2027-Q1,Normal cruise altitude

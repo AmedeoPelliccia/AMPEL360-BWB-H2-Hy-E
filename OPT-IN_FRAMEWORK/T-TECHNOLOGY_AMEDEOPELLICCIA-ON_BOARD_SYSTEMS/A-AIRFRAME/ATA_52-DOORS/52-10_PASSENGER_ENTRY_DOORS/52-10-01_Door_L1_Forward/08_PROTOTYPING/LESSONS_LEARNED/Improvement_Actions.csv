@@ -1,9 +1,0 @@
-Action_ID,Date_Raised,Issue_Reference,Description,Priority,Owner,Due_Date,Status,Completion_Date,Notes
-ACT-001,2025-11-03,DI-001,Complete_professional_FEA_analysis,Critical,Chief_Engineer,2026-Q1,Not_Started,TBD,Required_before_PROTO-001
-ACT-002,2025-11-03,DI-002,Plan_and_budget_GVT_testing,Critical,Test_Engineer,2026-Q2,Not_Started,TBD,Mandatory_GO_NO-GO_gate
-ACT-003,2025-11-03,DI-003,Execute_coupon_test_program,High,Materials_Engineer,2026-Q2,Not_Started,TBD,Validate_AI_predictions
-ACT-004,2025-11-03,DI-004,Identify_AFP_manufacturing_partner,Medium,Manufacturing_Lead,2026-Q4,Not_Started,TBD,For_production_transition
-ACT-005,2025-11-03,DI-005,Secure_Phase_1_funding,Critical,Program_Manager,2026-Q1,Active,TBD,$61k_minimum
-ACT-006,2025-11-03,DI-006,Order_cure_mold_tooling,Critical,Manufacturing_Lead,2026-Q2,Not_Started,TBD,16_week_lead_time
-ACT-007,2025-11-03,DI-007,Develop_damping_mitigation_options,High,Chief_Engineer,2026-Q1,Not_Started,TBD,If_GVT_shows_low_damping
-ACT-008,2025-11-03,DI-008,Create_interface_control_documents,Medium,Systems_Engineer,2026-Q1,Not_Started,TBD,Coordinate_with_other_teams

@@ -1,7 +1,0 @@
-Parameter,Prediction,Method,Confidence,Validation_Required
-Leak_Rate_CFM,0.10,Analysis,Low,Pressure_Test
-Operation_Time_sec,5.0,Estimate,Medium,Timed_Tests
-Reliability_%,99.2,Industry_Data,Low,Field_Data
-Weight_kg,114.0,Calculation,Medium,Weighing
-Natural_Frequency_Hz,27.5,Rayleigh,Low,GVT
-Fatigue_Life_flights,2400000,S-N_Curve,Very_Low,Testing

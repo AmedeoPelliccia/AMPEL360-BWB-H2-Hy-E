@@ -1,3 +1,0 @@
-# 09 PRODUCTION PLANNING
-
-This directory contains 09 PRODUCTION PLANNING documentation for 57-80_WING_STRUCTURAL_JOINTS.

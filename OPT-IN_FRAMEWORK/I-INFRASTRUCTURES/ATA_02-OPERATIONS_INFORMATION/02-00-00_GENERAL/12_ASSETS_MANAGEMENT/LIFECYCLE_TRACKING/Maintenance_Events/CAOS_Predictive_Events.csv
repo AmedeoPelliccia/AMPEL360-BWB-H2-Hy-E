@@ -1,5 +1,0 @@
-Asset_ID,Prediction_Type,Predicted_Date,Confidence,CAOS_Model_Version,Generated_Date
-DPP-H2-001,Seal Replacement,2026-04-15,0.89,v2.0.0,2025-11-05
-DPP-H2-002,Valve Maintenance,2026-02-20,0.85,v2.0.0,2025-11-05
-DPP-CAOS-001,Firmware Update,2026-01-10,0.92,v2.0.0,2025-11-05
-DPP-OPS-001,Calibration Required,2025-11-25,0.87,v2.0.0,2025-11-05

@@ -1,4 +1,0 @@
-Request_ID,Tool,Enhancement,Requested_By,Date,Priority,Status
-TER-001,DMS,Better_search_functionality,J.Smith,2025-09-15,High,Implemented
-TER-002,Version_Control,Visual_diff_tool,D.Lee,2025-10-01,Medium,Planned
-TER-003,CSDB,Batch_operations,E.Brown,2025-10-10,Medium,Under_Review

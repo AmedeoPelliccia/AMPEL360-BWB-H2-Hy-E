@@ -1,7 +1,0 @@
-Action_ID,Meeting,Assigned_To,Description,Due_Date,Status,Completion_Date
-AI-001,CCB_Meeting_001,Doc_Manager,Update version control policy,2025-10-20,Complete,2025-10-18
-AI-002,CCB_Meeting_001,Safety_Manager,Review H2 safety gaps,2025-10-25,Complete,2025-10-23
-AI-003,CCB_Meeting_002,CAOS_Lead,Define CAOS operational interfaces,2025-11-10,Complete,2025-11-08
-AI-004,CCB_Meeting_002,Systems_Eng,Restructure requirements database,2025-11-15,Complete,2025-11-12
-AI-005,CCB_Meeting_003,Safety_Team,Draft enhanced H2 procedures,2025-11-25,In Progress,
-AI-006,CCB_Meeting_003,Training,Update CAOS training materials,2025-11-22,In Progress,

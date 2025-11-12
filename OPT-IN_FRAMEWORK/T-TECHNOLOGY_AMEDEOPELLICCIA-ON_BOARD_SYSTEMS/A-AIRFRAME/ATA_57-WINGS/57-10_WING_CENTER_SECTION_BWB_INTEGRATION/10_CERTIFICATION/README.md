@@ -1,3 +1,0 @@
-# 10 CERTIFICATION
-
-This directory contains 10 CERTIFICATION documentation for 57-10_WING_CENTER_SECTION_BWB_INTEGRATION.

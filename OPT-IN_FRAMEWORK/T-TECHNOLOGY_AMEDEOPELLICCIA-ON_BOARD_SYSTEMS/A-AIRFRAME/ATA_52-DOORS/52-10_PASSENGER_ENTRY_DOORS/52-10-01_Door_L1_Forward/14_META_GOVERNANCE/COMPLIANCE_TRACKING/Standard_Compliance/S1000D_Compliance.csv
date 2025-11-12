@@ -1,7 +1,0 @@
-Standard,Requirement,Status,Gap_Description,Action_Required,Due_Date
-S1000D_Issue_5.0,Data_Module_Structure,In_Progress,70%_complete,Continue_DMC_creation,2026-Q2
-S1000D_Issue_5.0,Common_Source_Database,Planned,Not_started,Setup_CSDB,2026-Q1
-S1000D_Issue_5.0,Applicability,Planned,Not_defined,Define_applicability_rules,2026-Q1
-S1000D_Issue_5.0,Publication_Module,Planned,Not_started,Create_PM_structure,2026-Q2
-ISO_9001:2015,Quality_Management_System,Complete,None,Maintain,Ongoing
-AS9100D,Aerospace_Requirements,In_Progress,Gap_assessment_complete,Close_gaps,2026-Q1

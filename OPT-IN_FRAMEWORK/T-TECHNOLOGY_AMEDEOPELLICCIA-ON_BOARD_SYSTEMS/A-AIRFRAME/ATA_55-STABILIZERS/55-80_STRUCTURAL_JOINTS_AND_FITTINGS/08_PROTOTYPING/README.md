@@ -1,3 +1,0 @@
-# 08 PROTOTYPING
-
-This directory contains 08 PROTOTYPING documentation for 55-80_STRUCTURAL_JOINTS_AND_FITTINGS.

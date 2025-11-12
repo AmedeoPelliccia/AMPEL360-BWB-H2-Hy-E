@@ -1,7 +1,0 @@
-Mechanism,Operation,Time_sec,Force_N,Status
-Latch_Engagement,Close,2.0,45,Design
-Latch_Release,Open,1.5,42,Design
-Door_Swing,Open_Full,3.5,50,Design
-Door_Close,Close_Full,4.0,55,Design
-Emergency_Open,Emergency,5.0,80,Design
-Manual_Override,Backup,8.0,85,Design

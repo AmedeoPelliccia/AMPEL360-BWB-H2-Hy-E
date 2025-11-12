@@ -1,4 +1,0 @@
-Test_ID,Test_Description,Date,Status,Result,Success_Criteria,Actual_Performance,Notes
-VAL-02-00-201,Weight and Balance Ground Test,Scheduled,Planned,TBD,Accuracy ±0.5%,N/A,Scheduled Jan 2026
-VAL-02-00-202,H2 Refueling Ground Test,2025-10-25,Complete,Pass,45min full refuel,43min achieved,Exceeded target by 4.4%
-VAL-02-00-203,Emergency Equipment Test,Scheduled,Planned,TBD,100% functionality,N/A,Scheduled Feb 2026

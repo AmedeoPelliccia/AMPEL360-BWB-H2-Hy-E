@@ -1,8 +1,0 @@
-CR_Number,Title,Submitted_Date,Approved_Date,Class,Implemented_Date,Affected_Documents,Result
-CR-02-00-015,Add CAOS section to overview,2025-09-20,2025-10-01,B,2025-10-15,02-00-01-OVERVIEW,Success
-CR-02-00-018,Add 50 new requirements,2025-09-25,2025-10-01,B,2025-10-05,02-00-03-REQUIREMENTS,Success
-CR-02-00-028,Update operations philosophy,2025-10-05,2025-10-08,B,2025-10-20,02-00-01-OVERVIEW,Success
-CR-02-00-035,Major H2 safety update,2025-10-10,2025-10-15,A,2025-10-25,02-00-02-SAFETY,Success
-CR-02-00-042,Requirements restructure,2025-10-20,2025-10-25,B,2025-11-01,02-00-03-REQUIREMENTS,Success
-CR-02-00-048,Update design standards,2025-10-25,2025-10-28,B,2025-11-03,02-00-04-DESIGN,Success
-CR-02-00-051,Add 5 new ICDs,2025-10-28,2025-11-01,B,2025-11-04,02-00-05-INTERFACES,Success

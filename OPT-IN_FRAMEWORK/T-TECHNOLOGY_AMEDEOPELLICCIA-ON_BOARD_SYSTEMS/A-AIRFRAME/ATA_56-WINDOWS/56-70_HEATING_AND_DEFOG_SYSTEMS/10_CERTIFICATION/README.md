@@ -1,3 +1,0 @@
-# 10 CERTIFICATION
-
-This directory contains 10 CERTIFICATION documentation for 56-70_HEATING_AND_DEFOG_SYSTEMS.

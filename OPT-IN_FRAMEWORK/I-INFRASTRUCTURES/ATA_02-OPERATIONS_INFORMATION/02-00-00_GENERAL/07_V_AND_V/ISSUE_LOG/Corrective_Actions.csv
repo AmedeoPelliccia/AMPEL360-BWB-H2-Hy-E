@@ -1,9 +1,0 @@
-Issue_ID,Action_ID,Action_Description,Action_Owner,Date_Initiated,Date_Completed,Verification_Method,Verification_Result
-ISS-001,CA-001,Update CAOS training module with enhanced backup procedure section,Training Team,2025-10-29,2025-11-15,Training assessment,TBD
-ISS-002,CA-002,Revise ground crew checklist with optimized step order,Operations Team,2025-10-26,2025-11-20,Ground test validation,TBD
-ISS-003,CA-003,Enhance simulator audio system for H2 leak detection sound,Simulator Team,2025-11-03,2025-12-01,Simulator validation,TBD
-ISS-004,CA-004,Implement streamlined preflight checklist,Operations Team,2025-10-11,2025-10-18,Simulator testing,Pass
-ISS-005,CA-005,Adjust CAOS alert timing algorithm,CAOS Team,2025-10-16,2025-10-22,Simulator testing,Pass
-ISS-006,CA-006,Modify crew workstation panel angle,Design Team,2025-10-19,2025-10-25,Ergonomic assessment,Pass
-ISS-007,CA-007,Enhance H2 gauge display settings,Avionics Team,2025-10-21,2025-10-28,Display testing,Pass
-ISS-008,CA-008,Increase emergency lighting LED brightness,Electrical Team,2025-10-26,2025-11-01,Lighting measurement,Pass

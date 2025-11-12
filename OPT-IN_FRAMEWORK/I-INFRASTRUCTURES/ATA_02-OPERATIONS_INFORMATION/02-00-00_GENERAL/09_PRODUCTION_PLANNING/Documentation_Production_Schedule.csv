@@ -1,6 +1,0 @@
-Document,Pages,Start_Date,Complete_Date,Status,Owner,Dependencies
-AFM,450,2025-11-01,2026-04-30,Active,Tech_Pubs,Performance_Data
-FCOM,800,2025-12-01,2026-06-30,Planning,Operations,AFM_Complete
-QRH,120,2026-01-15,2026-05-15,Planning,Safety,Emergency_Procedures
-WBM,200,2025-11-15,2026-03-15,Active,Performance,Weight_Data
-MEL,180,2026-02-01,2026-07-01,Planning,Maintenance,Reliability_Data

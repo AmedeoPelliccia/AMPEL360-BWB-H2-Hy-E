@@ -1,4 +1,0 @@
-Activity_ID,Date,Activity_Type,Description,Documents_Affected,Status
-CERT-001,2025-09-01,Baseline_Establishment,Initial_documentation_baseline,All,Complete
-CERT-002,2025-10-15,Major_Update,H2_safety_procedures_update,02-00-02-SAFETY,Complete
-CERT-003,2025-11-01,Submission,EASA_certification_package,Multiple,In_Progress

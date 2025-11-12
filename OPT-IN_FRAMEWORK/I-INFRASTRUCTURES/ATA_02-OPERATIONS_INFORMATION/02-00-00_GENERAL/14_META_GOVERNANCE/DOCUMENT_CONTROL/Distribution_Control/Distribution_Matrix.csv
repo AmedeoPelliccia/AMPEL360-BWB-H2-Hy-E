@@ -1,9 +1,0 @@
-Doc_ID,Engineering,Operations,Safety,Quality,Certification,Management,External,Method
-02-00-00-README,Yes,Yes,Yes,Yes,Yes,Yes,No,Electronic
-02-00-01-OVERVIEW,Yes,Yes,Yes,No,No,Yes,No,Electronic
-02-00-02-SAFETY,Yes,Yes,Yes,Yes,Yes,Yes,Yes_EASA_FAA,Electronic+Print
-02-00-03-REQUIREMENTS,Yes,No,Yes,Yes,Yes,No,No,Electronic
-02-00-04-DESIGN,Yes,Yes,No,Yes,No,No,No,Electronic
-02-00-05-INTERFACES,Yes,Yes,No,Yes,No,No,No,Electronic
-02-00-06-ENGINEERING,Yes,No,No,Yes,No,No,No,Electronic
-14_META_GOVERNANCE,No,No,No,Yes,Yes,Yes,No,Electronic
