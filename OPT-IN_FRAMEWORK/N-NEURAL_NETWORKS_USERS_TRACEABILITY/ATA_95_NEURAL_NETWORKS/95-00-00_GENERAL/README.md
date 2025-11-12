@@ -180,20 +180,20 @@ This system follows the OPT-IN 14-folder structure:
 
 ```
 95-00-00_GENERAL/
-├── 01_OVERVIEW/              # System description and architecture
-├── 02_SAFETY/                # Hazard analysis and safety requirements
-├── 03_REQUIREMENTS/          # Functional and non-functional requirements
-├── 04_DESIGN/                # Neural network model design
-├── 05_INTERFACES/            # API specifications and protocols
-├── 06_ENGINEERING/           # Implementation and algorithms
-├── 07_V_AND_V/               # Verification and validation
-├── 08_PROTOTYPING/           # Proof-of-concept implementations
-├── 09_PRODUCTION_PLANNING/   # Deployment strategies
-├── 10_CERTIFICATION/         # Regulatory compliance
-├── 11_OPERATIONS_MAINTENANCE/ # Operational procedures
-├── 12_ASSETS_MANAGEMENT/     # Model versioning and infrastructure
-├── 13_SUBSYSTEMS_COMPONENTS/ # Component specifications
-└── 14_META_GOVERNANCE/       # Standards and governance
+├── 95-00-01_Overview/              # System description and architecture
+├── 95-00-02_Safety/                # Hazard analysis and safety requirements
+├── 95-00-03_Requirements/          # Functional and non-functional requirements
+├── 95-00-04_Design/                # Neural network model design
+├── 95-00-05_Interfaces/            # API specifications and protocols
+├── 95-00-06_Engineering/           # Implementation and algorithms
+├── 95-00-07_V_and_V/               # Verification and validation
+├── 95-00-08_Prototyping/           # Proof-of-concept implementations
+├── 95-00-09_Production_Planning/   # Deployment strategies
+├── 95-00-10_Certification/         # Regulatory compliance
+├── 95-00-11_Operations_Maintenance/ # Operational procedures
+├── 95-00-12_Assets_Management/     # Model versioning and infrastructure
+├── 95-00-13_Subsystems_Components/ # Component specifications
+└── 95-00-14_Meta_Governance/       # Standards and governance
 ```
 
 ---

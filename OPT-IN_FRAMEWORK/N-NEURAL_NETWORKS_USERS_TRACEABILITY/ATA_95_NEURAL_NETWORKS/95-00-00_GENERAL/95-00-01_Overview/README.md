@@ -1,80 +1,3 @@
----
-Title: "ATA 95 Neural Networks – Overview Documentation"
-Identifier: "95-00-00"
-DocumentID: "AMPEL360-95-00-00-OVR-001"
-
-Version: "1.0"
-Author: "AI Systems Team"
-Approver: "Chief Engineer – AI Systems"
-
-CreationDate: "2025-09-15"
-ModificationDate: "2025-11-04"
-NextReviewDate: "2026-05-04"
-
-Status: "Released"
-Classification: "Technical Documentation"
-AccessLevel: "Internal"
-
-Scope: >
-  Foundational overview documentation for ATA 95 – Neural Networks systems
-  within the AMPEL360 BWB H2 Hy-E Q100 INTEGRA program, defining the
-  framework for safe, certifiable and traceable integration of neural
-  networks across multiple ATA chapters.
-
-Abstract: >
-  Summarizes the purpose, scope, regulatory context, cross-chapter
-  integration and implementation status of ATA 95 neural network systems,
-  including applicability matrices, terminology, certification framework,
-  traceability requirements, interfaces and user accountability model.
-
-Keywords:
-  - ATA 95
-  - Neural Networks
-  - AI
-  - Machine Learning
-  - Traceability
-  - Certification
-  - CAOS
-  - AMPEL360
-  - High-Risk AI
-  - Aviation
-
-Compliance:
-  - "EASA AI Roadmap 2.0 – Machine Learning Applications"
-  - "FAA AI Assurance Framework (2024)"
-  - "EU AI Act – High-Risk AI Systems (Aviation)"
-  - "ICAO Annex 6 – Operation of Aircraft (autonomous/AI-related amendments)"
-  - "DO-178C – Software Considerations in Airborne Systems"
-  - "DO-254 – Hardware Considerations for Airborne Systems"
-  - "ATA iSpec 2200 – Information Standards for Aviation Maintenance"
-  - "S1000D – Technical Publications Specification"
-
-Metrics:
-  TotalDocumentationPages: 400
-  NeuralNetworkSystems: 24
-  ATAChaptersIntegrated: 15
-  RegulatoryRequirementsTracked: 35
-  TermsDefined: 200
-  TraceabilityLayers: 7
-  CertificationCostEstimateUSD: 57000000
-  TargetCertificationYear: 2028
-
-ChangeLog:
-  - version: "0.1"
-    date: "2025-09-15"
-    author: "AI Systems Team"
-    change: "Initial draft of ATA 95 overview documentation."
-  - version: "0.5"
-    date: "2025-10-10"
-    author: "Certification Lead"
-    change: "Regulatory framework and certification aspects added."
-  - version: "1.0"
-    date: "2025-11-04"
-    author: "Chief Engineer – AI Systems"
-    change: "Released version; documentation suite completed."
----
-
-
 # ATA 95 Neural Networks - Overview Documentation
 
 ## Document Control
@@ -100,28 +23,28 @@ This directory contains foundational documentation for ATA 95 - Neural Networks 
 
 ### Core Documents
 
-1. **[ATA_95_Purpose_Scope.md](ATA_95_Purpose_Scope.md)**
+1. **[95-00-01-001A_Purpose_Scope.md](95-00-01-001A_Purpose_Scope.md)**
    - Defines ATA 95 coverage and boundaries
    - Establishes neural network system categories
    - Links to applicable regulations
    - System architecture overview
    - Cross-chapter integration points
 
-2. **[Applicability_Matrix.md](Applicability_Matrix.md)**
+2. **[95-00-01-002A_Applicability_Matrix.md](95-00-01-002A_Applicability_Matrix.md)**
    - Details where neural networks are deployed
    - Maps NN systems to aircraft functions
    - Defines criticality levels (DAL A-E)
    - Operational design domains
    - Certification evidence requirements
 
-3. **[Terminology_Definitions.md](Terminology_Definitions.md)**
+3. **[95-00-01-003A_Terminology_Definitions.md](95-00-01-003A_Terminology_Definitions.md)**
    - Standard AI/ML terminology (200+ terms)
    - Aviation-specific neural network terms
    - Traceability and accountability definitions
    - Regulatory terminology
    - Acronyms and abbreviations
 
-4. **[Certification_Framework.md](Certification_Framework.md)**
+4. **[95-00-01-004A_Certification_Framework.md](95-00-01-004A_Certification_Framework.md)**
    - EASA AI Roadmap integration
    - FAA AI Assurance Framework
    - EU AI Act compliance for High-Risk Systems
@@ -129,7 +52,7 @@ This directory contains foundational documentation for ATA 95 - Neural Networks 
    - Certification process and timeline
    - Cost estimates
 
-5. **[Traceability_Requirements.md](Traceability_Requirements.md)**
+5. **[95-00-01-005A_Traceability_Requirements.md](95-00-01-005A_Traceability_Requirements.md)**
    - Complete data lineage tracking
    - Seven-layer traceability framework
    - Model lifecycle traceability
@@ -137,14 +60,14 @@ This directory contains foundational documentation for ATA 95 - Neural Networks 
    - Digital twin integration
    - Audit trail specifications
 
-6. **[Interface_Documentation.md](Interface_Documentation.md)**
+6. **[95-00-01-006A_Interface_Documentation.md](95-00-01-006A_Interface_Documentation.md)**
    - Cross-ATA chapter integration
    - Data interfaces and protocols (AFDX, ARINC 429)
    - Safety monitor interfaces
    - Communication specifications
    - Integration testing requirements
 
-7. **[User_Accountability_Model.md](User_Accountability_Model.md)**
+7. **[95-00-01-007A_User_Accountability_Model.md](95-00-01-007A_User_Accountability_Model.md)**
    - Human-in-the-loop requirements
    - Decision authority framework
    - Stakeholder roles and responsibilities
@@ -154,23 +77,27 @@ This directory contains foundational documentation for ATA 95 - Neural Networks 
 
 ### Supporting Files
 
-8. **[Cross_ATA_Integration.csv](Cross_ATA_Integration.csv)**
+8. **[95-00-01-008A_Cross_ATA_Integration.csv](95-00-01-008A_Cross_ATA_Integration.csv)**
    - Detailed system integration matrix
    - 22 NN systems mapped to ATA chapters
    - Interface specifications
    - Safety monitors and fallback systems
 
-9. **[Regulatory_Compliance_Map.csv](Regulatory_Compliance_Map.csv)**
+9. **[95-00-01-009A_Regulatory_Compliance_Map.csv](95-00-01-009A_Regulatory_Compliance_Map.csv)**
    - 35 regulatory requirements tracked
    - Compliance status and evidence
    - Responsible parties and due dates
    - Multi-jurisdictional coverage (EASA, FAA, EU)
 
 10. **ASSETS/** (Directory)
-    - System architecture diagrams
-    - Lifecycle flowcharts
-    - Certification roadmaps
-    - Technical illustrations
+    - [ASSETS/95-00-01-A001_Certification_Roadmap.md](ASSETS/95-00-01-A001_Certification_Roadmap.md)  
+      *Certification roadmap and milestones for ATA 95 NN systems*
+    - [ASSETS/95-00-01-A002_NN_Lifecycle_Diagram.md](ASSETS/95-00-01-A002_NN_Lifecycle_Diagram.md)  
+      *Neural network lifecycle overview (data → training → certification → operations)*
+    - [ASSETS/95-00-01-A003_SAD_System_Architecture.md](ASSETS/95-00-01-A003_SAD_System_Architecture.md)  
+      *System Architecture Description (SAD) for ATA 95 integration*
+    - [ASSETS/95-00-01-A004_Traceability_Flow.md](ASSETS/95-00-01-A004_Traceability_Flow.md)  
+      *End-to-end traceability flow diagrams for data, models and decisions*
 
 ---
 
@@ -187,9 +114,11 @@ Neural networks in AMPEL360 are deployed across:
 ### Traceability Chain
 
 ```
-Data Source → Dataset Curation → Training → Validation → 
-Certification → Deployment → Runtime Monitoring → 
+
+Data Source → Dataset Curation → Training → Validation →
+Certification → Deployment → Runtime Monitoring →
 Performance Analytics → Model Updates → User Actions
+
 ```
 
 Each stage is fully traceable with cryptographic verification and immutable logging.
@@ -259,29 +188,29 @@ Total: **22 integrated neural network systems** across **15 ATA chapters**
 ## Quick Start Guide
 
 **For Certification Engineers:**
-1. Read [ATA_95_Purpose_Scope.md](ATA_95_Purpose_Scope.md) for overall framework
-2. Review [Certification_Framework.md](Certification_Framework.md) for regulatory path
-3. Check [Regulatory_Compliance_Map.csv](Regulatory_Compliance_Map.csv) for status
+1. Read [95-00-01-001A_Purpose_Scope.md](95-00-01-001A_Purpose_Scope.md) for overall framework
+2. Review [95-00-01-004A_Certification_Framework.md](95-00-01-004A_Certification_Framework.md) for regulatory path
+3. Check [95-00-01-009A_Regulatory_Compliance_Map.csv](95-00-01-009A_Regulatory_Compliance_Map.csv) for status
 
 **For Systems Engineers:**
-1. Review [Applicability_Matrix.md](Applicability_Matrix.md) for system overview
-2. Study [Interface_Documentation.md](Interface_Documentation.md) for integration
-3. Consult [Cross_ATA_Integration.csv](Cross_ATA_Integration.csv) for details
+1. Review [95-00-01-002A_Applicability_Matrix.md](95-00-01-002A_Applicability_Matrix.md) for system overview
+2. Study [95-00-01-006A_Interface_Documentation.md](95-00-01-006A_Interface_Documentation.md) for integration
+3. Consult [95-00-01-008A_Cross_ATA_Integration.csv](95-00-01-008A_Cross_ATA_Integration.csv) for details
 
 **For Flight Crews:**
-1. Read [User_Accountability_Model.md](User_Accountability_Model.md) for responsibilities
+1. Read [95-00-01-007A_User_Accountability_Model.md](95-00-01-007A_User_Accountability_Model.md) for responsibilities
 2. Review crew interface sections in documentation
 3. Complete NN systems training module
 
 **For Maintenance Personnel:**
-1. Review maintenance sections in [User_Accountability_Model.md](User_Accountability_Model.md)
+1. Review maintenance sections in [95-00-01-007A_User_Accountability_Model.md](95-00-01-007A_User_Accountability_Model.md)
 2. Study interface specifications for troubleshooting
 3. Complete NN maintenance training
 
 **For ML Engineers:**
-1. Review [Traceability_Requirements.md](Traceability_Requirements.md) for data/model requirements
-2. Study [Terminology_Definitions.md](Terminology_Definitions.md) for aviation context
-3. Understand certification constraints in [Certification_Framework.md](Certification_Framework.md)
+1. Review [95-00-01-005A_Traceability_Requirements.md](95-00-01-005A_Traceability_Requirements.md) for data/model requirements
+2. Study [95-00-01-003A_Terminology_Definitions.md](95-00-01-003A_Terminology_Definitions.md) for aviation context
+3. Understand certification constraints in [95-00-01-004A_Certification_Framework.md](95-00-01-004A_Certification_Framework.md)
 
 ---
 
