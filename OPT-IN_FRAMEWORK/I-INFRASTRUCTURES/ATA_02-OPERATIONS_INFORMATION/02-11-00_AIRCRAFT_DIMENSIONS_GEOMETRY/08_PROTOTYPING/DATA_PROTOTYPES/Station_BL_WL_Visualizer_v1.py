@@ -17,6 +17,7 @@ Version: 1.0
 
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 - Required for 3D projection
 from dataclasses import dataclass
 from typing import List, Tuple, Optional
 import json

@@ -233,7 +233,7 @@ class GroundClearanceTool:
         print("Analyzing clearance envelope...")
         results = self.analyze_attitude_envelope(pitch_range, roll_range)
         
-        (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
+        _, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
         
         # Contour plot
         pitch_values = np.linspace(pitch_range[0], pitch_range[1], 20)
