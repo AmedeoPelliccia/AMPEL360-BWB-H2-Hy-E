@@ -33,7 +33,7 @@ This channel integrates with:
 
 ## Data Categories
 
-* **Structural:** Strain gauges, vibration sensors
+* **Structural (including Strain):** Strain gauges, vibration sensors, structural load measurements
 * **Thermal:** Temperature sensors, heat distribution
 * **Cycles:** Component usage counters, operation cycles
 * **H₂ Systems:** Fuel cell health, stack performance, flow rates
