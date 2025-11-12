@@ -1,3 +1,62 @@
+---
+Title: "ATA 95-00-00 – Neural Networks – General"
+Identifier: "95-00-00"
+SystemCode: "95-00-00"
+SystemName: "GENERAL"
+ParentSystem: "ATA 95 – Neural Networks"
+OPTINAxis: "N – Neural Networks, Users, Traceability"
+
+Version: "1.0"
+Author: "CAOS Implementation Team"
+CreationDate: "2025-11-04"
+ModificationDate: "2025-11-04"
+Status: "Draft"
+
+Scope: >
+  General neural network framework standards, guidelines, and governance
+  for all ATA 95 systems within the AMPEL360 BWB-H₂-Hy-E program, integrated
+  with the CAOS federated learning architecture.
+
+Abstract: >
+  Defines the general framework for ATA 95 neural networks, including their
+  role in AI/ML-driven decision support, safety-assured autonomous operations,
+  CAOS-based federated learning, and integration with aircraft systems,
+  Service Twin, Digital Product Passport, and edge neural processors.
+
+Keywords:
+  - GENERAL
+  - Neural Networks
+  - AI
+  - Machine Learning
+  - ATA 95
+  - CAOS
+  - AMPEL360
+  - Traceability
+  - Federated Learning
+  - Safety
+
+Compliance:
+  - "DO-178C – Software Considerations in Airborne Systems and Equipment Certification"
+  - "DO-326A – Airworthiness Security Process Specification"
+  - "EUROCAE ED-202A – AI in Aviation Guidelines"
+  - "EASA CS-25 – Certification Specifications for Large Aeroplanes"
+  - "ISO/IEC 5338 – AI System Lifecycle Processes"
+  - "ISO/IEC 23894 – AI Risk Management"
+  - "IEEE P2863 – Governance of AI"
+  - "ATA iSpec 2200 – Information Standards for Aviation Maintenance"
+  - "S1000D – Technical Publications Specification"
+  - "ONNX – Open Neural Network Exchange Format"
+
+AccessLevel: "Internal"
+
+ChangeLog:
+  - version: "1.0"
+    date: "2025-11-04"
+    author: "CAOS Implementation Team"
+    change: "Initial system documentation for ATA 95-00-00 General."
+---
+
+
 # 95-00-00 - GENERAL
 
 **System Code:** 95-00-00  
@@ -264,3 +323,61 @@ This system follows the OPT-IN 14-folder structure:
 ---
 
 **Keywords:** GENERAL, Neural Networks, AI, Machine Learning, ATA 95, CAOS, AMPEL360, 95-00-00
+
+```json
+{
+  "Title": "ATA 95-00-00 – Neural Networks – General",
+  "Identifier": "95-00-00",
+  "SystemCode": "95-00-00",
+  "SystemName": "GENERAL",
+  "ParentSystem": "ATA 95 – Neural Networks",
+  "OPTINAxis": "N – Neural Networks, Users, Traceability",
+
+  "Version": "1.0",
+  "Author": "CAOS Implementation Team",
+  "CreationDate": "2025-11-04",
+  "ModificationDate": "2025-11-04",
+  "Status": "Draft",
+
+  "Scope": "General neural network framework standards, guidelines, and governance for all ATA 95 systems within the AMPEL360 BWB-H₂-Hy-E program, integrated with the CAOS federated learning architecture.",
+
+  "Abstract": "Defines the general framework for ATA 95 neural networks, including their role in AI/ML-driven decision support, safety-assured autonomous operations, CAOS-based federated learning, and integration with aircraft systems, Service Twin, Digital Product Passport, and edge neural processors.",
+
+  "Keywords": [
+    "GENERAL",
+    "Neural Networks",
+    "AI",
+    "Machine Learning",
+    "ATA 95",
+    "CAOS",
+    "AMPEL360",
+    "Traceability",
+    "Federated Learning",
+    "Safety"
+  ],
+
+  "Compliance": [
+    "DO-178C – Software Considerations in Airborne Systems and Equipment Certification",
+    "DO-326A – Airworthiness Security Process Specification",
+    "EUROCAE ED-202A – AI in Aviation Guidelines",
+    "EASA CS-25 – Certification Specifications for Large Aeroplanes",
+    "ISO/IEC 5338 – AI System Lifecycle Processes",
+    "ISO/IEC 23894 – AI Risk Management",
+    "IEEE P2863 – Governance of AI",
+    "ATA iSpec 2200 – Information Standards for Aviation Maintenance",
+    "S1000D – Technical Publications Specification",
+    "ONNX – Open Neural Network Exchange Format"
+  ],
+
+  "AccessLevel": "Internal",
+
+  "ChangeLog": [
+    {
+      "version": "1.0",
+      "date": "2025-11-04",
+      "author": "CAOS Implementation Team",
+      "change": "Initial system documentation for ATA 95-00-00 General."
+    }
+  ]
+}
+
