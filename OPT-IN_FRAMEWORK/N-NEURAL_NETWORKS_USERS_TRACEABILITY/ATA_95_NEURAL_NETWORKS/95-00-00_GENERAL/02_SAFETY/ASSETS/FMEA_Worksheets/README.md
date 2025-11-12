@@ -16,7 +16,7 @@
 ## Worksheets
 
 ### 1. FMEA Template - Neural Network Components
-**File:** `FMEA_Template_NN_Components.xlsx` (Placeholder)
+**File:** `95-00-02-A001_FMEA_Template_NN_Components.xlsx` (Placeholder)
 
 **Columns:**
 - Component
@@ -43,7 +43,7 @@
 - Hardware (GPU, memory)
 
 ### 2. FMEA Template - Training Phase
-**File:** `FMEA_Template_Training_Phase.xlsx` (Placeholder)
+**File:** `95-00-02-A002_FMEA_Template_Training_Phase.xlsx` (Placeholder)
 
 **Focus:** Failures during model development
 
@@ -56,7 +56,7 @@
 - Architecture selection errors
 
 ### 3. FMEA Template - Deployment Phase
-**File:** `FMEA_Template_Deployment_Phase.xlsx` (Placeholder)
+**File:** `95-00-02-A003_FMEA_Template_Deployment_Phase.xlsx` (Placeholder)
 
 **Focus:** Operational failures
 
