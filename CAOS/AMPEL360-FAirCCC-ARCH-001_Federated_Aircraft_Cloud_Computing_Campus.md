@@ -470,8 +470,8 @@ graph TB
 ## Bonus: Drop-in repo wiring
 
 * Channel specification stubs are available in `CAOS/channels/`:
-  * `channels/ofec.md` – Operational Flight Envelope Channel
-  * `channels/pmt.md` – Predictive Maintenance Telemetry
-  * `channels/cflf-grad.md` – Collaborative Federated Learning Fabric (Gradient)
-  * `channels/cuc.md` – Config & Update Channel
+  * `CAOS/channels/ofec.md` – Operational Flight Envelope Channel
+  * `CAOS/channels/pmt.md` – Predictive Maintenance Telemetry
+  * `CAOS/channels/cflf-grad.md` – Collaborative Federated Learning Fabric (Gradient)
+  * `CAOS/channels/cuc.md` – Config & Update Channel
 * Add **CG** scheduled job later to keep docs cross-linked and matured.
