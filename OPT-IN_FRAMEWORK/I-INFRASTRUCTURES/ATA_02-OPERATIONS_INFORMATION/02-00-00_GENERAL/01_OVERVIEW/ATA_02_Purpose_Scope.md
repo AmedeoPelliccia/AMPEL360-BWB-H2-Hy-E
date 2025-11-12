@@ -2,9 +2,11 @@
 ## Purpose and Scope
 
 **Document ID:** AMPEL360-02-00-00-OVR-PS  
-**Version:** 1.0.0  
-**Date:** 2025-11-04  
+**Version:** 2.0.0  
+**Date:** 2025-11-12  
 **Classification:** Operations Critical
+
+> **Update Note:** Structure references updated per AMPEL360_DOCUMENTATION_STANDARD v1.4 on 2025-11-12
 
 ---
 
