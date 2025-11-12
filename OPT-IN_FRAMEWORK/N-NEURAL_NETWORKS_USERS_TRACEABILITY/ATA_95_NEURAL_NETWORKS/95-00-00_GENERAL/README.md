@@ -93,39 +93,47 @@ This system provides:
 
 The neural network system architecture follows the CAOS federated learning model:
 
-```
-┌─────────────────────────────────────────────┐
-│    Cloud Computing Campus (CCC)             │
-│  ┌────────────┐  ┌────────────┐            │
-│  │   Model    │  │  Training  │            │
-│  │ Repository │  │  Pipeline  │            │
-│  └────────────┘  └────────────┘            │
-└─────────────────────────────────────────────┘
-                    ▲  ▼
-            Model Updates / Telemetry
-                    ▲  ▼
-┌─────────────────────────────────────────────┐
-│         Service Twin / Digital Twin         │
-│  ┌────────────┐  ┌────────────┐            │
-│  │ Simulation │  │ Prediction │            │
-│  └────────────┘  └────────────┘            │
-└─────────────────────────────────────────────┘
-                    ▲  ▼
-            Real-time Data / Commands
-                    ▲  ▼
-┌─────────────────────────────────────────────┐
-│      Edge Neural Network Processor          │
-│  ┌────────────┐  ┌────────────┐            │
-│  │  Inference │  │   Local    │            │
-│  │   Engine   │  │  Storage   │            │
-│  └────────────┘  └────────────┘            │
-└─────────────────────────────────────────────┘
-                    ▲  ▼
-              Sensor Data / Actuators
-                    ▲  ▼
-┌─────────────────────────────────────────────┐
-│         Physical Aircraft Systems           │
-└─────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph CCC["Cloud Computing Campus (CCC)"]
+        MR["Model Repository"]
+        TP["Training Pipeline"]
+    end
+
+    subgraph TW["Service Twin<br> / Digital Twin"]
+        SML["Simulation"]
+        PRED["Prediction"]
+    end
+
+    subgraph ENN["Edge Neural Network Processor"]
+        INF["Inference Engine"]
+        LST["Local Storage"]
+    end
+
+    PACS["Physical Aircraft Systems"]
+
+    %% Vertical data/control flows
+    CCC -- "Model Updates / Telemetry" --> TW
+    TW -- "Real-time Data / Commands" --> ENN
+    ENN -- "Sensor Data / Actuators" --> PACS
+
+    %% Feedback/return flows (bidirectional)
+    TW -- "Model Updates / Telemetry" --> CCC
+    ENN -- "Real-time Data / Commands" --> TW
+    PACS -- "Sensor Data / Actuators" --> ENN
+
+    %% Layout within each block
+    MR -.-> TP
+    SML -.-> PRED
+    INF -.-> LST
+
+    %% Style for grouping clarity (optional)
+    classDef ccc fill:#f4f8ff,stroke:#6a7fc7,stroke-width:1.5px;
+    classDef enn fill:#e6faf4,stroke:#00806e,stroke-width:1.5px;
+    classDef tw fill:#fffaec,stroke:#e6a100,stroke-width:1.5px;
+    class CCC ccc;
+    class ENN enn;
+    class TW tw;
 ```
 
 ### Neural Network Architecture
