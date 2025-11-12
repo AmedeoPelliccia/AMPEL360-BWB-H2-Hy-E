@@ -45,7 +45,7 @@ Context:
             temperature=0.3, max_tokens=300
         )
         return resp.choices[0].message.content.strip()
-    except:
+    except Exception:
         return body + "\n\n_TODO: Expansion Pending_\n"
 
 def main():
@@ -56,6 +56,9 @@ def main():
         text = md.read_text(encoding="utf-8", errors="replace")
         orig = text
         matches = list(H2_RE.finditer(text))
+        
+        # Collect all changes first, then apply in reverse order to preserve positions
+        changes = []
         for i, m in enumerate(matches):
             if edits >= MAX_EDITS:
                 break
@@ -64,8 +67,13 @@ def main():
             body = text[start:end].strip()
             if word_count(body) < MIN_WORDS:
                 new_body = expand(m.group(1), body, text)
-                text = text[:start] + "\n" + new_body + "\n" + text[end:]
+                changes.append((start, end, new_body))
                 edits += 1
+        
+        # Apply changes in reverse order to preserve positions
+        for start, end, new_body in reversed(changes):
+            text = text[:start] + "\n" + new_body + "\n" + text[end:]
+        
         if text != orig:
             md.write_text(text, encoding="utf-8")
     print(f"[cg-expand] Expanded sections: {edits} (mode={MODE})")

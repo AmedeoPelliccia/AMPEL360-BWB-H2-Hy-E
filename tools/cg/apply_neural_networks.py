@@ -33,7 +33,6 @@ def run_scan():
     """Run CG scan on Neural Networks directory."""
     banner("Step 1: Scanning Neural Networks Directory")
     
-    # Temporarily set environment to focus on NN directory
     env = os.environ.copy()
     
     result = subprocess.run(

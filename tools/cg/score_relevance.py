@@ -9,7 +9,6 @@ Signals used:
 - Shared directory structure
 - Document title keywords
 """
-from pathlib import Path
 import re
 from typing import List, Tuple
 

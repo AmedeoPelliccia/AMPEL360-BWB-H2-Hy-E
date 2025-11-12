@@ -7,7 +7,7 @@ Produces audit report of:
 """
 
 from pathlib import Path
-import re, os
+import re
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 FRAME = REPO_ROOT / "OPT-IN_FRAMEWORK"

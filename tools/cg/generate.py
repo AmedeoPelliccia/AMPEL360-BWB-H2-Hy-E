@@ -37,6 +37,7 @@ def create_doc(path: Path, context: str):
         return False
 
     title = path.stem.replace("_"," ").replace("-"," ").title()
+    timestamp = datetime.datetime.now().isoformat()
     placeholder = f"""# {title}
 ## Overview
 Placeholder generated automatically. Path: `{rel_path}`
@@ -45,7 +46,7 @@ Placeholder generated automatically. Path: `{rel_path}`
 To be completed based on system role and ATA allocation.
 
 ## Document Control
-Generated: {datetime.date.today().isoformat()}
+Generated: {timestamp}
 Status: Draft
 Source: CG Generate
 """
@@ -63,6 +64,21 @@ Source: CG Generate
             placeholder = resp.choices[0].message.content or placeholder
         except Exception as e:
             print(f"[cg-generate] AI fallback for {title}: {e}")
+            # Add note to document when AI generation fails
+            placeholder = f"""# {title}
+## Overview
+Placeholder generated automatically. Path: `{rel_path}`
+
+## Purpose
+To be completed based on system role and ATA allocation.
+
+## Document Control
+Generated: {timestamp}
+Status: Draft
+Source: CG Generate (AI-enhanced generation attempted but failed)
+Note: Template-based content used due to AI generation error
+
+"""
 
     path.write_text(placeholder, encoding="utf-8")
     return True
@@ -74,11 +90,14 @@ def main():
         original = text
 
         # Convert ATA references to hyperlinks
-        for r in sorted(set(PLAIN_REF_RE.findall(text))):
+        # Use regex substitution with negative lookbehind to avoid replacing already-linked references
+        for r in sorted(set(PLAIN_REF_RE.findall(text)), key=len, reverse=True):
             tgt = guess_target(r)
             if tgt:
                 rel = os.path.relpath(tgt, md.parent)
-                text = text.replace(r, f"[{r}]({rel})")
+                # Avoid replacing references that are already inside markdown links
+                pattern = rf'(?<!\[)(?<!\]\(){re.escape(r)}(?!\]\()'
+                text = re.sub(pattern, f"[{r}]({rel})", text)
 
         # Create documents for missing linked targets
         for m in LINK_RE.finditer(text):
