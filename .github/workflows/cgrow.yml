@@ -41,24 +41,26 @@ jobs:
       phase: ${{ steps.check.outputs.phase }}
     steps:
       - id: check
+        env:
+          BODY: ${{ github.event.comment.body }}
         run: |
           if [[ "${{ github.event_name }}" == "issue_comment" ]]; then
             # Check if user has write permission
             # For now, allow all comments with /cgrow
-            if [[ "${{ github.event.comment.body }}" == *"/cgrow"* ]]; then
+            if [[ "$BODY" == *"/cgrow"* ]]; then
               echo "result=true" >> $GITHUB_OUTPUT
               # Extract phase if specified
-              if [[ "${{ github.event.comment.body }}" == *"/cgrow cg"* ]]; then
+              if [[ "$BODY" == *"/cgrow cg"* ]]; then
                 echo "phase=cg" >> $GITHUB_OUTPUT
-              elif [[ "${{ github.event.comment.body }}" == *"/cgrow cr"* ]]; then
+              elif [[ "$BODY" == *"/cgrow cr"* ]]; then
                 echo "phase=cr" >> $GITHUB_OUTPUT
-              elif [[ "${{ github.event.comment.body }}" == *"/cgrow co"* ]]; then
+              elif [[ "$BODY" == *"/cgrow co"* ]]; then
                 echo "phase=co" >> $GITHUB_OUTPUT
-              elif [[ "${{ github.event.comment.body }}" == *"/cgrow cw"* ]]; then
+              elif [[ "$BODY" == *"/cgrow cw"* ]]; then
                 echo "phase=cw" >> $GITHUB_OUTPUT
-              elif [[ "${{ github.event.comment.body }}" == *"/cgrow ct"* ]]; then
+              elif [[ "$BODY" == *"/cgrow ct"* ]]; then
                 echo "phase=ct" >> $GITHUB_OUTPUT
-              elif [[ "${{ github.event.comment.body }}" == *"/cgrow ch"* ]]; then
+              elif [[ "$BODY" == *"/cgrow ch"* ]]; then
                 echo "phase=ch" >> $GITHUB_OUTPUT
               else
                 echo "phase=all" >> $GITHUB_OUTPUT
