@@ -2,9 +2,11 @@
 ## Document Organization
 
 **Document ID:** AMPEL360-02-00-00-OVR-DO  
-**Version:** 1.0.0  
-**Date:** 2025-11-04  
+**Version:** 2.0.0  
+**Date:** 2025-11-12  
 **Classification:** Operations Critical
+
+> **Update Note:** Restructured per AMPEL360_DOCUMENTATION_STANDARD v1.4 on 2025-11-12
 
 ---
 
@@ -25,42 +27,47 @@ This document describes how operational documentation for the AMPEL360 BWB H2 Hy
 ### 2.1 Primary Documentation Structure
 
 ```
-ATA Chapter 02 - Operations Information
+ATA Chapter 02 - Operations Information (NEW STRUCTURE)
     │
-    ├── 02-00-00 GENERAL
-    │   └── Foundation documents, overview, conventions
+    ├── 02-00-00_GENERAL/
+    │   └── 14-folder SKELETON: Overall operations framework
     │
-    ├── 02-10-00 AIRCRAFT GENERAL DATA
-    │   └── Dimensions, configurations, identification
+    ├── 02-20-00_SYSTEMS/
+    │   ├── Aircraft Data (02-20-01 to 02-20-03)
+    │   ├── Weight & Balance (02-20-10 to 02-20-19)
+    │   ├── Performance (02-20-20 to 02-20-29)
+    │   ├── Limitations (02-20-30 to 02-20-39)
+    │   ├── Flight Planning (02-20-40 to 02-20-46)
+    │   ├── Emergency Procedures (02-20-50 to 02-20-59)
+    │   └── Operational Procedures (02-20-60 to 02-20-69)
     │
-    ├── 02-20-00 WEIGHT AND BALANCE
-    │   └── W&B data, procedures, limitations
+    ├── 02-40-00_PROGRAMMING_ALGORITHMS/
+    │   ├── Neural Network Operations (02-40-01, 10, 15)
+    │   ├── CAOS Integration (02-40-20, 30, 40)
+    │   ├── Predictive Analytics (02-40-50, 60, 70)
+    │   └── NN Support Systems (02-40-80 to 02-40-99)
     │
-    ├── 02-30-00 HYDROGEN FUEL DATA
-    │   └── H2 fuel system operations data
+    ├── 02-50-00_STRUCTURES/
+    │   ├── Reference Systems (02-50-10, 20)
+    │   ├── Dimensions & Clearances (02-50-30, 40)
+    │   └── Access & Layout (02-50-50, 60, 70)
     │
-    ├── 02-40-00 PERFORMANCE DATA
-    │   └── Takeoff, climb, cruise, descent, landing
+    ├── 02-70-00_PROPULSION/
+    │   ├── H₂ Fuel System Data (02-70-10 to 02-70-18)
+    │   └── H₂ Refueling (02-70-30)
     │
-    ├── 02-50-00 OPERATING LIMITATIONS
-    │   └── All operational limits
-    │
-    ├── 02-60-00 FLIGHT PLANNING DATA
-    │   └── Flight planning procedures and data
-    │
-    ├── 02-70-00 EMERGENCY PROCEDURES DATA
-    │   └── Emergency and abnormal procedures
-    │
-    ├── 02-80-00 OPERATIONAL PROCEDURES
-    │   └── Normal and special operations
-    │
-    └── 02-90-00 CAOS OPERATIONS INTEGRATION
-        └── AI-enhanced operations data
+    └── 02-90-00_TABLES_SCHEMAS_DIAGRAMS/
+        ├── Schemas (02-90-10)
+        └── Operations Data Recording (02-90-20)
 ```
 
-### 2.2 Component Structure
+### 2.2 Origin Block Structure
 
-Each component (02-XX-00) follows the **14-folder SKELETON methodology**:
+Per AMPEL360_DOCUMENTATION_STANDARD v1.4:
+
+**02-00-00_GENERAL** - Only this block follows the **14-folder SKELETON methodology**:
+
+**All other origin blocks** (20/40/50/70/90) use **design-driven structure**:
 
 ```
 02-XX-00_COMPONENT_NAME/
