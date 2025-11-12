@@ -272,7 +272,7 @@ class GroundClearanceTool:
             else:
                 colors.append('green')
         
-        bars = ax2.barh(range(len(names)), clearances, color=colors, alpha=0.7)
+        ax2.barh(range(len(names)), clearances, color=colors, alpha=0.7)
         ax2.set_yticks(range(len(names)))
         ax2.set_yticklabels(names, fontsize=8)
         ax2.set_xlabel('Clearance (m)', fontsize=12)
