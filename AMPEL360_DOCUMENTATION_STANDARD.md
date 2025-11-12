@@ -1,6 +1,6 @@
 # AMPEL360 Documentation Standard
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Date:** 2025-11-12  
 **Status:** Active
 
@@ -369,6 +369,134 @@ ATA_XX-SYSTEM_NAME/
 
 ---
 
+## ATA Code Numbering Convention (Law of Origin)
+
+This section defines the **fundamental numbering blocks** that serve as the origin for all ATA codes across the AMPEL360 program. This "law of origin" ensures consistent, predictable code structure.
+
+### Numbering Blocks
+
+#### 20-xx → SYSTEMS (Functional/Operational)
+All **functional systems** and **operational processes** originate from block **20**.
+
+**Scope:**
+- Operational systems (handling, processing, management)
+- Fleet maintenance programs
+- Support system operations
+- Functional procedures and workflows
+
+**Examples:**
+- `20-00-00_STANDARD_PRACTICES_AIRFRAME` - Base airframe practices
+- `03-20-00_GENERAL_HANDLING` - GSE handling systems
+- `03-20-01_STORAGE_SHIPPING` - Storage/shipping systems
+- `03-20-10_FLEET_MAINTENANCE_PROGRAM` - Fleet-level maintenance
+- `03-20-11_LH2_CRYO_REFUELER_MAINT` - LH₂ refueler maintenance system
+
+#### 50-xx → STRUCTURES (Physical/Airframe)
+All **physical structures**, **airframe components**, and **structural support** originate from block **50**.
+
+**Scope:**
+- Airframe structures (fuselage, wings, stabilizers)
+- GSE structural equipment (frames, stands, docks)
+- Physical support structures
+- Structural mounting and attachment points
+
+**Examples:**
+- `50-00-00_CARGO_AND_ACCESSORY_COMPARTMENTS` - Cargo structures
+- `53-00-00_FUSELAGE` - Fuselage structure
+- `03-50-00_GENERAL_STRUCTURAL_GSE` - GSE structural equipment
+- `03-50-01_LH2_SUPPORT_FRAMES` - LH₂ support frames and structures
+
+#### 70-xx / 80-xx → ENGINES / PROPULSION / ENERGY
+All **powerplant**, **propulsion systems**, **energy systems**, and **auxiliary power** originate from blocks **70** and **80**.
+
+**Scope:**
+- **70-xx**: Primary powerplant, engines, propulsion systems, H₂ fuel cells
+- **80-xx**: Auxiliary power (APU, GPU, starting systems), ground energy systems
+
+**Examples:**
+- `70-00-00_STANDARD_PRACTICES_ENGINE` - Engine practices
+- `71-00-00_POWER_PLANT` - Main powerplant
+- `72-00-00_ENGINE` - Engine systems
+- `80-00-00_STARTING` - Starting systems
+- `03-80-00_GENERAL_ENERGY_GSE` - GSE energy systems
+- `03-80-01_LH2_CRYOGENIC_REFUELER` - LH₂ refueling energy system
+- `03-80-02_HV_GROUND_POWER_UNIT` - High-voltage ground power
+
+#### 90-xx → SCHEMAS / META / CATALOGS / TRAINING
+All **schemas**, **metadata**, **catalogs**, **registries**, **training materials**, and **safety data** originate from block **90**.
+
+**Scope:**
+- Documentation schemas and templates
+- Part catalogs (IPL/IPC)
+- In-service registries
+- Training materials and programs
+- Safety Data Sheets (SDS)
+- Configuration management
+- Meta-governance documents
+
+**Examples:**
+- `91-00-00_CHARTS_FLIGHT_OPERATIONS` - Operational charts
+- `92-00-00_MODEL_BASED_MAINTENANCE` - Maintenance models
+- `93-00-00_ONBOARD_DATA_LOAD` - Data loading schemas
+- `03-90-00_IN-SERVICE_REGISTRY` - GSE service registry
+- `03-90-01_TRAINING_MATERIALS` - GSE training content
+- `03-90-02_SAFETY_DATA_SHEETS` - SDS documents
+- `03-90-10_FLEET_SPARES_PROGRAM` - Spares catalog/program
+- `03-90-11_LH2_CRYO_REFUELER_PARTS` - LH₂ refueler parts catalog
+
+### Application Rules
+
+#### Rule 1: Domain-Specific Numbering
+When creating subsystems within an ATA domain (e.g., ATA 03 Infrastructure), apply the origin blocks as **second-level codes**:
+
+- `03-20-xx` for **systems** within infrastructure
+- `03-50-xx` for **structures** within infrastructure
+- `03-80-xx` for **energy/propulsion** within infrastructure
+- `03-90-xx` for **schemas/catalogs** within infrastructure
+
+#### Rule 2: Consistency Across Domains
+The same origin blocks apply across **all OPT-IN axes** (O, P, T, I, N):
+
+- **Organization (O)**: May use 20 (policies/systems), 90 (governance schemas)
+- **Program (P)**: May use 20 (program systems), 50 (geometry/structures)
+- **Technology (T)**: Full use of 20, 50, 70/80, 90 based on technology type
+- **Infrastructures (I)**: As shown above (03-20, 03-50, 03-80, 03-90)
+- **Neural Networks (N)**: May use 20 (AI systems), 90 (model catalogs/schemas)
+
+#### Rule 3: No Random Numbering
+**Do not** create intermediate blocks (10-xx, 30-xx, 40-xx, 60-xx) unless explicitly justified by:
+1. An existing ATA standard requirement
+2. A specific regulatory mandate
+3. Documented program decision with traceability
+
+**Always** map new codes to one of the four origin blocks (20, 50, 70/80, 90).
+
+### Decision Tree for New Codes
+
+When creating a new ATA code, ask:
+
+1. **Is it a functional system or operational process?** → Use **20-xx**
+2. **Is it a physical structure or airframe component?** → Use **50-xx**
+3. **Is it related to engines, propulsion, or energy?** → Use **70-xx** or **80-xx**
+4. **Is it a schema, catalog, training, or meta-document?** → Use **90-xx**
+
+If multiple categories apply, prioritize based on **primary function**:
+- If it's primarily structural with energy aspects → **50-xx** (structure is primary)
+- If it's primarily energy with structural supports → **70/80-xx** (energy is primary)
+- If it's documentation/training about a system → **90-xx** (meta is primary)
+
+### Examples of Correct Mapping
+
+| Item | Wrong Code | Correct Code | Reason |
+|------|-----------|--------------|---------|
+| Fleet maintenance program | `03-40-00` | `03-20-10` | It's a system (20), not random 40 |
+| LH₂ refueler parts catalog | `03-40-01` | `03-90-11` | It's a catalog/IPC (90), not 40 |
+| GSE support frame | `03-30-01` | `03-50-01` | It's a structure (50), not 30 |
+| Ground power unit | `03-60-01` | `03-80-02` | It's energy equipment (80), not 60 |
+| Training materials | `03-10-00` | `03-90-01` | It's training/meta (90), not 10 |
+
+---
+
 ## Content Requirements
 
 ### Every Folder Must Have
@@ -537,6 +665,7 @@ This standard is a living document. Updates should be:
 
 | Version | Date       | Author                  | Changes                            |
 |---------|------------|-------------------------|------------------------------------|
+| 1.1     | 2025-11-12 | AMPEL360 Implementation | Added ATA Code Numbering Convention (Law of Origin) - defines 20/50/70-80/90 blocks |
 | 1.0     | 2025-11-12 | AMPEL360 Implementation | Initial documentation standard     |
 
 ---
