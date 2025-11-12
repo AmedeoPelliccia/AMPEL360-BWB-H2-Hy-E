@@ -69,5 +69,5 @@ Any change to these frozen values requires ECR approval.
 - Verification: FEA Global Model + Component Build-Up
 - Next Review: After Phase 2 testing
 - Related Documentation:
-  - [Verification & Validation Plan](../../../../../../../02-00-00_GENERAL/07_V_AND_V/Verification_Validation_Plan.md)
-  - [Configuration Management Plan](../../../../../../../02-00-00_GENERAL/13_SUBSYSTEMS_COMPONENTS/CONFIGURATION_CONTROL/Configuration_Management_Plan.md)
+  - [Verification & Validation Plan](../../../../../../../02-00_OPS-GENERAL-INFO/07_V_AND_V/Verification_Validation_Plan.md)
+  - [Configuration Management Plan](../../../../../../../02-00_OPS-GENERAL-INFO/13_SUBSYSTEMS_COMPONENTS/CONFIGURATION_CONTROL/Configuration_Management_Plan.md)

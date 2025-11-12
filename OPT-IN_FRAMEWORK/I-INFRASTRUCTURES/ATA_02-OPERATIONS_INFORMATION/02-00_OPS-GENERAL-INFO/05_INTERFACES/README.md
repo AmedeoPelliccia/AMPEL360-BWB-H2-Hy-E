@@ -301,7 +301,7 @@ All interface documentation is under configuration control:
 - [ATA 02 Master Index](../../ATA_02_Master_Index.md)
 - [AMPEL360 System Architecture](../../../../../README.md)
 - [CAOS Manifesto](../../../../../../CAOS_MANIFESTO.md)
-- Parent Component: [02-00-00_GENERAL](../README.md)
+- Parent Component: [02-00_OPS-GENERAL-INFO](../README.md)
 - ATA Chapter: [ATA 02 - Operations Information](../../README.md)
 
 ## Training Requirements

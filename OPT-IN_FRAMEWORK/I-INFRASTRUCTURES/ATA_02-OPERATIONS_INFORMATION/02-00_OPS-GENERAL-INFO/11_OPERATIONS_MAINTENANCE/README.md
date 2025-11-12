@@ -1,7 +1,7 @@
-# 11_OPERATIONS_MAINTENANCE - ATA 02-00-00 GENERAL
+# 11_OPERATIONS_MAINTENANCE - ATA 02-00 OPS-GENERAL-INFO
 
-**Component Code:** 02-00-00  
-**Component Name:** GENERAL  
+**Component Code:** 02-00  
+**Component Name:** OPS-GENERAL-INFO  
 **Folder:** 11_OPERATIONS_MAINTENANCE  
 **Status:** ✅ **COMPLETE**
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This folder contains comprehensive operations and maintenance documentation for the AMPEL360 BWB H₂ Hy-E Q100 aircraft, specifically for ATA 02-00-00 GENERAL chapter.
+This folder contains comprehensive operations and maintenance documentation for the AMPEL360 BWB H₂ Hy-E Q100 aircraft, specifically for ATA 02-00 OPS-GENERAL-INFO chapter.
 
 ---
 
@@ -47,7 +47,7 @@ This folder contains comprehensive operations and maintenance documentation for 
 │       ├── AMM_Index.csv
 │       ├── DMC_Register.csv
 │       │
-│       └── 02-00-00_GENERAL/
+│       └── 02-00_OPS-GENERAL-INFO/
 │           ├── DMC-AMP-A-02-00-00-00A-941A-A.xml (System Description)
 │           ├── DMC-AMP-A-02-00-00-00A-018A-A.xml (Technical Data)
 │           ├── DMC-AMP-A-02-00-00-00A-012A-A.xml (Special Tools)
@@ -131,7 +131,7 @@ This folder contains comprehensive operations and maintenance documentation for 
 
 ### Aircraft Maintenance Manual (AMM)
 - Complete S1000D-compliant maintenance manual structure
-- 6 Data Module Codes (DMCs) for ATA 02-00-00
+- 6 Data Module Codes (DMCs) for ATA 02-00
 - Indexed task cards and procedures
 
 ### Flight Operations Manuals
@@ -240,7 +240,7 @@ This folder contains comprehensive operations and maintenance documentation for 
 
 ## 🔗 Related Documents
 
-- Parent Component: **02-00-00_GENERAL**
+- Parent Component: **02-00_OPS-GENERAL-INFO**
 - ATA Chapter: **02 - Operations Information**
 - Aircraft: **AMPEL360 BWB H₂ Hy-E Q100**
 - Framework: **OPT-IN SKELETON 14-folder methodology**

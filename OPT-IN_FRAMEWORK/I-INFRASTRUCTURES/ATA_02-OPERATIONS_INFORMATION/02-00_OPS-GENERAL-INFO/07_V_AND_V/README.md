@@ -293,7 +293,7 @@ This folder contains comprehensive Verification and Validation (V&V) documentati
 
 ## 📄 Related Documents
 
-- Parent Component: [02-00-00_GENERAL](../)
+- Parent Component: [02-00_OPS-GENERAL-INFO](../)
 - ATA Chapter: [02 - Operations Information](../../)
 - AMPEL360 Platform: BWB H₂ Hy-E Q100 INTEGRA
 
