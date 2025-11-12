@@ -58,11 +58,11 @@ C-GROWTH is implemented across documentation, AI models, aircraft systems, groun
 * **CO** (Continuous Optimization)
 * **CW** (Continuous Workflow Integration)
 
-Collectively referred to as the **C-GROW Method**.
+Collectively referred to as the **C-GROWTH Method**.
 
 ### 2.2 Distinction from Traditional Systems
 
-| Traditional Aerospace Systems | C-GROW / CC Aerospace Systems |
+| Traditional Aerospace Systems | C-GROWTH / CC Aerospace Systems |
 |-------------------------------|-------------------------------|
 | Model is developed once | Model evolves continuously |
 | Documents are passive, become outdated | Documentation grows in real-time with design + ops |
@@ -459,7 +459,7 @@ CH ensures the *Monitoring + Corrective Action* pillar required by EASA AI Level
 
 ## 10. Traceability & Provenance
 
-Every artifact generated through C-GROW must maintain:
+Every artifact generated through C-GROWTH must maintain:
 
 1. **Source Attribution:** Which phase generated it (CG/CR/CO/CW)
 2. **Data Lineage:** Input sources and transformations
@@ -520,7 +520,7 @@ Every artifact generated through C-GROW must maintain:
 
 ## 12. Governance & Roles
 
-### 12.1 C-GROW Council
+### 12.1 C-GROWTH Council
 
 **Composition:**
 * Engineering Authority (Chair)
@@ -530,7 +530,7 @@ Every artifact generated through C-GROW must maintain:
 * Operations Representative
 
 **Responsibilities:**
-* Approve C-GROW policies
+* Approve C-GROWTH policies
 * Review major optimizations
 * Resolve escalations
 * Audit traceability
@@ -562,7 +562,7 @@ Every artifact generated through C-GROW must maintain:
 
 * **Per-model kill switch:** Disable specific model deployments
 * **Per-tail kill switch:** Disable updates to specific aircraft
-* **Global pause:** Halt all C-GROW operations (emergency)
+* **Global pause:** Halt all C-GROWTH operations (emergency)
 
 ---
 
@@ -590,8 +590,8 @@ And thanks to **S0 centralized authority**, it learns *safely*.
 
 ### 15.2 Phase 3 (Research)
 
-* Self-optimizing C-GROW parameters
-* Cross-platform C-GROW (beyond aerospace)
+* Self-optimizing C-GROWTH parameters
+* Cross-platform C-GROWTH (beyond aerospace)
 * Quantum-resistant CW signatures
 
 ---
@@ -610,7 +610,7 @@ And thanks to **S0 centralized authority**, it learns *safely*.
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | 2025-11-11 | AI (A. Pelliccia) | Initial C-GROW methodology specification (4 phases) |
+| 1.0 | 2025-11-11 | AI (A. Pelliccia) | Initial C-GROWTH methodology specification (4 phases) |
 | 2.0 | 2025-11-11 | AI (A. Pelliccia) | Expanded to C-GROWTH™ with CT and CH phases (6 phases total) |
 
 ---
