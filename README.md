@@ -422,6 +422,248 @@ graph LR
 
 ---
 
+## 📋 ATA 02-00-00 – Operations Information – General
+
+**Document ID:** AMPEL360-02-00-00-GEN-001  
+**Version:** 1.0.0  
+**Status:** Draft – Architecture Baseline  
+**Last Updated:** 2025-11-12  
+
+### 1. Purpose and Scope
+
+This document defines the **general framework for Operations Information (ATA 02-00-00)** for the AMPEL360 BWB H₂ Hy-E aircraft, in alignment with **ATA iSpec 2200**.
+
+It provides:
+
+- A **standardized structure** for ATA 02-00-00, consistent with industry practice  
+- The **link between classical ATA documentation** and the **CAOS digital layer**  
+- The **governance and lifecycle** for operations-related data, documents, and models  
+- Clear **interfaces to subordinate ATA 02 chapters** (mass, geometry, performance, etc.)
+
+This chapter is the **root reference** for all ATA 02 Operations Information for AMPEL360.
+
+---
+
+### 2. Alignment with ATA iSpec 2200
+
+ATA iSpec 2200 defines standardized **content and structure** for Operations Information – General:
+
+- **Introduction and Overview**  
+  Purpose and scope of operations information relevant to the aircraft and its systems.
+
+- **Applicability and Definitions**  
+  Clarifications of terminology, aircraft applicability, and operational limits.
+
+- **Document Structure and References**  
+  Layout of the operations information chapter, plus cross-references to related sections and external documents.
+
+- **Roles and Responsibilities**  
+  Responsibilities for creating, maintaining, and using operations information across OEM, operator, and MRO organizations.
+
+- **Operational Guidelines**  
+  High-level instructions, policies, and constraints for operations data management.
+
+- **Subordinate Chapters Index**  
+  Index of detailed subordinate topics (e.g., mass, geometry, performance, maintenance operations).
+
+ATA iSpec 2200 emphasizes:
+
+- **Standard content and format** (including electronic data interchange)  
+- **Harmonized, well-structured information** for operators and manufacturers  
+- Support for **operational decision-making** and **maintenance planning**  
+- An **integrated data environment** and standardized information architecture
+
+This document implements these ATA 02-00-00 concepts in the **AMPEL360 + CAOS + AirCCC** context.
+
+---
+
+### 3. Structure of ATA 02-00-00 in AMPEL360
+
+The Operations Information – General chapter is organized as follows:
+
+#### 3.1 01_OVERVIEW – Introduction and Overview
+
+- High-level description of Operations Information for AMPEL360  
+- Scope across flight operations, maintenance, performance, and digital services  
+- Relationship to **CAOS** (Computer Aided Operations and Services) and **AirCCC** (Aircraft Cloud Computing Campus)
+
+#### 3.2 02_APPLICABILITY_AND_DEFINITIONS
+
+- Aircraft applicability (variants, blocks, MSN ranges)  
+- Key definitions used across ATA 02 (e.g. "baseline", "as-built", "as-operated")  
+- Terminology for **digital twins**, **advisory AI**, and **fleet intelligence**
+
+#### 3.3 03_DOCUMENT_STRUCTURE_AND_REFERENCES
+
+- Description of the ATA 02 chapter layout  
+- Pointer to each subordinate ATA 02 section (02-10, 02-11, etc.)  
+- References to:
+  - `CAOS_INDEX.md` (program-wide CAOS index)  
+  - AirCCC architecture standard  
+  - C-GROWTH / C-GROWTH² methodology standards  
+  - GenCCC cross-reference tooling and CD artifacts (`cd/`)
+
+#### 3.4 04_ROLES_AND_RESPONSIBILITIES
+
+- Roles for **OEM**, **operators**, **MROs**, and **digital service providers**  
+- Ownership of:
+  - Operations baselines (mass, geometry, performance tables)  
+  - Data quality and updates  
+  - Integration to CAOS services and AirCCC nodes  
+- Links to organizational RACI / governance in `O-ORGANIZATION/`
+
+#### 3.5 05_OPERATIONAL_GUIDELINES
+
+- General policies for:
+  - Baseline vs. as-built vs. as-operated data  
+  - Use of advisory AI in operations (crew and maintenance decision support)  
+  - Versioning and effective-date management for Ops Information  
+- Requirements for:
+  - Traceability  
+  - Safety boundaries (advisory vs. certified logic)  
+  - Compliance with ATA iSpec 2200, ARP4754A, DO-178C, DO-326A, and the EASA AI roadmap (Level 2 advisory)
+
+#### 3.6 06_SUBORDINATE_CHAPTERS_INDEX
+
+- Index of Operations Information sub-chapters, e.g.:
+
+  - **02-10-00 – Aircraft General Data**  
+    - Mass properties baseline, mass breakdown, CG envelope  
+    - Mass properties watchdogs and CD reports  
+
+  - **02-11-00 – Aircraft Dimensions and Geometry**  
+    - Baseline dimensions and geometry  
+    - As-built geometry configuration and measurement data generation  
+    - Geometry watchdogs, packaging tools, and CD artifacts  
+
+  - Other ATA 02 chapters (performance, operational limitations, etc.) as they are developed.
+
+Each subordinate chapter must be **consistent with this general framework**.
+
+---
+
+### 4. Integration with CAOS, AirCCC and C-GROWTH
+
+#### 4.1 CAOS (Computer Aided Operations and Services)
+
+ATA 02-00-00 GENERAL is the **Operations Information entry point into CAOS**:
+
+- Defines which Operations Information sets are exposed to CAOS services  
+- Specifies **channels** (e.g. OFEC, PMT, CFLF-GRAD, CUC) relevant to Ops data  
+- Ensures Ops Information remains **advisory** and **safety-bounded**, with human authority
+
+See also: `CAOS_INDEX.md` at repository root.
+
+#### 4.2 AirCCC (Aircraft Cloud Computing Campus)
+
+Operations Information feeds the **AirCCC ecosystem**:
+
+- **AirCCC-A (Aircraft)**: Onboard advisory models consume mass, geometry, and performance baselines from ATA 02.  
+- **AirCCC-G (Ground)**: Maintenance and turnaround tools use ATA 02 data for diagnostics and planning.  
+- **AirCCC-R (Regional)**: Aggregation and analysis of Ops behavior patterns across fleets.  
+- **AirCCC-F (Fleet Core)**: Governs model releases and cross-generational intelligence under O3 / S0 / D3.
+
+This document defines how Operations Information is **published to and consumed by** AirCCC nodes.
+
+#### 4.3 C-GROWTH and C-GROWTH²
+
+Operations Information participates in the **C-GROWTH lifecycle**:
+
+- **CG – Continuous Generation**  
+  New data, documents and model deltas derived from Ops Information.
+
+- **CR – Continuous Review**  
+  Validation of baselines, tables and operational rules using V&V and expert review.
+
+- **CO – Continuous Optimization**  
+  Improvement of Ops Information based on fleet data and feedback.
+
+- **CW – Continuous Workflow Integration**  
+  Propagation of updated Ops baselines into aircraft, ground tools, and documentation.
+
+- **CT – Continuous Testing**  
+  Scenario-based and digital twins tests for operational data changes.
+
+- **CH – Circular Hauling**  
+  Carrying forward validated operational wisdom across aircraft series and fleet generations (C-GROWTH²).
+
+ATA 02-00-00 GENERAL defines how **Ops Information participates in and benefits from C-GROWTH / C-GROWTH²**, while remaining certifiable and traceable.
+
+---
+
+### 5. Interfaces to Tools and Automation
+
+The following tools are considered part of the **Operations Information General** ecosystem:
+
+- **Document Metadata & CAOS Awareness**  
+  - `tools/ci/doc_meta_enforcer.py`  
+  - Ensures AI generation attribution, CAOS integration lines, internal links, and SARIF output.
+
+- **GenCCC – Cross-Reference Intelligence**  
+  - `tools/genccc/report.py` – Reports on cross-references and missing links.  
+  - `tools/genccc/apply.py` – Auto-linking and contextual stub generation for missing docs.
+
+- **Operations Baseline Watchdogs**  
+  - `tools/ci/check_mass_properties.py` – Mass properties baseline vs. docs.  
+  - `tools/ci/check_dimensions.py` – Geometry baseline vs. docs.
+
+- **CD Artifacts**  
+  - `cd/geometry/`, `cd/mass/`, `cd/publications/` – Generated reports and packages that document Operations Information baselines and changes.
+
+Any new automation that **creates, validates, or distributes** Operations Information must:
+
+- Respect the structure of ATA 02-00-00  
+- Integrate with CAOS / AirCCC where applicable  
+- Be documented and referenced from this chapter
+
+---
+
+### 6. Roles and Responsibilities (High Level)
+
+- **OEM / AMPEL360 Program**  
+  - Define and maintain ATA 02-00-00 structure and governance  
+  - Publish and update Operations Information baselines  
+  - Maintain CAOS and AirCCC standards and tooling
+
+- **Airline / Operator**  
+  - Apply Operations Information in daily operations  
+  - Contribute operational feedback, data, and improvement proposals  
+  - Maintain operator-specific supplements while respecting this standard
+
+- **MRO / Maintenance Organizations**  
+  - Use and update maintenance-related Operations Information  
+  - Feed back mass/geometry deviations, wear patterns, and turn-time data
+
+- **Digital / AI Teams**  
+  - Implement C-GROWTH lifecycle on top of Ops Information  
+  - Ensure advisory AI remains within defined safety and authority boundaries
+
+Detailed RACI assignments can be captured in dedicated governance documents under `O-ORGANIZATION/`.
+
+---
+
+### 7. Document Control
+
+**Document Control:**
+
+- Generated by: AI (prompted by Amedeo Pelliccia); pending approval by [Approver]  
+- CAOS Integration: This document is part of the Computer Aided Operations and Services framework  
+- Version: 1.0.0  
+- Status: Draft – Architecture Baseline  
+- Last Updated: 2025-11-12  
+- Next Review: After first complete ATA 02 implementation and initial CAOS / AirCCC integration  
+
+**Related Documentation:**
+
+- `CAOS_INDEX.md` (root)  
+- `O-ORGANIZATION/STANDARDS/AMPEL360-AirCCC-ARCH-001_*.md`  
+- `O-ORGANIZATION/STANDARDS/C-GROWTH_Methodology_Specification.md`  
+- `O-ORGANIZATION/STANDARDS/C-GROWTH2_Evolutionary_Intelligence_Model.md`  
+- `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-10-00_AIRCRAFT_GENERAL_DATA/*`  
+- `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-11-00_AIRCRAFT_DIMENSIONS_GEOMETRY/*`
+
+---
+
 ## 📊 Documentation Progress by Axis
 
 | Axis | Chapters | Completion | Status |
