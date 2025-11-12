@@ -1,0 +1,18 @@
+# RQ-53-20-03-101: Two-Bay Crack Criteria
+
+## Requirement Statement
+A crack in the BWB outer skin panel shall not propagate beyond two frame bays before detection by scheduled inspection.
+
+## Rationale
+Fail-safe design philosophy ensures time for detection and repair.
+
+## Acceptance Criteria
+- Crack growth analysis shows > 2× inspection interval to critical size
+- Inspection interval established (C-Check recommended)
+- NDT method validated for detection capability
+
+## Compliance Status
+Crack growth analysis complete, inspection interval TBD
+
+## Traceability
+Parent: CS-25.571, AMC 25.571

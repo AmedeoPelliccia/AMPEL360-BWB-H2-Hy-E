@@ -1,0 +1,9 @@
+Deviation_ID,Aircraft_SN,Date_Identified,Component,Deviation_Type,Description,Impact,Resolution,Status,Closed_Date
+DEV-MSN001-001,MSN001,2024-02-10,Wing Panel,Dimensional,Wing panel 0.8mm out of tolerance,Minor,Accepted with engineering disposition,Closed,2024-02-15
+DEV-MSN001-002,MSN001,2024-04-05,Avionics Bay,Installation,Wire routing differs from design,Cosmetic,Documented as-built configuration,Closed,2024-04-10
+DEV-MSN001-003,MSN001,2024-06-20,Fuel System,Material,Alternative seal material used,None,Approved alternate material,Closed,2024-06-25
+DEV-MSN001-004,MSN001,2024-08-15,Landing Gear,Weight,Gear assembly 2kg heavier than spec,Minor,Updated weight manifest,Closed,2024-08-20
+DEV-MSN001-005,MSN001,2024-10-01,Interior,Design,Modified galley layout for test phase,Temporary,Revert to standard for production,Open,N/A
+DEV-MSN002-001,MSN002,2024-07-12,Structure,Dimensional,Fuselage frame 1.2mm variance,Minor,Accepted with engineering disposition,Closed,2024-07-18
+DEV-MSN002-002,MSN002,2024-09-05,Hydraulic System,Component,Backup pump from different supplier,None,Approved equivalent part,Closed,2024-09-10
+DEV-MSN002-003,MSN002,2024-10-25,Electrical,Installation,Cable tray routing adjustment,Minor,Documented as-built configuration,Open,N/A

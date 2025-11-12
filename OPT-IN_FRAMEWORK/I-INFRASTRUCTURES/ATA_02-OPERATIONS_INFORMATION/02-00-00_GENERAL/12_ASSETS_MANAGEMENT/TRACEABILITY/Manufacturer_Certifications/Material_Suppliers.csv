@@ -1,0 +1,6 @@
+Supplier_Name,Material_Type,Batch_Number,Certificate_Date,REACH_Compliant,RoHS_Compliant
+CompositeTech Inc,Tank Composite,Batch_A001,2025-09-10,Yes,Yes
+CryoFoam Ltd,Insulation Foam,Batch_B001,2025-09-15,Yes,Yes
+SealPro GmbH,Sealing Material,Batch_C001,2025-09-20,Yes,Yes
+FiberTech SA,Carbon Fiber,Batch_X001,2025-09-05,Yes,Yes
+MetalWorks Inc,Aluminum Alloy,Batch_Y001,2025-09-08,Yes,N/A

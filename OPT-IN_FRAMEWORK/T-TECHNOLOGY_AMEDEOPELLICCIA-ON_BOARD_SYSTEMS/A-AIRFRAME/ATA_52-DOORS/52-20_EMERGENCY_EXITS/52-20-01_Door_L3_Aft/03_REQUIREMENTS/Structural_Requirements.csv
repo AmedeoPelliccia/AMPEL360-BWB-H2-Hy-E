@@ -1,0 +1,20 @@
+Requirement_ID,Description,Criticality,Verification,Status,Rationale
+RQ-52-20-01-001,Primary_Structure_Composite_Frame,Critical,Analysis,Defined,Load bearing capability
+RQ-52-20-01-002,Door_Hinge_Titanium_Alloy,Critical,Test,Defined,Corrosion resistance
+RQ-52-20-01-003,Latch_Pin_Steel_15-5PH,Critical,Test,Defined,High strength required
+RQ-52-20-01-004,Skin_Panel_CFRP_Sandwich,High,Inspect,Defined,Weight optimization
+RQ-52-20-01-005,Ultimate_Load_Factor_4.5g,Critical,Analysis,Defined,CS-25 requirement
+RQ-52-20-01-006,Limit_Load_Factor_3.0g,Critical,Analysis,Defined,Normal operation
+RQ-52-20-01-007,Pressure_Differential_9.1psi,Critical,Test,Defined,Max cabin pressure
+RQ-52-20-01-008,Emergency_Load_Case_Panic,High,Analysis,Defined,Crowd loading
+RQ-52-20-01-009,Fatigue_Life_60000_Cycles,Critical,Analysis,Defined,Design service goal
+RQ-52-20-01-010,Damage_Tolerance_Detectability,Critical,NDT,Defined,Inspection capability
+RQ-52-20-01-011,Impact_Resistance_50J,High,Test,Defined,Tool drop scenario
+RQ-52-20-01-012,Frame_Redundancy_Load_Path,Critical,Analysis,Defined,Fail-safe design
+RQ-52-20-01-013,Seal_Compression_Set_25percent,High,Test,Defined,Pressure sealing
+RQ-52-20-01-014,Window_Frame_Integration,High,Analysis,Defined,Structural continuity
+RQ-52-20-01-015,Attachment_Point_Strength,Critical,Test,Defined,Aircraft interface
+RQ-52-20-01-016,Lightning_Strike_Protection,Critical,Test,Defined,Zone 1A requirement
+RQ-52-20-01-017,Static_Discharge_Path,High,Test,Defined,Prevent arcing
+RQ-52-20-01-018,Thermal_Expansion_Compatibility,High,Analysis,Defined,Material selection
+RQ-52-20-01-019,Corrosion_Protection_Class_C1,High,Inspect,Defined,Environmental protection

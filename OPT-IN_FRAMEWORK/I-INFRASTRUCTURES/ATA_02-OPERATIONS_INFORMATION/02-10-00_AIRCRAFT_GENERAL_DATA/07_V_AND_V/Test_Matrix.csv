@@ -1,0 +1,7 @@
+Test_ID,Parameter,Method,Target,Status,Result,Date
+VER-02-10-001,Wingspan,Measurement,52.0m ±0.1m,Complete,52.02m,2026-Q2
+VER-02-10-002,Length,Measurement,38.2m ±0.1m,Planned,TBD,2026-Q2
+VAL-02-10-101,MTOW,Weighing,185000kg,Planned,TBD,2026-Q3
+VAL-02-10-103,CG Range,Load Test,15-42% MAC,Planned,TBD,2026-Q3
+VAL-02-10-201,Range,Flight Test,6500km,Planned,TBD,2027-Q1
+VAL-02-10-303,H2 Capacity,Inspection,8000kg,Planned,TBD,2026-Q2

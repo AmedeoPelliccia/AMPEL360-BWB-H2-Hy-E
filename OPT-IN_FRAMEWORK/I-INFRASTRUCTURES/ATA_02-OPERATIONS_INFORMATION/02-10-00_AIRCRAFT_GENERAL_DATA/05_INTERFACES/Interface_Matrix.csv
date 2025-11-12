@@ -1,0 +1,11 @@
+ICD_ID,From,To,Data_Type,Update_Freq,Criticality,Status
+ICD-02-10-08-001,ATA-02-10,ATA-08,Weight/CG,Static,Critical,Active
+ICD-02-10-28-001,ATA-02-10,ATA-28,Fuel_Capacity,Static,Critical,Active
+ICD-02-10-95-001,ATA-02-10,ATA-95,Aircraft_Model,Real-time,High,Active
+ICD-02-10-06-001,ATA-02-10,ATA-06,Dimensions,Static,Medium,Active
+ICD-02-10-05-001,ATA-02-10,ATA-05,Maintenance_Data,Static,Medium,Active
+ICD-02-10-20-001,ATA-02-10,ATA-20,Structural_Limits,Static,Critical,Active
+ICD-02-10-28-002,ATA-02-10,ATA-28,Tank_Geometry,Static,High,Active
+ICD-02-10-52-001,ATA-02-10,ATA-52,Door_Locations,Static,High,Active
+ICD-02-10-71-001,ATA-02-10,ATA-71,Power_Data,Static,High,Active
+ICD-02-10-95-002,ATA-02-10,ATA-95,Digital_Twin,Real-time,High,Active

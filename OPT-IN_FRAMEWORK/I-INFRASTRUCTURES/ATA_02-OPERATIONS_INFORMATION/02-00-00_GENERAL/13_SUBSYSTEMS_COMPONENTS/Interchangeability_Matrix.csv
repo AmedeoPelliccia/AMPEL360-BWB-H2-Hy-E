@@ -1,0 +1,11 @@
+Primary_PNR,Alternate_PNR,Interchange_Type,Approval_Status,Restrictions,Notes
+PNR-02-32-001-01,PNR-02-32-001-01A,Direct,Approved,None,Improved composite material with better UV resistance
+PNR-02-EFB-001,PNR-02-EFB-001B,Form-Fit-Function,Approved,Software_update_required,Different manufacturer (Panasonic) but meets all specifications
+PNR-CAOS-HW-001-02,PNR-CAOS-HW-001-02C,Direct,Approved,Firmware_v2.1_min,Memory capacity upgrade from 64GB to 128GB
+PNR-02-32-001-03,PNR-02-32-001-03B,Direct,Approved,None,Seal kit with extended temperature range
+PNR-02-EMG-002-01,PNR-02-EMG-002-01A,Direct,Approved,Training_required,Clean agent fire extinguisher as alternative to Halon
+PNR-CAOS-HW-002-01,PNR-CAOS-HW-002-01B,Form-Fit-Function,Approved,Calibration_required,Alternative thermocouple type with same accuracy
+PNR-02-GSE-001-01,PNR-02-GSE-001-01A,Direct,Under_Review,Pending_load_test,Lightweight towbar design for reduced operator strain
+PNR-02-EFB-001-02,PNR-02-EFB-001-02A,Direct,Approved,None,Higher capacity battery (12000 mAh vs 10000 mAh)
+PNR-02-32-002-03,PNR-02-32-002-03A,Form-Fit-Function,Approved,Pressure_test_required,Alternative check valve design with improved flow characteristics
+PNR-CAOS-SW-001,PNR-CAOS-SW-001-v2.1,Direct,Approved,Data_migration_required,Software version upgrade with enhanced features

@@ -1,0 +1,6 @@
+Risk_ID,Hazard,Consequence,Probability,Severity,Risk_Level,Mitigation,Status
+RSK-02-10-001,H2 Leak Ground,Fire/Explosion,Remote,Catastrophic,Medium,8 sensors + 50m zone + training,Mitigated
+RSK-02-10-002,Wide CG Range Exceedance,Loss of Control,Extremely Remote,Catastrophic,Low,CAOS monitoring + procedures,Mitigated
+RSK-02-10-003,BWB Evacuation Time,Passenger Safety,Remote,Hazardous,Medium,12 exits + 75sec validated,Mitigated
+RSK-02-10-004,Fuel Cell Failure,Loss of Power,Probable,Major,Medium,Redundancy + graceful degradation,Mitigated
+RSK-02-10-005,CAOS Malfunction,Incorrect Advisory,Probable,Minor,Low,Human override + independent monitor,Acceptable

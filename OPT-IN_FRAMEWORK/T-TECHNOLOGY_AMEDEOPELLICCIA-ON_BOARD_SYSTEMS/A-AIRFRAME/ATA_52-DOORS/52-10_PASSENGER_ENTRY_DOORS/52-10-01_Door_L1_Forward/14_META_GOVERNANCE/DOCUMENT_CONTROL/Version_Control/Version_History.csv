@@ -1,0 +1,8 @@
+Document_ID,Version,Date,Author,Change_Description,Approval_Status
+DOC-52-10-01-001,1.0,2025-11-03,Design_Lead,Initial_release,Approved
+DOC-52-10-01-003,1.0,2025-10-15,Systems_Engineer,Initial_requirements,Approved
+DOC-52-10-01-003,2.0,2025-11-03,Systems_Engineer,Updated_load_cases,Approved
+DOC-52-10-01-004,0.5,2025-10-20,Design_Engineer,Initial_draft,Draft
+DOC-52-10-01-004,1.0,2025-10-28,Design_Engineer,First_complete_version,In_Review
+DOC-52-10-01-004,1.2,2025-11-03,Design_Engineer,Incorporated_review_comments,In_Review
+DOC-52-10-01-006,1.0,2025-10-25,Materials_Engineer,Material_specification,Approved

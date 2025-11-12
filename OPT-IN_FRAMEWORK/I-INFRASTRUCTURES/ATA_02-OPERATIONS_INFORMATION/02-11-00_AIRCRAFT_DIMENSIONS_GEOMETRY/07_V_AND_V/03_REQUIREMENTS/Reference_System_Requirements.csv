@@ -1,0 +1,7 @@
+Requirement_ID,Description,System,Definition,Verification_Method,Priority
+REQ-02-11-019,Body Axis System Implementation,Body_Axis,X_Forward_Y_Starboard_Z_Down,VER-02-11-301,High
+REQ-02-11-020,Coordinate System Consistency,STA_BL_WL,All_Documents_Consistent,VER-02-11-302,High
+REQ-02-11-021,Traceability Requirements,Data_Consistency,Traceable_Across_All_Docs,VER-02-11-402,High
+REQ-02-11-022,Station System Implementation,Station,Longitudinal_Positions,VER-02-11-301,Medium
+REQ-02-11-023,Buttline System Implementation,Buttline,Lateral_Positions,VER-02-11-301,Medium
+REQ-02-11-024,Waterline System Implementation,Waterline,Vertical_Positions,VER-02-11-301,Medium

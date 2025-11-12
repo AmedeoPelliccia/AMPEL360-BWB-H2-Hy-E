@@ -1,0 +1,11 @@
+Action_ID,Date_Identified,Issue_Area,Description,Priority,Responsible,Due_Date,Status,Completion_Date
+ACT-001,2025-10-30,Procedures,Add format consistency across all procedures,High,Ops Team,2025-11-15,In Progress,
+ACT-002,2025-10-30,Procedures,Create illustrations for all procedures,Medium,Tech Writers,2025-12-01,Planned,
+ACT-003,2025-11-04,CAOS Interface,Implement night mode for all displays,High,CAOS Dev Team,2025-11-20,In Progress,
+ACT-004,2025-11-04,CAOS Interface,Add customization options,Medium,CAOS Dev Team,2025-12-15,Planned,
+ACT-005,2025-11-01,Training,Extend CAOS training to 20 hours,High,Training Dept,2025-11-15,Approved,
+ACT-006,2025-11-01,Training,Develop CBT modules 1-5,High,E-Learning,2026-03-01,In Progress,
+ACT-007,2025-10-28,Checklists,Add cooldown timer to After Landing checklist,Low,Ops Team,2025-11-08,Complete,2025-11-07
+ACT-008,2025-10-28,Checklists,Expand H2 emergency checklist detail,High,Safety Team,2025-11-12,In Progress,
+ACT-009,2025-10-25,Documentation,Add more W&B calculation examples,Medium,Load Planning,2025-11-30,Planned,
+ACT-010,2025-11-03,Simulator,Add 4 more H2 emergency scenarios,Medium,Sim Team,2025-12-01,Planned,

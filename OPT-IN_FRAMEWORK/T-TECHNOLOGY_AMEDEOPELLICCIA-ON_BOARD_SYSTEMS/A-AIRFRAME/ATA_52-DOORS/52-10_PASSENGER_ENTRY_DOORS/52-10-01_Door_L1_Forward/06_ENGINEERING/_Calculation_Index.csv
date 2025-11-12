@@ -1,0 +1,26 @@
+Calc_Number,Title,Revision,Date,Engineer,Checker,Approver,Status,Pages,File_Path
+CALC-52-10-01-STR-001,Pressure Loads,A,2025-11-03,AI_Claude,Pending,Pending,Draft,3,STRUCTURAL_ANALYSIS/CALC-52-10-01-STR-001_Pressure_Loads.md
+CALC-52-10-01-STR-002,Panel Stress,A,2025-11-03,AI_Claude,Pending,Pending,Draft,3,STRUCTURAL_ANALYSIS/CALC-52-10-01-STR-002_Panel_Stress.md
+CALC-52-10-01-STR-003,Hinge Loads,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,STRUCTURAL_ANALYSIS/CALC-52-10-01-STR-003_Hinge_Loads.md
+CALC-52-10-01-STR-004,Latch Loads,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,STRUCTURAL_ANALYSIS/CALC-52-10-01-STR-004_Latch_Loads.md
+CALC-52-10-01-STR-005,Composite Laminate,A,2025-11-03,AI_Claude,Pending,Pending,Draft,4,STRUCTURAL_ANALYSIS/CALC-52-10-01-STR-005_Composite_Laminate.md
+CALC-52-10-01-STR-006,Core Shear,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,STRUCTURAL_ANALYSIS/CALC-52-10-01-STR-006_Core_Shear.md
+CALC-52-10-01-STR-007,Edge Bands,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,STRUCTURAL_ANALYSIS/CALC-52-10-01-STR-007_Edge_Bands.md
+CALC-52-10-01-FAT-001,SN Curve Analysis,A,2025-11-03,AI_Claude,Pending,Pending,Draft,3,FATIGUE_DAMAGE_TOLERANCE/CALC-52-10-01-FAT-001_SN_Curve_Analysis.md
+CALC-52-10-01-FAT-002,Spectrum Development,A,2025-11-03,AI_Claude,Pending,Pending,Draft,3,FATIGUE_DAMAGE_TOLERANCE/CALC-52-10-01-FAT-002_Spectrum_Development.md
+CALC-52-10-01-FAT-003,Crack Growth,A,2025-11-03,AI_Claude,Pending,Pending,Draft,3,FATIGUE_DAMAGE_TOLERANCE/CALC-52-10-01-FAT-003_Crack_Growth.md
+CALC-52-10-01-FAT-004,Inspection Intervals,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,FATIGUE_DAMAGE_TOLERANCE/CALC-52-10-01-FAT-004_Inspection_Intervals.md
+CALC-52-10-01-FAT-005,Damage Scenarios,A,2025-11-03,AI_Claude,Pending,Pending,Draft,3,FATIGUE_DAMAGE_TOLERANCE/CALC-52-10-01-FAT-005_Damage_Scenarios.md
+CALC-52-10-01-DYN-001,Natural Frequency,A,2025-11-03,AI_Claude,Pending,Pending,Draft,3,DYNAMIC_ANALYSIS/CALC-52-10-01-DYN-001_Natural_Frequency.md
+CALC-52-10-01-DYN-002,Mode Shapes,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,DYNAMIC_ANALYSIS/CALC-52-10-01-DYN-002_Mode_Shapes.md
+CALC-52-10-01-DYN-003,Resonance Risk,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,DYNAMIC_ANALYSIS/CALC-52-10-01-DYN-003_Resonance_Risk.md
+CALC-52-10-01-DYN-004,Damping Requirements,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,DYNAMIC_ANALYSIS/CALC-52-10-01-DYN-004_Damping_Requirements.md
+CALC-52-10-01-WGT-001,Mass Breakdown,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,WEIGHT_AND_BALANCE/CALC-52-10-01-WGT-001_Mass_Breakdown.md
+CALC-52-10-01-WGT-002,CG Location,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,WEIGHT_AND_BALANCE/CALC-52-10-01-WGT-002_CG_Location.md
+CALC-52-10-01-WGT-003,Inertia Properties,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,WEIGHT_AND_BALANCE/CALC-52-10-01-WGT-003_Inertia_Properties.md
+CALC-52-10-01-THM-001,Temperature Range,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,THERMAL_ANALYSIS/CALC-52-10-01-THM-001_Temperature_Range.md
+CALC-52-10-01-THM-002,Thermal Expansion,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,THERMAL_ANALYSIS/CALC-52-10-01-THM-002_Thermal_Expansion.md
+CALC-52-10-01-THM-003,Seal Performance,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,THERMAL_ANALYSIS/CALC-52-10-01-THM-003_Seal_Performance.md
+CALC-52-10-01-MEC-001,Kinematics,A,2025-11-03,AI_Claude,Pending,Pending,Draft,3,MECHANISMS/CALC-52-10-01-MEC-001_Kinematics.md
+CALC-52-10-01-MEC-002,Actuation Forces,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,MECHANISMS/CALC-52-10-01-MEC-002_Actuation_Forces.md
+CALC-52-10-01-MEC-003,Manual Override,A,2025-11-03,AI_Claude,Pending,Pending,Draft,2,MECHANISMS/CALC-52-10-01-MEC-003_Manual_Override.md

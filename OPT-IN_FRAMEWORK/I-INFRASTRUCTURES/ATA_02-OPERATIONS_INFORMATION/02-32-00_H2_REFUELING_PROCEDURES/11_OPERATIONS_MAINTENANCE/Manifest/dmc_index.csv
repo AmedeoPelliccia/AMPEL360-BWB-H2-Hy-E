@@ -1,0 +1,37 @@
+DMC,Title,Info_Code,Type,Revision,Status,CAOS_Artifact,Location
+AMP-02-32-01-01-100-A.XML,Safety Zone 50m,100,Operating Procedures,001,Initial Release,,02-32-01-00_PRE_REFUELING_PROCEDURES
+AMP-02-32-01-02-100-A.XML,Fire Equipment Positioning,100,Operating Procedures,001,Initial Release,,02-32-01-00_PRE_REFUELING_PROCEDURES
+AMP-02-32-01-03-100-A.XML,Grounding Cable 3milliohm,100,Operating Procedures,001,Initial Release,RTD-02-32-01-03-RESIST-v1.0.yaml,02-32-01-00_PRE_REFUELING_PROCEDURES
+AMP-02-32-01-04-200-A.XML,Leak Detection System Test,200,Maintenance/Servicing,001,Initial Release,,02-32-01-00_PRE_REFUELING_PROCEDURES
+AMP-02-32-01-05-100-A.XML,Vent System Verification,100,Operating Procedures,001,Initial Release,RTD-02-32-01-05-VENT-v1.0.yaml,02-32-01-00_PRE_REFUELING_PROCEDURES
+AMP-02-32-01-06-100-A.XML,Communication Protocol,100,Operating Procedures,001,Initial Release,,02-32-01-00_PRE_REFUELING_PROCEDURES
+AMP-02-32-02-01-100-A.XML,Receptacle Location,100,Operating Procedures,001,Initial Release,,02-32-02-00_CONNECTION_PROCEDURES
+AMP-02-32-02-02-100-A.XML,Connector Coupling,100,Operating Procedures,001,Initial Release,,02-32-02-00_CONNECTION_PROCEDURES
+AMP-02-32-02-03-100-A.XML,Pressure Test 5bar 30sec,100,Operating Procedures,001,Initial Release,RTD-02-32-02-03-PRESS-v1.0.yaml,02-32-02-00_CONNECTION_PROCEDURES
+AMP-02-32-02-04-100-A.XML,Purge Line Connection,100,Operating Procedures,001,Initial Release,,02-32-02-00_CONNECTION_PROCEDURES
+AMP-02-32-02-05-100-A.XML,Cooldown 10min,100,Operating Procedures,001,Initial Release,RTD-02-32-02-05-TEMP-v1.0.yaml,02-32-02-00_CONNECTION_PROCEDURES
+AMP-02-32-02-06-100-A.XML,Connection Verification,100,Operating Procedures,001,Initial Release,DP_02-32-02-06_Connection_Check.json,02-32-02-00_CONNECTION_PROCEDURES
+AMP-02-32-03-01-100-A.XML,Initial Flow 50kg/min,100,Operating Procedures,001,Initial Release,RTD-02-32-03-01-FLOW-v1.0.yaml|NN-02-32-FLOW-PREDICT-v1.0.h5,02-32-03-00_REFUELING_OPERATION
+AMP-02-32-03-02-100-A.XML,Normal Flow 120kg/min,100,Operating Procedures,001,Initial Release,DS_02-32-03-02_Flow_Optimizer.py,02-32-03-00_REFUELING_OPERATION
+AMP-02-32-03-03-100-A.XML,Maximum Flow 180kg/min,100,Operating Procedures,001,Initial Release,,02-32-03-00_REFUELING_OPERATION
+AMP-02-32-03-04-100-A.XML,Tank Filling Sequence,100,Operating Procedures,001,Initial Release,NN-02-32-SEQ-CONTROL-v1.0.h5,02-32-03-00_REFUELING_OPERATION
+AMP-02-32-03-05-100-A.XML,Pressure Monitoring 2.8-3.2bar,100,Operating Procedures,001,Initial Release,RTD-02-32-03-05-PRESS-v1.0.yaml|PA_02-32-03-05_Pressure_Anomaly.py,02-32-03-00_REFUELING_OPERATION
+AMP-02-32-03-06-100-A.XML,Temperature Monitoring -253C,100,Operating Procedures,001,Initial Release,RTD-02-32-03-06-TEMP-v1.0.yaml,02-32-03-00_REFUELING_OPERATION
+AMP-02-32-03-07-100-A.XML,Leak Detection Active,100,Operating Procedures,001,Initial Release,RTD-02-32-03-07-LEAK-v1.0.yaml,02-32-03-00_REFUELING_OPERATION
+AMP-02-32-03-08-100-A.XML,Top Off Final 500kg,100,Operating Procedures,001,Initial Release,DS_02-32-03-08_TopOff_Control.py,02-32-03-00_REFUELING_OPERATION
+AMP-02-32-04-01-100-A.XML,Flow Shutdown Sequence,100,Operating Procedures,001,Initial Release,,02-32-04-00_POST_REFUELING_PROCEDURES
+AMP-02-32-04-02-100-A.XML,Line Purge Nitrogen,100,Operating Procedures,001,Initial Release,,02-32-04-00_POST_REFUELING_PROCEDURES
+AMP-02-32-04-03-100-A.XML,Disconnect Procedure,100,Operating Procedures,001,Initial Release,,02-32-04-00_POST_REFUELING_PROCEDURES
+AMP-02-32-04-04-100-A.XML,Quantity Verification 50kg,100,Operating Procedures,001,Initial Release,RTD-02-32-04-04-QUANT-v1.0.yaml,02-32-04-00_POST_REFUELING_PROCEDURES
+AMP-02-32-04-05-100-A.XML,Final Leak Check,100,Operating Procedures,001,Initial Release,,02-32-04-00_POST_REFUELING_PROCEDURES
+AMP-02-32-04-06-100-A.XML,Documentation Sign-Off,100,Operating Procedures,001,Initial Release,DP_02-32-04-06_Digital_Signoff.json,02-32-04-00_POST_REFUELING_PROCEDURES
+AMP-02-32-05-01-100-E.XML,Emergency Initiation,100,Emergency Procedures,001,Initial Release,,02-32-05-00_EMERGENCY_DEFUELING
+AMP-02-32-05-02-100-E.XML,Rapid Defuel 150kg/min,100,Emergency Procedures,001,Initial Release,RTD-02-32-05-02-FLOW-v1.0.yaml,02-32-05-00_EMERGENCY_DEFUELING
+AMP-02-32-05-03-100-E.XML,Safe Quantity Defuel,100,Emergency Procedures,001,Initial Release,,02-32-05-00_EMERGENCY_DEFUELING
+AMP-02-32-05-04-100-E.XML,Emergency Isolation,100,Emergency Procedures,001,Initial Release,,02-32-05-00_EMERGENCY_DEFUELING
+AMP-02-32-05-05-100-E.XML,Ground Emergency Response,100,Emergency Procedures,001,Initial Release,,02-32-05-00_EMERGENCY_DEFUELING
+AMP-02-32-06-01-000-A.XML,Full Refuel 45min,000,Descriptive,001,Initial Release,,02-32-06-00_REFUELING_TIME_DATA
+AMP-02-32-06-02-000-A.XML,Partial Refuel 25min,000,Descriptive,001,Initial Release,,02-32-06-00_REFUELING_TIME_DATA
+AMP-02-32-06-03-000-A.XML,Setup Time 15min,000,Descriptive,001,Initial Release,,02-32-06-00_REFUELING_TIME_DATA
+AMP-02-32-06-04-000-A.XML,Breakdown Time 10min,000,Descriptive,001,Initial Release,,02-32-06-00_REFUELING_TIME_DATA
+AMP-02-32-06-05-400-A.XML,Turnaround Impact,400,Process Data,001,Initial Release,DS_02-32-06-05_Turnaround_Optimizer.py,02-32-06-00_REFUELING_TIME_DATA

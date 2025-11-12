@@ -1,0 +1,21 @@
+Parameter,Value,Unit,Condition,Notes
+Descent Rate Typical,1500,ft/min,Cruise Desc,Typical descent rate
+Descent Rate Maximum,3000,ft/min,Emergency,Emergency descent rate
+Descent Speed,280-250,KIAS,Variable,Speed schedule descending
+Descent Angle Typical,3,deg,Standard,Standard descent angle
+Fuel Flow Descent,95,kg/hr,Idle,H2 fuel flow in descent
+Distance from FL350,120,nm,Typical,Descent distance to sea level
+Time from FL350,20,min,Typical,Descent time from cruise
+Energy Management,Excellent,qualitative,BWB,Potential to kinetic energy
+Speed Brake Available,Yes,boolean,Standard,Speed brakes for descent control
+Noise Abatement,Standard,procedure,Available,Noise abatement procedures
+Temperature Rise,Minimal,qualitative,H2 System,Minimal temp effects on H2 system
+CG Effect,Minimal,qualitative,Descent,CG effect on descent minimal
+CAOS Descent Planning,Optimized,qualitative,Automated,CAOS optimizes descent path
+Arrival Scheduling,Integrated,qualitative,ATM,Integration with air traffic
+Fuel Savings Optimization,3-5,%,vs Standard,Optimized vs standard descent
+Continuous Descent,Preferred,procedure,When Possible,Continuous descent operations
+BWB Descent Efficiency,Good,qualitative,Low Drag,Low drag in descent
+Approach Preparation,Integrated,qualitative,CAOS,Automated approach preparation
+Emergency Descent Capability,Full,qualitative,Available,Full emergency descent capability
+Pressurization Management,Automated,qualitative,System,Automated cabin pressure control

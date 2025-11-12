@@ -1,0 +1,5 @@
+CR_Number,Date,Requestor,Title,Classification,Status,Priority,Target_Date
+CR-52-10-01-2025-001,2025-11-03,Design_Engineer,Update_seal_material_specification,B,Approved,Medium,2025-11-10
+CR-52-10-01-2025-002,2025-11-04,Safety_Engineer,Add_emergency_release_mechanism,A,In_Review,High,2025-11-20
+CR-52-10-01-2025-003,2025-11-05,Tech_Writer,Correct_documentation_errors,C,Approved,Low,2025-11-08
+CR-52-10-01-2025-004,2025-11-06,Systems_Engineer,Update_interface_requirements,B,Submitted,Medium,2025-11-15

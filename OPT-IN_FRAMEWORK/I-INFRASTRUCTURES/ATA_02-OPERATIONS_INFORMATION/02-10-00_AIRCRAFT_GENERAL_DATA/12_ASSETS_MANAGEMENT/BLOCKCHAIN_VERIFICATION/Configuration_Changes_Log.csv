@@ -1,0 +1,8 @@
+Change_ID,Date,Aircraft_SN,Change_Type,Description,Blockchain_Hash,Approved_By,Status
+CC-MSN001-001,2024-01-15,MSN001,Initial Configuration,Aircraft birth certificate and initial configuration,0x8f3d2a1b5c7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a,Chief Engineer,Committed
+CC-MSN001-002,2024-03-20,MSN001,Equipment Addition,Flight test instrumentation package installed,0x9a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b,Flight Test Director,Committed
+CC-MSN001-003,2024-05-10,MSN001,Software Update,Avionics software upgrade to v2.1.0,0x1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b,Avionics Lead,Committed
+CC-MSN001-004,2024-07-15,MSN001,Weight Change,Additional test equipment - weight increased 500kg,0x2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c,Weight Engineer,Committed
+CC-MSN001-005,2024-09-01,MSN001,Modification,Hydrogen leak detection system upgrade,0x3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d,Systems Engineer,Committed
+CC-MSN001-006,2024-11-05,MSN001,Equipment Removal,Temporary test equipment removed - weight reduced 300kg,0x4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e,Flight Test Engineer,Committed
+CC-MSN002-001,2024-06-01,MSN002,Initial Configuration,Aircraft birth certificate and initial configuration,0x9f4e3b2c6d8f0a2b4d6e8f0a2c4e6f8a0b2d4e6f,Chief Engineer,Committed

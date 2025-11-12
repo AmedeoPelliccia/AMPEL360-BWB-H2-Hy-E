@@ -1,0 +1,17 @@
+Weight_Category,Value_kg,Condition,CG_Position_MAC,Notes
+Maximum_Ramp_Weight,185500,Includes taxi fuel,—,Before taxi
+Maximum_Takeoff_Weight,185000,At brake release,—,MTOW
+Maximum_Landing_Weight,150000,Structural limit,—,MLW
+Maximum_Zero_Fuel_Weight,140000,Payload + OEW,—,MZFW
+Operating_Empty_Weight,95000,As equipped,28%,Typical OEW CG
+Center_Tank_1_Capacity,2500,Forward center body,—,H₂ fuel
+Center_Tank_2_Capacity,2000,Aft center body,—,H₂ fuel
+Left_Outboard_Tank,1750,Left wing,—,H₂ fuel
+Right_Outboard_Tank,1750,Right wing,—,H₂ fuel
+Total_Usable_Fuel,8000,All tanks,—,H₂ cryogenic
+Maximum_Structural_Payload,45000,PAX + cargo,—,—
+Forward_CG_Limit,—,—,15%,MAC
+Aft_CG_Limit,—,—,42%,MAC
+Normal_CG_Range_Start,—,—,25%,MAC
+Normal_CG_Range_End,—,—,38%,MAC
+Usable_CG_Range,—,—,27%,vs 20% conventional

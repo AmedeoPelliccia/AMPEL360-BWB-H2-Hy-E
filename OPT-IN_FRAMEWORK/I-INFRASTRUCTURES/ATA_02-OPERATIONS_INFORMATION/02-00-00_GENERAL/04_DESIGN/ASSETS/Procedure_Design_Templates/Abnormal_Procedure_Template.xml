@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure xmlns="http://www.ampel360.aero/procedures" version="1.0">
+  <header>
+    <title>ABNORMAL CONDITION TITLE</title>
+    <procedureId>XX-XX-XX</procedureId>
+    <procedureType>Abnormal</procedureType>
+    <revision>1.0</revision>
+    <effectiveDate>YYYY-MM-DD</effectiveDate>
+  </header>
+  
+  <applicability>
+    <aircraftType>AMPEL360 BWB H&#8322; Hy-E Q100</aircraftType>
+  </applicability>
+  
+  <condition>
+    <symptoms>
+      <symptom>Observable symptom 1</symptom>
+      <symptom>Observable symptom 2</symptom>
+      <symptom>System indication</symptom>
+    </symptoms>
+  </condition>
+  
+  <immediateActions required="false">
+    <note>If immediate actions are time-critical, they become memory items</note>
+  </immediateActions>
+  
+  <subsequentActions>
+    <section title="Verification">
+      <step number="1">
+        <subject>System/Component</subject>
+        <action>Verify condition</action>
+        <verification>Expected indication</verification>
+      </step>
+    </section>
+    
+    <section title="Diagnosis">
+      <step number="2">
+        <subject>System/Component</subject>
+        <action>Identify source of problem</action>
+        <verification>Isolate affected system</verification>
+      </step>
+    </section>
+    
+    <section title="Corrective Actions">
+      <step number="3">
+        <subject>System/Component</subject>
+        <action>Corrective action to take</action>
+        <verification>Verify correction</verification>
+      </step>
+      
+      <step number="4">
+        <subject>System/Component</subject>
+        <action>Additional corrective action</action>
+        <verification>Verify system returns to normal</verification>
+      </step>
+    </section>
+    
+    <section title="Monitoring">
+      <step number="5">
+        <subject>System/Component</subject>
+        <action>Continue monitoring affected system</action>
+        <verification>Parameters remain normal</verification>
+      </step>
+    </section>
+  </subsequentActions>
+  
+  <landingConsiderations>
+    <consideration>If condition persists: LAND AS SOON AS PRACTICAL</consideration>
+    <consideration>Performance impact assessment required</consideration>
+    <consideration>Notify maintenance of condition</consideration>
+  </landingConsiderations>
+  
+  <notes>
+    <note type="caution">
+      <content>⚠ System may have reduced capability or redundancy</content>
+    </note>
+    <note type="information">
+      <content>Additional considerations or background information</content>
+    </note>
+  </notes>
+  
+  <caos>
+    <support enabled="true">
+      <automation level="2">CAOS provides diagnostic assistance and landing planning support</automation>
+      <diagnostics>
+        <diagnostic>Fault isolation assistance</diagnostic>
+        <diagnostic>System impact analysis</diagnostic>
+        <diagnostic>Landing site recommendations</diagnostic>
+      </diagnostics>
+    </support>
+  </caos>
+  
+  <references>
+    <reference>Related emergency procedure: XX-XX-XX</reference>
+    <reference>System description: ATA XX</reference>
+    <reference>MEL reference: MEL-XX-XX</reference>
+  </references>
+</procedure>

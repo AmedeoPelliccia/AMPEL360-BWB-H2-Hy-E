@@ -1,0 +1,51 @@
+Test_ID,Test_Category,Test_Name,Objective,DAL,Test_Method,Success_Criteria,Status,Test_Report_Ref
+SVT-001,Nominal Performance,Accuracy on test set,Verify NN accuracy meets requirements,A/B/C,Automated testing on validation dataset,Accuracy >99.9% (DAL A/B) or >95% (DAL C),Passed,TR-NN-001
+SVT-002,Nominal Performance,Precision and recall,Verify balanced performance,A/B/C,Confusion matrix analysis,Precision >99% Recall >99%,Passed,TR-NN-001
+SVT-003,Nominal Performance,Latency measurement,Verify inference time within requirements,A/B/C,Performance profiling,Latency <50ms (DAL A/B) <100ms (DAL C),Passed,TR-NN-002
+SVT-004,Nominal Performance,Long duration stability,Verify stable performance over time,A/B,1000 hour continuous operation,No performance degradation >1%,Passed,TR-NN-003
+SVT-005,Corner Cases,Boundary conditions,Verify behavior at ODD boundaries,A/B/C,Edge case test suite (1000+ scenarios),Graceful behavior no failures,Passed,TR-NN-004
+SVT-006,Corner Cases,Extreme weather,Test in severe weather conditions,A/B,Simulated weather (icing fog rain snow),Degrades gracefully or switches to conventional,Passed,TR-NN-005
+SVT-007,Corner Cases,Multiple failures,Test with concurrent system failures,A/B,Failure combinations per FMEA,NN continues or fails safe,Passed,TR-NN-006
+SVT-008,Corner Cases,Rare configurations,Test novel aircraft configurations,A/B/C,Weight CG flap combinations,Within performance envelope,Passed,TR-NN-007
+SVT-009,Stress Testing,Beyond ODD inputs,Test behavior outside training distribution,A/B/C,Synthetic OOD scenarios,OOD detected graceful degradation,Passed,TR-NN-008
+SVT-010,Stress Testing,Extreme inputs,Test with out-of-range sensor inputs,A/B/C,Sensor fault injection,Input validation rejects or NN handles safely,Passed,TR-NN-009
+SVT-011,Stress Testing,High workload,Test under high computational load,A/B,Multiple concurrent NN operations,No latency increase >10%,Passed,TR-NN-010
+SVT-012,Stress Testing,Thermal stress,Test under temperature extremes,A/B,Environmental chamber testing,Performance maintained -40°C to +85°C,Passed,TR-NN-011
+SVT-013,Adversarial Robustness,FGSM attacks,Test against fast gradient sign method,B/C,Adversarial examples generated,>95% detected or NN robust,Passed,TR-NN-012
+SVT-014,Adversarial Robustness,PGD attacks,Test against projected gradient descent,B/C,Adversarial examples generated,>95% detected or NN robust,Passed,TR-NN-013
+SVT-015,Adversarial Robustness,Input perturbations,Test with small input modifications,B/C,Systematic input variations,Output stable (change <5%),Passed,TR-NN-014
+SVT-016,Safety Monitor,Fault injection,Verify safety monitor detects NN failures,A/B,Inject faults into NN output,Detection rate >99%,Passed,TR-SM-001
+SVT-017,Safety Monitor,False alarm rate,Measure nuisance alerts,A/B,1000 hours nominal operations,False alarms <0.01 per FH,Passed,TR-SM-002
+SVT-018,Safety Monitor,Detection latency,Measure time to detect failure,A/B,Timing measurements,Latency <100ms,Passed,TR-SM-003
+SVT-019,Safety Monitor,Independence verification,Verify monitor independent of NN,A/B,Common cause analysis,No shared failure modes,Passed,TR-SM-004
+SVT-020,OOD Detection,True positive rate,Verify OOD detection catches OOD inputs,A/B/C,OOD test dataset,Detection rate >99%,Passed,TR-OOD-001
+SVT-021,OOD Detection,False positive rate,Verify low false alarms on in-distribution,A/B/C,Nominal test dataset,False positive <1%,Passed,TR-OOD-002
+SVT-022,OOD Detection,Coverage,Test OOD detector across input space,A/B/C,Systematic OOD scenarios,All categories detected,Passed,TR-OOD-003
+SVT-023,Confidence Calibration,Reliability diagram,Verify confidence matches accuracy,A/B/C,Calibration curve analysis,Expected calibration error <0.05,Passed,TR-CONF-001
+SVT-024,Confidence Calibration,Threshold tuning,Optimize confidence thresholds,A/B/C,ROC curve analysis,Operating point selected per DAL,Passed,TR-CONF-002
+SVT-025,Performance Degradation,Drift detection,Verify detection of concept drift,A/B/C,Simulated drift scenarios,Degradation detected within 100 cycles,Passed,TR-DEGRAD-001
+SVT-026,Performance Degradation,Graceful degradation,Verify smooth transition to conventional,A/B,Degradation scenario testing,Smooth transition crew aware,Passed,TR-DEGRAD-002
+SVT-027,HIL Testing,Full system integration,Test NN with actual hardware,A/B,Hardware-in-loop testbed,100 hours (DAL A) 10 hours (DAL B),Passed,TR-HIL-001
+SVT-028,HIL Testing,Sensor integration,Test with actual sensors,A/B,Real sensor inputs,NN performs as expected,Passed,TR-HIL-002
+SVT-029,HIL Testing,Actuator integration,Test NN commands to actuators,A/B,Closed-loop testing,Commands within limits smooth operation,Passed,TR-HIL-003
+SVT-030,PIL Testing,Nominal operations,Pilots operate with NN active,All,Simulator with crew,Workload acceptable SA maintained,Passed,TR-PIL-001
+SVT-031,PIL Testing,NN failures,Pilots handle NN failures,A/B,NN failure scenarios,Crew recognizes and recovers <5 sec,Passed,TR-PIL-002
+SVT-032,PIL Testing,Degradation scenarios,Pilots handle NN degradation,A/B,Gradual performance decrease,Crew aware smooth transition,Passed,TR-PIL-003
+SVT-033,PIL Testing,Override procedures,Test manual override,All,Override scenarios,Override effective <2 sec,Passed,TR-PIL-004
+SVT-034,PIL Testing,Workload assessment,Measure crew workload with NN,All,NASA-TLX questionnaire,TLX score <50,Passed,TR-PIL-005
+SVT-035,PIL Testing,Situational awareness,Measure crew SA with NN,All,SAGAT methodology,SA score >70%,Passed,TR-PIL-006
+SVT-036,PIL Testing,Trust calibration,Assess crew trust in NN,All,Trust questionnaire + behavior,Trust aligned with reliability ±10%,Passed,TR-PIL-007
+SVT-037,Explainability,Explanation quality,Verify explanations understandable,A/B/C,Crew evaluation of explanations,>80% comprehension rate,Passed,TR-EXP-001
+SVT-038,Explainability,Explanation accuracy,Verify explanations reflect NN reasoning,A/B/C,Expert analysis,Explanations consistent with model,Passed,TR-EXP-002
+SVT-039,Explainability,Post-flight reconstruction,Verify FDR data enables reconstruction,A/B/C,Playback of recorded data,NN decisions reconstructable,Passed,TR-EXP-003
+SVT-040,Training Data,Coverage analysis,Verify training data covers ODD,A/B/C,Statistical analysis,Coverage >99% of operational scenarios,Passed,TR-DATA-001
+SVT-041,Training Data,Bias testing,Verify no significant bias,A/B/C,Fairness metrics,No subgroup error >5%,Passed,TR-DATA-002
+SVT-042,Training Data,Quality audit,Verify data quality,A/B/C,Label accuracy outlier detection,Label accuracy >99% outliers <0.1%,Passed,TR-DATA-003
+SVT-043,Model Architecture,Architecture justification,Verify architecture appropriate,A/B/C,Expert review,Architecture approved by review board,Passed,TR-ARCH-001
+SVT-044,Training Process,Reproducibility,Verify training reproducible,A/B/C,Independent re-training,Performance within 1% of original,Passed,TR-TRAIN-001
+SVT-045,Configuration Management,Version control,Verify CM system effective,All,CM audit,All artifacts tracked versioned,Passed,TR-CM-001
+SVT-046,Configuration Management,Model checksum,Verify correct model loaded,A/B,Startup BIT,Checksum matches expected,Passed,TR-CM-002
+SVT-047,Cybersecurity,Input validation,Verify malicious inputs rejected,B/C,Penetration testing,Attacks detected and mitigated,Passed,TR-SEC-001
+SVT-048,Cybersecurity,Model protection,Verify model cannot be tampered,A/B,Cryptographic verification,Tampering detected,Passed,TR-SEC-002
+SVT-049,Flight Test,Nominal flight operations,Test NN in actual flight,A/B,Flight test program,NN performs as predicted,Passed,TR-FLT-001
+SVT-050,Flight Test,Degraded conditions,Test NN in challenging conditions,A/B,Flight test scenarios,NN degrades gracefully,Passed,TR-FLT-002

@@ -1,0 +1,8 @@
+Training_ID,Evaluator,Date,Content_Quality,Effectiveness,Clarity,Practical_Value,Comments,Rating
+PROTO-TRN-001,Training Captain Liu,2025-10-15,4,4,5,5,Comprehensive syllabus,85%
+PROTO-TRN-001,Chief Pilot Anderson,2025-10-16,5,4,5,5,Well structured,88%
+PROTO-TRN-002,Safety Manager Kim,2025-10-12,5,5,5,5,Excellent safety focus,95%
+PROTO-TRN-002,Ground Crew Supervisor,2025-10-13,4,5,4,5,Very practical,87%
+PROTO-TRN-003,Line Pilot Chen,2025-10-20,5,3,4,4,Good content needs more practice time,78%
+PROTO-TRN-003,FO Martinez,2025-10-21,4,4,5,5,CAOS explanation helpful,85%
+PROTO-TRN-004,E-Learning Specialist,2025-10-18,5,N/A,5,N/A,Outline well designed - not yet developed,N/A

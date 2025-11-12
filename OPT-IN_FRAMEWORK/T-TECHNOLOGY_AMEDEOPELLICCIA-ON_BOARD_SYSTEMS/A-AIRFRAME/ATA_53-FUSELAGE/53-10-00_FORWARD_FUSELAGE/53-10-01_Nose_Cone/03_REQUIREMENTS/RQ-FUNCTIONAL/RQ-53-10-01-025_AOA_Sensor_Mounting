@@ -1,0 +1,16 @@
+# RQ-53-10-01-025: AOA Sensor Mounting
+
+## Requirement Statement
+The nose cone shall provide mounting provisions for 3 angle-of-attack (AOA) vanes.
+
+## Acceptance Criteria
+- 3 AOA vane locations on nose sides
+- 500mm minimum separation
+- Heated vanes (anti-ice)
+- Position in undisturbed airflow
+
+## Compliance Status
+Design complete, flight test validation planned
+
+## Traceability
+Parent: ATA 34 (Air Data System)

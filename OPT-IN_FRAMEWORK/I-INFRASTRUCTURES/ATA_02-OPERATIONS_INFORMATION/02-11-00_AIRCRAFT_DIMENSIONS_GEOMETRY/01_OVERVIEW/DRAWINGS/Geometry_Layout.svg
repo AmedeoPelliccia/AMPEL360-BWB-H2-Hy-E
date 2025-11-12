@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <title>AMPEL360 BWB H₂ - Geometry Layout</title>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-size="20" font-weight="bold" text-anchor="middle">AMPEL360 BWB H₂ - Geometry Layout</text>
+  <text x="600" y="60" font-size="12" text-anchor="middle">Reference Systems and Key Geometric Parameters</text>
+  
+  <!-- Main aircraft outline (top view) -->
+  <g id="aircraft-outline">
+    <!-- Center body -->
+    <path d="M 600,200 Q 550,220 500,270 Q 450,320 420,380 L 360,450 L 420,520 Q 450,580 500,630 Q 550,680 600,700 
+             Q 650,680 700,630 Q 750,580 780,520 L 840,450 L 780,380 Q 750,320 700,270 Q 650,220 600,200 Z" 
+          fill="lightblue" fill-opacity="0.15" stroke="black" stroke-width="2"/>
+  </g>
+  
+  <!-- Coordinate system axes -->
+  <g id="axes">
+    <!-- X-axis (Station) -->
+    <line x1="600" y1="100" x2="600" y2="800" stroke="red" stroke-width="2" marker-end="url(#arrowRed)"/>
+    <text x="610" y="750" font-size="12" fill="red" font-weight="bold">+X (STA)</text>
+    <text x="610" y="765" font-size="10" fill="red">Forward →</text>
+    
+    <!-- Y-axis (Buttline) -->
+    <line x1="200" y1="450" x2="1000" y2="450" stroke="blue" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <text x="920" y="440" font-size="12" fill="blue" font-weight="bold">+Y (BL)</text>
+    <text x="920" y="455" font-size="10" fill="blue">Right →</text>
+    
+    <!-- Origin marker -->
+    <circle cx="600" cy="200" r="8" fill="red" stroke="white" stroke-width="2"/>
+    <text x="610" y="190" font-size="11" fill="red" font-weight="bold">Origin (0,0,0)</text>
+    <text x="610" y="205" font-size="9" fill="red">STA 0, BL 0, WL 0</text>
+  </g>
+  
+  <!-- Station markers -->
+  <g id="stations">
+    <line x1="580" y1="300" x2="620" y2="300" stroke="red" stroke-width="1.5"/>
+    <text x="625" y="305" font-size="9" fill="red">STA 10</text>
+    
+    <line x1="580" y1="400" x2="620" y2="400" stroke="red" stroke-width="1.5"/>
+    <text x="625" y="405" font-size="9" fill="red">STA 20</text>
+    
+    <line x1="580" y1="500" x2="620" y2="500" stroke="red" stroke-width="1.5"/>
+    <text x="625" y="505" font-size="9" fill="red">STA 30</text>
+    
+    <line x1="580" y1="700" x2="620" y2="700" stroke="red" stroke-width="1.5"/>
+    <text x="625" y="705" font-size="9" fill="red">STA 38.2</text>
+  </g>
+  
+  <!-- Buttline markers -->
+  <g id="buttlines">
+    <line x1="360" y1="430" x2="360" y2="470" stroke="blue" stroke-width="1.5"/>
+    <text x="365" y="425" font-size="9" fill="blue">BL -26</text>
+    
+    <line x1="420" y1="430" x2="420" y2="470" stroke="blue" stroke-width="1.5"/>
+    <text x="425" y="425" font-size="9" fill="blue">BL -19</text>
+    
+    <line x1="500" y1="430" x2="500" y2="470" stroke="blue" stroke-width="1.5"/>
+    <text x="505" y="425" font-size="9" fill="blue">BL -10</text>
+    
+    <line x1="700" y1="430" x2="700" y2="470" stroke="blue" stroke-width="1.5"/>
+    <text x="655" y="425" font-size="9" fill="blue">BL +10</text>
+    
+    <line x1="780" y1="430" x2="780" y2="470" stroke="blue" stroke-width="1.5"/>
+    <text x="735" y="425" font-size="9" fill="blue">BL +19</text>
+    
+    <line x1="840" y1="430" x2="840" y2="470" stroke="blue" stroke-width="1.5"/>
+    <text x="795" y="425" font-size="9" fill="blue">BL +26</text>
+  </g>
+  
+  <!-- Key dimensions -->
+  <g id="dimensions">
+    <!-- Wingspan -->
+    <line x1="360" y1="500" x2="840" y2="500" stroke="green" stroke-width="2"/>
+    <line x1="360" y1="495" x2="360" y2="505" stroke="green" stroke-width="2"/>
+    <line x1="840" y1="495" x2="840" y2="505" stroke="green" stroke-width="2"/>
+    <text x="600" y="520" font-size="12" fill="green" font-weight="bold" text-anchor="middle">Wingspan: 52.0 m</text>
+    
+    <!-- Length -->
+    <line x1="620" y1="200" x2="620" y2="700" stroke="purple" stroke-width="2"/>
+    <line x1="615" y1="200" x2="625" y2="200" stroke="purple" stroke-width="2"/>
+    <line x1="615" y1="700" x2="625" y2="700" stroke="purple" stroke-width="2"/>
+    <text x="640" y="450" font-size="12" fill="purple" font-weight="bold">Length: 38.2 m</text>
+  </g>
+  
+  <!-- MAC indication -->
+  <g id="mac">
+    <line x1="500" y1="300" x2="500" y2="525" stroke="brown" stroke-width="2.5" stroke-dasharray="5,3"/>
+    <circle cx="500" cy="412" r="6" fill="brown"/>
+    <text x="470" y="415" font-size="10" fill="brown" font-weight="bold">MAC</text>
+    <text x="455" y="430" font-size="9" fill="brown">22.5 m</text>
+    <text x="445" y="445" font-size="9" fill="brown">BL ±8.5</text>
+  </g>
+  
+  <!-- Center body highlight -->
+  <rect x="420" y="270" width="360" height="360" fill="yellow" fill-opacity="0.1" stroke="orange" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="600" y="260" font-size="11" fill="orange" font-weight="bold" text-anchor="middle">Center Body</text>
+  <text x="600" y="275" font-size="9" fill="orange" text-anchor="middle">38.0 m × 28.5 m</text>
+  
+  <!-- Reference table -->
+  <g id="reference-table" transform="translate(50, 750)">
+    <rect x="0" y="0" width="500" height="120" fill="white" stroke="black" stroke-width="1"/>
+    <text x="10" y="20" font-size="12" font-weight="bold">Reference Coordinate System:</text>
+    
+    <text x="10" y="40" font-size="10" font-weight="bold">Body Axis System (Right-Hand):</text>
+    <text x="20" y="55" font-size="9">• X-axis: Forward positive (Stations)</text>
+    <text x="20" y="70" font-size="9">• Y-axis: Right wing positive (Buttlines)</text>
+    <text x="20" y="85" font-size="9">• Z-axis: Down positive (Waterlines, not shown in top view)</text>
+    
+    <text x="10" y="105" font-size="10" font-weight="bold">Origin:</text>
+    <text x="20" y="118" font-size="9">Nose apex at (STA 0, BL 0, WL 0)</text>
+  </g>
+  
+  <!-- Key parameters table -->
+  <g id="parameters-table" transform="translate(600, 750)">
+    <rect x="0" y="0" width="550" height="120" fill="white" stroke="black" stroke-width="1"/>
+    <text x="10" y="20" font-size="12" font-weight="bold">Key Geometric Parameters:</text>
+    
+    <text x="10" y="40" font-size="9">Wingspan: 52.0 m | Length: 38.2 m | Height: 14.5 m</text>
+    <text x="10" y="54" font-size="9">Wing Area: 845 m² | Aspect Ratio: 3.2 | Wetted Area: 1850 m²</text>
+    <text x="10" y="68" font-size="9">Root Chord: 35.0 m | Tip Chord: 3.5 m | MAC: 22.5 m</text>
+    <text x="10" y="82" font-size="9">LE Sweep: 37° | c/4 Sweep: 32° | Dihedral: 3° (avg)</text>
+    <text x="10" y="96" font-size="9">Center Body: 38.0 m width × 28.5 m length</text>
+    <text x="10" y="110" font-size="9">ICAO Code: E | Compatible with 500+ airports worldwide</text>
+  </g>
+  
+  <!-- Drawing info -->
+  <rect x="950" y="100" width="230" height="90" fill="white" stroke="black" stroke-width="1"/>
+  <text x="960" y="120" font-size="11" font-weight="bold">AMPEL360 BWB H₂</text>
+  <text x="960" y="135" font-size="10">Geometry Layout</text>
+  <text x="960" y="150" font-size="9">Doc: AMPEL360-02-11-00-DWG-004</text>
+  <text x="960" y="163" font-size="9">Version: 1.0.0</text>
+  <text x="960" y="176" font-size="9">Date: 2025-11-06</text>
+  <text x="960" y="185" font-size="8">Scale: NTS</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="red"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="blue"/>
+    </marker>
+  </defs>
+</svg>

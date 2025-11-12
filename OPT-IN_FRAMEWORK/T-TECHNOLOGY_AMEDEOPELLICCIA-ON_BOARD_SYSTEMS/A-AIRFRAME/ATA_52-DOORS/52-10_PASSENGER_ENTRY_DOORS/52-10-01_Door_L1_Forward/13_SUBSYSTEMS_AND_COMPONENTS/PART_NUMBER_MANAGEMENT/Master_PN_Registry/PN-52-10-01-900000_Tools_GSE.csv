@@ -1,0 +1,8 @@
+Part_Number,Description,Tool_Type,Calibration_Required,Calibration_Interval_Months,Unit_Cost_EUR,Supplier
+PN-52-10-01-901001,Door_Alignment_Jig,Positioning_Tool,Yes,12,4250,ToolTech_GmbH
+PN-52-10-01-901002,Seal_Installation_Tool,Hand_Tool,No,N/A,285,SealDynamics_Inc
+PN-52-10-01-901003,Hinge_Pin_Removal_Tool,Special_Tool,No,N/A,195,TitanHinge_Systems
+PN-52-10-01-901004,Latch_Adjustment_Gauge,Measurement_Tool,Yes,6,820,LatchTech_GmbH
+PN-52-10-01-901005,Pressure_Test_Kit,Test_Equipment,Yes,12,2850,AeroTest_Systems
+PN-52-10-01-901006,Electrical_Test_Set,Electronic_Tester,Yes,6,5600,AvionicsTest_Corp
+PN-52-10-01-901007,Torque_Wrench_Set,Hand_Tool,Yes,12,650,PrecisionTools_Ltd

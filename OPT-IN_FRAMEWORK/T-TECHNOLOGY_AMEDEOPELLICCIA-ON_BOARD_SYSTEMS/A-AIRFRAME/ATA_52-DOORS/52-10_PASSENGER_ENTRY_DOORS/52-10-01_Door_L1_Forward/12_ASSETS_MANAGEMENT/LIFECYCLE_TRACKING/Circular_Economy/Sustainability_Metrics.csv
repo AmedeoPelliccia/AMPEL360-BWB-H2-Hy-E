@@ -1,0 +1,11 @@
+Material,Recyclability_Percentage,Recovery_Method,CO2_Saved_per_kg,Economic_Value_per_kg,Circular_Score
+CFRP,85,Pyrolysis,45.0,35.00,8.5
+Nomex_Core,60,Chemical_Solvolysis,12.0,18.00,6.0
+Titanium,100,VAR_Remelting,18.0,45.00,10.0
+Aluminum,100,Remelt_Casting,9.0,2.50,10.0
+Electronics,75,Urban_Mining,8.5,450.00,7.5
+Seals_Rubber,30,Energy_Recovery,2.1,0.00,3.0
+Adhesives,40,Thermal_Treatment,5.5,0.00,4.0
+Paint_Coating,50,Chemical_Strip,3.2,0.00,5.0
+Fasteners_Steel,100,Magnetic_Separation,7.8,1.20,10.0
+Insulation,45,Mechanical_Grinding,1.5,0.50,4.5

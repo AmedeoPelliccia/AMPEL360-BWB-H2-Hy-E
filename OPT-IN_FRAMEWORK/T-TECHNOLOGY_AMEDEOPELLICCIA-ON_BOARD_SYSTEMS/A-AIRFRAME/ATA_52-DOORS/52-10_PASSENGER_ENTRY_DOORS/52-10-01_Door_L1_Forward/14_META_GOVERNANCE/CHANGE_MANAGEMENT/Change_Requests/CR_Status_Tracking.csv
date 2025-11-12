@@ -1,0 +1,5 @@
+CR_Number,Status,Submitted,In_Review,Approved,Implemented,Closed,Current_Owner
+CR-52-10-01-2025-001,Implemented,2025-11-03,2025-11-03,2025-11-03,2025-11-08,Pending,Design_Engineer
+CR-52-10-01-2025-002,In_Review,2025-11-04,2025-11-04,Pending,Pending,Pending,Safety_Engineer
+CR-52-10-01-2025-003,Approved,2025-11-05,2025-11-05,2025-11-06,Pending,Pending,Tech_Writer
+CR-52-10-01-2025-004,Submitted,2025-11-06,Pending,Pending,Pending,Pending,Systems_Engineer

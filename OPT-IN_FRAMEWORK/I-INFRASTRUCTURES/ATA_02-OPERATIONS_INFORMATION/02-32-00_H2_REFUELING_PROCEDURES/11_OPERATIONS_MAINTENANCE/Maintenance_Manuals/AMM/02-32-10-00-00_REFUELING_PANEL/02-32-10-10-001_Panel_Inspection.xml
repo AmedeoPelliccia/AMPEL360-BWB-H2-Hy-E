@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/procedural.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02"
+                subSystemCode="3" subSubSystemCode="2" assyCode="10"
+                disassyCode="10" disassyCodeVariant="00" infoCode="520"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="04"/>
+        <dmTitle>
+          <techName>H2 REFUELING PANEL - INSPECTION</techName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="aircraft" applicPropertyType="prodattr"
+                  applicPropertyValues="AMPEL360"/>
+        </applic>
+      </applicability>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <description>
+      <levelledPara>
+        <title>GENERAL</title>
+        <para>This procedure provides visual and functional inspection of the H2 refueling 
+              panel assembly. Inspection interval: 1000 flight hours or 12 months, 
+              whichever occurs first.</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>PERSONNEL REQUIREMENTS</title>
+        <para>1 technician (Mechanic certified)</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TIME REQUIRED</title>
+        <para>30 minutes</para>
+      </levelledPara>
+
+      <levelledPara>
+        <title>TOOLS AND EQUIPMENT</title>
+        <para>
+          <randomList>
+            <listItem><para>Flashlight</para></listItem>
+            <listItem><para>Mirror (inspection)</para></listItem>
+            <listItem><para>Clean, lint-free cloths</para></listItem>
+            <listItem><para>Safety glasses</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="RC001"/>
+            <reqCondText>Aircraft secured, parking brake set</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="RC002"/>
+            <reqCondText>H2 tanks defueled (for thorough inspection)</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </preliminaryRqmts>
+
+      <mainProcedure>
+        <proceduralStep id="step01">
+          <para>Don safety glasses.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step02">
+          <para>Locate refueling panel. Position: Forward fuselage, left side, 
+                station 180, 1.5 meters above ground level.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step03">
+          <para>EXTERNAL INSPECTION - Panel Door</para>
+          <para>Inspect panel door for:</para>
+          <para>
+            <randomList>
+              <listItem><para>Dents, cracks, or deformation</para></listItem>
+              <listItem><para>Paint condition and corrosion</para></listItem>
+              <listItem><para>Placard legibility ("H2 FUEL - DANGER")</para></listItem>
+              <listItem><para>Door hinge condition and smooth operation</para></listItem>
+              <listItem><para>Lock mechanism functionality</para></listItem>
+              <listItem><para>Weather seal condition (no tears, compression set)</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step04">
+          <para>Open panel door fully (90 degrees).</para>
+          <para>Verify door stays open without support.</para>
+          <para>Check door damper operation (should open smoothly, not slam).</para>
+        </proceduralStep>
+
+        <proceduralStep id="step05">
+          <para>INTERNAL INSPECTION - Receptacle Area</para>
+          <para>Inspect refueling receptacle for:</para>
+          <para>
+            <randomList>
+              <listItem><para>Contamination (dirt, oil, FOD)</para></listItem>
+              <listItem><para>Ice or frost formation (indicates leak)</para></listItem>
+              <listItem><para>Corrosion on receptacle body</para></listItem>
+              <listItem><para>Damage to coupling mechanism</para></listItem>
+              <listItem><para>Dust cap present and serviceable (if installed)</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step06">
+          <para>INSPECTION - Status Indicators</para>
+          <para>Panel includes LED status indicators. Verify:</para>
+          <para>
+            <randomList>
+              <listItem><para>Green "READY" LED - visible and not damaged</para></listItem>
+              <listItem><para>Red "FAULT" LED - visible and not damaged</para></listItem>
+              <listItem><para>Blue "REFUELING" LED - visible and not damaged</para></listItem>
+              <listItem><para>LED lenses clean and not cracked</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step07">
+          <para>INSPECTION - Wiring and Connectors</para>
+          <para>Inspect visible wiring for:</para>
+          <para>
+            <randomList>
+              <listItem><para>Chafing or abrasion</para></listItem>
+              <listItem><para>Loose or disconnected connectors</para></listItem>
+              <listItem><para>Cracked or deteriorated insulation</para></listItem>
+              <listItem><para>Proper routing and clamping</para></listItem>
+              <listItem><para>Corrosion on terminals</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step08">
+          <para>INSPECTION - Grounding Point</para>
+          <para>Locate grounding point adjacent to panel (marked with yellow triangle).</para>
+          <para>Inspect for:</para>
+          <para>
+            <randomList>
+              <listItem><para>Corrosion or oxidation</para></listItem>
+              <listItem><para>Secure mounting</para></listItem>
+              <listItem><para>Clean contact surface</para></listItem>
+              <listItem><para>Bonding strap integrity</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step09">
+          <para>FUNCTIONAL TEST - Door Interlock</para>
+          <para>Close panel door partially (45 degrees).</para>
+          <para>Attempt to initiate refueling from ground equipment (if available) or 
+                check CAOS system status.</para>
+          <para>Verify refueling is INHIBITED with door not fully closed.</para>
+          <para>Open door fully again.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step10">
+          <para>CLEANING (if required)</para>
+          <para>Clean panel door exterior with damp cloth.</para>
+          <para>Clean receptacle area with clean, dry, lint-free cloth only.</para>
+          <caution>
+            <warningAndCautionPara>
+              Do NOT use solvents, lubricants, or cleaners inside receptacle area. 
+              May contaminate seals or create combustion hazard.
+            </warningAndCautionPara>
+          </caution>
+        </proceduralStep>
+
+        <proceduralStep id="step11">
+          <para>DEFECT RECORDING</para>
+          <para>If any defects found:</para>
+          <para>
+            <sequentialList>
+              <listItem>
+                <para>Photograph defect for maintenance records</para>
+              </listItem>
+              <listItem>
+                <para>Record in aircraft maintenance log</para>
+              </listItem>
+              <listItem>
+                <para>Tag panel with "DO NOT OPERATE - MAINTENANCE REQUIRED" if defect 
+                      affects safety or operation</para>
+              </listItem>
+              <listItem>
+                <para>Initiate work order for corrective maintenance</para>
+              </listItem>
+            </sequentialList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step12">
+          <para>Close and secure panel door.</para>
+          <para>Verify locking mechanism engages properly.</para>
+        </proceduralStep>
+
+        <proceduralStep id="step13">
+          <para>Complete maintenance record entry with:</para>
+          <para>
+            <randomList>
+              <listItem><para>Inspection date and aircraft flight hours</para></listItem>
+              <listItem><para>Inspection results (SERVICEABLE or defects noted)</para></listItem>
+              <listItem><para>Any corrective action required</para></listItem>
+              <listItem><para>Next inspection due (1000 FH or 12 months)</para></listItem>
+              <listItem><para>Technician name and certificate number</para></listItem>
+            </randomList>
+          </para>
+        </proceduralStep>
+
+        <proceduralStep id="step14">
+          <para>Update CAOS maintenance tracking system.</para>
+        </proceduralStep>
+      </mainProcedure>
+
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+          <reqCond>
+            <reqCondIdent id="CL001"/>
+            <reqCondText>Panel inspection complete with no unresolved defects</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL002"/>
+            <reqCondText>Panel door closed and secured</reqCondText>
+          </reqCond>
+          <reqCond>
+            <reqCondIdent id="CL003"/>
+            <reqCondText>Maintenance records updated</reqCondText>
+          </reqCond>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>

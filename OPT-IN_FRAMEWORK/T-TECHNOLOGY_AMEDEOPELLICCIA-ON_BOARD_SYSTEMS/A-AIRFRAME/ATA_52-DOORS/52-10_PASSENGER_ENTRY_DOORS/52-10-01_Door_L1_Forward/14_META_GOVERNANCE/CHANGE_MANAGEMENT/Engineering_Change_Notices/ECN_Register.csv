@@ -1,0 +1,4 @@
+ECN_Number,Date,Title,Reason,Impact,Status,Approval_Date
+ECN-52-10-01-001,2025-10-15,Door_hinge_reinforcement,Stress_analysis_findings,Structural,Approved,2025-10-20
+ECN-52-10-01-002,2025-10-28,Latch_mechanism_update,Reliability_improvement,Functional,In_Review,Pending
+ECN-52-10-01-003,2025-11-02,Seal_groove_geometry,Manufacturing_feedback,Minor,Submitted,Pending

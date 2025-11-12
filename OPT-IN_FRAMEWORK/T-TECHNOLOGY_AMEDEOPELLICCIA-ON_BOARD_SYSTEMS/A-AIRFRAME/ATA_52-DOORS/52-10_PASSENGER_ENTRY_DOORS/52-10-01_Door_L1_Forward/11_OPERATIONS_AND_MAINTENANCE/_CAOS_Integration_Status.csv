@@ -1,0 +1,14 @@
+System,Subsystem,CAOS_Module,Status,Integration_Level,Data_Flow,Last_Update,Health_Score,DMC_Reference
+Door_L1_Forward,Latch_System,Health_Monitor,Active,Full,Bidirectional,2025-11-03,98.5,DMC-AMPEL360-A-52-10-01-00A-100A-D
+Door_L1_Forward,Seal_System,Pressure_Monitor,Active,Full,Bidirectional,2025-11-03,87.3,DMC-AMPEL360-A-52-10-01-00A-711A-D
+Door_L1_Forward,Actuator,Performance_Tracker,Active,Full,Bidirectional,2025-11-03,95.2,DMC-AMPEL360-A-52-10-01-00A-710A-D
+Door_L1_Forward,Sensors,Calibration_Manager,Active,Full,Bidirectional,2025-11-03,99.1,DMC-AMPEL360-A-52-10-01-00A-722A-D
+Door_L1_Forward,Emergency_Release,Test_Monitor,Active,Partial,Inbound,2025-11-03,100.0,DMC-AMPEL360-A-52-10-01-00A-215A-D
+Door_L1_Forward,Structural,Stress_Monitor,Active,Full,Bidirectional,2025-11-03,96.7,DMC-AMPEL360-A-52-10-01-00A-721A-D
+Door_L1_Forward,Digital_Twin,Sync_Engine,Active,Full,Bidirectional,2025-11-03,100.0,DMC-AMPEL360-A-52-10-01-00A-913A-D
+Door_L1_Forward,Predictive_Maintenance,Alert_Generator,Active,Full,Outbound,2025-11-03,97.8,DMC-AMPEL360-A-52-10-01-00A-914A-D
+Door_L1_Forward,Diagnostics,Fault_Analyzer,Active,Full,Bidirectional,2025-11-03,99.5,DMC-AMPEL360-A-52-10-01-00A-912A-D
+Door_L1_Forward,Fleet_Learning,Data_Aggregator,Active,Full,Bidirectional,2025-11-03,94.2,DMC-AMPEL360-A-52-10-01-00A-022A-D
+Door_L1_Forward,S1000D_Updates,Publication_Sync,Active,Full,Outbound,2025-11-03,100.0,DMC-AMPEL360-A-52-10-01-00A-019A-D
+Door_L1_Forward,Warning_System,Status_Monitor,Active,Full,Bidirectional,2025-11-03,98.9,DMC-AMPEL360-A-52-10-01-00A-210A-D
+Door_L1_Forward,Control_Software,Version_Manager,Active,Full,Bidirectional,2025-11-03,100.0,DMC-AMPEL360-A-52-10-01-SB002-400A-D

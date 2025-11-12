@@ -1,0 +1,37 @@
+Mission_Phase,Phase_Name,Start_Altitude_m,End_Altitude_m,Distance_km,Duration_min,Avg_Weight_kg,L_D_Ratio,Fuel_Used_kg,Cumulative_Fuel_kg,Notes
+Phase_01,Ground_Operations,0,0,0,15,148000,0,10,10,Pre-taxi APU and systems check
+Phase_02,Taxi_Out,0,0,0,15,147990,0,10,20,Taxi to runway
+Phase_03,Takeoff_Roll,0,0,2,1,147980,0,15,35,V1 VR VLO to liftoff
+Phase_04,Initial_Climb,0,500,3,2,147965,8,10,45,Gear and flap retraction
+Phase_05,Climb_to_FL100,500,3000,50,10,147930,12,120,165,Accelerated climb segment
+Phase_06,Climb_to_Cruise,3000,11000,200,25,146835,16,240,405,Climb to FL360 cruise altitude
+Phase_07,Cruise_Leg_1,11000,11000,1500,200,145595,21,1200,1605,First cruise segment - optimal L/D
+Phase_08,Cruise_Leg_2,11000,11000,1500,200,144395,21,1200,2805,Second cruise segment
+Phase_09,Cruise_Leg_3,11000,11000,1500,200,143195,21,1200,4005,Third cruise segment
+Phase_10,Cruise_Leg_4,11000,11000,1500,200,141995,21,1200,5205,Fourth cruise segment - extended range
+Phase_11,Top_of_Descent,11000,11000,15,5,140795,21,60,5265,Cruise deceleration
+Phase_12,Descent,11000,1000,150,20,140735,18,120,5385,Managed descent - idle thrust
+Phase_13,Approach_Setup,1000,300,30,5,140615,15,30,5415,Configure for approach
+Phase_14,Final_Approach,300,0,10,5,140585,12,30,5445,Final approach and landing
+Phase_15,Landing_Rollout,0,0,3,2,140555,0,10,5455,Reverse thrust and braking
+Phase_16,Taxi_In,0,0,0,10,140545,0,8,5463,Taxi to gate
+Phase_17,Ground_Operations,0,0,0,5,140537,0,7,5470,APU operations at gate
+Mission_Summary,Design_Mission,0,11000,6465,905,144235,19.2,5470,5470,Complete design mission profile
+Reserve_Phase,Holding_Reserve,3000,3000,150,45,140537,15,200,5670,45-minute reserve at alternate
+Reserve_Phase,Diversion,3000,0,300,50,140337,17,250,5920,Fly to alternate airport 300 km
+Reserve_Phase,Approach_Alternate,300,0,10,5,140087,12,20,5940,Land at alternate
+Fuel_Planning,Total_Mission_Fuel,,,6963,1005,,,5940,5940,Mission + reserves
+Fuel_Planning,Contingency_5pct,,,,,,,,297,Additional 5% contingency
+Fuel_Planning,Total_Fuel_Required,,,,,,,,6237,Design fuel requirement
+Fuel_Planning,Fuel_Capacity,,,,,,,,8000,Available H2 tankage
+Fuel_Planning,Fuel_Margin,,,,,,,,1763,28% fuel margin for operations
+Performance_Metrics,Average_Mission_Speed,,,6963,905,,460,kts TAS,,High-speed cruise capability
+Performance_Metrics,Average_L_D_Cruise,,,6000,800,,21,,,30% better than conventional
+Performance_Metrics,Specific_Range,,,,,,,1.27,km/kg H2,Excellent fuel economy
+Performance_Metrics,Payload_Range,6500,km with 45000 kg payload,,,,,,,Design target achieved
+Weight_Profile,Start_Weight_MTOW,,,,,,148000,kg,,,Maximum takeoff weight
+Weight_Profile,Landing_Weight,,,,,,140545,kg,,,Well below MLW 155000 kg
+Weight_Profile,Reserve_Landing_Weight,,,,,,140087,kg,,,Alternate landing scenario
+Operational_Notes,Cruise_Optimization,FL360,is optimal altitude for H2 fuel cell efficiency and range,,,,,,,
+Operational_Notes,Diversion_Capability,300,km alternate within normal reserve fuel,,,,,,,Regulatory compliance
+Operational_Notes,Extended_Range_Option,Additional,1500 km available with full fuel tanks,,,,,,,Future long-range missions

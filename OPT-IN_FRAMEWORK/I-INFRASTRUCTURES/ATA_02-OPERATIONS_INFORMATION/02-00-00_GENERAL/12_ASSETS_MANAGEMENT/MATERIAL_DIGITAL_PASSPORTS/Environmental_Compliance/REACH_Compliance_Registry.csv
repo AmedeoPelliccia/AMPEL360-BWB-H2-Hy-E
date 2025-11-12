@@ -1,0 +1,6 @@
+Material_Name,Batch_Number,Supplier,REACH_Number,RoHS_Status,Expiry_Date
+Tank Composite,Batch_A001,CompositeTech Inc,REACH-2025-001,Compliant,2035-09-15
+Insulation Foam,Batch_B001,CryoFoam Ltd,REACH-2025-002,Compliant,2035-09-20
+Sealing Material,Batch_C001,SealPro GmbH,REACH-2025-003,Compliant,2035-09-25
+Carbon Fiber,Batch_X001,FiberTech SA,REACH-2025-004,Compliant,2035-09-10
+Aluminum Alloy,Batch_Y001,MetalWorks Inc,REACH-2025-005,N/A,2035-09-12

@@ -1,0 +1,51 @@
+---
+chapter:
+  number: "02"
+  title: "Operations Information"
+  category: "I-INFRASTRUCTURES"
+  version: "1.0.0"
+  status: "Active"
+  last_updated: "2025-11-04"
+
+description: |
+  ATA Chapter 02 contains all operational information required for flight 
+  and ground operations of the AMPEL360 aircraft.
+
+scope:
+  - Flight Crew Operating Manual (FCOM)
+  - Quick Reference Handbook (QRH)
+  - Performance data and calculations
+  - Weight and balance procedures
+  - Minimum Equipment List (MEL)
+  - Ground operations procedures
+
+subsections:
+  "02-01":
+    title: "FCOM - Flight Crew Operating Manual"
+    components:
+      - "01-LIMITATIONS"
+      - "02-NORMAL_PROCEDURES"
+      - "03-NON-NORMAL_PROCEDURES"
+      - "04-SYSTEM_DESCRIPTIONS"
+  
+  "02-02":
+    title: "QRH - Quick Reference Handbook"
+  
+  "02-03":
+    title: "FPERF - Performance"
+  
+  "02-04":
+    title: "WBM - Weight and Balance Manual"
+  
+  "02-05":
+    title: "MEL - Minimum Equipment List"
+  
+  "02-06":
+    title: "Ground Operations Manual"
+
+revision_history:
+  - version: "1.0.0"
+    date: "2025-11-04"
+    author: "AMPEL360 Program Office"
+    changes: "Initial structure creation"
+    status: "Active"

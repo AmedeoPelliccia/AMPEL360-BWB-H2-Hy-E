@@ -1,0 +1,4 @@
+Timestamp,User_ID,User_Name,Activity,Resource,Result,Session_ID
+2025-11-05T08:00:00Z,U001,J.Smith,Login,DMS,Success,S12345
+2025-11-05T08:05:00Z,U001,J.Smith,Search,Documents,Success,S12345
+2025-11-05T08:10:00Z,U001,J.Smith,Open,02-00-01-OVERVIEW,Success,S12345

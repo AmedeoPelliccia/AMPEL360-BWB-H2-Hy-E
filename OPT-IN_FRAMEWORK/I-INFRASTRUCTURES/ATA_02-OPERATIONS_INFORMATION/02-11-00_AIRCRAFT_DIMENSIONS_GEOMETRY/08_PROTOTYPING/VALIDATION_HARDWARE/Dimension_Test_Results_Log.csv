@@ -1,0 +1,76 @@
+Test_Date,Test_ID,Test_Type,Component,Parameter,Nominal_Value,Measured_Value,Unit,Deviation,Tolerance,Status,Operator,Temperature_C,Humidity_Pct,Notes
+2025-11-11,DIM-001,Primary_Dimensions,Aircraft,Wingspan,65.00,64.98,m,-0.02,±0.10,PASS,J.Smith,22.5,45,MTOW configuration
+2025-11-11,DIM-002,Primary_Dimensions,Aircraft,Overall_Length,52.00,52.03,m,+0.03,±0.10,PASS,J.Smith,22.5,45,Measurement at centerline
+2025-11-11,DIM-003,Primary_Dimensions,Aircraft,Overall_Height,15.50,15.48,m,-0.02,±0.10,PASS,J.Smith,22.5,45,From ground to highest point
+2025-11-11,DIM-004,Primary_Dimensions,Aircraft,Center_Body_Width,28.00,28.01,m,+0.01,±0.10,PASS,J.Smith,22.6,45,At widest point
+2025-11-11,DIM-005,Wing_Geometry,Left_Wing,Semi_Span,32.50,32.49,m,-0.01,±0.05,PASS,M.Chen,22.6,46,Centerline to tip
+2025-11-11,DIM-006,Wing_Geometry,Right_Wing,Semi_Span,32.50,32.51,m,+0.01,±0.05,PASS,M.Chen,22.6,46,Centerline to tip
+2025-11-11,DIM-007,Wing_Geometry,Wing,Aspect_Ratio,8.50,8.48,—,-0.02,±0.2,PASS,M.Chen,22.6,46,Calculated from span and area
+2025-11-11,DIM-008,Wing_Geometry,Wing,Sweep_Angle_25pct,35.00,35.12,deg,+0.12,±0.5,PASS,M.Chen,22.7,46,At 25% chord line
+2025-11-11,DIM-009,Wing_Geometry,Wing,Root_Chord,29.00,29.03,m,+0.03,±0.10,PASS,M.Chen,22.7,46,At centerline BL 0
+2025-11-11,DIM-010,Wing_Geometry,Left_Wing,Tip_Chord,2.80,2.78,m,-0.02,±0.05,PASS,M.Chen,22.7,47,Left wingtip
+2025-11-11,DIM-011,Wing_Geometry,Right_Wing,Tip_Chord,2.80,2.81,m,+0.01,±0.05,PASS,M.Chen,22.8,47,Right wingtip
+2025-11-11,DIM-012,Ground_Clearance,Left_Wingtip,Ground_Clearance,2.50,2.48,m,-0.02,≥1.0,PASS,R.Johnson,22.8,47,Level attitude
+2025-11-11,DIM-013,Ground_Clearance,Right_Wingtip,Ground_Clearance,2.50,2.51,m,+0.01,≥1.0,PASS,R.Johnson,22.8,47,Level attitude
+2025-11-11,DIM-014,Ground_Clearance,Forward_Belly,Ground_Clearance,1.80,1.78,m,-0.02,≥0.5,PASS,R.Johnson,22.9,47,FS 20 location
+2025-11-11,DIM-015,Ground_Clearance,Center_Belly,Ground_Clearance,1.80,1.79,m,-0.01,≥0.5,PASS,R.Johnson,22.9,48,FS 30 location
+2025-11-11,DIM-016,Ground_Clearance,Aft_Belly,Ground_Clearance,1.80,1.82,m,+0.02,≥0.5,PASS,R.Johnson,22.9,48,FS 40 location
+2025-11-11,DIM-017,Ground_Clearance,Tail_Tip,Ground_Clearance,3.20,3.18,m,-0.02,≥1.0,PASS,R.Johnson,23.0,48,Aft extremity
+2025-11-11,DIM-018,Ground_Clearance,LH_Engine_Intake,Ground_Clearance,2.00,1.98,m,-0.02,≥0.5,PASS,R.Johnson,23.0,48,Left side
+2025-11-11,DIM-019,Ground_Clearance,RH_Engine_Intake,Ground_Clearance,2.00,2.01,m,+0.01,≥0.5,PASS,R.Johnson,23.0,48,Right side
+2025-11-11,DIM-020,Landing_Gear,Nose_Gear,Extended_Height,3.20,3.19,m,-0.01,±0.05,PASS,A.Williams,23.1,48,Fully extended
+2025-11-11,DIM-021,Landing_Gear,Left_Main_Gear,Extended_Height,3.80,3.79,m,-0.01,±0.05,PASS,A.Williams,23.1,49,Fully extended
+2025-11-11,DIM-022,Landing_Gear,Right_Main_Gear,Extended_Height,3.80,3.81,m,+0.01,±0.05,PASS,A.Williams,23.1,49,Fully extended
+2025-11-11,DIM-023,Landing_Gear,Main_Gear,Track_Width,12.00,12.02,m,+0.02,±0.10,PASS,A.Williams,23.2,49,Wheel center to center
+2025-11-11,DIM-024,Landing_Gear,Main_Gear,Wheelbase,15.00,15.01,m,+0.01,±0.10,PASS,A.Williams,23.2,49,Nose to main gear
+2025-11-12,DIM-025,Door_Dimensions,Door_L1,Sill_Height,2.50,2.49,m,-0.01,±0.03,PASS,K.Lee,22.8,50,Forward left door
+2025-11-12,DIM-026,Door_Dimensions,Door_R1,Sill_Height,2.50,2.50,m,0.00,±0.03,PASS,K.Lee,22.8,50,Forward right door
+2025-11-12,DIM-027,Door_Dimensions,Door_L2,Sill_Height,2.50,2.51,m,+0.01,±0.03,PASS,K.Lee,22.9,50,Mid left door
+2025-11-12,DIM-028,Door_Dimensions,Door_R2,Sill_Height,2.50,2.49,m,-0.01,±0.03,PASS,K.Lee,22.9,50,Mid right door
+2025-11-12,DIM-029,Door_Dimensions,Exit_L3,Sill_Height,2.80,2.78,m,-0.02,±0.03,PASS,K.Lee,22.9,51,Aft left exit
+2025-11-12,DIM-030,Door_Dimensions,Exit_R3,Sill_Height,2.80,2.81,m,+0.01,±0.03,PASS,K.Lee,23.0,51,Aft right exit
+2025-11-12,DIM-031,Reference_System,Datum_FS0,Position_Accuracy,0.00,0.00,mm,0.00,±0.5,PASS,T.Brown,23.0,51,Primary datum verification
+2025-11-12,DIM-032,Reference_System,Datum_BL0,Position_Accuracy,0.00,0.00,mm,0.00,±0.5,PASS,T.Brown,23.0,51,Centerline verification
+2025-11-12,DIM-033,Reference_System,Datum_WL0,Position_Accuracy,0.00,0.00,mm,0.00,±0.5,PASS,T.Brown,23.1,51,Ground reference verification
+2025-11-12,DIM-034,Reference_System,SRF-1,Position_FS,15.00,15.002,m,+0.002,±0.010,PASS,T.Brown,23.1,52,Secondary reference fixture 1
+2025-11-12,DIM-035,Reference_System,SRF-1,Position_BL,0.00,0.001,m,+0.001,±0.010,PASS,T.Brown,23.1,52,Secondary reference fixture 1
+2025-11-12,DIM-036,Reference_System,SRF-1,Position_WL,2.50,2.501,m,+0.001,±0.010,PASS,T.Brown,23.1,52,Secondary reference fixture 1
+2025-11-12,DIM-037,Reference_System,SRF-2,Position_FS,25.00,25.003,m,+0.003,±0.010,PASS,T.Brown,23.2,52,Secondary reference fixture 2
+2025-11-12,DIM-038,Reference_System,SRF-2,Position_BL,0.00,-0.001,m,-0.001,±0.010,PASS,T.Brown,23.2,52,Secondary reference fixture 2
+2025-11-12,DIM-039,Reference_System,SRF-2,Position_WL,8.00,8.002,m,+0.002,±0.010,PASS,T.Brown,23.2,52,Secondary reference fixture 2
+2025-11-12,DIM-040,Reference_System,SRF-3,Position_FS,40.00,39.998,m,-0.002,±0.010,PASS,T.Brown,23.3,53,Secondary reference fixture 3
+2025-11-12,DIM-041,Reference_System,SRF-3,Position_BL,0.00,0.000,m,0.000,±0.010,PASS,T.Brown,23.3,53,Secondary reference fixture 3
+2025-11-12,DIM-042,Reference_System,SRF-3,Position_WL,5.00,5.001,m,+0.001,±0.010,PASS,T.Brown,23.3,53,Secondary reference fixture 3
+2025-11-12,DIM-043,Cabin_Interior,Cabin_Height_Center,Max_Height,2.45,2.44,m,-0.01,≥2.20,PASS,S.Patel,23.3,53,At BL 0
+2025-11-12,DIM-044,Cabin_Interior,Cabin_Height_Mid_Span,Max_Height,2.20,2.19,m,-0.01,≥1.95,PASS,S.Patel,23.4,53,At BL ±8m
+2025-11-12,DIM-045,Cabin_Interior,Cabin_Height_Outboard,Max_Height,1.95,1.94,m,-0.01,≥1.75,PASS,S.Patel,23.4,53,At BL ±12m
+2025-11-12,DIM-046,Cabin_Interior,Aisle_Width_Center,Width,0.51,0.52,m,+0.01,≥0.508,PASS,S.Patel,23.4,54,Center aisle
+2025-11-12,DIM-047,Cabin_Interior,Aisle_Width_Outboard,Width,0.38,0.39,m,+0.01,≥0.381,PASS,S.Patel,23.5,54,Outboard aisles
+2025-11-13,DIM-048,Control_Surfaces,Left_Elevon,Span,8.50,8.48,m,-0.02,±0.10,PASS,D.Martinez,22.9,49,Port side
+2025-11-13,DIM-049,Control_Surfaces,Right_Elevon,Span,8.50,8.51,m,+0.01,±0.10,PASS,D.Martinez,22.9,49,Starboard side
+2025-11-13,DIM-050,Control_Surfaces,Left_Elevon,Chord,2.20,2.19,m,-0.01,±0.05,PASS,D.Martinez,23.0,49,Mean chord
+2025-11-13,DIM-051,Control_Surfaces,Right_Elevon,Chord,2.20,2.21,m,+0.01,±0.05,PASS,D.Martinez,23.0,49,Mean chord
+2025-11-13,DIM-052,Control_Surfaces,Rudder,Height,6.50,6.49,m,-0.01,±0.10,PASS,D.Martinez,23.0,50,Vertical height
+2025-11-13,DIM-053,Control_Surfaces,Rudder,Chord,1.80,1.79,m,-0.01,±0.05,PASS,D.Martinez,23.1,50,Mean chord
+2025-11-13,DIM-054,Fuel_System,H2_Tank_1,Length,5.50,5.49,m,-0.01,±0.05,PASS,N.Wilson,23.1,50,Forward tank
+2025-11-13,DIM-055,Fuel_System,H2_Tank_1,Diameter,3.20,3.19,m,-0.01,±0.05,PASS,N.Wilson,23.1,50,Forward tank
+2025-11-13,DIM-056,Fuel_System,H2_Tank_2,Length,6.00,6.01,m,+0.01,±0.05,PASS,N.Wilson,23.2,51,Aft tank
+2025-11-13,DIM-057,Fuel_System,H2_Tank_2,Diameter,3.20,3.21,m,+0.01,±0.05,PASS,N.Wilson,23.2,51,Aft tank
+2025-11-13,DIM-058,Symmetry_Check,Wing,Left_Right_Incidence,0.00,0.08,deg,+0.08,±0.3,PASS,M.Chen,23.2,51,Washout difference
+2025-11-13,DIM-059,Symmetry_Check,Wing,Left_Right_Dihedral,0.00,0.05,deg,+0.05,±0.3,PASS,M.Chen,23.3,51,Dihedral difference
+2025-11-13,DIM-060,Symmetry_Check,Elevon,Left_Right_Neutral,0.00,0.10,deg,+0.10,±0.5,PASS,D.Martinez,23.3,52,Neutral position difference
+2025-11-13,DIM-061,Mass_Properties,Aircraft_Empty,Total_Mass,45000,45123,kg,+123,±500,PASS,P.Garcia,23.4,52,Empty weight
+2025-11-13,DIM-062,Mass_Properties,Aircraft_Empty,CG_Longitudinal,22.00,22.03,m,+0.03,±0.20,PASS,P.Garcia,23.4,52,FS position
+2025-11-13,DIM-063,Mass_Properties,Aircraft_Empty,CG_Lateral,0.00,0.02,m,+0.02,±0.10,PASS,P.Garcia,23.4,52,BL position
+2025-11-13,DIM-064,Mass_Properties,Aircraft_Empty,CG_Vertical,8.00,8.01,m,+0.01,±0.20,PASS,P.Garcia,23.5,53,WL position
+2025-11-13,DIM-065,Deflection_Test,Wing_Tip_Left,Static_Deflection_MTOW,0.85,0.83,m,-0.02,±0.10,PASS,R.Johnson,23.5,53,Under MTOW loading
+2025-11-13,DIM-066,Deflection_Test,Wing_Tip_Right,Static_Deflection_MTOW,0.85,0.84,m,-0.01,±0.10,PASS,R.Johnson,23.5,53,Under MTOW loading
+2025-11-13,DIM-067,Deflection_Test,Wing_Tip_Left,Dynamic_Deflection_2.5g,2.10,2.08,m,-0.02,±0.20,PASS,R.Johnson,23.6,53,2.5g pull-up simulation
+2025-11-13,DIM-068,Deflection_Test,Wing_Tip_Right,Dynamic_Deflection_2.5g,2.10,2.11,m,+0.01,±0.20,PASS,R.Johnson,23.6,54,2.5g pull-up simulation
+2025-11-13,DIM-069,Airport_Compatibility,Turning_Radius,Minimum_Radius,35.00,35.2,m,+0.2,≤40.0,PASS,A.Williams,23.6,54,70° steering angle
+2025-11-13,DIM-070,Airport_Compatibility,Gate_Footprint,Width_Required,65.00,65.0,m,0.0,≤80.0,PASS,A.Williams,23.7,54,Wingtip to wingtip
+2025-11-13,DIM-071,Airport_Compatibility,Gate_Footprint,Length_Required,52.00,52.0,m,0.0,≤85.0,PASS,A.Williams,23.7,54,Nose to tail
+2025-11-13,DIM-072,Tolerance_Analysis,Manufacturing,Max_Tolerance_Stack,—,45.2,mm,—,≤50.0,PASS,Quality,23.7,54,Worst-case analysis
+2025-11-13,DIM-073,Final_Inspection,Overall,Dimensional_Compliance,—,PASS,—,—,—,PASS,J.Smith,23.8,54,All dims within spec
+2025-11-13,DIM-074,Final_Inspection,Overall,Symmetry_Compliance,—,PASS,—,—,—,PASS,M.Chen,23.8,55,Left/right symmetry good
+2025-11-13,DIM-075,Final_Inspection,Overall,Clearance_Compliance,—,PASS,—,—,—,PASS,R.Johnson,23.8,55,All clearances adequate

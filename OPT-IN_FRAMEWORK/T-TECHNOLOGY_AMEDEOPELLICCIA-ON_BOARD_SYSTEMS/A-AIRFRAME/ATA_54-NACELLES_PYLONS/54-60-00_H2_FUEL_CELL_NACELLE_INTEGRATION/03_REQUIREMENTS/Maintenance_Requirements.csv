@@ -1,0 +1,16 @@
+Requirement_ID,Description,Task_Type,Interval,Duration,Skill_Level,Verification,Status
+RQ-54-60-00-150,Visual_H2_System_Inspection,Check,Daily,10,min,H2_Qualified,Inspect,Defined
+RQ-54-60-00-151,H2_Leak_Test_Inspection,Test,100_FH,30,min,H2_Certified,Test,Defined
+RQ-54-60-00-152,Fuel_Cell_Performance_Check,Test,500_FH,1,hour,FC_Specialist,Test,Defined
+RQ-54-60-00-153,Cooling_System_Inspection,Inspect,1000_FH,45,min,Cert_Mech,Inspect,Defined
+RQ-54-60-00-154,Stack_Temperature_Calibration,Calibrate,2000_FH,1,hour,Avionics,Test,Defined
+RQ-54-60-00-155,H2_Sensor_Calibration,Calibrate,3000_FH,2,hours,H2_Certified,Test,Defined
+RQ-54-60-00-156,Fire_Suppression_Test,Test,Annual,3,hours,Cert_Mech,Test,Defined
+RQ-54-60-00-157,Fuel_Cell_Stack_Replacement,Service,20000_hours,24,hours,FC_Specialist,Demo,Defined
+RQ-54-60-00-158,Nacelle_Structural_Inspection,Inspect,5000_FH,6,hours,Inspector,NDT,Defined
+RQ-54-60-00-159,Power_Electronics_Testing,Test,4000_FH,2,hours,Avionics,Test,Defined
+RQ-54-60-00-160,Ventilation_System_Function,Test,2000_FH,1,hour,Cert_Mech,Test,Defined
+RQ-54-60-00-161,CAOS_Sensor_Network_Check,Check,6000_FH,1,hour,Avionics,Test,Defined
+RQ-54-60-00-162,Water_Management_System_Check,Check,1000_FH,30,min,Cert_Mech,Inspect,Defined
+RQ-54-60-00-163,Emergency_Shutdown_Test,Test,Annual,2,hours,H2_Certified,Demo,Defined
+RQ-54-60-00-164,Predictive_Maintenance_Review,Analysis,Continuous,Variable,Engineer,Analysis,Defined

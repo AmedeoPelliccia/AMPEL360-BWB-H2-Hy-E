@@ -1,0 +1,11 @@
+DPP_ID,Asset_Type,Description,Serial_Number,Blockchain_Hash,Status,Last_Updated
+DPP-H2-001,Component,Refueling Receptacle,SN001,0x7a3f2b1c9d4e6f8a2b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a,Active,2025-11-05
+DPP-SW-CAOS-001,Software,CAOS Core System,v2.0.0,0x9c4e8d7f3a2b1c5e8f4d9a6b3c7e2f1a8d5b9c4e7f3a2b1c5e8f4d9a6b3c7e,Active,2025-11-01
+DPP-MAT-H2-001,Material,Tank Composite,Batch_A001,0x1b6f3a5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1,Active,2025-10-20
+DPP-OPS-001,Equipment,H2 Refueling Panel,Unit-001,0x5d2c9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7,Active,2025-10-15
+DPP-CAOS-001,Component,Processing Unit,SN001,0x8f4d9a6b3c7e2f1a8d5b9c4e7f3a2b1c5e8f4d9a6b3c7e2f1a8d5b9c4e7f3a,Active,2025-10-10
+DPP-TRN-001,Equipment,Simulator System,Unit-SIM-001,0x3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5,Active,2025-09-30
+DPP-DOC-001,Equipment,EFB Hardware,Unit-EFB-001,0x7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b,Active,2025-09-25
+DPP-OPS-INS-001,Component,Display Unit,SN-DISP-001,0x2f1a8d5b9c4e7f3a2b1c5e8f4d9a6b3c7e2f1a8d5b9c4e7f3a2b1c5e8f4d9a,Active,2025-09-20
+DPP-MAT-STR-001,Material,Carbon Fiber,Batch_X001,0x6b3c7e2f1a8d5b9c4e7f3a2b1c5e8f4d9a6b3c7e2f1a8d5b9c4e7f3a2b1c5e,Active,2025-09-15
+DPP-SW-OPS-001,Software,Flight Planning,v3.1.0,0x9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1,Active,2025-09-10

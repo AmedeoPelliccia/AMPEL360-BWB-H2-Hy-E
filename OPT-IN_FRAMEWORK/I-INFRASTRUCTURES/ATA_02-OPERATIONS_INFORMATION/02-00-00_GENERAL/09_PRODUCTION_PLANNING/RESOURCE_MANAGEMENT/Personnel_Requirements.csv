@@ -1,0 +1,16 @@
+Person_ID,Name,Role,Email,Phone,Allocation_Pct,Cost_Center,Manager,Location
+P001,Lead_Writer,Technical_Writer_Lead,lead.writer@ampel360.aero,+1-555-0101,100,Tech_Pubs,Doc_Manager,HQ
+P002,Senior_Writer_1,Technical_Writer_Senior,senior1@ampel360.aero,+1-555-0102,100,Tech_Pubs,Lead_Writer,HQ
+P003,Senior_Writer_2,Technical_Writer_Senior,senior2@ampel360.aero,+1-555-0103,100,Tech_Pubs,Lead_Writer,Remote
+P004,Mid_Writer_1,Technical_Writer_Mid,mid1@ampel360.aero,+1-555-0104,100,Tech_Pubs,Lead_Writer,HQ
+P005,Mid_Writer_2,Technical_Writer_Mid,mid2@ampel360.aero,+1-555-0105,100,Tech_Pubs,Lead_Writer,Remote
+P006,Junior_Writer,Technical_Writer_Junior,junior1@ampel360.aero,+1-555-0106,100,Tech_Pubs,Senior_Writer_1,HQ
+P007,Illustrator_1,Technical_Illustrator,illustrator1@ampel360.aero,+1-555-0107,100,Tech_Pubs,Lead_Writer,HQ
+P008,Illustrator_2,Technical_Illustrator,illustrator2@ampel360.aero,+1-555-0108,80,Tech_Pubs,Lead_Writer,Remote
+P009,QA_Lead,QA_Specialist,qa.lead@ampel360.aero,+1-555-0109,60,Quality,Quality_Manager,HQ
+P010,CBT_Developer_1,Training_Developer,cbt1@ampel360.aero,+1-555-0110,100,Training,Training_Manager,HQ
+P011,CBT_Developer_2,Training_Developer,cbt2@ampel360.aero,+1-555-0111,100,Training,Training_Manager,Remote
+P012,CAOS_Tech_Writer,Technical_Writer,caos.writer@ampel360.aero,+1-555-0112,80,CAOS_Team,CAOS_Manager,HQ
+P013,Translation_Coord,Translation_Coordinator,translation@ampel360.aero,+1-555-0113,50,Tech_Pubs,Lead_Writer,HQ
+P014,Doc_Controller,Document_Controller,doccontrol@ampel360.aero,+1-555-0114,100,Tech_Pubs,Doc_Manager,HQ
+P015,Project_Manager,Production_Manager,pm.production@ampel360.aero,+1-555-0115,100,PMO,PMO_Director,HQ

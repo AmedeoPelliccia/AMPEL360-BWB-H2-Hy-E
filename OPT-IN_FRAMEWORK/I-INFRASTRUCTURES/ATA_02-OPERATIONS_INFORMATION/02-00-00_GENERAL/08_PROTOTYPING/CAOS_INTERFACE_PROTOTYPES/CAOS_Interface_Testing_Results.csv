@@ -1,0 +1,7 @@
+Interface_ID,Test_Date,Evaluator,Usability_Score,Clarity_Score,Response_Time_ms,Comments,Issues,Recommendation
+PROTO-CAOS-001,2025-10-25,FO Williams,3,3,85,Layout unclear,Cluttered display,Major revision needed
+PROTO-CAOS-001,2025-11-01,Capt. Davis,5,5,72,Much improved!,None,Approve for simulator
+PROTO-CAOS-002,2025-10-28,Chief Pilot Anderson,4,5,45,Good safety approach,Add confirmation delay,Minor revision
+PROTO-CAOS-003,2025-10-30,Training Captain Lee,5,4,95,Excellent explainability,Response time high,Optimize performance
+PROTO-CAOS-004,2025-11-02,Line Pilot Martinez,5,5,48,Outstanding visualization,None,Production ready
+PROTO-CAOS-004,2025-11-03,Safety Officer Kim,4,5,52,Very comprehensive,Add failure mode display,Minor addition

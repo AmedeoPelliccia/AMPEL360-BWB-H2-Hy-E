@@ -1,0 +1,66 @@
+Equipment_Name,Part_Number,Serial_Number,Location,Weight_kg,CG_Arm_m,Installation_Date,Status,Aircraft_MSN,Notes
+Aircraft Structure,AMP-BWB-0001,MSN-0001,N/A,78500,16.2,2027-03-15,Installed,MSN-0001,Basic airframe structure
+Fuel Cell Stack 1,AMP-FC-3000-A,FC-S1-001,Station 18.0 Left,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
+Fuel Cell Stack 2,AMP-FC-3000-A,FC-S2-001,Station 18.0 Center-Left,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
+Fuel Cell Stack 3,AMP-FC-3000-A,FC-S3-001,Station 18.0 Center-Right,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
+Fuel Cell Stack 4,AMP-FC-3000-A,FC-S4-001,Station 18.0 Center-Left,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
+Fuel Cell Stack 5,AMP-FC-3000-A,FC-S5-001,Station 18.0 Center-Right,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
+Fuel Cell Stack 6,AMP-FC-3000-A,FC-S6-001,Station 18.0 Right,850,18.0,2027-03-18,Installed,MSN-0001,3MW PEM fuel cell
+Electric Motor 1,AMP-EM-1250-A,EM-01-001,Station 25.0 Port Outboard,245,25.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 2,AMP-EM-1250-A,EM-02-001,Station 24.0 Port Mid-Out,245,24.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 3,AMP-EM-1250-A,EM-03-001,Station 23.0 Port Mid-In,245,23.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 4,AMP-EM-1250-A,EM-04-001,Station 22.0 Port Center,245,22.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 5,AMP-EM-1250-A,EM-05-001,Station 21.0 Port Center,245,21.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 6,AMP-EM-1250-A,EM-06-001,Station 20.0 Port Inner,245,20.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 7,AMP-EM-1250-A,EM-07-001,Station 20.0 Stbd Inner,245,20.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 8,AMP-EM-1250-A,EM-08-001,Station 21.0 Stbd Center,245,21.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 9,AMP-EM-1250-A,EM-09-001,Station 22.0 Stbd Center,245,22.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 10,AMP-EM-1250-A,EM-10-001,Station 23.0 Stbd Mid-In,245,23.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 11,AMP-EM-1250-A,EM-11-001,Station 24.0 Stbd Mid-Out,245,24.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+Electric Motor 12,AMP-EM-1250-A,EM-12-001,Station 25.0 Stbd Outboard,245,25.0,2027-03-20,Installed,MSN-0001,1.25MW distributed propulsion
+H2 Tank 1 (Port Fwd),AMP-H2-TANK-750,H2-T1-001,Station 14.0 Port,1420,14.0,2027-03-16,Installed,MSN-0001,750kg capacity cryogenic
+H2 Tank 2 (Port Mid),AMP-H2-TANK-750,H2-T2-001,Station 17.0 Port,1420,17.0,2027-03-16,Installed,MSN-0001,750kg capacity cryogenic
+H2 Tank 3 (Port Aft),AMP-H2-TANK-750,H2-T3-001,Station 20.0 Port,1420,20.0,2027-03-16,Installed,MSN-0001,750kg capacity cryogenic
+H2 Tank 4 (Stbd Aft),AMP-H2-TANK-750,H2-T4-001,Station 20.0 Stbd,1420,20.0,2027-03-16,Installed,MSN-0001,750kg capacity cryogenic
+H2 Tank 5 (Stbd Mid),AMP-H2-TANK-750,H2-T5-001,Station 17.0 Stbd,1420,17.0,2027-03-16,Installed,MSN-0001,750kg capacity cryogenic
+H2 Tank 6 (Stbd Fwd),AMP-H2-TANK-750,H2-T6-001,Station 14.0 Stbd,1420,14.0,2027-03-16,Installed,MSN-0001,750kg capacity cryogenic
+Battery Pack 1,AMP-BAT-500,BAT-01-001,Station 16.0 Center,185,16.0,2027-03-19,Installed,MSN-0001,500kWh emergency power
+Battery Pack 2,AMP-BAT-500,BAT-02-001,Station 19.0 Center,185,19.0,2027-03-19,Installed,MSN-0001,500kWh emergency power
+Flight Control Computer 1,AMP-FCC-100,FCC-01-001,Station 8.0 Flight Deck,25,8.0,2027-03-22,Installed,MSN-0001,Primary flight control
+Flight Control Computer 2,AMP-FCC-100,FCC-02-001,Station 8.5 Flight Deck,25,8.5,2027-03-22,Installed,MSN-0001,Backup flight control
+CAOS Computer Primary,AMP-CAOS-1000,CAOS-P1-001,Station 9.0 Avionics Bay,45,9.0,2027-03-25,Installed,MSN-0001,Digital twin processor
+CAOS Computer Backup,AMP-CAOS-1000,CAOS-B1-001,Station 9.5 Avionics Bay,45,9.5,2027-03-25,Installed,MSN-0001,Digital twin backup
+Fuel Cell Management Sys,AMP-FCMS-600,FCMS-01-001,Station 18.5 Center,32,18.5,2027-03-21,Installed,MSN-0001,Fuel cell control and monitoring
+H2 Fuel Management Sys,AMP-H2MS-400,H2MS-01-001,Station 17.0 Center,28,17.0,2027-03-21,Installed,MSN-0001,H2 tank monitoring and control
+Landing Gear Nose,AMP-LG-NOSE-200,LG-N-001,Station 5.5,650,5.5,2027-03-17,Installed,MSN-0001,Dual wheel nose gear
+Landing Gear Main Left,AMP-LG-MAIN-400,LG-ML-001,Station 18.0 Port,1250,18.0,2027-03-17,Installed,MSN-0001,Four-wheel main gear bogie
+Landing Gear Main Right,AMP-LG-MAIN-400,LG-MR-001,Station 18.0 Stbd,1250,18.0,2027-03-17,Installed,MSN-0001,Four-wheel main gear bogie
+APU (Fuel Cell Aux),AMP-APU-H2-150,APU-01-001,Station 42.0 Aft,220,42.0,2027-03-23,Installed,MSN-0001,150kW H2 fuel cell APU
+Air Conditioning Pack 1,AMP-AC-PACK-80,AC-P1-001,Station 12.0 Port,165,12.0,2027-03-24,Installed,MSN-0001,Environmental control
+Air Conditioning Pack 2,AMP-AC-PACK-80,AC-P2-001,Station 12.0 Stbd,165,12.0,2027-03-24,Installed,MSN-0001,Environmental control
+DAC CO2 Capture System,AMP-DAC-100,DAC-01-001,Station 35.0 Aft,485,35.0,2027-03-26,Installed,MSN-0001,Direct air capture carbon negative
+Navigation System GNSS,AMP-NAV-GNSS-50,GNSS-01-001,Station 7.0 Flight Deck,18,7.0,2027-03-27,Installed,MSN-0001,Primary navigation
+Inertial Reference 1,AMP-IRS-75,IRS-01-001,Station 7.5 Avionics Bay,22,7.5,2027-03-27,Installed,MSN-0001,Primary IRS
+Inertial Reference 2,AMP-IRS-75,IRS-02-001,Station 8.0 Avionics Bay,22,8.0,2027-03-27,Installed,MSN-0001,Backup IRS
+Weather Radar,AMP-WXR-200,WXR-01-001,Station 4.0 Nose,35,4.0,2027-03-28,Installed,MSN-0001,C-band weather radar
+TCAS System,AMP-TCAS-100,TCAS-01-001,Station 7.0 Avionics Bay,15,7.0,2027-03-28,Installed,MSN-0001,Traffic alert and collision avoidance
+Cockpit Voice Recorder,AMP-CVR-25H,CVR-01-001,Station 9.0 Avionics Bay,12,9.0,2027-03-29,Installed,MSN-0001,25-hour solid state
+Flight Data Recorder,AMP-FDR-25H,FDR-01-001,Station 9.5 Avionics Bay,14,9.5,2027-03-29,Installed,MSN-0001,25-hour solid state
+Emergency Locator Transmitter,AMP-ELT-406,ELT-01-001,Station 44.0 Aft,5,44.0,2027-03-29,Installed,MSN-0001,406 MHz ELT
+Passenger Seats (220),AMP-SEAT-STD,SEAT-BLOCK-001,Stations 10-38,3300,24.0,2027-04-01,Installed,MSN-0001,220 seats @ 15kg average
+Emergency Slides (8),AMP-SLIDE-TYPE-A,SLIDE-SET-001,Various Doors,160,16.0,2027-04-02,Installed,MSN-0001,Type-A emergency slides
+Galley Forward,AMP-GALLEY-FWD,GAL-F-001,Station 10.0,285,10.0,2027-04-03,Installed,MSN-0001,Forward service galley
+Galley Aft,AMP-GALLEY-AFT,GAL-A-001,Station 36.0,285,36.0,2027-04-03,Installed,MSN-0001,Aft service galley
+Lavatory 1 Forward Port,AMP-LAV-STD,LAV-01-001,Station 11.0 Port,95,11.0,2027-04-04,Installed,MSN-0001,Standard lavatory
+Lavatory 2 Forward Stbd,AMP-LAV-STD,LAV-02-001,Station 11.0 Stbd,95,11.0,2027-04-04,Installed,MSN-0001,Standard lavatory
+Lavatory 3 Mid Port,AMP-LAV-STD,LAV-03-001,Station 24.0 Port,95,24.0,2027-04-04,Installed,MSN-0001,Standard lavatory
+Lavatory 4 Mid Stbd,AMP-LAV-STD,LAV-04-001,Station 24.0 Stbd,95,24.0,2027-04-04,Installed,MSN-0001,Standard lavatory
+Lavatory 5 Aft Port,AMP-LAV-STD,LAV-05-001,Station 37.0 Port,95,37.0,2027-04-04,Installed,MSN-0001,Standard lavatory
+Lavatory 6 Aft Stbd,AMP-LAV-STD,LAV-06-001,Station 37.0 Stbd,95,37.0,2027-04-04,Installed,MSN-0001,Standard lavatory
+In-Flight Entertainment,AMP-IFE-SYSTEM,IFE-01-001,Throughout Cabin,420,22.0,2027-04-05,Installed,MSN-0001,IFE system with 220 screens
+WiFi System,AMP-WIFI-100,WIFI-01-001,Station 15.0 Ceiling,25,15.0,2027-04-05,Installed,MSN-0001,Passenger and crew WiFi
+Cargo Loading System,AMP-CLS-FWD,CLS-F-001,Station 6.0 Forward Hold,180,6.0,2027-04-06,Installed,MSN-0001,Powered cargo handling
+Fire Suppression Sys,AMP-FIRE-HALON,FIRE-01-001,Various Zones,145,18.0,2027-04-07,Installed,MSN-0001,Halon fire suppression
+Hydraulic System 1,AMP-HYD-A-200,HYD-A-001,Station 14.0,195,14.0,2027-03-19,Installed,MSN-0001,Primary hydraulic system
+Hydraulic System 2,AMP-HYD-B-200,HYD-B-001,Station 22.0,195,22.0,2027-03-19,Installed,MSN-0001,Backup hydraulic system
+Wing Anti-Ice System,AMP-WAIS-ELEC,WAIS-01-001,Wing Leading Edges,240,16.0,2027-04-08,Installed,MSN-0001,Electric anti-ice

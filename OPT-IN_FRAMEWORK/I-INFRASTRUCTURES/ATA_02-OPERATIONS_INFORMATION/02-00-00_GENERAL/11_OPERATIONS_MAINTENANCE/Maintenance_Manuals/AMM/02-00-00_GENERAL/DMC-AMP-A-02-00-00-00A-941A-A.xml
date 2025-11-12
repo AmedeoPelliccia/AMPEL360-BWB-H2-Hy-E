@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_6-0/xml_schema_flat/descript.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP" systemDiffCode="A" systemCode="02" 
+                subSystemCode="0" subSubSystemCode="0" assyCode="00" 
+                disassyCode="00" disassyCodeVariant="A" infoCode="941" 
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="11" day="05"/>
+        <dmTitle>
+          <techName>GENERAL - Operations Information</techName>
+          <infoName>System Description</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360 Aerospace</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 BWB H₂ Hy-E Q100 aircraft</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <firstVerification verificationType="tabtop"/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <levelledPara>
+        <title>General</title>
+        <para>
+          ATA Chapter 02 - Operations Information provides general operational guidance and procedures for the AMPEL360 BWB H₂ Hy-E Q100 aircraft. This chapter includes aircraft limitations, performance data, and operating procedures.
+        </para>
+      </levelledPara>
+      <levelledPara>
+        <title>Aircraft Overview</title>
+        <para>
+          The AMPEL360 BWB H₂ Hy-E Q100 is a revolutionary blended wing body aircraft powered by hydrogen fuel cells. Key features include:
+        </para>
+        <para>
+          <randomList>
+            <listItem><para>Blended Wing Body design for 30% improved aerodynamic efficiency</para></listItem>
+            <listItem><para>Hydrogen (H₂) fuel cell propulsion system - zero emissions</para></listItem>
+            <listItem><para>CO₂ capture system for carbon-negative flight</para></listItem>
+            <listItem><para>CAOS (Computer Aided Operations &amp; Services) AI system integration</para></listItem>
+            <listItem><para>Passenger capacity: 220 passengers</para></listItem>
+            <listItem><para>Range: 4,000 km (2,160 NM)</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      <levelledPara>
+        <title>Operations Philosophy</title>
+        <para>
+          All operations are conducted with emphasis on:
+        </para>
+        <para>
+          <randomList>
+            <listItem><para>Safety - H₂ system safety is paramount</para></listItem>
+            <listItem><para>Efficiency - Optimal fuel cell and energy management</para></listItem>
+            <listItem><para>Environmental Responsibility - Carbon-negative operations</para></listItem>
+            <listItem><para>AI-Assisted Decision Making - CAOS advisory system support</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      <levelledPara>
+        <title>Documentation Structure</title>
+        <para>
+          Operations and maintenance documentation follows S1000D standards and includes:
+        </para>
+        <para>
+          <randomList>
+            <listItem><para>Aircraft Maintenance Manual (AMM)</para></listItem>
+            <listItem><para>Airplane Flight Manual (AFM)</para></listItem>
+            <listItem><para>Flight Crew Operating Manual (FCOM)</para></listItem>
+            <listItem><para>Quick Reference Handbook (QRH)</para></listItem>
+            <listItem><para>CAOS Operations Manual</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

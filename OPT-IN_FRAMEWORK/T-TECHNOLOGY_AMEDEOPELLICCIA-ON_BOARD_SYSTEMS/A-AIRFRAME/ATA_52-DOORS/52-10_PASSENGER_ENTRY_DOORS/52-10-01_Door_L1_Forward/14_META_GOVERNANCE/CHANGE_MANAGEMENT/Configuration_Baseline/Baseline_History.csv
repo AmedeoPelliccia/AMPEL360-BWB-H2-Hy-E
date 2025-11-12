@@ -1,0 +1,6 @@
+Baseline_ID,Version,Date,Description,Status,Documents_Included,Approved_By
+BL-001,1.0-CONCEPTUAL,2025-11-03,Initial_conceptual_design_baseline,Active,475,Chief_Engineer
+BL-002,2.0-PDR,2026-03-15,Preliminary_Design_Review_baseline,Planned,550,Program_Manager
+BL-003,3.0-CDR,2026-09-20,Critical_Design_Review_baseline,Planned,625,Chief_Engineer
+BL-004,3.1-TRR,2026-12-10,Test_Readiness_Review_baseline,Planned,650,Test_Director
+BL-005,4.0-PRODUCTION,2027-06-30,Production_release_baseline,Planned,700,Program_Manager

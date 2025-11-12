@@ -1,0 +1,44 @@
+Clearance_Point,Location,Ground_Height_m,Aircraft_Height_m,Clearance_m,Design_Requirement_m,Status,Critical_Notes
+Nose_Tip,Forward fuselage,0.0,2.5,2.5,2.0,Pass,Adequate nose clearance at rotation
+Fuselage_Belly_Forward,Forward lower fuselage,0.0,0.85,0.85,0.50,Pass,Forward belly clearance
+Fuselage_Belly_Center,Center body station,0.0,0.95,0.95,0.50,Pass,Center section clearance
+Fuselage_Belly_Aft,Aft lower fuselage,0.0,0.80,0.80,0.50,Pass,Aft belly clearance
+Main_Gear_Strut,MLG pivot,0.0,2.80,2.80,2.50,Pass,Main gear static position
+Nose_Gear_Strut,NLG pivot,0.0,2.50,2.50,2.20,Pass,Nose gear static position
+Wing_Tip_Ground,Wingtip static,0.0,1.20,1.20,0.80,Pass,Wingtip clearance at zero bank
+Engine_Nacelle_Port,Port propulsor,0.0,0.95,0.95,0.60,Pass,Engine ground clearance
+Engine_Nacelle_Stbd,Starboard propulsor,0.0,0.95,0.95,0.60,Pass,Engine ground clearance
+Tail_Cone,Aft fuselage,0.0,1.85,1.85,1.20,Pass,Tail strike protection adequate
+Vertical_Stabilizer_Tip,VTP tip height,0.0,12.50,12.50,N/A,Pass,Total aircraft height
+Door_Sill_Height_L1,Forward entry door,0.0,3.20,3.20,2.80,Pass,Compatible with standard jetway
+Door_Sill_Height_L3,Aft emergency exit,0.0,3.15,3.15,2.80,Pass,Emergency slide deployment clear
+Cargo_Door_Forward,Forward cargo access,0.0,1.60,1.60,1.20,Pass,Standard GSE compatible
+Cargo_Door_Aft,Aft cargo access,0.0,1.55,1.55,1.20,Pass,Standard GSE compatible
+Critical_Rotation,Nose up 12° at VR,0.0,0.45,0.45,0.35,Pass,Tail strike clearance at rotation
+Critical_Landing_Flare,Nose up 10° at touchdown,0.0,0.52,0.52,0.40,Pass,Landing flare clearance adequate
+Critical_Wing_Bank_5deg,5° bank angle,0.0,0.74,0.74,0.50,Pass,Taxiway bank clearance
+Critical_Wing_Bank_10deg,10° bank angle during turn,0.0,0.16,0.16,0.10,Marginal,Requires careful ground handling
+Over_Wing_Emergency_Exit,Slide deployment clearance,3.15,4.20,1.05,0.80,Pass,Emergency slide inflates clear of ground
+Propulsor_Blade_Tip,Spinning propeller,0.0,2.45,2.45,2.00,Pass,Propeller tip ground clearance
+APU_Exhaust,Tail cone APU outlet,0.0,10.50,10.50,N/A,Pass,Clear of ground operations
+Antenna_Belly_VHF,Underside VHF antenna,0.0,0.35,0.35,0.25,Pass,Antenna ground clearance
+Antenna_Top_Satcom,Upper fuselage SATCOM,0.0,12.20,12.20,N/A,Pass,No interference with hangar height
+Hangar_Door_Height,Standard hangar,0.0,20.00,7.50,15.00,Pass,Fits standard wide-body hangars
+Hangar_Width,Standard hangar,0.0,80.00,10.00,75.00,Pass,70m span fits in hangar
+Airport_Category,ICAO code,,,,,E,Wingspan 65-80m requires Code E airport
+Taxiway_Width_Required,ICAO minimum,,,23.0,m,E,Taxiway centerline to edge 11.5m
+Runway_Width_Required,ICAO minimum,,,45.0,m,E,Minimum runway width for operations
+Parking_Stand_Size,Gate dimensions,,,80x80,m,Pass,Typical wide-body parking stand
+Tow_Bar_Attachment,Nose gear tow point,0.0,1.20,1.20,0.80,Pass,Standard tow bar compatible
+Jacking_Point_Height,Forward jack pad,0.0,0.95,0.95,0.60,Pass,Standard jacking equipment
+Service_Panel_Access,Belly service doors,0.0,2.20,2.20,1.80,Pass,Maintenance access adequate
+Bridge_Clearance_Static,Static ground position,0.0,12.50,12.50,N/A,Info,Total height for bridge/hangar planning
+Bridge_Clearance_Towed,Towing configuration,0.0,12.50,12.50,N/A,Info,Height remains constant when towed
+Turning_Radius,Nose gear steering,,,42.0,m,Info,Minimum turning radius - outer wingtip
+Wheelbase,NLG to MLG,,,19.0,m,Info,Longitudinal gear spacing
+Track_Width,MLG port to starboard,,,9.0,m,Info,Lateral main gear spacing
+Tipback_Angle,Static stability,,,15.5,°,Info,Angle before aft tip - well above operational
+Ground_Maneuvering_Envelope,Rotation at MTOW,12,°,0.45,m,Pass,CS-25 tail strike clearance met
+Ground_Maneuvering_Envelope,Landing flare at MLW,10,°,0.52,m,Pass,CS-25 landing clearance met
+Design_Notes,BWB Configuration,Requires careful ground operations due to low wing,,,,,Operations procedures emphasize ground awareness
+Design_Notes,Wingtip Clearance,70m span requires Code E airport infrastructure,,,,,Airport compatibility assessment required

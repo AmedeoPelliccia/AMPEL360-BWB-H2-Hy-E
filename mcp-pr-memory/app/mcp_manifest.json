@@ -1,0 +1,10 @@
+{
+  "version": "2025-01-01",
+  "id": "ampl-pr-memory",
+  "name": "AMPEL PR Memory MCP",
+  "resources_endpoint": "/search_prs",
+  "tools": [
+    {"name": "search_prs", "description": "Buscar PRs cerrados/mergeados", "endpoint": "/search_prs"},
+    {"name": "get_diff", "description": "Obtener diff bajo demanda", "endpoint": "/get_diff"}
+  ]
+}

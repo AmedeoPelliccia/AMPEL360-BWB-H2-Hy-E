@@ -1,0 +1,13 @@
+# RQ-53-10-01-055: Radar Transmission > 95%
+
+## Requirement Statement
+The radome shall provide > 95% RF transmission efficiency for weather radar.
+
+## Acceptance Criteria
+- Transmission > 95% at 9.3 GHz
+- Insertion loss < 0.5 dB
+- No degradation over service life
+- Validated by ground and flight testing
+
+## Compliance Status
+Material testing complete - 96.5% transmission

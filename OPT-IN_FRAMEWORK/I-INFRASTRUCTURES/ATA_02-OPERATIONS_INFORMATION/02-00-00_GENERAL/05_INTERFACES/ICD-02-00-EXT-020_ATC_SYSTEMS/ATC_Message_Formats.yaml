@@ -1,0 +1,23 @@
+---
+interface_id: ICD-02-00-EXT-020
+version: 1.0.0
+protocol: CPDLC/ACARS
+
+flight_plan:
+  aircraft_type: AMPEL360
+  equipment_code: SBDEG/H
+  wake_category: M
+  special_requirements:
+    - H2_CAPABLE_ALTERNATE
+    - H2_DIVERSION_AIRPORTS
+
+cpdlc:
+  standard: FANS_1A
+  backup: ATN_B2
+  coverage: [OCEANIC, DOMESTIC]
+  
+emergency_messaging:
+  h2_leak: MAYDAY_H2_FUEL_EMERGENCY
+  fuel_cell_failure: PAN_PAN_POWERPLANT
+  diversion_required: H2_CAPABLE_AIRPORT_REQUIRED
+---

@@ -174,7 +174,7 @@ The DPP continuously accumulates:
 - [CAOS Manifesto](/CAOS_MANIFESTO.md) - Complete framework overview
 - [OPT-IN Framework](/OPT-IN_FRAMEWORK/README.md) - Parent framework
 - [ATA 95 - Digital Product Passport](./ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/)
-- [Technology Systems](../T-TECHNOLOGY_AMPEDEOPELLICCIA-ON_BOARD_SYSTEMS/)
+- [Technology Systems](../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/)
 
 ---
 

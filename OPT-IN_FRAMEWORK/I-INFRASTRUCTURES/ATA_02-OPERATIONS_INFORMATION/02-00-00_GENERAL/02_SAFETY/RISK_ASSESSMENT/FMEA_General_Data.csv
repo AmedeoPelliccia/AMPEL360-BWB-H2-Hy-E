@@ -1,0 +1,11 @@
+Component,Function,Failure_Mode,Effect_Local,Effect_System,Effect_Aircraft,Severity,Probability,Detection,RPN,Mitigation,Status
+H2_Sensor,Leak Detection,Sensor Failure,No detection in zone,Delayed leak detection,Fire/explosion risk,Catastrophic,Remote,High,12,8 sensors per zone (redundancy),Acceptable
+H2_Valve,Fuel Isolation,Fails Open,Cannot isolate leak,Continued leak,Fire/explosion,Catastrophic,Extremely Remote,Medium,8,Fail-safe design + manual backup,Acceptable
+Fuel_Cell_Stack_1,Power Generation,Stack Failure,Loss of 25% power,Reduced power,Performance degradation,Major,Probable,High,18,4 stacks (operate on 2),Acceptable
+CG_Sensor,Weight Measurement,Incorrect Reading,Wrong CG calculation,Incorrect CG display,Loss of control,Catastrophic,Remote,Medium,10,Triple redundant sensors + CAOS,Acceptable
+Evacuation_Slide,Emergency Egress,Fails to Deploy,One exit blocked,Reduced evacuation capacity,Evacuation delay,Hazardous,Remote,High,12,12 exits (redundancy) + manual deployment,Acceptable
+CAOS_Primary,Advisory System,Incorrect Advisory,Wrong recommendation,Crew confusion,Minor safety impact,Minor,Probable,High,15,Human override + independent monitor,Acceptable
+Emergency_Light,Evacuation Lighting,Battery Failure,Section dark,Reduced visibility,Evacuation difficulty,Major,Remote,High,12,Independent battery + photoluminescent backup,Acceptable
+Ventilation_Fan,H2 Ventilation,Fan Failure,Reduced airflow,H2 accumulation risk,Fire/explosion risk,Catastrophic,Remote,High,12,Dual redundant fans + monitoring,Acceptable
+Fire_Detector_H2,Fire Detection,False Negative,No fire detection,Undetected fire,Aircraft loss,Catastrophic,Extremely Remote,Low,6,Multi-spectrum sensors + redundancy,Acceptable
+Fuel_Transfer,CG Management,Transfer Failure,Cannot adjust CG,CG exceedance,Loss of control,Catastrophic,Remote,High,12,Manual procedures + CAOS monitoring,Acceptable

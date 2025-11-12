@@ -1,0 +1,11 @@
+Test_ID,Test_Name,Priority,Plan_Status,Procedure_Status,Test_Status,Results,Pass_Fail,Date_Completed,Notes
+TP-001,Static_Ultimate,HIGH,Complete,Draft,Not_Started,-,-,-,Awaiting_prototype
+TP-002,Proof_Pressure,HIGH,Complete,Draft,Not_Started,-,-,-,Awaiting_prototype
+TP-003,Fatigue_120k,HIGH,Complete,Conceptual,Not_Started,-,-,-,120k_cycles_6_month_test
+TP-004,Damage_Tolerance,MEDIUM,Draft,Not_Started,Not_Started,-,-,-,50mm_hole_damage_scenario
+TP-005,GVT_Modal,CRITICAL,Complete,Complete,Not_Started,-,-,-,MANDATORY_before_flight_Mode_1_damping
+TP-006,Lightning_Strike,MEDIUM,Draft,Not_Started,Not_Started,-,-,-,200kA_Zone_1A_direct_strike
+TP-007,Bird_Strike,MEDIUM,Conceptual,Not_Started,Not_Started,-,-,-,1.8kg_bird_230kts_impact
+TP-008,Fire_Resistance,LOW,Conceptual,Not_Started,Not_Started,-,-,-,15min_1000C_exposure
+TP-009,Environmental,LOW,Not_Started,Not_Started,Not_Started,-,-,-,Thermal_humidity_cycling
+TP-010,Functional,HIGH,Draft,Draft,Not_Started,-,-,-,Door_operation_all_modes

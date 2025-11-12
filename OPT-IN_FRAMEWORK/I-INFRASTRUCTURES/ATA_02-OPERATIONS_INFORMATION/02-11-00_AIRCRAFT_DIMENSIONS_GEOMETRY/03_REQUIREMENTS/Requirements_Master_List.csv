@@ -1,0 +1,16 @@
+Req_ID,Category,Title,Priority,Status,Source,Verification
+RQ-02-11-10-001,Dimensions,Wingspan 52.0m ±0.1m,Critical,Approved,Design_Spec,Measurement
+RQ-02-11-10-002,Dimensions,Overall Length 38.2m ±0.1m,Critical,Approved,Design_Spec,Measurement
+RQ-02-11-10-003,Dimensions,Overall Height 14.5m ±0.05m,Critical,Approved,Design_Spec,Measurement
+RQ-02-11-10-004,Dimensions,Wing Area 845m² ±5m²,High,Approved,Aero_Analysis,Calculation
+RQ-02-11-10-005,Dimensions,ICAO Code E Compliance,Critical,Approved,ICAO_Annex14,Analysis
+RQ-02-11-20-001,BWB_Geometry,Center Body Width 38.0m,Critical,Approved,BWB_Design,Measurement
+RQ-02-11-20-003,BWB_Geometry,Aspect Ratio 3.2,High,Approved,Aero_Design,Calculation
+RQ-02-11-20-004,BWB_Geometry,LE Sweep 37° ±0.5°,High,Approved,Aero_Design,Measurement
+RQ-02-11-30-001,Clearances,Wingtip Clearance ≥1.2m,Critical,Approved,CS-25.231,Test
+RQ-02-11-30-002,Clearances,Belly Clearance ≥1.8m,Critical,Approved,CS-25.231,Test
+RQ-02-11-40-001,Reference,Body Axis Right-Hand System,Critical,Approved,ATA_100,Inspection
+RQ-02-11-40-002,Reference,Station System From Nose,Critical,Approved,ATA_100,Inspection
+RQ-02-11-50-001,Airport,Taxiway Width ≥23m Required,Critical,Approved,ICAO_Annex14,Analysis
+RQ-02-11-50-002,Airport,Turning Radius 42m,High,Approved,Ground_Ops,Test
+RQ-02-11-60-001,Tolerances,Manufacturing ±0.1m Critical,Critical,Approved,Production,Inspection

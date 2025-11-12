@@ -1,0 +1,6 @@
+Issue_ID,Date_Opened,Date_Closed,Severity,Category,Description,Resolution,Closed_By,Verified_By
+ISS-004,2025-10-10,2025-10-18,Low,Procedure,Preflight checklist length too long,Streamlined checklist to 14 min from 15 min,Operations Team,Test Team
+ISS-005,2025-10-15,2025-10-22,Low,Software,CAOS alert timing inconsistent,Adjusted algorithm parameters; timing now consistent,CAOS Team,Test Team
+ISS-006,2025-10-18,2025-10-25,Low,Design,Crew workstation layout minor ergonomic issue,Minor adjustment to panel angle,Design Team,HF Team
+ISS-007,2025-10-20,2025-10-28,Low,Display,H2 fuel gauge readability in bright conditions,Enhanced display contrast and brightness,Avionics Team,Test Team
+ISS-008,2025-10-25,2025-11-01,Medium,Safety,Emergency lighting intensity below optimal,Increased LED brightness by 15%,Electrical Team,Safety Team

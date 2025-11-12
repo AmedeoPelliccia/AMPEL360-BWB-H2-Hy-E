@@ -1,0 +1,17 @@
+Phase,Period,Position,Headcount,Shift,FTE,Notes
+Prototype,2026_Q3,Composite_Tech,2,Day,2.0,Hire_3_months_early
+Prototype,2026_Q3,Assembly_Mech,1,Day,1.0,Hire_3_months_early
+Prototype,2026_Q3,Quality_Inspector,1,Day,1.0,Hire_3_months_early
+Prototype,2026_Q3,Prod_Supervisor,1,Day,1.0,Hire_6_months_early
+Prototype,2026_Q4,NDT_Technician,1,Day,0.5,Contract_initially
+Prototype,2026_Q4,Material_Handler,1,Day,0.5,Part_time
+LRIP,2027_Q1,Composite_Tech,3,Day,3.0,Add_1_position
+LRIP,2027_Q1,Assembly_Mech,2,Day,2.0,Add_1_position
+LRIP,2027_Q2,Quality_Engineer,1,Day,1.0,New_position
+LRIP,2027_Q3,Paint_Tech,1,Day,1.0,New_position
+LRIP,2027_Q3,Mfg_Engineer,1,Day,1.0,New_position
+FRP,2028_Q1,Composite_Tech,4,2_Shift,4.0,Add_1_position
+FRP,2028_Q1,Assembly_Mech,3,2_Shift,3.0,Add_1_position
+FRP,2028_Q2,Material_Handler,1,2_Shift,1.0,Full_time
+FRP,2028_Q2,Planner,1,Day,1.0,New_position
+Steady,2028_Q4,All_Positions,15,2_Shift,15.0,Full_complement

@@ -1,0 +1,3 @@
+# 10 CERTIFICATION
+
+This directory contains 10 CERTIFICATION documentation for 55-70_ICE_PROTECTION_SYSTEMS.

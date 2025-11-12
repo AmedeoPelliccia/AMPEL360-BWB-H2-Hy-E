@@ -1,0 +1,13 @@
+# RQ-53-10-01-075: Composite to Metal Joint
+
+## Requirement Statement
+The interface between composite nose cone and aluminum bulkhead shall prevent galvanic corrosion.
+
+## Acceptance Criteria
+- Glass fiber isolation layer at interface
+- Corrosion-resistant fasteners (titanium or stainless)
+- Sealant prevents moisture ingress
+- No direct contact between dissimilar metals
+
+## Compliance Status
+Design complete

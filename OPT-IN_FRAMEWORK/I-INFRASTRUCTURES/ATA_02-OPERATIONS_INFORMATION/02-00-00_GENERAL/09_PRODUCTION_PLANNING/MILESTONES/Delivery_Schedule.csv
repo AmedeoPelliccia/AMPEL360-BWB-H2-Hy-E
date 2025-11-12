@@ -1,0 +1,16 @@
+Deliverable,Target_Date,Recipient,Format,Status,Dependencies
+AFM_Final,2026-04-30,Regulatory_Ops,PDF_S1000D,On_Track,Performance_Data
+FCOM_Complete,2026-06-30,Flight_Ops,PDF_S1000D_EFB,Planning,AFM_Systems_Data
+QRH_Final,2026-05-15,Flight_Ops,Print_EFB,Planning,Emergency_Procedures
+WBM_Final,2026-03-15,Flight_Ops_Performance,PDF_EFB,On_Track,Weight_Data
+MEL_Approved,2026-07-01,Regulatory_Maintenance_Ops,PDF_S1000D_EFB,Planning,MMEL_Reliability_Data
+Type_Rating_Course,2026-05-15,Training_Centers,Complete_Package,At_Risk,All_Documentation
+CBT_Modules,2026-05-31,Training_Centers,SCORM,Planning,Content_Development
+Simulator_Scenarios,2026-03-31,Simulator_Facilities,Software_Package,On_Track,Flight_Model
+CAOS_Training_Complete,2026-06-30,All_Personnel,Multi_Format,Planning,CAOS_Software
+SOPs_Deployed,2026-06-30,Flight_Ops,Digital_Print,Planning,FCOM_Procedures
+Emergency_Procedures,2026-06-15,Flight_Ops_Safety,QRH_EFB,Planning,Safety_Analysis
+Digital_Distribution_Ready,2026-07-31,All_Users,EFB_Portal,Planning,All_Documentation
+Print_Production_Complete,2026-07-31,Various,Physical_Copies,Planning,Final_Approvals
+Translation_Complete,2026-07-31,International_Ops,Multi_Language,Planning,Source_Documents
+CAOS_Deployment_Complete,2026-07-31,Fleet,Software_Installation,Planning,CAOS_Development

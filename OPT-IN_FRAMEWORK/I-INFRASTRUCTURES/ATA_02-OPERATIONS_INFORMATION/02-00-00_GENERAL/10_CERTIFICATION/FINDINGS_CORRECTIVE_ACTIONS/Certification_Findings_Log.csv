@@ -1,0 +1,4 @@
+Finding_ID,Date,Authority,Category,Description,Severity,Status
+FIND-001,2026-02-20,EASA,H2_Systems,Ventilation_test_requirements_unclear,Minor,Closed
+FIND-002,2026-03-01,EASA,Documentation,AFM_H2_procedures_incomplete,Minor,Active
+FIND-003,2026-03-10,FAA,BWB_Design,Ground_clearance_procedures_needed,Minor,Open

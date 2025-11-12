@@ -1,0 +1,6 @@
+Part_Number,Description,Current_Revision,Previous_Revision,Change_Date,Change_Type,Reason,Effectivity,Approved_By
+PN-52-10-01-101001,Outer_Face_Sheet,02,01,2024-06-15,Minor,Material_thickness_tolerance_update,All_new_production,Engineering_Manager
+PN-52-10-01-202001,Hinge_Arm,03,02,2024-03-20,Minor,Surface_finish_specification,MSN-050_onwards,Chief_Engineer
+PN-52-10-01-302001,Door_Controller,v2.0.1,v2.0.0,2024-08-15,Software,Bug_fix_sensor_timeout,All_units_retrofit,Software_Director
+PN-52-10-01-204001,Primary_Seal,02,01,2024-01-10,Minor,Compound_reformulation_supplier,MSN-025_onwards,Materials_Engineer
+PN-52-10-01-203002,Gearbox,02,01,2023-11-05,Major,Bearing_upgrade_for_reliability,MSN-010_onwards,Chief_Engineer

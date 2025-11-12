@@ -1,0 +1,28 @@
+% MATLAB/Simulink Model: H2 Tank Thermal Model
+% File: SIM-02-00-102_Tank_Thermal_Model.slx
+% Purpose: Thermal analysis of liquid hydrogen storage tanks
+%
+% This is a placeholder for the actual Simulink model file.
+%
+% Model Components:
+% - Multi-layer vacuum insulation (MLVI)
+% - Support strut heat leak
+% - Radiation heat transfer
+% - Residual gas conduction
+% - Penetration heat leak
+%
+% Environmental Inputs:
+% - Ambient temperature
+% - Solar radiation (ground operations)
+% - Aerodynamic heating (flight)
+% - Internal H2 temperature
+%
+% Outputs:
+% - Total heat leak (W)
+% - Boil-off rate (%/hr)
+% - Tank pressure rise
+% - Temperature profiles
+%
+% Author: AMPEL360 Cryogenic Systems Team
+% Date: 2025-11-05
+% Version: 1.0

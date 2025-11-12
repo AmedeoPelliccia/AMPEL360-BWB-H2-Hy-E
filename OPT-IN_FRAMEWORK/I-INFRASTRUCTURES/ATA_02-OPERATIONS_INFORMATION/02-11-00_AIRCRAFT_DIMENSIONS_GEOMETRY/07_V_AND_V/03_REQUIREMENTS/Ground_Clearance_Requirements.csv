@@ -1,0 +1,7 @@
+Requirement_ID,Description,Location,Min_Clearance_m,Condition,Verification_Method,Priority
+REQ-02-11-013,Minimum Ground Clearance,Belly_Min,1.8,MTOW_Level,VER-02-11-201,Critical
+REQ-02-11-014,Tail Strike Angle Limit,Aft_Body,14,deg,Max_Rotation,VER-02-11-201,Critical
+REQ-02-11-015,Wingtip Ground Clearance,Wingtip,1.2,MTOW_Fueled,VER-02-11-202,High
+REQ-02-11-016,Maximum Wingtip Droop,Wingtip,0.15,m,Max_Fuel,VER-02-11-202,High
+REQ-02-11-017,Engine Intake Clearance,Engine_Intake,2.8,Ground_Ops,VER-02-11-203,Critical
+REQ-02-11-018,Door Sill Height,Passenger_Door,4.3,Boarding,VER-02-11-203,High

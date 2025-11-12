@@ -1,0 +1,6 @@
+Test_ID,Test_Description,Date,Status,Result,Success_Criteria,Actual_Performance,Crews_Tested,Notes
+VAL-02-00-101,Normal Takeoff Procedure,2025-10-20,Complete,Pass,100% completion in <5min,All completed avg 4.8 min,20,All crews successful
+VAL-02-00-102,H2 Leak Response,2025-10-22,Complete,Pass,Memory items <30sec,Average 28sec response,20,Excellent threat management
+VAL-02-00-103,Emergency Procedures,In Progress,Partial Pass,H2 fire suppression <60sec,Average 52sec,10,Testing continues to Dec 2025
+VAL-02-00-104,H2 Refueling Simulation,Scheduled,TBD,TBD,Completion <45min,N/A,0,Scheduled Nov 15 2025
+VAL-02-00-105,CAOS Integration,Active,Pass,Advisory accuracy >85%,87% accuracy achieved,15,Digital twin performing well

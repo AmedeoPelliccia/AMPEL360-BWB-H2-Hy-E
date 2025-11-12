@@ -1,0 +1,18 @@
+# RQ-53-20-03-054: Surface Waviness < 3mm per meter
+
+## Requirement Statement
+The BWB outer skin panels shall have surface waviness < 3mm per meter of span for aerodynamic efficiency.
+
+## Rationale
+Excessive surface waviness increases skin friction drag.
+
+## Acceptance Criteria
+- Measured waviness < 3mm per meter (1m straightedge)
+- Surface quality Ra < 3.2 μm
+- Manufacturing process control established
+
+## Compliance Status
+Manufacturing tolerance specification released
+
+## Traceability
+Related: RQ-53-20-03-020 (Surface Continuity)

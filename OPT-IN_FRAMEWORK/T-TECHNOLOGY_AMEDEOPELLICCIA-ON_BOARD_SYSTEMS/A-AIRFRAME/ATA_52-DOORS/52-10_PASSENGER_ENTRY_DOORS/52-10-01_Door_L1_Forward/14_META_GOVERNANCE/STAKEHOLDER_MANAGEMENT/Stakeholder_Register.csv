@@ -1,0 +1,12 @@
+Stakeholder,Role,Organization,Interest,Influence,Communication_Frequency,Contact
+Program_Manager,Accountable,AMPEL360,Overall_success,Very_High,Daily,pm@ampel360.aero
+Chief_Engineer,Decision_Maker,Engineering,Technical_approval,Very_High,Weekly,ce@ampel360.aero
+Design_Lead,Responsible,Design_Team,Design_quality,High,Daily,design-lead@ampel360.aero
+Safety_Engineer,Key_Stakeholder,Safety,Safety_compliance,High,Weekly,safety@ampel360.aero
+Certification_Engineer,Key_Stakeholder,Certification,Regulatory_approval,High,Bi-weekly,cert@ampel360.aero
+Quality_Manager,Key_Stakeholder,Quality,Quality_standards,High,Weekly,qa@ampel360.aero
+Manufacturing_Lead,Consulted,Manufacturing,Producibility,Medium,Bi-weekly,mfg@ampel360.aero
+Maintenance_Lead,Consulted,Operations,Maintainability,Medium,Monthly,maint@ampel360.aero
+Supplier_Manager,Consulted,Supply_Chain,Component_delivery,Medium,Weekly,supply@ampel360.aero
+Customer_Rep,Informed,Customer,Requirements,Medium,Monthly,customer@airline.com
+Regulatory_Authority,Approver,EASA,Certification,Very_High,Quarterly,authority@easa.europa.eu

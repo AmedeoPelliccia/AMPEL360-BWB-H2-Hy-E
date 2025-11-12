@@ -1,0 +1,53 @@
+Req_ID,Source_Type,Source_Doc,Source_Section,Design_Implementation,Verification_Doc,Validation_Doc,Status
+RQ-02-00-01-001,Regulation,EASA CS-25,25.1581,AFM Section 1,VER-02-00-001,VAL-02-00-001,Verified
+RQ-02-00-01-002,Regulation,FAA 14 CFR 25,25.1581,AFM Section 1,VER-02-00-002,VAL-02-00-002,Verified
+RQ-02-00-01-003,Regulation,ICAO Annex 6,Part I Section II,Operations Manual Chapter 1,VER-02-00-003,VAL-02-00-003,Verified
+RQ-02-00-01-015,Regulation,ISO 19881:2018,Section 5,ATA 28-10-00 Tank Design,VER-28-10-001,VAL-28-10-001,Verified
+RQ-02-00-01-016,Regulation,SAE J2719,Quality Standards,ATA 28 Fuel Quality Control,VER-28-00-002,VAL-28-00-002,Verified
+RQ-02-00-01-017,Regulation,NFPA 2:2020,Chapter 7,ATA 28 H2 System Safety,VER-28-00-003,VAL-28-00-003,Verified
+RQ-02-00-01-018,Regulation,EU AI Act,Article 5,ATA 95 CAOS Safety Framework,VER-95-00-001,VAL-95-00-001,In Progress
+RQ-02-00-02-001,Safety Analysis,SMS-001,Safety Objectives,Operations Manual Chapter 2,VER-02-00-010,VAL-02-00-010,Verified
+RQ-02-00-02-009,Safety Analysis,FHA-H2-001,H2 Leak Hazard,ATA 28 Leak Detection System,VER-28-00-045,VAL-28-00-045,Verified
+RQ-02-00-02-010,Safety Analysis,FHA-H2-002,Ventilation Failure,ATA 21 Emergency Ventilation,VER-21-00-020,VAL-21-00-020,Verified
+RQ-02-00-02-017,Safety Analysis,FHA-CAOS-001,CAOS Failure Modes,ATA 95 Safety Monitor,VER-95-00-010,VAL-95-00-010,Verified
+RQ-02-00-02-018,Safety Analysis,HF-001,Automation Authority,ATA 95 Override System,VER-95-00-011,VAL-95-00-011,Verified
+RQ-02-00-03-001,Design Spec,DS-PERF-001,Range Requirements,ATA 28 Fuel Capacity,VER-02-40-001,VAL-02-40-001,Validated
+RQ-02-00-03-002,Design Spec,DS-PERF-002,Cruise Performance,ATA 57 Wing Design,VER-02-40-002,VAL-02-40-002,Validated
+RQ-02-00-03-007,Design Spec,DS-PERF-007,Efficiency Target,ATA 28 + ATA 71 Integration,VER-02-40-007,VAL-02-40-007,Validated
+RQ-02-00-03-008,Design Spec,DS-FC-001,Fuel Cell Efficiency,ATA 71 Fuel Cell System,VER-71-00-001,VAL-71-00-001,Validated
+RQ-02-00-03-015,Design Spec,DS-CAOS-001,CAOS Optimization,ATA 95 Optimization Algorithms,VER-95-00-020,VAL-95-00-020,In Progress
+RQ-02-00-04-010,Operations Spec,OPS-REL-001,Dispatch Reliability,ATA 05 Maintenance Program,VER-02-00-020,VAL-02-00-020,Verified
+RQ-02-00-05-001,Design Spec,DS-H2-FUEL-001,Tank Capacity,ATA 28-10-00 Tanks,VER-28-10-001,VAL-28-10-001,Validated
+RQ-02-00-05-002,Design Spec,DS-H2-FUEL-002,Usable Fuel,ATA 28-10-00 Tank System,VER-28-10-002,VAL-28-10-002,Validated
+RQ-02-00-05-003,Design Spec,DS-H2-FUEL-003,Cryogenic Temp,ATA 28-10-00 Cooling System,VER-28-10-003,VAL-28-10-003,Validated
+RQ-02-00-05-006,Operations Spec,OPS-H2-001,Refueling Time,ATA 12 H2 Servicing Procedures,VER-12-00-010,VAL-12-00-010,Verified
+RQ-02-00-06-001,Flight Control Spec,FC-BWB-001,CG Range,ATA 27 Flight Control System,VER-27-00-001,VAL-27-00-001,Validated
+RQ-02-00-06-005,Flight Control Spec,FC-BWB-005,Lateral Imbalance,ATA 27 Lateral Control,VER-27-00-005,VAL-27-00-005,Validated
+RQ-02-00-07-001,Design Spec,DS-FC-100,Total Power,ATA 71 Fuel Cell Array,VER-71-00-100,VAL-71-00-100,Validated
+RQ-02-00-07-002,Design Spec,DS-FC-101,Stack Power,ATA 71 Individual Stack,VER-71-00-101,VAL-71-00-101,Validated
+RQ-02-00-07-009,Design Spec,DS-FC-109,Thermal Management,ATA 71 Cooling System,VER-71-00-109,VAL-71-00-109,Validated
+RQ-02-00-08-001,CAOS Spec,CAOS-ARCH-001,Digital Twin,ATA 95-10-00 Digital Twin,VER-95-10-001,VAL-95-10-001,In Progress
+RQ-02-00-08-002,CAOS Spec,CAOS-ARCH-002,Synchronization,ATA 95-10-00 Data Sync,VER-95-10-002,VAL-95-10-002,In Progress
+RQ-02-00-08-006,CAOS Spec,CAOS-OPT-001,Route Optimization,ATA 95-20-00 Flight Optimizer,VER-95-20-001,VAL-95-20-001,In Progress
+RQ-02-00-08-007,CAOS Spec,CAOS-OPT-002,Fuel Optimization,ATA 95-20-00 Fuel Manager,VER-95-20-002,VAL-95-20-002,In Progress
+RQ-02-00-08-016,Human Factors Spec,HF-CAOS-001,Human Authority,ATA 95 Human-AI Interface,VER-95-30-001,VAL-95-30-001,Verified
+RQ-02-00-08-017,Human Factors Spec,HF-CAOS-002,Override Capability,ATA 95 Override Mechanism,VER-95-30-002,VAL-95-30-002,Verified
+RQ-02-00-09-001,Human Factors Spec,HF-WL-001,Workload Management,Cockpit Design Specification,VER-31-00-001,VAL-31-00-001,Verified
+RQ-02-00-09-020,Human Factors Spec,HF-TRUST-001,Trust Calibration,ATA 95 Trust Interface,VER-95-30-020,VAL-95-30-020,In Progress
+RQ-02-00-10-001,Training Spec,TRN-TYPE-001,Type Rating Ground,Training Program TP-001,VER-TRN-001,VAL-TRN-001,Approved
+RQ-02-00-10-004,Training Spec,TRN-H2-001,H2 Systems Training,H2 Training Module HTM-001,VER-TRN-H2-001,VAL-TRN-H2-001,Approved
+RQ-02-00-10-006,Training Spec,TRN-CAOS-001,CAOS Training,CAOS Training Module CTM-001,VER-TRN-CAOS-001,VAL-TRN-CAOS-001,In Progress
+RQ-02-00-11-001,Regulation,CS-25.1581,AFM Requirements,AFM Document Structure,VER-DOC-001,VAL-DOC-001,Verified
+RQ-02-00-11-006,Standard,S1000D Issue 5.0,Data Modules,Technical Publications System,VER-DOC-006,VAL-DOC-006,Verified
+RQ-02-00-11-007,Standard,ATA iSpec 2200,Chapter Codes,Maintenance Manual Structure,VER-DOC-007,VAL-DOC-007,Verified
+RQ-02-00-12-001,Environmental Policy,ENV-001,Zero Emissions,ATA 71 Fuel Cell + ATA 28 H2,VER-ENV-001,VAL-ENV-001,Validated
+RQ-02-00-12-002,Environmental Policy,ENV-002,Carbon Negative,ATA 21-80 CO2 Capture System,VER-ENV-002,VAL-ENV-002,In Progress
+RQ-02-00-12-011,Environmental Policy,ENV-011,CO2 Capture Rate,ATA 21-80 Sorbent System,VER-ENV-011,VAL-ENV-011,In Progress
+RQ-02-00-13-001,Integration Spec,INT-ATA05-001,Maintenance Interface,ATA 05 Integration Document,VER-INT-001,VAL-INT-001,Verified
+RQ-02-00-13-005,Integration Spec,INT-ATA28-001,H2 Fuel Interface,ATA 28 Interface Control Doc,VER-INT-005,VAL-INT-005,Verified
+RQ-02-00-13-007,Integration Spec,INT-ATA71-001,Fuel Cell Interface,ATA 71 Interface Control Doc,VER-INT-007,VAL-INT-007,Verified
+RQ-02-00-13-008,Integration Spec,INT-ATA95-001,CAOS Interface,ATA 95 Integration Document,VER-INT-008,VAL-INT-008,In Progress
+RQ-02-00-14-001,Functional Spec,FUNC-FP-001,Flight Planning,Flight Planning System FPS-1,VER-FUNC-001,VAL-FUNC-001,Verified
+RQ-02-00-14-004,Functional Spec,FUNC-H2-001,H2 Fuel Calculation,H2 Fuel Management System,VER-FUNC-004,VAL-FUNC-004,Verified
+RQ-02-00-14-016,Functional Spec,FUNC-MON-001,Real-Time Monitoring,Monitoring System Architecture,VER-FUNC-016,VAL-FUNC-016,Verified
+RQ-02-00-14-020,Functional Spec,FUNC-FLEET-001,Fleet Data Sharing,ATA 95 Fleet Learning Module,VER-FUNC-020,VAL-FUNC-020,In Progress

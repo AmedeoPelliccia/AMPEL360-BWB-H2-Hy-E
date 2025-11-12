@@ -1,0 +1,3 @@
+# 03 REQUIREMENTS
+
+This directory contains 03 REQUIREMENTS documentation for 56-40_WINDOW_FRAMES_AND_STRUCTURE.

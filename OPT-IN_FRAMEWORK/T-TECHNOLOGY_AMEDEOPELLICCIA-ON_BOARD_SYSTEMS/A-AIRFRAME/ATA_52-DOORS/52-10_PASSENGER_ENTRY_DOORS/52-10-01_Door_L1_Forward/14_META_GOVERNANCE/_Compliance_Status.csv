@@ -1,0 +1,15 @@
+Standard,Requirement,Status,Evidence,Gap_Analysis,Action_Required,Due_Date,Owner
+CS-25.783,Door_Design,Partial,Design_Documents,No_test_evidence,Prototype_testing_required,2026-Q2,Design_Lead
+CS-25.783(a),Emergency_Exit,In_Progress,Safety_Analysis,Evacuation_test_pending,Schedule_evacuation_demo,2026-Q3,Safety_Engineer
+CS-25.783(b),Door_Location,Complete,Layout_Drawings,None,None,Complete,Systems_Engineer
+CS-25.783(c),Marking,Planned,Marking_Spec,Not_yet_defined,Create_marking_specification,2026-Q1,Design_Engineer
+CS-25.807,Emergency_Exits,Partial,Exit_Analysis,Test_data_missing,Conduct_emergency_egress_tests,2026-Q3,Test_Engineer
+CS-25.809,Emergency_Exit_Arrangement,In_Progress,Cabin_Layout,Final_review_pending,Complete_layout_review,2026-Q1,Design_Lead
+CS-25.810,Emergency_Egress_Assist,Planned,Slide_Spec,Supplier_selection_pending,Award_slide_contract,2026-Q2,Procurement
+CS-25.813,Emergency_Exit_Access,In_Progress,Access_Analysis,Mockup_testing_required,Build_full-scale_mockup,2026-Q2,Prototype_Lead
+FAR_25.783,Door_Design_Compliance,Partial,FAA_Coordination,Certification_basis_pending,Submit_certification_plan,2026-Q1,Cert_Engineer
+ATA_52,Documentation_Structure,Complete,14-Folder_Skeleton,None,None,Complete,Program_Manager
+S1000D,Data_Module_Compliance,In_Progress,DMC_Templates,70%_complete,Continue_DMC_development,2026-Q2,Tech_Writer
+ISO_9001,Quality_Management,Complete,QMS_Manual,Annual_audit_passed,Maintain_QMS,Ongoing,Quality_Manager
+AS9100D,Aerospace_Quality,In_Progress,Process_Maps,Gap_assessment_Q4_2025,Address_AS9100_gaps,2026-Q1,Quality_Lead
+EN_9100,European_Compliance,Planned,Compliance_Matrix,Not_yet_assessed,Conduct_EN9100_assessment,2026-Q3,Compliance_Lead

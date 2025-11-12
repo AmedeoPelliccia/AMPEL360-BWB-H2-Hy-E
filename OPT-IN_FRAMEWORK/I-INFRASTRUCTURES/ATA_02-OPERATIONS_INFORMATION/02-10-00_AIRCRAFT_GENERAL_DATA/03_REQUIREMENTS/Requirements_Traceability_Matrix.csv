@@ -1,0 +1,8 @@
+Req_ID,Design_Element,Test_Case,Compliance_Doc,Related_ATA,Status
+RQ-02-10-00-001,Type_Certificate_Sheet,TC-001,EASA_Type_Certificate,ATA_00,Linked
+RQ-02-10-10-001,BWB_Geometry_Model,GEO-001,Design_Spec_v2.1,ATA_06,Linked
+RQ-02-10-20-001,Weight_Statement,WT-001,CS-25.25_Compliance,ATA_08,Linked
+RQ-02-10-20-005,CG_Envelope_Chart,CG-001,Stability_Report_v1.3,ATA_08,Linked
+RQ-02-10-30-003,H2_Tank_Design,H2-001,Tank_Cert_Report,ATA_28,Linked
+RQ-02-10-40-001,Mission_Profile,FT-001,Performance_Analysis,ATA_05,Linked
+RQ-02-10-50-003,CAOS_Architecture,CAOS-001,CAOS_Validation_Report,ATA_45,Linked

@@ -1,0 +1,4 @@
+Comment_ID,Review_ID,Document_ID,Section,Comment,Priority,Status,Resolution_Date
+RC-001,TR-02-00-001,02-00-03-REQUIREMENTS,3.2,Typo in requirement ID,Minor,Resolved,2025-10-29
+RC-002,TR-02-00-001,02-00-03-REQUIREMENTS,4.5,Clarify interface requirement,Major,Resolved,2025-10-30
+RC-003,TR-02-00-002,02-00-04-DESIGN,2.1,Add BWB-specific note,Minor,Resolved,2025-11-02

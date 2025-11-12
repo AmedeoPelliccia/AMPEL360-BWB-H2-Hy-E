@@ -1,0 +1,7 @@
+Compartment,Volume_m3,Max_Weight_kg,Typical_Load_kg,Station,Moment,Density_kg_m3,Capability
+Forward_Hold,12,3500,2500,200,500000,292,Containerized
+Main_Hold_Fwd,9,2500,2000,500,1000000,278,Containerized
+Main_Hold_Aft,9,2500,1500,700,1050000,278,Containerized
+Aft_Hold,8,2000,1500,950,1425000,250,Bulk
+Bulk_Cargo,4,800,500,850,425000,200,Loose
+Total,42,11300,8000,,4400000,,

@@ -1,0 +1,28 @@
+Geometry_ID,Geometry_Element,Design_Parameter,Design_Value,Unit,Validation_Method,Validation_Date,Validated_Value,Result,Deviation,Validator,Notes
+GEOM-101,Planform,Wing_Area,845,m²,CAD_Integration,TBD,TBD,PENDING,TBD,TBD,Integrated planform area
+GEOM-102,Planform,Aspect_Ratio,3.2,—,Calculation,TBD,TBD,PENDING,TBD,TBD,b²/S from measured span and area
+GEOM-103,Planform,Taper_Ratio,0.1,—,CAD_Analysis,TBD,TBD,PENDING,TBD,TBD,Tip chord / Root chord
+GEOM-104,Planform,LE_Sweep_Angle,37,deg,CAD_Geometry,TBD,TBD,PENDING,TBD,TBD,Leading edge sweep
+GEOM-105,Planform,QC_Sweep_Angle,32,deg,CAD_Geometry,TBD,TBD,PENDING,TBD,TBD,Quarter-chord sweep
+GEOM-106,Planform,MAC_Length,22.5,m,Integration_Calc,TBD,TBD,PENDING,TBD,TBD,Mean aerodynamic chord
+GEOM-107,Planform,MAC_Y_Position,8.5,m,Integration_Calc,TBD,TBD,PENDING,TBD,TBD,Spanwise location of MAC
+GEOM-108,Planform,Wetted_Area,1850,m²,CAD_Surface_Area,TBD,TBD,PENDING,TBD,TBD,Total external surface area
+GEOM-201,Cross_Section,Root_Thickness_Ratio,0.18,—,CAD_Section,TBD,TBD,PENDING,TBD,TBD,t/c at root (BL 0)
+GEOM-202,Cross_Section,Tip_Thickness_Ratio,0.12,—,CAD_Section,TBD,TBD,PENDING,TBD,TBD,t/c at tip (BL 26)
+GEOM-203,Cross_Section,Center_Body_Depth,4.2,m,CAD_Measurement,TBD,TBD,PENDING,TBD,TBD,Maximum depth at centerline
+GEOM-204,Cross_Section,Pressure_Vessel_Radius,2.1,m,CAD_Measurement,TBD,TBD,PENDING,TBD,TBD,Equivalent radius for pressure vessel
+GEOM-205,Cross_Section,Airfoil_Type,NACA_6-series,—,Design_Review,TBD,TBD,PENDING,TBD,TBD,Airfoil family verification
+GEOM-206,Cross_Section,Surface_Continuity,G2,—,Curvature_Analysis,TBD,TBD,PENDING,TBD,TBD,Geometric continuity check
+GEOM-301,Wing,Root_Chord,35.0,m,CAD_Measurement,TBD,TBD,PENDING,TBD,TBD,Chord at BL 0
+GEOM-302,Wing,Tip_Chord,3.5,m,CAD_Measurement,TBD,TBD,PENDING,TBD,TBD,Chord at BL 26
+GEOM-303,Wing,Chord_Distribution,Trapezoidal,—,CAD_Analysis,TBD,TBD,PENDING,TBD,TBD,Chord variation spanwise
+GEOM-304,Wing,Dihedral_Angle,2.5,deg,CAD_Geometry,TBD,TBD,PENDING,TBD,TBD,Wing dihedral (upward angle)
+GEOM-305,Wing,Twist_Distribution,Linear_-3deg,—,CAD_Section_Analysis,TBD,TBD,PENDING,TBD,TBD,Geometric twist root to tip
+GEOM-306,Wing,Leading_Edge_Contour,Continuous,—,Curvature_Plot,TBD,TBD,PENDING,TBD,TBD,LE smoothness verification
+GEOM-307,Wing,Trailing_Edge_Contour,Continuous,—,Curvature_Plot,TBD,TBD,PENDING,TBD,TBD,TE smoothness verification
+GEOM-401,Center_Body,Width,38.0,m,CAD_Measurement,TBD,TBD,PENDING,TBD,TBD,Maximum width at STA 15.0
+GEOM-402,Center_Body,Length,28.5,m,CAD_Measurement,TBD,TBD,PENDING,TBD,TBD,Pressurized section length
+GEOM-403,Center_Body,Depth,4.2,m,CAD_Measurement,TBD,TBD,PENDING,TBD,TBD,Maximum depth at centerline
+GEOM-404,Center_Body,Volume,2800,m³,CAD_Volume_Calc,TBD,TBD,PENDING,TBD,TBD,Total internal volume
+GEOM-405,Center_Body,Blend_Continuity,G2,—,Surface_Analysis,TBD,TBD,PENDING,TBD,TBD,Blend into wing surfaces
+GEOM-406,Center_Body,Floor_Area,850,m²,CAD_Surface_Area,TBD,TBD,PENDING,TBD,TBD,Usable cabin floor area

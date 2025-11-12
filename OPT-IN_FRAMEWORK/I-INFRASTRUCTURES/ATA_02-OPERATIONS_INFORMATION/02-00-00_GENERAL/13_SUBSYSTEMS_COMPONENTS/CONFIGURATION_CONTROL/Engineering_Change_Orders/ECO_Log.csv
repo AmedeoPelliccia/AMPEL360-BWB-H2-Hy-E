@@ -1,0 +1,8 @@
+ECO_Number,Title,Type,Status,Submitted_Date,Approved_Date,Implementer,Affected_PNRs,Reason,Priority
+ECO-25-001,Refueling Panel Material Upgrade,Class 2,Closed,2025-09-15,2025-09-22,Engineering,"PNR-02-32-001-01",Improved UV resistance for extended life,Medium
+ECO-25-002,CAOS Software v2.1 Release,Class 2,Closed,2025-10-01,2025-10-08,Software_Team,"PNR-CAOS-SW-001",Performance improvements and bug fixes,Medium
+ECO-25-003,Memory Module Capacity Upgrade,Class 3,Closed,2025-10-12,2025-10-14,Engineering,"PNR-CAOS-HW-001-02",Support for larger AI models,Low
+ECO-25-004,Fire Extinguisher Halon Replacement,Class 1,In_Progress,2025-10-20,2025-10-25,Safety_Team,"PNR-02-EMG-002-01",Environmental compliance (Montreal Protocol),High
+ECO-25-005,EFB Tablet Alternative Manufacturer,Class 2,Approved,2025-11-01,2025-11-05,Procurement,"PNR-02-EFB-001",Dual source strategy for supply chain resilience,Medium
+ECO-25-006,Check Valve Flow Enhancement,Class 3,In_Review,2025-11-03,N/A,Engineering,"PNR-02-32-002-03",Reduce refueling time by 15%,Low
+ECO-25-007,Sensor Calibration Interval Extension,Class 2,In_Review,2025-11-04,N/A,Maintenance_Team,"PNR-CAOS-HW-002-01, PNR-CAOS-HW-002-02",Reduce maintenance burden based on reliability data,Medium

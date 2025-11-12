@@ -1,0 +1,11 @@
+Airport_Code,Gate_Compatible,Taxiway_Compatible,Runway_Compatible,H2_Available,Overall_Status
+EDDF,Yes,Yes,Yes,Yes,FULLY_COMPATIBLE
+LFPG,Yes,Yes,Yes,Planned_2027,COMPATIBLE_2027
+EHAM,Yes,Yes,Yes,Planned_2028,COMPATIBLE_2028
+EGLL,Yes,Yes,Yes,Planned_2029,COMPATIBLE_2029
+KJFK,Yes,Yes,Yes,Planned_2030,COMPATIBLE_2030
+KSFO,Yes,Partial,Yes,Planned_2030,LIMITED
+KLAX,Yes,Yes,Yes,Planned_2029,COMPATIBLE_2029
+OMDB,Yes,Yes,Yes,Planned_2028,COMPATIBLE_2028
+WSSS,Yes,Yes,Yes,Planned_2029,COMPATIBLE_2029
+RJAA,Yes,Yes,Yes,Planned_2028,COMPATIBLE_2028

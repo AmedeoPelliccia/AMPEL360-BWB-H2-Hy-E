@@ -1,0 +1,5 @@
+Risk_ID,Risk_Description,Probability,Impact,Risk_Level,Mitigation,Owner,Status
+R-001,Resource_availability_Q4,Medium,Medium,Medium,Buffer_built_in_schedule,Doc_Manager,Open_Monitored
+R-002,EASA_review_delay,Low,High,Medium,Early_engagement_regular_updates,Cert_Manager,Open_Monitored
+R-003,Requirements_volatility,Medium,Low,Low,Change_management_enforced,Systems_Eng,Open_Monitored
+R-004,Tool_system_failure,Low,Medium,Low,Redundant_systems_daily_backups,IT_Manager,Mitigated

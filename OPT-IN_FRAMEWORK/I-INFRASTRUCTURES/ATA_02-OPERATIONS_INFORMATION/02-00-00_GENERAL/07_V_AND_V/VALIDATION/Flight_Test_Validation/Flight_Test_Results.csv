@@ -1,0 +1,5 @@
+Test_ID,Test_Description,Date,Status,Result,Success_Criteria,Actual_Performance,Notes
+VAL-02-00-301,Initial Flight Test Plan,Planned,TBD,TBD,Safe flight completion,N/A,Scheduled Q2 2026
+VAL-02-00-302,Performance Flight Tests,Planned,TBD,TBD,Range validation 3500 NM,N/A,Awaiting prototype
+VAL-02-00-303,H2 System Flight Tests,Planned,TBD,TBD,System performance nominal,N/A,Scheduled Q3 2026
+VAL-02-00-304,CAOS Flight Tests,Planned,TBD,TBD,Advisory accuracy >85%,N/A,Digital twin ready

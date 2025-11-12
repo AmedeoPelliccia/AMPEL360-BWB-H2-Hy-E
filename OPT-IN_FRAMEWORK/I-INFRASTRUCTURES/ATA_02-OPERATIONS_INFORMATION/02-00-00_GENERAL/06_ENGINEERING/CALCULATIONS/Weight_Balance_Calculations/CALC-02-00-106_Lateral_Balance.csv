@@ -1,0 +1,11 @@
+Component,Left_Weight_kg,Right_Weight_kg,Imbalance_kg,Max_Allowed_kg,Status,Corrective_Action
+Fuel_Tanks,2100,2100,0,100,OK,None
+Passengers_Zone1,2295,2295,0,500,OK,None
+Passengers_Zone2,2295,2295,0,500,OK,None
+Passengers_Zone3,2295,2295,0,500,OK,None
+Passengers_Zone4,2295,2295,0,500,OK,None
+Cargo_Forward,1250,1250,0,300,OK,None
+Cargo_Main,1750,1750,0,300,OK,None
+Cargo_Aft,750,750,0,200,OK,None
+Systems,1400,1400,0,N/A,OK,Design Balanced
+Total,14235,14235,0,500,OK,Balanced
