@@ -1,683 +1,308 @@
-# AMPEL360 Documentation Standard
+# AMPEL360 Documentation & OPT-IN Structure Standard
 
-**Version:** 1.1  
+**Version:** 1.4  
 **Date:** 2025-11-12  
-**Status:** Active
+**Status:** ACTIVE
 
 ---
 
-## Overview
+## 1. OPT-IN Framework Top-Level Structure
 
-This document defines the mandatory documentation structure for the AMPEL360-BWB-H₂-Hy-E program. All ATA chapters and systems must comply with this standard to ensure:
+All documentation in the AMPEL360 program is organized under the **OPT-IN Framework**, with five main axes:
 
-- **Coherent documentation** across all systems
-- **Certification readiness** with complete traceability
-- **Lifecycle coverage** from concept to maintenance
-- **Standards compliance** with ATA iSpec 2200, S1000D, and regulatory requirements
+```text
+OPT-IN_FRAMEWORK/
+├── O-ORGANIZATION/
+├── P-PROGRAM/
+├── T-TECHNOLOGY/        # AMEDEOPELLICCIA taxonomy – on-board systems
+├── I-INFRASTRUCTURES/   # Airports, H2 value chains, supply chains, facilities, operations
+└── N-NEURAL_NETWORKS_USERS_TRACEABILITY/
+````
 
----
-
-## Canonical Reference: ATA 95-00-00_GENERAL
-
-The **ATA 95-00-00_GENERAL** (Neural Networks) serves as the canonical reference pattern for all ATA chapter documentation structures. All other ATA chapters must follow this pattern.
-
-**Location:** `/OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95_NEURAL_NETWORKS/95-00-00_GENERAL/`
+Each axis is mapped to specific ATA chapters as follows.
 
 ---
 
-## Mandatory XX-00-00_GENERAL Structure
+### 1.1 O – ORGANIZATION
 
-Every ATA chapter **MUST** include a `XX-00-00_GENERAL` directory (where `XX` is the ATA chapter number) containing the complete 14-folder lifecycle structure.
+Policies, limitations, and maintenance frameworks.
 
-### Folder Hierarchy
-
+```text
+O-ORGANIZATION/
+├── ATA_00_GENERAL/
+├── ATA_01_MAINTENANCE_POLICY_INFORMATION/
+├── ATA_04_AIRWORTHINESS_LIMITATIONS/
+└── ATA_05_TIME_LIMITS_MAINTENANCE_CHECKS/
 ```
+
+---
+
+### 1.2 P – PROGRAM
+
+Geometry, handling, servicing, and physical operations of the aircraft.
+
+```text
+P-PROGRAM/
+├── ATA_06_DIMENSIONS_AND_AREAS/
+├── ATA_07_LIFTING_AND_SHORING/
+├── ATA_08_LEVELING_AND_WEIGHING/
+├── ATA_09_TOWING_AND_TAXIING/
+└── ATA_12_SERVICING/
+```
+
+---
+
+### 1.3 T – TECHNOLOGY (On-Board Systems – AMEDEOPELLICCIA)
+
+On-board systems are structured using the A-M-E-D-E-O-P-E-L-I-C-C-I₂-A₂ taxonomy.
+
+```text
+T-TECHNOLOGY/
+├── A-AIRFRAME/
+│   ├── ATA_20_STANDARD_PRACTICES_AIRFRAME/
+│   ├── ATA_50_CARGO_ACCESSORY_COMPARTMENTS/
+│   ├── ATA_51_STANDARD_PRACTICES_STRUCTURES_GENERAL/
+│   ├── ATA_52_DOORS/
+│   ├── ATA_53_FUSELAGE/
+│   ├── ATA_54_NACELLES_PYLONS/
+│   ├── ATA_55_STABILIZERS/
+│   ├── ATA_56_WINDOWS/
+│   └── ATA_57_WINGS/
+│
+├── M-MECHANICS/
+│   ├── ATA_27_FLIGHT_CONTROLS_ACTUATION/
+│   ├── ATA_29_HYDRAULIC_POWER/
+│   ├── ATA_32_LANDING_GEAR/
+│   ├── ATA_36_PNEUMATIC/
+│   ├── ATA_37_VACUUM_WASTE_DISPOSAL/
+│   └── ATA_41_WATER_BALLAST/
+│
+├── E1-ENVIRONMENT/
+│   ├── ATA_21_AIR_CONDITIONING_PRESSURIZATION/
+│   ├── ATA_26_FIRE_PROTECTION/
+│   ├── ATA_30_ICE_RAIN_PROTECTION/
+│   └── ATA_38_WATER_WASTE/
+│
+├── D-DATA/
+│   └── ATA_31_INDICATING_RECORDING_RECORDING_FUNCTION/   # FDR/CVR
+│
+├── E2-ENERGY/
+│   ├── ATA_24_ELECTRICAL_POWER/
+│   ├── ATA_47_INERTING_SYSTEM/
+│   ├── ATA_49_AIRBORNE_AUXILIARY_POWER/
+│   └── ATA_80_STARTING/
+│
+├── O-OPERATING_SYSTEMS/
+│   └── ATA_42_IMA_GOVERNANCE/                            # Operating systems, partitioning
+│
+├── P-PROPULSION/
+│   ├── ATA_60_STANDARD_PRACTICES_PROP_ROTOR/
+│   ├── ATA_61_PROPELLERS_PROPULSORS/
+│   ├── ATA_70_STANDARD_PRACTICES_ENGINE/
+│   ├── ATA_71_POWER_PLANT/
+│   ├── ATA_72_ENGINE/
+│   ├── ATA_73_ENGINE_FUEL_CONTROL/
+│   ├── ATA_74_IGNITION/
+│   ├── ATA_75_AIR/
+│   ├── ATA_76_ENGINE_CONTROLS/
+│   ├── ATA_78_EXHAUST/
+│   └── ATA_79_OIL/
+│
+├── E3-ELECTRONICS/
+│   ├── ATA_34_NAVIGATION/
+│   ├── ATA_39_ELECTRICAL_ELECTRONIC_PANELS/
+│   └── ATA_42_IMA_HARDWARE_MODULES/                       # CPM/IOM
+│
+├── L1-LOGICS/
+│   ├── ATA_22_AUTOFLIGHT/
+│   ├── ATA_27_FLIGHT_CONTROLS_CONTROL_LAWS_SW/
+│   └── ATA_42_IMA_HOSTED_APPLICATIONS/                    # Partitions
+│
+├── L2-LINKS/
+│   ├── ATA_23_COMMUNICATIONS/
+│   ├── ATA_42_IMA_NETWORK_FABRIC/                         # e.g. AFDX
+│   └── ATA_91_CHARTS_FLIGHT_OPERATIONS/
+│
+├── I-INFORMATION_INTELLIGENCE_INTERFACES/
+│   ├── ATA_31_INDICATING_RECORDING_INDICATING_FUNCTION/
+│   ├── ATA_42_IMA_CORE_OS_APIS_HEALTH_MONITORING/
+│   ├── ATA_45_ONBOARD_MAINTENANCE_SYSTEMS/
+│   ├── ATA_46_INFORMATION_SYSTEMS_DATALINK/
+│   ├── ATA_77_ENGINE_INDICATING/
+│   └── ATA_93_ONBOARD_DATA_LOAD_CONFIGURATION/            # Reserved in ATA; used here
+│
+├── C1-COCKPIT_CABIN_CARGO/
+│   ├── ATA_11_PLACARDS_MARKINGS/
+│   ├── ATA_15_AIRCREW_INFORMATION/
+│   ├── ATA_16_CHANGE_OF_ROLE/
+│   ├── ATA_25_EQUIPMENT_FURNISHINGS/
+│   ├── ATA_33_LIGHTS/
+│   ├── ATA_35_OXYGEN/
+│   └── ATA_44_CABIN_SYSTEMS/
+│
+├── C2-CIRCULAR_CRYOGENICS_SYSTEMS/
+│   ├── ATA_28_FUEL_SAF_CRYOGENIC_H2/
+│   └── ATA_21-80-00_CO2_CAPTURE_PROCESSING_PROV/
+│
+├── I2-I_PLUS_D/
+│   ├── ATA_40_MULTISYSTEM_AI_INTEGRATION/
+│   ├── ATA_42-55-00_POWERTRAIN_ENERGY_ORCHESTRATION_PROV/
+│   ├── ATA_42-60-00_QUANTUM_INSPIRED_ORCHESTRATION_PROV/
+│   ├── ATA_48_IN_FLIGHT_MAINTENANCE_AI_ENABLED_RESERVED/
+│   └── ATA_92_MODEL_BASED_MAINTENANCE_PROV/
+│
+└── A2-AERODYNAMICS/
+    └── ATA_27_FLIGHT_CONTROLS_AERODYNAMIC_MANIPULATION/
+```
+
+---
+
+### 1.4 I – INFRASTRUCTURES
+
+Airports, hydrogen value chains, supply chains, ground facilities, operations.
+
+```text
+I-INFRASTRUCTURES/
+├── ATA_02_OPERATIONS_INFORMATION/
+├── ATA_03_SUPPORT_INFORMATION_GSE/
+├── ATA_10_PARKING_MOORING_STORAGE_RTS/
+├── ATA_13_HARDWARE_AND_GENERAL_TOOLS/
+├── ATA_85-90_INFRASTRUCTURE_INTERFACE_STANDARDS_RESERVED/
+├── ATA_115_FLIGHT_SIMULATOR_SYSTEMS/
+└── ATA_116_FLIGHT_SIMULATOR_CUING_SYSTEM/
+```
+
+---
+
+### 1.5 N – NEURAL NETWORKS, USERS, TRACEABILITY
+
+Digital intelligence and Digital Product Passport.
+
+```text
+N-NEURAL_NETWORKS_USERS_TRACEABILITY/
+└── ATA_95_DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/
+```
+
+ATA 95 (Neural Networks / DPP / Users / Traceability) is also the **canonical template** for GENERAL-layer documentation (`XX-00-00_GENERAL`).
+
+---
+
+## 2. Standard Root Structure per ATA Chapter
+
+Every ATA chapter (`ATA_XX-…`) in the AMPEL360 repo **MUST** follow the same top-level pattern:
+
+```text
 ATA_XX-SYSTEM_NAME/
-└── XX-00-00_GENERAL/
-    ├── XX-00-01_Overview/              # System description and architecture
-    ├── XX-00-02_Safety/                # Hazard analysis and safety requirements
-    ├── XX-00-03_Requirements/          # Functional and non-functional requirements
-    ├── XX-00-04_Design/                # System design and models
-    ├── XX-00-05_Interfaces/            # Interface specifications and protocols
-    ├── XX-00-06_Engineering/           # Analysis, models, simulations
-    ├── XX-00-07_V_and_V/               # Verification and validation
-    ├── XX-00-08_Prototyping/           # Proof-of-concept implementations
-    ├── XX-00-09_Production_Planning/   # Deployment strategies
-    ├── XX-00-10_Certification/         # Regulatory compliance
-    ├── XX-00-11_Operations_Maintenance/ # Operational procedures
-    ├── XX-00-12_Assets_Management/     # Asset and resource management
-    ├── XX-00-13_Subsystems_Components/ # Component specifications
-    └── XX-00-14_Meta_Governance/       # Standards and governance
+├── XX-00-00_GENERAL/
+│   ├── XX-00-01_Overview/               # ATA domain description and global architecture
+│   ├── XX-00-02_Safety/                 # Safety framework and analysis methods
+│   ├── XX-00-03_Requirements/           # Requirements framework and traceability
+│   ├── XX-00-04_Design/                 # Reference architectures and design patterns
+│   ├── XX-00-05_Interfaces/             # General interface rules and ICD templates
+│   ├── XX-00-06_Engineering/            # Approach to analysis, models and simulation
+│   ├── XX-00-07_V_AND_V/                # Global verification & validation strategy
+│   ├── XX-00-08_Prototyping/            # Prototyping and experimentation policy
+│   ├── XX-00-09_Production_Planning/    # Industrialization / deployment strategy
+│   ├── XX-00-10_Certification/          # Certification strategy and MoC catalog
+│   ├── XX-00-11_EIS_Versions_Tags/      # EIS, versions, CM and change control
+│   ├── XX-00-12_Services/               # In-service MRO and service models
+│   ├── XX-00-13_Subsystems_Components/  # Subsystems, components and PNR/source management
+│   └── XX-00-14_Ops_Std_Sustain/        # Operational standards, governance, circularity
+│
+├── XX-20-00_Systems/                    # Functional systems (origin block 20)
+├── XX-40-00_Programming_Algorithms/     # SW, logic, NN, algorithms
+├── XX-50-00_Structures/                 # Physical structures / airframe / structural GSE
+├── XX-70-00_Propulsion/                 # Propulsion / energy (70/80 as applicable)
+└── XX-90-00_Tables_Schemas_Diagrams/    # Tables, catalogs, schemas, SDS, training, meta
 ```
 
----
+### 2.1 GENERAL Layer
 
-## 14-Folder Lifecycle Structure
+* `XX-00-00_GENERAL/` is **mandatory** for every `ATA_XX`.
+* The 14 subfolders `XX-00-01_…` to `XX-00-14_…` are **mandatory**.
+* Each must contain at least a `README.md` stating:
 
-### 01_OVERVIEW
-**Purpose:** System description, architecture, purpose, and scope
+  * Scope of the area (Overview, Safety, Requirements, …)
+  * How it applies to this ATA chapter
+  * Status (`Pending`, `Draft`, `Active`, `Deprecated`)
 
-**Content:**
-- System overview and description
-- Architecture diagrams
-- Scope definition
-- Key features and capabilities
-- Integration with other systems
+### 2.2 Origin Blocks: 20 / 40 / 50 / 70 / 90
 
-**Key Documents:**
-- System Architecture Document (SAD)
-- Interface diagram
-- Stakeholder requirements
+The following “origin blocks” are used consistently:
 
----
+* `XX-20-00_Systems/` → **functional systems** of that ATA domain
+* `XX-40-00_Programming_Algorithms/` → **software, logic, NN, algorithms**
+* `XX-50-00_Structures/` → **physical structures / supports / airframe / GSE frames**
+* `XX-70-00_Propulsion/` → **propulsion & energy** (mapped to 70/80 family as needed)
+* `XX-90-00_Tables_Schemas_Diagrams/` → **catalogs, tables, schemas, SDS, training, meta**
 
-### 02_SAFETY
-**Purpose:** Functional Hazard Assessment (FHA), FMEA, FTA, Common Cause Analysis (CCA), safety cases
-
-**Content:**
-- Functional Hazard Assessment (FHA)
-- Failure Modes and Effects Analysis (FMEA)
-- Fault Tree Analysis (FTA)
-- Common Cause Analysis (CCA)
-- Safety requirements and objectives
-- Safety cases and validation
-
-**Key Documents:**
-- Safety Assessment Report
-- Hazard Log
-- Safety Requirements Specification
-
-**Standards:**
-- ARP4754A (Development of Civil Aircraft and Systems)
-- ARP4761 (Safety Assessment Process)
+Concrete systems live under these origin directories as `XX-20-YY_*`, `XX-40-YY_*`, etc., with their own internal structure (see next section).
 
 ---
 
-### 03_REQUIREMENTS
-**Purpose:** Functional, non-functional, safety, and data requirements
+## 3. Per-System Breakdown (Design-Driven)
 
-**Content:**
-- Functional requirements
-- Non-functional requirements (performance, reliability, maintainability)
-- Safety requirements
-- Data requirements
-- Requirements traceability matrix
-- Requirements management and change control
+Each system under `XX-20-00_…`, `XX-40-00_…`, `XX-50-00_…`, `XX-70-00_…`, `XX-90-00_…`:
 
-**Key Documents:**
-- System Requirements Document (SRD)
-- Requirements Traceability Matrix (RTM)
-- Requirements Verification Cross-Reference Matrix (RVCRM)
+* **Does not** have to implement the 01…14 folders.
+* **Must** be structured according to how that system is:
 
----
+  * conceived,
+  * designed,
+  * implemented,
+  * and evolved in time.
 
-### 04_DESIGN
-**Purpose:** System design, models, System Architecture Document (SAD), diagrams
+Examples:
 
-**Content:**
-- System design documentation
-- Design models and diagrams
-- System Architecture Document (SAD)
-- Design decisions and rationale
-- Design verification against requirements
+```text
+03-80-01_LH2_CRYO_REFUELER/
+├── SYSTEM_ARCHITECTURE/
+├── CONTROL_SOFTWARE/
+├── HARDWARE_DESIGN/
+├── TEST_RIGS/
+├── FIELD_DATA/
+└── CERTIFICATION_EVIDENCE/
+```
 
-**Key Documents:**
-- System Architecture Document (SAD)
-- Design Description Document (DDD)
-- Trade study reports
+```text
+95-10-00_FLIGHT_CONTROL_NN/
+├── HIGH_LEVEL_DESIGN/
+├── TRAINING_DATA/
+├── MODELS/
+├── RUNTIME_MONITORING/
+└── SAFETY_CASE/
+```
 
----
+The structure is **free**, as long as:
 
-### 05_INTERFACES
-**Purpose:** Interface Control Documents (ICD), data formats, timing, protocols
+* It is navigable and understandable.
+* Artefacts can be traced to lifecycle areas and requirements.
 
-**Content:**
-- Interface Control Documents (ICD)
-- Data formats and protocols
-- Timing requirements and constraints
-- Interface specifications
-- API documentation
-- Bus specifications (AFDX, CAN, etc.)
-
-**Key Documents:**
-- Interface Control Document (ICD)
-- Data Dictionary
-- Protocol Specifications
+(You can enforce lifecycle linkage via metadata, RTMs, or index files – as you already defined in your UTCS/DET layer.)
 
 ---
 
-### 06_ENGINEERING
-**Purpose:** Analysis, models, simulations, trade-off studies
+## 4. Summary of Rules
 
-**Content:**
-- Engineering analysis
-- Models and simulations
-- Trade-off studies
-- Performance analysis
-- Optimization studies
-- Computational models
+1. **OPT-IN Framework** is the top-level organization: O, P, T, I, N.
+2. Every ATA domain sits under one of those axes exactly as mapped above.
+3. Every `ATA_XX-SYSTEM_NAME/` **must** have:
 
-**Key Documents:**
-- Analysis Reports
-- Simulation Results
-- Trade Study Documents
-
-**Tools:**
-- CAD (Computer-Aided Design)
-- CAE (Computer-Aided Engineering)
-- CAM (Computer-Aided Manufacturing)
-- CAOS (Computer-Aided Operations & Services)
+   * `XX-00-00_GENERAL/` with all 14 GENERAL subfolders.
+   * The origin buckets `XX-20-00_…`, `XX-40-00_…`, `XX-50-00_…`, `XX-70-00_…`, `XX-90-00_…` as applicable.
+4. Concrete systems live under `XX-20/40/50/70/90` and are **designed-driven** in their internal folder breakdown.
+5. ATA 95 acts as the **canonical template** for GENERAL (`XX-00-00_GENERAL`), and is the reference when in doubt.
 
 ---
 
-### 07_V_AND_V
-**Purpose:** Verification and Validation plans and results
+## 5. Document Control
 
-**Content:**
-- Verification plans and procedures
-- Validation plans and strategies
-- Test procedures and scripts
-- Test results and reports
-- Verification coverage analysis
-- Requirements verification matrix
+| Version | Date       | Author                  | Changes                                                           |
+| ------- | ---------- | ----------------------- | ----------------------------------------------------------------- |
+| 1.4     | 2025-11-12 | AMPEL360 Documentation  | Integrated full OPT-IN/ATA mapping + canonical ATA_XX root layout |
+| 1.3     | 2025-11-12 | AMPEL360 Documentation  | Fixed GENERAL layer, per-system breakdown free + metadata concept |
+| 1.2     | 2025-11-12 | AMPEL360 Documentation  | Added XX-20/40/50/70/90 root buckets per ATA chapter              |
+| 1.1     | 2025-11-12 | AMPEL360 Implementation | Formalized XX-00-00_GENERAL                                       |
+| 1.0     | 2025-11-12 | AMPEL360 Implementation | Initial documentation standard                                    |
 
-**Key Documents:**
-- Verification Plan
-- Validation Plan
-- Test Procedures
-- Test Reports
-- Requirements Verification Matrix
 
-**Standards:**
-- DO-178C (Software)
-- DO-254 (Hardware)
-- DO-160 (Environmental Conditions)
-
----
-
-### 08_PROTOTYPING
-**Purpose:** Mockups, test benches, experiments, proof-of-concept
-
-**Content:**
-- Proof-of-concept implementations
-- Mockups and prototypes
-- Test benches and rigs
-- Experimental results
-- Lessons learned
-- Technology demonstrations
-
-**Key Documents:**
-- Prototype Test Reports
-- Lessons Learned Documents
-- Technology Readiness Level (TRL) Assessments
-
----
-
-### 09_PRODUCTION_PLANNING
-**Purpose:** Industrialization, deployment, ramp-up strategies
-
-**Content:**
-- Industrialization strategy
-- Deployment plans
-- Manufacturing considerations
-- Ramp-up planning
-- Supply chain management
-- Quality assurance plans
-
-**Key Documents:**
-- Production Plan
-- Manufacturing Plan
-- Quality Assurance Plan
-- Supply Chain Strategy
-
----
-
-### 10_CERTIFICATION
-**Purpose:** Regulatory requirements mapping, Means of Compliance (MoC), evidence
-
-**Content:**
-- Regulatory requirements mapping
-- Means of Compliance (MoC)
-- Certification evidence
-- Authority liaison records
-- Compliance documentation
-- Certification plans
-
-**Key Documents:**
-- Certification Plan
-- Compliance Matrix
-- Means of Compliance Documents
-- Certification Evidence
-
-**Regulatory Bodies:**
-- EASA (European Union Aviation Safety Agency)
-- FAA (Federal Aviation Administration)
-- Transport Canada
-- Other national authorities
-
-**Key Regulations:**
-- CS-25 (Large Aeroplanes)
-- CS-E (Engines)
-- CS-APU (Auxiliary Power Units)
-
----
-
-### 11_OPERATIONS_MAINTENANCE
-**Purpose:** In-service operation, maintenance procedures, troubleshooting
-
-**Content:**
-- Operating procedures
-- Maintenance procedures
-- Troubleshooting guides
-- Service bulletins
-- Operational limitations
-- Maintenance planning
-
-**Key Documents:**
-- Aircraft Maintenance Manual (AMM)
-- Fault Isolation Manual (FIM)
-- Illustrated Parts Catalog (IPC)
-- Service Bulletins
-
-**Standards:**
-- ATA iSpec 2200
-- S1000D
-
----
-
-### 12_ASSETS_MANAGEMENT
-**Purpose:** Spare parts, tooling, datasets, model versions
-
-**Content:**
-- Spare parts management
-- Tooling and equipment
-- Datasets and databases
-- Version control
-- Configuration management
-- Digital assets (models, datasets, software)
-
-**Key Documents:**
-- Configuration Management Plan
-- Asset Register
-- Version Control Logs
-
----
-
-### 13_SUBSYSTEMS_COMPONENTS
-**Purpose:** Hierarchical decomposition of subsystems and components
-
-**Content:**
-- Subsystem decomposition
-- Component specifications
-- Hierarchical breakdown structure
-- Dependencies mapping
-- Integration points
-- Component interfaces
-
-**Key Documents:**
-- System Breakdown Structure
-- Component Specifications
-- Integration Plan
-
----
-
-### 14_META_GOVERNANCE
-**Purpose:** Schemas, CI rules, metadata, traceability framework
-
-**Content:**
-- Documentation schemas
-- CI/CD rules and pipelines
-- Metadata standards
-- Traceability framework
-- Governance policies
-- Quality gates
-- Documentation standards
-
-**Key Documents:**
-- Documentation Standards
-- Governance Framework
-- Traceability Matrix
-- CI/CD Configuration
-
----
-
-## Naming Conventions
-
-### Directory Names
-- Format: `XX-YY-ZZ_DESCRIPTIVE_NAME`
-- `XX`: ATA chapter number (e.g., 22, 95, 115)
-- `YY`: Section number (00 for GENERAL layer)
-- `ZZ`: Subsection number (01-14 for lifecycle folders)
-- Use underscores for multi-word names
-- Use UPPERCASE for descriptive parts
-
-**Examples:**
-- `22-00-00_GENERAL`
-- `95-00-01_Overview`
-- `24-00-11_Operations_Maintenance`
-
-### File Names
-- Use descriptive names with context
-- Include ATA reference code
-- Use hyphens or underscores consistently
-- End with appropriate extension (.md, .pdf, .xlsx, etc.)
-
-**Examples:**
-- `22-00-01-001A_System_Overview.md`
-- `95-00-02-005A_Fault_Tree_Analysis.md`
-- `24-00-03-REQ_Requirements_Matrix.xlsx`
-
----
-
-## ATA Code Numbering Convention (Law of Origin)
-
-This section defines the **fundamental numbering blocks** that serve as the origin for all ATA codes across the AMPEL360 program. This "law of origin" ensures consistent, predictable code structure.
-
-### Numbering Blocks
-
-#### 20-xx → SYSTEMS (Functional/Operational)
-All **functional systems** and **operational processes** originate from block **20**.
-
-**Scope:**
-- Operational systems (handling, processing, management)
-- Fleet maintenance programs
-- Support system operations
-- Functional procedures and workflows
-
-**Examples:**
-- `20-00-00_STANDARD_PRACTICES_AIRFRAME` - Base airframe practices
-- `03-20-00_GENERAL_HANDLING` - GSE handling systems
-- `03-20-01_STORAGE_SHIPPING` - Storage/shipping systems
-- `03-20-10_FLEET_MAINTENANCE_PROGRAM` - Fleet-level maintenance
-- `03-20-11_LH2_CRYO_REFUELER_MAINT` - LH₂ refueler maintenance system
-
-#### 50-xx → STRUCTURES (Physical/Airframe)
-All **physical structures**, **airframe components**, and **structural support** originate from block **50**.
-
-**Scope:**
-- Airframe structures (fuselage, wings, stabilizers)
-- GSE structural equipment (frames, stands, docks)
-- Physical support structures
-- Structural mounting and attachment points
-
-**Examples:**
-- `50-00-00_CARGO_AND_ACCESSORY_COMPARTMENTS` - Cargo structures
-- `53-00-00_FUSELAGE` - Fuselage structure
-- `03-50-00_GENERAL_STRUCTURAL_GSE` - GSE structural equipment
-- `03-50-01_LH2_SUPPORT_FRAMES` - LH₂ support frames and structures
-
-#### 70-xx / 80-xx → ENGINES / PROPULSION / ENERGY
-All **powerplant**, **propulsion systems**, **energy systems**, and **auxiliary power** originate from blocks **70** and **80**.
-
-**Scope:**
-- **70-xx**: Primary powerplant, engines, propulsion systems, H₂ fuel cells
-- **80-xx**: Auxiliary power (APU, GPU, starting systems), ground energy systems
-
-**Examples:**
-- `70-00-00_STANDARD_PRACTICES_ENGINE` - Engine practices
-- `71-00-00_POWER_PLANT` - Main powerplant
-- `72-00-00_ENGINE` - Engine systems
-- `80-00-00_STARTING` - Starting systems
-- `03-80-00_GENERAL_ENERGY_GSE` - GSE energy systems
-- `03-80-01_LH2_CRYOGENIC_REFUELER` - LH₂ refueling energy system
-- `03-80-02_HV_GROUND_POWER_UNIT` - High-voltage ground power
-
-#### 90-xx → SCHEMAS / META / CATALOGS / TRAINING
-All **schemas**, **metadata**, **catalogs**, **registries**, **training materials**, and **safety data** originate from block **90**.
-
-**Scope:**
-- Documentation schemas and templates
-- Part catalogs (IPL/IPC)
-- In-service registries
-- Training materials and programs
-- Safety Data Sheets (SDS)
-- Configuration management
-- Meta-governance documents
-
-**Examples:**
-- `91-00-00_CHARTS_FLIGHT_OPERATIONS` - Operational charts
-- `92-00-00_MODEL_BASED_MAINTENANCE` - Maintenance models
-- `93-00-00_ONBOARD_DATA_LOAD` - Data loading schemas
-- `03-90-00_IN-SERVICE_REGISTRY` - GSE service registry
-- `03-90-01_TRAINING_MATERIALS` - GSE training content
-- `03-90-02_SAFETY_DATA_SHEETS` - SDS documents
-- `03-90-10_FLEET_SPARES_PROGRAM` - Spares catalog/program
-- `03-90-11_LH2_CRYO_REFUELER_PARTS` - LH₂ refueler parts catalog
-
-### Application Rules
-
-#### Rule 1: Domain-Specific Numbering
-When creating subsystems within an ATA domain (e.g., ATA 03 Infrastructure), apply the origin blocks as **second-level codes**:
-
-- `03-20-xx` for **systems** within infrastructure
-- `03-50-xx` for **structures** within infrastructure
-- `03-80-xx` for **energy/propulsion** within infrastructure
-- `03-90-xx` for **schemas/catalogs** within infrastructure
-
-#### Rule 2: Consistency Across Domains
-The same origin blocks apply across **all OPT-IN axes** (O, P, T, I, N):
-
-- **Organization (O)**: May use 20 (policies/systems), 90 (governance schemas)
-- **Program (P)**: May use 20 (program systems), 50 (geometry/structures)
-- **Technology (T)**: Full use of 20, 50, 70/80, 90 based on technology type
-- **Infrastructures (I)**: As shown above (03-20, 03-50, 03-80, 03-90)
-- **Neural Networks (N)**: May use 20 (AI systems), 90 (model catalogs/schemas)
-
-#### Rule 3: No Random Numbering
-**Do not** create intermediate blocks (10-xx, 30-xx, 40-xx, 60-xx) unless explicitly justified by:
-1. An existing ATA standard requirement
-2. A specific regulatory mandate
-3. Documented program decision with traceability
-
-**Always** map new codes to one of the four origin blocks (20, 50, 70/80, 90).
-
-### Decision Tree for New Codes
-
-When creating a new ATA code, ask:
-
-1. **Is it a functional system or operational process?** → Use **20-xx**
-2. **Is it a physical structure or airframe component?** → Use **50-xx**
-3. **Is it related to engines, propulsion, or energy?** → Use **70-xx** or **80-xx**
-4. **Is it a schema, catalog, training, or meta-document?** → Use **90-xx**
-
-If multiple categories apply, prioritize based on **primary function**:
-- If it's primarily structural with energy aspects → **50-xx** (structure is primary)
-- If it's primarily energy with structural supports → **70/80-xx** (energy is primary)
-- If it's documentation/training about a system → **90-xx** (meta is primary)
-
-### Examples of Correct Mapping
-
-| Item | Wrong Code | Correct Code | Reason |
-|------|-----------|--------------|---------|
-| Fleet maintenance program | `03-40-00` | `03-20-10` | It's a system (20), not random 40 |
-| LH₂ refueler parts catalog | `03-40-01` | `03-90-11` | It's a catalog/IPC (90), not 40 |
-| GSE support frame | `03-30-01` | `03-50-01` | It's a structure (50), not 30 |
-| Ground power unit | `03-60-01` | `03-80-02` | It's energy equipment (80), not 60 |
-| Training materials | `03-10-00` | `03-90-01` | It's training/meta (90), not 10 |
-
----
-
-## Content Requirements
-
-### Every Folder Must Have
-1. **README.md** - Folder overview and contents
-2. **Status indicator** - Development, Draft, Active, Deprecated
-3. **Related documents** - Links to parent/child/sibling documentation
-4. **Standards references** - Applicable ATA, EASA, FAA standards
-
-### Pending Content
-If content is not yet developed:
-- ✅ **DO** create the folder structure
-- ✅ **DO** add a README.md with placeholder text
-- ✅ **DO** mark status as "Pending Development"
-- ✅ **DO** describe what should be in the folder
-- ❌ **DON'T** leave folders empty without README
-- ❌ **DON'T** skip mandatory folders
-
----
-
-## OPT-IN Framework Integration
-
-The XX-00-00_GENERAL structure integrates with the OPT-IN framework axes:
-
-### O - Organization
-ATA chapters: 00-05, 100-series
-- Policies, certification, governance, maintenance
-
-### P - Program
-ATA chapters: 06-12
-- Geometry, mission, configuration, performance
-
-### T - Technology
-ATA chapters: 20-99 (following A-M-E-D-E-O-P-E-L-I-C-C-I₂-A₂ taxonomy)
-- On-board systems and technologies
-
-### I - Infrastructures
-ATA chapters: 02, 03, 10, 13, 85-90, 115-116
-- Airports, supply chain, GSE, data centers
-
-### N - Neural Networks
-ATA chapters: 40, 92, 95
-- AI, machine learning, CAOS, Digital Product Passport
-
----
-
-## CAOS Integration
-
-All systems should consider CAOS (Computer-Aided Operations & Services) integration:
-
-- **Product-as-Intelligent-Service (PaaSI)** approach
-- **Digital Product Passport (DPP)** data collection
-- **Service Twin / Digital Twin** simulation
-- **Federated Learning** for fleet intelligence
-- **Predictive maintenance** capabilities
-- **Real-time optimization** strategies
-
----
-
-## Standards Compliance
-
-### Regulatory Standards
-- **EASA CS-25** - Certification Specifications for Large Aeroplanes
-- **FAA 14 CFR Part 25** - Airworthiness Standards
-- **DO-178C** - Software Considerations in Airborne Systems
-- **DO-254** - Design Assurance Guidance for Airborne Electronic Hardware
-- **DO-160** - Environmental Conditions and Test Procedures
-- **ARP4754A** - Guidelines for Development of Civil Aircraft and Systems
-- **ARP4761** - Guidelines and Methods for Conducting Safety Assessment Process
-
-### Documentation Standards
-- **ATA iSpec 2200** - Information Standards for Aviation Maintenance
-- **S1000D** - International specification for technical publications
-- **ATA 100** - Specification for Manufacturers' Technical Data
-
-### AI/ML Standards (for ATA 95 and related systems)
-- **ISO/IEC 5338** - AI System Lifecycle Processes
-- **ISO/IEC 23894** - AI Risk Management
-- **IEEE P2863** - Recommended Practice for Organizational Governance of AI
-- **EUROCAE ED-202A** - Guidelines for Approval of AI in Aviation
-
----
-
-## Traceability Requirements
-
-All documentation must maintain traceability:
-
-1. **Upward Traceability** - Requirements to stakeholder needs
-2. **Downward Traceability** - Requirements to design, implementation, tests
-3. **Horizontal Traceability** - Between related systems and interfaces
-4. **Bidirectional Traceability** - Change impact analysis
-
-### Traceability Matrix
-Each system should maintain:
-- Requirements Traceability Matrix (RTM)
-- Verification Cross-Reference Matrix (VCRM)
-- Safety Requirements Traceability
-- Interface Dependencies Map
-
----
-
-## Implementation Checklist
-
-When implementing XX-00-00_GENERAL for a new ATA chapter:
-
-- [ ] Create `XX-00-00_GENERAL` directory
-- [ ] Create main `README.md` with system overview
-- [ ] Create all 14 mandatory subfolders (01-14)
-- [ ] Add `README.md` to each subfolder with purpose and placeholder content
-- [ ] Document folder structure in main README
-- [ ] List applicable standards and compliance requirements
-- [ ] Add integration points with other ATA chapters
-- [ ] Link to OPT-IN framework axis
-- [ ] Reference CAOS components (if applicable)
-- [ ] Set development status indicators
-- [ ] Create initial traceability links
-- [ ] Review against ATA 95-00-00 canonical pattern
-
----
-
-## Automation and Tools
-
-### Implementation Script
-Location: `/tmp/implement_general_structure.py`
-
-This script automatically creates the XX-00-00_GENERAL structure for ATA chapters. Use it to ensure consistency.
-
-### Validation
-Future tools will validate:
-- Folder structure completeness
-- Naming convention compliance
-- README presence in all folders
-- Traceability link integrity
-- Standards reference completeness
-
----
-
-## Continuous Improvement
-
-This standard is a living document. Updates should be:
-
-1. **Proposed** through issue or pull request
-2. **Reviewed** by documentation working group
-3. **Approved** by technical authority
-4. **Implemented** across all affected ATA chapters
-5. **Version controlled** with clear change log
-
----
-
-## References
-
-### Primary References
-- [ATA 95-00-00_GENERAL](./OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95_NEURAL_NETWORKS/95-00-00_GENERAL/) - Canonical reference pattern
-- [OPT-IN Framework](./OPT-IN_FRAMEWORK/README.md) - Program structure
-- [CAOS Manifesto](./CAOS/CAOS_MANIFESTO.md) - Operations framework
-
-### Standards Documents
-- ATA iSpec 2200 - Available from ATA Spec 2200
-- S1000D - Available from S1000D website
-- DO-178C, DO-254, DO-160 - Available from RTCA
-- CS-25 - Available from EASA
-- 14 CFR Part 25 - Available from FAA
-
----
-
-## Document Control
-
-| Version | Date       | Author                  | Changes                            |
-|---------|------------|-------------------------|------------------------------------|
-| 1.1     | 2025-11-12 | AMPEL360 Implementation | Added ATA Code Numbering Convention (Law of Origin) - defines 20/50/70-80/90 blocks |
-| 1.0     | 2025-11-12 | AMPEL360 Implementation | Initial documentation standard     |
-
----
-
-## Contact
-
-For questions, clarifications, or suggestions regarding this documentation standard:
-
-- **Technical Lead:** AMPEL360 Program Documentation Team
-- **Repository:** [AMPEL360-BWB-H2-Hy-E](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
-- **Issues:** Use GitHub Issues for documentation standard questions
-
----
-
-*This document is part of the AMPEL360-BWB-H₂-Hy-E program documentation.*
