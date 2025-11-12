@@ -1,262 +1,201 @@
-# CAOS Documentation Index
+# CAOS INDEX  
+**Computer Aided Operations and Services – Master Index**
 
-**Quick navigation guide to all CAOS (Computer Aided Operations and Services) documentation in the AMPEL360-BWB-H₂-Hy-E repository**
-
----
-
-## Executive Documents
-
-### 📋 [CAOS Manifesto](./CAOS_MANIFESTO.md)
-**The strategic vision and principles**
-- The evolution: CAD → CAE → CAM → CAOS
-- Anatomy of CAOS: physical and digital domains
-- Autodetermination as defining trait
-- Technology stack architecture
-- Strategic impact: PLM to PaaSI and circularity
-- Governance, safety, and adoption constraints
-
-**Read this first** to understand the CAOS vision and its role as the fourth pillar of digital engineering.
-
-### 🏗️ [CAOS Operations Framework](./CAOS_OPERATIONS_FRAMEWORK.md)
-**Detailed operational implementation architecture**
-- Three-tier architecture (Cloud Campus, Edge, Physical)
-- Service Twin architecture and implementation
-- Cloud Computing Campus (CCC) details
-- Federated edge intelligence protocols
-- Autodetermination framework (levels 0-5)
-- PaaSI business model implementation
-- Sustainability and circular economy integration
-- Security and safety framework
-
-**Read this second** to understand how to implement CAOS operationally.
-
-### 💡 [CAOS Use Cases](./CAOS_USE_CASES.md)
-**Concrete examples for AMPEL360 operations**
-1. Predictive fuel cell maintenance
-2. Hybrid powertrain energy optimization
-3. Circular economy end-of-life decisions
-4. Autonomous fleet health management
-5. Human-in-the-loop model upgrades
-
-**Read this third** to see CAOS in action with practical examples.
+> CAOS is the digital nervous system of the AMPEL360 program.  
+> It connects aircraft, ground, fleet operations, documentation, and AI services  
+> into a single, observable, continuously evolving operational fabric.
 
 ---
 
-## Integration with OPT-IN Framework
+## 1. Purpose of CAOS
 
-### 🧠 [N-Axis: Neural Networks, Users, Traceability](./OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/)
-**CAOS integration axis within OPT-IN framework**
-- Role of N-axis in AMPEL360
-- CAOS integration points
-- Technology stack components
-- Governance framework
-- Implementation roadmap
+CAOS (**Computer Aided Operations and Services**) defines the **operational intelligence layer** for AMPEL360:
 
-### 📦 [ATA 95: Digital Product Passport](./OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_AND_TRACEABILITY/)
-**The data foundation for CAOS**
-- [Main Overview](README.md)
-- [01_OVERVIEW - System Description](README.md)
-- [03_REQUIREMENTS - Specifications](README.md)
+- Orchestrates **data, models, documents, and workflows** across the fleet  
+- Provides **decision support** to humans (pilots, dispatch, maintenance, ops)  
+- Enables **Continuous Computing** via the **C-GROWTH / C-GROWTH²** lifecycle  
+- Integrates **AirCCC** (Aircraft Cloud Computing Campus) with ground and enterprise systems  
+
+CAOS is **advisory by design** and **safety-bounded**. It does **not** replace certified control laws.  
+It augments operations with **predictive, data-driven, and explainable intelligence**.
 
 ---
 
-## Main Project Documentation
+## 2. Scope
 
-### 🚀 [AMPEL360 Main README](./README.md)
-**Updated to include CAOS as fourth pillar**
-- Section 1: Concept Description (includes CAOS)
-- Section 2: OPT-IN Framework (N-axis includes CAOS)
-- **Section 3: CAOS — The Fourth Pillar** (NEW)
-  - Evolution table: CAD → CAE → CAM → CAOS
-  - CAOS in AMPEL360
-  - Key documents links
+CAOS covers:
 
----
+- **On-Aircraft Operational Intelligence** (non-safety advisory, health, efficiency)
+- **Ground Maintenance & Turnaround Intelligence**
+- **Fleet & Network Optimization Intelligence**
+- **Documentation Automation & Integrity** (GenCCC, CG tools)
+- **C-GROWTH Lifecycle** (continuous generation, review, optimization, workflow, testing, hauling)
+- **Cross-Generational Evolution** (C-GROWTH², knowledge inheritance)
 
-## Document Relationships
+It does **not** define:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     AMPEL360 README                         │
-│              (Introduces CAOS as 4th Pillar)                │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                ┌───────────┴───────────┐
-                │                       │
-    ┌───────────▼─────────┐    ┌───────▼──────────┐
-    │   CAOS MANIFESTO    │    │  OPT-IN N-AXIS   │
-    │  (Strategic Vision) │    │ (Integration)    │
-    └───────────┬─────────┘    └───────┬──────────┘
-                │                      │
-    ┌───────────▼─────────┐            │
-    │ CAOS OPERATIONS     │            │
-    │    FRAMEWORK        │            │
-    │ (Implementation)    │            │
-    └───────────┬─────────┘            │
-                │                      │
-    ┌───────────▼─────────┐    ┌───────▼──────────┐
-    │   CAOS USE CASES    │    │   ATA 95 DPP     │
-    │  (Practical Apps)   │    │ (Data Foundation)│
-    └─────────────────────┘    └──────────────────┘
-```
+- Low-level flight control laws (covered by flight controls & avionics standards)
+- Hardware design specifications (covered by ATA / system chapters)
+- Regulatory requirements themselves (CAOS aligns with but does not replace EASA/FAA material)
 
 ---
 
-## Reading Paths
+## 3. Core Concepts
 
-### For Executives / Stakeholders
-1. **AMPEL360 README** - Section 3: CAOS Overview (5 min)
-2. **CAOS Manifesto** - Executive Summary (10 min)
-3. **CAOS Use Cases** - Business outcomes sections (15 min)
+### 3.1 AirCCC – Aircraft Cloud Computing Campus
 
-**Total: ~30 minutes to understand CAOS value proposition**
+**AirCCC** is the distributed compute fabric behind CAOS:
 
-### For Program Managers
-1. **CAOS Manifesto** - Complete document (30 min)
-2. **CAOS Operations Framework** - Sections 1-6 (45 min)
-3. **N-Axis README** - Implementation roadmap (15 min)
-4. **CAOS Use Cases** - All use cases (45 min)
+- **AirCCC-A** – Aircraft edge nodes (onboard advisory AI + telemetry)
+- **AirCCC-G** – Ground maintenance / turnaround nodes
+- **AirCCC-R** – Regional secure aggregation hubs
+- **AirCCC-F** – Fleet core + neutral trust layer (OEM + operators + MROs)
 
-**Total: ~2 hours for comprehensive understanding**
+AirCCC operates under configuration:
 
-### For Technical Teams
-1. **CAOS Operations Framework** - Complete document (90 min)
-2. **ATA 95 DPP Requirements** - All sections (60 min)
-3. **CAOS Use Cases** - Technical implementations (60 min)
-4. **N-Axis README** - Technology stack (30 min)
+- **O3** – Joint governance (OEM + Operators + MROs)
+- **S0** – Centralized signing authority for model updates
+- **D3** – Airline-isolated data/model silos
 
-**Total: ~4 hours for detailed technical knowledge**
+See:  
+- `O-ORGANIZATION/STANDARDS/AMPEL360-AirCCC-ARCH-001_*.md`
 
-### For Safety & Certification
-1. **CAOS Manifesto** - Section 6: Governance and Safety (20 min)
-2. **CAOS Operations Framework** - Section 8: Security and Safety (30 min)
-3. **CAOS Use Cases** - Use Case 5: Human-in-the-Loop (20 min)
-4. **ATA 95 Requirements** - Safety and compliance sections (30 min)
+### 3.2 C-GROWTH – Circular Intelligence Lifecycle
 
-**Total: ~2 hours for safety and certification focus**
+C-GROWTH defines **how CAOS learns and evolves**:
 
----
+- **CG – Continuous Generation** (data, knowledge, documents, model deltas)
+- **CR – Continuous Review** (safety, consistency, traceability)
+- **CO – Continuous Optimization** (models, rules, processes)
+- **CW – Continuous Workflow Integration** (CI/CD into real ops)
+- **CT – Continuous Testing** (digital twin, shadow, scenario libraries)
+- **CH – Circular Hauling** (carrying validated wisdom across time)
 
-## Key Concepts Quick Reference
+See:  
+- `O-ORGANIZATION/STANDARDS/C-GROWTH_Methodology_Specification.md`
 
-| Concept | Definition | Where to Learn More |
-|---------|------------|---------------------|
-| **CAOS** | Computer Aided Operations and Services - The 4th pillar of digital engineering | CAOS Manifesto |
-| **Service Twin** | Digital twin + operational context for decision support | CAOS Operations Framework, Section 2 |
-| **PaaSI** | Product as Intelligent Service - Outcome-based business model | CAOS Manifesto, Section 5 |
-| **CCC** | Cloud Computing Campus - Centralized MLOps and governance | CAOS Operations Framework, Section 3 |
-| **Autodetermination** | System property where AI determines actions toward goals | CAOS Manifesto, Section 3 |
-| **DPP** | Digital Product Passport - Complete lifecycle traceability | ATA 95 Documentation |
-| **OODA Loop** | Observe-Orient-Decide-Act decision cycle | CAOS Manifesto, Section 2.3 |
-| **Federated Learning** | Distributed ML without centralizing raw data | CAOS Operations Framework, Section 4 |
+### 3.3 C-GROWTH² – Constellation Intelligence
+
+C-GROWTH² extends C-GROWTH from **single system** to **multi-fleet, multi-generation** evolution:
+
+- Each aircraft/fleet is a **node in a constellation**
+- Constellations **evolve** across blocks, variants, and decades
+- Validated knowledge is **hauled forward** instead of being lost
+
+See:  
+- `O-ORGANIZATION/STANDARDS/C-GROWTH2_Evolutionary_Intelligence_Model.md`  
+- `/ASSETS/C-GROWTH2_Constellation/*`
 
 ---
 
-## Implementation Status
+## 4. CAOS Architecture Layers
 
-### ✅ Completed (Phase 1: Foundation)
-- [x] CAOS Manifesto documentation
-- [x] CAOS Operations Framework
-- [x] CAOS Use Cases with 5 examples
-- [x] N-Axis framework structure
-- [x] ATA 95 DPP foundation
-  - [x] Main README
-  - [x] 01_OVERVIEW
-  - [x] 03_REQUIREMENTS
-- [x] Updated AMPEL360 main README
-- [x] 14-folder skeleton for ATA 95
+CAOS is structured in **four main layers**:
 
-### 🚧 In Progress (Phase 2: Infrastructure)
-- [ ] Complete remaining ATA 95 folders
-  - [ ] 02_SAFETY
-  - [ ] 04_DESIGN
-  - [ ] 05_INTERFACES
-  - [ ] 06_ENGINEERING
-  - [ ] 07_V_AND_V
-  - [ ] 08_PROTOTYPING
-  - [ ] 09_PRODUCTION_PLANNING
-  - [ ] 10_CERTIFICATION
-  - [ ] 11_OPERATIONS_AND_MAINTENANCE
-  - [ ] 12_ASSETS_MANAGEMENT
-  - [ ] 13_SUBSYSTEMS_AND_COMPONENTS
-  - [ ] 14_META_GOVERNANCE
+1. **Sensing & Telemetry Layer**
+   - Flight states, structural/thermal/energy health, maintenance events
+   - Channels: OFEC, PMT, CFLF-GRAD (for non-safety learning)
 
-### 📋 Planned (Future Phases)
-- [ ] ATA 40 - AI Integration framework
-- [ ] ATA 92 - Model Based Maintenance
-- [ ] Cloud Computing Campus specifications
-- [ ] Federated learning protocols
-- [ ] Service Twin reference implementations
-- [ ] PaaSI contract templates
-- [ ] Certification guidance for AI systems
+2. **Intelligence & Learning Layer**
+   - Onboard inference (AirCCC-A) – advisory only
+   - Ground & regional model aggregation
+   - Fleet-core model governance and signing
+
+3. **Documentation & Knowledge Layer**
+   - GenCCC: cross-reference detection, auto-linking, contextual doc generation
+   - CG tools: summary tables, baseline checks, mass & geometry watchdogs
+   - Doc metadata enforcement (doc_meta_enforcer, SARIF, CAOS awareness)
+
+4. **Operations & Workflow Layer**
+   - Maintenance planning, turnaround optimization, hydrogen refuel planning
+   - Technician AR support and guided workcards
+   - Workflow automation via GitHub Actions / CI/CD + cd/ artifacts
 
 ---
 
-## Contributing
+## 5. File & System Entry Points
 
-To contribute to CAOS documentation:
+### 5.1 Root-Level CAOS Documents
 
-1. **Follow OPT-IN Framework:** Use 14-folder skeleton for new systems
-2. **Maintain Traceability:** Link to related documents
-3. **Use Standard Templates:** Follow existing document structure
-4. **Document Control:** Update version tables
-5. **Review Process:** Submit for technical and safety review
+- `CAOS_INDEX.md` *(this file)* – Master index & concept overview  
+- `CAOS_MANIFESTO.md` – Vision, principles, long-term goals  
+- `CAOS_OPERATIONS_FRAMEWORK.md` – Operational playbook (roles, RACI, phases)  
+- `CAOS_USE_CASES.md` – Concrete scenarios & user journeys
 
----
+*(These may be created/extended over time using C-GROWTH.)*
 
-## Standards and References
+### 5.2 Tools and Automation (CAOS-Aware)
 
-### Industry Standards
-- **ATA iSpec 2200** - Aviation specifications
-- **S1000D** - Technical publications
-- **ISO 55000** - Asset management
-- **GS1 Digital Link** - Product identification
+- `tools/ci/check_dimensions.py` – Geometry baseline watchdog  
+- `tools/ci/check_mass_properties.py` – Mass properties watchdog  
+- `tools/ci/doc_meta_enforcer.py` – Doc metadata, AI attribution, CAOS tagging, SARIF output  
+- `tools/genccc/` – GenCCC cross-reference intelligence (report + apply modes)  
+- `tools/cg/` (planned) – Continuous documentation growth and section expansion  
+- `tools/cgrowth/` (planned) – C-GROWTH orchestrators (CG/CR/CO/CW/CT/CH)
 
-### Regulatory
-- **EASA/FAA** - Airworthiness regulations
-- **EU Regulation 2023/1542** - Digital Product Passport
-- **GDPR** - Data protection
+### 5.3 CD – Continuous Delivery & Data
 
-### Technology
-- **DTDL** - Digital Twin Definition Language
-- **OpenAPI/GraphQL** - API specifications
-- **MLOps** - Machine Learning Operations practices
+- `cd/api.py` – Programmatic API surface for CD artifacts  
+- `cd/geometry/` – Generated geometry deviation reports  
+- `cd/mass/` – Generated mass properties deviation reports  
+- `cd/publications/` – Release bundles and packages
 
 ---
 
-## Support and Contact
+## 6. Governance & Safety Boundaries
 
-### Documentation Issues
-- GitHub Issues in main repository
-- Tag with `documentation` label
+CAOS is designed to respect **aviation safety regulations**:
 
-### Technical Questions
-- CAOS working group (TBD)
-- Technical lead (TBD)
+- **Advisory Only** for operational suggestions; final authority remains with humans
+- **No self-modifying safety-critical functions in flight**
+- **Signed model bundles (CUC channel) installed on ground only**
+- **Per-operator silos (D3): data does not cross airline boundaries**
+- **Auditability**: all changes to models, docs, and workflows are traceable
 
-### Safety Concerns
-- Escalate to Safety Board immediately
-- Email: [safety@ampel360.example] (TBD)
+Key standards CAOS aligns with:
 
----
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | 2025-11-03 | Initial CAOS documentation suite completed |
+- **ARP4754A / ARP4761** – System & safety processes  
+- **DO-178C / DO-330** – Software & tool qualification (where applicable)  
+- **DO-326A / ED-202A** – Cybersecurity assurance  
+- **EASA AI Roadmap (Level 2 Advisory)** – AI assurance & human authority
 
 ---
 
-## License and Copyright
+## 7. How to Navigate CAOS
 
-Copyright © 2025 Amedeo Pelliccia / AMPEL360 Program  
-All rights reserved.
+1. **Understand the Intelligence Fabric**  
+   - Start with `AMPEL360-AirCCC-ARCH-001_*.md` in  
+     `O-ORGANIZATION/STANDARDS/`
 
-This documentation is part of the AMPEL360-BWB-H₂-Hy-E aircraft development program and is subject to export control regulations.
+2. **Learn the Lifecycle**  
+   - Read `C-GROWTH_Methodology_Specification.md` and  
+     `C-GROWTH2_Evolutionary_Intelligence_Model.md`.
+
+3. **Review the Tools**  
+   - See `tools/README.md` and `tools/genccc/README.md`  
+   - Explore CI workflows in `.github/workflows/`.
+
+4. **Explore Generated Artifacts**  
+   - Check `cd/geometry/`, `cd/mass/`, and `cd/publications/`.
+
+5. **Extend CAOS**  
+   - New tools and documents should:
+     - Respect CAOS boundaries (advisory, safety, governance)
+     - Integrate with C-GROWTH (support CG/CR/CO/CW/CT/CH)
+     - Be documented and linked via GenCCC & doc_meta_enforcer
 
 ---
 
-**Last Updated:** 2025-11-03  
-**Maintained By:** CAOS Documentation Team  
-**Review Cycle:** Quarterly
+## 8. Roadmap (High Level)
+
+- Integrate **C-GROWTH orchestrators** (CG/CR/CO/CW/CT/CH) as scheduled workflows  
+- Extend **GenCCC** to full GenCCC-CG (continuous cross-reference growth)  
+- Link CAOS to **digital twin** and **scenario testing** pipelines  
+- Add **AirCCC monitoring dashboards** (fleet constellation views)  
+- Bring CAOS material into EASA/FAA **certification liaison packs**
+
+---
+
+**CAOS is the umbrella under which AMPEL360 evolves as a living, learning, and certifiable operational system.**  
+All new intelligence, automation, and documentation capabilities should register themselves here, or link from here, as the program grows.
+
