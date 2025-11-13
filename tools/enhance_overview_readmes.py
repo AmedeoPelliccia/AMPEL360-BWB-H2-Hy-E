@@ -166,7 +166,13 @@ def has_yaml_frontmatter(content):
 
 
 def enhance_readme(file_path, dry_run=False):
-    """Enhance a single README.md file."""
+    """Enhance a single README.md file.
+    
+    Returns:
+        'success': File was enhanced
+        'skip': File was skipped (already has YAML)
+        'error': An error occurred
+    """
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -174,7 +180,7 @@ def enhance_readme(file_path, dry_run=False):
         # Skip if already has YAML front-matter
         if has_yaml_frontmatter(content):
             print(f"SKIP (already has YAML): {file_path}")
-            return False
+            return 'skip'
         
         # Generate enhancements
         yaml_fm = generate_yaml_frontmatter(file_path, content)
@@ -199,16 +205,16 @@ def enhance_readme(file_path, dry_run=False):
         
         if dry_run:
             print(f"WOULD ENHANCE: {file_path}")
-            return True
+            return 'success'
         else:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(enhanced_content)
             print(f"ENHANCED: {file_path}")
-            return True
+            return 'success'
             
     except Exception as e:
         print(f"ERROR processing {file_path}: {e}", file=sys.stderr)
-        return False
+        return 'error'
 
 
 def find_overview_readmes(root_dir):
@@ -250,8 +256,8 @@ def main():
             print(f"ERROR: File not found: {args.file}", file=sys.stderr)
             return 1
         
-        success = enhance_readme(args.file, args.dry_run)
-        return 0 if success else 1
+        result = enhance_readme(args.file, args.dry_run)
+        return 0 if result == 'success' else 1
     else:
         # Process all files
         print(f"Searching for 01_OVERVIEW/README.md files in {args.root}...")
@@ -268,9 +274,9 @@ def main():
         
         for file_path in overview_files:
             result = enhance_readme(file_path, args.dry_run)
-            if result:
+            if result == 'success':
                 success_count += 1
-            elif "SKIP" in str(result):
+            elif result == 'skip':
                 skip_count += 1
             else:
                 error_count += 1
