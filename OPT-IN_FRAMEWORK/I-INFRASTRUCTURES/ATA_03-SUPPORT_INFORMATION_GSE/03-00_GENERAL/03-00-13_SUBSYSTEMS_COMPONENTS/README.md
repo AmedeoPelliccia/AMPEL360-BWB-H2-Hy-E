@@ -38,7 +38,7 @@ This documentation follows:
 
 ## Related Documentation
 
-- Parent: [03-00-00_GENERAL](../README.md)
+- Parent: [03-00_GENERAL](../README.md)
 - ATA 03 Main: [../README.md](../../README.md)
 - OPT-IN Framework: [/OPT-IN_FRAMEWORK/README.md](/OPT-IN_FRAMEWORK/README.md)
 
