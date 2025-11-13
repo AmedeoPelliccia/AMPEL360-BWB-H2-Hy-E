@@ -7,7 +7,7 @@ status: "Draft"
 # Assumptions & Constraints — 02-20-02
 
 ## Assumptions
-- A-01: Geometry dataset is derived from approved design release X.Y.
+- A-01: Geometry dataset is derived from approved design release X.Y. <!-- TODO: Replace "X.Y" with the actual approved design release version before finalization. -->
 - A-02: Publication pipeline enforces iSpec/S1000D schemas & validations.
 
 ## Constraints
