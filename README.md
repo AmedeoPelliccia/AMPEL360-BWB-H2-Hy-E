@@ -16,6 +16,9 @@
 
 [📖 Documentation](#-documentation-hub) • [🤖 CAOS System](#-caos-ai-powered-operations) • [💰 Invest](#-investment-opportunity) • [🤝 Join Us](#-get-involved)
 
+> **🆕 NEW: [OPT-IN Framework](OPT-IN_FRAMEWORK/) — Complete documentation topology now available!**  
+> 79 ATA chapters • 14 lifecycle folders • 9 cross-ATA buckets • [Quick Start Guide](OPT-IN_FRAMEWORK/QUICK_START.md) • [Full Standard](OPT-IN_FRAMEWORK_STANDARD.md)
+
 ---
 
 ### **Key Metrics**
