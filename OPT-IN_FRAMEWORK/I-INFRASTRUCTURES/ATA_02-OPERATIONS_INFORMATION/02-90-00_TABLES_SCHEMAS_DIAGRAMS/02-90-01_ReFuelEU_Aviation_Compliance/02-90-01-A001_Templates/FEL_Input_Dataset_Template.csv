@@ -1,0 +1,2 @@
+season,route_code,origin_icao,destination_icao,aircraft_type,avg_pax,avg_cargo_kg,fuel_h2_kg,fuel_saf_kg,saf_share_pct,h2_lca_gCO2e_MJ,saf_lca_gCO2e_MJ,flights_count,data_period_start,data_period_end
+Summer YYYY,AMPXXX,XXXX,XXXX,BWB-H2-Q100,0,0,0.0,0.0,0.0,0.0,0.0,0,YYYY-MM-DD,YYYY-MM-DD
