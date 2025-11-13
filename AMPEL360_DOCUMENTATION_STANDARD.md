@@ -1,8 +1,12 @@
 # AMPEL360 Documentation & OPT-IN Structure Standard
 
-**Version:** 1.4  
-**Date:** 2025-11-12  
+**Version:** 1.5  
+**Date:** 2025-11-13  
 **Status:** ACTIVE
+
+> **Note**: This document provides a comprehensive overview of the OPT-IN Framework.
+> For the complete mandatory standard including cross-ATA buckets and CI validation,
+> see [OPT-IN_FRAMEWORK_STANDARD.md](OPT-IN_FRAMEWORK_STANDARD.md)
 
 ---
 
@@ -299,6 +303,7 @@ The structure is **free**, as long as:
 
 | Version | Date       | Author                  | Changes                                                           |
 | ------- | ---------- | ----------------------- | ----------------------------------------------------------------- |
+| 1.5     | 2025-11-13 | AMPEL360 Documentation  | Added reference to OPT-IN_FRAMEWORK_STANDARD.md                   |
 | 1.4     | 2025-11-12 | AMPEL360 Documentation  | Integrated full OPT-IN/ATA mapping + canonical ATA_XX root layout |
 | 1.3     | 2025-11-12 | AMPEL360 Documentation  | Fixed GENERAL layer, per-system breakdown free + metadata concept |
 | 1.2     | 2025-11-12 | AMPEL360 Documentation  | Added XX-20/40/50/70/90 root buckets per ATA chapter              |
