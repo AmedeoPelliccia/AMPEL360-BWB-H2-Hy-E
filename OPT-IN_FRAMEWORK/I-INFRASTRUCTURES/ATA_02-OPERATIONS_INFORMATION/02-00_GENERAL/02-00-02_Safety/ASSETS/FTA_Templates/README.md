@@ -1,0 +1,28 @@
+# FTA Templates
+
+This folder contains Fault Tree Analysis (FTA) templates for ATA 02 Operations Information.
+
+## Files (placeholders)
+
+- `02-00-02-A010_FTA_Template_Generic_Ops.xlsx`
+- `02-00-02-A011_FTA_Template_Publication_Pipeline.xlsx`
+
+## Purpose
+
+These templates provide structured fault tree diagrams for:
+- Generic operations information hazards
+- Publication pipeline specific fault trees
+
+## Usage
+
+1. Copy the appropriate template
+2. Define top event and develop fault tree logic
+3. Identify minimal cut sets
+4. Link to parent FTA document: `../02-00-02-005A_Fault_Tree_Analysis.md`
+5. Store completed analyses here or in project-specific locations
+
+## Document Control
+
+- **Owner**: AMPEL360 Safety Team
+- **Status**: Template
+- **Last Updated**: 2025-11-13

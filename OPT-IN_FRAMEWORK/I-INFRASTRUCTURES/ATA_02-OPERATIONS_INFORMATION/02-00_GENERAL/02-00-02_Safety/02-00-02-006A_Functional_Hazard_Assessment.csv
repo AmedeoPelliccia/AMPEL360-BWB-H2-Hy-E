@@ -1,0 +1,2 @@
+HazardID,Description,Operational_Context,Effect_On_Aircraft/Crew,Severity,Initial_Class,Mitigations,Residual_Class,Verification_Link,Notes
+H-02-001,Ops manual turnaround time incorrect,Turnarounds,Schedule & safety margins reduced,Major,3,Publication QC + runtime checks,4,TR-Ops-Performance-v1.0.pdf,—
