@@ -63,6 +63,96 @@ jobs:
               ].join("\n")
             });
 
+  # 1b) Validate requirements on PRs
+  req-validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Validate Requirements
+        run: |
+          mkdir -p cd/reports
+          python tools/genccc/validate.py || true
+      - name: Generate Traceability Matrices
+        run: |
+          python tools/genccc/traceability.py || true
+      - name: Upload Requirements Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: genccc-requirements-reports
+          path: |
+            cd/reports/requirements_validation.md
+            cd/reports/requirements_traceability_matrix.md
+            cd/reports/verification_coverage_matrix.md
+            cd/reports/Requirements_Traceability_Matrix.csv
+            cd/reports/Verification_Coverage_Matrix.csv
+          retention-days: 30
+      - name: Check Validation Results
+        id: check-validation
+        run: |
+          if [ -f cd/reports/requirements_validation.md ]; then
+            if grep -q "❌ Validation failed" cd/reports/requirements_validation.md; then
+              echo "validation_failed=true" >> $GITHUB_OUTPUT
+            else
+              echo "validation_failed=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "validation_failed=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Post Validation Summary
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            let validationMsg = '';
+            let coverageMsg = '';
+            
+            try {
+              const validationReport = fs.readFileSync('cd/reports/requirements_validation.md', 'utf8');
+              const lines = validationReport.split('\n').slice(0, 20);
+              validationMsg = lines.join('\n');
+            } catch (e) {
+              validationMsg = 'No requirements validation report generated.';
+            }
+            
+            try {
+              const coverageReport = fs.readFileSync('cd/reports/verification_coverage_matrix.md', 'utf8');
+              const lines = coverageReport.split('\n');
+              const summaryLines = lines.slice(0, 25).join('\n');
+              coverageMsg = summaryLines;
+            } catch (e) {
+              coverageMsg = 'No coverage matrix generated.';
+            }
+            
+            const body = [
+              "📋 **Requirements Management Report**",
+              "",
+              "### Validation Results",
+              "```",
+              validationMsg,
+              "```",
+              "",
+              "### Coverage Summary",
+              "```",
+              coverageMsg,
+              "```",
+              "",
+              "Download full reports from artifact: **genccc-requirements-reports**"
+            ].join("\n");
+            
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });
+
   # 2) Apply quick fixes on-demand: `/genccc apply`
   apply:
     if: |
@@ -449,6 +539,80 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: msg
+            });
+
+  # 4b) Create requirements baseline on-demand: `/genccc baseline`
+  baseline:
+    if: |
+      github.event_name == 'issue_comment' &&
+      github.event.issue.pull_request &&
+      contains(github.event.comment.body, '/genccc baseline')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Create Baseline
+        id: create-baseline
+        run: |
+          python tools/genccc/baseline.py create --name "PR-${{ github.event.issue.number }}" || echo "No requirements found"
+          if [ -f cd/baselines/requirements_PR-*.json ]; then
+            echo "baseline_created=true" >> $GITHUB_OUTPUT
+          else
+            echo "baseline_created=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Generate Baseline Diff
+        if: steps.create-baseline.outputs.baseline_created == 'true'
+        run: |
+          python tools/genccc/baseline.py diff || echo "Baseline diff not available"
+      - name: Upload Baseline Artifacts
+        if: steps.create-baseline.outputs.baseline_created == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: genccc-baseline-${{ github.event.issue.number }}
+          path: |
+            cd/baselines/requirements_PR-*.json
+            cd/reports/baseline_diff.md
+          retention-days: 90
+      - name: Post Baseline Comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            let diffMsg = '';
+            
+            try {
+              const diffReport = fs.readFileSync('cd/reports/baseline_diff.md', 'utf8');
+              const lines = diffReport.split('\n').slice(0, 30);
+              diffMsg = lines.join('\n');
+            } catch (e) {
+              diffMsg = 'No baseline diff available (this may be the first baseline).';
+            }
+            
+            const body = [
+              "📦 **Requirements Baseline Created**",
+              "",
+              "A snapshot of current requirements has been saved.",
+              "",
+              "### Baseline Diff Preview",
+              "```",
+              diffMsg,
+              "```",
+              "",
+              "Download full baseline from artifact: **genccc-baseline-${{ github.event.issue.number }}**",
+              "",
+              "Use baselines to track requirements changes over time and perform impact analysis."
+            ].join("\n");
+            
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
             });
 
   # 5) Enforce completion targets and set a status on PR head commit
