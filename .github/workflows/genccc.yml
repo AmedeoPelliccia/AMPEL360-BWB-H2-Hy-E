@@ -196,3 +196,22 @@ jobs:
               repo: context.repo.repo,
               body
             });
+
+  # Completion Target - Required Status Check
+  # This job provides a clear gate for branch protection rules.
+  # Set "GenCCC Completion Target" as a required status check to ensure
+  # that GenCCC analysis has been performed before merge.
+  completion-target:
+    name: GenCCC Completion Target
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    needs: [report]
+    
+    steps:
+      - name: Check completion
+        run: |
+          echo "✅ GenCCC workflow completed successfully"
+          echo "Report job has finished and artifacts are available"
+          echo ""
+          echo "This status check can be marked as required in branch protection rules"
+          echo "to ensure GenCCC analysis runs before merge."
