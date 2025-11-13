@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2025 AMPEL360 Project Contributors
+
 """
 GenCCC Baseline Management
 Create and compare requirements baselines for change control.

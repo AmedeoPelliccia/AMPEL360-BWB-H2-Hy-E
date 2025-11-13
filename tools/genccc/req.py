@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2025 AMPEL360 Project Contributors
+
 """
 GenCCC Requirements Management CLI
 Provides CRUD operations for requirements with traceability support.
