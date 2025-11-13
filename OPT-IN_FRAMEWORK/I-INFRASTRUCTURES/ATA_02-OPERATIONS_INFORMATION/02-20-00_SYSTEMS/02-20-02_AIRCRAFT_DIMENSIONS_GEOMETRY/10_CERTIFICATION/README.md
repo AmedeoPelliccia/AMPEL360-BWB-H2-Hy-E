@@ -9,7 +9,7 @@ status: "Draft"
 **Purpose.** Collect the certification basis, means of compliance (MoC), evidence, and authority interactions for the *Aircraft Dimensions & Geometry* system under **ATA 02 – Operations Information**.
 
 **Scope.**
-- Regulatory basis (EASA/FAA) applicable to dimensions/markings en ab-initio operations documentation.
+- Regulatory basis (EASA/FAA) applicable to dimensions/markings in ab-initio operations documentation.
 - MoC selection and allocation to requirements.
 - Evidence register and conformity inspections planning.
 - Authority engagement log and assumptions control.
