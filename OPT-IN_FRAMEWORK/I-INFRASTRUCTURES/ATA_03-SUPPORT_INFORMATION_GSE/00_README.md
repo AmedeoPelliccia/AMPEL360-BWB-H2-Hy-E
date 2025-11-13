@@ -23,16 +23,16 @@ This ATA chapter contains all documentation and specifications for Ground Suppor
 This ATA chapter follows the **AMPEL360 Documentation Standard v1.4**, which defines:
 
 ### Mandatory GENERAL Layer
-All 14 lifecycle folders are present in `03-00-00_GENERAL/`:
-- 01_Overview through 14_Ops_Std_Sustain
+All 14 lifecycle folders are present in `03-00_GENERAL/`:
+- 01_OVERVIEW through 14_OPS_STD_SUSTAIN
 
 ### Origin Blocks (Design-Driven)
 Five origin blocks organize concrete systems:
-- `03-20-00_Systems/` - Functional GSE systems
-- `03-40-00_Programming_Algorithms/` - Software, logic, algorithms
-- `03-50-00_Structures/` - Physical structures and frames
-- `03-70-00_Propulsion/` - Energy and propulsion systems
-- `03-90-00_Tables_Schemas_Diagrams/` - Catalogs, schemas, training
+- `03-20_SYSTEMS-GENERAL/` - Functional GSE systems
+- `03-40_PROGRAMMING_ALGORITHMS/` - Software, logic, algorithms
+- `03-50_STRUCTURES/` - Physical structures and frames
+- `03-70_PROPULSION/` - Energy and propulsion systems
+- `03-90_TABLES_SCHEMAS_DIAGRAMS/` - Catalogs, schemas, training
 
 **Important:** Systems under origin blocks (20/40/50/70/90) use **design-driven** structure, not the 14-folder lifecycle pattern.
 
@@ -61,26 +61,26 @@ This structure reflects how the complex cryogenic system is naturally conceived,
 
 ```
 ATA_03-SUPPORT_INFORMATION_GSE/
-├── 03-00-00_GENERAL/                          # Mandatory 14-folder lifecycle
-│   ├── 03-00-01_Overview/
-│   ├── 03-00-02_Safety/
-│   ├── 03-00-03_Requirements/
-│   ├── 03-00-04_Design/
-│   ├── 03-00-05_Interfaces/
-│   ├── 03-00-06_Engineering/
+├── 03-00_GENERAL/                             # Mandatory 14-folder lifecycle
+│   ├── 03-00-01_OVERVIEW/
+│   ├── 03-00-02_SAFETY/
+│   ├── 03-00-03_REQUIREMENTS/
+│   ├── 03-00-04_DESIGN/
+│   ├── 03-00-05_INTERFACES/
+│   ├── 03-00-06_ENGINEERING/
 │   ├── 03-00-07_V_AND_V/
-│   ├── 03-00-08_Prototyping/
-│   ├── 03-00-09_Production_Planning/
-│   ├── 03-00-10_Certification/
-│   ├── 03-00-11_EIS_Versions_Tags/
-│   ├── 03-00-12_Services/
-│   ├── 03-00-13_Subsystems_Components/
-│   └── 03-00-14_Ops_Std_Sustain/
+│   ├── 03-00-08_PROTOTYPING/
+│   ├── 03-00-09_PRODUCTION_PLANNING/
+│   ├── 03-00-10_CERTIFICATION/
+│   ├── 03-00-11_EIS_VERSIONS_TAGS/
+│   ├── 03-00-12_SERVICES/
+│   ├── 03-00-13_SUBSYSTEMS_COMPONENTS/
+│   └── 03-00-14_OPS_STD_SUSTAIN/
 │
-├── 03-20-00_Systems/                          # Functional systems
-├── 03-40-00_Programming_Algorithms/           # Software and algorithms
-├── 03-50-00_Structures/                       # Physical structures
-├── 03-70-00_Propulsion/                       # Energy systems
+├── 03-20_SYSTEMS-GENERAL/                     # Functional systems
+├── 03-40_PROGRAMMING_ALGORITHMS/              # Software and algorithms
+├── 03-50_STRUCTURES/                          # Physical structures
+├── 03-70_PROPULSION/                          # Energy systems
 │   └── 03-70-03_LH2_CRYO_REFUELER/           # Example: Design-driven structure
 │       ├── SYSTEM_ARCHITECTURE/
 │       ├── CONTROL_SOFTWARE/
@@ -90,7 +90,7 @@ ATA_03-SUPPORT_INFORMATION_GSE/
 │       ├── FIELD_DATA/
 │       └── CERTIFICATION_EVIDENCE/
 │
-└── 03-90-00_Tables_Schemas_Diagrams/         # Catalogs and schemas
+└── 03-90_TABLES_SCHEMAS_DIAGRAMS/            # Catalogs and schemas
 ```
 
 ---
