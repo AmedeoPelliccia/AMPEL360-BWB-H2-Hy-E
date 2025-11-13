@@ -10,7 +10,7 @@ status: "Draft"
 Plan inspections/audits to confirm the *published* dimensions & geometry are faithful to approved sources and under CM.
 
 ## 2. Inspection Items
-- Source–to–publication trace check (sampled items)
+- Source-to-publication trace check (sampled items)
 - Schema conformance (ATA iSpec 2200 / S1000D)
 - Change control evidence for last issue
 - Cross-check critical clearances noted for operations (if applicable)
