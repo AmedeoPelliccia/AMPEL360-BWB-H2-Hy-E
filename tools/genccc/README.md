@@ -123,11 +123,58 @@ The tool is configured to work with the AMPEL360 project structure:
 - **Report Output**: `cd/reports/` (ignored by git)
 - **Target Files**: All `*.md` files in the repository
 
+### Branch Protection Setup
+
+To gate merges and ensure GenCCC analysis runs before merge, configure branch protection:
+
+1. Go to **Settings** → **Branches** → **Branch protection rules**
+2. Add or edit the rule for your main branch (e.g., `main`)
+3. Enable **"Require status checks to pass before merging"**
+4. Search for and select **"GenCCC Completion Target"** as a required check
+5. Save the branch protection rule
+
+This ensures that the GenCCC workflow completes successfully before any PR can be merged.
+
+### Fork PR Support
+
+For PRs from forked repositories:
+
+1. Create a Personal Access Token (PAT) with `repo` scope
+2. Add it to repository secrets as **`GENCCC_PAT`**
+3. The workflow will automatically use it for fork PRs
+4. Falls back to `GITHUB_TOKEN` for same-repository PRs
+
 ## Requirements
 
 - Python 3.11+
 - OpenAI Python client (for apply mode with AI generation)
 - `OPENAI_API_KEY` environment variable (optional, for AI-powered generation)
+
+## Scripts
+
+### Core Scripts
+
+1. **`agent.py`**: Shared utilities module
+   - Common path resolution functions
+   - Markdown file discovery
+   - Link extraction and validation
+   - Environment validation
+   - Can be run standalone to display agent info and validate environment
+
+2. **`report.py`**: Cross-reference audit report generator
+   - Scans all markdown files
+   - Identifies broken links
+   - Reports on documentation structure
+
+3. **`apply.py`**: Automatic fix application
+   - Fixes broken internal links
+   - Auto-links plain text ATA references
+   - Generates missing documentation with AI
+
+4. **`generate.py`**: Continuous documentation generation
+   - Expands stub documents
+   - Generates channel specifications
+   - Maintains cross-references
 
 ## Architecture Integration
 
