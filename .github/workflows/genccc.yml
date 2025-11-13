@@ -162,6 +162,12 @@ jobs:
             });
 
   # 3) Agent flow: automatic on PRs + on-demand `/genccc solve`
+  # Security Note: This job runs agent.py from trusted base branch.
+  # The agent may checkout PR content but only executes trusted scripts:
+  # 1. Scripts are copied from base branch to /tmp (trusted code)
+  # 2. agent.py delegates to apply.py which is also from base
+  # 3. PR content is treated as data only, never executed
+  # 4. All changes are committed to new child branches for review
   agent_child_pr:
     if: >
       (github.event_name == 'pull_request') ||
@@ -374,6 +380,12 @@ jobs:
             });
 
   # 4) Verify child branch by re-running the GenCCC audit
+  # Security Note: This job checks out and runs code from a child branch.
+  # This is safe because:
+  # 1. Child branch is created by the trusted agent_child_pr job above
+  # 2. Only runs scripts that are in tools/genccc/ (report.py)
+  # 3. report.py is read-only and doesn't modify repository
+  # 4. Child branch content comes from trusted base scripts, not untrusted PR
   verify_child_proposal:
     name: Verify Child Proposal (re-run GenCCC audit)
     needs: [agent_child_pr]
