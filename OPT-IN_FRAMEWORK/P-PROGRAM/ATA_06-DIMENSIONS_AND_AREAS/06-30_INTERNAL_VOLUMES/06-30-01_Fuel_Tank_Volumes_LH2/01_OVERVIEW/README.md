@@ -1,4 +1,26 @@
+---
+title: Overview: 06-30-01 - Fuel Tank Volumes (LH₂)
+identifier: 06-30-01-001A
+version: 0.1
+author: Amedeo Pelliccia
+status: In Development
+classification: Technical
+scope: Dimensions And Areas architecture and integration with related subsystems
+created_at: 2025-11-13
+next_review: 2026-05-12
+compliance:
+  - ATA iSpec 2200
+  - S1000D
+  - AMPEL360 OPT-IN Framework
+---
+
+<!-- GENCCC_STATUS: pending -->
+<!-- GENCCC_SCOPE: system_description, architecture, integration -->
+
 # Overview: 06-30-01 - Fuel Tank Volumes (LH₂)
+
+
+> 🔗 **Linked Verification Matrix:** [../../07_V_AND_V/06-30-01-001A_Traceability_Matrix.csv](../../07_V_AND_V/06-30-01-001A_Traceability_Matrix.csv)
 
 ## Purpose
 This component documents the volumetric capacity and dimensional specifications of the liquid hydrogen (LH₂) fuel storage system for the AMPEL360 aircraft.

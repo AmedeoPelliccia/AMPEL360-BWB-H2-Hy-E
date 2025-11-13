@@ -1,8 +1,30 @@
+---
+title: 01_OVERVIEW - NOISE_ABATEMENT_PROCEDURES
+identifier: 02-20-66-001A
+version: 0.1
+author: Amedeo Pelliccia
+status: Draft
+classification: Technical
+scope: Operations Information architecture and integration with related subsystems
+created_at: 2025-11-13
+next_review: 2026-05-12
+compliance:
+  - ATA iSpec 2200
+  - S1000D
+  - AMPEL360 OPT-IN Framework
+---
+
+<!-- GENCCC_STATUS: pending -->
+<!-- GENCCC_SCOPE: system_description, architecture, integration -->
+
 # 01_OVERVIEW - NOISE_ABATEMENT_PROCEDURES
 
 **Component Code:** 02-86-00  
 **Component Name:** NOISE_ABATEMENT_PROCEDURES  
 **Folder:** 01_OVERVIEW
+
+
+> 🔗 **Linked Verification Matrix:** [../../07_V_AND_V/02-20-66-001A_Traceability_Matrix.csv](../../07_V_AND_V/02-20-66-001A_Traceability_Matrix.csv)
 
 ## Purpose
 

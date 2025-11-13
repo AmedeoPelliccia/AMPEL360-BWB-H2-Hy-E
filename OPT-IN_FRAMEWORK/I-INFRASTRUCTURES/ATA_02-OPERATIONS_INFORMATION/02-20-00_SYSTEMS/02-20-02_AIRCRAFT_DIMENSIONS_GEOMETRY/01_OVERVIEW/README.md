@@ -1,8 +1,30 @@
+---
+title: ATA 02-11-00 Aircraft Dimensions & Geometry - Overview
+identifier: 02-20-02-001A
+version: 0.1
+author: Amedeo Pelliccia
+status: Released
+classification: Technical
+scope: Operations Information architecture and integration with related subsystems
+created_at: 2025-11-13
+next_review: 2026-05-12
+compliance:
+  - ATA iSpec 2200
+  - S1000D
+  - AMPEL360 OPT-IN Framework
+---
+
+<!-- GENCCC_STATUS: pending -->
+<!-- GENCCC_SCOPE: system_description, architecture, integration -->
+
 # ATA 02-11-00 Aircraft Dimensions & Geometry - Overview
 
 **Document ID:** AMPEL360-02-11-00-OVW-README  
 **Version:** 1.0.0  
 **Status:** Released
+
+
+> 🔗 **Linked Verification Matrix:** [../../07_V_AND_V/02-20-02-001A_Traceability_Matrix.csv](../../07_V_AND_V/02-20-02-001A_Traceability_Matrix.csv)
 
 ## Purpose
 

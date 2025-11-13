@@ -1,4 +1,26 @@
+---
+title: Overview: Waste Drain Procedures
+identifier: 12-70-04-001A
+version: 0.1
+author: Amedeo Pelliccia
+status: In Development
+classification: Technical
+scope: Servicing architecture and integration with related subsystems
+created_at: 2025-11-13
+next_review: 2026-05-12
+compliance:
+  - ATA iSpec 2200
+  - S1000D
+  - AMPEL360 OPT-IN Framework
+---
+
+<!-- GENCCC_STATUS: pending -->
+<!-- GENCCC_SCOPE: system_description, architecture, integration -->
+
 # Overview: Waste Drain Procedures
+
+
+> 🔗 **Linked Verification Matrix:** [../../07_V_AND_V/12-70-04-001A_Traceability_Matrix.csv](../../07_V_AND_V/12-70-04-001A_Traceability_Matrix.csv)
 
 ## Purpose
 This folder contains overview documentation for Waste Drain Procedures, including scope, objectives, and high-level system description.

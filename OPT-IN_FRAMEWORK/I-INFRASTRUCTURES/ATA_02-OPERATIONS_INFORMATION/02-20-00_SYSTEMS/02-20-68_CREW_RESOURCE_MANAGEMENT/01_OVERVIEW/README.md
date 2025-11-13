@@ -1,8 +1,30 @@
+---
+title: 01_OVERVIEW - CREW_RESOURCE_MANAGEMENT
+identifier: 02-20-68-001A
+version: 0.1
+author: Amedeo Pelliccia
+status: Draft
+classification: Technical
+scope: Operations Information architecture and integration with related subsystems
+created_at: 2025-11-13
+next_review: 2026-05-12
+compliance:
+  - ATA iSpec 2200
+  - S1000D
+  - AMPEL360 OPT-IN Framework
+---
+
+<!-- GENCCC_STATUS: pending -->
+<!-- GENCCC_SCOPE: system_description, architecture, integration -->
+
 # 01_OVERVIEW - CREW_RESOURCE_MANAGEMENT
 
 **Component Code:** 02-88-00  
 **Component Name:** CREW_RESOURCE_MANAGEMENT  
 **Folder:** 01_OVERVIEW
+
+
+> 🔗 **Linked Verification Matrix:** [../../07_V_AND_V/02-20-68-001A_Traceability_Matrix.csv](../../07_V_AND_V/02-20-68-001A_Traceability_Matrix.csv)
 
 ## Purpose
 

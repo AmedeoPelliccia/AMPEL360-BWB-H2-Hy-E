@@ -1,3 +1,25 @@
+---
+title: ASSETS Directory
+identifier: 02-00-00-001A
+version: 0.1
+author: Amedeo Pelliccia
+status: ⚠️ To Be Created
+classification: Technical
+scope: Operations Information architecture and integration with related subsystems
+created_at: 2025-11-13
+next_review: 2026-05-12
+compliance:
+  - ATA iSpec 2200
+  - S1000D
+  - AMPEL360 OPT-IN Framework
+---
+
+<!-- GENCCC_STATUS: pending -->
+<!-- GENCCC_SCOPE: system_description, architecture, integration -->
+
+
+> 🔗 **Linked Verification Matrix:** [../../07_V_AND_V/02-00-00-001A_Traceability_Matrix.csv](../../07_V_AND_V/02-00-00-001A_Traceability_Matrix.csv)
+
 # ASSETS Directory
 ## ATA 02-00-00 GENERAL / 01_OVERVIEW
 

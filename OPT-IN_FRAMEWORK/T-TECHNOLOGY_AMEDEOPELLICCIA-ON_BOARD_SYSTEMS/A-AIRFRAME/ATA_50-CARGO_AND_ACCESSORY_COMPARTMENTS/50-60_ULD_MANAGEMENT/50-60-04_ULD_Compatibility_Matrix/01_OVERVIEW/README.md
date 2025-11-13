@@ -1,3 +1,25 @@
+---
+title: 50-60-04_ULD_Compatibility_Matrix
+identifier: 50-60-04-001A
+version: 0.1
+author: Amedeo Pelliccia
+status: Template - To be populated
+classification: Technical
+scope: Cargo And Accessory Compartments architecture and integration with related subsystems
+created_at: 2025-11-13
+next_review: 2026-05-12
+compliance:
+  - ATA iSpec 2200
+  - S1000D
+  - AMPEL360 OPT-IN Framework
+---
+
+<!-- GENCCC_STATUS: pending -->
+<!-- GENCCC_SCOPE: system_description, architecture, integration -->
+
+
+> 🔗 **Linked Verification Matrix:** [../../07_V_AND_V/50-60-04-001A_Traceability_Matrix.csv](../../07_V_AND_V/50-60-04-001A_Traceability_Matrix.csv)
+
 # 50-60-04_ULD_Compatibility_Matrix
 ## 01 OVERVIEW
 

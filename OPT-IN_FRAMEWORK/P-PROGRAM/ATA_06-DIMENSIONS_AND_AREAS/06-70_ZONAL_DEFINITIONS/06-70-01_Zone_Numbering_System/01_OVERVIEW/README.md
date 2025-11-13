@@ -1,4 +1,26 @@
+---
+title: Overview: 06-70-01 - Zone Numbering System
+identifier: 06-70-01-001A
+version: 0.1
+author: Amedeo Pelliccia
+status: Approved
+classification: Technical
+scope: Dimensions And Areas architecture and integration with related subsystems
+created_at: 2025-11-13
+next_review: 2026-05-12
+compliance:
+  - ATA iSpec 2200
+  - S1000D
+  - AMPEL360 OPT-IN Framework
+---
+
+<!-- GENCCC_STATUS: pending -->
+<!-- GENCCC_SCOPE: system_description, architecture, integration -->
+
 # Overview: 06-70-01 - Zone Numbering System
+
+
+> 🔗 **Linked Verification Matrix:** [../../07_V_AND_V/06-70-01-001A_Traceability_Matrix.csv](../../07_V_AND_V/06-70-01-001A_Traceability_Matrix.csv)
 
 ## Purpose
 This component establishes the standardized zone numbering system for the AMPEL360 aircraft, enabling systematic identification of maintenance zones and access points per ATA 100 specifications.
