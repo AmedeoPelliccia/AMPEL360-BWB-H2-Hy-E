@@ -655,6 +655,8 @@ jobs:
         run: |
           AUDIT_FILE="reports/cross_reference_audit.md"
           VV_LAKE="base/cd/vv_lake.json"
+          
+          # Handle audit file with proper output redirection
           if [ ! -f "$AUDIT_FILE" ]; then
             echo "::warning::Audit file not found at $AUDIT_FILE. Counting issues as 0."
             echo "pooled_issues=0" >> $GITHUB_OUTPUT
@@ -662,6 +664,8 @@ jobs:
             COUNT=$(grep -Ei "warning|error|issue" "$AUDIT_FILE" | wc -l || echo 0)
             echo "pooled_issues=$COUNT" >> $GITHUB_OUTPUT
           fi
+          
+          # Handle V&V lake with proper output redirection
           if [ -f "$VV_LAKE" ]; then
             STANDARDS=$(jq -r '.standards[]?' "$VV_LAKE" | paste -sd, -)
             PATHS=$(jq -r '.paths[]?' "$VV_LAKE" | paste -sd, -)
