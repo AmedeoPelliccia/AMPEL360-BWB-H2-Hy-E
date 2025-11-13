@@ -45,7 +45,7 @@ status: "Draft"
 | `02-20-02-010D_Compliance_Matrix.csv` | Requirements compliance tracking | Template |
 | `02-20-02-010E_Evidence_Register.csv` | Evidence artifacts registry | Template |
 | `02-20-02-010F_Conformity_Inspection_Plan.md` | Inspection procedures | Draft |
-| `02-20-02-010G_Authority_Engagement_Log.md` | Authority meeting records | Template |
+| `02-20-02-010G_Authority_Engagement_Log.md` | Authority meeting records | Draft |
 | `02-20-02-010H_Assumptions_Constraints.md` | Project assumptions and constraints | Draft |
 | `02-20-02-010J_Change_Impact_Assessment_Template.md` | CIA template for changes | Template |
 
