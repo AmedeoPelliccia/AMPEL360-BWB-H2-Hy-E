@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2025 AMPEL360 Project Contributors
+# SPDX-FileCopyrightText: 2025 AMPEL360 Project Contributors
 # SPDX-License-Identifier: Apache-2.0
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -52,6 +52,9 @@ def csv_to_markdown_table(csv_path: pathlib.Path) -> str:
     lines.append("| " + " | ".join(header) + " |")
     lines.append("| " + " | ".join("---" for _ in header) + " |")
     for r in data:
+        # Ensure row has same number of columns as header
+        if len(r) < len(header):
+            r = r + [""] * (len(header) - len(r))
         lines.append("| " + " | ".join(r) + " |")
     return "\n".join(lines)
 
@@ -63,8 +66,13 @@ def generate_for_files(csv_files: Iterable[pathlib.Path], output_dir: pathlib.Pa
         if not p.exists():
             print(f"[summary] WARNING: {p} does not exist, skipping")
             continue
-        md = csv_to_markdown_table(p)
+        try:
+            md = csv_to_markdown_table(p)
+        except Exception as e:
+            print(f"[summary] ERROR: Failed to parse {p}: {e}")
+            continue
         if not md:
+            print(f"[summary] INFO: {p} produced no table content, skipping")
             continue
         rel_name = p.stem + ".md"
         out_path = output_dir / rel_name
