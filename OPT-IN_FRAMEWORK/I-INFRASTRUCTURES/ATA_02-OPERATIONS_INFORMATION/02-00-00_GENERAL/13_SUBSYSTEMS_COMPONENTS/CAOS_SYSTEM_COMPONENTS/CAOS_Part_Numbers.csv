@@ -1,9 +1,0 @@
-Part_Number,Description,Category,Type,Version,Platform,License,Status,Release_Date
-PNR-CAOS-SW-001,CAOS Core System,Core_Software,Operating_System,v2.0,Linux_x86_64,Proprietary,Active,2025-09-01
-PNR-CAOS-SW-002,Neural Network Models,AI_ML,Model_Package,v3.2,Python_TensorFlow,Proprietary,Active,2025-10-15
-PNR-CAOS-SW-003,Digital Twin Engine,Simulation,Physics_Engine,v1.5,C++_CUDA,Proprietary,Active,2025-08-20
-PNR-02-EFB-002,EFB Software Suite,Documentation,Application,v4.1,Android_13,Proprietary,Active,2025-09-10
-PNR-02-PUB-002,S1000D Tools,Publication,Authoring_Suite,v12.5,Windows_Linux,Commercial,Active,2025-07-01
-PNR-CAOS-SW-004,Predictive Maintenance Module,AI_ML,Analytics,v2.3,Python,Proprietary,Active,2025-10-01
-PNR-CAOS-SW-005,Anomaly Detection Module,AI_ML,Analytics,v1.8,Python,Proprietary,Active,2025-09-15
-PNR-CAOS-SW-006,Energy Optimization Module,AI_ML,Optimization,v1.6,Python_C++,Proprietary,Active,2025-10-10

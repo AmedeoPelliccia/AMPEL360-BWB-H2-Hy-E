@@ -1,3 +1,0 @@
-# 10 CERTIFICATION
-
-This directory contains 10 CERTIFICATION documentation for 55-10_HORIZONTAL_STABILIZER_STRUCTURE.

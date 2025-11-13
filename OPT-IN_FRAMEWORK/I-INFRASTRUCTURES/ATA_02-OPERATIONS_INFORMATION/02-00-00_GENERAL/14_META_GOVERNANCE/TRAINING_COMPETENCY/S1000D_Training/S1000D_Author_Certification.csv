@@ -1,5 +1,0 @@
-Employee_ID,Name,Certification_Date,Certificate_Number,Expiry_Date,Status,Renewal_Due
-E001,J.Smith,2025-08-15,S1000D-2025-001,2028-08-15,Current,2028-06-15
-E002,M.Garcia,2025-08-22,S1000D-2025-002,2028-08-22,Current,2028-06-22
-E004,E.Brown,2025-09-05,S1000D-2025-003,2028-09-05,Current,2028-07-05
-E005,S.Johnson,2025-09-10,S1000D-2025-004,2028-09-10,Current,2028-07-10

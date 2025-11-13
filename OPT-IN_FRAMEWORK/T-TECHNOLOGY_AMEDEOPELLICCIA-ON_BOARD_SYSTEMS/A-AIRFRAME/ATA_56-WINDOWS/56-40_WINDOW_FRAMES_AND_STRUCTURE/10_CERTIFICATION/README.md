@@ -1,3 +1,0 @@
-# 10 CERTIFICATION
-
-This directory contains 10 CERTIFICATION documentation for 56-40_WINDOW_FRAMES_AND_STRUCTURE.

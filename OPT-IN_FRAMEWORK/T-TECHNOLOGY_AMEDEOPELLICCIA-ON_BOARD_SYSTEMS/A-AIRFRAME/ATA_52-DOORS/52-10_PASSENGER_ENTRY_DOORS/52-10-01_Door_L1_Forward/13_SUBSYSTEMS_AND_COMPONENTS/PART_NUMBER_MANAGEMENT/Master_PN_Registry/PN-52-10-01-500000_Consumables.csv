@@ -1,7 +1,0 @@
-Part_Number,Description,Material,Unit_Size,Shelf_Life_Months,Hazmat,Usage_Per_Maintenance,Unit_Cost_EUR,Supplier
-PN-52-10-01-501001,Seal_Lubricant,Silicone_Grease,50ml,36,Yes,50ml,12,SealDynamics_Inc
-PN-52-10-01-501002,IPA_Cleaner,Isopropyl_Alcohol,100ml,24,Yes,100ml,8,ChemClean_Supply
-PN-52-10-01-501003,Epoxy_Adhesive,Two_Part_Epoxy,1kg,18,Yes,200g,45,AdhesiveTech_Corp
-PN-52-10-01-501004,Anti_Seize_Compound,Copper_Based,250g,60,No,50g,18,MaintenancePro_Ltd
-PN-52-10-01-501005,Contact_Cleaner,Electronic_Grade,200ml,36,Yes,50ml,15,ElectroClean_Inc
-PN-52-10-01-501006,Corrosion_Inhibitor,ACF-50,100ml,48,No,25ml,22,CorrosionX_Supply

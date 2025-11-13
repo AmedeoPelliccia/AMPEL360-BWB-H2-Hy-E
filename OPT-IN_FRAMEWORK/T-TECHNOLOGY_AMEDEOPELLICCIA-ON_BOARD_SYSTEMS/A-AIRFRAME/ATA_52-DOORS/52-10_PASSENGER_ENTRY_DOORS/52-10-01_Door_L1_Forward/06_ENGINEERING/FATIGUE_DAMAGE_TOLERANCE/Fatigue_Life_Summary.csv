@@ -1,8 +1,0 @@
-Stress_Level_MPa,Cycles_to_Failure,R_Ratio,Temperature_C,Environment,Source,Confidence
-100,1.0E+08,0.1,23,Ambient,CMH-17,High
-200,5.0E+06,0.1,23,Ambient,CMH-17,High
-300,1.0E+06,0.1,23,Ambient,CMH-17,Medium
-400,2.0E+05,0.1,23,Ambient,Estimated,Low
-500,5.0E+04,0.1,23,Ambient,Estimated,Low
-348,2.4E+06,0.1,23,Ambient,Interpolated,Medium
-348,1.8E+06,0.1,85,Hot_Wet,Knockdown,Low

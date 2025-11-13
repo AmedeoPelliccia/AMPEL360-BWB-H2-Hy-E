@@ -1,7 +1,0 @@
-Refuel_Amount_kg,Flow_Rate_kg_min,Time_min,Procedure_Time_min,Total_Time_min,Notes
-500,70,7,10,17,Quick turn refuel
-1000,70,14,10,24,Partial refuel
-2000,70,29,10,39,Half tank refuel
-3000,70,43,10,53,Substantial refuel
-4200,70,60,10,70,Full refuel standard
-4200,100,42,10,52,Full refuel fast (future)

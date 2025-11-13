@@ -1,3 +1,0 @@
-# 05 INTERFACES
-
-This directory contains 05 INTERFACES documentation for 56-80_WINDOW_INSTALLATION_AND_RETENTION.

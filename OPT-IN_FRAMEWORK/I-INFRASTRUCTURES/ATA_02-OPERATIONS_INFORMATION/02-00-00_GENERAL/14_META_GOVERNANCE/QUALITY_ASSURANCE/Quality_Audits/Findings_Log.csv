@@ -1,4 +1,0 @@
-Finding_ID,Audit_ID,Severity,Description,Responsible,Due_Date,Status,Closure_Date
-F-001,QA-2025-Q3,Minor,Missing review date in metadata,Doc_Control,2025-10-05,Closed,2025-10-03
-F-002,QA-2025-Q3,Minor,Version number inconsistency,Doc_Control,2025-10-05,Closed,2025-10-03
-F-003,QA-2025-S1000D,Minor,Business rule violation in DMC,S1000D_Team,2025-10-20,Closed,2025-10-18

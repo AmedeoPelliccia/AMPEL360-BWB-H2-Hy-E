@@ -1,3 +1,0 @@
-# 08 PROTOTYPING
-
-This directory contains 08 PROTOTYPING documentation for 55-10_HORIZONTAL_STABILIZER_STRUCTURE.

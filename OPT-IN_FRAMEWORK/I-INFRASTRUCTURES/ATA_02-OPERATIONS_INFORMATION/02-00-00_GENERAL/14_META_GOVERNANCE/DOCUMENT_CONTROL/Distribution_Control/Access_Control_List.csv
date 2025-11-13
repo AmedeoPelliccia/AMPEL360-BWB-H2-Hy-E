@@ -1,8 +1,0 @@
-Doc_ID,Classification,Public_Read,Internal_Read,Internal_Write,Mgmt_Approve,Admin_Full
-02-00-00-README,Internal,No,Yes,No,No,Yes
-02-00-01-OVERVIEW,Internal,No,Yes,No,Yes,Yes
-02-00-02-SAFETY,Confidential,No,Yes,Safety_Only,Yes,Yes
-02-00-03-REQUIREMENTS,Confidential,No,Engineering_Only,Engineering_Only,Yes,Yes
-02-00-04-DESIGN,Confidential,No,Engineering_Only,Engineering_Only,Yes,Yes
-02-00-05-INTERFACES,Internal,No,Yes,Engineering_Only,Yes,Yes
-14_META_GOVERNANCE,Internal,No,Quality_Mgmt,Quality_Mgmt,Yes,Yes

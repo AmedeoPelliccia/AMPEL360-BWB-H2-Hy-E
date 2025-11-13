@@ -1,5 +1,0 @@
-Loading_Condition,Weight_kg,CG_X_m,CG_Y_m,CG_Z_m,Ixx_kg_m2,Iyy_kg_m2,Izz_kg_m2,Ixy_kg_m2,Ixz_kg_m2,Iyz_kg_m2,Notes
-OEW,120000,25.5,0.0,2.8,15500000,8200000,22800000,0,-125000,0,Operating Empty Weight
-MTOW_Full_Fuel,220000,25.2,0.0,2.9,28400000,15000000,41800000,0,-230000,0,Maximum Take-Off Weight
-MLW_Landing_Fuel,190000,25.9,0.0,2.9,24600000,13000000,36200000,0,-198000,0,Maximum Landing Weight
-MZFW,170000,26.4,0.0,2.9,22000000,11600000,32400000,0,-176000,0,Maximum Zero Fuel Weight

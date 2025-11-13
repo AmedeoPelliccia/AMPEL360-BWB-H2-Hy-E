@@ -1,9 +1,0 @@
-Request_ID,Date_Submitted,Submitted_By,Prototype_Affected,Change_Type,Description,Priority,Status,Date_Implemented
-CR-001,2025-10-22,Capt. Wilson,PROTO-PROC-001,Enhancement,Add BWB handling notes,Medium,Planned,TBD
-CR-002,2025-10-25,Safety Officer,PROTO-PROC-002,Critical,Expand H2 leak location detail,High,In Progress,2025-11-10
-CR-003,2025-10-26,FO Martinez,PROTO-CAOS-001,Enhancement,Add night mode,Medium,Planned,TBD
-CR-004,2025-10-28,Training Capt.,PROTO-TRN-003,Enhancement,Extend training to 20 hours,High,Approved,2025-11-15
-CR-005,2025-11-01,Line Pilot Chen,PROTO-CKL-003,Critical,Add CAOS diagnostic guidance,High,In Progress,2025-11-12
-CR-006,2025-11-02,Load Master,PROTO-DOC-004,Enhancement,Add more W&B examples,Medium,Planned,TBD
-CR-007,2025-11-03,UX Designer,PROTO-CAOS-002,Enhancement,Soften color scheme,Low,Under Review,TBD
-CR-008,2025-11-04,Check Pilot,PROTO-CKL-002,Minor,Add cooldown timer reference,Low,Approved,2025-11-08

@@ -1,3 +1,0 @@
-# 14 META GOVERNANCE
-
-This directory contains 14 META GOVERNANCE documentation for 56-70_HEATING_AND_DEFOG_SYSTEMS.

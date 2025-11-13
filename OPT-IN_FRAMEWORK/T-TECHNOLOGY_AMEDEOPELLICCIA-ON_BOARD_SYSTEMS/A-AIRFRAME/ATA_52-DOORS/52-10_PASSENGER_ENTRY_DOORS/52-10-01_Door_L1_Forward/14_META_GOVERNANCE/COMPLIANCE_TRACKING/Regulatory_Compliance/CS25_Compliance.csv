@@ -1,6 +1,0 @@
-Requirement,CS25_Section,Status,Evidence,Test_Required,Compliance_Date
-Door_structural_strength,CS25.783(a),Partial,Analysis_report,Yes,2026-Q2
-Emergency_exit_marking,CS25.811,Planned,Design_spec,No,2026-Q1
-Door_locking_mechanism,CS25.783(c),In_Progress,Design_review,Yes,2026-Q3
-Fail-safe_design,CS25.571,In_Progress,Stress_analysis,Yes,2026-Q2
-Damage_tolerance,CS25.571(e),Planned,Fatigue_analysis,Yes,2026-Q3

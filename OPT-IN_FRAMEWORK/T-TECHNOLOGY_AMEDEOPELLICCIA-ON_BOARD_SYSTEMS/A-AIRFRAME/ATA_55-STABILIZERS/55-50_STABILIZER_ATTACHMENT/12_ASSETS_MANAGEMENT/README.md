@@ -1,3 +1,0 @@
-# 12 ASSETS MANAGEMENT
-
-This directory contains 12 ASSETS MANAGEMENT documentation for 55-50_STABILIZER_ATTACHMENT.

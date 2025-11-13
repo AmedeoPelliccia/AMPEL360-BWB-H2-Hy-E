@@ -1,8 +1,0 @@
-Cabin_Zone,Rows,Seats,Pax_Load_Factor,Pax_Count,Avg_Weight_kg,Total_kg,Station,Moment
-Forward_Zone,1-8,64,85%,54,85,4590,250,1147500
-Forward_Center,9-16,64,85%,54,85,4590,450,2065500
-Center_Zone,17-24,64,85%,54,85,4590,650,2983500
-Aft_Center,25-32,64,85%,54,85,4590,850,3901500
-Aft_Zone,33-36,32,85%,27,85,2295,1000,2295000
-Total,,288,85%,243,,20655,,12393000
-Baggage,All,220,85%,187,23,4301,Various,2795650

@@ -1,5 +1,0 @@
-Asset_ID,Inspection_Date,Inspector,Findings,Status,Next_Inspection
-DPP-H2-001,2025-10-30,Inspector A,No issues found,Pass,2026-01-30
-DPP-H2-002,2025-10-31,Inspector A,Slight wear on seal,Advisory,2025-12-31
-DPP-CAOS-001,2025-11-01,Technician B,Operating normally,Pass,2026-02-01
-DPP-OPS-001,2025-10-28,Inspector C,Calibration drift,Minor Issue,2025-11-28

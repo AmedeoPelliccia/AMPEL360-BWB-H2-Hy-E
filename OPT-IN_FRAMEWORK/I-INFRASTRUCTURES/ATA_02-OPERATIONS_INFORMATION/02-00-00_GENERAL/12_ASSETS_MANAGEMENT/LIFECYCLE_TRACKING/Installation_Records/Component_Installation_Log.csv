@@ -1,5 +1,0 @@
-Asset_ID,Component_ID,Installation_Date,Installed_By,Configuration_File,Blockchain_Tx
-DPP-H2-001,Refueling Receptacle,2025-10-15,Installation Team A,config_h2_001.yaml,0x8b4g3c2d0e5f7a9b
-DPP-H2-002,Main Valve Assembly,2025-10-16,Installation Team A,config_h2_002.yaml,0x9c5h4d3e1f6g8b0c
-DPP-CAOS-001,Processing Unit,2025-10-10,IT Team,config_caos_001.yaml,0x0d6i5e4f2g7h9c1d
-DPP-OPS-001,H2 Refueling Panel,2025-10-15,Ground Crew,config_ops_001.yaml,0x1e7j6f5g3h8i0d2e

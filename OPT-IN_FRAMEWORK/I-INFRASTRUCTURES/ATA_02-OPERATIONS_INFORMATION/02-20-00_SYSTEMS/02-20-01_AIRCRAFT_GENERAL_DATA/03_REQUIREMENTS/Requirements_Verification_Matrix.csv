@@ -1,8 +1,0 @@
-Req_ID,Verification_Method,Verification_Procedure,Responsible_Party,Verification_Date,Status,Results
-RQ-02-10-00-001,Inspection,Visual_Inspection_Type_Plate,Certification_Team,2025-Q4,Planned,Pending
-RQ-02-10-10-001,Measurement,Dimensional_Survey_Ground,Engineering,2026-Q1,Planned,Pending
-RQ-02-10-20-001,Test,Weighing_Procedure_Full_Scale,Test_Team,2026-Q2,Planned,Pending
-RQ-02-10-20-005,Analysis,CG_Envelope_Calculation,Engineering,2025-Q4,In_Progress,Preliminary
-RQ-02-10-30-003,Inspection,Tank_Capacity_Verification,H2_Systems,2026-Q1,Planned,Pending
-RQ-02-10-40-001,Flight_Test,Range_Validation_Flight,Flight_Test,2027-Q2,Planned,Pending
-RQ-02-10-50-003,Test,Latency_Measurement_Suite,CAOS_Team,2026-Q3,Planned,Pending

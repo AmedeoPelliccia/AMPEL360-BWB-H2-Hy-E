@@ -1,5 +1,0 @@
-Part_Number,Description,Version,Language,Lines_of_Code,Certification,Checksum_SHA256,Release_Date,Developer,License_Type
-PN-52-10-01-401001,Door_Firmware,v2.0.1,C/C++,12450,DO-178C_DAL-B,a3f5e8d...9c2b1a4,2024-08-15,AMPEL360_Software,Proprietary
-PN-52-10-01-401002,Sensor_Firmware,v1.8.3,C,3280,DO-178C_DAL-C,b7e2f9c...4d8a3f1,2024-07-22,AMPEL360_Software,Proprietary
-PN-52-10-01-402001,Monitoring_Module,v3.1.0,Python/C++,8750,Internal,c9d4a1e...2f7b8c5,2024-09-10,AMPEL360_CAOS,MIT
-PN-52-10-01-402002,Analytics_Module,v3.1.0,Python,6420,Internal,d2e8f3b...5c9a1d6,2024-09-10,AMPEL360_CAOS,MIT

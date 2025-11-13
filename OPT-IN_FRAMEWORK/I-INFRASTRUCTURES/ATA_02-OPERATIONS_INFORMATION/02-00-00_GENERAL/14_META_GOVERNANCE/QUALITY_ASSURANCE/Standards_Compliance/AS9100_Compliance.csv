@@ -1,6 +1,0 @@
-AS9100_Clause,Requirement,Compliance_Status,Evidence,Last_Audit
-7.3.1,Design control,Compliant,Design_Standards/,2025-10-15
-7.3.4,Design review,Compliant,Technical_Reviews/,2025-10-15
-7.3.7,Design verification,Compliant,V_AND_V/,2025-10-15
-8.2.1,Customer feedback,Compliant,Stakeholder_Feedback_Log.csv,2025-10-15
-8.5.2,Corrective action,Compliant,Corrective_Actions_Tracker.csv,2025-10-15

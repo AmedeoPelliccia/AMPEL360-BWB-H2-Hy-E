@@ -1,3 +1,0 @@
-# 06 ENGINEERING
-
-This directory contains 06 ENGINEERING documentation for 55-10_HORIZONTAL_STABILIZER_STRUCTURE.

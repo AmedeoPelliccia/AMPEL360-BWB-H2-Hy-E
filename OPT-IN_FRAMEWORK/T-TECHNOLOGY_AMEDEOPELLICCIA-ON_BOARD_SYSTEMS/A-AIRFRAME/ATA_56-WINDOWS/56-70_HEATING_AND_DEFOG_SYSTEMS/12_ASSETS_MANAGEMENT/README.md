@@ -1,3 +1,0 @@
-# 12 ASSETS MANAGEMENT
-
-This directory contains 12 ASSETS MANAGEMENT documentation for 56-70_HEATING_AND_DEFOG_SYSTEMS.

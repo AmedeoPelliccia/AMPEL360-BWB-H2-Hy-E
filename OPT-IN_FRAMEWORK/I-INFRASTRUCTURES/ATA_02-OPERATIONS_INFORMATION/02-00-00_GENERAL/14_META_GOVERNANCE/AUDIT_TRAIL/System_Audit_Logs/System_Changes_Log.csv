@@ -1,3 +1,0 @@
-Timestamp,Admin_User,Change_Type,Description,Approval,Rollback_Available
-2025-10-01T20:00:00Z,Admin1,Config_Change,Updated_backup_schedule,Approved,Yes
-2025-10-15T18:00:00Z,Admin2,Software_Update,DMS_version_upgrade,Approved,Yes

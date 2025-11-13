@@ -1,3 +1,0 @@
-Timestamp,Event_Type,User_ID,Source_IP,Description,Severity,Action_Taken
-2025-10-20T14:30:00Z,Failed_Login,U999,10.0.5.99,3_failed_attempts,Medium,Account_locked
-2025-11-01T09:15:00Z,Unauthorized_Access,U888,10.0.6.88,Attempted_restricted_doc,High,Reported_to_security

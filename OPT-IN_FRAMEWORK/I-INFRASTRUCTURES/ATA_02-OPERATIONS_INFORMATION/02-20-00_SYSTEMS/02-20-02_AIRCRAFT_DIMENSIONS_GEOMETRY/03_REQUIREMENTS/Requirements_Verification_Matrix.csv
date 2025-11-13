@@ -1,9 +1,0 @@
-Req_ID,Verification_Method,Test_ID,Responsible,Target_Date,Status
-RQ-02-11-10-001,Measurement,VER-02-11-001,Manufacturing,2026-Q2,Planned
-RQ-02-11-10-002,Measurement,VER-02-11-002,Manufacturing,2026-Q2,Planned
-RQ-02-11-10-003,Measurement,VER-02-11-003,Manufacturing,2026-Q2,Planned
-RQ-02-11-20-001,Measurement,VER-02-11-020,Manufacturing,2026-Q2,Planned
-RQ-02-11-20-003,Calculation,VER-02-11-022,Aerodynamics,2025-Q4,Complete
-RQ-02-11-30-001,Test,TEST-02-11-030,Flight_Test,2027-Q1,Planned
-RQ-02-11-40-002,Inspection,VER-02-11-040,Documentation,2025-Q4,Complete
-RQ-02-11-50-001,Analysis+Test,TEST-02-11-050,Operations,2027-Q1,Planned

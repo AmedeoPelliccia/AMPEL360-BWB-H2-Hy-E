@@ -1,7 +1,0 @@
-Heat_Source,Heat_Leak_W,Percentage_%,Mitigation,Notes
-Support_Struts,3.5,35,Low_conductivity_materials,Conduction through supports
-Radiation,2.5,25,MLI_insulation,Radiation from outer shell
-Residual_Gas,1.5,15,Vacuum_maintenance,Residual gas in vacuum space
-Penetrations,1.5,15,Thermal_breaks,Fill/vent/sensor penetrations
-Joints_Seams,1.0,10,Optimized_design,Tank construction joints
-Total,10.0,100,Multi_layer_approach,Total heat leak design target

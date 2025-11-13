@@ -1,6 +1,0 @@
-Audit_ID,Audit_Date,Audit_Type,Auditor,Scope,Findings,Status,Corrective_Actions,Close_Date
-AUD-001,2025-11-01,Internal,QA Team,Document structure compliance,Minor - Metadata consistency in 3 documents,Closed,Metadata updated,2025-11-02
-AUD-002,2025-11-03,Technical,Lead Engineer,Technical content accuracy,None - All documents accurate,Closed,N/A,2025-11-03
-AUD-003,2025-11-04,Safety,Safety Manager,Safety content completeness,None - Safety review complete,Closed,N/A,2025-11-04
-AUD-004,2025-11-05,CCB Review,Configuration Board,Change request CR-02-10-001,Approved with conditions,Open,Wind tunnel validation required,TBD
-AUD-005,2025-11-05,Compliance,Regulatory Affairs,ATA iSpec 2200 compliance,Compliant - 15/15 requirements met,Closed,N/A,2025-11-05

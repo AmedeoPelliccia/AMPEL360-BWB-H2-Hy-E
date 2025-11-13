@@ -1,6 +1,0 @@
-Condition,Boiloff_Rate_%_per_hr,Heat_Leak_W,Boiloff_kg_per_hr,Daily_Loss_kg,Notes
-Ground_Ambient_15C,0.5,14,21,504,Standard ground conditions
-Ground_Hot_35C,0.7,19.6,29.4,706,Hot day ground operations
-Flight_Cruise,0.15,4.2,6.3,151,In-flight cruise conditions
-Ground_Cold_minus10C,0.3,8.4,12.6,302,Cold weather operations
-Maximum_Design,0.8,22.4,33.6,806,Design maximum boiloff

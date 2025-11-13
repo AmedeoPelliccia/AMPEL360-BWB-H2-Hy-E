@@ -1,3 +1,0 @@
-# 12 ASSETS MANAGEMENT
-
-This directory contains 12 ASSETS MANAGEMENT documentation for 57-50_WING_TIPS_AND_DEVICES.

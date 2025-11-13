@@ -1,6 +1,0 @@
-Test_ID,Test_Description,Status,Result,Target,Actual,Crews_Tested,Notes
-HF-TEST-001,Workload Assessment,In Progress,Pass,TLX <70,TLX 65,20,All phases within targets
-HF-TEST-002,Situational Awareness Test,Scheduled,TBD,SART >75,N/A,0,Scheduled Dec 2025
-HF-TEST-003,CAOS Interface Usability,Active,Pass,SUS >80,SUS 84,15,Exceeds target
-HF-TEST-004,Emergency Response Time,Complete,Pass,<30 sec,28 sec avg,20,All scenarios passed
-HF-TEST-005,Training Effectiveness,Scheduled,TBD,>90% proficiency,N/A,0,Scheduled Q1 2026
