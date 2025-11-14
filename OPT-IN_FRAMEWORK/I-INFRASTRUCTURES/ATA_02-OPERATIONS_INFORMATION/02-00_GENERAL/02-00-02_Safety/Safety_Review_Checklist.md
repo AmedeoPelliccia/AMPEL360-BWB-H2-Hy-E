@@ -64,7 +64,7 @@ This checklist should be used during:
 ### 3.1 Hazard Identification
 
 - [ ] All identified hazards related to this content are recorded in [02-00-02-015A_Hazard_Log.csv](./02-00-02-015A_Hazard_Log.csv).
-- [ ] Each hazard has a unique **HazardID** (e.g., `H-02-XXX`).
+- [ ] Each hazard has a unique **HazardID** (e.g., `HZ-02-0001`).
 - [ ] Hazard **Description** clearly states the information-related failure or defect (e.g., "incorrect turnaround time", "missing precondition in de-icing procedure").
 
 ### 3.2 Hazard Classification
