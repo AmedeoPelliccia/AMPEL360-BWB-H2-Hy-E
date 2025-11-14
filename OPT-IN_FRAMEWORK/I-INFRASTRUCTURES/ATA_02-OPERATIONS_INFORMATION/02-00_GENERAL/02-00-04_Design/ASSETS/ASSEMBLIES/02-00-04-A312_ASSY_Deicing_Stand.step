@@ -1,0 +1,11 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('AMPEL360 Deicing Stand Assembly'),'2;1');
+FILE_NAME('02-00-04-A312_ASSY_Deicing_Stand.step','2025-11-14T14:30:00',('AMPEL360 Design Team'),('AMPEL360 Project'),'Placeholder STEP file','CAD System','');
+FILE_SCHEMA(('AUTOMOTIVE_DESIGN'));
+ENDSEC;
+DATA;
+/* Placeholder STEP assembly file for Deicing Stand */
+/* This is a minimal STEP file structure - replace with actual CAD model */
+ENDSEC;
+END-ISO-10303-21;

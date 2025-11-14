@@ -1,0 +1,5 @@
+# BOM for 02-00-04-A310_ASSY_GSE_Power_Cart
+Line,PN,Description,Qty,UoM,Spec/Std,Material,Weight_kg,SourceRef,Notes
+1,PN-079-0001,Cart Frame Weldment,1,ea,ISO 5817,S355,42.5,03-13-00_FRAME_WELD,Primary structure
+2,PN-079-0002,Wheel 250mm PU,4,ea,EN 12527,PU/Steel,3.2,IPC-03-90-10,Swivel x2, fixed x2
+3,PN-079-0003,HV Connector Set,1,ea,DO-160 Sec 22,Cu/Al,1.1,ICD-02-00-05-POW,Rated 180 kW
