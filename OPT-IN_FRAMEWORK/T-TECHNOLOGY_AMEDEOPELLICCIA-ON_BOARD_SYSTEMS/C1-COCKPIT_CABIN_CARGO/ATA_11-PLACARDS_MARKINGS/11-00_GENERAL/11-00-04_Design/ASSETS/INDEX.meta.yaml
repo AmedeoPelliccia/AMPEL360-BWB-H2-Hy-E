@@ -1,0 +1,19 @@
+# AMPEL360 ASSETS INDEX — applies to this XX-..-.. folder only
+version: 1
+owner: "AMPEL360 Documentation Team"
+folder: "11-00-04_Design"
+
+assets: []
+# Add asset entries here following the pattern:
+#  - id: "11-00-04-Annn"
+#    category: "DIAG|DRWG|PROD|ASSY|PART|INST|MODL|DATA|TMPL|EXPT"
+#    title: "Asset Title"
+#    source: "ASSETS/CATEGORY/filename.ext"
+#    exports: []
+#    links:
+#      reqs: []
+#      odd: []
+#      safety: []
+#    status: "Draft|Review|Approved|Obsolete"
+#    version: "1.0.0"
+#    checksum: "<filled-by-CI>"
