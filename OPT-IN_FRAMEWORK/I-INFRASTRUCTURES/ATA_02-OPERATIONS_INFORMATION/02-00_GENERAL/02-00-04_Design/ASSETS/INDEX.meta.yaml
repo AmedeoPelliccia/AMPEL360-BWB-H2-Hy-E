@@ -83,7 +83,6 @@ assets:
     bom: "ASSETS/ASSEMBLIES/BOM/02-00-04-A310_ASSY_GSE_Power_Cart_BOM.csv"
     exports:
       - "ASSETS/EXPORTS/02-00-04-A310_EXPT_GSE_Power_Cart_Exploded.pdf"
-      - "ASSETS/EXPORTS/02-00-04-A310_EXPT_GSE_Power_Cart_Exploded.png"
     links:
       reqs: ["REQ-02-001","REQ-02-015"]
       odd:  ["ODD-01","ODD-02"]
