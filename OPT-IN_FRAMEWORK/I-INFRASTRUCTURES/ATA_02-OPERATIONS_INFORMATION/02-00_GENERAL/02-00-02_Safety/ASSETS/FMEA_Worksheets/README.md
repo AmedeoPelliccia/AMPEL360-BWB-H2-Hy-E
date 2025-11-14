@@ -111,7 +111,7 @@ If you prefer Excel for editing/visualization:
   → `../02-00-02-004A_Failure_Modes_Effects_Analysis.csv`
 
 - **Hazards**  
-  → `./AMPEL360-02-00-02_Hazards.csv` (or equivalent hazards CSV)
+  → `./02-00-02-015A_Hazard_Log.csv` (or equivalent hazards CSV)
 
 - **Requirements**  
   → `../02-00-03_Requirements/` (safety requirements such as `S-02-REQ-###`)

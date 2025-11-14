@@ -21,7 +21,7 @@ Links:
   CCA: "./AMPEL360-02-00-02-002A_Common_Cause_Analysis.md"
   ERP: "./AMPEL360-02-00-02-003A_Emergency_Response_Procedures.md"
   FTA: "./AMPEL360-02-00-02-005A_Fault_Tree_Analysis.md"
-  Hazards: "./AMPEL360-02-00-02_Hazards.csv"
+  Hazards: "./02-00-02-015A_Hazard_Log.csv"
   Requirements: "../02-00-03_Requirements/"
   VAndV: "../02-00-07_V_AND_V/"
   OperationalSafetyProcedures: "./02-00-02-009A_Operational_Safety_Procedures.md"

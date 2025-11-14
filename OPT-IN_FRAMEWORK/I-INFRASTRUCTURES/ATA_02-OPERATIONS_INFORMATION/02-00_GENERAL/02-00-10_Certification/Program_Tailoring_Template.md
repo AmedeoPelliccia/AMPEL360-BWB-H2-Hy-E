@@ -120,7 +120,7 @@ Define the approval thresholds for hazards based on their classification:
 
 Define the process for managing changes to hazards:
 
-- **New hazards identified:** `[e.g., "Must be added to AMPEL360-02-00-02_Hazards.csv within 5 business days of identification."]`
+- **New hazards identified:** `[e.g., "Must be added to 02-00-02-015A_Hazard_Log.csv within 5 business days of identification."]`
 - **Changes to existing hazards:** `[e.g., "Requires re-assessment and approval per Section 5.1."]`
 - **Emergency changes:** `[e.g., "Streamlined approval by Safety Engineer + Certification Focal, with full review within 10 business days."]`
 
@@ -146,7 +146,7 @@ Identify any program-specific requirements that influence hazard analysis:
 
 ### 7.1 Linking to Base Methodology
 
-All hazards recorded for this program in `AMPEL360-02-00-02_Hazards.csv` must be traceable to:
+All hazards recorded for this program in `02-00-02-015A_Hazard_Log.csv` must be traceable to:
 
 - The base [Hazard Analysis Methodology — ATA 02](../02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md).
 - This program tailoring document.
