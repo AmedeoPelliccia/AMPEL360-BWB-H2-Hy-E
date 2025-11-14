@@ -111,7 +111,7 @@ assets:
     category: "ASSY"
     title: "Deicing Stand"
     source: "ASSETS/ASSEMBLIES/02-00-04-A312_ASSY_Deicing_Stand.step"
-    bom: null
+    bom: []
     exports: []
     links:
       reqs: []
