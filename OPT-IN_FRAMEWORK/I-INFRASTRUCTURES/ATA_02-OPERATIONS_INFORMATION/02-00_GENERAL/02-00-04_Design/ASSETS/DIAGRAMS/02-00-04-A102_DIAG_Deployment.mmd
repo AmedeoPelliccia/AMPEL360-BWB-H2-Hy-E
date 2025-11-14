@@ -1,0 +1,32 @@
+graph TB
+    subgraph "Airport Gate - Physical Layout"
+        A[Aircraft BWB-H2]
+        B[Jet Bridge]
+        C[Ground Power Unit]
+        D[H2 Refueling Station]
+        E[Baggage Loader]
+        F[Catering Truck]
+        G[Pushback Tug]
+    end
+    
+    subgraph "Remote Systems"
+        H[Operations Center]
+        I[Fuel Management]
+        J[Safety Control]
+        K[Maintenance Database]
+    end
+    
+    A ---|Docked| B
+    A ---|Connected| C
+    A ---|Connected| D
+    A ---|Service| E
+    A ---|Service| F
+    G -.Available.- A
+    
+    H -->|Monitor| A
+    I -->|Control| D
+    J -->|Supervise| D
+    K -->|Data Link| A
+    
+    style A fill:#e1f5ff,stroke:#333,stroke-width:3px
+    style D fill:#ffe1e1,stroke:#f00,stroke-width:2px

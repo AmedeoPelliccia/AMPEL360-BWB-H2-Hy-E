@@ -1,0 +1,118 @@
+# AMPEL360 ASSETS INDEX — applies to this XX-..-.. folder only
+version: 1
+owner: "AMPEL360 Documentation Team"
+folder: "02-00-04_Design"
+
+assets:
+  - id: "02-00-04-A101"
+    category: "DIAG"
+    title: "Operational Context"
+    source: "ASSETS/DIAGRAMS/02-00-04-A101_DIAG_Context.mmd"
+    exports:
+      - "ASSETS/EXPORTS/02-00-04-A901_EXPT_Context.png"
+      - "ASSETS/EXPORTS/02-00-04-A901_EXPT_Context.pdf"
+    links:
+      reqs: ["REQ-02-001","REQ-02-021"]
+      odd:  ["ODD-01","ODD-03"]
+      safety: ["HZ-02-0001"]
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A102"
+    category: "DIAG"
+    title: "Deployment Diagram"
+    source: "ASSETS/DIAGRAMS/02-00-04-A102_DIAG_Deployment.mmd"
+    exports:
+      - "ASSETS/EXPORTS/02-00-04-A902_EXPT_Deployment.png"
+      - "ASSETS/EXPORTS/02-00-04-A902_EXPT_Deployment.pdf"
+    links:
+      reqs: ["REQ-02-001","REQ-02-022"]
+      odd:  ["ODD-01","ODD-02"]
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A201"
+    category: "DRWG"
+    title: "Gate Power Layout (Cat C/D)"
+    source: "ASSETS/DRAWINGS/02-00-04-A201_DRWG_Gate_Power_Layout.dwg"
+    exports:
+      - "ASSETS/EXPORTS/02-00-04-A201_DRWG_Gate_Power_Layout.pdf"
+    links:
+      reqs: ["REQ-02-001","REQ-02-015"]
+      odd:  ["ODD-01","ODD-02"]
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A310"
+    category: "ASSY"
+    title: "GSE Power Cart Assembly"
+    source: "ASSETS/ASSEMBLIES/02-00-04-A310_ASSY_GSE_Power_Cart.step"
+    exports:
+      - "ASSETS/EXPORTS/02-00-04-A310_ASSY_GSE_Power_Cart.pdf"
+    links:
+      reqs: ["REQ-02-030"]
+      odd:  ["ODD-02"]
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A401"
+    category: "PART"
+    title: "Coupler A"
+    source: "ASSETS/PARTS/02-00-04-A401_PART_Coupler_A.step"
+    exports:
+      - "ASSETS/EXPORTS/02-00-04-A401_PART_Coupler_A.pdf"
+    links:
+      reqs: ["REQ-02-031"]
+      odd:  []
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A510"
+    category: "INST"
+    title: "Deicing Stand Installation"
+    source: "ASSETS/INSTALLATIONS/02-00-04-A510_INST_Deicing_Stand_Install.pdf"
+    exports:
+      - "ASSETS/EXPORTS/02-00-04-A510_INST_Deicing_Stand_Install.pdf"
+    links:
+      reqs: ["REQ-02-040"]
+      odd:  ["ODD-03"]
+      safety: ["HZ-02-0010"]
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A601"
+    category: "MODL"
+    title: "Ops State Machine"
+    source: "ASSETS/MODELS/02-00-04-A601_MODL_Ops_StateMachine.mdxml"
+    exports:
+      - "ASSETS/EXPORTS/02-00-04-A601_MODL_Ops_StateMachine.pdf"
+    links:
+      reqs: ["REQ-02-050"]
+      odd:  ["ODD-01","ODD-02","ODD-03"]
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A701"
+    category: "DATA"
+    title: "Turnaround States"
+    source: "ASSETS/DATA/02-00-04-A701_DATA_Turnaround_States.csv"
+    exports: []
+    links:
+      reqs: ["REQ-02-051"]
+      odd:  ["ODD-02"]
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
