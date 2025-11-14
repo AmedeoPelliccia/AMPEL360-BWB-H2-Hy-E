@@ -1,15 +1,15 @@
 ---
-Title: "Human Factors Safety — ATA 02"
-Identifier: "AMPEL360-02-00-02-008A"
+Title: "Operational Safety Procedures — ATA 02"
+Identifier: "AMPEL360-02-00-02-009A"
 Version: "1.0.0"
 Status: "Draft"
 AccessLevel: "Internal"
-Author: "HF Lead"
+Author: "Ops"
 CreatedAt: "2025-11-13"
 ModifiedAt: "2025-11-13"
-Scope: "Human Factors safety approach for ATA 02 Operations Information within I-INFRASTRUCTURES"
-Abstract: "Defines Human Factors safety considerations, assessment methods, and procedural/training expectations for ATA 02 operations information."
-Keywords: ["ATA 02", "Human Factors", "HF", "Safety", "Operations Information"]
+Scope: "Operational safety procedures for ATA 02 Operations Information within I-INFRASTRUCTURES"
+Abstract: "Defines operational safety procedures for managing ATA 02 operations information, including publication cadence and approvals, turnaround-critical steps and cross-checks, and degraded operations fallbacks and escalation."
+Keywords: ["ATA 02", "Operational Safety", "Procedures", "Turnaround", "Degraded Operations"]
 Compliance:
   - "ATA iSpec 2200"
   - "S1000D"
@@ -18,270 +18,278 @@ Compliance:
 Links:
   ParentGeneral: "../"
   SafetyObjectives: "./AMPEL360-02-00-02-001A_Certification_Safety_Objectives.md"
+  CCA: "./AMPEL360-02-00-02-002A_Common_Cause_Analysis.md"
   ERP: "./AMPEL360-02-00-02-003A_Emergency_Response_Procedures.md"
   HazardMethodology: "./AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md"
-  TrainingMaterials: "../../02-90_Tables_Schemas_Diagrams/"
+  HumanFactors: "./AMPEL360-02-00-02-008A_Human_Factors_Safety.md"
   Requirements: "../02-00-03_Requirements/"
   VAndV: "../02-00-07_V_AND_V/"
   RolesResponsibilities: "../02-00-01-004A_Roles_Responsibilities.md"
+  TurnaroundContent: "../../02-10_Operations/"
 ChangeLog:
-  - {version: "1.0.0", date: "2025-11-13", author: "HF Lead", change: "Initial creation"}
+  - {version: "1.0.0", date: "2025-11-13", author: "Ops", change: "Initial creation"}
 ---
 
-# Human Factors Safety — ATA 02
+# Operational Safety Procedures — ATA 02
 
 ## 1. Purpose
 
-This document defines the **Human Factors (HF) safety approach** for **ATA 02 — Operations Information**. It specifies:
+This document defines **operational safety procedures** for **ATA 02 — Operations Information**, focusing on:
 
-- HF dimensions to be considered when designing, reviewing, and validating operations information.
-- Expectations for HF assessment techniques and evidence.
-- Requirements for the **clarity and handling of change notices**.
-- Linkage to **training materials** and HF-related requirements and verification.
+- Safe governance and publication of operations information (cadence, approvals, two-person rule).
+- **Turnaround-critical** operational steps and required cross-checks.
+- Procedures and escalation paths for **degraded operations** (e.g., data issues, tool outages, infrastructure constraints).
 
-It complements the **Certification Safety Objectives — ATA 02** and the **Hazard Analysis Methodology**, focusing on workload, situation awareness, error resilience, and information usability.
-
----
-
-## 2. Human Factors Focus Areas
-
-HF assessment for ATA 02 operations information must consider at least the following dimensions:
-
-### 2.1 Crew and Operator Workload
-
-- Use structured workload assessment methods (e.g. **NASA-TLX** or equivalent) where appropriate to evaluate:
-  - Additional workload imposed by interacting with ops information (manual lookups, multiple systems, complex tables).
-  - Workload during **time-critical** phases (e.g., turnarounds, irregular operations, degraded conditions).
-- Objectives:
-  - Avoid excessive or poorly distributed workload caused by information design.
-  - Ensure critical information is accessible with minimal cognitive and physical effort.
-
-### 2.2 Situation Awareness (SA)
-
-- Use methods such as **SAGAT** (Situation Awareness Global Assessment Technique) or equivalent to assess:
-  - Whether operators can easily understand:
-    - Current operational status and constraints.
-    - Applicability of procedures/limits to their aircraft, airport, and configuration.
-  - Whether information presentation supports maintaining SA during:
-    - Rapid changes (e.g., NOTAM updates, gate changes, weather deterioration).
-    - Abnormal and degraded situations.
-- Objectives:
-  - Minimize SA loss due to ambiguous or poorly structured information.
-  - Ensure critical changes are clearly visible and contextualized.
-
-### 2.3 Error Traps and Error Tolerance
-
-- Identify **error traps**, such as:
-  - Look-alike/sound-alike values or codes.
-  - Crowded tables with similar entries.
-  - Layouts that encourage slips (e.g., off-by-one line selection, misaligned columns).
-- Design for **error tolerance**, including:
-  - Cross-checks and confirmation steps where high-risk selections are involved.
-  - Clear fallbacks and recovery paths (e.g., how to verify suspect information).
-- Objectives:
-  - Reduce the likelihood of human error induced by the structure or content of operations information.
-  - Ensure that when errors occur, they are detectable and recoverable.
-
-### 2.4 Display and Information Clarity
-
-- Assess **display clarity** for all published formats:
-  - EFB screens, portals, PDFs, printed manuals, dashboards.
-- Consider:
-  - Readability (font size, contrast, color usage).
-  - Consistent terminology, symbols, and iconography.
-  - Logical grouping and hierarchy (headings, sections, tables).
-  - Distinct visual emphasis for **warnings, cautions, limitations**, and applicability.
-- Objectives:
-  - Make key safety-critical information immediately recognizable.
-  - Avoid visual clutter and misinterpretation.
+It links the safety framework (objectives, hazard analysis, ERP, HF) to day-to-day operational practices for managing and using ATA 02 content.
 
 ---
 
-## 3. Procedures for Change Notices
+## 2. Publication Cadence, Approvals, and Two-Person Rule
 
-Ops information change notices (including emergency changes) must be HF-informed.
+### 2.1 Publication Cadence
 
-### 3.1 Unambiguous Content
+ATA 02 operations information must follow a defined **publication cadence**, agreed per program, typically including:
 
-Change notices must:
+- **Planned updates**
+  - Regular cycles (e.g., monthly/quarterly) for routine updates:
+    - Turnaround parameters.
+    - Procedures.
+    - Infrastructure-related assumptions and constraints.
+  - Coordination with:
+    - Airport/infra changes.
+    - Fleet/configuration changes.
+    - Regulatory/publication cycles.
 
-- Clearly state:
-  - **What** is changing (e.g., specific tables, procedures, airports, fleets).
-  - **Why** it is changing (safety, performance, regulatory, operational rationale).
-  - **From–to** differences (old vs. new values or steps).
-- Avoid:
-  - Ambiguous timing (“soon”, “as possible”).
-  - Vague scope (e.g., “some airports” instead of explicit identifiers).
+- **Unplanned / urgent updates**
+  - Issued when:
+    - Safety-relevant issues are detected (see ERP).
+    - Critical airport or infrastructure changes occur outside planned cycles.
+  - Must follow the emergency response principles in  
+    `AMPEL360-02-00-02-003A_Emergency_Response_Procedures.md`.
 
-### 3.2 Time-Boxed Validity and Actions
+Programs must document their actual cadence in `../02-00-10_Certification/` or a local governance note and ensure alignment with operator expectations.
 
-Change notices must:
+### 2.2 Approvals Workflow
 
-- Include **explicit timing information**:
-  - Effective date/time and time zone.
-  - Applicability periods (temporary vs. permanent).
-- Define **clear actions**:
-  - What crews/operators must do **before**, **during**, and **after** the change becomes effective.
-  - Any required confirmation (e.g., acknowledgement or training completion).
+All safety-relevant ATA 02 publications must follow a **controlled approval workflow**:
 
-### 3.3 Auditability and Traceability
+- **Minimum roles involved** (see `../02-00-01-004A_Roles_Responsibilities.md`):
+  - Ops Information Lead (or delegate).
+  - Safety Engineer (Ops).
+  - Technical Publications.
+  - Certification Focal (for certification-relevant content or where required by program policy).
+  - HF Lead (for major structural or HF-significant changes).
 
-Change notice procedures must be:
+- **Approval checks must include**:
+  - Technical correctness and consistency with design/configuration baselines.
+  - Safety impact assessment and alignment with safety objectives and hazards.
+  - Human Factors aspects (clarity, workload, error traps) where applicable.
+  - Traceability links to requirements, analyses, and evidence.
 
-- **Auditable**:
-  - Records of which notices were issued, when, and to whom.
-  - Proof of distribution and, where necessary, acknowledgement.
-- **Traceable**:
-  - Linked to:
-    - Hazards and safety objectives.
-    - Requirements (in `../02-00-03_Requirements/`).
-    - ERP activations (where applicable).
-    - V&V and certification evidence.
+### 2.3 Two-Person Rule
 
-Where possible, change notice templates should be **standardized** and stored with training and communication materials (see Section 4).
+For **safety-critical** operations information (e.g., operational limitations, critical turnaround steps, emergency procedures):
 
----
+- A **two-person rule** applies to at least the following activities:
+  - Final content changes to safety-critical tables, procedures, or limitations.
+  - Applicability or configuration tagging for content used operationally.
+  - Activation/deactivation of safety-relevant publications or ERP bulletins.
 
-## 4. Training and Materials
+- Two-person rule means:
+  - One person performs the change (**preparer**).
+  - A second, independent person (**reviewer/approver**) verifies:
+    - Correctness of content.
+    - Correct mapping to baselines/configurations.
+    - Consistency with safety/ERP requirements.
 
-HF safety depends on appropriate training for users of ATA 02 operations information.
-
-### 4.1 Training Content
-
-Training materials should cover:
-
-- How to **interpret and navigate** operations information structures (ATA 02 hierarchy, key buckets).
-- How to understand **limits, warnings, and applicability tags**.
-- How to respond to:
-  - **Change notices** (including emergency ones).
-  - ERP bulletins and special instructions.
-- Typical **error traps** and recommended cross-checks.
-
-### 4.2 Training Material Location
-
-HF-relevant training artefacts (slides, e-learning references, checklists, scenarios) should be stored under:
-
-- `../../02-90_Tables_Schemas_Diagrams/`
-
-with clear subfolders or naming conventions indicating:
-
-- `Training_*` for general HF and operations information training sets.
-- Program-specific training variants where needed.
-
-These artefacts should be:
-
-- Referenced from this document and from program safety/certification documents.
-- Kept consistent with the latest **requirements**, **procedures**, and **ERP** content.
-
-### 4.3 HF in Training Evaluation
-
-Where appropriate:
-
-- Evaluate training effectiveness using:
-  - Knowledge checks and scenario-based exercises.
-  - Feedback on clarity and usability of materials.
-- Feed results back into:
-  - HF design of ops information.
-  - Hazard and risk assessments.
+- Evidence:
+  - Approvals must be logged (e.g., in CSDB metadata, front-matter, or tooling audit trails).
+  - Logs must be accessible as certification evidence where needed.
 
 ---
 
-## 5. Requirements and Verification Hooks
+## 3. Turnaround-Critical Steps and Cross-Checks
 
-### 5.1 Requirements
+Turnarounds are a primary context where ATA 02 information has direct safety and performance impact.
 
-HF-related safety expectations should be translated into explicit **requirements** under:
+### 3.1 Identification of Turnaround-Critical Steps
 
-- `../02-00-03_Requirements/`
+Programs should maintain a **turnaround safety-critical step set**, typically stored under `../../02-10_Operations/`, including:
 
-Examples (to be formalized as requirements):
+- Ground handling and servicing tasks.
+- Turnaround time assumptions and buffers.
+- Interfaces with airport services (fuel, catering, baggage, cleaning, towing).
+- Constraints (e.g., stand type, equipment access, safety zones).
 
-- HF-01: “Ops information affecting safety-critical tasks shall be assessed for crew workload impact using an accepted HF method where justified (e.g., NASA-TLX).”
-- HF-02: “Change notices for safety-relevant information shall include explicit effective date/time, scope, and required actions, and be auditable.”
-- HF-03: “Hazard mitigations relying on human detection or action shall be supported by HF assessment and training materials.”
+Each step must identify:
 
-### 5.2 Verification
+- **Safety significance** (e.g., fuel safety, door safety, pushback safety).
+- **Information dependencies** (which ATA 02 datasets, tables, or procedures are needed).
+- **Roles involved** (e.g., ramp agent, gate agent, dispatcher, crew).
 
-Verification of HF-related requirements may include:
+### 3.2 Cross-Checks
 
-- **Analytical reviews**:
-  - HF expert review of procedures, layouts, and change notices.
-- **Empirical evaluations**:
-  - Usability tests, simulations, SAGAT or NASA-TLX studies where justified.
-- **Operational monitoring**:
-  - Incident/feedback analysis related to information use, misunderstandings, or workload issues.
+For safety-critical turnaround steps, define **mandatory cross-checks**, such as:
 
-Evidence should be stored and referenced via:
+- **Data cross-checks**
+  - Validate critical parameters (turnaround times, constraints, limits) against:
+    - Airport AODB/NOTAMs.
+    - Airline/operator SOPs.
+    - Config-specific limits (weight/balance, performance).
+  - Use **dual-source checks** where feasible (e.g., independent tool vs. central dataset).
 
-- `../02-00-07_V_AND_V/` and `../02-00-10_Certification/`.
+- **Procedural cross-checks**
+  - Where a single step can introduce high risk, require:
+    - Read-back or confirmation (e.g., “challenge–response” style).
+    - Confirmation of critical parameters by two parties (e.g., dispatcher and captain).
 
----
+- **Tool cross-checks**
+  - For key planning tools:
+    - Compare outputs for plausibility (e.g., turnaround time vs. historical/expected norms).
+    - Flag anomalies (e.g., unusually low turnaround times) for manual review.
 
-## 6. Roles & Responsibilities
+### 3.3 Handling Detected Inconsistencies
 
-HF responsibilities dovetail with roles defined in:
+If a cross-check shows **inconsistent or suspect turnaround information**:
 
-- `../02-00-01-004A_Roles_Responsibilities.md`
+1. **Do not use** the suspect dataset as the primary reference.
+2. **Escalate** via:
+   - Local ops supervision and Safety Engineer (Ops).
+   - Activation of ERP if the inconsistency is safety-critical.
+3. **Fallback** to:
+   - Last confirmed safe dataset, if valid.
+   - Conservative operational assumptions (see Section 4).
 
-In particular:
-
-- **HF Lead**:
-  - Owns this document and HF assessment strategy for ATA 02.
-  - Provides HF input to hazard analysis, FTA, FMEA, ERP, and training.
-- **Safety Engineer (Ops)**:
-  - Ensures HF hazards and mitigations are included in safety artefacts and objectives.
-- **Ops Information Lead**:
-  - Ensures HF considerations are applied in the design and governance of ATA 02 documents.
-- **Technical Publications**:
-  - Implements HF-driven layout and clarity requirements in all publication formats.
-- **Training/Operations**:
-  - Develops and maintains HF-aligned training materials and ensures delivery to relevant users.
-
----
-
-## 7. Usage Guidelines
-
-When designing or changing ATA 02 operations information:
-
-1. **Identify HF-relevant tasks**  
-   - Focus on time-critical, high-workload, or safety-critical tasks (e.g., turnarounds, abnormal operations).
-
-2. **Apply HF assessment methods**  
-   - Use NASA-TLX, SAGAT, expert review, or other appropriate techniques to evaluate workload, SA, and error traps.
-
-3. **Design for clarity and resilience**  
-   - Ensure content structure, layout, and language support easy, correct use and recovery from potential errors.
-
-4. **Define clear change notices and training impacts**  
-   - Ensure changes to ops information are accompanied by:
-     - Clear notices.
-     - Updated training materials, where necessary.
-
-5. **Maintain traceability**  
-   - Link HF findings to:
-     - Hazards and safety objectives.
-     - Requirements and verification.
-     - Training content in `../../02-90_Tables_Schemas_Diagrams/`.
+All such cases should trigger updates in hazard/FMEA records where recurrent patterns emerge.
 
 ---
 
-## 8. What to do next / how to approach this
+## 4. Degraded Operations: Fallbacks and Escalation
 
-1. **Add HF requirements**  
-   - Create a small HF requirements cluster in `../02-00-03_Requirements/` and tag them clearly (e.g., `Category: HF`).
+Degraded operations scenarios include:
 
-2. **Seed training content structure**  
-   - Under `../../02-90_Tables_Schemas_Diagrams/`, create a minimal `Training_HF_ATA02` folder or file set with placeholders for:
-     - HF overview.
-     - Navigation of ATA 02.
-     - Change notice handling.
+- Loss or degradation of key datasets or information systems.
+- Significant mismatches between ATA 02 content and real-world conditions.
+- Tool outages, communications issues, or airport infrastructure disruptions.
 
-3. **Integrate HF checks into workflow**  
-   - In ops content and safety review checklists, add explicit HF checkpoints:
-     - “HF impact assessed?”  
-     - “Change notice HF criteria met (unambiguous, time-boxed, auditable)?”
+### 4.1 Fallback Principles
 
-4. **Connect HF to hazards and ERP**  
-   - For hazards like H-02-001 (turnaround data errors), explicitly note HF aspects:
-     - Workload, SA, error traps.  
-   - Ensure ERP templates include HF guidance for writing clear, operator-friendly bulletins.
+Fallbacks should:
+
+- **Prioritize safety over punctuality or efficiency**.
+- Use **conservative assumptions** where data is incomplete or suspect.
+- Ensure clear communication of:
+  - Differences from nominal procedures or parameters.
+  - Limitations of fallback methods.
+
+Typical fallbacks include:
+
+- Using **simplified or pre-defined contingency procedures** stored in ATA 02 or operator SOPs.
+- Reverting to **last known safe dataset** (if still applicable).
+- Using **manual calculations or look-up tables** as interim measures.
+
+### 4.2 Escalation Matrix
+
+Define a **degraded ops escalation matrix** mapping conditions to actions and roles. Example structure:
+
+- **Condition Type A: Data issue**
+  - Symptoms:
+    - Ops dataset inconsistencies.
+    - Stale or missing data.
+  - Immediate action:
+    - Suspend use of suspect data.
+    - Trigger ERP if safety-relevant.
+  - Escalate to:
+    - Ops Information Lead.
+    - Safety Engineer (Ops).
+    - Technical Publications.
+    - Certification Focal (if safety/cert basis impacted).
+
+- **Condition Type B: Tool outage**
+  - Symptoms:
+    - Publication platform unavailable.
+    - EFB sync failures affecting multiple crews.
+  - Immediate action:
+    - Switch to alternative channels (cached copies, printed backups) where safe.
+    - Confirm validity of backups.
+  - Escalate to:
+    - IT/tools owners.
+    - Ops Information Lead.
+    - Airport/Infra Liaison if airport systems involved.
+
+- **Condition Type C: Airport/infra disruption**
+  - Symptoms:
+    - Rapid changes (runway closure, stand changes).
+    - Conflicts between ATA 02 information and current airport constraints.
+  - Immediate action:
+    - Use most authoritative real-time sources (NOTAMs, ATC, airport ops).
+    - If conflicts with ATA 02 content are safety-relevant, trigger ERP.
+  - Escalate to:
+    - Airport/Infra Liaison.
+    - Safety Engineer (Ops).
+    - Operator/airline safety/ops contacts as applicable.
+
+Programs should instantiate a concrete matrix (table/chart) in this file or a linked diagram under `../../02-90_Tables_Schemas_Diagrams/`.
+
+---
+
+## 5. Integration with Safety, HF, and Requirements
+
+### 5.1 Safety Artefacts
+
+Operational safety procedures must be consistent with and traceable to:
+
+- **Certification Safety Objectives — ATA 02**  
+- **CCA** (for identifying common causes behind degraded operations scenarios).  
+- **FTA** and **FMEA** (mapping failure modes and barrier functions).
+
+Where new degraded ops scenarios or turnaround-critical steps are identified, update hazards, FTA, FMEA, and CCA as needed.
+
+### 5.2 Human Factors
+
+- Procedures and fallbacks must be **HF-aware**:
+  - Avoid overloading crew/operators during degraded ops.
+  - Ensure instructions and change notices are clear, concise, and actionable.
+- Link HF assessments and training (as per `AMPEL360-02-00-02-008A_Human_Factors_Safety.md`) to:
+  - Turnaround-critical procedures.
+  - Degraded ops scenarios where workload and SA are at risk.
+
+### 5.3 Requirements and Verification
+
+Translate key operational safety rules into **requirements** under `../02-00-03_Requirements/`, for example:
+
+- “Safety-critical changes to ATA 02 operational limits shall implement a two-person rule for content change and applicability tagging.”
+- “Turnaround-critical procedures shall include defined cross-checks and, where applicable, dual-source data validation.”
+- “Degraded operations procedures shall specify fallbacks and escalation paths for data, tools, and airport/infra disruptions.”
+
+Verify these requirements via:
+
+- Process audits (publication logs, approvals).
+- Scenario-based tests (turnaround simulations).
+- Degraded ops drills and ERP exercises.
+
+---
+
+## 6. Usage Guidelines
+
+When working with ATA 02 operational content:
+
+1. **Follow the approvals and two-person rule**  
+   - Do not bypass required reviewers for safety-relevant changes.
+   - Ensure approvals are logged and traceable.
+
+2. **Respect turnaround-critical procedures**  
+   - Implement required cross-checks in operations workflows and tools.
+   - Escalate if turnaround data or procedures appear inconsistent or unsafe.
+
+3. **Apply degraded ops fallbacks and escalation**  
+   - Recognize degraded conditions early.
+   - Use the escalation matrix to reach the right roles quickly.
+   - Activate ERP when safety is at risk due to information issues.
+
+4. **Feed back into the safety system**  
+   - After degraded ops events or ERP activations:
+     - Review whether procedures, hazards, or requirements need updates.
+     - Capture lessons learned into `02-00-02` safety artefacts and `02-00-03` requirements.
+
+---
