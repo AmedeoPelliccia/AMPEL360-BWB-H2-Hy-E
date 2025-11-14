@@ -37,6 +37,8 @@ It supports the **Certification Safety Objectives — ATA 02** by:
 - Providing inputs to FHA, FMEA, and runtime monitoring strategies.
 - Guiding requirements and mitigations for information integrity, availability, and timeliness.
 
+**Hazard generation and classification** follow [Hazard Analysis Methodology — ATA 02](./AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md).
+
 ## 2. Scope
 
 CCA for ATA 02 covers:
