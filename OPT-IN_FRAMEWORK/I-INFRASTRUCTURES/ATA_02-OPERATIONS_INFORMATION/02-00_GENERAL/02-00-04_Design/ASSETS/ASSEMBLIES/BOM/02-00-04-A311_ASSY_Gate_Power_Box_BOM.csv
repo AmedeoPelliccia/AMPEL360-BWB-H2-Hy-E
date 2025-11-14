@@ -1,4 +1,3 @@
-# BOM for 02-00-04-A311_ASSY_Gate_Power_Box
 Line,PN,Description,Qty,UoM,Spec/Std,Material,Weight_kg,SourceRef,Notes
 1,PN-080-0001,Box Enclosure IP65,1,ea,IEC 60529,Al 6061-T6,18.3,03-14-00_ENCL,Weather resistant
 2,PN-080-0002,400Hz Transformer,1,ea,MIL-STD-704F,Cu/Fe,22.7,ICD-02-00-05-POW,28.5 VAC to 115 VAC
