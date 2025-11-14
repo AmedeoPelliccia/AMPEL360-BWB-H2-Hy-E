@@ -141,14 +141,14 @@ If you prefer Excel for analysis:
    - Excel should remain a **derived working view** only.
 
 > Rule: New or modified FMEA content must be reflected in  
-> `../02-00-02-004A_Failure_Modes_Effects_Analysis.csv` to exist in the safety record.
+> `./02-00-02-004A_Failure_Modes_Effects_Analysis.csv` to exist in the safety record.
 
 ---
 
 ## 5. Integration with the Safety Framework
 
 - **Parent FMEA CSV**  
-  → `../02-00-02-004A_Failure_Modes_Effects_Analysis.csv`
+  → `./02-00-02-004A_Failure_Modes_Effects_Analysis.csv`
 
 - **Hazard Analysis & Methodology**  
   → `./02-00-02-007A_Hazard_Analysis_Methodology.md`  
