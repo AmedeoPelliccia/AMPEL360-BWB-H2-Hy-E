@@ -1,2 +1,2 @@
 HazardID,Description,Operational_Context,Effect_On_Aircraft/Crew,Severity,Initial_Class,Mitigations,Residual_Class,Verification_Link,Notes
-H-02-001,Ops manual turnaround time incorrect,Turnarounds,Schedule & safety margins reduced,Major,3,Publication QC + runtime checks,4,TR-Ops-Performance-v1.0.pdf,—
+H-02-001,Ops manual turnaround time incorrect,Turnarounds,"Reduced schedule and safety margins (pressure on crew/ground staff, increased risk of procedural deviations and errors)",Major,3,"Publication QC (peer/safety review, configuration checks) + automated runtime data freshness/consistency checks + ERP for critical discrepancies",4,TR-Ops-Performance-v1.0.pdf,"Linked to CCA (stale/incorrect data ingestion) and ERP for rollback/bulletins"
