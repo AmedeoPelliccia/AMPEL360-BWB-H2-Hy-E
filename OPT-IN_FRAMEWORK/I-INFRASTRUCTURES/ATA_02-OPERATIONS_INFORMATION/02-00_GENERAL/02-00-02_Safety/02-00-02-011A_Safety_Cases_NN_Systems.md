@@ -215,7 +215,7 @@ Evidence should be **indexed** and referenced via identifying fields in front-ma
 
 For NN interplay:
 
-- Add specific hazards in `AMPEL360-02-00-02_Hazards.csv` such as:
+- Add specific hazards in `02-00-02-015A_Hazard_Log.csv` such as:
   - Misleading NN recommendations due to incorrect ATA 02 input data.
   - Unsafe over-reliance on NN outputs in degraded data conditions.
 - Map them to:

@@ -117,7 +117,7 @@ For every safety-relevant topic (hazard, analysis, monitoring rule, ERP behaviou
   - Origin in `02-00-02-001A_Certification_Safety_Objectives.md`.
 
 - **Hazards**  
-  - Listed in `AMPEL360-02-00-02_Hazards.csv` (referenced from the methodology doc).
+  - Listed in `02-00-02-015A_Hazard_Log.csv` (referenced from the methodology doc).
 
 - **Requirements**  
   - At least one requirement in `../02-00-03_Requirements/` (e.g. `S-02-REQ-001`), referenced in:

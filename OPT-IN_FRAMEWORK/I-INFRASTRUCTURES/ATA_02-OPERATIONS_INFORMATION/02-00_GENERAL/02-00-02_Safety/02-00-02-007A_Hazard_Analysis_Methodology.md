@@ -21,7 +21,7 @@ Links:
   CCA: "./AMPEL360-02-00-02-002A_Common_Cause_Analysis.md"
   ERP: "./AMPEL360-02-00-02-003A_Emergency_Response_Procedures.md"
   FTA: "./AMPEL360-02-00-02-005A_Fault_Tree_Analysis.md"
-  HazardsCSV: "./AMPEL360-02-00-02_Hazards.csv"
+  HazardsCSV: "./02-00-02-015A_Hazard_Log.csv"
   Requirements: "../02-00-03_Requirements/"
   VAndV: "../02-00-07_V_AND_V/"
   Certification: "../02-00-10_Certification/"
@@ -76,7 +76,7 @@ Identify potential hazards where **operations information contributes to or fail
 - **Tooling and automation**  
   - Authoring tools, ETL/ingestion pipelines, publication and distribution systems, EFB platforms.
 
-Hazards are recorded in a structured way, e.g. in `AMPEL360-02-00-02_Hazards.csv`.
+Hazards are recorded in a structured way, e.g. in `02-00-02-015A_Hazard_Log.csv`.
 
 ### 2.2 Classification
 
@@ -294,7 +294,7 @@ When performing hazard analysis for ATA 02:
 ## 8. What to do next / how to approach this
 
 1. **Instantiate a canonical hazard table for ATA 02**
-   - Create or update `AMPEL360-02-00-02_Hazards.csv` using the field semantics in Section 4 and incorporate your existing `H-02-001` entry.
+   - Create or update `02-00-02-015A_Hazard_Log.csv` using the field semantics in Section 4 and incorporate your existing `H-02-001` entry.
 
 2. **Wire methodology into the safety chain**
    - From:

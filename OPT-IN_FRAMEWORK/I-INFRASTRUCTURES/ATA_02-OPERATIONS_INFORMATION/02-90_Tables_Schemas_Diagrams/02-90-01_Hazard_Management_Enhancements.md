@@ -18,7 +18,7 @@ Compliance:
 Links:
   ParentGeneral: "../"
   HazardMethodology: "../02-00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md"
-  HazardsCSV: "../02-00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02_Hazards.csv"
+  HazardsCSV: "../02-00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv"
 ChangeLog:
   - {version: "1.0.0", date: "2025-11-14", author: "Safety", change: "Initial planning document"}
 ---
@@ -42,7 +42,7 @@ The enhancements support the [Hazard Analysis Methodology — ATA 02](../02-00_G
 ### 2.1 Validation Script for Hazard CSV
 
 **Objective:**  
-Create a small script to automatically validate entries in `AMPEL360-02-00-02_Hazards.csv`.
+Create a small script to automatically validate entries in `02-00-02-015A_Hazard_Log.csv`.
 
 **Validation Checks:**
 
@@ -71,7 +71,7 @@ Create a small script to automatically validate entries in `AMPEL360-02-00-02_Ha
 **Implementation Notes:**
 
 - Language: Python (or another scripting language preferred by the team).
-- Input: `AMPEL360-02-00-02_Hazards.csv`.
+- Input: `02-00-02-015A_Hazard_Log.csv`.
 - Output: Validation report (console output or file) listing any issues found.
 - Integration: Can be run manually or as part of CI/CD pipeline for automated checks.
 
@@ -114,7 +114,7 @@ Generate a visual summary of the hazard portfolio to support decision-making and
 **Implementation Notes:**
 
 - Language: Python (using libraries like `matplotlib`, `seaborn`, `plotly`) or R.
-- Input: `AMPEL360-02-00-02_Hazards.csv`.
+- Input: `02-00-02-015A_Hazard_Log.csv`.
 - Output: Static images (PNG, SVG) or interactive dashboards (HTML, Jupyter Notebook).
 - Location: Generated summaries should be stored in this folder (`02-90_Tables_Schemas_Diagrams`) for easy access.
 
@@ -149,7 +149,7 @@ Generate a visual summary of the hazard portfolio to support decision-making and
    - Identify program-specific tailoring requirements (if any).
 
 2. **Script Development**
-   - Develop Python script to parse `AMPEL360-02-00-02_Hazards.csv`.
+   - Develop Python script to parse `02-00-02-015A_Hazard_Log.csv`.
    - Implement validation checks (required fields, valid severity/DAL, reference ID checks).
    - Generate validation report.
 
@@ -168,7 +168,7 @@ Generate a visual summary of the hazard portfolio to support decision-making and
    - Determine preferred output formats (static images, interactive dashboards).
 
 2. **Visualization Development**
-   - Develop Python scripts to generate visualizations from `AMPEL360-02-00-02_Hazards.csv`.
+   - Develop Python scripts to generate visualizations from `02-00-02-015A_Hazard_Log.csv`.
    - Create dashboard layout (if interactive).
 
 3. **Testing and Refinement**
@@ -193,7 +193,7 @@ Generate a visual summary of the hazard portfolio to support decision-making and
 
 - **Dependencies:**
   - Python 3.x (or equivalent scripting environment).
-  - Access to `AMPEL360-02-00-02_Hazards.csv` and related safety documents.
+  - Access to `02-00-02-015A_Hazard_Log.csv` and related safety documents.
   - Optionally: Access to FTA, FMEA, CCA documents to verify reference IDs.
 
 - **Prerequisites:**
@@ -204,7 +204,7 @@ Generate a visual summary of the hazard portfolio to support decision-making and
 
 - **Dependencies:**
   - Python 3.x with visualization libraries (`matplotlib`, `seaborn`, `plotly`).
-  - Access to `AMPEL360-02-00-02_Hazards.csv`.
+  - Access to `02-00-02-015A_Hazard_Log.csv`.
 
 - **Prerequisites:**
   - Sufficient hazard data to generate meaningful visualizations (at least 5-10 hazards).
@@ -225,7 +225,7 @@ Generate a visual summary of the hazard portfolio to support decision-making and
 ## 7. References
 
 - [Hazard Analysis Methodology — ATA 02](../02-00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)
-- [AMPEL360-02-00-02_Hazards.csv](../02-00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02_Hazards.csv)
+- [02-00-02-015A_Hazard_Log.csv](../02-00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv)
 - [Safety Review Checklist — ATA 02](../02-00_GENERAL/02-00-02_Safety/Safety_Review_Checklist.md)
 - [Program Tailoring Template](../02-00_GENERAL/02-00-10_Certification/Program_Tailoring_Template.md)
 

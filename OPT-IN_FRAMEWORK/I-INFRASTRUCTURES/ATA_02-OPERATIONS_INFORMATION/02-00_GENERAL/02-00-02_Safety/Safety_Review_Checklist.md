@@ -19,7 +19,7 @@ Links:
   ParentGeneral: "../"
   HazardMethodology: "./AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md"
   SafetyObjectives: "./AMPEL360-02-00-02-001A_Certification_Safety_Objectives.md"
-  HazardsCSV: "./AMPEL360-02-00-02_Hazards.csv"
+  HazardsCSV: "./02-00-02-015A_Hazard_Log.csv"
 ChangeLog:
   - {version: "1.0.0", date: "2025-11-14", author: "Safety", change: "Initial creation"}
 ---
@@ -63,8 +63,8 @@ This checklist should be used during:
 
 ### 3.1 Hazard Identification
 
-- [ ] All identified hazards related to this content are recorded in [AMPEL360-02-00-02_Hazards.csv](./AMPEL360-02-00-02_Hazards.csv).
-- [ ] Each hazard has a unique **HazardID** (e.g., `H-02-XXX`).
+- [ ] All identified hazards related to this content are recorded in [02-00-02-015A_Hazard_Log.csv](./02-00-02-015A_Hazard_Log.csv).
+- [ ] Each hazard has a unique **HazardID** (e.g., `HZ-02-0001`).
 - [ ] Hazard **Description** clearly states the information-related failure or defect (e.g., "incorrect turnaround time", "missing precondition in de-icing procedure").
 
 ### 3.2 Hazard Classification
@@ -137,7 +137,7 @@ This checklist should be used during:
 - [ ] Safety-related requirements derived from hazards are documented in `../02-00-03_Requirements/`.
 - [ ] Requirements are marked with appropriate safety tags/attributes (e.g., `SafetyLevel`, `SafetyCritical: true`).
 - [ ] Requirements trace back to:
-  - [ ] Hazards in `AMPEL360-02-00-02_Hazards.csv`.
+  - [ ] Hazards in `02-00-02-015A_Hazard_Log.csv`.
   - [ ] Safety objectives in [Certification Safety Objectives — ATA 02](./AMPEL360-02-00-02-001A_Certification_Safety_Objectives.md).
 
 ### 6.2 Approval Status
@@ -222,7 +222,7 @@ This checklist should be used during:
 - [Common Cause Analysis — ATA 02](./AMPEL360-02-00-02-002A_Common_Cause_Analysis.md)
 - [Emergency Response Procedures — ATA 02](./AMPEL360-02-00-02-003A_Emergency_Response_Procedures.md)
 - [Runtime Safety Monitoring — ATA 02](./AMPEL360-02-00-02-010A_Runtime_Safety_Monitoring.md)
-- [AMPEL360-02-00-02_Hazards.csv](./AMPEL360-02-00-02_Hazards.csv)
+- [02-00-02-015A_Hazard_Log.csv](./02-00-02-015A_Hazard_Log.csv)
 - [Program Tailoring Template](../02-00-10_Certification/Program_Tailoring_Template.md)
 
 ---

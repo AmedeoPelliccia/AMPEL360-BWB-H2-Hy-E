@@ -18,7 +18,7 @@ Compliance:
 Links:
   ParentSafety: "./"
   CanonicalFMEA: "./02-00-02-004A_Failure_Modes_Effects_Analysis.csv"
-  Hazards: "./AMPEL360-02-00-02_Hazards.csv"
+  Hazards: "./02-00-02-015A_Hazard_Log.csv"
   Requirements: "../02-00-03_Requirements/"
   VAndV: "../02-00-07_V_AND_V/"
   RuntimeMonitoring: "./02-00-02-010A_Runtime_Safety_Monitoring.md"
@@ -142,7 +142,7 @@ The single source of truth for all FMEA data. All pipeline-related failure modes
 
 ### 5.2 Hazards
 
-→ `./AMPEL360-02-00-02_Hazards.csv`
+→ `./02-00-02-015A_Hazard_Log.csv`
 
 Each FMEA row references one or more hazard IDs (e.g., `H-02-001`, `H-02-002`) that identify the root safety concern.
 

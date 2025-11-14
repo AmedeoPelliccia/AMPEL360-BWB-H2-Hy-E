@@ -152,7 +152,7 @@ If you prefer Excel for analysis:
 
 - **Hazard Analysis & Methodology**  
   → `./02-00-02-007A_Hazard_Analysis_Methodology.md`  
-  → Hazards CSV: `./AMPEL360-02-00-02_Hazards.csv` (or equivalent)
+  → Hazards CSV: `./02-00-02-015A_Hazard_Log.csv` (or equivalent)
 
 - **Human Factors and Training**  
   → `./02-00-02-008A_Human_Factors_Safety.md`  
