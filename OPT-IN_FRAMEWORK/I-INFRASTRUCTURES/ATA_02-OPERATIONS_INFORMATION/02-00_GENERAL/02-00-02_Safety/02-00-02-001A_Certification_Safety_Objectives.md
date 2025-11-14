@@ -80,6 +80,7 @@ The following Means of Compliance are **indicative** and must be instantiated pe
    - **FHA (Functional Hazard Assessment)** including operational use cases and scenarios relying on ATA 02 information.
    - **CCA (Common Cause Analysis)** where common information sources (e.g., shared data tables, procedures) could contribute to multiple hazards.
    - **FMEA (Failure Modes and Effects Analysis)** and/or **FTA (Fault Tree Analysis)** where failures or misuse of information contribute to hazards.
+   - **Hazard generation and classification** follow [Hazard Analysis Methodology — ATA 02](./AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md).
    - Results must identify:
      - Safety-significant operations information.
      - Required warnings, cautions, notes, and limitations.

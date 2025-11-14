@@ -43,6 +43,8 @@ It provides:
 
 This FTA supports the **Certification Safety Objectives — ATA 02**, particularly those related to integrity, timeliness, and control of operations information.
 
+**Hazard generation and classification** follow [Hazard Analysis Methodology — ATA 02](./AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md).
+
 ---
 
 ## 2. Top Event
