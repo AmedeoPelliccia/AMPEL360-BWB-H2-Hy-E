@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/assembly_bom_v1.json",
+  "title": "AMPEL360 Assembly BOM v1",
+  "description": "JSON Schema for validating AMPEL360 Assembly Bill of Materials (BOM) files",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["Line","PN","Description","Qty","UoM"],
+    "properties": {
+      "Line": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Line number in the BOM"
+      },
+      "PN": {
+        "type": "string",
+        "pattern": "^[A-Z0-9\\-_.]+$",
+        "description": "Part number (alphanumeric with hyphens, underscores, dots)"
+      },
+      "Description": {
+        "type": "string",
+        "minLength": 3,
+        "description": "Human-readable description of the part"
+      },
+      "Qty": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Quantity required (must be greater than 0)"
+      },
+      "UoM": {
+        "type": "string",
+        "enum": ["ea","kg","m","set","kit"],
+        "description": "Unit of measure"
+      },
+      "Spec/Std": {
+        "type": "string",
+        "description": "Applicable specification or standard"
+      },
+      "Material": {
+        "type": "string",
+        "description": "Material specification"
+      },
+      "Weight_kg": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Weight per unit in kilograms"
+      },
+      "SourceRef": {
+        "type": "string",
+        "description": "Reference to source document or interface control document"
+      },
+      "Notes": {
+        "type": "string",
+        "description": "Additional notes or comments"
+      }
+    },
+    "additionalProperties": true
+  }
+}

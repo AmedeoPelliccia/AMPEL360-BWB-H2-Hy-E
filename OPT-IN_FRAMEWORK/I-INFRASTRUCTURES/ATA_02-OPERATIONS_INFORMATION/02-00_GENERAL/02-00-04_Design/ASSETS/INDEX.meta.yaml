@@ -78,13 +78,43 @@ assets:
 
   - id: "02-00-04-A310"
     category: "ASSY"
-    title: "GSE Power Cart Assembly"
+    title: "GSE Power Cart"
     source: "ASSETS/ASSEMBLIES/02-00-04-A310_ASSY_GSE_Power_Cart.step"
+    bom: "ASSETS/ASSEMBLIES/BOM/02-00-04-A310_ASSY_GSE_Power_Cart_BOM.csv"
     exports:
-      - "ASSETS/EXPORTS/02-00-04-A310_ASSY_GSE_Power_Cart.pdf"
+      - "ASSETS/EXPORTS/02-00-04-A310_EXPT_GSE_Power_Cart_Exploded.pdf"
     links:
-      reqs: ["REQ-02-030"]
-      odd:  ["ODD-02"]
+      reqs: ["REQ-02-001","REQ-02-015"]
+      odd:  ["ODD-01","ODD-02"]
+      safety: ["HZ-02-0007"]
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A311"
+    category: "ASSY"
+    title: "Gate Power Box"
+    source: "ASSETS/ASSEMBLIES/02-00-04-A311_ASSY_Gate_Power_Box.step"
+    bom: "ASSETS/ASSEMBLIES/BOM/02-00-04-A311_ASSY_Gate_Power_Box_BOM.csv"
+    exports:
+      - "ASSETS/EXPORTS/02-00-04-A311_EXPT_Gate_Power_Box_Exploded.pdf"
+    links:
+      reqs: ["REQ-02-001"]
+      odd:  ["ODD-01"]
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "02-00-04-A312"
+    category: "ASSY"
+    title: "Deicing Stand"
+    source: "ASSETS/ASSEMBLIES/02-00-04-A312_ASSY_Deicing_Stand.step"
+    bom: []
+    exports: []
+    links:
+      reqs: []
+      odd:  []
       safety: []
     status: "Draft"
     version: "1.0.0"
