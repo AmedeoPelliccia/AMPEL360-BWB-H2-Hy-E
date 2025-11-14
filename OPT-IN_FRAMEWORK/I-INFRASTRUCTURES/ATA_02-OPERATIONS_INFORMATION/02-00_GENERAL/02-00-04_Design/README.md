@@ -17,13 +17,17 @@ This folder contains:
 - **[ASSETS/](ASSETS/)** - Standardized design artifacts (diagrams, drawings, models, data)
   - See [ASSETS/README.md](ASSETS/README.md) for structure and usage
   - See [ASSETS/INDEX.meta.yaml](ASSETS/INDEX.meta.yaml) for authoritative asset catalog
+  - **[ASSETS/INSTALLATIONS/](ASSETS/INSTALLATIONS/)** - Physical and logical installation designs
+    - Control rooms, dispatch centers, briefing areas
+    - Information terminals, displays, signage and GSE info points
+    - See [ASSETS/INSTALLATIONS/README.md](ASSETS/INSTALLATIONS/README.md) for details
 
 ## Status
 
 - **Phase**: Design
 - **Lifecycle Position**: 04 of 14
 - **Status**: Active
-- **Last Updated**: 2025-11-13
+- **Last Updated**: 2025-11-14
 
 ## Related Folders
 
