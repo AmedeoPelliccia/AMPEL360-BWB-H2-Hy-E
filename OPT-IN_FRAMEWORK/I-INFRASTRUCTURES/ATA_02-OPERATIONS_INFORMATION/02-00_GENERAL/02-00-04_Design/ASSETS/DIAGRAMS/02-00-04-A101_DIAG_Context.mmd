@@ -1,0 +1,31 @@
+graph TD
+    subgraph "Ground Operations Context - ATA 02"
+        A[Aircraft on Stand] -->|Power| B[Ground Power Unit]
+        A -->|Fuel| C[Hydrogen Refueling]
+        A -->|Data| D[Ground Systems]
+        A -->|Air| E[Pneumatic GSE]
+        
+        B --> F[400Hz Power Cart]
+        B --> G[28V DC Power]
+        
+        C --> H[H2 Storage]
+        C --> I[Safety Systems]
+        
+        D --> J[Flight Data Upload]
+        D --> K[Maintenance System]
+        
+        E --> L[Air Start Unit]
+        E --> M[Climate Control]
+    end
+    
+    subgraph "Airport Infrastructure"
+        N[Gate Management] --> A
+        O[Operations Control] --> D
+        P[Safety Monitoring] --> I
+    end
+    
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style C fill:#ffe1e1
+    style D fill:#e1ffe1
+    style E fill:#f0e1ff

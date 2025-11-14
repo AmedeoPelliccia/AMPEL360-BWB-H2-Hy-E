@@ -18,6 +18,9 @@
 
 > **🆕 NEW: [OPT-IN Framework](OPT-IN_FRAMEWORK/) — Complete documentation topology now available!**  
 > 79 ATA chapters • 14 lifecycle folders • 9 cross-ATA buckets • [Quick Start Guide](OPT-IN_FRAMEWORK/QUICK_START.md) • [Full Standard](OPT-IN_FRAMEWORK_STANDARD.md)
+> 
+> **📦 NEW: [ASSETS Standard](AMPEL360_ASSETS_STANDARD.md) — Standardized design artifact structure for all Design folders!**  
+> Consistent naming • Category organization • Authoritative catalog (INDEX.meta.yaml) • CI validation
 
 ---
 

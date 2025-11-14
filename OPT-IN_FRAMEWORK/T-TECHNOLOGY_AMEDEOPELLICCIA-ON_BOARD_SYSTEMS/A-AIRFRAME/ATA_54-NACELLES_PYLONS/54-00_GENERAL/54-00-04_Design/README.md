@@ -11,6 +11,9 @@ This folder is part of the **54-00_GENERAL** layer, which provides governance an
 ## Contents
 
 This folder should contain:
+- **[ASSETS/](ASSETS/)** - Standardized design artifacts (diagrams, drawings, models, data)
+  - See [ASSETS/README.md](ASSETS/README.md) for structure and usage
+  - See [ASSETS/INDEX.meta.yaml](ASSETS/INDEX.meta.yaml) for authoritative asset catalog
 - Documentation related to reference architectures and design patterns
 - Traceability matrices linking to other lifecycle stages
 - Evidence and artifacts supporting this lifecycle phase

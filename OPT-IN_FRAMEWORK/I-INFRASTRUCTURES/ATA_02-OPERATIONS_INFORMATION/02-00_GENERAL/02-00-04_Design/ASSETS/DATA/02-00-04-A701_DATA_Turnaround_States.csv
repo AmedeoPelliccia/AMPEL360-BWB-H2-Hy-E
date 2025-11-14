@@ -1,0 +1,16 @@
+State_ID,State_Name,Duration_Min,Duration_Max,Next_States,Prerequisites,Safety_Critical
+TA-001,Aircraft Arrival,2,5,"TA-002,TA-003","Ground crew ready,Gate available",TRUE
+TA-002,Jet Bridge Connection,3,5,"TA-004","Aircraft stopped,Parking brake set",TRUE
+TA-003,Ground Power Connection,2,4,"TA-005","Electrical systems ready",FALSE
+TA-004,Passenger Disembarkation,15,30,"TA-006","Jet bridge connected,Doors open",TRUE
+TA-005,Ground Services Setup,5,10,"TA-007,TA-008","Power connected,Safety checks complete",FALSE
+TA-006,Cabin Cleaning,20,40,"TA-009","All passengers deplaned",FALSE
+TA-007,H2 Refueling,15,25,"TA-010","Safety zone established,H2 truck connected",TRUE
+TA-008,Baggage Unloading,10,20,"TA-011","Cargo doors open,Ground crew ready",FALSE
+TA-009,Catering Service,10,20,"TA-012","Cabin clean,Catering truck positioned",FALSE
+TA-010,Pre-flight Checks,15,30,"TA-013","All systems nominal,Fuel complete",TRUE
+TA-011,Baggage Loading,15,25,"TA-013","New baggage ready,Weight/balance calculated",FALSE
+TA-012,Passenger Boarding,20,40,"TA-014","Pre-flight checks complete,Gate ready",TRUE
+TA-013,Final Safety Checks,5,10,"TA-014","All services disconnected,Cabin secure",TRUE
+TA-014,Pushback Ready,2,5,"TA-015","Tug connected,Clearance received",TRUE
+TA-015,Pushback and Engine Start,5,10,"DEPARTURE","Clear area,Ground crew clear",TRUE
