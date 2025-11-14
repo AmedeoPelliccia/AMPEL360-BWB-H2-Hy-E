@@ -1,0 +1,2 @@
+TestID,Title,TestType(Performance/CornerCase/HIL/PIL/IVV),Setup,Procedure,Acceptance,ResultsLink,Status,Notes
+TR-Ops-Performance-001,Ops Freshness Monitor Perf,Performance,Staging datasets,Inject lags & measure,TPR>99% FPR<0.01/FH,TR-Ops-Performance-v1.0.pdf,Planned,—
