@@ -25,19 +25,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with:
+          python-version: '3.11'
+
       - name: Generate Cross-Reference Report
         run: |
           mkdir -p cd/reports
           python tools/genccc/report.py
+
+      - name: Show generated audit
+        run: |
+          echo "Generated audit file:"
+          ls -la cd/reports || true
+          if [ -f cd/reports/cross_reference_audit.md ]; then
+            sed -n '1,200p' cd/reports/cross_reference_audit.md || true
+          fi
+
       - name: Upload Audit Report Artifact
         uses: actions/upload-artifact@v4
         with:
           name: genccc-cross-reference-audit
           path: cd/reports/cross_reference_audit.md
           retention-days: 30
+
       - name: Post PR Comment
         uses: actions/github-script@v7
         with:
@@ -71,16 +84,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with:
+          python-version: '3.11'
+
       - name: Validate Requirements
         run: |
           mkdir -p cd/reports
           python tools/genccc/validate.py || true
+
       - name: Generate Traceability Matrices
         run: |
           python tools/genccc/traceability.py || true
+
       - name: Upload Requirements Reports
         uses: actions/upload-artifact@v4
         with:
@@ -92,6 +110,7 @@ jobs:
             cd/reports/Requirements_Traceability_Matrix.csv
             cd/reports/Verification_Coverage_Matrix.csv
           retention-days: 30
+
       - name: Check Validation Results
         id: check-validation
         run: |
@@ -104,6 +123,7 @@ jobs:
           else
             echo "validation_failed=false" >> $GITHUB_OUTPUT
           fi
+
       - name: Post Validation Summary
         uses: actions/github-script@v7
         with:
@@ -185,7 +205,9 @@ jobs:
       - name: Checkout base branch (trusted scripts)
         if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/checkout@v4
-        with: { path: base, fetch-depth: 0 }
+        with:
+          path: base
+          fetch-depth: 0
 
       - name: Checkout PR branch (content)
         if: steps.check-permissions.outputs.has_permission == 'true'
@@ -199,7 +221,8 @@ jobs:
       - name: Set up Python
         if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with:
+          python-version: '3.11'
 
       - name: Install OpenAI Client
         if: steps.check-permissions.outputs.has_permission == 'true'
@@ -252,12 +275,6 @@ jobs:
             });
 
   # 3) Agent flow: automatic on PRs + on-demand `/genccc solve`
-  # Security Note: This job runs agent.py from trusted base branch.
-  # The agent may checkout PR content but only executes trusted scripts:
-  # 1. Scripts are copied from base branch to /tmp (trusted code)
-  # 2. agent.py delegates to apply.py which is also from base
-  # 3. PR content is treated as data only, never executed
-  # 4. All changes are committed to new child branches for review
   agent_child_pr:
     if: >
       (github.event_name == 'pull_request') ||
@@ -284,7 +301,9 @@ jobs:
 
       - name: Checkout base (trusted)
         uses: actions/checkout@v4
-        with: { path: base, fetch-depth: 0 }
+        with:
+          path: base
+          fetch-depth: 0
 
       - name: Checkout PR head
         uses: actions/checkout@v4
@@ -312,7 +331,8 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with:
+          python-version: '3.11'
 
       - name: Install OpenAI Client
         run: pip install openai
@@ -348,6 +368,7 @@ jobs:
           git config user.name "GenCCC Agent Bot"
           git config user.email "genccc-agent-bot@local"
           git add -A
+          # determine if there are staged changes (added above)
           if git diff --cached --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
@@ -470,12 +491,6 @@ jobs:
             });
 
   # 4) Verify child branch by re-running the GenCCC audit
-  # Security Note: This job checks out and runs code from a child branch.
-  # This is safe because:
-  # 1. Child branch is created by the trusted agent_child_pr job above
-  # 2. Only runs scripts that are in tools/genccc/ (report.py)
-  # 3. report.py is read-only and doesn't modify repository
-  # 4. Child branch content comes from trusted base scripts, not untrusted PR
   verify_child_proposal:
     name: Verify Child Proposal (re-run GenCCC audit)
     needs: [agent_child_pr]
@@ -485,7 +500,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+        with:
+          fetch-depth: 0
+
       - name: Resolve child branch (same-repo vs fork-safe)
         id: childref
         uses: actions/github-script@v7
@@ -498,23 +515,29 @@ jobs:
             const cand = branches.find(b => b.name.startsWith('genccc/agent-'));
             if (!cand) { core.setOutput('found','false'); }
             else { core.setOutput('found','true'); core.setOutput('ref', cand.name); }
+
       - name: Exit if no child branch found
         if: steps.childref.outputs.found != 'true'
         run: echo "No child branch found. Skipping verification."
+
       - name: Checkout child branch
         if: steps.childref.outputs.found == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.childref.outputs.ref }}
+
       - name: Set up Python
         if: steps.childref.outputs.found == 'true'
         uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with:
+          python-version: '3.11'
+
       - name: Run GenCCC audit on child
         if: steps.childref.outputs.found == 'true'
         run: |
           mkdir -p cd/reports
           python tools/genccc/report.py
+
       - name: Upload Child Audit Artifact
         if: steps.childref.outputs.found == 'true'
         uses: actions/upload-artifact@v4
@@ -522,6 +545,7 @@ jobs:
           name: genccc-cross-reference-audit-child
           path: cd/reports/cross_reference_audit.md
           retention-days: 14
+
       - name: Comment audit status in original PR
         if: steps.childref.outputs.found == 'true'
         uses: actions/github-script@v7
@@ -552,22 +576,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with:
+          python-version: '3.11'
+
       - name: Create Baseline
         id: create-baseline
         run: |
           python tools/genccc/baseline.py create --name "PR-${{ github.event.issue.number }}" || echo "No requirements found"
-          if [ -f cd/baselines/requirements_PR-*.json ]; then
+          if ls cd/baselines/requirements_PR-*.json 1> /dev/null 2>&1; then
             echo "baseline_created=true" >> $GITHUB_OUTPUT
           else
             echo "baseline_created=false" >> $GITHUB_OUTPUT
           fi
+
       - name: Generate Baseline Diff
         if: steps.create-baseline.outputs.baseline_created == 'true'
         run: |
           python tools/genccc/baseline.py diff || echo "Baseline diff not available"
+
       - name: Upload Baseline Artifacts
         if: steps.create-baseline.outputs.baseline_created == 'true'
         uses: actions/upload-artifact@v4
@@ -577,6 +606,7 @@ jobs:
             cd/baselines/requirements_PR-*.json
             cd/reports/baseline_diff.md
           retention-days: 90
+
       - name: Post Baseline Comment
         uses: actions/github-script@v7
         with:
@@ -603,7 +633,7 @@ jobs:
               diffMsg,
               "```",
               "",
-              "Download full baseline from artifact: **genccc-baseline-${{ github.event.issue.number }}**",
+              `Download full baseline from artifact: **genccc-baseline-${{ github.event.issue.number }}**`,
               "",
               "Use baselines to track requirements changes over time and perform impact analysis."
             ].join("\n");
@@ -625,7 +655,10 @@ jobs:
     steps:
       - name: Checkout Base for V&V Lake Access
         uses: actions/checkout@v4
-        with: { path: base, fetch-depth: 1 }
+        with:
+          path: base
+          fetch-depth: 1
+
       - name: Download Child Audit Artifact (if present)
         id: dl-audit
         continue-on-error: true
@@ -633,6 +666,7 @@ jobs:
         with:
           name: genccc-cross-reference-audit-child
           path: reports
+
       - name: Collect PR context (head sha & changed files)
         id: prctx
         uses: actions/github-script@v7
@@ -650,6 +684,7 @@ jobs:
             const mdChanged = files.map(f => f.filename).filter(n => n.endsWith('.md')).join(', ');
             core.setOutput('head_sha', headSha);
             core.setOutput('md_changed', mdChanged);
+
       - name: Pool Verification Points from Artifacts
         id: pool
         run: |
@@ -676,6 +711,7 @@ jobs:
           fi
           echo "standards=$STANDARDS" >> $GITHUB_OUTPUT
           echo "validation_paths=$PATHS" >> $GITHUB_OUTPUT
+
       - name: Build Contextual Checklists from V&V Lake
         id: checklist
         run: |
@@ -683,25 +719,27 @@ jobs:
           VALIDATION_PATHS="${{ steps.pool.outputs.validation_paths }}"
           CHANGED="${{ steps.prctx.outputs.md_changed }}"
           VV_LAKE="base/cd/vv_lake.json"
+
           CHECKLIST="- [ ] Cross-references validated against: ${VALIDATION_PATHS:-n/a}
-          - [ ] Standards compliance (${STANDARDS:-n/a})
-          - [ ] Traceability links complete"
+- [ ] Standards compliance (${STANDARDS:-n/a})
+- [ ] Traceability links complete"
           if [ -n "$CHANGED" ]; then
             CHECKLIST="$CHECKLIST
-          - [ ] Contextual validation for changed files: $CHANGED"
+- [ ] Contextual validation for changed files: $CHANGED"
           fi
           if [ -f "$VV_LAKE" ]; then
             EXTRA=$(jq -r '.checklists.contextual[]?' "$VV_LAKE" 2>/dev/null | sed 's/^/- [ ] /' || true)
             if [ -n "$EXTRA" ]; then
               CHECKLIST="$CHECKLIST
-          $EXTRA"
+$EXTRA"
             fi
           fi
-          {
-            echo "checklist<<'EOF'"
-            echo "$CHECKLIST"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
+
+          # Properly emit multiline output to $GITHUB_OUTPUT (do not quote EOF)
+          echo "checklist<<EOF" >> "$GITHUB_OUTPUT"
+          printf "%s\n" "$CHECKLIST" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
       - name: Validate Against All Eventual Contextual Paths
         id: validate
         run: |
@@ -723,11 +761,12 @@ jobs:
             UPDATED_CHECKLIST="$CHECKLIST"
           fi
           echo "validation_passed=$VALID" >> $GITHUB_OUTPUT
-          {
-            echo "updated_checklist<<'EOF'"
-            echo "$UPDATED_CHECKLIST"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
+
+          # Properly emit multiline updated_checklist
+          echo "updated_checklist<<EOF" >> "$GITHUB_OUTPUT"
+          printf "%s\n" "$UPDATED_CHECKLIST" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
       - name: Set PR Status Check (on PR head SHA)
         uses: actions/github-script@v7
         env:
@@ -750,6 +789,7 @@ jobs:
                                   : `Targets incomplete - ${issues} issues; see checklist`,
               context: 'GenCCC Completion Target'
             });
+
       - name: Post Contextual Checklist in PR
         uses: actions/github-script@v7
         env:
@@ -767,6 +807,7 @@ jobs:
               repo: context.repo.repo,
               body
             });
+
       - name: Fail Workflow on Incomplete Targets
         if: steps.validate.outputs.validation_passed != 'true'
         run: |

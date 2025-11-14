@@ -1,0 +1,2 @@
+ReqID,Title,Type(Safety/Process/HF),Rationale,Source(HazardID/Reg),Verification_Method,Acceptance_Criteria,Owner,Status,Links
+S-02-REQ-001,Ops Data Freshness Check,Safety,Prevent stale data,Reg/Policy,Analysis+Test,Freshness<24h & Alerting,Ops Lead,Draft,TR-Ops-Performance-v1.0.pdf
