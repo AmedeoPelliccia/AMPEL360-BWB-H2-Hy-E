@@ -57,6 +57,7 @@ The following outputs are **mandatory** for ATA 02 `02-00-02_Safety`, with canon
   - **CCA**: `02-00-02-002A_Common_Cause_Analysis.md`  
   - **Emergency Response Procedures (ERP)**: `02-00-02-003A_Emergency_Response_Procedures.md`  
   - **FMEA** (CSV): `02-00-02-004A_Failure_Modes_Effects_Analysis.csv`  
+    - FMEA View: Training Phase: `02-00-02-A002_FMEA_View_Training_Phase.md`
   - **FTA** (method): `02-00-02-005A_Fault_Tree_Analysis.md`  
   - **FHA** (CSV): `02-00-02-006A_Functional_Hazard_Assessment.csv`
 
@@ -187,6 +188,7 @@ Use this section as your **working table of contents** when operating in `02-00-
   - CCA: `./02-00-02-002A_Common_Cause_Analysis.md`  
   - ERP: `./02-00-02-003A_Emergency_Response_Procedures.md`  
   - FMEA (CSV): `./02-00-02-004A_Failure_Modes_Effects_Analysis.csv`  
+    - FMEA View: Training Phase: `./02-00-02-A002_FMEA_View_Training_Phase.md`
   - FTA (method): `./02-00-02-005A_Fault_Tree_Analysis.md`  
   - FHA (CSV): `./02-00-02-006A_Functional_Hazard_Assessment.csv`
 

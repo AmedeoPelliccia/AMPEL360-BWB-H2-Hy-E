@@ -21,7 +21,19 @@ RowID,Function/Item,Failure_Mode,NN/IT_Cause,Local_Effect,System_Effect,Ops_Effe
 
 All detailed FMEA work must **eventually be reflected** in this CSV.
 
-### 1.2 Optional FMEA Workbooks (views only)
+### 1.2 FMEA View Definitions
+
+FMEA view definitions describe how to filter and interpret specific subsets of the canonical CSV for different lifecycle phases:
+
+- **Training Phase View**  
+  → `../../02-00-02-A002_FMEA_View_Training_Phase.md`  
+  Defines filtering rules for training-related FMEA entries (tagged `#TrainingFMEA`)
+
+- **Deployment Phase View** (planned)  
+  → `../../02-00-02-A003_FMEA_View_Deployment_Phase.md`  
+  Will define filtering rules for deployment-related FMEA entries (tagged `#DeploymentFMEA`)
+
+### 1.3 Optional FMEA Workbooks (views only)
 
 If spreadsheets are still useful as working views, they should be treated as **generated/editorial views** of the CSV, not as primary records.
 
