@@ -1,0 +1,4 @@
+ReqID,DesignRefs,ImplementationRefs,TestRefs,SafetyRefs,CertificationRefs,Notes
+REQ-02-001,"02-10_Operations/02-10-01_Turnaround/","N/A","TR-02-Perf-001","HZ-02-0001|HZ-02-0003","CERT-02-010","Baseline nominal ops envelope for Cat C/D airports"
+REQ-02-015,"02-10_Operations/02-10-02_Hot_High/","N/A","TR-02-Perf-014","HZ-02-0012","CERT-02-034","Hot/high derating and margin protection"
+REQ-02-021,"02-10_Operations/02-10-03_Cold_Soak/","N/A","TR-02-Proc-021","HZ-02-0031","CERT-02-034","Cold-soak de-icing inspection and procedure linkage"

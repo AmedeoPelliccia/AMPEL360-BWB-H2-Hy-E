@@ -1,0 +1,4 @@
+ReqID,VerificationMethod,TestCaseID,ODD_ID,AcceptanceCriteriaRef,Result,Evidence,Reviewer,Status,Date
+REQ-02-001,TST,TR-02-Perf-001,ODD-01,AC-02-001,Planned,report/TR-02-Perf-001.pdf,Reviewer A,Planned,2025-11-14
+REQ-02-015,ANL,TR-02-Perf-014,ODD-02,AC-02-015,Planned,calc/HH_margin.xlsx,Reviewer B,Planned,2025-11-14
+REQ-02-021,REV,TR-02-Proc-021,ODD-03,AC-02-021,Planned,proc/deicing_checklist.md,Reviewer C,Planned,2025-11-14
