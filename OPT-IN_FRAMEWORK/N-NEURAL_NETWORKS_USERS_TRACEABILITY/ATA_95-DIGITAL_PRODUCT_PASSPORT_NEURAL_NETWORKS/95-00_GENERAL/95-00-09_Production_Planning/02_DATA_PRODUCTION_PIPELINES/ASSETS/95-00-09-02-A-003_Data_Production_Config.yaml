@@ -1,0 +1,9 @@
+pipeline:
+  name: production_data_pipeline
+  version: 1.0
+  sources:
+    - flight_test_data
+    - simulator_data
+  validation:
+    quality_threshold: 0.95
+    completeness_threshold: 0.99

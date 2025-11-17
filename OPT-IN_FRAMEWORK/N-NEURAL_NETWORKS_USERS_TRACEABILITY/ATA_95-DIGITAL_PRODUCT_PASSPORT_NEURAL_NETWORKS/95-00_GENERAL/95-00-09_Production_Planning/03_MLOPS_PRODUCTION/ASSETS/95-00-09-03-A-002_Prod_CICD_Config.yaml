@@ -1,0 +1,7 @@
+cicd:
+  stages:
+    - build
+    - test
+    - deploy
+  deployment:
+    strategy: blue_green

@@ -1,0 +1,4 @@
+embedded_test:
+  platforms:
+    - nvidia_jetson
+    - intel_xeon_d

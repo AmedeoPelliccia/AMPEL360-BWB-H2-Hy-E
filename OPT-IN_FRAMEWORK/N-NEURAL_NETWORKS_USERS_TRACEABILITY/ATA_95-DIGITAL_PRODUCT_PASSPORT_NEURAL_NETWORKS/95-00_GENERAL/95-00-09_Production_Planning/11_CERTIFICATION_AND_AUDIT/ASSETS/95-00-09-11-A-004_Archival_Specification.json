@@ -1,0 +1,8 @@
+{
+  "archival_spec": {
+    "retention_period": "aircraft_lifetime_plus_10_years",
+    "storage_media": ["primary_repository", "backup_site", "cold_storage"],
+    "access_control": "restricted",
+    "integrity_verification": "monthly"
+  }
+}
