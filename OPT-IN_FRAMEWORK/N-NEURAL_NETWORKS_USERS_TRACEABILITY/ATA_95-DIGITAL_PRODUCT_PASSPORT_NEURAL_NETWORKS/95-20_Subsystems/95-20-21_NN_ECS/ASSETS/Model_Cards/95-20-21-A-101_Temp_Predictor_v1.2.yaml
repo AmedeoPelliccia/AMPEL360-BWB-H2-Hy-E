@@ -1,0 +1,357 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+model_card:
+  name: "Cabin Temperature Predictor"
+  version: "1.2"
+  model_id: "95-20-21-A-101"
+  subsystem: "95-20-21 NN_ECS"
+  status: "production"
+  created_date: "2024-09-15"
+  last_updated: "2025-11-17"
+  
+  description:
+    summary: "LSTM-based neural network for predicting cabin temperature across multiple zones with 5-minute horizon"
+    purpose: "Enable proactive HVAC control and improve passenger comfort while reducing energy consumption"
+    use_case: "Real-time cabin temperature forecasting during all flight phases"
+    
+architecture:
+  type: "LSTM + Dense Layers"
+  framework: "TensorFlow 2.14"
+  input_features: 24
+  input_description:
+    - "Cabin temperature (6 zones)"
+    - "External temperature"
+    - "Passenger count"
+    - "Flight phase"
+    - "HVAC power consumption"
+    - "Airflow rate"
+    - "Historical temperature trend (rolling window)"
+    
+  layers:
+    - type: "Input"
+      shape: [null, 10, 24]
+      description: "10 timesteps, 24 features"
+    - type: "LSTM"
+      units: 128
+      return_sequences: true
+      dropout: 0.2
+    - type: "LSTM"
+      units: 64
+      return_sequences: true
+      dropout: 0.2
+    - type: "LSTM"
+      units: 32
+      return_sequences: false
+      dropout: 0.1
+    - type: "Dense"
+      units: 16
+      activation: "relu"
+    - type: "Dense"
+      units: 8
+      activation: "relu"
+    - type: "Dense"
+      units: 6
+      activation: "linear"
+      description: "6 zone temperature predictions"
+      
+  total_parameters: 156842
+  trainable_parameters: 156842
+  model_size_mb: 2.3
+  format: "ONNX"
+  
+training:
+  dataset:
+    name: "95-20-21-601_Cabin_Temp_10k_Flights"
+    source: "10,000+ flight hours from test aircraft"
+    size: "2.5 GB"
+    samples: 12500000
+    features: 24
+    split:
+      train: 0.80
+      validation: 0.10
+      test: 0.10
+      
+  data_quality:
+    completeness: 0.997
+    noise_level: "low"
+    representativeness: "high"
+    diversity: "multiple aircraft, seasons, flight profiles"
+    
+  hyperparameters:
+    optimizer: "Adam"
+    learning_rate: 0.001
+    batch_size: 256
+    epochs: 100
+    early_stopping_patience: 10
+    reduce_lr_patience: 5
+    
+  training_time:
+    duration_hours: 48
+    hardware: "NVIDIA V100 GPU"
+    framework_version: "TensorFlow 2.14"
+    
+  loss_function:
+    name: "Mean Squared Error (MSE)"
+    formula: "mean((y_true - y_pred)^2)"
+    
+performance:
+  metrics:
+    mae:
+      train: 0.32
+      validation: 0.35
+      test: 0.37
+      unit: "°C"
+    rmse:
+      train: 0.42
+      validation: 0.46
+      test: 0.49
+      unit: "°C"
+    r2_score:
+      train: 0.96
+      validation: 0.94
+      test: 0.93
+    accuracy_within_0.5C:
+      test: 0.95
+      
+  inference:
+    latency_ms:
+      mean: 8
+      p50: 7
+      p95: 10
+      p99: 12
+      max: 15
+    throughput_rps: 125
+    memory_mb: 50
+    cpu_usage_percent: 5
+    
+  robustness:
+    adversarial_robustness: "moderate"
+    out_of_distribution_detection: true
+    uncertainty_quantification: true
+    method: "Bayesian dropout"
+    
+deployment:
+  target: "AMPEL360 BWB H₂ Hy-E Q100"
+  runtime: "95-20-01 NN Core Platform"
+  hardware: "95-20-42 IMA Partition"
+  quantization: "FP32"
+  optimization: "ONNX Runtime"
+  
+  resource_requirements:
+    memory_mb: 50
+    cpu_cores: 0.5
+    gpu_memory_mb: 100
+    storage_mb: 2.3
+    
+  update_rate: "10 Hz"
+  expected_latency: "< 10 ms"
+  
+certification:
+  dal_level: "C"
+  failure_condition: "Hazardous"
+  compliance:
+    - standard: "DO-178C"
+      level: "C"
+      status: "Complete"
+    - standard: "DO-333"
+      level: "Formal Methods"
+      status: "Complete"
+    - standard: "EASA SC-AI"
+      status: "Complete"
+    - standard: "FAA AC 20-115D"
+      status: "Complete"
+      
+  verification:
+    requirements_coverage: 1.0
+    code_coverage: 0.98
+    mcdc_coverage: 0.95
+    test_cases: 1250
+    test_hours: 2000
+    
+  safety_analysis:
+    fmea: "95-20-21-A-504"
+    fta: "95-20-21-A-504"
+    hazard_analysis: "Complete"
+    
+interfaces:
+  inputs:
+    - name: "cabin_temp_zones"
+      type: "float32[6]"
+      unit: "°C"
+      range: [-40, 50]
+      rate_hz: 10
+      source: "ATA 21 temperature sensors"
+      
+    - name: "external_temp"
+      type: "float32"
+      unit: "°C"
+      range: [-60, 50]
+      rate_hz: 1
+      source: "External temperature probes"
+      
+    - name: "passenger_count"
+      type: "int16"
+      range: [0, 220]
+      rate_hz: 0.1
+      source: "Cabin management system"
+      
+    - name: "flight_phase"
+      type: "enum"
+      values: ["ground", "taxi", "takeoff", "climb", "cruise", "descent", "approach", "landing"]
+      rate_hz: 0.5
+      source: "FMS"
+      
+    - name: "hvac_power"
+      type: "float32"
+      unit: "kW"
+      range: [0, 50]
+      rate_hz: 10
+      source: "ECS power meters"
+      
+    - name: "airflow_rate"
+      type: "float32"
+      unit: "m³/min"
+      range: [0, 1000]
+      rate_hz: 10
+      source: "Ventilation flow sensors"
+      
+  outputs:
+    - name: "predicted_temps"
+      type: "float32[6]"
+      unit: "°C"
+      range: [-40, 50]
+      rate_hz: 10
+      description: "5-minute ahead temperature predictions for 6 zones"
+      destination: "95-20-21-A-103 HVAC Optimizer"
+      
+    - name: "confidence"
+      type: "float32[6]"
+      range: [0, 1]
+      rate_hz: 10
+      description: "Prediction confidence scores"
+      destination: "System monitor"
+      
+    - name: "anomaly_flag"
+      type: "bool"
+      rate_hz: 10
+      description: "True if input or output anomaly detected"
+      destination: "System monitor"
+      
+dpp_integration:
+  blockchain_anchor: "0x..."
+  provenance_hash: "sha256:..."
+  training_data_hash: "sha256:..."
+  model_hash: "sha256:..."
+  certification_hash: "sha256:..."
+  
+  lineage:
+    parent_models: null
+    derived_from: null
+    influences: ["95-20-21-A-103"]
+    
+  audit_trail:
+    - timestamp: "2024-09-15T10:00:00Z"
+      event: "Initial training"
+      user: "ml-engineer-01"
+    - timestamp: "2024-10-20T14:30:00Z"
+      event: "Hyperparameter tuning"
+      user: "ml-engineer-02"
+    - timestamp: "2024-11-05T09:00:00Z"
+      event: "Final validation"
+      user: "v&v-team"
+    - timestamp: "2025-01-10T11:00:00Z"
+      event: "Certification approval"
+      user: "certification-authority"
+    - timestamp: "2025-02-01T08:00:00Z"
+      event: "Production deployment"
+      user: "ops-team"
+      
+limitations:
+  known_issues: []
+  
+  constraints:
+    - "Requires 10 timesteps of historical data for initialization"
+    - "Accuracy degrades in extreme temperature conditions (< -30°C or > +40°C)"
+    - "Assumes properly calibrated sensors"
+    
+  edge_cases:
+    - "Rapid passenger load changes may reduce accuracy temporarily"
+    - "Unusual flight profiles (e.g., aerobatic maneuvers) not supported"
+    
+  fallback:
+    condition: "Inference timeout or anomaly detection"
+    action: "Classical PID control takeover"
+    
+ethical_considerations:
+  fairness: "N/A - No human subjects or protected groups"
+  privacy: "No personally identifiable information (PII) processed"
+  bias: "No demographic data used"
+  transparency: "Model explainability via attention weight analysis"
+  
+maintenance:
+  retraining_schedule: "Annually or on significant performance degradation"
+  monitoring_metrics:
+    - "Online prediction accuracy vs. actual temperatures"
+    - "Inference latency"
+    - "Input distribution drift"
+  performance_threshold:
+    mae_degradation: "> 0.5°C"
+    action: "Trigger retraining evaluation"
+    
+  update_procedure:
+    - "Collect new operational data"
+    - "Retrain model with combined dataset"
+    - "Validate per original V&V plan"
+    - "Regression testing"
+    - "Certification authority review"
+    - "Controlled deployment"
+    
+references:
+  documentation:
+    - "95-20-21-002_Cabin_Temp_Predictor.md"
+    - "95-20-21-009_Safety_and_Certification.md"
+    
+  related_models:
+    - "95-20-21-A-103_HVAC_Optimizer_v2.1"
+    
+  papers:
+    - "LSTM Networks for Time Series Prediction (Hochreiter & Schmidhuber, 1997)"
+    - "Aviation Environmental Control Systems (SAE AIR1168)"
+    
+contact:
+  owner: "AMPEL360 ML Engineering Team"
+  email: "ml-engineering@ampel360.aero"
+  maintainer: "ml-team-ecs@ampel360.aero"
+  
+document_control:
+  version: "1.2"
+  status: "WORKING"
+  last_updated: "2025-11-17"
+  approved_by: "Chief Engineer - AI Systems"
+  approval_date: "2025-02-01"

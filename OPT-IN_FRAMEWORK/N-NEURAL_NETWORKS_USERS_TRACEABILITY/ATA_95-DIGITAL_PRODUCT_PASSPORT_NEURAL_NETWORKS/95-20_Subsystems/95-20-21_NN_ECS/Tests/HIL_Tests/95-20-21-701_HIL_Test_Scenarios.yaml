@@ -1,0 +1,29 @@
+# Hardware-in-Loop Test Scenarios
+# Complete test scenarios should be defined here
+
+hil_test_scenarios:
+  version: "1.0"
+  test_platform: "dSPACE SCALEXIO"
+  
+  scenarios:
+    - id: "TC-001"
+      name: "Normal Operation - Cruise"
+      description: "Test all models during normal cruise flight"
+      duration_sec: 300
+      expected_result: "All models operate within specifications"
+      
+    - id: "TC-002"
+      name: "Rapid Altitude Change"
+      description: "Test pressure control during emergency descent"
+      duration_sec: 180
+      expected_result: "Pressure controlled within limits"
+      
+    - id: "TC-003"
+      name: "Sensor Failure"
+      description: "Single temperature sensor failure"
+      duration_sec: 240
+      expected_result: "Graceful degradation, system continues"
+
+document_control:
+  status: "PLACEHOLDER"
+  last_updated: "2025-11-17"

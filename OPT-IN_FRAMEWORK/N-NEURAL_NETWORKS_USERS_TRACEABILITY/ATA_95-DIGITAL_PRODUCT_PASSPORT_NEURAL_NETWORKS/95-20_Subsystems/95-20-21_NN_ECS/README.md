@@ -107,10 +107,10 @@ Each model card follows the format:
 
 ### Compliance
 
-- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)**: Software DAL-C
-- **[DO-333](https://www.rtca.org/content/standards-guidance-materials)**: Model-based development
-- **[EASA MOC SC-AI](https://www.easa.europa.eu/en/document-library/acceptable-means-compliance-and-guidance-materials/special-condition-sc-ai)**: AI/ML certification guidance
-- **[FAA AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/)**: Airborne software
+- **[DO-178C](https://www.rtca.org/product/do-178c/)**: Software DAL-C
+- **[DO-333](https://www.rtca.org/product/do-333/)**: Model-based development
+- **[EASA SC-AI](https://www.easa.europa.eu/en/document-library/general-publications/special-condition-sc-ai)**: AI/ML certification guidance
+- **[FAA AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1026670)**: Airborne software
 
 ### Evidence
 
