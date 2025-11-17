@@ -80,7 +80,7 @@ State (32-dim) → Actor Network → Actions (12-dim) → HVAC Actuators
 - **Failure Condition**: Inefficient control or comfort degradation
 - **Mitigation**: Safe action space limits + classical control fallback
 - **Operational Limits**: Hard-coded constraints on all outputs
-- **V&V Status**: Complete per DO-178C Level C
+- **V&V Status**: Complete per [DO-178C](https://www.rtca.org/product/do-178c/) Level C
 
 ## Model Card
 

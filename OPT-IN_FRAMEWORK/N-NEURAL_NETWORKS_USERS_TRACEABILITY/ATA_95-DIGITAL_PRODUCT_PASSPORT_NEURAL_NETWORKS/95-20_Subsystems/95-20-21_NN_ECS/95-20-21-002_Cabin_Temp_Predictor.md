@@ -63,7 +63,7 @@ Input (24 features) → LSTM(128) → LSTM(64) → LSTM(32) → Dense(16) → De
 - **DAL Level**: C (Hazardous)
 - **Failure Condition**: Temperature prediction error could lead to passenger discomfort but not safety hazard
 - **Mitigation**: Fallback to sensor-based reactive control
-- **V&V Status**: Complete per DO-178C Level C
+- **V&V Status**: Complete per [DO-178C](https://www.rtca.org/product/do-178c/) Level C
 
 ## Model Card
 

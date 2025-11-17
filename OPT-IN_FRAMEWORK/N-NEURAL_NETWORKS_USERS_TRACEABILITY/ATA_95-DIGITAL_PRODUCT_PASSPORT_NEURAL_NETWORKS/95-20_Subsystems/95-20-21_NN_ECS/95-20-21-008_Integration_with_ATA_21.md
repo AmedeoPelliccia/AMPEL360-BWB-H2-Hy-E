@@ -94,19 +94,22 @@ The ECS NN subsystem enhances ATA 21 conventional control systems with AI-driven
 
 ## Communication Protocols
 
-### ARINC 429
+### [ARINC 429](https://www.aviation-ia.com/arinc-standards/arinc-429/)
+- **Standard**: [ARINC 429-18](https://www.sae.org/standards/content/arinc429/)
 - **Bit Rate**: 100 kbps (high-speed)
 - **Word Format**: 32-bit with label, SDI, data, SSM, parity
 - **Error Detection**: Parity bit
 - **Usage**: Legacy sensor interfaces and displays
 
-### ARINC 825 (CAN)
+### [ARINC 825](https://www.aviation-ia.com/arinc-standards/arinc-825/) (CAN)
+- **Standard**: [SAE AS6802](https://www.sae.org/standards/content/as6802/)
 - **Bit Rate**: 1 Mbps
 - **Frame Format**: Standard CAN 2.0B
 - **Error Detection**: CRC, ACK, frame check
 - **Usage**: Actuator control commands
 
-### AFDX (ARINC 664)
+### [AFDX](https://www.aviation-ia.com/arinc-standards/arinc-664/) (ARINC 664)
+- **Standard**: [ARINC 664P7](https://www.arinc.com/cf/store/catalog.cfm)
 - **Data Rate**: 100 Mbps full-duplex
 - **Protocol**: Deterministic Ethernet
 - **Virtual Links**: Dedicated VLs for each data stream
@@ -170,9 +173,9 @@ See: `ASSETS/Test_Data/95-20-21-A-302_Flight_Test_Results.csv`
 ## Certification Evidence
 
 ### Interface Compliance
-- ARINC 429: Verified per DO-160G
-- ARINC 825: Verified per SAE AS6802
-- AFDX: Verified per ARINC 664P7
+- [ARINC 429](https://www.sae.org/standards/content/arinc429/): Verified per [DO-160G](https://www.rtca.org/product/do-160g/)
+- [ARINC 825](https://www.sae.org/standards/content/as6802/): Verified per [SAE AS6802](https://www.sae.org/standards/content/as6802/)
+- [AFDX](https://www.arinc.com/cf/store/catalog.cfm): Verified per [ARINC 664P7](https://www.arinc.com/cf/store/catalog.cfm)
 
 ### Safety Analysis
 - FMEA completed: See `ASSETS/Certification/95-20-21-A-504_Safety_Analysis_FTA_FMEA.pdf`
@@ -191,10 +194,14 @@ See: `Documentation/95-20-21-803_Troubleshooting_Guide.md`
 
 ## References
 
+### Standards and Specifications
+- [ARINC 429 Specification (DO-158)](https://www.rtca.org/)
+- [ARINC 825 Specification (SAE AS6802)](https://www.sae.org/standards/content/as6802/)
+- [AFDX Specification (ARINC 664P7)](https://www.arinc.com/cf/store/catalog.cfm)
+- [DO-160G Environmental Testing](https://www.rtca.org/product/do-160g/)
+
+### Documentation
 - ATA 21 System Manual: [Link to aircraft-specific documentation]
-- ARINC 429 Specification: DO-158
-- ARINC 825 Specification: SAE AS6802
-- AFDX Specification: ARINC 664P7
 - Interface Control Documents: `ASSETS/Interface_Specs/95-20-21-A-401_ATA_21_Interface_Spec.yaml`
 
 ## Document Control

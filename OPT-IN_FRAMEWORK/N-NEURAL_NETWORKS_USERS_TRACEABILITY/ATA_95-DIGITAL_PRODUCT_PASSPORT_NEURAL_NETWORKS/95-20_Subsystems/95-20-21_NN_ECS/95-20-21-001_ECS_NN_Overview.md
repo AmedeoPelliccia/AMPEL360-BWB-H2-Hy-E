@@ -101,11 +101,11 @@ The ECS NN subsystem consists of six primary neural network components:
 **Supporting DAL**: D (Minor failure condition)
 
 ### Compliance Standards
-- **DO-178C**: Software Considerations in Airborne Systems and Equipment Certification
-- **DO-333**: Formal Methods Supplement to DO-178C
-- **EASA SC-AI**: Special Condition for AI/ML systems
-- **FAA AC 20-115D**: Airborne Software Development Assurance
-- **ARP4754B**: Guidelines for Development of Civil Aircraft and Systems
+- **[DO-178C](https://www.rtca.org/product/do-178c/)**: Software Considerations in Airborne Systems and Equipment Certification
+- **[DO-333](https://www.rtca.org/product/do-333/)**: Formal Methods Supplement to DO-178C
+- **[EASA SC-AI](https://www.easa.europa.eu/en/document-library/general-publications/special-condition-sc-ai)**: Special Condition for AI/ML systems
+- **[FAA AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1026670)**: Airborne Software Development Assurance
+- **[ARP4754B](https://www.sae.org/standards/content/arp4754b/)**: Guidelines for Development of Civil Aircraft and Systems
 
 ### Verification & Validation
 - Model V&V per 95-00-07 procedures

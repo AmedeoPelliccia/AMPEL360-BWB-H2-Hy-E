@@ -159,7 +159,8 @@ Upon completion of this training, crew members will be able to:
 
 ### Recommended Reading
 - `95-20-21-008_Integration_with_ATA_21.md`
-- ATA 21 System Manual
+- [ATA iSpec 2200](https://www.ata.org/resources/specifications) System Manual
+- [ICAO Doc 9983 (Manual on ML Applications)](https://www.icao.int/)
 
 ### Simulator Scenarios
 1. Normal flight with NN system

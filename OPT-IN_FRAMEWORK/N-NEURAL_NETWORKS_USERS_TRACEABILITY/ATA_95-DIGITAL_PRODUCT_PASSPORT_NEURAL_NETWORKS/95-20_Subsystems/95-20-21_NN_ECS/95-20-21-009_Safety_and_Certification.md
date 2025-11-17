@@ -14,14 +14,14 @@ This document describes the safety analysis, certification approach, and complia
 
 | Standard | Title | Applicability |
 |----------|-------|---------------|
-| **DO-178C** | Software Considerations in Airborne Systems and Equipment Certification | Primary software certification standard (DAL C) |
-| **DO-333** | Formal Methods Supplement to DO-178C and DO-278A | Used for critical algorithm verification |
-| **DO-200B** | Standards for Processing Aeronautical Data | Data quality and integrity |
-| **EASA SC-AI** | Special Condition for Artificial Intelligence | AI/ML-specific guidance |
-| **FAA AC 20-115D** | Airborne Software Development Assurance | US certification guidance |
-| **ARP4754B** | Guidelines for Development of Civil Aircraft and Systems | System-level safety |
-| **ARP4761** | Guidelines and Methods for Conducting the Safety Assessment Process | Safety assessment |
-| **DO-160G** | Environmental Conditions and Test Procedures for Airborne Equipment | Environmental qualification |
+| **[DO-178C](https://www.rtca.org/product/do-178c/)** | Software Considerations in Airborne Systems and Equipment Certification | Primary software certification standard (DAL C) |
+| **[DO-333](https://www.rtca.org/product/do-333/)** | Formal Methods Supplement to DO-178C and DO-278A | Used for critical algorithm verification |
+| **[DO-200B](https://www.rtca.org/product/do-200b/)** | Standards for Processing Aeronautical Data | Data quality and integrity |
+| **[EASA SC-AI](https://www.easa.europa.eu/en/document-library/general-publications/special-condition-sc-ai)** | Special Condition for Artificial Intelligence | AI/ML-specific guidance |
+| **[FAA AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1026670)** | Airborne Software Development Assurance | US certification guidance |
+| **[ARP4754B](https://www.sae.org/standards/content/arp4754b/)** | Guidelines for Development of Civil Aircraft and Systems | System-level safety |
+| **[ARP4761](https://www.sae.org/standards/content/arp4761/)** | Guidelines and Methods for Conducting the Safety Assessment Process | Safety assessment |
+| **[DO-160G](https://www.rtca.org/product/do-160g/)** | Environmental Conditions and Test Procedures for Airborne Equipment | Environmental qualification |
 
 ## Design Assurance Levels
 
@@ -251,12 +251,16 @@ Process for model updates:
 
 ## Cybersecurity
 
-Security measures per DO-326A:
+Security measures per [DO-326A (Airworthiness Security Process Specification)](https://www.rtca.org/product/do-326a/):
 - Model integrity: Cryptographic signatures on all models
 - Communication security: Encrypted AFDX virtual links
 - Access control: Secure boot, authenticated updates
 - Intrusion detection: Runtime monitoring
 - Provenance: Blockchain tracking (95-20-02)
+
+Related Standards:
+- [DO-356A (Airworthiness Security Methods)](https://www.rtca.org/product/do-356a/)
+- [SAE ARP4761A (Cybersecurity Considerations)](https://www.sae.org/standards/content/arp4761a/)
 
 ## Document Control
 

@@ -72,7 +72,7 @@ Inputs → MLP(64) → MLP(32) → MLP(16) → Output + PID Baseline → Valve C
 - **Failure Condition**: Improper pressure control could cause passenger discomfort or injury
 - **Mitigation**: Hard limits on valve rate-of-change + PID fallback
 - **Safety Monitors**: Multiple redundant pressure sensors
-- **V&V Status**: Complete per DO-178C Level C
+- **V&V Status**: Complete per [DO-178C](https://www.rtca.org/product/do-178c/) Level C
 
 ## Model Card
 

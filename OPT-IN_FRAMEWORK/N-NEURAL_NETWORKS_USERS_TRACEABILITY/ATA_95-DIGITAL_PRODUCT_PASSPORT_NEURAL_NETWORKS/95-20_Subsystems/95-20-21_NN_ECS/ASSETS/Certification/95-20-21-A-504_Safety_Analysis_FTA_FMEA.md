@@ -175,6 +175,20 @@ Loss of Cabin Environmental Control
 - **Approved By**: [Chief Safety Engineer]
 - **Status**: PLACEHOLDER
 
+## References
+
+### Safety Analysis Standards
+- [ARP4754B](https://www.sae.org/standards/content/arp4754b/) - Guidelines for Development of Civil Aircraft and Systems
+- [ARP4761](https://www.sae.org/standards/content/arp4761/) - Guidelines and Methods for Conducting Safety Assessment
+- [ARP5150](https://www.sae.org/standards/content/arp5150/) - Safety Assessment of Transport Airplanes in Commercial Service
+- [ISO 26262](https://www.iso.org/standard/68383.html) - Functional Safety (reference)
+- [IEC 61508](https://www.iec.ch/functionalsafety/) - Functional Safety (reference)
+
+### Safety Analysis Tools and Methods
+- [MIL-STD-882E](https://www.dau.edu/) - System Safety
+- [NASA Safety Manual](https://www.nasa.gov/offices/oce/llis/detail.html)
+- [NUREG-0492](https://www.nrc.gov/) - Fault Tree Handbook
+
 ## Document Control
 
 - **Version**: 1.0

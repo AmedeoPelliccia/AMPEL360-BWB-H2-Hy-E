@@ -81,7 +81,7 @@ State (16-dim) → Actor Network → Actions (4-dim) → Scrubber Control
 - **Failure Condition**: Reduced CO₂ capture (comfort impact only)
 - **Mitigation**: Baseline scrubbing continues without NN
 - **Safety Limits**: Hard constraints on all operating parameters
-- **V&V Status**: Complete per DO-178C Level D
+- **V&V Status**: Complete per [DO-178C](https://www.rtca.org/product/do-178c/) Level D
 
 ## Model Card
 

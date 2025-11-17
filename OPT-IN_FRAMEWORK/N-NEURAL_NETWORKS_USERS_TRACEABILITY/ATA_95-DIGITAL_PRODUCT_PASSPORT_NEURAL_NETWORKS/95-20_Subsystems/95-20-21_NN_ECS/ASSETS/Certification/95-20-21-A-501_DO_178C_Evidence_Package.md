@@ -59,6 +59,20 @@ This document contains the complete DO-178C Level C certification evidence packa
 
 [TODO: Complete SAS]
 
+## References
+
+### Regulatory Standards
+- [DO-178C](https://www.rtca.org/product/do-178c/) - Software Considerations in Airborne Systems
+- [DO-330](https://www.rtca.org/product/do-330/) - Software Tool Qualification Considerations
+- [DO-331](https://www.rtca.org/product/do-331/) - Model-Based Development Supplement
+- [DO-332](https://www.rtca.org/product/do-332/) - Object-Oriented Technology Supplement
+- [DO-333](https://www.rtca.org/product/do-333/) - Formal Methods Supplement
+
+### Regulatory Authorities
+- [EASA](https://www.easa.europa.eu/) - European Union Aviation Safety Agency
+- [FAA](https://www.faa.gov/) - Federal Aviation Administration
+- [Transport Canada](https://tc.canada.ca/en/aviation) - Civil Aviation Authority Canada
+
 ## Document Control
 
 - **Version**: 1.0

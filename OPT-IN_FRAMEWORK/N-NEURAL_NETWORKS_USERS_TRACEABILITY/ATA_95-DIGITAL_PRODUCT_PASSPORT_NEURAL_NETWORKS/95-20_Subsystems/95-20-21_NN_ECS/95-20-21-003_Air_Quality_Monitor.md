@@ -74,7 +74,7 @@ Input → 1D-CNN(64/128/256) → Transformer(4-head, 2-layer) → Dense(128) →
 - **DAL Level**: C (Hazardous)
 - **Failure Condition**: Undetected poor air quality could affect passenger health
 - **Mitigation**: Redundant sensors + direct sensor readouts to crew
-- **V&V Status**: Complete per DO-178C Level C
+- **V&V Status**: Complete per [DO-178C](https://www.rtca.org/product/do-178c/) Level C
 
 ## Model Card
 

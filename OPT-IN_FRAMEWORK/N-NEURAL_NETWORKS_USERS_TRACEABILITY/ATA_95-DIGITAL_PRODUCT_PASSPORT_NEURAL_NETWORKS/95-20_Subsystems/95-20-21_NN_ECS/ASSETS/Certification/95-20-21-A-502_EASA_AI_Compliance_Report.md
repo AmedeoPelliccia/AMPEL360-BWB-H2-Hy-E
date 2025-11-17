@@ -100,6 +100,20 @@ This document provides evidence of compliance with EASA Special Condition for Ar
 - **Certification Authority**: EASA
 - **Target Approval Date**: [TBD]
 
+## References
+
+### AI/ML Standards and Guidance
+- [EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/domains/innovation-digitalisation/artificial-intelligence/ai-roadmap)
+- [EASA Concept Paper: First usable guidance for Level 1 & 2 ML applications](https://www.easa.europa.eu/en/document-library/general-publications)
+- [FAA AI/ML Research](https://www.faa.gov/aircraft/air_cert/design_approvals/air_software)
+- [EUROCAE WG-114 (AI in Aviation)](https://www.eurocae.net/)
+- [RTCA SC-229 (AI Assurance)](https://www.rtca.org/)
+
+### Industry Organizations
+- [SAE G-34 (AI in Aviation)](https://www.sae.org/)
+- [IEEE Standards for AI](https://standards.ieee.org/)
+- [ISO/IEC JTC 1/SC 42 (Artificial Intelligence)](https://www.iso.org/committee/6794475.html)
+
 ## Document Control
 
 - **Version**: 1.0

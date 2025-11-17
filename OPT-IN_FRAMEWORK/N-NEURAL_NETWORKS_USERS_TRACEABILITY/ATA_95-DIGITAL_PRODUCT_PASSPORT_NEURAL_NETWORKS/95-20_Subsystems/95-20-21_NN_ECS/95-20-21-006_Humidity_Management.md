@@ -70,7 +70,7 @@ Input (10) → Dense(32) → Dense(24) → Dense(16) → Dense(8) → Output (2)
 - **DAL Level**: D (Minor)
 - **Failure Condition**: Discomfort but no safety impact
 - **Mitigation**: Manual crew override available
-- **V&V Status**: Complete per DO-178C Level D
+- **V&V Status**: Complete per [DO-178C](https://www.rtca.org/product/do-178c/) Level D
 
 ## Model Card
 

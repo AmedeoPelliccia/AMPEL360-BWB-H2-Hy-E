@@ -317,8 +317,9 @@ Quarterly trending for:
 - `95-20-21-008_Integration_with_ATA_21.md` - Interface specs
 - `95-20-21-802_Maintenance_Procedures.md` - Detailed procedures
 - `95-20-21-803_Troubleshooting_Guide.md` - Troubleshooting
-- ATA 21 AMM - Base ECS system
-- ATA 42 AMM - IMA system
+- [ATA iSpec 2200](https://www.ata.org/resources/specifications) ATA 21 AMM - Base ECS system
+- [ATA iSpec 2200](https://www.ata.org/resources/specifications) ATA 42 AMM - IMA system
+- [SAE AIR1168 (ECS Guidelines)](https://www.sae.org/standards/content/air1168/)
 
 ### Support Resources
 - Technical support: ecs-support@ampel360.aero
