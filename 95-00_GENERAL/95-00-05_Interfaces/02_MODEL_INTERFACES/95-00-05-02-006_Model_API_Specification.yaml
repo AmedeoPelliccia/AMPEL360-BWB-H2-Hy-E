@@ -1,0 +1,486 @@
+openapi: 3.0.3
+info:
+  title: AMPEL360 AI/ML Model API
+  description: |
+    REST API specification for AI/ML model inference and management in the
+    AMPEL360 BWB H2-Hy-E aircraft system.
+
+    **Security:** All endpoints require mTLS authentication and JWT authorization.
+    **Performance:** Target p99 latency < 100 ms for inference requests.
+    **Criticality:** DAL B (safety-critical predictions)
+
+  version: 2.0.0
+  contact:
+    name: AI/ML Integration Team
+    email: aiml-team@ampel360.com
+  license:
+    name: Proprietary
+    url: https://ampel360.com/license
+
+servers:
+  - url: https://aiml-api.ampel360.internal/v2
+    description: Production edge compute platform
+  - url: https://aiml-api-staging.ampel360.internal/v2
+    description: Staging environment
+  - url: http://localhost:8080/v2
+    description: Local development
+
+tags:
+  - name: Inference
+    description: Real-time model inference operations
+  - name: Model Management
+    description: Model deployment and lifecycle management
+  - name: Monitoring
+    description: Health, metrics, and performance monitoring
+  - name: Explainability
+    description: Model explainability and interpretability
+
+paths:
+  /inference/predict:
+    post:
+      summary: Execute model inference
+      description: |
+        Perform real-time inference using the specified model.
+        Supports both synchronous and asynchronous modes.
+      operationId: predict
+      tags:
+        - Inference
+      security:
+        - mTLS: []
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InferenceRequest'
+            examples:
+              h2_leak_prediction:
+                summary: H2 leak probability prediction
+                value:
+                  model_id: "h2_leak_predictor_v2.1"
+                  inputs:
+                    features:
+                      h2_pressure_bar: 325.5
+                      h2_temperature_kelvin: 22.3
+                      h2_level_percent: 87.2
+                      h2_flow_rate_kg_s: 12.5
+                      flight_phase: "CRUISE"
+                      altitude_ft: 35000
+                      airspeed_kts: 450
+                    context:
+                      flight_id: "FL-20251117-A3F8C2"
+                      timestamp: 1700000000.123456
+                  options:
+                    include_explanation: true
+                    confidence_threshold: 0.85
+      responses:
+        '200':
+          description: Inference successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InferenceResponse'
+              examples:
+                h2_leak_prediction_response:
+                  summary: Leak prediction response
+                  value:
+                    inference_id: "INF-20251117-A3F8C2-00142"
+                    model_id: "h2_leak_predictor_v2.1"
+                    model_version: "2.1.0"
+                    predictions:
+                      leak_probability: 0.02
+                      leak_severity: "NONE"
+                      time_to_leak_hours: null
+                    confidence: 0.97
+                    latency_ms: 42
+                    timestamp: 1700000000.165814
+                    explanation:
+                      method: "SHAP"
+                      top_features:
+                        - feature: "h2_pressure_bar"
+                          importance: 0.45
+                        - feature: "h2_temperature_kelvin"
+                          importance: 0.32
+                        - feature: "h2_flow_rate_kg_s"
+                          importance: 0.18
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+
+  /inference/batch:
+    post:
+      summary: Batch inference
+      description: Process multiple inference requests in a single batch
+      operationId: batchPredict
+      tags:
+        - Inference
+      security:
+        - mTLS: []
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchInferenceRequest'
+      responses:
+        '200':
+          description: Batch inference completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BatchInferenceResponse'
+
+  /models:
+    get:
+      summary: List available models
+      description: Retrieve list of deployed models
+      operationId: listModels
+      tags:
+        - Model Management
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [ACTIVE, INACTIVE, DEPRECATED]
+        - name: criticality
+          in: query
+          schema:
+            type: string
+            enum: [DAL_A, DAL_B, DAL_C, DAL_D, DAL_E]
+      responses:
+        '200':
+          description: Model list retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  models:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ModelInfo'
+
+  /models/{model_id}:
+    get:
+      summary: Get model information
+      description: Retrieve detailed information about a specific model
+      operationId: getModel
+      tags:
+        - Model Management
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/ModelId'
+      responses:
+        '200':
+          description: Model information retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelInfo'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /health:
+    get:
+      summary: Health check
+      description: Check API and model health status
+      operationId: healthCheck
+      tags:
+        - Monitoring
+      responses:
+        '200':
+          description: System healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthStatus'
+
+  /metrics:
+    get:
+      summary: Get performance metrics
+      description: Retrieve system and model performance metrics
+      operationId: getMetrics
+      tags:
+        - Monitoring
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Metrics retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Metrics'
+
+  /explainability/explain:
+    post:
+      summary: Generate explanation
+      description: Generate explanation for a specific prediction
+      operationId: explain
+      tags:
+        - Explainability
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExplanationRequest'
+      responses:
+        '200':
+          description: Explanation generated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Explanation'
+
+components:
+  securitySchemes:
+    mTLS:
+      type: mutualTLS
+      description: Mutual TLS authentication with client certificates
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token for authorization
+
+  parameters:
+    ModelId:
+      name: model_id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Unique model identifier
+      example: "h2_leak_predictor_v2.1"
+
+  schemas:
+    InferenceRequest:
+      type: object
+      required:
+        - model_id
+        - inputs
+      properties:
+        model_id:
+          type: string
+          description: Model identifier
+          example: "h2_leak_predictor_v2.1"
+        inputs:
+          type: object
+          description: Model input features and context
+          properties:
+            features:
+              type: object
+              description: Feature values (model-specific schema)
+            context:
+              type: object
+              description: Contextual metadata
+        options:
+          type: object
+          properties:
+            include_explanation:
+              type: boolean
+              default: false
+            confidence_threshold:
+              type: number
+              minimum: 0
+              maximum: 1
+              default: 0.5
+
+    InferenceResponse:
+      type: object
+      properties:
+        inference_id:
+          type: string
+          description: Unique inference identifier
+        model_id:
+          type: string
+        model_version:
+          type: string
+        predictions:
+          type: object
+          description: Model predictions (model-specific schema)
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+        latency_ms:
+          type: number
+        timestamp:
+          type: number
+        explanation:
+          $ref: '#/components/schemas/Explanation'
+
+    BatchInferenceRequest:
+      type: object
+      required:
+        - model_id
+        - batch
+      properties:
+        model_id:
+          type: string
+        batch:
+          type: array
+          items:
+            type: object
+            properties:
+              inputs:
+                type: object
+
+    BatchInferenceResponse:
+      type: object
+      properties:
+        batch_id:
+          type: string
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/InferenceResponse'
+
+    ModelInfo:
+      type: object
+      properties:
+        model_id:
+          type: string
+        name:
+          type: string
+        version:
+          type: string
+        status:
+          type: string
+          enum: [ACTIVE, INACTIVE, DEPRECATED]
+        criticality:
+          type: string
+          enum: [DAL_A, DAL_B, DAL_C, DAL_D, DAL_E]
+        description:
+          type: string
+        input_schema:
+          type: object
+        output_schema:
+          type: object
+        performance:
+          type: object
+          properties:
+            average_latency_ms:
+              type: number
+            p99_latency_ms:
+              type: number
+            throughput_rps:
+              type: number
+
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [HEALTHY, DEGRADED, UNHEALTHY]
+        timestamp:
+          type: number
+        components:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              status:
+                type: string
+              message:
+                type: string
+
+    Metrics:
+      type: object
+      properties:
+        inference_count:
+          type: integer
+        average_latency_ms:
+          type: number
+        error_rate:
+          type: number
+        model_metrics:
+          type: object
+
+    Explanation:
+      type: object
+      properties:
+        method:
+          type: string
+          enum: [SHAP, LIME, GRAD_CAM]
+        top_features:
+          type: array
+          items:
+            type: object
+            properties:
+              feature:
+                type: string
+              importance:
+                type: number
+
+    ExplanationRequest:
+      type: object
+      required:
+        - inference_id
+      properties:
+        inference_id:
+          type: string
+        method:
+          type: string
+          enum: [SHAP, LIME, GRAD_CAM]
+          default: SHAP
+
+    Error:
+      type: object
+      properties:
+        error_code:
+          type: string
+        message:
+          type: string
+        details:
+          type: object
+
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Authentication failed
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    TooManyRequests:
+      description: Rate limit exceeded
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    ServiceUnavailable:
+      description: Service temporarily unavailable
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+security:
+  - mTLS: []
+  - bearerAuth: []
