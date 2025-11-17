@@ -15,7 +15,7 @@ Each product aggregates:
 
 - **Parts** from [`ASSETS/PARTS/`](../../PARTS/)
 - **Models** from [`ASSETS/MODELS/`](../../MODELS/)
-- **BIM / CAD** from [`ASSETS/INSTALLATIONS/BIM_CAD_MODELS/`](../../INSTALLATIONS/BIM_CAD_MODELS/)
+- **BIM / CAD** from [`ASSETS/INSTALLATIONS/BIM_CAD_MODELS/`](../../../INSTALLATIONS/BIM_CAD_MODELS/)
 - **Drawings** from [`ASSETS/DRAWINGS/`](../../DRAWINGS/)
 - **Manuals / datasheets** under its own product folder
 
