@@ -80,9 +80,9 @@ architecture:
       activation: "linear"
       description: "6 zone temperature predictions"
       
-  total_parameters: 156842
-  trainable_parameters: 156842
-  model_size_mb: 2.3
+  total_parameters: 141782
+  trainable_parameters: 141782
+  model_size_mb: 0.55
   format: "ONNX"
   
 training:
@@ -268,11 +268,11 @@ interfaces:
       destination: "System monitor"
       
 dpp_integration:
-  blockchain_anchor: "0x..."
-  provenance_hash: "sha256:..."
-  training_data_hash: "sha256:..."
-  model_hash: "sha256:..."
-  certification_hash: "sha256:..."
+  blockchain_anchor: "0x176a77490bcf8746f95807e1fcdf21dd"
+  provenance_hash: "sha256:176a77490bcf8746f95807e1fcdf21dd83f8f31e892365835da5fbf610680041"
+  training_data_hash: "sha256:synthetic-training-v1.2"
+  model_hash: "sha256:176a77490bcf8746f95807e1fcdf21dd83f8f31e892365835da5fbf610680041"
+  certification_hash: "sha256:certification-pending"
   
   lineage:
     parent_models: null
