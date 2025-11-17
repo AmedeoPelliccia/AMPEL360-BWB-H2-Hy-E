@@ -1,0 +1,5 @@
+Contract_ID,Provider,Consumer,Data_Type,Schema_Version,SLA_Latency_ms,Status
+DC-001,Sensor_Array,Feature_Extractor,TimeSeries,v1.2.0,100,Active
+DC-002,Feature_Store,Model_Inference,FeatureVector,v2.0.1,50,Active
+DC-003,Model_Output,DPP_Storage,Prediction,v1.0.0,200,Active
+DC-004,Flight_Computer,Data_Logger,FlightData,v3.1.0,10,Active

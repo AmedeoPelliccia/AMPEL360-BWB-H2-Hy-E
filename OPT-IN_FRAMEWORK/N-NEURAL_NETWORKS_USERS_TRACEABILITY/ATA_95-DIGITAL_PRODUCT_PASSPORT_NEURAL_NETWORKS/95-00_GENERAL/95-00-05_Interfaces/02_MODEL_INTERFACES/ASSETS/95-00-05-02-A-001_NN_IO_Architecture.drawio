@@ -1,0 +1,11 @@
+<!-- DrawIO XML placeholder for NN I/O Architecture -->
+<mxfile host="app.diagrams.net">
+  <diagram id="nn-io" name="NN I/O Architecture">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

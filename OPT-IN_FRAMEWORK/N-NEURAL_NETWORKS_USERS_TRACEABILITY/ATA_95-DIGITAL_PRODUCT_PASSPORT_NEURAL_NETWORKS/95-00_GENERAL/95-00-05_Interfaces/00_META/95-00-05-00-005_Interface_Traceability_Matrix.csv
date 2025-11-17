@@ -1,0 +1,19 @@
+Interface_ID,Interface_Name,Source_System,Target_System,Requirement_ID,Test_Case_ID,Status,Criticality,Owner
+95-00-05-03-005,Operations Data Feed,ATA_02,ATA_95,RQ-95-01-001,TC-95-001,Active,Medium,Sys_Eng
+95-00-05-03-006,H2 Consumption Data,ATA_28,ATA_95,RQ-95-01-002,TC-95-002,Active,High,Fuel_Sys
+95-00-05-03-007,Recording Interface,ATA_31,ATA_95,RQ-95-01-003,TC-95-003,Active,High,Data_Eng
+95-00-05-03-008,IMA Integration,ATA_42,ATA_95,RQ-95-01-004,TC-95-004,Active,Critical,Avionics
+95-00-05-03-009,Maintenance Data,ATA_45,ATA_95,RQ-95-01-005,TC-95-005,Active,Medium,Maint_Sys
+95-28-IF-001,Tank Level Prediction,ATA_95,ATA_28,RQ-95-02-001,TC-95-020,In_Development,Critical,AI_Team
+95-31-IF-001,Event Logging API,ATA_95,ATA_31,RQ-95-02-002,TC-95-021,Active,High,Data_Eng
+95-42-IF-001,ARINC 664 AFDX,ATA_95,ATA_42,RQ-95-02-003,TC-95-022,Active,Critical,Avionics
+95-45-IF-001,Maintenance Tracking,ATA_95,ATA_45,RQ-95-02-004,TC-95-023,Active,Medium,Maint_Sys
+95-71-IF-001,Fuel Cell Performance,ATA_71,ATA_95,RQ-95-01-006,TC-95-006,Active,High,Power_Sys
+95-71-IF-002,Power Optimization,ATA_95,ATA_71,RQ-95-02-005,TC-95-024,In_Development,Medium,AI_Team
+95-96-IF-001,Training Data Pipeline,ATA_96,ATA_95,RQ-95-01-007,TC-95-007,Active,High,ML_Ops
+95-96-IF-002,Data Lineage,ATA_96,ATA_95,RQ-95-01-008,TC-95-008,Active,Critical,ML_Ops
+95-97-IF-001,Model Registry,ATA_97,ATA_95,RQ-95-01-009,TC-95-009,Active,High,ML_Ops
+95-97-IF-002,Model Deployment,ATA_97,ATA_95,RQ-95-01-010,TC-95-010,Active,Critical,ML_Ops
+95-98-IF-001,Runtime Monitoring,ATA_98,ATA_95,RQ-95-01-011,TC-95-011,Active,High,AI_Ops
+95-98-IF-002,Performance Metrics,ATA_98,ATA_95,RQ-95-01-012,TC-95-012,Active,Medium,AI_Ops
+95-98-IF-003,Drift Detection,ATA_98,ATA_95,RQ-95-02-006,TC-95-025,In_Development,Critical,AI_Ops

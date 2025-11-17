@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Model Provenance Schema",
+  "type": "object",
+  "properties": {
+    "model_id": {"type": "string"},
+    "training_dataset_hash": {"type": "string"},
+    "training_date": {"type": "string", "format": "date-time"},
+    "trainer": {"type": "string"},
+    "validation_results": {"type": "object"}
+  }
+}
