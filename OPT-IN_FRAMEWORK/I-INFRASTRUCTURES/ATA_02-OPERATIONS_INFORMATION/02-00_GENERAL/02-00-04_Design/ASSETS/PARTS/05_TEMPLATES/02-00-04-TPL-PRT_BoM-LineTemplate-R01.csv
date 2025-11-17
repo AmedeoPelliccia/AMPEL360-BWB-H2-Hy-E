@@ -1,0 +1,2 @@
+Item,Part_ID,PartCode,Category,ShortName,Description,Quantity,Unit,COTS_or_Custom,Supplier,Manufacturer,Manufacturer_PN,Unit_Mass_kg,Total_Mass_kg,Material,Finish,Status,Notes
+1,02-00-04-PRT-XXXX-####,####,MECH|ELEC|IT|GSE|STD,[ShortName],[Full description],1,EA,COTS|CUSTOM,[Supplier name],[Manufacturer],[Mfr P/N],0.000,0.000,[Material],[Finish],WORKING,[Additional notes]
