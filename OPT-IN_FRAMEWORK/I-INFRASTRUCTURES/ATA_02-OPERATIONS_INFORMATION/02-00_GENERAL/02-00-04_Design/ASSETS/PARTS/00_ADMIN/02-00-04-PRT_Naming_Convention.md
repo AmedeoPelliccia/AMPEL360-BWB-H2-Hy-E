@@ -74,7 +74,7 @@ Example: `02-00-04-PRT-MECH-0001_ConsoleSideBracket.step`
 ```
 
 Examples:
-* `02-00-04-PRT-MECH-0001_ConsoleSideBracket.prt` (Creo/Pro-E)
+* `02-00-04-PRT-MECH-0001_ConsoleSideBracket.prt` (Creo)
 * `02-00-04-PRT-MECH-0001_ConsoleSideBracket.sldprt` (SolidWorks)
 * `02-00-04-PRT-MECH-0001_ConsoleSideBracket.f3d` (Fusion 360)
 
