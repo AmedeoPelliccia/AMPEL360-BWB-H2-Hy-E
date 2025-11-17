@@ -1,15 +1,132 @@
 # Training Configuration for Temperature Predictor
+# Model ID: 95-20-21-A-101
+# Component: 95-20-21-002 Cabin Temperature Predictor
+
 model:
   name: "temp_predictor"
   version: "1.2"
-  
+  model_id: "95-20-21-A-101"
+  framework: "tensorflow"
+  framework_version: "2.14"
+  architecture:
+    type: "lstm_dense"
+    timesteps: 10
+    input_features: 24
+    output_zones: 6
+    layers:
+      - type: "LSTM"
+        units: 128
+        return_sequences: true
+        dropout: 0.2
+      - type: "LSTM"
+        units: 64
+        return_sequences: true
+        dropout: 0.2
+      - type: "LSTM"
+        units: 32
+        return_sequences: false
+        dropout: 0.1
+      - type: "Dense"
+        units: 16
+        activation: "relu"
+      - type: "Dense"
+        units: 8
+        activation: "relu"
+      - type: "Dense"
+        units: 6
+        activation: "linear"
+
+data:
+  dataset_id: "95-20-21-601_Cabin_Temp_10k_Flights"
+  train_path: "Data/Training_Datasets/95-20-21-601_Cabin_Temp_10k_Flights.parquet"
+  format: "parquet"
+  features: 24
+  timesteps: 10
+  target_zones: 6
+  shuffle: true
+  val_split: 0.1
+  test_split: 0.1
+  stratify: false
+  normalization:
+    type: "z_score"
+    apply_to:
+      - "cabin_temp_zones"
+      - "external_temp"
+      - "hvac_power"
+      - "airflow_rate"
+  windowing:
+    enabled: true
+    timesteps: 10
+    horizon_minutes: 5
+
 training:
   batch_size: 256
   epochs: 100
   learning_rate: 0.001
   optimizer: "adam"
-  
-data:
-  train_path: "Data/Training_Datasets/95-20-21-601_Cabin_Temp_10k_Flights.parquet"
-  val_split: 0.1
-  test_split: 0.1
+  loss: "mse"
+  metrics:
+    - "mae"
+  early_stopping:
+    enabled: true
+    monitor: "val_loss"
+    patience: 10
+    restore_best_weights: true
+  reduce_lr_on_plateau:
+    enabled: true
+    monitor: "val_loss"
+    factor: 0.5
+    patience: 5
+    min_lr: 0.000001
+  seed: 42
+  hardware:
+    accelerator: "gpu"
+    gpu_type: "V100"
+    mixed_precision: false
+
+export:
+  enabled: true
+  format: "onnx"
+  opset: 13
+  output_path: "../Models/Trained/temp_predictor_v1.2.onnx"
+  metadata:
+    model_id: "95-20-21-A-101"
+    subsystem: "95-20-21 NN_ECS"
+    dpp_link: "ASSETS/Model_Cards/95-20-21-A-101_Temp_Predictor_v1.2.yaml"
+
+logging:
+  log_dir: "Logs/temp_predictor_v1.2/"
+  tensorboard:
+    enabled: true
+    update_freq: "epoch"
+  checkpoints:
+    enabled: true
+    path: "Checkpoints/temp_predictor_v1.2/"
+    monitor: "val_loss"
+    save_best_only: true
+
+evaluation:
+  metrics:
+    - "mae"
+    - "rmse"
+    - "r2"
+  thresholds:
+    mae_max: 0.5          # °C
+    rmse_max: 0.7         # °C
+  report_path: "Reports/temp_predictor_v1.2_eval.json"
+
+governance:
+  owner: "AMPEL360 ML Engineering Team"
+  contact: "ml-engineering@ampel360.aero"
+  traceability:
+    spec_doc: "95-20-21-002_Cabin_Temp_Predictor.md"
+    model_card: "ASSETS/Model_Cards/95-20-21-A-101_Temp_Predictor_v1.2.yaml"
+    safety_doc: "95-20-21-009_Safety_and_Certification.md"
+  ai_assistance:
+    used: true
+    tools:
+      - "GitHub Copilot"
+      - "ChatGPT"
+    prompted_by: "Amedeo Pelliccia"
+    note: "Configuration drafted with AI assistance; subject to human review and approval."
+
