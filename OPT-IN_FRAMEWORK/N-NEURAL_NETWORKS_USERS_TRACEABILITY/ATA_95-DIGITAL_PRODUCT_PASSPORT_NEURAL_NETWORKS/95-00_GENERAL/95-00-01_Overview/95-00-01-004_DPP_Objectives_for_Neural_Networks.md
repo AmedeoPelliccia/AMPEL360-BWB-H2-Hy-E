@@ -318,25 +318,21 @@ In-Service Metrics → Maintenance Action
 ## 8. Roadmap & Phasing
 
 ### Phase 1: Foundation (2025 Q1-Q2)
-- [ ] DPP schema definition and tool development
-- [ ] Pilot implementation on 3 baseline models
-- [ ] EASA pre-application meeting (AI certification approach)
 
-### Phase 2: Scaling (2025 Q3-Q4)
-- [ ] DPP rollout to all 20+ neural network systems
-- [ ] Automated DPP generation integrated into CI/CD pipeline
-- [ ] First model update using DPP change control process
-
-### Phase 3: Certification (2026-2027)
-- [ ] Certification campaign for high-risk AI systems
-- [ ] Submission of DPP artifacts as compliance evidence
-- [ ] Authority concurrence on AI safety approach
-
-### Phase 4: Operations & Evolution (2028+)
-- [ ] Fleet-wide DPP deployment
-- [ ] In-service data analytics driving model improvements
-- [ ] Open-source publication of non-proprietary DPP tooling
-
+| Phase                                   | Timeline        | Task                                                      | Status     |
+|-----------------------------------------|-----------------|-----------------------------------------------------------|------------|
+| Phase 1: Foundation                     | 2025 Q1-Q2      | DPP schema definition and tool development                | Planned    |
+| Phase 1: Foundation                     | 2025 Q1-Q2      | Pilot implementation on 3 baseline models                 | Planned    |
+| Phase 1: Foundation                     | 2025 Q1-Q2      | EASA pre-application meeting (AI certification approach)  | Planned    |
+| Phase 2: Scaling                        | 2025 Q3-Q4      | DPP rollout to all 20+ neural network systems             | Planned    |
+| Phase 2: Scaling                        | 2025 Q3-Q4      | Automated DPP generation integrated into CI/CD pipeline   | Planned    |
+| Phase 2: Scaling                        | 2025 Q3-Q4      | First model update using DPP change control process       | Planned    |
+| Phase 3: Certification                  | 2026-2027       | Certification campaign for high-risk AI systems           | Planned    |
+| Phase 3: Certification                  | 2026-2027       | Submission of DPP artifacts as compliance evidence        | Planned    |
+| Phase 3: Certification                  | 2026-2027       | Authority concurrence on AI safety approach               | Planned    |
+| Phase 4: Operations & Evolution         | 2028+           | Fleet-wide DPP deployment                                 | Planned    |
+| Phase 4: Operations & Evolution         | 2028+           | In-service data analytics driving model improvements      | Planned    |
+| Phase 4: Operations & Evolution         | 2028+           | Open-source publication of non-proprietary DPP tooling    | Planned    |
 ---
 
 ## 9. Document Control
