@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AMPEL360 Neural Network Subsystems Registry",
+  "version": "1.0",
+  "last_updated": "2025-11-17",
+  "subsystems": [
+    {
+      "id": "95-20-01",
+      "name": "NN_Core_Platform",
+      "description": "Core neural network infrastructure providing model registry, inference runtime, and monitoring",
+      "status": "active",
+      "criticality": "DAL-A",
+      "owner": "AI Platform Team",
+      "parent_ata": "ATA 95",
+      "dependencies": ["95-20-02", "95-00-11", "95-20-42"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-01",
+        "health": "https://ampel360.aero/health/95-20-01",
+        "metrics": "https://ampel360.aero/metrics/95-20-01"
+      },
+      "maturity": "TRL9",
+      "certification_status": "operational"
+    },
+    {
+      "id": "95-20-02",
+      "name": "NN_DPP_Blockchain",
+      "description": "Digital Product Passport with blockchain-based model provenance and traceability",
+      "status": "active",
+      "criticality": "DAL-B",
+      "owner": "Blockchain Team",
+      "parent_ata": "ATA 95",
+      "dependencies": ["95-20-01", "95-00-12", "95-90"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-02",
+        "blockchain": "https://ampel360.aero/chain/95-20-02",
+        "query": "https://ampel360.aero/query/95-20-02"
+      },
+      "maturity": "TRL9",
+      "certification_status": "operational"
+    },
+    {
+      "id": "95-20-21",
+      "name": "NN_ECS",
+      "description": "Environmental Control System neural networks for cabin temperature, air quality, and HVAC optimization",
+      "status": "active",
+      "criticality": "DAL-C",
+      "owner": "Environmental Systems Team",
+      "parent_ata": "ATA 21",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-45", "95-20-31", "95-20-80"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-21",
+        "inference": "https://ampel360.aero/predict/95-20-21"
+      },
+      "maturity": "TRL7",
+      "certification_status": "development"
+    },
+    {
+      "id": "95-20-27",
+      "name": "NN_Flight_Controls",
+      "description": "Flight control neural networks for aerodynamic prediction, gust alleviation, and control surface optimization",
+      "status": "active",
+      "criticality": "DAL-A",
+      "owner": "Flight Controls Team",
+      "parent_ata": "ATA 27",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-45", "95-20-31", "95-20-53", "95-20-57", "95-20-70"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-27",
+        "inference": "https://ampel360.aero/predict/95-20-27"
+      },
+      "maturity": "TRL9",
+      "certification_status": "certification"
+    },
+    {
+      "id": "95-20-28",
+      "name": "NN_Fuel_System",
+      "description": "H₂ fuel system neural networks for level prediction, boiloff estimation, and fuel optimization",
+      "status": "active",
+      "criticality": "DAL-B",
+      "owner": "Fuel Systems Team",
+      "parent_ata": "ATA 28",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-45", "95-20-31", "95-20-70", "95-20-80"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-28",
+        "inference": "https://ampel360.aero/predict/95-20-28"
+      },
+      "maturity": "TRL8",
+      "certification_status": "validation"
+    },
+    {
+      "id": "95-20-31",
+      "name": "NN_Recording_Systems",
+      "description": "Recording system neural networks for anomaly detection, event classification, and data compression",
+      "status": "active",
+      "criticality": "DAL-C",
+      "owner": "Data Recording Team",
+      "parent_ata": "ATA 31",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-45"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-31",
+        "inference": "https://ampel360.aero/predict/95-20-31"
+      },
+      "maturity": "TRL7",
+      "certification_status": "development"
+    },
+    {
+      "id": "95-20-42",
+      "name": "NN_IMA_Integration",
+      "description": "IMA integration neural networks for partition management, AFDX traffic prediction, and health monitoring",
+      "status": "active",
+      "criticality": "DAL-B",
+      "owner": "Avionics Integration Team",
+      "parent_ata": "ATA 42",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-45"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-42",
+        "inference": "https://ampel360.aero/predict/95-20-42"
+      },
+      "maturity": "TRL7",
+      "certification_status": "development"
+    },
+    {
+      "id": "95-20-45",
+      "name": "NN_Maintenance",
+      "description": "Maintenance neural networks for predictive maintenance, RUL estimation, and fault diagnosis",
+      "status": "active",
+      "criticality": "DAL-C",
+      "owner": "Maintenance Systems Team",
+      "parent_ata": "ATA 45",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-31", "95-00-11"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-45",
+        "inference": "https://ampel360.aero/predict/95-20-45"
+      },
+      "maturity": "TRL7",
+      "certification_status": "development"
+    },
+    {
+      "id": "95-20-49",
+      "name": "NN_APU",
+      "description": "APU neural networks for performance prediction and health monitoring",
+      "status": "active",
+      "criticality": "DAL-D",
+      "owner": "Auxiliary Power Team",
+      "parent_ata": "ATA 49",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-45", "95-20-31", "95-20-80"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-49",
+        "inference": "https://ampel360.aero/predict/95-20-49"
+      },
+      "maturity": "TRL6",
+      "certification_status": "conceptual"
+    },
+    {
+      "id": "95-20-53",
+      "name": "NN_Structures",
+      "description": "Structural neural networks (GNN) for health monitoring, load distribution, and fatigue estimation",
+      "status": "active",
+      "criticality": "DAL-B",
+      "owner": "Structures Team",
+      "parent_ata": "ATA 53",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-27", "95-20-45", "95-20-31", "95-20-57"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-53",
+        "inference": "https://ampel360.aero/predict/95-20-53"
+      },
+      "maturity": "TRL7",
+      "certification_status": "development"
+    },
+    {
+      "id": "95-20-57",
+      "name": "NN_Wing_Systems",
+      "description": "Wing system neural networks (LSTM, vision) for flutter prediction, ice detection, and load alleviation",
+      "status": "active",
+      "criticality": "DAL-A",
+      "owner": "Wing Systems Team",
+      "parent_ata": "ATA 57",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-27", "95-20-53", "95-20-45", "95-20-31"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-57",
+        "inference": "https://ampel360.aero/predict/95-20-57"
+      },
+      "maturity": "TRL9",
+      "certification_status": "certification"
+    },
+    {
+      "id": "95-20-70",
+      "name": "NN_Propulsion",
+      "description": "Propulsion neural networks for engine performance modeling, fuel cell optimization, and thrust prediction",
+      "status": "active",
+      "criticality": "DAL-A",
+      "owner": "Propulsion Team",
+      "parent_ata": "ATA 70-79",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-28", "95-20-80", "95-20-45", "95-20-31"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-70",
+        "inference": "https://ampel360.aero/predict/95-20-70"
+      },
+      "maturity": "TRL8",
+      "certification_status": "validation"
+    },
+    {
+      "id": "95-20-80",
+      "name": "NN_Energy_Systems",
+      "description": "Energy system neural networks for power load prediction, battery SOH estimation, and energy management",
+      "status": "active",
+      "criticality": "DAL-B",
+      "owner": "Energy Systems Team",
+      "parent_ata": "ATA 80",
+      "dependencies": ["95-20-01", "95-20-02", "95-20-42", "95-20-70", "95-20-28", "95-20-49", "95-20-45", "95-20-31", "95-20-21"],
+      "endpoints": {
+        "mcp": "https://ampel360.aero/mcp/95-20-80",
+        "inference": "https://ampel360.aero/predict/95-20-80"
+      },
+      "maturity": "TRL7",
+      "certification_status": "development"
+    }
+  ],
+  "metadata": {
+    "total_subsystems": 13,
+    "dal_a_count": 4,
+    "dal_b_count": 5,
+    "dal_c_count": 3,
+    "dal_d_count": 1,
+    "discovery_endpoint": "https://ampel360.aero/mcp/registry",
+    "schema_version": "1.0"
+  }
+}

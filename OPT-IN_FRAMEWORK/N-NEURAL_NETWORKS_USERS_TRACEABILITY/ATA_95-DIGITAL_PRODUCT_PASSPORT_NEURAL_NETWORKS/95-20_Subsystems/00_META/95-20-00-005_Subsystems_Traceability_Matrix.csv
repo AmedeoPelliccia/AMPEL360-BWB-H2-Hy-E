@@ -1,0 +1,41 @@
+Subsystem_ID,Subsystem_Name,Requirement_ID,Component_ID,V&V_Document,Certification_Evidence,Parent_ATA,Notes
+95-20-01,NN_Core_Platform,95-00-03-REQ-001,95-00-13-C-001,95-00-07-VV-001,95-00-10-CERT-001,ATA 95,Core infrastructure for all NN subsystems
+95-20-01,NN_Core_Platform,95-00-03-REQ-002,95-00-13-C-001,95-00-07-VV-002,95-00-10-CERT-001,ATA 95,Model registry functionality
+95-20-01,NN_Core_Platform,95-00-03-REQ-003,95-00-13-C-001,95-00-07-VV-003,95-00-10-CERT-001,ATA 95,Inference runtime performance
+95-20-02,NN_DPP_Blockchain,95-00-03-REQ-004,95-00-13-C-002,95-00-07-VV-004,95-00-10-CERT-002,ATA 95,Blockchain provenance chain
+95-20-02,NN_DPP_Blockchain,95-00-03-REQ-005,95-00-13-C-002,95-00-07-VV-005,95-00-10-CERT-002,ATA 95,Smart contract verification
+95-20-02,NN_DPP_Blockchain,95-00-03-REQ-006,95-00-13-C-002,95-00-07-VV-006,95-00-10-CERT-002,ATA 95,Query interface for audits
+95-20-21,NN_ECS,95-00-03-REQ-021,95-00-13-C-021,95-00-07-VV-021,95-00-10-CERT-021,ATA 21,Cabin temperature prediction
+95-20-21,NN_ECS,95-00-03-REQ-022,95-00-13-C-021,95-00-07-VV-022,95-00-10-CERT-021,ATA 21,Air quality monitoring
+95-20-21,NN_ECS,95-00-03-REQ-023,95-00-13-C-021,95-00-07-VV-023,95-00-10-CERT-021,ATA 21,HVAC optimization
+95-20-27,NN_Flight_Controls,95-00-03-REQ-027,95-00-13-C-027,95-00-07-VV-027,95-00-10-CERT-027,ATA 27,Aerodynamic predictor (CFD surrogate)
+95-20-27,NN_Flight_Controls,95-00-03-REQ-028,95-00-13-C-027,95-00-07-VV-028,95-00-10-CERT-027,ATA 27,Control surface optimization
+95-20-27,NN_Flight_Controls,95-00-03-REQ-029,95-00-13-C-027,95-00-07-VV-029,95-00-10-CERT-027,ATA 27,Gust load alleviation
+95-20-27,NN_Flight_Controls,95-00-03-REQ-030,95-00-13-C-027,95-00-07-VV-030,95-00-10-CERT-027,ATA 27,Failover to conventional laws (<10ms)
+95-20-28,NN_Fuel_System,95-00-03-REQ-031,95-00-13-C-028,95-00-07-VV-031,95-00-10-CERT-028,ATA 28,H2 level prediction (±2%)
+95-20-28,NN_Fuel_System,95-00-03-REQ-032,95-00-13-C-028,95-00-07-VV-032,95-00-10-CERT-028,ATA 28,Boiloff rate estimation
+95-20-28,NN_Fuel_System,95-00-03-REQ-033,95-00-13-C-028,95-00-07-VV-033,95-00-10-CERT-028,ATA 28,Fuel optimization (5% efficiency)
+95-20-28,NN_Fuel_System,95-00-03-REQ-034,95-00-13-C-028,95-00-07-VV-034,95-00-10-CERT-028,ATA 28,Leak detection integration
+95-20-31,NN_Recording_Systems,95-00-03-REQ-035,95-00-13-C-031,95-00-07-VV-035,95-00-10-CERT-031,ATA 31,Anomaly detection (99.5% recall)
+95-20-31,NN_Recording_Systems,95-00-03-REQ-036,95-00-13-C-031,95-00-07-VV-036,95-00-10-CERT-031,ATA 31,Event classification
+95-20-31,NN_Recording_Systems,95-00-03-REQ-037,95-00-13-C-031,95-00-07-VV-037,95-00-10-CERT-031,ATA 31,Data compression (10:1 ratio lossless)
+95-20-42,NN_IMA_Integration,95-00-03-REQ-038,95-00-13-C-042,95-00-07-VV-038,95-00-10-CERT-042,ATA 42,Neural partition manager (ARINC 653)
+95-20-42,NN_IMA_Integration,95-00-03-REQ-039,95-00-13-C-042,95-00-07-VV-039,95-00-10-CERT-042,ATA 42,AFDX traffic prediction
+95-20-42,NN_IMA_Integration,95-00-03-REQ-040,95-00-13-C-042,95-00-07-VV-040,95-00-10-CERT-042,ATA 42,Health monitoring framework
+95-20-45,NN_Maintenance,95-00-03-REQ-041,95-00-13-C-045,95-00-07-VV-041,95-00-10-CERT-045,ATA 45,Predictive maintenance (500 FH horizon)
+95-20-45,NN_Maintenance,95-00-03-REQ-042,95-00-13-C-045,95-00-07-VV-042,95-00-10-CERT-045,ATA 45,RUL estimation
+95-20-45,NN_Maintenance,95-00-03-REQ-043,95-00-13-C-045,95-00-07-VV-043,95-00-10-CERT-045,ATA 45,Fault diagnosis (85% accuracy)
+95-20-49,NN_APU,95-00-03-REQ-044,95-00-13-C-049,95-00-07-VV-044,95-00-10-CERT-049,ATA 49,APU performance prediction
+95-20-49,NN_APU,95-00-03-REQ-045,95-00-13-C-049,95-00-07-VV-045,95-00-10-CERT-049,ATA 49,APU health monitoring
+95-20-53,NN_Structures,95-00-03-REQ-046,95-00-13-C-053,95-00-07-VV-046,95-00-10-CERT-053,ATA 53,Structural health monitoring (GNN)
+95-20-53,NN_Structures,95-00-03-REQ-047,95-00-13-C-053,95-00-07-VV-047,95-00-10-CERT-053,ATA 53,Load distribution prediction
+95-20-53,NN_Structures,95-00-03-REQ-048,95-00-13-C-053,95-00-07-VV-048,95-00-10-CERT-053,ATA 53,Fatigue estimation
+95-20-57,NN_Wing_Systems,95-00-03-REQ-049,95-00-13-C-057,95-00-07-VV-049,95-00-10-CERT-057,ATA 57,Flutter prediction (LSTM 10s ahead)
+95-20-57,NN_Wing_Systems,95-00-03-REQ-050,95-00-13-C-057,95-00-07-VV-050,95-00-10-CERT-057,ATA 57,Ice detection (vision 95% accuracy)
+95-20-57,NN_Wing_Systems,95-00-03-REQ-051,95-00-13-C-057,95-00-07-VV-051,95-00-10-CERT-057,ATA 57,Load alleviation
+95-20-70,NN_Propulsion,95-00-03-REQ-052,95-00-13-C-070,95-00-07-VV-052,95-00-10-CERT-070,ATA 70,Engine performance modeling
+95-20-70,NN_Propulsion,95-00-03-REQ-053,95-00-13-C-070,95-00-07-VV-053,95-00-10-CERT-070,ATA 70,Fuel cell optimizer
+95-20-70,NN_Propulsion,95-00-03-REQ-054,95-00-13-C-070,95-00-07-VV-054,95-00-10-CERT-070,ATA 70,Thrust prediction
+95-20-80,NN_Energy_Systems,95-00-03-REQ-055,95-00-13-C-080,95-00-07-VV-055,95-00-10-CERT-080,ATA 80,Power load prediction (5 min ahead)
+95-20-80,NN_Energy_Systems,95-00-03-REQ-056,95-00-13-C-080,95-00-07-VV-056,95-00-10-CERT-080,ATA 80,Battery SOH estimation
+95-20-80,NN_Energy_Systems,95-00-03-REQ-057,95-00-13-C-080,95-00-07-VV-057,95-00-10-CERT-080,ATA 80,Energy management optimization

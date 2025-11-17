@@ -1,0 +1,138 @@
+# 95-20-21 — NN_ECS
+
+## Subsystem Metadata
+
+```yaml
+subsystem_id: "95-20-21"
+name: "NN_ECS"
+description: "Environmental Control System neural networks for cabin temperature prediction, air quality monitoring, and HVAC optimization"
+parent_ata: "ATA 21"
+criticality: "DAL-C"
+status: "active"
+version: "1.0"
+last_updated: "2025-11-17"
+```
+
+## Purpose
+
+Environmental Control System neural networks for cabin temperature prediction, air quality monitoring, and HVAC optimization
+
+## Key Capabilities
+
+- Cabin Temperature Prediction: ±0.5°C accuracy
+- Air Quality Monitoring: CO₂, humidity, contaminants
+- HVAC Optimization: 15% energy reduction
+- Integration: ATA 21 environmental control systems
+
+## Architecture
+
+### Components
+
+See individual component documents:
+- `95-20-21-001_*_Overview.md` — Architecture and overview
+- `95-20-21-002_*` through `95-20-21-00X_*` — Individual components
+- `95-20-21-005_Integration_with_ATA 21.md` — Integration with parent ATA chapter
+
+### ASSETS
+
+- Diagrams: `ASSETS/95-20-21-A-001_*.drawio`, `ASSETS/95-20-21-A-002_*.svg`
+- Configuration: `ASSETS/95-20-21-A-003_*.json`
+- Model Cards: `ASSETS/Model_Cards/95-20-21-A-2XX_*.yaml`
+
+## Integration
+
+### Dependencies
+
+See `../95-20-00-003_Cross_ATA_Dependencies.csv` for complete dependency matrix.
+
+**Primary Dependencies**:
+- 95-20-01 (NN Core Platform): Model deployment and inference
+- 95-20-02 (NN DPP Blockchain): Model provenance
+- 95-20-42 (NN IMA Integration): Compute resources
+
+### Interface to Parent ATA
+
+**Parent ATA**: ATA 21
+
+- **Input Sensors**: See `95-20-21-005_Integration_with_ATA 21.md`
+- **Control Outputs**: See `95-20-21-005_Integration_with_ATA 21.md`
+- **Data Schema**: Defined in 95-90 Tables/Schemas
+
+## Operational Context
+
+### Design Assurance Level
+
+**Criticality**: DAL-C
+
+### Deployment
+
+- **Runtime Environment**: IMA Partition (via 95-20-42)
+- **Latency Requirements**: See component specifications
+- **Resource Allocation**: See 95-20-42 IMA Integration
+
+## CAOS Integration
+
+### Discovery
+
+This subsystem is registered in:
+- `../00_META/95-20-00-006_Subsystem_Registry.json`
+- `../00_META/95-20-00-007_CAOS_Subsystems_Hooks.md`
+
+### MCP Endpoints
+
+- **Capability**: `/.well-known/mcp/capability.json`
+- **Health**: `/health`
+- **Inference**: `/v1/predict`
+- **Metrics**: `/metrics`
+- **Models**: `/v1/models`
+
+## Model Information
+
+### Active Models
+
+See `ASSETS/Model_Cards/` for detailed model cards.
+
+Each model card follows the format:
+- `95-20-21-A-2XX_ModelName_vX.Y.yaml`
+
+### Model Lifecycle
+
+1. **Training**: Offline with [95-00-13 component data](../../95-00_GENERAL/95-00-13_Subsystems_Components/)
+2. **Validation**: Per [95-00-07 V&V procedures](../../95-00_GENERAL/95-00-07_V_AND_V/)
+3. **Deployment**: Via [95-20-01 model registry](../95-20-01_NN_Core_Platform/)
+4. **Monitoring**: Real-time via [95-20-01 monitoring framework](../95-20-01_NN_Core_Platform/)
+5. **Provenance**: Logged to [95-20-02 blockchain](../95-20-02_NN_DPP_Blockchain/)
+
+## Certification
+
+### Compliance
+
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)**: Software DAL-C
+- **[DO-333](https://www.rtca.org/content/standards-guidance-materials)**: Model-based development
+- **[EASA MOC SC-AI](https://www.easa.europa.eu/en/document-library/acceptable-means-compliance-and-guidance-materials/special-condition-sc-ai)**: AI/ML certification guidance
+- **[FAA AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/)**: Airborne software
+
+### Evidence
+
+Certification evidence is maintained in:
+- [95-00-10_Certification](../../95-00_GENERAL/95-00-10_Certification/)
+- [95-20-02 blockchain provenance chain](../95-20-02_NN_DPP_Blockchain/)
+
+## References
+
+- [95-20-00-001_Subsystems_Overview.md](../95-20-00-001_Subsystems_Overview.md) — Overall architecture
+- [95-20-00-002_Subsystems_Integration_Map.md](../95-20-00-002_Subsystems_Integration_Map.md) — Integration patterns
+- [95-20-00-003_Cross_ATA_Dependencies.csv](../95-20-00-003_Cross_ATA_Dependencies.csv) — Dependencies
+- [00_META/95-20-00-004_Subsystems_Taxonomy.md](../00_META/95-20-00-004_Subsystems_Taxonomy.md) — Classification
+- [ATA 21](../../..) — Parent ATA chapter documentation
+
+## Document Control
+
+- **Owner**: AMPEL360 NN_ECS Team
+- **Version**: 1.0
+- **Status**: Active
+- **Classification**: Technical Reference
+
+---
+
+**For detailed component specifications, see individual documents in this directory.**
