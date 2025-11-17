@@ -179,13 +179,17 @@ certification:
     - standard: "DO-178C"
       level: "C"
       status: "Complete"
+      url: "https://www.rtca.org/products/do-178c/"
     - standard: "DO-333"
       level: "Formal Methods"
       status: "Complete"
+      url: "https://www.rtca.org/products/do-333/"
     - standard: "EASA SC-AI"
       status: "Complete"
+      url: "https://www.easa.europa.eu/en/document-library/special-conditions/special-condition-artificial-intelligence-easa-sc-ai"
     - standard: "FAA AC 20-115D"
       status: "Complete"
+      url: "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1026665"
       
   verification:
     requirements_coverage: 1.0
@@ -341,8 +345,14 @@ references:
     - "95-20-21-A-103_HVAC_Optimizer_v2.1"
     
   papers:
-    - "LSTM Networks for Time Series Prediction (Hochreiter & Schmidhuber, 1997)"
-    - "Aviation Environmental Control Systems (SAE AIR1168)"
+    - title: "Long Short-Term Memory"
+      authors: "Hochreiter, S.; Schmidhuber, J."
+      year: 1997
+      venue: "Neural Computation"
+      url: "https://doi.org/10.1162/neco.1997.9.8.1735"
+    - title: "Aviation Environmental Control Systems"
+      standard: "SAE AIR1168"
+      url: "https://www.sae.org/standards/content/air1168/"
     
 contact:
   owner: "AMPEL360 ML Engineering Team"
@@ -355,3 +365,11 @@ document_control:
   last_updated: "2025-11-17"
   approved_by: "Chief Engineer - AI Systems"
   approval_date: "2025-02-01"
+  ai_assistance:
+    used: true
+    tools:
+      - "GitHub Copilot"
+      - "ChatGPT"
+    prompted_by: "Amedeo Pelliccia"
+    note: "Model card editing and hyperlinking supported by AI; content subject to human review and formal approval."
+
