@@ -1,0 +1,13 @@
+# Deployment Configuration
+runtime:
+  platform: "95-20-01"
+  format: "onnx"
+  optimization_level: 3
+  
+resources:
+  memory_mb: 256
+  cpu_cores: 1.0
+  
+monitoring:
+  enabled: true
+  metrics_endpoint: "/metrics"

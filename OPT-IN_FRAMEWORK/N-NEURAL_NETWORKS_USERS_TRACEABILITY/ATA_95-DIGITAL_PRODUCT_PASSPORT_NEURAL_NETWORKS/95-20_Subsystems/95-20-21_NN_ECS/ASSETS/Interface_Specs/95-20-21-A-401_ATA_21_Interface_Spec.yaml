@@ -1,0 +1,15 @@
+# Interface Specification Template
+# Complete interface specifications should be documented here
+
+interface_specification:
+  id: "95-20-21-A-XXX"
+  name: "Interface Name"
+  version: "1.0"
+  
+signals: []
+protocols: []
+timing: {}
+
+document_control:
+  status: "PLACEHOLDER"
+  last_updated: "2025-11-17"

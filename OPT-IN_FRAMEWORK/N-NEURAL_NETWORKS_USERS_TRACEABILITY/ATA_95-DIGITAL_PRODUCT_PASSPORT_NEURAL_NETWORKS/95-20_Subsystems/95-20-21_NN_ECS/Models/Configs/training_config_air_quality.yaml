@@ -1,0 +1,10 @@
+# Training Configuration for Air Quality Monitor
+model:
+  name: "air_quality_monitor"
+  version: "1.0"
+  
+training:
+  batch_size: 128
+  epochs: 80
+  learning_rate: 0.0005
+  optimizer: "adamw"

@@ -1,0 +1,15 @@
+# Training Configuration for Temperature Predictor
+model:
+  name: "temp_predictor"
+  version: "1.2"
+  
+training:
+  batch_size: 256
+  epochs: 100
+  learning_rate: 0.001
+  optimizer: "adam"
+  
+data:
+  train_path: "Data/Training_Datasets/95-20-21-601_Cabin_Temp_10k_Flights.parquet"
+  val_split: 0.1
+  test_split: 0.1
