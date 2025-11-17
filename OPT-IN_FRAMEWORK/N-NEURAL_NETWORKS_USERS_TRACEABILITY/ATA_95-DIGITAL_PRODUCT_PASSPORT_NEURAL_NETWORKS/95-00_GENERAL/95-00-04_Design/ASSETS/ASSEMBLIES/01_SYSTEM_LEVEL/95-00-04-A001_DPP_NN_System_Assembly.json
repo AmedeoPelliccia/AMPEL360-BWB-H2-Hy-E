@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DPP+NN System Assembly",
+  "assemblyId": "95-00-04-A001",
+  "version": "1.0",
+  "status": "WORKING",
+  "type": "system",
+  "description": "Top-level system assembly for Digital Product Passport and Neural Networks integration",
+  
+  "constituents": [
+    {
+      "assemblyId": "95-00-04-A010",
+      "name": "Model Lifecycle",
+      "type": "subsystem",
+      "criticality": "high",
+      "certificationLevel": "DAL-B"
+    },
+    {
+      "assemblyId": "95-00-04-A020",
+      "name": "Data Pipeline",
+      "type": "subsystem",
+      "criticality": "medium",
+      "certificationLevel": "DAL-C"
+    },
+    {
+      "assemblyId": "95-00-04-A030",
+      "name": "Runtime Inference",
+      "type": "subsystem",
+      "criticality": "high",
+      "certificationLevel": "DAL-B"
+    },
+    {
+      "assemblyId": "95-00-04-A040",
+      "name": "Monitoring and Telemetry",
+      "type": "subsystem",
+      "criticality": "medium",
+      "certificationLevel": "DAL-C"
+    },
+    {
+      "assemblyId": "95-00-04-A050",
+      "name": "Blockchain DPP",
+      "type": "subsystem",
+      "criticality": "medium",
+      "certificationLevel": "DAL-C"
+    }
+  ],
+  
+  "interfaces": {
+    "internal": [
+      {
+        "id": "IF-ATA-42",
+        "name": "IMA Neural Partition",
+        "protocol": "ARINC 653",
+        "dataRate": "100 Hz",
+        "criticality": "high"
+      },
+      {
+        "id": "IF-ATA-31",
+        "name": "Flight Data Recorder",
+        "protocol": "ARINC 767",
+        "dataRate": "10 Hz",
+        "criticality": "medium"
+      },
+      {
+        "id": "IF-ATA-28",
+        "name": "H2 Fuel System",
+        "protocol": "ARINC 429",
+        "dataRate": "50 Hz",
+        "criticality": "high"
+      }
+    ],
+    "external": [
+      {
+        "id": "IF-GROUND-OPS",
+        "name": "Ground Operations",
+        "protocol": "ACARS/SATCOM",
+        "security": "TLS 1.3",
+        "criticality": "medium"
+      },
+      {
+        "id": "IF-OEM-PORTAL",
+        "name": "OEM Certification Portal",
+        "protocol": "HTTPS REST",
+        "security": "OAuth 2.0",
+        "criticality": "low"
+      }
+    ]
+  },
+  
+  "requirements": [
+    {
+      "id": "RQ-95-03-001",
+      "description": "Neural network lifecycle management",
+      "verification": "System integration testing"
+    },
+    {
+      "id": "RQ-95-03-002",
+      "description": "Digital product passport integration",
+      "verification": "Blockchain verification tests"
+    },
+    {
+      "id": "RQ-95-03-005",
+      "description": "Blockchain provenance anchoring",
+      "verification": "Cryptographic validation"
+    },
+    {
+      "id": "RQ-95-03-008",
+      "description": "Cross-ATA interface compatibility",
+      "verification": "Interface conformance testing"
+    }
+  ],
+  
+  "certification": {
+    "standards": [
+      {
+        "name": "DO-178C",
+        "level": "DAL-B",
+        "applicableTo": ["A030", "A031", "A032", "A033"]
+      },
+      {
+        "name": "DO-254",
+        "level": "DAL-B",
+        "applicableTo": ["NPU hardware interfaces"]
+      },
+      {
+        "name": "EU AI Act",
+        "level": "High-risk",
+        "applicableTo": ["All neural network components"]
+      }
+    ]
+  },
+  
+  "metadata": {
+    "originator": "AI prompted by Amedeo Pelliccia",
+    "created": "2025-11-17",
+    "lastModified": "2025-11-17",
+    "toolchain": "GitHub Copilot + MCP Doc Control Server",
+    "relatedDocuments": [
+      "95-00-04-A001_DPP_NN_System_Assembly.md",
+      "DESIGN_PRINCIPLES.md",
+      "ARCHITECTURE_OVERVIEW.md"
+    ]
+  }
+}

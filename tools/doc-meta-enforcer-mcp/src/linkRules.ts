@@ -70,6 +70,24 @@ export const linkRules: LinkRule[] = [
     description: "ATA 95 - Digital Product Passport & Neural Networks"
   },
 
+  // ========== Internal References - ATA 95 Design Assemblies ==========
+  
+  {
+    pattern: /(?<!\[)\b(95-00-04-A\d{3})\b(?!\]\()/g,
+    replacement: "[$1](../95-00_GENERAL/95-00-04_Design/ASSETS/ASSEMBLIES/**/$1_*.md)",
+    description: "ATA 95 Design Assembly reference (A-series)"
+  },
+  {
+    pattern: /(?<!\[)\b(95-00-04-P\d{3})\b(?!\]\()/g,
+    replacement: "[$1](../95-00_GENERAL/95-00-04_Design/ASSETS/PARTS/**/$1_*.md)",
+    description: "ATA 95 Design Part reference (P-series)"
+  },
+  {
+    pattern: /(?<!\[)\b(95-00-04-I\d{3})\b(?!\]\()/g,
+    replacement: "[$1](../95-00_GENERAL/95-00-04_Design/ASSETS/INSTALLATIONS/**/$1_*.md)",
+    description: "ATA 95 Design Installation reference (I-series)"
+  },
+
   // ========== Internal References - Requirements ==========
   
   {
