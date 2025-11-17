@@ -18,10 +18,11 @@ All product folders follow this pattern:
   * `KIT` — System kit or bundle
   * `SVC` — Service or software product
 * **[Code]** = Four-digit numeric product code:
-  * `0001-0999` — In-house products
-  * `1000-1999` — COTS equipment
+  * `0001-0499`, `0600-0999` — In-house products
   * `0500-0599` — System kits and bundles
+  * `1000-1999` — COTS equipment
   * `2000-2999` — Service and software products
+  * _Note: The `0500-0599` range is reserved exclusively for System kits and bundles, and is excluded from the In-house products range._
 * **[ShortName]** = Human-readable product identifier (no spaces, use underscores)
 
 ### Examples
