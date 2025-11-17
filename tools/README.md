@@ -14,6 +14,11 @@ tools/
 │   ├── check_dimensions.py
 │   ├── check_mass_properties.py
 │   └── doc_meta_enforcer.py
+├── doc-meta-enforcer-mcp/      # MCP server for document control & hyperlinking
+│   ├── src/
+│   ├── config/
+│   ├── README.md
+│   └── package.json
 ├── package_geometry_data.py
 ├── create_release_bundle.py
 ├── generate_summary_tables.py
@@ -27,8 +32,114 @@ tools/
 ```
 
 * `ci/` – Continuous Integration watchdog scripts and documentation automation
+* `doc-meta-enforcer-mcp/` – Model Context Protocol server for GitHub Copilot integration
 * `cd/` – Continuous Delivery artifacts and API (at repo root)
 * Root level scripts – Packaging, release, and summary generation tools
+
+---
+
+## MCP Server for Documentation Automation
+
+### Document Meta Enforcer MCP Server
+
+**Location:** `tools/doc-meta-enforcer-mcp/`
+
+The **Document Meta Enforcer MCP Server** is a Model Context Protocol (MCP) server that integrates with GitHub Copilot and other AI assistants to automatically enforce documentation standards across the AMPEL360 repository.
+
+#### Features
+
+1. **Document Control Block Enforcement**
+   - Automatically adds standardized Document Control sections
+   - Includes authorship attribution: "AI prompted by Amedeo Pelliccia"
+   - Tracks toolchain, status, and approval workflow
+   - Idempotent: safe to run multiple times
+
+2. **Automatic Hyperlinking**
+   - Converts plain text references to hyperlinks:
+     - **Aviation Standards**: EASA CS-25, FAA FAR 25, ICAO Annex 6/8
+     - **Technical Standards**: DO-178C, ARP4754A, S1000D, ATA iSpec 2200
+     - **Regulations**: EU AI Act, GDPR, EASA AI Roadmap
+     - **Internal References**: ATA chapters, Requirements (RQ-XX-XX-XXX), OPT-IN axes
+   - Smart linking: prevents double-linking
+   - Extensible: add custom patterns via configuration
+
+3. **AI Assistant Integration**
+   - Works with GitHub Copilot in VS Code
+   - Compatible with Claude Desktop
+   - Standard MCP protocol for custom clients
+   - Simple tool interface: `doc_control.enforce`
+
+#### Quick Start
+
+```bash
+# Build the server
+cd tools/doc-meta-enforcer-mcp
+npm install
+npm run build
+
+# Test it
+node test-full.js
+
+# Expected output: ✅ MCP Server is ready for integration!
+```
+
+#### VS Code + Copilot Integration
+
+Add to `.vscode/settings.json`:
+
+```json
+{
+  "mcp.servers": {
+    "doc-meta-enforcer": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/tools/doc-meta-enforcer-mcp/dist/server.js"]
+    }
+  }
+}
+```
+
+Then in Copilot:
+> "Create a safety requirements document and use doc_control.enforce to add proper metadata"
+
+#### Documentation
+
+* **[README.md](doc-meta-enforcer-mcp/README.md)** – Full feature documentation
+* **[QUICK_START.md](doc-meta-enforcer-mcp/QUICK_START.md)** – 5-minute setup guide
+* **[INTEGRATION.md](doc-meta-enforcer-mcp/INTEGRATION.md)** – Detailed integration instructions
+
+#### Example Transformation
+
+**Before:**
+```markdown
+# Fuel System Design
+Complies with EASA CS-25. See ATA_28-FUEL_SAF_CRYOGENIC_H2.
+Requirement: RQ-02-01-001
+```
+
+**After:**
+```markdown
+# Fuel System Design
+Complies with [EASA CS-25](https://www.easa.europa.eu/...). 
+See [ATA_28-FUEL_SAF_CRYOGENIC_H2](../T-TECHNOLOGY_.../README.md).
+Requirement: [RQ-02-01-001](../../REQUIREMENTS/RQ-02-01-001/README.md)
+
+---
+
+## Document Control
+- **Originator**: _AI prompted by Amedeo Pelliccia_
+- **Toolchain**: GitHub Copilot + MCP Doc Control Server
+- **Status**: `WORKING`
+...
+```
+
+#### Use Cases
+
+* **Documentation Generation**: Automatically format new documents with proper metadata
+* **Standards Compliance**: Ensure all docs have Document Control blocks
+* **Link Management**: Maintain hyperlinks to standards and internal references
+* **Copilot Integration**: Make AI-generated docs conform to AMPEL360 standards
+* **Quality Assurance**: Consistent documentation across the repository
 
 ---
 
