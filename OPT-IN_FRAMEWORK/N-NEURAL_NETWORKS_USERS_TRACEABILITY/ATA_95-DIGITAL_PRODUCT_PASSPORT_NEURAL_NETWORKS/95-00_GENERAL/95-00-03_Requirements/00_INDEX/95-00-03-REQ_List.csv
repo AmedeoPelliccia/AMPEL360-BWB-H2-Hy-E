@@ -1,0 +1,47 @@
+ID,Title,Category,Status,Priority,Owner,Last_Updated
+RQ-95-00-03-001,DPP SHALL Provide Unique UUID Per Model,Functional,APPROVED,High,Requirements WG,2025-11-17
+RQ-95-00-03-002,DPP SHALL Support Semantic Versioning,Functional,APPROVED,High,Requirements WG,2025-11-17
+RQ-95-00-03-003,DPP SHALL Link To Models And Artifacts,Functional,APPROVED,High,Requirements WG,2025-11-17
+RQ-95-00-03-004,DPP SHALL Store Model Metadata,Functional,DRAFT,Medium,Requirements WG,2025-11-17
+RQ-95-00-03-005,DPP SHALL Track Model Lifecycle States,Functional,DRAFT,Medium,Requirements WG,2025-11-17
+RQ-95-00-03-006,DPP SHALL Support Multiple Neural Network Types,Functional,DRAFT,Medium,Requirements WG,2025-11-17
+RQ-95-00-03-007,DPP SHALL Maintain Configuration History,Functional,DRAFT,Medium,Requirements WG,2025-11-17
+RQ-95-00-03-008,DPP SHALL Support Model Comparison,Functional,DRAFT,Low,Requirements WG,2025-11-17
+RQ-95-00-03-009,DPP SHALL Enable Model Rollback,Functional,DRAFT,Medium,Requirements WG,2025-11-17
+RQ-95-00-03-010,DPP SHALL Provide API Access,Functional,DRAFT,High,Requirements WG,2025-11-17
+RQ-95-00-03-101,DPP Availability >= 99.5%,NonFunctional,APPROVED,High,Requirements WG,2025-11-17
+RQ-95-00-03-102,DPP Read Latency Under 500ms,NonFunctional,APPROVED,High,Requirements WG,2025-11-17
+RQ-95-00-03-103,DPP SHALL Support Concurrent Access,NonFunctional,DRAFT,Medium,Requirements WG,2025-11-17
+RQ-95-00-03-104,DPP SHALL Scale to 1000+ Models,NonFunctional,DRAFT,High,Requirements WG,2025-11-17
+RQ-95-00-03-105,DPP Data Retention Minimum 10 Years,NonFunctional,DRAFT,High,Requirements WG,2025-11-17
+RQ-95-00-03-201,DPP SHALL Capture ODD Definition,Safety_and_AAI,FOR_REVIEW,Critical,Safety WG,2025-11-17
+RQ-95-00-03-202,DPP SHALL Store Runtime Monitoring Config,Safety_and_AAI,FOR_REVIEW,Critical,Safety WG,2025-11-17
+RQ-95-00-03-203,DPP SHALL Record Safety Assessment Results,Safety_and_AAI,DRAFT,Critical,Safety WG,2025-11-17
+RQ-95-00-03-204,DPP SHALL Track Failure Modes,Safety_and_AAI,DRAFT,Critical,Safety WG,2025-11-17
+RQ-95-00-03-205,DPP SHALL Store Mitigation Strategies,Safety_and_AAI,DRAFT,Critical,Safety WG,2025-11-17
+RQ-95-00-03-206,DPP SHALL Link to FHA/FMEA Documents,Safety_and_AAI,DRAFT,High,Safety WG,2025-11-17
+RQ-95-00-03-301,DPP SHALL Support EU AI Act High-Risk Documentation,Regulatory_Compliance,FOR_REVIEW,Critical,Certification WG,2025-11-17
+RQ-95-00-03-302,DPP SHALL Expose EU DPP Mandatory Fields,Regulatory_Compliance,FOR_REVIEW,Critical,Certification WG,2025-11-17
+RQ-95-00-03-303,DPP SHALL Comply With EASA AI Requirements,Regulatory_Compliance,DRAFT,Critical,Certification WG,2025-11-17
+RQ-95-00-03-304,DPP SHALL Support FAA AI Certification,Regulatory_Compliance,DRAFT,Critical,Certification WG,2025-11-17
+RQ-95-00-03-305,DPP SHALL Enable Regulatory Inspections,Regulatory_Compliance,DRAFT,High,Certification WG,2025-11-17
+RQ-95-00-03-306,DPP SHALL Maintain Certification Evidence,Regulatory_Compliance,DRAFT,Critical,Certification WG,2025-11-17
+RQ-95-00-03-307,DPP SHALL Support Data Protection Regulations,Regulatory_Compliance,DRAFT,High,Legal WG,2025-11-17
+RQ-95-00-03-308,DPP SHALL Comply With Export Control Laws,Regulatory_Compliance,DRAFT,Medium,Legal WG,2025-11-17
+RQ-95-00-03-401,DPP SHALL Store Training Data Lineage,Data_and_Metadata,APPROVED,High,Data WG,2025-11-17
+RQ-95-00-03-402,DPP SHALL Record CO2e Metrics,Data_and_Metadata,APPROVED,High,Sustainability WG,2025-11-17
+RQ-95-00-03-403,DPP SHALL Track Data Provenance,Data_and_Metadata,DRAFT,High,Data WG,2025-11-17
+RQ-95-00-03-404,DPP SHALL Store Hyperparameter History,Data_and_Metadata,DRAFT,Medium,ML Engineering WG,2025-11-17
+RQ-95-00-03-405,DPP SHALL Record Validation Dataset Info,Data_and_Metadata,DRAFT,Medium,ML Engineering WG,2025-11-17
+RQ-95-00-03-406,DPP SHALL Track Model Performance Metrics,Data_and_Metadata,DRAFT,High,ML Engineering WG,2025-11-17
+RQ-95-00-03-407,DPP SHALL Store Bias Assessment Results,Data_and_Metadata,DRAFT,High,Ethics WG,2025-11-17
+RQ-95-00-03-501,DPP SHALL Be Validated By JSON Schema,Toolchain_and_Automation,APPROVED,High,DevOps WG,2025-11-17
+RQ-95-00-03-502,DPP SHALL Be Auto-Generated From CI Pipeline,Toolchain_and_Automation,APPROVED,High,DevOps WG,2025-11-17
+RQ-95-00-03-503,DPP SHALL Use Doc-Meta-Enforcer MCP,Toolchain_and_Automation,APPROVED,Medium,Documentation WG,2025-11-17
+RQ-95-00-03-504,DPP SHALL Integrate With Model Registry,Toolchain_and_Automation,DRAFT,High,ML Engineering WG,2025-11-17
+RQ-95-00-03-505,DPP SHALL Support Git-Based Versioning,Toolchain_and_Automation,DRAFT,High,DevOps WG,2025-11-17
+RQ-95-00-03-506,DPP SHALL Enable Automated Testing,Toolchain_and_Automation,DRAFT,High,QA WG,2025-11-17
+RQ-95-00-03-601,DPP Changes SHALL Require CCB Approval,Governance_and_Audit,APPROVED,Critical,Governance WG,2025-11-17
+RQ-95-00-03-602,DPP SHALL Support Audit Trail,Governance_and_Audit,APPROVED,Critical,Governance WG,2025-11-17
+RQ-95-00-03-603,DPP SHALL Log All Modifications,Governance_and_Audit,DRAFT,High,Governance WG,2025-11-17
+RQ-95-00-03-604,DPP SHALL Enable Access Control,Governance_and_Audit,DRAFT,Critical,Security WG,2025-11-17
