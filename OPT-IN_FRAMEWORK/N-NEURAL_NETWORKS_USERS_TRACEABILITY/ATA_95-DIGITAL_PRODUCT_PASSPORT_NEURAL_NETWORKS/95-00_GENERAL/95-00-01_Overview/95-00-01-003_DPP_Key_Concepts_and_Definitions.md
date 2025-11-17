@@ -343,6 +343,15 @@ Governed by 95-00-11_EIS_Versions_Tags processes.
 
 ---
 
+### Document Metadata
+
+- **Originator**: AI prompted by Amedeo Pelliccia
+- **Toolchain**: GitHub Copilot + AMPEL360 Documentation Standards
+- **Status**: `WORKING`
+- **Notes**: This document was generated with AI assistance and must be reviewed and approved by a designated human checker/approver before being used as an official baseline.
+
+---
+
 **Previous Document**: [95-00-01-002_Regulatory_and_Standards_Context.md](95-00-01-002_Regulatory_and_Standards_Context.md)
 
 **Next Document**: [95-00-01-004_DPP_Objectives_for_Neural_Networks.md](95-00-01-004_DPP_Objectives_for_Neural_Networks.md)

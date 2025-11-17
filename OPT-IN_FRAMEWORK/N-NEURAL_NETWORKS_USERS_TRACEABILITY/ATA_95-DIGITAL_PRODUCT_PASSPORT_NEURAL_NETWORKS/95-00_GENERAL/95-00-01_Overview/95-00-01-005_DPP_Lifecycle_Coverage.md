@@ -429,6 +429,15 @@ At each lifecycle stage, the DPP undergoes formal review:
 
 ---
 
+### Document Metadata
+
+- **Originator**: AI prompted by Amedeo Pelliccia
+- **Toolchain**: GitHub Copilot + AMPEL360 Documentation Standards
+- **Status**: `WORKING`
+- **Notes**: This document was generated with AI assistance and must be reviewed and approved by a designated human checker/approver before being used as an official baseline.
+
+---
+
 **Previous Document**: [95-00-01-004_DPP_Objectives_for_Neural_Networks.md](95-00-01-004_DPP_Objectives_for_Neural_Networks.md)
 
 **Next Document**: [95-00-01-006_DPP_Roles_and_Responsibilities.md](95-00-01-006_DPP_Roles_and_Responsibilities.md)

@@ -601,6 +601,15 @@ All DPP modifications logged:
 
 ---
 
+### Document Metadata
+
+- **Originator**: AI prompted by Amedeo Pelliccia
+- **Toolchain**: GitHub Copilot + AMPEL360 Documentation Standards
+- **Status**: `WORKING`
+- **Notes**: This document was generated with AI assistance and must be reviewed and approved by a designated human checker/approver before being used as an official baseline.
+
+---
+
 **Previous Document**: [95-00-01-006_DPP_Roles_and_Responsibilities.md](95-00-01-006_DPP_Roles_and_Responsibilities.md)
 
 **Next Document**: [95-00-01-008_DPP_Scope_Limitations_and_Exclusions.md](95-00-01-008_DPP_Scope_Limitations_and_Exclusions.md)

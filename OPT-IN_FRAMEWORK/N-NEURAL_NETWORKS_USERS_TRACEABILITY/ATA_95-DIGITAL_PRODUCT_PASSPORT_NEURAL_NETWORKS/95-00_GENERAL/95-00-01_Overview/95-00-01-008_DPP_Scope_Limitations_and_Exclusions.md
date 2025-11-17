@@ -386,6 +386,15 @@ During **early prototyping** (95-00-08_Prototyping), maintaining a complete DPP 
 
 ---
 
+### Document Metadata
+
+- **Originator**: AI prompted by Amedeo Pelliccia
+- **Toolchain**: GitHub Copilot + AMPEL360 Documentation Standards
+- **Status**: `WORKING`
+- **Notes**: This document was generated with AI assistance and must be reviewed and approved by a designated human checker/approver before being used as an official baseline.
+
+---
+
 **Previous Document**: [95-00-01-007_DPP_Data_Model_and_Identifiers.md](95-00-01-007_DPP_Data_Model_and_Identifiers.md)
 
 **Parent**: [95-00-01_Overview README](README.md)

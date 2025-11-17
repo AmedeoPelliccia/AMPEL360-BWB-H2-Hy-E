@@ -347,6 +347,15 @@ In-Service Metrics → Maintenance Action
 
 ---
 
+### Document Metadata
+
+- **Originator**: AI prompted by Amedeo Pelliccia
+- **Toolchain**: GitHub Copilot + AMPEL360 Documentation Standards
+- **Status**: `WORKING`
+- **Notes**: This document was generated with AI assistance and must be reviewed and approved by a designated human checker/approver before being used as an official baseline.
+
+---
+
 **Previous Document**: [95-00-01-003_DPP_Key_Concepts_and_Definitions.md](95-00-01-003_DPP_Key_Concepts_and_Definitions.md)
 
 **Next Document**: [95-00-01-005_DPP_Lifecycle_Coverage.md](95-00-01-005_DPP_Lifecycle_Coverage.md)

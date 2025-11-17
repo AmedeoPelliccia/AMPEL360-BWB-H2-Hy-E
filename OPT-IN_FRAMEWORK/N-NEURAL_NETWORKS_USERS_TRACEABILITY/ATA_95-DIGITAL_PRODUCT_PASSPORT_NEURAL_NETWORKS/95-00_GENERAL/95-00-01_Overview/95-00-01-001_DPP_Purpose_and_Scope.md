@@ -135,6 +135,15 @@ All DPP updates follow formal change control processes defined in 95-00-11_EIS_V
 
 ---
 
+### Document Metadata
+
+- **Originator**: AI prompted by Amedeo Pelliccia
+- **Toolchain**: GitHub Copilot + AMPEL360 Documentation Standards
+- **Status**: `WORKING`
+- **Notes**: This document was generated with AI assistance and must be reviewed and approved by a designated human checker/approver before being used as an official baseline.
+
+---
+
 **Next Document**: [95-00-01-002_Regulatory_and_Standards_Context.md](95-00-01-002_Regulatory_and_Standards_Context.md)
 
 **Parent**: [95-00-01_Overview README](README.md)
