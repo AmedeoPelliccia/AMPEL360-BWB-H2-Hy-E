@@ -34,11 +34,9 @@ Location: .github/scripts/validate_nn_subsystem.py
 
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import List, Tuple
 import yaml
-import json
 import csv
-import re
 
 REQUIRED_SUBSYSTEM_STRUCTURE = {
     'root_docs': {

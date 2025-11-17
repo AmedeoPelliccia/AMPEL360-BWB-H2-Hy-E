@@ -60,7 +60,7 @@ This document describes the safety analysis, certification approach, and complia
 
 ### Failure Modes and Effects Analysis (FMEA)
 
-Complete FMEA documented in: `ASSETS/Certification/95-20-21-A-504_Safety_Analysis_FTA_FMEA.pdf`
+Complete FMEA documented in: [95-20-21-A-504 Safety Analysis (FTA/FMEA)](ASSETS/Certification/95-20-21-A-504_Safety_Analysis_FTA_FMEA.md)
 
 #### Critical Failure Modes
 
@@ -100,7 +100,7 @@ Potential common mode failures identified and mitigated:
 - **Validation**: Independent validation dataset never used in training
 - **Quality Metrics**: SNR, completeness, representativeness documented
 
-See: `Data/Training_Datasets/95-20-21-601_Cabin_Temp_10k_Flights.parquet`
+See: [95-20-21-601 Cabin Temperature Training Data](Data/Training_Datasets/95-20-21-601_Cabin_Temp_10k_Flights.parquet)
 
 ### Model Explainability
 
@@ -146,23 +146,23 @@ Following DO-178C and DO-333 guidance:
 | Unit Tests | `Tests/Unit_Tests/` | 95%+ | Complete |
 | Integration Tests | `Tests/Integration_Tests/` | All interfaces | Complete |
 | HIL Tests | `Tests/HIL_Tests/` | All scenarios | Complete |
-| Ground Tests | `ASSETS/Test_Data/95-20-21-A-301` | Environmental | Complete |
-| Flight Tests | `ASSETS/Test_Data/95-20-21-A-302` | Operational | Complete |
-| Environmental | `ASSETS/Test_Data/95-20-21-A-304` | DO-160G | Complete |
+| Ground Tests | [95-20-21-A-301](ASSETS/Test_Data/95-20-21-A-301_Ground_Test_Results.csv) | Environmental | Complete |
+| Flight Tests | [95-20-21-A-302](ASSETS/Test_Data/95-20-21-A-302_Flight_Test_Results.csv) | Operational | Complete |
+| Environmental | [95-20-21-A-304](ASSETS/Test_Data/95-20-21-A-304_Environmental_Chamber_Tests.csv) | DO-160G | Complete |
 
 ### Model-Specific Validation
 
 Each model has dedicated validation evidence:
-- Performance metrics: `ASSETS/Performance_Data/95-20-21-A-201_Prediction_Accuracy_Results.xlsx`
-- Energy savings: `ASSETS/Performance_Data/95-20-21-A-202_Energy_Savings_Analysis.csv`
-- Comfort metrics: `ASSETS/Performance_Data/95-20-21-A-203_Passenger_Comfort_Metrics.xlsx`
-- Latency benchmarks: `ASSETS/Performance_Data/95-20-21-A-204_Inference_Latency_Benchmarks.csv`
+- Performance metrics: [95-20-21-A-201 Prediction Accuracy Results](ASSETS/Performance_Data/95-20-21-A-201_Prediction_Accuracy_Results.xlsx)
+- Energy savings: [95-20-21-A-202 Energy Savings Analysis](ASSETS/Performance_Data/95-20-21-A-202_Energy_Savings_Analysis.csv)
+- Comfort metrics: [95-20-21-A-203 Passenger Comfort Metrics](ASSETS/Performance_Data/95-20-21-A-203_Passenger_Comfort_Metrics.xlsx)
+- Latency benchmarks: [95-20-21-A-204 Inference Latency Benchmarks](ASSETS/Performance_Data/95-20-21-A-204_Inference_Latency_Benchmarks.csv)
 
 ## Certification Evidence Package
 
 ### DO-178C Compliance
 
-Complete evidence package: `ASSETS/Certification/95-20-21-A-501_DO_178C_Evidence_Package.pdf`
+Complete evidence package: [95-20-21-A-501 DO-178C Evidence Package](ASSETS/Certification/95-20-21-A-501_DO_178C_Evidence_Package.md)
 
 Contents:
 - Plan for Software Aspects of Certification (PSAC)

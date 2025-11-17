@@ -116,7 +116,7 @@ Common fault codes:
 
 #### Troubleshooting Guide
 
-See: `95-20-21-803_Troubleshooting_Guide.md` for detailed procedures
+See: [95-20-21-803 Troubleshooting Guide](../95-20-21-803_Troubleshooting_Guide.md) for detailed procedures
 
 ### Software Updates
 
@@ -313,10 +313,10 @@ Quarterly trending for:
 ## Documentation References
 
 ### Technical Publications
-- `95-20-21-001_ECS_NN_Overview.md` - System description
-- `95-20-21-008_Integration_with_ATA_21.md` - Interface specs
-- `95-20-21-802_Maintenance_Procedures.md` - Detailed procedures
-- `95-20-21-803_Troubleshooting_Guide.md` - Troubleshooting
+- [95-20-21-001 ECS NN Overview](../../95-20-21-001_ECS_NN_Overview.md) - System description
+- [95-20-21-008 Integration with ATA 21](../../95-20-21-008_Integration_with_ATA_21.md) - Interface specs
+- [95-20-21-802 Maintenance Procedures](../95-20-21-802_Maintenance_Procedures.md) - Detailed procedures
+- [95-20-21-803 Troubleshooting Guide](../95-20-21-803_Troubleshooting_Guide.md) - Troubleshooting
 - [ATA iSpec 2200](https://www.ata.org/resources/specifications) ATA 21 AMM - Base ECS system
 - [ATA iSpec 2200](https://www.ata.org/resources/specifications) ATA 42 AMM - IMA system
 - [SAE AIR1168 (ECS Guidelines)](https://www.sae.org/standards/content/air1168/)

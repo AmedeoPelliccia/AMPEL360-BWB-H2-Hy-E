@@ -163,10 +163,10 @@ Loss of Cabin Environmental Control
 
 [TODO: Link to verification evidence]
 
-- Unit test results: `Tests/Unit_Tests/`
-- Integration test results: `Tests/Integration_Tests/`
-- HIL test results: `ASSETS/Test_Data/95-20-21-A-303_HIL_Validation_Results.xlsx`
-- Flight test results: `ASSETS/Test_Data/95-20-21-A-302_Flight_Test_Results.csv`
+- Unit test results: [Unit Tests](../../Tests/Unit_Tests/)
+- Integration test results: [Integration Tests](../../Tests/Integration_Tests/)
+- HIL test results: [95-20-21-A-303 HIL Validation Results](../Test_Data/95-20-21-A-303_HIL_Validation_Results.xlsx)
+- Flight test results: [95-20-21-A-302 Flight Test Results](../Test_Data/95-20-21-A-302_Flight_Test_Results.csv)
 
 ## Certification Status
 

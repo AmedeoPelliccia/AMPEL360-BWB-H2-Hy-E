@@ -34,8 +34,6 @@ Location: tools/scripts/generate_nn_subsystem.py
 
 import sys
 from pathlib import Path
-from typing import Dict
-import yaml
 from datetime import datetime
 
 SUBSYSTEM_TEMPLATE = {

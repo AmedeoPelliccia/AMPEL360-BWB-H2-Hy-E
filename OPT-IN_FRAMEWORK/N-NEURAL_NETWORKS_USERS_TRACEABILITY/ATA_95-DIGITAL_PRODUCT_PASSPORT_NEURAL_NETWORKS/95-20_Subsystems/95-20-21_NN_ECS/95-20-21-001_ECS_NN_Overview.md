@@ -147,19 +147,19 @@ The ECS NN subsystem consists of six primary neural network components:
 
 ### Interfaces
 - Links to 95-00-05 (Interfaces)
-- 95-20-21-A-401 through 95-20-21-A-404: Interface specifications
+- [95-20-21-A-401](ASSETS/Interface_Specs/95-20-21-A-401_ATA_21_Interface_Spec.yaml) through [95-20-21-A-404](ASSETS/Interface_Specs/95-20-21-A-404_Actuator_Output_Specs.yaml): Interface specifications
 
 ### Engineering
 - Links to 95-00-06 (Engineering)
-- Model cards: 95-20-21-A-101 through 95-20-21-A-105
+- Model cards: [95-20-21-A-101](ASSETS/Model_Cards/95-20-21-A-101_Temp_Predictor_v1.2.yaml) through [95-20-21-A-105](ASSETS/Model_Cards/95-20-21-A-105_Humidity_Manager_v1.1.yaml)
 
 ### Verification
 - Links to 95-00-07 (V&V)
-- Test results: 95-20-21-A-301 through 95-20-21-A-304
+- Test results: [95-20-21-A-301](ASSETS/Test_Data/95-20-21-A-301_Ground_Test_Results.csv) through [95-20-21-A-304](ASSETS/Test_Data/95-20-21-A-304_Environmental_Chamber_Tests.csv)
 
 ### Certification
 - Links to 95-00-10 (Certification)
-- Certification package: 95-20-21-A-501 through 95-20-21-A-504
+- Certification package: [95-20-21-A-501](ASSETS/Certification/95-20-21-A-501_DO_178C_Evidence_Package.md) through [95-20-21-A-504](ASSETS/Certification/95-20-21-A-504_Safety_Analysis_FTA_FMEA.md)
 
 ## Document Control
 
@@ -174,9 +174,9 @@ The ECS NN subsystem consists of six primary neural network components:
 ---
 
 **For detailed component specifications, see:**
-- `95-20-21-002_Cabin_Temp_Predictor.md`
-- `95-20-21-003_Air_Quality_Monitor.md`
-- `95-20-21-004_HVAC_Optimizer.md`
-- `95-20-21-005_Pressure_Control_NN.md`
-- `95-20-21-006_Humidity_Management.md`
-- `95-20-21-007_CO2_Scrubbing_Optimizer.md`
+- [95-20-21-002 Cabin Temperature Predictor](95-20-21-002_Cabin_Temp_Predictor.md)
+- [95-20-21-003 Air Quality Monitor](95-20-21-003_Air_Quality_Monitor.md)
+- [95-20-21-004 HVAC Optimizer](95-20-21-004_HVAC_Optimizer.md)
+- [95-20-21-005 Pressure Control NN](95-20-21-005_Pressure_Control_NN.md)
+- [95-20-21-006 Humidity Management](95-20-21-006_Humidity_Management.md)
+- [95-20-21-007 CO₂ Scrubbing Optimizer](95-20-21-007_CO2_Scrubbing_Optimizer.md)

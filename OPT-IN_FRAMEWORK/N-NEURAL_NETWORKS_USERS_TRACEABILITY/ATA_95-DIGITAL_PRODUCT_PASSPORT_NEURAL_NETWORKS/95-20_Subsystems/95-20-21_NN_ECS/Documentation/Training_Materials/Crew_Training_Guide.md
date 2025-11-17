@@ -152,13 +152,13 @@ Upon completion of this training, crew members will be able to:
 ## Training Materials
 
 ### Required Reading
-- `95-20-21-001_ECS_NN_Overview.md`
-- `95-20-21-010_Operational_Procedures.md`
+- [95-20-21-001 ECS NN Overview](../../95-20-21-001_ECS_NN_Overview.md)
+- [95-20-21-010 Operational Procedures](../../95-20-21-010_Operational_Procedures.md)
 - Flight Crew Operating Manual (FCOM) - ECS Section
 - Quick Reference Handbook (QRH) - ECS Abnormals
 
 ### Recommended Reading
-- `95-20-21-008_Integration_with_ATA_21.md`
+- [95-20-21-008 Integration with ATA 21](../../95-20-21-008_Integration_with_ATA_21.md)
 - [ATA iSpec 2200](https://www.ata.org/resources/specifications) System Manual
 - [ICAO Doc 9983 (Manual on ML Applications)](https://www.icao.int/)
 

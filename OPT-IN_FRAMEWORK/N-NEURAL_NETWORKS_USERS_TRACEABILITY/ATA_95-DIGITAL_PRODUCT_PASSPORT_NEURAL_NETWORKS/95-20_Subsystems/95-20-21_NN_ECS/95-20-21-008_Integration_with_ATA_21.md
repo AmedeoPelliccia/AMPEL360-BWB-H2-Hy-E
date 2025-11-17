@@ -149,7 +149,7 @@ The ECS NN subsystem enhances ATA 21 conventional control systems with AI-driven
 
 ### Hardware-in-the-Loop (HIL) Tests
 
-See: `Tests/HIL_Tests/95-20-21-701_HIL_Test_Scenarios.yaml`
+See: [95-20-21-701 HIL Test Scenarios](Tests/HIL_Tests/95-20-21-701_HIL_Test_Scenarios.yaml)
 
 Test scenarios include:
 1. Normal operations across all flight phases
@@ -163,7 +163,7 @@ Test scenarios include:
 
 ### Integration Test Results
 
-See: `ASSETS/Test_Data/95-20-21-A-302_Flight_Test_Results.csv`
+See: [95-20-21-A-302 Flight Test Results](ASSETS/Test_Data/95-20-21-A-302_Flight_Test_Results.csv)
 
 - **Total Test Hours**: 2,000+ hours (ground + flight)
 - **Success Rate**: 99.97%
@@ -178,7 +178,7 @@ See: `ASSETS/Test_Data/95-20-21-A-302_Flight_Test_Results.csv`
 - [AFDX](https://www.arinc.com/cf/store/catalog.cfm): Verified per [ARINC 664P7](https://www.arinc.com/cf/store/catalog.cfm)
 
 ### Safety Analysis
-- FMEA completed: See `ASSETS/Certification/95-20-21-A-504_Safety_Analysis_FTA_FMEA.pdf`
+- FMEA completed: See [95-20-21-A-504 Safety Analysis (FTA/FMEA)](ASSETS/Certification/95-20-21-A-504_Safety_Analysis_FTA_FMEA.md)
 - FTA completed: All hazards identified and mitigated
 - Fault injection testing: 100% coverage
 
@@ -190,7 +190,7 @@ See: `ASSETS/Test_Data/95-20-21-A-302_Flight_Test_Results.csv`
 - Annually: Full integration test with ATA 21 systems
 
 ### Troubleshooting
-See: `Documentation/95-20-21-803_Troubleshooting_Guide.md`
+See: [95-20-21-803 Troubleshooting Guide](Documentation/95-20-21-803_Troubleshooting_Guide.md)
 
 ## References
 
@@ -202,7 +202,7 @@ See: `Documentation/95-20-21-803_Troubleshooting_Guide.md`
 
 ### Documentation
 - ATA 21 System Manual: [Link to aircraft-specific documentation]
-- Interface Control Documents: `ASSETS/Interface_Specs/95-20-21-A-401_ATA_21_Interface_Spec.yaml`
+- Interface Control Documents: [95-20-21-A-401 ATA 21 Interface Spec](ASSETS/Interface_Specs/95-20-21-A-401_ATA_21_Interface_Spec.yaml)
 
 ## Document Control
 
@@ -210,7 +210,7 @@ See: `Documentation/95-20-21-803_Troubleshooting_Guide.md`
 - **Status**: WORKING
 - **Last Updated**: 2025-11-17
 - **Related Files**:
-  - `ASSETS/Interface_Specs/95-20-21-A-401_ATA_21_Interface_Spec.yaml`
-  - `ASSETS/Interface_Specs/95-20-21-A-402_ATA_42_IMA_Interface.yaml`
-  - `ASSETS/Interface_Specs/95-20-21-A-403_Sensor_Input_Specs.yaml`
-  - `ASSETS/Interface_Specs/95-20-21-A-404_Actuator_Output_Specs.yaml`
+  - [95-20-21-A-401 ATA 21 Interface Spec](ASSETS/Interface_Specs/95-20-21-A-401_ATA_21_Interface_Spec.yaml)
+  - [95-20-21-A-402 ATA 42 IMA Interface](ASSETS/Interface_Specs/95-20-21-A-402_ATA_42_IMA_Interface.yaml)
+  - [95-20-21-A-403 Sensor Input Specs](ASSETS/Interface_Specs/95-20-21-A-403_Sensor_Input_Specs.yaml)
+  - [95-20-21-A-404 Actuator Output Specs](ASSETS/Interface_Specs/95-20-21-A-404_Actuator_Output_Specs.yaml)

@@ -88,10 +88,10 @@ This document provides evidence of compliance with EASA Special Condition for Ar
 
 [TODO: Add links to supporting evidence]
 
-- Requirements traceability: `95-20-21-012_ECS_NN_Traceability_Map.csv`
-- Safety analysis: `95-20-21-A-504_Safety_Analysis_FTA_FMEA.md`
-- V&V results: `95-20-21-A-503_Verification_Matrix.xlsx`
-- Test results: `ASSETS/Test_Data/`
+- Requirements traceability: [95-20-21-012 ECS NN Traceability Map](../../00_META/95-20-21-012_ECS_NN_Traceability_Map.csv)
+- Safety analysis: [95-20-21-A-504 Safety Analysis (FTA/FMEA)](95-20-21-A-504_Safety_Analysis_FTA_FMEA.md)
+- V&V results: [95-20-21-A-503 Verification Matrix](95-20-21-A-503_Verification_Matrix.xlsx)
+- Test results: [Test Data](../Test_Data/)
 
 ## Certification Status
 

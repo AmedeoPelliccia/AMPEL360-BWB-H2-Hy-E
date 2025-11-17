@@ -360,11 +360,11 @@ Flight crew assists by:
   - Flight Crew Operating Manual (FCOM) - ECS Section
   - Quick Reference Handbook (QRH) - ECS Abnormals
   - Minimum Equipment List (MEL) - ATA 21
-  - `Documentation/95-20-21-801_Operations_Manual.md`
-  - `Documentation/95-20-21-803_Troubleshooting_Guide.md`
+  - [95-20-21-801 Operations Manual](Documentation/95-20-21-801_Operations_Manual.md)
+  - [95-20-21-803 Troubleshooting Guide](Documentation/95-20-21-803_Troubleshooting_Guide.md)
 
 ---
 
 **For maintenance procedures, see:**
-- `Documentation/95-20-21-802_Maintenance_Procedures.md`
-- `Documentation/Training_Materials/Technician_Manual.pdf`
+- [95-20-21-802 Maintenance Procedures](Documentation/95-20-21-802_Maintenance_Procedures.md)
+- [Technician Manual](Documentation/Training_Materials/Technician_Manual.md)
