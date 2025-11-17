@@ -1,0 +1,7 @@
+Date,Model_ID,File_Name,Previous_Revision,New_Revision,Change_Type,Change_Description,Changed_By,Reviewed_By,Approved_By,Notes
+2025-11-17,MDL-ARCH-OPSCTR-001,02-00-04-MDL-ARCH-OPSCTR-SysML_Context-R01.md,,R01,CREATED,Initial creation of Operations Center SysML context model,,,,"Example entry - Model structure setup"
+2025-11-17,MDL-ARCH-DATACENTER-001,02-00-04-MDL-ARCH-DATACENTER-SysML_Context-R01.md,,R01,CREATED,Initial creation of Data Center SysML context model,,,,"Example entry - Model structure setup"
+2025-11-17,MDL-BEH-OPSCTR-001,02-00-04-MDL-BEH-OPSCTR-StateMachine-AlarmHandling-R01.md,,R01,CREATED,Initial creation of alarm handling state machine,,,,"Example entry - Model structure setup"
+2025-11-17,MDL-PERF-DATACENTER-001,02-00-04-MDL-PERF-DATACENTER-UPS_Availability-R01.xlsx,,R01,CREATED,Initial creation of UPS availability performance model,,,,"Example entry - Model structure setup"
+2025-11-17,MDL-SIM-OPSCTR-001,02-00-04-MDL-SIM-OPSCTR-DiscreteEvent-Scenarios-R01.md,,R01,CREATED,Initial creation of discrete event simulation scenarios,,,,"Example entry - Model structure setup"
+2025-11-17,MDL-DT-DATACENTER-001,02-00-04-MDL-DT-DATACENTER-TagMap-R01.csv,,R01,CREATED,Initial creation of digital twin tag mapping,,,,"Example entry - Model structure setup"
