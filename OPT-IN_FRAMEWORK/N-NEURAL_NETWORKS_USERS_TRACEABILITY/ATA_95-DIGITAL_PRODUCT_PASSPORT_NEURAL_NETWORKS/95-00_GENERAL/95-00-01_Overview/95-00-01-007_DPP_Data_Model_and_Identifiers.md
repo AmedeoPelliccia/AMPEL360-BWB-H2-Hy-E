@@ -510,7 +510,7 @@ DPPs containing proprietary information encrypted at rest (AES-256) and in trans
 
 DPP JSON files stored in Git for version history:
 
-**Repository**: `https://github.com/AMPEL360/dpp-neural-networks` (private)
+**Repository**: `<internal-repository-url>` (private)
 
 **Branch Strategy**:
 - `main` — Certified models (production)
