@@ -407,10 +407,11 @@ Each hook must pass:
 
 ## 12. References
 
+### Internal Documents
 - CAOS System Architecture Document
-- 95-30-00-001: Circularity Overview
-- 95-30-00-006: Circularity KPI Definitions
-- 95-30-00-007: Circularity Assets Registry
+- [95-30-00-001: Circularity Overview](../95-30-00-001_Circularity_Overview.md)
+- [95-30-00-006: Circularity KPI Definitions](./95-30-00-006_Circularity_KPI_Definitions.md)
+- [95-30-00-007: Circularity Assets Registry](./95-30-00-007_Circularity_Assets_Registry.json)
 - ATA-95 Digital Product Passport Specification
 
 ## 13. Document Control
@@ -424,4 +425,4 @@ Each hook must pass:
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

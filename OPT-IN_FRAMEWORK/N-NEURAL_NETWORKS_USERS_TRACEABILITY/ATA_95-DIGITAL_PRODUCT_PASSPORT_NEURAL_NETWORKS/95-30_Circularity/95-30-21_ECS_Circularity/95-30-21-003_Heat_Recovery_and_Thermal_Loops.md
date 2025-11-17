@@ -24,9 +24,9 @@ This document details heat recovery and thermal loops for the Environmental Cont
 
 ## 5. References
 
-- 95-30-21-001: ECS Circularity Overview
-- 95-30-00-008: CAOS Circularity Hooks
+- [95-30-21-001: ECS Circularity Overview
+- [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

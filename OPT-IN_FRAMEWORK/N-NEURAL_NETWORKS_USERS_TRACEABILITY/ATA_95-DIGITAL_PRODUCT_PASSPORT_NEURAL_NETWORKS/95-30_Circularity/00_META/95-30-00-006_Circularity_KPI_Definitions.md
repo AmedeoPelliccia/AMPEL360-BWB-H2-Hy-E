@@ -313,12 +313,16 @@ All KPIs derived from:
 
 ## 12. References
 
-- 95-30-00-001: Circularity Overview
-- 95-30-00-002: Circularity Strategy and Objectives
-- 95-30-00-004: Circularity Taxonomy
-- 95-30-00-005: Circularity Traceability Matrix
-- ISO 14040/14044: Life Cycle Assessment standards
-- ISO 59004: Circular Economy guidelines
+### Internal Documents
+- [95-30-00-001: Circularity Overview](../95-30-00-001_Circularity_Overview.md)
+- [95-30-00-002: Circularity Strategy and Objectives](../95-30-00-002_Circularity_Strategy_and_Objectives.md)
+- [95-30-00-004: Circularity Taxonomy](./95-30-00-004_Circularity_Taxonomy.md)
+- [95-30-00-005: Circularity Traceability Matrix](./95-30-00-005_Circularity_Traceability_Matrix.csv)
+
+### External Standards
+- [ISO 14040:2006](https://www.iso.org/standard/37456.html): Life Cycle Assessment - Principles and framework
+- [ISO 14044:2006](https://www.iso.org/standard/38498.html): Life Cycle Assessment - Requirements and guidelines
+- [ISO 59004:2024](https://www.iso.org/standard/80647.html): Circular Economy - Terminology, principles and guidance for implementation
 
 ## 13. Document Control
 
@@ -331,4 +335,4 @@ All KPIs derived from:
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

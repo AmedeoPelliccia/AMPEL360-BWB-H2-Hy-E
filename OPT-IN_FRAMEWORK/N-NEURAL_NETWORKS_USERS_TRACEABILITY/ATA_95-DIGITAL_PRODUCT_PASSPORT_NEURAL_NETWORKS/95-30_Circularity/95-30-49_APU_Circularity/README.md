@@ -45,9 +45,9 @@ The APU circularity implementation focuses on maximizing resource efficiency, mi
 
 ## Related Documents
 
-- [95-30-00-001](../95-30-00-001_Circularity_Overview.md): Circularity Overview
-- [95-30-00-003](../95-30-00-003_Cross_ATA_Circularity_Map.csv): Cross-ATA Circularity Map
-- [95-30-00-006](../00_META/95-30-00-006_Circularity_KPI_Definitions.md): KPI Definitions
+- [95-30-00-001: Circularity Overview](../95-30-00-001_Circularity_Overview.md): Circularity Overview
+- [95-30-00-003: Cross-ATA Circularity Map](../95-30-00-003_Cross_ATA_Circularity_Map.csv): Cross-ATA Circularity Map
+- [95-30-00-006: Circularity KPI Definitions](../00_META/95-30-00-006_Circularity_KPI_Definitions.md): KPI Definitions
 
 ## Owner
 

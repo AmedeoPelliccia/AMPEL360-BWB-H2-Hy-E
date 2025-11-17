@@ -76,17 +76,18 @@ Each circular loop and component is tracked through the Digital Product Passport
 ## 7. Regulatory Framework
 
 Circularity implementation aligns with:
-- EU Ecodesign for Sustainable Products Regulation (ESPR)
-- EU Digital Product Passport requirements
-- EASA sustainability guidelines
-- ISO 14040/14044 Life Cycle Assessment standards
+- [EU Ecodesign for Sustainable Products Regulation (ESPR)](https://ec.europa.eu/info/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products_en)
+- [EU Digital Product Passport requirements](https://ec.europa.eu/growth/industry/sustainability/product-policy_en)
+- [EASA sustainability guidelines](https://www.easa.europa.eu/en/environmental-sustainability)
+- [ISO 14040:2006](https://www.iso.org/standard/37456.html) Life Cycle Assessment - Principles and framework
+- [ISO 14044:2006](https://www.iso.org/standard/38498.html) Life Cycle Assessment - Requirements and guidelines
 
 ## 8. References
 
-- 95-30-00-002: Circularity Strategy and Objectives
-- 95-30-00-003: Cross-ATA Circularity Map
-- 95-30-00-004: Circularity Taxonomy
-- 95-30-00-006: Circularity KPI Definitions
+- [95-30-00-002: Circularity Strategy and Objectives](./95-30-00-002_Circularity_Strategy_and_Objectives.md)
+- [95-30-00-003: Cross-ATA Circularity Map](./95-30-00-003_Cross_ATA_Circularity_Map.csv)
+- [95-30-00-004: Circularity Taxonomy](./00_META/95-30-00-004_Circularity_Taxonomy.md)
+- [95-30-00-006: Circularity KPI Definitions](./00_META/95-30-00-006_Circularity_KPI_Definitions.md)
 
 ## 9. Document Control
 
@@ -99,4 +100,4 @@ Circularity implementation aligns with:
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

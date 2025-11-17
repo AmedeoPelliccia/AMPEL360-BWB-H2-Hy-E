@@ -28,10 +28,10 @@ This document provides cross-references and integration points between the APU c
 
 ## 6. References
 
-- 95-30-49-001: APU Circularity Overview
-- 95-30-00-003: Cross-ATA Circularity Map
-- 95-30-00-008: CAOS Circularity Hooks
+- [95-30-49-001: APU Circularity Overview
+- [95-30-00-003: Cross-ATA Circularity Map](../../95-30-00-003_Cross_ATA_Circularity_Map.csv)
+- [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

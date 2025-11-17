@@ -24,9 +24,9 @@ This document details end of life and second life use cases for the Energy Stora
 
 ## 5. References
 
-- 95-30-80-001: Energy_Storage Circularity Overview
-- 95-30-00-005: Circularity Traceability Matrix
+- [95-30-80-001: Energy_Storage Circularity Overview
+- [95-30-00-005: Circularity Traceability Matrix](../../00_META/95-30-00-005_Circularity_Traceability_Matrix.csv)
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

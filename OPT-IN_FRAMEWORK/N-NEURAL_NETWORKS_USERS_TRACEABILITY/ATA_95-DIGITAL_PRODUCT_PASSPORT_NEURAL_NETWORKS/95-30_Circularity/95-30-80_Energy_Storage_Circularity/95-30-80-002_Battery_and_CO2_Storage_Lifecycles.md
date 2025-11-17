@@ -24,9 +24,9 @@ This document details battery and co2 storage lifecycles for the Energy Storage.
 
 ## 5. References
 
-- 95-30-80-001: Energy_Storage Circularity Overview
-- 95-30-00-006: Circularity KPI Definitions
+- [95-30-80-001: Energy_Storage Circularity Overview
+- [95-30-00-006: Circularity KPI Definitions](../../00_META/95-30-00-006_Circularity_KPI_Definitions.md)
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

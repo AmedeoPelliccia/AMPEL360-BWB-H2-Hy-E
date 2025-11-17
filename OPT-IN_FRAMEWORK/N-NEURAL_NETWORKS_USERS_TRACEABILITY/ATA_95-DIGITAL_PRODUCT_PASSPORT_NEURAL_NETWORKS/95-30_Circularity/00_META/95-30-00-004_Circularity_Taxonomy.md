@@ -237,16 +237,16 @@ Format: `{Category}-{System}-{Metric}-{Unit}`
 ## 7. Cross-References
 
 ### 7.1 Related Documents
-- 95-30-00-001: Circularity Overview
-- 95-30-00-005: Circularity Traceability Matrix
-- 95-30-00-006: Circularity KPI Definitions
-- 95-30-00-007: Circularity Assets Registry
+- [95-30-00-001: Circularity Overview](../95-30-00-001_Circularity_Overview.md)
+- [95-30-00-005: Circularity Traceability Matrix](./95-30-00-005_Circularity_Traceability_Matrix.csv)
+- [95-30-00-006: Circularity KPI Definitions](./95-30-00-006_Circularity_KPI_Definitions.md)
+- [95-30-00-007: Circularity Assets Registry](./95-30-00-007_Circularity_Assets_Registry.json)
 
 ### 7.2 External Standards
-- ISO 14040: Life Cycle Assessment - Principles and Framework
-- ISO 14044: Life Cycle Assessment - Requirements and Guidelines
-- EN 45552: General method for the assessment of the durability of energy-related products
-- EU Battery Regulation 2023/1542
+- [ISO 14040:2006](https://www.iso.org/standard/37456.html): Life Cycle Assessment - Principles and Framework
+- [ISO 14044:2006](https://www.iso.org/standard/38498.html): Life Cycle Assessment - Requirements and Guidelines
+- [EN 45552:2020](https://standards.iteh.ai/catalog/standards/cen/d7e5f5d5-8d3e-4f3e-9f3a-3b3b3b3b3b3b/en-45552-2020): General method for the assessment of the durability of energy-related products
+- [EU Battery Regulation 2023/1542](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1542): Regulation on batteries and waste batteries
 
 ## 8. Document Control
 
@@ -259,4 +259,4 @@ Format: `{Category}-{System}-{Metric}-{Unit}`
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

@@ -24,9 +24,9 @@ This document details fluid conditioning and filtering for the Hydraulic Power.
 
 ## 5. References
 
-- 95-30-29-001: Hydraulic Circularity Overview
-- 95-30-00-008: CAOS Circularity Hooks
+- [95-30-29-001: Hydraulic Circularity Overview
+- [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

@@ -67,10 +67,10 @@ All circularity data is captured in the Digital Product Passport (DPP) for lifec
 
 ## 7. References
 
-- 95-30-00-001: Overall Circularity Overview
-- 95-30-00-002: Circularity Strategy and Objectives
-- 95-30-00-003: Cross-ATA Circularity Map
-- 95-30-00-006: Circularity KPI Definitions
+- [95-30-00-001: Overall Circularity Overview](../../95-30-00-001_Circularity_Overview.md)
+- [95-30-00-002: Circularity Strategy and Objectives](../../95-30-00-002_Circularity_Strategy_and_Objectives.md)
+- [95-30-00-003: Cross-ATA Circularity Map](../../95-30-00-003_Cross_ATA_Circularity_Map.csv)
+- [95-30-00-006: Circularity KPI Definitions](../../00_META/95-30-00-006_Circularity_KPI_Definitions.md)
 - 95-30-29-002 through 005: Detailed Hydraulic circularity documents
 
 ## 8. Document Control
@@ -84,4 +84,4 @@ All circularity data is captured in the Digital Product Passport (DPP) for lifec
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*

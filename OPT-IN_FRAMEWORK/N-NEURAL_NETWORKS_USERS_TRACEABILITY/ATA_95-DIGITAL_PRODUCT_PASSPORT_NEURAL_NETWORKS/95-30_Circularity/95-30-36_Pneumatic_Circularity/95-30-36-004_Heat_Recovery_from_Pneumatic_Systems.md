@@ -24,9 +24,9 @@ This document details heat recovery from pneumatic systems for the Pneumatic.
 
 ## 5. References
 
-- 95-30-36-001: Pneumatic Circularity Overview
-- 95-30-00-005: Circularity Traceability Matrix
+- [95-30-36-001: Pneumatic Circularity Overview
+- [95-30-00-005: Circularity Traceability Matrix](../../00_META/95-30-00-005_Circularity_Traceability_Matrix.csv)
 
 ---
 
-*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in OPT-IN_FRAMEWORK_STANDARD.md*
+*This document is part of the AMPEL360 OPT-IN Framework and follows the structure defined in [OPT-IN_FRAMEWORK_STANDARD.md](../../../../OPT-IN_FRAMEWORK_STANDARD.md)*
