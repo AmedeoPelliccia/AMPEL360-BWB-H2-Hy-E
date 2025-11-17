@@ -424,7 +424,7 @@ RETURN m.name, m.version
 
 ### 6.1 RESTful API
 
-**Base URL**: `https://dpp.ampel360.aero/api/v1/`
+**Base URL**: `https://<dpp-api-endpoint>/api/v1/`
 
 **Endpoints**:
 
