@@ -147,11 +147,11 @@ Operational monitoring data informs DPP updates:
 
 ## 7. Integration with ATA 98 (Runtime Monitoring)
 
-- **ATA 98** covers the technical implementation of runtime monitoring for NN systems.
-- **This section (95-00-02-006)** defines the **safety requirements** that ATA 98 implementations must meet.
+- **[ATA 98](../../ATA_98-NEURAL_NETWORK_RUNTIME_MONITORING/)** covers the technical implementation of runtime monitoring for NN systems.
+- **This section ([95-00-02-006](./95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md))** defines the **safety requirements** that ATA 98 implementations must meet.
 - Cross-reference between the two ensures consistency:
-  - ATA 98 provides the "how" (monitoring architecture, data pipelines, dashboards).
-  - 95-00-02-006 provides the "what" and "why" (safety KPIs, thresholds, alert logic).
+  - [ATA 98](../../ATA_98-NEURAL_NETWORK_RUNTIME_MONITORING/) provides the "how" (monitoring architecture, data pipelines, dashboards).
+  - [95-00-02-006](./95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md) provides the "what" and "why" (safety KPIs, thresholds, alert logic).
 
 ---
 

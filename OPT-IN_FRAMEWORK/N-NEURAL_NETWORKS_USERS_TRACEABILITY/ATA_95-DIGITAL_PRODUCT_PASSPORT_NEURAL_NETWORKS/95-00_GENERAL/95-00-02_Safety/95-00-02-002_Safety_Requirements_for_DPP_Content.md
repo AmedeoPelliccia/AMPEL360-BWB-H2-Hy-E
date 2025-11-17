@@ -54,9 +54,9 @@ safety-critical functions:
 
 ### 2.7 Training and Validation Evidence
 
-- **Training Data Pedigree:** Reference to ATA 96 data passport or equivalent.
+- **Training Data Pedigree:** Reference to [ATA 96](../../ATA_96-NEURAL_NETWORK_TRAINING_DATA/) data passport or equivalent.
 - **Validation Results:** Summary of test performance, confusion matrices, edge case testing.
-- **Links to Test Reports:** Pointers to detailed validation and V&V documentation (ATA 95-00-07).
+- **Links to Test Reports:** Pointers to detailed validation and V&V documentation ([ATA 95-00-07](../95-00-07_V_AND_V/)).
 
 ---
 

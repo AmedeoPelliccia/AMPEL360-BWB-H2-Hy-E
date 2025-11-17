@@ -50,9 +50,9 @@ DPP entries can be decomposed to support sub-claims:
 Goal G1: NN system is acceptably safe
   ├─ Strategy S1: Argument over development lifecycle
   │   ├─ Goal G1.1: Training data is appropriate
-  │   │   └─ Evidence E1.1: DPP reference to ATA 96 data passport
+  │   │   └─ Evidence E1.1: DPP reference to [ATA 96](../../ATA_96-NEURAL_NETWORK_TRAINING_DATA/) data passport
   │   ├─ Goal G1.2: Model is validated against safety requirements
-  │   │   └─ Evidence E1.2: DPP link to V&V test reports (ATA 95-00-07)
+  │   │   └─ Evidence E1.2: DPP link to V&V test reports ([ATA 95-00-07](../95-00-07_V_AND_V/))
   ├─ Strategy S2: Argument over operational safety
       ├─ Goal G2.1: Runtime monitoring detects anomalies
       │   └─ Evidence E2.1: DPP monitoring plan and alert thresholds
@@ -114,7 +114,7 @@ Example fragment:
   ├─[Strategy: Argument by decomposition over lifecycle]
   │   │
   │   ├─[G1.1: Training is appropriate]
-  │   │   └─[Evidence: DPP → ATA 96 data passport, training logs]
+  │   │   └─[Evidence: DPP → [ATA 96](../../ATA_96-NEURAL_NETWORK_TRAINING_DATA/) data passport, training logs]
   │   │
   │   ├─[G1.2: Model is validated]
   │   │   └─[Evidence: DPP → V&V test reports, performance metrics]

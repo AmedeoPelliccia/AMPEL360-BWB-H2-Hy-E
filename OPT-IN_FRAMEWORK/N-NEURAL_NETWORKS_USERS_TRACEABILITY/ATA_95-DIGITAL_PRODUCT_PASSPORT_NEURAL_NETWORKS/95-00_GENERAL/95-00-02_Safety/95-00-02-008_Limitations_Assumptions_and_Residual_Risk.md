@@ -58,7 +58,7 @@ The safety arguments and DPP content rely on the following assumptions:
 ### 3.2 Technical Assumptions
 
 - **Assumption T1:** The training data is representative of operational conditions within the ODD.
-  - **Validity:** Data provenance documented in ATA 96 data passport.
+  - **Validity:** Data provenance documented in [ATA 96](../../ATA_96-NEURAL_NETWORK_TRAINING_DATA/) data passport.
   - **Risk if violated:** Poor generalisation, high false positive/negative rates.
 
 - **Assumption T2:** The NN model architecture and training process are correctly implemented and free from defects.
@@ -72,7 +72,7 @@ The safety arguments and DPP content rely on the following assumptions:
 ### 3.3 Regulatory and Organisational Assumptions
 
 - **Assumption R1:** The certification authority accepts the DPP as valid evidence for NN safety assurance.
-  - **Validity:** Alignment with AMC 20-170, EASA AI Roadmap, and other guidance.
+  - **Validity:** Alignment with [AMC 20-170](https://www.easa.europa.eu/en/document-library/acceptable-means-of-compliance-and-guidance-materials/amc-20-170), [EASA AI Roadmap](https://www.easa.europa.eu/en/domains/research-innovation/artificial-intelligence), and other guidance.
   - **Risk if violated:** Certification delays or rejection.
 
 - **Assumption R2:** The organisation has mature change control, configuration management, and quality assurance processes.

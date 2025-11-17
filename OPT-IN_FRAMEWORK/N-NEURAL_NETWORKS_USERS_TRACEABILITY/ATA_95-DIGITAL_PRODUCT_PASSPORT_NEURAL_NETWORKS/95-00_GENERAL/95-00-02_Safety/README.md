@@ -57,34 +57,34 @@ deployments.
 
 Suggested roles:
 
-* **95-00-02-001_Safety_Objectives_and_Principles.md**
+* **[95-00-02-001_Safety_Objectives_and_Principles.md](./95-00-02-001_Safety_Objectives_and_Principles.md)**
   Defines safety objectives for NN DPP and alignment with overall safety policy.
 
-* **95-00-02-002_Safety_Requirements_for_DPP_Content.md**
+* **[95-00-02-002_Safety_Requirements_for_DPP_Content.md](./95-00-02-002_Safety_Requirements_for_DPP_Content.md)**
   Lists DPP fields and links that are required to support safety assurance
   (e.g. operating envelope, fail-safe behaviour, monitoring hooks, fallback).
 
-* **95-00-02-003_Hazard_Analysis_and_DPP_Linkage.md**
+* **[95-00-02-003_Hazard_Analysis_and_DPP_Linkage.md](./95-00-02-003_Hazard_Analysis_and_DPP_Linkage.md)**
   Describes how each DPP instance is connected to specific hazards, causes,
   controls and safety requirements in the hazard / risk tools.
 
-* **95-00-02-004_Safety_Cases_and_Arguments_Using_DPP.md**
+* **[95-00-02-004_Safety_Cases_and_Arguments_Using_DPP.md](./95-00-02-004_Safety_Cases_and_Arguments_Using_DPP.md)**
   Explains how DPP content contributes as **evidence** in safety cases and
   how consistency with other artefacts is maintained.
 
-* **95-00-02-005_Failure_Modes_and_Risk_Controls_for_NN_Systems.md**
+* **[95-00-02-005_Failure_Modes_and_Risk_Controls_for_NN_Systems.md](./95-00-02-005_Failure_Modes_and_Risk_Controls_for_NN_Systems.md)**
   Catalogues NN-specific failure modes and required DPP data to describe
   risk controls, mitigations and operational constraints.
 
-* **95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md**
+* **[95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md](./95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md)**
   Maps safety monitoring requirements (KPIs, triggers, thresholds) into
   DPP fields and references.
 
-* **95-00-02-007_Safety_Incidents_Learning_and_DPP_Updates.md**
+* **[95-00-02-007_Safety_Incidents_Learning_and_DPP_Updates.md](./95-00-02-007_Safety_Incidents_Learning_and_DPP_Updates.md)**
   Defines how incidents/occurrences lead to updates in DPP entries, including
   additional warnings, changed status, or retirement flags.
 
-* **95-00-02-008_Limitations_Assumptions_and_Residual_Risk.md**
+* **[95-00-02-008_Limitations_Assumptions_and_Residual_Risk.md](./95-00-02-008_Limitations_Assumptions_and_Residual_Risk.md)**
   Documents what the DPP safety view can and cannot represent, explicit
   assumptions and remaining risk.
 
@@ -92,7 +92,7 @@ Suggested roles:
 
 ## 4. Relationship with Other Sections
 
-* **95-00-01_Overview**
+* **[95-00-01_Overview](../95-00-01_Overview/)**
   Provides the general DPP concept; 95-00-02_Safety specialises it for
   **safety-related usage and evidence**.
 

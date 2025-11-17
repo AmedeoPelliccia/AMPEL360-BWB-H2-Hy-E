@@ -86,9 +86,9 @@ Incident investigation outcomes may require DPP updates:
 
 | Investigation Finding                    | DPP Update Action                                          |
 |------------------------------------------|------------------------------------------------------------|
-| New failure mode identified              | Add to failure mode catalogue (95-00-02-005)              |
+| New failure mode identified              | Add to failure mode catalogue ([95-00-02-005](./95-00-02-005_Failure_Modes_and_Risk_Controls_for_NN_Systems.md))              |
 | ODD gap discovered                       | Refine ODD definition, add exclusion or constraint        |
-| Monitoring threshold insufficient        | Update alert thresholds (95-00-02-006)                    |
+| Monitoring threshold insufficient        | Update alert thresholds ([95-00-02-006](./95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md))                    |
 | Model requires retraining                | Update version, revalidate, update status to "IN_REVIEW"  |
 | Risk level re-assessed                   | Update hazard links, risk controls, residual risk         |
 | Component decommissioned / retired       | Update status to "RETIRED", add retirement rationale      |

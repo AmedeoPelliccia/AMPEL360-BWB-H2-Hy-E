@@ -8,7 +8,7 @@ Digital Product Passport (DPP) for Neural Networks under ATA 95.
 It establishes:
 
 - High-level safety goals for NN-enabled systems.
-- Alignment with overall safety policy and regulatory frameworks (e.g., AMC 20-170, EASA AI Roadmap).
+- Alignment with overall safety policy and regulatory frameworks (e.g., [AMC 20-170](https://www.easa.europa.eu/en/document-library/acceptable-means-of-compliance-and-guidance-materials/amc-20-170), [EASA AI Roadmap](https://www.easa.europa.eu/en/domains/research-innovation/artificial-intelligence)).
 - Core principles that DPP content must support to enable safe deployment and operation.
 
 ---
@@ -84,10 +84,10 @@ The NN DPP shall support the following safety objectives:
 
 This document aligns with:
 
-- **EASA AMC 20-170** (Airworthiness and Operational Consideration for AI/ML Systems)
-- **EASA AI Roadmap 2.0**
-- **SAE ARP6983** (Guidance for Neural Network-Based Systems)
-- **ISO/IEC 5338** (AI System Life Cycle Processes)
+- **[EASA AMC 20-170](https://www.easa.europa.eu/en/document-library/acceptable-means-of-compliance-and-guidance-materials/amc-20-170)** (Airworthiness and Operational Consideration for AI/ML Systems)
+- **[EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/domains/research-innovation/artificial-intelligence)**
+- **[SAE ARP6983](https://www.sae.org/standards/content/arp6983/)** (Guidance for Neural Network-Based Systems)
+- **[ISO/IEC 5338](https://www.iso.org/standard/81118.html)** (AI System Life Cycle Processes)
 
 The DPP structure is designed to provide the evidence and traceability required
 by these frameworks.
