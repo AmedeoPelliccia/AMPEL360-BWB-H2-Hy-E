@@ -1,0 +1,19 @@
+Artifact_ID,Artifact_Type,Artifact_Name,Requirement_ID,Test_ID,Validation_Evidence,Status,Owner,Last_Updated
+95-06-01-001,Model,flight_control_transformer_v2.1,REQ-95-001;REQ-95-015,TEST-95-001;TEST-95-015,VAL-95-001.pdf,Validated,ML Team,2025-11-17
+95-06-01-002,Model,collision_avoidance_cnn_v1.0,REQ-95-002;REQ-95-016,TEST-95-002;TEST-95-016,VAL-95-002.pdf,In Progress,ML Team,2025-11-17
+95-06-01-003,Model,propulsion_mgmt_lstm_v3.2,REQ-95-003;REQ-95-017,TEST-95-003;TEST-95-017,VAL-95-003.pdf,Validated,ML Team,2025-11-17
+95-06-02-001,Pipeline,hpc_training_pipeline,REQ-95-020;REQ-95-021,TEST-95-020,EXEC-95-020.log,Validated,DevOps Team,2025-11-17
+95-06-03-001,Dataset,flight_test_timeseries_v1.2,REQ-95-030;REQ-95-031,TEST-95-030,DQ-95-030.xlsx,Validated,Data Team,2025-11-17
+95-06-04-001,Benchmark,flight_control_benchmark_v1,REQ-95-040;REQ-95-041,TEST-95-040,BENCH-95-040.csv,Validated,QA Team,2025-11-17
+95-06-05-001,Deployment,avionics_deployment_package,REQ-95-050;REQ-95-051,TEST-95-050,DEPLOY-95-050.pdf,In Progress,MLOps Team,2025-11-17
+95-06-06-001,Monitor,runtime_monitoring_dashboard,REQ-95-060;REQ-95-061,TEST-95-060,MON-95-060.png,In Progress,Ops Team,2025-11-17
+95-06-07-001,Simulation,sil_testbench_v1,REQ-95-070;REQ-95-071,TEST-95-070,SIL-95-070.pdf,Validated,Test Team,2025-11-17
+95-06-08-001,Optimization,int8_quantized_model,REQ-95-080;REQ-95-081,TEST-95-080,PERF-95-080.xlsx,Validated,Optimization Team,2025-11-17
+95-06-10-001,CFD_Analysis,cruise_mach08_baseline,REQ-95-100;REQ-95-101,VAL-95-100,CFD-95-100.pdf,Validated,Aero Team,2025-11-17
+95-06-10-002,CFD_Analysis,high_lift_landing_config,REQ-95-102;REQ-95-103,VAL-95-102,CFD-95-102.pdf,In Progress,Aero Team,2025-11-17
+95-06-11-001,FEM_Analysis,ultimate_load_case_wing,REQ-95-110;REQ-95-111,VAL-95-110,FEM-95-110.pdf,Validated,Structures Team,2025-11-17
+95-06-11-002,FEM_Analysis,modal_analysis_gvt,REQ-95-112;REQ-95-113,VAL-95-112,FEM-95-112.pdf,Validated,Structures Team,2025-11-17
+95-06-12-001,Multiphysics,fsi_wing_flutter,REQ-95-120;REQ-95-121,VAL-95-120,FSI-95-120.pdf,In Progress,Multiphysics Team,2025-11-17
+95-06-13-001,Aeroelasticity,flutter_analysis_v1,REQ-95-130;REQ-95-131,VAL-95-130,FLUTTER-95-130.pdf,In Progress,Aeroelastic Team,2025-11-17
+95-06-14-001,Loads,gust_load_envelope,REQ-95-140;REQ-95-141,VAL-95-140,LOADS-95-140.pdf,Validated,Loads Team,2025-11-17
+95-06-14-002,Loads,landing_impact_analysis,REQ-95-142;REQ-95-143,VAL-95-142,LOADS-95-142.pdf,Validated,Loads Team,2025-11-17
