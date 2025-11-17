@@ -1,0 +1,1 @@
+BIM model file would be placed here

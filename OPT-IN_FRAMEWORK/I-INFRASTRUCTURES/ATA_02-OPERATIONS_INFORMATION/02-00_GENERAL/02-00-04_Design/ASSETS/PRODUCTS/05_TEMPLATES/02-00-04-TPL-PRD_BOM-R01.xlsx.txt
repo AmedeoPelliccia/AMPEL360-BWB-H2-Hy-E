@@ -1,0 +1,2 @@
+Template Excel file: 02-00-04-TPL-PRD_BOM-R01.xlsx
+Note: Actual Excel templates would be created in Excel/LibreOffice
