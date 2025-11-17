@@ -1,31 +1,282 @@
 # Model Card Template
-# This file should be populated with complete model card information
-# following the structure in 95-20-21-A-101_Temp_Predictor_v1.2.yaml
+# Fill all TBD fields before using this for a certified artefact.
+# Pattern derived from: 95-20-21-A-101_Temp_Predictor_v1.2.yaml
 
+# -----------------------------------------------------------------------------
+# BASIC MODEL INFO
+# -----------------------------------------------------------------------------
 model_card:
   name: "Model Name"
   version: "X.X"
-  model_id: "95-20-21-A-XXX"
-  status: "template"
-  
+  model_id: "95-20-21-A-XXX"          # ATA 95 ID for this NN artefact
+  subsystem: "95-20-YY SUBSYSTEM_NAME"
+  status: "template"                  # template | draft | production
+  created_date: "YYYY-MM-DD"
+  last_updated: "2025-11-17"
+
+  description:
+    summary: "Short description of what this model does."
+    purpose: "Business / operational purpose in the ECS / ATA 21 / etc."
+    use_case: "Where/when it runs (flight phases, maintenance, ground ops...)."
+
+# -----------------------------------------------------------------------------
+# ARCHITECTURE
+# -----------------------------------------------------------------------------
 architecture:
-  type: "TBD"
-  framework: "TBD"
-  
+  type: "TBD"                         # e.g. "LSTM + Dense", "CNN + Transformer"
+  framework: "TBD"                    # e.g. "TensorFlow 2.XX", "PyTorch 2.XX"
+  input_features: 0
+  input_description:
+    - "Describe input feature 1"
+    - "Describe input feature 2"
+
+  layers:
+    # Example structure – adapt to your model
+    - type: "Input"
+      shape: [null, T, F]             # batch, timesteps, features
+      description: "Input tensor semantics."
+    - type: "Dense"
+      units: 0
+      activation: "relu"
+    # ...
+
+  total_parameters: 0
+  trainable_parameters: 0
+  model_size_mb: 0.0
+  format: "ONNX"                      # ONNX / TorchScript / SavedModel / etc.
+
+# -----------------------------------------------------------------------------
+# TRAINING
+# -----------------------------------------------------------------------------
+training:
+  dataset:
+    name: "DATASET_ID"
+    source: "Short description of origin (test aircraft, sim, bench...)."
+    size: "TBD GB"
+    samples: 0
+    features: 0
+    split:
+      train: 0.0
+      validation: 0.0
+      test: 0.0
+
+  data_quality:
+    completeness: 0.0                 # 0–1
+    noise_level: "low | medium | high"
+    representativeness: "TBD"
+    diversity: "TBD"
+
+  hyperparameters:
+    optimizer: "TBD"                  # adam / adamw / sgd...
+    learning_rate: 0.0
+    batch_size: 0
+    epochs: 0
+    early_stopping_patience: 0
+    reduce_lr_patience: 0
+
+  training_time:
+    duration_hours: 0
+    hardware: "GPU/CPU type"
+    framework_version: "TBD"
+
+  loss_function:
+    name: "TBD"
+    formula: "Describe mathematically if relevant."
+
+# -----------------------------------------------------------------------------
+# PERFORMANCE
+# -----------------------------------------------------------------------------
 performance:
-  metrics: {}
-  
+  metrics:
+    # Replace with what matters for this model
+    primary_metric:
+      name: "TBD"                     # e.g. "mae", "accuracy", "f1"
+      train: 0.0
+      validation: 0.0
+      test: 0.0
+      unit: "TBD"
+    secondary_metric:
+      name: "TBD"
+      value: 0.0
+
+  inference:
+    latency_ms:
+      mean: 0.0
+      p50: 0.0
+      p95: 0.0
+      p99: 0.0
+      max: 0.0
+    throughput_rps: 0.0
+    memory_mb: 0.0
+    cpu_usage_percent: 0.0
+
+  robustness:
+    adversarial_robustness: "TBD"
+    out_of_distribution_detection: false
+    uncertainty_quantification: false
+    method: null
+
+# -----------------------------------------------------------------------------
+# DEPLOYMENT
+# -----------------------------------------------------------------------------
 deployment:
   target: "AMPEL360 BWB H₂ Hy-E Q100"
   runtime: "95-20-01 NN Core Platform"
-  
+  hardware: "TBD IMA Partition / HW"
+  quantization: "FP32"
+  optimization: "ONNX Runtime | TensorRT | etc."
+
+  resource_requirements:
+    memory_mb: 0
+    cpu_cores: 0.0
+    gpu_memory_mb: 0
+    storage_mb: 0.0
+
+  update_rate: "TBD Hz"
+  expected_latency: "< TBD ms"
+
+# -----------------------------------------------------------------------------
+# CERTIFICATION
+# -----------------------------------------------------------------------------
 certification:
-  dal_level: "TBD"
-  
+  dal_level: "TBD"                    # e.g. "C", "D"
+  failure_condition: "Describe hazard if model misbehaves."
+  compliance:
+    - standard: "DO-178C"
+      level: "TBD"
+      status: "TBD"
+      url: "https://www.rtca.org/products/do-178c/"
+    # Add other standards as needed
+
+  verification:
+    requirements_coverage: 0.0
+    code_coverage: 0.0
+    mcdc_coverage: 0.0
+    test_cases: 0
+    test_hours: 0
+
+  safety_analysis:
+    fmea: "DOC_ID_FMEA"
+    fta: "DOC_ID_FTA"
+    hazard_analysis: "TBD / DOC_ID"
+
+# -----------------------------------------------------------------------------
+# INTERFACES
+# -----------------------------------------------------------------------------
+interfaces:
+  inputs:
+    - name: "input_name"
+      type: "float32[...]"
+      unit: "TBD"
+      range: [min, max]
+      rate_hz: 0.0
+      source: "System / ATA chapter"
+  outputs:
+    - name: "output_name"
+      type: "float32[...]"
+      unit: "TBD"
+      range: [min, max]
+      rate_hz: 0.0
+      description: "What this output means."
+      destination: "Downstream function / system"
+
+# -----------------------------------------------------------------------------
+# DPP INTEGRATION / LINEAGE
+# -----------------------------------------------------------------------------
 dpp_integration:
   blockchain_anchor: null
-  
+  provenance_hash: null
+  training_data_hash: null
+  model_hash: null
+  certification_hash: null
+
+  lineage:
+    parent_models: null
+    derived_from: null
+    influences: []
+
+  audit_trail:
+    - timestamp: "YYYY-MM-DDTHH:MM:SSZ"
+      event: "Model card template created"
+      user: "Amedeo Pelliccia"
+
+# -----------------------------------------------------------------------------
+# LIMITATIONS & FALLBACK
+# -----------------------------------------------------------------------------
+limitations:
+  known_issues: []
+  constraints:
+    - "Describe key assumptions/operating envelope."
+  edge_cases:
+    - "Describe edge case behaviour."
+
+  fallback:
+    condition: "When the model must be bypassed."
+    action: "What classical / deterministic logic takes over."
+
+# -----------------------------------------------------------------------------
+# ETHICAL / PRIVACY
+# -----------------------------------------------------------------------------
+ethical_considerations:
+  fairness: "TBD"
+  privacy: "TBD"
+  bias: "TBD"
+  transparency: "How explainability is handled, if applicable."
+
+# -----------------------------------------------------------------------------
+# MAINTENANCE & MONITORING
+# -----------------------------------------------------------------------------
+maintenance:
+  retraining_schedule: "TBD"
+  monitoring_metrics:
+    - "Metric 1"
+    - "Metric 2"
+  performance_threshold:
+    # Example: for regression
+    primary_metric_degradation: "> X units"
+    action: "Trigger retraining evaluation"
+
+  update_procedure:
+    - "Collect new operational data"
+    - "Retrain model"
+    - "Validate per V&V plan"
+    - "Certification review"
+    - "Controlled deployment"
+
+# -----------------------------------------------------------------------------
+# REFERENCES & CONTACT
+# -----------------------------------------------------------------------------
+references:
+  documentation:
+    - "95-20-21-XXX_Component_Spec.md"
+    - "95-20-21-009_Safety_and_Certification.md"
+  related_models:
+    - "95-20-21-A-YYY_Another_Model_vX.Y"
+  papers:
+    - title: "Reference paper or standard"
+      authors: "Author et al."
+      year: 20XX
+      venue: "Journal / Conf."
+      url: "https://..."
+
+contact:
+  owner: "AMPEL360 ML Engineering Team"
+  email: "ml-engineering@ampel360.aero"
+  maintainer: "team-alias@ampel360.aero"
+
+# -----------------------------------------------------------------------------
+# DOCUMENT CONTROL / AI ASSISTANCE
+# -----------------------------------------------------------------------------
 document_control:
   version: "template"
-  status: "PLACEHOLDER"
+  status: "PLACEHOLDER"               # PLACEHOLDER | WORKING | RELEASED
   last_updated: "2025-11-17"
+  approved_by: null
+  approval_date: null
+  ai_assistance:
+    used: true
+    tools:
+      - "GitHub Copilot"
+      - "ChatGPT"
+    prompted_by: "Amedeo Pelliccia"
+    note: "Template generated with AI assistance; must be customized and approved by human reviewers before use in certification contexts."
