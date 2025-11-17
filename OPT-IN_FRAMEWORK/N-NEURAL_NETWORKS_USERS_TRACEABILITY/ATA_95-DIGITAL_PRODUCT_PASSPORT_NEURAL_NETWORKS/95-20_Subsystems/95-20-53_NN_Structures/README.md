@@ -107,7 +107,7 @@ Each model card follows the format:
 
 ### Compliance
 
-- **DO-178C**: Software DAL DAL-B
+- **DO-178C**: Software DAL-B
 - **DO-333**: Model-based development
 - **EASA MOC SC-AI**: AI/ML certification guidance
 - **FAA AC 20-115D**: Airborne software
