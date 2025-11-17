@@ -1,0 +1,14 @@
+# Verification Matrix Template Placeholder
+# This is a placeholder for an Excel spreadsheet template
+# Actual Excel file should contain the following sheets:
+
+# Sheet 1: Requirements Traceability
+# Columns: Requirement_ID, Requirement_Text, Category, Priority, Status, Verification_Method, Test_Case_ID, Test_Result, Verification_Date, Verified_By, Evidence_Link, Notes
+
+# Sheet 2: Verification Summary
+# Summary statistics and coverage analysis
+
+# Template ID: TPL-DOC-003
+# Revision: R01
+# Date: 2025-11-17
+# Status: WORKING

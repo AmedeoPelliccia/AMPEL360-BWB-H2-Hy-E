@@ -1,0 +1,9 @@
+# Archive Directory for Superseded Templates
+
+This directory contains archived versions of templates that have been superseded by newer revisions.
+
+Archive folders should follow the naming convention:
+02-00-04-TPL-ARCHIVE_YYYY-MM-DD_<tag>/
+
+Example:
+02-00-04-TPL-ARCHIVE_2025-11-17_pre-v2-update/
