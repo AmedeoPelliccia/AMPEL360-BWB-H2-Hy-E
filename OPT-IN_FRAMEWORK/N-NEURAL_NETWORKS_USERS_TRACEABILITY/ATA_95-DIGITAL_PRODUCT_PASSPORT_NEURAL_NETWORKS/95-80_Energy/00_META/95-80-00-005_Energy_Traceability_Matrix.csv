@@ -1,0 +1,31 @@
+Requirement_ID,Requirement_Description,Source_ATA,95_80_Reference,95_20_80_Link,95_60_Link,95_30_Link,95_70_Link,Verification_Method,Status
+REQ-E-001,Primary electrical generation via fuel cells,24,95-80-24,95-20-80-24,95-60-24,N/A,95-70-71,Test,Verified
+REQ-E-002,Backup power via APU for 30 minutes minimum,49,95-80-49,95-20-80-49,95-60-49,N/A,N/A,Test,Verified
+REQ-E-003,Battery storage for peak loads and emergency,24,95-80-24,95-20-80-24,95-60-24,N/A,N/A,Test,In Progress
+REQ-E-004,270 VDC primary bus voltage regulation ±5%,24,95-80-24,95-20-80-24,N/A,N/A,N/A,Analysis,Verified
+REQ-E-005,28 VDC secondary bus voltage regulation ±2%,24,95-80-24,95-20-80-24,N/A,N/A,N/A,Analysis,Verified
+REQ-E-006,Power quality THD <5% on all buses,24,95-80-24,95-20-80-24,N/A,N/A,N/A,Test,In Progress
+REQ-E-007,Fuel cell efficiency >55% at cruise power,71,95-80-70,95-20-80-70,N/A,N/A,95-70-71,Test,In Progress
+REQ-E-008,Overall propulsion efficiency >45% H2-to-thrust,70-79,95-80-70,95-20-80-70,N/A,N/A,95-70-70,Analysis,In Progress
+REQ-E-009,H2 flow measurement accuracy ±2%,28,95-80-28,95-20-80-28,95-60-28,N/A,N/A,Calibration,Verified
+REQ-E-010,Energy management response time <50ms,80,95-80-80,95-20-80-80,N/A,N/A,N/A,Test,Verified
+REQ-E-011,Hydraulic system pressure 5000 psi ±100 psi,29,95-80-29,95-20-80-29,95-60-29,N/A,N/A,Test,Verified
+REQ-E-012,Hydraulic accumulator energy storage,29,95-80-29,95-20-80-29,95-60-29,N/A,N/A,Test,In Progress
+REQ-E-013,Pneumatic system pressure 50-200 psi,36,95-80-36,95-20-80-36,N/A,N/A,N/A,Test,In Progress
+REQ-E-014,Electric compressor efficiency >80%,36,95-80-36,95-20-80-36,N/A,N/A,N/A,Test,Planned
+REQ-E-015,Waste heat recovery for cabin heating,21,95-80-70,95-20-80-21,N/A,N/A,95-70-71,Analysis,In Progress
+REQ-E-016,LH2 boil-off rate <0.5% per day,28,95-80-28,95-20-80-28,95-60-28,95-30-28,N/A,Test,In Progress
+REQ-E-017,CO2 capture energy penalty <10% cruise power,21-80,95-80-80,95-20-80-21,N/A,95-30-21,N/A,Analysis,Planned
+REQ-E-018,Load prioritization with 3 levels: Critical/Essential/Non-Essential,80,95-80-80,95-20-80-80,N/A,N/A,N/A,Analysis,Verified
+REQ-E-019,Automatic load shedding in degraded mode,80,95-80-80,95-20-80-80,N/A,N/A,N/A,Test,In Progress
+REQ-E-020,Energy data logging at 1 Hz minimum,46,95-80-46,95-20-80-46,N/A,N/A,N/A,Test,Verified
+REQ-E-021,Digital twin energy model accuracy ±5%,46,95-80-46,95-20-80-46,N/A,N/A,N/A,Simulation,In Progress
+REQ-E-022,Predictive energy demand for mission planning,80,95-80-80,95-20-80-80,N/A,N/A,N/A,Simulation,Planned
+REQ-E-023,Regenerative braking energy capture >70%,32/80,95-80-80,95-20-80-32,95-60-24,N/A,N/A,Test,Planned
+REQ-E-024,Energy efficiency reporting per flight cycle,95-10,95-80-46,N/A,N/A,N/A,N/A,Software,In Progress
+REQ-E-025,Electrical system redundancy: dual bus architecture,24,95-80-24,95-20-80-24,N/A,N/A,N/A,Analysis,Verified
+REQ-E-026,Bus cross-tie capability for load balancing,24,95-80-24,95-20-80-24,N/A,N/A,N/A,Test,Verified
+REQ-E-027,Fault detection and isolation <100ms,80,95-80-80,95-20-80-80,N/A,N/A,N/A,Test,In Progress
+REQ-E-028,Energy asset lifecycle tracking in DPP,95-60,95-80-46,95-20-80-all,95-60-all,N/A,N/A,Software,Planned
+REQ-E-029,Circular economy energy recycling metrics,95-30,95-80-80,95-20-80-all,N/A,95-30-all,N/A,Analysis,Planned
+REQ-E-030,CAOS integration for energy optimization,40/92,95-80-80,95-20-80-80,N/A,N/A,N/A,Software,In Progress

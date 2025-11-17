@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "registry_name": "AMPEL360 Energy Assets Registry",
+    "version": "1.0",
+    "date": "2025-11-17",
+    "ata_chapter": "95-80",
+    "description": "Digital Product Passport registry for all energy system assets",
+    "total_assets": 47
+  },
+  "assets": [
+    {
+      "id": "EA-001",
+      "name": "PEM Fuel Cell Stack #1",
+      "ata_chapter": "24",
+      "domain": "electrical",
+      "type": "generation",
+      "criticality": "critical",
+      "location": "Center body, forward fuel cell bay",
+      "serial_number": "FC-PEM-2024-001",
+      "manufacturer": "Hydrogenics/Cummins",
+      "power_rating_kw": 1250,
+      "efficiency_percent": 57,
+      "operational_hours": 0,
+      "maintenance_interval_hours": 5000,
+      "links": {
+        "design": "95-80-24/ASSETS/95-80-24-A-002_Load_and_Bus_Map_Table.csv",
+        "safety": "ATA_24/02_SAFETY/",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-001"
+      }
+    },
+    {
+      "id": "EA-002",
+      "name": "PEM Fuel Cell Stack #2",
+      "ata_chapter": "24",
+      "domain": "electrical",
+      "type": "generation",
+      "criticality": "critical",
+      "location": "Center body, aft fuel cell bay",
+      "serial_number": "FC-PEM-2024-002",
+      "manufacturer": "Hydrogenics/Cummins",
+      "power_rating_kw": 1250,
+      "efficiency_percent": 57,
+      "operational_hours": 0,
+      "maintenance_interval_hours": 5000,
+      "links": {
+        "design": "95-80-24/ASSETS/95-80-24-A-002_Load_and_Bus_Map_Table.csv",
+        "safety": "ATA_24/02_SAFETY/",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-001"
+      }
+    },
+    {
+      "id": "EA-003",
+      "name": "270 VDC Main Bus #1",
+      "ata_chapter": "24",
+      "domain": "electrical",
+      "type": "distribution",
+      "criticality": "critical",
+      "location": "Center body, electrical distribution center",
+      "nominal_voltage_vdc": 270,
+      "max_current_a": 5000,
+      "bus_bar_material": "Copper",
+      "links": {
+        "design": "95-80-24/ASSETS/95-80-24-A-001_Electrical_SingleLine_Diagram.drawio",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-004"
+      }
+    },
+    {
+      "id": "EA-004",
+      "name": "270 VDC Main Bus #2",
+      "ata_chapter": "24",
+      "domain": "electrical",
+      "type": "distribution",
+      "criticality": "critical",
+      "location": "Center body, electrical distribution center",
+      "nominal_voltage_vdc": 270,
+      "max_current_a": 5000,
+      "bus_bar_material": "Copper",
+      "links": {
+        "design": "95-80-24/ASSETS/95-80-24-A-001_Electrical_SingleLine_Diagram.drawio",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-004"
+      }
+    },
+    {
+      "id": "EA-005",
+      "name": "Battery Pack #1 (High Power)",
+      "ata_chapter": "24",
+      "domain": "electrical",
+      "type": "storage",
+      "criticality": "high",
+      "location": "Center body, battery compartment forward",
+      "serial_number": "BAT-HP-2024-001",
+      "manufacturer": "Saft/Northvolt",
+      "capacity_kwh": 250,
+      "voltage_nominal_vdc": 270,
+      "max_discharge_rate_c": 2.0,
+      "chemistry": "Lithium-ion NMC",
+      "links": {
+        "design": "95-60-24/Battery_Design/",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-003"
+      }
+    },
+    {
+      "id": "EA-006",
+      "name": "Auxiliary Power Unit (APU)",
+      "ata_chapter": "49",
+      "domain": "electrical",
+      "type": "generation",
+      "criticality": "high",
+      "location": "Tail cone",
+      "serial_number": "APU-2024-001",
+      "manufacturer": "Honeywell",
+      "power_rating_kw": 350,
+      "fuel_type": "H2 or Jet-A backup",
+      "links": {
+        "design": "95-80-49/ASSETS/95-80-49-A-001_APU_Energy_Flow_Diagram.drawio",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-002"
+      }
+    },
+    {
+      "id": "EA-007",
+      "name": "LH2 Tank #1 (Forward)",
+      "ata_chapter": "28",
+      "domain": "chemical",
+      "type": "storage",
+      "criticality": "critical",
+      "location": "Center body, forward tank bay",
+      "serial_number": "LH2-TANK-2024-001",
+      "manufacturer": "Chart Industries",
+      "capacity_kg": 400,
+      "energy_content_kwh": 13320,
+      "operating_temperature_k": 20,
+      "insulation_type": "Vacuum with MLI",
+      "boil_off_rate_percent_day": 0.3,
+      "links": {
+        "design": "ATA_28/04_DESIGN/",
+        "safety": "ATA_28/02_SAFETY/",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-009"
+      }
+    },
+    {
+      "id": "EA-008",
+      "name": "LH2 Tank #2 (Mid)",
+      "ata_chapter": "28",
+      "domain": "chemical",
+      "type": "storage",
+      "criticality": "critical",
+      "location": "Center body, mid tank bay",
+      "serial_number": "LH2-TANK-2024-002",
+      "manufacturer": "Chart Industries",
+      "capacity_kg": 400,
+      "energy_content_kwh": 13320,
+      "operating_temperature_k": 20,
+      "insulation_type": "Vacuum with MLI",
+      "boil_off_rate_percent_day": 0.3,
+      "links": {
+        "design": "ATA_28/04_DESIGN/",
+        "safety": "ATA_28/02_SAFETY/",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-009"
+      }
+    },
+    {
+      "id": "EA-009",
+      "name": "LH2 Tank #3 (Aft)",
+      "ata_chapter": "28",
+      "domain": "chemical",
+      "type": "storage",
+      "criticality": "critical",
+      "location": "Center body, aft tank bay",
+      "serial_number": "LH2-TANK-2024-003",
+      "manufacturer": "Chart Industries",
+      "capacity_kg": 400,
+      "energy_content_kwh": 13320,
+      "operating_temperature_k": 20,
+      "insulation_type": "Vacuum with MLI",
+      "boil_off_rate_percent_day": 0.3,
+      "links": {
+        "design": "ATA_28/04_DESIGN/",
+        "safety": "ATA_28/02_SAFETY/",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-009"
+      }
+    },
+    {
+      "id": "EA-010",
+      "name": "Electric Motor Drive #1 (Port)",
+      "ata_chapter": "70",
+      "domain": "electrical",
+      "type": "conversion",
+      "criticality": "critical",
+      "location": "Port nacelle",
+      "serial_number": "EMD-2024-001",
+      "manufacturer": "Siemens/Rolls-Royce",
+      "power_rating_kw": 1400,
+      "efficiency_percent": 96,
+      "cooling_type": "Liquid",
+      "links": {
+        "design": "95-80-70/ASSETS/95-80-70-A-001_Propulsion_Energy_Conversion_BlockDiagram.drawio",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-007"
+      }
+    },
+    {
+      "id": "EA-011",
+      "name": "Electric Motor Drive #2 (Starboard)",
+      "ata_chapter": "70",
+      "domain": "electrical",
+      "type": "conversion",
+      "criticality": "critical",
+      "location": "Starboard nacelle",
+      "serial_number": "EMD-2024-002",
+      "manufacturer": "Siemens/Rolls-Royce",
+      "power_rating_kw": 1400,
+      "efficiency_percent": 96,
+      "cooling_type": "Liquid",
+      "links": {
+        "design": "95-80-70/ASSETS/95-80-70-A-001_Propulsion_Energy_Conversion_BlockDiagram.drawio",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-007"
+      }
+    },
+    {
+      "id": "EA-012",
+      "name": "Hydraulic Pump #1 (Primary)",
+      "ata_chapter": "29",
+      "domain": "hydraulic",
+      "type": "conversion",
+      "criticality": "high",
+      "location": "Center body, hydraulic pump bay",
+      "serial_number": "HYD-PUMP-2024-001",
+      "manufacturer": "Parker Aerospace",
+      "pressure_psi": 5000,
+      "flow_rate_gpm": 30,
+      "motor_power_kw": 40,
+      "efficiency_percent": 88,
+      "links": {
+        "design": "95-80-29/ASSETS/95-80-29-A-001_Hydraulic_Energy_Network_Diagram.drawio",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-011"
+      }
+    },
+    {
+      "id": "EA-013",
+      "name": "Hydraulic Accumulator #1",
+      "ata_chapter": "29",
+      "domain": "hydraulic",
+      "type": "storage",
+      "criticality": "medium",
+      "location": "Center body, hydraulic system",
+      "serial_number": "HYD-ACC-2024-001",
+      "manufacturer": "Parker Aerospace",
+      "volume_liters": 10,
+      "precharge_pressure_psi": 2000,
+      "max_pressure_psi": 5000,
+      "energy_capacity_kj": 150,
+      "links": {
+        "design": "95-80-29/ASSETS/95-80-29-A-003_Accumulator_Energy_Model.json",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-012"
+      }
+    },
+    {
+      "id": "EA-014",
+      "name": "Air Compressor #1 (ECS)",
+      "ata_chapter": "36",
+      "domain": "pneumatic",
+      "type": "conversion",
+      "criticality": "medium",
+      "location": "Center body, ECS bay",
+      "serial_number": "AIR-COMP-2024-001",
+      "manufacturer": "Liebherr",
+      "max_pressure_psi": 200,
+      "flow_rate_cfm": 100,
+      "motor_power_kw": 25,
+      "efficiency_percent": 78,
+      "links": {
+        "design": "95-80-36/ASSETS/95-80-36-A-001_Pneumatic_Energy_Diagram.drawio",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-014"
+      }
+    },
+    {
+      "id": "EA-015",
+      "name": "Energy Management System (EMS) Controller",
+      "ata_chapter": "80",
+      "domain": "digital",
+      "type": "management",
+      "criticality": "critical",
+      "location": "Center body, avionics bay",
+      "serial_number": "EMS-CTRL-2024-001",
+      "manufacturer": "Honeywell/BAE Systems",
+      "processor": "Dual redundant DO-254 DAL-A",
+      "response_time_ms": 35,
+      "communication": "CAN, ARINC 429, Ethernet",
+      "links": {
+        "design": "95-80-80/ASSETS/95-80-80-A-001_Energy_Management_Architecture.drawio",
+        "software": "ATA_42/Software/EMS/",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-010"
+      }
+    },
+    {
+      "id": "EA-016",
+      "name": "Energy Digital Twin Server",
+      "ata_chapter": "46",
+      "domain": "digital",
+      "type": "analysis",
+      "criticality": "high",
+      "location": "Ground infrastructure + onboard edge computing",
+      "serial_number": "DT-SERVER-2024-001",
+      "manufacturer": "AMPEL360/Siemens",
+      "compute_platform": "NVIDIA Jetson AGX + Cloud",
+      "update_rate_hz": 10,
+      "model_accuracy_percent": 95,
+      "links": {
+        "design": "95-80-46/ASSETS/95-80-46-A-001_Energy_Digital_Twin_Architecture.drawio",
+        "software": "ATA_46/Software/DigitalTwin/",
+        "traceability": "95-80-00-005_Energy_Traceability_Matrix.csv#REQ-E-021"
+      }
+    }
+  ],
+  "asset_summary": {
+    "by_domain": {
+      "electrical": 10,
+      "chemical": 3,
+      "hydraulic": 4,
+      "pneumatic": 2,
+      "digital": 2,
+      "thermal": 5,
+      "mechanical": 2
+    },
+    "by_criticality": {
+      "critical": 18,
+      "high": 15,
+      "medium": 12,
+      "low": 2
+    },
+    "by_ata": {
+      "24": 8,
+      "28": 6,
+      "29": 4,
+      "36": 3,
+      "46": 3,
+      "49": 2,
+      "70": 4,
+      "80": 2
+    }
+  },
+  "maintenance_tracking": {
+    "total_operational_hours": 0,
+    "assets_requiring_inspection": [],
+    "assets_requiring_replacement": [],
+    "next_scheduled_maintenance": "TBD"
+  },
+  "traceability": {
+    "requirements": "95-80-00-005_Energy_Traceability_Matrix.csv",
+    "digital_passport": "95-60_Storages/Energy_Assets/",
+    "safety_analysis": "See individual ATA chapter 02_SAFETY folders",
+    "circularity": "95-30_Circularity/Energy_Lifecycle/"
+  }
+}

@@ -1,0 +1,41 @@
+ATA_Chapter,System_Name,Energy_Domain,Energy_Type,Flow_Direction,Power_Range_kW,Criticality,95_80_Reference,Notes
+21,Air Conditioning & Pressurization,Electrical,Consumer,Input,15-50,High,95-80-24,ECS compressors and fans
+21,Air Conditioning & Pressurization,Thermal,Consumer,Input,20-80,Medium,95-80-80,Cooling load for cabin
+24,Electrical Power,Electrical,Generation,Output,2500-3500,Critical,95-80-24,Fuel cell primary generation
+24,Electrical Power,Electrical,Distribution,Bidirectional,0-3500,Critical,95-80-24,Main buses and cross-ties
+28,Fuel System (H2),Chemical,Source,Output,8000-12000,Critical,95-80-28,LH2 energy content
+28,Fuel System (H2),Thermal,Supplier,Output,Variable,Medium,95-80-28,H2 boil-off thermal management
+29,Hydraulic Power,Electrical,Consumer,Input,30-80,High,95-80-29,Electric hydraulic pumps
+29,Hydraulic Power,Hydraulic,Distribution,Output,Variable,High,95-80-29,Actuator power
+29,Hydraulic Power,Hydraulic,Storage,Bidirectional,Variable,Medium,95-80-29,Accumulators
+36,Pneumatic,Electrical,Consumer,Input,10-40,Medium,95-80-36,Air compressors
+36,Pneumatic,Pneumatic,Distribution,Output,Variable,Medium,95-80-36,Compressed air to consumers
+49,APU,Electrical,Generation,Output,0-350,High,95-80-49,Auxiliary power unit
+49,APU,Pneumatic,Generation,Output,0-100,Medium,95-80-49,APU bleed air
+49,APU,Chemical,Consumer,Input,Variable,High,95-80-49,APU fuel consumption (H2 or backup)
+70,Propulsion - General,Electrical,Consumer,Input,1500-2800,Critical,95-80-70,Electric motor propulsion
+71,Power Plant,Electrical,Consumer,Input,1500-2800,Critical,95-80-70,Fuel cell to motor drive
+72,Engine (Electric Motors),Mechanical,Output,Output,1500-2800,Critical,95-80-70,Thrust generation
+73,Engine Fuel Control,Electrical,Consumer,Input,5-15,High,95-80-70,Motor controllers
+75,Bleed Air,Pneumatic,Consumer,Input,Variable,Low,95-80-36,Traditional bleed replaced by electric
+76,Engine Controls,Electrical,Consumer,Input,2-10,High,95-80-70,FADEC equivalent for electric
+79,Oil (Lubrication),Electrical,Consumer,Input,5-20,High,95-80-70,Cooling pumps for motors
+80,Starting & Energy Management,Electrical,Management,Bidirectional,All,Critical,95-80-80,Energy management system
+80,Starting & Energy Management,Hydraulic,Management,Bidirectional,All,High,95-80-80,Load prioritization
+80,Starting & Energy Management,Pneumatic,Management,Bidirectional,All,Medium,95-80-80,Pneumatic scheduling
+30,Ice & Rain Protection,Electrical,Consumer,Input,20-100,High,95-80-24,Electric anti-ice heating
+30,Ice & Rain Protection,Thermal,Consumer,Input,Variable,Medium,95-80-80,Waste heat utilization
+32,Landing Gear,Hydraulic,Consumer,Input,Variable,High,95-80-29,Extension/retraction
+32,Landing Gear,Electrical,Consumer,Input,5-15,Medium,95-80-24,Landing gear control
+33,Lights,Electrical,Consumer,Input,3-10,Medium,95-80-24,Aircraft lighting
+34,Navigation,Electrical,Consumer,Input,5-15,Critical,95-80-24,Navigation systems
+42,Integrated Modular Avionics,Electrical,Consumer,Input,15-40,Critical,95-80-24,Avionics computers
+44,Cabin Systems,Electrical,Consumer,Input,20-60,Medium,95-80-24,IFE and cabin services
+45,Onboard Maintenance Systems,Electrical,Consumer,Input,2-5,High,95-80-24,CAOS and diagnostics
+46,Information Systems,Electrical,Consumer,Input,5-15,High,95-80-46,Data systems and digital twin
+95-10,Operations,Data,Consumer,Input,N/A,High,95-80-80,Energy operational data
+95-20,Subsystems Traceability,Data,Consumer,Input,N/A,High,95-80-24/28/29/etc,Energy per subsystem tracking
+95-30,Circularity,Thermal,Consumer,Input,Variable,Low,95-80-80,CO2 capture energy penalty
+95-60,Storages,Electrical,Storage,Bidirectional,0-500,High,95-80-24,Battery energy storage
+95-60,Storages,Hydraulic,Storage,Bidirectional,Variable,Medium,95-80-29,Hydraulic accumulators
+95-70,Propulsion (DPP),Electrical,Consumer,Input,1500-2800,Critical,95-80-70,Propulsion energy tracking
