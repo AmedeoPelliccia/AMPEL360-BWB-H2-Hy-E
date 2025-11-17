@@ -1,0 +1,276 @@
+{
+  "registry_metadata": {
+    "version": "1.0",
+    "last_updated": "2025-11-17",
+    "owner": "AMPEL360 Propulsion Systems Engineering",
+    "description": "Central registry of all propulsion assets for digital product passport"
+  },
+  "assets": [
+    {
+      "asset_id": "PROP-72-001",
+      "component_type": "Open-Fan Propulsor",
+      "component_name": "Left Engine Propulsor",
+      "ata_chapter": "72",
+      "location": {
+        "aircraft_station": "Left Wing Position 1",
+        "coordinates": {
+          "fuselage_station": "FS 250",
+          "buttline": "BL -200",
+          "waterline": "WL 100"
+        }
+      },
+      "criticality": "Critical",
+      "status": "Design",
+      "trl": 7,
+      "serial_number": null,
+      "manufacturer": "TBD",
+      "model": "AMPEL360-OFP-5000",
+      "specifications": {
+        "diameter_m": 5.0,
+        "blade_count": 14,
+        "max_rpm": 1200,
+        "max_power_mw": 2.5,
+        "weight_kg": 800
+      },
+      "interfaces": [
+        {
+          "interface_to": "ATA-76-FADEC",
+          "interface_type": "Control",
+          "protocol": "CAN Bus"
+        },
+        {
+          "interface_to": "ATA-72-Motor",
+          "interface_type": "Mechanical",
+          "protocol": "Shaft Connection"
+        }
+      ],
+      "health_monitoring": {
+        "sensors": ["vibration", "temperature", "speed"],
+        "nn_model": "propulsor_health_v1.2",
+        "health_score": null,
+        "last_inspection": null
+      },
+      "maintenance": {
+        "next_inspection_hours": 1000,
+        "last_maintenance": null,
+        "maintenance_interval_hours": 2000
+      },
+      "traceability": {
+        "requirements": ["REQ-72-001", "REQ-72-005"],
+        "design_docs": ["95-70-72-002", "95-70-72-004"],
+        "test_reports": ["TEST-72-001"],
+        "certification": ["CERT-72-001"]
+      }
+    },
+    {
+      "asset_id": "PROP-76-001",
+      "component_type": "FADEC",
+      "component_name": "Left Engine FADEC Channel A",
+      "ata_chapter": "76",
+      "location": {
+        "aircraft_station": "Left Nacelle Firewall",
+        "coordinates": {
+          "fuselage_station": "FS 240",
+          "buttline": "BL -195",
+          "waterline": "WL 95"
+        }
+      },
+      "criticality": "Critical",
+      "status": "Design",
+      "trl": 8,
+      "serial_number": null,
+      "manufacturer": "TBD",
+      "model": "AMPEL360-FADEC-H2-100",
+      "specifications": {
+        "channels": 2,
+        "software_version": "v2.0.0",
+        "do178c_level": "DAL A",
+        "processor": "Dual Core ARM",
+        "io_channels": 64
+      },
+      "interfaces": [
+        {
+          "interface_to": "ATA-42-IMA",
+          "interface_type": "Data",
+          "protocol": "ARINC 429"
+        },
+        {
+          "interface_to": "ATA-73-FMU",
+          "interface_type": "Control",
+          "protocol": "CAN Bus"
+        },
+        {
+          "interface_to": "CAOS-NN-Module",
+          "interface_type": "Data",
+          "protocol": "Ethernet"
+        }
+      ],
+      "health_monitoring": {
+        "sensors": ["temperature", "voltage", "current"],
+        "nn_model": "fadec_health_v1.0",
+        "health_score": null,
+        "last_inspection": null
+      },
+      "maintenance": {
+        "next_inspection_hours": 5000,
+        "last_maintenance": null,
+        "maintenance_interval_hours": 10000
+      },
+      "traceability": {
+        "requirements": ["REQ-76-001", "REQ-76-010"],
+        "design_docs": ["95-70-76-002", "95-70-76-003"],
+        "test_reports": ["TEST-76-001", "TEST-76-010"],
+        "certification": ["CERT-76-001"]
+      }
+    },
+    {
+      "asset_id": "PROP-73-001",
+      "component_type": "Cryogenic Fuel Pump",
+      "component_name": "Left Engine H2 Fuel Pump",
+      "ata_chapter": "73",
+      "location": {
+        "aircraft_station": "Left Nacelle Forward Section",
+        "coordinates": {
+          "fuselage_station": "FS 230",
+          "buttline": "BL -198",
+          "waterline": "WL 90"
+        }
+      },
+      "criticality": "Critical",
+      "status": "Design",
+      "trl": 6,
+      "serial_number": null,
+      "manufacturer": "TBD",
+      "model": "AMPEL360-H2-PUMP-1000",
+      "specifications": {
+        "fluid": "Liquid Hydrogen",
+        "flow_rate_kg_per_min": 5.0,
+        "inlet_pressure_bar": 3,
+        "outlet_pressure_bar": 12,
+        "operating_temp_c": -253,
+        "weight_kg": 25
+      },
+      "interfaces": [
+        {
+          "interface_to": "ATA-28-H2-Storage",
+          "interface_type": "Physical",
+          "protocol": "Cryogenic Line"
+        },
+        {
+          "interface_to": "ATA-73-FMU",
+          "interface_type": "Physical",
+          "protocol": "Fuel Line"
+        },
+        {
+          "interface_to": "ATA-76-FADEC",
+          "interface_type": "Control",
+          "protocol": "CAN Bus"
+        }
+      ],
+      "health_monitoring": {
+        "sensors": ["temperature", "pressure", "vibration", "flow_rate"],
+        "nn_model": "cryo_pump_health_v1.0",
+        "health_score": null,
+        "last_inspection": null
+      },
+      "maintenance": {
+        "next_inspection_hours": 500,
+        "last_maintenance": null,
+        "maintenance_interval_hours": 1000
+      },
+      "traceability": {
+        "requirements": ["REQ-73-001", "REQ-73-020"],
+        "design_docs": ["95-70-73-002", "95-70-73-004"],
+        "test_reports": ["TEST-73-001"],
+        "certification": ["CERT-73-001"]
+      }
+    },
+    {
+      "asset_id": "PROP-77-003",
+      "component_type": "Health Monitoring System",
+      "component_name": "Propulsion Health Monitoring",
+      "ata_chapter": "77",
+      "location": {
+        "aircraft_station": "Avionics Bay",
+        "coordinates": {
+          "fuselage_station": "FS 500",
+          "buttline": "BL 0",
+          "waterline": "WL 120"
+        }
+      },
+      "criticality": "High",
+      "status": "Design",
+      "trl": 7,
+      "serial_number": null,
+      "manufacturer": "AMPEL360",
+      "model": "CAOS-PHM-1.0",
+      "specifications": {
+        "data_channels": 256,
+        "sample_rate_hz": 100,
+        "storage_capacity_gb": 500,
+        "nn_models": ["anomaly_detection", "prognostics", "diagnostics"]
+      },
+      "interfaces": [
+        {
+          "interface_to": "All Propulsion Sensors",
+          "interface_type": "Data",
+          "protocol": "ARINC 429 / Ethernet"
+        },
+        {
+          "interface_to": "CAOS",
+          "interface_type": "Data",
+          "protocol": "Ethernet"
+        },
+        {
+          "interface_to": "ATA-45-Maintenance-System",
+          "interface_type": "Data",
+          "protocol": "ARINC 429"
+        }
+      ],
+      "health_monitoring": {
+        "sensors": ["self_diagnostics"],
+        "nn_model": null,
+        "health_score": null,
+        "last_inspection": null
+      },
+      "maintenance": {
+        "next_inspection_hours": 10000,
+        "last_maintenance": null,
+        "maintenance_interval_hours": 20000
+      },
+      "traceability": {
+        "requirements": ["REQ-77-002", "REQ-77-010"],
+        "design_docs": ["95-70-77-003", "95-70-77-004"],
+        "test_reports": ["TEST-77-002"],
+        "certification": ["CERT-77-002"]
+      }
+    }
+  ],
+  "asset_summary": {
+    "total_assets": 4,
+    "by_criticality": {
+      "Critical": 3,
+      "High": 1,
+      "Medium": 0,
+      "Low": 0
+    },
+    "by_status": {
+      "Design": 4,
+      "Prototype": 0,
+      "Production": 0,
+      "Active": 0,
+      "Retired": 0
+    },
+    "by_ata": {
+      "70": 0,
+      "71": 0,
+      "72": 1,
+      "73": 1,
+      "75": 0,
+      "76": 1,
+      "77": 1,
+      "78": 0,
+      "79": 0
+    }
+  }
+}

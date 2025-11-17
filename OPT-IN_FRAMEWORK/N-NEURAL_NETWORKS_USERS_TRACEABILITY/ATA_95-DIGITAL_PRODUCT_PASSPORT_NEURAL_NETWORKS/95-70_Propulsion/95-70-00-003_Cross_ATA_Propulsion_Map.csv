@@ -1,0 +1,34 @@
+ATA_Chapter,System_Name,Interface_Type,Propulsion_Component,Interface_Description,Data_Flow,Criticality,Document_Reference
+28,Fuel System,Physical+Data,Engine Fuel Pump,H2 fuel supply to engine inlet,Aircraft->Engine,Critical,95-70-73-004
+28,H2 Storage,Physical,Fuel Feed Lines,Cryogenic H2 distribution,Storage->Engine,Critical,95-60-28 / 95-70-73-002
+30,Ice Protection,Physical+Control,Engine Inlet,Anti-ice bleed air or electric heating,Engine->Inlet,High,95-70-75-003
+36,Pneumatic,Physical,Bleed Air Manifold,High-pressure air from compressor,Engine->Aircraft,High,95-70-75-002
+49,APU,Electrical,Starter/Generator,APU provides starting power,APU->Engine,Medium,95-70-80 / ATA-49
+50,Cargo Compartments,Structural,Nacelle Clearance,Ensure adequate clearance,N/A,Low,95-70-71-004
+51,Structures General,Structural,Pylon Interface,Load transfer to wing,Engine->Wing,Critical,95-70-71-003
+52,Doors,Structural,Cowling Doors,Engine access and maintenance,N/A,Medium,95-70-71-004
+53,Fuselage,Structural,Engine Mounting,Engine attach points on BWB center body,Engine->Fuselage,Critical,95-70-71-002
+54,Nacelles/Pylons,Structural,Pylon Structure,Primary engine mounting,Engine->Wing,Critical,95-70-71-001
+55,Stabilizers,Aerodynamic,Exhaust Flow,Exhaust impingement on empennage,Engine->Stabilizer,Medium,95-70-78-002
+56,Windows,Structural,Nacelle Clearance,Visual inspection access,N/A,Low,95-70-71-004
+57,Wings,Structural,Pylon-Wing Interface,Load path and fuel lines,Engine<->Wing,Critical,95-70-71-003
+70,Standard Practices Engine,Standards,All Propulsion,General engine practices and standards,N/A,High,95-70-70-002
+71,Power Plant,Integration,Nacelle Assembly,Complete power plant installation,N/A,Critical,95-70-71-001
+72,Engine,Mechanical,Core Engine,Turbine or electric motor core,N/A,Critical,95-70-72-003
+73,Engine Fuel Control,Physical+Control,Fuel Metering Unit,Engine fuel flow control,Engine Internal,Critical,95-70-73-003
+74,Ignition,Electrical,Ignition System,Engine starting (if combustion),Electrical->Engine,High,ATA-74 (if applicable)
+75,Bleed Air,Physical,Compressor Bleed,High-pressure air extraction,Engine->Aircraft,High,95-70-75-001
+76,Engine Controls,Control+Data,FADEC,Full authority digital engine control,Cockpit<->Engine,Critical,95-70-76-002
+77,Engine Indicating,Data,Sensors and Instruments,Engine parameters to cockpit,Engine->Cockpit,Critical,95-70-77-002
+78,Exhaust,Physical,Exhaust Nozzle,Hot gas discharge,Engine->Atmosphere,High,95-70-78-001
+79,Oil,Physical,Oil System,Lubrication and cooling,Engine Internal,Critical,95-70-79-002
+80,Starting,Electrical+Pneumatic,Starter Motor,Engine starting sequence,Aircraft->Engine,Critical,ATA-80
+21,Air Conditioning,Thermal,Bleed Air for ECS,Conditioned air source,Engine->Cabin,High,95-70-75-003
+24,Electrical Power,Electrical,Shaft-Driven Generator,Electrical power generation,Engine->Aircraft,Critical,ATA-24 / 95-20-24
+27,Flight Controls,Control,Thrust Reversers,Reverse thrust actuation (if applicable),FCC->Engine,High,95-70-76-003
+42,Integrated Avionics,Data,Engine Data Bus,ARINC 429 / MIL-STD-1553,Engine<->Avionics,Critical,95-70-77-004
+45,Maintenance Systems,Data,Health Monitoring,Engine health and diagnostics,Engine->Maintenance,High,95-70-77-003
+21-80,CO2 Capture,Thermal,Waste Heat Recovery,Exhaust heat for CO2 processing,Engine->CO2 System,Medium,95-70-78-004
+95-20-70,NN Propulsion Optimization,Data,Thrust Optimization AI,Real-time performance tuning,Engine<->CAOS,High,95-70-76-004
+95-30-70,NN Health Monitoring,Data,Predictive Maintenance,Anomaly detection and prognostics,Engine->CAOS,High,95-70-77-004
+95-60-70,NN Asset Management,Data,Component Tracking,Digital twin and lifecycle data,Engine->DPP,Medium,95-70-00-006
