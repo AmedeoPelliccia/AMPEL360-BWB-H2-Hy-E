@@ -219,7 +219,7 @@ DPP designed to satisfy requirements in:
 DPP **may not** fully satisfy requirements in jurisdictions with unique AI regulations:
 
 - **China** (CAAC) — Additional documentation may be required
-- **Russia** (EASA) — Local certification requirements may differ
+- **Russia** (Rosaviatsia) — Local certification requirements may differ
 - **Emerging Markets** — Regulatory frameworks still developing
 
 **Mitigation**: DPP designed to be **extensible** (additional fields can be added for jurisdiction-specific requirements).
