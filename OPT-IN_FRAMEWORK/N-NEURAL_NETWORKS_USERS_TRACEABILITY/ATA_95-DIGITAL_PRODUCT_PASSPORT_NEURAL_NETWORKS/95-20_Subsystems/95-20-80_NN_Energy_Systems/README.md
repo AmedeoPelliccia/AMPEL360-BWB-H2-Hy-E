@@ -97,26 +97,26 @@ Each model card follows the format:
 
 ### Model Lifecycle
 
-1. **Training**: Offline with 95-00-13 component data
-2. **Validation**: Per 95-00-07 V&V procedures
-3. **Deployment**: Via 95-20-01 model registry
-4. **Monitoring**: Real-time via 95-20-01 monitoring framework
-5. **Provenance**: Logged to 95-20-02 blockchain
+1. **Training**: Offline with [95-00-13 component data](../../95-00_GENERAL/95-00-13_Subsystems_Components/)
+2. **Validation**: Per [95-00-07 V&V procedures](../../95-00_GENERAL/95-00-07_V_AND_V/)
+3. **Deployment**: Via [95-20-01 model registry](../95-20-01_NN_Core_Platform/)
+4. **Monitoring**: Real-time via [95-20-01 monitoring framework](../95-20-01_NN_Core_Platform/)
+5. **Provenance**: Logged to [95-20-02 blockchain](../95-20-02_NN_DPP_Blockchain/)
 
 ## Certification
 
 ### Compliance
 
-- **DO-178C**: Software DAL-B
-- **DO-333**: Model-based development
-- **EASA MOC SC-AI**: AI/ML certification guidance
-- **FAA AC 20-115D**: Airborne software
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)**: Software DAL-B
+- **[DO-333](https://www.rtca.org/content/standards-guidance-materials)**: Model-based development
+- **[EASA MOC SC-AI](https://www.easa.europa.eu/en/document-library/acceptable-means-compliance-and-guidance-materials/special-condition-sc-ai)**: AI/ML certification guidance
+- **[FAA AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/)**: Airborne software
 
 ### Evidence
 
 Certification evidence is maintained in:
-- 95-00-10_Certification
-- 95-20-02 blockchain provenance chain
+- [95-00-10_Certification](../../95-00_GENERAL/95-00-10_Certification/)
+- [95-20-02 blockchain provenance chain](../95-20-02_NN_DPP_Blockchain/)
 
 ## References
 
