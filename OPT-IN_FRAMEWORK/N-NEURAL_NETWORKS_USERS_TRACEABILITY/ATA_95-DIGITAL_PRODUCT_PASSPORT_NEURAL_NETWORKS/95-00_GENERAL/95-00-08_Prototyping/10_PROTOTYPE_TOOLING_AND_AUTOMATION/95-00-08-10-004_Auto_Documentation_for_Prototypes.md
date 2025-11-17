@@ -24,13 +24,23 @@ Automated documentation generation
 
 This document covers auto-documentation for prototypes within the prototyping framework of ATA Chapter 95 Digital Product Passport Neural Networks.
 
-## 3. Overview
+## 3. Auto-Documentation for Prototypes Overview
 
-This section provides comprehensive guidance on auto-documentation for prototypes, including:
-- Strategy and objectives
-- Implementation approaches
-- Integration with lifecycle stages (Engineering, V&V, Certification)
-- Best practices and lessons learned
+This document defines tools and automation infrastructure supporting the prototyping process, from notebooks to CI/CD pipelines.
+
+### 3.1 Tooling Categories
+- **Development Tools**: Jupyter notebooks, IDEs, debuggers
+- **Automation Tools**: CI/CD pipelines, auto-documentation
+- **Collaboration Tools**: Version control, code review
+- **Integration Tools**: CAOS hooks, MCP interfaces
+
+### 3.2 Best Practices
+- Standardized notebook templates
+- Automated testing in CI/CD
+- Auto-generated documentation from code
+- Seamless integration with CAOS lifecycle management
+
+Refer to ASSETS folder for tooling flow diagrams, templates, and configuration samples.
 
 ## 4. Relationship to Lifecycle Stages
 
@@ -103,6 +113,10 @@ Prototypes in this category are successful when they:
 - 95-00-08-00-001_Prototyping_Strategy
 - 95-00-08-00-002_Prototyping_Governance_and_Criteria
 - 95-00-10_Certification
+
+---
+
+
 
 ---
 

@@ -24,13 +24,33 @@ Isolated environments for offline model testing and validation
 
 This document covers offline sandbox environments within the prototyping framework of ATA Chapter 95 Digital Product Passport Neural Networks.
 
-## 3. Overview
+## 3. Offline Sandbox Configuration
 
-This section provides comprehensive guidance on offline sandbox environments, including:
-- Strategy and objectives
-- Implementation approaches
-- Integration with lifecycle stages (Engineering, V&V, Certification)
-- Best practices and lessons learned
+### 3.1 Environment Setup
+Offline sandboxes provide isolated testing environments:
+- No network connectivity to production
+- Synthetic or anonymized data only
+- Version-controlled configurations
+
+### 3.2 Use Cases
+- Algorithm development and debugging
+- Unit and integration testing
+- Performance profiling
+- Security testing
+
+### 3.3 Tools and Frameworks
+- Docker for containerization
+- Jupyter notebooks for experimentation
+- MLflow for experiment tracking
+- Local GPU resources for training
+
+## 4. Data Management
+
+Offline sandboxes use controlled datasets:
+- Synthetic data generation
+- Historical data snapshots
+- Privacy-preserving transformations
+- Data versioning with DVC
 
 ## 4. Relationship to Lifecycle Stages
 
@@ -103,6 +123,10 @@ Prototypes in this category are successful when they:
 - 95-00-08-00-001_Prototyping_Strategy
 - 95-00-08-00-002_Prototyping_Governance_and_Criteria
 - 95-00-10_Certification
+
+---
+
+
 
 ---
 

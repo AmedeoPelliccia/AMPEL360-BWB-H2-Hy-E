@@ -24,13 +24,35 @@ Criteria and process for transitioning from sandbox to production
 
 This document covers sandbox to production gates within the prototyping framework of ATA Chapter 95 Digital Product Passport Neural Networks.
 
-## 3. Overview
+## 3. Transition Gates
 
-This section provides comprehensive guidance on sandbox to production gates, including:
-- Strategy and objectives
-- Implementation approaches
-- Integration with lifecycle stages (Engineering, V&V, Certification)
-- Best practices and lessons learned
+### 3.1 Sandbox Exit Criteria
+Prototypes must meet criteria before production:
+- Performance targets achieved
+- Stability demonstrated (>99% uptime)
+- Resource usage within limits
+- Security scan passed
+- Documentation complete
+
+### 3.2 Gate Review Process
+Staged progression from sandbox to production:
+1. **Gate 1**: Offline → Shadow (technical validation)
+2. **Gate 2**: Shadow → Limited Production (operational validation)
+3. **Gate 3**: Limited → Full Production (scale validation)
+
+### 3.3 Rollback Procedures
+- Automated rollback triggers
+- Manual override capability
+- Incident response playbook
+- Post-mortem documentation
+
+## 4. Production Readiness Checklist
+
+- [ ] Performance SLAs met
+- [ ] Security review completed
+- [ ] Disaster recovery tested
+- [ ] Monitoring dashboards configured
+- [ ] On-call runbook updated
 
 ## 4. Relationship to Lifecycle Stages
 
@@ -103,6 +125,10 @@ Prototypes in this category are successful when they:
 - 95-00-08-00-001_Prototyping_Strategy
 - 95-00-08-00-002_Prototyping_Governance_and_Criteria
 - 95-00-10_Certification
+
+---
+
+
 
 ---
 

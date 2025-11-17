@@ -24,13 +24,23 @@ Safety requirements for hardware testing
 
 This document covers safety constraints for hardware prototypes within the prototyping framework of ATA Chapter 95 Digital Product Passport Neural Networks.
 
-## 3. Overview
+## 3. Safety Constraints for Hardware Prototypes Overview
 
-This section provides comprehensive guidance on safety constraints for hardware prototypes, including:
-- Strategy and objectives
-- Implementation approaches
-- Integration with lifecycle stages (Engineering, V&V, Certification)
-- Best practices and lessons learned
+This document defines hardware test rigs and Hardware-in-the-Loop (HIL) setups for validating NN prototypes with real sensors and avionics hardware.
+
+### 3.1 Test Rig Purpose
+- Validate NN models with actual sensor data
+- Test real-time performance on target hardware
+- Identify hardware-specific issues early
+- Support certification testing requirements
+
+### 3.2 HIL Configuration
+- Sensor simulators for controlled testing
+- Real sensors for validation
+- Target compute platforms (embedded systems)
+- Data acquisition and logging systems
+
+Refer to ASSETS folder for rig layouts, IO mappings, and test procedures.
 
 ## 4. Relationship to Lifecycle Stages
 
@@ -103,6 +113,10 @@ Prototypes in this category are successful when they:
 - 95-00-08-00-001_Prototyping_Strategy
 - 95-00-08-00-002_Prototyping_Governance_and_Criteria
 - 95-00-10_Certification
+
+---
+
+
 
 ---
 

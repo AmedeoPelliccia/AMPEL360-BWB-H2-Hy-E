@@ -24,13 +24,35 @@ Data flow and communication buses for integrated prototypes
 
 This document covers prototype data paths and buses within the prototyping framework of ATA Chapter 95 Digital Product Passport Neural Networks.
 
-## 3. Overview
+## 3. Data Path Architecture
 
-This section provides comprehensive guidance on prototype data paths and buses, including:
-- Strategy and objectives
-- Implementation approaches
-- Integration with lifecycle stages (Engineering, V&V, Certification)
-- Best practices and lessons learned
+### 3.1 On-Board Data Buses
+Integration with aircraft data buses:
+- **ARINC 429**: Low-speed serial (12.5-100 kbps)
+- **ARINC 664 (AFDX)**: Ethernet (10-100 Mbps)
+- **MIL-STD-1553**: Military data bus (1 Mbps)
+- **CAN Bus**: Sensor networks (up to 1 Mbps)
+
+### 3.2 Data Flow Topology
+```
+Sensors → Data Bus → Gateway → NN Processor → Output Bus → Actuators/Displays
+           ↓                       ↓
+         FDR Recording        Data Lake (ground)
+```
+
+### 3.3 Message Prioritization
+Critical data paths require priority handling:
+- Safety-critical: Highest priority, guaranteed delivery
+- Operational: Medium priority, best-effort delivery
+- Diagnostic: Low priority, can be delayed
+
+## 4. Bandwidth Management
+
+Optimizing data throughput:
+- Compression for non-critical data
+- Sampling rate adaptation
+- Buffering and batching
+- Load shedding under contention
 
 ## 4. Relationship to Lifecycle Stages
 
@@ -103,6 +125,10 @@ Prototypes in this category are successful when they:
 - 95-00-08-00-001_Prototyping_Strategy
 - 95-00-08-00-002_Prototyping_Governance_and_Criteria
 - 95-00-10_Certification
+
+---
+
+
 
 ---
 

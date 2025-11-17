@@ -24,13 +24,23 @@ Prototypes for storing NN metadata on blockchain
 
 This document covers on-chain data prototypes within the prototyping framework of ATA Chapter 95 Digital Product Passport Neural Networks.
 
-## 3. Overview
+## 3. On-Chain Data Prototypes Overview
 
-This section provides comprehensive guidance on on-chain data prototypes, including:
-- Strategy and objectives
-- Implementation approaches
-- Integration with lifecycle stages (Engineering, V&V, Certification)
-- Best practices and lessons learned
+This document addresses blockchain-based traceability for NN models, ensuring immutable audit trails for certification and regulatory compliance.
+
+### 3.1 Digital Product Passport (DPP)
+- Complete model provenance from training to deployment
+- Immutable record of model versions, data, and performance
+- Smart contracts for automated compliance checks
+- Integration with certification authorities
+
+### 3.2 Blockchain Architecture
+- Public or private blockchain selection criteria
+- On-chain vs off-chain data storage decisions
+- Gas cost optimization strategies
+- Query performance and scalability
+
+Refer to ASSETS folder for sequence diagrams, smart contract specifications, and test cases.
 
 ## 4. Relationship to Lifecycle Stages
 
@@ -103,6 +113,10 @@ Prototypes in this category are successful when they:
 - 95-00-08-00-001_Prototyping_Strategy
 - 95-00-08-00-002_Prototyping_Governance_and_Criteria
 - 95-00-10_Certification
+
+---
+
+
 
 ---
 

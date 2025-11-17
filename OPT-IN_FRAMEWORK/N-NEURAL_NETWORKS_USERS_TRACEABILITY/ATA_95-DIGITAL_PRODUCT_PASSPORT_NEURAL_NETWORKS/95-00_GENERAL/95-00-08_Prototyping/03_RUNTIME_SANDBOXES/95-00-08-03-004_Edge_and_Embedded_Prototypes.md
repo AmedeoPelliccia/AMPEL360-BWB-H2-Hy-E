@@ -24,13 +24,34 @@ Prototypes for edge devices and embedded systems in aircraft
 
 This document covers edge and embedded prototypes within the prototyping framework of ATA Chapter 95 Digital Product Passport Neural Networks.
 
-## 3. Overview
+## 3. Edge Computing Constraints
 
-This section provides comprehensive guidance on edge and embedded prototypes, including:
-- Strategy and objectives
-- Implementation approaches
-- Integration with lifecycle stages (Engineering, V&V, Certification)
-- Best practices and lessons learned
+### 3.1 Resource Limitations
+Edge devices have strict constraints:
+- Limited CPU/GPU compute
+- Restricted memory (typically < 8GB)
+- Power consumption limits
+- Storage constraints
+
+### 3.2 Optimization Techniques
+- Model quantization (INT8, FP16)
+- Pruning and compression
+- Knowledge distillation
+- Edge-specific frameworks (TensorFlow Lite, ONNX Runtime)
+
+### 3.3 Real-Time Requirements
+- Latency targets (typically < 100ms)
+- Deterministic execution
+- Fault tolerance
+- Offline operation capability
+
+## 4. Testing Strategy
+
+Validation on target hardware:
+- Hardware-in-the-loop testing
+- Power consumption profiling
+- Thermal management validation
+- Network disruption scenarios
 
 ## 4. Relationship to Lifecycle Stages
 
@@ -103,6 +124,10 @@ Prototypes in this category are successful when they:
 - 95-00-08-00-001_Prototyping_Strategy
 - 95-00-08-00-002_Prototyping_Governance_and_Criteria
 - 95-00-10_Certification
+
+---
+
+
 
 ---
 

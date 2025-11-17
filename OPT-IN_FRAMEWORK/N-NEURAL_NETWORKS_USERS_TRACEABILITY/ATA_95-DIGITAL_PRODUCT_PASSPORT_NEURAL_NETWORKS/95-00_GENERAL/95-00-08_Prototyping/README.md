@@ -350,7 +350,11 @@ Where:
 
 ### Canonical 14-Folder Lifecycle
 
+**Note**: The numbering below reflects the standard OPT-IN Framework folder structure (01-14), not the logical workflow sequence. In practice, prototyping activities occur throughout the lifecycle, particularly between Requirements and Engineering, and continue iteratively through V&V.
+
 1. Overview → 2. Safety → 3. Requirements → 4. Design → 5. Interfaces → 6. Engineering → **7. V&V** → **8. Prototyping** → 9. Production Planning → **10. Certification** → 11. EIS/Versions/Tags → 12. Services → 13. Subsystems/Components → 14. Ops/Std/Sustain
+
+**Logical Workflow Sequence**: Requirements (03) → Design (04) → **Prototyping (08)** → Engineering (06) → V&V (07) → Certification (10)
 
 ---
 

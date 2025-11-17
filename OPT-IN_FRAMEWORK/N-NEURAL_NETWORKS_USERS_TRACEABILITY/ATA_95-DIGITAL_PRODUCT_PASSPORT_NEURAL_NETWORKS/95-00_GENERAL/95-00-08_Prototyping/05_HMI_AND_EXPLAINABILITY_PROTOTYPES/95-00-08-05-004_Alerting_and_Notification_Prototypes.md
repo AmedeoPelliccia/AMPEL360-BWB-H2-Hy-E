@@ -24,13 +24,23 @@ Alert systems and notification mechanisms
 
 This document covers alerting and notification prototypes within the prototyping framework of ATA Chapter 95 Digital Product Passport Neural Networks.
 
-## 3. Overview
+## 3. Alerting and Notification Prototypes Overview
 
-This section provides comprehensive guidance on alerting and notification prototypes, including:
-- Strategy and objectives
-- Implementation approaches
-- Integration with lifecycle stages (Engineering, V&V, Certification)
-- Best practices and lessons learned
+This document defines prototypes for human-machine interfaces and explainability features, ensuring NN systems are transparent and usable by pilots, maintainers, and operators.
+
+### 3.1 Key Objectives
+- User-centered design for cockpit and maintenance interfaces
+- Clear visualization of NN model decisions and confidence levels
+- Compliance with human factors standards (DO-178C, DO-254)
+- Rapid iteration based on user feedback
+
+### 3.2 Prototyping Approach
+- Low-fidelity wireframes for early concept validation
+- Interactive mockups for user testing
+- High-fidelity prototypes for certification evidence
+- Continuous refinement based on HF studies
+
+Refer to ASSETS folder for wireframes, mockups, and test scripts.
 
 ## 4. Relationship to Lifecycle Stages
 
@@ -103,6 +113,10 @@ Prototypes in this category are successful when they:
 - 95-00-08-00-001_Prototyping_Strategy
 - 95-00-08-00-002_Prototyping_Governance_and_Criteria
 - 95-00-10_Certification
+
+---
+
+
 
 ---
 
