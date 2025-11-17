@@ -1,0 +1,6 @@
+Signal_Name,IO_Type,Channel,Range,Units,Description
+ALT_SENSOR,Analog Input,AI0,0-50000,feet,Altitude sensor
+SPEED_SENSOR,Analog Input,AI1,0-600,knots,Airspeed sensor
+FUEL_LEVEL,Analog Input,AI2,0-100,%,Fuel level
+ALERT_OUT,Digital Output,DO0,0-1,bool,Alert signal
+STATUS_LED,Digital Output,DO1,0-1,bool,Status indicator

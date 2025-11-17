@@ -1,0 +1,15 @@
+{
+  "log_specification": {
+    "version": "1.0",
+    "format": "JSON",
+    "fields": {
+      "timestamp": "ISO8601",
+      "prototype_id": "string",
+      "source_system": "string",
+      "target_system": "string",
+      "message_type": "string",
+      "payload": "object",
+      "status": "string"
+    }
+  }
+}

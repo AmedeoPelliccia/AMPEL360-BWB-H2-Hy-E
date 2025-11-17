@@ -1,0 +1,4 @@
+<mxfile><diagram name="Pipeline">
+<!-- Placeholder for draw.io diagram -->
+<!-- Data Source -> Ingestion -> Validation -> Transformation -> Storage -> Model Training -->
+</diagram></mxfile>

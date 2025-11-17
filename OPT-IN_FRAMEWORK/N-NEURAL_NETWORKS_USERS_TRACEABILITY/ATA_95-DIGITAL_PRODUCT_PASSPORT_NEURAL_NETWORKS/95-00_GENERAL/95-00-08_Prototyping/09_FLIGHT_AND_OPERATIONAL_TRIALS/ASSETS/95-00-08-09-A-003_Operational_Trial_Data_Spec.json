@@ -1,0 +1,17 @@
+{
+  "trial_data": {
+    "trial_id": "string",
+    "aircraft_id": "string",
+    "timestamp_start": "ISO8601",
+    "timestamp_end": "ISO8601",
+    "prototype_version": "string",
+    "sensors": [
+      "list"
+    ],
+    "telemetry": "object",
+    "events": [
+      "array"
+    ],
+    "notes": "string"
+  }
+}

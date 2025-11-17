@@ -1,0 +1,11 @@
+Prototype_ID,Prototype_Name,Type,Stage,Maturity_Level,Requirement_ID,Engineering_Model_ID,VV_Test_ID,Certification_Artifact_ID,Status,Owner,Last_Updated
+MP-ALPHA-ATA95-001-v0.3,Flight Path Prediction Model,Model Prototype,Alpha,ML1,REQ-95-00-03-001,ENG-95-00-06-001,VV-95-00-07-001,CERT-95-00-10-001,In Progress,alice.smith@ampel360.com,2025-11-17
+DP-CONCEPT-ATA95-002-v0.1,Synthetic Flight Data Generator,Data Prototype,Concept,ML0,REQ-95-00-03-015,N/A,N/A,N/A,Planning,bob.jones@ampel360.com,2025-11-17
+RP-BETA-ATA95-003-v1.0,Cloud Sandbox Environment,Runtime Prototype,Beta,ML2,REQ-95-00-03-025,ENG-95-00-06-010,VV-95-00-07-015,N/A,In Progress,charlie.davis@ampel360.com,2025-11-17
+IP-BETA-ATA31-005-v1.2,FDR Data Interface,Integration Prototype,Beta,ML3,REQ-95-00-05-008,ENG-95-00-06-025,VV-95-00-07-030,CERT-95-00-10-015,Testing,diana.garcia@ampel360.com,2025-11-17
+HP-ALPHA-ATA95-004-v0.5,Pilot Alerting Dashboard,HMI Prototype,Alpha,ML1,REQ-95-00-03-042,N/A,N/A,N/A,In Progress,eve.martinez@ampel360.com,2025-11-17
+BP-CONCEPT-ATA95-006-v0.2,DPP Smart Contract POC,DPP Prototype,Concept,ML0,REQ-95-00-03-055,N/A,N/A,N/A,Planning,frank.wilson@ampel360.com,2025-11-17
+HW-BETA-ATA95-007-v1.5,Sensor Test Rig,Hardware Prototype,Beta,ML2,REQ-95-00-03-068,ENG-95-00-06-040,VV-95-00-07-045,N/A,Testing,grace.lee@ampel360.com,2025-11-17
+DM-ALPHA-ATA95-008-v0.8,Customer Demo Package,Demo Prototype,Alpha,ML1,N/A,N/A,N/A,N/A,In Progress,henry.kim@ampel360.com,2025-11-17
+OP-BETA-ATA95-009-v2.0,Pre-Certification Flight Trial,Operational Prototype,Beta,ML3,REQ-95-00-03-075,ENG-95-00-06-055,VV-95-00-07-060,CERT-95-00-10-030,Approved,isabel.chen@ampel360.com,2025-11-17
+TP-RC-ATA95-010-v1.8,Auto-Documentation Tool,Tooling Prototype,RC,ML4,REQ-95-00-03-088,ENG-95-00-06-070,VV-95-00-07-075,N/A,Ready for Production,jack.patel@ampel360.com,2025-11-17
