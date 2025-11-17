@@ -1,0 +1,49 @@
+Requirement_ID,Requirement_Description,Component_ID,Component_Name,Verification_Method,Verification_Status,Test_Reference,Notes
+95-00-03-REQ-101,Cloud platform orchestration and service management,95-40-01-C001,Kubernetes Cluster Manager,Test,Pass,TEST-PLT-001,Verified in staging
+95-00-03-REQ-102,Service discovery and registration,95-40-01-C003,Service Registry and Discovery,Test,Pass,TEST-PLT-002,Verified in staging
+95-00-03-REQ-105,REST API gateway for external clients,95-40-02-C003,REST API Gateway,Test,Pass,TEST-API-001,Load tested
+95-00-03-REQ-106,gRPC service interfaces for internal communication,95-40-02-C004,gRPC Service Interface,Test,Pass,TEST-API-002,Latency verified
+95-00-03-REQ-205,Safety-critical partition isolation (ARINC 653),95-40-01-C002,ARINC 653 Partition Manager,Formal Proof,Pass,CERT-EMB-001,DO-178C Level A certified
+95-00-03-REQ-206,Deterministic network communication (ARINC 664),95-40-04-C002,ARINC 664 Communication Stack,Test,Pass,CERT-EMB-002,DO-178C Level A certified
+95-00-03-REQ-207,CAN bus communication for legacy systems,95-40-04-C003,CAN Bus Driver,Test,Pass,CERT-EMB-003,DO-178C Level B certified
+95-00-03-REQ-208,Hardware abstraction layer for portability,95-40-04-C004,Device Drivers and HAL,Test,Pass,CERT-EMB-004,DO-178C Level A certified
+95-00-03-REQ-301,TensorFlow model serving for cloud inference,95-40-02-C001,TensorFlow Serving,Test,Pass,TEST-ML-001,Throughput verified
+95-00-03-REQ-302,ONNX runtime for cross-platform inference,95-40-02-C002,ONNX Runtime Engine,Test,Pass,TEST-ML-002,Certified for DO-178C Level C
+95-00-03-REQ-401,Orchestration of ML training pipelines,95-40-03-C001,Apache Airflow Pipeline Orchestrator,Test,Pass,TEST-OPS-001,DAG validation complete
+95-00-03-REQ-402,Experiment tracking and reproducibility,95-40-03-C002,MLflow Experiment Tracker,Test,Pass,TEST-OPS-002,Lineage verified
+95-00-03-REQ-403,Feature storage and serving for training/inference,95-40-03-C003,Feature Store Service,Test,Pass,TEST-OPS-003,Low-latency access verified
+95-00-03-REQ-404,Model versioning and registry,95-40-03-C004,Model Registry,Test,Pass,TEST-OPS-004,Version control tested
+95-00-03-REQ-501,Real-time onboard neural network inference,95-40-04-C001,Onboard Inference Engine,Test,Pass,CERT-EMB-005,DO-178C Level B certified
+95-00-03-REQ-601,Runtime monitoring of NN outputs for safety,95-40-05-C001,Runtime Safety Monitor,Formal Proof,Pass,CERT-SAF-001,DO-178C Level A certified
+95-00-03-REQ-602,Input validation and sanitization,95-40-05-C002,Input Validation Guard,Formal Proof,Pass,CERT-SAF-002,DO-178C Level A certified
+95-00-03-REQ-603,Fallback to safe state on NN failure,95-40-05-C003,Fallback Controller,Test,Pass,CERT-SAF-003,DO-178C Level A certified
+95-00-03-REQ-604,Voting mechanism for redundant NN outputs,95-40-05-C004,Voting Mechanism Manager,Test,Pass,CERT-SAF-004,DO-178C Level A certified
+95-00-03-REQ-701,OAuth2/OIDC authentication for users and services,95-40-06-C001,OAuth2/OIDC Authentication Service,Test,Pass,TEST-SEC-001,Penetration tested
+95-00-03-REQ-702,Role-based access control (RBAC),95-40-06-C002,RBAC Authorization Engine,Test,Pass,TEST-SEC-002,Policy enforcement verified
+95-00-03-REQ-703,Cryptographic key lifecycle management,95-40-06-C003,Key Management Service,Test,Pass,TEST-SEC-003,HSM integration tested
+95-00-03-REQ-704,Data masking for privacy compliance,95-40-06-C004,Data Masking Service,Test,Pass,TEST-SEC-004,GDPR compliance verified
+95-00-03-REQ-705,Encryption of data at rest and in transit,95-40-06-C005,Encryption Service,Test,Pass,TEST-SEC-005,AES-256 and TLS 1.3 verified
+95-00-03-REQ-801,Blockchain node operation for DPP,95-40-07-C001,Hyperledger Fabric Node,Test,Pass,TEST-BC-001,Consensus verified
+95-00-03-REQ-802,Smart contract deployment and management,95-40-07-C002,Smart Contract Manager,Test,Pass,TEST-BC-002,Chaincode tested
+95-00-03-REQ-803,Off-chain data storage and indexing,95-40-07-C003,Off-Chain Data Service,Test,Pass,TEST-BC-003,Query performance verified
+95-00-03-REQ-804,DPP query API for external access,95-40-07-C004,DPP Query API,Test,Pass,TEST-BC-004,Rate limiting tested
+95-00-03-REQ-901,Software-in-the-loop simulation environment,95-40-08-C001,Software-in-the-Loop (SIL) Environment,Test,Pass,TEST-SIM-001,Scenario coverage verified
+95-00-03-REQ-902,Hardware-in-the-loop testing with real hardware,95-40-08-C002,Hardware-in-the-Loop (HIL) Environment,Test,Pass,TEST-SIM-002,Hardware integration tested
+95-00-03-REQ-903,Automated scenario generation for testing,95-40-08-C003,Scenario Generator,Test,Pass,TEST-SIM-003,Edge case generation verified
+95-00-03-REQ-904,Test orchestration and execution,95-40-08-C004,Test Orchestrator,Test,Pass,TEST-SIM-004,Parallel execution verified
+95-00-03-REQ-905,Test harness framework for NN systems,95-40-08-C005,Test Harness Framework,Test,Pass,TEST-SIM-005,NN-specific tests validated
+95-00-03-REQ-1001,CI/CD pipeline for software builds,95-40-09-C001,GitLab CI/CD Pipeline,Inspection,Pass,TOOL-CI-001,Pipeline stages verified
+95-00-03-REQ-1002,Continuous build and integration server,95-40-09-C002,Jenkins Build Server,Inspection,Pass,TOOL-CI-002,Plugin configuration verified
+95-00-03-REQ-1003,Internal CLI tools for developers,95-40-09-C003,Internal CLI Tools,Test,Pass,TOOL-DEV-001,Command coverage tested
+95-00-03-REQ-1004,Developer portal for documentation and tools,95-40-09-C004,Developer Portal,Inspection,Pass,TOOL-DEV-002,User acceptance tested
+95-00-03-REQ-1005,Observability stack for metrics and traces,95-40-09-C005,Observability Stack (Prometheus/Grafana),Test,Pass,TOOL-OBS-001,Dashboard functionality verified
+95-00-03-REQ-1101,Metrics collection from all services,95-40-10-C001,Metrics Collection Service,Test,Pass,TEST-MON-001,Collection rate verified
+95-00-03-REQ-1102,Centralized logging aggregation,95-40-10-C002,Logging Aggregator (ELK Stack),Test,Pass,TEST-MON-002,Log ingestion tested
+95-00-03-REQ-1103,Distributed tracing for request flows,95-40-10-C003,Distributed Tracing (Jaeger),Test,Pass,TEST-MON-003,Trace completeness verified
+95-00-03-REQ-1104,Detection of model performance drift,95-40-10-C004,Model Drift Detector,Test,Pass,TEST-MON-004,Drift thresholds validated
+95-00-03-REQ-1105,Detection of data distribution drift,95-40-10-C005,Data Drift Detector,Test,Pass,TEST-MON-005,Statistical tests verified
+95-00-03-REQ-1106,Operations analytics and reporting,95-40-10-C006,Operations Analytics Dashboard,Inspection,Pass,TEST-MON-006,Report generation tested
+95-00-03-REQ-1201,Automated traceability from requirements to code,95-40-11-C001,Traceability Automation Tool,Test,Pass,TOOL-CERT-001,Coverage analysis verified
+95-00-03-REQ-1202,Evidence bundle generation for certification,95-40-11-C002,Evidence Bundle Generator,Test,Pass,TOOL-CERT-002,Bundle completeness verified
+95-00-03-REQ-1203,Audit query engine for compliance,95-40-11-C003,Audit Query Engine,Test,Pass,TOOL-CERT-003,Query accuracy verified
+95-00-03-REQ-1204,Automated report generation for auditors,95-40-11-C004,Report Generation Tool,Test,Pass,TOOL-CERT-004,Template rendering tested

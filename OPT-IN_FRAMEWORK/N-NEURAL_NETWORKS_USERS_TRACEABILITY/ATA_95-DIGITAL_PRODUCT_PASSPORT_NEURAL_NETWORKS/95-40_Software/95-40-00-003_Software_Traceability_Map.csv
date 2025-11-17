@@ -1,0 +1,49 @@
+Software_Component_ID,Component_Name,Subsection,Requirements_Link,Safety_Impact,Certification_Level,Status,Owner
+95-40-01-C001,Kubernetes Cluster Manager,95-40-01,95-00-03-REQ-101,Low,N/A,Active,Platform Team
+95-40-01-C002,ARINC 653 Partition Manager,95-40-01,95-00-03-REQ-205,Critical,DO-178C Level A,Active,Embedded Team
+95-40-01-C003,Service Registry and Discovery,95-40-01,95-00-03-REQ-102,Medium,N/A,Active,Platform Team
+95-40-02-C001,TensorFlow Serving,95-40-02,95-00-03-REQ-301,Medium,N/A,Active,ML Ops Team
+95-40-02-C002,ONNX Runtime Engine,95-40-02,95-00-03-REQ-302,High,DO-178C Level C,Active,Embedded Team
+95-40-02-C003,REST API Gateway,95-40-02,95-00-03-REQ-105,Medium,N/A,Active,API Team
+95-40-02-C004,gRPC Service Interface,95-40-02,95-00-03-REQ-106,Medium,N/A,Active,API Team
+95-40-03-C001,Apache Airflow Pipeline Orchestrator,95-40-03,95-00-03-REQ-401,Low,N/A,Active,ML Ops Team
+95-40-03-C002,MLflow Experiment Tracker,95-40-03,95-00-03-REQ-402,Low,N/A,Active,ML Ops Team
+95-40-03-C003,Feature Store Service,95-40-03,95-00-03-REQ-403,Medium,N/A,Active,Data Team
+95-40-03-C004,Model Registry,95-40-03,95-00-03-REQ-404,Medium,N/A,Active,ML Ops Team
+95-40-04-C001,Onboard Inference Engine,95-40-04,95-00-03-REQ-501,Critical,DO-178C Level B,Active,Embedded Team
+95-40-04-C002,ARINC 664 Communication Stack,95-40-04,95-00-03-REQ-206,Critical,DO-178C Level A,Active,Embedded Team
+95-40-04-C003,CAN Bus Driver,95-40-04,95-00-03-REQ-207,High,DO-178C Level B,Active,Embedded Team
+95-40-04-C004,Device Drivers and HAL,95-40-04,95-00-03-REQ-208,Critical,DO-178C Level A,Active,Embedded Team
+95-40-05-C001,Runtime Safety Monitor,95-40-05,95-00-03-REQ-601,Critical,DO-178C Level A,Active,Safety Team
+95-40-05-C002,Input Validation Guard,95-40-05,95-00-03-REQ-602,Critical,DO-178C Level A,Active,Safety Team
+95-40-05-C003,Fallback Controller,95-40-05,95-00-03-REQ-603,Critical,DO-178C Level A,Active,Safety Team
+95-40-05-C004,Voting Mechanism Manager,95-40-05,95-00-03-REQ-604,Critical,DO-178C Level A,Active,Safety Team
+95-40-06-C001,OAuth2/OIDC Authentication Service,95-40-06,95-00-03-REQ-701,High,N/A,Active,Security Team
+95-40-06-C002,RBAC Authorization Engine,95-40-06,95-00-03-REQ-702,High,N/A,Active,Security Team
+95-40-06-C003,Key Management Service,95-40-06,95-00-03-REQ-703,High,N/A,Active,Security Team
+95-40-06-C004,Data Masking Service,95-40-06,95-00-03-REQ-704,High,N/A,Active,Security Team
+95-40-06-C005,Encryption Service,95-40-06,95-00-03-REQ-705,High,N/A,Active,Security Team
+95-40-07-C001,Hyperledger Fabric Node,95-40-07,95-00-03-REQ-801,Medium,N/A,Active,Blockchain Team
+95-40-07-C002,Smart Contract Manager,95-40-07,95-00-03-REQ-802,Medium,N/A,Active,Blockchain Team
+95-40-07-C003,Off-Chain Data Service,95-40-07,95-00-03-REQ-803,Medium,N/A,Active,Blockchain Team
+95-40-07-C004,DPP Query API,95-40-07,95-00-03-REQ-804,Medium,N/A,Active,API Team
+95-40-08-C001,Software-in-the-Loop (SIL) Environment,95-40-08,95-00-03-REQ-901,Low,N/A,Active,Test Team
+95-40-08-C002,Hardware-in-the-Loop (HIL) Environment,95-40-08,95-00-03-REQ-902,Medium,N/A,Active,Test Team
+95-40-08-C003,Scenario Generator,95-40-08,95-00-03-REQ-903,Low,N/A,Active,Test Team
+95-40-08-C004,Test Orchestrator,95-40-08,95-00-03-REQ-904,Low,N/A,Active,Test Team
+95-40-08-C005,Test Harness Framework,95-40-08,95-00-03-REQ-905,Low,N/A,Active,Test Team
+95-40-09-C001,GitLab CI/CD Pipeline,95-40-09,95-00-03-REQ-1001,Low,N/A,Active,DevOps Team
+95-40-09-C002,Jenkins Build Server,95-40-09,95-00-03-REQ-1002,Low,N/A,Active,DevOps Team
+95-40-09-C003,Internal CLI Tools,95-40-09,95-00-03-REQ-1003,Low,N/A,Active,Developer Experience Team
+95-40-09-C004,Developer Portal,95-40-09,95-00-03-REQ-1004,Low,N/A,Active,Developer Experience Team
+95-40-09-C005,Observability Stack (Prometheus/Grafana),95-40-09,95-00-03-REQ-1005,Medium,N/A,Active,DevOps Team
+95-40-10-C001,Metrics Collection Service,95-40-10,95-00-03-REQ-1101,Medium,N/A,Active,Operations Team
+95-40-10-C002,Logging Aggregator (ELK Stack),95-40-10,95-00-03-REQ-1102,Medium,N/A,Active,Operations Team
+95-40-10-C003,Distributed Tracing (Jaeger),95-40-10,95-00-03-REQ-1103,Medium,N/A,Active,Operations Team
+95-40-10-C004,Model Drift Detector,95-40-10,95-00-03-REQ-1104,Medium,N/A,Active,ML Ops Team
+95-40-10-C005,Data Drift Detector,95-40-10,95-00-03-REQ-1105,Medium,N/A,Active,Data Team
+95-40-10-C006,Operations Analytics Dashboard,95-40-10,95-00-03-REQ-1106,Low,N/A,Active,Operations Team
+95-40-11-C001,Traceability Automation Tool,95-40-11,95-00-03-REQ-1201,High,N/A,Active,Certification Team
+95-40-11-C002,Evidence Bundle Generator,95-40-11,95-00-03-REQ-1202,High,N/A,Active,Certification Team
+95-40-11-C003,Audit Query Engine,95-40-11,95-00-03-REQ-1203,High,N/A,Active,Certification Team
+95-40-11-C004,Report Generation Tool,95-40-11,95-00-03-REQ-1204,High,N/A,Active,Certification Team
