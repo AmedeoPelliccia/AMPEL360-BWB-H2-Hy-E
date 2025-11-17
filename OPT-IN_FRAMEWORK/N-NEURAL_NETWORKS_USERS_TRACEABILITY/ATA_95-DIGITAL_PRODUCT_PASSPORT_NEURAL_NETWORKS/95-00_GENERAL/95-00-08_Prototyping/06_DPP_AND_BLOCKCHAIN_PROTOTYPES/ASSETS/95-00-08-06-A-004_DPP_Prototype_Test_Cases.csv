@@ -1,0 +1,5 @@
+Test_ID,Scenario,Expected_Result,Actual_Result,Status
+DPP-001,Register new model,Transaction success,Success,Pass
+DPP-002,Query existing model,Return model record,Record returned,Pass
+DPP-003,Update model version,New version recorded,Success,Pass
+DPP-004,Invalid model ID,Transaction reverts,Reverted,Pass

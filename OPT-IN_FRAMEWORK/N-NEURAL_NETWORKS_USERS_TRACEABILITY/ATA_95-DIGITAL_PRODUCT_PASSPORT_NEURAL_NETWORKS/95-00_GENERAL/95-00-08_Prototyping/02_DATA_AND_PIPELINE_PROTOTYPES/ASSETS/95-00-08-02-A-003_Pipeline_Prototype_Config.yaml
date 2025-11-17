@@ -1,0 +1,26 @@
+# Data Pipeline Configuration
+pipeline:
+  name: "flight-data-preprocessing"
+  version: "1.0"
+
+stages:
+  - name: "ingestion"
+    source: "s3://data-lake/raw"
+    format: "parquet"
+    
+  - name: "validation"
+    rules:
+      - "no_null_values"
+      - "range_check"
+      - "schema_compliance"
+      
+  - name: "transformation"
+    operations:
+      - "normalize"
+      - "feature_engineering"
+      - "time_alignment"
+      
+  - name: "output"
+    destination: "s3://data-lake/processed"
+    format: "parquet"
+    partitioning: ["year", "month", "day"]

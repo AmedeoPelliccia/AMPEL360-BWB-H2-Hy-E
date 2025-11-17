@@ -1,0 +1,22 @@
+# Sandbox Environment Configuration
+sandbox:
+  name: "cloud-sandbox-03"
+  type: "offline"  # offline, shadow, edge
+  
+resources:
+  cpu_cores: 8
+  memory_gb: 32
+  gpu_count: 2
+  gpu_type: "NVIDIA T4"
+  
+network:
+  isolation: true
+  allowed_endpoints:
+    - "data-lake.ampel360.internal"
+    - "model-registry.ampel360.internal"
+    
+monitoring:
+  metrics_enabled: true
+  logging_level: "INFO"
+  alert_endpoints:
+    - "ops-team@ampel360.com"

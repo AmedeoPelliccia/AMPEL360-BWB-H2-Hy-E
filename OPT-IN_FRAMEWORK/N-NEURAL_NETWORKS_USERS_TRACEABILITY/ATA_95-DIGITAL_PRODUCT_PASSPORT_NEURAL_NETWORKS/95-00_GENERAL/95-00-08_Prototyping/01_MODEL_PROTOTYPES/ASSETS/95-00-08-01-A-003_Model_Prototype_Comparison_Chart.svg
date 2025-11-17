@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+  <rect width="800" height="600" fill="#f0f0f0"/>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold">Model Prototype Performance Comparison</text>
+  <text x="400" y="300" text-anchor="middle" font-size="16" fill="#666">
+    [Placeholder: Bar chart comparing accuracy, speed, and size of different prototypes]
+  </text>
+</svg>

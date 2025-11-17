@@ -1,0 +1,6 @@
+Prototype_ID,Name,Architecture,Framework,Dataset,Accuracy,Inference_Time_ms,Status
+MP-001,Flight Path Predictor,LSTM,TensorFlow,Synthetic,0.87,125,Active
+MP-002,Anomaly Detector,Autoencoder,PyTorch,Real,0.92,80,Testing
+MP-003,Fuel Optimizer,DQN,TensorFlow,Simulation,0.89,200,In Development
+MP-004,Maintenance Predictor,Random Forest,Scikit-learn,Historical,0.85,50,Active
+MP-005,Weather Classifier,CNN,PyTorch,Satellite,0.91,100,Ready for V&V
