@@ -1,0 +1,9 @@
+{
+  "sensors": [
+    {
+      "id": "H2-S-001",
+      "type": "leak_detector",
+      "location": "tank_1"
+    }
+  ]
+}

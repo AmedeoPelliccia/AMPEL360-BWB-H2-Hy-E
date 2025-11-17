@@ -1,0 +1,9 @@
+{
+  "states": [
+    "off",
+    "standby",
+    "normal",
+    "emergency"
+  ],
+  "transitions": {}
+}

@@ -1,0 +1,4 @@
+Flight_Phase,Duration_min,Power_Demand_kW,H2_Consumption_kg,Battery_Delta_kWh
+Taxi,15,50,0.5,-5
+Takeoff,2,800,8,-20
+Cruise,180,300,30,0

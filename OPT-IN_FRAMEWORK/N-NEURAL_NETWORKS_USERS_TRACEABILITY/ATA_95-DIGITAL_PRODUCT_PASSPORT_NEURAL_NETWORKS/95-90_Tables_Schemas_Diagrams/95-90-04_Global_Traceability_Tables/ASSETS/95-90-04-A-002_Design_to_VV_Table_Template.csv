@@ -1,0 +1,3 @@
+Design_Element_ID,Test_Case_ID,Verification_Method,Status,Result
+DES-95-00-04-001,TC-95-00-07-001,test,passed,All criteria met
+DES-95-00-04-002,TC-95-00-07-002,analysis,in_progress,Under review

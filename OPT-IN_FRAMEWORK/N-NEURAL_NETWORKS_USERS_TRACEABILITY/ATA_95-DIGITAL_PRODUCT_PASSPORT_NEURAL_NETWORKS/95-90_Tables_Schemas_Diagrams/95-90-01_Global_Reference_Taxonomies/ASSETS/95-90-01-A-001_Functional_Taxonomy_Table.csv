@@ -1,0 +1,8 @@
+Category,Subcategory,Code,Description,Examples
+Perception,Vision Systems,PER-VIS,Camera and image processing systems,"Forward cameras, obstacle detection"
+Perception,Environmental Sensors,PER-ENV,"Temperature, pressure, humidity sensors","Cabin sensors, external probes"
+Processing,Neural Networks,PRC-NN,AI/ML processing systems,"Object detection, predictive maintenance"
+Processing,Edge Computing,PRC-EDG,Local computation units,"Flight computers, sensor fusion"
+Decision,Autonomous Control,DEC-AUTO,Automated control systems,"Autopilot, auto-throttle"
+Actuation,Flight Controls,ACT-FLT,Primary and secondary flight controls,"Ailerons, elevators, rudder"
+Communication,Internal Buses,COM-INT,Internal data buses,"AFDX, CAN, ARINC 429"

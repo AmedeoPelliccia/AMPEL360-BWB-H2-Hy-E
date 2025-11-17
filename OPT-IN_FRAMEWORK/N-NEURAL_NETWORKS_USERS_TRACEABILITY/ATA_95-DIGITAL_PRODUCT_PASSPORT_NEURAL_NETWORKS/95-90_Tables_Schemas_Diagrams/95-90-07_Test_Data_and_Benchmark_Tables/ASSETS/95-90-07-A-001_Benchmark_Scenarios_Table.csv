@@ -1,0 +1,3 @@
+Scenario_ID,Name,Category,Complexity,Expected_Result
+BM-001,Nominal Flight,nominal,medium,All systems normal
+BM-002,Engine Failure,failure,high,Safe landing

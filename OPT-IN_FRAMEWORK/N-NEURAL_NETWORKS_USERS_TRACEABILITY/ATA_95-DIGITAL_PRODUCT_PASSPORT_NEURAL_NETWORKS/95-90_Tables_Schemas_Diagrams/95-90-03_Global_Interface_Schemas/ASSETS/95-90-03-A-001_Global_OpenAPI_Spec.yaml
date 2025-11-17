@@ -1,0 +1,24 @@
+openapi: 3.0.0
+info:
+  title: AMPEL360 CAOS API
+  version: 1.0.0
+  description: REST API for AMPEL360 CAOS system
+paths:
+  /aircraft/{id}:
+    get:
+      summary: Get aircraft details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Aircraft details
+  /telemetry/{id}/latest:
+    get:
+      summary: Get latest telemetry
+      responses:
+        '200':
+          description: Latest telemetry data

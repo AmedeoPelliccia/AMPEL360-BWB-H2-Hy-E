@@ -1,0 +1,8 @@
+{
+  "view": "dpp_traceability",
+  "fields": [
+    "uuid",
+    "lifecycle_stage",
+    "owner"
+  ]
+}

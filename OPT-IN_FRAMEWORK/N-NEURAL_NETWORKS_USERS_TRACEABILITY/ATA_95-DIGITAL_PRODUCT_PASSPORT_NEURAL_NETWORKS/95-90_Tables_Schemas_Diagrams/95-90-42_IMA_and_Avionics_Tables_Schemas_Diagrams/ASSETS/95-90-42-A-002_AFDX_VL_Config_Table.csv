@@ -1,0 +1,3 @@
+VL_ID,Source,Destination,BAG_ms,MTU_bytes
+VL-001,FCC,IMA_Core,10,1500
+VL-002,NAV,Display,50,512

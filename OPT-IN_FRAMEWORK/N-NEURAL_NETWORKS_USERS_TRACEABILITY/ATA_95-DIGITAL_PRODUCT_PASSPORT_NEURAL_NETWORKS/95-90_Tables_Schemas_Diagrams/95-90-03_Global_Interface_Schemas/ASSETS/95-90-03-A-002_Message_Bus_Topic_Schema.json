@@ -1,0 +1,16 @@
+{
+  "topics": {
+    "aircraft.telemetry": {
+      "schema": "95-90-02-A-002",
+      "retention": "30 days"
+    },
+    "aircraft.events": {
+      "schema": "95-90-02-A-003",
+      "retention": "365 days"
+    },
+    "aircraft.commands": {
+      "schema": "command_schema",
+      "retention": "90 days"
+    }
+  }
+}
