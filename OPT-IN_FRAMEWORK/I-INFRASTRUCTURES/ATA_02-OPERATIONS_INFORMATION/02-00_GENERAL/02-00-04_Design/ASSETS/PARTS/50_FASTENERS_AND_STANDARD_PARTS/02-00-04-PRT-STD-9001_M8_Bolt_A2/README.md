@@ -129,7 +129,7 @@
 
 ### 7.1 Specifications
 
-* **Thread:** M8 x 1.25 coarse
+* **Thread:** M8 x 1.25 (coarse thread per ISO 261)
 * **Length:** 25mm (specify different lengths as separate part numbers)
 * **Material:** A2 stainless (304)
 * **Strength Grade:** 70
