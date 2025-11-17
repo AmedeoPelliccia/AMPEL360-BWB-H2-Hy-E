@@ -1,0 +1,31 @@
+model_name: H2 Fuel Predictor
+model_id: h2_predictor_v2.1
+version: 2.1.0
+model_type: LSTM
+framework: PyTorch
+purpose: Predict H2 fuel consumption based on flight phase and conditions
+inputs:
+  - name: flight_phase
+    type: categorical
+    values: [ground, taxi, takeoff, climb, cruise, descent, approach, landing]
+  - name: altitude_m
+    type: float
+    range: [0, 15000]
+  - name: airspeed_kt
+    type: float
+    range: [0, 500]
+outputs:
+  - name: fuel_rate_kg_s
+    type: float
+    range: [0, 10]
+  - name: confidence
+    type: float
+    range: [0, 1]
+performance:
+  accuracy: 0.94
+  latency_ms: 45
+  memory_mb: 128
+training_data:
+  dataset_id: flight_test_2024
+  samples: 50000
+  date_range: 2024-01-01 to 2024-06-30

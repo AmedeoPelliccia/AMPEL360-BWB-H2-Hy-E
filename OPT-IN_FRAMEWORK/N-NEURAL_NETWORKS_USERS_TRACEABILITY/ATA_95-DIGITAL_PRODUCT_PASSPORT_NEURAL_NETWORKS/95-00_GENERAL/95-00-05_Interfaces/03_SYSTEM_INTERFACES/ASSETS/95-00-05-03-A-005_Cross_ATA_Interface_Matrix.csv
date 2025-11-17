@@ -1,0 +1,6 @@
+ATA_Source,ATA_Target,Interface_Type,Protocol,Criticality
+ATA_02,ATA_95,Data,ARINC_664,Medium
+ATA_28,ATA_95,Data,CAN,High
+ATA_31,ATA_95,Data,ARINC_717,High
+ATA_42,ATA_95,System,AFDX,Critical
+ATA_45,ATA_95,Data,Ethernet,Medium

@@ -1,0 +1,4 @@
+CAN_ID,Signal_Name,Source_System,Target_System,Data_Length,Update_Rate_Hz
+0x100,H2_Pressure,Fuel_System,DPP,8,10
+0x101,Tank_Temp,Fuel_System,DPP,8,10
+0x200,Model_Output,AI_Module,IMA,8,5

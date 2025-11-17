@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: DPP Query API
+  version: 1.0.0
+paths:
+  /dpp/{component_id}:
+    get:
+      summary: Get DPP for component
+      parameters:
+        - name: component_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: DPP data

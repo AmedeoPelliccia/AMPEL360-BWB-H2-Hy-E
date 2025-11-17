@@ -1,0 +1,6 @@
+model_name: Predictive Maintenance Model
+model_id: maintenance_predictor_v3.0
+version: 3.0.0
+model_type: Random Forest
+framework: Scikit-learn
+purpose: Predict maintenance needs based on component health

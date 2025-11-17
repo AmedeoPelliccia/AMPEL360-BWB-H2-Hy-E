@@ -1,0 +1,4 @@
+Report_Type,Frequency,Format,Recipients,Retention_Years
+Model_Explanation,Per_Inference,JSON,Flight_Crew,7
+Audit_Summary,Monthly,PDF,Certification_Authority,Permanent
+Performance_Metrics,Weekly,CSV,Engineering_Team,5

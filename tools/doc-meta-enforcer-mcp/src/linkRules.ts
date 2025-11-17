@@ -215,6 +215,19 @@ export const linkRules: LinkRule[] = [
     replacement: "[$1](../../REQUIREMENTS/$1/README.md)",
     description: "Internal requirement reference (RQ-XX-XX-XXX pattern)"
   },
+
+  // ========== ATA 95 Interface References ==========
+  
+  {
+    pattern: /(?<!\[)\b(95-00-05-\d{2}-A-\d{3})\b(?!\]\()/g,
+    replacement: "[$1](../95-00_GENERAL/95-00-05_Interfaces/**/ASSETS/$1_*)",
+    description: "ATA 95 Interface Asset reference"
+  },
+  {
+    pattern: /(?<!\[)\b(95-00-05-\d{2}-\d{3})\b(?!\]\()/g,
+    replacement: "[$1](../95-00_GENERAL/95-00-05_Interfaces/**/$1_*.md)",
+    description: "ATA 95 Interface Document reference"
+  },
   
 ];
 

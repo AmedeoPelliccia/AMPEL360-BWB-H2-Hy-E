@@ -1,0 +1,6 @@
+model_name: Flight Systems Anomaly Detector
+model_id: anomaly_detector_v1.5
+version: 1.5.0
+model_type: Autoencoder
+framework: TensorFlow
+purpose: Detect anomalies in flight systems data

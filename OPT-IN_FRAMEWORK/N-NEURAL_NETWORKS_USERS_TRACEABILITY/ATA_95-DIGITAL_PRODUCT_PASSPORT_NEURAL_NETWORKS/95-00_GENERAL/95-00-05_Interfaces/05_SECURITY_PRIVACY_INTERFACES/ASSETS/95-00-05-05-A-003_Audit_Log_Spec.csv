@@ -1,0 +1,5 @@
+Event_Type,Severity,Retention_Days,Encryption,Destination
+Authentication,High,365,AES-256,SIEM
+Authorization_Failure,Critical,730,AES-256,SIEM
+Data_Access,Medium,180,AES-256,Archive
+Crypto_Operation,High,365,AES-256,SIEM

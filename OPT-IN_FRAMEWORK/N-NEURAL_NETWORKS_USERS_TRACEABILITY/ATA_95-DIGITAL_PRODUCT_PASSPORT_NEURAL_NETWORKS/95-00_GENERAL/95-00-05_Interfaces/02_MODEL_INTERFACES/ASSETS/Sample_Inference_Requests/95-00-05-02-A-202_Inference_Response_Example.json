@@ -1,0 +1,21 @@
+{
+  "request_id": "req_12345",
+  "model_id": "h2_predictor_v2.1",
+  "timestamp": "2025-11-17T20:51:14.123Z",
+  "prediction": {
+    "fuel_rate_kg_s": 0.85,
+    "estimated_range_km": 3850
+  },
+  "confidence": 0.94,
+  "explanation": {
+    "method": "SHAP",
+    "top_features": [
+      {"feature": "altitude_m", "importance": 0.35},
+      {"feature": "airspeed_kt", "importance": 0.28}
+    ]
+  },
+  "metadata": {
+    "inference_time_ms": 45,
+    "model_version": "2.1.0"
+  }
+}
