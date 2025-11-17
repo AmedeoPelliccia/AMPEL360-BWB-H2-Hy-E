@@ -1,0 +1,21 @@
+95-50 Structure ID,Structure Name,Parent ATA Chapter,95-20 Subsystem Link,95-00-13 Component Link,Location,Access Type,Status
+95-50-21-A-001,ECS Duct Assembly,ATA 21,95-20-21 NN ECS,95-00-13-021-xxx,Forward Equipment Bay,Service Panel,Active
+95-50-21-A-002,ECS Sensor Rack,ATA 21,95-20-21 NN ECS,95-00-13-021-yyy,Mid-Fuselage,Quick Access,Active
+95-50-24-A-001,Electrical Rack,ATA 24,95-20-80 NN Energy,95-00-13-024-xxx,Forward Avionics Bay,Service Door,Active
+95-50-24-A-002,Cable Tray,ATA 24,95-20-80 NN Energy,95-00-13-024-yyy,Throughout Aircraft,Multiple Points,Active
+95-50-28-A-001,H2 Tank Support,ATA 28,95-20-28 NN H2 Fuel,95-00-13-028-xxx,Aft Fuselage,External Access,Active
+95-50-28-A-002,Manifold Rack,ATA 28,95-20-28 NN H2 Fuel,95-00-13-028-yyy,Wing Root,Service Panel,Active
+95-50-31-A-001,Recorder Rack,ATA 31,95-20-31 NN Recording,95-00-13-031-xxx,Aft Equipment Bay,Quick Access,Active
+95-50-31-A-002,Data Module Carrier,ATA 31,95-20-31 NN Recording,95-00-13-031-yyy,Forward Avionics Bay,Service Panel,Active
+95-50-42-A-001,IMA Rack,ATA 42,95-20-42 NN IMA,95-00-13-042-xxx,Forward Avionics Bay,Service Door,Active
+95-50-42-A-002,LRU Chassis,ATA 42,95-20-42 NN IMA,95-00-13-042-yyy,Multiple Locations,Quick Access,Active
+95-50-46-A-001,Server Rack,ATA 46,95-20-46 NN InfoSys,95-00-13-046-xxx,Mid-Fuselage Electronics Bay,Service Door,Active
+95-50-46-A-002,Operator Console,ATA 46,95-20-46 NN InfoSys,95-00-13-046-yyy,Cockpit,Internal Access,Active
+95-50-49-A-001,APU Mount,ATA 49,95-20-49 NN APU,95-00-13-049-xxx,Aft Fuselage Tail Cone,External Access,Active
+95-50-49-A-002,APU Duct,ATA 49,95-20-49 NN APU,95-00-13-049-yyy,Aft Fuselage,Service Panel,Active
+95-50-53-A-001,Equipment Bay Structure,ATA 53,Multiple,Multiple,Multiple Bays,Multiple Points,Active
+95-50-53-A-002,Reinforcement Kit,ATA 53,Multiple,Multiple,Equipment Mounting Points,N/A,Active
+95-50-57-A-001,Wing Sensor Mount,ATA 57,95-20-57 NN Wing,95-00-13-057-xxx,Wing Leading Edge,External Panel,Active
+95-50-57-A-002,Antenna Fairing,ATA 57,95-20-57 NN Wing,95-00-13-057-yyy,Wingtip,External Access,Active
+95-50-70-A-001,Pylon Equipment Bracket,ATA 71,95-20-70 NN Propulsion,95-00-13-071-xxx,Engine Pylon,Service Panel,Active
+95-50-70-A-002,Nacelle Sensor Mount,ATA 71,95-20-70 NN Propulsion,95-00-13-071-yyy,Engine Nacelle,Quick Access,Active
