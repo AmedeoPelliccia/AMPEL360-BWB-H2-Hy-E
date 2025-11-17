@@ -1,0 +1,7 @@
+Zone,Min_Clearance_mm,Purpose,Safety_Factor
+Wingtip,500,Ground clearance,1.5
+Belly,300,Ground clearance,1.5
+Engine_Intake,200,FOD protection,2.0
+Exhaust_to_Stabilizer,1000,Hot gas impingement,2.5
+Pylon_to_Fuselage,150,Vibration clearance,1.8
+Access_Door_Swing,100,Maintenance clearance,1.2

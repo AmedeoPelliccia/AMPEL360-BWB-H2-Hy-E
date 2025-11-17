@@ -1,0 +1,8 @@
+Parameter,Unit,Normal_Min,Normal_Max,Caution_Min,Caution_Max,Max_Limit,Safety_Margin_Percent
+Thrust,%,0,100,100,110,120,20
+N1_RPM,RPM,0,1200,1200,1320,1440,20
+EGT,C,0,650,650,750,850,30
+Oil_Temp,C,40,90,90,110,125,38
+Oil_Pressure,psi,30,60,25,30,90,50
+Fuel_Pressure,bar,5,10,4,5,15,50
+Vibration,mm_s,0,5,5,10,15,50
