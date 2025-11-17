@@ -134,7 +134,7 @@ See: `CONFIG/02-00-04-PRD-INH-0010_ConfigMatrix-R01.xlsx` for detailed configura
 
 ### 5.2 Functional Models
 
-* **Logical Model:** `MODELS/LOGICAL/02-00-04-MDL-PRD-INH-0010_FunctionalModel-R01.md` (see [MODELS](../../../MODELS/))
+* **Logical Model:** `MODELS/LOGICAL/02-00-04-MDL-PRD-INH-0010_FunctionalModel-R01.md` (in this product folder)
 
 ### 5.3 Drawings
 
