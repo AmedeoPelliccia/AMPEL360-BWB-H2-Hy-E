@@ -98,7 +98,7 @@
 
 ### 6.1 Related Assemblies
 
-* `02-00-04-ASSY-A310` - GSE Power Cart Assembly (example)
+* `02-00-04-ASSY-C100` - Console Assembly (example)
 * Additional assemblies to be determined
 
 ### 6.2 Related BoMs
