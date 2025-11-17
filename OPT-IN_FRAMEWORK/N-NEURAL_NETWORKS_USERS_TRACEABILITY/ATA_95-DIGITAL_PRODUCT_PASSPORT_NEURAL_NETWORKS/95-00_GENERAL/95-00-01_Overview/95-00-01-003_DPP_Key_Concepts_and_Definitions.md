@@ -306,23 +306,30 @@ Governed by 95-00-11_EIS_Versions_Tags processes.
 | ANN     | Artificial Neural Network                       |
 | CCB     | Configuration Control Board                     |
 | CI/CD   | Continuous Integration / Continuous Deployment  |
-| DAL     | Design Assurance Level                          |
-| DMC     | Data Module Code (S1000D)                       |
-| DPP     | Digital Product Passport                        |
-| FMEA    | Failure Modes and Effects Analysis              |
-| GDPR    | General Data Protection Regulation              |
-| GPU     | Graphics Processing Unit                        |
-| IMA     | Integrated Modular Avionics                     |
-| LIME    | Local Interpretable Model-agnostic Explanations |
-| MAE     | Mean Absolute Error                             |
-| ML      | Machine Learning                                |
-| NN      | Neural Network                                  |
-| ODD     | Operational Design Domain                       |
-| OTA     | Over-The-Air                                    |
-| RMSE    | Root Mean Squared Error                         |
-| SHAP    | SHapley Additive exPlanations                   |
-| SVM     | Support Vector Machine                          |
-| UUID    | Universally Unique Identifier                   |
+| AMPEL360 | Aircraft Modular Platform for Enhanced Lifecycle (360°) |
+| BWB      | Blended Wing Body                                      |
+| ConOps   | Concept of Operations                                  |
+| DAL      | Design Assurance Level                                 |
+| DMC      | Data Module Code (S1000D)                              |
+| DPP      | Digital Product Passport                               |
+| EIS      | Entry Into Service                                     |
+| FHA      | Functional Hazard Assessment                           |
+| FMEA     | Failure Modes and Effects Analysis                     |
+| GDPR     | General Data Protection Regulation                     |
+| GPU      | Graphics Processing Unit                               |
+| IMA      | Integrated Modular Avionics                            |
+| LIME     | Local Interpretable Model-agnostic Explanations        |
+| MAE      | Mean Absolute Error                                    |
+| ML       | Machine Learning                                       |
+| NN       | Neural Network                                         |
+| ODD      | Operational Design Domain                              |
+| OTA      | Over-The-Air                                           |
+| PHA      | Preliminary Hazard Analysis                            |
+| RMSE     | Root Mean Squared Error                                |
+| RTM      | Requirements Traceability Matrix                       |
+| SHAP     | SHapley Additive exPlanations                          |
+| SVM      | Support Vector Machine                                 |
+| UUID     | Universally Unique Identifier                          |
 
 ---
 
