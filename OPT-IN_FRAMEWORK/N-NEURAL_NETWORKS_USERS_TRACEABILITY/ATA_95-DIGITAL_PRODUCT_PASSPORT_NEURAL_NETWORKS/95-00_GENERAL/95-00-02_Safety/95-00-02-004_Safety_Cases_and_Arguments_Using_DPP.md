@@ -1,0 +1,144 @@
+# 95-00-02-004 — Safety Cases and Arguments Using DPP
+
+## 1. Purpose
+
+This document explains how the **Neural Network Digital Product Passport (DPP)**
+is used as **evidence** in **safety cases** and **assurance arguments**.
+
+It defines:
+
+- The role of DPP content in structured safety argumentation (e.g., Goal Structuring Notation, Claims-Arguments-Evidence).
+- How DPP entries support top-level safety claims.
+- Consistency and completeness checks between DPP and safety case artefacts.
+
+---
+
+## 2. Overview of Safety Cases
+
+A **safety case** is a structured argument that demonstrates a system is acceptably safe to operate.
+
+Key components:
+
+- **Claims / Goals:** High-level safety objectives (e.g., "System X is safe to operate in conditions Y").
+- **Arguments / Strategies:** Decomposition of goals into sub-goals, supported by rationale.
+- **Evidence:** Data, test results, analyses, and documentation that substantiate claims.
+
+The **DPP** provides **traceable, version-controlled evidence** for claims related to NN components.
+
+---
+
+## 3. DPP as Evidence in Safety Cases
+
+### 3.1 Top-Level Safety Claims
+
+Examples of top-level claims supported by DPP:
+
+- **Claim C1:** "The NN-based object detection system operates safely within its ODD."
+  - **Evidence:** DPP references to ODD definition, validation test results, runtime monitoring data.
+
+- **Claim C2:** "Failure of the NN component does not lead to catastrophic outcomes."
+  - **Evidence:** DPP documentation of fallback modes, fail-safe logic, and fault injection test results.
+
+- **Claim C3:** "The NN system is monitored for anomalies and performance drift."
+  - **Evidence:** DPP links to monitoring KPIs, alert thresholds, and operational logs.
+
+### 3.2 Evidence Decomposition
+
+DPP entries can be decomposed to support sub-claims:
+
+```
+Goal G1: NN system is acceptably safe
+  ├─ Strategy S1: Argument over development lifecycle
+  │   ├─ Goal G1.1: Training data is appropriate
+  │   │   └─ Evidence E1.1: DPP reference to [ATA 96](../../ATA_96-NEURAL_NETWORK_TRAINING_DATA/) data passport
+  │   ├─ Goal G1.2: Model is validated against safety requirements
+  │   │   └─ Evidence E1.2: DPP link to V&V test reports ([ATA 95-00-07](../95-00-07_V_AND_V/))
+  ├─ Strategy S2: Argument over operational safety
+      ├─ Goal G2.1: Runtime monitoring detects anomalies
+      │   └─ Evidence E2.1: DPP monitoring plan and alert thresholds
+      ├─ Goal G2.2: System fails safe
+          └─ Evidence E2.2: DPP fallback mode documentation
+```
+
+---
+
+## 4. Consistency Between DPP and Safety Case
+
+### 4.1 Traceability Matrix
+
+A traceability matrix shall map:
+
+- Safety case **goals** ↔ DPP **evidence entries**.
+- Safety case **claims** ↔ DPP **fields** (ODD, limitations, monitoring, etc.).
+
+This ensures:
+
+- All safety claims are substantiated by DPP evidence.
+- All DPP entries are linked to safety objectives (preventing orphaned data).
+
+### 4.2 Configuration Control
+
+- Changes to NN components (e.g., retraining, parameter updates) may invalidate safety case arguments.
+- DPP version control enables **impact analysis**:
+  - Which safety claims are affected by a DPP change?
+  - Does the change require re-validation or re-approval?
+
+### 4.3 Completeness and Coverage
+
+The DPP shall provide evidence for **all** safety-critical aspects of the NN:
+
+- **Completeness:** No safety claim lacks supporting DPP evidence.
+- **Coverage:** All hazards, failure modes, and risk controls are documented in the DPP.
+
+---
+
+## 5. Safety Case Presentation
+
+When presenting the safety case to regulators or certification authorities:
+
+- **Reference DPP entries explicitly** (by ID, version, and field).
+- **Provide summaries** of DPP content in the safety case document (e.g., excerpts of ODD, validation results).
+- **Ensure auditability:** DPP records must be accessible for inspection and audit.
+
+---
+
+## 6. Example: GSN-Style Safety Argument
+
+**Goal Structuring Notation (GSN)** is a common framework for safety cases.
+
+Example fragment:
+
+```
+[G1: NN object detection is safe]
+  │
+  ├─[Strategy: Argument by decomposition over lifecycle]
+  │   │
+  │   ├─[G1.1: Training is appropriate]
+  │   │   └─[Evidence: DPP → [ATA 96](../../ATA_96-NEURAL_NETWORK_TRAINING_DATA/) data passport, training logs]
+  │   │
+  │   ├─[G1.2: Model is validated]
+  │   │   └─[Evidence: DPP → V&V test reports, performance metrics]
+  │   │
+  │   ├─[G1.3: Deployment constraints are met]
+  │       └─[Evidence: DPP → ODD, input constraints, deployment checklist]
+  │
+  ├─[Strategy: Argument by operational monitoring]
+      │
+      ├─[G2.1: Anomalies are detected]
+      │   └─[Evidence: DPP → monitoring KPIs, alert thresholds]
+      │
+      ├─[G2.2: Fallback is effective]
+          └─[Evidence: DPP → fallback mode description, test results]
+```
+
+---
+
+## 7. Document Control
+
+- **Status:** `WORKING` / `FOR_REVIEW` / `APPROVED`
+- **Owner:** Safety / Certification Lead
+- **Last Updated:** [Date]
+- **Notes:**
+
+  - This document was **generated by AI prompted by Amedeo Pelliccia**.
+  - Content must be **reviewed and approved** by designated human safety experts.

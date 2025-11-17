@@ -1,33 +1,137 @@
-# 95-00-02_Safety
+# 95-00-02_Safety — Digital Product Passport Safety View for Neural Networks
 
-## Purpose
+## 1. Purpose
 
-Safety framework and analysis methods
+This folder defines the **safety-related aspects** of the
+**Digital Product Passport (DPP) for Neural Networks** under **ATA 95**.
 
-## Scope
+It explains how the DPP:
 
-This folder is part of the **95-00_GENERAL** layer, which provides governance and lifecycle management for ATA Chapter 95.
+- Supports **safety objectives and principles** for NN-enabled functions.
+- Provides **structured evidence** for safety cases and certification.
+- Connects DPP records to **hazard analysis**, **risk controls** and
+  **operational monitoring**.
+- Enables **learning from safety events** and controlled evolution of
+  NN deployments (limitations, restrictions, decommissioning).
 
-## Contents
+---
 
-This folder should contain:
-- Documentation related to safety framework and analysis methods
-- Traceability matrices linking to other lifecycle stages
-- Evidence and artifacts supporting this lifecycle phase
+## 2. Scope
 
-## Status
+The 95-00-02_Safety layer covers:
 
-- **Phase**: Safety
-- **Lifecycle Position**: 02 of 14
-- **Status**: Active
-- **Last Updated**: 2025-11-13
+- Safety objectives and principles that the NN DPP must support.
+- Safety-driven **requirements on DPP content** (fields, metadata, links).
+- The interface between DPP records and:
+  - Hazard logs, FHA/FMEA/FTA, bow-tie analyses.
+  - Safety cases / assurance cases.
+  - Operational monitoring and alerting mechanisms.
+- How safety incidents and lessons learned are reflected in the DPP
+  (status changes, new warnings, constraints, or retirement).
 
-## Related Folders
+It does **not** define the full hazard analysis process itself (which is
+handled by project safety processes) but specifies how the DPP must
+**expose and track safety-relevant information** about NN artefacts and
+deployments.
 
-Part of the canonical 14-folder lifecycle:
-1. Overview → 2. Safety → 3. Requirements → 4. Design → 5. Interfaces → 6. Engineering → 7. V&V → 8. Prototyping → 9. Production Planning → 10. Certification → 11. EIS/Versions/Tags → 12. Services → 13. Subsystems/Components → 14. Ops/Std/Sustain
+---
 
-## Document Control
+## 3. Folder Structure
 
-- **Standard**: OPT-IN Framework v1.1 (ATA 95 canonical template)
-- **Owner**: AMPEL360 Documentation WG
+```text
+95-00-02_Safety/
+├── README.md
+├── 95-00-02-001_Safety_Objectives_and_Principles.md
+├── 95-00-02-002_Safety_Requirements_for_DPP_Content.md
+├── 95-00-02-003_Hazard_Analysis_and_DPP_Linkage.md
+├── 95-00-02-004_Safety_Cases_and_Arguments_Using_DPP.md
+├── 95-00-02-005_Failure_Modes_and_Risk_Controls_for_NN_Systems.md
+├── 95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md
+├── 95-00-02-007_Safety_Incidents_Learning_and_DPP_Updates.md
+├── 95-00-02-008_Limitations_Assumptions_and_Residual_Risk.md
+└── ASSETS/
+    ├── 95-00-02-SFT-001_DPP_Safety_Context_Diagram.png
+    ├── 95-00-02-SFT-002_DPP_to_HazardLog_Interface.svg
+    └── 95-00-02-SFT-003_Safety_Monitoring_DataFlow.png
+```
+
+Suggested roles:
+
+* **[95-00-02-001_Safety_Objectives_and_Principles.md](./95-00-02-001_Safety_Objectives_and_Principles.md)**
+  Defines safety objectives for NN DPP and alignment with overall safety policy.
+
+* **[95-00-02-002_Safety_Requirements_for_DPP_Content.md](./95-00-02-002_Safety_Requirements_for_DPP_Content.md)**
+  Lists DPP fields and links that are required to support safety assurance
+  (e.g. operating envelope, fail-safe behaviour, monitoring hooks, fallback).
+
+* **[95-00-02-003_Hazard_Analysis_and_DPP_Linkage.md](./95-00-02-003_Hazard_Analysis_and_DPP_Linkage.md)**
+  Describes how each DPP instance is connected to specific hazards, causes,
+  controls and safety requirements in the hazard / risk tools.
+
+* **[95-00-02-004_Safety_Cases_and_Arguments_Using_DPP.md](./95-00-02-004_Safety_Cases_and_Arguments_Using_DPP.md)**
+  Explains how DPP content contributes as **evidence** in safety cases and
+  how consistency with other artefacts is maintained.
+
+* **[95-00-02-005_Failure_Modes_and_Risk_Controls_for_NN_Systems.md](./95-00-02-005_Failure_Modes_and_Risk_Controls_for_NN_Systems.md)**
+  Catalogues NN-specific failure modes and required DPP data to describe
+  risk controls, mitigations and operational constraints.
+
+* **[95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md](./95-00-02-006_Operational_Safety_Monitoring_and_Alerts.md)**
+  Maps safety monitoring requirements (KPIs, triggers, thresholds) into
+  DPP fields and references.
+
+* **[95-00-02-007_Safety_Incidents_Learning_and_DPP_Updates.md](./95-00-02-007_Safety_Incidents_Learning_and_DPP_Updates.md)**
+  Defines how incidents/occurrences lead to updates in DPP entries, including
+  additional warnings, changed status, or retirement flags.
+
+* **[95-00-02-008_Limitations_Assumptions_and_Residual_Risk.md](./95-00-02-008_Limitations_Assumptions_and_Residual_Risk.md)**
+  Documents what the DPP safety view can and cannot represent, explicit
+  assumptions and remaining risk.
+
+---
+
+## 4. Relationship with Other Sections
+
+* **[95-00-01_Overview](../95-00-01_Overview/)**
+  Provides the general DPP concept; 95-00-02_Safety specialises it for
+  **safety-related usage and evidence**.
+
+* **95-xx-xx Schema / Implementation**
+  Technical schema documents will define actual field names, data types and
+  interfaces corresponding to the safety requirements stated here.
+
+* **Other Safety / Certification Artefacts**
+  This section is designed to align with:
+
+  * Hazard logs and risk registers.
+  * Safety cases and assurance frameworks.
+  * Operational safety monitoring and occurrence reporting processes.
+
+---
+
+## 5. Usage
+
+* Use this folder as the **reference** when:
+
+  * Defining safety-relevant DPP fields and constraints.
+  * Mapping NN safety analyses into DPP records.
+  * Explaining to safety / certification stakeholders how the DPP supports
+    safety assurance and monitoring.
+
+* Any change to safety objectives, requirements or processes that affects
+  DPP content must be reflected in the relevant `95-00-02-xxx_*.md` files
+  and captured in ATA 95 change control.
+
+---
+
+## 6. Document Control
+
+* **Originator:** *[Name / Role]*
+* **Checker:** *[Name / Role]*
+* **Approver:** *[Name / Role]*
+* **Status:** `WORKING` / `FOR_REVIEW` / `APPROVED`
+* **Notes:**
+
+  * This structure and README were **generated by AI prompted by Amedeo Pelliccia**.
+  * Content must be **reviewed and approved by a designated human checker/approver**
+    before being used as an official documentation baseline.
