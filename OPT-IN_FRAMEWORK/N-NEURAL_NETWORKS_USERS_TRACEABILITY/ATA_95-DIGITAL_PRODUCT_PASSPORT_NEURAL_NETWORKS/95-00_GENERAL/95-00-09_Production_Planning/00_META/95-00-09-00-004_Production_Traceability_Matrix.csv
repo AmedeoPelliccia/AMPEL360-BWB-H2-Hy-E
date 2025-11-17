@@ -1,0 +1,66 @@
+Source_ID,Source_Type,Target_ID,Target_Type,Relationship,Rationale,Status,Last_Verified,Verified_By
+95-00-03-REQ-001,Requirement,95-00-09-01-001,Process,IMPL,Model freeze implements requirement traceability,ACTIVE,2025-11-17,Production Planning Board
+95-00-03-REQ-002,Requirement,95-00-09-02-001,Architecture,IMPL,Data pipeline implements data quality requirements,ACTIVE,2025-11-17,Data Engineering Lead
+95-00-03-REQ-003,Requirement,95-00-09-03-001,Architecture,IMPL,MLOps architecture implements deployment requirements,ACTIVE,2025-11-17,MLOps Lead
+95-00-04-DES-001,Design,95-00-09-01-002,Baseline,DRVF,Production baseline derives from approved design,ACTIVE,2025-11-17,Design Authority
+95-00-04-DES-002,Design,95-00-09-04-001,Strategy,IMPL,SW/HW strategy implements design specifications,ACTIVE,2025-11-17,Systems Engineer
+95-00-05-INT-001,Interface,95-00-09-05-001,Definition,REFS,Supply chain references interface specifications,ACTIVE,2025-11-17,Integration Engineer
+95-00-06-ENG-001,Engineering,95-00-09-01-001,Process,VALD,Engineering artifacts validated by freeze process,ACTIVE,2025-11-17,Engineering Lead
+95-00-07-VV-001,V&V Report,95-00-09-07-001,Strategy,DRVF,Production V&V strategy derives from development V&V,ACTIVE,2025-11-17,V&V Lead
+95-00-08-PRO-001,Prototype,95-00-09-00-001,Strategy,REFS,Production strategy references prototype lessons learned,ACTIVE,2025-11-17,Prototype Manager
+95-00-09-00-001,Strategy,95-00-09-01-001,Process,REFN,Model freeze process refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-02-001,Architecture,REFN,Data architecture refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-03-001,Architecture,REFN,MLOps architecture refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-04-001,Strategy,REFN,SW/HW strategy refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-05-001,Definition,REFN,Supply chain definition refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-06-001,Strategy,REFN,DPP strategy refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-07-001,Strategy,REFN,Production V&V strategy refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-08-001,Strategy,REFN,Monitoring strategy refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-09-001,Strategy,REFN,EIS strategy refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-10-001,Standard,REFN,Documentation standard refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-001,Strategy,95-00-09-11-001,Strategy,REFN,Certification strategy refines production strategy,ACTIVE,2025-11-17,Production Planning Board
+95-00-09-00-002,Criteria,95-00-09-01-005,Checklist,IMPL,Readiness checklist implements industrialization criteria,ACTIVE,2025-11-17,Quality Assurance
+95-00-09-01-001,Process,95-00-09-01-002,Baseline,DRVF,Baselined documents derive from freeze process,ACTIVE,2025-11-17,Configuration Management
+95-00-09-01-003,Process,95-00-09-01-004,Parameters,REFS,Change control references configurable parameters,ACTIVE,2025-11-17,Change Control Board
+95-00-09-02-001,Architecture,95-00-09-02-002,Rules,IMPL,Data sourcing rules implement pipeline architecture,ACTIVE,2025-11-17,Data Engineering
+95-00-09-02-002,Rules,95-00-09-02-003,Process,IMPL,ETL process implements sourcing rules,ACTIVE,2025-11-17,Data Engineering
+95-00-09-02-003,Process,95-00-09-02-004,Validation,VALD,Data validation validates ETL process,ACTIVE,2025-11-17,Quality Assurance
+95-00-09-02-004,Validation,95-00-09-02-005,Lineage,DEPO,Data lineage depends on validation,ACTIVE,2025-11-17,Data Governance
+95-00-09-03-001,Architecture,95-00-09-03-002,Process,IMPL,CI/CD process implements MLOps architecture,ACTIVE,2025-11-17,DevOps Lead
+95-00-09-03-002,Process,95-00-09-03-003,Specification,IMPL,Packaging specification implements CI/CD process,ACTIVE,2025-11-17,MLOps Engineer
+95-00-09-03-003,Specification,95-00-09-03-004,Channels,IMPL,Deployment channels implement packaging spec,ACTIVE,2025-11-17,Deployment Manager
+95-00-09-03-004,Channels,95-00-09-03-005,Strategy,IMPL,Rollout strategy implements deployment channels,ACTIVE,2025-11-17,Release Manager
+95-00-09-04-001,Strategy,95-00-09-04-002,Qualification,IMPL,Target qualification implements SW/HW strategy,ACTIVE,2025-11-17,Hardware Engineer
+95-00-09-04-002,Qualification,95-00-09-04-003,Targets,VALD,Edge targets validated through qualification,ACTIVE,2025-11-17,Test Engineer
+95-00-09-04-003,Targets,95-00-09-04-004,Cycles,REFS,Release cycles reference target specifications,ACTIVE,2025-11-17,Release Manager
+95-00-09-04-004,Cycles,95-00-09-04-005,Integration,IMPL,Integration implements release cycles,ACTIVE,2025-11-17,Integration Engineer
+95-00-09-05-001,Definition,95-00-09-05-002,Rules,IMPL,Sourcing rules implement supply chain definition,ACTIVE,2025-11-17,Supply Chain Manager
+95-00-09-05-002,Rules,95-00-09-05-003,Provenance,IMPL,Provenance tracking implements sourcing rules,ACTIVE,2025-11-17,Compliance Officer
+95-00-09-05-003,Provenance,95-00-09-05-004,Licensing,REFS,Third-party modules reference provenance,ACTIVE,2025-11-17,Legal Compliance
+95-00-09-05-004,Licensing,95-00-09-05-005,Qualification,IMPL,Supplier qualification implements licensing requirements,ACTIVE,2025-11-17,Procurement
+95-00-09-06-001,Strategy,95-00-09-06-002,Documentation,IMPL,On-chain documentation implements DPP strategy,ACTIVE,2025-11-17,DPP Lead
+95-00-09-06-002,Documentation,95-00-09-06-003,Deployment,IMPL,Smart contract deployment implements on-chain docs,ACTIVE,2025-11-17,Blockchain Engineer
+95-00-09-06-003,Deployment,95-00-09-06-004,Traceability,DRVF,Traceability links derive from smart contracts,ACTIVE,2025-11-17,Traceability Manager
+95-00-09-06-004,Traceability,95-00-09-06-005,Audit,VALD,Blockchain audit validates traceability,ACTIVE,2025-11-17,Audit Lead
+95-00-09-07-001,Strategy,95-00-09-07-002,VV Process,IMPL,Pre-release V&V implements production V&V strategy,ACTIVE,2025-11-17,V&V Manager
+95-00-09-07-002,VV Process,95-00-09-07-003,VV Process,REFS,Post-deployment V&V references pre-release V&V,ACTIVE,2025-11-17,V&V Manager
+95-00-09-07-003,VV Process,95-00-09-07-004,Validation,IMPL,On-aircraft validation implements post-deployment V&V,ACTIVE,2025-11-17,Flight Test Engineer
+95-00-09-07-004,Validation,95-00-09-07-005,Interface,REFS,Certification interface references validation results,ACTIVE,2025-11-17,Certification Engineer
+95-00-09-08-001,Strategy,95-00-09-08-002,Architecture,IMPL,Health monitoring architecture implements monitoring strategy,ACTIVE,2025-11-17,Monitoring Lead
+95-00-09-08-002,Architecture,95-00-09-08-003,Monitoring,IMPL,Performance monitoring implements health architecture,ACTIVE,2025-11-17,Performance Engineer
+95-00-09-08-003,Monitoring,95-00-09-08-004,Workflows,DEPO,Maintenance workflows depend on performance monitoring,ACTIVE,2025-11-17,Maintenance Manager
+95-00-09-08-004,Workflows,95-00-09-08-005,Response,IMPL,Incident response implements maintenance workflows,ACTIVE,2025-11-17,Incident Manager
+95-00-09-09-001,Strategy,95-00-09-09-002,Support,IMPL,Flight operations support implements EIS strategy,ACTIVE,2025-11-17,Operations Manager
+95-00-09-09-002,Support,95-00-09-09-003,Risk,REFS,EIS risk analysis references operations support,ACTIVE,2025-11-17,Risk Manager
+95-00-09-09-003,Risk,95-00-09-09-004,Training,IMPL,Airline training implements risk mitigation,ACTIVE,2025-11-17,Training Manager
+95-00-09-09-004,Training,95-00-09-09-005,Tracking,VALD,Performance tracking validates training effectiveness,ACTIVE,2025-11-17,Quality Assurance
+95-00-09-10-001,Standard,95-00-09-10-002,Structure,IMPL,Release notes structure implements documentation standard,ACTIVE,2025-11-17,Documentation Lead
+95-00-09-10-002,Structure,95-00-09-10-003,Dossier,IMPL,DPP dossier implements release notes structure,ACTIVE,2025-11-17,DPP Coordinator
+95-00-09-10-003,Dossier,95-00-09-10-004,Documentation,IMPL,Customer docs implement DPP dossier requirements,ACTIVE,2025-11-17,Technical Writer
+95-00-09-10-004,Documentation,95-00-09-10-005,Material,IMPL,Training material implements customer documentation,ACTIVE,2025-11-17,Training Developer
+95-00-09-11-001,Strategy,95-00-09-11-002,Packaging,IMPL,Evidence packaging implements certification strategy,ACTIVE,2025-11-17,Certification Manager
+95-00-09-11-002,Packaging,95-00-09-11-003,Audit,IMPL,Audit checks implement evidence packaging,ACTIVE,2025-11-17,Quality Auditor
+95-00-09-11-003,Audit,95-00-09-11-004,Interface,REFS,Regulatory interface references audit results,ACTIVE,2025-11-17,Regulatory Affairs
+95-00-09-11-004,Interface,95-00-09-11-005,Archival,IMPL,Archival implements regulatory requirements,ACTIVE,2025-11-17,Records Manager
+95-00-09-00-001,Strategy,95-00-10-00-001,Certification,DEPO,Certification depends on production strategy completion,ACTIVE,2025-11-17,Program Manager
+95-00-09-11-005,Archival,95-00-11-00-001,EIS Plan,DEPO,EIS plan depends on archival completion,ACTIVE,2025-11-17,Program Manager
