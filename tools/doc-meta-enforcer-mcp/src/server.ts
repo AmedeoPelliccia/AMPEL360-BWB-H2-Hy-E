@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /*
  * Copyright 2025 AMPEL360 Project Contributors
  *
