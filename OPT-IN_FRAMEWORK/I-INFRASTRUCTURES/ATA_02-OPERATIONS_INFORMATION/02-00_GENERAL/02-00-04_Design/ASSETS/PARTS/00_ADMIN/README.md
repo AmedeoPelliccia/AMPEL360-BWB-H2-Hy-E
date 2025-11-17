@@ -9,7 +9,7 @@ This directory contains the **parts library** for
 - Electrical / electronic parts (panels, breakers, connectors, harnesses)
 - IT / network parts (racks, chassis, modules, COTS components)
 - GSE / infrastructure parts (power carts, supports, enclosures)
-- Fasteners and standardised hardware
+- Fasteners and standardized hardware
 
 Each **part** has its own folder, with:
 
