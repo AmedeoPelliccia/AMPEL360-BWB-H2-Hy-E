@@ -129,7 +129,7 @@ See: `CONFIG/02-00-04-PRD-INH-0010_ConfigMatrix-R01.xlsx` for detailed configura
 
 ### 5.1 3D Models
 
-* **BIM Model:** `MODELS/BIM/02-00-04-MDL-PRD-INH-0010_BIM_RefModel-R01.rvt` (see [INSTALLATIONS/BIM_CAD_MODELS](../../../INSTALLATIONS/BIM_CAD_MODELS/))
+* **BIM Model:** `MODELS/BIM/02-00-04-MDL-PRD-INH-0010_BIM_RefModel-R01.rvt`
 * **CAD Model:** To be created
 
 ### 5.2 Functional Models
