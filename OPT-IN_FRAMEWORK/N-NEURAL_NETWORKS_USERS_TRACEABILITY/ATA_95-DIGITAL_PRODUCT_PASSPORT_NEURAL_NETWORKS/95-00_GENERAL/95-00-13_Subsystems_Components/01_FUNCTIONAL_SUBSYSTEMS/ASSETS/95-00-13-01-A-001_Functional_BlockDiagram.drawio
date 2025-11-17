@@ -1,0 +1,18 @@
+<mxfile host="app.diagrams.net" modified="2025-11-17T00:00:00.000Z" agent="AMPEL360" version="1.0">
+  <diagram name="Functional Block Diagram" id="functional-subsystems">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- This is a placeholder for the actual functional block diagram -->
+        <!-- The diagram would show: -->
+        <!-- - All functional subsystems as blocks -->
+        <!-- - Data flow between subsystems -->
+        <!-- - Control flow -->
+        <!-- - Interface points -->
+        <!-- - Mode dependencies -->
+        <!-- To edit: Open in draw.io or diagrams.net -->
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

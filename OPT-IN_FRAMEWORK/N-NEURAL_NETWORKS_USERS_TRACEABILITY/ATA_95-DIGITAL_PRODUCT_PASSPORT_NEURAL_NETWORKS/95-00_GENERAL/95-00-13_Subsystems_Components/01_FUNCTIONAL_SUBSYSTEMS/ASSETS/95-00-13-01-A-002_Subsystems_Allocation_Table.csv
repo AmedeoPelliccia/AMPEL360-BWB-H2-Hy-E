@@ -1,0 +1,16 @@
+Subsystem_ID,Subsystem_Name,ATA_Chapter,Primary_Function,Criticality,HW_Components,SW_Components,Data_Components,Status
+FS-001,Flight Control,ATA-22/27,Attitude & trajectory control,DAL-A,"HW-001,HW-004","SW-001,SW-003",,Active
+FS-002,Navigation,ATA-34,Position & velocity determination,DAL-A,"HW-002,HW-003","SW-002,SW-003",DS-001,Active
+FS-003,Communication,ATA-23,Voice & data communication,DAL-B,HW-010,SW-004,,Active
+FS-004,Power Management,ATA-24,Power generation & distribution,DAL-B,"HW-005,HW-006",SW-005,,Active
+FS-005,Mission Management,ATA-22/28,Mission planning & execution,DAL-C,HW-001,SW-006,DS-002,Active
+FS-006,Environmental Control,ATA-21,Cabin & equipment environment,DAL-C,"HW-011,HW-012",SW-007,,Active
+FS-007,Fuel System,ATA-28,H₂ fuel storage & delivery,DAL-B,"HW-013,HW-014",SW-008,DS-003,Active
+FS-008,Display & Crew Interface,ATA-31,Information presentation,DAL-B,"HW-015,HW-016",SW-009,,Active
+FS-009,Data Recording,ATA-31,Flight data & voice recording,DAL-C,"HW-017,HW-018",SW-010,DS-001,Active
+FS-010,Health Monitoring,ATA-45,System health & diagnostics,DAL-D,HW-019,"SW-011,DG-001,DG-002",DS-004,Active
+FS-011,Landing Gear Control,ATA-32,Gear extension/retraction,DAL-B,"HW-020,HW-021",SW-012,,Active
+FS-012,Ice & Rain Protection,ATA-30,Anti-icing & de-icing,DAL-C,"HW-022,HW-023",SW-013,,Active
+FS-013,Fire Protection,ATA-26,Fire detection & suppression,DAL-B,"HW-024,HW-025",SW-014,,Active
+FS-014,Lighting,ATA-33,Interior & exterior lighting,DAL-D,HW-026,SW-015,,Active
+FS-015,Oxygen System,ATA-35,Emergency oxygen supply,DAL-B,"HW-027,HW-028",SW-016,,Active
