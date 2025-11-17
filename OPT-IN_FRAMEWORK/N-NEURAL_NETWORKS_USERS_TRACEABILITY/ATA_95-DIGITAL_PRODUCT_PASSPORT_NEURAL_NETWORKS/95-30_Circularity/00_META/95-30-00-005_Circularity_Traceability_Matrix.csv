@@ -1,0 +1,31 @@
+Requirement_ID,Requirement_Description,ATA_Chapter,System,Component,Design_Document,Test_Case,Verification_Method,Status,Owner,Priority,CRL_Level
+REQ-CIRC-001,Achieve 85% energy recovery rate across all systems,Multi-ATA,Cross-System,All Energy Systems,95-30-00-002,TEST-CIRC-001,Analysis + Test,Active,Energy Circularity Lead,P0,CRL-4
+REQ-CIRC-002,Maintain fluid loss below 1% across all fluid systems,Multi-ATA,Fluid Systems,All Fluid Systems,95-30-00-002,TEST-CIRC-002,Test,Active,Fluid Circularity Lead,P0,CRL-4
+REQ-CIRC-003,Capture and utilize fuel cell waste heat for cabin heating,ATA-21/70,ECS + Propulsion,Heat Exchangers,95-30-21-003,TEST-CIRC-003,Test,Active,ECS Lead,P1,CRL-5
+REQ-CIRC-004,Implement closed-loop air recirculation with 90% efficiency,ATA-21,Environmental Control,Air Management,95-30-21-002,TEST-CIRC-004,Test,Active,ECS Lead,P1,CRL-5
+REQ-CIRC-005,Recover and reuse hydraulic accumulator energy,ATA-29,Hydraulic Power,Accumulators,95-30-29-002,TEST-CIRC-005,Test,Active,Hydraulic Lead,P1,CRL-4
+REQ-CIRC-006,Minimize H₂ boil-off through recovery and recompression,ATA-28,Fuel System,H₂ Tanks,95-30-28-002,TEST-CIRC-006,Test,Active,Fuel Systems Lead,P0,CRL-5
+REQ-CIRC-007,Optimize bleed air usage between pneumatic and ECS,ATA-36/21,Pneumatic + ECS,Bleed Air System,95-30-36-002,TEST-CIRC-007,Analysis,Active,Pneumatic Lead,P1,CRL-4
+REQ-CIRC-008,Treat and reuse grey water at 88% recovery rate,ATA-38,Water/Waste,Water Treatment,95-30-38-003,TEST-CIRC-008,Test,Active,Water Systems Lead,P1,CRL-4
+REQ-CIRC-009,Capture CO₂ from atmosphere achieving -5kg per flight,ATA-80/70,Energy Storage,CO₂ Battery,95-30-80-002,TEST-CIRC-009,Test,Active,Energy Storage Lead,P0,CRL-4
+REQ-CIRC-010,Implement regenerative braking for electrical systems,ATA-24/32,Electrical Power,Brake System,95-30-24-002,TEST-CIRC-010,Test,Active,Electrical Lead,P1,CRL-4
+REQ-CIRC-011,Share APU power with main electrical grid bidirectionally,ATA-49/24,APU + Electrical,Power Distribution,95-30-49-004,TEST-CIRC-011,Test,Active,APU Lead,P1,CRL-5
+REQ-CIRC-012,Optimize battery charge/discharge cycles for longevity,ATA-80,Energy Storage,Battery System,95-30-80-003,TEST-CIRC-012,Analysis + Test,Active,Energy Storage Lead,P0,CRL-5
+REQ-CIRC-013,Track all components through Digital Product Passport,ATA-95,DPP,All Components,95-30-00-007,TEST-CIRC-013,Review,Active,DPP Lead,P0,CRL-5
+REQ-CIRC-014,Design components for second-life applications,Multi-ATA,All Systems,Selected Components,95-30-00-002,TEST-CIRC-014,Review,Active,Material Circularity Lead,P1,CRL-3
+REQ-CIRC-015,Use 70% recyclable materials by aircraft weight,Multi-ATA,All Systems,All Components,95-30-00-002,TEST-CIRC-015,Analysis,Active,Material Circularity Lead,P1,CRL-3
+REQ-CIRC-016,Implement predictive leak detection for hydraulic systems,ATA-29,Hydraulic Power,Leak Detection,95-30-29-004,TEST-CIRC-016,Test,Active,Hydraulic Lead,P1,CRL-4
+REQ-CIRC-017,Convert fuel cell water output to potable water at 95%,ATA-38/70,Water + Propulsion,Water Processing,95-30-38-002,TEST-CIRC-017,Test,Active,Water Systems Lead,P1,CRL-4
+REQ-CIRC-018,Recover heat from APU for cabin conditioning,ATA-49/21,APU + ECS,Heat Recovery,95-30-49-002,TEST-CIRC-018,Test,Design,APU Lead,P2,CRL-3
+REQ-CIRC-019,Integrate all circular loops with CAOS monitoring,ATA-95,CAOS,All Loops,95-30-00-008,TEST-CIRC-019,Test,Active,CAOS Lead,P0,CRL-5
+REQ-CIRC-020,Optimize electrical load sharing across all sources,ATA-24,Electrical Power,Load Management,95-30-24-003,TEST-CIRC-020,Test,Active,Electrical Lead,P1,CRL-5
+REQ-CIRC-021,Implement filter lifecycle tracking and optimization,ATA-21,Environmental Control,Filters,95-30-21-004,TEST-CIRC-021,Analysis,Active,ECS Lead,P1,CRL-5
+REQ-CIRC-022,Design modular components for easy disassembly,Multi-ATA,All Systems,All Components,95-30-00-002,TEST-CIRC-022,Review,Active,Design Team,P1,CRL-3
+REQ-CIRC-023,Establish component refurbishment protocols,Multi-ATA,All Systems,Selected Components,95-30-00-002,TEST-CIRC-023,Review,Design,Material Circularity Lead,P2,CRL-2
+REQ-CIRC-024,Monitor and report circularity KPIs in real-time,ATA-95,CAOS,Monitoring System,95-30-00-006,TEST-CIRC-024,Test,Active,CAOS Lead,P0,CRL-5
+REQ-CIRC-025,Minimize venting in H₂ fuel system operations,ATA-28,Fuel System,Venting System,95-30-28-004,TEST-CIRC-025,Test,Active,Fuel Systems Lead,P0,CRL-5
+REQ-CIRC-026,Implement thermal recovery from propulsion system,ATA-70/21,Propulsion + ECS,Heat Exchangers,95-30-70-002,TEST-CIRC-026,Test,Design,Propulsion Lead,P2,CRL-3
+REQ-CIRC-027,Optimize pneumatic pressure regulation for efficiency,ATA-36,Pneumatic,Pressure Regulators,95-30-36-003,TEST-CIRC-027,Test,Active,Pneumatic Lead,P1,CRL-4
+REQ-CIRC-028,Establish ground interface protocols for water reclaim,ATA-38,Water/Waste,Ground Interface,95-30-38-004,TEST-CIRC-028,Review,Active,Water Systems Lead,P1,CRL-4
+REQ-CIRC-029,Track battery state of health continuously,ATA-80,Energy Storage,Battery Management,95-30-80-002,TEST-CIRC-029,Test,Active,Energy Storage Lead,P0,CRL-5
+REQ-CIRC-030,Implement cryogenic cooling applications from H₂ system,ATA-28/21,Fuel + ECS,Cooling System,95-30-28-002,TEST-CIRC-030,Test,Design,Fuel Systems Lead,P2,CRL-3
