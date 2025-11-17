@@ -195,8 +195,8 @@ See: `CONFIG/[Product_ID]_ConfigMatrix-R01.xlsx` for detailed configuration matr
 
 ### 10.1 Internal References
 
-* [AMPEL360 Assets Standard](../../../../../../../AMPEL360_ASSETS_STANDARD.md)
-* [AMPEL360 Documentation Standard](../../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md)
+* [AMPEL360 Assets Standard](../../../../../../AMPEL360_ASSETS_STANDARD.md)
+* [AMPEL360 Documentation Standard](../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md)
 * [PRODUCTS Admin](../../00_ADMIN/README.md) - Product governance and naming conventions
 
 ### 10.2 Related Asset Directories
