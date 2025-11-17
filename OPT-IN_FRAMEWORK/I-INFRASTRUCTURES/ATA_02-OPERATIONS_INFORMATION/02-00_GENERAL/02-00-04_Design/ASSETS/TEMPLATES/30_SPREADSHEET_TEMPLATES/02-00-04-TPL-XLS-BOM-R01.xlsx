@@ -1,0 +1,16 @@
+# Bill of Materials (BOM) Template Placeholder
+# Template ID: TPL-XLS-001
+# Revision: R01
+# Date: 2025-11-17
+# Status: WORKING
+
+# Excel file should contain the following sheets:
+
+# Sheet 1: BOM
+# Columns: Level, Item_Number, Part_Number, Description, Quantity, UOM, Manufacturer, Manufacturer_PN, Cost_Each, Total_Cost, Lead_Time, Source, Notes, Rev
+
+# Sheet 2: Summary
+# BOM statistics and totals
+
+# Sheet 3: Change_Log
+# Track changes to the BOM

@@ -1,0 +1,23 @@
+Date,Template_ID,File_Name,Change_Type,Revision,Description,Changed_By,Approved_By,Status
+2025-11-17,TPL-DOC-001,02-00-04-TPL-DOC-Requirement-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-DOC-002,02-00-04-TPL-DOC-RequirementsSet-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-DOC-003,02-00-04-TPL-DOC-VerificationMatrix-R01.xlsx,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-DOC-004,02-00-04-TPL-DOC-SystemSpecification-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-DOC-005,02-00-04-TPL-DOC-InterfaceControlDocument-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-DOC-006,02-00-04-TPL-DOC-DesignReport-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-DOC-007,02-00-04-TPL-DOC-TestReport-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-DOC-008,02-00-04-TPL-DOC-InstallationProcedure-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-DOC-009,02-00-04-TPL-DOC-MaintenanceProcedure-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-PRES-001,02-00-04-TPL-PRES-DesignReview-R01.pptx,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-PRES-002,02-00-04-TPL-PRES-ManagementSummary-R01.pptx,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-PRES-003,02-00-04-TPL-PRES-TechnicalBriefing-R01.pptx,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-XLS-001,02-00-04-TPL-XLS-BOM-R01.xlsx,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-XLS-002,02-00-04-TPL-XLS-RiskRegister-R01.xlsx,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-XLS-003,02-00-04-TPL-XLS-IssueLog-R01.xlsx,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-XLS-004,02-00-04-TPL-XLS-ConfigMatrix-R01.xlsx,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-SCR-001,02-00-04-TPL-SCR-DataExtraction-R01.py,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-SCR-002,02-00-04-TPL-SCR-ModelCheck-R01.py,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-SCR-003,02-00-04-TPL-SCR-ReportGenerator-R01.py,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-TD-001,02-00-04-TPL-TD-S1000D_DataModule-R01.xml,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-TD-002,02-00-04-TPL-TD-OPS_ManualSection-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING
+2025-11-17,TPL-TD-003,02-00-04-TPL-TD-MaintTask-R01.md,CREATED,R01,Initial template structure created,AI (Amedeo Pelliccia),Pending,WORKING

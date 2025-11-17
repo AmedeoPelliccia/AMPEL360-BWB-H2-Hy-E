@@ -1,0 +1,23 @@
+Template_ID,File_Name,Domain,TemplateName,Revision,Folder_Path,Intended_Use,Referenced_By,Status
+TPL-DOC-001,02-00-04-TPL-DOC-Requirement-R01.md,DOC,Requirement,R01,10_DOC_TEMPLATES/REQUIREMENTS,Requirements documentation,Requirements Management Guide,WORKING
+TPL-DOC-002,02-00-04-TPL-DOC-RequirementsSet-R01.md,DOC,RequirementsSet,R01,10_DOC_TEMPLATES/REQUIREMENTS,Requirements set documentation,Requirements Management Guide,WORKING
+TPL-DOC-003,02-00-04-TPL-DOC-VerificationMatrix-R01.xlsx,XLS,VerificationMatrix,R01,10_DOC_TEMPLATES/REQUIREMENTS,Verification and validation matrix,V&V Process Guide,WORKING
+TPL-DOC-004,02-00-04-TPL-DOC-SystemSpecification-R01.md,DOC,SystemSpecification,R01,10_DOC_TEMPLATES/SPECIFICATIONS,System specification document,System Engineering Guide,WORKING
+TPL-DOC-005,02-00-04-TPL-DOC-InterfaceControlDocument-R01.md,DOC,InterfaceControlDocument,R01,10_DOC_TEMPLATES/SPECIFICATIONS,Interface control documentation,Interface Management Guide,WORKING
+TPL-DOC-006,02-00-04-TPL-DOC-DesignReport-R01.md,DOC,DesignReport,R01,10_DOC_TEMPLATES/REPORTS,Design report template,Design Review Process,WORKING
+TPL-DOC-007,02-00-04-TPL-DOC-TestReport-R01.md,DOC,TestReport,R01,10_DOC_TEMPLATES/REPORTS,Test report template,Testing Process Guide,WORKING
+TPL-DOC-008,02-00-04-TPL-DOC-InstallationProcedure-R01.md,DOC,InstallationProcedure,R01,10_DOC_TEMPLATES/PROCEDURES,Installation procedure template,Installation Guide,WORKING
+TPL-DOC-009,02-00-04-TPL-DOC-MaintenanceProcedure-R01.md,DOC,MaintenanceProcedure,R01,10_DOC_TEMPLATES/PROCEDURES,Maintenance procedure template,Maintenance Guide,WORKING
+TPL-PRES-001,02-00-04-TPL-PRES-DesignReview-R01.pptx,PRES,DesignReview,R01,20_PRESENTATION_TEMPLATES,Design review presentation,Design Review Process,WORKING
+TPL-PRES-002,02-00-04-TPL-PRES-ManagementSummary-R01.pptx,PRES,ManagementSummary,R01,20_PRESENTATION_TEMPLATES,Management summary presentation,Management Reporting Guide,WORKING
+TPL-PRES-003,02-00-04-TPL-PRES-TechnicalBriefing-R01.pptx,PRES,TechnicalBriefing,R01,20_PRESENTATION_TEMPLATES,Technical briefing presentation,Technical Communication Guide,WORKING
+TPL-XLS-001,02-00-04-TPL-XLS-BOM-R01.xlsx,XLS,BOM,R01,30_SPREADSHEET_TEMPLATES,Bill of materials template,BOM Management Guide,WORKING
+TPL-XLS-002,02-00-04-TPL-XLS-RiskRegister-R01.xlsx,XLS,RiskRegister,R01,30_SPREADSHEET_TEMPLATES,Risk register template,Risk Management Guide,WORKING
+TPL-XLS-003,02-00-04-TPL-XLS-IssueLog-R01.xlsx,XLS,IssueLog,R01,30_SPREADSHEET_TEMPLATES,Issue tracking log template,Issue Management Guide,WORKING
+TPL-XLS-004,02-00-04-TPL-XLS-ConfigMatrix-R01.xlsx,XLS,ConfigMatrix,R01,30_SPREADSHEET_TEMPLATES,Configuration matrix template,Configuration Management Guide,WORKING
+TPL-SCR-001,02-00-04-TPL-SCR-DataExtraction-R01.py,SCR,DataExtraction,R01,40_SCRIPT_AND_AUTOMATION_TEMPLATES,Data extraction script template,Automation Guide,WORKING
+TPL-SCR-002,02-00-04-TPL-SCR-ModelCheck-R01.py,SCR,ModelCheck,R01,40_SCRIPT_AND_AUTOMATION_TEMPLATES,Model validation script template,Model Checking Guide,WORKING
+TPL-SCR-003,02-00-04-TPL-SCR-ReportGenerator-R01.py,SCR,ReportGenerator,R01,40_SCRIPT_AND_AUTOMATION_TEMPLATES,Report generation script template,Reporting Automation Guide,WORKING
+TPL-TD-001,02-00-04-TPL-TD-S1000D_DataModule-R01.xml,TD,S1000D_DataModule,R01,50_TECHPUB_AND_S1000D_TEMPLATES,S1000D data module template,S1000D Authoring Guide,WORKING
+TPL-TD-002,02-00-04-TPL-TD-OPS_ManualSection-R01.md,TD,OPS_ManualSection,R01,50_TECHPUB_AND_S1000D_TEMPLATES,Operations manual section template,Tech Pub Guide,WORKING
+TPL-TD-003,02-00-04-TPL-TD-MaintTask-R01.md,TD,MaintTask,R01,50_TECHPUB_AND_S1000D_TEMPLATES,Maintenance task template,Maintenance Documentation Guide,WORKING
