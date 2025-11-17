@@ -1,0 +1,6 @@
+Change_ID,Date,Part_ID,Change_Type,Description,Author,Reviewer,Approver,Status,Related_Change_Request,Notes
+CHG-PRT-001,2025-11-17,02-00-04-PRT-MECH-0001,CREATE,Initial creation of ConsoleSideBracket part,AMPEL360 Design Team,,[To be assigned],WORKING,,Part structure and folder created
+CHG-PRT-002,2025-11-17,02-00-04-PRT-ELEC-0100,CREATE,Initial creation of PowerPanelMainBreaker part,AMPEL360 Design Team,,[To be assigned],WORKING,,Part structure and folder created
+CHG-PRT-003,2025-11-17,02-00-04-PRT-IT-0200,CREATE,Initial creation of ServerChassis_2U part,AMPEL360 Design Team,,[To be assigned],WORKING,,Part structure and folder created
+CHG-PRT-004,2025-11-17,02-00-04-PRT-GSE-0300,CREATE,Initial creation of PowerCart_Chassis part,AMPEL360 Design Team,,[To be assigned],WORKING,,Part structure and folder created
+CHG-PRT-005,2025-11-17,02-00-04-PRT-STD-9001,CREATE,Initial creation of M8_Bolt_A2 standard part,AMPEL360 Design Team,,[To be assigned],WORKING,,Part structure and folder created
