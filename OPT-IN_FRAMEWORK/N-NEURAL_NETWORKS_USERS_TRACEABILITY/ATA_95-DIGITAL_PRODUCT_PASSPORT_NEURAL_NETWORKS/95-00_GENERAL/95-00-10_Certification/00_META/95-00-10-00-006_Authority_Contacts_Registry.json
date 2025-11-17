@@ -1,0 +1,231 @@
+{
+  "document_id": "95-00-10-00-006",
+  "title": "Authority Contacts Registry",
+  "version": "1.0",
+  "status": "Active",
+  "last_updated": "2025-11-17",
+  "authorities": [
+    {
+      "authority": "EASA",
+      "full_name": "European Union Aviation Safety Agency",
+      "headquarters": {
+        "address": "Konrad-Adenauer-Ufer 3",
+        "city": "Cologne",
+        "postal_code": "50668",
+        "country": "Germany"
+      },
+      "primary_contacts": [
+        {
+          "role": "Certification Project Manager",
+          "department": "Certification Directorate",
+          "name": "TBD",
+          "email": "certification@easa.europa.eu",
+          "phone": "+49 221 89990 000",
+          "responsible_for": ["Type Certification", "Special Conditions", "AI/ML Guidance"]
+        },
+        {
+          "role": "AI Certification Specialist",
+          "department": "Innovation & AI Division",
+          "name": "TBD",
+          "email": "ai-certification@easa.europa.eu",
+          "phone": "+49 221 89990 000",
+          "responsible_for": ["AI Roadmap Compliance", "Neural Network Assessment", "ML Certification"]
+        },
+        {
+          "role": "Alternative Fuels Specialist",
+          "department": "Environmental Protection",
+          "name": "TBD",
+          "email": "environment@easa.europa.eu",
+          "phone": "+49 221 89990 000",
+          "responsible_for": ["Hydrogen Propulsion", "Alternative Fuels Certification"]
+        }
+      ],
+      "meetings": {
+        "frequency": "Monthly",
+        "format": "Hybrid (In-person/Virtual)",
+        "standard_agenda": ["Progress review", "Technical discussions", "Issue resolution", "Action items"]
+      }
+    },
+    {
+      "authority": "FAA",
+      "full_name": "Federal Aviation Administration",
+      "headquarters": {
+        "address": "800 Independence Avenue SW",
+        "city": "Washington",
+        "state": "DC",
+        "postal_code": "20591",
+        "country": "United States"
+      },
+      "regional_office": {
+        "office": "AIR-100 (Aircraft Certification Service)",
+        "address": "800 Independence Avenue SW",
+        "city": "Washington",
+        "state": "DC",
+        "postal_code": "20591"
+      },
+      "primary_contacts": [
+        {
+          "role": "ACO Manager (Aircraft Certification Office)",
+          "department": "AIR-100",
+          "name": "TBD",
+          "email": "AIR-100@faa.gov",
+          "phone": "+1 202 267 3131",
+          "responsible_for": ["Type Certification", "Coordination", "Overall Certification"]
+        },
+        {
+          "role": "AI/ML Certification Engineer",
+          "department": "AIR-600 (Avionics)",
+          "name": "TBD",
+          "email": "AIR-600@faa.gov",
+          "phone": "+1 202 267 3131",
+          "responsible_for": ["AI Assurance Framework", "ML Systems", "Autonomous Functions"]
+        },
+        {
+          "role": "Propulsion Certification Engineer",
+          "department": "AIR-800 (Propulsion)",
+          "name": "TBD",
+          "email": "AIR-800@faa.gov",
+          "phone": "+1 202 267 3131",
+          "responsible_for": ["Hydrogen Fuel Cells", "Alternative Propulsion"]
+        }
+      ],
+      "meetings": {
+        "frequency": "Bi-weekly",
+        "format": "Virtual/In-person as needed",
+        "standard_agenda": ["Status updates", "Technical issues", "Compliance demonstration", "Schedule review"]
+      }
+    },
+    {
+      "authority": "EASA Member States",
+      "full_name": "National Aviation Authorities (EU Member States)",
+      "notes": "Coordination through EASA, but may involve direct contact for production certificates",
+      "primary_contacts": [
+        {
+          "country": "Germany",
+          "authority": "LBA (Luftfahrt-Bundesamt)",
+          "role": "Production Certification Contact",
+          "name": "TBD",
+          "email": "certification@lba.de",
+          "responsible_for": ["Production Certificate", "National Oversight"]
+        },
+        {
+          "country": "France",
+          "authority": "DGAC (Direction Générale de l'Aviation Civile)",
+          "role": "Liaison Officer",
+          "name": "TBD",
+          "email": "certification@aviation-civile.gouv.fr",
+          "responsible_for": ["National Coordination"]
+        }
+      ]
+    },
+    {
+      "authority": "Industry Standards Organizations",
+      "organizations": [
+        {
+          "name": "EUROCAE",
+          "full_name": "European Organization for Civil Aviation Equipment",
+          "address": "102 rue Etienne Dolet, 92240 Malakoff, France",
+          "email": "office@eurocae.net",
+          "relevant_working_groups": [
+            {
+              "wg": "WG-114",
+              "topic": "Artificial Intelligence in Aviation",
+              "contact": "TBD"
+            }
+          ]
+        },
+        {
+          "name": "SAE International",
+          "full_name": "Society of Automotive Engineers International",
+          "address": "400 Commonwealth Drive, Warrendale, PA 15096, USA",
+          "email": "customerservice@sae.org",
+          "relevant_committees": [
+            {
+              "committee": "G-34",
+              "topic": "Hydrogen-Powered Aircraft",
+              "contact": "TBD"
+            },
+            {
+              "committee": "G-41",
+              "topic": "AI for Aerospace",
+              "contact": "TBD"
+            }
+          ]
+        },
+        {
+          "name": "RTCA",
+          "full_name": "Radio Technical Commission for Aeronautics",
+          "address": "1150 18th Street NW, Suite 910, Washington, DC 20036, USA",
+          "email": "info@rtca.org",
+          "relevant_special_committees": [
+            {
+              "sc": "SC-229",
+              "topic": "Artificial Intelligence",
+              "contact": "TBD"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "communication_protocols": {
+    "formal_submissions": {
+      "easa": {
+        "portal": "EASA Certification Portal",
+        "format": "PDF with digital signatures",
+        "response_time": "30-60 days typical"
+      },
+      "faa": {
+        "portal": "AIR Portal / Email",
+        "format": "PDF",
+        "response_time": "30-45 days typical"
+      }
+    },
+    "technical_meetings": {
+      "scheduling": "Minimum 2 weeks advance notice",
+      "materials": "Sent 1 week before meeting",
+      "minutes": "Distributed within 5 business days"
+    },
+    "urgent_issues": {
+      "easa": {
+        "contact": "certification@easa.europa.eu",
+        "phone": "+49 221 89990 000",
+        "response_time": "24-48 hours"
+      },
+      "faa": {
+        "contact": "AIR-100@faa.gov",
+        "phone": "+1 202 267 3131",
+        "response_time": "24-48 hours"
+      }
+    }
+  },
+  "escalation_procedures": {
+    "level_1": {
+      "description": "Technical disagreement at engineer level",
+      "escalate_to": "Certification Project Manager",
+      "timeline": "5 business days"
+    },
+    "level_2": {
+      "description": "Unresolved at project manager level",
+      "escalate_to": "Certification Directorate Manager",
+      "timeline": "10 business days"
+    },
+    "level_3": {
+      "description": "Policy or regulatory interpretation dispute",
+      "escalate_to": "Executive Director / Administrator",
+      "timeline": "As needed, formal process"
+    }
+  },
+  "document_control": {
+    "owner": "Certification Manager",
+    "approver": "Chief Engineer",
+    "review_frequency": "Quarterly",
+    "next_review": "2026-02-17"
+  },
+  "notes": [
+    "Contact names (TBD) will be populated once certification project formally kicks off and assignments made",
+    "All contact information subject to change; verify before major submissions",
+    "This registry should be synchronized with CAOS contact management system",
+    "Confidential distribution - internal use only"
+  ]
+}
