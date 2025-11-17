@@ -223,7 +223,7 @@ All individual product documentation is referenced:
 ### 9.2 Standards Compliance
 
 * [ISO 9241-5](https://www.iso.org/standard/77520.html): Ergonomic requirements for office work with visual display terminals
-* [IEC 60950](https://www.iec.ch/): Safety of information technology equipment (superseded by IEC 62368-1)
+* [IEC 60950](https://webstore.iec.ch/publication/2089): Safety of information technology equipment (superseded by [IEC 62368-1](https://webstore.iec.ch/publication/26136))
 * [NFPA 75](https://www.nfpa.org/): Standard for the Fire Protection of Information Technology Equipment
 * [ANSI/HFES 100](https://www.hfes.org/): Human factors engineering of computer workstations
 
