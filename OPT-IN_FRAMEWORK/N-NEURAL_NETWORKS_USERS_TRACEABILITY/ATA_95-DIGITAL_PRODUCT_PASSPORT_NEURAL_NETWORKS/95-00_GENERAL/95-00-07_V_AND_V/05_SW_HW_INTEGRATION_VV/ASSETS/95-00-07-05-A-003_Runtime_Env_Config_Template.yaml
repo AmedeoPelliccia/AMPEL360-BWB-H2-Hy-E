@@ -1,0 +1,5 @@
+# 95-00-07-05-A-003_Runtime_Env_Config_Template.yaml
+# Runtime config template
+version: 1.0
+status: template
+data: {}

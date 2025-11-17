@@ -1,0 +1,5 @@
+# 95-00-07-10-A-002_CI_Test_Config_Sample.yaml
+# CI test config sample
+version: 1.0
+status: template
+data: {}
