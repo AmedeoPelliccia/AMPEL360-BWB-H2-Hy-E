@@ -13,10 +13,10 @@ items that can be **offered, configured and delivered** as units, such as:
 
 Each product aggregates:
 
-- **Parts** from `ASSETS/PARTS/`
-- **Models** from `ASSETS/MODELS/`
-- **BIM / CAD** from `ASSETS/INSTALLATIONS/BIM_CAD_MODELS/`
-- **Drawings** from `ASSETS/DRAWINGS/`
+- **Parts** from [`ASSETS/PARTS/`](../../PARTS/)
+- **Models** from [`ASSETS/MODELS/`](../../MODELS/)
+- **BIM / CAD** from [`ASSETS/INSTALLATIONS/BIM_CAD_MODELS/`](../../INSTALLATIONS/BIM_CAD_MODELS/)
+- **Drawings** from [`ASSETS/DRAWINGS/`](../../DRAWINGS/)
 - **Manuals / datasheets** under its own product folder
 
 ---
@@ -126,7 +126,30 @@ Internal files follow consistent patterns, e.g.:
 
 ---
 
-## 6. Document Control
+## 6. Related Documentation
+
+### 6.1 Internal Standards & Guidelines
+
+* [AMPEL360 Assets Standard](../../../../../../../AMPEL360_ASSETS_STANDARD.md) - Asset naming and organization conventions
+* [AMPEL360 Documentation Standard](../../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md) - Documentation guidelines
+* [ATA Numbering Guide](../../../../../../../ATA_03_NUMBERING_GUIDE.md) - ATA chapter structure reference
+
+### 6.2 Related Asset Directories
+
+* [PARTS](../../PARTS/) - Component-level parts library
+* [ASSEMBLIES](../../ASSEMBLIES/) - Sub-assembly definitions
+* [MODELS](../../MODELS/) - Logical and system models
+* [DRAWINGS](../../DRAWINGS/) - Engineering drawings
+* [INSTALLATIONS](../../INSTALLATIONS/) - Installation layouts and procedures
+
+### 6.3 Related ATA Chapters
+
+* [02-00-03_Requirements](../../../02-00-03_Requirements/) - Requirements specifications
+* [02-00-02_Safety](../../../02-00-02_Safety/) - Safety requirements and analysis
+
+---
+
+## 7. Document Control
 
 * **Originator:** *[Name / Role]*
 * **Checker:** *[Name / Role]*

@@ -282,10 +282,10 @@ Installation is a one-time fee, separate from recurring service fees.
 
 ### 9.2 Compliance
 
-* **ISO 27001:** Information security management
-* **SOC 2 Type II:** Service organization controls
-* **GDPR:** EU data protection compliance
-* **Industry Standards:** Relevant aviation industry standards
+* **[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html):** Information security management systems
+* **[SOC 2 Type II](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report.html):** Service organization controls for security, availability, and confidentiality
+* **[GDPR](https://gdpr.eu/):** EU General Data Protection Regulation
+* **Industry Standards:** Relevant aviation industry standards (ATA, IATA)
 
 ### 9.3 Privacy
 
@@ -306,9 +306,9 @@ Installation is a one-time fee, separate from recurring service fees.
 
 ### 10.2 Standards Reference
 
-* ISO/IEC 20000: IT service management
-* ITIL v4: Service management framework
-* ISO 22301: Business continuity
+* [ISO/IEC 20000](https://www.iso.org/standard/70636.html): IT service management systems
+* [ITIL v4](https://www.axelos.com/certifications/itil-service-management): IT Infrastructure Library - Service management framework
+* [ISO 22301](https://www.iso.org/standard/75106.html): Business continuity management systems
 
 ---
 

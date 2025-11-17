@@ -109,10 +109,10 @@ See: `CONFIG/02-00-04-PRD-INH-0010_ConfigMatrix-R01.xlsx` for detailed configura
 
 | Part Number | Description | Quantity | Source |
 |-------------|-------------|----------|--------|
-| To be defined | Console frame structure | 1 | PARTS/STRUCTURAL |
-| To be defined | Work surface panel | 1 | PARTS/FURNITURE |
+| To be defined | Console frame structure | 1 | [PARTS/STRUCTURAL](../../../PARTS/) |
+| To be defined | Work surface panel | 1 | [PARTS/FURNITURE](../../../PARTS/) |
 | To be defined | Monitor arm assembly | 1-4 | COTS |
-| To be defined | Cable management system | 1 set | PARTS/ACCESSORIES |
+| To be defined | Cable management system | 1 set | [PARTS/ACCESSORIES](../../../PARTS/) |
 | To be defined | PDU 8-outlet | 1 | COTS |
 | To be defined | Leveling feet set | 4 | COTS |
 
@@ -120,8 +120,8 @@ See: `CONFIG/02-00-04-PRD-INH-0010_ConfigMatrix-R01.xlsx` for detailed configura
 
 ### 4.2 Related Assemblies
 
-* Console Frame Assembly (to be defined in ASSEMBLIES/)
-* Cable Management Assembly (to be defined in ASSEMBLIES/)
+* Console Frame Assembly (to be defined in [ASSEMBLIES/](../../../ASSEMBLIES/))
+* Cable Management Assembly (to be defined in [ASSEMBLIES/](../../../ASSEMBLIES/))
 
 ---
 
@@ -129,12 +129,12 @@ See: `CONFIG/02-00-04-PRD-INH-0010_ConfigMatrix-R01.xlsx` for detailed configura
 
 ### 5.1 3D Models
 
-* **BIM Model:** `MODELS/BIM/02-00-04-MDL-PRD-INH-0010_BIM_RefModel-R01.rvt`
+* **BIM Model:** `MODELS/BIM/02-00-04-MDL-PRD-INH-0010_BIM_RefModel-R01.rvt` (see [INSTALLATIONS/BIM_CAD_MODELS](../../../INSTALLATIONS/BIM_CAD_MODELS/))
 * **CAD Model:** To be created
 
 ### 5.2 Functional Models
 
-* **Logical Model:** `MODELS/LOGICAL/02-00-04-MDL-PRD-INH-0010_FunctionalModel-R01.md`
+* **Logical Model:** `MODELS/LOGICAL/02-00-04-MDL-PRD-INH-0010_FunctionalModel-R01.md` (see [MODELS](../../../MODELS/))
 
 ### 5.3 Drawings
 
@@ -144,7 +144,7 @@ See: `CONFIG/02-00-04-PRD-INH-0010_ConfigMatrix-R01.xlsx` for detailed configura
 | 02-00-04-DWG-EQP-PRD-INH-0010-ConsoleSystem-SHT02 | SHT02 | Detailed dimensions | R01 |
 | 02-00-04-DWG-EQP-PRD-INH-0010-ConsoleSystem-SHT03 | SHT03 | Electrical schematic | R01 |
 
-**Location:** `DRAWINGS/`
+**Location:** [DRAWINGS/](../../../DRAWINGS/)
 
 ---
 
@@ -164,9 +164,9 @@ See: `CONFIG/02-00-04-PRD-INH-0010_ConfigMatrix-R01.xlsx` for detailed configura
 ### 6.3 Certifications & Compliance
 
 * CE marked for European markets
-* Ergonomic design per ISO 9241-5
+* Ergonomic design per [ISO 9241-5](https://www.iso.org/standard/77520.html) (Ergonomic requirements for office work with visual display terminals)
 * Fire rating: M1/B1 materials
-* BIFMA standards compliance (office furniture)
+* [BIFMA](https://www.bifma.org/) standards compliance (office furniture safety and performance)
 
 ---
 
@@ -179,12 +179,12 @@ See: `CONFIG/02-00-04-PRD-INH-0010_ConfigMatrix-R01.xlsx` for detailed configura
 * REQ-OPS-003: Cable management requirements
 * REQ-OPS-004: Acoustic performance
 
-**Reference:** See `02-00-03_Requirements` folder
+**Reference:** See [02-00-03_Requirements](../../../../02-00-03_Requirements/) folder
 
 ### 7.2 Related ATA Chapters
 
-* ATA 02-00-04: Operations Information - Design
-* ATA 02-00-03: Operations Information - Requirements
+* [ATA 02-00-04](../../../../02-00-04_Design/): Operations Information - Design
+* [ATA 02-00-03](../../../../02-00-03_Requirements/): Operations Information - Requirements
 
 ---
 

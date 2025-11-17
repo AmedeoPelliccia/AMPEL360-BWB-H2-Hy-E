@@ -191,13 +191,37 @@ See: `CONFIG/[Product_ID]_ConfigMatrix-R01.xlsx` for detailed configuration matr
 
 ---
 
-## 10. Notes & Revision History
+## 10. Related Documentation
 
-### 10.1 Special Notes
+### 10.1 Internal References
+
+* [AMPEL360 Assets Standard](../../../../../../../AMPEL360_ASSETS_STANDARD.md)
+* [AMPEL360 Documentation Standard](../../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md)
+* [PRODUCTS Admin](../../00_ADMIN/README.md) - Product governance and naming conventions
+
+### 10.2 Related Asset Directories
+
+* [PARTS](../../../PARTS/) - Component parts library
+* [ASSEMBLIES](../../../ASSEMBLIES/) - Assembly definitions
+* [MODELS](../../../MODELS/) - System models
+* [DRAWINGS](../../../DRAWINGS/) - Engineering drawings
+* [INSTALLATIONS](../../../INSTALLATIONS/) - Installation procedures
+
+### 10.3 Standards & Regulations
+
+[Add relevant standards and regulations with hyperlinks, e.g.:]
+* [ISO 9001](https://www.iso.org/iso-9001-quality-management.html) - Quality management systems
+* [IEC Standards](https://www.iec.ch/) - International Electrotechnical Commission standards
+
+---
+
+## 11. Notes & Revision History
+
+### 11.1 Special Notes
 
 [Any special considerations, warnings, or important information]
 
-### 10.2 Revision History
+### 11.2 Revision History
 
 | Revision | Date | Description | Author | Approver |
 |----------|------|-------------|--------|----------|
@@ -205,7 +229,7 @@ See: `CONFIG/[Product_ID]_ConfigMatrix-R01.xlsx` for detailed configuration matr
 
 ---
 
-## 11. Contacts
+## 12. Contacts
 
 * **Product Owner:** [Name / Role]
 * **Technical Lead:** [Name / Role]

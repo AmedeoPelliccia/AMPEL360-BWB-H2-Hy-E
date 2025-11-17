@@ -91,7 +91,7 @@ Used in:
 ### 3.3 Part Number Mapping
 
 This COTS product may contain sub-components that are tracked separately in 
-`ASSETS/PARTS/` for maintenance and spares purposes.
+[`ASSETS/PARTS/`](../../../PARTS/) for maintenance and spares purposes.
 
 See: `BOM/` folder for internal part number mapping.
 
@@ -107,10 +107,10 @@ See: `BOM/` folder for internal part number mapping.
 
 ### 4.2 Certifications
 
-* UL listed
-* CE marked
-* RoHS compliant
-* Seismic rating: Zone 4 (when anchored)
+* [UL listed](https://www.ul.com/) (Underwriters Laboratories safety certification)
+* CE marked (European conformity)
+* [RoHS compliant](https://ec.europa.eu/environment/topics/waste-and-recycling/rohs-directive_en) (Restriction of Hazardous Substances)
+* Seismic rating: Zone 4 (when anchored per [IBC](https://codes.iccsafe.org/))
 
 ---
 
@@ -139,9 +139,9 @@ See: `BOM/` folder for internal part number mapping.
 
 ### 6.2 Applicable Standards
 
-* EIA-310-D: Rack standard
-* IEC 60297: Electronic equipment chassis
-* ANSI/TIA-942: Data center telecommunications infrastructure
+* [EIA-310-D](https://www.eia.org/) (TIA-310-D): Rack standard - Cabinets, racks, panels, and associated equipment
+* [IEC 60297](https://www.iec.ch/): Electronic equipment chassis - Dimensions of mechanical structures of the 482.6 mm (19 in) series
+* [ANSI/TIA-942](https://www.tiaonline.org/): Data center telecommunications infrastructure standard
 
 ---
 

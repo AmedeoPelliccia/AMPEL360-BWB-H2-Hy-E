@@ -42,7 +42,7 @@ Ideal for:
 
 | Product ID | Product Name | Quantity | Notes |
 |------------|--------------|----------|-------|
-| PRD-INH-0010 | OPSCTR Console System | 2 | Standard configuration |
+| [PRD-INH-0010](../../10_INHOUSE_PRODUCTS/02-00-04-PRD-INH-0010_OPSCTR_ConsoleSystem/) | OPSCTR Console System | 2 | Standard configuration |
 | PRD-COTS-1300 | Display Monitor 32" 4K | 4 | 2 per console |
 | PRD-COTS-1100 | UPS 3kVA | 1 | Shared between consoles |
 | PRD-COTS-1101 | Rack PDU | 2 | Power distribution |
@@ -132,9 +132,9 @@ Ideal for:
 See: `BOM/02-00-04-PRD-KIT-0500_BOM-R01.xlsx`
 
 The BOM references all component products from:
-* `PRODUCTS/10_INHOUSE_PRODUCTS/`
-* `PRODUCTS/20_COTS_EQUIPMENT/`
-* `ASSETS/PARTS/` (for accessories)
+* [`PRODUCTS/10_INHOUSE_PRODUCTS/`](../../10_INHOUSE_PRODUCTS/)
+* [`PRODUCTS/20_COTS_EQUIPMENT/`](../../20_COTS_EQUIPMENT/)
+* [`ASSETS/PARTS/`](../../../PARTS/) (for accessories)
 
 ### 5.2 BOM Structure
 
@@ -222,10 +222,10 @@ All individual product documentation is referenced:
 
 ### 9.2 Standards Compliance
 
-* ISO 9241-5: Ergonomic requirements
-* IEC 60950: Safety of IT equipment
-* NFPA 75: Fire protection for IT equipment
-* ANSI/HFES 100: Human factors engineering
+* [ISO 9241-5](https://www.iso.org/standard/77520.html): Ergonomic requirements for office work with visual display terminals
+* [IEC 60950](https://www.iec.ch/): Safety of information technology equipment (superseded by IEC 62368-1)
+* [NFPA 75](https://www.nfpa.org/): Standard for the Fire Protection of Information Technology Equipment
+* [ANSI/HFES 100](https://www.hfes.org/): Human factors engineering of computer workstations
 
 ---
 
