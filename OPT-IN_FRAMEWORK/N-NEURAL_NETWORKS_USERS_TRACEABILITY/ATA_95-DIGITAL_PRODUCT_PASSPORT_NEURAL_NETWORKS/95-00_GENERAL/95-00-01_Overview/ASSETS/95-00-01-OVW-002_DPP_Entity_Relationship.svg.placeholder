@@ -1,0 +1,20 @@
+# 95-00-01-OVW-002_DPP_Entity_Relationship.svg
+
+This is a placeholder for the DPP Entity Relationship Diagram.
+
+## Intended Content:
+An entity-relationship diagram showing:
+- DPP core entities (Models, Versions, Requirements, Tests, Certifications)
+- Relationships between entities (one-to-many, many-to-many)
+- Key attributes for each entity
+- Traceability links
+- Data model structure (as described in 95-00-01-007)
+
+## Creation Guidelines:
+- Format: SVG (scalable vector graphics for quality at any zoom)
+- Notation: UML or Chen notation for ER diagrams
+- Style: Clean, professional, with clear labeling
+- Tools: Lucidchart, draw.io, or database design tools
+- Include legend for relationship types
+
+## Status: TO BE CREATED
