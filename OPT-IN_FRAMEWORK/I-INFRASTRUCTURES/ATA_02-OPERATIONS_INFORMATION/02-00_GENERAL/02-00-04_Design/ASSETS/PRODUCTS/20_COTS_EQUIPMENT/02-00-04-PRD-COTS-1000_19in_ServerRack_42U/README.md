@@ -139,8 +139,8 @@ See: `BOM/` folder for internal part number mapping.
 
 ### 6.2 Applicable Standards
 
-* [EIA-310-D](https://www.eia.org/) (TIA-310-D): Rack standard - Cabinets, racks, panels, and associated equipment
-* [IEC 60297](https://www.iec.ch/): Electronic equipment chassis - Dimensions of mechanical structures of the 482.6 mm (19 in) series
+* [EIA-310-D (TIA-310-D)](https://global.ihs.com/doc_detail.cfm?item_s_key=00256898): Rack standard - Cabinets, racks, panels, and associated equipment
+* [IEC 60297](https://webstore.iec.ch/publication/2226): Electronic equipment chassis - Dimensions of mechanical structures of the 482.6 mm (19 in) series
 * [ANSI/TIA-942](https://www.tiaonline.org/): Data center telecommunications infrastructure standard
 
 ---
