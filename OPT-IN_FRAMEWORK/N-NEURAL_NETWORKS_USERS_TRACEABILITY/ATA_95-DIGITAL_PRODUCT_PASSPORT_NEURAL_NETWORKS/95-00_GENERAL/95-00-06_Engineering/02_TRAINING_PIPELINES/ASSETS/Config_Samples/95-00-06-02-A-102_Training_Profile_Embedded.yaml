@@ -1,0 +1,316 @@
+# 95-00-06-02-A-102: Training Profile for Embedded Target
+# Embedded device training/fine-tuning configuration
+# Platform: NVIDIA Jetson AGX Orin or similar embedded platform
+
+metadata:
+  profile_name: "Embedded_Training_Profile"
+  version: "1.0"
+  created: "2025-11-17"
+  author: "AMPEL360 ML Team"
+  description: "Training configuration optimized for embedded development boards"
+  target_platform: "Jetson_AGX_Orin"
+  gpu_type: "Integrated_NVIDIA_GPU"
+
+# Model configuration (smaller for embedded)
+model:
+  architecture: "lightweight_transformer"
+  hidden_size: 256                   # Reduced from 512
+  num_layers: 6                      # Reduced from 12
+  num_attention_heads: 4             # Reduced from 8
+  intermediate_size: 1024            # Reduced from 2048
+  dropout: 0.1
+  attention_dropout: 0.1
+  activation: "gelu"
+  max_position_embeddings: 512      # Reduced from 1024
+  
+# Training hyperparameters (optimized for limited resources)
+training:
+  # Batch configuration
+  batch_size: 16                     # Smaller for limited memory
+  gradient_accumulation_steps: 8     # Larger to simulate bigger batch
+  
+  # Optimizer
+  optimizer: "adamw"
+  learning_rate: 0.0005              # Lower LR for fine-tuning
+  weight_decay: 0.01
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-8
+  max_grad_norm: 1.0
+  
+  # Learning rate schedule
+  scheduler:
+    type: "linear_warmup_cosine"
+    warmup_steps: 500
+    T_max: 10000                     # Shorter training
+    eta_min: 1.0e-7
+    
+  # Training loop
+  max_epochs: 50                     # Fewer epochs
+  max_steps: 10000
+  eval_frequency: 500
+  save_frequency: 1000
+  log_frequency: 50
+  
+  # Loss function
+  loss:
+    type: "mse"
+    reduction: "mean"
+    
+  # Mixed precision (essential for embedded)
+  mixed_precision:
+    enabled: true
+    precision: "fp16"
+    loss_scale: "dynamic"
+    
+  # Checkpointing
+  checkpointing:
+    enabled: true
+    frequency: 1000
+    keep_last_n: 3                   # Keep fewer checkpoints
+    save_optimizer_state: false      # Save space
+    save_best_only: true
+    
+  # Early stopping
+  early_stopping:
+    enabled: true
+    patience: 5
+    min_delta: 0.005
+    monitor: "val_loss"
+    mode: "min"
+
+# Data configuration
+data:
+  # Dataset paths (local storage or SD card)
+  train_data: "/data/flight_data_v3.1_subset/train/"
+  val_data: "/data/flight_data_v3.1_subset/val/"
+  test_data: "/data/flight_data_v3.1_subset/test/"
+  
+  # Data loading (fewer workers for embedded)
+  num_workers: 4
+  pin_memory: false                  # May not help on embedded
+  prefetch_factor: 2
+  persistent_workers: false
+  
+  # Data preprocessing
+  preprocessing:
+    normalize: true
+    mean: [0.0, 0.0, 0.0]
+    std: [1.0, 1.0, 1.0]
+    clip_range: [-3.0, 3.0]
+    
+  # Data augmentation (lighter)
+  augmentation:
+    enabled: true
+    noise_std: 0.01
+    temporal_jitter_ms: 5
+    
+  # Input/output specifications
+  input_shape: [100, 32]
+  output_shape: [10]
+  
+# Distributed training (not used on embedded)
+distributed:
+  enabled: false
+  
+# Resource allocation
+resources:
+  # Compute resources (Jetson AGX Orin specs)
+  num_gpus: 1
+  num_cpus: 8
+  memory_gb: 32
+  
+  # Storage
+  scratch_dir: "/tmp/ampel360/training/"
+  output_dir: "/data/ampel360/models/"
+  
+# Logging and monitoring
+logging:
+  # Console logging
+  console_log_level: "INFO"
+  log_format: "%(asctime)s - %(levelname)s - %(message)s"
+  
+  # File logging
+  log_file: "training_embedded.log"
+  log_dir: "/data/ampel360/logs/"
+  
+  # TensorBoard (lightweight)
+  tensorboard:
+    enabled: true
+    log_dir: "/data/ampel360/tensorboard/"
+    log_images: false
+    log_histograms: false            # Reduce overhead
+    
+  # MLflow (remote tracking)
+  mlflow:
+    enabled: true
+    tracking_uri: "http://mlflow.ampel360.local:5000"
+    experiment_name: "embedded_fine_tuning"
+    
+  # Weights & Biases
+  wandb:
+    enabled: false                   # Disable to save bandwidth
+
+# Monitoring and alerts
+monitoring:
+  # Performance monitoring
+  track_gpu_utilization: true
+  track_memory_usage: true
+  track_temperature: true            # Important for embedded
+  track_power_consumption: true
+  
+  # Health checks
+  health_check_interval: 300
+  stall_detection_threshold: 600
+  temperature_threshold_celsius: 85  # Throttle warning
+  
+  # Alerting (local only)
+  alerts:
+    enabled: false                   # No network alerts
+
+# Reproducibility
+reproducibility:
+  seed: 42
+  deterministic: false
+  benchmark: true
+
+# Debugging
+debug:
+  enabled: false
+  detect_anomaly: false
+  profile: false
+  
+# Fault tolerance
+fault_tolerance:
+  auto_restart: true
+  max_restarts: 2
+  restart_delay: 30
+  resume_from_checkpoint: true
+  checkpoint_path: null
+
+# Environment
+environment:
+  # Python environment
+  python_version: "3.10"
+  virtual_env: "/opt/ampel360/venv/ml"
+  
+  # CUDA
+  cuda_version: "11.4"               # JetPack version
+  cudnn_version: "8.6"
+  
+  # PyTorch
+  pytorch_version: "2.0.0"           # Compatible with Jetson
+  
+  # TensorRT (for optimization)
+  tensorrt_version: "8.5"
+  
+# Validation
+validation:
+  strategy: "epoch_end"
+  metrics:
+    - "loss"
+    - "accuracy"
+    - "inference_time"               # Critical for embedded
+    
+  save_best_metric: "val_loss"
+  save_best_mode: "min"
+
+# Post-training (optimize for embedded deployment)
+post_training:
+  # Model export
+  export:
+    enabled: true
+    formats: ["onnx", "tensorrt"]
+    onnx_opset: 17
+    
+  # Model optimization (essential for embedded)
+  optimize:
+    enabled: true
+    quantization: "int8"             # INT8 quantization
+    calibration_samples: 1000
+    pruning: true
+    pruning_ratio: 0.3               # Remove 30% of weights
+    
+  # Evaluation on test set
+  final_evaluation:
+    enabled: true
+    test_metrics: ["loss", "accuracy", "latency", "memory_footprint"]
+    target_latency_ms: 5
+    target_memory_mb: 50
+    
+  # Report generation
+  report:
+    enabled: true
+    format: "markdown"               # Simpler than PDF
+    include_plots: true
+
+# Power management
+power_management:
+  # Power mode (Jetson AGX Orin power modes)
+  power_mode: "MAXN"                 # Maximum performance
+  
+  # Dynamic adjustment
+  enable_dynamic_clocking: false     # Keep stable for training
+  
+  # Thermal management
+  enable_thermal_throttling: true
+  max_temperature_celsius: 85
+
+# Embedded-specific optimizations
+embedded_optimizations:
+  # Memory management
+  use_memory_efficient_attention: true
+  gradient_checkpointing: true       # Trade compute for memory
+  empty_cache_frequency: 100         # Clear cache every N steps
+  
+  # Compute optimizations
+  use_cudnn_benchmark: true
+  use_tf32: false                    # May not be available
+  channels_last_memory_format: false
+  
+  # I/O optimizations
+  use_mmap_datasets: true            # Memory-map large datasets
+  cache_preprocessed_data: true
+
+# Transfer learning
+transfer_learning:
+  # Load pretrained model
+  pretrained_model_path: "/data/ampel360/models/pretrained/flight_control_transformer_v2.1.pt"
+  freeze_layers: true
+  freeze_until_layer: 4              # Freeze first 4 layers
+  
+  # Fine-tuning strategy
+  strategy: "gradual_unfreezing"
+  unfreeze_schedule: [2, 4, 6]       # Unfreeze at epochs 2, 4, 6
+
+# Safety and compliance
+compliance:
+  anonymize_logs: true
+  remove_pii: true
+  track_data_lineage: true
+  track_model_provenance: true
+  
+# Notes
+notes: |
+  This configuration is optimized for NVIDIA Jetson AGX Orin embedded platform.
+  
+  Expected performance:
+  - Training time: ~24-48 hours for 50 epochs (much slower than HPC)
+  - Memory usage: ~8-12GB during training
+  - Inference time: <5ms after INT8 optimization
+  
+  Key considerations:
+  - Limited memory: Use smaller batch sizes and gradient accumulation
+  - Power/thermal: Monitor temperature and enable throttling
+  - Storage: Use local SSD or fast SD card
+  - Network: Minimize remote logging to save bandwidth
+  
+  Recommended workflow:
+  1. Start with pretrained model from HPC
+  2. Fine-tune on embedded with domain-specific data
+  3. Optimize with INT8 quantization and pruning
+  4. Validate latency and accuracy on target hardware
+  5. Deploy with TensorRT for maximum performance
+
+---
+# END OF CONFIGURATION
