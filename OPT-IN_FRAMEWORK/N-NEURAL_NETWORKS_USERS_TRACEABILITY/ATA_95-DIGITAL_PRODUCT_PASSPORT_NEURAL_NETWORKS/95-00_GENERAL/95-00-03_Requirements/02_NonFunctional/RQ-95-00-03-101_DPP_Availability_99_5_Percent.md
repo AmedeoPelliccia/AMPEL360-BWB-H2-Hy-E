@@ -21,9 +21,9 @@ Higher availability (99.9%+) would be costly and unnecessary for non-flight-crit
 
 ## 4. Source(s)
 
-- **95-00-01-004_DPP_Objectives_for_Neural_Networks.md** — Section 3.2 (Operational Requirements)
-- **ATA MSG-3** — Maintenance program requirements
-- **ISO/IEC 25010** — System quality models (Reliability)
+- **[95-00-01-004_DPP_Objectives_for_Neural_Networks.md](../../95-00-01_Overview/)** — Section 3.2 (Operational Requirements)
+- **[ATA MSG-3](https://www.ata.org/resources/msg-3)** — Maintenance program requirements
+- **[ISO/IEC 25010](https://www.iso.org/standard/35733.html)** — System quality models (Reliability)
 
 ## 5. Acceptance Criteria
 

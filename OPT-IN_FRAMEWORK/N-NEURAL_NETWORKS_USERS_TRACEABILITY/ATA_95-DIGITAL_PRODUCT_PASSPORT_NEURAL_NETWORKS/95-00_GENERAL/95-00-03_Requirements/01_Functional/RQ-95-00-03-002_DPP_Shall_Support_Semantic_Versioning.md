@@ -25,10 +25,10 @@ Semantic versioning follows the pattern:
 
 ## 4. Source(s)
 
-- **95-00-01-004_DPP_Objectives_for_Neural_Networks.md** — Section 2.4 (Version Control)
-- **Semantic Versioning Specification** (semver.org) — Version 2.0.0
-- **EU AI Act** — Article 43 (Conformity assessment procedures)
-- **DO-178C** — Software versioning and configuration management guidance
+- **[95-00-01-004_DPP_Objectives_for_Neural_Networks.md](../../95-00-01_Overview/)** — Section 2.4 (Version Control)
+- **[Semantic Versioning Specification](https://semver.org/)** (semver.org) — Version 2.0.0
+- **[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** — Article 43 (Conformity assessment procedures)
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)** — Software versioning and configuration management guidance
 
 ## 5. Acceptance Criteria
 

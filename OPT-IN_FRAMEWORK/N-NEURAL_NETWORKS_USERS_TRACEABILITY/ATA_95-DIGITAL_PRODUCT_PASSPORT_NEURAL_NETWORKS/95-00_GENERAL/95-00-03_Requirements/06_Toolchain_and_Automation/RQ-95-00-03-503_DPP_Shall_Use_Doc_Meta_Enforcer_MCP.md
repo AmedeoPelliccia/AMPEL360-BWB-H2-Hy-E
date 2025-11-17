@@ -26,9 +26,9 @@ The doc-meta-enforcer MCP provides AI-powered documentation tooling specifically
 
 ## 4. Source(s)
 
-- **95-00-01_Overview/** — DPP tooling requirements
-- **AMPEL360_DOCUMENTATION_STANDARD** — Document control framework
-- **MCP Protocol Specification** — Model Context Protocol standard
+- **[95-00-01_Overview/](../../95-00-01_Overview/)** — DPP tooling requirements
+- **[AMPEL360_DOCUMENTATION_STANDARD](../../../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md)** — Document control framework
+- **[MCP Protocol Specification](https://modelcontextprotocol.io/)** — Model Context Protocol standard
 
 ## 5. Acceptance Criteria
 

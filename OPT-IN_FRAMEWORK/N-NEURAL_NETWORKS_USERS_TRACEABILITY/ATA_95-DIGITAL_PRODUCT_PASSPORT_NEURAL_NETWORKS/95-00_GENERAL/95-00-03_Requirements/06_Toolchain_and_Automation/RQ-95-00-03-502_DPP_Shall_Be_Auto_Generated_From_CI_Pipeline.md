@@ -26,9 +26,9 @@ Manual DPP creation is:
 
 ## 4. Source(s)
 
-- **95-00-01_Overview/** — DPP automation objectives
+- **[95-00-01_Overview/](../../95-00-01_Overview/)** — DPP automation objectives
 - **DevOps best practices** — Infrastructure as Code, GitOps
-- **ISO/IEC 12207** — Software lifecycle processes
+- **[ISO/IEC 12207](https://www.iso.org/standard/63712.html)** — Software lifecycle processes
 
 ## 5. Acceptance Criteria
 

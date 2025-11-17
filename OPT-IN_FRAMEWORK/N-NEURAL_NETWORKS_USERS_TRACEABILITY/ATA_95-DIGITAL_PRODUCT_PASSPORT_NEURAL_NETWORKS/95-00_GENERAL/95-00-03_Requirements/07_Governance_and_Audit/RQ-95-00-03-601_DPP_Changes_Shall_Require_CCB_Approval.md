@@ -28,10 +28,10 @@ All such changes require formal review and approval.
 
 ## 4. Source(s)
 
-- **95-00-14_Ops_Std_Sustain/** — Change management framework
-- **DO-178C** — Section 7 (Configuration management)
-- **AS9100** — Quality management for aerospace
-- **EASA Part 21** — Certification procedures for change management
+- **[95-00-14_Ops_Std_Sustain/](../../95-00-14_Ops_Std_Sustain/)** — Change management framework
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)** — Section 7 (Configuration management)
+- **[AS9100](https://www.sae.org/standards/content/as9100/)** — Quality management for aerospace
+- **[EASA Part 21](https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-7482012)** — Certification procedures for change management
 
 ## 5. Acceptance Criteria
 

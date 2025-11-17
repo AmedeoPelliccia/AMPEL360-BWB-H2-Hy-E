@@ -30,11 +30,11 @@ Without proper ODD documentation:
 
 ## 4. Source(s)
 
-- **95-00-02_Safety/** — Neural network safety framework
-- **EU AI Act** — Article 9 (Risk management system), Annex IV (Technical documentation)
-- **EASA AI Roadmap 2.0** — ODD documentation requirements
-- **DO-178C** — Section 2.4 (System safety assessment)
-- **SAE J3016** — Levels of driving automation (ODD concept)
+- **[95-00-02_Safety/](../../95-00-02_Safety/)** — Neural network safety framework
+- **[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** — Article 9 (Risk management system), Annex IV (Technical documentation)
+- **[EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/light/topics/artificial-intelligence)** — ODD documentation requirements
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)** — Section 2.4 (System safety assessment)
+- **[SAE J3016](https://www.sae.org/standards/content/j3016_202104/)** — Levels of driving automation (ODD concept)
 
 ## 5. Acceptance Criteria
 

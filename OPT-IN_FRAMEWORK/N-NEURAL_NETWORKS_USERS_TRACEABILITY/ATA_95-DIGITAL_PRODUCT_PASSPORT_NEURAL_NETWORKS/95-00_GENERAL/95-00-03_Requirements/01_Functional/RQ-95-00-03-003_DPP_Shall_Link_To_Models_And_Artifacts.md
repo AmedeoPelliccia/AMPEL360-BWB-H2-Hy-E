@@ -32,11 +32,11 @@ Without proper artifact linking:
 
 ## 4. Source(s)
 
-- **95-00-01-004_DPP_Objectives_for_Neural_Networks.md** — Section 2.5 (Artifact Management)
-- **EU AI Act** — Article 11 (Technical documentation)
-- **EU DPP Framework** — Article 10 (Data carrier requirements)
-- **DO-178C** — Section 11 (Configuration management)
-- **ISO 15489** — Records management standard
+- **[95-00-01-004_DPP_Objectives_for_Neural_Networks.md](../../95-00-01_Overview/)** — Section 2.5 (Artifact Management)
+- **[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** — Article 11 (Technical documentation)
+- **[EU DPP Framework](https://ec.europa.eu/commission/presscorner/detail/en/ip_2024_1689)** — Article 10 (Data carrier requirements)
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)** — Section 11 (Configuration management)
+- **[ISO 15489](https://www.iso.org/standard/62542.html)** — Records management standard
 
 ## 5. Acceptance Criteria
 

@@ -33,9 +33,9 @@ AMPEL360 must track and minimize this impact to maintain carbon-negative operati
 ## 4. Source(s)
 
 - **AMPEL360 Mission** — Carbon-negative aviation commitment
-- **EU Digital Product Passport Regulation** — Environmental impact disclosure
-- **ISO 14064** — Greenhouse gas quantification and reporting
-- **Green Software Foundation** — Software carbon intensity standard
+- **[EU Digital Product Passport Regulation](https://ec.europa.eu/commission/presscorner/detail/en/ip_2024_1689)** — Environmental impact disclosure
+- **[ISO 14064](https://www.iso.org/standard/66453.html)** — Greenhouse gas quantification and reporting
+- **[Green Software Foundation](https://greensoftware.foundation/)** — Software carbon intensity standard
 
 ## 5. Acceptance Criteria
 

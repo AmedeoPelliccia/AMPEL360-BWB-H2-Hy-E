@@ -31,11 +31,11 @@ Without audit trails:
 
 ## 4. Source(s)
 
-- **95-00-14_Ops_Std_Sustain/** — Operational governance framework
-- **DO-178C** — Section 11.1 (Configuration management)
-- **ISO/IEC 27001** — Information security audit trails
-- **EASA Part 21** — Record-keeping requirements
-- **EU GDPR** — Article 30 (Records of processing activities)
+- **[95-00-14_Ops_Std_Sustain/](../../95-00-14_Ops_Std_Sustain/)** — Operational governance framework
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)** — Section 11.1 (Configuration management)
+- **[ISO/IEC 27001](https://www.iso.org/standard/27001)** — Information security audit trails
+- **[EASA Part 21](https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-7482012)** — Record-keeping requirements
+- **[EU GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj)** — Article 30 (Records of processing activities)
 
 ## 5. Acceptance Criteria
 

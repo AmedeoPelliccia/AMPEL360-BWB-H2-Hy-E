@@ -21,8 +21,8 @@ This requirement covers read operations; write operations may have higher latenc
 
 ## 4. Source(s)
 
-- **95-00-01-004_DPP_Objectives_for_Neural_Networks.md** — Section 3.3 (Performance Requirements)
-- **ISO/IEC 25010** — System quality models (Performance efficiency)
+- **[95-00-01-004_DPP_Objectives_for_Neural_Networks.md](../../95-00-01_Overview/)** — Section 3.3 (Performance Requirements)
+- **[ISO/IEC 25010](https://www.iso.org/standard/35733.html)** — System quality models (Performance efficiency)
 - **User experience research** — 500ms threshold for interactive systems
 
 ## 5. Acceptance Criteria

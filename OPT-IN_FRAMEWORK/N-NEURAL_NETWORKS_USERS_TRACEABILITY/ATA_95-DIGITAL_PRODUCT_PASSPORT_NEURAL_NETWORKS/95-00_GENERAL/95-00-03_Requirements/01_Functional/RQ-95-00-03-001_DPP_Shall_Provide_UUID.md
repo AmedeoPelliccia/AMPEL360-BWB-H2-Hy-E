@@ -26,12 +26,12 @@ Without unique identifiers, it would be impossible to:
 
 ## 4. Source(s)
 
-- **95-00-01-004_DPP_Objectives_for_Neural_Networks.md** — Section 2.3 (Unique Identification)
-- **95-00-01-007_DPP_Data_Model_and_Identifiers.md** — UUID specification
-- **EU AI Act** (Regulation EU 2024/1689) — Article 11 (High-risk AI documentation)
-- **EU DPP Framework** (Regulation EU 2024/1781) — Article 8 (Unique product identifiers)
-- **RFC 4122** — A Universally Unique Identifier (UUID) URN Namespace
-- **ISO/IEC 19941** — Information technology — Cloud computing — Interoperability and portability
+- **[95-00-01-004_DPP_Objectives_for_Neural_Networks.md](../../95-00-01_Overview/)** — Section 2.3 (Unique Identification)
+- **[95-00-01-007_DPP_Data_Model_and_Identifiers.md](../../95-00-01_Overview/)** — UUID specification
+- **[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** (Regulation EU 2024/1689) — Article 11 (High-risk AI documentation)
+- **[EU DPP Framework](https://ec.europa.eu/commission/presscorner/detail/en/ip_2024_1689)** (Regulation EU 2024/1781) — Article 8 (Unique product identifiers)
+- **[RFC 4122](https://www.rfc-editor.org/rfc/rfc4122)** — A Universally Unique Identifier (UUID) URN Namespace
+- **[ISO/IEC 19941](https://www.iso.org/standard/66639.html)** — Information technology — Cloud computing — Interoperability and portability
 
 ## 5. Acceptance Criteria
 

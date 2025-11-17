@@ -32,10 +32,10 @@ Without data lineage:
 
 ## 4. Source(s)
 
-- **95-00-01_Overview/** — DPP data model objectives
-- **EU AI Act** — Article 10 (Data and data governance)
-- **ISO/IEC 5259** — Data quality for AI systems
-- **W3C PROV** — Provenance data model standard
+- **[95-00-01_Overview/](../../95-00-01_Overview/)** — DPP data model objectives
+- **[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** — Article 10 (Data and data governance)
+- **[ISO/IEC 5259](https://www.iso.org/standard/81088.html)** — Data quality for AI systems
+- **[W3C PROV](https://www.w3.org/TR/prov-overview/)** — Provenance data model standard
 
 ## 5. Acceptance Criteria
 

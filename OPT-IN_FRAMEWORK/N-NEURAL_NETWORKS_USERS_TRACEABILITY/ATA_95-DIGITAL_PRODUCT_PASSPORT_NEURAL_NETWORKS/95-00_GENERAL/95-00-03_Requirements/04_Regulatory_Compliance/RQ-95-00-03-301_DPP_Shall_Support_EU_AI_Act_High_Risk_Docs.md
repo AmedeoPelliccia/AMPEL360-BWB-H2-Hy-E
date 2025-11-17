@@ -31,12 +31,12 @@ Non-compliance risks:
 
 ## 4. Source(s)
 
-- **EU AI Act** (Regulation EU 2024/1689):
+- **[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** (Regulation EU 2024/1689):
   - Article 11 — Technical documentation
   - Annex IV — Technical documentation for high-risk AI
   - Article 9 — Risk management system
   - Article 72 — Post-market monitoring
-- **EASA AI Roadmap 2.0** — Alignment with EU AI Act
+- **[EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/light/topics/artificial-intelligence)** — Alignment with EU AI Act
 
 ## 5. Acceptance Criteria
 

@@ -22,11 +22,11 @@ The EU DPP regulation applies to aviation components and systems, requiring digi
 
 ## 4. Source(s)
 
-- **EU Digital Product Passport Regulation** (Regulation EU 2024/1781):
+- **[EU Digital Product Passport Regulation](https://ec.europa.eu/commission/presscorner/detail/en/ip_2024_1689)** (Regulation EU 2024/1781):
   - Article 8 — Product passport content
   - Article 9 — Data carrier requirements
   - Annex II — Mandatory data elements
-- **Ecodesign for Sustainable Products Regulation** (ESPR)
+- **[Ecodesign for Sustainable Products Regulation](https://environment.ec.europa.eu/topics/circular-economy/ecodesign-sustainable-products-regulation_en)** (ESPR)
 
 ## 5. Acceptance Criteria
 

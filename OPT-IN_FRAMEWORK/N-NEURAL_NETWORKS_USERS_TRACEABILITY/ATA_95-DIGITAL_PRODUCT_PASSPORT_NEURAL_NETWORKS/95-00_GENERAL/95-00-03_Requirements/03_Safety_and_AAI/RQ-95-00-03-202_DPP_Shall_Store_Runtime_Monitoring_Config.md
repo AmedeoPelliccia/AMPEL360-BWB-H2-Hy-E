@@ -31,10 +31,10 @@ Without runtime monitoring configuration:
 
 ## 4. Source(s)
 
-- **95-00-02_Safety/** — Runtime monitoring framework
-- **EU AI Act** — Article 72 (Post-market monitoring)
-- **EASA AI Roadmap 2.0** — Continuous airworthiness for AI systems
-- **DO-178C** — Section 2.5 (Verification processes)
+- **[95-00-02_Safety/](../../95-00-02_Safety/)** — Runtime monitoring framework
+- **[EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** — Article 72 (Post-market monitoring)
+- **[EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/light/topics/artificial-intelligence)** — Continuous airworthiness for AI systems
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)** — Section 2.5 (Verification processes)
 
 ## 5. Acceptance Criteria
 

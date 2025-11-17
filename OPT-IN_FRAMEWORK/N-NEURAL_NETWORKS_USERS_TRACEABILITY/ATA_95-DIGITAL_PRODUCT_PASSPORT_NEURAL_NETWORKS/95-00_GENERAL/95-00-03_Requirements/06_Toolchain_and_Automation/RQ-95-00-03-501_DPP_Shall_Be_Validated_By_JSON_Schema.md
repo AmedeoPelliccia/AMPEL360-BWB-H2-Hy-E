@@ -33,9 +33,9 @@ Without schema validation:
 
 ## 4. Source(s)
 
-- **95-00-01_Overview/** — DPP data model requirements
-- **JSON Schema Specification** — Draft 2020-12
-- **ISO/IEC 25010** — Software quality models
+- **[95-00-01_Overview/](../../95-00-01_Overview/)** — DPP data model requirements
+- **[JSON Schema Specification](https://json-schema.org/draft/2020-12/json-schema-core.html)** — Draft 2020-12
+- **[ISO/IEC 25010](https://www.iso.org/standard/35733.html)** — Software quality models
 
 ## 5. Acceptance Criteria
 
