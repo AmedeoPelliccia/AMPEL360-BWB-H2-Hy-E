@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "description": "Example VS Code MCP configuration for AMPEL360 Document Meta Enforcer",
+  "mcp.servers": {
+    "doc-meta-enforcer": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/tools/doc-meta-enforcer-mcp/dist/server.js"
+      ],
+      "env": {},
+      "description": "AMPEL360 Document Control and Hyperlinking Server"
+    }
+  },
+  "github.copilot.advanced": {
+    "mcpInstructions": [
+      "For any new or heavily edited documentation file (.md, .rst, .txt, .adoc):",
+      "1. After drafting the content, call the MCP tool 'doc_control.enforce' with the full document text and file path",
+      "2. Replace the file content with the tool's output",
+      "3. The tool will add a Document Control block (authorship: AI prompted by Amedeo Pelliccia) if missing",
+      "4. The tool will convert standards/regulations to hyperlinks (EASA CS-25, FAA FAR 25, DO-178C, etc.)",
+      "5. The tool will link internal references (ATA chapters, requirements like RQ-XX-XX-XXX, OPT-IN axes)"
+    ]
+  }
+}

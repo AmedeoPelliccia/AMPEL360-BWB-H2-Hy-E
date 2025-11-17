@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AMPEL360 Document Link Rules",
+  "description": "Configuration for automatic hyperlinking of standards, regulations, and internal references",
+  "version": "1.0.0",
+  "categories": {
+    "aviation_standards": {
+      "EASA CS-25": "https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes",
+      "FAA FAR 25": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25",
+      "FAA 14 CFR Part 25": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25",
+      "ICAO Annex 6": "https://www.icao.int/safety/airnavigation/Pages/annex-6.aspx",
+      "ICAO Annex 8": "https://www.icao.int/safety/airnavigation/Pages/annex-8.aspx"
+    },
+    "ai_regulations": {
+      "EU AI Act": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
+      "EASA AI Roadmap": "https://www.easa.europa.eu/en/research-development/artificial-intelligence",
+      "GDPR": "https://gdpr-info.eu/"
+    },
+    "technical_standards": {
+      "S1000D": "http://www.s1000d.org/",
+      "ATA iSpec 2200": "https://www.ata.org/resources/specifications",
+      "ARP4754A": "https://www.sae.org/standards/content/arp4754a/",
+      "ARP4761": "https://www.sae.org/standards/content/arp4761/",
+      "DO-178C": "https://www.rtca.org/content/standards-guidance-materials",
+      "DO-254": "https://www.rtca.org/content/standards-guidance-materials",
+      "DO-326A": "https://www.rtca.org/content/standards-guidance-materials",
+      "ED-202A": "https://www.eurocae.net/"
+    },
+    "iso_standards": {
+      "ISO 15926": "https://www.iso.org/standard/29556.html",
+      "ISO 9001": "https://www.iso.org/iso-9001-quality-management.html",
+      "ISO 14001": "https://www.iso.org/iso-14001-environmental-management.html"
+    }
+  },
+  "internal_patterns": {
+    "requirements": {
+      "pattern": "RQ-\\d{2}-\\d{2}-\\d{3}",
+      "template": "../../REQUIREMENTS/{{match}}/README.md",
+      "description": "Internal requirement references"
+    },
+    "ata_chapters": {
+      "pattern": "ATA_\\d{2}-[A-Z_]+",
+      "base_paths": {
+        "ATA_00": "../O-ORGANIZATION",
+        "ATA_01": "../O-ORGANIZATION",
+        "ATA_02": "../I-INFRASTRUCTURES",
+        "ATA_04": "../O-ORGANIZATION",
+        "ATA_05": "../O-ORGANIZATION",
+        "ATA_28": "../T-TECHNOLOGY_AMEDEOPELLICCIA/C2-CIRCULAR_CRYOGENICS_SYSTEMS",
+        "ATA_95": "../N-NEURAL_NETWORKS_USERS_TRACEABILITY"
+      },
+      "description": "ATA chapter internal references"
+    },
+    "optin_axes": {
+      "O-ORGANIZATION": "../../OPT-IN_FRAMEWORK/O-ORGANIZATION/README.md",
+      "P-PROGRAM": "../../OPT-IN_FRAMEWORK/P-PROGRAM/README.md",
+      "T-TECHNOLOGY_AMEDEOPELLICCIA": "../../OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA/README.md",
+      "I-INFRASTRUCTURES": "../../OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/README.md",
+      "N-NEURAL_NETWORKS_USERS_TRACEABILITY": "../../OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/README.md"
+    }
+  },
+  "metadata": {
+    "last_updated": "2025-11-17",
+    "maintainer": "Amedeo Pelliccia",
+    "notes": [
+      "This configuration is used by the doc-meta-enforcer-mcp server",
+      "Patterns are converted to regex in the TypeScript code",
+      "URLs should be stable and official sources",
+      "Internal paths are relative to typical OPT-IN Framework structure"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/claude-desktop-config.json",
+  "mcpServers": {
+    "doc-meta-enforcer": {
+      "command": "node",
+      "args": [
+        "/absolute/path/to/AMPEL360-BWB-H2-Hy-E/tools/doc-meta-enforcer-mcp/dist/server.js"
+      ],
+      "env": {},
+      "metadata": {
+        "name": "AMPEL360 Document Meta Enforcer",
+        "description": "Enforces document control blocks and hyperlinks standards/regulations in AMPEL360 documentation",
+        "version": "0.1.0",
+        "author": "AI prompted by Amedeo Pelliccia"
+      }
+    }
+  },
+  "instructions": {
+    "doc-meta-enforcer": [
+      "Use the 'doc_control.enforce' tool for all documentation generation and editing tasks",
+      "Always include file path when available for better tracking",
+      "The tool is idempotent - safe to run multiple times on the same document",
+      "Standards automatically linked: EASA CS-25, FAA FAR 25, ICAO Annex, EU AI Act, DO-178C, ARP4754A, S1000D, ATA iSpec 2200",
+      "Internal references linked: ATA chapters, Requirements (RQ-XX-XX-XXX), OPT-IN Framework axes"
+    ]
+  }
+}
