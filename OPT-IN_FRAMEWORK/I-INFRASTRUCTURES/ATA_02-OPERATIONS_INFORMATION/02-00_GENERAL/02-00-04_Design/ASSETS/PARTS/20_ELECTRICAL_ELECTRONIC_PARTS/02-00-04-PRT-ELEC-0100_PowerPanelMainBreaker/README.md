@@ -36,7 +36,7 @@
 
 ### 3.3 Mass Properties
 
-* **Mass:** `5.2 kg` (per manufacturer datasheet)
+* **Mass:** `0.4 kg` (per manufacturer datasheet)
 * **Center of Gravity:** `Per manufacturer data`
 * **Moment of Inertia:** `Not applicable`
 
