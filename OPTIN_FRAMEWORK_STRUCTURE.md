@@ -1,5 +1,16 @@
 # OPT-IN Framework Structure
 
+> **⚠️ DEPRECATION NOTICE**
+> This document is deprecated as of 2025-11-17.
+> Please refer to [OPT-IN_FRAMEWORK_STANDARD.md](./OPT-IN_FRAMEWORK_STANDARD.md) for the current official specification.
+>
+> **Key differences:**
+> - Updated lifecycle folder naming: `XX-00-01_Overview` (not `01_OVERVIEW`)
+> - Cross-ATA bucket naming: `XX-10_Operations` (not just `10_Operations`)
+> - Current version: 1.2 (2025-11-17)
+
+---
+
 ## Overview
 This directory contains the complete OPT-IN Framework skeleton for the AMPEL360 Blended-Wing-Body (BWB) hydrogen-hybrid aircraft program. The framework provides a structured, certifiable approach to concurrent development and documentation of complex aerospace systems.
 

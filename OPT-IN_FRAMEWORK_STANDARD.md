@@ -1,8 +1,8 @@
 # OPT-IN Framework — Top-Level Standard & Cross-ATA Bucket Schema
 
-**Version:** 1.1  
-**Date:** 2025-11-13  
-**Status:** Active  
+**Version:** 1.2
+**Date:** 2025-11-17
+**Status:** Active
 **Owner:** AMPEL360 Documentation WG
 
 ---
@@ -291,7 +291,62 @@ ATA_XX-DESCRIPTION/
 
 ---
 
-## 5. Rules (Concise)
+## 5. Definitions (One-Liners)
+
+- **00 General** — General ATA information, audience-based instructions, regulations, governance, standards, configuration & change management.
+- **10 Operations** — Operational use, turnaround, ground/flight ops specifics for the ATA domain.
+- **20 Subsystems** — Functional systems of the domain; main engineering artefacts live here.
+- **30 Circularity** — Sustainability, repairability, reuse/recycle, LCA, carbon accounting.
+- **40 Software** — Embedded apps, controllers, diagnostics, analytics, ML/NN for the domain.
+- **50 Structures** — Frames, housings, supports, structural routes.
+- **60 Storages** — Tanks, reservoirs, accumulators, cryogenic storages (H₂, oils, etc.).
+- **70 Propulsion** — Propulsive interface items/couplings (when applicable).
+- **80 Energy** — Electrical/thermal energy conversion, distribution, interfaces.
+- **90 Schemas** — Data schemas, tables, catalogs, drawing indexes, SDS, training.
+
+---
+
+## 6. Example — ATA 79 (OIL)
+
+```
+ATA_79-OIL/
+├── 79-00_GENERAL/                    # 14 lifecycle folders (mandatory)
+│   ├── 79-00-01_Overview/
+│   ├── 79-00-02_Safety/
+│   ├── 79-00-03_Requirements/
+│   ├── 79-00-04_Design/
+│   ├── 79-00-05_Interfaces/
+│   ├── 79-00-06_Engineering/
+│   ├── 79-00-07_V_AND_V/
+│   ├── 79-00-08_Prototyping/
+│   ├── 79-00-09_Production_Planning/
+│   ├── 79-00-10_Certification/
+│   ├── 79-00-11_EIS_Versions_Tags/
+│   ├── 79-00-12_Services/
+│   ├── 79-00-13_Subsystems_Components/
+│   └── 79-00-14_Ops_Std_Sustain/
+├── 79-10_Operations/
+│   └── 79-10-01_Service_Turnaround_Lubes/
+├── 79-20_Subsystems/
+│   ├── 79-20-01_Engine_Oil_System/
+│   └── 79-20-02_Oil_Condition_Monitoring/
+├── 79-30_Circularity/
+│   └── 79-30-01_Waste_Oil_Recovery_LCA/
+├── 79-40_Software/
+│   └── 79-40-01_Oil_Controller_SW/
+├── 79-50_Structures/
+│   └── 79-50-01_Oil_Tank_Mounts/
+├── 79-60_Storages/
+│   └── 79-60-01_Oil_Tank_Aft/
+├── 79-70_Propulsion/                 # if applicable
+├── 79-80_Energy/                     # if applicable
+└── 79-90_Tables_Schemas_Diagrams/
+    └── 79-90-01_Fluid_Specs_Tables/
+```
+
+---
+
+## 7. Rules (Concise)
 
 1. **All chapters include XX-00_GENERAL with all 14 lifecycle folders.**
 2. **Buckets 10/20/30/40/50/60/70/80/90 are present in every chapter.**
@@ -306,7 +361,7 @@ ATA_XX-DESCRIPTION/
 
 ---
 
-## 6. CI Validation
+## 8. CI Validation
 
 The repository includes automated validation to enforce this structure:
 
@@ -320,7 +375,7 @@ The repository includes automated validation to enforce this structure:
 
 ---
 
-## 7. Summary
+## 9. Summary
 
 The OPT-IN Framework provides:
 
@@ -332,10 +387,11 @@ The OPT-IN Framework provides:
 
 ---
 
-## 8. Document Control
+## 10. Document Control
 
 | Version | Date       | Author                      | Changes                                               |
 |---------|------------|-----------------------------|-------------------------------------------------------|
+| 1.2     | 2025-11-17 | AMPEL360 Documentation WG   | Added concise definitions & ATA 79 example            |
 | 1.1     | 2025-11-13 | AMPEL360 Documentation WG   | Initial definition of OPT-IN Framework standard       |
 | 1.0     | 2025-11-12 | AMPEL360 Documentation WG   | Draft specification                                   |
 

@@ -1,7 +1,7 @@
 # OPT-IN Framework
 
-**Version:** 1.1  
-**Date:** 2025-11-13  
+**Version:** 1.2
+**Date:** 2025-11-17
 **Status:** Active
 
 ## Overview
@@ -200,11 +200,11 @@ For complete specification, see:
 
 ## Document Control
 
-- **Version**: 1.1
+- **Version**: 1.2
 - **Status**: Active
 - **Owner**: AMPEL360 Documentation WG
-- **Standard**: OPT-IN Framework v1.1
-- **Last Updated**: 2025-11-13
+- **Standard**: OPT-IN Framework v1.2
+- **Last Updated**: 2025-11-17
 
 ---
 
