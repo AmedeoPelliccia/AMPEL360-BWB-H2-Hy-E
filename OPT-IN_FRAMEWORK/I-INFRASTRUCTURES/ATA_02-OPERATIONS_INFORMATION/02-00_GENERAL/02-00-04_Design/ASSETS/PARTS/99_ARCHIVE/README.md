@@ -53,7 +53,7 @@ Each archive event creates a dated folder containing the archived part(s):
 ### 2. Archive Procedure
 
 1. Create a new archive folder: `02-00-04-PRT-ARCHIVE_YYYY-MM-DD_[Tag]/`
-2. Create an `README.md` in the archive folder documenting:
+2. Create a `README.md` in the archive folder documenting:
    - Date of archive
    - Parts archived
    - Reason for archiving
