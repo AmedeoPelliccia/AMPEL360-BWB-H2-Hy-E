@@ -239,11 +239,11 @@ Each traced item must include:
 ### 10.1 Alignment with External Standards
 
 This taxonomy aligns with:
-- **ISO/IEC 15288**: Systems lifecycle processes
-- **ARP4754A**: Development of civil aircraft systems
-- **DO-178C**: Software considerations in airborne systems
-- **ISO 9001**: Quality management systems
-- **EASA Part 21**: Certification specifications
+- **[ISO/IEC 15288](https://www.iso.org/standard/63711.html)**: Systems lifecycle processes
+- **[ARP4754A](https://www.sae.org/standards/content/arp4754a/)**: Development of civil aircraft systems
+- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)**: Software considerations in airborne systems
+- **[ISO 9001](https://www.iso.org/iso-9001-quality-management.html)**: Quality management systems
+- **[EASA Part 21](https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-7482012)**: Certification specifications
 
 ### 10.2 Digital Product Passport (DPP) Integration
 
@@ -310,9 +310,9 @@ Format: **MAJOR.MINOR.PATCH**
 - **Review Cycle**: Annually or upon major taxonomy change
 - **Next Review**: 2026-11-17
 - **Related Documents**:
-  - 95-00-09-00-001: Production Planning Strategy
-  - 95-00-09-00-004: Production Traceability Matrix
-  - AMPEL360_DOCUMENTATION_STANDARD.md
+  - [95-00-09-00-001: Production Planning Strategy](../95-00-09-00-001_Production_Planning_Strategy.md)
+  - [95-00-09-00-004: Production Traceability Matrix](./95-00-09-00-004_Production_Traceability_Matrix.csv)
+  - [AMPEL360_DOCUMENTATION_STANDARD.md](../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md)
 
 ---
 

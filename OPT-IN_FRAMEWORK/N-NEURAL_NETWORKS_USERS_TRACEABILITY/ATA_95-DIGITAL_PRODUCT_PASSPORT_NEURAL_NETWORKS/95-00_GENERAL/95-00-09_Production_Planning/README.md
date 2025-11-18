@@ -159,15 +159,15 @@ This folder is part of the **95-00_GENERAL** layer, which provides governance an
 ## Key Documents
 
 ### Core Strategy
-- **95-00-09-00-001**: Production Planning Strategy - Overall approach and framework
-- **95-00-09-00-002**: Industrialization Criteria - Requirements for production readiness
+- **[95-00-09-00-001](./95-00-09-00-001_Production_Planning_Strategy.md)**: Production Planning Strategy - Overall approach and framework
+- **[95-00-09-00-002](./95-00-09-00-002_Industrialization_Criteria.md)**: Industrialization Criteria - Requirements for production readiness
 
 ### Governance and Meta
-- **95-00-09-00-003**: Taxonomy and classification system
-- **95-00-09-00-004**: Traceability matrix linking production to other lifecycle phases
-- **95-00-09-00-005**: Registry of all industrialization components
-- **95-00-09-00-006**: Risk register for production activities
-- **95-00-09-00-007**: CAOS framework integration hooks
+- **[95-00-09-00-003](./00_META/95-00-09-00-003_Production_Planning_Taxonomy.md)**: Taxonomy and classification system
+- **[95-00-09-00-004](./00_META/95-00-09-00-004_Production_Traceability_Matrix.csv)**: Traceability matrix linking production to other lifecycle phases
+- **[95-00-09-00-005](./00_META/95-00-09-00-005_Industrialization_Registry.json)**: Registry of all industrialization components
+- **[95-00-09-00-006](./00_META/95-00-09-00-006_Risk_Register_for_Production.md)**: Risk register for production activities
+- **[95-00-09-00-007](./00_META/95-00-09-00-007_CAOS_Production_Hooks.md)**: CAOS framework integration hooks
 
 ### Production Areas
 1. **Model Freeze**: Process for freezing models and creating immutable baselines
@@ -196,9 +196,9 @@ Part of the canonical 14-folder lifecycle:
 
 ## Key Integration Points
 
-- **Inputs from**: V&V (Phase 07), Prototyping (Phase 08), Engineering (Phase 06)
-- **Outputs to**: Certification (Phase 10), EIS (Phase 11), Operations (Phase 14)
-- **Cross-references**: Safety (Phase 02), Requirements (Phase 03), Design (Phase 04)
+- **Inputs from**: [V&V (Phase 07)](../95-00-07_VV/README.md), [Prototyping (Phase 08)](../95-00-08_Prototyping/README.md), [Engineering (Phase 06)](../95-00-06_Engineering/README.md)
+- **Outputs to**: [Certification (Phase 10)](../95-00-10_Certification/README.md), [EIS (Phase 11)](../95-00-11_EIS_Versions_Tags/README.md), [Operations (Phase 14)](../95-00-14_Ops_Std_Sustain/README.md)
+- **Cross-references**: [Safety (Phase 02)](../95-00-02_Safety/README.md), [Requirements (Phase 03)](../95-00-03_Requirements/README.md), [Design (Phase 04)](../95-00-04_Design/README.md)
 
 ## Document Control
 

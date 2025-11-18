@@ -639,9 +639,9 @@ Hooks follow semantic versioning (X.Y.Z):
 - **Review Cycle**: Quarterly or upon CAOS framework updates
 - **Next Review**: 2026-02-17
 - **Related Documents**:
-  - 95-00-09-00-001: Production Planning Strategy
-  - CAOS_Architecture_Specification.md
-  - 95-00-09-06-001: DPP Production Strategy
+  - [95-00-09-00-001: Production Planning Strategy](../95-00-09-00-001_Production_Planning_Strategy.md)
+  - [CAOS Framework](../../../../../../CAOS/README.md)
+  - [95-00-09-06-001: DPP Production Strategy](../06_DPP_AND_BLOCKCHAIN_PRODUCTION/95-00-09-06-001_DPP_Prod_Strategy.md)
 
 ---
 

@@ -98,10 +98,10 @@ Multi-layered quality assurance:
 ### 5.3 Regulatory Compliance
 
 Full alignment with regulatory requirements:
-- EASA CS-25, CS-LNAA (where applicable)
-- FAA regulations for AI/ML systems
-- DO-178C adaptation for neural networks
-- Environmental regulations (REACH, RoHS)
+- [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes), [CS-LNAA](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-lnaa-large-non-aeroplane-aircraft) (where applicable)
+- [FAA](https://www.faa.gov/) regulations for AI/ML systems
+- [DO-178C](https://www.rtca.org/content/standards-guidance-materials) adaptation for neural networks
+- Environmental regulations ([REACH](https://echa.europa.eu/regulations/reach), [RoHS](https://environment.ec.europa.eu/topics/waste-and-recycling/rohs-directive_en))
 
 ### 5.4 Traceability and Transparency
 
@@ -146,18 +146,18 @@ Production planning as a living process:
 
 ### 7.1 Inputs from Previous Phases
 
-- Requirements (Phase 03): Validated requirements baseline
-- Design (Phase 04): Approved design artifacts
-- Engineering (Phase 06): Completed engineering models
-- V&V (Phase 07): Verification and validation reports
-- Prototyping (Phase 08): Prototype test results and lessons learned
+- [Requirements (Phase 03: 95-00-03)](../95-00-03_Requirements/README.md): Validated requirements baseline
+- [Design (Phase 04: 95-00-04)](../95-00-04_Design/README.md): Approved design artifacts
+- [Engineering (Phase 06: 95-00-06)](../95-00-06_Engineering/README.md): Completed engineering models
+- [V&V (Phase 07: 95-00-07)](../95-00-07_VV/README.md): Verification and validation reports
+- [Prototyping (Phase 08: 95-00-08)](../95-00-08_Prototyping/README.md): Prototype test results and lessons learned
 
 ### 7.2 Outputs to Subsequent Phases
 
-- Certification (Phase 10): Production evidence package
-- EIS (Phase 11): Production-ready systems
-- Services (Phase 12): Service procedures and support documentation
-- Ops/Std/Sustain (Phase 14): Operational and maintenance data
+- [Certification (Phase 10: 95-00-10)](../95-00-10_Certification/README.md): Production evidence package
+- [EIS (Phase 11: 95-00-11)](../95-00-11_EIS_Versions_Tags/README.md): Production-ready systems
+- [Services (Phase 12: 95-00-12)](../95-00-12_Services/README.md): Service procedures and support documentation
+- [Ops/Std/Sustain (Phase 14: 95-00-14)](../95-00-14_Ops_Std_Sustain/README.md): Operational and maintenance data
 
 ---
 
@@ -206,9 +206,9 @@ Production planning phase is complete when:
 - **Review Cycle**: Quarterly or upon major change
 - **Next Review**: 2026-02-17
 - **Related Documents**:
-  - 95-00-09-00-002: Industrialization Criteria
-  - 95-00-09-00-003: Production Planning Taxonomy
-  - 95-00-09-00-006: Risk Register for Production
+  - [95-00-09-00-002: Industrialization Criteria](./95-00-09-00-002_Industrialization_Criteria.md)
+  - [95-00-09-00-003: Production Planning Taxonomy](./00_META/95-00-09-00-003_Production_Planning_Taxonomy.md)
+  - [95-00-09-00-006: Risk Register for Production](./00_META/95-00-09-00-006_Risk_Register_for_Production.md)
 
 ---
 

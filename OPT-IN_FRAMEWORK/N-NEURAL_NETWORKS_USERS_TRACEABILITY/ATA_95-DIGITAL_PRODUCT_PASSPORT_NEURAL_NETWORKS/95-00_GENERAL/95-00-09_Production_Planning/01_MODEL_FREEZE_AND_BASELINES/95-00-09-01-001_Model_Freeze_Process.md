@@ -242,7 +242,7 @@ After freeze, changes are classified as:
 - Normal development cycle
 - New freeze for future version
 
-See document 95-00-09-01-003 for detailed change control process.
+See document [95-00-09-01-003: Change Control in Production](./95-00-09-01-003_Change_Control_in_Production.md) for detailed change control process.
 
 ---
 
@@ -308,7 +308,7 @@ Frozen baseline traces backward to:
 
 Model freeze is automated via CAOS hook: `CAOS.PROD.MODEL.FREEZE`
 
-See 95-00-09-00-007 for details.
+See [95-00-09-00-007: CAOS Production Hooks](../00_META/95-00-09-00-007_CAOS_Production_Hooks.md) for details.
 
 ### 9.2 Artifact Repository
 
@@ -365,9 +365,9 @@ Automated integrity checks run:
 - **Review Cycle**: Annually or upon process change
 - **Next Review**: 2026-11-17
 - **Related Documents**:
-  - 95-00-09-01-002: Baselined Model Documents
-  - 95-00-09-01-003: Change Control in Production
-  - 95-00-09-00-007: CAOS Production Hooks
+  - [95-00-09-01-002: Baselined Model Documents](./95-00-09-01-002_Baselined_Model_Documents.md)
+  - [95-00-09-01-003: Change Control in Production](./95-00-09-01-003_Change_Control_in_Production.md)
+  - [95-00-09-00-007: CAOS Production Hooks](../00_META/95-00-09-00-007_CAOS_Production_Hooks.md)
 
 ---
 

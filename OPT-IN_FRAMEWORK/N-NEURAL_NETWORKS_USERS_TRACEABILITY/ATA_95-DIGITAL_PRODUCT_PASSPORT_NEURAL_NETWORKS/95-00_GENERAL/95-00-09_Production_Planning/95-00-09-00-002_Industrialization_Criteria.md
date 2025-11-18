@@ -129,7 +129,7 @@ These criteria apply to:
 ### 5.1 Software Quality
 
 **Criteria:**
-- [ ] Code meets coding standards (DO-178C adapted)
+- [ ] Code meets coding standards ([DO-178C](https://www.rtca.org/content/standards-guidance-materials) adapted)
 - [ ] Code review is complete and approved
 - [ ] Static analysis shows no critical or high-severity issues
 - [ ] Unit test coverage exceeds 80%
@@ -339,7 +339,7 @@ These criteria apply to:
 ### 10.2 Standards Compliance
 
 **Criteria:**
-- [ ] Compliance with applicable standards is demonstrated (DO-178C, ARP4754A, etc.)
+- [ ] Compliance with applicable standards is demonstrated ([DO-178C](https://www.rtca.org/content/standards-guidance-materials), [ARP4754A](https://www.sae.org/standards/content/arp4754a/), etc.)
 - [ ] Standard deviations (if any) are documented and approved
 - [ ] Third-party compliance audits (if required) are complete
 - [ ] Compliance gaps are addressed
@@ -416,9 +416,9 @@ These criteria shall be reviewed and updated:
 - **Review Cycle**: Quarterly or upon major change
 - **Next Review**: 2026-02-17
 - **Related Documents**:
-  - 95-00-09-00-001: Production Planning Strategy
-  - 95-00-09-01-005: Production Readiness Checklist
-  - 95-00-09-00-003: Production Planning Taxonomy
+  - [95-00-09-00-001: Production Planning Strategy](./95-00-09-00-001_Production_Planning_Strategy.md)
+  - [95-00-09-01-005: Production Readiness Checklist](./01_MODEL_FREEZE_AND_BASELINES/95-00-09-01-005_Production_Readiness_Checklist.md)
+  - [95-00-09-00-003: Production Planning Taxonomy](./00_META/95-00-09-00-003_Production_Planning_Taxonomy.md)
 
 ---
 

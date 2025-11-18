@@ -58,7 +58,7 @@ Defined roles and responsibilities ensure clear ownership and accountability for
 - **Approver**: Chief Engineer, AI Systems
 - **Review Cycle**: Annually or upon significant change
 - **Next Review**: 2026-11-17
-- **Related Documents**: See Production Planning Strategy (95-00-09-00-001)
+- **Related Documents**: See [Production Planning Strategy (95-00-09-00-001)](../95-00-09-00-001_Production_Planning_Strategy.md)
 
 ---
 

@@ -420,9 +420,9 @@ Risks must be escalated to Production Planning Board when:
 - **Review Cycle**: Monthly for active risks, quarterly for register
 - **Next Review**: 2025-12-17
 - **Related Documents**:
-  - 95-00-09-00-001: Production Planning Strategy
-  - 95-00-02-00-001: Safety Management Plan
-  - 95-00-09-00-005: Industrialization Registry
+  - [95-00-09-00-001: Production Planning Strategy](../95-00-09-00-001_Production_Planning_Strategy.md)
+  - [95-00-02: Safety Management Plan](../../95-00-02_Safety/README.md)
+  - [95-00-09-00-005: Industrialization Registry](./95-00-09-00-005_Industrialization_Registry.json)
 
 ---
 
