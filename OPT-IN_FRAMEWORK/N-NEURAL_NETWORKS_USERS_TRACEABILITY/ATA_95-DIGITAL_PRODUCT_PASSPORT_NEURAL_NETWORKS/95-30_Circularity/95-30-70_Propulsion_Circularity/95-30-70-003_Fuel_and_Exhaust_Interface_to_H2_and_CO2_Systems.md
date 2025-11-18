@@ -24,7 +24,7 @@ This document details fuel and exhaust interface to h2 and co2 systems for the P
 
 ## 5. References
 
-- [95-30-70-001: Propulsion Circularity Overview
+- [95-30-70-001: Propulsion Circularity Overview](./95-30-70-001_Propulsion_Circularity_Overview.md)
 - [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---

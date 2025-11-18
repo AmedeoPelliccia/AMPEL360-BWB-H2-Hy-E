@@ -24,7 +24,7 @@ This document details air quality and recirculation loops for the Environmental 
 
 ## 5. References
 
-- [95-30-21-001: ECS Circularity Overview
+- [95-30-21-001: ECS Circularity Overview](./95-30-21-001_ECS_Circularity_Overview.md)
 - [95-30-00-006: Circularity KPI Definitions](../../00_META/95-30-00-006_Circularity_KPI_Definitions.md)
 
 ---

@@ -28,7 +28,7 @@ This document provides cross-references and integration points between the Elect
 
 ## 6. References
 
-- [95-30-24-001: Electrical_Power Circularity Overview
+- [95-30-24-001: Electrical_Power Circularity Overview](./95-30-24-001_Electrical_Power_Circularity_Overview.md)
 - [95-30-00-003: Cross-ATA Circularity Map](../../95-30-00-003_Cross_ATA_Circularity_Map.csv)
 - [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 

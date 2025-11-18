@@ -24,7 +24,7 @@ This document details end of life and second life use cases for the Energy Stora
 
 ## 5. References
 
-- [95-30-80-001: Energy_Storage Circularity Overview
+- [95-30-80-001: Energy_Storage Circularity Overview](./95-30-80-001_Energy_Storage_Circularity_Overview.md)
 - [95-30-00-005: Circularity Traceability Matrix](../../00_META/95-30-00-005_Circularity_Traceability_Matrix.csv)
 
 ---

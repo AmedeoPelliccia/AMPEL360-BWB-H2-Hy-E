@@ -24,7 +24,7 @@ This document details leak avoidance recovery and topup for the Hydraulic Power.
 
 ## 5. References
 
-- [95-30-29-001: Hydraulic Circularity Overview
+- [95-30-29-001: Hydraulic Circularity Overview](./95-30-29-001_Hydraulic_Circularity_Overview.md)
 - [95-30-00-005: Circularity Traceability Matrix](../../00_META/95-30-00-005_Circularity_Traceability_Matrix.csv)
 
 ---

@@ -24,7 +24,7 @@ This document details apu emissions and operational minimization for the APU.
 
 ## 5. References
 
-- [95-30-49-001: APU Circularity Overview
+- [95-30-49-001: APU Circularity Overview](./95-30-49-001_APU_Circularity_Overview.md)
 - [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---

@@ -24,7 +24,7 @@ This document details power distribution and recovery for the Electrical Power.
 
 ## 5. References
 
-- [95-30-24-001: Electrical_Power Circularity Overview
+- [95-30-24-001: Electrical_Power Circularity Overview](./95-30-24-001_Electrical_Power_Circularity_Overview.md)
 - [95-30-00-006: Circularity KPI Definitions](../../00_META/95-30-00-006_Circularity_KPI_Definitions.md)
 
 ---

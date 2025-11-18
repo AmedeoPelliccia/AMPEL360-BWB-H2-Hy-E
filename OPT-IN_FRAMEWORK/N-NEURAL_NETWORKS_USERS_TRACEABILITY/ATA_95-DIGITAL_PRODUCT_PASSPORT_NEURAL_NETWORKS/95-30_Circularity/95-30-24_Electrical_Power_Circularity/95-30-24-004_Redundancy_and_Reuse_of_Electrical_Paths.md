@@ -24,7 +24,7 @@ This document details redundancy and reuse of electrical paths for the Electrica
 
 ## 5. References
 
-- [95-30-24-001: Electrical_Power Circularity Overview
+- [95-30-24-001: Electrical_Power Circularity Overview](./95-30-24-001_Electrical_Power_Circularity_Overview.md)
 - [95-30-00-005: Circularity Traceability Matrix](../../00_META/95-30-00-005_Circularity_Traceability_Matrix.csv)
 
 ---

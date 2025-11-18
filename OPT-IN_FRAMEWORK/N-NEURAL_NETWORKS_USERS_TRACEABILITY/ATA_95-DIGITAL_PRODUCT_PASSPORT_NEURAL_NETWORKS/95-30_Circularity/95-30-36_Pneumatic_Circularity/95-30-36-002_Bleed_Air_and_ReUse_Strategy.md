@@ -24,7 +24,7 @@ This document details bleed air and reuse strategy for the Pneumatic.
 
 ## 5. References
 
-- [95-30-36-001: Pneumatic Circularity Overview
+- [95-30-36-001: Pneumatic Circularity Overview](./95-30-36-001_Pneumatic_Circularity_Overview.md)
 - [95-30-00-006: Circularity KPI Definitions](../../00_META/95-30-00-006_Circularity_KPI_Definitions.md)
 
 ---

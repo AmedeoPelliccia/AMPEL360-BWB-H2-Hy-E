@@ -24,7 +24,7 @@ This document details fuel transfer and minimum venting strategy for the Fuel Sy
 
 ## 5. References
 
-- [95-30-28-001: Fuel_H2 Circularity Overview
+- [95-30-28-001: Fuel_H2 Circularity Overview](./95-30-28-001_Fuel_H2_Circularity_Overview.md)
 - [95-30-00-005: Circularity Traceability Matrix](../../00_META/95-30-00-005_Circularity_Traceability_Matrix.csv)
 
 ---

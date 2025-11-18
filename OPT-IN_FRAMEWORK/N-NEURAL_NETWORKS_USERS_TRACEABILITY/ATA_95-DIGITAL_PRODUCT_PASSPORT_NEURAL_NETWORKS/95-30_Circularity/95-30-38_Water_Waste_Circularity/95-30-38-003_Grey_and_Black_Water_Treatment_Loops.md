@@ -24,7 +24,7 @@ This document details grey and black water treatment loops for the Water/Waste.
 
 ## 5. References
 
-- [95-30-38-001: Water_Waste Circularity Overview
+- [95-30-38-001: Water_Waste Circularity Overview](./95-30-38-001_Water_Waste_Circularity_Overview.md)
 - [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---

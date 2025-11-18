@@ -28,7 +28,7 @@ This document provides cross-references and integration points between the Fuel 
 
 ## 6. References
 
-- [95-30-28-001: Fuel_H2 Circularity Overview
+- [95-30-28-001: Fuel_H2 Circularity Overview](./95-30-28-001_Fuel_H2_Circularity_Overview.md)
 - [95-30-00-003: Cross-ATA Circularity Map](../../95-30-00-003_Cross_ATA_Circularity_Map.csv)
 - [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 

@@ -24,7 +24,7 @@ This document details charge discharge and recovery strategy for the Energy Stor
 
 ## 5. References
 
-- [95-30-80-001: Energy_Storage Circularity Overview
+- [95-30-80-001: Energy_Storage Circularity Overview](./95-30-80-001_Energy_Storage_Circularity_Overview.md)
 - [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---

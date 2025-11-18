@@ -24,7 +24,7 @@ This document details apu energy recovery and use for the APU.
 
 ## 5. References
 
-- [95-30-49-001: APU Circularity Overview
+- [95-30-49-001: APU Circularity Overview](./95-30-49-001_APU_Circularity_Overview.md)
 - [95-30-00-006: Circularity KPI Definitions](../../00_META/95-30-00-006_Circularity_KPI_Definitions.md)
 
 ---

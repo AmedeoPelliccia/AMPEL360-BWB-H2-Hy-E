@@ -24,7 +24,7 @@ This document details h₂ return and recompression loops for the Fuel System (H
 
 ## 5. References
 
-- [95-30-28-001: Fuel_H2 Circularity Overview
+- [95-30-28-001: Fuel_H2 Circularity Overview](./95-30-28-001_Fuel_H2_Circularity_Overview.md)
 - [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---

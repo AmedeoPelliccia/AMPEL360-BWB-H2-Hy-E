@@ -24,7 +24,7 @@ This document details fluid conditioning and filtering for the Hydraulic Power.
 
 ## 5. References
 
-- [95-30-29-001: Hydraulic Circularity Overview
+- [95-30-29-001: Hydraulic Circularity Overview](./95-30-29-001_Hydraulic_Circularity_Overview.md)
 - [95-30-00-008: CAOS Circularity Hooks](../../00_META/95-30-00-008_CAOS_Circularity_Hooks.md)
 
 ---

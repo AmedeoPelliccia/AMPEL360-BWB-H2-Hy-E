@@ -24,7 +24,7 @@ This document details thermal and energy recovery from propulsion for the Propul
 
 ## 5. References
 
-- [95-30-70-001: Propulsion Circularity Overview
+- [95-30-70-001: Propulsion Circularity Overview](./95-30-70-001_Propulsion_Circularity_Overview.md)
 - [95-30-00-006: Circularity KPI Definitions](../../00_META/95-30-00-006_Circularity_KPI_Definitions.md)
 
 ---

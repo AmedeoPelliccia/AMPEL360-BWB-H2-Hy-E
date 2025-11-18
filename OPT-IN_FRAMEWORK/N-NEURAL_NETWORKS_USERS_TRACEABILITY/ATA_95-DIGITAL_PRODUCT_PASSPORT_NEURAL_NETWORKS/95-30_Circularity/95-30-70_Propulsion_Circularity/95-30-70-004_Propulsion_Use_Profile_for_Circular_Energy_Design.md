@@ -24,7 +24,7 @@ This document details propulsion use profile for circular energy design for the 
 
 ## 5. References
 
-- [95-30-70-001: Propulsion Circularity Overview
+- [95-30-70-001: Propulsion Circularity Overview](./95-30-70-001_Propulsion_Circularity_Overview.md)
 - [95-30-00-005: Circularity Traceability Matrix](../../00_META/95-30-00-005_Circularity_Traceability_Matrix.csv)
 
 ---
