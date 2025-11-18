@@ -39,7 +39,7 @@
 
 ## I/O Mapping
 
-See: [ASSETS/[95-00-13-02-A-003_HW_IO_Mapping_Table](95-00-13-02-A-003_HW_IO_Mapping_Table.md).csv](ASSETS/95-00-13-02-A-003_HW_IO_Mapping_Table.csv)
+See: [ASSETS/95-00-13-02-A-003_HW_IO_Mapping_Table.csv](ASSETS/95-00-13-02-A-003_HW_IO_Mapping_Table.csv)
 
 ## Related Documents
 
