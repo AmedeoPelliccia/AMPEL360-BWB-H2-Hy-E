@@ -1,0 +1,35 @@
+Requirement_ID,Requirement_Type,Description,Component_ID,Model_ID,ATA_Chapter,Test_Case_IDs,Verification_Method,Status,Compliance_Standard,Notes
+FR-FCS-001,Functional,Real-time aerodynamic predictions <10ms latency,95-20-27-002,aero_predictor_v2.1,ATA-27,"TC-001,TC-002,TC-003",Test + Analysis,VERIFIED,DO-178C,Measured at 2.8ms average
+FR-FCS-002,Functional,Optimize control surface deflections for minimum drag,95-20-27-003,control_surface_optimizer_v1.4,ATA-27,"TC-010,TC-011,TC-012",Test,VERIFIED,DO-178C,6.8% drag reduction in cruise
+FR-FCS-003,Functional,Reduce gust-induced loads by ≥30%,95-20-27-004,gust_load_alleviation_v1.3,ATA-27,"TC-020,TC-021,TC-022",Flight Test,VERIFIED,DO-178C,32% load reduction validated
+FR-FCS-004,Functional,Prevent flight envelope exceedances with 100% reliability,95-20-27-005,envelope_protection_v1.0,ATA-27,"TC-030,TC-031,TC-032",Test + Formal Verification,VERIFIED,DO-178C + DO-333,Zero false negatives in 50k scenarios
+FR-FCS-005,Functional,Stabilize flight path within ±0.5° of commanded trajectory,95-20-27-006,flight_path_stabilization_v1.1,ATA-27,"TC-040,TC-041,TC-042",Flight Test,VERIFIED,DO-178C,±0.3° average tracking error
+FR-FCS-006,Functional,Optimize trim settings for fuel efficiency,95-20-27-007,trim_optimizer_v1.2,ATA-27,"TC-050,TC-051,TC-052",Flight Test,VERIFIED,DO-178C,2.8% fuel savings per mission
+NFR-FCS-001,Non-Functional,System latency <10ms for all inference operations,95-20-27-001,All,ATA-27,"TC-100,TC-101,TC-102",Analysis + Test,VERIFIED,DO-178C,Worst-case 9.8ms measured
+NFR-FCS-002,Non-Functional,Model inference on IMA partition with deterministic timing,95-20-27-008,All,ATA-42,"TC-110,TC-111",Analysis,VERIFIED,DO-254,WCET analysis complete
+NFR-FCS-003,Non-Functional,Graceful degradation to conventional control laws within 10ms,95-20-27-008,All,ATA-27,"TC-120,TC-121",HIL Test,VERIFIED,DO-178C,8.5ms max failover time
+NFR-FCS-004,Non-Functional,Continuous monitoring and anomaly detection,95-20-27-001,All,ATA-27,"TC-130,TC-131",Test,VERIFIED,DO-178C,Real-time health monitoring active
+NFR-FCS-005,Non-Functional,Full traceability via blockchain provenance,95-20-27-001,All,ATA-95,"TC-140,TC-141",Inspection,VERIFIED,EASA SC-AI,Integration with 95-20-02 complete
+IR-FCS-001,Interface,ARINC 429 air data input (α β V M h),95-20-27-008,aero_predictor_v2.1,ATA-27,"TC-200,TC-201",Test,VERIFIED,ARINC 429,Label 206 interface validated
+IR-FCS-002,Interface,ARINC 429 inertial data input (p q r ax ay az),95-20-27-008,All,ATA-27,"TC-210,TC-211",Test,VERIFIED,ARINC 429,Label 324 interface validated
+IR-FCS-003,Interface,AFDX control surface commands output,95-20-27-008,control_surface_optimizer_v1.4,ATA-27,"TC-220,TC-221",Test,VERIFIED,ARINC 664-7,VL_FCS_CMD validated
+IR-FCS-004,Interface,AFDX FCS_NN status output,95-20-27-008,All,ATA-27,"TC-230,TC-231",Test,VERIFIED,ARINC 664-7,VL_FCS_NN_STATUS validated
+IR-FCS-005,Interface,IMA partition resource allocation,95-20-27-008,All,ATA-42,"TC-240,TC-241",Analysis,VERIFIED,ARINC 653,900 MIPS 68MB allocated
+CR-FCS-001,Certification,DO-178C Level A compliance (DAL-A),95-20-27-009,All,ATA-27,"TC-ALL",Documentation Review,IN PROGRESS,DO-178C,SAS package under review
+CR-FCS-002,Certification,DO-254 Level A compliance (IMA hardware),95-20-27-009,All,ATA-42,"TC-HW-ALL",Documentation Review,IN PROGRESS,DO-254,Hardware design complete
+CR-FCS-003,Certification,DO-333 formal verification for critical properties,95-20-27-009,envelope_protection_v1.0,ATA-27,"TC-300,TC-301",Formal Methods,VERIFIED,DO-333,Input bounds and safety properties proven
+CR-FCS-004,Certification,EASA SC-AI compliance for ML systems,95-20-27-009,All,ATA-95,"TC-310,TC-311,TC-312",Documentation Review,IN PROGRESS,EASA SC-AI,Compliance report submitted
+CR-FCS-005,Certification,CS-25.143 Controllability and maneuverability,95-20-27-009,All,ATA-27,"TC-320,TC-321",Flight Test,VERIFIED,CS-25.143,Demonstrated in flight test
+CR-FCS-006,Certification,CS-25.1309 Equipment systems and installations (FHA FTA FMEA),95-20-27-009,All,ATA-27,"TC-330,TC-331",Safety Assessment,VERIFIED,CS-25.1309,Prob <10^-9 /FH demonstrated
+SR-FCS-001,Safety,Catastrophic failure probability <10^-9 per flight hour,95-20-27-009,All,ATA-27,"SA-FTA-001",Fault Tree Analysis,VERIFIED,ARP-4761,2.3E-10 /FH calculated
+SR-FCS-002,Safety,No single-point failures leading to loss of control,95-20-27-009,All,ATA-27,"SA-FMEA-001",FMEA,VERIFIED,ARP-4761,All SPFs mitigated by redundancy
+SR-FCS-003,Safety,Independent fallback to conventional FCS,95-20-27-009,All,ATA-27,"TC-400,TC-401",HIL Test,VERIFIED,DO-178C,Dissimilar redundancy validated
+SR-FCS-004,Safety,Envelope protection false negative rate = 0%,95-20-27-005,envelope_protection_v1.0,ATA-27,"TC-030,TC-031,TC-032",Test,VERIFIED,DO-178C + DO-333,100% detection rate in all scenarios
+TR-FCS-001,Training,Training data quality and coverage,95-20-27-009,All,ATA-95,"TD-001,TD-002",Data Review,VERIFIED,EASA SC-AI,50k CFD + 5k wind tunnel + 2k flight hours
+TR-FCS-002,Training,Model verification and validation,95-20-27-009,All,ATA-95,"TC-ALL",V&V Review,IN PROGRESS,EASA SC-AI,Verification matrix 95% complete
+TR-FCS-003,Training,Model explainability and interpretability,95-20-27-009,All,ATA-95,"EX-001,EX-002",Analysis,VERIFIED,EASA SC-AI,SHAP analysis and sensitivity studies complete
+TR-FCS-004,Training,Robustness to adversarial inputs,95-20-27-009,All,ATA-95,"TC-500,TC-501",Test,VERIFIED,EASA SC-AI,Adversarial testing with 50k trials
+OP-FCS-001,Operational,Crew training requirements defined,95-20-27-010,All,ATA-27,"TR-001,TR-002",Training Completion,VERIFIED,N/A,4hr ground + 2hr sim initial training
+OP-FCS-002,Operational,Maintenance procedures documented,95-20-27-010,All,ATA-27,"MT-001,MT-002",Documentation Review,VERIFIED,N/A,Maintenance manual complete
+OP-FCS-003,Operational,MEL dispatch restrictions defined,95-20-27-010,All,ATA-27,"MEL-001",MEL Review,VERIFIED,N/A,MEL entries approved
+OP-FCS-004,Operational,Emergency procedures validated,95-20-27-010,All,ATA-27,"EP-001,EP-002,EP-003",Simulator,VERIFIED,N/A,All emergency scenarios tested

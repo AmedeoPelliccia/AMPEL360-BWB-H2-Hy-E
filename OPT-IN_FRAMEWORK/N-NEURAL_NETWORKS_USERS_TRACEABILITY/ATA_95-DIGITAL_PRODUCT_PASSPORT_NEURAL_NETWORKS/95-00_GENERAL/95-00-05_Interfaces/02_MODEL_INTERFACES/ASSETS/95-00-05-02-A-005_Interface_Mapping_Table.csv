@@ -1,0 +1,4 @@
+Model_Interface,Input_Schema,Output_Schema,Latency_Target_ms,Throughput_req_s
+H2_Predictor_IF,H2_Sensor_Schema_v1,Prediction_Schema_v1,100,10
+Anomaly_Detector_IF,FlightData_Schema_v2,Anomaly_Schema_v1,50,20
+Maintenance_Predictor_IF,ComponentHealth_Schema_v1,MaintenanceAlert_Schema_v1,200,5

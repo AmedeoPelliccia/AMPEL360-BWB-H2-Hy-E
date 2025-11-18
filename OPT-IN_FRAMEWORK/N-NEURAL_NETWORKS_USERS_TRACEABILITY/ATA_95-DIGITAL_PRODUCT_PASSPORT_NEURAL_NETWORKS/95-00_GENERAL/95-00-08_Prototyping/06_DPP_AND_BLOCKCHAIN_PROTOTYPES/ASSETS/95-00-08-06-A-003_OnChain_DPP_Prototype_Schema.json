@@ -1,0 +1,14 @@
+{
+  "model_record": {
+    "model_id": "string",
+    "version": "string",
+    "hash": "bytes32",
+    "timestamp": "uint256",
+    "owner": "address",
+    "metadata": {
+      "name": "string",
+      "framework": "string",
+      "performance_metrics": "object"
+    }
+  }
+}

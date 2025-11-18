@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Flight Phase Data Schema",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "phase": {
+      "type": "string",
+      "enum": ["ground", "taxi", "takeoff", "climb", "cruise", "descent", "approach", "landing"]
+    },
+    "altitude_m": {
+      "type": "number"
+    },
+    "airspeed_kt": {
+      "type": "number",
+      "minimum": 0
+    },
+    "vertical_speed_fpm": {
+      "type": "number"
+    }
+  },
+  "required": ["timestamp", "phase", "altitude_m", "airspeed_kt"]
+}

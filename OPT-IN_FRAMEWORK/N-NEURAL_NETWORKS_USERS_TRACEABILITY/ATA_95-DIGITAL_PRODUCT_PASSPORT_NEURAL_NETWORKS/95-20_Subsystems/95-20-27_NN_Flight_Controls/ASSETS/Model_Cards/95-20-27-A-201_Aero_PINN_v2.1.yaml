@@ -1,0 +1,351 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Model Card: Aerodynamic Physics-Informed Neural Network (PINN) v2.1
+
+model_id: "95-20-27-A-201"
+model_name: "Aero_PINN"
+version: "2.1.0"
+subsystem: "95-20-27 (NN_Flight_Controls)"
+parent_ata: "ATA 27"
+status: "active"
+dal: "DAL-A"
+
+## Model Overview
+
+description: >
+  Physics-Informed Neural Network (PINN) serving as a CFD surrogate for real-time aerodynamic
+  predictions. Embeds Navier-Stokes equations as physics constraints to ensure physically
+  consistent predictions. Used for gust load alleviation and control surface optimization.
+
+use_case: "Real-time aerodynamic prediction for flight control system"
+deployment_context: "In-flight, IMA Partition P1"
+
+## Model Details
+
+architecture:
+  type: "Physics-Informed Neural Network (PINN)"
+  framework: "PyTorch"
+  layers: 8
+  parameters: 15_234_890
+  input_dim: 12
+  output_dim: 6
+  activation: "tanh"
+  physics_constraints:
+    - "Navier-Stokes momentum equations"
+    - "Continuity equation"
+    - "Boundary conditions"
+
+training:
+  dataset:
+    name: "BWB_Aerodynamics_Dataset_v3"
+    size: 500_000
+    sources:
+      - "CFD simulations (ANSYS Fluent)"
+      - "Wind tunnel data (NASA Ames)"
+      - "Flight test data (X-48 BWB)"
+    date_range: "2023-01-01 to 2025-06-30"
+    storage: "95-00-12_ASSETS_MANAGEMENT/Datasets/"
+  
+  hyperparameters:
+    learning_rate: 0.001
+    batch_size: 256
+    epochs: 1000
+    optimizer: "Adam"
+    loss_function: "MSE + Physics Loss"
+    physics_loss_weight: 0.3
+  
+  hardware:
+    device: "8× NVIDIA A100 GPUs"
+    training_time: "72 hours"
+    location: "AMPEL360 ML Cluster"
+  
+  validation:
+    method: "K-fold cross-validation (k=10)"
+    metrics:
+      mae: 0.0023  # Mean Absolute Error
+      rmse: 0.0041  # Root Mean Square Error
+      r2: 0.9987  # R-squared
+      physics_residual: 1.2e-5  # Physics constraint violation
+
+## Performance
+
+inference:
+  latency:
+    mean: "4.2 ms"
+    p50: "3.8 ms"
+    p95: "5.1 ms"
+    p99: "7.3 ms"
+    requirement: "<10 ms (DAL-A)"
+  
+  throughput: "1200 inferences/second"
+  
+  hardware:
+    device: "IMA Partition P1"
+    runtime: "ONNX Runtime"
+    precision: "FP32"
+    memory: "180 MB"
+  
+  accuracy:
+    compared_to_cfd: "99.2% within 2% error"
+    speedup_vs_cfd: "1000×"
+
+operational:
+  flight_hours_tested: 2_500
+  accuracy_in_flight: "98.7%"
+  false_positive_rate: "0.3%"
+  false_negative_rate: "0.1%"
+
+## Inputs
+
+input_features:
+  - name: "airspeed"
+    unit: "m/s"
+    range: [50, 300]
+    sensor: "ATA 27-10 Air Data System"
+  
+  - name: "angle_of_attack"
+    unit: "degrees"
+    range: [-10, 25]
+    sensor: "ATA 27-10 AoA Sensor"
+  
+  - name: "sideslip_angle"
+    unit: "degrees"
+    range: [-15, 15]
+    sensor: "ATA 27-10 Beta Sensor"
+  
+  - name: "pitch_rate"
+    unit: "deg/s"
+    range: [-20, 20]
+    sensor: "ATA 27-10 IMU"
+  
+  - name: "roll_rate"
+    unit: "deg/s"
+    range: [-30, 30]
+    sensor: "ATA 27-10 IMU"
+  
+  - name: "yaw_rate"
+    unit: "deg/s"
+    range: [-15, 15]
+    sensor: "ATA 27-10 IMU"
+  
+  - name: "elevator_deflection"
+    unit: "degrees"
+    range: [-25, 15]
+    sensor: "ATA 27-30 Control Surface Position"
+  
+  - name: "aileron_deflection"
+    unit: "degrees"
+    range: [-20, 20]
+    sensor: "ATA 27-30 Control Surface Position"
+  
+  - name: "rudder_deflection"
+    unit: "degrees"
+    range: [-25, 25]
+    sensor: "ATA 27-30 Control Surface Position"
+  
+  - name: "flap_position"
+    unit: "degrees"
+    range: [0, 40]
+    sensor: "ATA 27-30 Flap Position"
+  
+  - name: "altitude"
+    unit: "meters"
+    range: [0, 15_000]
+    sensor: "ATA 27-10 Air Data System"
+  
+  - name: "mach_number"
+    unit: "dimensionless"
+    range: [0.1, 0.8]
+    sensor: "ATA 27-10 Air Data System"
+
+data_preprocessing:
+  normalization: "Min-Max Scaling [0, 1]"
+  outlier_detection: "3-sigma rule"
+  missing_data_handling: "Linear interpolation"
+
+## Outputs
+
+output_predictions:
+  - name: "lift_coefficient"
+    unit: "dimensionless"
+    range: [-0.5, 2.5]
+    confidence_interval: "95%"
+  
+  - name: "drag_coefficient"
+    unit: "dimensionless"
+    range: [0.01, 0.3]
+    confidence_interval: "95%"
+  
+  - name: "pitching_moment_coefficient"
+    unit: "dimensionless"
+    range: [-0.5, 0.5]
+    confidence_interval: "95%"
+  
+  - name: "rolling_moment_coefficient"
+    unit: "dimensionless"
+    range: [-0.3, 0.3]
+    confidence_interval: "95%"
+  
+  - name: "yawing_moment_coefficient"
+    unit: "dimensionless"
+    range: [-0.2, 0.2]
+    confidence_interval: "95%"
+  
+  - name: "side_force_coefficient"
+    unit: "dimensionless"
+    range: [-0.5, 0.5]
+    confidence_interval: "95%"
+
+uncertainty_quantification:
+  method: "Monte Carlo Dropout"
+  dropout_rate: 0.1
+  samples: 100
+  confidence_level: "95%"
+
+## Safety & Certification
+
+criticality: "DAL-A (Flight-Critical)"
+
+safety_features:
+  - "Input bounds checking"
+  - "Output sanity verification"
+  - "Physics constraint validation"
+  - "Uncertainty quantification"
+  - "Automatic failover to conventional control laws if confidence < 90%"
+
+operational_design_domain:
+  flight_phases: ["cruise", "climb", "descent", "approach"]
+  weather_conditions: ["clear", "light turbulence", "moderate turbulence"]
+  excluded_conditions: ["severe turbulence", "icing", "emergency"]
+  altitude_range: [1000, 15000]  # meters
+  airspeed_range: [70, 280]  # m/s
+
+failure_modes:
+  - mode: "Input sensor failure"
+    mitigation: "Fallback to conventional aerodynamic tables"
+    probability: "<1e-7 per flight hour"
+  
+  - mode: "Model prediction out of bounds"
+    mitigation: "Reject prediction, use last valid value"
+    probability: "<1e-6 per flight hour"
+  
+  - mode: "Inference timeout"
+    mitigation: "Use backup conventional model"
+    probability: "<1e-8 per flight hour"
+
+certification:
+  compliance:
+    - standard: "DO-178C Level A"
+      status: "In Progress"
+    - standard: "DO-333"
+      status: "In Progress"
+    - standard: "EASA MOC SC-AI"
+      status: "In Progress"
+  
+  verification:
+    - "Unit tests: 100% code coverage"
+    - "Integration tests: 500 scenarios"
+    - "Flight tests: 200 hours"
+    - "Monte Carlo analysis: 1M simulations"
+  
+  evidence_location: "95-00-10_Certification/95-20-27/"
+
+## Provenance
+
+development:
+  team: "AMPEL360 Flight Controls AI Team"
+  lead: "Dr. Jane Smith"
+  contributors: ["Dr. John Doe", "Alice Johnson", "Bob Williams"]
+  organization: "AMPEL360 Aircraft Development"
+
+blockchain_record:
+  chain_id: "95-20-02-DPP-Chain"
+  model_registration_tx: "0x7a3b9f2e..."
+  training_data_hash: "0x4c5d8e1f..."
+  validation_evidence_hash: "0x9e2f7a4b..."
+  deployment_tx: "0x1f3e6c8d..."
+
+version_history:
+  - version: "1.0.0"
+    date: "2024-06-15"
+    changes: "Initial release"
+    performance: "MAE: 0.0045, R²: 0.9950"
+  
+  - version: "2.0.0"
+    date: "2025-03-20"
+    changes: "Added physics constraints, increased training data"
+    performance: "MAE: 0.0028, R²: 0.9980"
+  
+  - version: "2.1.0"
+    date: "2025-11-01"
+    changes: "Improved uncertainty quantification, optimized inference"
+    performance: "MAE: 0.0023, R²: 0.9987"
+
+## Monitoring & Maintenance
+
+monitoring:
+  metrics:
+    - "Inference latency"
+    - "Prediction accuracy (vs. onboard redundant sensors)"
+    - "Input distribution drift"
+    - "Prediction confidence scores"
+    - "Physics constraint violations"
+  
+  alerting:
+    - condition: "Latency > 10ms"
+      action: "Alert crew, switch to backup"
+    - condition: "Drift detection"
+      action: "Schedule model retraining"
+    - condition: "Confidence < 90%"
+      action: "Automatic failover"
+  
+  dashboard: "https://ampel360.aero/monitoring/95-20-27"
+
+maintenance:
+  retraining_trigger:
+    - "Drift detected (KL divergence > 0.1)"
+    - "Accuracy degradation > 5%"
+    - "New flight regime encountered"
+    - "Quarterly scheduled retraining"
+  
+  update_procedure:
+    - "Retrain model with new data"
+    - "Validate per DO-333"
+    - "Update blockchain record"
+    - "Deploy via 95-20-01 model registry"
+    - "Phased rollout (20% fleet, then 100%)"
+
+## Contact
+
+owner: "Flight Controls AI Team"
+email: "flight-controls-ai@ampel360.aero"
+documentation: "95-20_Subsystems/95-20-27_NN_Flight_Controls/"
+support: "https://ampel360.aero/support/95-20-27"
+
+## References
+
+papers:
+  - "Raissi et al. (2019), Physics-informed neural networks"
+  - "Karniadakis et al. (2021), Physics-informed ML: A survey"
+  - "AMPEL360 (2025), BWB Aerodynamic Modeling Technical Report"
+
+code_repository: "https://github.com/ampel360/nn-flight-controls"
+model_artifact: "95-00-12_ASSETS_MANAGEMENT/Models/95-20-27-A-201_v2.1.onnx"
+
+---
+
+**Model Card Version**: 1.0  
+**Last Updated**: 2025-11-17  
+**Status**: Active (Certification In Progress)

@@ -1,0 +1,326 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# 95-00-06-02-A-101: Training Profile for HPC Cluster
+# High-Performance Computing training configuration for neural network models
+# Platform: On-premise HPC cluster with NVIDIA A100 GPUs
+
+metadata:
+  profile_name: "HPC_Training_Profile"
+  version: "1.0"
+  created: "2025-11-17"
+  author: "AMPEL360 ML Team"
+  description: "Training configuration for large-scale neural network training on HPC cluster"
+  target_platform: "HPC_Cluster"
+  gpu_type: "NVIDIA_A100_80GB"
+
+# Model configuration
+model:
+  architecture: "transformer"
+  hidden_size: 512
+  num_layers: 12
+  num_attention_heads: 8
+  intermediate_size: 2048
+  dropout: 0.1
+  attention_dropout: 0.1
+  activation: "gelu"
+  max_position_embeddings: 1024
+  
+# Training hyperparameters
+training:
+  # Batch configuration
+  batch_size: 128                    # Per-GPU batch size
+  gradient_accumulation_steps: 4     # Effective batch = 128 * 4 * num_gpus
+  
+  # Optimizer
+  optimizer: "adam"
+  learning_rate: 0.001
+  weight_decay: 0.01
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-8
+  max_grad_norm: 1.0                 # Gradient clipping
+  
+  # Learning rate schedule
+  scheduler:
+    type: "cosine_annealing"
+    warmup_steps: 1000
+    T_max: 100000                    # Total training steps
+    eta_min: 1.0e-6
+    
+  # Training loop
+  max_epochs: 100
+  max_steps: 100000                  # Override epochs if reached first
+  eval_frequency: 1000               # Evaluate every N steps
+  save_frequency: 5000               # Save checkpoint every N steps
+  log_frequency: 100                 # Log metrics every N steps
+  
+  # Loss function
+  loss:
+    type: "mse"                      # Mean Squared Error for regression
+    reduction: "mean"
+    
+  # Regularization
+  dropout: 0.1
+  label_smoothing: 0.0
+  
+  # Mixed precision training
+  mixed_precision:
+    enabled: true
+    precision: "fp16"                # fp16 or bf16
+    loss_scale: "dynamic"
+    
+  # Checkpointing
+  checkpointing:
+    enabled: true
+    frequency: 1000                  # Save every N steps
+    keep_last_n: 5                   # Keep only last 5 checkpoints
+    save_optimizer_state: true
+    save_best_only: false
+    
+  # Early stopping
+  early_stopping:
+    enabled: true
+    patience: 10                     # Stop if no improvement for N evals
+    min_delta: 0.001                 # Minimum improvement threshold
+    monitor: "val_loss"
+    mode: "min"
+
+# Data configuration
+data:
+  # Dataset paths
+  train_data: "/data/ampel360/flight_data_v3.1/train/"
+  val_data: "/data/ampel360/flight_data_v3.1/val/"
+  test_data: "/data/ampel360/flight_data_v3.1/test/"
+  
+  # Data loading
+  num_workers: 16                    # DataLoader workers per GPU
+  pin_memory: true
+  prefetch_factor: 2
+  persistent_workers: true
+  
+  # Data preprocessing
+  preprocessing:
+    normalize: true
+    mean: [0.0, 0.0, 0.0]           # Per-channel mean
+    std: [1.0, 1.0, 1.0]            # Per-channel std
+    clip_range: [-3.0, 3.0]         # Clip outliers
+    
+  # Data augmentation
+  augmentation:
+    enabled: true
+    noise_std: 0.01
+    temporal_jitter_ms: 5
+    rotation_degrees: 0
+    
+  # Input/output specifications
+  input_shape: [100, 32]             # (sequence_length, features)
+  output_shape: [10]                 # Output dimension
+  
+# Distributed training
+distributed:
+  enabled: true
+  backend: "nccl"                    # NCCL for GPU, Gloo for CPU
+  init_method: "env://"
+  world_size: 4                      # Number of GPUs
+  rank: null                         # Set by launcher
+  local_rank: null                   # Set by launcher
+  
+# Resource allocation
+resources:
+  # Compute resources
+  num_gpus: 4
+  num_cpus_per_gpu: 8
+  memory_per_gpu_gb: 80
+  
+  # Storage
+  scratch_dir: "/scratch/ampel360/training/"
+  output_dir: "/results/ampel360/models/"
+  
+  # Job scheduling
+  queue: "gpu_large"
+  wall_time: "48:00:00"              # Max 48 hours
+  job_name: "ampel360_training"
+
+# Logging and monitoring
+logging:
+  # Console logging
+  console_log_level: "INFO"
+  log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # File logging
+  log_file: "training.log"
+  log_dir: "/results/ampel360/logs/"
+  
+  # TensorBoard
+  tensorboard:
+    enabled: true
+    log_dir: "/results/ampel360/tensorboard/"
+    log_images: false
+    log_histograms: true
+    
+  # MLflow
+  mlflow:
+    enabled: true
+    tracking_uri: "http://mlflow.ampel360.local:5000"
+    experiment_name: "flight_control_transformer"
+    
+  # Weights & Biases
+  wandb:
+    enabled: true
+    project: "ampel360-flight-control"
+    entity: "ampel360-ml"
+    tags: ["transformer", "hpc", "production"]
+
+# Monitoring and alerts
+monitoring:
+  # Performance monitoring
+  track_gpu_utilization: true
+  track_memory_usage: true
+  track_throughput: true
+  
+  # Health checks
+  health_check_interval: 300         # Seconds
+  stall_detection_threshold: 600     # Alert if no progress for N seconds
+  
+  # Alerting
+  alerts:
+    enabled: true
+    email: "ml-team@ampel360.aero"
+    slack_webhook: "https://hooks.slack.com/services/..."
+    
+# Reproducibility
+reproducibility:
+  seed: 42
+  deterministic: false               # true for reproducibility, false for performance
+  benchmark: true                    # cuDNN benchmark mode
+
+# Debugging
+debug:
+  enabled: false
+  detect_anomaly: false              # PyTorch autograd anomaly detection
+  profile: false
+  profile_steps: [100, 110]          # Profile steps 100-110
+  
+# Fault tolerance
+fault_tolerance:
+  # Automatic restart
+  auto_restart: true
+  max_restarts: 3
+  restart_delay: 60                  # Seconds
+  
+  # Checkpoint recovery
+  resume_from_checkpoint: true
+  checkpoint_path: null              # Auto-detect latest if null
+
+# Environment
+environment:
+  # Python environment
+  python_version: "3.10"
+  virtual_env: "/opt/ampel360/venv/ml"
+  
+  # CUDA
+  cuda_version: "12.1"
+  cudnn_version: "8.9"
+  
+  # PyTorch
+  pytorch_version: "2.1.0"
+  
+  # Additional dependencies
+  requirements_file: "requirements.txt"
+
+# Validation
+validation:
+  # Validation strategy
+  strategy: "epoch_end"              # epoch_end, step_interval, time_interval
+  
+  # Metrics to track
+  metrics:
+    - "loss"
+    - "accuracy"
+    - "mae"
+    - "rmse"
+    
+  # Save best model based on
+  save_best_metric: "val_loss"
+  save_best_mode: "min"
+
+# Post-training
+post_training:
+  # Model export
+  export:
+    enabled: true
+    formats: ["onnx", "torchscript"]
+    onnx_opset: 17
+    
+  # Model optimization
+  optimize:
+    enabled: false                   # Do in separate optimization phase
+    quantization: "int8"
+    pruning: false
+    
+  # Evaluation on test set
+  final_evaluation:
+    enabled: true
+    test_metrics: ["loss", "accuracy", "latency"]
+    
+  # Report generation
+  report:
+    enabled: true
+    format: "pdf"
+    include_plots: true
+    include_confusion_matrix: true
+
+# Safety and compliance
+compliance:
+  # Data privacy
+  anonymize_logs: true
+  remove_pii: true
+  
+  # Audit trail
+  track_data_lineage: true
+  track_model_provenance: true
+  
+  # Regulatory
+  easa_ai_compliant: true
+  do_178c_level: "B"
+
+# Notes
+notes: |
+  This configuration is optimized for HPC cluster training with 4x NVIDIA A100 GPUs.
+  Expected training time: ~12-15 hours for 100 epochs.
+  Memory footprint: ~40GB per GPU with batch size 128.
+  
+  For modifications:
+  - Adjust batch_size and gradient_accumulation_steps for memory constraints
+  - Increase num_workers if I/O is bottleneck
+  - Enable deterministic mode for reproducibility (slower)
+  - Adjust learning_rate and warmup_steps for convergence
+
+---
+# END OF CONFIGURATION

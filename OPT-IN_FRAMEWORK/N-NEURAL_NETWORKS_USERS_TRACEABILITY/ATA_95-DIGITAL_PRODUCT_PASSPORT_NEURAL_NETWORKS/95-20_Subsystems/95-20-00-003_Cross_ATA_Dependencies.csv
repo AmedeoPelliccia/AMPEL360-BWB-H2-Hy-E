@@ -1,0 +1,100 @@
+Subsystem_ID,Subsystem_Name,Depends_On_Subsystem,Depends_On_ATA,Dependency_Type,Interface_Protocol,Criticality,Notes
+95-20-01,NN_Core_Platform,95-20-02,ATA 95,Service,REST/gRPC,DAL-A,Model provenance verification
+95-20-01,NN_Core_Platform,95-00-11,ATA 95,Data,Git/DVC,DAL-A,Version control integration
+95-20-01,NN_Core_Platform,95-20-42,ATA 42,Compute,ARINC 653,DAL-A,Hosted on IMA infrastructure
+95-20-02,NN_DPP_Blockchain,95-20-01,ATA 95,Service,Smart Contract,DAL-B,Model registration events
+95-20-02,NN_DPP_Blockchain,95-00-12,ATA 95,Data,GraphQL,DAL-B,Asset management traceability
+95-20-02,NN_DPP_Blockchain,95-90,ATA 95,Data,IPFS,DAL-B,Evidence storage schemas
+95-20-21,NN_ECS,95-20-01,ATA 95,Service,gRPC,DAL-C,Model inference runtime
+95-20-21,NN_ECS,95-20-02,ATA 95,Service,Smart Contract,DAL-C,Model provenance
+95-20-21,NN_ECS,ATA 21-30,ATA 21,Sensor,ARINC 429,DAL-C,Temperature/pressure/humidity sensors
+95-20-21,NN_ECS,ATA 21-40,ATA 21,Control,ARINC 429,DAL-C,HVAC control outputs
+95-20-21,NN_ECS,95-20-42,ATA 42,Compute,ARINC 653,DAL-C,IMA partition P3
+95-20-21,NN_ECS,95-20-45,ATA 45,Data,REST,DAL-C,Performance monitoring
+95-20-21,NN_ECS,95-20-31,ATA 31,Data,ARINC 717,DAL-C,Event logging
+95-20-21,NN_ECS,95-20-80,ATA 80,Data,AFDX,DAL-C,Power consumption coordination
+95-20-27,NN_Flight_Controls,95-20-01,ATA 95,Service,gRPC,DAL-A,Model inference runtime (flight-critical)
+95-20-27,NN_Flight_Controls,95-20-02,ATA 95,Service,Smart Contract,DAL-A,Model provenance (certification)
+95-20-27,NN_Flight_Controls,ATA 27-10,ATA 27,Sensor,ARINC 429,DAL-A,Air data/IMU inputs
+95-20-27,NN_Flight_Controls,ATA 27-30,ATA 27,Control,ARINC 429,DAL-A,Control surface commands
+95-20-27,NN_Flight_Controls,ATA 27-40,ATA 27,Safety,ARINC 429,DAL-A,Conventional law monitoring
+95-20-27,NN_Flight_Controls,95-20-42,ATA 42,Compute,ARINC 653,DAL-A,IMA partition P1 (highest priority)
+95-20-27,NN_Flight_Controls,95-20-45,ATA 45,Data,REST,DAL-A,Performance monitoring
+95-20-27,NN_Flight_Controls,95-20-31,ATA 31,Data,ARINC 717,DAL-A,Flight data recording
+95-20-27,NN_Flight_Controls,95-20-53,ATA 53,Data,AFDX,DAL-A,Fuselage loads
+95-20-27,NN_Flight_Controls,95-20-57,ATA 57,Data,AFDX,DAL-A,Wing loads and flutter data
+95-20-27,NN_Flight_Controls,95-20-70,ATA 70,Data,AFDX,DAL-A,Thrust vector coordination
+95-20-28,NN_Fuel_System,95-20-01,ATA 95,Service,gRPC,DAL-B,Model inference runtime
+95-20-28,NN_Fuel_System,95-20-02,ATA 95,Service,Smart Contract,DAL-B,Model provenance
+95-20-28,NN_Fuel_System,ATA 28-10,ATA 28,Sensor,ARINC 429,DAL-B,H2 tank level/temp/pressure
+95-20-28,NN_Fuel_System,ATA 28-30,ATA 28,Control,ARINC 429,DAL-B,Pump/valve control
+95-20-28,NN_Fuel_System,ATA 28-60,ATA 28,Safety,ARINC 429,DAL-B,Leak detection/boiloff management
+95-20-28,NN_Fuel_System,95-20-42,ATA 42,Compute,ARINC 653,DAL-B,IMA partition P2
+95-20-28,NN_Fuel_System,95-20-45,ATA 45,Data,REST,DAL-B,Tank health monitoring
+95-20-28,NN_Fuel_System,95-20-31,ATA 31,Data,ARINC 717,DAL-B,Fuel data recording
+95-20-28,NN_Fuel_System,95-20-70,ATA 70,Data,AFDX,DAL-B,Fuel demand from propulsion
+95-20-28,NN_Fuel_System,95-20-80,ATA 80,Data,AFDX,DAL-B,Cryogenic system power
+95-20-31,NN_Recording_Systems,95-20-01,ATA 95,Service,gRPC,DAL-C,Anomaly detection inference
+95-20-31,NN_Recording_Systems,95-20-02,ATA 95,Service,Smart Contract,DAL-C,Recording provenance
+95-20-31,NN_Recording_Systems,ATA 31-10,ATA 31,Data,ARINC 717,DAL-C,FDR/CVR interface
+95-20-31,NN_Recording_Systems,95-20-42,ATA 42,Data,AFDX,DAL-C,AFDX traffic for data acquisition
+95-20-31,NN_Recording_Systems,All 95-20-XX,ATA 95,Data,AFDX,DAL-C,Health monitoring from all subsystems
+95-20-31,NN_Recording_Systems,95-20-45,ATA 45,Data,REST,DAL-C,Anomaly alerts for maintenance
+95-20-42,NN_IMA_Integration,95-20-01,ATA 95,Service,gRPC,DAL-B,Provides NN runtime to all partitions
+95-20-42,NN_IMA_Integration,95-20-02,ATA 95,Service,Smart Contract,DAL-B,IMA configuration provenance
+95-20-42,NN_IMA_Integration,ATA 42-10,ATA 42,Hardware,Internal,DAL-B,IMA modules/cabinets
+95-20-42,NN_IMA_Integration,ATA 42-20,ATA 42,Network,AFDX,DAL-B,Network fabric management
+95-20-42,NN_IMA_Integration,ATA 42-30,ATA 42,OS,ARINC 653,DAL-B,Partition management
+95-20-42,NN_IMA_Integration,All 95-20-XX,ATA 95,Compute,ARINC 653,DAL-B,Hosts all NN subsystems
+95-20-42,NN_IMA_Integration,95-20-45,ATA 45,Data,REST,DAL-B,IMA health monitoring
+95-20-45,NN_Maintenance,95-20-01,ATA 95,Service,gRPC,DAL-C,Model inference runtime
+95-20-45,NN_Maintenance,95-20-02,ATA 95,Service,Smart Contract,DAL-C,Maintenance predictions provenance
+95-20-45,NN_Maintenance,ATA 45-10,ATA 45,Data,ARINC 429,DAL-C,Maintenance system interface
+95-20-45,NN_Maintenance,All 95-20-XX,ATA 95,Data,REST/AFDX,DAL-C,Collects performance metrics from all
+95-20-45,NN_Maintenance,95-20-31,ATA 31,Data,REST,DAL-C,Historical event data
+95-20-45,NN_Maintenance,95-00-11,ATA 95,Data,REST,DAL-C,Operations procedures integration
+95-20-49,NN_APU,95-20-01,ATA 95,Service,gRPC,DAL-D,Model inference runtime
+95-20-49,NN_APU,95-20-02,ATA 95,Service,Smart Contract,DAL-D,APU model provenance
+95-20-49,NN_APU,ATA 49-10,ATA 49,Sensor,ARINC 429,DAL-D,APU parameters
+95-20-49,NN_APU,95-20-42,ATA 42,Compute,ARINC 653,DAL-D,IMA partition
+95-20-49,NN_APU,95-20-45,ATA 45,Data,REST,DAL-D,APU health for maintenance
+95-20-49,NN_APU,95-20-31,ATA 31,Data,ARINC 717,DAL-D,APU data recording
+95-20-49,NN_APU,95-20-80,ATA 80,Data,AFDX,DAL-D,Backup power coordination
+95-20-53,NN_Structures,95-20-01,ATA 95,Service,gRPC,DAL-B,GNN inference runtime
+95-20-53,NN_Structures,95-20-02,ATA 95,Service,Smart Contract,DAL-B,Structural model provenance
+95-20-53,NN_Structures,ATA 53-10,ATA 53,Sensor,ARINC 429,DAL-B,Strain gauges/acoustic sensors
+95-20-53,NN_Structures,95-20-42,ATA 42,Compute,ARINC 653,DAL-B,IMA partition
+95-20-53,NN_Structures,95-20-27,ATA 27,Data,AFDX,DAL-B,Flight loads data
+95-20-53,NN_Structures,95-20-45,ATA 45,Data,REST,DAL-B,Structural health for maintenance
+95-20-53,NN_Structures,95-20-31,ATA 31,Data,ARINC 717,DAL-B,Structural data recording
+95-20-53,NN_Structures,95-20-57,ATA 57,Data,AFDX,DAL-B,Wing-fuselage load transfer
+95-20-57,NN_Wing_Systems,95-20-01,ATA 95,Service,gRPC,DAL-A,LSTM/Vision inference runtime
+95-20-57,NN_Wing_Systems,95-20-02,ATA 95,Service,Smart Contract,DAL-A,Wing model provenance
+95-20-57,NN_Wing_Systems,ATA 57-10,ATA 57,Sensor,ARINC 429,DAL-A,Wing strain/accelerometers/cameras
+95-20-57,NN_Wing_Systems,95-20-42,ATA 42,Compute,ARINC 653,DAL-A,IMA partition
+95-20-57,NN_Wing_Systems,95-20-27,ATA 27,Control,AFDX,DAL-A,Coordinate control surface actions
+95-20-57,NN_Wing_Systems,95-20-53,ATA 53,Data,AFDX,DAL-A,Wing-fuselage load transfer
+95-20-57,NN_Wing_Systems,ATA 30,ATA 30,Control,ARINC 429,DAL-A,Ice protection system activation
+95-20-57,NN_Wing_Systems,95-20-45,ATA 45,Data,REST,DAL-A,Wing health monitoring
+95-20-57,NN_Wing_Systems,95-20-31,ATA 31,Data,ARINC 717,DAL-A,Wing data recording
+95-20-70,NN_Propulsion,95-20-01,ATA 95,Service,gRPC,DAL-A,Model inference runtime
+95-20-70,NN_Propulsion,95-20-02,ATA 95,Service,Smart Contract,DAL-A,Propulsion model provenance
+95-20-70,NN_Propulsion,ATA 71,ATA 71,Sensor,ARINC 429,DAL-A,Engine/fuel cell parameters
+95-20-70,NN_Propulsion,ATA 73,ATA 73,Control,ARINC 429,DAL-A,Engine fuel control
+95-20-70,NN_Propulsion,95-20-42,ATA 42,Compute,ARINC 653,DAL-A,IMA partition
+95-20-70,NN_Propulsion,95-20-28,ATA 28,Data,AFDX,DAL-A,Fuel availability and quality
+95-20-70,NN_Propulsion,95-20-80,ATA 80,Data,AFDX,DAL-A,Electrical power from fuel cells
+95-20-70,NN_Propulsion,95-20-45,ATA 45,Data,REST,DAL-A,Engine health monitoring
+95-20-70,NN_Propulsion,95-20-31,ATA 31,Data,ARINC 717,DAL-A,Engine data recording
+95-20-80,NN_Energy_Systems,95-20-01,ATA 95,Service,gRPC,DAL-B,Model inference runtime
+95-20-80,NN_Energy_Systems,95-20-02,ATA 95,Service,Smart Contract,DAL-B,Energy model provenance
+95-20-80,NN_Energy_Systems,ATA 80-10,ATA 80,Sensor,ARINC 429,DAL-B,Power loads/battery SOC/bus voltages
+95-20-80,NN_Energy_Systems,ATA 24,ATA 24,Control,ARINC 429,DAL-B,Load shedding/charging control
+95-20-80,NN_Energy_Systems,95-20-42,ATA 42,Compute,ARINC 653,DAL-B,IMA partition
+95-20-80,NN_Energy_Systems,95-20-70,ATA 70,Data,AFDX,DAL-B,Fuel cell power generation
+95-20-80,NN_Energy_Systems,95-20-28,ATA 28,Data,AFDX,DAL-B,H2 fuel availability
+95-20-80,NN_Energy_Systems,All 95-20-XX,ATA 95,Data,AFDX,DAL-B,Power demand forecasting from all
+95-20-80,NN_Energy_Systems,95-20-49,ATA 49,Data,AFDX,DAL-B,APU backup power coordination
+95-20-80,NN_Energy_Systems,95-20-45,ATA 45,Data,REST,DAL-B,Energy system health
+95-20-80,NN_Energy_Systems,95-20-31,ATA 31,Data,ARINC 717,DAL-B,Energy data recording
+95-20-80,NN_Energy_Systems,95-20-21,ATA 21,Data,AFDX,DAL-B,Environmental system power loads
