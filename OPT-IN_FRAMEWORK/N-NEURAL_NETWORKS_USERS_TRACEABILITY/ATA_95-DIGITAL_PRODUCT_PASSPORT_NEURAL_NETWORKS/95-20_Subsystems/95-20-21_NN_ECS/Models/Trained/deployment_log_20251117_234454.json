@@ -1,0 +1,14 @@
+{
+  "model_id": "NN-TEMP-PRED-v1.2",
+  "model_file": "temp_predictor_v1.2.onnx",
+  "hash_sha256": "176a77490bcf8746f95807e1fcdf21dd83f8f31e892365835da5fbf610680041",
+  "aircraft": "AMPEL360-Q100-001",
+  "partition": "NEURAL_PARTITION_95_20_21",
+  "deployed_by": "Amedeo Pelliccia",
+  "deployment_timestamp": "2025-11-17T23:44:54.416584Z",
+  "verification": {
+    "hash_check": "passed",
+    "bit_test": "passed",
+    "status": "operational"
+  }
+}

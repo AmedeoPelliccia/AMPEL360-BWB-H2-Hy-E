@@ -1,0 +1,78 @@
+Document_ID,Title,Status,Phase,Traces_To_Requirements,Traces_To_Hazards,Traces_To_VV,Traces_To_Design,Authority,Last_Updated
+95-00-10-00-001,Certification Strategy,APPROVED,00,REQ-CERT-001,,,DES-SYS-001,"EASA,FAA",2025-11-17
+95-00-10-00-002,Certification Lifecycle Overview,APPROVED,00,REQ-CERT-002,,,DES-SYS-002,"EASA,FAA",2025-11-17
+95-00-10-00-003,Certification Taxonomy,APPROVED,00,REQ-CERT-003,,,,DUAL,2025-11-17
+95-00-10-00-004,Certification Traceability Matrix,APPROVED,00,REQ-CERT-004,,,,DUAL,2025-11-17
+95-00-10-00-005,Regulatory Framework Index,DRAFT,00,REQ-CERT-005,,,,DUAL,2025-11-17
+95-00-10-00-006,Authority Contacts Registry,DRAFT,00,,,,,DUAL,2025-11-17
+95-00-10-00-007,CAOS Certification Hooks,DRAFT,00,REQ-AI-001,,,DES-AI-001,DUAL,2025-11-17
+95-00-10-01-001,Regulatory Frameworks Overview,DRAFT,01,REQ-CERT-010,,,,DUAL,2025-11-17
+95-00-10-01-002,EASA Framework for AI and SW,DRAFT,01,REQ-AI-010,,,,"EASA",2025-11-17
+95-00-10-01-003,FAA Framework for AI and SW,DRAFT,01,REQ-AI-011,,,,"FAA",2025-11-17
+95-00-10-01-004,EU AI Act and Other Legal Regimes,DRAFT,01,REQ-LEGAL-001,,,,"EASA",2025-11-17
+95-00-10-01-005,Industry Standards Map,DRAFT,01,REQ-STD-001,,,,DUAL,2025-11-17
+95-00-10-02-001,Certification Basis Definition,DRAFT,02,REQ-CERT-020,,,,DUAL,2025-11-17
+95-00-10-02-002,Applicable Regulations and Standards,DRAFT,02,REQ-CERT-021,,,,DUAL,2025-11-17
+95-00-10-02-003,Special Conditions and Equivalent Levels,DRAFT,02,REQ-CERT-022,,,,DUAL,2025-11-17
+95-00-10-02-004,MOC Methods of Compliance Definition,DRAFT,02,REQ-CERT-023,,,,DUAL,2025-11-17
+95-00-10-02-005,Assumptions and Limitations,DRAFT,02,REQ-CERT-024,,,,DUAL,2025-11-17
+95-00-10-03-001,Compliance Strategy Overview,DRAFT,03,REQ-CERT-030,,,,DUAL,2025-11-17
+95-00-10-03-002,Compliance Roadmap and Milestones,DRAFT,03,REQ-CERT-031,,,,DUAL,2025-11-17
+95-00-10-03-003,Certification Plans for AI Functions,DRAFT,03,REQ-AI-030,,,DES-AI-010,DUAL,2025-11-17
+95-00-10-03-004,Roles and Responsibilities in Certification,DRAFT,03,REQ-CERT-033,,,,DUAL,2025-11-17
+95-00-10-03-005,Compliance Risk Assessment,DRAFT,03,REQ-CERT-034,HAZ-CERT-001,,,DUAL,2025-11-17
+95-00-10-04-001,Evidence Strategy,DRAFT,04,REQ-CERT-040,,,,DUAL,2025-11-17
+95-00-10-04-002,Evidence Catalog Structure,DRAFT,04,REQ-CERT-041,,,,DUAL,2025-11-17
+95-00-10-04-003,Traceability Rules and Conventions,DRAFT,04,REQ-CERT-042,,,,DUAL,2025-11-17
+95-00-10-04-004,Links to Requirements And VV,DRAFT,04,REQ-CERT-043,,VV-ALL,,DUAL,2025-11-17
+95-00-10-04-005,Digital Evidence Integrity and Signatures,DRAFT,04,REQ-CERT-044,,,,DUAL,2025-11-17
+95-00-10-05-001,Safety Case Concept for NN,DRAFT,05,REQ-AI-050,HAZ-AI-ALL,VV-AI-050,DES-AI-020,DUAL,2025-11-17
+95-00-10-05-002,AI Assurance Goals and Claims,DRAFT,05,REQ-AI-051,HAZ-AI-001,,,DUAL,2025-11-17
+95-00-10-05-003,Safety Arguments and Evidence Links,DRAFT,05,REQ-AI-052,HAZ-AI-ALL,VV-AI-051,DES-AI-021,DUAL,2025-11-17
+95-00-10-05-004,AI Assurance Criteria and Metrics,DRAFT,05,REQ-AI-053,,VV-AI-052,,DUAL,2025-11-17
+95-00-10-05-005,Hazard and Failure Analysis Links,DRAFT,05,REQ-SAFE-001,HAZ-ALL,,,DUAL,2025-11-17
+95-00-10-06-001,SW Certification Strategy DO178 Family,DRAFT,06,REQ-SW-001,,,DES-SW-001,DUAL,2025-11-17
+95-00-10-06-002,HW Certification Strategy DO254 Family,DRAFT,06,REQ-HW-001,,,DES-HW-001,DUAL,2025-11-17
+95-00-10-06-003,Tool Qualification and Automation,DRAFT,06,REQ-TOOL-001,,,,DUAL,2025-11-17
+95-00-10-06-004,Integration with Existing Cert Frameworks,DRAFT,06,REQ-CERT-060,,,,DUAL,2025-11-17
+95-00-10-06-005,SW HW Cert Evidence Overview,DRAFT,06,REQ-CERT-061,,VV-SW-ALL VV-HW-ALL,,DUAL,2025-11-17
+95-00-10-07-001,ML Specific Certification Challenges,DRAFT,07,REQ-ML-001,HAZ-ML-001,,,DUAL,2025-11-17
+95-00-10-07-002,Data and Dataset Certification Considerations,DRAFT,07,REQ-ML-002,,,DES-DATA-001,DUAL,2025-11-17
+95-00-10-07-003,Model Lifecycle Certification Constraints,DRAFT,07,REQ-ML-003,,,DES-ML-001,DUAL,2025-11-17
+95-00-10-07-004,Updates and Retraining Policy,DRAFT,07,REQ-ML-004,HAZ-ML-002,,DES-ML-002,DUAL,2025-11-17
+95-00-10-07-005,Alignment with EASA AI Roadmap and FAA AI AF,DRAFT,07,REQ-AI-070,,,,DUAL,2025-11-17
+95-00-10-08-001,Certification Tests Overview,DRAFT,08,REQ-TEST-001,,VV-TEST-ALL,,DUAL,2025-11-17
+95-00-10-08-002,Qualification Tests Definition,DRAFT,08,REQ-TEST-002,,VV-QUAL-ALL,,DUAL,2025-11-17
+95-00-10-08-003,Witnessed Tests and Authority Involvement,DRAFT,08,REQ-TEST-003,,VV-WITNESS-ALL,,DUAL,2025-11-17
+95-00-10-08-004,Environmental and Operational Qualification Tests,DRAFT,08,REQ-TEST-004,,VV-ENV-ALL,,DUAL,2025-11-17
+95-00-10-08-005,Test Reports and Summary for Authorities,DRAFT,08,REQ-TEST-005,,VV-REPORT-ALL,,DUAL,2025-11-17
+95-00-10-09-001,Audit Strategy and Types,DRAFT,09,REQ-AUDIT-001,,,,DUAL,2025-11-17
+95-00-10-09-002,Internal Audits and Prep,DRAFT,09,REQ-AUDIT-002,,,,DUAL,2025-11-17
+95-00-10-09-003,Authority Audits and Inspections,DRAFT,09,REQ-AUDIT-003,,,,DUAL,2025-11-17
+95-00-10-09-004,Findings Classification and Tracking,DRAFT,09,REQ-AUDIT-004,,,,DUAL,2025-11-17
+95-00-10-09-005,Corrective Actions and Preventive Actions,DRAFT,09,REQ-AUDIT-005,,,,DUAL,2025-11-17
+95-00-10-10-001,Authority Interface Strategy,DRAFT,10,REQ-AUTH-001,,,,DUAL,2025-11-17
+95-00-10-10-002,Formal Submissions and Dossiers,DRAFT,10,REQ-AUTH-002,,,,DUAL,2025-11-17
+95-00-10-10-003,Meetings and Technical Briefings,DRAFT,10,REQ-AUTH-003,,,,DUAL,2025-11-17
+95-00-10-10-004,Questions and Clarifications Tracking,DRAFT,10,REQ-AUTH-004,,,,DUAL,2025-11-17
+95-00-10-10-005,Configuration of Submitted Material,DRAFT,10,REQ-AUTH-005,,,,DUAL,2025-11-17
+95-00-10-11-001,Continuing Airworthiness Strategy for NN,DRAFT,11,REQ-CA-001,,,DES-AI-030,DUAL,2025-11-17
+95-00-10-11-002,InService Monitoring and Feedback to Cert,DRAFT,11,REQ-CA-002,HAZ-OPS-001,VV-OPS-001,,DUAL,2025-11-17
+95-00-10-11-003,Service Bulletins and Airworthiness Directives Interface,DRAFT,11,REQ-CA-003,,,,DUAL,2025-11-17
+95-00-10-11-004,Changes in Operation and Cert Impact,DRAFT,11,REQ-CA-004,,,,DUAL,2025-11-17
+95-00-10-11-005,LongTerm Support and Obsolescence Management,DRAFT,11,REQ-CA-005,,,,DUAL,2025-11-17
+95-00-10-12-001,Change Control Policy for Certified NN,DRAFT,12,REQ-CC-001,,,DES-CFG-001,DUAL,2025-11-17
+95-00-10-12-002,Minor vs Major Changes Classification,DRAFT,12,REQ-CC-002,,,,DUAL,2025-11-17
+95-00-10-12-003,Change Impact on Certification Basis,DRAFT,12,REQ-CC-003,,,,DUAL,2025-11-17
+95-00-10-12-004,Change Approval Workflows,DRAFT,12,REQ-CC-004,,,,DUAL,2025-11-17
+95-00-10-12-005,Links to Configuration Management and DPP,DRAFT,12,REQ-CC-005,,,DES-DPP-001,DUAL,2025-11-17
+95-00-10-13-001,DPP Cert Evidence Strategy,DRAFT,13,REQ-DPP-001,,,DES-DPP-002,DUAL,2025-11-17
+95-00-10-13-002,OnChain Representation of Cert States,DRAFT,13,REQ-DPP-002,,,DES-DPP-003,DUAL,2025-11-17
+95-00-10-13-003,Smart Contracts for Cert Evidence,DRAFT,13,REQ-DPP-003,,,DES-DPP-004,DUAL,2025-11-17
+95-00-10-13-004,Audit and Transparency Requirements,DRAFT,13,REQ-DPP-004,,,,DUAL,2025-11-17
+95-00-10-13-005,Privacy and Confidentiality Constraints,DRAFT,13,REQ-DPP-005,,,,DUAL,2025-11-17
+95-00-10-14-001,Certification Packaging Strategy,DRAFT,14,REQ-PKG-001,,,,DUAL,2025-11-17
+95-00-10-14-002,Internal vs External Packages,DRAFT,14,REQ-PKG-002,,,,DUAL,2025-11-17
+95-00-10-14-003,Archival Policies and Retention Times,DRAFT,14,REQ-PKG-003,,,,DUAL,2025-11-17
+95-00-10-14-004,Secure Storage and Access Control,DRAFT,14,REQ-PKG-004,,,,DUAL,2025-11-17
+95-00-10-14-005,Certification Closure and Exit Criteria,DRAFT,14,REQ-PKG-005,,,,DUAL,2025-11-17

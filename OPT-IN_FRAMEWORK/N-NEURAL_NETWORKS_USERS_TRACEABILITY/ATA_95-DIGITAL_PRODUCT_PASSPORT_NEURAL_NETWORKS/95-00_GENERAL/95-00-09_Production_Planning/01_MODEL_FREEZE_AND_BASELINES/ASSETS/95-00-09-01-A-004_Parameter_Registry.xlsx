@@ -1,0 +1,7 @@
+Parameter_Name,Parameter_Type,Default_Value,Configurable,Safety_Critical,Owner,Last_Updated
+inference_timeout_ms,Runtime,1000,Yes,No,Operations,2025-11-17
+batch_size,Runtime,32,Yes,No,Operations,2025-11-17
+alert_threshold_latency,Threshold,50ms,Yes,No,Monitoring,2025-11-17
+safety_margin_confidence,Threshold,0.95,No,Yes,Safety Engineer,2025-10-15
+model_weights,Model,frozen,No,Yes,Configuration Mgmt,2025-10-15
+drift_detection_window,Monitoring,24h,Yes,No,Monitoring,2025-11-17
