@@ -58,9 +58,7 @@ This script:
 ### Example Output:
 
 ```
-================================================================================
 Inspecting ONNX Model: temp_predictor_v1.2.onnx
-================================================================================
 
 ✅ Model is valid ONNX format
 Model Metadata:
@@ -114,9 +112,7 @@ python3 test_onnx_model.py ../Trained/temp_predictor_v1.2.onnx
 ### Example Results:
 
 ```
-================================================================================
 Testing ONNX Model: temp_predictor_v1.2.onnx
-================================================================================
 
 [TEST 1] Input Validation
   ✅ Valid input accepted
@@ -141,9 +137,7 @@ Testing ONNX Model: temp_predictor_v1.2.onnx
 [TEST 6] Batch Processing
   ✅ All batch sizes supported
 
-================================================================================
 Test Results: 6 passed, 0 failed
-================================================================================
 ```
 
 ## 🚀 Deployment Pipeline
@@ -168,9 +162,7 @@ python3 deploy_to_ima.py ../Trained/temp_predictor_v1.2.onnx AMPEL360-Q100-001
 ### Example Output:
 
 ```
-================================================================================
 Deploying Model to IMA
-================================================================================
 
 [1/5] Verifying model integrity...
   ✅ Hash computed: 176a77490bcf8746...
@@ -188,9 +180,7 @@ Deploying Model to IMA
   ✅ Deployment logged
   ✅ DPP blockchain anchor: 0x176a77490bcf8746...
 
-================================================================================
 ✅ Deployment Complete!
-================================================================================
 ```
 
 ## 📋 Model Management Checklist

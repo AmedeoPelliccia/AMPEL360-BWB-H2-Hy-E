@@ -186,8 +186,8 @@ interfaces:
 dpp_integration:
   blockchain_anchor: null
   provenance_hash: null
-  training_data_hash: null
-  model_hash: null
+  training_data_hash: "sha256:TODO_95-20-21-602_..."
+  model_hash: "sha256:bb03e479d77c729a22058a53bee62b149b4f090fe7675ab3b42e403d24edd2d4"
   certification_hash: null
 
   lineage:
@@ -196,9 +196,10 @@ dpp_integration:
     influences: []
 
   audit_trail:
-    - timestamp: "YYYY-MM-DDTHH:MM:SSZ"
-      event: "Model card template created"
+    - timestamp: "2025-11-17T23:59:00Z"
+      event: "ONNX model generated and exported"
       user: "Amedeo Pelliccia"
+      details: "Generated air_quality_monitor_v1.0.onnx with GitHub Copilot assistance"
 
 # -----------------------------------------------------------------------------
 # LIMITATIONS & FALLBACK
@@ -248,16 +249,20 @@ maintenance:
 # -----------------------------------------------------------------------------
 references:
   documentation:
-    - "95-20-21-XXX_Component_Spec.md"
+    - "95-20-21-003_Air_Quality_Monitor.md"
     - "95-20-21-009_Safety_and_Certification.md"
+  
+  artifacts:
+    source_code: "OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-20_Subsystems/95-20-21_NN_ECS/Models/Source/air_quality_monitor_v1.0.py"
+    trained_model: "OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-20_Subsystems/95-20-21_NN_ECS/Models/Trained/air_quality_monitor_v1.0.onnx"
+    training_config: "OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-20_Subsystems/95-20-21_NN_ECS/Models/Configs/training_config_air_quality.yaml"
+    export_script: "OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-20_Subsystems/95-20-21_NN_ECS/Models/Source/export_air_quality_onnx.py"
+    inspection_script: "OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-20_Subsystems/95-20-21_NN_ECS/Models/Source/inspect_air_quality_onnx.py"
+  
   related_models:
-    - "95-20-21-A-YYY_Another_Model_vX.Y"
-  papers:
-    - title: "Reference paper or standard"
-      authors: "Author et al."
-      year: 20XX
-      venue: "Journal / Conf."
-      url: "https://..."
+    - "95-20-21-A-101_Temp_Predictor_v1.2"
+  
+  papers: []
 
 contact:
   owner: "AMPEL360 ML Engineering Team"
