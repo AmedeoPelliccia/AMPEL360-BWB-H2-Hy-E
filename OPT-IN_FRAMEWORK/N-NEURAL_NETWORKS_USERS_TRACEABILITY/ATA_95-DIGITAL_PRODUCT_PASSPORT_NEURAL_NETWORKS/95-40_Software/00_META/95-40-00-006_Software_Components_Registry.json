@@ -1,0 +1,856 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2025-11-17",
+  "components": [
+    {
+      "id": "95-40-01-C001",
+      "name": "Kubernetes Cluster Manager",
+      "subsection": "95-40-01",
+      "type": "Platform",
+      "language": "Go",
+      "version": "1.28+",
+      "license": "Apache-2.0",
+      "repository": "internal/platform/k8s-manager",
+      "owner": "Platform Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "containerd",
+        "etcd",
+        "CoreDNS"
+      ]
+    },
+    {
+      "id": "95-40-01-C002",
+      "name": "ARINC 653 Partition Manager",
+      "subsection": "95-40-01",
+      "type": "Embedded",
+      "language": "C",
+      "version": "2.0",
+      "license": "Proprietary",
+      "repository": "internal/embedded/arinc653-manager",
+      "owner": "Embedded Team",
+      "safety_impact": "Critical",
+      "certification_level": "DO-178C Level A",
+      "status": "Active",
+      "dependencies": [
+        "VxWorks 653 RTOS"
+      ]
+    },
+    {
+      "id": "95-40-01-C003",
+      "name": "Service Registry and Discovery",
+      "subsection": "95-40-01",
+      "type": "Platform",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/platform/service-registry",
+      "owner": "Platform Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "etcd",
+        "Consul"
+      ]
+    },
+    {
+      "id": "95-40-02-C001",
+      "name": "TensorFlow Serving",
+      "subsection": "95-40-02",
+      "type": "Inference",
+      "language": "C++/Python",
+      "version": "2.14+",
+      "license": "Apache-2.0",
+      "repository": "external/tensorflow/serving",
+      "owner": "ML Ops Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "TensorFlow",
+        "gRPC"
+      ]
+    },
+    {
+      "id": "95-40-02-C002",
+      "name": "ONNX Runtime Engine",
+      "subsection": "95-40-02",
+      "type": "Inference",
+      "language": "C++",
+      "version": "1.16+",
+      "license": "MIT",
+      "repository": "external/onnxruntime",
+      "owner": "Embedded Team",
+      "safety_impact": "High",
+      "certification_level": "DO-178C Level C",
+      "status": "Active",
+      "dependencies": [
+        "ONNX"
+      ]
+    },
+    {
+      "id": "95-40-02-C003",
+      "name": "REST API Gateway",
+      "subsection": "95-40-02",
+      "type": "API",
+      "language": "Go",
+      "version": "2.0",
+      "license": "Apache-2.0",
+      "repository": "internal/api/rest-gateway",
+      "owner": "API Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Nginx",
+        "OAuth2 Proxy"
+      ]
+    },
+    {
+      "id": "95-40-02-C004",
+      "name": "gRPC Service Interface",
+      "subsection": "95-40-02",
+      "type": "API",
+      "language": "Go/Python",
+      "version": "1.60+",
+      "license": "Apache-2.0",
+      "repository": "internal/api/grpc-services",
+      "owner": "API Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "gRPC",
+        "Protocol Buffers"
+      ]
+    },
+    {
+      "id": "95-40-03-C001",
+      "name": "Apache Airflow Pipeline Orchestrator",
+      "subsection": "95-40-03",
+      "type": "MLOps",
+      "language": "Python",
+      "version": "2.7+",
+      "license": "Apache-2.0",
+      "repository": "external/airflow",
+      "owner": "ML Ops Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "PostgreSQL",
+        "Redis",
+        "Celery"
+      ]
+    },
+    {
+      "id": "95-40-03-C002",
+      "name": "MLflow Experiment Tracker",
+      "subsection": "95-40-03",
+      "type": "MLOps",
+      "language": "Python",
+      "version": "2.8+",
+      "license": "Apache-2.0",
+      "repository": "external/mlflow",
+      "owner": "ML Ops Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "PostgreSQL",
+        "S3"
+      ]
+    },
+    {
+      "id": "95-40-03-C003",
+      "name": "Feature Store Service",
+      "subsection": "95-40-03",
+      "type": "MLOps",
+      "language": "Python/Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/mlops/feature-store",
+      "owner": "Data Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Feast",
+        "Redis",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "95-40-03-C004",
+      "name": "Model Registry",
+      "subsection": "95-40-03",
+      "type": "MLOps",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/mlops/model-registry",
+      "owner": "ML Ops Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "MLflow",
+        "S3"
+      ]
+    },
+    {
+      "id": "95-40-04-C001",
+      "name": "Onboard Inference Engine",
+      "subsection": "95-40-04",
+      "type": "Embedded",
+      "language": "C++",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/embedded/inference-engine",
+      "owner": "Embedded Team",
+      "safety_impact": "Critical",
+      "certification_level": "DO-178C Level B",
+      "status": "Active",
+      "dependencies": [
+        "ONNX Runtime",
+        "TensorRT"
+      ]
+    },
+    {
+      "id": "95-40-04-C002",
+      "name": "ARINC 664 Communication Stack",
+      "subsection": "95-40-04",
+      "type": "Embedded",
+      "language": "C",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/embedded/arinc664-stack",
+      "owner": "Embedded Team",
+      "safety_impact": "Critical",
+      "certification_level": "DO-178C Level A",
+      "status": "Active",
+      "dependencies": [
+        "AFDX Driver"
+      ]
+    },
+    {
+      "id": "95-40-04-C003",
+      "name": "CAN Bus Driver",
+      "subsection": "95-40-04",
+      "type": "Embedded",
+      "language": "C",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/embedded/can-driver",
+      "owner": "Embedded Team",
+      "safety_impact": "High",
+      "certification_level": "DO-178C Level B",
+      "status": "Active",
+      "dependencies": [
+        "CAN Controller HAL"
+      ]
+    },
+    {
+      "id": "95-40-04-C004",
+      "name": "Device Drivers and HAL",
+      "subsection": "95-40-04",
+      "type": "Embedded",
+      "language": "C",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/embedded/device-drivers",
+      "owner": "Embedded Team",
+      "safety_impact": "Critical",
+      "certification_level": "DO-178C Level A",
+      "status": "Active",
+      "dependencies": [
+        "VxWorks BSP"
+      ]
+    },
+    {
+      "id": "95-40-05-C001",
+      "name": "Runtime Safety Monitor",
+      "subsection": "95-40-05",
+      "type": "Safety",
+      "language": "C",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/safety/runtime-monitor",
+      "owner": "Safety Team",
+      "safety_impact": "Critical",
+      "certification_level": "DO-178C Level A",
+      "status": "Active",
+      "dependencies": [
+        "ARINC 653 APEX"
+      ]
+    },
+    {
+      "id": "95-40-05-C002",
+      "name": "Input Validation Guard",
+      "subsection": "95-40-05",
+      "type": "Safety",
+      "language": "C",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/safety/input-validator",
+      "owner": "Safety Team",
+      "safety_impact": "Critical",
+      "certification_level": "DO-178C Level A",
+      "status": "Active",
+      "dependencies": []
+    },
+    {
+      "id": "95-40-05-C003",
+      "name": "Fallback Controller",
+      "subsection": "95-40-05",
+      "type": "Safety",
+      "language": "C",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/safety/fallback-controller",
+      "owner": "Safety Team",
+      "safety_impact": "Critical",
+      "certification_level": "DO-178C Level A",
+      "status": "Active",
+      "dependencies": [
+        "ARINC 653 APEX"
+      ]
+    },
+    {
+      "id": "95-40-05-C004",
+      "name": "Voting Mechanism Manager",
+      "subsection": "95-40-05",
+      "type": "Safety",
+      "language": "C",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/safety/voting-manager",
+      "owner": "Safety Team",
+      "safety_impact": "Critical",
+      "certification_level": "DO-178C Level A",
+      "status": "Active",
+      "dependencies": []
+    },
+    {
+      "id": "95-40-06-C001",
+      "name": "OAuth2/OIDC Authentication Service",
+      "subsection": "95-40-06",
+      "type": "Security",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/security/auth-service",
+      "owner": "Security Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Keycloak",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "95-40-06-C002",
+      "name": "RBAC Authorization Engine",
+      "subsection": "95-40-06",
+      "type": "Security",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/security/authz-engine",
+      "owner": "Security Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Casbin",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "95-40-06-C003",
+      "name": "Key Management Service",
+      "subsection": "95-40-06",
+      "type": "Security",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/security/kms",
+      "owner": "Security Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "HashiCorp Vault",
+        "HSM"
+      ]
+    },
+    {
+      "id": "95-40-06-C004",
+      "name": "Data Masking Service",
+      "subsection": "95-40-06",
+      "type": "Security",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/security/data-masking",
+      "owner": "Security Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": []
+    },
+    {
+      "id": "95-40-06-C005",
+      "name": "Encryption Service",
+      "subsection": "95-40-06",
+      "type": "Security",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/security/encryption-service",
+      "owner": "Security Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "OpenSSL"
+      ]
+    },
+    {
+      "id": "95-40-07-C001",
+      "name": "Hyperledger Fabric Node",
+      "subsection": "95-40-07",
+      "type": "Blockchain",
+      "language": "Go",
+      "version": "2.5+",
+      "license": "Apache-2.0",
+      "repository": "external/hyperledger-fabric",
+      "owner": "Blockchain Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "CouchDB",
+        "Kafka"
+      ]
+    },
+    {
+      "id": "95-40-07-C002",
+      "name": "Smart Contract Manager",
+      "subsection": "95-40-07",
+      "type": "Blockchain",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/blockchain/chaincode-manager",
+      "owner": "Blockchain Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Hyperledger Fabric SDK"
+      ]
+    },
+    {
+      "id": "95-40-07-C003",
+      "name": "Off-Chain Data Service",
+      "subsection": "95-40-07",
+      "type": "Blockchain",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/blockchain/offchain-service",
+      "owner": "Blockchain Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "PostgreSQL",
+        "Elasticsearch"
+      ]
+    },
+    {
+      "id": "95-40-07-C004",
+      "name": "DPP Query API",
+      "subsection": "95-40-07",
+      "type": "Blockchain",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/blockchain/query-api",
+      "owner": "API Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Hyperledger Fabric SDK",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "95-40-08-C001",
+      "name": "Software-in-the-Loop (SIL) Environment",
+      "subsection": "95-40-08",
+      "type": "Testing",
+      "language": "Python/C++",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/testing/sil-environment",
+      "owner": "Test Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Simulink",
+        "Docker"
+      ]
+    },
+    {
+      "id": "95-40-08-C002",
+      "name": "Hardware-in-the-Loop (HIL) Environment",
+      "subsection": "95-40-08",
+      "type": "Testing",
+      "language": "C++",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/testing/hil-environment",
+      "owner": "Test Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "dSPACE",
+        "Real-Time Target"
+      ]
+    },
+    {
+      "id": "95-40-08-C003",
+      "name": "Scenario Generator",
+      "subsection": "95-40-08",
+      "type": "Testing",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/testing/scenario-generator",
+      "owner": "Test Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "OpenSCENARIO"
+      ]
+    },
+    {
+      "id": "95-40-08-C004",
+      "name": "Test Orchestrator",
+      "subsection": "95-40-08",
+      "type": "Testing",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/testing/test-orchestrator",
+      "owner": "Test Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Apache Airflow",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "95-40-08-C005",
+      "name": "Test Harness Framework",
+      "subsection": "95-40-08",
+      "type": "Testing",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/testing/test-harness",
+      "owner": "Test Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "pytest",
+        "Robot Framework"
+      ]
+    },
+    {
+      "id": "95-40-09-C001",
+      "name": "GitLab CI/CD Pipeline",
+      "subsection": "95-40-09",
+      "type": "DevOps",
+      "language": "YAML",
+      "version": "Latest",
+      "license": "MIT",
+      "repository": "external/gitlab",
+      "owner": "DevOps Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "GitLab Runner",
+        "Docker"
+      ]
+    },
+    {
+      "id": "95-40-09-C002",
+      "name": "Jenkins Build Server",
+      "subsection": "95-40-09",
+      "type": "DevOps",
+      "language": "Java",
+      "version": "2.426+",
+      "license": "MIT",
+      "repository": "external/jenkins",
+      "owner": "DevOps Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Java JDK",
+        "Docker"
+      ]
+    },
+    {
+      "id": "95-40-09-C003",
+      "name": "Internal CLI Tools",
+      "subsection": "95-40-09",
+      "type": "DevOps",
+      "language": "Go/Python",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/devex/cli-tools",
+      "owner": "Developer Experience Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Cobra",
+        "Click"
+      ]
+    },
+    {
+      "id": "95-40-09-C004",
+      "name": "Developer Portal",
+      "subsection": "95-40-09",
+      "type": "DevOps",
+      "language": "TypeScript",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/devex/portal",
+      "owner": "Developer Experience Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "React",
+        "Next.js"
+      ]
+    },
+    {
+      "id": "95-40-09-C005",
+      "name": "Observability Stack (Prometheus/Grafana)",
+      "subsection": "95-40-09",
+      "type": "DevOps",
+      "language": "Go/TypeScript",
+      "version": "Latest",
+      "license": "Apache-2.0/AGPL",
+      "repository": "external/prometheus-grafana",
+      "owner": "DevOps Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Prometheus",
+        "Grafana",
+        "Alertmanager"
+      ]
+    },
+    {
+      "id": "95-40-10-C001",
+      "name": "Metrics Collection Service",
+      "subsection": "95-40-10",
+      "type": "Monitoring",
+      "language": "Go",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/monitoring/metrics-collector",
+      "owner": "Operations Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Prometheus",
+        "InfluxDB"
+      ]
+    },
+    {
+      "id": "95-40-10-C002",
+      "name": "Logging Aggregator (ELK Stack)",
+      "subsection": "95-40-10",
+      "type": "Monitoring",
+      "language": "Java",
+      "version": "8.10+",
+      "license": "Elastic License/SSPL",
+      "repository": "external/elastic-stack",
+      "owner": "Operations Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Elasticsearch",
+        "Logstash",
+        "Kibana"
+      ]
+    },
+    {
+      "id": "95-40-10-C003",
+      "name": "Distributed Tracing (Jaeger)",
+      "subsection": "95-40-10",
+      "type": "Monitoring",
+      "language": "Go",
+      "version": "1.50+",
+      "license": "Apache-2.0",
+      "repository": "external/jaeger",
+      "owner": "Operations Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Elasticsearch",
+        "Cassandra"
+      ]
+    },
+    {
+      "id": "95-40-10-C004",
+      "name": "Model Drift Detector",
+      "subsection": "95-40-10",
+      "type": "Monitoring",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/monitoring/model-drift",
+      "owner": "ML Ops Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "scikit-learn",
+        "Evidently AI"
+      ]
+    },
+    {
+      "id": "95-40-10-C005",
+      "name": "Data Drift Detector",
+      "subsection": "95-40-10",
+      "type": "Monitoring",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/monitoring/data-drift",
+      "owner": "Data Team",
+      "safety_impact": "Medium",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "scipy",
+        "Evidently AI"
+      ]
+    },
+    {
+      "id": "95-40-10-C006",
+      "name": "Operations Analytics Dashboard",
+      "subsection": "95-40-10",
+      "type": "Monitoring",
+      "language": "TypeScript",
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "repository": "internal/monitoring/ops-dashboard",
+      "owner": "Operations Team",
+      "safety_impact": "Low",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Grafana",
+        "React"
+      ]
+    },
+    {
+      "id": "95-40-11-C001",
+      "name": "Traceability Automation Tool",
+      "subsection": "95-40-11",
+      "type": "Certification",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/certification/traceability-tool",
+      "owner": "Certification Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Neo4j",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "95-40-11-C002",
+      "name": "Evidence Bundle Generator",
+      "subsection": "95-40-11",
+      "type": "Certification",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/certification/evidence-bundler",
+      "owner": "Certification Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "S3",
+        "ZIP Library"
+      ]
+    },
+    {
+      "id": "95-40-11-C003",
+      "name": "Audit Query Engine",
+      "subsection": "95-40-11",
+      "type": "Certification",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/certification/audit-query",
+      "owner": "Certification Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "PostgreSQL",
+        "Elasticsearch"
+      ]
+    },
+    {
+      "id": "95-40-11-C004",
+      "name": "Report Generation Tool",
+      "subsection": "95-40-11",
+      "type": "Certification",
+      "language": "Python",
+      "version": "1.0",
+      "license": "Proprietary",
+      "repository": "internal/certification/report-generator",
+      "owner": "Certification Team",
+      "safety_impact": "High",
+      "certification_level": "N/A",
+      "status": "Active",
+      "dependencies": [
+        "Jinja2",
+        "WeasyPrint"
+      ]
+    }
+  ]
+}
