@@ -1,0 +1,276 @@
+{
+  "registry_metadata": {
+    "document_id": "95-00-14-00-006",
+    "title": "Stakeholders and Roles Registry",
+    "version": "1.0",
+    "date": "2025-11-17",
+    "status": "Active",
+    "owner": "HR & Operations Lead"
+  },
+  "governance_board": {
+    "name": "Operational Standards Governance Board",
+    "purpose": "Strategic oversight and policy approval for operational standards",
+    "meeting_frequency": "Monthly",
+    "members": [
+      {
+        "role": "Chair",
+        "title": "Chief Operations Officer",
+        "responsibilities": ["Overall strategy", "Final approval authority"],
+        "raci": "Accountable"
+      },
+      {
+        "role": "Member",
+        "title": "Head of Safety",
+        "responsibilities": ["Safety case alignment", "Risk oversight"],
+        "raci": "Consulted"
+      },
+      {
+        "role": "Member",
+        "title": "Head of Sustainability",
+        "responsibilities": ["ESG strategy", "Sustainability KPIs"],
+        "raci": "Consulted"
+      },
+      {
+        "role": "Member",
+        "title": "Head of AI/ML",
+        "responsibilities": ["NN operations", "AI assurance"],
+        "raci": "Consulted"
+      },
+      {
+        "role": "Secretary",
+        "title": "Operations Standards Manager",
+        "responsibilities": ["Meeting coordination", "Action tracking"],
+        "raci": "Responsible"
+      }
+    ]
+  },
+  "operations_standards_committee": {
+    "name": "Operations Standards Committee",
+    "purpose": "Technical standards development and maintenance",
+    "meeting_frequency": "Bi-weekly",
+    "members": [
+      {
+        "role": "Chair",
+        "title": "Operations Standards Manager",
+        "responsibilities": ["SOP development", "Standards maintenance"],
+        "raci": "Accountable"
+      },
+      {
+        "role": "Member",
+        "title": "Flight Operations Expert",
+        "responsibilities": ["Pilot procedures", "Flight ops input"],
+        "raci": "Responsible"
+      },
+      {
+        "role": "Member",
+        "title": "Maintenance Operations Expert",
+        "responsibilities": ["Maintenance procedures", "MRO input"],
+        "raci": "Responsible"
+      },
+      {
+        "role": "Member",
+        "title": "AI Operations Specialist",
+        "responsibilities": ["NN operational standards", "CAOS integration"],
+        "raci": "Responsible"
+      },
+      {
+        "role": "Member",
+        "title": "H₂ Systems Engineer",
+        "responsibilities": ["H₂ operational procedures", "Safety protocols"],
+        "raci": "Responsible"
+      }
+    ]
+  },
+  "sustainability_esg_committee": {
+    "name": "Sustainability & ESG Committee",
+    "purpose": "Environmental goals and ESG reporting",
+    "meeting_frequency": "Monthly",
+    "members": [
+      {
+        "role": "Chair",
+        "title": "Head of Sustainability",
+        "responsibilities": ["Sustainability strategy", "ESG reporting"],
+        "raci": "Accountable"
+      },
+      {
+        "role": "Member",
+        "title": "ESG Analyst",
+        "responsibilities": ["KPI tracking", "Report preparation"],
+        "raci": "Responsible"
+      },
+      {
+        "role": "Member",
+        "title": "Circularity Lead",
+        "responsibilities": ["Circular economy", "DPP lifecycle"],
+        "raci": "Responsible"
+      },
+      {
+        "role": "Member",
+        "title": "Regulatory Affairs Manager",
+        "responsibilities": ["Regulatory compliance", "EU AI Act/DPP"],
+        "raci": "Consulted"
+      }
+    ]
+  },
+  "working_groups": [
+    {
+      "name": "Risk & Compliance Working Group",
+      "chair": "Risk Manager",
+      "meeting_frequency": "Bi-weekly",
+      "focus": "Risk identification, compliance controls, audit preparation"
+    },
+    {
+      "name": "Training & Competence Working Group",
+      "chair": "Training Manager",
+      "meeting_frequency": "Monthly",
+      "focus": "Training programs, competence management, human factors"
+    },
+    {
+      "name": "Vendor Management Working Group",
+      "chair": "Procurement Manager",
+      "meeting_frequency": "Quarterly",
+      "focus": "Vendor governance, SLA management, performance reviews"
+    },
+    {
+      "name": "Analytics & Reporting Working Group",
+      "chair": "Analytics Lead",
+      "meeting_frequency": "Bi-weekly",
+      "focus": "KPI dashboards, operational analytics, data insights"
+    },
+    {
+      "name": "Knowledge Management Working Group",
+      "chair": "Documentation Manager",
+      "meeting_frequency": "Monthly",
+      "focus": "Documentation standards, knowledge repository, CAOS integration"
+    }
+  ],
+  "key_roles": {
+    "operational_roles": [
+      {
+        "title": "Operations Standards Manager",
+        "department": "Operations",
+        "key_responsibilities": [
+          "Maintain 95-00-14 documentation",
+          "Chair Operations Standards Committee",
+          "Coordinate SOP development",
+          "Interface with ATA 02 operations"
+        ],
+        "required_competencies": ["Aviation operations", "Standards development", "ATA expertise"]
+      },
+      {
+        "title": "Risk Manager",
+        "department": "Risk & Compliance",
+        "key_responsibilities": [
+          "Maintain operational risk register",
+          "Conduct risk assessments",
+          "Coordinate audits",
+          "Link to safety case"
+        ],
+        "required_competencies": ["Risk management", "Aviation safety", "Audit procedures"]
+      },
+      {
+        "title": "Sustainability Manager",
+        "department": "ESG",
+        "key_responsibilities": [
+          "Develop sustainability strategy",
+          "Track carbon/energy KPIs",
+          "Circularity program management",
+          "ESG reporting"
+        ],
+        "required_competencies": ["Environmental science", "ESG reporting", "LCA methodology"]
+      }
+    ],
+    "technical_roles": [
+      {
+        "title": "AI Operations Specialist",
+        "department": "AI/ML",
+        "key_responsibilities": [
+          "NN operational standards",
+          "CAOS integration procedures",
+          "AI explainability requirements",
+          "Human-AI interaction protocols"
+        ],
+        "required_competencies": ["AI/ML systems", "Aviation operations", "Human factors"]
+      },
+      {
+        "title": "H₂ Systems Engineer",
+        "department": "Propulsion",
+        "key_responsibilities": [
+          "H₂ operational procedures",
+          "Cryogenic safety protocols",
+          "Fuel cell operations",
+          "Ground operations integration"
+        ],
+        "required_competencies": ["Hydrogen systems", "Cryogenics", "Aviation fuel systems"]
+      },
+      {
+        "title": "DPP Manager",
+        "department": "Digital",
+        "key_responsibilities": [
+          "DPP lifecycle management",
+          "Blockchain operations",
+          "Data integrity controls",
+          "Circularity data tracking"
+        ],
+        "required_competencies": ["Digital systems", "Blockchain", "Data management"]
+      }
+    ],
+    "governance_roles": [
+      {
+        "title": "Compliance Officer",
+        "department": "Risk & Compliance",
+        "key_responsibilities": [
+          "Regulatory compliance monitoring",
+          "Audit coordination",
+          "Compliance controls implementation",
+          "EU AI Act/DPP compliance"
+        ],
+        "required_competencies": ["Regulatory affairs", "Aviation law", "Audit management"]
+      },
+      {
+        "title": "Documentation Manager",
+        "department": "Quality",
+        "key_responsibilities": [
+          "Documentation standards enforcement",
+          "Knowledge management system",
+          "Version control",
+          "Change management"
+        ],
+        "required_competencies": ["Technical writing", "S1000D", "ATA iSpec 2200"]
+      }
+    ]
+  },
+  "external_stakeholders": [
+    {
+      "category": "Regulatory Authorities",
+      "stakeholders": ["EASA", "FAA", "National Aviation Authorities"],
+      "engagement_frequency": "As required",
+      "primary_contact": "Regulatory Affairs Manager"
+    },
+    {
+      "category": "Airlines & Operators",
+      "stakeholders": ["Launch customer airlines", "Cargo operators"],
+      "engagement_frequency": "Quarterly",
+      "primary_contact": "Customer Relations Manager"
+    },
+    {
+      "category": "Technology Partners",
+      "stakeholders": ["Fuel cell suppliers", "H₂ infrastructure", "AI/ML vendors"],
+      "engagement_frequency": "Monthly",
+      "primary_contact": "Procurement Manager"
+    },
+    {
+      "category": "Industry Bodies",
+      "stakeholders": ["IATA", "ATA", "ICAO"],
+      "engagement_frequency": "Bi-annually",
+      "primary_contact": "Industry Relations Lead"
+    }
+  ],
+  "raci_summary": {
+    "governance_board": "Accountable for strategic decisions",
+    "operations_standards_committee": "Responsible for technical standards",
+    "sustainability_esg_committee": "Accountable for ESG goals",
+    "working_groups": "Responsible for specific domain execution",
+    "key_roles": "Informed and Consulted as per RACI matrix (see 95-00-14-02-A-002)"
+  }
+}

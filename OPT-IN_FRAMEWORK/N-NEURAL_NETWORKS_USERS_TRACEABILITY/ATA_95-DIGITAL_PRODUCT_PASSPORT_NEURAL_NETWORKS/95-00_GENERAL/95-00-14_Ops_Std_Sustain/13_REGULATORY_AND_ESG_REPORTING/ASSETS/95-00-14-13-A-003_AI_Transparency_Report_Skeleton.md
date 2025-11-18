@@ -1,0 +1,1 @@
+# AI Transparency Report Skeleton
