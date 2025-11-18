@@ -62,7 +62,7 @@ This document provides a comprehensive overview of hardware components used in t
 
 ## Hardware Architecture
 
-See: [ASSETS/[95-00-13-02-A-002_HW_Architecture_Diagram](95-00-13-02-A-002_HW_Architecture_Diagram.md).drawio](ASSETS/95-00-13-02-A-002_HW_Architecture_Diagram.drawio)
+See: [ASSETS/95-00-13-02-A-002_HW_Architecture_Diagram.drawio](ASSETS/95-00-13-02-A-002_HW_Architecture_Diagram.drawio)
 
 ## Component Specifications
 
