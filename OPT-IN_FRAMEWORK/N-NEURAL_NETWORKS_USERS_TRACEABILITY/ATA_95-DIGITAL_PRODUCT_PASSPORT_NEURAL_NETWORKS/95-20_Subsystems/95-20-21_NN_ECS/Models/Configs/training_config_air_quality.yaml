@@ -1,10 +1,78 @@
 # Training Configuration for Air Quality Monitor
+# Model ID: 95-20-21-A-102
+# Version: 1.0
+
 model:
   name: "air_quality_monitor"
   version: "1.0"
+  model_id: "95-20-21-A-102"
+  architecture: "CNN + Bi-LSTM"
+  
+  # Architecture configuration
+  config:
+    num_features: 16
+    window_length: 60
+    num_classes: 5
+    conv_channels: [64, 128, 256]
+    kernel_size: 3
+    cnn_pool: 2
+    d_model: 256
+    n_heads: 4
+    num_layers: 2
+    dim_feedforward: 512
+    dropout: 0.1
   
 training:
   batch_size: 128
   epochs: 80
   learning_rate: 0.0005
   optimizer: "adamw"
+  weight_decay: 0.01
+  early_stopping_patience: 10
+  reduce_lr_patience: 5
+  reduce_lr_factor: 0.5
+  
+  loss_function: "cross_entropy"
+  class_weights: [1.0, 1.0, 1.2, 1.5, 2.0]  # Higher weight for hazardous conditions
+  
+data:
+  dataset_id: "95-20-21-602"
+  split:
+    train: 0.75
+    validation: 0.15
+    test: 0.10
+  
+  augmentation:
+    enabled: true
+    noise_std: 0.01
+    time_shift_max: 5
+  
+  preprocessing:
+    normalization: "standard"  # Mean=0, Std=1
+    clip_outliers: true
+    outlier_std_threshold: 3.0
+
+export:
+  format: "ONNX"
+  opset_version: 17
+  dynamic_axes:
+    batch_size: true
+    seq_len: true
+  
+  metadata:
+    model_id: "95-20-21-A-102"
+    version: "1.0"
+    component: "95-20-21-003_Air_Quality_Monitor"
+    dal_level: "C"
+    certification: "DO-178C"
+    owner: "AMPEL360 ML Engineering Team"
+
+# Document Control
+document_control:
+  version: "1.0"
+  status: "WORKING"
+  last_updated: "2025-11-17"
+  ai_assistance:
+    used: true
+    tools: ["GitHub Copilot"]
+    prompted_by: "Amedeo Pelliccia"
