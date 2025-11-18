@@ -56,7 +56,7 @@
 
 ## Mode Transition Matrix
 
-See: [ASSETS/[95-00-13-01-A-003_Modes_vs_Subsystems_Matrix](95-00-13-01-A-003_Modes_vs_Subsystems_Matrix.md).xlsx](ASSETS/95-00-13-01-A-003_Modes_vs_Subsystems_Matrix.xlsx)
+See: [ASSETS/95-00-13-01-A-003_Modes_vs_Subsystems_Matrix.xlsx](ASSETS/95-00-13-01-A-003_Modes_vs_Subsystems_Matrix.xlsx)
 
 ## Related Documents
 
