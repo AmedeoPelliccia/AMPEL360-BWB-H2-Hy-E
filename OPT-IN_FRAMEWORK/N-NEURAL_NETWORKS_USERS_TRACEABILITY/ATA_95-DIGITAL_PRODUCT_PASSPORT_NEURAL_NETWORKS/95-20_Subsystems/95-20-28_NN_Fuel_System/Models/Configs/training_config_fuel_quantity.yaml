@@ -1,0 +1,117 @@
+# Training Configuration - Fuel Quantity Estimator
+# Model: 95-20-28-A-101
+# Version: 1.0
+
+model:
+  name: "fuel_quantity_estimator"
+  version: "1.0"
+  architecture: "mlp"
+  
+data:
+  training_dataset: "../../Data/Training_Datasets/95-20-28-601_Fuel_Quantity_Sensor_Logs.parquet"
+  validation_split: 0.10
+  test_split: 0.10
+  batch_size: 256
+  shuffle: true
+  seed: 42
+  
+preprocessing:
+  normalization: "standard_scaler"
+  feature_scaling: true
+  outlier_removal: true
+  outlier_threshold: 3.0  # standard deviations
+  
+augmentation:
+  enabled: true
+  techniques:
+    - "gaussian_noise"  # sigma: 0.01
+    - "attitude_perturbation"  # ±2 degrees
+  
+features:
+  input_features:
+    - "tank_level_1"
+    - "tank_level_2"
+    - "tank_level_center"
+    - "tank_level_reserve"
+    - "pitch"
+    - "roll"
+    - "yaw_rate"
+    - "temp_tank_1"
+    - "temp_tank_2"
+    - "temp_tank_center"
+    - "temp_tank_reserve"
+    - "pressure_tank_1"
+    - "pressure_tank_2"
+    - "flow_engine_1"
+    - "flow_engine_2"
+    - "flow_transfer_1_2"
+    - "flow_transfer_2_center"
+    - "tank_configuration"
+    
+  output_features:
+    - "estimated_qty_tank_1"
+    - "estimated_qty_tank_2"
+    - "estimated_qty_center"
+    - "estimated_qty_reserve"
+    
+network:
+  layers:
+    - type: "dense"
+      units: 64
+      activation: "relu"
+      dropout: 0.2
+    - type: "dense"
+      units: 32
+      activation: "relu"
+      dropout: 0.2
+    - type: "dense"
+      units: 16
+      activation: "relu"
+      dropout: 0.1
+    - type: "dense"
+      units: 8
+      activation: "relu"
+    - type: "dense"
+      units: 4
+      activation: "linear"
+      
+training:
+  optimizer: "adam"
+  learning_rate: 0.001
+  loss_function: "mean_absolute_error"
+  metrics:
+    - "mae"
+    - "rmse"
+    - "r2_score"
+  epochs: 80
+  early_stopping:
+    enabled: true
+    patience: 10
+    monitor: "val_mae"
+    mode: "min"
+  reduce_lr:
+    enabled: true
+    patience: 5
+    factor: 0.5
+    min_lr: 0.00001
+    
+validation:
+  cross_validation: false  # Use fixed validation split
+  validation_frequency: 1  # Every epoch
+  
+export:
+  format: "onnx"
+  output_path: "../../Models/Trained/fuel_quantity_estimator_v1.0.onnx"
+  opset_version: 13
+  optimization: true
+  
+logging:
+  tensorboard: true
+  log_dir: "../../Models/Trained/logs/fuel_quantity_v1.0"
+  checkpoint_dir: "../../Models/Trained/checkpoints/fuel_quantity_v1.0"
+  save_best_only: true
+  
+# Generated with the assistance of AI (GitHub Copilot), prompted by Amedeo Pelliccia.
+# Status: DRAFT – Subject to human review and approval.
+# Repository: AMPEL360-BWB-H2-Hy-E
+# Last AI update: 2025-11-18
