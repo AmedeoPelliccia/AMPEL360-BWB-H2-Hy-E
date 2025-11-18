@@ -262,7 +262,7 @@ Subsystems operate differently in various flight modes:
 See: [[[95-00-13-01-005_Links_to_](95-00-13-01-005_Links_to_.md)95-00-03_Requirements](95-00-13-01-005_Links_to_95-00-03_Requirements.md).md](../01_FUNCTIONAL_SUBSYSTEMS/95-00-13-01-005_Links_to_95-00-03_Requirements.md)
 
 ### To ATA Systems
-See: [ASSETS/[95-00-13-01-A-002_Subsystems_Allocation_Table](95-00-13-01-A-002_Subsystems_Allocation_Table.md).csv](ASSETS/95-00-13-01-A-002_Subsystems_Allocation_Table.csv)
+See: [ASSETS/95-00-13-01-A-002_Subsystems_Allocation_Table.csv](ASSETS/95-00-13-01-A-002_Subsystems_Allocation_Table.csv)
 
 ### To Operational Modes
 See: [95-00-13-01-004_Modes_and_Operational_Contexts](95-00-13-01-004_Modes_and_Operational_Contexts.md).md
