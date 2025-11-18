@@ -213,7 +213,7 @@ Incident Closed → Hook KM-001 → RCA Documented →
 ### Data Protection
 - **In-Transit**: TLS 1.3
 - **At-Rest**: AES-256
-- **PII Handling**: GDPR compliant, anonymization where possible
+- **PII Handling**: [GDPR](https://gdpr.eu/) compliant, anonymization where possible
 
 ## Performance Requirements
 

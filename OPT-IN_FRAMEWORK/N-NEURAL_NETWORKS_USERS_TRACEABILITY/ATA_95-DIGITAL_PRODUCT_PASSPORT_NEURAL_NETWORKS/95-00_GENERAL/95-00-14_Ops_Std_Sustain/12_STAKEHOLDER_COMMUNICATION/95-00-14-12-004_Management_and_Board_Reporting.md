@@ -16,15 +16,15 @@ This document provides comprehensive guidance on Management and Board Reporting,
 
 ## Key Points
 - Integration with CAOS (Computer Aided Operations & Services)
-- Compliance with EU AI Act and DPP Regulation
+- Compliance with [EU AI Act](https://artificialintelligenceact.eu/) and [DPP Regulation](https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products-regulation_en)
 - Support for carbon-negative operations
 - Hydrogen propulsion considerations
 - Neural Network operational governance
 
 ## Related Documents
-- 95-00-14-00-001: Ops Std Sustain Strategy
-- 95-00-14-00-002: Scope and Alignment with ATA Operations
-- Relevant ATA chapters as applicable
+- [95-00-14-00-001: Ops Std Sustain Strategy](../95-00-14-00-001_Ops_Std_Sustain_Strategy.md)
+- [95-00-14-00-002: Scope and Alignment with ATA Operations](../95-00-14-00-002_Scope_and_Alignment_with_ATA_Operations.md)
+- Relevant [ATA chapters](../) as applicable
 
 ## Document Control
 | Version | Date | Author | Changes | Approved By |

@@ -30,8 +30,8 @@ Establishes traceability between operational standards and verification/validati
 ### Regulatory Compliance
 | Regulation | Operational Control | Certification Evidence |
 |-----------|-------------------|----------------------|
-| EASA CS-25 | Safety procedures | 95-00-10-CS25-001 |
-| EU AI Act | NN explainability | 95-00-10-AI-002 |
+| [EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) | Safety procedures | 95-00-10-CS25-001 |
+| [EU AI Act](https://artificialintelligenceact.eu/) | NN explainability | 95-00-10-AI-002 |
 | EU DPP Reg | Lifecycle tracking | 95-00-10-DPP-003 |
 | ISO 19881 | H₂ safety | 95-00-10-H2-004 |
 
