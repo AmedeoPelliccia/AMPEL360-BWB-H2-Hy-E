@@ -33,7 +33,7 @@ CAOS (Computer-Aided Operations & Services) is the fourth pillar of AMPEL360's d
 **Data Flow**: CAOS → DPP → Flight Deck Display  
 **Integration Point**: FCOM Section 3 (Operating Procedures)
 
-####IN-FLIGHT-001: NN Advisory Generation
+#### IN-FLIGHT-001: NN Advisory Generation
 **Trigger**: NN system generates operational recommendation  
 **CAOS Action**:
 - Contextualize recommendation with flight phase and conditions
