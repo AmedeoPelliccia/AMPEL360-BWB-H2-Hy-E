@@ -106,10 +106,10 @@ The AMPEL360 DPP framework aligns with:
 - **EU Digital Product Passport Regulation**: Battery Regulation (EU) 2023/1542, Ecodesign for Sustainable Products Regulation
 - **EASA AI Roadmap**: Concept Paper on AI, ML Guidance Material
 - **ISO/IEC 5338**: AI System Lifecycle
-- **DO-178C & DO-254**: Software and Hardware Certification (adapted for AI)
+- **[DO-178C](https://www.rtca.org/document/do-178c/) & [DO-254](https://www.rtca.org/document/do-254/)**: Software and Hardware Certification (adapted for AI)
 - **RTCA SC-147 / EUROCAE WG-114**: AI Assurance
-- **S1000D**: Technical publication standards for aircraft documentation
-- **ATA iSpec 2200**: ATA chapter structure and numbering
+- **[S1000D](http://www.s1000d.org/)**: Technical publication standards for aircraft documentation
+- **[ATA iSpec 2200](https://www.ata.org/resources/specifications)**: ATA chapter structure and numbering
 
 ---
 

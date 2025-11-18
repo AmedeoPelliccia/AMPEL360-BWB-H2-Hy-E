@@ -1,7 +1,7 @@
-# 95-00-13-12-004: Integration with ATA 31 Recording
+# [95-00-13-12-004](95-00-13-12-004.md): Integration with ATA 31 Recording
 
 ## Document Information
-- **Document ID**: 95-00-13-12-004
+- **Document ID**: [95-00-13-12-004](95-00-13-12-004.md)
 - **Title**: Integration with ATA 31 Recording
 - **Version**: 1.0
 - **Status**: Active

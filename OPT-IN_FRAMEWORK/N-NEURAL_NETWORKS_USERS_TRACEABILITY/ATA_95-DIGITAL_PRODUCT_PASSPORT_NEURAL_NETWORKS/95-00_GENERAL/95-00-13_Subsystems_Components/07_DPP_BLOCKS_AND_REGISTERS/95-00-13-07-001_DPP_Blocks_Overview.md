@@ -1,7 +1,7 @@
-# 95-00-13-07-001: DPP Blocks Overview
+# [95-00-13-07-001](95-00-13-07-001.md): DPP Blocks Overview
 
 ## Document Information
-- **Document ID**: 95-00-13-07-001
+- **Document ID**: [95-00-13-07-001](95-00-13-07-001.md)
 - **Title**: DPP Blocks Overview
 - **Version**: 1.0
 - **Status**: Active

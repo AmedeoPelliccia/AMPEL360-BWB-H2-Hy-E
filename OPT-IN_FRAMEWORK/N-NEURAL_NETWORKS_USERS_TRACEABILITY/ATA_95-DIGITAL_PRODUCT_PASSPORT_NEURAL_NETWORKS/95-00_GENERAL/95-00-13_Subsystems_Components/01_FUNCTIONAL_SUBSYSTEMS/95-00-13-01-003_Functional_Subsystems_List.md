@@ -1,7 +1,7 @@
-# 95-00-13-01-003: Functional Subsystems List
+# [95-00-13-01-003](95-00-13-01-003.md): Functional Subsystems List
 
 ## Document Information
-- **Document ID**: 95-00-13-01-003
+- **Document ID**: [95-00-13-01-003](95-00-13-01-003.md)
 - **Title**: Functional Subsystems List
 - **Version**: 1.0
 - **Status**: Active
@@ -61,13 +61,13 @@
 
 ## Cross-Reference Matrix
 
-See: ASSETS/95-00-13-01-A-002_Subsystems_Allocation_Table.csv for detailed allocations.
+See: [ASSETS/[95-00-13-01-A-002_Subsystems_Allocation_Table](95-00-13-01-A-002_Subsystems_Allocation_Table.md).csv](ASSETS/95-00-13-01-A-002_Subsystems_Allocation_Table.csv) for detailed allocations.
 
 ## Related Documents
 
-- 95-00-13-01-001: Functional Subsystems Overview
-- 95-00-13-01-004: Modes and Operational Contexts
-- 95-00-13-00-003: Subsystems Taxonomy
+- [95-00-13-01-001](95-00-13-01-001.md): Functional Subsystems Overview
+- [95-00-13-01-004](95-00-13-01-004.md): Modes and Operational Contexts
+- [95-00-13-00-003](../00_META/95-00-13-00-003.md): Subsystems Taxonomy
 
 ## Revision History
 

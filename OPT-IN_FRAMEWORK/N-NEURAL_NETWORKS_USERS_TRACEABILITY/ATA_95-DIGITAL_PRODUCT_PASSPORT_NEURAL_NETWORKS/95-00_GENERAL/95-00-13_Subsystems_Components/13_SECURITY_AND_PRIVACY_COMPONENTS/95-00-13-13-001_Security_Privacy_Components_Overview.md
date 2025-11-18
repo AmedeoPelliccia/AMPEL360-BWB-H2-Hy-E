@@ -1,7 +1,7 @@
-# 95-00-13-13-001: Security Privacy Components Overview
+# [95-00-13-13-001](95-00-13-13-001.md): Security Privacy Components Overview
 
 ## Document Information
-- **Document ID**: 95-00-13-13-001
+- **Document ID**: [95-00-13-13-001](95-00-13-13-001.md)
 - **Title**: Security Privacy Components Overview
 - **Version**: 1.0
 - **Status**: Active

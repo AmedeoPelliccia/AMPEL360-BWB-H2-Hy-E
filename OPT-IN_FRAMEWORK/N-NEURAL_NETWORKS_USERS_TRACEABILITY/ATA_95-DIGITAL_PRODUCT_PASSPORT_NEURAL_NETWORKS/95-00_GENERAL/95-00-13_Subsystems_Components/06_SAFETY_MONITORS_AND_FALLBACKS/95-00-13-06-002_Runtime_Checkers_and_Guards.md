@@ -1,7 +1,7 @@
-# 95-00-13-06-002: Runtime Checkers and Guards
+# [95-00-13-06-002](95-00-13-06-002.md): Runtime Checkers and Guards
 
 ## Document Information
-- **Document ID**: 95-00-13-06-002
+- **Document ID**: [95-00-13-06-002](95-00-13-06-002.md)
 - **Title**: Runtime Checkers and Guards
 - **Version**: 1.0
 - **Status**: Active

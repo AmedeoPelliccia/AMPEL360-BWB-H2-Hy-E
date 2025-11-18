@@ -1,7 +1,7 @@
-# 95-00-13-05-003: Ensembles and Composite Models
+# [95-00-13-05-003](95-00-13-05-003.md): Ensembles and Composite Models
 
 ## Document Information
-- **Document ID**: 95-00-13-05-003
+- **Document ID**: [95-00-13-05-003](95-00-13-05-003.md)
 - **Title**: Ensembles and Composite Models
 - **Version**: 1.0
 - **Status**: Active

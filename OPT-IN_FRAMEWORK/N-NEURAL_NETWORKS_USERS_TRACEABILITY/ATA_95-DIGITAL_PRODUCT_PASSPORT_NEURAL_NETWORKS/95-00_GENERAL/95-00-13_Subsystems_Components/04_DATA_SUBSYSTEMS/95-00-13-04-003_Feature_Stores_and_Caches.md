@@ -1,7 +1,7 @@
-# 95-00-13-04-003: Feature Stores and Caches
+# [95-00-13-04-003](95-00-13-04-003.md): Feature Stores and Caches
 
 ## Document Information
-- **Document ID**: 95-00-13-04-003
+- **Document ID**: [95-00-13-04-003](95-00-13-04-003.md)
 - **Title**: Feature Stores and Caches
 - **Version**: 1.0
 - **Status**: Active

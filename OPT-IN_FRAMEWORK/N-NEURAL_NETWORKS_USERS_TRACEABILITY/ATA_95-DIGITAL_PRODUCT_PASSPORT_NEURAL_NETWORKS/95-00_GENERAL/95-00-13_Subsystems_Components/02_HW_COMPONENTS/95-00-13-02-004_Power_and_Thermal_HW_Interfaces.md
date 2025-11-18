@@ -1,7 +1,7 @@
-# 95-00-13-02-004: Power and Thermal HW Interfaces
+# [95-00-13-02-004](95-00-13-02-004.md): Power and Thermal HW Interfaces
 
 ## Document Information
-- **Document ID**: 95-00-13-02-004
+- **Document ID**: [95-00-13-02-004](95-00-13-02-004.md)
 - **Title**: Power and Thermal HW Interfaces
 - **Version**: 1.0
 - **Status**: Active
@@ -35,8 +35,8 @@
 
 ## Related Documents
 
-- 95-00-13-02-001: HW Components Overview
-- 95-00-13-02-003: Sensors Actuators and IO
+- [95-00-13-02-001](95-00-13-02-001.md): HW Components Overview
+- [95-00-13-02-003](95-00-13-02-003.md): Sensors Actuators and IO
 
 ## Revision History
 

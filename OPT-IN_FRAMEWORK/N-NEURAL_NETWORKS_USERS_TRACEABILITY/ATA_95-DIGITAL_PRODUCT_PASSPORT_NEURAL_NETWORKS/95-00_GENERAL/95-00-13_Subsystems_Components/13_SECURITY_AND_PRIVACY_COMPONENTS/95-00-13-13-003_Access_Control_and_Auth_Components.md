@@ -1,7 +1,7 @@
-# 95-00-13-13-003: Access Control and Auth Components
+# [95-00-13-13-003](95-00-13-13-003.md): Access Control and Auth Components
 
 ## Document Information
-- **Document ID**: 95-00-13-13-003
+- **Document ID**: [95-00-13-13-003](95-00-13-13-003.md)
 - **Title**: Access Control and Auth Components
 - **Version**: 1.0
 - **Status**: Active

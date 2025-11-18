@@ -1,7 +1,7 @@
-# 95-00-13-02-002: Compute Boards and Modules
+# [95-00-13-02-002](95-00-13-02-002.md): Compute Boards and Modules
 
 ## Document Information
-- **Document ID**: 95-00-13-02-002
+- **Document ID**: [95-00-13-02-002](95-00-13-02-002.md)
 - **Title**: Compute Boards and Modules
 - **Version**: 1.0
 - **Status**: Active
@@ -18,10 +18,10 @@
 - **Redundancy**: Triple modular redundancy (TMR)
 
 ### IMA Core Modules
-- **Standard**: ARINC 653 compliant
+- **Standard**: [ARINC 653](https://www.aviation-ia.com/cf/aeec.html) compliant
 - **Partitioning**: Time and space partitioning
 - **Real-time OS**: PikeOS or VxWorks 653
-- **Communication**: ARINC 664 backplane
+- **Communication**: [ARINC 664](https://www.aviation-ia.com/cf/aeec.html) backplane
 
 ### AI Accelerator Modules
 - **GPU**: NVIDIA Jetson AGX Orin
@@ -32,7 +32,7 @@
 
 ## Related Documents
 
-- 95-00-13-02-001: HW Components Overview
+- [95-00-13-02-001](95-00-13-02-001.md): HW Components Overview
 - ASSETS/95-00-13-02-A-001_HW_Components_List.xlsx
 
 ## Revision History

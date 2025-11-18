@@ -1,7 +1,7 @@
-# 95-00-13-10-001: FRU Concept for NN and DPP
+# [95-00-13-10-001](95-00-13-10-001.md): FRU Concept for NN and DPP
 
 ## Document Information
-- **Document ID**: 95-00-13-10-001
+- **Document ID**: [95-00-13-10-001](95-00-13-10-001.md)
 - **Title**: FRU Concept for NN and DPP
 - **Version**: 1.0
 - **Status**: Active

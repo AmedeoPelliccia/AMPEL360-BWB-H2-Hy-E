@@ -11,15 +11,15 @@ This folder is part of the **95-00_GENERAL** layer, which provides governance an
 ## Contents
 
 ### Strategy and Principles
-- **95-00-13-00-001_Subsystems_Components_Strategy.md**: Overall strategy for system decomposition
-- **95-00-13-00-002_Decomposition_Principles_and_Rules.md**: Rules and principles for decomposition
+- **[95-00-13-00-001_Subsystems_Components_Strategy](95-00-13-00-001_Subsystems_Components_Strategy.md).md**: Overall strategy for system decomposition
+- **[95-00-13-00-002_Decomposition_Principles_and_Rules](95-00-13-00-002_Decomposition_Principles_and_Rules.md).md**: Rules and principles for decomposition
 
 ### 00_META/ - Taxonomy and Traceability
-- **95-00-13-00-003_Subsystems_Taxonomy.md**: Hierarchical classification system
-- **95-00-13-00-004_Components_Taxonomy.md**: Component classification framework
-- **95-00-13-00-005_Subsys_Comp_Traceability_Matrix.csv**: Traceability matrix
-- **95-00-13-00-006_Subsys_Registry.json**: Component registry in JSON format
-- **95-00-13-00-007_CAOS_Subsystems_Hooks.md**: CAOS AI integration points
+- **[95-00-13-00-003_Subsystems_Taxonomy](95-00-13-00-003_Subsystems_Taxonomy.md).md**: Hierarchical classification system
+- **[95-00-13-00-004_Components_Taxonomy](95-00-13-00-004_Components_Taxonomy.md).md**: Component classification framework
+- **[95-00-13-00-005_Subsys_Comp_Traceability_Matrix](95-00-13-00-005_Subsys_Comp_Traceability_Matrix.md).csv**: Traceability matrix
+- **[95-00-13-00-006_Subsys_Registry](95-00-13-00-006_Subsys_Registry.md).json**: Component registry in JSON format
+- **[95-00-13-00-007_CAOS_Subsystems_Hooks](95-00-13-00-007_CAOS_Subsystems_Hooks.md).md**: CAOS AI integration points
 
 ### 01_FUNCTIONAL_SUBSYSTEMS/
 Mission-capability based functional decomposition:
@@ -139,8 +139,8 @@ Traceability and verification:
 ```
 95-00-13_Subsystems_Components/
 ├── README.md (this file)
-├── 95-00-13-00-001_Subsystems_Components_Strategy.md
-├── 95-00-13-00-002_Decomposition_Principles_and_Rules.md
+├── [95-00-13-00-001_Subsystems_Components_Strategy](95-00-13-00-001_Subsystems_Components_Strategy.md).md
+├── [95-00-13-00-002_Decomposition_Principles_and_Rules](95-00-13-00-002_Decomposition_Principles_and_Rules.md).md
 │
 ├── 00_META/ (7 files)
 ├── 01_FUNCTIONAL_SUBSYSTEMS/ (5 docs + 4 assets)
@@ -174,7 +174,7 @@ Total: 134 files across 15 directories
 
 ## Usage Guidelines
 
-1. **Start with Strategy**: Read 95-00-13-00-001 and 95-00-13-00-002 first
+1. **Start with Strategy**: Read [95-00-13-00-001](95-00-13-00-001.md) and [95-00-13-00-002](95-00-13-00-002.md) first
 2. **Understand Taxonomy**: Review 00_META/ for classification systems
 3. **Navigate by Domain**: Use appropriate subfolder for your domain (HW, SW, Data, etc.)
 4. **Follow Traceability**: Use 14_SUBSYSTEMS_REQUIREMENTS_VV_MAP for verification

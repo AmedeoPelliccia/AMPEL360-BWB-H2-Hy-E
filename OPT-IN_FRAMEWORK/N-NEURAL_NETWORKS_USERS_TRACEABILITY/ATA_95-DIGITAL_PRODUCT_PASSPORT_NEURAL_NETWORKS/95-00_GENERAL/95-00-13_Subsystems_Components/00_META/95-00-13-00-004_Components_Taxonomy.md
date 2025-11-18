@@ -1,7 +1,7 @@
-# 95-00-13-00-004: Components Taxonomy
+# [95-00-13-00-004](95-00-13-00-004.md): Components Taxonomy
 
 ## Document Information
-- **Document ID**: 95-00-13-00-004
+- **Document ID**: [95-00-13-00-004](95-00-13-00-004.md)
 - **Title**: Components Taxonomy
 - **Version**: 1.0
 - **Status**: Active
@@ -47,7 +47,7 @@ This document defines the detailed taxonomy for classifying individual component
 - **Management**: Battery management systems
 
 #### 1.5 Communication Components
-- **Wired**: Ethernet, CAN, ARINC 429
+- **Wired**: Ethernet, CAN, [ARINC 429](https://www.aviation-ia.com/cf/aeec.html)
 - **Wireless**: WiFi, Bluetooth, cellular
 - **Optical**: Fiber transceivers
 - **Radio**: VHF, UHF, satcom
@@ -274,7 +274,7 @@ This document defines the detailed taxonomy for classifying individual component
 ## Component Registry
 
 ### Registry Structure
-See: 95-00-13-00-006_Subsys_Registry.json
+See: [95-00-13-00-006_Subsys_Registry](95-00-13-00-006_Subsys_Registry.md).json
 
 ### Registry Fields
 - Component ID
@@ -288,13 +288,13 @@ See: 95-00-13-00-006_Subsys_Registry.json
 ## Cross-References
 
 ### To Requirements
-See: 95-00-13-14-002_Subsystems_to_RQ_Map.md
+See: [95-00-13-14-002_Subsystems_to_RQ_Map](../14_SUBSYSTEMS_REQUIREMENTS_VV_MAP/95-00-13-14-002_Subsystems_to_RQ_Map.md).md
 
 ### To Verification
-See: 95-00-13-14-003_Subsystems_to_VV_Cases_Map.md
+See: [95-00-13-14-003_Subsystems_to_VV_Cases_Map](../14_SUBSYSTEMS_REQUIREMENTS_VV_MAP/95-00-13-14-003_Subsystems_to_VV_Cases_Map.md).md
 
 ### To Certification
-See: 95-00-13-14-004_Subsystems_to_Cert_Evidence_Map.md
+See: [95-00-13-14-004_Subsystems_to_Cert_Evidence_Map](../14_SUBSYSTEMS_REQUIREMENTS_VV_MAP/95-00-13-14-004_Subsystems_to_Cert_Evidence_Map.md).md
 
 ## Maintenance and Updates
 
@@ -313,9 +313,9 @@ See: 95-00-13-14-004_Subsystems_to_Cert_Evidence_Map.md
 
 ## Related Documents
 
-- 95-00-13-00-003: Subsystems Taxonomy
-- 95-00-13-00-005: Subsys_Comp_Traceability_Matrix.csv
-- 95-00-13-00-006: Subsys_Registry.json
+- [95-00-13-00-003](95-00-13-00-003.md): Subsystems Taxonomy
+- [95-00-13-00-005](95-00-13-00-005.md): Subsys_Comp_Traceability_Matrix.csv
+- [95-00-13-00-006](95-00-13-00-006.md): Subsys_Registry.json
 - Component-specific catalogs in each subsystem folder
 
 ## Revision History

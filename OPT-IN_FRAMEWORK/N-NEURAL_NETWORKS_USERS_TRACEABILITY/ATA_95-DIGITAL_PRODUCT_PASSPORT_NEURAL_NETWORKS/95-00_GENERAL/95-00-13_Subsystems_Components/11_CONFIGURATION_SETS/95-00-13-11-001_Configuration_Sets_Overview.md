@@ -1,7 +1,7 @@
-# 95-00-13-11-001: Configuration Sets Overview
+# [95-00-13-11-001](95-00-13-11-001.md): Configuration Sets Overview
 
 ## Document Information
-- **Document ID**: 95-00-13-11-001
+- **Document ID**: [95-00-13-11-001](95-00-13-11-001.md)
 - **Title**: Configuration Sets Overview
 - **Version**: 1.0
 - **Status**: Active

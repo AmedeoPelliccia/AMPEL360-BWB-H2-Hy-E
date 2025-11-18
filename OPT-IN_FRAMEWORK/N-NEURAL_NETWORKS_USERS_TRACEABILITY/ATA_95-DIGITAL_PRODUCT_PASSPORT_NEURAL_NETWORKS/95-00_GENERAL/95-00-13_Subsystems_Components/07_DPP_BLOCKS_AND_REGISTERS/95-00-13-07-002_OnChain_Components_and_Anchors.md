@@ -1,7 +1,7 @@
-# 95-00-13-07-002: OnChain Components and Anchors
+# [95-00-13-07-002](95-00-13-07-002.md): OnChain Components and Anchors
 
 ## Document Information
-- **Document ID**: 95-00-13-07-002
+- **Document ID**: [95-00-13-07-002](95-00-13-07-002.md)
 - **Title**: OnChain Components and Anchors
 - **Version**: 1.0
 - **Status**: Active

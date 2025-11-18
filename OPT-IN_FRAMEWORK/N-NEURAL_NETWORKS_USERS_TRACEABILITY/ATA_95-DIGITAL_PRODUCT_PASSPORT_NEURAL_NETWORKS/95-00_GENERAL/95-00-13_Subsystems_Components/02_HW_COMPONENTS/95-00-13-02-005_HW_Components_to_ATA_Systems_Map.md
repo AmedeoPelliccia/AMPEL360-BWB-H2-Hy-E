@@ -1,7 +1,7 @@
-# 95-00-13-02-005: HW Components to ATA Systems Map
+# [95-00-13-02-005](95-00-13-02-005.md): HW Components to ATA Systems Map
 
 ## Document Information
-- **Document ID**: 95-00-13-02-005
+- **Document ID**: [95-00-13-02-005](95-00-13-02-005.md)
 - **Title**: HW Components to ATA Systems Map
 - **Version**: 1.0
 - **Status**: Active
@@ -23,7 +23,7 @@
 
 ## Related Documents
 
-- 95-00-13-02-001: HW Components Overview
+- [95-00-13-02-001](95-00-13-02-001.md): HW Components Overview
 - ASSETS/95-00-13-02-A-001_HW_Components_List.xlsx
 
 ## Revision History

@@ -1,7 +1,7 @@
-# 95-00-13-14-005: Subsystem Impact and Criticality Levels
+# [95-00-13-14-005](95-00-13-14-005.md): Subsystem Impact and Criticality Levels
 
 ## Document Information
-- **Document ID**: 95-00-13-14-005
+- **Document ID**: [95-00-13-14-005](95-00-13-14-005.md)
 - **Title**: Subsystem Impact and Criticality Levels
 - **Version**: 1.0
 - **Status**: Active

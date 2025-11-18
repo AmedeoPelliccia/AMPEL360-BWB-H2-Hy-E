@@ -1,7 +1,7 @@
-# 95-00-13-02-003: Sensors, Actuators and I/O
+# [95-00-13-02-003](95-00-13-02-003.md): Sensors, Actuators and I/O
 
 ## Document Information
-- **Document ID**: 95-00-13-02-003
+- **Document ID**: [95-00-13-02-003](95-00-13-02-003.md)
 - **Title**: Sensors, Actuators and I/O
 - **Version**: 1.0
 - **Status**: Active
@@ -39,12 +39,12 @@
 
 ## I/O Mapping
 
-See: ASSETS/95-00-13-02-A-003_HW_IO_Mapping_Table.csv
+See: [ASSETS/[95-00-13-02-A-003_HW_IO_Mapping_Table](95-00-13-02-A-003_HW_IO_Mapping_Table.md).csv](ASSETS/95-00-13-02-A-003_HW_IO_Mapping_Table.csv)
 
 ## Related Documents
 
-- 95-00-13-02-001: HW Components Overview
-- 95-00-13-02-004: Power and Thermal HW Interfaces
+- [95-00-13-02-001](95-00-13-02-001.md): HW Components Overview
+- [95-00-13-02-004](95-00-13-02-004.md): Power and Thermal HW Interfaces
 
 ## Revision History
 

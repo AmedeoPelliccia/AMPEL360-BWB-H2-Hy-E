@@ -1,7 +1,7 @@
-# 95-00-13-10-004: FRU and Spare Parts Management
+# [95-00-13-10-004](95-00-13-10-004.md): FRU and Spare Parts Management
 
 ## Document Information
-- **Document ID**: 95-00-13-10-004
+- **Document ID**: [95-00-13-10-004](95-00-13-10-004.md)
 - **Title**: FRU and Spare Parts Management
 - **Version**: 1.0
 - **Status**: Active

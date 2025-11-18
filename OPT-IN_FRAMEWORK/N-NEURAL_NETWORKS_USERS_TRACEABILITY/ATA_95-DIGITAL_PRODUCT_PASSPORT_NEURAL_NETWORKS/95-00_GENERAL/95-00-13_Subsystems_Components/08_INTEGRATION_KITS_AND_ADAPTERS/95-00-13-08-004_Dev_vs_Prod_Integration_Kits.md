@@ -1,7 +1,7 @@
-# 95-00-13-08-004: Dev vs Prod Integration Kits
+# [95-00-13-08-004](95-00-13-08-004.md): Dev vs Prod Integration Kits
 
 ## Document Information
-- **Document ID**: 95-00-13-08-004
+- **Document ID**: [95-00-13-08-004](95-00-13-08-004.md)
 - **Title**: Dev vs Prod Integration Kits
 - **Version**: 1.0
 - **Status**: Active

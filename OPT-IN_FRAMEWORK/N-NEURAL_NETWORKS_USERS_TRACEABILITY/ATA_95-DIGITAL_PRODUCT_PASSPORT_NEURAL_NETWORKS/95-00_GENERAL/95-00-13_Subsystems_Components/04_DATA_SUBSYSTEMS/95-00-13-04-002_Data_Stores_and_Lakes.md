@@ -1,7 +1,7 @@
-# 95-00-13-04-002: Data Stores and Lakes
+# [95-00-13-04-002](95-00-13-04-002.md): Data Stores and Lakes
 
 ## Document Information
-- **Document ID**: 95-00-13-04-002
+- **Document ID**: [95-00-13-04-002](95-00-13-04-002.md)
 - **Title**: Data Stores and Lakes
 - **Version**: 1.0
 - **Status**: Active

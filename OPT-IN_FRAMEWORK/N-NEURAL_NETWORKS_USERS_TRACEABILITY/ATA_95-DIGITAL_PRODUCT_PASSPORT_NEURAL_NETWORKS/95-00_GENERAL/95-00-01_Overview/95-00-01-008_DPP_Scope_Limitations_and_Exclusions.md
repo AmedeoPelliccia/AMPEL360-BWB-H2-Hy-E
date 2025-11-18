@@ -47,14 +47,14 @@ The following neural network and machine learning systems **MUST** have a DPP:
 
 ## 3. Systems Excluded from DPP Scope
 
-### 3.1 Conventional Software (DO-178C Compliant)
+### 3.1 Conventional Software ([DO-178C](https://www.rtca.org/document/do-178c/) Compliant)
 
 **Excluded**:
 - Deterministic control laws (e.g., PID controllers with fixed coefficients)
 - Rule-based expert systems (if/then logic without learning)
 - Traditional avionics software (flight management systems without AI)
 
-**Rationale**: Conventional software is governed by existing standards (DO-178C, DO-254). DPP is specifically tailored for AI/ML uncertainty and lifecycle.
+**Rationale**: Conventional software is governed by existing standards (DO-178C, [DO-254](https://www.rtca.org/document/do-254/)). DPP is specifically tailored for AI/ML uncertainty and lifecycle.
 
 **Documentation**: Conventional software documented per standard software development plans, not DPP.
 

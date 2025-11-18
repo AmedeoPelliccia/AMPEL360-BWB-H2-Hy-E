@@ -1,7 +1,7 @@
-# 95-00-13-11-003: Config Sets for Sim, Lab and Prod
+# [95-00-13-11-003](95-00-13-11-003.md): Config Sets for Sim, Lab and Prod
 
 ## Document Information
-- **Document ID**: 95-00-13-11-003
+- **Document ID**: [95-00-13-11-003](95-00-13-11-003.md)
 - **Title**: Config Sets for Sim, Lab and Prod
 - **Version**: 1.0
 - **Status**: Active

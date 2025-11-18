@@ -1,7 +1,7 @@
-# 95-00-13-09-003: HIL/SIL Rig Subsystems
+# [95-00-13-09-003](95-00-13-09-003.md): HIL/SIL Rig Subsystems
 
 ## Document Information
-- **Document ID**: 95-00-13-09-003
+- **Document ID**: [95-00-13-09-003](95-00-13-09-003.md)
 - **Title**: HIL/SIL Rig Subsystems
 - **Version**: 1.0
 - **Status**: Active

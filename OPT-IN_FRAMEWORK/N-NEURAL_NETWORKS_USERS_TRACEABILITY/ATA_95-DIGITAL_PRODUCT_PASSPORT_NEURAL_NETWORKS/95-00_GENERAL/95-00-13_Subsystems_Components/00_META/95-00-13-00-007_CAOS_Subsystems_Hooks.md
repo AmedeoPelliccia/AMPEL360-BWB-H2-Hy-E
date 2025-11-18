@@ -1,7 +1,7 @@
-# 95-00-13-00-007: CAOS Subsystems Hooks
+# [95-00-13-00-007](95-00-13-00-007.md): CAOS Subsystems Hooks
 
 ## Document Information
-- **Document ID**: 95-00-13-00-007
+- **Document ID**: [95-00-13-00-007](95-00-13-00-007.md)
 - **Title**: CAOS Subsystems Hooks
 - **Version**: 1.0
 - **Status**: Active
@@ -413,10 +413,10 @@ if impact['severity'] == 'critical':
 ## Related Documents
 
 - CAOS System Architecture (CAOS/)
-- 95-00-13-00-001: Subsystems Components Strategy
-- 95-00-13-00-006: Subsys_Registry.json
-- 95-00-05: Interfaces Documentation
-- 95-00-12: Services Documentation
+- [95-00-13-00-001](95-00-13-00-001.md): Subsystems Components Strategy
+- [95-00-13-00-006](95-00-13-00-006.md): Subsys_Registry.json
+- [95-00-05](../../95-00-05_*/): Interfaces Documentation
+- [95-00-12](../../95-00-12_*/): Services Documentation
 
 ## Revision History
 

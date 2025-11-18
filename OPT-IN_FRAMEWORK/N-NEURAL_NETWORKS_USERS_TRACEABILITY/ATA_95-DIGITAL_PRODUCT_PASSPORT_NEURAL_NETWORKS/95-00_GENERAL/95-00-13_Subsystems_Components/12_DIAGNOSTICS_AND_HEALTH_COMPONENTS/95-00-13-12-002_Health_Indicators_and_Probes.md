@@ -1,7 +1,7 @@
-# 95-00-13-12-002: Health Indicators and Probes
+# [95-00-13-12-002](95-00-13-12-002.md): Health Indicators and Probes
 
 ## Document Information
-- **Document ID**: 95-00-13-12-002
+- **Document ID**: [95-00-13-12-002](95-00-13-12-002.md)
 - **Title**: Health Indicators and Probes
 - **Version**: 1.0
 - **Status**: Active

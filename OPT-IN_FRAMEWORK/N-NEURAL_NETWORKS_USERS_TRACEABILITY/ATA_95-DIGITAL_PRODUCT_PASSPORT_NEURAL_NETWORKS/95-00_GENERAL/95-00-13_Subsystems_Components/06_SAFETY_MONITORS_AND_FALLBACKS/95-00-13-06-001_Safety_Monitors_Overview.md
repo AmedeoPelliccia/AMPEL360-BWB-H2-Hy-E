@@ -1,7 +1,7 @@
-# 95-00-13-06-001: Safety Monitors Overview
+# [95-00-13-06-001](95-00-13-06-001.md): Safety Monitors Overview
 
 ## Document Information
-- **Document ID**: 95-00-13-06-001
+- **Document ID**: [95-00-13-06-001](95-00-13-06-001.md)
 - **Title**: Safety Monitors Overview
 - **Version**: 1.0
 - **Status**: Active

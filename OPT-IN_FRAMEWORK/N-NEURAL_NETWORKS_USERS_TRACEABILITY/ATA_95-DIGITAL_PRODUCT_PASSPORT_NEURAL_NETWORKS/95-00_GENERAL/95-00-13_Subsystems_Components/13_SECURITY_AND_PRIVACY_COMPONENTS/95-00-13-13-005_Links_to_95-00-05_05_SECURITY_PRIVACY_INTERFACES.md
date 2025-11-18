@@ -1,7 +1,7 @@
-# 95-00-13-13-005: Links to Security Privacy Interfaces
+# [95-00-13-13-005](95-00-13-13-005.md): Links to Security Privacy Interfaces
 
 ## Document Information
-- **Document ID**: 95-00-13-13-005
+- **Document ID**: [95-00-13-13-005](95-00-13-13-005.md)
 - **Title**: Links to Security Privacy Interfaces
 - **Version**: 1.0
 - **Status**: Active

@@ -1,7 +1,7 @@
-# 95-00-13-01-002: Functional Decomposition Rules
+# [95-00-13-01-002](95-00-13-01-002.md): Functional Decomposition Rules
 
 ## Document Information
-- **Document ID**: 95-00-13-01-002
+- **Document ID**: [95-00-13-01-002](95-00-13-01-002.md)
 - **Title**: Functional Decomposition Rules
 - **Version**: 1.0
 - **Status**: Active
@@ -293,11 +293,11 @@ Each functional subsystem shall be documented with:
 
 ## Related Documents
 
-- 95-00-13-01-001: Functional Subsystems Overview
-- 95-00-13-01-003: Functional Subsystems List
-- 95-00-13-00-002: Decomposition Principles and Rules
-- 95-00-03: Requirements Documentation
-- 95-00-07: Verification & Validation
+- [95-00-13-01-001](95-00-13-01-001.md): Functional Subsystems Overview
+- [95-00-13-01-003](95-00-13-01-003.md): Functional Subsystems List
+- [95-00-13-00-002](../00_META/95-00-13-00-002.md): Decomposition Principles and Rules
+- [95-00-03](../../95-00-03_*/): Requirements Documentation
+- [95-00-07](../../95-00-07_*/): Verification & Validation
 
 ## Revision History
 

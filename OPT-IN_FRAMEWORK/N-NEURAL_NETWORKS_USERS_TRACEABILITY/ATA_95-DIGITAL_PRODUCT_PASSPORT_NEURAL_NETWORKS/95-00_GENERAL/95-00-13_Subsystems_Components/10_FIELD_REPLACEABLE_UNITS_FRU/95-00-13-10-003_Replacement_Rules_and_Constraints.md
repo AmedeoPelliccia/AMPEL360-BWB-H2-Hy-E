@@ -1,7 +1,7 @@
-# 95-00-13-10-003: Replacement Rules and Constraints
+# [95-00-13-10-003](95-00-13-10-003.md): Replacement Rules and Constraints
 
 ## Document Information
-- **Document ID**: 95-00-13-10-003
+- **Document ID**: [95-00-13-10-003](95-00-13-10-003.md)
 - **Title**: Replacement Rules and Constraints
 - **Version**: 1.0
 - **Status**: Active

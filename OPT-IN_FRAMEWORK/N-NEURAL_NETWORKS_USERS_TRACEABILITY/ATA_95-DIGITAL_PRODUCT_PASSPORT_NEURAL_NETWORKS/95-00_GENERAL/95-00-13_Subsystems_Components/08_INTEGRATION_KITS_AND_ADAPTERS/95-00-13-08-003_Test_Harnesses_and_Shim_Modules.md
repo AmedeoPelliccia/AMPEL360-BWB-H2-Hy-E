@@ -1,7 +1,7 @@
-# 95-00-13-08-003: Test Harnesses and Shim Modules
+# [95-00-13-08-003](95-00-13-08-003.md): Test Harnesses and Shim Modules
 
 ## Document Information
-- **Document ID**: 95-00-13-08-003
+- **Document ID**: [95-00-13-08-003](95-00-13-08-003.md)
 - **Title**: Test Harnesses and Shim Modules
 - **Version**: 1.0
 - **Status**: Active

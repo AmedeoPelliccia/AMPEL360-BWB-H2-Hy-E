@@ -1,7 +1,7 @@
-# 95-00-13-06-004: Safety Monitor Interfaces
+# [95-00-13-06-004](95-00-13-06-004.md): Safety Monitor Interfaces
 
 ## Document Information
-- **Document ID**: 95-00-13-06-004
+- **Document ID**: [95-00-13-06-004](95-00-13-06-004.md)
 - **Title**: Safety Monitor Interfaces
 - **Version**: 1.0
 - **Status**: Active

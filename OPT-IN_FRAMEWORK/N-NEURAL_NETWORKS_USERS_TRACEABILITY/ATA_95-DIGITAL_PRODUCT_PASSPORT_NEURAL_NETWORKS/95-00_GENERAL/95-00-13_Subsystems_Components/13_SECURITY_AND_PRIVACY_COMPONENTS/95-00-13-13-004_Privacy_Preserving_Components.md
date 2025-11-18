@@ -1,7 +1,7 @@
-# 95-00-13-13-004: Privacy Preserving Components
+# [95-00-13-13-004](95-00-13-13-004.md): Privacy Preserving Components
 
 ## Document Information
-- **Document ID**: 95-00-13-13-004
+- **Document ID**: [95-00-13-13-004](95-00-13-13-004.md)
 - **Title**: Privacy Preserving Components
 - **Version**: 1.0
 - **Status**: Active

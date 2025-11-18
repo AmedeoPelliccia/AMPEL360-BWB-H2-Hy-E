@@ -1,7 +1,7 @@
-# 95-00-13-10-002: FRU List and Classification
+# [95-00-13-10-002](95-00-13-10-002.md): FRU List and Classification
 
 ## Document Information
-- **Document ID**: 95-00-13-10-002
+- **Document ID**: [95-00-13-10-002](95-00-13-10-002.md)
 - **Title**: FRU List and Classification
 - **Version**: 1.0
 - **Status**: Active

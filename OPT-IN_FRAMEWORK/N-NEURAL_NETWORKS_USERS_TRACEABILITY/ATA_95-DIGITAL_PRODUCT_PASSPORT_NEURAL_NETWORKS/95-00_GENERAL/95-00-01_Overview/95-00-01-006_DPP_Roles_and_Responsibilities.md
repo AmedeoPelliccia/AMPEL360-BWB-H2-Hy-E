@@ -490,7 +490,7 @@ Program Management
 | ------------------ | --------------------------------------------------------------------- | -------------------------------- |
 | ML Engineer        | Python, TensorFlow/PyTorch, ML algorithms, data science               | Internal bootcamp + Coursera     |
 | Safety Engineer    | ARP 4754A, ARP 4761, hazard analysis, safety cases                    | SAE courses + mentorship         |
-| V&V Engineer       | Test design, DO-178C, HIL testing, robustness analysis                | DO-178C training + hands-on      |
+| V&V Engineer       | Test design, [DO-178C](https://www.rtca.org/document/do-178c/), HIL testing, robustness analysis                | DO-178C training + hands-on      |
 | Certification Mgr  | CS-25, FAA regulations, certification processes, authority engagement | EASA/FAA workshops + experience  |
 | Config Mgr         | CM best practices, Git, baseline management, change control           | CMII certification + AMPEL360 CM |
 

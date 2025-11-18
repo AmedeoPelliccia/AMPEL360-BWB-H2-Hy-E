@@ -31,7 +31,7 @@ The Digital Product Passport framework for neural networks in AMPEL360 is design
 **Objective**: Reduce time-to-market for AI innovations while maintaining safety and quality standards.
 
 **Success Criteria**:
-- 30% reduction in certification timeline vs. traditional software (DO-178C baseline)
+- 30% reduction in certification timeline vs. traditional software ([DO-178C](https://www.rtca.org/document/do-178c/) baseline)
 - Reusable validation artifacts across model versions
 - Automated testing and continuous integration pipelines
 
@@ -127,7 +127,7 @@ In-Service Metrics → Maintenance Action
 **Objective**: Enable neural networks to integrate seamlessly with heterogeneous avionics systems.
 
 **Interface Specifications**:
-- Input/output data formats (ARINC 429, AFDX, Ethernet)
+- Input/output data formats ([ARINC 429](https://www.aviation-ia.com/cf/aeec.html), AFDX, Ethernet)
 - Timing constraints (latency, jitter, throughput)
 - API contracts (function signatures, error handling)
 - Protocol compliance (CAN bus, MIL-STD-1553)
@@ -233,7 +233,7 @@ In-Service Metrics → Maintenance Action
 - **EU DPP Regulation**: Digital passport for intelligent systems
 - **EASA CS-25**: Airworthiness standards for AI-enabled functions
 - **FAA 14 CFR Part 25**: Equivalent FAA regulations
-- **DO-178C / DO-254**: Software and hardware design assurance (adapted for AI)
+- **DO-178C / [DO-254](https://www.rtca.org/document/do-254/)**: Software and hardware design assurance (adapted for AI)
 - **GDPR**: Data privacy for training data and operational logs
 
 ### 5.2 Align with Industry Standards

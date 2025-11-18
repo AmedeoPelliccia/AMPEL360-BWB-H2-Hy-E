@@ -1,7 +1,7 @@
-# 95-00-13-11-004: Config Set Approval and Control
+# [95-00-13-11-004](95-00-13-11-004.md): Config Set Approval and Control
 
 ## Document Information
-- **Document ID**: 95-00-13-11-004
+- **Document ID**: [95-00-13-11-004](95-00-13-11-004.md)
 - **Title**: Config Set Approval and Control
 - **Version**: 1.0
 - **Status**: Active

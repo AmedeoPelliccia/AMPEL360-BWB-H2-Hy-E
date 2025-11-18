@@ -1,7 +1,7 @@
-# 95-00-13-03-004: Interfaces between SW Components
+# [95-00-13-03-004](95-00-13-03-004.md): Interfaces between SW Components
 
 ## Document Information
-- **Document ID**: 95-00-13-03-004
+- **Document ID**: [95-00-13-03-004](95-00-13-03-004.md)
 - **Title**: Interfaces between SW Components
 - **Version**: 1.0
 - **Status**: Active

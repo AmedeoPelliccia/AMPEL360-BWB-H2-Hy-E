@@ -1,7 +1,7 @@
-# 95-00-13-03-001: Software Components Overview
+# [95-00-13-03-001](95-00-13-03-001.md): Software Components Overview
 
 ## Document Information
-- **Document ID**: 95-00-13-03-001
+- **Document ID**: [95-00-13-03-001](95-00-13-03-001.md)
 - **Title**: Software Components Overview
 - **Version**: 1.0
 - **Status**: Active

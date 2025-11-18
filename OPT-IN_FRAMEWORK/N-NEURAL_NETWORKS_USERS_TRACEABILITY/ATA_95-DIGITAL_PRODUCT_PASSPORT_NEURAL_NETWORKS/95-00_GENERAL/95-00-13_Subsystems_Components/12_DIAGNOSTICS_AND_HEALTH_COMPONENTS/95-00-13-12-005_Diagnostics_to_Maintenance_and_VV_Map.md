@@ -1,7 +1,7 @@
-# 95-00-13-12-005: Diagnostics to Maintenance and V&V Map
+# [95-00-13-12-005](95-00-13-12-005.md): Diagnostics to Maintenance and V&V Map
 
 ## Document Information
-- **Document ID**: 95-00-13-12-005
+- **Document ID**: [95-00-13-12-005](95-00-13-12-005.md)
 - **Title**: Diagnostics to Maintenance and V&V Map
 - **Version**: 1.0
 - **Status**: Active

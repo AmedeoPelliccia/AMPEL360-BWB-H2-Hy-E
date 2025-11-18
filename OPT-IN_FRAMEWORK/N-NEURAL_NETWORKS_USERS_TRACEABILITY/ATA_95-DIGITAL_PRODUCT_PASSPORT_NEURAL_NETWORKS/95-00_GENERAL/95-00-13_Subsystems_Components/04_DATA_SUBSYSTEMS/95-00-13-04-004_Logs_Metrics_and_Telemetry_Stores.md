@@ -1,7 +1,7 @@
-# 95-00-13-04-004: Logs, Metrics and Telemetry Stores
+# [95-00-13-04-004](95-00-13-04-004.md): Logs, Metrics and Telemetry Stores
 
 ## Document Information
-- **Document ID**: 95-00-13-04-004
+- **Document ID**: [95-00-13-04-004](95-00-13-04-004.md)
 - **Title**: Logs, Metrics and Telemetry Stores
 - **Version**: 1.0
 - **Status**: Active

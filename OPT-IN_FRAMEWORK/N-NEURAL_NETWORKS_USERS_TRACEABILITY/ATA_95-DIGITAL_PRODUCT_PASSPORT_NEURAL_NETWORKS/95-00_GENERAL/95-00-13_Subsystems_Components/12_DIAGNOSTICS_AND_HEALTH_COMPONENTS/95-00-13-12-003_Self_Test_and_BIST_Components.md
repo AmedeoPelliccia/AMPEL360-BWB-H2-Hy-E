@@ -1,7 +1,7 @@
-# 95-00-13-12-003: Self Test and BIST Components
+# [95-00-13-12-003](95-00-13-12-003.md): Self Test and BIST Components
 
 ## Document Information
-- **Document ID**: 95-00-13-12-003
+- **Document ID**: [95-00-13-12-003](95-00-13-12-003.md)
 - **Title**: Self Test and BIST Components
 - **Version**: 1.0
 - **Status**: Active

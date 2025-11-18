@@ -87,7 +87,7 @@
 | [Mode Name] | [What causes this mode] | [What still works] | [What doesn't work] |
 
 ## Certification Basis
-- **Applicable Standards**: [DO-178C, DO-254, etc.]
+- **Applicable Standards**: [[DO-178C](https://www.rtca.org/document/do-178c/), [DO-254](https://www.rtca.org/document/do-254/), etc.]
 - **Certification Level**: [DAL-X]
 - **Certification Status**: [Not Started|In Progress|Complete]
 - **Certification Authority**: [FAA/EASA/etc.]

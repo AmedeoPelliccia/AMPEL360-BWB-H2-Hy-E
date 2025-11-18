@@ -1,7 +1,7 @@
-# 95-00-13-05-002: Submodels and Heads
+# [95-00-13-05-002](95-00-13-05-002.md): Submodels and Heads
 
 ## Document Information
-- **Document ID**: 95-00-13-05-002
+- **Document ID**: [95-00-13-05-002](95-00-13-05-002.md)
 - **Title**: Submodels and Heads
 - **Version**: 1.0
 - **Status**: Active

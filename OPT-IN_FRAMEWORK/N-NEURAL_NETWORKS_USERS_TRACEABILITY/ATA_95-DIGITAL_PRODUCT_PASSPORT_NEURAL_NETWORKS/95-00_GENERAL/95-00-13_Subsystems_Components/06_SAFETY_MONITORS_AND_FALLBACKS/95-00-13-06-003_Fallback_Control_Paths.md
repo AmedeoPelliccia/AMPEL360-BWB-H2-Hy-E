@@ -1,7 +1,7 @@
-# 95-00-13-06-003: Fallback Control Paths
+# [95-00-13-06-003](95-00-13-06-003.md): Fallback Control Paths
 
 ## Document Information
-- **Document ID**: 95-00-13-06-003
+- **Document ID**: [95-00-13-06-003](95-00-13-06-003.md)
 - **Title**: Fallback Control Paths
 - **Version**: 1.0
 - **Status**: Active

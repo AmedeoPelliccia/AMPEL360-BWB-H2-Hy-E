@@ -1,7 +1,7 @@
-# 95-00-13-09-002: Lab Racks and Simulators
+# [95-00-13-09-002](95-00-13-09-002.md): Lab Racks and Simulators
 
 ## Document Information
-- **Document ID**: 95-00-13-09-002
+- **Document ID**: [95-00-13-09-002](95-00-13-09-002.md)
 - **Title**: Lab Racks and Simulators
 - **Version**: 1.0
 - **Status**: Active

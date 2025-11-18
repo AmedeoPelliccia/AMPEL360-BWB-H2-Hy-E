@@ -1,7 +1,7 @@
-# 95-00-13-00-002: Decomposition Principles and Rules
+# [95-00-13-00-002](95-00-13-00-002.md): Decomposition Principles and Rules
 
 ## Document Information
-- **Document ID**: 95-00-13-00-002
+- **Document ID**: [95-00-13-00-002](95-00-13-00-002.md)
 - **Title**: Decomposition Principles and Rules
 - **Version**: 1.0
 - **Status**: Active
@@ -144,8 +144,8 @@ Examples:
 Format: `<Subsystem>-<Sequence>-<Descriptive_Name>`
 
 Examples:
-- 95-00-13-01-001_Functional_Subsystems_Overview.md
-- 95-00-13-02-001_HW_Components_Overview.md
+- [95-00-13-01-001_Functional_Subsystems_Overview](95-00-13-01-001_Functional_Subsystems_Overview.md).md
+- [95-00-13-02-001_HW_Components_Overview](95-00-13-02-001_HW_Components_Overview.md).md
 
 ### Asset Naming
 Format: `<Document>-A-<Sequence>_<Description>.<extension>`
@@ -298,11 +298,11 @@ Changes shall be verified by:
 
 ## Related Documents
 
-- 95-00-13-00-001: Subsystems Components Strategy
-- 95-00-13-00-003: Subsystems Taxonomy
-- 95-00-13-00-004: Components Taxonomy
-- 95-00-02: Safety Documentation
-- 95-00-07: Verification & Validation
+- [95-00-13-00-001](../00_META/95-00-13-00-001.md): Subsystems Components Strategy
+- [95-00-13-00-003](../00_META/95-00-13-00-003.md): Subsystems Taxonomy
+- [95-00-13-00-004](../00_META/95-00-13-00-004.md): Components Taxonomy
+- [95-00-02](../../95-00-02_*/): Safety Documentation
+- [95-00-07](../../95-00-07_*/): Verification & Validation
 
 ## Revision History
 

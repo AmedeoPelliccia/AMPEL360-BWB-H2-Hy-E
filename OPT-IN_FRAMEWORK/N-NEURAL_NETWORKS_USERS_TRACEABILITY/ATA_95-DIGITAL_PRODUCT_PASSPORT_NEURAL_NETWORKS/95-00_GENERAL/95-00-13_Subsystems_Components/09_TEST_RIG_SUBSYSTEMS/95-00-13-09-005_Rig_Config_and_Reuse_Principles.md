@@ -1,7 +1,7 @@
-# 95-00-13-09-005: Rig Config and Reuse Principles
+# [95-00-13-09-005](95-00-13-09-005.md): Rig Config and Reuse Principles
 
 ## Document Information
-- **Document ID**: 95-00-13-09-005
+- **Document ID**: [95-00-13-09-005](95-00-13-09-005.md)
 - **Title**: Rig Config and Reuse Principles
 - **Version**: 1.0
 - **Status**: Active

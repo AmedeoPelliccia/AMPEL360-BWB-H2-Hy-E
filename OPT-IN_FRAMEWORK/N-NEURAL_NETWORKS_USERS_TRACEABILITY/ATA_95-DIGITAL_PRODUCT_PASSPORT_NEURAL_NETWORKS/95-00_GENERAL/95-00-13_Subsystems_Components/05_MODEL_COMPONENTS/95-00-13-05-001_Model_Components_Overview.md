@@ -1,7 +1,7 @@
-# 95-00-13-05-001: Model Components Overview
+# [95-00-13-05-001](95-00-13-05-001.md): Model Components Overview
 
 ## Document Information
-- **Document ID**: 95-00-13-05-001
+- **Document ID**: [95-00-13-05-001](95-00-13-05-001.md)
 - **Title**: Model Components Overview
 - **Version**: 1.0
 - **Status**: Active

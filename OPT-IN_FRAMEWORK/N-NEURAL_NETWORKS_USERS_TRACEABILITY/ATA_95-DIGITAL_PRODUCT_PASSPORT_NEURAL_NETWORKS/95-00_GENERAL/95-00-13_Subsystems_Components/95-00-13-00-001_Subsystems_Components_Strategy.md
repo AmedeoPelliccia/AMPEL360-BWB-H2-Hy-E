@@ -1,7 +1,7 @@
-# 95-00-13-00-001: Subsystems & Components Strategy
+# [95-00-13-00-001](95-00-13-00-001.md): Subsystems & Components Strategy
 
 ## Document Information
-- **Document ID**: 95-00-13-00-001
+- **Document ID**: [95-00-13-00-001](95-00-13-00-001.md)
 - **Title**: Subsystems & Components Strategy
 - **Version**: 1.0
 - **Status**: Active
@@ -9,7 +9,7 @@
 
 ## Purpose
 
-This document defines the overall strategy for decomposing the AMPEL360 BWB H₂ Hy-E aircraft system into manageable subsystems and components, ensuring traceability, maintainability, and alignment with ATA iSpec 2200 standards.
+This document defines the overall strategy for decomposing the AMPEL360 BWB H₂ Hy-E aircraft system into manageable subsystems and components, ensuring traceability, maintainability, and alignment with [ATA iSpec 2200](https://www.ata.org/resources/specifications) standards.
 
 ## Scope
 
@@ -156,12 +156,12 @@ AMPEL360 BWB H₂ Hy-E complete aircraft system
 
 ## Related Documents
 
-- 95-00-13-00-002: Decomposition Principles and Rules
-- 95-00-13-00-003: Subsystems Taxonomy
-- 95-00-13-00-004: Components Taxonomy
-- 95-00-03: Requirements Documentation
-- 95-00-05: Interfaces Documentation
-- 95-00-07: Verification & Validation
+- [95-00-13-00-002](../00_META/95-00-13-00-002.md): Decomposition Principles and Rules
+- [95-00-13-00-003](../00_META/95-00-13-00-003.md): Subsystems Taxonomy
+- [95-00-13-00-004](../00_META/95-00-13-00-004.md): Components Taxonomy
+- [95-00-03](../../95-00-03_*/): Requirements Documentation
+- [95-00-05](../../95-00-05_*/): Interfaces Documentation
+- [95-00-07](../../95-00-07_*/): Verification & Validation
 
 ## Revision History
 

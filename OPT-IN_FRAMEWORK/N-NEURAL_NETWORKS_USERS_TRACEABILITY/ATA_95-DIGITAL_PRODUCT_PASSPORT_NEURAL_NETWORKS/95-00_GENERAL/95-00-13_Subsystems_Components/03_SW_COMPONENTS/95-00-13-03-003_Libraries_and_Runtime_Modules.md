@@ -1,7 +1,7 @@
-# 95-00-13-03-003: Libraries and Runtime Modules
+# [95-00-13-03-003](95-00-13-03-003.md): Libraries and Runtime Modules
 
 ## Document Information
-- **Document ID**: 95-00-13-03-003
+- **Document ID**: [95-00-13-03-003](95-00-13-03-003.md)
 - **Title**: Libraries and Runtime Modules
 - **Version**: 1.0
 - **Status**: Active

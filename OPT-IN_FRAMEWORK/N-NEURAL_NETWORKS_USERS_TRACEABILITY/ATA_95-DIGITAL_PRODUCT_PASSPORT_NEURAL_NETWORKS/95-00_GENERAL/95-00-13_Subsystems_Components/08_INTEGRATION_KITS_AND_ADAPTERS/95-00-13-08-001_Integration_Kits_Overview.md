@@ -1,7 +1,7 @@
-# 95-00-13-08-001: Integration Kits Overview
+# [95-00-13-08-001](95-00-13-08-001.md): Integration Kits Overview
 
 ## Document Information
-- **Document ID**: 95-00-13-08-001
+- **Document ID**: [95-00-13-08-001](95-00-13-08-001.md)
 - **Title**: Integration Kits Overview
 - **Version**: 1.0
 - **Status**: Active

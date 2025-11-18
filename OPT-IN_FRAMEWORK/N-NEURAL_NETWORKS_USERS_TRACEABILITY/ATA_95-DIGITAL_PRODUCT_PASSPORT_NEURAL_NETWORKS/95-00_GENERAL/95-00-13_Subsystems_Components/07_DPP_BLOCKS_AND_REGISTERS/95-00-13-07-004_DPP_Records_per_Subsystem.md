@@ -1,7 +1,7 @@
-# 95-00-13-07-004: DPP Records per Subsystem
+# [95-00-13-07-004](95-00-13-07-004.md): DPP Records per Subsystem
 
 ## Document Information
-- **Document ID**: 95-00-13-07-004
+- **Document ID**: [95-00-13-07-004](95-00-13-07-004.md)
 - **Title**: DPP Records per Subsystem
 - **Version**: 1.0
 - **Status**: Active

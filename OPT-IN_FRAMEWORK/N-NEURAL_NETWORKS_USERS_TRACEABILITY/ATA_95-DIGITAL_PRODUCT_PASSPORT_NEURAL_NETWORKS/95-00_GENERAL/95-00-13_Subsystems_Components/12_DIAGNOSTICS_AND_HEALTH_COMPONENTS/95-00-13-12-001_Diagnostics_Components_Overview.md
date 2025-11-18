@@ -1,7 +1,7 @@
-# 95-00-13-12-001: Diagnostics Components Overview
+# [95-00-13-12-001](95-00-13-12-001.md): Diagnostics Components Overview
 
 ## Document Information
-- **Document ID**: 95-00-13-12-001
+- **Document ID**: [95-00-13-12-001](95-00-13-12-001.md)
 - **Title**: Diagnostics Components Overview
 - **Version**: 1.0
 - **Status**: Active

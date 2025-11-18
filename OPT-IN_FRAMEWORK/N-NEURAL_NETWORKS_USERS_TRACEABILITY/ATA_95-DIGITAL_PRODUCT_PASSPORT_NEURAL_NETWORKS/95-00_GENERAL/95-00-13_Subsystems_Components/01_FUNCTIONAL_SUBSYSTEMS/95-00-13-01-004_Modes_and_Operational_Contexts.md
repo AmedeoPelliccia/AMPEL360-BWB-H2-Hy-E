@@ -1,7 +1,7 @@
-# 95-00-13-01-004: Modes and Operational Contexts
+# [95-00-13-01-004](95-00-13-01-004.md): Modes and Operational Contexts
 
 ## Document Information
-- **Document ID**: 95-00-13-01-004
+- **Document ID**: [95-00-13-01-004](95-00-13-01-004.md)
 - **Title**: Modes and Operational Contexts
 - **Version**: 1.0
 - **Status**: Active
@@ -56,12 +56,12 @@
 
 ## Mode Transition Matrix
 
-See: ASSETS/95-00-13-01-A-003_Modes_vs_Subsystems_Matrix.xlsx
+See: [ASSETS/[95-00-13-01-A-003_Modes_vs_Subsystems_Matrix](95-00-13-01-A-003_Modes_vs_Subsystems_Matrix.md).xlsx](ASSETS/95-00-13-01-A-003_Modes_vs_Subsystems_Matrix.xlsx)
 
 ## Related Documents
 
-- 95-00-13-01-001: Functional Subsystems Overview
-- 95-00-13-01-003: Functional Subsystems List
+- [95-00-13-01-001](95-00-13-01-001.md): Functional Subsystems Overview
+- [95-00-13-01-003](95-00-13-01-003.md): Functional Subsystems List
 
 ## Revision History
 
