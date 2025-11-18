@@ -1,0 +1,78 @@
+Document_ID,Document_Title,Category,Phase,Primary_Actor,Related_ATA,Related_95-00,Related_95-10,Safety_Critical,Regulatory_Requirement,Status,Last_Updated
+95-10-00-01-001,Operations Overview,META,All,All,ATA 02,95-00-01; 95-00-02,All,No,EASA;FAA,Active,2025-11-17
+95-10-00-01-002,Operational Scope and Actors,META,All,All,ATA 02,95-00-03,All,No,EASA;FAA,Active,2025-11-17
+95-10-00-01-003,Operations Taxonomy,META,All,All,None,95-00-01,All,No,None,Active,2025-11-17
+95-10-00-01-004,Operations Traceability Matrix,META,All,Data Ops,None,All,All,No,None,Active,2025-11-17
+95-10-00-01-005,Operational Roles Registry,META,All,All,ATA 02,95-00-03,95-10-00-01-002,No,EASA;FAA,Active,2025-11-17
+95-10-00-01-006,Ops References and Linked Docs,META,All,All,All ATA,All,All,No,None,Active,2025-11-17
+95-10-00-01-007,CAOS Ops Hooks,META,All,AI/MLOps,ATA 40; ATA 02,95-00-06; 95-00-11,95-10-05,No,EU AI Act,Active,2025-11-17
+95-10-01-01-001,Flight Ops Use of NN Systems,Flight Ops,Phase 1,Flight Crew,ATA 27; ATA 22,95-00-02; 95-00-07,95-10-06,Yes,EASA CS-25;FAA 25.1309,Active,2025-11-17
+95-10-01-01-002,Normal Procedures Integration,Flight Ops,Phase 1,Flight Crew,ATA 27,95-00-02,95-10-01-01-001,Yes,EASA;FAA,Active,2025-11-17
+95-10-01-01-003,Abnormal and Emergency Procedures Refs,Flight Ops,Phase 2-3,Flight Crew,ATA 27,95-00-02,95-10-07,Yes,EASA;FAA,Active,2025-11-17
+95-10-01-01-004,Flight Crew Responsibilities for NN,Flight Ops,All,Flight Crew,ATA 02,95-00-03,95-10-01-01-001,Yes,EASA;FAA,Active,2025-11-17
+95-10-01-01-005,Links to FCOM FCTM and OM-A B,Flight Ops,All,Flight Crew,ATA 02,95-00-10,95-10-01,No,EASA;FAA,Active,2025-11-17
+95-10-02-01-001,Maintenance Ops Overview for NN,Maint Ops,Phase 4,Maintenance,ATA 45; ATA 05,95-00-02,95-10-04,No,EASA Part-M;FAA Part 43,Active,2025-11-17
+95-10-02-01-002,Predictive Maintenance Use Cases,Maint Ops,Phase 4,Maintenance,ATA 05; ATA 45,95-00-06,95-10-04,No,EASA Part-M,Active,2025-11-17
+95-10-02-01-003,Integration with ATA 45 and ATA 05,Maint Ops,Phase 4,Maintenance,ATA 45; ATA 05,95-00-13,95-10-02-01-001,No,EASA Part-M,Active,2025-11-17
+95-10-02-01-004,Maintenance Tasks and Intervals,Maint Ops,Phase 4,Maintenance,ATA 05,95-00-03,95-10-02-01-002,No,EASA Part-M,Active,2025-11-17
+95-10-02-01-005,Maintenance Data Feedback to DPP,Maint Ops,Phase 4,Maintenance,ATA 45,95-00-06,95-10-11,No,EU DPP,Active,2025-11-17
+95-10-03-01-001,Ground Ops Interactions with NN,Ground Ops,Phase 0-4,Ground Ops,ATA 02; ATA 28,95-00-02,95-10-04,Yes,EASA;FAA,Active,2025-11-17
+95-10-03-01-002,Turnaround and Ramp Use Cases,Ground Ops,Phase 0,Ground Ops,ATA 02,95-00-02,95-10-03-01-001,No,Airport Regs,Active,2025-11-17
+95-10-03-01-003,Ground Safety and NN Advisories,Ground Ops,Phase 0,Ground Ops,ATA 02,95-00-02,95-10-06,Yes,EASA;Airport Safety,Active,2025-11-17
+95-10-03-01-004,Integration with GSE and Ops Centers,Ground Ops,Phase 0,Ground Ops,ATA 03,95-00-05,95-10-03-01-001,No,None,Active,2025-11-17
+95-10-03-01-005,Ground Ops Data Capture to DPP,Ground Ops,Phase 0-4,Ground Ops,ATA 02,95-00-06,95-10-11,No,EU DPP,Active,2025-11-17
+95-10-04-01-001,Data Ops Strategy in Service,Data Ops,All,Data Ops,ATA 31,95-00-06,95-10-11,No,GDPR;EU DPP,Active,2025-11-17
+95-10-04-01-002,Data Flows Flight to Ground,Data Ops,Phase 1-4,Data Ops,ATA 31; ATA 45,95-00-06,95-10-04-01-001,No,GDPR,Active,2025-11-17
+95-10-04-01-003,Data Quality Monitoring in Ops,Data Ops,All,Data Ops,ATA 31,95-00-06,95-10-10,No,GDPR,Active,2025-11-17
+95-10-04-01-004,Operational Data Retention Rules,Data Ops,All,Data Ops,ATA 02,95-00-05; 95-00-14,95-10-04-01-001,No,GDPR;EASA,Active,2025-11-17
+95-10-04-01-005,Links to 95-00-06 Data Engineering,Data Ops,All,Data Ops,None,95-00-06,95-10-04,No,None,Active,2025-11-17
+95-10-05-01-001,AI Ops in Service Overview,AI/MLOps,All,AI/MLOps,ATA 40,95-00-06; 95-00-08,95-10-04,No,EU AI Act,Active,2025-11-17
+95-10-05-01-002,Model Deployment Channels in Ops,AI/MLOps,Phase 0,AI/MLOps,ATA 40; ATA 93,95-00-09; 95-00-11,95-10-05-01-001,No,EU AI Act,Active,2025-11-17
+95-10-05-01-003,Runtime Configuration and Overrides,AI/MLOps,Phase 1,AI/MLOps,ATA 40,95-00-06,95-10-06,Yes,EU AI Act,Active,2025-11-17
+95-10-05-01-004,Operational Rules for Retraining and Updates,AI/MLOps,Phase 4,AI/MLOps,ATA 40,95-00-10; 95-00-06,95-10-05-01-002,No,EU AI Act;EASA,Active,2025-11-17
+95-10-05-01-005,Links to 95-00-06 MLOps and 11 EIS,AI/MLOps,All,AI/MLOps,None,95-00-06; 95-00-11,95-10-05,No,None,Active,2025-11-17
+95-10-06-01-001,Safety Critical Ops Overview for NN,Safety Ops,All,Safety Dept,ATA 27; ATA 02,95-00-02,95-10-01; 95-10-07,Yes,EASA CS-25;FAA 25.1309,Active,2025-11-17
+95-10-06-01-002,Safety Boundaries and No-Go Criteria,Safety Ops,All,Safety Dept,ATA 27,95-00-02; 95-00-07,95-10-06-01-001,Yes,EASA;FAA,Active,2025-11-17
+95-10-06-01-003,Safety Monitors and Ops Overrides,Safety Ops,Phase 1-3,Flight Crew,ATA 27; ATA 22,95-00-02,95-10-01,Yes,EASA;FAA,Active,2025-11-17
+95-10-06-01-004,Safety Roles and Accountabilities,Safety Ops,All,All,ATA 02,95-00-02; 95-00-03,95-10-00-01-002,Yes,EASA;FAA,Active,2025-11-17
+95-10-06-01-005,Links to 95-00-02 Safety and 10 Cert,Safety Ops,All,Safety Dept,None,95-00-02; 95-00-10,95-10-06,Yes,EASA;FAA,Active,2025-11-17
+95-10-07-01-001,Abnormal NN Use Cases,Emergency,Phase 2,Flight Crew,ATA 27,95-00-02; 95-00-07,95-10-06,Yes,EASA;FAA,Active,2025-11-17
+95-10-07-01-002,Emergency Procedures Interaction with NN,Emergency,Phase 3,Flight Crew,ATA 27; ATA 02,95-00-02,95-10-01-01-003,Yes,EASA;FAA,Active,2025-11-17
+95-10-07-01-003,Fallback to Conventional Systems,Emergency,Phase 3,Flight Crew,ATA 27,95-00-02; 95-00-04,95-10-07-01-002,Yes,EASA;FAA,Active,2025-11-17
+95-10-07-01-004,Event Recording and Post Analysis,Emergency,Phase 4,Data Ops,ATA 31; ATA 45,95-00-06,95-10-04; 95-10-10,No,EASA;FAA,Active,2025-11-17
+95-10-07-01-005,Links to OM-B QRH and VV Safety Tests,Emergency,Phase 2-3,Flight Crew,ATA 02,95-00-07; 95-00-10,95-10-07,Yes,EASA;FAA,Active,2025-11-17
+95-10-08-01-001,Training Ops Overview,Training,Phase 0,Training Dept,ATA 115; ATA 116,95-00-07,95-10-01,No,EASA Part-FCL,Active,2025-11-17
+95-10-08-01-002,Simulator Use of NN Models,Training,Phase 0,Training Dept,ATA 115,95-00-07; 95-00-06,95-10-08-01-001,No,EASA Part-FSTD,Active,2025-11-17
+95-10-08-01-003,Training Scenarios for NN Behaviour,Training,Phase 0,Training Dept,ATA 115,95-00-07,95-10-08-01-002,No,EASA Part-FCL,Active,2025-11-17
+95-10-08-01-004,Competence and Check Rides Integration,Training,Phase 0,Training Dept,ATA 02,95-00-07; 95-00-14,95-10-08-01-001,No,EASA Part-FCL,Active,2025-11-17
+95-10-08-01-005,Link to 95-00-07 Simulation VV and 14 Ops Std,Training,Phase 0,Training Dept,None,95-00-07; 95-00-14,95-10-08,No,EASA,Active,2025-11-17
+95-10-09-01-001,Airline Ops Integration Strategy,Fleet/Airline,All,OCC,ATA 02,95-00-11,95-10-01; 95-10-02,No,Airline Policy,Active,2025-11-17
+95-10-09-01-002,Fleet Management Use Cases,Fleet/Airline,All,OCC,ATA 45; ATA 02,95-00-11,95-10-10,No,Airline Policy,Active,2025-11-17
+95-10-09-01-003,Operator Specific Ops Profiles,Fleet/Airline,All,OCC,ATA 02,95-00-03; 95-00-11,95-10-09-01-001,No,Airline Policy,Active,2025-11-17
+95-10-09-01-004,Ops Agreements and SLAs,Fleet/Airline,All,OCC,ATA 02,95-00-11; 95-00-12,95-10-09-01-001,No,Contract Law,Active,2025-11-17
+95-10-09-01-005,Links to 95-00-11 EIS and 13 Subsystems,Fleet/Airline,All,OCC,None,95-00-11; 95-00-13,95-10-09,No,None,Active,2025-11-17
+95-10-10-01-001,Ops Monitoring Strategy,Monitoring,All,Data Ops,ATA 31; ATA 45,95-00-06,95-10-04,No,None,Active,2025-11-17
+95-10-10-01-002,Ops KPIs and Dashboards,Monitoring,All,OCC,ATA 02,95-00-14,95-10-10-01-001,No,None,Active,2025-11-17
+95-10-10-01-003,Frontline Feedback Channels,Monitoring,Phase 4,All,ATA 02,95-00-14,95-10-10-01-001,No,None,Active,2025-11-17
+95-10-10-01-004,Incident and Event Feedback to Engineering,Monitoring,Phase 4,Safety Dept,ATA 02,95-00-02; 95-00-06,95-10-07; 95-10-04,No,EASA;FAA,Active,2025-11-17
+95-10-10-01-005,Links to 95-00-14 Ops Std and 09 Production,Monitoring,All,OCC,None,95-00-14; 95-00-09,95-10-10,No,None,Active,2025-11-17
+95-10-11-01-001,DPP in DaytoDay Operations,DPP Ops,All,All,None,95-00-06; 95-00-11,All,No,EU DPP,Active,2025-11-17
+95-10-11-01-002,Access to DPP for Ops Roles,DPP Ops,All,All,None,95-00-05; 95-00-11,95-10-12,No,EU DPP;GDPR,Active,2025-11-17
+95-10-11-01-003,OnAircraft and OffAircraft DPP Views,DPP Ops,All,All,ATA 46,95-00-11,95-10-11-01-001,No,EU DPP,Active,2025-11-17
+95-10-11-01-004,DPP Updates Triggered by Ops,DPP Ops,All,All,None,95-00-06; 95-00-11,95-10-04,No,EU DPP,Active,2025-11-17
+95-10-11-01-005,Links to 95-00-06 08 11 and 13,DPP Ops,All,Data Ops,None,95-00-06; 95-00-08; 95-00-11; 95-00-13,95-10-11,No,None,Active,2025-11-17
+95-10-12-01-001,SecPrivacy Ops Policy,Security,All,Security Team,None,95-00-05,95-10-11; 95-10-04,No,GDPR;NIS2,Active,2025-11-17
+95-10-12-01-002,Access Control in Ops Environments,Security,All,Security Team,None,95-00-05,95-10-11-01-002,No,GDPR,Active,2025-11-17
+95-10-12-01-003,Handling of Sensitive Operational Data,Security,All,Data Ops,ATA 31,95-00-05; 95-00-06,95-10-04,No,GDPR,Active,2025-11-17
+95-10-12-01-004,Incident Response for SecPrivacy Ops,Security,Phase 2-3,Security Team,None,95-00-05,95-10-12-01-001,No,GDPR;NIS2,Active,2025-11-17
+95-10-12-01-005,Links to 95-00-05 Security Privacy and 14,Security,All,Security Team,None,95-00-05; 95-00-14,95-10-12,No,None,Active,2025-11-17
+95-10-13-01-001,Environmental Ops Policy,Environmental,All,Sustainability,None,95-00-14,95-10-04,No,EU Taxonomy,Active,2025-11-17
+95-10-13-01-002,Ops Impact on Carbon Energy and Noise,Environmental,Phase 1,Data Ops,ATA 28; ATA 71,95-00-14,95-10-13-01-001,No,ICAO CORSIA,Active,2025-11-17
+95-10-13-01-003,Operational Practices for Circularity,Environmental,All,Sustainability,None,95-00-14,95-10-13-01-001,No,EU Circular Economy,Active,2025-11-17
+95-10-13-01-004,Data for ESG and Circularity Reporting,Environmental,Phase 4,Data Ops,None,95-00-06; 95-00-14,95-10-04; 95-10-11,No,EU Taxonomy;CSRD,Active,2025-11-17
+95-10-13-01-005,Links to 95-00-14 Ops Std Sustain,Environmental,All,Sustainability,None,95-00-14,95-10-13,No,None,Active,2025-11-17
+95-10-14-01-001,Ops Governance in Practice,Governance,All,Quality Assurance,None,95-00-14,All,No,ISO 9001,Active,2025-11-17
+95-10-14-01-002,Ops Committees and Review Cadence,Governance,Phase 4,Quality Assurance,ATA 02,95-00-14,95-10-14-01-001,No,ISO 9001,Active,2025-11-17
+95-10-14-01-003,Links from Ops to Requirements and Roadmap,Governance,All,Quality Assurance,None,95-00-03; 95-00-14,95-10-00-01-004,No,None,Active,2025-11-17
+95-10-14-01-004,Change Management for Operational Standards,Governance,All,Quality Assurance,ATA 02,95-00-14,95-10-14-01-001,No,ISO 9001,Active,2025-11-17
+95-10-14-01-005,Ops Maturity Model and Assessments,Governance,Phase 4,Quality Assurance,None,95-00-14,95-10-14-01-001,No,CMMI,Active,2025-11-17
