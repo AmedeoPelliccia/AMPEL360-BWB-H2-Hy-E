@@ -7,7 +7,7 @@
 - **Date**: 2025-11-17
 - **Status**: Active
 - **Author**: AMPEL360 Documentation Team
-- **Related Standards**: ATA 95, ISO 14001, ISO 45001
+- **Related Standards**: [ATA 95](https://www.ata.org/), [ISO 14001](https://www.iso.org/standard/60857.html), [ISO 45001](https://www.iso.org/standard/63787.html)
 
 ## Purpose
 
@@ -45,15 +45,15 @@ This strategy covers:
 
 ### 3. Risk & Compliance
 - Proactive risk identification and mitigation for NN operations
-- Maintain compliance with aviation regulations (EASA CS-25, FAA regulations)
+- Maintain compliance with aviation regulations ([EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27), [FAA regulations](https://www.faa.gov/regulations_policies/))
 - Integrate AI assurance and safety case requirements
-- Address EU AI Act and DPP Regulation compliance
+- Address [EU AI Act](https://artificialintelligenceact.eu/) and [EU DPP Regulation](https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products-regulation_en) compliance
 
 ### 4. Sustainability & Circularity
 - Achieve carbon-negative operations through H₂ propulsion and CO₂ capture
 - Implement circular economy principles in the DPP lifecycle
 - Track and optimize energy, emissions, and waste metrics
-- Support EU Green Deal and Circular Economy Action Plan objectives
+- Support [EU Green Deal](https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/european-green-deal_en) and Circular Economy Action Plan objectives
 
 ### 5. Continuous Improvement
 - Foster a culture of learning from incidents and operational events
@@ -216,26 +216,26 @@ This strategy will be deemed successful when:
 ## Related Documents
 
 ### Internal References
-- 95-00-14-00-002: Scope and Alignment with ATA Operations
-- 95-00-14-00-003: Ops Standards Taxonomy
-- 95-00-14-00-004: Governance and Sustainability Index
-- 95-00-14-14-001: Long-Term Ops and Sustainability Roadmap
-- 95-00-14-14-002: Maturity Levels for Ops and Governance
+- [95-00-14-00-002: Scope and Alignment with ATA Operations](./95-00-14-00-002_Scope_and_Alignment_with_ATA_Operations.md)
+- [95-00-14-00-003: Ops Standards Taxonomy](./00_META/95-00-14-00-003_Ops_Standards_Taxonomy.md)
+- [95-00-14-00-004: Governance and Sustainability Index](./00_META/95-00-14-00-004_Governance_and_Sustainability_Index.md)
+- [95-00-14-14-001: Long-Term Ops and Sustainability Roadmap](./14_STRATEGY_AND_ROADMAP/95-00-14-14-001_LongTerm_Ops_and_Sustainability_Roadmap.md)
+- [95-00-14-14-002: Maturity Levels for Ops and Governance](./14_STRATEGY_AND_ROADMAP/95-00-14-14-002_Maturity_Levels_for_Ops_and_Governance.md)
 
 ### ATA Cross-References
-- ATA 02: Operations Information
-- ATA 31: Indicating/Recording Systems
-- ATA 45: Onboard Maintenance Systems
-- ATA 92: Model-Based Maintenance
-- ATA 95-00-07: Verification & Validation
-- ATA 95-00-10: Certification
+- [ATA 02: Operations Information](../../../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/)
+- [ATA 31: Indicating/Recording Systems](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/)
+- [ATA 45: Onboard Maintenance Systems](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
+- [ATA 92: Model-Based Maintenance](../../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/)
+- [ATA 95-00-07: Verification & Validation](../../95-00-07_V_and_V/)
+- [ATA 95-00-10: Certification](../../95-00-10_Certification/)
 
 ### External Standards
-- ISO 14001: Environmental Management Systems
-- ISO 45001: Occupational Health and Safety
-- EASA CS-25: Airworthiness of Large Aeroplanes
-- EU AI Act: Requirements for High-Risk AI Systems
-- EU DPP Regulation: Digital Product Passport Requirements
+- [ISO 14001: Environmental Management Systems](https://www.iso.org/standard/60857.html)
+- [ISO 45001: Occupational Health and Safety](https://www.iso.org/standard/63787.html)
+- [EASA CS-25: Airworthiness of Large Aeroplanes](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)
+- [EU AI Act: Requirements for High-Risk AI Systems](https://artificialintelligenceact.eu/)
+- [EU DPP Regulation: Digital Product Passport Requirements](https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products-regulation_en)
 
 ## Approval & Version Control
 

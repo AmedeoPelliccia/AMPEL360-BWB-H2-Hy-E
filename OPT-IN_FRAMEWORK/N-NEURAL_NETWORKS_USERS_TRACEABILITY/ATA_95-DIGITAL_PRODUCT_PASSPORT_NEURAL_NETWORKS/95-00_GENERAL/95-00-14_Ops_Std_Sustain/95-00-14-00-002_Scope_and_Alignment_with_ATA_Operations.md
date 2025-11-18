@@ -7,7 +7,7 @@
 - **Date**: 2025-11-17
 - **Status**: Active
 - **Author**: AMPEL360 Documentation Team
-- **Related Standards**: ATA iSpec 2200, S1000D
+- **Related Standards**: [ATA iSpec 2200](https://www.ata.org/resources/specifications), [S1000D](http://www.s1000d.org/)
 
 ## Purpose
 
@@ -46,7 +46,7 @@ This module (95-00-14_Ops_Std_Sustain) covers:
 #### 5. Governance & Compliance
 - Operational governance structures and decision-making
 - Risk management specific to NN and novel technologies
-- Regulatory compliance operations (EU AI Act, DPP Regulation, EASA CS-25)
+- Regulatory compliance operations ([EU AI Act](https://artificialintelligenceact.eu/), [DPP Regulation](https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products-regulation_en), [EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27))
 - Audit and assurance procedures
 
 #### 6. Continuous Improvement & Learning
@@ -277,23 +277,23 @@ All changes tracked via:
 ## Related Documents
 
 ### Internal References
-- 95-00-14-00-001: Ops Std Sustain Strategy
-- 95-00-14-00-003: Ops Standards Taxonomy
-- 95-00-14-00-005: Ops Traceability Matrix (CSV)
+- [95-00-14-00-001: Ops Std Sustain Strategy](./95-00-14-00-001_Ops_Std_Sustain_Strategy.md)
+- [95-00-14-00-003: Ops Standards Taxonomy](./00_META/95-00-14-00-003_Ops_Standards_Taxonomy.md)
+- [95-00-14-00-005: Ops Traceability Matrix (CSV)](./00_META/95-00-14-00-005_Ops_Traceability_Matrix.csv)
 
 ### ATA Cross-References
-- ATA 00: AMPEL360 General Documentation Standard
-- ATA 02: Operations Information (all sub-sections)
-- ATA 31: Indicating/Recording Systems
-- ATA 45: Onboard Maintenance Systems
-- ATA 92: Model-Based Maintenance
-- ATA 95-00-07: V&V
-- ATA 95-00-10: Certification
+- [ATA 00: AMPEL360 General Documentation Standard](../../../../../../../O-ORGANIZATION/ATA_00-GENERAL/)
+- [ATA 02: Operations Information (all sub-sections)](../../../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/)
+- [ATA 31: Indicating/Recording Systems](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/)
+- [ATA 45: Onboard Maintenance Systems](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
+- [ATA 92: Model-Based Maintenance](../../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/)
+- [ATA 95-00-07: V&V](../../95-00-07_V_and_V/)
+- [ATA 95-00-10: Certification](../../95-00-10_Certification/)
 
 ### External Standards
-- ATA iSpec 2200: Aviation Industry Specifications
-- S1000D: Technical Publications Specification
-- ISO/IEC 15288: Systems and Software Engineering
+- [ATA iSpec 2200: Aviation Industry Specifications](https://www.ata.org/resources/specifications)
+- [S1000D: Technical Publications Specification](http://www.s1000d.org/)
+- [ISO/IEC 15288: Systems and Software Engineering](https://www.iso.org/standard/63711.html)
 
 ## Approval & Version Control
 

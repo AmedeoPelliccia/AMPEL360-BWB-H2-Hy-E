@@ -156,43 +156,43 @@ This folder is part of the **95-00_GENERAL** layer (14 of 14 in the canonical li
 - **H₂ Operations**: Specialized hydrogen propulsion operational standards
 
 ### Compliance Framework
-- **EU AI Act**: High-risk AI operational controls and transparency
-- **EU DPP Regulation**: Circularity and lifecycle traceability
-- **EASA CS-25**: Airworthiness operational compliance
-- **ISO 14001/45001**: Environmental and safety management systems
+- **[EU AI Act](https://artificialintelligenceact.eu/)**: High-risk AI operational controls and transparency
+- **[EU DPP Regulation](https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/sustainable-products/ecodesign-sustainable-products-regulation_en)**: Circularity and lifecycle traceability
+- **[EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)**: Airworthiness operational compliance
+- **[ISO 14001](https://www.iso.org/standard/60857.html)/[45001](https://www.iso.org/standard/63787.html)**: Environmental and safety management systems
 
 ### Integration Points
 
 | ATA Chapter | Integration Type | Key Documents |
 |-------------|------------------|---------------|
-| ATA 02 | Operations Information | 95-00-14-01-004 |
-| ATA 31 | Data Recording | 95-00-14-11-004 |
-| ATA 45 | Maintenance Systems | 95-00-14-05-002 |
-| ATA 92 | Model-Based Maintenance | 95-00-14-08-005 |
-| ATA 95-00-07 | V&V | 95-00-14-01-005 |
-| ATA 95-00-10 | Certification | 95-00-14-03-003 |
+| [ATA 02](../../../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/) | Operations Information | [95-00-14-01-004](./01_OPERATIONAL_STANDARDS/95-00-14-01-004_Ops_Interfaces_with_ATA_02_31_45.md) |
+| [ATA 31](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/) | Data Recording | [95-00-14-11-004](./11_OPERATIONAL_ANALYTICS_AND_KPIS/95-00-14-11-004_Link_to_Monitoring_and_DPP_Insights.md) |
+| [ATA 45](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/) | Maintenance Systems | [95-00-14-05-002](./05_CONTINUOUS_IMPROVEMENT/95-00-14-05-002_Learnings_from_Incidents_and_Events.md) |
+| [ATA 92](../../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/) | Model-Based Maintenance | [95-00-14-08-005](./08_KNOWLEDGE_MANAGEMENT_AND_DOCUMENTATION/95-00-14-08-005_Use_of_CAOS_and_MCP_for_Knowledge_Flow.md) |
+| [ATA 95-00-07](../../95-00-07_V_and_V/) | V&V | [95-00-14-01-005](./01_OPERATIONAL_STANDARDS/95-00-14-01-005_Links_to_95-00-07_VV_and_10_Certification.md) |
+| [ATA 95-00-10](../../95-00-10_Certification/) | Certification | [95-00-14-03-003](./03_RISK_AND_COMPLIANCE/95-00-14-03-003_Compliance_Controls_in_Ops.md) |
 
 ## Quick Start Guide
 
 ### For Operations Personnel
-1. Start with **95-00-14-00-001**: Understand overall strategy
-2. Review **01_OPERATIONAL_STANDARDS**: Learn NN and H₂ procedures
-3. Check **11_OPERATIONAL_ANALYTICS_AND_KPIS**: Access dashboards
+1. Start with **[95-00-14-00-001](./95-00-14-00-001_Ops_Std_Sustain_Strategy.md)**: Understand overall strategy
+2. Review **[01_OPERATIONAL_STANDARDS](./01_OPERATIONAL_STANDARDS/)**: Learn NN and H₂ procedures
+3. Check **[11_OPERATIONAL_ANALYTICS_AND_KPIS](./11_OPERATIONAL_ANALYTICS_AND_KPIS/)**: Access dashboards
 
 ### For Governance & Compliance
-1. Review **02_GOVERNANCE_MODEL**: Understand decision structures
-2. Study **03_RISK_AND_COMPLIANCE**: Risk register and controls
-3. Monitor **13_REGULATORY_AND_ESG_REPORTING**: Reporting requirements
+1. Review **[02_GOVERNANCE_MODEL](./02_GOVERNANCE_MODEL/)**: Understand decision structures
+2. Study **[03_RISK_AND_COMPLIANCE](./03_RISK_AND_COMPLIANCE/)**: Risk register and controls
+3. Monitor **[13_REGULATORY_AND_ESG_REPORTING](./13_REGULATORY_AND_ESG_REPORTING/)**: Reporting requirements
 
 ### For Sustainability Teams
-1. Read **04_SUSTAINABILITY_AND_CIRCULARITY**: Strategy and KPIs
-2. Use **11_OPERATIONAL_ANALYTICS_AND_KPIS**: Track carbon metrics
-3. Follow **13_REGULATORY_AND_ESG_REPORTING**: ESG reporting
+1. Read **[04_SUSTAINABILITY_AND_CIRCULARITY](./04_SUSTAINABILITY_AND_CIRCULARITY/)**: Strategy and KPIs
+2. Use **[11_OPERATIONAL_ANALYTICS_AND_KPIS](./11_OPERATIONAL_ANALYTICS_AND_KPIS/)**: Track carbon metrics
+3. Follow **[13_REGULATORY_AND_ESG_REPORTING](./13_REGULATORY_AND_ESG_REPORTING/)**: ESG reporting
 
 ### For Training & Development
-1. Review **07_TRAINING_AND_HUMAN_FACTORS**: Training strategy
-2. Access **08_KNOWLEDGE_MANAGEMENT_AND_DOCUMENTATION**: FAQs and runbooks
-3. Contribute to **05_CONTINUOUS_IMPROVEMENT**: Share lessons learned
+1. Review **[07_TRAINING_AND_HUMAN_FACTORS](./07_TRAINING_AND_HUMAN_FACTORS/)**: Training strategy
+2. Access **[08_KNOWLEDGE_MANAGEMENT_AND_DOCUMENTATION](./08_KNOWLEDGE_MANAGEMENT_AND_DOCUMENTATION/)**: FAQs and runbooks
+3. Contribute to **[05_CONTINUOUS_IMPROVEMENT](./05_CONTINUOUS_IMPROVEMENT/)**: Share lessons learned
 
 ## Status
 
@@ -222,7 +222,7 @@ This folder is part of the **95-00_GENERAL** layer (14 of 14 in the canonical li
 ## Related Folders
 
 Part of the canonical 14-folder lifecycle:
-1. **Overview** → 2. **Safety** → 3. **Requirements** → 4. **Design** → 5. **Interfaces** → 6. **Engineering** → 7. **V&V** → 8. **Prototyping** → 9. **Production Planning** → 10. **Certification** → 11. **EIS/Versions/Tags** → 12. **Services** → 13. **Subsystems/Components** → **14. Ops/Std/Sustain** ⬅ YOU ARE HERE
+1. [**Overview**](../95-00-01_Overview/) → 2. [**Safety**](../95-00-02_Safety/) → 3. [**Requirements**](../95-00-03_Requirements/) → 4. [**Design**](../95-00-04_Design/) → 5. [**Interfaces**](../95-00-05_Interfaces/) → 6. [**Engineering**](../95-00-06_Engineering/) → 7. [**V&V**](../95-00-07_V_and_V/) → 8. [**Prototyping**](../95-00-08_Prototyping/) → 9. [**Production Planning**](../95-00-09_Production_Planning/) → 10. [**Certification**](../95-00-10_Certification/) → 11. [**EIS/Versions/Tags**](../95-00-11_EIS_Versions_Tags/) → 12. [**Services**](../95-00-12_Services/) → 13. [**Subsystems/Components**](../95-00-13_Subsystems_Components/) → **14. Ops/Std/Sustain** ⬅ YOU ARE HERE
 
 ## Document Control
 

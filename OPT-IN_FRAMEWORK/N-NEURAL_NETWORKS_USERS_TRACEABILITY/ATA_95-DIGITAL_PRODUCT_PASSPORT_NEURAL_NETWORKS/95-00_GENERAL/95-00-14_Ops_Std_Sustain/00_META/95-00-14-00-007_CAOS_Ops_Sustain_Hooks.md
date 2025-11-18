@@ -305,20 +305,20 @@ Incident Closed → Hook KM-001 → RCA Documented →
 ## Related Documents
 
 ### Internal References
-- 95-00-14-00-001: Ops Std Sustain Strategy
-- 95-00-14-08-005: Use of CAOS and MCP for Knowledge Flow
-- 95-00-14-11-004: Link to Monitoring and DPP Insights
+- [95-00-14-00-001: Ops Std Sustain Strategy](../95-00-14-00-001_Ops_Std_Sustain_Strategy.md)
+- [95-00-14-08-005: Use of CAOS and MCP for Knowledge Flow](../08_KNOWLEDGE_MANAGEMENT_AND_DOCUMENTATION/95-00-14-08-005_Use_of_CAOS_and_MCP_for_Knowledge_Flow.md)
+- [95-00-14-11-004: Link to Monitoring and DPP Insights](../11_OPERATIONAL_ANALYTICS_AND_KPIS/95-00-14-11-004_Link_to_Monitoring_and_DPP_Insights.md)
 
 ### ATA Cross-References
-- ATA 31: Indicating/Recording Systems
-- ATA 40: AI Integration
-- ATA 45: Onboard Maintenance Systems
-- ATA 92: Model-Based Maintenance
+- [ATA 31: Indicating/Recording Systems](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/)
+- [ATA 40: AI Integration](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-ID/ATA_40-AI_INTEGRATION/)
+- [ATA 45: Onboard Maintenance Systems](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
+- [ATA 92: Model-Based Maintenance](../../../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/)
 
 ### External Standards
-- MCP (Model Context Protocol): https://modelcontextprotocol.io
-- OAuth 2.0: RFC 6749
-- OpenAPI Specification v3.1
+- [MCP (Model Context Protocol)](https://modelcontextprotocol.io)
+- [OAuth 2.0: RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749)
+- [OpenAPI Specification v3.1](https://spec.openapis.org/oas/v3.1.0)
 
 ## Document Control
 

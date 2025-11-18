@@ -192,11 +192,11 @@ Maintained in: `95-00-14-00-005_Ops_Traceability_Matrix.csv`
 
 ## Related Documents
 
-- 95-00-14-00-001: Ops Std Sustain Strategy
-- 95-00-14-00-002: Scope and Alignment with ATA Operations
-- 95-00-14-00-004: Governance and Sustainability Index
-- 95-00-14-00-005: Ops Traceability Matrix
-- 95-00-14-00-006: Stakeholders and Roles Registry
+- [95-00-14-00-001: Ops Std Sustain Strategy](../95-00-14-00-001_Ops_Std_Sustain_Strategy.md)
+- [95-00-14-00-002: Scope and Alignment with ATA Operations](../95-00-14-00-002_Scope_and_Alignment_with_ATA_Operations.md)
+- [95-00-14-00-004: Governance and Sustainability Index](./95-00-14-00-004_Governance_and_Sustainability_Index.md)
+- [95-00-14-00-005: Ops Traceability Matrix](./95-00-14-00-005_Ops_Traceability_Matrix.csv)
+- [95-00-14-00-006: Stakeholders and Roles Registry](./95-00-14-00-006_Stakeholders_and_Roles_Registry.json)
 
 ## Document Control
 

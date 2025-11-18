@@ -50,10 +50,10 @@ Defines integration points and data interfaces between 95-00-14 operational stan
 | Fault Detection | Anomaly Alerts | 03_RISK_AND_COMPLIANCE |
 
 ## Related Documents
-- 95-00-14-00-002: Scope and Alignment with ATA Operations
-- ATA 02: Operations Information
-- ATA 31: Indicating/Recording Systems
-- ATA 45: Onboard Maintenance Systems
+- [95-00-14-00-002: Scope and Alignment with ATA Operations](../95-00-14-00-002_Scope_and_Alignment_with_ATA_Operations.md)
+- [ATA 02: Operations Information](../../../../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/)
+- [ATA 31: Indicating/Recording Systems](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/)
+- [ATA 45: Onboard Maintenance Systems](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
 
 ---
 **END OF DOCUMENT**

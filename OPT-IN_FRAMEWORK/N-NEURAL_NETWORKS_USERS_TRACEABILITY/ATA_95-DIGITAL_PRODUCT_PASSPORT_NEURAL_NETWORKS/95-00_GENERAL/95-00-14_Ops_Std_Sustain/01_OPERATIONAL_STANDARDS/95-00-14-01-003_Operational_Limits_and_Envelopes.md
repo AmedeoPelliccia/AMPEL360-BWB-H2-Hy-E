@@ -59,10 +59,10 @@ Establishes operational limits and envelopes for Neural Network systems, hydroge
 - **Energy Consumption**: <5% total electrical load
 
 ## Related Documents
-- 95-00-14-01-001: Operational Standards Overview
-- 95-00-14-01-002: Standard Operating Procedures for NN
-- ATA 28: H₂ Fuel System Specifications
-- ATA 71: Fuel Cell Power Plant Specifications
+- [95-00-14-01-001: Operational Standards Overview](./95-00-14-01-001_Operational_Standards_Overview.md)
+- [95-00-14-01-002: Standard Operating Procedures for NN](./95-00-14-01-002_Standard_Operating_Procedures_for_NN.md)
+- [ATA 28: H₂ Fuel System Specifications](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/)
+- [ATA 71: Fuel Cell Power Plant Specifications](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_71-POWER_PLANT/)
 
 ---
 **END OF DOCUMENT**
