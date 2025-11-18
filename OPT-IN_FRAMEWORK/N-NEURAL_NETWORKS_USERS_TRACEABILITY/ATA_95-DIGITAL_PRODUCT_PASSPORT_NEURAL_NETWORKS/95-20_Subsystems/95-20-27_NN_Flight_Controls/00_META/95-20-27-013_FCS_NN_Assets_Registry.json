@@ -367,7 +367,7 @@
       "model_id": "flight_path_stabilization_v1.1",
       "source_code": "Models/Source/flight_path_stabilization_v1.1.py",
       "trained_model": "Models/Trained/flight_path_stabilization_v1.1.onnx",
-      "training_config": "Models/Configs/deployment_config_fcs.yaml",
+      "training_config": "Models/Configs/training_config_flight_path.yaml",
       "status": "active"
     }
   ]
