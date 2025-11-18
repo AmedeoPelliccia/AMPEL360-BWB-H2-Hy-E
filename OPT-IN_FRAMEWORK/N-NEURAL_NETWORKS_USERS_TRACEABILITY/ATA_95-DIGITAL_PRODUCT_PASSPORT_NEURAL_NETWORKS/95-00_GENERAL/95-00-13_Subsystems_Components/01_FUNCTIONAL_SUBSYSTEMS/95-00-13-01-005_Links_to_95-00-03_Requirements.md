@@ -55,7 +55,7 @@ Each functional subsystem traces to:
 
 ## Complete Traceability Matrix
 
-See: [95-00-13-14-002_Subsystems_to_RQ_Map](../14_SUBSYSTEMS_REQUIREMENTS_VV_MAP/95-00-13-14-002_Subsystems_to_RQ_Map.md).md for complete traceability.
+See: [95-00-13-14-002_Subsystems_to_RQ_Map](../14_SUBSYSTEMS_REQUIREMENTS_VV_MAP/95-00-13-14-002_Subsystems_to_RQ_Map.md) for complete traceability.
 
 ## Requirements Coverage Analysis
 
