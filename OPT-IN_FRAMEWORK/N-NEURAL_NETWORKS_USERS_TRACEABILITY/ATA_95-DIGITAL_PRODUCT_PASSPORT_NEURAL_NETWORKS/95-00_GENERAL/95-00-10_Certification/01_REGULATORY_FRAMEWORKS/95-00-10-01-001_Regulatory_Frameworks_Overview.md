@@ -30,13 +30,13 @@ This document provides a comprehensive overview of the regulatory frameworks app
 ### Regulatory Domains
 
 1. **Airworthiness (Type Certification)**
-   - CS-25 / FAR Part 25 - Large Aeroplanes
+   - [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) / [FAR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) - Large Aeroplanes
    - Special Conditions for BWB, H₂, AI
    
 2. **AI/ML Systems**
-   - EASA AI Roadmap 2.0
-   - FAA AI Assurance Framework
-   - EU AI Act compliance
+   - [EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap)
+   - [FAA AI Assurance Framework](https://www.faa.gov/aircraft/air_cert/design_approvals/)
+   - [EU AI Act](https://artificialintelligenceact.eu/) compliance
 
 3. **Alternative Propulsion**
    - Hydrogen-specific standards (in development)
@@ -53,7 +53,7 @@ The certification basis consists of:
 - Special Conditions (BWB, H₂, AI)
 - Equivalent Levels of Safety (where applicable)
 - Methods of Compliance (analysis, test, simulation)
-- Industry standards (DO-178C, DO-254, ARP4754A)
+- Industry standards (DO-178C, [DO-254](https://www.rtca.org/content/standards-guidance-materials), ARP4754A)
 
 ## Key Regulatory Challenges
 
@@ -95,10 +95,10 @@ AMPEL360 pursues harmonized EASA/FAA certification wherever possible:
 
 ## References
 
-- 95-00-10-00-001 Certification Strategy
-- 95-00-10-00-005 Regulatory Framework Index
-- 95-00-10-01-002 EASA Framework for AI and SW
-- 95-00-10-01-003 FAA Framework for AI and SW
+- [95-00-10-00-001](../95-00-10-00-001_Certification_Strategy.md) Certification Strategy
+- [95-00-10-00-005](../00_META/95-00-10-00-005_Regulatory_Framework_Index.md) Regulatory Framework Index
+- [95-00-10-01-002](95-00-10-01-002_EASA_Framework_for_AI_and_SW.md) EASA Framework for AI and SW
+- [95-00-10-01-003](95-00-10-01-003_FAA_Framework_for_AI_and_SW.md) FAA Framework for AI and SW
 
 ---
 *This document is part of the AMPEL360 OPT-IN Framework certification package.*

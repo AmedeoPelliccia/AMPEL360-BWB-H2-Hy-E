@@ -11,10 +11,10 @@
 
 This document analyzes the EASA regulatory framework for artificial intelligence and software systems in aviation, specifically as it applies to the CAOS neural network systems in the AMPEL360 aircraft.
 
-## EASA AI Roadmap 2.0
+## [EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap)
 
 ### Overview
-EASA AI Roadmap 2.0 (2023) establishes a risk-based approach to AI certification:
+[EASA AI Roadmap](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap) 2.0 (2023) establishes a risk-based approach to AI certification:
 - Level 1: AI Assistance (human in the loop)
 - Level 2: AI Human Cooperation  
 - Level 3: AI Automation (highly automated)
@@ -40,10 +40,10 @@ EASA introduces "Learning Assurance" parallel to Development Assurance (DO-178C)
 - Validation and verification
 - Runtime monitoring and adaptation
 
-## CS-25 Integration
+## [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) Integration
 
 ### Relevant Paragraphs
-- **CS-25.1309**: Equipment, systems, and installations
+- **[CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes).1309**: Equipment, systems, and installations
   - (a) Safety assessment process
   - (b) Failure conditions classification
   - (c) Design requirements
@@ -74,9 +74,9 @@ EASA introduces "Learning Assurance" parallel to Development Assurance (DO-178C)
 - AI infrastructure: DAL A/B depending on function
 - Non-safety critical: DAL C/D
 
-### DO-178C Supplements
-- **DO-331**: Model-Based Development (for AI models)
-- **DO-333**: Formal Methods (for safety-critical AI)
+### [DO-178C](https://www.rtca.org/content/standards-guidance-materials) Supplements
+- **[DO-331](https://www.rtca.org/content/standards-guidance-materials)**: Model-Based Development (for AI models)
+- **[DO-333](https://www.rtca.org/content/standards-guidance-materials)**: Formal Methods (for safety-critical AI)
 
 ## Compliance Strategy
 
@@ -88,10 +88,10 @@ EASA introduces "Learning Assurance" parallel to Development Assurance (DO-178C)
 
 ## References
 
-- EASA AI Roadmap 2.0 (2023)
-- CS-25 Amendment 27
-- DO-178C Software Considerations in Airborne Systems
-- 95-00-10-00-005 Regulatory Framework Index
+- [EASA AI Roadmap](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap) 2.0 (2023)
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) Amendment 27
+- [DO-178C](https://www.rtca.org/content/standards-guidance-materials) Software Considerations in Airborne Systems
+- [95-00-10-00-005](../00_META/95-00-10-00-005_Regulatory_Framework_Index.md) Regulatory Framework Index
 
 ---
 *This document is part of the AMPEL360 OPT-IN Framework certification package.*

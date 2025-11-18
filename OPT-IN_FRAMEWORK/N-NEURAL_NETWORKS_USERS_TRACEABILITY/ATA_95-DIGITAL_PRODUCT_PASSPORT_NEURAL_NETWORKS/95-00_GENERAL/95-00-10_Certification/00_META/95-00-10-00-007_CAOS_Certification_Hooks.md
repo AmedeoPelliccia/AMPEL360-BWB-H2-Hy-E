@@ -43,7 +43,7 @@ CAOS is the AI-powered cognitive operations system for AMPEL360, serving as the 
 
 ### Hook 1: Evidence Capture and Cataloging
 
-**Purpose**: Automatically capture certification evidence from development activities and catalog it according to the evidence taxonomy (95-00-10-00-003).
+**Purpose**: Automatically capture certification evidence from development activities and catalog it according to the evidence taxonomy ([95-00-10-00-003](95-00-10-00-003_Certification_Taxonomy.md)).
 
 **Implementation**:
 - **Trigger Events**: Test execution, analysis completion, review approval, inspection closure
@@ -107,7 +107,7 @@ CAOS is the AI-powered cognitive operations system for AMPEL360, serving as the 
   },
   "gaps": [
     {
-      "document_id": "95-00-10-07-002",
+      "document_id": "[95-00-10-07-002](../07_ML_AND_DATA_SPECIFIC_CERTIFICATION/95-00-10-07-002_Data_and_Dataset_Certification_Considerations.md)",
       "issue": "Missing link to requirements",
       "severity": "HIGH",
       "recommendation": "Add traceability to REQ-ML-002"
@@ -268,7 +268,7 @@ CAOS is the AI-powered cognitive operations system for AMPEL360, serving as the 
   "authority": "EASA",
   "date_submitted": "2026-03-15",
   "type": "Safety Case Package",
-  "documents": ["95-00-10-05-001", "95-00-10-05-002", "95-00-10-05-003"],
+  "documents": ["95-00-10-05-001", "[95-00-10-05-002](../05_SAFETY_CASES_AND_AI_ASSURANCE/95-00-10-05-002_AI_Assurance_Goals_and_Claims.md)", "[95-00-10-05-003](../05_SAFETY_CASES_AND_AI_ASSURANCE/95-00-10-05-003_Safety_Arguments_and_Evidence_Links.md)"],
   "status": "UNDER REVIEW",
   "questions": [
     {
@@ -380,11 +380,11 @@ CAOS is the AI-powered cognitive operations system for AMPEL360, serving as the 
 
 ## References
 
-- 95-00-10-00-003 Certification Taxonomy
+- [95-00-10-00-003](95-00-10-00-003_Certification_Taxonomy.md) Certification Taxonomy
 - 95-00-10-00-004 Certification Traceability Matrix
-- 95-00-10-04 Evidence and Traceability folder
-- 95-00-10-09 Audits and Findings folder
-- 95-00-10-13 DPP and Blockchain folder
+- [95-00-10-04 Evidence](../04_EVIDENCE_AND_TRACEABILITY) and Traceability folder
+- [95-00-10-09 Audits](../09_AUDITS_FINDINGS_AND_RESOLUTION) and Findings folder
+- [95-00-10-13 DPP](../13_DPP_AND_BLOCKCHAIN_FOR_CERT_EVIDENCE) and Blockchain folder
 - CAOS System Architecture Document
 
 ---

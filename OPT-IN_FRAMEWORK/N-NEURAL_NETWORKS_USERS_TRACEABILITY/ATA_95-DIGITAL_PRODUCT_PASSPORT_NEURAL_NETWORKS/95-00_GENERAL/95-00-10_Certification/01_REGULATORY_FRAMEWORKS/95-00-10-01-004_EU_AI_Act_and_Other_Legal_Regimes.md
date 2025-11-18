@@ -1,15 +1,15 @@
-# 95-00-10-01-004 EU AI Act and Other Legal Regimes
+# 95-00-10-01-004 [EU AI Act](https://artificialintelligenceact.eu/) and Other Legal Regimes
 
 ## Document Information
 - **Document ID**: 95-00-10-01-004
-- **Title**: EU AI Act and Other Legal Regimes
+- **Title**: [EU AI Act](https://artificialintelligenceact.eu/) and Other Legal Regimes
 - **Version**: 1.0
 - **Status**: Draft
 - **Last Updated**: 2025-11-17
 
 ## Purpose
 
-This document addresses compliance with the EU AI Act and other legal regimes beyond traditional airworthiness certification, ensuring AMPEL360 meets all applicable legal requirements in the European Union and globally.
+This document addresses compliance with the [EU AI Act](https://artificialintelligenceact.eu/) and other legal regimes beyond traditional airworthiness certification, ensuring AMPEL360 meets all applicable legal requirements in the European Union and globally.
 
 ## EU AI Act (Regulation 2024/1689)
 
@@ -27,7 +27,7 @@ Aviation AI systems are classified as **HIGH-RISK** under Annex III (critical in
 
 ### AMPEL360 Compliance Strategy
 - Integrate EU AI Act requirements into certification basis
-- Leverage DO-178C/DO-254 compliance for technical documentation
+- Leverage [DO-178C](https://www.rtca.org/content/standards-guidance-materials)/[DO-254](https://www.rtca.org/content/standards-guidance-materials) compliance for technical documentation
 - DPP blockchain provides record-keeping infrastructure
 - CAOS design includes human oversight by default
 
@@ -37,7 +37,7 @@ Aviation AI systems are classified as **HIGH-RISK** under Annex III (critical in
 - Technical documentation review
 - EU Declaration of Conformity
 
-## GDPR (General Data Protection Regulation)
+## [GDPR](https://gdpr-info.eu/) (General Data Protection Regulation)
 
 ### Applicability
 - Flight data may contain personal information
@@ -50,17 +50,17 @@ Aviation AI systems are classified as **HIGH-RISK** under Annex III (critical in
 - Right to explanation for AI decisions affecting individuals
 - Data protection impact assessment (DPIA)
 
-## eIDAS (Electronic Identification and Trust Services)
+## [eIDAS](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation) (Electronic Identification and Trust Services)
 
 ### Relevance to AMPEL360
 - Digital signatures for certification documents
-- Blockchain-based evidence requires eIDAS compliance
+- Blockchain-based evidence requires [eIDAS](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation) compliance
 - Trust services for DPP
 
 ### Implementation
 - Qualified Electronic Signatures (QES) for document approval
 - Qualified Trust Service Providers (QTSP) for DPP
-- eIDAS-compliant smart contract signatures
+- [eIDAS](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)-compliant smart contract signatures
 
 ## Product Liability and Safety
 
@@ -120,7 +120,7 @@ Aviation AI systems are classified as **HIGH-RISK** under Annex III (critical in
 ## Compliance Timeline
 
 - **2025 Q3**: EU AI Act compliance assessment
-- **2025 Q4**: GDPR DPIA for AI systems
+- **2025 Q4**: [GDPR](https://gdpr-info.eu/) DPIA for AI systems
 - **2026 Q1**: eIDAS integration for DPP
 - **2026 Q2**: Conformity assessment preparation
 - **2027**: EU AI Act conformity declaration
@@ -128,10 +128,10 @@ Aviation AI systems are classified as **HIGH-RISK** under Annex III (critical in
 ## References
 
 - EU AI Act (Regulation 2024/1689)
-- GDPR (Regulation 2016/679)
+- [GDPR](https://gdpr-info.eu/) (Regulation 2016/679)
 - eIDAS (Regulation 910/2014)
-- EASA AI Roadmap (alignment with EU AI Act)
-- 95-00-10-00-005 Regulatory Framework Index
+- [EASA AI Roadmap](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap) (alignment with EU AI Act)
+- [95-00-10-00-005](../00_META/95-00-10-00-005_Regulatory_Framework_Index.md) Regulatory Framework Index
 
 ---
 *This document is part of the AMPEL360 OPT-IN Framework certification package.*

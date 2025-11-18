@@ -9,7 +9,7 @@
 
 ## Purpose
 
-This document describes how SW/HW certification integrates with existing DO-178C/DO-254 frameworks and AMPEL360-specific extensions.
+This document describes how SW/HW certification integrates with existing [DO-178C](https://www.rtca.org/content/standards-guidance-materials)/[DO-254](https://www.rtca.org/content/standards-guidance-materials) frameworks and AMPEL360-specific extensions.
 
 ## Content
 
@@ -26,8 +26,8 @@ This document provides detailed information about Integration with Existing Cert
 ## Scope
 
 This document is part of the AMPEL360 certification package and integrates with:
-- Certification Strategy (95-00-10-00-001)
-- Certification Lifecycle Overview (95-00-10-00-002)
+- Certification Strategy ([95-00-10-00-001](../95-00-10-00-001_Certification_Strategy.md))
+- Certification Lifecycle Overview ([95-00-10-00-002](../95-00-10-00-002_Certification_Lifecycle_Overview.md))
 - Related certification phase documents
 - Requirements and V&V activities
 
@@ -40,8 +40,8 @@ This document is part of the AMPEL360 certification package and integrates with:
 
 ## References
 
-- 95-00-10-00-001 Certification Strategy
-- 95-00-10-00-002 Certification Lifecycle Overview
+- [95-00-10-00-001](../95-00-10-00-001_Certification_Strategy.md) Certification Strategy
+- [95-00-10-00-002](../95-00-10-00-002_Certification_Lifecycle_Overview.md) Certification Lifecycle Overview
 - Related phase-specific documents
 
 ---

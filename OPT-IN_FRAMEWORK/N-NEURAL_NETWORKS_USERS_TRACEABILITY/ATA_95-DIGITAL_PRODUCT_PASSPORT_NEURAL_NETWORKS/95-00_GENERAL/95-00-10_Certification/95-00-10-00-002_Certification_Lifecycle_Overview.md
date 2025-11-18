@@ -46,7 +46,7 @@ The certification lifecycle is organized into 14 sequential yet overlapping phas
 ### Phase 01: Regulatory Frameworks
 **Timing**: Months 1-3 (Pre-application)  
 **Key Activities**:
-- Analyze EASA, FAA, and EU AI Act requirements
+- Analyze EASA, FAA, and [EU AI Act](https://artificialintelligenceact.eu/) requirements
 - Map applicable industry standards (DO-178C, DO-254, etc.)
 - Create regulatory landscape map
 - Identify gaps and novel areas
@@ -125,8 +125,8 @@ The certification lifecycle is organized into 14 sequential yet overlapping phas
 ### Phase 06: SW/HW Certification
 **Timing**: Months 10-24 (Development and Testing)  
 **Key Activities**:
-- Apply DO-178C process for software
-- Apply DO-254 process for hardware
+- Apply [DO-178C](https://www.rtca.org/content/standards-guidance-materials) process for software
+- Apply [DO-254](https://www.rtca.org/content/standards-guidance-materials) process for hardware
 - Qualify development and verification tools
 - Integrate with existing certification frameworks
 - Generate SW/HW certification evidence
@@ -145,7 +145,7 @@ The certification lifecycle is organized into 14 sequential yet overlapping phas
 - Certify datasets and data pipelines
 - Define model lifecycle constraints
 - Establish retraining and update policy
-- Align with EASA AI Roadmap and FAA AI AF
+- Align with [EASA AI Roadmap](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap) and FAA AI AF
 
 **Key Outputs**:
 - ML certification challenges document
@@ -308,7 +308,7 @@ The certification lifecycle is synchronized with the broader AMPEL360 developmen
 |-----------|-------------|-------------|
 | Certification Basis Approved | Month 6 | EASA/FAA approval of CB including special conditions |
 | Safety Case Acceptance | Month 18 | Authority acceptance of NN safety case approach |
-| SW/HW Compliance Demonstrated | Month 24 | DO-178C/DO-254 objectives met |
+| SW/HW Compliance Demonstrated | Month 24 | [DO-178C](https://www.rtca.org/content/standards-guidance-materials)/[DO-254](https://www.rtca.org/content/standards-guidance-materials) objectives met |
 | ML Certification Package Complete | Month 24 | ML-specific evidence compiled |
 | Qualification Testing Complete | Month 30 | All cert tests passed, reports submitted |
 | Type Inspection Authorization (TIA) | Month 32 | Authority issues TIA, final inspections begin |
@@ -368,9 +368,9 @@ The certification lifecycle is successful when:
 
 ## References
 
-- 95-00-10-00-001 Certification Strategy
-- 95-00-10-00-003 Certification Taxonomy
-- 95-00-10-03-002 Compliance Roadmap and Milestones
+- [95-00-10-00-001](95-00-10-00-001_Certification_Strategy.md) Certification Strategy
+- [95-00-10-00-003](00_META/95-00-10-00-003_Certification_Taxonomy.md) Certification Taxonomy
+- [95-00-10-03-002](03_COMPLIANCE_STRATEGY/95-00-10-03-002_Compliance_Roadmap_and_Milestones.md) Compliance Roadmap and Milestones
 - EASA Certification Process CM-001
 - FAA Order 8110.4C (Type Certification)
 

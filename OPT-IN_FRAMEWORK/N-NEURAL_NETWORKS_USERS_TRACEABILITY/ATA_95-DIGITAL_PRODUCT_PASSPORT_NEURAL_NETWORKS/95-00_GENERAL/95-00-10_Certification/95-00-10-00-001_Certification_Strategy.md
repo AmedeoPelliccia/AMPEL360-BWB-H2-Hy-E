@@ -34,10 +34,10 @@ This certification strategy covers:
 
 ### Key Regulatory Frameworks
 - CS-25 (EASA) / FAR Part 25 (FAA) - Large Aeroplanes
-- EASA AI Roadmap 2.0
-- FAA AI Assurance Framework
-- EU AI Act compliance considerations
-- DO-178C (Software), DO-254 (Hardware), DO-326A (Airworthiness Security)
+- [EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap)
+- [FAA AI Assurance Framework](https://www.faa.gov/aircraft/air_cert/design_approvals/)
+- [EU AI Act](https://artificialintelligenceact.eu/) compliance considerations
+- [DO-178C](https://www.rtca.org/content/standards-guidance-materials) (Software), [DO-254](https://www.rtca.org/content/standards-guidance-materials) (Hardware), [DO-326A](https://www.rtca.org/content/standards-guidance-materials) (Airworthiness Security)
 
 ## Certification Approach
 
@@ -188,13 +188,13 @@ Certification is considered successful when:
 
 ## References
 
-- 95-00-10-00-002 Certification Lifecycle Overview
-- 95-00-10-00-003 Certification Taxonomy
-- 95-00-10-01 Regulatory Frameworks folder
-- 95-00-10-02 Certification Basis folder
-- EASA AI Roadmap 2.0
-- FAA AI Assurance Framework
-- CS-25 / FAR Part 25
+- [95-00-10-00-002](95-00-10-00-002_Certification_Lifecycle_Overview.md) Certification Lifecycle Overview
+- [95-00-10-00-003](00_META/95-00-10-00-003_Certification_Taxonomy.md) Certification Taxonomy
+- [95-00-10-01 Regulatory Frameworks](01_REGULATORY_FRAMEWORKS) folder
+- [95-00-10-02 Certification Basis](02_CERTIFICATION_BASIS) folder
+- [EASA AI Roadmap 2.0](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap)
+- [FAA AI Assurance Framework](https://www.faa.gov/aircraft/air_cert/design_approvals/)
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) / [FAR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)
 
 ---
 *This document is part of the AMPEL360 OPT-IN Framework certification package.*

@@ -53,11 +53,11 @@ Certification artifacts are tagged with relevant ATA chapters:
 - **EASA**: EASA-specific artifacts
 - **FAA**: FAA-specific artifacts
 - **DUAL**: Harmonized EASA/FAA artifacts
-- **DO178**: DO-178C related
-- **DO254**: DO-254 related
-- **AI-RD**: EASA AI Roadmap related
-- **AI-AF**: FAA AI Assurance Framework related
-- **EU-AI**: EU AI Act related
+- **DO178**: [DO-178C](https://www.rtca.org/content/standards-guidance-materials) related
+- **DO254**: [DO-254](https://www.rtca.org/content/standards-guidance-materials) related
+- **AI-RD**: [EASA AI Roadmap](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap) related
+- **AI-AF**: [FAA AI Assurance Framework](https://www.faa.gov/aircraft/air_cert/design_approvals/) related
+- **EU-AI**: [EU AI Act](https://artificialintelligenceact.eu/) related
 
 ### 5. Status/Maturity Dimension
 - **DRAFT**: Work in progress
@@ -159,8 +159,8 @@ All certification documents include tags linking to:
 ### Cross-Reference Tags
 - **@EASA[regulation/section]**: Reference to EASA regulations (e.g., @EASA[CS-25.1309])
 - **@FAA[regulation/section]**: Reference to FAA regulations (e.g., @FAA[25.1309])
-- **@DO178C[objective]**: Reference to DO-178C objectives (e.g., @DO178C[A-1])
-- **@AI-RD[section]**: Reference to EASA AI Roadmap (e.g., @AI-RD[3.2])
+- **@DO178C[objective]**: Reference to [DO-178C](https://www.rtca.org/content/standards-guidance-materials) objectives (e.g., @DO178C[A-1])
+- **@AI-RD[section]**: Reference to [EASA AI Roadmap](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap) (e.g., @AI-RD[3.2])
 
 ## Metadata Schema
 
@@ -206,7 +206,7 @@ Users can search certification artifacts using:
 2. "Open findings from authority audits"
    - Filter: Phase=09, Type=EVID, Status=REVIEW
 
-3. "DO-178C compliance evidence for CAOS software"
+3. "[DO-178C](https://www.rtca.org/content/standards-guidance-materials) compliance evidence for CAOS software"
    - Filter: Standard=DO178, ATA=42, Type=EVID
 
 ## Versioning and Configuration Management
@@ -259,8 +259,8 @@ Certification artifacts stored in DPP include:
 
 ## References
 
-- 95-00-10-00-001 Certification Strategy
-- 95-00-10-00-002 Certification Lifecycle Overview
+- [95-00-10-00-001](../95-00-10-00-001_Certification_Strategy.md) Certification Strategy
+- [95-00-10-00-002](../95-00-10-00-002_Certification_Lifecycle_Overview.md) Certification Lifecycle Overview
 - 95-00-10-00-004 Certification Traceability Matrix
 - AMPEL360 Configuration Management Plan
 - ATA iSpec 2200 (Numbering system)

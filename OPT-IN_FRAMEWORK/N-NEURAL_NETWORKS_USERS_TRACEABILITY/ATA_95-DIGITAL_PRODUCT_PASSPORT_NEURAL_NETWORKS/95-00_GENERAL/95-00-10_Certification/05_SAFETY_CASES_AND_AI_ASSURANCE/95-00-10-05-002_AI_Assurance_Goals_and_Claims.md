@@ -9,7 +9,7 @@
 
 ## Purpose
 
-This document defines specific assurance goals and claims for AI systems, aligned with EASA AI Roadmap and FAA AI Assurance Framework.
+This document defines specific assurance goals and claims for AI systems, aligned with [EASA AI Roadmap](https://www.easa.europa.eu/en/light/topics/artificial-intelligence-roadmap) and [FAA AI Assurance Framework](https://www.faa.gov/aircraft/air_cert/design_approvals/).
 
 ## Content
 
@@ -26,8 +26,8 @@ This document provides detailed information about AI Assurance Goals and Claims 
 ## Scope
 
 This document is part of the AMPEL360 certification package and integrates with:
-- Certification Strategy (95-00-10-00-001)
-- Certification Lifecycle Overview (95-00-10-00-002)
+- Certification Strategy ([95-00-10-00-001](../95-00-10-00-001_Certification_Strategy.md))
+- Certification Lifecycle Overview ([95-00-10-00-002](../95-00-10-00-002_Certification_Lifecycle_Overview.md))
 - Related certification phase documents
 - Requirements and V&V activities
 
@@ -40,8 +40,8 @@ This document is part of the AMPEL360 certification package and integrates with:
 
 ## References
 
-- 95-00-10-00-001 Certification Strategy
-- 95-00-10-00-002 Certification Lifecycle Overview
+- [95-00-10-00-001](../95-00-10-00-001_Certification_Strategy.md) Certification Strategy
+- [95-00-10-00-002](../95-00-10-00-002_Certification_Lifecycle_Overview.md) Certification Lifecycle Overview
 - Related phase-specific documents
 
 ---
