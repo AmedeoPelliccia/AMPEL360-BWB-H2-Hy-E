@@ -70,7 +70,7 @@ See: [ASSETS/[95-00-13-02-A-001_HW_Components_List](95-00-13-02-A-001_HW_Compone
 
 ## ATA Chapter Mapping
 
-See: [95-00-13-02-005_HW_Components_to_ATA_Systems_Map](95-00-13-02-005_HW_Components_to_ATA_Systems_Map.md).md
+See: [95-00-13-02-005_HW_Components_to_ATA_Systems_Map](95-00-13-02-005_HW_Components_to_ATA_Systems_Map.md)
 
 ## Related Documents
 
