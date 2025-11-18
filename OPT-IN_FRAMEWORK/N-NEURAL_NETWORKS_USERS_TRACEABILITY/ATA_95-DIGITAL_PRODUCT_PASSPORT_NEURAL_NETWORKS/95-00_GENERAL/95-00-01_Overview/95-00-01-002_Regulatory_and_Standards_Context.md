@@ -57,7 +57,7 @@ This document establishes the regulatory and standards landscape governing Digit
 - Concept Paper: "Artificial Intelligence in Aviation"
 
 **Proposed Special Condition: AI/ML Systems in Flight-Critical Applications**
-- Additional means of compliance beyond DO-178C
+- Additional means of compliance beyond [DO-178C](https://www.rtca.org/document/do-178c/)
 - Requirements for training data validation, model interpretability, runtime monitoring
 - **AMPEL360 Application**: Direct applicability to ATA 22, 27 neural network functions
 
@@ -71,7 +71,7 @@ This document establishes the regulatory and standards landscape governing Digit
 - Guidance for applicants and FAA engineers
 - Issue papers on neural network verification, validation, and assurance
 
-### 3.3 DO-178C & DO-254 (AI Extensions)
+### 3.3 DO-178C & [DO-254](https://www.rtca.org/document/do-254/) (AI Extensions)
 
 **DO-178C** (Software Considerations in Airborne Systems)
 - Baseline for software certification (Design Assurance Level A-D)
@@ -121,20 +121,20 @@ This document establishes the regulatory and standards landscape governing Digit
 
 ### 5.1 Technical Publications
 
-**S1000D** — International specification for technical publications
+**[S1000D](http://www.s1000d.org/)** — International specification for technical publications
 - Issue 6.0 includes provisions for dynamic content and digital twins
 - **AMPEL360 Application**: DPP data modules structured per S1000D conventions
 
-**ATA iSpec 2200** — Information Standards for Aviation Maintenance
+**[ATA iSpec 2200](https://www.ata.org/resources/specifications)** — Information Standards for Aviation Maintenance
 - ATA chapter numbering system (basis for ATA 95)
 - Data module code structure
 
 ### 5.2 Data Exchange & Interoperability
 
-**ARINC 653** — Avionics Application Software Standard Interface
+**[ARINC 653](https://www.aviation-ia.com/cf/aeec.html)** — Avionics Application Software Standard Interface
 - Partitioning for AI applications in Integrated Modular Avionics (IMA)
 
-**AFDX / ARINC 664** — Avionics Full-Duplex Switched Ethernet
+**AFDX / [ARINC 664](https://www.aviation-ia.com/cf/aeec.html)** — Avionics Full-Duplex Switched Ethernet
 - Network infrastructure for AI inference data distribution
 
 **IEEE 1451** — Smart Transducer Interface Standards

@@ -85,7 +85,7 @@ The AMPEL360 DPP aligns with the 14-folder GENERAL lifecycle structure (95-00-01
 - Functional requirements (e.g., "Detect anomalies with 95% recall")
 - Non-functional requirements (e.g., "Inference latency < 10 ms")
 - Interface requirements (inputs, outputs, data rates)
-- Certification requirements (DO-178C, CS-25.1309)
+- Certification requirements ([DO-178C](https://www.rtca.org/document/do-178c/), CS-25.1309)
 - Requirements Traceability Matrix (RTM)
 
 **Traceability Links**:
