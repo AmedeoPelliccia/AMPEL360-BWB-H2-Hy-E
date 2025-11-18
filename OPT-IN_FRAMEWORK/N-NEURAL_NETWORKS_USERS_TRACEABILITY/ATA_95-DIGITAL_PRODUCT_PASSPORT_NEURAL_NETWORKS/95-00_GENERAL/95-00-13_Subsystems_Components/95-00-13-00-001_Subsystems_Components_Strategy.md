@@ -156,9 +156,9 @@ AMPEL360 BWB H₂ Hy-E complete aircraft system
 
 ## Related Documents
 
-- [95-00-13-00-002](../00_META/95-00-13-00-002.md): Decomposition Principles and Rules
-- [95-00-13-00-003](../00_META/95-00-13-00-003.md): Subsystems Taxonomy
-- [95-00-13-00-004](../00_META/95-00-13-00-004.md): Components Taxonomy
+- [95-00-13-00-002](95-00-13-00-002_Decomposition_Principles_and_Rules.md): Decomposition Principles and Rules
+- [95-00-13-00-003](00_META/95-00-13-00-003_Subsystems_Taxonomy.md): Subsystems Taxonomy
+- [95-00-13-00-004](00_META/95-00-13-00-004_Components_Taxonomy.md): Components Taxonomy
 - [95-00-03](../../95-00-03_*/): Requirements Documentation
 - [95-00-05](../../95-00-05_*/): Interfaces Documentation
 - [95-00-07](../../95-00-07_*/): Verification & Validation

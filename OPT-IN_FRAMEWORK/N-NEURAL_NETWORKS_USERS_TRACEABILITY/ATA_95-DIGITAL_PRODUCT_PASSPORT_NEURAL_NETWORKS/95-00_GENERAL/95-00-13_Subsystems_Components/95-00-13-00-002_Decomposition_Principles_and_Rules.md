@@ -298,9 +298,9 @@ Changes shall be verified by:
 
 ## Related Documents
 
-- [95-00-13-00-001](../00_META/95-00-13-00-001.md): Subsystems Components Strategy
-- [95-00-13-00-003](../00_META/95-00-13-00-003.md): Subsystems Taxonomy
-- [95-00-13-00-004](../00_META/95-00-13-00-004.md): Components Taxonomy
+- [95-00-13-00-001](95-00-13-00-001_Subsystems_Components_Strategy.md): Subsystems Components Strategy
+- [95-00-13-00-003](00_META/95-00-13-00-003_Subsystems_Taxonomy.md): Subsystems Taxonomy
+- [95-00-13-00-004](00_META/95-00-13-00-004_Components_Taxonomy.md): Components Taxonomy
 - [95-00-02](../../95-00-02_*/): Safety Documentation
 - [95-00-07](../../95-00-07_*/): Verification & Validation
 
