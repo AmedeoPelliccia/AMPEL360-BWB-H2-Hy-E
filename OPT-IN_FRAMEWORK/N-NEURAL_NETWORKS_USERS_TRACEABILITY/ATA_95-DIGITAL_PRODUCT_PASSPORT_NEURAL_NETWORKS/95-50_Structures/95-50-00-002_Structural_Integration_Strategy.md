@@ -130,7 +130,7 @@ This document defines the strategic approach for integrating Neural Network (NN)
 - Crash test article for crashworthiness
 
 **Environmental Testing:**
-- DO-160 testing for equipment installations
+- [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials) testing for equipment installations
 - Fire test for firewall structures
 - Lightning test for external mounts
 

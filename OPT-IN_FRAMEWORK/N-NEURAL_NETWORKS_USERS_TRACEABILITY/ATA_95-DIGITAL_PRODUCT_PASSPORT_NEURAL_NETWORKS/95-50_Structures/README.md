@@ -73,9 +73,9 @@ Every structure is traceable to:
 
 ### 3. **ASSETS Standard**
 Each ATA-specific subfolder includes an `ASSETS/` directory following the [AMPEL360_ASSETS_STANDARD.md](../../../../../AMPEL360_ASSETS_STANDARD.md):
-- **ASSEMBLIES/** – Assembly models (ASM.json, STEP)
+- **ASSEMBLIES/** – Assembly models (ASM.json, [STEP](https://en.wikipedia.org/wiki/ISO_10303))
 - **INSTALLATIONS/** – Installation layouts (INS.json, PDF)
-- **DRAWINGS/** – Engineering drawings (drawio, SVG, DXF)
+- **DRAWINGS/** – Engineering drawings ([drawio](https://www.drawio.com/), SVG, [DXF](https://en.wikipedia.org/wiki/AutoCAD_DXF))
 
 ### 4. **CAOS Integration**
 Structures include digital hooks for the Computer Aided Operations & Services (CAOS) system to track:
@@ -116,23 +116,23 @@ Structures include digital hooks for the Computer Aided Operations & Services (C
 ### Installation Standards
 All structures must comply with:
 - **Mounting:** Load paths, fastener types, torque specifications
-- **Bonding:** Electrical bonding and grounding requirements
-- **Separation:** Physical separation for EMI, fire protection, and redundancy
+- **Bonding:** Electrical bonding and grounding requirements (per [SAE AS50881](https://www.sae.org/standards/content/as50881/))
+- **Separation:** Physical separation for [EMI](https://en.wikipedia.org/wiki/Electromagnetic_interference), fire protection, and redundancy
 - **Access:** Maintenance access requirements and panel design
 - **Thermal:** Heat dissipation paths and cooling interfaces
 
-See `00_META/95-50-00-007_Installation_Standards_and_Rules.md` for complete guidelines.
+See [00_META/95-50-00-007_Installation_Standards_and_Rules.md](00_META/95-50-00-007_Installation_Standards_and_Rules.md) for complete guidelines.
 
 ---
 
 ## Compliance & Standards
 
-- **ATA iSpec 2200** – Air Transport Association specification for technical documentation
-- **S1000D** – International specification for technical publications
-- **EASA CS-25** – Certification Specifications for Large Aeroplanes
-- **RTCA DO-160** – Environmental Conditions and Test Procedures for Airborne Equipment
-- **SAE AS50881** – Wiring Aerospace Vehicle (for electrical routing)
-- **ISO 19881** – Gaseous hydrogen - Land vehicle fuel containers (for H₂ structures)
+- **[ATA iSpec 2200](https://www.ata.org/resources/specifications)** – Air Transport Association specification for technical documentation
+- **[S1000D](http://www.s1000d.org/)** – International specification for technical publications
+- **[EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)** – Certification Specifications for Large Aeroplanes
+- **[RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials)** – Environmental Conditions and Test Procedures for Airborne Equipment
+- **[SAE AS50881](https://www.sae.org/standards/content/as50881/)** – Wiring Aerospace Vehicle (for electrical routing)
+- **[ISO 19881](https://www.iso.org/standard/66513.html)** – Gaseous hydrogen - Land vehicle fuel containers (for H₂ structures)
 
 ---
 

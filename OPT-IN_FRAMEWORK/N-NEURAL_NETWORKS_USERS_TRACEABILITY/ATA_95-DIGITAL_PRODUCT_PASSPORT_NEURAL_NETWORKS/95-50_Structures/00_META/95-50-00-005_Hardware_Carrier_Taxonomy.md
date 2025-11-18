@@ -118,18 +118,18 @@ This document defines the taxonomy for **hardware carriers** – the specific ra
 ### 3.3 Environmental Attributes
 
 **Operating Range:**
-- Temperature: -55°C to +71°C (DO-160 Category B3)
+- Temperature: -55°C to +71°C ([RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials) Category B3)
 - Altitude: Sea level to 60,000 ft
 - Humidity: 0-95% RH (non-condensing)
 
 **Vibration:**
-- Random vibration per DO-160 (Category R)
-- Sinusoidal vibration per DO-160 (Category S)
+- Random vibration per [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials) (Category R)
+- Sinusoidal vibration per [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials) (Category S)
 
-**EMI/EMC:**
-- Conducted emissions per DO-160 Section 21
-- Radiated emissions per DO-160 Section 21
-- Susceptibility per DO-160 Sections 18-20
+**[EMI](https://en.wikipedia.org/wiki/Electromagnetic_interference)/[EMC](https://en.wikipedia.org/wiki/Electromagnetic_compatibility):**
+- Conducted emissions per [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials) Section 21
+- Radiated emissions per [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials) Section 21
+- Susceptibility per [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials) Sections 18-20
 
 ---
 
@@ -155,8 +155,8 @@ This document defines the taxonomy for **hardware carriers** – the specific ra
 ### 4.2 Standard Mounting Patterns
 
 **IMA Rack Mounting:**
-- ARINC 600 form factor
-- 1 MCU (Modular Concept Unit) = 1.0" width
+- [ARINC 600](https://en.wikipedia.org/wiki/ARINC_600) form factor
+- 1 [MCU](https://en.wikipedia.org/wiki/ARINC_600) (Modular Concept Unit) = 1.0" width
 - Standard depths: 8, 12, 16 MCU
 
 **Sensor Mount Patterns:**

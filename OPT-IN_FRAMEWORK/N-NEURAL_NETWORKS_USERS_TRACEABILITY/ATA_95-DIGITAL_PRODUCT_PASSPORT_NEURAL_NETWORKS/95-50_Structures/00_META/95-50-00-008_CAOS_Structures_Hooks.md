@@ -9,7 +9,7 @@
 
 ## 1. Introduction
 
-This document defines the **CAOS (Computer Aided Operations & Services) integration points** for the 95-50 Structures module, enabling the digital twin to monitor, predict, and optimize structural performance.
+This document defines the **[CAOS](../../../../../CAOS/) (Computer Aided Operations & Services) integration points** for the 95-50 Structures module, enabling the [digital twin](https://en.wikipedia.org/wiki/Digital_twin) to monitor, predict, and optimize structural performance.
 
 ---
 
@@ -53,10 +53,10 @@ This document defines the **CAOS (Computer Aided Operations & Services) integrat
 ### 2.2 Sensor Integration
 
 **Real-Time Monitoring:**
-- **Temperature sensors** – Thermal trending for cooling system health
-- **Accelerometers** – Vibration analysis for mount integrity
-- **Strain gauges** – Structural load monitoring
-- **Proximity sensors** – Access panel status (open/closed)
+- **[Temperature sensors](https://en.wikipedia.org/wiki/Temperature_measurement)** – Thermal trending for cooling system health
+- **[Accelerometers](https://en.wikipedia.org/wiki/Accelerometer)** – Vibration analysis for mount integrity
+- **[Strain gauges](https://en.wikipedia.org/wiki/Strain_gauge)** – Structural load monitoring
+- **[Proximity sensors](https://en.wikipedia.org/wiki/Proximity_sensor)** – Access panel status (open/closed)
 
 **Data Sampling Rates:**
 - Critical sensors: 100 Hz (accelerometers)
@@ -82,7 +82,7 @@ This document defines the **CAOS (Computer Aided Operations & Services) integrat
 ### 3.2 Vibration Analysis
 
 **Algorithm:**
-- FFT analysis of accelerometer data
+- [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) analysis of accelerometer data
 - Identify resonance frequencies
 - Detect bearing wear, loose fasteners, imbalance
 
@@ -155,8 +155,8 @@ This document defines the **CAOS (Computer Aided Operations & Services) integrat
 - Failure modes and troubleshooting actions
 
 **Predictive Actions:**
-- Recommend proactive replacement before MTBF
-- Identify "bad actor" LRUs with high removal rates
+- Recommend proactive replacement before [MTBF](https://en.wikipedia.org/wiki/Mean_time_between_failures)
+- Identify "bad actor" [LRUs](https://en.wikipedia.org/wiki/Line-replaceable_unit) with high removal rates
 - Optimize spare parts inventory
 
 ---
@@ -177,7 +177,7 @@ This document defines the **CAOS (Computer Aided Operations & Services) integrat
 
 ### 6.2 Augmented Reality (AR) Hooks
 
-**AR Features:**
+**[AR](https://en.wikipedia.org/wiki/Augmented_reality) Features:**
 - Overlay sensor data on physical structure (tablet/headset)
 - Highlight access panels for maintenance tasks
 - Display installation procedures step-by-step
@@ -193,7 +193,7 @@ This document defines the **CAOS (Computer Aided Operations & Services) integrat
 
 ### 7.1 Structure Query API
 
-**Endpoint:** `GET /api/v1/structures/{structure_id}`
+**Endpoint:** [`GET /api/v1/structures/{structure_id}`](https://en.wikipedia.org/wiki/REST)
 
 **Response:**
 ```json
@@ -209,7 +209,7 @@ This document defines the **CAOS (Computer Aided Operations & Services) integrat
 
 ### 7.2 Sensor Data Stream API
 
-**Endpoint:** `WS /api/v1/sensors/stream`
+**Endpoint:** [`WS /api/v1/sensors/stream`](https://en.wikipedia.org/wiki/WebSocket)
 
 **Message Format:**
 ```json
@@ -224,7 +224,7 @@ This document defines the **CAOS (Computer Aided Operations & Services) integrat
 
 ### 7.3 Maintenance Event API
 
-**Endpoint:** `POST /api/v1/maintenance/event`
+**Endpoint:** [`POST /api/v1/maintenance/event`](https://en.wikipedia.org/wiki/REST)
 
 **Request Body:**
 ```json

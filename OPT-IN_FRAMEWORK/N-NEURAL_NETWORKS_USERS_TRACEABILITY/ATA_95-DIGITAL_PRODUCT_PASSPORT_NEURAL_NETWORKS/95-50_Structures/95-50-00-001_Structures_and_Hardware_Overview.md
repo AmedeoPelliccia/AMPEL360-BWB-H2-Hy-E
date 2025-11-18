@@ -43,10 +43,10 @@ This chapter covers **mounting structures, racks, brackets, and installation har
 - **Recorder Racks (95-50-31)** – FDR, CVR, and data storage modules
 
 **Key Requirements:**
-- Shock and vibration isolation per DO-160
+- Shock and vibration isolation per [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials)
 - Thermal management (air cooling, liquid cooling, heat sinks)
-- EMI/RFI shielding
-- Quick-release mechanisms for LRU replacement
+- [EMI](https://en.wikipedia.org/wiki/Electromagnetic_interference)/[RFI](https://en.wikipedia.org/wiki/Radio-frequency_interference) shielding
+- Quick-release mechanisms for [LRU](https://en.wikipedia.org/wiki/Line-replaceable_unit) replacement
 - Cable management and strain relief
 
 ### 2.2 Sensor and Antenna Mounts
@@ -91,10 +91,10 @@ This chapter covers **mounting structures, racks, brackets, and installation har
 - **Firewall structures** – Separation between fuel zones and occupied areas
 
 **Key Requirements:**
-- Load paths for crash loads (CS-25.561)
+- Load paths for crash loads ([EASA CS-25.561](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27))
 - Thermal expansion joints
 - Leak detection integration
-- Fire-resistant materials (FAR 25.853)
+- Fire-resistant materials ([FAR 25.853](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR61b1513e00c1bd8/section-25.853))
 
 ### 2.5 Access Panels and Doors
 
@@ -166,8 +166,8 @@ This chapter covers **mounting structures, racks, brackets, and installation har
 - Thermal expansion (H₂ tanks, hot structures)
 
 **Analysis:**
-- FEA verification of attach fittings
-- Margin of safety calculations per CS-25.303
+- [FEA](https://en.wikipedia.org/wiki/Finite_element_analysis) verification of attach fittings
+- Margin of safety calculations per [EASA CS-25.303](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)
 - Fatigue life assessment
 
 ### 4.2 Dynamic Loads
@@ -179,15 +179,15 @@ This chapter covers **mounting structures, racks, brackets, and installation har
 - Aerodynamic buffet
 
 **Analysis:**
-- Modal analysis to avoid resonance
-- Shock and vibration testing per DO-160
+- [Modal analysis](https://en.wikipedia.org/wiki/Modal_analysis) to avoid resonance
+- Shock and vibration testing per [RTCA DO-160G](https://www.rtca.org/content/standards-guidance-materials)
 - Random vibration profiles for each zone
 
 ### 4.3 Crash Loads
 
 **Requirements:**
-- Emergency landing (CS-25.561)
-- Crashworthiness of fuel systems (CS-25.963)
+- Emergency landing ([EASA CS-25.561](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27))
+- Crashworthiness of fuel systems ([EASA CS-25.963](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27))
 - Retention of heavy equipment
 
 **Analysis:**
@@ -202,12 +202,12 @@ This chapter covers **mounting structures, racks, brackets, and installation har
 ### 5.1 Metallic Structures
 
 **Aluminum Alloys:**
-- 7075-T6 for high-strength brackets
-- 6061-T6 for general-purpose racks
-- 2024-T3 for sheet metal panels
+- [7075-T6](https://en.wikipedia.org/wiki/7075_aluminium_alloy) for high-strength brackets
+- [6061-T6](https://en.wikipedia.org/wiki/6061_aluminium_alloy) for general-purpose racks
+- [2024-T3](https://en.wikipedia.org/wiki/2024_aluminium_alloy) for sheet metal panels
 
 **Titanium Alloys:**
-- Ti-6Al-4V for high-temperature mounts (near engines)
+- [Ti-6Al-4V](https://en.wikipedia.org/wiki/Ti-6Al-4V) for high-temperature mounts (near engines)
 - Corrosion-resistant in H₂ environment
 
 **Stainless Steel:**
@@ -246,21 +246,21 @@ This chapter covers **mounting structures, racks, brackets, and installation har
 ### 6.1 Fastener Selection
 
 **Thread Types:**
-- **UNJ threads** – Aerospace standard for bolts
+- **[UNJ threads](https://en.wikipedia.org/wiki/Unified_Thread_Standard)** – Aerospace standard for bolts
 - **UNJF** – Fine threads for thin sections
 - **Self-locking nuts** – Prevailing torque or nylon inserts
 
 **Torque Specifications:**
-- Per MIL-STD-1312 or manufacturer specifications
+- Per [MIL-STD-1312](https://assist.dla.mil/online/start/) or manufacturer specifications
 - Torque seals for inspection
 - Controlled tightening sequence for multiple-fastener joints
 
 ### 6.2 Bonding and Grounding
 
 **Electrical Bonding:**
-- Bonding jumpers across joints per AS50881
+- Bonding jumpers across joints per [SAE AS50881](https://www.sae.org/standards/content/as50881/)
 - Maximum resistance: 2.5 milliohms
-- Bonding to aircraft structure for lightning protection
+- Bonding to aircraft structure for [lightning protection](https://en.wikipedia.org/wiki/Lightning_protection)
 
 **Grounding Points:**
 - Designated grounding studs on equipment racks
@@ -275,8 +275,8 @@ This chapter covers **mounting structures, racks, brackets, and installation har
 - Electrical connectors in high-vibration zones
 
 **Standards:**
-- SAE AS50881 (wiring practices)
-- AC 43.13-1B (acceptable methods)
+- [SAE AS50881](https://www.sae.org/standards/content/as50881/) (wiring practices)
+- [AC 43.13-1B](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/99861) (acceptable methods)
 
 ---
 

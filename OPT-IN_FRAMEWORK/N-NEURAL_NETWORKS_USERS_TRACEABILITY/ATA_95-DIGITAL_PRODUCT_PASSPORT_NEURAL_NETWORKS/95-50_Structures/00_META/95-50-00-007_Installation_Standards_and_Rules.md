@@ -12,9 +12,9 @@
 ### 1.1 Workmanship Standards
 
 **Reference Documents:**
-- AC 43.13-1B - Acceptable Methods, Techniques, and Practices
-- SAE AS50881 - Wiring Aerospace Vehicle
-- MIL-STD-1312 - Fastener Test Methods
+- [AC 43.13-1B](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/99861) - Acceptable Methods, Techniques, and Practices
+- [SAE AS50881](https://www.sae.org/standards/content/as50881/) - Wiring Aerospace Vehicle
+- [MIL-STD-1312](https://assist.dla.mil/online/start/) - Fastener Test Methods
 
 **Quality Requirements:**
 - All installations shall be performed by certified technicians
@@ -28,8 +28,8 @@
 ### 2.1 Torque Requirements
 
 **Torque Specifications:**
-- Per manufacturer specifications or MIL-STD-1312
-- Use calibrated torque wrenches (±4% accuracy)
+- Per manufacturer specifications or [MIL-STD-1312](https://assist.dla.mil/online/start/)
+- Use calibrated [torque wrenches](https://en.wikipedia.org/wiki/Torque_wrench) (±4% accuracy)
 - Apply torque seals for inspection
 
 **Tightening Sequence:**
@@ -46,7 +46,7 @@
 
 **Safety Wiring:**
 - Required for critical fasteners (flight controls, engine mounts)
-- MS20995 lockwire (0.032" or 0.041" diameter)
+- [MS20995](https://en.wikipedia.org/wiki/Safety_wire) lockwire (0.032" or 0.041" diameter)
 - Positive twist direction (tends to tighten)
 
 ---
@@ -61,8 +61,8 @@
 - Grounding stud-to-bus: ≤2.5 milliohms
 
 **Bonding Methods:**
-- Bonding jumpers with lugs crimped per AS50881
-- Conductive finishes (alodine, cadmium plate)
+- Bonding jumpers with lugs crimped per [SAE AS50881](https://www.sae.org/standards/content/as50881/)
+- Conductive finishes ([alodine](https://en.wikipedia.org/wiki/Alodine), cadmium plate)
 - Star washers or conductive gaskets at interfaces
 
 ### 3.2 Grounding Points
@@ -193,7 +193,7 @@
 ### 8.1 Fire Protection
 
 **Materials:**
-- Non-flammable materials in fire zones (per FAR 25.853)
+- Non-flammable materials in fire zones (per [FAR 25.853](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25/subpart-D/subject-group-ECFR61b1513e00c1bd8/section-25.853))
 - Fire-resistant barriers between zones
 - Fire detection and suppression integration
 
