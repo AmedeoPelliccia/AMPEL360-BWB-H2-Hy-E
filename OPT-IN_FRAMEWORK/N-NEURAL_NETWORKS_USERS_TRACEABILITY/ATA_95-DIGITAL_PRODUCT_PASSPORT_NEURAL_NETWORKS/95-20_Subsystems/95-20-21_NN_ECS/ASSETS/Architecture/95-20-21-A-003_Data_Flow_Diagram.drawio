@@ -1,218 +1,269 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg
-  width="1200"
-  height="700"
-  viewBox="0 0 1200 700"
-  xmlns="http://www.w3.org/2000/svg"
-  font-family="Segoe UI, Roboto, Arial, sans-serif"
->
-  <title>95-20-21-A-002 — ECS NN System Architecture</title>
+# 95-20-21-A-003 — ECS NN Data Flow Diagram
 
-  <!-- Background -->
-  <rect x="0" y="0" width="1200" height="700" fill="#0b0c10" />
+**Subsystem**: 95-20-21 NN ECS (Environmental Control System Neural Networks)  
+**ATA Chapters**: ATA 21 (Air Conditioning) · ATA 95 (Neural Networks)  
+**Status**: WORKING  
 
-  <!-- Title -->
-  <text x="600" y="40" text-anchor="middle" font-size="22" fill="#ffffff">
-    95-20-21 NN ECS – System Architecture
-  </text>
-  <text x="600" y="65" text-anchor="middle" font-size="14" fill="#c0c0c0">
-    AMPEL360 BWB H₂ Hy-E · ATA 21 / ATA 95 Integration
-  </text>
+---
 
-  <!-- ATA 21 Container -->
-  <rect x="40" y="110" width="360" height="430" rx="16" ry="16"
-        fill="#111827" stroke="#4b5563" stroke-width="2"/>
-  <text x="220" y="140" text-anchor="middle" font-size="16" fill="#e5e7eb">
-    ATA 21 – Environmental Control System
-  </text>
+## 1. Purpose and Scope
 
-  <!-- ECS Sensors -->
-  <rect x="70" y="170" width="300" height="80" rx="10" ry="10"
-        fill="#1f2933" stroke="#6b7280" stroke-width="1.5"/>
-  <text x="220" y="195" text-anchor="middle" font-size="14" fill="#f9fafb">
-    ECS Sensors
-  </text>
-  <text x="220" y="215" text-anchor="middle" font-size="11" fill="#d1d5db">
-    T, RH, CO₂, VOC, PM, P, Airflow, External T, Passenger Load
-  </text>
+This document provides a **data-flow–centric view** of the ECS NN subsystem:
 
-  <!-- ECS Controller -->
-  <rect x="70" y="280" width="300" height="90" rx="10" ry="10"
-        fill="#111827" stroke="#9ca3af" stroke-width="1.5"/>
-  <text x="220" y="305" text-anchor="middle" font-size="14" fill="#f9fafb">
-    Classical ECS Controller
-  </text>
-  <text x="220" y="325" text-anchor="middle" font-size="11" fill="#d1d5db">
-    Schedules · PID · Safety Limits · Mode Logic
-  </text>
+- How **runtime data** flows from sensors to NN models and back to ECS actuators.  
+- How **logging & monitoring** feeds ATA 31 / ATA 45.  
+- How **offline training data** is generated and used (digital twin, synthetic scenarios, flight data).  
 
-  <!-- ECS Actuators -->
-  <rect x="70" y="410" width="300" height="80" rx="10" ry="10"
-        fill="#1f2933" stroke="#6b7280" stroke-width="1.5"/>
-  <text x="220" y="435" text-anchor="middle" font-size="14" fill="#f9fafb">
-    ECS Actuators
-  </text>
-  <text x="220" y="455" text-anchor="middle" font-size="11" fill="#d1d5db">
-    Valves · Packs · Fans · Mixers · CO₂ Scrubbers
-  </text>
+It complements:
 
-  <!-- IMA Container -->
-  <rect x="430" y="110" width="440" height="430" rx="16" ry="16"
-        fill="#020617" stroke="#4b5563" stroke-width="2"/>
-  <text x="650" y="140" text-anchor="middle" font-size="16" fill="#e5e7eb">
-    IMA Platform – ARINC 653
-  </text>
+- `95-20-21-A-001_ECS_NN_System_Architecture.md` (structural view)  
+- Model cards in `ASSETS/Model_Cards/95-20-21-A-1XX_*.yaml`  
+- Safety & certification view in `95-20-21-009_Safety_and_Certification.md`  
 
-  <!-- NN ECS Partition -->
-  <rect x="450" y="170" width="400" height="350" rx="14" ry="14"
-        fill="#030712" stroke="#6b7280" stroke-width="1.5"/>
-  <text x="650" y="195" text-anchor="middle" font-size="14" fill="#f9fafb">
-    95-20-21 NN ECS Partition
-  </text>
-  <text x="650" y="215" text-anchor="middle" font-size="11" fill="#d1d5db">
-    ONNX Inference · Health Monitoring · Fallback Hooks
-  </text>
+---
 
-  <!-- Individual NN Blocks -->
-  <!-- Cabin Temp Predictor -->
-  <rect x="470" y="240" width="180" height="70" rx="10" ry="10"
-        fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
-  <text x="560" y="262" text-anchor="middle" font-size="12" fill="#f9fafb">
-    95-20-21-A-101
-  </text>
-  <text x="560" y="280" text-anchor="middle" font-size="11" fill="#d1d5db">
-    Cabin Temp Predictor
-  </text>
+## 2. Runtime Data Flow (Onboard)
 
-  <!-- Air Quality Monitor -->
-  <rect x="650" y="240" width="180" height="70" rx="10" ry="10"
-        fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
-  <text x="740" y="262" text-anchor="middle" font-size="12" fill="#f9fafb">
-    95-20-21-A-102
-  </text>
-  <text x="740" y="280" text-anchor="middle" font-size="11" fill="#d1d5db">
-    Air Quality Monitor
-  </text>
+### 2.1 Logical Data Flow (Mermaid)
 
-  <!-- HVAC Optimizer -->
-  <rect x="470" y="330" width="360" height="70" rx="10" ry="10"
-        fill="#111827" stroke="#f97316" stroke-width="1.6"/>
-  <text x="650" y="352" text-anchor="middle" font-size="12" fill="#f9fafb">
-    95-20-21-A-103
-  </text>
-  <text x="650" y="370" text-anchor="middle" font-size="11" fill="#fbbf24">
-    HVAC Optimizer – Setpoints & Power Recommendations
-  </text>
+```mermaid
+flowchart LR
+    %% 95-20-21 ECS NN – Runtime Data Flow
 
-  <!-- Humidity Management -->
-  <rect x="470" y="420" width="180" height="70" rx="10" ry="10"
-        fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
-  <text x="560" y="442" text-anchor="middle" font-size="12" fill="#f9fafb">
-    95-20-21-A-105
-  </text>
-  <text x="560" y="460" text-anchor="middle" font-size="11" fill="#d1d5db">
-    Humidity Management
-  </text>
+    subgraph SENSORS["ATA 21 Sensors & Inputs"]
+        TZONE["Cabin T per zone\n(°C, 10 Hz)"]
+        AQ["Air Quality Sensors\nCO₂, VOC, PM, RH (5–10 Hz)"]
+        PDATA["Pressure & Diff P\n(hPa, 1–10 Hz)"]
+        AIRFLOW["Airflow Rates\n(m³/min, 10 Hz)"]
+        EXT["External T & Env\n(°C, 1 Hz)"]
+        LOAD["Passenger Load\n(0.1 Hz)"]
+        PHASE["Flight Phase\n(enum, 0.5 Hz)"]
+    end
 
-  <!-- CO2 Scrubbing Optimizer -->
-  <rect x="650" y="420" width="180" height="70" rx="10" ry="10"
-        fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
-  <text x="740" y="442" text-anchor="middle" font-size="12" fill="#f9fafb">
-    95-20-21-A-107
-  </text>
-  <text x="740" y="460" text-anchor="middle" font-size="11" fill="#d1d5db">
-    CO₂ Scrubbing Optimizer
-  </text>
+    subgraph FE["Feature Engineering & Preprocessing\n(95-20-21 NN ECS Partition)"]
+        FE_NODE["Normalization · Windowing\nOutlier Filtering · Encoding"]
+    end
 
-  <!-- Monitoring Container -->
-  <rect x="890" y="110" width="270" height="430" rx="16" ry="16"
-        fill="#111827" stroke="#4b5563" stroke-width="2"/>
-  <text x="1025" y="140" text-anchor="middle" font-size="16" fill="#e5e7eb">
-    ATA 31 / ATA 45
-  </text>
-  <text x="1025" y="160" text-anchor="middle" font-size="13" fill="#d1d5db">
-    Monitoring · Recording · Maintenance
-  </text>
+    subgraph NN_ECS["95-20-21 NN ECS Models"]
+        TEMP_NN["A-101\nCabin Temp Predictor"]
+        AQ_NN["A-102\nAir Quality Monitor"]
+        HVAC_OPT["A-103\nHVAC Optimizer"]
+        HUM_NN["A-105\nHumidity Management"]
+        CO2_OPT["A-107\nCO₂ Scrubbing Optimizer"]
+    end
 
-  <!-- Monitoring Block -->
-  <rect x="910" y="190" width="230" height="110" rx="10" ry="10"
-        fill="#1f2933" stroke="#6b7280" stroke-width="1.5"/>
-  <text x="1025" y="215" text-anchor="middle" font-size="13" fill="#f9fafb">
-    ECS NN Logs & Metrics
-  </text>
-  <text x="1025" y="235" text-anchor="middle" font-size="11" fill="#d1d5db">
-    Predictions · Alerts · Setpoints · Health Status
-  </text>
-  <text x="1025" y="255" text-anchor="middle" font-size="11" fill="#9ca3af">
-    Used for trend analysis & maintenance
-  </text>
+    subgraph ECS["ATA 21 ECS Controller + Actuators"]
+        ECSCTL["Classical ECS Controller\n(PID / Logic / Schedules)"]
+        ACT["ECS Actuators\nValves · Packs · Fans · Scrubbers"]
+    end
 
-  <!-- Arrows: Sensors -> NN Partition -->
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3"
-            orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L8,3 L0,6 z" fill="#e5e7eb" />
-    </marker>
-    <marker id="arrow-soft" markerWidth="10" markerHeight="10" refX="8" refY="3"
-            orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L8,3 L0,6 z" fill="#9ca3af" />
-    </marker>
-  </defs>
+    subgraph MON["Monitoring & Recording\n(ATA 31 / 45)"]
+        LOGS["ECS NN Logs\nPredictions · Alerts · Setpoints\nHealth & Status"]
+        HFM["Health / Fault Mgmt"]
+    end
 
-  <!-- Sensors to NN Partition -->
-  <line x1="370" y1="210" x2="450" y2="210"
-        stroke="#e5e7eb" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="410" y="200" text-anchor="middle" font-size="11" fill="#e5e7eb">
-    Time-series features
-  </text>
+    %% Sensor data to FE
+    TZONE --> FE_NODE
+    AQ --> FE_NODE
+    PDATA --> FE_NODE
+    AIRFLOW --> FE_NODE
+    EXT --> FE_NODE
+    LOAD --> FE_NODE
+    PHASE --> FE_NODE
 
-  <!-- NN Partition to ECS Controller (Recommendations) -->
-  <line x1="470" y1="365" x2="370" y2="365"
-        stroke="#f97316" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="420" y="355" text-anchor="middle" font-size="11" fill="#fbbf24">
-    Optimized setpoints & advisories
-  </text>
+    %% FE to NNs
+    FE_NODE --> TEMP_NN
+    FE_NODE --> AQ_NN
+    FE_NODE --> HUM_NN
+    FE_NODE --> CO2_OPT
 
-  <!-- ECS Controller to Actuators -->
-  <line x1="220" y1="370" x2="220" y2="410"
-        stroke="#e5e7eb" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="230" y="392" font-size="11" fill="#e5e7eb">
-    Commands
-  </text>
+    %% Chained inputs into HVAC optimizer
+    TEMP_NN -->|"Zone T forecast\n(5 min horizon)"| HVAC_OPT
+    AQ_NN -->|"AQI + alerts"| HVAC_OPT
+    HUM_NN -->|"RH trends / targets"| HVAC_OPT
+    CO2_OPT -->|"Scrubber duty\nrecommendations"| HVAC_OPT
 
-  <!-- NN ECS to Monitoring -->
-  <line x1="850" y1="305" x2="890" y2="245"
-        stroke="#9ca3af" stroke-width="1.8" marker-end="url(#arrow-soft)"/>
-  <line x1="850" y1="345" x2="890" y2="245"
-        stroke="#9ca3af" stroke-width="1.8" marker-end="url(#arrow-soft)"/>
-  <line x1="850" y1="445" x2="890" y2="245"
-        stroke="#9ca3af" stroke-width="1.8" marker-end="url(#arrow-soft)"/>
-  <text x="900" y="220" font-size="11" fill="#d1d5db">
-    Logs, metrics, alerts
-  </text>
+    %% Optimizer to ECS controller
+    HVAC_OPT -->|"Optimized setpoints\n(advisory, bounded)"| ECSCTL
+    ECSCTL -->|"Validated commands"| ACT
 
-  <!-- Legend -->
-  <rect x="860" y="520" width="290" height="130" rx="12" ry="12"
-        fill="#020617" stroke="#4b5563" stroke-width="1.5"/>
-  <text x="1005" y="545" text-anchor="middle" font-size="13" fill="#e5e7eb">
-    Legend
-  </text>
-  <rect x="880" y="560" width="18" height="10" fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
-  <text x="905" y="568" font-size="11" fill="#d1d5db">NN Component (ONNX)</text>
+    %% Logging & monitoring
+    TEMP_NN --> LOGS
+    AQ_NN --> LOGS
+    HVAC_OPT --> LOGS
+    HUM_NN --> LOGS
+    CO2_OPT --> LOGS
+    ECSCTL --> LOGS
 
-  <rect x="880" y="582" width="18" height="10" fill="#111827" stroke="#f97316" stroke-width="1.6"/>
-  <text x="905" y="590" font-size="11" fill="#fbbf24">HVAC Optimizer (advisory)</text>
+    LOGS --> HFM
+````
 
-  <line x1="880" y1="608" x2="900" y2="608"
-        stroke="#e5e7eb" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="905" y="612" font-size="11" fill="#e5e7eb">Control / data flow</text>
+### 2.2 Key Data Contracts
 
-  <line x1="880" y1="630" x2="900" y2="630"
-        stroke="#9ca3af" stroke-width="1.8" marker-end="url(#arrow-soft)"/>
-  <text x="905" y="634" font-size="11" fill="#9ca3af">Monitoring / logging</text>
+Main data contracts between blocks:
 
-  <!-- Document Control Footer -->
-  <text x="20" y="680" font-size="10" fill="#6b7280">
-    95-20-21-A-002_ECS_NN_System_Architecture.svg · Version 1.0 · Generated with AI assistance (GitHub Copilot / ChatGPT), prompted by Amedeo Pelliccia.
-  </text>
-</svg>
+* **Sensors → Preprocessing**
+
+  * Numeric time series with timestamps, units (°C, %RH, ppm, µg/m³, hPa, m³/min).
+  * Quality flags (OK / DEGRADED / FAIL).
+
+* **Preprocessing → NN Models**
+
+  * Fixed-length sliding windows (e.g. `shape = [batch, timesteps, features]`).
+  * Encoded categorical variables (flight phase, modes).
+
+* **NN Models → ECS Controller**
+
+  * Bounded, unit-consistent recommendations:
+
+    * Temperature targets (°C) per zone
+    * Humidity targets (%RH)
+    * CO₂ scrubber duty cycle / mode
+    * HVAC power bands (kW range)
+  * Confidence / quality indicators AND anomaly flags, when available.
+
+* **NN Models & ECS Controller → Monitoring**
+
+  * Raw predictions / recommendations
+  * Final commands applied
+  * NN health status, inference latency, failure counters
+
+---
+
+## 3. Offline Training & Data Lifecycle
+
+### 3.1 Training Data Flow (High-Level)
+
+```mermaid
+flowchart TB
+    %% 95-20-21 ECS NN – Training Data Flow
+
+    subgraph SRC["Data Sources"]
+        FLT["Flight Test Data\n(Real ECS Telemetry)"]
+        RIG["Ground Rigs / Iron Bird\nECS Test Benches"]
+        DTWIN["Digital Twin & Synthetic\n95-20-21-605_Digital_Twin_ECS_Scenarios.parquet"]
+    end
+
+    subgraph RAW["Raw Ingestion\n(95-20-21 Data)"]
+        RAW_ECS["Raw ECS Logs\n(time series, events)"]
+    end
+
+    subgraph CUR["Curation & Labeling"]
+        CURATE["Cleaning · Alignment\nUnit Checks · Outlier Removal"]
+        LABEL["Labeling & Annotation\nComfort, AQI, Events"]
+    end
+
+    subgraph DS["Training Datasets\n(Data/Training_Datasets)"]
+        DS_TEMP["95-20-21-601\nCabin_Temp_10k_Flights.parquet"]
+        DS_AQ["95-20-21-602\nAir_Quality_Logs.parquet"]
+        DS_HUM["95-20-21-603\nHumidity_Profiles.parquet"]
+        DS_CO2["95-20-21-604\nCO2_Scrubber_Logs.parquet"]
+    end
+
+    subgraph TRAIN["Model Training\n(Offline ML Pipeline)"]
+        TRAIN_TEMP["Train A-101\nTemp Predictor"]
+        TRAIN_AQ["Train A-102\nAir Quality Monitor"]
+        TRAIN_HVAC["Train A-103\nHVAC Optimizer"]
+    end
+
+    subgraph ART["Model Artifacts\n(Models/Trained + DPP)"]
+        ONNX_TEMP["temp_predictor_v1.2.onnx"]
+        ONNX_AQ["air_quality_monitor_v1.0.onnx"]
+        CARD["Model Cards\n95-20-21-A-1XX_*.yaml"]
+        DPP["DPP Entries\n(hashes, lineage, evidence)"]
+    end
+
+    SRC --> RAW_ECS
+    RAW_ECS --> CURATE
+    CURATE --> LABEL
+    LABEL --> DS_TEMP
+    LABEL --> DS_AQ
+    LABEL --> DS_HUM
+    LABEL --> DS_CO2
+
+    DS_TEMP --> TRAIN_TEMP
+    DS_AQ --> TRAIN_AQ
+    DS_TEMP --> TRAIN_HVAC
+    DS_AQ --> TRAIN_HVAC
+    DS_HUM --> TRAIN_HVAC
+    DS_CO2 --> TRAIN_HVAC
+
+    TRAIN_TEMP --> ONNX_TEMP
+    TRAIN_AQ --> ONNX_AQ
+    TRAIN_TEMP --> CARD
+    TRAIN_AQ --> CARD
+    TRAIN_HVAC --> CARD
+
+    ONNX_TEMP --> DPP
+    ONNX_AQ --> DPP
+    CARD --> DPP
+```
+
+### 3.2 Traceability Hooks
+
+Every step above should be traceable via:
+
+* **Dataset IDs** (`95-20-21-60X_*`) in:
+
+  * Model cards (`training.dataset.*`)
+  * Training configs (`Models/Configs/*.yaml`)
+
+* **Model artefact hashes** (e.g. SHA-256) stored in:
+
+  * Inspection reports (e.g. `*_inspection_report.json`)
+  * DPP fields (`dpp_integration.model_hash` in model cards)
+
+* **Training runs**:
+
+  * Logged in CI/CD or MLOps pipeline (run ID + git commit).
+
+---
+
+## 4. Safety, Boundaries, and Fallback (Data Perspective)
+
+From a data perspective, the following safety measures apply:
+
+* **Input validation & sanitization**:
+
+  * Range checks, unit consistency, sensor status flags.
+  * Drop or flag obviously corrupted samples before feeding NNs.
+
+* **Output bounding and plausibility checks**:
+
+  * NN outputs are checked against safe envelopes and rate-of-change limits.
+  * Out-of-bounds or low-confidence recommendations are discarded and replaced by:
+
+    * Classical ECS controller defaults
+    * Safe fallback schedules.
+
+* **Data isolation & privacy**:
+
+  * ECS NN logs contain no PII; only technical telemetry.
+  * Logs are stored and offloaded according to safety and certification requirements.
+
+---
+
+## 5. Document Control
+
+* **Document ID**: 95-20-21-A-003_ECS_NN_Data_Flow_Diagram
+* **Version**: 1.0
+* **Status**: WORKING
+* **Location**: `ASSETS/Architecture/` under `95-20-21_NN_ECS`
+* **Last Updated**: 2025-11-19
+
+**AI Assistance & Authorship**
+
+* **AI Tools Used**:
+
+  * GitHub Copilot
+  * ChatGPT
+* **Prompted by**: **Amedeo Pelliccia**
+* **Note**:
+  This document was drafted with AI assistance for data-flow mapping and diagram
+  generation. Content is subject to human review, validation, and approval under the
+  AMPEL360 document control process before being used for certification or regulatory
+  submissions.
+
+```
+
+
