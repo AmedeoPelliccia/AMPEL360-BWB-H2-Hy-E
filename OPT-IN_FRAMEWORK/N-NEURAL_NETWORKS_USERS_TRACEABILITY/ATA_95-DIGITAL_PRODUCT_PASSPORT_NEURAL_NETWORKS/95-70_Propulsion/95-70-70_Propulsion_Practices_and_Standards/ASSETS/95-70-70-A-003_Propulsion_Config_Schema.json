@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "configuration_baseline": "PROP-CFG-001-REV-A",
+  "aircraft_type": "AMPEL360 BWB H2 Hy-E Q100",
+  "propulsion_configuration": {
+    "architecture": "Hybrid Electric with Open-Fan Propulsors",
+    "number_of_engines": 2,
+    "engine_locations": ["Left Wing", "Right Wing"],
+    "propulsion_type": "Electric Motor + Open-Fan"
+  },
+  "components": [
+    {
+      "component_id": "PROP-72-001",
+      "type": "Open-Fan Propulsor",
+      "location": "Left",
+      "part_number": "OFP-5000-L"
+    },
+    {
+      "component_id": "PROP-76-001",
+      "type": "FADEC Channel A",
+      "location": "Left",
+      "part_number": "FADEC-H2-100-A"
+    }
+  ]
+}
