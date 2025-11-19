@@ -1,13 +1,4 @@
-Perfecto, ese folder pide a gritos un mini‐framework de trazabilidad 😄
-Te dejo **todo lo que debería vivir dentro de**:
 
-`ASSETS/Reports/95-20-21-Test_Logs/`
-
-incluyendo un `README.md` y la estructura propuesta.
-
----
-
-````markdown
 # 95-20-21 — Test Logs Directory  
 ### ECS Neural Network Subsystem (NN_ECS)
 
@@ -171,9 +162,3 @@ Política recomendada:
 * **Owner**: AMPEL360 Verification Team
 * **AI Assistance**: Drafted with AI assistance (ChatGPT), prompted by **Amedeo Pelliccia**; subject to human review and formal approval.
 
-```
-
-Si quieres, siguiente paso muy natural:
-
-- un **ejemplo completo real** de `95-20-21-TL-TIMING_A-101_v1.2.log` (con datos ficticios pero consistentes con tu `inspect_onnx_model.py` y `test_onnx_model.py`), para que solo tengas que copiar/pegar.
-```
