@@ -1,0 +1,27 @@
+## File Summary
+
+**Size**: 9.1 MB (compressed with Snappy)  
+**Records**: 50,000 samples  
+**Sampling Rate**: 10 Hz (100ms intervals)  
+**Duration**: ~1.4 hours of simulated flight  
+**Columns**: 33 parameters
+
+### Key Features
+
+- **Flight phases**: Full mission profile (TAXI → TAKEOFF → CLIMB → CRUISE → DESCENT → APPROACH → LANDING)
+- **BWB-specific controls**: 4 distributed elevon sections for blended wing body architecture
+- **Physics-based**: Realistic aerodynamic coefficients (CL, CD, Cm) correlated with flight state
+- **System health**: Hydraulic pressure, temperature, power consumption metrics
+- **ML-ready labels**: Control effectiveness, response time, stability margin for supervised learning
+
+### Column Categories
+
+1. **Temporal/ID**: timestamp, flight_phase, scenario_id
+2. **Flight state**: altitude, airspeed, Mach, α/β angles, angular rates (p/q/r)
+3. **Commands**: pitch/roll/yaw commands, throttle
+4. **Actuators**: elevator, aileron, rudder positions + 4 elevon sections
+5. **Aerodynamics**: CL, CD, Cm coefficients
+6. **Health**: hydraulics, temperature, power
+7. **Targets**: effectiveness, response time, stability margin
+
+The file is ready for DO-178C compliant ML training pipelines. Would you like me to create the validation script or README.md next?
