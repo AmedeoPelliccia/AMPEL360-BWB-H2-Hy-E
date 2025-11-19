@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tables and Schemas Registry",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-17",
+  "description": "Central registry for all tables, schemas, and diagrams in the 95-90 bucket",
+  "registry": {
+    "schemas": [
+      {
+        "id": "aircraft_entity_schema",
+        "name": "Aircraft Entity Schema",
+        "file": "95-90-02_Global_Data_Schemas/ASSETS/95-90-02-A-001_Aircraft_and_Flight_Schema.json",
+        "version": "1.0.0",
+        "type": "entity_schema",
+        "domain": "GLB",
+        "status": "DRAFT",
+        "owner": "Data Architecture WG",
+        "lastUpdated": "2025-11-17",
+        "description": "Core schema for aircraft entities including registration, model, and capabilities"
+      },
+      {
+        "id": "telemetry_timeseries_schema",
+        "name": "Telemetry Time-Series Schema",
+        "file": "95-90-02_Global_Data_Schemas/ASSETS/95-90-02-A-002_Telemetry_Timeseries_Schema.json",
+        "version": "1.0.0",
+        "type": "timeseries_schema",
+        "domain": "GLB",
+        "status": "DRAFT",
+        "owner": "Data Architecture WG",
+        "lastUpdated": "2025-11-17",
+        "description": "Schema for time-series telemetry data from aircraft sensors"
+      },
+      {
+        "id": "event_log_schema",
+        "name": "Event Log Schema",
+        "file": "95-90-02_Global_Data_Schemas/ASSETS/95-90-02-A-003_Event_Log_Schema.json",
+        "version": "1.0.0",
+        "type": "event_schema",
+        "domain": "GLB",
+        "status": "DRAFT",
+        "owner": "Data Architecture WG",
+        "lastUpdated": "2025-11-17",
+        "description": "Schema for system events, alerts, and audit logs"
+      },
+      {
+        "id": "h2_tank_schema",
+        "name": "Hydrogen Tank Schema",
+        "file": "95-90-28_H2_and_Fuel_Tables_Schemas_Diagrams/ASSETS/95-90-28-A-001_H2_Tank_Sizing_Table.csv",
+        "version": "1.0.0",
+        "type": "configuration_table",
+        "domain": "H2",
+        "status": "DRAFT",
+        "owner": "Propulsion Team",
+        "lastUpdated": "2025-11-17",
+        "description": "Hydrogen tank sizing and capacity specifications"
+      },
+      {
+        "id": "ima_partition_table",
+        "name": "IMA Partition Configuration Table",
+        "file": "95-90-42_IMA_and_Avionics_Tables_Schemas_Diagrams/ASSETS/95-90-42-A-001_IMA_Partition_Table.csv",
+        "version": "1.0.0",
+        "type": "configuration_table",
+        "domain": "IMA",
+        "status": "DRAFT",
+        "owner": "Avionics Team",
+        "lastUpdated": "2025-11-17",
+        "description": "IMA partition allocation and scheduling configuration"
+      },
+      {
+        "id": "energy_balance_table",
+        "name": "Energy Balance Table",
+        "file": "95-90-80_Energy_Tables_Schemas_Diagrams/ASSETS/95-90-80-A-001_Energy_Balance_Table.csv",
+        "version": "1.0.0",
+        "type": "analysis_table",
+        "domain": "ENR",
+        "status": "DRAFT",
+        "owner": "Energy Team",
+        "lastUpdated": "2025-11-17",
+        "description": "Energy balance calculations for mission profiles"
+      }
+    ],
+    "tables": [
+      {
+        "id": "functional_taxonomy_table",
+        "name": "Functional Taxonomy Table",
+        "file": "95-90-01_Global_Reference_Taxonomies/ASSETS/95-90-01-A-001_Functional_Taxonomy_Table.csv",
+        "version": "1.0.0",
+        "type": "reference_table",
+        "domain": "GLB",
+        "status": "DRAFT",
+        "owner": "Data Architecture WG",
+        "lastUpdated": "2025-11-17",
+        "description": "Hierarchical functional taxonomy for NN and DPP systems"
+      },
+      {
+        "id": "ata_optin_mapping_table",
+        "name": "ATA to OPT-IN Mapping Table",
+        "file": "95-90-01_Global_Reference_Taxonomies/ASSETS/95-90-01-A-002_ATA_OPTIN_Mapping_Table.csv",
+        "version": "1.0.0",
+        "type": "mapping_table",
+        "domain": "GLB",
+        "status": "DRAFT",
+        "owner": "Data Architecture WG",
+        "lastUpdated": "2025-11-17",
+        "description": "Mapping between ATA chapters and OPT-IN framework axes"
+      },
+      {
+        "id": "regulatory_requirements_table",
+        "name": "Regulatory Requirements Table",
+        "file": "95-90-05_Regulatory_and_Standards_Tables/ASSETS/95-90-05-A-001_Regulatory_Requirements_Table.csv",
+        "version": "1.0.0",
+        "type": "reference_table",
+        "domain": "GLB",
+        "status": "DRAFT",
+        "owner": "Certification WG",
+        "lastUpdated": "2025-11-17",
+        "description": "EASA/FAA AI and ML requirements for certification"
+      },
+      {
+        "id": "benchmark_scenarios_table",
+        "name": "Benchmark Scenarios Table",
+        "file": "95-90-07_Test_Data_and_Benchmark_Tables/ASSETS/95-90-07-A-001_Benchmark_Scenarios_Table.csv",
+        "version": "1.0.0",
+        "type": "reference_table",
+        "domain": "GLB",
+        "status": "DRAFT",
+        "owner": "V&V Team",
+        "lastUpdated": "2025-11-17",
+        "description": "Standard benchmark scenarios for NN system testing"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "functional_taxonomy_diagram",
+        "name": "Functional Taxonomy Diagram",
+        "file": "95-90-01_Global_Reference_Taxonomies/ASSETS/95-90-01-A-004_Taxonomy_Diagram.drawio",
+        "version": "1.0.0",
+        "type": "conceptual_diagram",
+        "domain": "GLB",
+        "status": "DRAFT",
+        "owner": "Data Architecture WG",
+        "lastUpdated": "2025-11-17",
+        "description": "Visual representation of functional taxonomy hierarchy"
+      },
+      {
+        "id": "h2_pandid_diagram",
+        "name": "Hydrogen P&ID Diagram",
+        "file": "95-90-28_H2_and_Fuel_Tables_Schemas_Diagrams/ASSETS/95-90-28-A-003_H2_PandID_Diagram.drawio",
+        "version": "1.0.0",
+        "type": "physical_diagram",
+        "domain": "H2",
+        "status": "DRAFT",
+        "owner": "Propulsion Team",
+        "lastUpdated": "2025-11-17",
+        "description": "Piping and instrumentation diagram for H₂ system"
+      },
+      {
+        "id": "ima_architecture_diagram",
+        "name": "IMA Architecture Diagram",
+        "file": "95-90-42_IMA_and_Avionics_Tables_Schemas_Diagrams/ASSETS/95-90-42-A-004_IMA_Architecture_Diagram.drawio",
+        "version": "1.0.0",
+        "type": "structural_diagram",
+        "domain": "IMA",
+        "status": "DRAFT",
+        "owner": "Avionics Team",
+        "lastUpdated": "2025-11-17",
+        "description": "IMA system architecture and partition allocation"
+      },
+      {
+        "id": "energy_mission_diagram",
+        "name": "Mission Energy Profile Diagram",
+        "file": "95-90-80_Energy_Tables_Schemas_Diagrams/ASSETS/95-90-80-A-003_Mission_Energy_Diagram.drawio",
+        "version": "1.0.0",
+        "type": "behavioral_diagram",
+        "domain": "ENR",
+        "status": "DRAFT",
+        "owner": "Energy Team",
+        "lastUpdated": "2025-11-17",
+        "description": "Energy consumption profile across mission phases"
+      }
+    ]
+  },
+  "statistics": {
+    "total_schemas": 6,
+    "total_tables": 4,
+    "total_diagrams": 4,
+    "by_status": {
+      "DRAFT": 14,
+      "FOR_REVIEW": 0,
+      "APPROVED": 0,
+      "DEPRECATED": 0,
+      "ARCHIVED": 0
+    },
+    "by_domain": {
+      "GLB": 8,
+      "H2": 2,
+      "IMA": 2,
+      "ENR": 2,
+      "ECS": 0
+    }
+  },
+  "metadata": {
+    "registry_version": "1.0.0",
+    "last_updated": "2025-11-17",
+    "owner": "AMPEL360 Data Architecture WG",
+    "contact": "data-architecture@ampel360.aero"
+  }
+}

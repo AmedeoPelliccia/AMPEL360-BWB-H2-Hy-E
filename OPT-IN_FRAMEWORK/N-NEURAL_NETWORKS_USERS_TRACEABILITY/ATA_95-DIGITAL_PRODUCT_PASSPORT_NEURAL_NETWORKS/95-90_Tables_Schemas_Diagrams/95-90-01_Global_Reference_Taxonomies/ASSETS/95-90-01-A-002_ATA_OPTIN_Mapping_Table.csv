@@ -1,0 +1,7 @@
+ATA_Chapter,ATA_Name,OPTIN_Axis,OPTIN_Category,Primary_System
+21,Air Conditioning,T,E1-Environment,ECS
+24,Electrical Power,T,E2-Energy,Electrical
+28,Fuel (H2),T,P-Propulsion,H2 Fuel
+42,IMA,T,O-Operating Systems,Avionics
+80,Starting/Energy,T,E2-Energy,Energy Management
+95,DPP/NN,N,Neural Networks,Digital Twin

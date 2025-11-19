@@ -1,0 +1,2 @@
+Interface_ID,Source_System,Target_System,Protocol,Data_Rate
+IF-ECS-001,ECS_Controller,IMA,AFDX,10 Hz

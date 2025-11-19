@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AMPEL360 Classification Schema",
+  "version": "1.0.0",
+  "classifications": {
+    "criticality": {
+      "DAL-A": {
+        "description": "Catastrophic",
+        "certification": "DO-178C Level A"
+      },
+      "DAL-B": {
+        "description": "Hazardous",
+        "certification": "DO-178C Level B"
+      },
+      "DAL-C": {
+        "description": "Major",
+        "certification": "DO-178C Level C"
+      },
+      "DAL-D": {
+        "description": "Minor",
+        "certification": "DO-178C Level D"
+      },
+      "DAL-E": {
+        "description": "No effect",
+        "certification": "No certification"
+      }
+    },
+    "ai_ml_type": {
+      "supervised": "Supervised learning with labeled data",
+      "unsupervised": "Unsupervised learning for pattern discovery",
+      "reinforcement": "Reinforcement learning with reward-based training",
+      "transfer": "Transfer learning from pre-trained models"
+    }
+  }
+}

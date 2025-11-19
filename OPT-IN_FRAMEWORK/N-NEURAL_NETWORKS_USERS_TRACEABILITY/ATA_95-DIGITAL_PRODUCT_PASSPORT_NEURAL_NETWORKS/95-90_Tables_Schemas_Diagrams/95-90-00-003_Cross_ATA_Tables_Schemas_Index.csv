@@ -1,0 +1,13 @@
+Section_ID,Section_Name,Category,Primary_ATA,Related_ATAs,Status,Owner,Last_Updated,Description
+95-90-00,Meta,Governance,95,All,Active,Data Architecture WG,2025-11-17,Taxonomy and governance for tables and schemas
+95-90-01,Global Reference Taxonomies,Taxonomy,95,"20,21,28,42,80",Active,Data Architecture WG,2025-11-17,Functional taxonomies and ATA/OPT-IN mappings
+95-90-02,Global Data Schemas,Data Schema,95,"All ATAs",Active,Data Architecture WG,2025-11-17,Common entity schemas for aircraft and telemetry
+95-90-03,Global Interface Schemas,Interface,95,"40,42,60",Active,Software WG,2025-11-17,REST/gRPC contracts and message bus schemas
+95-90-04,Global Traceability Tables,Traceability,95,"00,03,04,07",Active,Systems Engineering,2025-11-17,Requirements-to-design and V&V traceability
+95-90-05,Regulatory and Standards Tables,Compliance,95,"00,04,10",Active,Certification WG,2025-11-17,EASA/FAA AI requirements and DO-178 mappings
+95-90-06,Diagram Library and Styles,Diagram,95,"All ATAs",Active,Documentation WG,2025-11-17,Standard notation and diagram templates
+95-90-07,Test Data and Benchmark Tables,Testing,95,"20,30,40,60",Active,V&V Team,2025-11-17,Benchmark scenarios and dataset definitions
+95-90-21,ECS Tables Schemas Diagrams,ATA-Specific,21,95,Active,ECS Team,2025-11-17,Environmental Control System specific schemas
+95-90-28,H2 and Fuel Tables Schemas Diagrams,ATA-Specific,28,"20,95",Active,Propulsion Team,2025-11-17,Hydrogen and fuel system specific schemas
+95-90-42,IMA and Avionics Tables Schemas Diagrams,ATA-Specific,42,"40,95",Active,Avionics Team,2025-11-17,IMA partition and bus configuration schemas
+95-90-80,Energy Tables Schemas Diagrams,ATA-Specific,80,"24,28,95",Active,Energy Team,2025-11-17,Energy balance and monitoring schemas

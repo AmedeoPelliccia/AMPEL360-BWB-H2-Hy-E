@@ -1,0 +1,3 @@
+Requirement_ID,Design_Element_ID,Traceability_Type,Coverage_Status,Notes
+RQ-95-00-03-001,DES-95-00-04-001,implements,complete,Full implementation
+RQ-95-00-03-002,DES-95-00-04-002,implements,partial,In progress

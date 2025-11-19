@@ -1,0 +1,11 @@
+{
+  "modules": [
+    {
+      "id": "IMA-1",
+      "partitions": [
+        "P1",
+        "P2"
+      ]
+    }
+  ]
+}

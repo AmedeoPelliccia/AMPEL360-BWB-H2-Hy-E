@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Aircraft and Flight Schema",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-17",
+  "definitions": {
+    "Aircraft": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "registration": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string",
+          "default": "AMPEL360 BWB H2 Hy-E"
+        },
+        "serial_number": {
+          "type": "string"
+        },
+        "manufacture_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "hydrogen_capacity_kg": {
+          "type": "number"
+        },
+        "battery_capacity_kwh": {
+          "type": "number"
+        },
+        "max_passengers": {
+          "type": "integer",
+          "default": 220
+        }
+      },
+      "required": [
+        "uuid",
+        "registration",
+        "model"
+      ]
+    },
+    "Flight": {
+      "type": "object",
+      "properties": {
+        "flight_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "aircraft_uuid": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "flight_number": {
+          "type": "string"
+        },
+        "departure_airport": {
+          "type": "string"
+        },
+        "arrival_airport": {
+          "type": "string"
+        },
+        "departure_time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "arrival_time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "flight_phase": {
+          "type": "string",
+          "enum": [
+            "pre-flight",
+            "taxi",
+            "takeoff",
+            "climb",
+            "cruise",
+            "descent",
+            "approach",
+            "landing"
+          ]
+        }
+      },
+      "required": [
+        "flight_id",
+        "aircraft_uuid",
+        "flight_number"
+      ]
+    }
+  }
+}

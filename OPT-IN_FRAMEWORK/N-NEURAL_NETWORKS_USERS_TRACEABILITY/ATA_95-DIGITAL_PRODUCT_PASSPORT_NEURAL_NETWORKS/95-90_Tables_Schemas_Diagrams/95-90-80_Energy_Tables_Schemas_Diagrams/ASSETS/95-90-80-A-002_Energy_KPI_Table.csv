@@ -1,0 +1,3 @@
+KPI_ID,Name,Unit,Target,Measurement_Method
+EN-KPI-001,Specific_Energy,Wh/kg,2000,Laboratory test
+EN-KPI-002,Efficiency,percent,85,Flight test

@@ -1,0 +1,3 @@
+Partition_ID,Application,Criticality,Memory_MB,CPU_Percent
+P1,Flight_Control,DAL-A,128,40
+P2,Navigation,DAL-B,64,20
