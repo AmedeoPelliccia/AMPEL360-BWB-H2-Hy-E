@@ -1,0 +1,21 @@
+Requirement_ID,Component_ID,Model_ID,Design_Ref,Test_Case,Verification_Status,Notes
+RQ-95-03-031-001,95-20-31-002,95-20-31-A-101,95-00-04-A031-001,TC-31-001,In Progress,CVR transcription accuracy requirement
+RQ-95-03-031-002,95-20-31-002,95-20-31-A-101,95-00-04-A031-001,TC-31-002,In Progress,CVR speaker identification requirement
+RQ-95-03-031-003,95-20-31-002,95-20-31-A-101,95-00-04-A031-001,TC-31-003,In Progress,CVR keyword detection requirement
+RQ-95-03-031-004,95-20-31-003,95-20-31-A-102,95-00-04-A031-002,TC-31-004,In Progress,FDR anomaly detection recall requirement
+RQ-95-03-031-005,95-20-31-003,95-20-31-A-102,95-00-04-A031-002,TC-31-005,In Progress,FDR false positive rate requirement
+RQ-95-03-031-006,95-20-31-003,95-20-31-A-102,95-00-04-A031-002,TC-31-006,In Progress,FDR detection latency requirement
+RQ-95-03-031-007,95-20-31-004,95-20-31-A-103,95-00-04-A031-003,TC-31-007,In Progress,Event segmentation accuracy requirement
+RQ-95-03-031-008,95-20-31-004,95-20-31-A-103,95-00-04-A031-003,TC-31-008,In Progress,Event boundary precision requirement
+RQ-95-03-031-009,95-20-31-005,95-20-31-A-104,95-00-04-A031-004,TC-31-009,Planned,Data compression ratio requirement
+RQ-95-03-031-010,95-20-31-005,95-20-31-A-104,95-00-04-A031-004,TC-31-010,Planned,Critical parameter fidelity requirement
+RQ-95-03-031-011,95-20-31-006,95-20-31-A-105,95-00-04-A031-005,TC-31-011,Planned,Maintenance log generation time requirement
+RQ-95-03-031-012,95-20-31-006,95-20-31-A-105,95-00-04-A031-005,TC-31-012,Planned,Maintenance log accuracy requirement
+RQ-95-03-031-013,95-20-31-007,N/A,95-00-04-A031-006,TC-31-013,In Progress,ATA 31 CVR interface requirement
+RQ-95-03-031-014,95-20-31-007,N/A,95-00-04-A031-006,TC-31-014,In Progress,ATA 31 FDR interface requirement
+RQ-95-03-031-015,95-20-31-008,N/A,95-00-04-A031-007,TC-31-015,In Progress,DAL-C compliance requirement
+RQ-95-03-031-016,95-20-31-008,N/A,95-00-04-A031-007,TC-31-016,In Progress,DO-178C Level C requirement
+RQ-95-03-031-017,95-20-31-008,N/A,95-00-04-A031-007,TC-31-017,In Progress,EASA SC-AI compliance requirement
+RQ-95-03-031-018,95-20-31-009,N/A,95-00-04-A031-008,TC-31-018,Planned,System initialization requirement
+RQ-95-03-031-019,95-20-31-009,N/A,95-00-04-A031-008,TC-31-019,Planned,Operational procedures requirement
+RQ-95-03-031-020,95-20-31-009,N/A,95-00-04-A031-008,TC-31-020,Planned,Maintenance procedures requirement

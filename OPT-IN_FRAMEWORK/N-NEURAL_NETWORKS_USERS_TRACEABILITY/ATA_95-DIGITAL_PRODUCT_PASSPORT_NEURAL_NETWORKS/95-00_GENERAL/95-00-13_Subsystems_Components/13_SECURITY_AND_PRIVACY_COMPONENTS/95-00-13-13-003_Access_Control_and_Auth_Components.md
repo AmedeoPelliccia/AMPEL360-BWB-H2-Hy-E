@@ -1,0 +1,38 @@
+# [95-00-13-13-003](95-00-13-13-003.md): Access Control and Auth Components
+
+## Document Information
+- **Document ID**: [95-00-13-13-003](95-00-13-13-003.md)
+- **Title**: Access Control and Auth Components
+- **Version**: 1.0
+- **Status**: Active
+- **Last Updated**: 2025-11-17
+
+## Purpose
+
+This document defines access control and auth components for the AMPEL360 BWB H₂ Hy-E aircraft system.
+
+## Overview
+
+[Content to be developed based on system architecture and design decisions]
+
+## Key Components
+
+[Component descriptions and specifications]
+
+## Architecture
+
+[Architectural details and diagrams]
+
+## Interfaces
+
+[Interface definitions and specifications]
+
+## Related Documents
+
+[Links to related documentation]
+
+## Revision History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | 2025-11-17 | AMPEL360 Documentation WG | Initial release |

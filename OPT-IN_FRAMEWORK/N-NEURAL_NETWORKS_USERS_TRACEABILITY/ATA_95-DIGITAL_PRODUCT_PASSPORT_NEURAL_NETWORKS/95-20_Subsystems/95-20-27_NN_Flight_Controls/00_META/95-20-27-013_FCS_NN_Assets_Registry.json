@@ -1,0 +1,374 @@
+{
+  "subsystem_id": "95-20-27",
+  "subsystem_name": "NN_Flight_Controls",
+  "version": "1.0.0",
+  "last_updated": "2025-11-17T00:00:00Z",
+  "registry_schema_version": "1.0",
+  
+  "architecture_assets": [
+    {
+      "asset_id": "95-20-27-A-001",
+      "name": "FCS_NN_System_Architecture",
+      "type": "drawio",
+      "category": "Architecture",
+      "path": "ASSETS/Architecture/95-20-27-A-001_FCS_NN_System_Architecture.drawio",
+      "description": "System architecture diagram showing all FCS_NN components and data flows",
+      "status": "draft",
+      "owner": "FCS_NN Architecture Team"
+    },
+    {
+      "asset_id": "95-20-27-A-002",
+      "name": "FCS_NN_System_Architecture",
+      "type": "svg",
+      "category": "Architecture",
+      "path": "ASSETS/Architecture/95-20-27-A-002_FCS_NN_System_Architecture.svg",
+      "description": "Rendered SVG of system architecture",
+      "status": "draft",
+      "owner": "FCS_NN Architecture Team"
+    },
+    {
+      "asset_id": "95-20-27-A-003",
+      "name": "Aero_Surrogate_DataFlow",
+      "type": "drawio",
+      "category": "Architecture",
+      "path": "ASSETS/Architecture/95-20-27-A-003_Aero_Surrogate_DataFlow.drawio",
+      "description": "Data flow diagram for aerodynamic predictor",
+      "status": "draft",
+      "owner": "FCS_NN Architecture Team"
+    },
+    {
+      "asset_id": "95-20-27-A-004",
+      "name": "Aero_Surrogate_DataFlow",
+      "type": "svg",
+      "category": "Architecture",
+      "path": "ASSETS/Architecture/95-20-27-A-004_Aero_Surrogate_DataFlow.svg",
+      "description": "Rendered SVG of aero predictor data flow",
+      "status": "draft",
+      "owner": "FCS_NN Architecture Team"
+    },
+    {
+      "asset_id": "95-20-27-A-005",
+      "name": "FCS_Integration_Map_27_42_53_57_70",
+      "type": "svg",
+      "category": "Architecture",
+      "path": "ASSETS/Architecture/95-20-27-A-005_FCS_Integration_Map_27_42_53_57_70.svg",
+      "description": "Integration map showing cross-ATA dependencies",
+      "status": "draft",
+      "owner": "FCS_NN Architecture Team"
+    }
+  ],
+  
+  "model_cards": [
+    {
+      "asset_id": "95-20-27-A-101",
+      "model_id": "aero_predictor_v2.1",
+      "name": "Aero_Predictor_v2.1",
+      "type": "yaml",
+      "category": "Model_Cards",
+      "path": "ASSETS/Model_Cards/95-20-27-A-101_Aero_Predictor_v2.1.yaml",
+      "description": "Model card for aerodynamic predictor PINN",
+      "status": "active",
+      "owner": "FCS_NN Model Team",
+      "model_version": "2.1.0",
+      "trained_model_path": "Models/Trained/aero_predictor_v2.1.onnx"
+    },
+    {
+      "asset_id": "95-20-27-A-102",
+      "model_id": "control_surface_optimizer_v1.4",
+      "name": "Control_Surface_Optimizer_v1.4",
+      "type": "yaml",
+      "category": "Model_Cards",
+      "path": "ASSETS/Model_Cards/95-20-27-A-102_Control_Surface_Optimizer_v1.4.yaml",
+      "description": "Model card for control surface optimizer",
+      "status": "active",
+      "owner": "FCS_NN Model Team",
+      "model_version": "1.4.0",
+      "trained_model_path": "Models/Trained/control_surface_optimizer_v1.4.onnx"
+    },
+    {
+      "asset_id": "95-20-27-A-103",
+      "model_id": "gust_load_alleviation_v1.3",
+      "name": "Gust_Load_Alleviation_v1.3",
+      "type": "yaml",
+      "category": "Model_Cards",
+      "path": "ASSETS/Model_Cards/95-20-27-A-103_Gust_Load_Alleviation_v1.3.yaml",
+      "description": "Model card for gust load alleviation LSTM",
+      "status": "active",
+      "owner": "FCS_NN Model Team",
+      "model_version": "1.3.0",
+      "trained_model_path": "Models/Trained/gust_load_alleviation_v1.3.onnx"
+    },
+    {
+      "asset_id": "95-20-27-A-104",
+      "model_id": "envelope_protection_v1.0",
+      "name": "Envelope_Protection_v1.0",
+      "type": "yaml",
+      "category": "Model_Cards",
+      "path": "ASSETS/Model_Cards/95-20-27-A-104_Envelope_Protection_v1.0.yaml",
+      "description": "Model card for envelope protection ensemble",
+      "status": "active",
+      "owner": "FCS_NN Model Team",
+      "model_version": "1.0.0",
+      "trained_model_path": "Models/Trained/envelope_protection_v1.0.onnx"
+    },
+    {
+      "asset_id": "95-20-27-A-105",
+      "model_id": "flight_path_stabilization_v1.1",
+      "name": "Flight_Path_Stabilization_v1.1",
+      "type": "yaml",
+      "category": "Model_Cards",
+      "path": "ASSETS/Model_Cards/95-20-27-A-105_Flight_Path_Stabilization_v1.1.yaml",
+      "description": "Model card for flight path stabilization MPC+NN",
+      "status": "active",
+      "owner": "FCS_NN Model Team",
+      "model_version": "1.1.0",
+      "trained_model_path": "Models/Trained/flight_path_stabilization_v1.1.onnx"
+    }
+  ],
+  
+  "performance_data": [
+    {
+      "asset_id": "95-20-27-A-201",
+      "name": "Tracking_Performance_Results",
+      "type": "xlsx",
+      "category": "Performance_Data",
+      "path": "ASSETS/Performance_Data/95-20-27-A-201_Tracking_Performance_Results.xlsx",
+      "description": "Flight path tracking performance metrics",
+      "status": "draft",
+      "owner": "FCS_NN Test Team"
+    },
+    {
+      "asset_id": "95-20-27-A-202",
+      "name": "Load_Alleviation_Effectiveness",
+      "type": "csv",
+      "category": "Performance_Data",
+      "path": "ASSETS/Performance_Data/95-20-27-A-202_Load_Alleviation_Effectiveness.csv",
+      "description": "GLA load reduction effectiveness data",
+      "status": "draft",
+      "owner": "FCS_NN Test Team"
+    },
+    {
+      "asset_id": "95-20-27-A-203",
+      "name": "Envelope_Violation_Statistics",
+      "type": "xlsx",
+      "category": "Performance_Data",
+      "path": "ASSETS/Performance_Data/95-20-27-A-203_Envelope_Violation_Statistics.xlsx",
+      "description": "Envelope protection statistics (false positives/negatives)",
+      "status": "draft",
+      "owner": "FCS_NN Test Team"
+    },
+    {
+      "asset_id": "95-20-27-A-204",
+      "name": "Inference_Latency_Benchmarks",
+      "type": "csv",
+      "category": "Performance_Data",
+      "path": "ASSETS/Performance_Data/95-20-27-A-204_Inference_Latency_Benchmarks.csv",
+      "description": "Inference latency measurements for all models",
+      "status": "draft",
+      "owner": "FCS_NN Test Team"
+    }
+  ],
+  
+  "test_data": [
+    {
+      "asset_id": "95-20-27-A-301",
+      "name": "Ground_Rig_Test_Results",
+      "type": "csv",
+      "category": "Test_Data",
+      "path": "ASSETS/Test_Data/95-20-27-A-301_Ground_Rig_Test_Results.csv",
+      "description": "Ground test rig validation results",
+      "status": "draft",
+      "owner": "FCS_NN Test Team"
+    },
+    {
+      "asset_id": "95-20-27-A-302",
+      "name": "Flight_Test_Results",
+      "type": "csv",
+      "category": "Test_Data",
+      "path": "ASSETS/Test_Data/95-20-27-A-302_Flight_Test_Results.csv",
+      "description": "In-flight validation test results",
+      "status": "draft",
+      "owner": "FCS_NN Test Team"
+    },
+    {
+      "asset_id": "95-20-27-A-303",
+      "name": "IronBird_Validation_Results",
+      "type": "xlsx",
+      "category": "Test_Data",
+      "path": "ASSETS/Test_Data/95-20-27-A-303_IronBird_Validation_Results.xlsx",
+      "description": "Iron bird HIL validation results",
+      "status": "draft",
+      "owner": "FCS_NN Test Team"
+    },
+    {
+      "asset_id": "95-20-27-A-304",
+      "name": "Turbulence_and_Gust_Scenarios",
+      "type": "csv",
+      "category": "Test_Data",
+      "path": "ASSETS/Test_Data/95-20-27-A-304_Turbulence_and_Gust_Scenarios.csv",
+      "description": "Turbulence and gust test scenario results",
+      "status": "draft",
+      "owner": "FCS_NN Test Team"
+    }
+  ],
+  
+  "interface_specs": [
+    {
+      "asset_id": "95-20-27-A-401",
+      "name": "ATA_27_FCS_Interface_Spec",
+      "type": "yaml",
+      "category": "Interface_Specs",
+      "path": "ASSETS/Interface_Specs/95-20-27-A-401_ATA_27_FCS_Interface_Spec.yaml",
+      "description": "Interface specification with ATA 27 Flight Control Computer",
+      "status": "draft",
+      "owner": "FCS_NN Integration Team"
+    },
+    {
+      "asset_id": "95-20-27-A-402",
+      "name": "ATA_42_IMA_Interface",
+      "type": "yaml",
+      "category": "Interface_Specs",
+      "path": "ASSETS/Interface_Specs/95-20-27-A-402_ATA_42_IMA_Interface.yaml",
+      "description": "Interface specification with ATA 42 IMA platform",
+      "status": "draft",
+      "owner": "FCS_NN Integration Team"
+    },
+    {
+      "asset_id": "95-20-27-A-403",
+      "name": "Sensor_and_Bus_Input_Specs",
+      "type": "yaml",
+      "category": "Interface_Specs",
+      "path": "ASSETS/Interface_Specs/95-20-27-A-403_Sensor_and_Bus_Input_Specs.yaml",
+      "description": "Sensor inputs and data bus specifications (ARINC 429, AFDX)",
+      "status": "draft",
+      "owner": "FCS_NN Integration Team"
+    },
+    {
+      "asset_id": "95-20-27-A-404",
+      "name": "Actuator_Command_Output_Specs",
+      "type": "yaml",
+      "category": "Interface_Specs",
+      "path": "ASSETS/Interface_Specs/95-20-27-A-404_Actuator_Command_Output_Specs.yaml",
+      "description": "Actuator command output specifications",
+      "status": "draft",
+      "owner": "FCS_NN Integration Team"
+    }
+  ],
+  
+  "certification": [
+    {
+      "asset_id": "95-20-27-A-501",
+      "name": "DO_178C_Evidence_Package",
+      "type": "pdf",
+      "category": "Certification",
+      "path": "ASSETS/Certification/95-20-27-A-501_DO_178C_Evidence_Package.pdf",
+      "description": "DO-178C Level A certification evidence package",
+      "status": "in_progress",
+      "owner": "FCS_NN Certification Team",
+      "compliance_standard": "DO-178C"
+    },
+    {
+      "asset_id": "95-20-27-A-502",
+      "name": "EASA_AI_Compliance_Report",
+      "type": "pdf",
+      "category": "Certification",
+      "path": "ASSETS/Certification/95-20-27-A-502_EASA_AI_Compliance_Report.pdf",
+      "description": "EASA Special Condition AI compliance report",
+      "status": "in_progress",
+      "owner": "FCS_NN Certification Team",
+      "compliance_standard": "EASA SC-AI"
+    },
+    {
+      "asset_id": "95-20-27-A-503",
+      "name": "Verification_Matrix",
+      "type": "xlsx",
+      "category": "Certification",
+      "path": "ASSETS/Certification/95-20-27-A-503_Verification_Matrix.xlsx",
+      "description": "Requirements verification and validation matrix",
+      "status": "in_progress",
+      "owner": "FCS_NN Certification Team"
+    },
+    {
+      "asset_id": "95-20-27-A-504",
+      "name": "Safety_Analysis_FTA_FMEA",
+      "type": "pdf",
+      "category": "Certification",
+      "path": "ASSETS/Certification/95-20-27-A-504_Safety_Analysis_FTA_FMEA.pdf",
+      "description": "Safety analysis including FTA, FMEA, and FHA",
+      "status": "in_progress",
+      "owner": "FCS_NN Safety Team",
+      "compliance_standard": "ARP-4761"
+    }
+  ],
+  
+  "training_datasets": [
+    {
+      "dataset_id": "95-20-27-601",
+      "name": "CFD_Aero_Surface_Coeffs",
+      "type": "parquet",
+      "path": "Data/Training_Datasets/95-20-27-601_CFD_Aero_Surface_Coeffs.parquet",
+      "description": "CFD simulation data for aerodynamic coefficients",
+      "size_gb": 12.5,
+      "records": 50000,
+      "status": "active"
+    },
+    {
+      "dataset_id": "95-20-27-602",
+      "name": "Control_Law_Flight_Data",
+      "type": "parquet",
+      "path": "Data/Training_Datasets/95-20-27-602_Control_Law_Flight_Data.parquet",
+      "description": "Flight test data for control law training",
+      "size_gb": 8.3,
+      "records": 120000,
+      "status": "active"
+    },
+    {
+      "dataset_id": "95-20-27-603",
+      "name": "Gust_and_Turbulence_FlightLogs",
+      "type": "parquet",
+      "path": "Data/Training_Datasets/95-20-27-603_Gust_and_Turbulence_FlightLogs.parquet",
+      "description": "Flight logs with gust and turbulence encounters",
+      "size_gb": 6.7,
+      "records": 100000,
+      "status": "active"
+    }
+  ],
+  
+  "models": [
+    {
+      "model_id": "aero_predictor_v2.1",
+      "source_code": "Models/Source/aero_predictor_v2.1.py",
+      "trained_model": "Models/Trained/aero_predictor_v2.1.onnx",
+      "training_config": "Models/Configs/training_config_aero.yaml",
+      "status": "active"
+    },
+    {
+      "model_id": "control_surface_optimizer_v1.4",
+      "source_code": "Models/Source/control_surface_optimizer_v1.4.py",
+      "trained_model": "Models/Trained/control_surface_optimizer_v1.4.onnx",
+      "training_config": "Models/Configs/training_config_control_surface.yaml",
+      "status": "active"
+    },
+    {
+      "model_id": "gust_load_alleviation_v1.3",
+      "source_code": "Models/Source/gust_load_alleviation_v1.3.py",
+      "trained_model": "Models/Trained/gust_load_alleviation_v1.3.onnx",
+      "training_config": "Models/Configs/training_config_gust.yaml",
+      "status": "active"
+    },
+    {
+      "model_id": "envelope_protection_v1.0",
+      "source_code": "Models/Source/envelope_protection_v1.0.py",
+      "trained_model": "Models/Trained/envelope_protection_v1.0.onnx",
+      "training_config": "Models/Configs/training_config_envelope.yaml",
+      "status": "active"
+    },
+    {
+      "model_id": "flight_path_stabilization_v1.1",
+      "source_code": "Models/Source/flight_path_stabilization_v1.1.py",
+      "trained_model": "Models/Trained/flight_path_stabilization_v1.1.onnx",
+      "training_config": "Models/Configs/training_config_flight_path.yaml",
+      "status": "active"
+    }
+  ]
+}

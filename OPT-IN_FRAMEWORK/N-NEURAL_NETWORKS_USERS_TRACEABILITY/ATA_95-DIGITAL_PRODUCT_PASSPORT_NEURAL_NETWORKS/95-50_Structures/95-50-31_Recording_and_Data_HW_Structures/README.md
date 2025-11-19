@@ -1,0 +1,60 @@
+# 95-50-31_Recording_and_Data_HW_Structures
+
+**ATA Chapter:** 31  
+**System:** Recording and Data Hardware Structures  
+**Version:** 1.0  
+**Date:** 2025-11-17  
+**Status:** Active
+
+---
+
+## Overview
+
+This directory contains hardware structures and physical integration points for **Recording and Data Hardware Structures** components within the Neural Network (NN) hardware infrastructure.
+
+Flight data recorder (FDR) and cockpit voice recorder (CVR) mounting racks, data storage module carriers, shock mounts, and environmental protection enclosures.
+
+---
+
+## Directory Structure
+
+```
+95-50-31_Recording_and_Data_HW_Structures/
+├── README.md (this file)
+├── 95-50-001_Recording and Data Hardware Structures_Structures_Overview.md
+├── 95-50-002_*.md
+├── 95-50-003_*.md
+├── 95-50-004_*.md
+├── 95-50-005_Links_to_*.md
+└── ASSETS/
+    ├── ASSEMBLIES/
+    │   └── *.json, *.step files
+    ├── INSTALLATIONS/
+    │   └── *.json, *.pdf files
+    └── DRAWINGS/
+        └── *.drawio, *.svg, *.dxf files
+```
+
+---
+
+## Cross-References
+
+### Within ATA 95
+- **[95-00-13 Subsystems & Components](../../95-00_GENERAL/95-00-13_Subsystems_Components/)** – Component library
+- **[95-20 Subsystems](../../95-20_Subsystems/)** – Functional NN systems
+- **[95-50 Root](../)** – Structures overview
+
+### To Parent ATA Chapter
+- **[ATA 31](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/)** – System details
+
+---
+
+## Document Control
+
+| Version | Date       | Author                     | Changes                |
+|---------|------------|----------------------------|------------------------|
+| 1.0     | 2025-11-17 | AMPEL360 Documentation Team | Initial creation       |
+
+---
+
+**Maintained by:** AMPEL360 Structures Team

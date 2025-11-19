@@ -1,0 +1,36 @@
+Storage_ID,Storage_Name,Primary_ATA,Secondary_ATA,Tertiary_ATA,Capacity,Unit,Criticality,Location,95-20_Link,95-30_Link,95-50_Link,Monitoring_Type,Description
+S-21-001,ECS_Primary_Thermal_Buffer,21,24,,50,L,ESSENTIAL,Forward_Equipment_Bay,95-20-21,95-30-21,95-50-21,Real-time,Primary thermal storage for environmental control
+S-21-002,ECS_Secondary_Thermal_Buffer,21,24,,30,L,IMPORTANT,Aft_Equipment_Bay,95-20-21,95-30-21,95-50-21,Real-time,Secondary thermal storage backup
+S-21-003,Cabin_Air_Thermal_Accumulator,21,,,20,L,IMPORTANT,Mid_Fuselage,95-20-21,95-30-21,95-50-21,Per-flight,Cabin temperature buffering
+S-24-001,Main_Battery_Pack_Forward,24,80,,250,kWh,CRITICAL,Forward_Equipment_Bay,95-20-24,95-30-24,95-50-24,Real-time,Primary electrical energy storage forward
+S-24-002,Main_Battery_Pack_Aft,24,80,,250,kWh,CRITICAL,Aft_Equipment_Bay,95-20-24,95-30-24,95-50-24,Real-time,Primary electrical energy storage aft
+S-24-003,Supercapacitor_Bank_Start,24,80,49,10,kWh,ESSENTIAL,APU_Compartment,95-20-24,95-30-24,95-50-24,Real-time,Engine start and transient power buffering
+S-24-004,Avionics_Backup_Battery,24,31,,5,kWh,CRITICAL,Avionics_Bay,95-20-24,95-30-24,95-50-24,Real-time,Flight critical systems backup power
+S-28-001,LH2_Main_Tank_Starboard,28,70,80,500,kg_H2,CRITICAL,Starboard_Wing_Root,95-20-28,95-30-28,95-50-28,Real-time,Primary hydrogen fuel storage starboard
+S-28-002,LH2_Main_Tank_Port,28,70,80,500,kg_H2,CRITICAL,Port_Wing_Root,95-20-28,95-30-28,95-50-28,Real-time,Primary hydrogen fuel storage port
+S-28-003,LH2_Buffer_Tank,28,70,,50,kg_H2,ESSENTIAL,Central_Distribution,95-20-28,95-30-28,95-50-28,Real-time,Hydrogen distribution buffer and surge protection
+S-29-001,Hydraulic_Main_Reservoir,29,27,,40,L,CRITICAL,Main_Equipment_Bay,95-20-29,95-30-29,95-50-29,Per-flight,Primary hydraulic fluid reservoir
+S-29-002,Hydraulic_Accumulator_Flight_Controls,29,27,,8,L,CRITICAL,FCS_Bay,95-20-29,95-30-29,95-50-29,Real-time,Flight control hydraulic pressure buffer
+S-29-003,Hydraulic_Accumulator_Landing_Gear,29,32,,12,L,CRITICAL,Landing_Gear_Bay,95-20-29,95-30-29,95-50-29,Real-time,Landing gear extension/retraction buffer
+S-29-004,Hydraulic_Accumulator_Brakes,29,32,,6,L,CRITICAL,Main_Gear_Bay,95-20-29,95-30-29,95-50-29,Real-time,Brake pressure accumulator
+S-31-001,Flight_Data_Recorder,31,46,,25,hours,CRITICAL,Tail_Section,95-20-31,95-30-31,95-50-31,Real-time,Flight data recording
+S-31-002,Cockpit_Voice_Recorder,31,46,,2,hours,CRITICAL,Tail_Section,95-20-31,95-30-31,95-50-31,Real-time,Cockpit voice recording
+S-31-003,Quick_Access_Recorder,31,46,,100,hours,ESSENTIAL,Avionics_Bay,95-20-31,95-30-31,95-50-31,Real-time,Quick access flight data
+S-31-004,Onboard_Data_Hub_Primary,31,46,95,5,TB,ESSENTIAL,Forward_Equipment_Bay,95-20-31,95-30-31,95-50-31,Real-time,Primary operational data buffering
+S-31-005,Onboard_Data_Hub_Secondary,31,46,95,5,TB,IMPORTANT,Aft_Equipment_Bay,95-20-31,95-30-31,95-50-31,Real-time,Secondary operational data buffering
+S-38-001,Potable_Water_Main_Tank,38,21,,300,L,IMPORTANT,Lower_Fuselage_Forward,95-20-38,95-30-38,95-50-38,Daily,Potable water supply
+S-38-002,Potable_Water_Reserve_Tank,38,21,,100,L,IMPORTANT,Lower_Fuselage_Aft,95-20-38,95-30-38,95-50-38,Daily,Potable water reserve supply
+S-38-003,Grey_Water_Tank,38,21,,200,L,IMPORTANT,Lower_Fuselage_Mid,95-20-38,95-30-38,95-50-38,Daily,Grey water collection
+S-38-004,Black_Water_Tank,38,21,,150,L,IMPORTANT,Lower_Fuselage_Aft,95-20-38,95-30-38,95-50-38,Daily,Black water collection
+S-46-001,Digital_Data_Lake,46,31,95,100,TB,ESSENTIAL,Ground_Infrastructure,95-20-46,95-30-46,95-50-46,Daily,Central data lake for analytics
+S-46-002,Model_Registry,46,95,97,10,TB,ESSENTIAL,Ground_Infrastructure,95-20-46,95-30-46,95-50-46,Daily,AI/ML model artifact storage
+S-46-003,Container_Registry,46,95,,5,TB,ESSENTIAL,Ground_Infrastructure,95-20-46,95-30-46,95-50-46,Daily,Software container image storage
+S-46-004,Cold_Archive_Storage,46,31,,500,TB,IMPORTANT,Ground_Infrastructure,95-20-46,95-30-46,95-50-46,Weekly,Long-term archive and compliance
+S-49-001,APU_Fuel_Tank,49,80,,80,L,ESSENTIAL,APU_Compartment,95-20-49,95-30-49,95-50-49,Per-flight,APU fuel supply
+S-49-002,APU_Oil_Reservoir,49,,,8,L,ESSENTIAL,APU_Compartment,95-20-49,95-30-49,95-50-49,Weekly,APU lubrication oil
+S-70-001,Propulsion_Thermal_Buffer_Starboard,70,28,21,100,kW,ESSENTIAL,Starboard_Nacelle,95-20-70,95-30-70,95-50-70,Real-time,Propulsion thermal energy buffer starboard
+S-70-002,Propulsion_Thermal_Buffer_Port,70,28,21,100,kW,ESSENTIAL,Port_Nacelle,95-20-70,95-30-70,95-50-70,Real-time,Propulsion thermal energy buffer port
+S-70-003,Spool_Mechanical_Energy_Buffer,70,,,50,kJ,IMPORTANT,Engine_Core,95-20-70,95-30-70,95-50-70,Real-time,Rotational inertia buffering
+S-80-001,CO2_Battery_System,80,24,28,500,kWh,CRITICAL,Central_Equipment_Bay,95-20-80,95-30-80,95-50-80,Real-time,Closed-loop CO2 energy storage system
+S-80-002,HVDC_Bus_Buffer_Capacitor,80,24,,20,kWh,ESSENTIAL,Power_Distribution_Bay,95-20-80,95-30-80,95-50-80,Real-time,HVDC bus transient buffering
+S-80-003,Hybrid_Energy_Storage_Controller,80,24,70,15,kWh,ESSENTIAL,Control_Bay,95-20-80,95-30-80,95-50-80,Real-time,Hybrid energy storage management

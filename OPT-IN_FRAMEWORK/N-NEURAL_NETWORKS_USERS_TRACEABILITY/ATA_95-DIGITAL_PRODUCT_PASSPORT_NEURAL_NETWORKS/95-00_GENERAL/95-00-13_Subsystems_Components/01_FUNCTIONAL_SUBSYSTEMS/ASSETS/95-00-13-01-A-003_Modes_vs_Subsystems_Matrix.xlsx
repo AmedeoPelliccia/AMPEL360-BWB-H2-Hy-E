@@ -1,0 +1,15 @@
+# PLACEHOLDER: Excel file for Modes vs Subsystems Matrix
+# This file should be created in Microsoft Excel or LibreOffice Calc
+# 
+# Structure:
+# - Rows: Operational Modes (Ground, Taxi, Takeoff, Climb, Cruise, Descent, Approach, Landing, Emergency)
+# - Columns: Functional Subsystems (FS-001 through FS-015)
+# - Cells: Activity level (Inactive, Standby, Active, Critical)
+# 
+# Color coding:
+# - Red: Critical operation required
+# - Yellow: Active operation
+# - Green: Standby
+# - Gray: Inactive
+#
+# To create: Use spreadsheet software and populate with operational mode analysis

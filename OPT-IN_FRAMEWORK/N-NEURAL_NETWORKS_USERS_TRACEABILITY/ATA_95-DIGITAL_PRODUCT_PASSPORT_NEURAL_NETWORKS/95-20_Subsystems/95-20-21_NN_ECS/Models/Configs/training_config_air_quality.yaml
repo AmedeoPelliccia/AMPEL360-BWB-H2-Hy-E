@@ -1,0 +1,129 @@
+# Training Configuration for Air Quality Monitor
+# Model ID: 95-20-21-A-102
+# Component: 95-20-21-003 Air Quality Monitor
+
+model:
+  name: "air_quality_monitor"
+  version: "1.0"
+  model_id: "95-20-21-A-102"
+  framework: "pytorch"
+  framework_version: "2.x"
+  architecture:
+    type: "cnn_transformer_classifier"
+    window_length: 60          # timesteps per window (ej. 60 × 0.2s = 12s)
+    input_features: 16         # CO₂, humidity, VOC, PM, temp, etc.
+    num_classes: 5             # AQI 1–5
+    conv_channels: [64, 128, 256]
+    kernel_size: 3
+    cnn_pool: 2
+    transformer:
+      d_model: 256
+      n_heads: 4
+      num_layers: 2
+      dim_feedforward: 512
+      dropout: 0.1
+
+data:
+  dataset_id: "95-20-21-602_Air_Quality_8k_Hours"
+  train_path: "Data/Training_Datasets/95-20-21-602_Air_Quality_8k_Hours.parquet"
+  format: "parquet"
+  features: 16
+  window_length: 60
+  target_type: "classification"
+  num_classes: 5
+  shuffle: true
+  val_split: 0.15
+  test_split: 0.10
+  stratify: true
+  normalization:
+    type: "z_score"
+    apply_to:
+      - "co2_ppm"
+      - "humidity_percent"
+      - "voc_ppb"
+      - "pm25"
+      - "pm10"
+      - "temperature_c"
+  windowing:
+    enabled: true
+    horizon_steps: 0           # clasificación instantánea en la ventana
+
+training:
+  batch_size: 128              # <- tu valor
+  epochs: 80                   # <- tu valor
+  learning_rate: 0.0005        # <- tu valor
+  optimizer: "adamw"           # <- tu valor
+  weight_decay: 0.01
+  loss: "cross_entropy"
+  class_weights:
+    enabled: true              # clases desbalanceadas (pocas veces AQI 4–5)
+  metrics:
+    - "accuracy"
+    - "f1_macro"
+    - "precision_macro"
+    - "recall_macro"
+  early_stopping:
+    enabled: true
+    monitor: "val_loss"
+    patience: 8
+    restore_best_weights: true
+  reduce_lr_on_plateau:
+    enabled: true
+    monitor: "val_loss"
+    factor: 0.5
+    patience: 4
+    min_lr: 0.00001
+  seed: 42
+  hardware:
+    accelerator: "gpu"
+    gpu_type: "A100"
+    mixed_precision: true
+
+export:
+  enabled: true
+  format: "onnx"
+  opset: 17
+  output_path: "../Trained/air_quality_monitor_v1.0.onnx"
+  metadata:
+    model_id: "95-20-21-A-102"
+    subsystem: "95-20-21 NN_ECS"
+    component: "95-20-21-003_Air_Quality_Monitor"
+    dpp_link: "ASSETS/Model_Cards/95-20-21-A-102_Air_Quality_Monitor_v1.0.yaml"
+
+logging:
+  log_dir: "Logs/air_quality_monitor_v1.0/"
+  tensorboard:
+    enabled: true
+    update_freq: "epoch"
+  checkpoints:
+    enabled: true
+    path: "Checkpoints/air_quality_monitor_v1.0/"
+    monitor: "val_loss"
+    save_best_only: true
+
+evaluation:
+  metrics:
+    - "accuracy"
+    - "f1_macro"
+    - "precision_macro"
+    - "recall_macro"
+    - "confusion_matrix"
+  thresholds:
+    accuracy_min: 0.98
+    f1_macro_min: 0.97
+  report_path: "Reports/air_quality_monitor_v1.0_eval.json"
+
+governance:
+  owner: "AMPEL360 ML Engineering Team"
+  contact: "ml-engineering@ampel360.aero"
+  traceability:
+    spec_doc: "95-20-21-003_Air_Quality_Monitor.md"
+    model_card: "ASSETS/Model_Cards/95-20-21-A-102_Air_Quality_Monitor_v1.0.yaml"
+    safety_doc: "95-20-21-009_Safety_and_Certification.md"
+  ai_assistance:
+    used: true
+    tools:
+      - "GitHub Copilot"
+      - "ChatGPT"
+    prompted_by: "Amedeo Pelliccia"
+    note: "Configuration drafted with AI assistance; subject to human review and approval."

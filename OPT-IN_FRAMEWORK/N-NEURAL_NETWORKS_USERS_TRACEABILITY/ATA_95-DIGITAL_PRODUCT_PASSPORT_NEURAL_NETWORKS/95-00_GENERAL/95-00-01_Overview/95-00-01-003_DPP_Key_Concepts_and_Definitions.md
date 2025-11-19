@@ -194,7 +194,7 @@ The **Operational Design Domain** defines the conditions under which a neural ne
 
 ## 5. Data & Information Concepts
 
-### 5.1 Data Module (S1000D)
+### 5.1 Data Module ([S1000D](http://www.s1000d.org/))
 
 A **Data Module** is the smallest self-contained unit of technical documentation in the S1000D standard. Each neural network DPP can be composed of multiple data modules:
 

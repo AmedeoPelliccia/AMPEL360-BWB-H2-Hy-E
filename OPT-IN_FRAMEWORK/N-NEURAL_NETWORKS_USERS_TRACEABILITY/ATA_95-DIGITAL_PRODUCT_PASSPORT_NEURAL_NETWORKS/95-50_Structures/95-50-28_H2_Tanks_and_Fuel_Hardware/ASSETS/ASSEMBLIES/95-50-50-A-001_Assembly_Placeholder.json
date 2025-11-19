@@ -1,0 +1,14 @@
+{
+  "assembly_id": "95-50-XX-A-001",
+  "name": "Assembly Placeholder",
+  "version": "1.0",
+  "status": "Template",
+  "components": [
+    {
+      "part_number": "PN-XXXXX",
+      "quantity": 1,
+      "material": "Aluminum 7075-T6"
+    }
+  ],
+  "note": "This is a placeholder file. Replace with actual assembly data."
+}

@@ -1,0 +1,36 @@
+Subsystem_ID,Component_ID,Component_Name,Component_Type,Requirement_ID,VV_Case_ID,ATA_Chapter,Criticality_Level,Status,Owner,Notes
+01_FUNCTIONAL,FS-001,Flight_Control_Primary,Functional,REQ-FC-001,VV-FC-001,ATA-27,DAL-A,Active,Flight_Systems_Team,Primary flight control subsystem
+01_FUNCTIONAL,FS-002,Navigation_Primary,Functional,REQ-NAV-001,VV-NAV-001,ATA-34,DAL-A,Active,Navigation_Team,Primary navigation subsystem
+01_FUNCTIONAL,FS-003,Communication_System,Functional,REQ-COM-001,VV-COM-001,ATA-23,DAL-B,Active,Comm_Team,Communication subsystem
+02_HW_COMPONENTS,HW-001,Flight_Computer_Primary,Compute,REQ-HW-001,VV-HW-001,ATA-42,DAL-A,Active,Hardware_Team,Primary flight computer
+02_HW_COMPONENTS,HW-002,IMU_Primary,Sensor,REQ-HW-002,VV-HW-002,ATA-34,DAL-A,Active,Sensor_Team,Inertial measurement unit
+02_HW_COMPONENTS,HW-003,GNSS_Receiver,Sensor,REQ-HW-003,VV-HW-003,ATA-34,DAL-B,Active,Sensor_Team,Global navigation satellite system
+02_HW_COMPONENTS,HW-004,Servo_Actuator_Primary,Actuator,REQ-HW-004,VV-HW-004,ATA-27,DAL-A,Active,Actuator_Team,Flight control servo
+02_HW_COMPONENTS,HW-005,Power_Distribution_Unit,Power,REQ-HW-005,VV-HW-005,ATA-24,DAL-B,Active,Power_Team,Main power distribution
+03_SW_COMPONENTS,SW-001,Flight_Control_Service,Service,REQ-SW-001,VV-SW-001,ATA-22,DAL-A,Active,Software_Team,Flight control service
+03_SW_COMPONENTS,SW-002,Navigation_Service,Service,REQ-SW-002,VV-SW-002,ATA-34,DAL-A,Active,Software_Team,Navigation processing service
+03_SW_COMPONENTS,SW-003,Sensor_Fusion_Library,Library,REQ-SW-003,VV-SW-003,ATA-34,DAL-B,Active,Software_Team,Multi-sensor fusion library
+03_SW_COMPONENTS,SW-004,Communication_Stack,Library,REQ-SW-004,VV-SW-004,ATA-23,DAL-C,Active,Software_Team,Network communication stack
+04_DATA_SUBSYSTEMS,DS-001,Flight_Data_Store,Database,REQ-DS-001,VV-DS-001,ATA-31,DAL-C,Active,Data_Team,Primary flight data storage
+04_DATA_SUBSYSTEMS,DS-002,Telemetry_Cache,Cache,REQ-DS-002,VV-DS-002,ATA-31,DAL-D,Active,Data_Team,Real-time telemetry cache
+04_DATA_SUBSYSTEMS,DS-003,Log_Aggregator,Logs,REQ-DS-003,VV-DS-003,ATA-45,DAL-D,Active,Data_Team,System log aggregation
+05_MODEL_COMPONENTS,ML-001,Object_Detection_NN,Neural_Network,REQ-ML-001,VV-ML-001,ATA-95,DAL-B,Active,AI_Team,Object detection neural network
+05_MODEL_COMPONENTS,ML-002,Path_Planning_Ensemble,Ensemble,REQ-ML-002,VV-ML-002,ATA-95,DAL-B,Active,AI_Team,Path planning ensemble model
+05_MODEL_COMPONENTS,ML-003,Feature_Extractor_Vision,Feature_Extractor,REQ-ML-003,VV-ML-003,ATA-95,DAL-C,Active,AI_Team,Vision feature extraction
+06_SAFETY_MONITORS,SM-001,Flight_Envelope_Monitor,Monitor,REQ-SM-001,VV-SM-001,ATA-22,DAL-A,Active,Safety_Team,Flight envelope protection
+06_SAFETY_MONITORS,SM-002,Sensor_Validity_Guard,Guard,REQ-SM-002,VV-SM-002,ATA-34,DAL-A,Active,Safety_Team,Sensor validation guard
+06_SAFETY_MONITORS,SM-003,Fallback_Control_Path,Fallback,REQ-SM-003,VV-SM-003,ATA-27,DAL-A,Active,Safety_Team,Emergency control fallback
+07_DPP_BLOCKS,DPP-001,Component_Registry_OnChain,OnChain,REQ-DPP-001,VV-DPP-001,ATA-95,DAL-D,Active,DPP_Team,On-chain component registry
+07_DPP_BLOCKS,DPP-002,Configuration_Manifest_OffChain,OffChain,REQ-DPP-002,VV-DPP-002,ATA-95,DAL-D,Active,DPP_Team,Off-chain configuration data
+08_INTEGRATION_KITS,IK-001,ATA42_IMA_Adapter,Adapter,REQ-IK-001,VV-IK-001,ATA-42,DAL-C,Active,Integration_Team,IMA integration adapter
+08_INTEGRATION_KITS,IK-002,HIL_Test_Harness,Test_Harness,REQ-IK-002,VV-IK-002,ATA-95,DAL-D,Active,Test_Team,Hardware-in-loop test harness
+09_TEST_RIG_SUBSYSTEMS,TR-001,Flight_Simulator_Rig,Simulator,REQ-TR-001,VV-TR-001,ATA-95,DAL-D,Active,Test_Team,Full flight simulator
+09_TEST_RIG_SUBSYSTEMS,TR-002,HIL_Control_Rig,HIL,REQ-TR-002,VV-TR-002,ATA-27,DAL-C,Active,Test_Team,Control system HIL rig
+10_FRU,FRU-001,Flight_Computer_Module,FRU,REQ-FRU-001,VV-FRU-001,ATA-42,DAL-A,Active,Maintenance_Team,Replaceable flight computer
+10_FRU,FRU-002,IMU_Module,FRU,REQ-FRU-002,VV-FRU-002,ATA-34,DAL-A,Active,Maintenance_Team,Replaceable IMU module
+11_CONFIG_SETS,CS-001,Production_Config_Standard,Config_Set,REQ-CS-001,VV-CS-001,ATA-95,DAL-C,Active,Config_Team,Standard production configuration
+11_CONFIG_SETS,CS-002,Test_Config_Lab,Config_Set,REQ-CS-002,VV-CS-002,ATA-95,DAL-D,Active,Config_Team,Laboratory test configuration
+12_DIAGNOSTICS,DG-001,Health_Monitor_Service,Service,REQ-DG-001,VV-DG-001,ATA-45,DAL-C,Active,Diagnostics_Team,System health monitoring
+12_DIAGNOSTICS,DG-002,Built_In_Self_Test,BIST,REQ-DG-002,VV-DG-002,ATA-45,DAL-C,Active,Diagnostics_Team,Automated self-test suite
+13_SECURITY,SC-001,Crypto_Engine_Primary,Crypto,REQ-SC-001,VV-SC-001,ATA-95,DAL-B,Active,Security_Team,Primary cryptographic engine
+13_SECURITY,SC-002,Access_Control_Service,Auth,REQ-SC-002,VV-SC-002,ATA-95,DAL-B,Active,Security_Team,Access control and authentication

@@ -1,0 +1,8 @@
+{
+  "event": "inference_executed",
+  "timestamp": "2025-11-17T20:51:14Z",
+  "request_id": "req_12345",
+  "model_id": "h2_predictor_v2.1",
+  "inputs_hash": "sha256:def456...",
+  "output_hash": "sha256:ghi789..."
+}

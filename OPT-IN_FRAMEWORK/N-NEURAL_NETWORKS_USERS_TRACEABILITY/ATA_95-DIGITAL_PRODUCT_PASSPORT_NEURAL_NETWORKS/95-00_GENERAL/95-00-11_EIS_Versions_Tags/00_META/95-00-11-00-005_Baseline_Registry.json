@@ -1,0 +1,194 @@
+{
+  "baseline_registry": {
+    "schema_version": "1.0",
+    "last_updated": "2025-11-17T14:30:00Z",
+    "baselines": [
+      {
+        "baseline_id": "PROD-2025-11-20-001",
+        "baseline_name": "AMPEL360-BWB-H2-v2.3.1",
+        "baseline_type": "Production",
+        "status": "Active",
+        "effective_date": "2025-11-20T10:00:00Z",
+        "supersedes": "PROD-2025-10-15-001",
+        "approval": {
+          "ccb_meeting": "CCB-2025-11-18-003",
+          "approved_by": "Dr. A. Pelliccia",
+          "approval_date": "2025-11-18T16:00:00Z",
+          "authority_acceptance": "EASA-TC-AMPEL360-RevC"
+        },
+        "configuration_items": [
+          {
+            "ci_id": "HW-BOM-v2.3",
+            "ci_type": "Hardware",
+            "version": "2.3",
+            "description": "Aircraft hardware bill of materials"
+          },
+          {
+            "ci_id": "SW-Baseline-v2.3.1",
+            "ci_type": "Software",
+            "version": "2.3.1",
+            "description": "Complete software baseline"
+          },
+          {
+            "ci_id": "NN-Suite-v2.3",
+            "ci_type": "NeuralNetworks",
+            "version": "2.3",
+            "description": "Certified neural network suite"
+          },
+          {
+            "ci_id": "DOC-Set-v2.3",
+            "ci_type": "Documentation",
+            "version": "2.3",
+            "description": "Technical publications and manuals"
+          }
+        ],
+        "deployment": {
+          "aircraft_affected": ["AC001", "AC002", "AC003"],
+          "operators": ["LaunchAirline-Fleet001"],
+          "deployment_date": "2025-11-20T10:00:00Z",
+          "deployment_method": "Phased rollout over 72 hours"
+        },
+        "dpp_anchors": [
+          {
+            "aircraft_id": "AC001",
+            "dpp_entry": "DPP-AC001-20251120T100000Z-00042",
+            "blockchain_hash": "0x8c3f5e1a7d2b9f4e6a3c8d1f5b7e9a2c"
+          },
+          {
+            "aircraft_id": "AC002",
+            "dpp_entry": "DPP-AC002-20251120T103000Z-00043",
+            "blockchain_hash": "0x3a7f9e1c5d8b2f4a6e9c1d7f5b3a8e2c"
+          },
+          {
+            "aircraft_id": "AC003",
+            "dpp_entry": "DPP-AC003-20251120T110000Z-00044",
+            "blockchain_hash": "0x9e2c7f1a5d8b3f6a4e9c1d7f5b8a3e2c"
+          }
+        ]
+      },
+      {
+        "baseline_id": "CERT-2025-11-15-001",
+        "baseline_name": "AMPEL360-BWB-H2-v2.4.0-beta",
+        "baseline_type": "Certification",
+        "status": "Under Review",
+        "submission_date": "2025-11-15T10:00:00Z",
+        "expected_approval": "2026-01-15",
+        "approval": {
+          "ccb_meeting": "CCB-2025-11-14-002",
+          "approved_by": "Dr. A. Pelliccia",
+          "approval_date": "2025-11-14T15:00:00Z",
+          "authority_submission": "EASA-STC-AMPEL360-2.4.0-001"
+        },
+        "configuration_items": [
+          {
+            "ci_id": "HW-BOM-v2.4",
+            "ci_type": "Hardware",
+            "version": "2.4",
+            "description": "Enhanced fuel cell integration"
+          },
+          {
+            "ci_id": "SW-Baseline-v2.4.0",
+            "ci_type": "Software",
+            "version": "2.4.0",
+            "description": "Advanced energy management features"
+          },
+          {
+            "ci_id": "NN-Suite-v2.4",
+            "ci_type": "NeuralNetworks",
+            "version": "2.4",
+            "description": "Improved prediction accuracy"
+          }
+        ],
+        "test_campaign": {
+          "flight_hours": 250,
+          "test_aircraft": ["FT-001"],
+          "start_date": "2025-09-01",
+          "completion_date": "2025-11-10",
+          "evidence_package": "95-00-10-03-XXX"
+        }
+      },
+      {
+        "baseline_id": "VAL-2025-11-01-001",
+        "baseline_name": "AMPEL360-BWB-H2-v2.5.0-alpha",
+        "baseline_type": "Validation",
+        "status": "Testing",
+        "start_date": "2025-11-01T08:00:00Z",
+        "expected_completion": "2025-12-15",
+        "configuration_items": [
+          {
+            "ci_id": "NN-CollisionAvoidance-v2.0.0-build4521",
+            "ci_type": "NeuralNetwork",
+            "version": "2.0.0-build4521",
+            "description": "Next-gen collision avoidance system"
+          }
+        ],
+        "test_environment": "Simulator + HIL rigs",
+        "test_plan": "95-00-07-02-XXX"
+      },
+      {
+        "baseline_id": "INT-2025-10-20-001",
+        "baseline_name": "AMPEL360-BWB-H2-v2.6.0-dev",
+        "baseline_type": "Integration",
+        "status": "Active Development",
+        "start_date": "2025-10-20T08:00:00Z",
+        "configuration_items": [
+          {
+            "ci_id": "NN-QuantumScheduler-v1.0.0-build0001",
+            "ci_type": "NeuralNetwork",
+            "version": "1.0.0-build0001",
+            "description": "Experimental quantum-inspired scheduler"
+          }
+        ],
+        "development_team": "AI Research Lab",
+        "target_completion": "2026-02-01"
+      },
+      {
+        "baseline_id": "MAINT-2025-11-22-HOT001",
+        "baseline_name": "AMPEL360-BWB-H2-v2.3.2-hotfix",
+        "baseline_type": "Maintenance",
+        "status": "Planned",
+        "trigger": "Minor fuel pressure sensor drift detected",
+        "scheduled_date": "2025-11-22T02:00:00Z",
+        "approval": {
+          "emergency_auth": "EA-2025-11-21-001",
+          "approved_by": "Chief Engineer",
+          "approval_date": "2025-11-21T18:00:00Z"
+        },
+        "configuration_items": [
+          {
+            "ci_id": "FuelSensorCalib-v1.5.2.1",
+            "ci_type": "Software",
+            "version": "1.5.2.1",
+            "description": "Calibration patch for fuel sensors"
+          }
+        ],
+        "deployment": {
+          "aircraft_affected": ["AC001", "AC002"],
+          "deployment_window": "02:00-06:00 UTC",
+          "rollback_plan": "Revert to v2.3.1 if issues detected"
+        }
+      }
+    ],
+    "baseline_states": {
+      "Active": "Currently deployed and operational",
+      "Under Review": "Submitted to authorities, awaiting approval",
+      "Testing": "In validation/verification phase",
+      "Active Development": "Under active engineering work",
+      "Planned": "Scheduled for future deployment",
+      "Deprecated": "Superseded, no longer supported",
+      "Archived": "Historical record, retained for compliance"
+    },
+    "change_control": {
+      "ccb_chair": "Dr. Amedeo Pelliccia",
+      "ccb_members": [
+        "Chief Engineer",
+        "Safety Manager",
+        "Certification Manager",
+        "Quality Assurance Manager",
+        "Operations Manager"
+      ],
+      "meeting_frequency": "Bi-weekly",
+      "emergency_procedures": "95-00-11-07-005"
+    }
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "registry_version": "1.0",
+  "last_updated": "2025-11-17",
+  "subsystems": [
+    {
+      "id": "01_FUNCTIONAL_SUBSYSTEMS",
+      "name": "Functional Subsystems",
+      "type": "Functional",
+      "owner": "Systems Engineering Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "FS-001",
+          "name": "Flight Control Primary",
+          "version": "2.1.0",
+          "criticality": "DAL-A",
+          "ata_chapter": "ATA-27",
+          "interfaces": ["CAN", "ARINC-429"],
+          "dependencies": ["HW-001", "SW-001"],
+          "certification_status": "Qualified"
+        },
+        {
+          "id": "FS-002",
+          "name": "Navigation Primary",
+          "version": "1.8.3",
+          "criticality": "DAL-A",
+          "ata_chapter": "ATA-34",
+          "interfaces": ["ARINC-429", "Ethernet"],
+          "dependencies": ["HW-002", "HW-003", "SW-002"],
+          "certification_status": "Qualified"
+        }
+      ]
+    },
+    {
+      "id": "02_HW_COMPONENTS",
+      "name": "Hardware Components",
+      "type": "Hardware",
+      "owner": "Hardware Engineering Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "HW-001",
+          "name": "Flight Computer Primary",
+          "version": "3.0",
+          "criticality": "DAL-A",
+          "ata_chapter": "ATA-42",
+          "part_number": "FC-P100-Rev3",
+          "manufacturer": "AMPEL360",
+          "is_fru": true,
+          "certification_status": "Qualified"
+        },
+        {
+          "id": "HW-002",
+          "name": "IMU Primary",
+          "version": "2.5",
+          "criticality": "DAL-A",
+          "ata_chapter": "ATA-34",
+          "part_number": "IMU-9DOF-Rev2",
+          "manufacturer": "InertialSystems Corp",
+          "is_fru": true,
+          "is_cots": true,
+          "certification_status": "Qualified"
+        }
+      ]
+    },
+    {
+      "id": "03_SW_COMPONENTS",
+      "name": "Software Components",
+      "type": "Software",
+      "owner": "Software Engineering Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "SW-001",
+          "name": "Flight Control Service",
+          "version": "2.3.1",
+          "criticality": "DAL-A",
+          "ata_chapter": "ATA-22",
+          "language": "C++",
+          "framework": "ROS2",
+          "dependencies": ["SW-003"],
+          "certification_status": "Qualified"
+        },
+        {
+          "id": "SW-002",
+          "name": "Navigation Service",
+          "version": "1.9.0",
+          "criticality": "DAL-A",
+          "ata_chapter": "ATA-34",
+          "language": "C++",
+          "framework": "ROS2",
+          "dependencies": ["SW-003"],
+          "certification_status": "Qualified"
+        }
+      ]
+    },
+    {
+      "id": "04_DATA_SUBSYSTEMS",
+      "name": "Data Subsystems",
+      "type": "Data",
+      "owner": "Data Engineering Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "DS-001",
+          "name": "Flight Data Store",
+          "version": "5.2.1",
+          "criticality": "DAL-C",
+          "ata_chapter": "ATA-31",
+          "database_type": "TimescaleDB",
+          "retention_days": 730,
+          "certification_status": "Production"
+        }
+      ]
+    },
+    {
+      "id": "05_MODEL_COMPONENTS",
+      "name": "Model Components",
+      "type": "AI_ML",
+      "owner": "AI/ML Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "ML-001",
+          "name": "Object Detection NN",
+          "version": "4.2.0",
+          "criticality": "DAL-B",
+          "ata_chapter": "ATA-95",
+          "model_architecture": "YOLO-v8",
+          "framework": "PyTorch",
+          "input_resolution": "1920x1080",
+          "inference_time_ms": 15,
+          "certification_status": "Testing"
+        }
+      ]
+    },
+    {
+      "id": "06_SAFETY_MONITORS",
+      "name": "Safety Monitors and Fallbacks",
+      "type": "Safety",
+      "owner": "Safety Systems Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "SM-001",
+          "name": "Flight Envelope Monitor",
+          "version": "1.5.2",
+          "criticality": "DAL-A",
+          "ata_chapter": "ATA-22",
+          "monitoring_frequency_hz": 100,
+          "certification_status": "Qualified"
+        }
+      ]
+    },
+    {
+      "id": "07_DPP_BLOCKS",
+      "name": "DPP Blocks and Registers",
+      "type": "DPP",
+      "owner": "Digital Product Passport Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "DPP-001",
+          "name": "Component Registry OnChain",
+          "version": "1.0.0",
+          "criticality": "DAL-D",
+          "ata_chapter": "ATA-95",
+          "blockchain": "Ethereum",
+          "contract_address": "0x...",
+          "certification_status": "Development"
+        }
+      ]
+    },
+    {
+      "id": "08_INTEGRATION_KITS",
+      "name": "Integration Kits and Adapters",
+      "type": "Integration",
+      "owner": "Integration Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "IK-001",
+          "name": "ATA42 IMA Adapter",
+          "version": "2.0.1",
+          "criticality": "DAL-C",
+          "ata_chapter": "ATA-42",
+          "protocols": ["ARINC-653", "ARINC-664"],
+          "certification_status": "Production"
+        }
+      ]
+    },
+    {
+      "id": "09_TEST_RIG_SUBSYSTEMS",
+      "name": "Test Rig Subsystems",
+      "type": "Testing",
+      "owner": "Test Engineering Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "TR-001",
+          "name": "Flight Simulator Rig",
+          "version": "3.1.0",
+          "criticality": "DAL-D",
+          "ata_chapter": "ATA-95",
+          "simulation_fidelity": "High",
+          "real_time_capable": true
+        }
+      ]
+    },
+    {
+      "id": "10_FRU",
+      "name": "Field Replaceable Units",
+      "type": "Maintenance",
+      "owner": "Maintenance Engineering Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "FRU-001",
+          "name": "Flight Computer Module",
+          "version": "3.0",
+          "criticality": "DAL-A",
+          "ata_chapter": "ATA-42",
+          "mtbf_hours": 50000,
+          "replacement_time_minutes": 30
+        }
+      ]
+    },
+    {
+      "id": "11_CONFIG_SETS",
+      "name": "Configuration Sets",
+      "type": "Configuration",
+      "owner": "Configuration Management Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "CS-001",
+          "name": "Production Config Standard",
+          "version": "2.5.0",
+          "criticality": "DAL-C",
+          "ata_chapter": "ATA-95",
+          "environment": "Production",
+          "approved": true,
+          "approval_date": "2025-11-01"
+        }
+      ]
+    },
+    {
+      "id": "12_DIAGNOSTICS",
+      "name": "Diagnostics and Health Components",
+      "type": "Diagnostics",
+      "owner": "Diagnostics Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "DG-001",
+          "name": "Health Monitor Service",
+          "version": "1.7.3",
+          "criticality": "DAL-C",
+          "ata_chapter": "ATA-45",
+          "monitoring_interval_sec": 1,
+          "alert_channels": ["CMS", "Cockpit Display"]
+        }
+      ]
+    },
+    {
+      "id": "13_SECURITY",
+      "name": "Security and Privacy Components",
+      "type": "Security",
+      "owner": "Security Team",
+      "status": "Active",
+      "components": [
+        {
+          "id": "SC-001",
+          "name": "Crypto Engine Primary",
+          "version": "1.2.0",
+          "criticality": "DAL-B",
+          "ata_chapter": "ATA-95",
+          "algorithms": ["AES-256", "RSA-4096", "SHA-512"],
+          "fips_certified": true
+        }
+      ]
+    },
+    {
+      "id": "14_SUBSYSTEMS_REQUIREMENTS_VV_MAP",
+      "name": "Subsystems Requirements V&V Map",
+      "type": "Traceability",
+      "owner": "Systems Engineering Team",
+      "status": "Active",
+      "components": []
+    }
+  ]
+}

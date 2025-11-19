@@ -1,0 +1,247 @@
+{
+  "registry_metadata": {
+    "name": "AMPEL360 Production Planning Industrialization Registry",
+    "version": "1.0",
+    "date": "2025-11-17",
+    "owner": "Production Planning Board",
+    "status": "ACTIVE",
+    "description": "Registry of all industrialization activities, components, and their current status"
+  },
+  "models": [
+    {
+      "model_id": "NN-FCS-001",
+      "model_name": "Flight Control System Neural Network",
+      "version": "2.1.0",
+      "status": "INDUSTRIALIZED",
+      "freeze_date": "2025-10-15",
+      "baseline_id": "BL-FCS-2.1.0",
+      "industrialization_phase": "VALIDATION",
+      "target_platforms": ["NVIDIA_AGX_XAVIER", "Intel_Xeon_D"],
+      "safety_level": "DAL-A",
+      "certification_basis": "EASA_CS-25",
+      "owner": "Flight Control AI Team",
+      "production_ready": false,
+      "prr_date": null,
+      "release_target": "2026-Q1"
+    },
+    {
+      "model_id": "NN-ENG-001",
+      "model_name": "Engine Health Monitoring NN",
+      "version": "1.5.2",
+      "status": "IN_FREEZE",
+      "freeze_date": "2025-11-01",
+      "baseline_id": "BL-ENG-1.5.2",
+      "industrialization_phase": "PREPARATION",
+      "target_platforms": ["Qualcomm_SoC", "FPGA_Xilinx_Versal"],
+      "safety_level": "DAL-B",
+      "certification_basis": "EASA_CS-E",
+      "owner": "Propulsion AI Team",
+      "production_ready": false,
+      "prr_date": null,
+      "release_target": "2026-Q2"
+    },
+    {
+      "model_id": "NN-NAV-001",
+      "model_name": "Navigation Assist Neural Network",
+      "version": "3.0.1",
+      "status": "PLANNING",
+      "freeze_date": null,
+      "baseline_id": null,
+      "industrialization_phase": "PLANNING",
+      "target_platforms": ["NVIDIA_Jetson_Orin"],
+      "safety_level": "DAL-C",
+      "certification_basis": "EASA_CS-25",
+      "owner": "Avionics AI Team",
+      "production_ready": false,
+      "prr_date": null,
+      "release_target": "2026-Q3"
+    }
+  ],
+  "data_pipelines": [
+    {
+      "pipeline_id": "DP-FCS-001",
+      "pipeline_name": "Flight Control Training Data Pipeline",
+      "version": "1.2",
+      "status": "OPERATIONAL",
+      "associated_models": ["NN-FCS-001"],
+      "data_sources": ["Flight_Test_Telemetry", "Simulator_Data", "Wind_Tunnel"],
+      "etl_frequency": "Daily",
+      "data_volume_gb": 250,
+      "quality_score": 0.97,
+      "owner": "Data Engineering Team",
+      "last_validated": "2025-11-15"
+    },
+    {
+      "pipeline_id": "DP-ENG-001",
+      "pipeline_name": "Engine Sensor Data Pipeline",
+      "version": "2.0",
+      "status": "OPERATIONAL",
+      "associated_models": ["NN-ENG-001"],
+      "data_sources": ["Engine_Test_Stand", "Flight_Test", "OEM_Data"],
+      "etl_frequency": "Hourly",
+      "data_volume_gb": 500,
+      "quality_score": 0.95,
+      "owner": "Data Engineering Team",
+      "last_validated": "2025-11-16"
+    }
+  ],
+  "mlops_infrastructure": [
+    {
+      "component_id": "MLOPS-CICD-001",
+      "component_name": "Production CI/CD Pipeline",
+      "version": "3.5",
+      "status": "OPERATIONAL",
+      "platform": "GitLab_CI_with_Kubernetes",
+      "deployment_targets": ["Production_Cluster", "Staging_Cluster", "Test_Bench"],
+      "automation_level": "FULLY_AUTOMATED",
+      "owner": "MLOps Team",
+      "last_updated": "2025-11-10"
+    },
+    {
+      "component_id": "MLOPS-MON-001",
+      "component_name": "Model Monitoring Platform",
+      "version": "2.1",
+      "status": "OPERATIONAL",
+      "platform": "Prometheus_Grafana_Custom",
+      "monitored_metrics": ["Accuracy", "Latency", "Drift", "Resource_Usage"],
+      "alert_channels": ["Email", "Slack", "PagerDuty"],
+      "owner": "Monitoring Team",
+      "last_updated": "2025-11-12"
+    }
+  ],
+  "hardware_targets": [
+    {
+      "target_id": "HW-TGT-001",
+      "target_name": "NVIDIA AGX Xavier",
+      "qualification_status": "QUALIFIED",
+      "qualification_date": "2025-09-20",
+      "environmental_testing": "COMPLETE",
+      "performance_validated": true,
+      "associated_models": ["NN-FCS-001"],
+      "supplier": "NVIDIA Corporation",
+      "owner": "Hardware Engineering"
+    },
+    {
+      "target_id": "HW-TGT-002",
+      "target_name": "Intel Xeon D-1700",
+      "qualification_status": "IN_PROGRESS",
+      "qualification_date": null,
+      "environmental_testing": "IN_PROGRESS",
+      "performance_validated": false,
+      "associated_models": ["NN-FCS-001", "NN-NAV-001"],
+      "supplier": "Intel Corporation",
+      "owner": "Hardware Engineering"
+    },
+    {
+      "target_id": "HW-TGT-003",
+      "target_name": "Xilinx Versal ACAP",
+      "qualification_status": "PLANNED",
+      "qualification_date": null,
+      "environmental_testing": "NOT_STARTED",
+      "performance_validated": false,
+      "associated_models": ["NN-ENG-001"],
+      "supplier": "AMD Xilinx",
+      "owner": "Hardware Engineering"
+    }
+  ],
+  "supply_chain_components": [
+    {
+      "component_id": "SC-LIB-001",
+      "component_name": "TensorFlow Runtime",
+      "version": "2.14.0",
+      "component_type": "SOFTWARE_LIBRARY",
+      "supplier": "Google LLC",
+      "license": "Apache-2.0",
+      "provenance_verified": true,
+      "security_scan_status": "PASS",
+      "qualification_status": "APPROVED",
+      "associated_models": ["NN-FCS-001", "NN-ENG-001"],
+      "owner": "Software Engineering"
+    },
+    {
+      "component_id": "SC-LIB-002",
+      "component_name": "ONNX Runtime",
+      "version": "1.16.0",
+      "component_type": "SOFTWARE_LIBRARY",
+      "supplier": "ONNX Community",
+      "license": "MIT",
+      "provenance_verified": true,
+      "security_scan_status": "PASS",
+      "qualification_status": "APPROVED",
+      "associated_models": ["NN-NAV-001"],
+      "owner": "Software Engineering"
+    },
+    {
+      "component_id": "SC-DATA-001",
+      "component_name": "Atmospheric Model Dataset",
+      "version": "2024.11",
+      "component_type": "EXTERNAL_DATA",
+      "supplier": "NOAA",
+      "license": "PUBLIC_DOMAIN",
+      "provenance_verified": true,
+      "security_scan_status": "N/A",
+      "qualification_status": "APPROVED",
+      "associated_models": ["NN-FCS-001", "NN-NAV-001"],
+      "owner": "Data Engineering"
+    }
+  ],
+  "dpp_blockchain_components": [
+    {
+      "component_id": "DPP-BC-001",
+      "component_name": "Neural Network DPP Smart Contract",
+      "version": "1.0",
+      "blockchain_network": "Ethereum_Mainnet",
+      "contract_address": "0x0000000000000000000000000000000000000000",
+      "deployment_status": "TESTNET_DEPLOYED",
+      "audit_status": "IN_PROGRESS",
+      "associated_models": ["NN-FCS-001", "NN-ENG-001", "NN-NAV-001"],
+      "owner": "Blockchain Team"
+    }
+  ],
+  "verification_validation_activities": [
+    {
+      "activity_id": "VV-PRE-001",
+      "activity_name": "Pre-Release Verification NN-FCS-001",
+      "activity_type": "PRE_RELEASE_VERIFICATION",
+      "status": "IN_PROGRESS",
+      "associated_model": "NN-FCS-001",
+      "planned_start": "2025-11-20",
+      "planned_end": "2025-12-10",
+      "completion_percentage": 35,
+      "owner": "V&V Team"
+    },
+    {
+      "activity_id": "VV-POST-001",
+      "activity_name": "Post-Deployment Validation NN-FCS-001",
+      "activity_type": "POST_DEPLOYMENT_VALIDATION",
+      "status": "PLANNED",
+      "associated_model": "NN-FCS-001",
+      "planned_start": "2026-01-15",
+      "planned_end": "2026-02-28",
+      "completion_percentage": 0,
+      "owner": "V&V Team"
+    }
+  ],
+  "certification_activities": [
+    {
+      "activity_id": "CERT-001",
+      "activity_name": "EASA Certification NN-FCS-001",
+      "regulatory_authority": "EASA",
+      "certification_basis": "CS-25 Amendment 27",
+      "status": "PREPARATION",
+      "associated_model": "NN-FCS-001",
+      "evidence_package_status": "IN_PROGRESS",
+      "submission_target": "2026-03-01",
+      "owner": "Certification Team"
+    }
+  ],
+  "change_log": [
+    {
+      "date": "2025-11-17",
+      "version": "1.0",
+      "change_type": "INITIAL_CREATION",
+      "description": "Initial creation of industrialization registry",
+      "author": "Production Planning Board"
+    }
+  ]
+}

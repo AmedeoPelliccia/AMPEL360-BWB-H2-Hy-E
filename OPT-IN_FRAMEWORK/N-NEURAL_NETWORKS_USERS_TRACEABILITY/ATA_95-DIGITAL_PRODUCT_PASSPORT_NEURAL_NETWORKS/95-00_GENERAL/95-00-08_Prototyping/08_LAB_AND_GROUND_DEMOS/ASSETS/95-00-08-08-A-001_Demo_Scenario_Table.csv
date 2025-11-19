@@ -1,0 +1,5 @@
+Scenario_ID,Title,Duration_min,Audience,Complexity,Prerequisites
+DEMO-001,Flight Path Prediction,15,Internal,Low,Laptop + data
+DEMO-002,Anomaly Detection,20,Customer,Medium,Test rig
+DEMO-003,Full System Integration,45,Regulatory,High,Full setup
+DEMO-004,Explainability Dashboard,10,All,Low,Web access

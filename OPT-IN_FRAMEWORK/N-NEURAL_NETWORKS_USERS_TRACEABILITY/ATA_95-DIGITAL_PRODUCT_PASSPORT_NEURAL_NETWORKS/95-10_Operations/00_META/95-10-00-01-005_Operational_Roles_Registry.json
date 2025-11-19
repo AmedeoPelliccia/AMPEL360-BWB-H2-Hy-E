@@ -1,0 +1,416 @@
+{
+  "registry_metadata": {
+    "document_id": "95-10-00-01-005",
+    "title": "Operational Roles Registry",
+    "version": "1.0",
+    "date": "2025-11-17",
+    "status": "Active",
+    "description": "Registry of all operational roles with permissions and responsibilities for NN systems and DPP"
+  },
+  "operational_roles": [
+    {
+      "role_id": "OPS-ROLE-001",
+      "role_name": "Pilot in Command (PIC)",
+      "category": "Flight Crew",
+      "description": "Commander of the aircraft with ultimate authority and responsibility",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": true,
+        "configure": false,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["pre-flight", "flight", "post-flight"],
+      "required_training": ["NN-OPS-BASIC", "NN-OPS-OVERRIDE", "DPP-FLIGHT-VIEW"],
+      "regulatory_requirements": ["EASA Part-FCL", "FAA Part 61"],
+      "accountability_level": "Ultimate"
+    },
+    {
+      "role_id": "OPS-ROLE-002",
+      "role_name": "First Officer (FO)",
+      "category": "Flight Crew",
+      "description": "Second-in-command pilot assisting PIC",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": true,
+        "configure": false,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["pre-flight", "flight", "post-flight"],
+      "required_training": ["NN-OPS-BASIC", "NN-OPS-OVERRIDE", "DPP-FLIGHT-VIEW"],
+      "regulatory_requirements": ["EASA Part-FCL", "FAA Part 61"],
+      "accountability_level": "Shared with PIC"
+    },
+    {
+      "role_id": "OPS-ROLE-003",
+      "role_name": "Licensed Aircraft Maintenance Engineer (LAME)",
+      "category": "Maintenance Personnel",
+      "description": "Certified maintenance engineer performing aircraft maintenance",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": true,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["maintenance", "post-flight"],
+      "required_training": ["NN-MAINT-BASIC", "NN-PRED-MAINT", "DPP-MAINT-VIEW"],
+      "regulatory_requirements": ["EASA Part-66", "FAA Part 65"],
+      "accountability_level": "Technical"
+    },
+    {
+      "role_id": "OPS-ROLE-004",
+      "role_name": "Line Maintenance Technician",
+      "category": "Maintenance Personnel",
+      "description": "Technician performing line maintenance tasks",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": false,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["turnaround", "maintenance"],
+      "required_training": ["NN-MAINT-BASIC", "DPP-MAINT-VIEW"],
+      "regulatory_requirements": ["EASA Part-145", "FAA Part 145"],
+      "accountability_level": "Task-specific"
+    },
+    {
+      "role_id": "OPS-ROLE-005",
+      "role_name": "Ramp Agent",
+      "category": "Ground Operations",
+      "description": "Ground staff handling aircraft turnaround operations",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": false,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": false,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["turnaround", "ground-ops"],
+      "required_training": ["NN-GROUND-BASIC", "DPP-GROUND-VIEW"],
+      "regulatory_requirements": ["Airport Ground Handling", "IATA AHM"],
+      "accountability_level": "Operational"
+    },
+    {
+      "role_id": "OPS-ROLE-006",
+      "role_name": "H₂ Fueling Technician",
+      "category": "Ground Operations",
+      "description": "Specialist for hydrogen refueling operations",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": false,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["turnaround", "refueling"],
+      "required_training": ["H2-SAFETY", "NN-H2-MONITORING", "DPP-GROUND-VIEW"],
+      "regulatory_requirements": ["H₂ Handling Certification", "Airport Safety"],
+      "accountability_level": "Safety-critical"
+    },
+    {
+      "role_id": "OPS-ROLE-007",
+      "role_name": "Flight Dispatcher",
+      "category": "Operations Control Center",
+      "description": "OCC staff responsible for flight planning and monitoring",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": true,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": false,
+        "annotate": false,
+        "admin": false
+      },
+      "operational_phases": ["pre-flight", "flight", "post-flight"],
+      "required_training": ["NN-OCC-MONITORING", "DPP-FLEET-VIEW"],
+      "regulatory_requirements": ["EASA Part-OPS", "FAA Part 121"],
+      "accountability_level": "Coordination"
+    },
+    {
+      "role_id": "OPS-ROLE-008",
+      "role_name": "Operations Controller",
+      "category": "Operations Control Center",
+      "description": "OCC staff managing overall operations",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": true,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": false,
+        "annotate": false,
+        "admin": false
+      },
+      "operational_phases": ["all"],
+      "required_training": ["NN-OCC-ADVANCED", "DPP-FLEET-VIEW"],
+      "regulatory_requirements": ["Airline Ops Manual"],
+      "accountability_level": "Coordination"
+    },
+    {
+      "role_id": "OPS-ROLE-009",
+      "role_name": "Data Engineer",
+      "category": "Data Operations Team",
+      "description": "Engineer managing operational data pipelines",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": true,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": false,
+        "admin": true
+      },
+      "operational_phases": ["all"],
+      "required_training": ["DATA-OPS-ADVANCED", "DPP-BACKEND", "GDPR-COMPLIANCE"],
+      "regulatory_requirements": ["GDPR", "Data Protection"],
+      "accountability_level": "Technical"
+    },
+    {
+      "role_id": "OPS-ROLE-010",
+      "role_name": "ML Engineer",
+      "category": "AI/MLOps Team",
+      "description": "Engineer managing NN model deployments",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": true,
+        "update": true
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": false,
+        "admin": true
+      },
+      "operational_phases": ["model-deployment", "monitoring"],
+      "required_training": ["MLOPS-ADVANCED", "NN-DEPLOYMENT", "DPP-MODEL-REGISTRY"],
+      "regulatory_requirements": ["EU AI Act", "EASA AI Guidance"],
+      "accountability_level": "Technical"
+    },
+    {
+      "role_id": "OPS-ROLE-011",
+      "role_name": "AI Safety Officer",
+      "category": "AI/MLOps Team",
+      "description": "Officer ensuring AI safety in operations",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": true,
+        "configure": true,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["all"],
+      "required_training": ["AI-SAFETY-ADVANCED", "NN-MONITORING", "DPP-AUDIT"],
+      "regulatory_requirements": ["EU AI Act", "EASA", "FAA"],
+      "accountability_level": "Safety oversight"
+    },
+    {
+      "role_id": "OPS-ROLE-012",
+      "role_name": "Safety Manager",
+      "category": "Safety Department",
+      "description": "Manager overseeing operational safety",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": true,
+        "configure": false,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["all"],
+      "required_training": ["SAFETY-MGMT", "NN-SAFETY-OVERSIGHT", "DPP-AUDIT"],
+      "regulatory_requirements": ["SMS", "EASA Part-ORO", "FAA Part 5"],
+      "accountability_level": "Safety oversight"
+    },
+    {
+      "role_id": "OPS-ROLE-013",
+      "role_name": "Training Captain",
+      "category": "Training Department",
+      "description": "Captain conducting NN systems training",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": true,
+        "configure": false,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": false,
+        "annotate": false,
+        "admin": false
+      },
+      "operational_phases": ["training"],
+      "required_training": ["INSTRUCTOR-RATING", "NN-OPS-ADVANCED", "DPP-TRAINING"],
+      "regulatory_requirements": ["EASA Part-FCL", "FAA Part 61"],
+      "accountability_level": "Training oversight"
+    },
+    {
+      "role_id": "OPS-ROLE-014",
+      "role_name": "Quality Assurance Auditor",
+      "category": "Quality Assurance",
+      "description": "Auditor verifying operational compliance",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": false,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": false,
+        "annotate": true,
+        "admin": false
+      },
+      "operational_phases": ["audit"],
+      "required_training": ["QA-AUDITOR", "NN-COMPLIANCE", "DPP-AUDIT"],
+      "regulatory_requirements": ["ISO 9001", "AS9100"],
+      "accountability_level": "Compliance oversight"
+    },
+    {
+      "role_id": "OPS-ROLE-015",
+      "role_name": "DPP Administrator",
+      "category": "Data Operations Team",
+      "description": "Administrator managing DPP system",
+      "nn_system_permissions": {
+        "monitor": true,
+        "override": false,
+        "configure": true,
+        "update": false
+      },
+      "dpp_access": {
+        "read": true,
+        "write": true,
+        "annotate": true,
+        "admin": true
+      },
+      "operational_phases": ["all"],
+      "required_training": ["DPP-ADMIN", "DATA-GOVERNANCE", "GDPR-DPO"],
+      "regulatory_requirements": ["EU DPP Regulation", "GDPR"],
+      "accountability_level": "System administration"
+    }
+  ],
+  "permission_definitions": {
+    "nn_system_permissions": {
+      "monitor": "View NN system status, recommendations, and performance metrics",
+      "override": "Override NN system recommendations or disable NN functions",
+      "configure": "Modify NN system configuration parameters",
+      "update": "Deploy new NN models or update existing models"
+    },
+    "dpp_access": {
+      "read": "View DPP data relevant to role",
+      "write": "Create or modify DPP records",
+      "annotate": "Add comments or annotations to DPP records",
+      "admin": "Full administrative access to DPP system"
+    }
+  },
+  "accountability_levels": {
+    "Ultimate": "Final decision authority and full responsibility",
+    "Shared with PIC": "Shared responsibility with Pilot in Command",
+    "Technical": "Technical responsibility within scope of certification",
+    "Operational": "Responsibility for operational task execution",
+    "Safety-critical": "Responsibility for safety-critical operations",
+    "Coordination": "Coordination and support responsibility",
+    "Safety oversight": "Oversight of safety-related activities",
+    "Training oversight": "Oversight of training activities",
+    "Compliance oversight": "Oversight of compliance activities",
+    "System administration": "Administration of systems and data",
+    "Task-specific": "Responsibility limited to specific tasks"
+  },
+  "training_programs": {
+    "NN-OPS-BASIC": "Basic NN systems operations for flight crew",
+    "NN-OPS-OVERRIDE": "NN system override procedures and decision-making",
+    "NN-OPS-ADVANCED": "Advanced NN operations and troubleshooting",
+    "NN-MAINT-BASIC": "NN systems for maintenance personnel",
+    "NN-PRED-MAINT": "Predictive maintenance using NN systems",
+    "NN-GROUND-BASIC": "NN systems for ground operations",
+    "NN-H2-MONITORING": "NN systems for H₂ operations monitoring",
+    "NN-OCC-MONITORING": "NN systems monitoring for OCC",
+    "NN-OCC-ADVANCED": "Advanced OCC operations with NN systems",
+    "NN-DEPLOYMENT": "NN model deployment procedures",
+    "NN-MONITORING": "NN system performance monitoring",
+    "NN-SAFETY-OVERSIGHT": "NN safety oversight and assessment",
+    "NN-COMPLIANCE": "NN compliance verification",
+    "DPP-FLIGHT-VIEW": "DPP operational view for flight crew",
+    "DPP-MAINT-VIEW": "DPP maintenance view and updates",
+    "DPP-GROUND-VIEW": "DPP ground operations view",
+    "DPP-FLEET-VIEW": "DPP fleet-wide monitoring",
+    "DPP-BACKEND": "DPP backend system administration",
+    "DPP-MODEL-REGISTRY": "DPP model registry management",
+    "DPP-AUDIT": "DPP audit and compliance review",
+    "DPP-TRAINING": "DPP for training purposes",
+    "DPP-ADMIN": "DPP system administration",
+    "DATA-OPS-ADVANCED": "Advanced data operations",
+    "MLOPS-ADVANCED": "Advanced MLOps practices",
+    "AI-SAFETY-ADVANCED": "Advanced AI safety practices",
+    "SAFETY-MGMT": "Safety management systems",
+    "INSTRUCTOR-RATING": "Flight instructor rating",
+    "QA-AUDITOR": "Quality assurance auditor certification",
+    "DATA-GOVERNANCE": "Data governance principles",
+    "GDPR-COMPLIANCE": "GDPR compliance training",
+    "GDPR-DPO": "GDPR Data Protection Officer training",
+    "H2-SAFETY": "Hydrogen safety certification"
+  },
+  "references": [
+    "95-10-00-01-002: Operational Scope and Actors",
+    "95-10-11-01-002: Access to DPP for Ops Roles",
+    "95-10-12-01-002: Access Control in Ops Environments"
+  ],
+  "version_history": [
+    {
+      "version": "1.0",
+      "date": "2025-11-17",
+      "author": "AMPEL360 Ops Team",
+      "changes": "Initial registry"
+    }
+  ]
+}

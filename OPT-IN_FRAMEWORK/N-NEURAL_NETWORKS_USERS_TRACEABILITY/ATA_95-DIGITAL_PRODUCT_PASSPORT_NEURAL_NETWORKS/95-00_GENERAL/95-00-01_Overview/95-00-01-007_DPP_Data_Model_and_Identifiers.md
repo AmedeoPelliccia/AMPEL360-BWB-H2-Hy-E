@@ -236,7 +236,7 @@ The complete identifier combines UUID, name, and version:
     "design_assurance_level": "B",
     "means_of_compliance": [
       {"id": "MoC-001", "standard": "CS 25.1309", "method": "Analysis + Test"},
-      {"id": "MoC-002", "standard": "DO-178C (adapted)", "method": "V&V Campaign"}
+      {"id": "MoC-002", "standard": "[DO-178C](https://www.rtca.org/document/do-178c/) (adapted)", "method": "V&V Campaign"}
     ],
     "certification_artifacts": [
       {"doc_id": "CERT-001", "title": "Safety Assessment Report", "path": "95-00-10/"},
@@ -290,7 +290,7 @@ The complete identifier combines UUID, name, and version:
     ],
     "system_interfaces": [
       {"system": "Flight Control Computer", "protocol": "AFDX", "ata_chapter": "27"},
-      {"system": "Air Data System", "protocol": "ARINC 429", "ata_chapter": "34"}
+      {"system": "Air Data System", "protocol": "[ARINC 429](https://www.aviation-ia.com/cf/aeec.html)", "ata_chapter": "34"}
     ]
   }
 }
@@ -350,7 +350,7 @@ DPPs are stored as **JSON** files for human-readability and wide tool support.
 
 ### 4.2 Alternative Formats
 
-**XML**: For integration with legacy systems (S1000D tools)
+**XML**: For integration with legacy systems ([S1000D](http://www.s1000d.org/) tools)
 **YAML**: For version control (more human-friendly diffs)
 **Protobuf**: For high-performance applications (runtime monitoring)
 

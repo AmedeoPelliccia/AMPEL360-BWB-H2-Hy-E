@@ -1,0 +1,190 @@
+{
+  "registry_version": "1.0",
+  "last_updated": "2025-11-17T10:30:00Z",
+  "experiments": [
+    {
+      "experiment_id": "exp-2025-11-17-001",
+      "timestamp": "2025-11-17T08:00:00Z",
+      "type": "model_training",
+      "title": "Flight Control Transformer Baseline",
+      "description": "Baseline training run for flight control transformer model with standard hyperparameters",
+      "researcher": "ML Team",
+      "model": "flight_control_transformer_v2.0",
+      "dataset": "flight_data_v3.1",
+      "config_file": "config_hpc_baseline.yaml",
+      "status": "completed",
+      "duration_hours": 12.5,
+      "resources": {
+        "platform": "HPC_Cluster",
+        "num_gpus": 4,
+        "gpu_type": "NVIDIA_A100"
+      },
+      "hyperparameters": {
+        "batch_size": 128,
+        "learning_rate": 0.001,
+        "max_epochs": 100,
+        "optimizer": "adam",
+        "dropout": 0.1
+      },
+      "results": {
+        "train_loss": 0.038,
+        "val_loss": 0.042,
+        "val_accuracy": 0.967,
+        "inference_time_ms": 5.2,
+        "model_size_mb": 58.3
+      },
+      "artifacts": {
+        "model_checkpoint": "s3://ampel360-ml/models/exp-2025-11-17-001/final_checkpoint.pt",
+        "tensorboard_logs": "s3://ampel360-ml/logs/exp-2025-11-17-001/",
+        "evaluation_report": "docs/experiments/exp-2025-11-17-001/evaluation.pdf"
+      },
+      "notes": "Successful baseline run. Model meets performance requirements. Ready for optimization phase.",
+      "tags": ["baseline", "transformer", "flight_control", "production"]
+    },
+    {
+      "experiment_id": "exp-2025-11-17-002",
+      "timestamp": "2025-11-17T09:30:00Z",
+      "type": "data_augmentation",
+      "title": "Advanced Data Augmentation for Collision Avoidance",
+      "description": "Testing impact of noise injection and temporal jittering on collision avoidance model robustness",
+      "researcher": "Data Team",
+      "model": "collision_avoidance_cnn_v1.0",
+      "dataset": "sensor_data_augmented_v2.0",
+      "config_file": "config_augmentation_test.yaml",
+      "status": "in_progress",
+      "duration_hours": null,
+      "resources": {
+        "platform": "Cloud_AWS",
+        "num_gpus": 2,
+        "gpu_type": "NVIDIA_V100"
+      },
+      "hyperparameters": {
+        "noise_level": 0.05,
+        "temporal_jitter_ms": 10,
+        "rotation_aug": true,
+        "brightness_range": [0.8, 1.2]
+      },
+      "results": null,
+      "artifacts": {
+        "interim_checkpoint": "s3://ampel360-ml/models/exp-2025-11-17-002/checkpoint_epoch_25.pt"
+      },
+      "notes": "Initial results promising. Model shows improved robustness to sensor noise.",
+      "tags": ["augmentation", "cnn", "collision_avoidance", "robustness"]
+    },
+    {
+      "experiment_id": "exp-2025-11-15-003",
+      "timestamp": "2025-11-15T14:00:00Z",
+      "type": "hyperparameter_tuning",
+      "title": "Learning Rate Schedule Optimization",
+      "description": "Grid search over learning rate schedules for propulsion management LSTM",
+      "researcher": "ML Team",
+      "model": "propulsion_mgmt_lstm_v3.1",
+      "dataset": "propulsion_telemetry_v2.5",
+      "config_file": "config_lr_sweep.yaml",
+      "status": "completed",
+      "duration_hours": 48.0,
+      "resources": {
+        "platform": "HPC_Cluster",
+        "num_gpus": 8,
+        "gpu_type": "NVIDIA_A100"
+      },
+      "hyperparameters": {
+        "scheduler_type": ["cosine", "exponential", "step"],
+        "base_lr": [0.0001, 0.0005, 0.001],
+        "warmup_epochs": [5, 10, 20]
+      },
+      "results": {
+        "best_config": {
+          "scheduler": "cosine",
+          "base_lr": 0.0005,
+          "warmup_epochs": 10
+        },
+        "best_val_loss": 0.028,
+        "best_val_accuracy": 0.982
+      },
+      "artifacts": {
+        "sweep_results": "s3://ampel360-ml/sweeps/exp-2025-11-15-003/results.csv",
+        "best_model": "s3://ampel360-ml/models/exp-2025-11-15-003/best_model.pt",
+        "wandb_dashboard": "https://wandb.ai/ampel360/propulsion/runs/exp-2025-11-15-003"
+      },
+      "notes": "Cosine annealing with warmup yields best performance. Adopting for v3.2 release.",
+      "tags": ["hyperparameter_tuning", "lstm", "propulsion", "optimization"]
+    },
+    {
+      "experiment_id": "exp-2025-11-10-004",
+      "timestamp": "2025-11-10T10:00:00Z",
+      "type": "ablation_study",
+      "title": "Transformer Attention Head Ablation",
+      "description": "Ablation study to determine optimal number of attention heads for flight control transformer",
+      "researcher": "ML Team",
+      "model": "flight_control_transformer_v1.x",
+      "dataset": "flight_data_v3.0",
+      "config_file": "config_ablation_heads.yaml",
+      "status": "completed",
+      "duration_hours": 36.0,
+      "resources": {
+        "platform": "HPC_Cluster",
+        "num_gpus": 4,
+        "gpu_type": "NVIDIA_A100"
+      },
+      "hyperparameters": {
+        "num_heads": [4, 8, 12, 16],
+        "fixed_params": {
+          "hidden_size": 512,
+          "num_layers": 12,
+          "learning_rate": 0.001
+        }
+      },
+      "results": {
+        "4_heads": {"val_accuracy": 0.945, "inference_ms": 3.8},
+        "8_heads": {"val_accuracy": 0.967, "inference_ms": 5.2},
+        "12_heads": {"val_accuracy": 0.971, "inference_ms": 7.1},
+        "16_heads": {"val_accuracy": 0.972, "inference_ms": 9.5}
+      },
+      "artifacts": {
+        "ablation_report": "docs/experiments/exp-2025-11-10-004/ablation_report.pdf",
+        "models": "s3://ampel360-ml/models/exp-2025-11-10-004/"
+      },
+      "notes": "8 heads provides best accuracy/latency tradeoff. Marginal gains beyond 12 heads not worth latency cost.",
+      "tags": ["ablation", "transformer", "flight_control", "architecture"]
+    },
+    {
+      "experiment_id": "exp-2025-11-08-005",
+      "timestamp": "2025-11-08T16:00:00Z",
+      "type": "quantization",
+      "title": "INT8 Quantization Impact Assessment",
+      "description": "Evaluate accuracy degradation from FP32 to INT8 quantization for embedded deployment",
+      "researcher": "Optimization Team",
+      "model": "flight_control_transformer_v2.0",
+      "dataset": "flight_data_v3.1",
+      "config_file": "config_quantization.yaml",
+      "status": "completed",
+      "duration_hours": 8.0,
+      "resources": {
+        "platform": "Embedded_Dev_Board",
+        "hardware": "NVIDIA_Jetson_AGX_Orin"
+      },
+      "hyperparameters": {
+        "calibration_samples": 1000,
+        "quantization_scheme": "symmetric"
+      },
+      "results": {
+        "fp32_accuracy": 0.967,
+        "int8_accuracy": 0.963,
+        "accuracy_drop": 0.004,
+        "fp32_inference_ms": 5.2,
+        "int8_inference_ms": 1.8,
+        "speedup": 2.89,
+        "fp32_model_mb": 58.3,
+        "int8_model_mb": 15.2,
+        "size_reduction": 3.84
+      },
+      "artifacts": {
+        "quantized_model": "models/flight_control_transformer_v2.0_int8.trt",
+        "performance_report": "docs/experiments/exp-2025-11-08-005/quantization_report.pdf"
+      },
+      "notes": "Minimal accuracy loss with significant latency and size improvements. Approved for embedded deployment.",
+      "tags": ["quantization", "optimization", "embedded", "production"]
+    }
+  ]
+}

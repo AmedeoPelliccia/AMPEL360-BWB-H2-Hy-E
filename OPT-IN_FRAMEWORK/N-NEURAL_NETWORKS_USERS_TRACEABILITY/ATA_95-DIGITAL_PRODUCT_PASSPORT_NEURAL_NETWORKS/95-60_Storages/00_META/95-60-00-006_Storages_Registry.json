@@ -1,0 +1,256 @@
+{
+  "registry_version": "1.0",
+  "last_updated": "2025-11-17",
+  "aircraft": "AMPEL360 BWB H2 Hy-E Q100",
+  "storages": [
+    {
+      "id": "S-21-001",
+      "name": "ECS_Primary_Thermal_Buffer",
+      "ata_chapter": "21",
+      "location": "Forward_Equipment_Bay",
+      "capacity": 50,
+      "unit": "L",
+      "class": "E5",
+      "capacity_band": "FV3",
+      "criticality": "ESSENTIAL",
+      "operational_profile": "CONTINUOUS",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["temperature", "pressure", "level"],
+      "safety_limits": {
+        "max_temperature": 150,
+        "max_pressure": 10,
+        "min_level": 10
+      }
+    },
+    {
+      "id": "S-24-001",
+      "name": "Main_Battery_Pack_Forward",
+      "ata_chapter": "24",
+      "location": "Forward_Equipment_Bay",
+      "capacity": 250,
+      "unit": "kWh",
+      "class": "E1",
+      "capacity_band": "EC4",
+      "criticality": "CRITICAL",
+      "operational_profile": "CONTINUOUS",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["voltage", "current", "temperature", "SOC", "SOH"],
+      "safety_limits": {
+        "max_temperature": 60,
+        "max_voltage": 850,
+        "max_current": 500,
+        "min_SOC": 20
+      }
+    },
+    {
+      "id": "S-24-002",
+      "name": "Main_Battery_Pack_Aft",
+      "ata_chapter": "24",
+      "location": "Aft_Equipment_Bay",
+      "capacity": 250,
+      "unit": "kWh",
+      "class": "E1",
+      "capacity_band": "EC4",
+      "criticality": "CRITICAL",
+      "operational_profile": "CONTINUOUS",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["voltage", "current", "temperature", "SOC", "SOH"],
+      "safety_limits": {
+        "max_temperature": 60,
+        "max_voltage": 850,
+        "max_current": 500,
+        "min_SOC": 20
+      }
+    },
+    {
+      "id": "S-28-001",
+      "name": "LH2_Main_Tank_Starboard",
+      "ata_chapter": "28",
+      "location": "Starboard_Wing_Root",
+      "capacity": 500,
+      "unit": "kg_H2",
+      "class": "E4",
+      "capacity_band": "EF3",
+      "criticality": "CRITICAL",
+      "operational_profile": "MISSION",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["level", "pressure", "temperature", "boil_off_rate", "leak_detection"],
+      "safety_limits": {
+        "max_pressure": 5,
+        "min_temperature": -253,
+        "max_boil_off_rate": 0.5,
+        "min_level": 5
+      }
+    },
+    {
+      "id": "S-28-002",
+      "name": "LH2_Main_Tank_Port",
+      "ata_chapter": "28",
+      "location": "Port_Wing_Root",
+      "capacity": 500,
+      "unit": "kg_H2",
+      "class": "E4",
+      "capacity_band": "EF3",
+      "criticality": "CRITICAL",
+      "operational_profile": "MISSION",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["level", "pressure", "temperature", "boil_off_rate", "leak_detection"],
+      "safety_limits": {
+        "max_pressure": 5,
+        "min_temperature": -253,
+        "max_boil_off_rate": 0.5,
+        "min_level": 5
+      }
+    },
+    {
+      "id": "S-29-001",
+      "name": "Hydraulic_Main_Reservoir",
+      "ata_chapter": "29",
+      "location": "Main_Equipment_Bay",
+      "capacity": 40,
+      "unit": "L",
+      "class": "F1",
+      "capacity_band": "FV3",
+      "criticality": "CRITICAL",
+      "operational_profile": "MISSION",
+      "monitoring_frequency": "Per-flight",
+      "sensors": ["level", "temperature", "contamination"],
+      "safety_limits": {
+        "max_temperature": 120,
+        "min_level": 10,
+        "max_contamination": "ISO_18/16/13"
+      }
+    },
+    {
+      "id": "S-29-002",
+      "name": "Hydraulic_Accumulator_Flight_Controls",
+      "ata_chapter": "29",
+      "location": "FCS_Bay",
+      "capacity": 8,
+      "unit": "L",
+      "class": "F2",
+      "capacity_band": "FV2",
+      "criticality": "CRITICAL",
+      "operational_profile": "CONTINUOUS",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["pressure", "precharge_pressure"],
+      "safety_limits": {
+        "max_pressure": 3200,
+        "min_pressure": 1500,
+        "min_precharge": 1000
+      }
+    },
+    {
+      "id": "S-31-001",
+      "name": "Flight_Data_Recorder",
+      "ata_chapter": "31",
+      "location": "Tail_Section",
+      "capacity": 25,
+      "unit": "hours",
+      "class": "D1",
+      "capacity_band": "DC2",
+      "criticality": "CRITICAL",
+      "operational_profile": "CONTINUOUS",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["recording_status", "memory_health", "data_integrity"],
+      "safety_limits": {
+        "min_recording_time": 25,
+        "max_write_failures": 0
+      }
+    },
+    {
+      "id": "S-38-001",
+      "name": "Potable_Water_Main_Tank",
+      "ata_chapter": "38",
+      "location": "Lower_Fuselage_Forward",
+      "capacity": 300,
+      "unit": "L",
+      "class": "F4",
+      "capacity_band": "FV4",
+      "criticality": "IMPORTANT",
+      "operational_profile": "MISSION",
+      "monitoring_frequency": "Daily",
+      "sensors": ["level", "quality", "temperature"],
+      "safety_limits": {
+        "max_temperature": 40,
+        "min_level": 20,
+        "water_quality": "potable"
+      }
+    },
+    {
+      "id": "S-46-001",
+      "name": "Digital_Data_Lake",
+      "ata_chapter": "46",
+      "location": "Ground_Infrastructure",
+      "capacity": 100,
+      "unit": "TB",
+      "class": "D3",
+      "capacity_band": "DC6",
+      "criticality": "ESSENTIAL",
+      "operational_profile": "CONTINUOUS",
+      "monitoring_frequency": "Daily",
+      "sensors": ["utilization", "performance", "backup_status"],
+      "safety_limits": {
+        "max_utilization": 85,
+        "min_backup_frequency": 1
+      }
+    },
+    {
+      "id": "S-49-001",
+      "name": "APU_Fuel_Tank",
+      "ata_chapter": "49",
+      "location": "APU_Compartment",
+      "capacity": 80,
+      "unit": "L",
+      "class": "E4",
+      "capacity_band": "FV4",
+      "criticality": "ESSENTIAL",
+      "operational_profile": "INTERMITTENT",
+      "monitoring_frequency": "Per-flight",
+      "sensors": ["level", "temperature"],
+      "safety_limits": {
+        "max_temperature": 60,
+        "min_level": 10
+      }
+    },
+    {
+      "id": "S-70-001",
+      "name": "Propulsion_Thermal_Buffer_Starboard",
+      "ata_chapter": "70",
+      "location": "Starboard_Nacelle",
+      "capacity": 100,
+      "unit": "kW",
+      "class": "E5",
+      "capacity_band": "FV3",
+      "criticality": "ESSENTIAL",
+      "operational_profile": "MISSION",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["temperature", "flow_rate", "thermal_capacity"],
+      "safety_limits": {
+        "max_temperature": 200,
+        "max_flow_rate": 50
+      }
+    },
+    {
+      "id": "S-80-001",
+      "name": "CO2_Battery_System",
+      "ata_chapter": "80",
+      "location": "Central_Equipment_Bay",
+      "capacity": 500,
+      "unit": "kWh",
+      "class": "E1",
+      "capacity_band": "EC5",
+      "criticality": "CRITICAL",
+      "operational_profile": "CONTINUOUS",
+      "monitoring_frequency": "Real-time",
+      "sensors": ["voltage", "current", "temperature", "SOC", "SOH", "CO2_pressure", "cycle_count"],
+      "safety_limits": {
+        "max_temperature": 80,
+        "max_voltage": 1200,
+        "max_current": 5000,
+        "max_CO2_pressure": 100,
+        "min_SOC": 15
+      }
+    }
+  ]
+}

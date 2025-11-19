@@ -1,0 +1,26 @@
+Source_ATA,Source_System,Target_ATA,Target_System,Circularity_Type,Flow_Description,Energy_Material,Direction,Efficiency_Target,KPI_Reference,Status
+ATA-21,Environmental Control System,ATA-70,Propulsion System,Energy Recovery,Waste heat from fuel cells to cabin heating,Thermal Energy,Bidirectional,75%,95-30-00-006-KPI-001,Active
+ATA-21,Environmental Control System,ATA-21,Air Recirculation,Material Loop,Filtered air recirculation for cabin,Air,Circular,90%,95-30-00-006-KPI-002,Active
+ATA-24,Electrical Power,ATA-80,Energy Storage,Energy Recovery,Regenerative braking energy to batteries,Electrical Energy,Unidirectional,85%,95-30-00-006-KPI-003,Active
+ATA-24,Electrical Power,ATA-49,APU,Energy Sharing,APU power distribution optimization,Electrical Energy,Bidirectional,95%,95-30-00-006-KPI-004,Active
+ATA-28,Fuel System (H₂),ATA-70,Propulsion System,Material Loop,H₂ boil-off recovery and recompression,Hydrogen,Circular,92%,95-30-00-006-KPI-005,Active
+ATA-28,Fuel System (H₂),ATA-21,Environmental Control,Energy Recovery,Cryogenic cooling for air conditioning,Thermal Energy,Unidirectional,70%,95-30-00-006-KPI-006,Design
+ATA-29,Hydraulic Power,ATA-29,Accumulator System,Energy Recovery,Pressure recovery in hydraulic loops,Hydraulic Energy,Circular,80%,95-30-00-006-KPI-007,Active
+ATA-29,Hydraulic Power,ATA-32,Landing Gear,Energy Recovery,Landing gear retraction energy recovery,Hydraulic Energy,Unidirectional,65%,95-30-00-006-KPI-008,Design
+ATA-36,Pneumatic,ATA-21,Environmental Control,Energy Sharing,Bleed air optimization with ECS,Pneumatic Energy,Bidirectional,85%,95-30-00-006-KPI-009,Active
+ATA-36,Pneumatic,ATA-70,Propulsion System,Material Loop,Pneumatic system heat recovery,Thermal Energy,Unidirectional,60%,95-30-00-006-KPI-010,Design
+ATA-38,Water/Waste,ATA-38,Water Treatment,Material Loop,Grey water treatment and reuse,Water,Circular,88%,95-30-00-006-KPI-011,Active
+ATA-38,Water/Waste,ATA-21,Environmental Control,Material Loop,Fuel cell water output to potable water,Water,Unidirectional,95%,95-30-00-006-KPI-012,Active
+ATA-49,APU,ATA-24,Electrical Power,Energy Sharing,APU as backup power source,Electrical Energy,Bidirectional,90%,95-30-00-006-KPI-013,Active
+ATA-49,APU,ATA-21,Environmental Control,Energy Recovery,APU waste heat recovery,Thermal Energy,Unidirectional,68%,95-30-00-006-KPI-014,Design
+ATA-70,Propulsion System,ATA-21,Environmental Control,Energy Recovery,Engine waste heat for cabin heating,Thermal Energy,Unidirectional,72%,95-30-00-006-KPI-015,Active
+ATA-70,Propulsion System,ATA-80,CO₂ Battery,Material Loop,Exhaust CO₂ capture for battery,CO₂,Unidirectional,98%,95-30-00-006-KPI-016,Active
+ATA-70,Propulsion System,ATA-28,Fuel System,Material Loop,Fuel cell water byproduct collection,Water,Unidirectional,99%,95-30-00-006-KPI-017,Active
+ATA-80,Energy Storage (Battery),ATA-24,Electrical Power,Energy Recovery,Battery charge optimization and recovery,Electrical Energy,Bidirectional,92%,95-30-00-006-KPI-018,Active
+ATA-80,CO₂ Battery,ATA-95,Digital Product Passport,Data Loop,CO₂ capture monitoring and reporting,Data,Unidirectional,100%,95-30-00-006-KPI-019,Active
+ATA-80,Energy Storage,ATA-95,Digital Product Passport,Data Loop,Battery health and lifecycle tracking,Data,Bidirectional,100%,95-30-00-006-KPI-020,Active
+ATA-21,Environmental Control,ATA-95,Digital Product Passport,Data Loop,Filter lifecycle and air quality data,Data,Unidirectional,100%,95-30-00-006-KPI-021,Active
+ATA-28,Fuel System,ATA-95,Digital Product Passport,Data Loop,H₂ consumption and efficiency tracking,Data,Unidirectional,100%,95-30-00-006-KPI-022,Active
+ATA-29,Hydraulic Power,ATA-95,Digital Product Passport,Data Loop,Fluid condition and contamination data,Data,Unidirectional,100%,95-30-00-006-KPI-023,Active
+ATA-36,Pneumatic,ATA-95,Digital Product Passport,Data Loop,Bleed air usage and efficiency data,Data,Unidirectional,100%,95-30-00-006-KPI-024,Active
+ATA-38,Water/Waste,ATA-95,Digital Product Passport,Data Loop,Water quality and treatment efficiency,Data,Unidirectional,100%,95-30-00-006-KPI-025,Active

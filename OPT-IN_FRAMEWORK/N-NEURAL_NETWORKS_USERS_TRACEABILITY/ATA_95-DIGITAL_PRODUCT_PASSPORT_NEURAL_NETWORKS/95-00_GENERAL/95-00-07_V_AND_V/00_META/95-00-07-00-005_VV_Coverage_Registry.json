@@ -1,0 +1,321 @@
+{
+  "vv_coverage_registry": {
+    "metadata": {
+      "version": "1.0",
+      "last_updated": "2025-11-17",
+      "owner": "AMPEL360 V&V Team",
+      "description": "Registry of V&V coverage across all NN systems"
+    },
+    "requirements_coverage": {
+      "total_requirements": 46,
+      "covered_by_tests": 20,
+      "coverage_percentage": 43.5,
+      "uncovered_requirements": [
+        "95-00-03-001-003",
+        "95-00-03-001-004",
+        "95-00-03-002-003",
+        "95-00-03-002-004"
+      ],
+      "by_category": {
+        "functional": {
+          "total": 10,
+          "covered": 6,
+          "percentage": 60
+        },
+        "non_functional": {
+          "total": 8,
+          "covered": 4,
+          "percentage": 50
+        },
+        "safety": {
+          "total": 12,
+          "covered": 5,
+          "percentage": 41.7
+        },
+        "regulatory": {
+          "total": 6,
+          "covered": 2,
+          "percentage": 33.3
+        },
+        "data": {
+          "total": 6,
+          "covered": 2,
+          "percentage": 33.3
+        },
+        "toolchain": {
+          "total": 4,
+          "covered": 1,
+          "percentage": 25
+        }
+      }
+    },
+    "code_coverage": {
+      "by_module": {
+        "data_preprocessing": {
+          "line_coverage": 85.2,
+          "branch_coverage": 78.5,
+          "function_coverage": 92.0,
+          "target": 90.0,
+          "status": "In Progress"
+        },
+        "model_inference": {
+          "line_coverage": 92.5,
+          "branch_coverage": 88.3,
+          "function_coverage": 95.0,
+          "target": 95.0,
+          "status": "Met"
+        },
+        "safety_monitors": {
+          "line_coverage": 98.5,
+          "branch_coverage": 96.2,
+          "function_coverage": 100.0,
+          "target": 95.0,
+          "status": "Met"
+        },
+        "integration_layer": {
+          "line_coverage": 75.0,
+          "branch_coverage": 68.5,
+          "function_coverage": 80.0,
+          "target": 90.0,
+          "status": "Below Target"
+        }
+      },
+      "overall": {
+        "line_coverage": 87.8,
+        "branch_coverage": 82.9,
+        "function_coverage": 91.8,
+        "target": 90.0,
+        "status": "Approaching Target"
+      }
+    },
+    "test_level_coverage": {
+      "unit_tests": {
+        "total_planned": 250,
+        "implemented": 180,
+        "passed": 175,
+        "failed": 3,
+        "blocked": 2,
+        "coverage_percentage": 72.0
+      },
+      "component_tests": {
+        "total_planned": 100,
+        "implemented": 60,
+        "passed": 55,
+        "failed": 3,
+        "blocked": 2,
+        "coverage_percentage": 60.0
+      },
+      "integration_tests": {
+        "total_planned": 80,
+        "implemented": 30,
+        "passed": 25,
+        "failed": 3,
+        "blocked": 2,
+        "coverage_percentage": 37.5
+      },
+      "system_tests": {
+        "total_planned": 50,
+        "implemented": 10,
+        "passed": 8,
+        "failed": 1,
+        "blocked": 1,
+        "coverage_percentage": 20.0
+      },
+      "acceptance_tests": {
+        "total_planned": 30,
+        "implemented": 0,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0,
+        "coverage_percentage": 0.0
+      }
+    },
+    "scenario_coverage": {
+      "nominal_scenarios": {
+        "total": 25,
+        "covered": 18,
+        "percentage": 72.0
+      },
+      "degraded_mode_scenarios": {
+        "total": 15,
+        "covered": 6,
+        "percentage": 40.0
+      },
+      "emergency_scenarios": {
+        "total": 10,
+        "covered": 3,
+        "percentage": 30.0
+      },
+      "edge_case_scenarios": {
+        "total": 20,
+        "covered": 5,
+        "percentage": 25.0
+      }
+    },
+    "safety_coverage": {
+      "hazards_identified": 35,
+      "hazards_with_tests": 15,
+      "percentage": 42.9,
+      "by_severity": {
+        "catastrophic": {
+          "total": 5,
+          "covered": 3,
+          "percentage": 60.0
+        },
+        "hazardous": {
+          "total": 10,
+          "covered": 6,
+          "percentage": 60.0
+        },
+        "major": {
+          "total": 12,
+          "covered": 4,
+          "percentage": 33.3
+        },
+        "minor": {
+          "total": 8,
+          "covered": 2,
+          "percentage": 25.0
+        }
+      }
+    },
+    "model_coverage": {
+      "models_in_system": 8,
+      "models_tested": {
+        "functional_tests": 6,
+        "performance_tests": 5,
+        "robustness_tests": 4,
+        "bias_tests": 3,
+        "explainability_tests": 3
+      },
+      "coverage_by_test_type": {
+        "functional": 75.0,
+        "performance": 62.5,
+        "robustness": 50.0,
+        "bias": 37.5,
+        "explainability": 37.5
+      }
+    },
+    "data_coverage": {
+      "datasets_validated": {
+        "training_data": true,
+        "validation_data": true,
+        "test_data": true,
+        "operational_data": false
+      },
+      "data_quality_checks": {
+        "completeness": true,
+        "accuracy": true,
+        "consistency": true,
+        "timeliness": false,
+        "validity": true
+      },
+      "drift_monitoring": {
+        "enabled": true,
+        "frequency": "per_flight",
+        "alerts_configured": true
+      }
+    },
+    "interface_coverage": {
+      "interfaces_identified": 20,
+      "interfaces_tested": 8,
+      "percentage": 40.0,
+      "by_interface_type": {
+        "sensor_interfaces": {
+          "total": 8,
+          "tested": 4,
+          "percentage": 50.0
+        },
+        "actuator_interfaces": {
+          "total": 5,
+          "tested": 2,
+          "percentage": 40.0
+        },
+        "system_interfaces": {
+          "total": 7,
+          "tested": 2,
+          "percentage": 28.6
+        }
+      }
+    },
+    "certification_coverage": {
+      "regulatory_requirements": {
+        "total": 25,
+        "evidence_collected": 8,
+        "percentage": 32.0
+      },
+      "standards_compliance": {
+        "DO-178C": {
+          "objectives_total": 71,
+          "objectives_met": 25,
+          "percentage": 35.2
+        },
+        "ISO_21448": {
+          "requirements_total": 30,
+          "requirements_met": 10,
+          "percentage": 33.3
+        },
+        "EU_AI_Act": {
+          "requirements_total": 15,
+          "requirements_met": 5,
+          "percentage": 33.3
+        }
+      }
+    },
+    "coverage_gaps": [
+      {
+        "area": "Acceptance Testing",
+        "gap": "No acceptance tests implemented yet",
+        "priority": "High",
+        "planned_resolution": "Q2 2026"
+      },
+      {
+        "area": "Edge Case Scenarios",
+        "gap": "Only 25% of edge cases covered",
+        "priority": "High",
+        "planned_resolution": "Q1 2026"
+      },
+      {
+        "area": "Integration Testing",
+        "gap": "62.5% of integration tests not implemented",
+        "priority": "Medium",
+        "planned_resolution": "Q1-Q2 2026"
+      },
+      {
+        "area": "Interface Testing",
+        "gap": "60% of interfaces not tested",
+        "priority": "Medium",
+        "planned_resolution": "Q2 2026"
+      },
+      {
+        "area": "Certification Evidence",
+        "gap": "68% of regulatory requirements without evidence",
+        "priority": "High",
+        "planned_resolution": "Ongoing through Q4 2026"
+      }
+    ],
+    "coverage_trends": {
+      "last_3_months": [
+        {
+          "month": "2025-09",
+          "overall_coverage": 30.5
+        },
+        {
+          "month": "2025-10",
+          "overall_coverage": 35.8
+        },
+        {
+          "month": "2025-11",
+          "overall_coverage": 43.5
+        }
+      ],
+      "projected": {
+        "2025-12": 48.0,
+        "2026-Q1": 60.0,
+        "2026-Q2": 75.0,
+        "2026-Q3": 85.0,
+        "2026-Q4": 95.0
+      }
+    }
+  }
+}

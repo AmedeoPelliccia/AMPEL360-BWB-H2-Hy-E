@@ -1,0 +1,13 @@
+Category,Item,Status,Owner,Target_Date,Notes
+Model,Model Freeze Complete,COMPLETE,Model Owner,2025-10-15,Baseline BL-FCS-2.1.0
+Model,Performance Validated,COMPLETE,V&V Lead,2025-10-20,All requirements met
+Model,Safety Approved,COMPLETE,Safety Engineer,2025-10-18,FMEA complete
+Data,Data Pipelines Operational,IN_PROGRESS,Data Engineering,2025-11-30,85% complete
+Data,Data Quality Validated,IN_PROGRESS,QA Lead,2025-11-30,Quality score 0.95
+Infrastructure,MLOps Deployed,COMPLETE,MLOps Team,2025-11-01,Production cluster ready
+Infrastructure,Monitoring Active,COMPLETE,Monitoring Team,2025-11-05,Grafana dashboards live
+Hardware,Target Qualified,IN_PROGRESS,HW Engineering,2025-12-15,Environmental testing ongoing
+Hardware,Performance Benchmarked,COMPLETE,Test Engineer,2025-11-10,Meets specs
+Documentation,Technical Docs Complete,IN_PROGRESS,Documentation Lead,2025-12-01,90% complete
+Documentation,Training Materials Ready,PLANNED,Training Lead,2025-12-15,Not started
+Certification,Evidence Package Prep,IN_PROGRESS,Cert Manager,2026-01-15,60% complete

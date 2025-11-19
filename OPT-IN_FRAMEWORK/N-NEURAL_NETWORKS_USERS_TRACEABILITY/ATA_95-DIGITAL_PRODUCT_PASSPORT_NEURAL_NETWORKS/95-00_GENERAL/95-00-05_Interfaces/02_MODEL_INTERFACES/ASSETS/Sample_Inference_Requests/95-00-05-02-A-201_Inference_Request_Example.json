@@ -1,0 +1,16 @@
+{
+  "model_id": "h2_predictor_v2.1",
+  "request_id": "req_12345",
+  "timestamp": "2025-11-17T20:51:14Z",
+  "inputs": {
+    "flight_phase": "cruise",
+    "altitude_m": 10668,
+    "airspeed_kt": 450,
+    "temperature_c": -45,
+    "weight_kg": 75000
+  },
+  "config": {
+    "explain": true,
+    "confidence_threshold": 0.8
+  }
+}

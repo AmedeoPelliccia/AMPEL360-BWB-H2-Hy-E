@@ -1,0 +1,22 @@
+Requirement_ID,Requirement_Description,Test_Case_ID,Test_Type,Test_Level,Test_Status,Evidence_ID,Evidence_Type,Verification_Status,Validation_Status,Comments
+95-00-03-001-001,NN model shall achieve 99.99% accuracy,L1-COMP-MODEL-001,MODL-ACC,L1-COMP,Planned,EVID-TST-PREDICT-001,Test Report,Not Started,Not Started,Accuracy testing planned for Q2 2026
+95-00-03-001-002,Data pipeline shall process 100 samples/sec,L2-INTG-PIPE-001,PERF-THR,L2-INTG,Planned,EVID-TST-PIPELINE-001,Test Report,Not Started,Not Started,Performance benchmarking required
+95-00-03-002-001,System latency shall be <100ms,L3-SYS-PERF-001,PERF-LAT,L3-SYS,Planned,EVID-TST-SYSTEM-001,Test Report,Not Started,Not Started,End-to-end latency validation
+95-00-03-002-002,System shall operate in ODD conditions,L3-SYS-SCEN-001,FUNC-NOM,L3-SYS,Planned,EVID-TST-SCENARIO-001,Test Report,Not Started,Not Started,Scenario-based testing
+95-00-03-003-001,NN shall detect adversarial inputs,L1-COMP-MODEL-002,RBST-ADV,L1-COMP,Planned,EVID-TST-ROBUST-001,Test Report,Not Started,Not Started,Adversarial testing required
+95-00-03-003-002,Safety monitor shall activate within 50ms,L2-INTG-MON-001,SFTY-MON,L2-INTG,Planned,EVID-TST-SAFETY-001,Test Report,Not Started,Not Started,Safety monitor validation
+95-00-03-004-001,System shall comply with EU AI Act,REQ-VER-COM-001,Compliance Check,Requirements,Planned,EVID-ANAL-COMP-001,Compliance Report,Not Started,Not Started,Regulatory compliance verification
+95-00-03-004-002,System shall meet EASA AMC 20-170,REQ-VER-COM-002,Compliance Check,Requirements,Planned,EVID-ANAL-COMP-002,Compliance Report,Not Started,Not Started,Aviation AI standards
+95-00-03-005-001,Data quality shall exceed 95% completeness,L0-UNIT-DATA-001,DATA-QUA,L0-UNIT,Planned,EVID-TST-DATA-001,Test Report,Not Started,Not Started,Data quality validation
+95-00-03-005-002,Label accuracy shall be >99%,L0-UNIT-DATA-002,DATA-LAB,L0-UNIT,Planned,EVID-TST-LABEL-001,Test Report,Not Started,Not Started,Label quality assessment
+95-00-03-005-003,Data drift detection shall trigger at p<0.05,L1-COMP-PIPE-002,DATA-DRF,L1-COMP,Planned,EVID-TST-DRIFT-001,Test Report,Not Started,Not Started,Statistical drift monitoring
+95-00-03-006-001,Model shall be explainable via SHAP,L1-COMP-MODEL-003,MODL-EXP,L1-COMP,Planned,EVID-TST-EXPLAI-001,Test Report,Not Started,Not Started,Explainability assessment
+95-00-03-006-002,Feature importance shall be documented,L1-COMP-MODEL-004,MODL-EXP,L1-COMP,Planned,EVID-ANAL-FEAT-001,Analysis Report,Not Started,Not Started,Feature analysis
+95-00-03-007-001,Fallback mechanism shall activate on failure,L2-INTG-FBK-001,SFTY-FBK,L2-INTG,Planned,EVID-TST-FALLBK-001,Test Report,Not Started,Not Started,Failover testing
+95-00-03-007-002,System shall degrade gracefully,L3-SYS-SFTY-001,SFTY-HAZ,L3-SYS,Planned,EVID-TST-DEGRADE-001,Test Report,Not Started,Not Started,Graceful degradation validation
+95-00-03-008-001,CI/CD pipeline shall run all tests,L4-ACPT-FUNC-001,Automation Check,L4-ACPT,Planned,EVID-TST-CICD-001,Test Report,Not Started,Not Started,Pipeline integration
+95-00-03-008-002,Test coverage shall be >90%,CODE-VER-COV-001,Coverage Analysis,Code,Planned,EVID-ANAL-COV-001,Coverage Report,Not Started,Not Started,Code coverage analysis
+95-00-03-009-001,Ground test shall validate all functions,ENV-GND-001,FUNC-NOM,L3-SYS,Planned,EVID-TST-GROUND-001,Test Report,Not Started,Not Started,Ground test campaign
+95-00-03-009-002,HIL test shall validate real-time performance,ENV-HIL-001,PERF-LAT,L2-INTG,Planned,EVID-TST-HIL-001,Test Report,Not Started,Not Started,Hardware-in-loop testing
+95-00-03-010-001,Flight test shall validate operational use,ENV-FLT-001,FUNC-OPR,L4-ACPT,Planned,EVID-TST-FLIGHT-001,Test Report,Not Started,Not Started,Flight test validation
+95-00-03-010-002,Flight data shall confirm performance,ENV-FLT-002,PERF-VAL,L4-ACPT,Planned,EVID-TST-FLTDAT-001,Test Report,Not Started,Not Started,Operational performance

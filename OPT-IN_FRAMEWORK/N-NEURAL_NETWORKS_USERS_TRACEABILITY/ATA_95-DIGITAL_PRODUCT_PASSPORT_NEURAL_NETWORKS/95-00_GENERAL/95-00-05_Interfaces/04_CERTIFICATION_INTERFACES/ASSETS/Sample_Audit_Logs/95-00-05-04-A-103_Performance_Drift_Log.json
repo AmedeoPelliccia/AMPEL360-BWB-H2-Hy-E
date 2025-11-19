@@ -1,0 +1,10 @@
+{
+  "event": "performance_drift_detected",
+  "timestamp": "2025-11-17T20:51:14Z",
+  "model_id": "h2_predictor_v2.1",
+  "metric": "accuracy",
+  "baseline": 0.94,
+  "current": 0.89,
+  "threshold": 0.90,
+  "action": "alert_triggered"
+}

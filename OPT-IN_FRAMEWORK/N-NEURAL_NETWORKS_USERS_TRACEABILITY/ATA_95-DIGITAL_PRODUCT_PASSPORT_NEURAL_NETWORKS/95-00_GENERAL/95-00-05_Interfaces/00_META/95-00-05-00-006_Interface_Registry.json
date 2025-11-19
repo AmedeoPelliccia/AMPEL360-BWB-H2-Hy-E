@@ -1,0 +1,153 @@
+{
+  "registry_version": "1.0.0",
+  "last_updated": "2025-11-17",
+  "interfaces": [
+    {
+      "id": "95-00-05-03-005",
+      "name": "Operations Data Feed to DPP",
+      "type": "data_interface",
+      "source": "ATA_02",
+      "target": "ATA_95",
+      "protocol": "ARINC_664",
+      "data_rate": "10Hz",
+      "criticality": "medium",
+      "status": "active",
+      "owner": "systems_engineering",
+      "specification": "01_DATA_INTERFACES/95-00-05-01-006_Interface_Control_Document_ICD.md"
+    },
+    {
+      "id": "95-00-05-03-006",
+      "name": "H2 Fuel System Interface",
+      "type": "data_interface",
+      "source": "ATA_28",
+      "target": "ATA_95",
+      "protocol": "CAN_Bus",
+      "data_rate": "50Hz",
+      "criticality": "high",
+      "status": "active",
+      "owner": "fuel_systems",
+      "specification": "03_SYSTEM_INTERFACES/95-00-05-03-006_ATA_28_Fuel_System_IF.md"
+    },
+    {
+      "id": "95-00-05-03-007",
+      "name": "Recording Systems Interface",
+      "type": "data_interface",
+      "source": "ATA_31",
+      "target": "ATA_95",
+      "protocol": "ARINC_717",
+      "data_rate": "1Hz",
+      "criticality": "high",
+      "status": "active",
+      "owner": "data_engineering",
+      "specification": "03_SYSTEM_INTERFACES/95-00-05-03-007_ATA_31_Recording_IF.md"
+    },
+    {
+      "id": "95-00-05-03-008",
+      "name": "IMA Integration Interface",
+      "type": "system_interface",
+      "source": "ATA_42",
+      "target": "ATA_95",
+      "protocol": "ARINC_664_AFDX",
+      "data_rate": "100Mbps",
+      "criticality": "critical",
+      "status": "active",
+      "owner": "avionics",
+      "specification": "03_SYSTEM_INTERFACES/95-00-05-03-008_ATA_42_IMA_IF.md"
+    },
+    {
+      "id": "95-28-IF-001",
+      "name": "H2 Tank Level Prediction Model",
+      "type": "model_interface",
+      "source": "ATA_95",
+      "target": "ATA_28",
+      "protocol": "REST_API",
+      "latency": "100ms",
+      "criticality": "critical",
+      "status": "in_development",
+      "owner": "ai_team",
+      "specification": "02_MODEL_INTERFACES/95-00-05-02-006_Model_API_Specification.yaml"
+    },
+    {
+      "id": "95-42-IF-001",
+      "name": "ARINC 664 AFDX Mapping",
+      "type": "system_interface",
+      "source": "ATA_95",
+      "target": "ATA_42",
+      "protocol": "ARINC_664_AFDX",
+      "data_rate": "100Mbps",
+      "criticality": "critical",
+      "dal_level": "A",
+      "status": "active",
+      "owner": "avionics",
+      "specification": "01_DATA_INTERFACES/95-00-05-01-007_ARINC_664_AFDX_Mapping.md"
+    },
+    {
+      "id": "95-96-IF-002",
+      "name": "Data Lineage Tracking",
+      "type": "data_interface",
+      "source": "ATA_96",
+      "target": "ATA_95",
+      "protocol": "GraphQL",
+      "criticality": "critical",
+      "status": "active",
+      "owner": "ml_ops",
+      "specification": "01_DATA_INTERFACES/95-00-05-01-005_Data_Lineage_Map.md"
+    },
+    {
+      "id": "95-97-IF-002",
+      "name": "Model Deployment API",
+      "type": "model_interface",
+      "source": "ATA_97",
+      "target": "ATA_95",
+      "protocol": "REST_API",
+      "criticality": "critical",
+      "status": "active",
+      "owner": "ml_ops",
+      "specification": "02_MODEL_INTERFACES/95-00-05-02-006_Model_API_Specification.yaml"
+    },
+    {
+      "id": "95-98-IF-003",
+      "name": "Model Drift Detection",
+      "type": "model_interface",
+      "source": "ATA_98",
+      "target": "ATA_95",
+      "protocol": "gRPC",
+      "criticality": "critical",
+      "status": "in_development",
+      "owner": "ai_ops",
+      "specification": "02_MODEL_INTERFACES/95-00-05-02-005_Model_to_Model_Interfaces.md"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "ARINC_664_AFDX",
+      "standard": "ARINC 664 Part 7",
+      "description": "Avionics Full-Duplex Switched Ethernet"
+    },
+    {
+      "name": "ARINC_717",
+      "standard": "ARINC 717",
+      "description": "Flight Data Recorder Interface"
+    },
+    {
+      "name": "CAN_Bus",
+      "standard": "ISO 11898",
+      "description": "Controller Area Network"
+    },
+    {
+      "name": "REST_API",
+      "standard": "HTTP/HTTPS",
+      "description": "RESTful API over HTTPS"
+    },
+    {
+      "name": "GraphQL",
+      "standard": "GraphQL Spec",
+      "description": "Query language for APIs"
+    },
+    {
+      "name": "gRPC",
+      "standard": "gRPC Protocol",
+      "description": "High-performance RPC framework"
+    }
+  ]
+}
