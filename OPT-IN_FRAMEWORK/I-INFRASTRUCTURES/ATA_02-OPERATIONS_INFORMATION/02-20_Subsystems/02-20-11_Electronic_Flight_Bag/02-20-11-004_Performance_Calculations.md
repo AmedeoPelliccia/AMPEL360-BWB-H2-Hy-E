@@ -361,7 +361,4 @@ All failures are logged to:
 
 ```
 
-`
 
-o directamente las **ASSETS**/diagramas correspondientes.
-```
