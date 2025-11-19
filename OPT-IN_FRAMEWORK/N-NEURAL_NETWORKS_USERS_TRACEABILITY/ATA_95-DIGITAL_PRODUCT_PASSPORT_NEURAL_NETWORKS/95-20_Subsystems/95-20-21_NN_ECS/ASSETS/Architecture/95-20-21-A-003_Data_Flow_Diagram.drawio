@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1200"
+  height="700"
+  viewBox="0 0 1200 700"
+  xmlns="http://www.w3.org/2000/svg"
+  font-family="Segoe UI, Roboto, Arial, sans-serif"
+>
+  <title>95-20-21-A-002 — ECS NN System Architecture</title>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="700" fill="#0b0c10" />
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="22" fill="#ffffff">
+    95-20-21 NN ECS – System Architecture
+  </text>
+  <text x="600" y="65" text-anchor="middle" font-size="14" fill="#c0c0c0">
+    AMPEL360 BWB H₂ Hy-E · ATA 21 / ATA 95 Integration
+  </text>
+
+  <!-- ATA 21 Container -->
+  <rect x="40" y="110" width="360" height="430" rx="16" ry="16"
+        fill="#111827" stroke="#4b5563" stroke-width="2"/>
+  <text x="220" y="140" text-anchor="middle" font-size="16" fill="#e5e7eb">
+    ATA 21 – Environmental Control System
+  </text>
+
+  <!-- ECS Sensors -->
+  <rect x="70" y="170" width="300" height="80" rx="10" ry="10"
+        fill="#1f2933" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="220" y="195" text-anchor="middle" font-size="14" fill="#f9fafb">
+    ECS Sensors
+  </text>
+  <text x="220" y="215" text-anchor="middle" font-size="11" fill="#d1d5db">
+    T, RH, CO₂, VOC, PM, P, Airflow, External T, Passenger Load
+  </text>
+
+  <!-- ECS Controller -->
+  <rect x="70" y="280" width="300" height="90" rx="10" ry="10"
+        fill="#111827" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="220" y="305" text-anchor="middle" font-size="14" fill="#f9fafb">
+    Classical ECS Controller
+  </text>
+  <text x="220" y="325" text-anchor="middle" font-size="11" fill="#d1d5db">
+    Schedules · PID · Safety Limits · Mode Logic
+  </text>
+
+  <!-- ECS Actuators -->
+  <rect x="70" y="410" width="300" height="80" rx="10" ry="10"
+        fill="#1f2933" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="220" y="435" text-anchor="middle" font-size="14" fill="#f9fafb">
+    ECS Actuators
+  </text>
+  <text x="220" y="455" text-anchor="middle" font-size="11" fill="#d1d5db">
+    Valves · Packs · Fans · Mixers · CO₂ Scrubbers
+  </text>
+
+  <!-- IMA Container -->
+  <rect x="430" y="110" width="440" height="430" rx="16" ry="16"
+        fill="#020617" stroke="#4b5563" stroke-width="2"/>
+  <text x="650" y="140" text-anchor="middle" font-size="16" fill="#e5e7eb">
+    IMA Platform – ARINC 653
+  </text>
+
+  <!-- NN ECS Partition -->
+  <rect x="450" y="170" width="400" height="350" rx="14" ry="14"
+        fill="#030712" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="650" y="195" text-anchor="middle" font-size="14" fill="#f9fafb">
+    95-20-21 NN ECS Partition
+  </text>
+  <text x="650" y="215" text-anchor="middle" font-size="11" fill="#d1d5db">
+    ONNX Inference · Health Monitoring · Fallback Hooks
+  </text>
+
+  <!-- Individual NN Blocks -->
+  <!-- Cabin Temp Predictor -->
+  <rect x="470" y="240" width="180" height="70" rx="10" ry="10"
+        fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="560" y="262" text-anchor="middle" font-size="12" fill="#f9fafb">
+    95-20-21-A-101
+  </text>
+  <text x="560" y="280" text-anchor="middle" font-size="11" fill="#d1d5db">
+    Cabin Temp Predictor
+  </text>
+
+  <!-- Air Quality Monitor -->
+  <rect x="650" y="240" width="180" height="70" rx="10" ry="10"
+        fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="740" y="262" text-anchor="middle" font-size="12" fill="#f9fafb">
+    95-20-21-A-102
+  </text>
+  <text x="740" y="280" text-anchor="middle" font-size="11" fill="#d1d5db">
+    Air Quality Monitor
+  </text>
+
+  <!-- HVAC Optimizer -->
+  <rect x="470" y="330" width="360" height="70" rx="10" ry="10"
+        fill="#111827" stroke="#f97316" stroke-width="1.6"/>
+  <text x="650" y="352" text-anchor="middle" font-size="12" fill="#f9fafb">
+    95-20-21-A-103
+  </text>
+  <text x="650" y="370" text-anchor="middle" font-size="11" fill="#fbbf24">
+    HVAC Optimizer – Setpoints & Power Recommendations
+  </text>
+
+  <!-- Humidity Management -->
+  <rect x="470" y="420" width="180" height="70" rx="10" ry="10"
+        fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="560" y="442" text-anchor="middle" font-size="12" fill="#f9fafb">
+    95-20-21-A-105
+  </text>
+  <text x="560" y="460" text-anchor="middle" font-size="11" fill="#d1d5db">
+    Humidity Management
+  </text>
+
+  <!-- CO2 Scrubbing Optimizer -->
+  <rect x="650" y="420" width="180" height="70" rx="10" ry="10"
+        fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="740" y="442" text-anchor="middle" font-size="12" fill="#f9fafb">
+    95-20-21-A-107
+  </text>
+  <text x="740" y="460" text-anchor="middle" font-size="11" fill="#d1d5db">
+    CO₂ Scrubbing Optimizer
+  </text>
+
+  <!-- Monitoring Container -->
+  <rect x="890" y="110" width="270" height="430" rx="16" ry="16"
+        fill="#111827" stroke="#4b5563" stroke-width="2"/>
+  <text x="1025" y="140" text-anchor="middle" font-size="16" fill="#e5e7eb">
+    ATA 31 / ATA 45
+  </text>
+  <text x="1025" y="160" text-anchor="middle" font-size="13" fill="#d1d5db">
+    Monitoring · Recording · Maintenance
+  </text>
+
+  <!-- Monitoring Block -->
+  <rect x="910" y="190" width="230" height="110" rx="10" ry="10"
+        fill="#1f2933" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="1025" y="215" text-anchor="middle" font-size="13" fill="#f9fafb">
+    ECS NN Logs & Metrics
+  </text>
+  <text x="1025" y="235" text-anchor="middle" font-size="11" fill="#d1d5db">
+    Predictions · Alerts · Setpoints · Health Status
+  </text>
+  <text x="1025" y="255" text-anchor="middle" font-size="11" fill="#9ca3af">
+    Used for trend analysis & maintenance
+  </text>
+
+  <!-- Arrows: Sensors -> NN Partition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#e5e7eb" />
+    </marker>
+    <marker id="arrow-soft" markerWidth="10" markerHeight="10" refX="8" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#9ca3af" />
+    </marker>
+  </defs>
+
+  <!-- Sensors to NN Partition -->
+  <line x1="370" y1="210" x2="450" y2="210"
+        stroke="#e5e7eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="410" y="200" text-anchor="middle" font-size="11" fill="#e5e7eb">
+    Time-series features
+  </text>
+
+  <!-- NN Partition to ECS Controller (Recommendations) -->
+  <line x1="470" y1="365" x2="370" y2="365"
+        stroke="#f97316" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="420" y="355" text-anchor="middle" font-size="11" fill="#fbbf24">
+    Optimized setpoints & advisories
+  </text>
+
+  <!-- ECS Controller to Actuators -->
+  <line x1="220" y1="370" x2="220" y2="410"
+        stroke="#e5e7eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="230" y="392" font-size="11" fill="#e5e7eb">
+    Commands
+  </text>
+
+  <!-- NN ECS to Monitoring -->
+  <line x1="850" y1="305" x2="890" y2="245"
+        stroke="#9ca3af" stroke-width="1.8" marker-end="url(#arrow-soft)"/>
+  <line x1="850" y1="345" x2="890" y2="245"
+        stroke="#9ca3af" stroke-width="1.8" marker-end="url(#arrow-soft)"/>
+  <line x1="850" y1="445" x2="890" y2="245"
+        stroke="#9ca3af" stroke-width="1.8" marker-end="url(#arrow-soft)"/>
+  <text x="900" y="220" font-size="11" fill="#d1d5db">
+    Logs, metrics, alerts
+  </text>
+
+  <!-- Legend -->
+  <rect x="860" y="520" width="290" height="130" rx="12" ry="12"
+        fill="#020617" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="1005" y="545" text-anchor="middle" font-size="13" fill="#e5e7eb">
+    Legend
+  </text>
+  <rect x="880" y="560" width="18" height="10" fill="#111827" stroke="#9ca3af" stroke-width="1.2"/>
+  <text x="905" y="568" font-size="11" fill="#d1d5db">NN Component (ONNX)</text>
+
+  <rect x="880" y="582" width="18" height="10" fill="#111827" stroke="#f97316" stroke-width="1.6"/>
+  <text x="905" y="590" font-size="11" fill="#fbbf24">HVAC Optimizer (advisory)</text>
+
+  <line x1="880" y1="608" x2="900" y2="608"
+        stroke="#e5e7eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="905" y="612" font-size="11" fill="#e5e7eb">Control / data flow</text>
+
+  <line x1="880" y1="630" x2="900" y2="630"
+        stroke="#9ca3af" stroke-width="1.8" marker-end="url(#arrow-soft)"/>
+  <text x="905" y="634" font-size="11" fill="#9ca3af">Monitoring / logging</text>
+
+  <!-- Document Control Footer -->
+  <text x="20" y="680" font-size="10" fill="#6b7280">
+    95-20-21-A-002_ECS_NN_System_Architecture.svg · Version 1.0 · Generated with AI assistance (GitHub Copilot / ChatGPT), prompted by Amedeo Pelliccia.
+  </text>
+</svg>
