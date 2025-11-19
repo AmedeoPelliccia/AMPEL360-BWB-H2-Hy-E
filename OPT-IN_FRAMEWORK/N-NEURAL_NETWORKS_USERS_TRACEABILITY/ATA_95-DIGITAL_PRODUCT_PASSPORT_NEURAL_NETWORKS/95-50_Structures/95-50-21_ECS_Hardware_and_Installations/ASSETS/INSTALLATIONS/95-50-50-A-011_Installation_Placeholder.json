@@ -1,0 +1,13 @@
+{
+  "installation_id": "95-50-XX-A-011",
+  "name": "Installation Placeholder",
+  "version": "1.0",
+  "status": "Template",
+  "location": {
+    "bay": "Equipment Bay",
+    "station": "STA XXX",
+    "waterline": "WL XXX",
+    "buttline": "BL XXX"
+  },
+  "note": "This is a placeholder file. Replace with actual installation data."
+}
