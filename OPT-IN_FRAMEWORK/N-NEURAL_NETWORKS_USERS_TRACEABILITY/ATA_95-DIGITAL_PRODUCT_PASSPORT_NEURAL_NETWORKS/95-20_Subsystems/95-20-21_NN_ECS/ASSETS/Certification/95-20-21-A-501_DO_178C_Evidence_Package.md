@@ -1,82 +1,105 @@
-# 95-20-21-A-501 — DO-178C Evidence Package
+# **95-20-21-A-501 — DO-178C Evidence Package**
 
-**Document ID**: 95-20-21-A-501  
-**Subsystem**: 95-20-21 NN_ECS  
-**Type**: Certification Evidence  
+**Document ID**: 95-20-21-A-501
+**Subsystem**: 95-20-21 NN_ECS
+**Type**: Certification Evidence
 **Status**: PLACEHOLDER
 
-## Purpose
+---
 
-This document contains the complete DO-178C Level C certification evidence package for the ECS Neural Network subsystem.
+## **Purpose**
 
-## Contents
+This document contains the complete **DO-178C Level C certification evidence package** for the ECS Neural Network subsystem.
 
-### 1. Plan for Software Aspects of Certification (PSAC)
+---
 
-[TODO: Complete PSAC documentation]
+# **Contents (with Hyperlinks)**
 
-### 2. Software Configuration Management Plan (SCMP)
+### **1. Plan for Software Aspects of Certification (PSAC)**
 
-[TODO: Complete SCMP documentation]
+➡️ [`95-20-21-PSAC.md`](./95-20-21-PSAC.md)
 
-### 3. Software Quality Assurance Plan (SQAP)
+### **2. Software Configuration Management Plan (SCMP)**
 
-[TODO: Complete SQAP documentation]
+➡️ [`95-20-21-SCMP.md`](./95-20-21-SCMP.md)
 
-### 4. Software Verification Plan (SVP)
+### **3. Software Quality Assurance Plan (SQAP)**
 
-[TODO: Complete SVP documentation]
+➡️ [`95-20-21-SQAP.md`](./95-20-21-SQAP.md)
 
-### 5. Software Development Plan (SDP)
+### **4. Software Verification Plan (SVP)**
 
-[TODO: Complete SDP documentation]
+➡️ [`95-20-21-SVP.md`](./95-20-21-SVP.md)
 
-### 6. Software Requirements Standards (SRS)
+### **5. Software Development Plan (SDP)**
 
-[TODO: Complete SRS documentation]
+➡️ [`95-20-21-SDP.md`](./95-20-21-SDP.md)
 
-### 7. Software Design Standards (SDS)
+### **6. Software Requirements Specification (SRS)**
 
-[TODO: Complete SDS documentation]
+➡️ [`95-20-21-SRS.md`](./95-20-21-SRS.md)
 
-### 8. Software Code Standards (SCS)
+### **7. Software Design Standards (SDS)**
 
-[TODO: Complete SCS documentation]
+➡️ [`95-20-21-SDS.md`](./95-20-21-SDS.md)
 
-### 9. Verification Results
+### **8. Software Code Standards (SCS)**
 
-[TODO: Add verification results and coverage reports]
+➡️ [`95-20-21-SCS.md`](./95-20-21-SCS.md)
 
-### 10. Configuration Management Records
+### **9. Verification Results & Evidence**
 
-[TODO: Add CM records]
+➡️ `ASSETS/Reports/`
+(Create folder) e.g.:
 
-### 11. Problem Reports and Resolutions
+* `ASSETS/Reports/95-20-21-Verification_Report.md`
+* `ASSETS/Reports/95-20-21-Coverage_Summary.md`
+* `ASSETS/Reports/95-20-21-Test_Logs/`
 
-[TODO: Add problem reports]
+### **10. Configuration Management Records**
 
-### 12. Software Accomplishment Summary (SAS)
+➡️ `Certification/CM_Records/`
+(Create: `95-20-21-CM_Records.md`)
 
-[TODO: Complete SAS]
+### **11. Problem Reports and Resolutions**
 
-## References
+➡️ `Certification/PR/`
+(Create: `PR_95-20-21_001.md`, `PR_95-20-21_002.md`, etc.)
 
-### Regulatory Standards
-- [DO-178C](https://www.rtca.org/product/do-178c/) - Software Considerations in Airborne Systems
-- [DO-330](https://www.rtca.org/product/do-330/) - Software Tool Qualification Considerations
-- [DO-331](https://www.rtca.org/product/do-331/) - Model-Based Development Supplement
-- [DO-332](https://www.rtca.org/product/do-332/) - Object-Oriented Technology Supplement
-- [DO-333](https://www.rtca.org/product/do-333/) - Formal Methods Supplement
+### **12. Software Accomplishment Summary (SAS)**
 
-### Regulatory Authorities
-- [EASA](https://www.easa.europa.eu/) - European Union Aviation Safety Agency
-- [FAA](https://www.faa.gov/) - Federal Aviation Administration
-- [Transport Canada](https://tc.canada.ca/en/aviation) - Civil Aviation Authority Canada
+➡️ `95-20-21-SAS.md` (to be created)
 
-## Document Control
+---
 
-- **Version**: 1.0
-- **Status**: PLACEHOLDER
-- **Last Updated**: 2025-11-17
-- **Classification**: Certification Evidence
-- **Approval**: Pending certification authority review
+# **References**
+
+### **Regulatory Standards**
+
+* [DO-178C](https://www.rtca.org/product/do-178c/) – Software Considerations in Airborne Systems
+* [DO-330](https://www.rtca.org/product/do-330/) – Software Tool Qualification
+* [DO-331](https://www.rtca.org/product/do-331/) – Model-Based Development
+* [DO-332](https://www.rtca.org/product/do-332/) – Object-Oriented Technology
+* [DO-333](https://www.rtca.org/product/do-333/) – Formal Methods
+
+### **Regulatory Authorities**
+
+* [EASA](https://www.easa.europa.eu/) – European Aviation Safety Agency
+* [FAA](https://www.faa.gov/) – Federal Aviation Administration
+* [Transport Canada Aviation](https://tc.canada.ca/en/aviation)
+
+---
+
+# **Document Control**
+
+* **Version**: 1.0
+* **Status**: PLACEHOLDER
+* **Last Updated**: 2025-11-17
+* **Classification**: Certification Evidence
+* **Generated with AI**: GitHub Copilot + ChatGPT
+* **Prompted by**: *Amedeo Pelliccia*
+* **Approval**: Pending certification authority review
+
+---
+
+
