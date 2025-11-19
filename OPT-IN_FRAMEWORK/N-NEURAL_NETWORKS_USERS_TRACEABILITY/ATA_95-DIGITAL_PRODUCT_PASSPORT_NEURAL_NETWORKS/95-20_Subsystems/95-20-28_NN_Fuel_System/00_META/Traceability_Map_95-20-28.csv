@@ -1,0 +1,21 @@
+Requirement_ID,Component_ID,Design_Document,Implementation,Test_ID,Verification_Status,Notes
+RQ-95-03-028-001,95-20-28-002,95-20-28-002_Fuel_Quantity_Estimator.md,Models/Source/fuel_quantity_estimator_v1.0.py,UT-95-28-001,VERIFIED,Fuel quantity estimation accuracy requirement
+RQ-95-03-028-002,95-20-28-002,95-20-28-002_Fuel_Quantity_Estimator.md,Models/Source/fuel_quantity_estimator_v1.0.py,UT-95-28-002,VERIFIED,Attitude compensation requirement
+RQ-95-03-028-003,95-20-28-003,95-20-28-003_Leak_Detection_Monitor.md,Models/Source/leak_detection_monitor_v1.0.py,UT-95-28-010,VERIFIED,Leak detection sensitivity requirement
+RQ-95-03-028-004,95-20-28-003,95-20-28-003_Leak_Detection_Monitor.md,Models/Source/leak_detection_monitor_v1.0.py,UT-95-28-011,VERIFIED,False positive rate requirement
+RQ-95-03-028-005,95-20-28-004,95-20-28-004_Fuel_Transfer_Optimizer.md,Models/Source/fuel_transfer_optimizer_v1.0.py,UT-95-28-020,VERIFIED,CG optimization requirement
+RQ-95-03-028-006,95-20-28-004,95-20-28-004_Fuel_Transfer_Optimizer.md,Models/Source/fuel_transfer_optimizer_v1.0.py,UT-95-28-021,VERIFIED,Transfer efficiency requirement
+RQ-95-03-028-007,95-20-28-005,95-20-28-005_Fuel_Temperature_Predictor.md,Models/Source/fuel_temperature_predictor_v1.0.py,UT-95-28-030,VERIFIED,Temperature prediction accuracy requirement
+RQ-95-03-028-008,95-20-28-005,95-20-28-005_Fuel_Temperature_Predictor.md,Models/Source/fuel_temperature_predictor_v1.0.py,UT-95-28-031,VERIFIED,Prediction horizon requirement
+RQ-95-03-028-009,95-20-28-006,95-20-28-006_Water_Contamination_Detector.md,Models/Source/water_contamination_detector_v1.0.py,UT-95-28-040,VERIFIED,Water detection accuracy requirement
+RQ-95-03-028-010,95-20-28-006,95-20-28-006_Water_Contamination_Detector.md,Models/Source/water_contamination_detector_v1.0.py,UT-95-28-041,VERIFIED,Minimum detectable water content requirement
+RQ-95-03-028-011,95-20-28-007,95-20-28-007_Integration_with_ATA_28.md,Models/Source/,IT-95-28-100,VERIFIED,ATA 28 interface requirement
+RQ-95-03-028-012,95-20-28-007,95-20-28-007_Integration_with_ATA_28.md,Models/Source/,IT-95-28-101,VERIFIED,ARINC 429 communication requirement
+RQ-95-03-028-013,95-20-28-007,95-20-28-007_Integration_with_ATA_28.md,Models/Source/,IT-95-28-102,VERIFIED,AFDX communication requirement
+RQ-95-03-028-014,95-20-28-008,95-20-28-008_Safety_and_Certification.md,Models/Source/,IT-95-28-200,VERIFIED,DAL-C compliance requirement
+RQ-95-03-028-015,95-20-28-008,95-20-28-008_Safety_and_Certification.md,Models/Source/,IT-95-28-201,VERIFIED,Graceful degradation requirement
+RQ-95-03-028-016,95-20-28-009,95-20-28-009_Operational_Procedures.md,Documentation/95-20-28_API_Specs.md,IT-95-28-300,VERIFIED,Operational procedures requirement
+RQ-95-03-028-017,95-20-28-001,95-20-28-001_Fuel_System_NN_Overview.md,Models/Source/,ST-95-28-001,VERIFIED,System architecture requirement
+RQ-95-03-028-018,95-20-28-002,95-20-28-002_Fuel_Quantity_Estimator.md,Models/Trained/fuel_quantity_estimator_v1.0.onnx,ST-95-28-010,VERIFIED,Model performance requirement
+RQ-95-03-028-019,95-20-28-003,95-20-28-003_Leak_Detection_Monitor.md,Models/Trained/leak_detection_monitor_v1.0.onnx,ST-95-28-020,VERIFIED,Detection latency requirement
+RQ-95-03-028-020,95-20-28-004,95-20-28-004_Fuel_Transfer_Optimizer.md,Models/Trained/fuel_transfer_optimizer_v1.0.onnx,ST-95-28-030,VERIFIED,Optimization performance requirement

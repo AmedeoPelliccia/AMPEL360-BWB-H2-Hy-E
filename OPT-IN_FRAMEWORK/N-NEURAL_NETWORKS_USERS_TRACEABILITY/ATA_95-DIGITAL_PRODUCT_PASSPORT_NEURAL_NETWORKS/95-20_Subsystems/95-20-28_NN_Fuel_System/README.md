@@ -1,43 +1,71 @@
-# 95-20-28 — NN_Fuel_System
+# 95-20-28 NN Fuel System
+
+**Scope:** Neural network–based functions supporting [ATA 28 Fuel System](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) for AMPEL360 BWB H₂ Hy-E.
+
+This subsystem covers:
+
+- Fuel quantity estimation and cross-checking
+- Leak and abnormal consumption detection
+- Fuel transfer optimization and balancing
+- Fuel temperature prediction and conditioning
+- Integration with ATA 28 classical control & monitoring
+
+## Structure
+
+- `00_META/` – Index, traceability maps, meta-information
+- `95-20-28-0XX_*.md` – Component specifications per NN function
+- `ASSETS/` – Model cards, diagrams, reports
+- `Data/` – Training, validation and synthetic datasets (incl. digital twin scenarios)
+- `Models/` – Source code, configs, trained ONNX artifacts and deployment scripts
+- `Tests/` – Unit, integration and scenario-based tests
+
+## Cross-ATA Integration
+
+- Primary integration: **[ATA 28 Fuel System](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)**
+- Safety and certification linkage: see `95-20-28-008_Safety_and_Certification.md`
+- Neural Networks governance: ATA 95-00-00 GENERAL framework
 
 ## Subsystem Metadata
 
 ```yaml
 subsystem_id: "95-20-28"
 name: "NN_Fuel_System"
-description: "H₂ fuel system neural networks for level prediction, boiloff rate estimation, and fuel optimization"
+description: "Fuel system neural networks for fuel quantity estimation, leak detection, transfer optimization, and temperature prediction"
 parent_ata: "ATA 28"
-criticality: "DAL-B"
+criticality: "DAL-C"
 status: "active"
 version: "1.0"
-last_updated: "2025-11-17"
+last_updated: "2025-11-18"
 ```
-
-## Purpose
-
-H₂ fuel system neural networks for level prediction, boiloff rate estimation, and fuel optimization
 
 ## Key Capabilities
 
-- H₂ Level Prediction: ±2% accuracy
-- Boiloff Rate Estimation: Physics-informed NN
-- Fuel Optimization: 5% efficiency gain
-- Safety Integration: Leak detection, pressure management
+- Fuel Quantity Estimation: ±2% accuracy
+- Leak Detection: Real-time anomaly monitoring
+- Transfer Optimization: Optimal fuel balancing
+- Temperature Prediction: Fuel conditioning support
+- Water Contamination Detection: Enhanced safety
 
 ## Architecture
 
 ### Components
 
 See individual component documents:
-- `95-20-28-001_*_Overview.md` — Architecture and overview
-- `95-20-28-002_*` through `95-20-28-00X_*` — Individual components
-- `95-20-28-005_Integration_with_ATA 28.md` — Integration with parent ATA chapter
+- `95-20-28-001_Fuel_System_NN_Overview.md` — Architecture and overview
+- `95-20-28-002_Fuel_Quantity_Estimator.md` — Fuel level estimation
+- `95-20-28-003_Leak_Detection_Monitor.md` — Leak detection
+- `95-20-28-004_Fuel_Transfer_Optimizer.md` — Transfer optimization
+- `95-20-28-005_Fuel_Temperature_Predictor.md` — Temperature prediction
+- `95-20-28-006_Water_Contamination_Detector.md` — Water detection
+- `95-20-28-007_Integration_with_ATA_28.md` — Integration with parent ATA chapter
+- `95-20-28-008_Safety_and_Certification.md` — Safety and certification
+- `95-20-28-009_Operational_Procedures.md` — Operations procedures
 
 ### ASSETS
 
-- Diagrams: `ASSETS/95-20-28-A-001_*.drawio`, `ASSETS/95-20-28-A-002_*.svg`
-- Configuration: `ASSETS/95-20-28-A-003_*.json`
-- Model Cards: `ASSETS/Model_Cards/95-20-28-A-2XX_*.yaml`
+- Diagrams: `ASSETS/Diagrams/`
+- Model Cards: `ASSETS/Model_Cards/95-20-28-A-1XX_*.yaml`
+- Reports: `ASSETS/Reports/`
 
 ## Integration
 
@@ -107,10 +135,10 @@ Each model card follows the format:
 
 ### Compliance
 
-- **[DO-178C](https://www.rtca.org/content/standards-guidance-materials)**: Software DAL-B
-- **[DO-333](https://www.rtca.org/content/standards-guidance-materials)**: Model-based development
-- **[EASA MOC SC-AI](https://www.easa.europa.eu/en/document-library/acceptable-means-compliance-and-guidance-materials/special-condition-sc-ai)**: AI/ML certification guidance
-- **[FAA AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/)**: Airborne software
+- **[DO-178C](https://www.rtca.org/product/do-178c/)**: Software Considerations in Airborne Systems and Equipment Certification (DAL-C)
+- **[DO-333](https://www.rtca.org/product/do-333/)**: Formal Methods Supplement to DO-178C
+- **[EASA SC-AI](https://www.easa.europa.eu/en/document-library/general-publications/special-condition-sc-ai)**: AI/ML certification guidance
+- **[FAA AC 20-115D](https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1026670)**: Airborne Software Development Assurance
 
 ### Evidence
 
@@ -124,14 +152,15 @@ Certification evidence is maintained in:
 - [95-20-00-002_Subsystems_Integration_Map.md](../95-20-00-002_Subsystems_Integration_Map.md) — Integration patterns
 - [95-20-00-003_Cross_ATA_Dependencies.csv](../95-20-00-003_Cross_ATA_Dependencies.csv) — Dependencies
 - [00_META/95-20-00-004_Subsystems_Taxonomy.md](../00_META/95-20-00-004_Subsystems_Taxonomy.md) — Classification
-- [ATA 28](../../..) — Parent ATA chapter documentation
+- [ATA 28](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) — Parent ATA chapter documentation
 
 ## Document Control
 
-- **Owner**: AMPEL360 NN_Fuel_System Team
-- **Version**: 1.0
-- **Status**: Active
-- **Classification**: Technical Reference
+- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- Status: **DRAFT** – Subject to human review and approval.
+- Human approver: _[to be completed]_.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
+- Last AI update: _2025-11-18_.
 
 ---
 
