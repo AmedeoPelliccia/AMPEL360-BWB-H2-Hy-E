@@ -1,0 +1,266 @@
+```json
+{
+  "meta": {
+    "document_id": "02-20-13-T-004",
+    "file_name": "02-20-13-T-004_BWB_Corrections.json",
+    "title": "BWB & H₂-Specific Corrections Test Cases",
+    "version": "0.1.0",
+    "status": "PLACEHOLDER",
+    "description": "Regression and validation test cases for BWB- and H₂-specific performance correction algorithms (ALG-BWB-01 … ALG-BWB-07, ALG-H2-01 … ALG-HYB-01), including geometry equivalents, aero/trim corrections, BLI effects and hydrogen / hybrid envelopes.",
+    "related_documents": [
+      "../02-20-13-006_BWB_Specific_Calculations.md",
+      "../02-20-13-002_Takeoff_Performance.md",
+      "../02-20-13-003_Landing_Performance.md",
+      "../02-20-13-004_Cruise_Optimization.md",
+      "../VERIF.md",
+      "../TRACE.csv"
+    ]
+  },
+  "global_config": {
+    "units": {
+      "weight": "kg",
+      "distance": "m",
+      "altitude": "ft",
+      "mach": "-",
+      "angle": "deg",
+      "area": "m2",
+      "moment": "Nm",
+      "cl": "-",
+      "cd": "-",
+      "cm": "-",
+      "power": "kW",
+      "energy": "kWh",
+      "soc": "-"
+    },
+    "defaults": {
+      "regulation_basis": "CS-25",
+      "reference_tube_wing_model_id": "REF-TW-01",
+      "bwb_model_id": "AMPEL360-BWB-Q100",
+      "gravity_mps2": 9.80665
+    }
+  },
+  "cases": [
+    {
+      "case_id": "BWB-CORR-001",
+      "title": "Rotation / low-speed lift & drag correction with ground effect",
+      "description": "Checks ALG-BWB-01/02/03 behaviour at low speed during takeoff rotation, including BWB CL/CD corrections vs reference tube-and-wing model and trim drag increment in ground effect.",
+      "variant": "Q100",
+      "flight_phase": "TAKEOFF_ROTATION",
+      "reference_model": {
+        "model_id": "REF-TW-01",
+        "sref_m2": 122.0,
+        "bref_m": 35.8,
+        "mac_m": 4.1
+      },
+      "bwb_model": {
+        "model_id": "AMPEL360-BWB-Q100",
+        "geometry_input": {
+          "planform_panels": 8,
+          "blended_center_body": true,
+          "distributed_flaps": true
+        }
+      },
+      "condition": {
+        "altitude_ft": 0.0,
+        "mach": 0.20,
+        "weight_kg": 85000.0,
+        "cg_percent_mac": 25.0,
+        "alpha_deg": 10.0,
+        "flap_config": "TO1",
+        "gear_down": true,
+        "ground_effect_active": true
+      },
+      "inputs_reference": {
+        "cl_ref": 1.45,
+        "cd_ref": 0.080,
+        "cm_ref": -0.8
+      },
+      "expected_results": {
+        "equivalent_geometry": {
+          "sref_bwb_m2": 128.0,
+          "bref_bwb_m": 38.5,
+          "mac_bwb_m": 4.6,
+          "x_le_mac_bwb_m": 17.2
+        },
+        "aero_corrections": {
+          "cl_bwb": 1.52,
+          "cd_bwb": 0.077,
+          "cm_bwb": -0.72,
+          "delta_cl_vs_ref": 0.07,
+          "delta_cd_vs_ref": -0.003,
+          "delta_cm_vs_ref": 0.08
+        },
+        "trim_and_ground_effect": {
+          "trim_elevon_deflection_deg": 4.5,
+          "delta_cd_trim": 0.004,
+          "delta_cl_ground_effect": 0.05,
+          "delta_cd_ground_effect": -0.002
+        }
+      },
+      "tolerances": {
+        "area_m2": 1.0,
+        "span_m": 0.3,
+        "mac_m": 0.1,
+        "cl": 0.02,
+        "cd": 0.002,
+        "cm": 0.02,
+        "deflection_deg": 0.5
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-BWB-GEOM",
+          "RQ-02-20-13-BWB-LOWSPD",
+          "RQ-02-20-13-TO-ROTATION"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/BWB_WT_LOWSPD_ROT_001/",
+          "EVIDENCE/BWB_CFD_GROUND_EFFECT_001/"
+        ],
+        "notes": "Numerics are placeholders; case targets correct relative behaviour (more lift, slightly less drag, reduced nose-down CM, and explicit trim drag increment vs reference)."
+      }
+    },
+    {
+      "case_id": "BWB-CORR-002",
+      "title": "Cruise drag and BLI benefit vs reference tube-and-wing",
+      "description": "Validates ALG-BWB-04/05 aero-propulsive corrections at cruise with boundary-layer ingestion (BLI), comparing BWB effective drag and thrust requirement vs a tube-and-wing baseline.",
+      "variant": "Q100",
+      "flight_phase": "CRUISE",
+      "reference_model": {
+        "model_id": "REF-TW-01",
+        "sref_m2": 122.0
+      },
+      "bwb_model": {
+        "model_id": "AMPEL360-BWB-Q100",
+        "bli_enabled": true,
+        "propulsor_layout": "AFT_UPPER_SURFACE_CLUSTERED"
+      },
+      "condition": {
+        "altitude_ft": 35000.0,
+        "mach": 0.80,
+        "weight_kg": 80000.0,
+        "cg_percent_mac": 26.0,
+        "flap_config": "CLEAN",
+        "anti_ice_on": false
+      },
+      "inputs_reference": {
+        "cd_ref": 0.030,
+        "drag_ref_N": 120000.0,
+        "thrust_required_ref_N": 120000.0
+      },
+      "expected_results": {
+        "aero_propulsive_corrections": {
+          "cd_bwb_no_bli": 0.028,
+          "cd_bwb_with_bli": 0.026,
+          "delta_cd_bwb_vs_ref": -0.004,
+          "delta_cd_bli_benefit": -0.002
+        },
+        "thrust_and_power": {
+          "thrust_required_bwb_no_bli_N": 112000.0,
+          "thrust_required_bwb_with_bli_N": 104000.0,
+          "propulsive_efficiency_bwb": 0.90,
+          "propulsive_efficiency_ref": 0.86
+        },
+        "validity_envelope": {
+          "bli_gain_active": true,
+          "mach_within_bli_range": true,
+          "alpha_within_bli_range": true
+        }
+      },
+      "tolerances": {
+        "cd": 0.0015,
+        "thrust_N": 3000.0,
+        "efficiency": 0.01
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-BWB-CRZ",
+          "RQ-02-20-13-BLI-BENEFIT"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/BWB_CFD_CRUISE_BLI_001/",
+          "EVIDENCE/BWB_CRZ_PERF_COMPARISON_TW_001/"
+        ],
+        "notes": "Purpose is to exercise BLI toggle and ensure drag/thrust corrections are applied only within a valid envelope; numbers are indicative only."
+      }
+    },
+    {
+      "case_id": "BWB-CORR-003",
+      "title": "H₂ mass / CG evolution and hybrid power envelope over mission segment",
+      "description": "Exercises ALG-H2-01/02 and ALG-HYB-01, verifying hydrogen mass & CG evolution, boil-off handling and CO₂ battery envelope consistency over a representative cruise segment.",
+      "variant": "Q100",
+      "flight_phase": "CRUISE_SEGMENT",
+      "mission_segment": {
+        "segment_id": "CRZ-SEG-01",
+        "duration_min": 90.0,
+        "distance_nm": 550.0
+      },
+      "initial_state": {
+        "time_from_block_off_min": 40.0,
+        "weight_kg": 83000.0,
+        "cg_percent_mac": 25.0,
+        "h2_total_mass_kg": 16000.0,
+        "tank_distribution": {
+          "center_tank_mass_kg": 9000.0,
+          "wing_tanks_mass_kg": 7000.0
+        },
+        "co2_battery_soc": 0.55,
+        "co2_battery_temperature_c": 25.0
+      },
+      "environment": {
+        "altitude_ft": 34000.0,
+        "mach": 0.79,
+        "outside_air_temp_c": -50.0
+      },
+      "system_config": {
+        "h2_tank_management_mode": "CENTER_PRIORITY",
+        "boil_off_mode": "MIN_LOSS",
+        "hybrid_usage_mode": "CRUISE_SUPPORT"
+      },
+      "expected_results": {
+        "final_state": {
+          "weight_kg": 79500.0,
+          "cg_percent_mac": 26.2,
+          "h2_total_mass_kg": 12500.0,
+          "tank_distribution": {
+            "center_tank_mass_kg": 5700.0,
+            "wing_tanks_mass_kg": 6800.0
+          },
+          "co2_battery_soc": 0.50
+        },
+        "derived_quantities": {
+          "delta_weight_kg": -3500.0,
+          "delta_cg_percent_mac": 1.2,
+          "boil_off_mass_kg": 80.0,
+          "usable_h2_consumed_kg": 3420.0
+        },
+        "hybrid_envelope": {
+          "max_fuel_cell_power_kw": 3200.0,
+          "max_battery_power_kw": 400.0,
+          "battery_soc_min_limit": 0.35,
+          "battery_soc_max_limit": 0.70,
+          "envelope_respected": true
+        }
+      },
+      "tolerances": {
+        "weight_kg": 200.0,
+        "cg_percent_mac": 0.3,
+        "mass_kg": 120.0,
+        "soc_abs": 0.03,
+        "power_kw": 100.0
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-H2-MASS-CG",
+          "RQ-02-20-13-HYB-ENVELOPE",
+          "RQ-10-02-HYB-CRZ-POWER"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/H2_TANK_MODEL_001/",
+          "EVIDENCE/CRZ_HYB_POWER_PROFILE_001/"
+        ],
+        "notes": "Scenario chosen to produce a visible CG shift into aft direction as center tank is depleted, while maintaining CO₂ battery SOC within defined cruise reserves; numeric values are placeholders."
+      }
+    }
+  ]
+}
+```
