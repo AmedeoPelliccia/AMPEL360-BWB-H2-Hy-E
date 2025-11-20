@@ -36,10 +36,10 @@ ops, dispatch and CAOS analytics.
   - Limit checks (runway, gradients, brake energy, etc.)  
 - H₂ and BWB-specific performance modelling  
 - Interfaces to:
-  - `02-20-11_Electronic_Flight_Bag`  
-  - `02-20-12_Weight_Balance_Computer`  
-  - `02-20-17_Weather_Information_System`  
-  - `02-20-23_Predictive_Operations_NN`  
+  - [02-20-11_Electronic_Flight_Bag](../02-20-11_Electronic_Flight_Bag/)  
+  - [02-20-12_Weight_Balance_Computer](../02-20-12_Weight_Balance_Computer/)  
+  - [02-20-17_Weather_Information_System](../02-20-17_Weather_Information_System/)  
+  - [02-20-23_Predictive_Operations_NN](../02-20-23_Predictive_Operations_NN/)  
   - ATA 42 (aircraft state) via platform  
 - Deterministic + NN-enhanced calculation paths  
 - Test harnesses and validation datasets  
@@ -91,7 +91,7 @@ The Performance Computer:
 * Is **traceable to AFM performance data** and certification analyses
 * Provides **APIs** to EFB, dispatch, CAOS and external tools via:
 
-  * `02-20-01_Digital_Ops_Platform` (REST/events)
+  * [02-20-01_Digital_Ops_Platform](../02-20-01_Digital_Ops_Platform/) (REST/events)
 * Supports both:
 
   * **Deterministic** (classical) algorithms
@@ -109,18 +109,18 @@ It is designed for:
 
 ### 5.1 Takeoff Performance
 
-Detailed in: `02-20-13-002_Takeoff_Performance.md`
+Detailed in: [02-20-13-002_Takeoff_Performance.md](./02-20-13-002_Takeoff_Performance.md)
 
 * V1 / VR / V2 calculation
 * Runway length required (dry, wet, contaminated)
 * Field length and obstacle-limited performance
 * Engine-out climb gradients
 * BWB-specific low-speed aerodynamics
-* H₂ mass / CG influence via 02-20-12
+* H₂ mass / CG influence via [02-20-12_Weight_Balance_Computer](../02-20-12_Weight_Balance_Computer/)
 
 ### 5.2 Landing Performance
 
-Detailed in: `02-20-13-003_Landing_Performance.md`
+Detailed in: [02-20-13-003_Landing_Performance.md](./02-20-13-003_Landing_Performance.md)
 
 * VREF / VAPP
 * Landing distance required (LDR)
@@ -130,17 +130,17 @@ Detailed in: `02-20-13-003_Landing_Performance.md`
 
 ### 5.3 Climb / Cruise / Descent Optimization
 
-Detailed in: `02-20-13-004_Cruise_Optimization.md`
+Detailed in: [02-20-13-004_Cruise_Optimization.md](./02-20-13-004_Cruise_Optimization.md)
 
 * Climb schedules (speed/Mach profiles)
 * Cruise altitude selection (including cost index)
 * Descent profiles (idle / continuous descent)
 * H₂ consumption profiles and optimum trajectories
-* Integration with 02-20-17 Weather & 02-20-23 Predictive Ops
+* Integration with [02-20-17_Weather_Information_System](../02-20-17_Weather_Information_System/) & [02-20-23_Predictive_Operations_NN](../02-20-23_Predictive_Operations_NN/)
 
 ### 5.4 BWB & H₂-Specific Modelling
 
-Detailed in: `02-20-13-006_BWB_Specific_Calculations.md`
+Detailed in: [02-20-13-006_BWB_Specific_Calculations.md](./02-20-13-006_BWB_Specific_Calculations.md)
 
 * BWB drag polars
 * Ground effect for blended geometry
@@ -150,7 +150,7 @@ Detailed in: `02-20-13-006_BWB_Specific_Calculations.md`
 
 ### 5.5 NN-Enhanced Performance
 
-Detailed in: `02-20-13-005_NN_Performance_Predictor.md`
+Detailed in: [02-20-13-005_NN_Performance_Predictor.md](./02-20-13-005_NN_Performance_Predictor.md)
 
 * Uses ATA 95 models (e.g., `NN-PERF-CALC-v1.0`)
 * Corrections to:
@@ -168,7 +168,7 @@ Detailed in: `02-20-13-005_NN_Performance_Predictor.md`
 
 * Takeoff / landing performance results for:
 
-  * `02-20-11-004_Performance_Calculations.md`
+  * [02-20-11-004_Performance_Calculations.md](../02-20-11_Electronic_Flight_Bag/02-20-11-004_Performance_Calculations.md)
 * Validated speeds and margins
 * Advisory labels when NN enhancement is active
 
@@ -226,6 +226,7 @@ The Performance Computer is **safety-significant**:
   * Takeoff decision making
   * Landing performance viability
   * Fuel and alt strategy
+
 * Likely **DO-178C DAL B or C** (subject to authority agreement), since performance errors can lead to safety events.
 
 Evidence and safety arguments will live in a dedicated cert package (e.g.):
@@ -244,13 +245,13 @@ The Performance Computer must:
 
 ### Internal (02-20)
 
-* `../02-20-00-001_Subsystems_Overview.md`
-* `../02-20-00-002_Subsystems_Integration_Map.md`
-* `../02-20-00-004_CAOS_Operations_Integration.md`
-* `../02-20-11_Electronic_Flight_Bag/`
-* `../02-20-12_Weight_Balance_Computer/`
-* `../02-20-17_Weather_Information_System/`
-* `../02-20-23_Predictive_Operations_NN/`
+* [../02-20-00-001_Subsystems_Overview.md](../02-20-00-001_Subsystems_Overview.md)
+* [../02-20-00-002_Subsystems_Integration_Map.md](../02-20-00-002_Subsystems_Integration_Map.md)
+* [../02-20-00-004_CAOS_Operations_Integration.md](../02-20-00-004_CAOS_Operations_Integration.md)
+* [../02-20-11_Electronic_Flight_Bag/](../02-20-11_Electronic_Flight_Bag/)
+* [../02-20-12_Weight_Balance_Computer/](../02-20-12_Weight_Balance_Computer/)
+* [../02-20-17_Weather_Information_System/](../02-20-17_Weather_Information_System/)
+* [../02-20-23_Predictive_Operations_NN/](../02-20-23_Predictive_Operations_NN/)
 
 ### Other ATA Chapters
 
@@ -272,6 +273,5 @@ The Performance Computer must:
 | ------- | ---------- | ------------------------------------- | ------------------------ |
 | 1.0     | 2025-11-19 | AMPEL360 Digital Ops & Performance WG | Initial subsystem README |
 
-
-::contentReference[oaicite:0]{index=0}
+```
 ```
