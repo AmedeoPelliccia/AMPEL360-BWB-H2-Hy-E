@@ -1,0 +1,322 @@
+# 02-20-13-A-101_Performance_NN_v1.0.yaml
+# Model Card / Digital Product Passport (DPP) – PLACEHOLDER
+
+meta:
+  asset_id: "02-20-13-A-101"
+  title: "Performance Neural Network – AMPEL360 Q100 (v1.0)"
+  subsystem_id: "02-20-13"
+  subsystem_name: "Performance Computer"
+  ata_chapter: "ATA_02-OPERATIONS_INFORMATION"
+  axis: "I-INFRASTRUCTURES"
+  dpp_version: "0.1.0"
+  status: "DRAFT_PLACEHOLDER"
+  created_by: "AI prompted by Amedeo Pelliccia"
+  owner_group: "Digital Ops & Performance Group"
+  created_date: "2025-11-20"
+  last_updated: "2025-11-20"
+
+model:
+  model_id: "NN-PERF-Q100-v1.0"
+  family: "NN-PERF"
+  variant: "Q100"
+  description: >
+    Supervised regression model providing corrections Δ to deterministic AMPEL360
+    performance calculations (takeoff field length, landing distance, cruise fuel /
+    H₂ usage and hybrid power margins) under the 02-20-13 Performance Computer.
+    The model never replaces deterministic logic; it only proposes bounded
+    corrections within certified envelopes.
+  type: "feedforward_regression"
+  architecture:
+    base_type: "dense_feedforward"
+    hidden_layers: [256, 256, 128]
+    activation: "ReLU"
+    normalization: "layer_norm"
+    output_activation: "linear"
+  inputs:
+    description: "Feature vector built from deterministic performance inputs + outputs + context."
+    features:
+      - name: "weight_kg"
+        type: "float"
+        units: "kg"
+      - name: "cg_percent_mac"
+        type: "float"
+        units: "%MAC"
+      - name: "pressure_altitude_ft"
+        type: "float"
+        units: "ft"
+      - name: "oat_c"
+        type: "float"
+        units: "degC"
+      - name: "isa_dev_c"
+        type: "float"
+        units: "degC"
+      - name: "wind_head_component_kt"
+        type: "float"
+        units: "kt"
+      - name: "runway_condition"
+        type: "categorical"
+        allowed_values: ["DRY", "WET", "STANDING_WATER", "COMPACTED_SNOW", "ICE"]
+      - name: "runway_mu"
+        type: "float"
+        units: "-"
+        description: "Effective friction coefficient (may be inferred / estimated)."
+      - name: "flaps_setting"
+        type: "categorical"
+        allowed_values: ["TO1", "TO2", "LDG"]
+      - name: "anti_ice_on"
+        type: "bool"
+      - name: "variant_id"
+        type: "categorical"
+        allowed_values: ["Q100"]
+      - name: "det_field_length_m"
+        type: "float"
+        units: "m"
+        description: "Deterministic computed takeoff or landing distance."
+      - name: "det_v1_kt"
+        type: "float"
+        units: "kt"
+      - name: "det_vr_kt"
+        type: "float"
+        units: "kt"
+      - name: "det_v2_kt"
+        type: "float"
+        units: "kt"
+      - name: "det_h2_used_kg"
+        type: "float"
+        units: "kg"
+        description: "Deterministic cruise H₂ usage (when in cruise mode)."
+      - name: "phase"
+        type: "categorical"
+        allowed_values: ["TAKEOFF", "LANDING", "CRUISE"]
+  outputs:
+    description: "Bounded corrections Δ plus uncertainty metrics; no raw performance values."
+    variables:
+      - name: "delta_field_length_m"
+        type: "float"
+        units: "m"
+        description: "Correction to deterministic field length (TO / LDG)."
+      - name: "delta_v1_kt"
+        type: "float"
+        units: "kt"
+      - name: "delta_vr_kt"
+        type: "float"
+        units: "kt"
+      - name: "delta_v2_kt"
+        type: "float"
+        units: "kt"
+      - name: "delta_h2_used_kg"
+        type: "float"
+        units: "kg"
+        description: "Correction to deterministic cruise H₂ usage."
+      - name: "delta_hybrid_margin_kw"
+        type: "float"
+        units: "kW"
+        description: "Correction to hybrid power margin estimate (cruise / climb)."
+      - name: "sigma_field_length_m"
+        type: "float"
+        units: "m"
+        description: "Predictive uncertainty for field length correction."
+      - name: "sigma_h2_used_kg"
+        type: "float"
+        units: "kg"
+        description: "Predictive uncertainty for H₂ usage correction."
+      - name: "ood_score"
+        type: "float"
+        units: "-"
+        description: "Out-of-distribution indicator; higher = more OOD."
+  versioning:
+    semantic_version: "1.0.0"
+    training_code_version: "perf-nn-train@commit-PLACEHOLDER"
+    data_version: "PERF-NN-DATASET-Q100-v1"
+    schema_version: "ATA95-DPP-0.1-internal"
+
+training_data:
+  description: >
+    Placeholder description for AMPEL360 Q100 performance NN dataset. Actual
+    dataset IDs and statistics to be filled by the data engineering team.
+  sources:
+    - name: "SIM_CFDTOOLS_Q100"
+      type: "high-fidelity_simulation"
+      share: 0.5
+      description: "CFD + system model-derived performance runs (TO, LDG, CRZ)."
+    - name: "SIM_MONTE_Q100"
+      type: "synthetic_sampling"
+      share: 0.3
+      description: "Monte Carlo sampling across operational envelope."
+    - name: "FLIGHT_Q100_EARLY"
+      type: "flight_test"
+      share: 0.2
+      description: "Early flight-test performance data (limited)."
+  preprocessing:
+    normalization: "feature-wise normalization (mean/std) with training-only statistics"
+    handling_missing: "rows with missing critical sensors removed; non-critical imputed"
+    balancing: "oversampling of corner cases (hot/high, contaminated runways)."
+  splits:
+    train_fraction: 0.7
+    validation_fraction: 0.15
+    test_fraction: 0.15
+  known_biases:
+    - "Limited real flight data in extreme high-altitude / ISA+20 cases."
+    - "Cruise profiles mostly medium CI; few high-CI, tight-RTA examples."
+    - "H₂ / hybrid envelope at extremes (near limits) underrepresented."
+
+evaluation:
+  description: "Offline metrics – schematic placeholder only."
+  metrics:
+    - name: "MAE_field_length"
+      phase: ["TAKEOFF", "LANDING"]
+      value: "PLACEHOLDER"
+      units: "m"
+      target: "<= 30"
+    - name: "RMSE_field_length"
+      phase: ["TAKEOFF", "LANDING"]
+      value: "PLACEHOLDER"
+      units: "m"
+      target: "<= 50"
+    - name: "MAE_h2_used"
+      phase: ["CRUISE"]
+      value: "PLACEHOLDER"
+      units: "kg"
+      target: "<= 80"
+    - name: "OOD_detection_AUROC"
+      phase: ["ALL"]
+      value: "PLACEHOLDER"
+      units: "-"
+      target: ">= 0.9"
+  slice_evaluations:
+    - slice: "hot_and_high_takeoff"
+      description: "PA >= 5000 ft and ISA+15…ISA+25"
+      findings: "Slightly higher residuals; still within envelope for Δ-bounds."
+    - slice: "wet_contaminated_landing"
+      description: "Runway_condition in {WET, STANDING_WATER, COMPACTED_SNOW}"
+      findings: "Conservative Δ tendencies; no observed unsafe shortening."
+  validation_status: "NOT_APPROVED_FOR_OPERATIONAL_USE"
+  reviewer_notes: >
+    This model card is a structural placeholder. Real metrics, residual plots and
+    corner-case analyses must be attached in 02-20-13 VERIF/EVIDENCE before DAL
+    allocation and operational approval.
+
+operational_envelope:
+  description: "Declared valid domain in which NN corrections may be applied."
+  conditions:
+    weight_kg:
+      min: 55000
+      max: 90000
+    pressure_altitude_ft:
+      min: -1000
+      max: 8000
+      note: "Above 8000 ft NN corrections for TO/LDG are disabled; deterministic only."
+    temperature_c:
+      min: -30
+      max: 45
+    runway_condition_allowed: ["DRY", "WET", "STANDING_WATER", "COMPACTED_SNOW"]
+    phase_allowed: ["TAKEOFF", "LANDING", "CRUISE"]
+  delta_bounds:
+    delta_field_length_m:
+      min: -150
+      max: 150
+    delta_v_kt:
+      min: -5
+      max: 5
+    delta_h2_used_kg:
+      min: -200
+      max: 200
+    delta_hybrid_margin_kw:
+      min: -300
+      max: 300
+  guardrail_policy:
+    - "If ood_score > threshold_ood → ignore NN, use deterministic result."
+    - "If |delta_field_length_m| > bound → clamp to bound and log event."
+    - "If sigma_* exceeds configured limit → downweight or ignore NN correction."
+    - "Under no circumstances reduce limiting margins below certified deterministic level."
+
+integration:
+  host_subsystem: "02-20-13_Performance_Computer"
+  integration_layer_document: "../02-20-13-005_NN_Performance_Predictor.md"
+  usage_modes:
+    - id: "TO_ASSIST"
+      phase: "TAKEOFF"
+      description: "Refine deterministic takeoff distances and V-speeds within bounds."
+      primary_consumers:
+        - "../02-20-11_Electronic_Flight_Bag/02-20-11-004_Performance_Calculations.md"
+    - id: "LDG_ASSIST"
+      phase: "LANDING"
+      description: "Refine landing distance and brake energy estimates."
+    - id: "CRZ_ASSIST"
+      phase: "CRUISE"
+      description: "Refine cruise H₂ usage and hybrid power margins."
+  interface_contract:
+    request_type: "NNPerfRequest"
+    response_type: "NNPerfResponse"
+    logging:
+      log_y_base_and_y_final: true
+      log_deltas_and_sigma: true
+      log_nn_id_and_version: true
+      log_ood_and_guardrails: true
+  fallback_behavior:
+    - "If inference fails or times out → use deterministic result without delay."
+    - "If model registry returns no valid model → NN path disabled for that request."
+    - "If guardrails are triggered → mark result as 'NN-IGNORED' in trace log."
+
+safety_and_governance:
+  criticality:
+    suggested_dal: "B/C hybrid – subject to authority agreement"
+    rationale: >
+      NN only refines deterministic outputs and is strictly bounded; deterministic
+      algorithms remain authoritative and are sufficient to satisfy safety
+      requirements.
+  hazards_if_misused:
+    - "Underestimation of required field length if Δ applied outside envelope."
+    - "Over-optimistic H₂ usage predictions leading to margin erosion."
+  mitigations:
+    - "Hard clipping of Δ to conservative bounds."
+    - "OOD detection and envelope checks at integration layer."
+    - "Mandatory logging of NN usage, deltas, and guardrail actions."
+    - "Configuration control and pinning of nn_id / version per aircraft config."
+  monitoring:
+    runtime_metrics:
+      - "mean_abs_delta_field_length_m"
+      - "delta_sign_mismatch_rate"
+      - "fraction_of_requests_with_NN_active"
+      - "ood_score_distribution"
+    alerting_rules:
+      - "If |mean_abs_delta_field_length_m| drifts > 2× reference → flag drift."
+      - "If ood_score high percentile exceeds threshold for N flights → flag drift."
+    reporting:
+      cadence: "per_flight + aggregated monthly"
+      sinks:
+        - "ATA 31 / CAOS performance logs"
+        - "ATA 95 monitoring dashboards"
+
+traceability:
+  requirements:
+    - "RQ-02-20-13-CRZ-CI"
+    - "RQ-02-20-13-CRZ-RTA"
+    - "RQ-02-20-13-CRZ-ECO"
+    - "RQ-02-20-13-LDG-DIST"
+    - "RQ-02-20-13-LDG-WET"
+    - "RQ-02-20-13-LDG-CONTAM"
+    - "RQ-02-20-13-BRAKE-ENERGY"
+    - "RQ-02-20-13-HYB-ENVELOPE"
+    - "RQ-02-20-13-BWB-CRZ"
+  related_documents:
+    - "../02-20-13-001_Performance_System_Overview.md"
+    - "../02-20-13-002_Takeoff_Performance.md"
+    - "../02-20-13-003_Landing_Performance.md"
+    - "../02-20-13-004_Cruise_Optimization.md"
+    - "../02-20-13-005_NN_Performance_Predictor.md"
+    - "../02-20-13-006_BWB_Specific_Calculations.md"
+    - "../TEST_DATA/02-20-13-T-001_TO_RunwayCases.json"
+    - "../TEST_DATA/02-20-13-T-002_LDG_DistanceCases.json"
+    - "../TEST_DATA/02-20-13-T-003_Cruise_Profiles.json"
+    - "../TEST_DATA/02-20-13-T-004_BWB_Corrections.json"
+  evidence_placeholders:
+    - "EVIDENCE/NN_PERF_Q100_TRAINING_REPORT/"
+    - "EVIDENCE/NN_PERF_Q100_EVAL_SUMMARY/"
+    - "EVIDENCE/NN_PERF_Q100_MONITORING_BASELINE/"
+
+notes:
+  - "All numeric values (bounds, metrics) are placeholders and must be replaced by
+     real figures before any certification or operational use."
+  - "This model card is meant to live under ASSETS/Model_Cards/ and be referenced
+     from ATA 95 Digital Product Passport indexes."
