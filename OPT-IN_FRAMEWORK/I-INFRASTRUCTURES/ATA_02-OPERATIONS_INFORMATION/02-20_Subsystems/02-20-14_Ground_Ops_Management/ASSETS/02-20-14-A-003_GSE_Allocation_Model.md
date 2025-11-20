@@ -10,6 +10,8 @@
 ---
 
 
+<img width="1400" height="800" alt="image" src="https://github.com/user-attachments/assets/cb9103a2-2c5b-44ab-b7ff-727902479eda" />
+
 
 ## 1. Purpose
 
