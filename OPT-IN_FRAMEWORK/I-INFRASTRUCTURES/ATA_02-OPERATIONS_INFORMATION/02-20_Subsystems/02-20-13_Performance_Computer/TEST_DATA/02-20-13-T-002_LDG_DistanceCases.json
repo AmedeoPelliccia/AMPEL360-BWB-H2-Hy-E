@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "document_id": "02-20-13-T-002",
+    "file_name": "02-20-13-T-002_LDG_DistanceCases.json",
+    "title": "Landing Distance Test Cases",
+    "version": "0.1.0",
+    "status": "PLACEHOLDER",
+    "description": "Regression and validation test cases for landing performance distance and braking algorithms (ALG-LND-01 … ALG-LND-07).",
+    "related_documents": [
+      "../02-20-13-003_Landing_Performance.md",
+      "../02-20-13-006_BWB_Specific_Calculations.md",
+      "../VERIF.md",
+      "../TRACE.csv"
+    ]
+  },
+  "global_config": {
+    "units": {
+      "weight": "kg",
+      "distance": "m",
+      "altitude": "ft",
+      "pressure": "hPa",
+      "temperature": "degC",
+      "wind_speed": "kt",
+      "slope": "percent",
+      "angle": "deg",
+      "power": "kW",
+      "energy": "MJ"
+    },
+    "defaults": {
+      "regulation_basis": "CS-25",
+      "lda_factor_dispatch_dry": 1.67,
+      "lda_factor_inflight": 1.15,
+      "headwind_credit_factor": 0.5,
+      "tailwind_penalty_factor": 1.0,
+      "screen_height_ft": 50
+    }
+  },
+  "cases": [
+    {
+      "case_id": "LDG-DIST-001",
+      "title": "Sea-level, dry, medium weight, autobrake MED",
+      "description": "Baseline landing distance case at sea level, ISA, dry runway, medium landing weight with autobrake MED and full spoilers.",
+      "variant": "Q100",
+      "aircraft": {
+        "landing_weight_kg": 70000.0,
+        "cg_percent_mac": 27.0,
+        "config": {
+          "flaps_setting": "LDG",
+          "slats_setting": "AUTO",
+          "spoilers_armed": true,
+          "reversers_available": "ALL",
+          "autobrake_setting": "MED",
+          "anti_ice_on": false,
+          "bleed_config": "STANDARD",
+          "brake_temp_initial_c": 80.0
+        }
+      },
+      "runway": {
+        "airport_icao": "AAAA",
+        "runway_id": "27",
+        "lda_m": 2400.0,
+        "tora_m": 2400.0,
+        "toda_m": 2500.0,
+        "asda_m": 2400.0,
+        "elevation_ft": 0.0,
+        "slope_percent": 0.0,
+        "surface_type": "CONCRETE",
+        "surface_condition": "DRY",
+        "contamination": {
+          "state": "NONE",
+          "depth_mm": 0.0,
+          "coverage_percent": 0.0,
+          "friction_mu_override": null
+        }
+      },
+      "environment": {
+        "pressure_altitude_ft": 0.0,
+        "qnh_hpa": 1013.0,
+        "temperature_c": 15.0,
+        "isa_deviation_c": 0.0,
+        "wind_head_component_kt": 5.0,
+        "wind_cross_component_kt": 0.0
+      },
+      "constraints": {
+        "regulation": "CS-25",
+        "reverse_credit_mode": "LIMITED",
+        "contaminated_logic_profile": "DRY_STANDARD",
+        "brake_energy_check_required": true,
+        "dispatch_factor_profile": "DISPATCH_DRY"
+      },
+      "expected_results": {
+        "distances_m": {
+          "ld_unfactored_m": 1350.0,
+          "ld_factored_dispatch_m": 2250.0,
+          "lda_margin_m": 150.0
+        },
+        "limiting_weights_kg": {
+          "field_length": 72000.0,
+          "brake_energy": 75000.0,
+          "structural": 76000.0,
+          "go_around": 74000.0
+        },
+        "v_speeds_kt": {
+          "vref": 132.0,
+          "vapp": 137.0,
+          "v_ga": 150.0
+        },
+        "brake_energy": {
+          "total_brake_energy_MJ": 220.0,
+          "max_brake_temp_c": 350.0
+        }
+      },
+      "tolerances": {
+        "distance_m": 15.0,
+        "v_speed_kt": 2.0,
+        "weight_kg": 300.0,
+        "brake_energy_MJ": 20.0
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-002",
+          "RQ-02-20-13-LDG-DIST",
+          "RQ-02-20-13-BRAKE-ENERGY"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/LDG_DRY_BASELINE_001/",
+          "EVIDENCE/BRAKE_MODEL_VALIDATION_001/"
+        ],
+        "notes": "Numeric values are placeholders; replace with validated AFM/analysis data before locking VERIF."
+      }
+    },
+    {
+      "case_id": "LDG-DIST-002",
+      "title": "Wet runway, tailwind, brake-energy-sensitive",
+      "description": "Wet runway with small tailwind, higher landing weight and autobrake MAX, exercising wet runway logic and brake energy limits.",
+      "variant": "Q100",
+      "aircraft": {
+        "landing_weight_kg": 76000.0,
+        "cg_percent_mac": 28.0,
+        "config": {
+          "flaps_setting": "LDG",
+          "slats_setting": "AUTO",
+          "spoilers_armed": true,
+          "reversers_available": "ALL",
+          "autobrake_setting": "MAX",
+          "anti_ice_on": true,
+          "bleed_config": "STANDARD",
+          "brake_temp_initial_c": 120.0
+        }
+      },
+      "runway": {
+        "airport_icao": "BBBB",
+        "runway_id": "09",
+        "lda_m": 2600.0,
+        "tora_m": 2600.0,
+        "toda_m": 2700.0,
+        "asda_m": 2600.0,
+        "elevation_ft": 300.0,
+        "slope_percent": -0.5,
+        "surface_type": "ASPHALT",
+        "surface_condition": "WET",
+        "contamination": {
+          "state": "WET",
+          "depth_mm": 1.0,
+          "coverage_percent": 100.0,
+          "friction_mu_override": 0.4
+        }
+      },
+      "environment": {
+        "pressure_altitude_ft": 300.0,
+        "qnh_hpa": 1010.0,
+        "temperature_c": 12.0,
+        "isa_deviation_c": -3.0,
+        "wind_head_component_kt": -5.0,
+        "wind_cross_component_kt": 8.0
+      },
+      "constraints": {
+        "regulation": "CS-25",
+        "reverse_credit_mode": "NO_CREDIT_WET",
+        "contaminated_logic_profile": "WET_ANNEX",
+        "brake_energy_check_required": true,
+        "dispatch_factor_profile": "DISPATCH_WET"
+      },
+      "expected_results": {
+        "distances_m": {
+          "ld_unfactored_m": 1800.0,
+          "ld_factored_dispatch_m": 3000.0,
+          "lda_margin_m": -400.0
+        },
+        "limiting_weights_kg": {
+          "field_length": 74000.0,
+          "brake_energy": 72000.0,
+          "structural": 78000.0,
+          "go_around": 76000.0
+        },
+        "v_speeds_kt": {
+          "vref": 139.0,
+          "vapp": 146.0,
+          "v_ga": 153.0
+        },
+        "brake_energy": {
+          "total_brake_energy_MJ": 260.0,
+          "max_brake_temp_c": 420.0
+        }
+      },
+      "tolerances": {
+        "distance_m": 20.0,
+        "v_speed_kt": 3.0,
+        "weight_kg": 400.0,
+        "brake_energy_MJ": 25.0
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-002",
+          "RQ-02-20-13-LDG-WET",
+          "RQ-02-20-13-BRAKE-ENERGY"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/LDG_WET_TAILWIND_001/",
+          "EVIDENCE/BRAKE_ENERGY_WET_001/"
+        ],
+        "notes": "Designed to fail field-length margin (negative LDA margin) and to be brake-energy-sensitive for autobrake MAX."
+      }
+    },
+    {
+      "case_id": "LDG-DIST-003",
+      "title": "Contaminated runway, antiskid inoperative, short-field",
+      "description": "Short-field landing on contaminated runway with antiskid inoperative, manual braking and limited reverse thrust credit.",
+      "variant": "Q100",
+      "aircraft": {
+        "landing_weight_kg": 68000.0,
+        "cg_percent_mac": 26.0,
+        "config": {
+          "flaps_setting": "LDG",
+          "slats_setting": "AUTO",
+          "spoilers_armed": true,
+          "reversers_available": "PARTIAL",
+          "autobrake_setting": "OFF",
+          "anti_ice_on": true,
+          "bleed_config": "STANDARD",
+          "brake_temp_initial_c": 100.0,
+          "antiskid_operational": false
+        }
+      },
+      "runway": {
+        "airport_icao": "CCCC",
+        "runway_id": "34",
+        "lda_m": 2000.0,
+        "tora_m": 2000.0,
+        "toda_m": 2100.0,
+        "asda_m": 2000.0,
+        "elevation_ft": 1500.0,
+        "slope_percent": 0.5,
+        "surface_type": "CONCRETE",
+        "surface_condition": "CONTAMINATED",
+        "contamination": {
+          "state": "COMPACTED_SNOW",
+          "depth_mm": 5.0,
+          "coverage_percent": 100.0,
+          "friction_mu_override": 0.25
+        }
+      },
+      "environment": {
+        "pressure_altitude_ft": 1500.0,
+        "qnh_hpa": 1005.0,
+        "temperature_c": -5.0,
+        "isa_deviation_c": -7.0,
+        "wind_head_component_kt": 0.0,
+        "wind_cross_component_kt": 5.0
+      },
+      "constraints": {
+        "regulation": "CS-25",
+        "reverse_credit_mode": "LIMITED_CONTAM",
+        "contaminated_logic_profile": "CONTAM_SNOW",
+        "brake_energy_check_required": true,
+        "dispatch_factor_profile": "DISPATCH_CONTAM",
+        "antiskid_inop_procedure": "MANUAL_MODERATE"
+      },
+      "expected_results": {
+        "distances_m": {
+          "ld_unfactored_m": 1900.0,
+          "ld_factored_dispatch_m": 3200.0,
+          "lda_margin_m": -1200.0
+        },
+        "limiting_weights_kg": {
+          "field_length": 63000.0,
+          "brake_energy": 65000.0,
+          "structural": 70000.0,
+          "go_around": 67000.0
+        },
+        "v_speeds_kt": {
+          "vref": 128.0,
+          "vapp": 133.0,
+          "v_ga": 145.0
+        },
+        "brake_energy": {
+          "total_brake_energy_MJ": 210.0,
+          "max_brake_temp_c": 390.0
+        }
+      },
+      "tolerances": {
+        "distance_m": 25.0,
+        "v_speed_kt": 3.0,
+        "weight_kg": 500.0,
+        "brake_energy_MJ": 30.0
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-002",
+          "RQ-02-20-13-LDG-CONTAM",
+          "RQ-02-20-13-BRAKE-ENERGY"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/LDG_CONTAM_ANTISKID_INOP_001/",
+          "EVIDENCE/BRAKE_ENERGY_CONTAM_001/"
+        ],
+        "notes": "Short-field, contaminated and antiskid-inoperative corner case; designed to clearly violate LDA margin for validation of prohibition logic."
+      }
+    }
+  ]
+}
