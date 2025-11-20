@@ -1,0 +1,448 @@
+```json
+{
+  "meta": {
+    "document_id": "02-20-13-T-003",
+    "file_name": "02-20-13-T-003_Cruise_Profiles.json",
+    "title": "Cruise Optimization Test Profiles",
+    "version": "0.1.0",
+    "status": "PLACEHOLDER",
+    "description": "Regression and validation test cases for cruise optimization algorithms (ALG-CRZ-01 … ALG-CRZ-07), including cost index behavior, step climbs, RTA and hybrid envelope checks.",
+    "related_documents": [
+      "../02-20-13-004_Cruise_Optimization.md",
+      "../02-20-13-006_BWB_Specific_Calculations.md",
+      "../VERIF.md",
+      "../TRACE.csv"
+    ]
+  },
+  "global_config": {
+    "units": {
+      "mass": "kg",
+      "distance": "nm",
+      "altitude": "ft",
+      "pressure": "hPa",
+      "temperature": "degC",
+      "wind_speed": "kt",
+      "time": "min",
+      "energy": "kWh",
+      "co2eq": "kgCO2eq"
+    },
+    "defaults": {
+      "regulation_basis": "CS-25",
+      "rvsm_min_fl": 290,
+      "rvsm_max_fl": 410,
+      "step_climb_min_delta_fl": 20,
+      "rta_tolerance_min": 2.0,
+      "soc_min_cruise_reserve": 0.25,
+      "soc_max_cruise": 0.85
+    }
+  },
+  "cases": [
+    {
+      "case_id": "CRZ-PROF-001",
+      "title": "Nominal westbound, medium CI, two-step climb",
+      "description": "Baseline medium-range cruise with moderate cost index, westerly headwinds aloft and an optimal two-step climb profile.",
+      "variant": "Q100",
+      "route": {
+        "departure_icao": "DDDD",
+        "destination_icao": "EEEE",
+        "great_circle_distance_nm": 850.0,
+        "waypoints": [
+          "DD01",
+          "DD02",
+          "MID01",
+          "EE01",
+          "EEEE"
+        ],
+        "available_fls": [310, 330, 350, 370, 390]
+      },
+      "atmosphere": {
+        "profile_points": [
+          {
+            "fl": 310,
+            "temperature_c": -47.0,
+            "headwind_kt": 40.0
+          },
+          {
+            "fl": 330,
+            "temperature_c": -49.0,
+            "headwind_kt": 35.0
+          },
+          {
+            "fl": 350,
+            "temperature_c": -51.0,
+            "headwind_kt": 30.0
+          },
+          {
+            "fl": 370,
+            "temperature_c": -53.0,
+            "headwind_kt": 25.0
+          }
+        ]
+      },
+      "aircraft": {
+        "weight_at_toc_kg": 83000.0,
+        "weight_at_top_descent_kg": 78000.0,
+        "cg_percent_mac": 26.5,
+        "config": {
+          "anti_ice_on": false,
+          "packs_config": "NOMINAL",
+          "cruise_flap_config": "CLEAN"
+        }
+      },
+      "energy_system": {
+        "fuel_cell_power_margin_kw": 800.0,
+        "co2_battery_initial_soc": 0.55,
+        "co2_battery_min_soc": 0.30,
+        "co2_battery_max_soc": 0.80
+      },
+      "cost_index": {
+        "ci_mode": "MEDIUM",
+        "c_time": 1.0,
+        "c_h2": 1.0,
+        "c_grid": 0.4,
+        "c_co2": 0.6,
+        "c_age": 0.2
+      },
+      "constraints": {
+        "rta_active": false,
+        "rta_time_min": null,
+        "max_cruise_mach": 0.84,
+        "min_cruise_mach": 0.75,
+        "forbidden_fls": [],
+        "hybrid_envelope_check_required": true
+      },
+      "expected_results": {
+        "profile": {
+          "initial_fl": 330,
+          "step_climbs": [
+            {
+              "to_fl": 350,
+              "at_distance_from_dep_nm": 250.0
+            },
+            {
+              "to_fl": 370,
+              "at_distance_from_dep_nm": 520.0
+            }
+          ],
+          "cruise_mach_schedule": [
+            {
+              "segment": "CLB_TO_FL330",
+              "mach": 0.78
+            },
+            {
+              "segment": "CRZ_FL330",
+              "mach": 0.79
+            },
+            {
+              "segment": "CRZ_FL350",
+              "mach": 0.79
+            },
+            {
+              "segment": "CRZ_FL370",
+              "mach": 0.80
+            }
+          ]
+        },
+        "metrics": {
+          "block_time_min": 150.0,
+          "airborne_time_min": 140.0,
+          "cruise_h2_used_kg": 2600.0,
+          "total_h2_used_kg": 2900.0,
+          "net_grid_energy_kwh": -10.0,
+          "net_co2eq_vs_baseline_kg": -4500.0
+        },
+        "hybrid_envelope": {
+          "max_stack_temp_margin_c": 15.0,
+          "min_co2_battery_soc": 0.33,
+          "max_co2_battery_soc": 0.60
+        }
+      },
+      "tolerances": {
+        "time_min": 3.0,
+        "distance_nm": 20.0,
+        "mass_kg": 150.0,
+        "energy_kwh": 10.0,
+        "soc_abs": 0.03
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-003",
+          "RQ-02-20-13-CRZ-CI",
+          "RQ-02-20-13-HYB-ENVELOPE"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/CRZ_MEDIUM_CI_BASELINE_001/",
+          "EVIDENCE/HYB_ENVELOPE_CHECK_001/"
+        ],
+        "notes": "Baseline check for step-climb logic, CI mapping and hybrid feasibility; numeric values are placeholders."
+      }
+    },
+    {
+      "case_id": "CRZ-PROF-002",
+      "title": "Time-critical, high CI with RTA near minimum time",
+      "description": "High cost index, tight RTA constraint driving near-minimum-time profile and slightly higher hydrogen usage.",
+      "variant": "Q100",
+      "route": {
+        "departure_icao": "FFFF",
+        "destination_icao": "GGGG",
+        "great_circle_distance_nm": 1200.0,
+        "waypoints": [
+          "FF01",
+          "MIDT1",
+          "MIDT2",
+          "GG01",
+          "GGGG"
+        ],
+        "available_fls": [330, 350, 370, 390, 410]
+      },
+      "atmosphere": {
+        "profile_points": [
+          {
+            "fl": 330,
+            "temperature_c": -50.0,
+            "headwind_kt": 10.0
+          },
+          {
+            "fl": 350,
+            "temperature_c": -52.0,
+            "headwind_kt": 5.0
+          },
+          {
+            "fl": 370,
+            "temperature_c": -54.0,
+            "headwind_kt": 0.0
+          },
+          {
+            "fl": 390,
+            "temperature_c": -55.0,
+            "headwind_kt": -5.0
+          }
+        ]
+      },
+      "aircraft": {
+        "weight_at_toc_kg": 87000.0,
+        "weight_at_top_descent_kg": 81000.0,
+        "cg_percent_mac": 27.5,
+        "config": {
+          "anti_ice_on": false,
+          "packs_config": "ECON",
+          "cruise_flap_config": "CLEAN"
+        }
+      },
+      "energy_system": {
+        "fuel_cell_power_margin_kw": 500.0,
+        "co2_battery_initial_soc": 0.60,
+        "co2_battery_min_soc": 0.30,
+        "co2_battery_max_soc": 0.80
+      },
+      "cost_index": {
+        "ci_mode": "HIGH",
+        "c_time": 2.0,
+        "c_h2": 0.8,
+        "c_grid": 0.5,
+        "c_co2": 0.4,
+        "c_age": 0.2
+      },
+      "constraints": {
+        "rta_active": true,
+        "rta_time_min": 185.0,
+        "max_cruise_mach": 0.86,
+        "min_cruise_mach": 0.77,
+        "forbidden_fls": [330],
+        "hybrid_envelope_check_required": true
+      },
+      "expected_results": {
+        "profile": {
+          "initial_fl": 350,
+          "step_climbs": [
+            {
+              "to_fl": 370,
+              "at_distance_from_dep_nm": 300.0
+            },
+            {
+              "to_fl": 390,
+              "at_distance_from_dep_nm": 700.0
+            }
+          ],
+          "cruise_mach_schedule": [
+            {
+              "segment": "CRZ_FL350",
+              "mach": 0.83
+            },
+            {
+              "segment": "CRZ_FL370",
+              "mach": 0.84
+            },
+            {
+              "segment": "CRZ_FL390",
+              "mach": 0.84
+            }
+          ]
+        },
+        "metrics": {
+          "block_time_min": 188.0,
+          "airborne_time_min": 178.0,
+          "rta_error_min": -1.0,
+          "cruise_h2_used_kg": 3800.0,
+          "total_h2_used_kg": 4100.0,
+          "net_grid_energy_kwh": -5.0,
+          "net_co2eq_vs_baseline_kg": -3800.0
+        },
+        "hybrid_envelope": {
+          "max_stack_temp_margin_c": 8.0,
+          "min_co2_battery_soc": 0.32,
+          "max_co2_battery_soc": 0.68
+        }
+      },
+      "tolerances": {
+        "time_min": 3.0,
+        "rta_error_min": 1.5,
+        "mass_kg": 200.0,
+        "energy_kwh": 12.0,
+        "soc_abs": 0.04
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-003",
+          "RQ-02-20-13-CRZ-RTA",
+          "RQ-02-20-13-HYB-ENVELOPE"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/CRZ_HIGH_CI_RTA_001/",
+          "EVIDENCE/HYB_ENVELOPE_HIGH_LOAD_001/"
+        ],
+        "notes": "Exercises RTA-constrained optimization and high CI behavior; expected to be close to minimum-time solution with slightly higher hydrogen usage."
+      }
+    },
+    {
+      "case_id": "CRZ-PROF-003",
+      "title": "Eco / CO₂-minimizing low CI profile with limited hybrid cooling",
+      "description": "Low cost index CO₂-focused profile with lower Mach and altitude selection constrained by hybrid thermal limits and SOC reserves.",
+      "variant": "Q100",
+      "route": {
+        "departure_icao": "HHHH",
+        "destination_icao": "IIII",
+        "great_circle_distance_nm": 650.0,
+        "waypoints": [
+          "HH01",
+          "ECO01",
+          "ECO02",
+          "II01",
+          "IIII"
+        ],
+        "available_fls": [270, 290, 310, 330, 350]
+      },
+      "atmosphere": {
+        "profile_points": [
+          {
+            "fl": 270,
+            "temperature_c": -37.0,
+            "headwind_kt": 5.0
+          },
+          {
+            "fl": 290,
+            "temperature_c": -41.0,
+            "headwind_kt": 10.0
+          },
+          {
+            "fl": 310,
+            "temperature_c": -45.0,
+            "headwind_kt": 18.0
+          },
+          {
+            "fl": 330,
+            "temperature_c": -49.0,
+            "headwind_kt": 25.0
+          }
+        ]
+      },
+      "aircraft": {
+        "weight_at_toc_kg": 80000.0,
+        "weight_at_top_descent_kg": 76500.0,
+        "cg_percent_mac": 25.5,
+        "config": {
+          "anti_ice_on": true,
+          "packs_config": "ECO",
+          "cruise_flap_config": "CLEAN"
+        }
+      },
+      "energy_system": {
+        "fuel_cell_power_margin_kw": 300.0,
+        "co2_battery_initial_soc": 0.45,
+        "co2_battery_min_soc": 0.35,
+        "co2_battery_max_soc": 0.70,
+        "cooling_capacity_limited": true
+      },
+      "cost_index": {
+        "ci_mode": "LOW_ECO",
+        "c_time": 0.5,
+        "c_h2": 1.2,
+        "c_grid": 0.8,
+        "c_co2": 1.5,
+        "c_age": 0.6
+      },
+      "constraints": {
+        "rta_active": false,
+        "rta_time_min": null,
+        "max_cruise_mach": 0.80,
+        "min_cruise_mach": 0.73,
+        "forbidden_fls": [],
+        "hybrid_envelope_check_required": true
+      },
+      "expected_results": {
+        "profile": {
+          "initial_fl": 290,
+          "step_climbs": [
+            {
+              "to_fl": 310,
+              "at_distance_from_dep_nm": 300.0
+            }
+          ],
+          "cruise_mach_schedule": [
+            {
+              "segment": "CRZ_FL290",
+              "mach": 0.75
+            },
+            {
+              "segment": "CRZ_FL310",
+              "mach": 0.76
+            }
+          ]
+        },
+        "metrics": {
+          "block_time_min": 120.0,
+          "airborne_time_min": 112.0,
+          "cruise_h2_used_kg": 1750.0,
+          "total_h2_used_kg": 1950.0,
+          "net_grid_energy_kwh": 5.0,
+          "net_co2eq_vs_baseline_kg": -5200.0
+        },
+        "hybrid_envelope": {
+          "max_stack_temp_margin_c": 5.0,
+          "min_co2_battery_soc": 0.36,
+          "max_co2_battery_soc": 0.52
+        }
+      },
+      "tolerances": {
+        "time_min": 3.0,
+        "mass_kg": 150.0,
+        "energy_kwh": 8.0,
+        "soc_abs": 0.03,
+        "co2eq_kg": 250.0
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-003",
+          "RQ-02-20-13-CRZ-ECO",
+          "RQ-02-20-13-HYB-THERMAL"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/CRZ_ECO_PROFILE_001/",
+          "EVIDENCE/HYB_THERMAL_LIMITS_001/"
+        ],
+        "notes": "Checks low-CI eco behavior, CO₂-focused objective, and operation near hybrid thermal and SOC constraints without violating reserves."
+      }
+    }
+  ]
+}
+```
