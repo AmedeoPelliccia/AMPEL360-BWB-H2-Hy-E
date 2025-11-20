@@ -1,0 +1,450 @@
+{
+  "test_id": "02-20-15-T-001_FPL_Delay_Scenarios",
+  "version": "0.1.0",
+  "description": "Scenarios linking turnaround disruptions, FPL / slot updates and resulting departure delay & slot usage outcomes.",
+  "schema_version": "1.0.0",
+  "requirements_covered": [
+    "02-20-15-RQ-001",
+    "02-20-15-RQ-010",
+    "02-20-15-RQ-020",
+    "02-20-15-RQ-030",
+    "02-20-15-RQ-040",
+    "02-20-15-RQ-050"
+  ],
+  "references": {
+    "ground_turnaround_scenarios": "../02-20-14_Ground_Ops_Management/TEST_DATA/02-20-14-T-001_Turnaround_Scenarios.json",
+    "gse_allocation_cases": "../02-20-14_Ground_Ops_Management/TEST_DATA/02-20-14-T-002_GSE_Allocation_Cases.json",
+    "disruption_handling_cases": "../02-20-14_Ground_Ops_Management/TEST_DATA/02-20-14-T-003_Disruption_Handling_Cases.json",
+    "delay_attribution_model": "./02-20-15-002_Turnaround_to_FPL_Interface.md",
+    "slot_usage_model": "./02-20-15-003_Slots_and_ATFM_Integration.md"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "FPD-S01",
+      "name": "Ground-driven H₂ fueling delay – TOBT/EOBT update, slot remains feasible",
+      "based_on_turnaround_scenario_id": "T001-S01",
+      "airport": "AMS",
+      "flight_id": "AB123",
+      "turnaround_id": "TRN-AB123-AMS",
+      "stand_id": "E15",
+      "initial_plan": {
+        "fpl_plan_snapshot": {
+          "snapshot_id": "FPL-SNAP-FPD-S01-0",
+          "flight_id": "AB123",
+          "airport": "AMS",
+          "route_id": "ROUTE-AB123-STD",
+          "eobt": "2025-11-20T12:50:00Z",
+          "ctot": "2025-11-20T13:05:00Z",
+          "tsat": "2025-11-20T12:55:00Z",
+          "turnaround_required_completion_time": "2025-11-20T12:45:00Z",
+          "buffers": {
+            "ground_buffer_min": 5,
+            "taxi_buffer_min": 3
+          },
+          "restrictions": [
+            "DEP_FLOW_AMS_STD"
+          ],
+          "performance_params": {
+            "cruise_level": "FL370",
+            "cost_index": 30.0
+          },
+          "last_update_time": "2025-11-20T11:30:00Z"
+        }
+      },
+      "slot_context": {
+        "slot_allocation": {
+          "allocation_id": "A1-AB123-AMS",
+          "regulation_id": "REG-AMS-DEP-2025-11-20-01",
+          "ctot": "2025-11-20T13:05:00Z",
+          "tsat": "2025-11-20T12:55:00Z",
+          "earliest_off_block": "2025-11-20T12:50:00Z",
+          "latest_off_block": "2025-11-20T13:00:00Z",
+          "margin_minutes": 5
+        }
+      },
+      "timeline": {
+        "events": [
+          {
+            "t": "2025-11-20T12:20:00Z",
+            "source": "GROUND_OPS",
+            "type": "GROUND.TURNAROUND.SNAPSHOT",
+            "payload_ref": "S1",
+            "summary": "H₂ fueling start delayed, expected off-block +15 min."
+          },
+          {
+            "t": "2025-11-20T12:21:00Z",
+            "source": "FPI",
+            "type": "FPI.TOBT_PROPOSAL",
+            "payload_ref": "P1",
+            "summary": "TOBT/EOBT proposal shifted +15 min (13:05Z)."
+          },
+          {
+            "t": "2025-11-20T12:25:00Z",
+            "source": "FPL",
+            "type": "FPI.TOBT_DECISION",
+            "payload_ref": "D1",
+            "summary": "Dispatcher accepts TOBT/EOBT proposal."
+          }
+        ]
+      },
+      "ground_snapshots": {
+        "S1": {
+          "snapshot_id": "TRN-SNAP-FPD-S01-S1",
+          "turnaround_id": "TRN-AB123-AMS",
+          "flight_id": "AB123",
+          "airport": "AMS",
+          "stand_id": "E15",
+          "timestamp": "2025-11-20T12:20:00Z",
+          "phase_id": "TA-P2",
+          "overall_status": "IN_PROGRESS",
+          "progress_percent": 55.0,
+          "critical_tasks": {
+            "remaining_critical_count": 2,
+            "blocking_reasons": [
+              "H2_FUELING_NOT_STARTED"
+            ]
+          },
+          "gse_constraints": {
+            "h2_fueling_status": "PLANNED",
+            "known_shortages": [],
+            "safety_windows_active": [
+              "NO_H2_DURING_BOARDING"
+            ]
+          },
+          "expected_off_block_time": "2025-11-20T13:05:00Z",
+          "expected_pushback_ready_time": "2025-11-20T13:03:00Z"
+        }
+      },
+      "proposals_and_decisions": {
+        "P1": {
+          "proposal_id": "TOBT-PROP-FPD-S01-P1",
+          "turnaround_id": "TRN-AB123-AMS",
+          "flight_id": "AB123",
+          "airport": "AMS",
+          "source_snapshot_id": "TRN-SNAP-FPD-S01-S1",
+          "proposed_tobt": "2025-11-20T13:05:00Z",
+          "proposed_eobt": "2025-11-20T13:05:00Z",
+          "validity_window": {
+            "valid_from": "2025-11-20T12:21:00Z",
+            "valid_to": "2025-11-20T12:35:00Z"
+          },
+          "reason": "H2_FUELING_DELAY",
+          "reason_detail": "H₂ fueling cannot start until boarding constraints are cleared; requires +15 min.",
+          "ground_confidence": 0.9,
+          "previous_eobt": "2025-11-20T12:50:00Z"
+        },
+        "D1": {
+          "decision_id": "TOBT-DEC-FPD-S01-D1",
+          "proposal_id": "TOBT-PROP-FPD-S01-P1",
+          "flight_id": "AB123",
+          "airport": "AMS",
+          "decision_timestamp": "2025-11-20T12:25:00Z",
+          "decision": "ACCEPTED",
+          "decided_eobt": "2025-11-20T13:05:00Z",
+          "decided_reason": "Ground-informed H₂ delay; slot still protected.",
+          "operator_id": "DISP-AMS-01"
+        }
+      },
+      "expected_outcome": {
+        "expected_feasibility_category": "FEASIBLE_WITH_MARGIN",
+        "expected_delay_attribution": {
+          "delay_expected_minutes": 15,
+          "primary_cause": "GROUND_GSE",
+          "notes": "Delay fully absorbed within slot window; no missed slot."
+        },
+        "expected_slot_usage_outcome": {
+          "slot_status": "USED_WITHIN_WINDOW",
+          "max_off_block_deviation_min": 10,
+          "max_takeoff_deviation_min": 5
+        },
+        "predictive_ops_expectations": {
+          "p_departure_delay_15_minimum": 0.6,
+          "p_slot_infringement_maximum": 0.2
+        }
+      }
+    },
+    {
+      "scenario_id": "FPD-S02",
+      "name": "ATFM-driven CTOT tightening – high risk of slot infringement",
+      "based_on_turnaround_scenario_id": "T001-S02",
+      "airport": "AMS",
+      "flight_id": "XY987",
+      "turnaround_id": "TRN-XY987-AMS",
+      "stand_id": "E17",
+      "initial_plan": {
+        "fpl_plan_snapshot": {
+          "snapshot_id": "FPL-SNAP-FPD-S02-0",
+          "flight_id": "XY987",
+          "airport": "AMS",
+          "route_id": "ROUTE-XY987-STD",
+          "eobt": "2025-11-20T12:55:00Z",
+          "ctot": "2025-11-20T13:10:00Z",
+          "tsat": "2025-11-20T13:00:00Z",
+          "turnaround_required_completion_time": "2025-11-20T12:50:00Z",
+          "buffers": {
+            "ground_buffer_min": 3,
+            "taxi_buffer_min": 3
+          },
+          "restrictions": [
+            "DEP_FLOW_AMS_STD"
+          ],
+          "performance_params": {
+            "cruise_level": "FL370",
+            "cost_index": 25.0
+          },
+          "last_update_time": "2025-11-20T11:35:00Z"
+        }
+      },
+      "slot_context": {
+        "slot_allocation_before": {
+          "allocation_id": "A1-XY987-AMS",
+          "ctot": "2025-11-20T13:10:00Z",
+          "tsat": "2025-11-20T13:00:00Z",
+          "earliest_off_block": "2025-11-20T12:55:00Z",
+          "latest_off_block": "2025-11-20T13:05:00Z",
+          "margin_minutes": 5
+        },
+        "slot_allocation_after": {
+          "allocation_id": "A2-XY987-AMS",
+          "ctot": "2025-11-20T13:00:00Z",
+          "tsat": "2025-11-20T12:50:00Z",
+          "earliest_off_block": "2025-11-20T12:45:00Z",
+          "latest_off_block": "2025-11-20T12:55:00Z",
+          "margin_minutes": 0
+        }
+      },
+      "timeline": {
+        "events": [
+          {
+            "t": "2025-11-20T12:15:00Z",
+            "source": "ATFM",
+            "type": "FPI.ATFM_SLOT_UPDATE",
+            "payload_ref": "SL1",
+            "summary": "CTOT tightened by -10 min, new slot A2-XY987-AMS."
+          },
+          {
+            "t": "2025-11-20T12:16:00Z",
+            "source": "FPI",
+            "type": "FPI.FPL_UPDATE",
+            "payload_ref": "FUP1",
+            "summary": "FPL updated with new CTOT/EOBT."
+          },
+          {
+            "t": "2025-11-20T12:17:00Z",
+            "source": "GROUND_OPS",
+            "type": "GROUND.TURNAROUND.SNAPSHOT",
+            "payload_ref": "S2",
+            "summary": "Turnaround progress behind plan; H₂ fueling and loading still in progress."
+          },
+          {
+            "t": "2025-11-20T12:18:00Z",
+            "source": "FPI",
+            "type": "FPI.PREDICTIVE_RISK_UPDATE",
+            "payload_ref": "PR2",
+            "summary": "High risk of slot infringement; mitigation options provided to OCC."
+          }
+        ]
+      },
+      "ground_snapshots": {
+        "S2": {
+          "snapshot_id": "TRN-SNAP-FPD-S02-S2",
+          "turnaround_id": "TRN-XY987-AMS",
+          "flight_id": "XY987",
+          "airport": "AMS",
+          "stand_id": "E17",
+          "timestamp": "2025-11-20T12:17:00Z",
+          "phase_id": "TA-P2",
+          "overall_status": "DELAYED",
+          "progress_percent": 40.0,
+          "critical_tasks": {
+            "remaining_critical_count": 3,
+            "blocking_reasons": [
+              "H2_FUELING_IN_PROGRESS",
+              "BAGGAGE_LOADING_INCOMPLETE"
+            ]
+          },
+          "gse_constraints": {
+            "h2_fueling_status": "IN_PROGRESS",
+            "known_shortages": [
+              "H2_SKID_CONFLICT"
+            ],
+            "safety_windows_active": [
+              "NO_H2_DURING_BOARDING"
+            ]
+          },
+          "expected_off_block_time": "2025-11-20T13:05:00Z",
+          "expected_pushback_ready_time": "2025-11-20T13:03:00Z"
+        }
+      },
+      "fpl_and_slot_events": {
+        "SL1": {
+          "event_id": "SLOT-EVT-FPD-S02-SL1",
+          "flight_id": "XY987",
+          "airport": "AMS",
+          "timestamp": "2025-11-20T12:15:00Z",
+          "reason": "REALLOCATION",
+          "allocation_before": {
+            "allocation_id": "A1-XY987-AMS",
+            "ctot": "2025-11-20T13:10:00Z",
+            "tsat": "2025-11-20T13:00:00Z"
+          },
+          "allocation_after": {
+            "allocation_id": "A2-XY987-AMS",
+            "ctot": "2025-11-20T13:00:00Z",
+            "tsat": "2025-11-20T12:50:00Z"
+          },
+          "notes": "Network re-sequencing under AMS departure regulation."
+        },
+        "FUP1": {
+          "event_id": "FPL-UPD-FPD-S02-FUP1",
+          "flight_id": "XY987",
+          "airport": "AMS",
+          "timestamp": "2025-11-20T12:16:00Z",
+          "reason": "ATFM_REGULATION",
+          "changed_fields": {
+            "eobt_old": "2025-11-20T12:55:00Z",
+            "eobt_new": "2025-11-20T12:50:00Z",
+            "ctot_old": "2025-11-20T13:10:00Z",
+            "ctot_new": "2025-11-20T13:00:00Z",
+            "tsat_old": "2025-11-20T13:00:00Z",
+            "tsat_new": "2025-11-20T12:50:00Z"
+          },
+          "notes": "Schedule tightened to protect new CTOT."
+        }
+      },
+      "predictive_ops_expected": {
+        "PR2": {
+          "risk_scores": {
+            "p_departure_delay_15_minimum": 0.8,
+            "p_departure_delay_30_minimum": 0.5,
+            "p_slot_infringement_minimum": 0.6,
+            "p_ground_cause_domination_minimum": 0.7
+          },
+          "recommendations": {
+            "expected_recommendations_contains": [
+              "PREPOSITION_H2_SKID",
+              "PRIORITISE_CRITICAL_TASKS",
+              "CONSIDER_REQUEST_LATER_SLOT"
+            ]
+          }
+        }
+      },
+      "expected_outcome": {
+        "expected_feasibility_category": "INFEASIBLE",
+        "expected_oc_decision_pattern": "Either request re-slot or accept risk with explicit OCC override.",
+        "expected_slot_usage_outcome": {
+          "slot_status_one_of": [
+            "USED_LATE",
+            "MISSED"
+          ]
+        },
+        "expected_delay_attribution": {
+          "primary_cause": "GROUND_GSE",
+          "secondary_causes_may_include": [
+            "ATFM"
+          ]
+        }
+      }
+    },
+    {
+      "scenario_id": "FPD-S03",
+      "name": "Minor schedule change – rule-based only, NN optional",
+      "based_on_turnaround_scenario_id": "T001-S03",
+      "airport": "FRA",
+      "flight_id": "CD456",
+      "turnaround_id": "TRN-CD456-FRA",
+      "stand_id": "Z23",
+      "initial_plan": {
+        "fpl_plan_snapshot": {
+          "snapshot_id": "FPL-SNAP-FPD-S03-0",
+          "flight_id": "CD456",
+          "airport": "FRA",
+          "route_id": "ROUTE-CD456-LONG",
+          "eobt": "2025-11-20T15:30:00Z",
+          "ctot": null,
+          "tsat": null,
+          "turnaround_required_completion_time": "2025-11-20T15:20:00Z",
+          "buffers": {
+            "ground_buffer_min": 10,
+            "taxi_buffer_min": 5
+          },
+          "restrictions": [],
+          "performance_params": {
+            "cruise_level": "FL410",
+            "cost_index": 40.0
+          },
+          "last_update_time": "2025-11-20T13:00:00Z"
+        }
+      },
+      "timeline": {
+        "events": [
+          {
+            "t": "2025-11-20T14:10:00Z",
+            "source": "FPL",
+            "type": "FPI.FPL_UPDATE",
+            "payload_ref": "FUP2",
+            "summary": "EOBT shifted +5 min for airline scheduling reasons."
+          },
+          {
+            "t": "2025-11-20T14:11:00Z",
+            "source": "GROUND_OPS",
+            "type": "GROUND.TURNAROUND.SNAPSHOT",
+            "payload_ref": "S3",
+            "summary": "Turnaround ahead of plan, no constraints."
+          }
+        ]
+      },
+      "ground_snapshots": {
+        "S3": {
+          "snapshot_id": "TRN-SNAP-FPD-S03-S3",
+          "turnaround_id": "TRN-CD456-FRA",
+          "flight_id": "CD456",
+          "airport": "FRA",
+          "stand_id": "Z23",
+          "timestamp": "2025-11-20T14:11:00Z",
+          "phase_id": "TA-P2",
+          "overall_status": "IN_PROGRESS",
+          "progress_percent": 70.0,
+          "critical_tasks": {
+            "remaining_critical_count": 1,
+            "blocking_reasons": []
+          },
+          "gse_constraints": {
+            "h2_fueling_status": "COMPLETED",
+            "known_shortages": [],
+            "safety_windows_active": []
+          },
+          "expected_off_block_time": "2025-11-20T15:25:00Z",
+          "expected_pushback_ready_time": "2025-11-20T15:22:00Z"
+        }
+      },
+      "fpl_and_slot_events": {
+        "FUP2": {
+          "event_id": "FPL-UPD-FPD-S03-FUP2",
+          "flight_id": "CD456",
+          "airport": "FRA",
+          "timestamp": "2025-11-20T14:10:00Z",
+          "reason": "NORMAL_REPLAN",
+          "changed_fields": {
+            "eobt_old": "2025-11-20T15:30:00Z",
+            "eobt_new": "2025-11-20T15:35:00Z",
+            "ctot_old": null,
+            "ctot_new": null,
+            "tsat_old": null,
+            "tsat_new": null
+          },
+          "notes": "Minor rotation change; sufficient ground buffer maintained."
+        }
+      },
+      "expected_outcome": {
+        "expected_feasibility_category": "FEASIBLE_WITH_MARGIN",
+        "expected_use_of_predictive_ops": "OPTIONAL",
+        "expected_tobt_proposal_needed": false,
+        "expected_delay_attribution": {
+          "delay_expected_minutes": 0,
+          "primary_cause": null
+        }
+      }
+    }
+  ]
+}
