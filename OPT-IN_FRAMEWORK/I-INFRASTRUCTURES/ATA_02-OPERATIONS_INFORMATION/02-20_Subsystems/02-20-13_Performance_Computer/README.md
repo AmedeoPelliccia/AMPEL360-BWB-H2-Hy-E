@@ -54,29 +54,34 @@ ops, dispatch and CAOS analytics.
 
 ## 3. Directory Structure
 
-```text
-02-20-13_Performance_Computer/
-├── README.md                                  ← You are here
-│
-├── 02-20-13-001_Performance_System_Overview.md    # High-level overview
-├── 02-20-13-002_Takeoff_Performance.md           # TO performance algorithms
-├── 02-20-13-003_Landing_Performance.md           # LND performance algorithms
-├── 02-20-13-004_Cruise_Optimization.md           # Cruise / CI / profiles
-├── 02-20-13-005_NN_Performance_Predictor.md      # AI/NN integration layer
-├── 02-20-13-006_BWB_Specific_Calculations.md     # BWB- and H₂-specific models
-│
-├── ASSETS/
-│   ├── 02-20-13-A-001_Performance_Architecture.drawio
-│   ├── 02-20-13-A-002_Takeoff_Charts.svg
-│   ├── 02-20-13-A-003_NN_Integration.svg
-│   └── Model_Cards/
-│       └── 02-20-13-A-101_Performance_NN_v1.0.yaml
-│
-└── TEST_DATA/
-    ├── 02-20-13-T-001_TO_RunwayCases.json
-    ├── 02-20-13-T-002_LDG_DistanceCases.json
-    ├── 02-20-13-T-003_Cruise_Profiles.json
-    └── 02-20-13-T-004_BWB_Corrections.json
+```mermaid
+graph TD
+  root[02-20-13_Performance_Computer/]
+
+  root --> readme[README.md]
+
+  %% Core documents
+  root --> d001[02-20-13-001_Performance_System_Overview.md]
+  root --> d002[02-20-13-002_Takeoff_Performance.md]
+  root --> d003[02-20-13-003_Landing_Performance.md]
+  root --> d004[02-20-13-004_Cruise_Optimization.md]
+  root --> d005[02-20-13-005_NN_Performance_Predictor.md]
+  root --> d006[02-20-13-006_BWB_Specific_Calculations.md]
+
+  %% ASSETS
+  root --> assets[ASSETS/]
+  assets --> a001[02-20-13-A-001_Performance_Architecture.drawio]
+  assets --> a002[02-20-13-A-002_Takeoff_Charts.svg]
+  assets --> a003[02-20-13-A-003_NN_Integration.svg]
+  assets --> modelcards[Model_Cards/]
+  modelcards --> mc101[02-20-13-A-101_Performance_NN_v1.0.yaml]
+
+  %% TEST DATA
+  root --> testdata[TEST_DATA/]
+  testdata --> t001[02-20-13-T-001_TO_RunwayCases.json]
+  testdata --> t002[02-20-13-T-002_LDG_DistanceCases.json]
+  testdata --> t003[02-20-13-T-003_Cruise_Profiles.json]
+  testdata --> t004[02-20-13-T-004_BWB_Corrections.json]
 ````
 
 *(TEST_DATA es sugerido; puedes adaptarlo a tu patrón real de pruebas.)*
@@ -275,3 +280,4 @@ The Performance Computer must:
 
 ```
 ```
+
