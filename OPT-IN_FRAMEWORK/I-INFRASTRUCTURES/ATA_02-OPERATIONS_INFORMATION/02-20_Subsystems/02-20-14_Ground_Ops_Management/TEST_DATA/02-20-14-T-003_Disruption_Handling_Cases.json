@@ -1,0 +1,374 @@
+{
+  "test_id": "02-20-14-T-002_GSE_Allocation_Cases",
+  "version": "0.1.0",
+  "description": "GSE allocation scenarios to validate nominal assignment, shortage, conflict detection and basic constraint handling (RQ-010, RQ-011, RQ-012, RQ-020).",
+  "schema_version": "1.0.0",
+  "requirements_covered": [
+    "02-20-14-RQ-010",
+    "02-20-14-RQ-011",
+    "02-20-14-RQ-012",
+    "02-20-14-RQ-020"
+  ],
+  "references": {
+    "turnaround_scenarios_file": "02-20-14-T-001_Turnaround_Scenarios.json"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "T002-S01",
+      "name": "Nominal single-stand allocation (no conflicts)",
+      "based_on_turnaround_scenario_ids": [
+        "T001-S01"
+      ],
+      "airport": "AMS",
+      "stands": [
+        "E15"
+      ],
+      "description": "Single turnaround AB123 at stand E15, enough GSE for all critical tasks. No conflicts expected.",
+      "requirements_focus": [
+        "02-20-14-RQ-010",
+        "02-20-14-RQ-011"
+      ],
+      "gse_inventory": [
+        {
+          "gse_id": "GPU-01",
+          "type": "GPU",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "HANDLER"
+        },
+        {
+          "gse_id": "BELT-03",
+          "type": "BELT_LOADER",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "HANDLER"
+        },
+        {
+          "gse_id": "H2-SKID-02",
+          "type": "H2_FUELING_SKID",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "AIRPORT"
+        }
+      ],
+      "turnarounds": [
+        {
+          "turnaround_id": "TRN-AB123-AMS",
+          "flight_id": "AB123",
+          "stand_id": "E15",
+          "reference_turnaround_scenario_id": "T001-S01"
+        }
+      ],
+      "expected_allocations": [
+        {
+          "allocation_id": "ALLOC-S01-GPU-AB123",
+          "gse_id": "GPU-01",
+          "turnaround_id": "TRN-AB123-AMS",
+          "stand_id": "E15",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:01:00Z",
+            "latest_departure": "2025-11-20T12:50:00Z"
+          },
+          "service_tasks": [
+            "AB123-GPU"
+          ],
+          "priority": "BASELINE",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "ALLOC-S01-BELT-AB123",
+          "gse_id": "BELT-03",
+          "turnaround_id": "TRN-AB123-AMS",
+          "stand_id": "E15",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:07:00Z",
+            "latest_departure": "2025-11-20T12:40:00Z"
+          },
+          "service_tasks": [
+            "AB123-BELT-1"
+          ],
+          "priority": "BASELINE",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "ALLOC-S01-H2-AB123",
+          "gse_id": "H2-SKID-02",
+          "turnaround_id": "TRN-AB123-AMS",
+          "stand_id": "E15",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:22:00Z",
+            "latest_departure": "2025-11-20T12:45:00Z"
+          },
+          "service_tasks": [
+            "AB123-H2-FUEL"
+          ],
+          "priority": "BASELINE",
+          "status": "PLANNED"
+        }
+      ],
+      "expected_task_status_by_id": {
+        "AB123-GPU": "READY",
+        "AB123-BELT-1": "READY",
+        "AB123-H2-FUEL": "READY",
+        "AB123-CLEAN": "PLANNED"
+      }
+    },
+    {
+      "scenario_id": "T002-S02",
+      "name": "H₂ fueling skid conflict between two flights",
+      "based_on_turnaround_scenario_ids": [
+        "T001-S01",
+        "T001-S02"
+      ],
+      "airport": "AMS",
+      "stands": [
+        "E15",
+        "E17"
+      ],
+      "description": "Two overlapping turnarounds (AB123, XY987) share only one H₂ fueling skid. Allocation engine must allocate one and mark the other as CONFLICT / WAITING_GSE.",
+      "requirements_focus": [
+        "02-20-14-RQ-010",
+        "02-20-14-RQ-011",
+        "02-20-14-RQ-012"
+      ],
+      "gse_inventory": [
+        {
+          "gse_id": "GPU-01",
+          "type": "GPU",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "HANDLER"
+        },
+        {
+          "gse_id": "BELT-03",
+          "type": "BELT_LOADER",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "HANDLER"
+        },
+        {
+          "gse_id": "H2-SKID-02",
+          "type": "H2_FUELING_SKID",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "AIRPORT"
+        }
+      ],
+      "turnarounds": [
+        {
+          "turnaround_id": "TRN-AB123-AMS",
+          "flight_id": "AB123",
+          "stand_id": "E15",
+          "reference_turnaround_scenario_id": "T001-S01"
+        },
+        {
+          "turnaround_id": "TRN-XY987-AMS",
+          "flight_id": "XY987",
+          "stand_id": "E17",
+          "reference_turnaround_scenario_id": "T001-S02"
+        }
+      ],
+      "expected_allocations": [
+        {
+          "allocation_id": "ALLOC-S02-H2-AB123",
+          "gse_id": "H2-SKID-02",
+          "turnaround_id": "TRN-AB123-AMS",
+          "stand_id": "E15",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:22:00Z",
+            "latest_departure": "2025-11-20T12:45:00Z"
+          },
+          "service_tasks": [
+            "AB123-H2-FUEL"
+          ],
+          "priority": "BASELINE",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "ALLOC-S02-H2-XY987",
+          "gse_id": "H2-SKID-02",
+          "turnaround_id": "TRN-XY987-AMS",
+          "stand_id": "E17",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:30:00Z",
+            "latest_departure": "2025-11-20T13:00:00Z"
+          },
+          "service_tasks": [
+            "XY987-H2-FUEL"
+          ],
+          "priority": "BASELINE",
+          "status": "CONFLICT",
+          "conflict_reason": "H2-SKID-02 overlapping allocation ALLOC-S02-H2-AB123 at stand E15"
+        }
+      ],
+      "expected_task_status_by_id": {
+        "AB123-H2-FUEL": "READY",
+        "XY987-H2-FUEL": "WAITING_GSE",
+        "AB123-GPU": "READY",
+        "XY987-GPU": "READY"
+      }
+    },
+    {
+      "scenario_id": "T002-S03",
+      "name": "GPU shortage across two stands",
+      "based_on_turnaround_scenario_ids": [
+        "T001-S01",
+        "T001-S02"
+      ],
+      "airport": "AMS",
+      "stands": [
+        "E15",
+        "E17"
+      ],
+      "description": "Two simultaneous turnarounds share only one GPU. One flight gets allocated GPU, the other remains WAITING_GSE. H₂ fueling is not constrained in this scenario.",
+      "requirements_focus": [
+        "02-20-14-RQ-010",
+        "02-20-14-RQ-011",
+        "02-20-14-RQ-012"
+      ],
+      "gse_inventory": [
+        {
+          "gse_id": "GPU-01",
+          "type": "GPU",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "HANDLER"
+        },
+        {
+          "gse_id": "BELT-03",
+          "type": "BELT_LOADER",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "HANDLER"
+        },
+        {
+          "gse_id": "BELT-04",
+          "type": "BELT_LOADER",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "HANDLER"
+        },
+        {
+          "gse_id": "H2-SKID-02",
+          "type": "H2_FUELING_SKID",
+          "location": {
+            "airport": "AMS",
+            "stand_id": null
+          },
+          "status": "AVAILABLE",
+          "owner": "AIRPORT"
+        }
+      ],
+      "turnarounds": [
+        {
+          "turnaround_id": "TRN-AB123-AMS",
+          "flight_id": "AB123",
+          "stand_id": "E15",
+          "reference_turnaround_scenario_id": "T001-S01"
+        },
+        {
+          "turnaround_id": "TRN-XY987-AMS",
+          "flight_id": "XY987",
+          "stand_id": "E17",
+          "reference_turnaround_scenario_id": "T001-S02"
+        }
+      ],
+      "expected_allocations": [
+        {
+          "allocation_id": "ALLOC-S03-GPU-AB123",
+          "gse_id": "GPU-01",
+          "turnaround_id": "TRN-AB123-AMS",
+          "stand_id": "E15",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:01:00Z",
+            "latest_departure": "2025-11-20T12:50:00Z"
+          },
+          "service_tasks": [
+            "AB123-GPU"
+          ],
+          "priority": "BASELINE",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "ALLOC-S03-GPU-XY987",
+          "gse_id": "GPU-01",
+          "turnaround_id": "TRN-XY987-AMS",
+          "stand_id": "E17",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:21:00Z",
+            "latest_departure": "2025-11-20T13:00:00Z"
+          },
+          "service_tasks": [
+            "XY987-GPU"
+          ],
+          "priority": "BASELINE",
+          "status": "CONFLICT",
+          "conflict_reason": "GPU-01 overlapping allocation ALLOC-S03-GPU-AB123"
+        },
+        {
+          "allocation_id": "ALLOC-S03-H2-AB123",
+          "gse_id": "H2-SKID-02",
+          "turnaround_id": "TRN-AB123-AMS",
+          "stand_id": "E15",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:22:00Z",
+            "latest_departure": "2025-11-20T12:45:00Z"
+          },
+          "service_tasks": [
+            "AB123-H2-FUEL"
+          ],
+          "priority": "BASELINE",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "ALLOC-S03-H2-XY987",
+          "gse_id": "H2-SKID-02",
+          "turnaround_id": "TRN-XY987-AMS",
+          "stand_id": "E17",
+          "time_window": {
+            "earliest_arrival": "2025-11-20T12:30:00Z",
+            "latest_departure": "2025-11-20T13:02:00Z"
+          },
+          "service_tasks": [
+            "XY987-H2-FUEL"
+          ],
+          "priority": "BASELINE",
+          "status": "PLANNED"
+        }
+      ],
+      "expected_task_status_by_id": {
+        "AB123-GPU": "READY",
+        "XY987-GPU": "WAITING_GSE",
+        "AB123-H2-FUEL": "READY",
+        "XY987-H2-FUEL": "READY"
+      }
+    }
+  ]
+}
