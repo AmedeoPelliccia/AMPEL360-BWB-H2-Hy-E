@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "document_id": "02-20-13-T-001",
+    "file_name": "02-20-13-T-001_TO_RunwayCases.json",
+    "title": "Takeoff Runway Test Cases",
+    "version": "0.1.0",
+    "status": "PLACEHOLDER",
+    "description": "Regression and validation test cases for takeoff performance runway evaluation algorithms (ALG-TO-01 … ALG-TO-07).",
+    "related_documents": [
+      "../02-20-13-002_Takeoff_Performance.md",
+      "../02-20-13-006_BWB_Specific_Calculations.md",
+      "../VERIF.md",
+      "../TRACE.csv"
+    ]
+  },
+  "global_config": {
+    "units": {
+      "weight": "kg",
+      "distance": "m",
+      "altitude": "ft",
+      "pressure": "hPa",
+      "temperature": "degC",
+      "wind_speed": "kt",
+      "slope": "percent",
+      "angle": "deg",
+      "power": "kW"
+    },
+    "defaults": {
+      "regulation_basis": "CS-25",
+      "headwind_credit_factor": 0.5,
+      "tailwind_penalty_factor": 1.0,
+      "obstacle_clearance_ft": 35,
+      "balanced_field_tolerance_m": 5.0
+    }
+  },
+  "cases": [
+    {
+      "case_id": "TO-RWY-001",
+      "title": "Sea-level, ISA, dry runway, balanced field",
+      "description": "Baseline balanced field case at sea level, ISA, dry runway, nominal mass and hybrid boost available.",
+      "variant": "Q100",
+      "aircraft": {
+        "takeoff_weight_kg": 85000.0,
+        "cg_percent_mac": 25.0,
+        "config": {
+          "flaps_setting": "TO1",
+          "slats_setting": "AUTO",
+          "packs_on_for_takeoff": true,
+          "anti_ice_on": false,
+          "bleed_config": "STANDARD",
+          "hybrid_boost_profile_id": "HB_TO_STD"
+        }
+      },
+      "runway": {
+        "airport_icao": "XXXX",
+        "runway_id": "09",
+        "tora_m": 2800.0,
+        "toda_m": 3000.0,
+        "asda_m": 2800.0,
+        "elevation_ft": 0.0,
+        "slope_percent": 0.0,
+        "surface_type": "CONCRETE",
+        "surface_condition": "DRY",
+        "contamination": {
+          "state": "NONE",
+          "depth_mm": 0.0,
+          "coverage_percent": 0.0,
+          "friction_mu_override": null
+        },
+        "obstacle": {
+          "exists": false,
+          "height_ft": 0.0,
+          "distance_from_threshold_m": 0.0,
+          "lateral_offset_m": 0.0
+        }
+      },
+      "environment": {
+        "pressure_altitude_ft": 0.0,
+        "qnh_hpa": 1013.0,
+        "temperature_c": 15.0,
+        "isa_deviation_c": 0.0,
+        "wind_head_component_kt": 5.0,
+        "wind_cross_component_kt": 0.0
+      },
+      "constraints": {
+        "regulation": "CS-25",
+        "balanced_field_required": true,
+        "obstacle_limitation_active": false,
+        "climb_limitation_active": true,
+        "brake_energy_check_required": true
+      },
+      "expected_results": {
+        "field_limits": {
+          "balanced_field_length_m": 2600.0,
+          "accelerate_stop_distance_m": 2595.0,
+          "accelerate_go_distance_m": 2598.0
+        },
+        "limiting_weights_kg": {
+          "field_length": 85000.0,
+          "climb": 86000.0,
+          "obstacle": 90000.0,
+          "brake_energy": 87000.0
+        },
+        "v_speeds_kt": {
+          "v1": 134.0,
+          "vr": 140.0,
+          "v2": 147.0
+        },
+        "power_hybrid": {
+          "fuel_cell_max_power_kW": 4800.0,
+          "co2_battery_peak_power_kW": 5000.0,
+          "co2_battery_energy_used_kWh": 45.0
+        }
+      },
+      "tolerances": {
+        "distance_m": 10.0,
+        "v_speed_kt": 1.0,
+        "weight_kg": 200.0
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-001",
+          "RQ-10-02-HYB-TO-POWER"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/CFD_TO_SEA_LEVEL_001/",
+          "EVIDENCE/WINDTUNNEL_TO_001/"
+        ],
+        "notes": "Numeric values are placeholders; replace with validated data before locking VERIF."
+      }
+    },
+    {
+      "case_id": "TO-RWY-002",
+      "title": "Hot-and-high, dry runway, climb-limited",
+      "description": "High-elevation, ISA+20, dry runway with limiting second-segment climb.",
+      "variant": "Q100",
+      "aircraft": {
+        "takeoff_weight_kg": 78000.0,
+        "cg_percent_mac": 28.0,
+        "config": {
+          "flaps_setting": "TO2",
+          "slats_setting": "AUTO",
+          "packs_on_for_takeoff": false,
+          "anti_ice_on": false,
+          "bleed_config": "REDUCED",
+          "hybrid_boost_profile_id": "HB_TO_CLIMB_FAVORING"
+        }
+      },
+      "runway": {
+        "airport_icao": "YYYY",
+        "runway_id": "27",
+        "tora_m": 3200.0,
+        "toda_m": 3400.0,
+        "asda_m": 3200.0,
+        "elevation_ft": 5500.0,
+        "slope_percent": 1.0,
+        "surface_type": "ASPHALT",
+        "surface_condition": "DRY",
+        "contamination": {
+          "state": "NONE",
+          "depth_mm": 0.0,
+          "coverage_percent": 0.0,
+          "friction_mu_override": null
+        },
+        "obstacle": {
+          "exists": true,
+          "height_ft": 100.0,
+          "distance_from_threshold_m": 2500.0,
+          "lateral_offset_m": 0.0
+        }
+      },
+      "environment": {
+        "pressure_altitude_ft": 5500.0,
+        "qnh_hpa": 1013.0,
+        "temperature_c": 35.0,
+        "isa_deviation_c": 20.0,
+        "wind_head_component_kt": 0.0,
+        "wind_cross_component_kt": 10.0
+      },
+      "constraints": {
+        "regulation": "CS-25",
+        "balanced_field_required": true,
+        "obstacle_limitation_active": true,
+        "climb_limitation_active": true,
+        "brake_energy_check_required": true
+      },
+      "expected_results": {
+        "field_limits": {
+          "balanced_field_length_m": 3050.0,
+          "accelerate_stop_distance_m": 3040.0,
+          "accelerate_go_distance_m": 3055.0
+        },
+        "limiting_weights_kg": {
+          "field_length": 80000.0,
+          "climb": 78000.0,
+          "obstacle": 79000.0,
+          "brake_energy": 82000.0
+        },
+        "v_speeds_kt": {
+          "v1": 142.0,
+          "vr": 149.0,
+          "v2": 156.0
+        },
+        "power_hybrid": {
+          "fuel_cell_max_power_kW": 4600.0,
+          "co2_battery_peak_power_kW": 5200.0,
+          "co2_battery_energy_used_kWh": 60.0
+        }
+      },
+      "tolerances": {
+        "distance_m": 15.0,
+        "v_speed_kt": 2.0,
+        "weight_kg": 300.0
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-001",
+          "RQ-02-20-13-CLIMB",
+          "RQ-10-02-HYB-TO-POWER"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/HOT_HIGH_TO_001/",
+          "EVIDENCE/CLIMB_LIMIT_002/"
+        ],
+        "notes": "Designed to exercise climb-limited logic and obstacle check simultaneously."
+      }
+    },
+    {
+      "case_id": "TO-RWY-003",
+      "title": "Wet/contaminated, sea-level, brake-energy-limited",
+      "description": "Wet runway with standing water, brake-energy-limited V1 and ASD dominance.",
+      "variant": "Q100",
+      "aircraft": {
+        "takeoff_weight_kg": 83000.0,
+        "cg_percent_mac": 26.0,
+        "config": {
+          "flaps_setting": "TO1",
+          "slats_setting": "AUTO",
+          "packs_on_for_takeoff": true,
+          "anti_ice_on": true,
+          "bleed_config": "STANDARD",
+          "hybrid_boost_profile_id": "HB_TO_STD"
+        }
+      },
+      "runway": {
+        "airport_icao": "ZZZZ",
+        "runway_id": "16",
+        "tora_m": 2600.0,
+        "toda_m": 2700.0,
+        "asda_m": 2600.0,
+        "elevation_ft": 100.0,
+        "slope_percent": -0.5,
+        "surface_type": "CONCRETE",
+        "surface_condition": "WET",
+        "contamination": {
+          "state": "STANDING_WATER",
+          "depth_mm": 3.0,
+          "coverage_percent": 100.0,
+          "friction_mu_override": 0.35
+        },
+        "obstacle": {
+          "exists": false,
+          "height_ft": 0.0,
+          "distance_from_threshold_m": 0.0,
+          "lateral_offset_m": 0.0
+        }
+      },
+      "environment": {
+        "pressure_altitude_ft": 100.0,
+        "qnh_hpa": 1010.0,
+        "temperature_c": 18.0,
+        "isa_deviation_c": 3.0,
+        "wind_head_component_kt": -5.0,
+        "wind_cross_component_kt": 5.0
+      },
+      "constraints": {
+        "regulation": "CS-25",
+        "balanced_field_required": true,
+        "obstacle_limitation_active": false,
+        "climb_limitation_active": true,
+        "brake_energy_check_required": true
+      },
+      "expected_results": {
+        "field_limits": {
+          "balanced_field_length_m": 2550.0,
+          "accelerate_stop_distance_m": 2540.0,
+          "accelerate_go_distance_m": 2555.0
+        },
+        "limiting_weights_kg": {
+          "field_length": 83000.0,
+          "climb": 86000.0,
+          "obstacle": 90000.0,
+          "brake_energy": 83000.0
+        },
+        "v_speeds_kt": {
+          "v1": 129.0,
+          "vr": 136.0,
+          "v2": 143.0
+        },
+        "power_hybrid": {
+          "fuel_cell_max_power_kW": 4700.0,
+          "co2_battery_peak_power_kW": 5000.0,
+          "co2_battery_energy_used_kWh": 50.0
+        }
+      },
+      "tolerances": {
+        "distance_m": 15.0,
+        "v_speed_kt": 2.0,
+        "weight_kg": 300.0
+      },
+      "traceability": {
+        "requirement_ids": [
+          "RQ-02-20-13-001",
+          "RQ-02-20-13-BRAKE-ENERGY"
+        ],
+        "evidence_refs": [
+          "EVIDENCE/WET_RUNWAY_TO_001/",
+          "EVIDENCE/BRAKE_ENERGY_001/"
+        ],
+        "notes": "Focus case for wet/contaminated logic and brake energy / V1 selection checks."
+      }
+    }
+  ]
+}
