@@ -1,4 +1,3 @@
-```markdown
 # 02-20-14-A-501 — Requirements Traceability
 
 **Document ID:** 02-20-14-A-501_Requirements_Traceability  
