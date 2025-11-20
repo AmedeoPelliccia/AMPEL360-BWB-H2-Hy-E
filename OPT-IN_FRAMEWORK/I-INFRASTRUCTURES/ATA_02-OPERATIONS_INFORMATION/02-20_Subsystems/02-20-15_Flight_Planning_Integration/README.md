@@ -73,10 +73,10 @@ The goal is to keep **turnaround reality**, **flight plan assumptions** and **sl
 ## 4. Document Map
 
 - [02-20-15-001_FPL_Integration_Overview.md](./02-20-15-001_FPL_Integration_Overview.md)  
-- [02-20-15-002_Turnaround_to_FPL_Interface.md](./02-20-15-002_Turnaround_to_FPL_Interface.md) *(planned)*  
-- [02-20-15-003_Slots_and_ATFM_Integration.md](./02-20-15-003_Slots_and_ATFM_Integration.md) *(planned)*  
-- [02-20-15-004_FPL_Change_Propagation.md](./02-20-15-004_FPL_Change_Propagation.md) *(planned)*  
-- [02-20-15-005_Predictive_Ops_FPL_Hooks.md](./02-20-15-005_Predictive_Ops_FPL_Hooks.md) *(planned)*  
+- [02-20-15-002_Turnaround_to_FPL_Interface.md](./02-20-15-002_Turnaround_to_FPL_Interface.md)  
+- [02-20-15-003_Slots_and_ATFM_Integration.md](./02-20-15-003_Slots_and_ATFM_Integration.md) 
+- [02-20-15-004_FPL_Change_Propagation.md](./02-20-15-004_FPL_Change_Propagation.md)   
+- [02-20-15-005_Predictive_Ops_FPL_Hooks.md](./02-20-15-005_Predictive_Ops_FPL_Hooks.md)  
 
 Architecture & assets:
 
