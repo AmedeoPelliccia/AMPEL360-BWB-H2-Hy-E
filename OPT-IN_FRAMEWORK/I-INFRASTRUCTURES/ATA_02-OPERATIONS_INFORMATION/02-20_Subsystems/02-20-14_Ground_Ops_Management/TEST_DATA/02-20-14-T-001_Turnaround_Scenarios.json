@@ -1,0 +1,265 @@
+{
+  "test_id": "02-20-14-T-001_Turnaround_Scenarios",
+  "version": "0.1.0",
+  "description": "Canonical turnaround scenarios for validating phase model and RampServiceTask representation (RQ-001, RQ-002).",
+  "requirements_covered": [
+    "02-20-14-RQ-001",
+    "02-20-14-RQ-002"
+  ],
+  "schema_version": "1.0.0",
+  "scenarios": [
+    {
+      "scenario_id": "T001-S01",
+      "name": "Nominal short-haul turnaround",
+      "airport": "AMS",
+      "stand_id": "E15",
+      "flight_id": "AB123",
+      "aircraft_type": "AMPEL360-Q100",
+      "scheduled_on_block": "2025-11-20T12:00:00Z",
+      "planned_turnaround_duration_min": 50,
+      "phases": [
+        {
+          "phase_id": "TA-P1",
+          "name": "On-block & initial safety",
+          "start_offset_min": 0,
+          "end_offset_min": 5
+        },
+        {
+          "phase_id": "TA-P2",
+          "name": "Deboarding & initial ground services",
+          "start_offset_min": 5,
+          "end_offset_min": 20
+        },
+        {
+          "phase_id": "TA-P3",
+          "name": "Servicing & fueling",
+          "start_offset_min": 20,
+          "end_offset_min": 35
+        },
+        {
+          "phase_id": "TA-P4",
+          "name": "Boarding & final checks",
+          "start_offset_min": 35,
+          "end_offset_min": 50
+        }
+      ],
+      "service_tasks": [
+        {
+          "task_id": "AB123-GPU",
+          "service_type": "GPU",
+          "phase_id": "TA-P1",
+          "required_gse_types": ["GPU"],
+          "planned_start_offset_min": 1,
+          "planned_end_offset_min": 50,
+          "critical": true
+        },
+        {
+          "task_id": "AB123-BELT-1",
+          "service_type": "BAGGAGE_UNLOAD",
+          "phase_id": "TA-P2",
+          "required_gse_types": ["BELT_LOADER"],
+          "planned_start_offset_min": 7,
+          "planned_end_offset_min": 22,
+          "critical": true
+        },
+        {
+          "task_id": "AB123-H2-FUEL",
+          "service_type": "H2_FUELING",
+          "phase_id": "TA-P3",
+          "required_gse_types": ["H2_FUELING_SKID"],
+          "planned_start_offset_min": 22,
+          "planned_end_offset_min": 37,
+          "critical": true
+        },
+        {
+          "task_id": "AB123-CLEAN",
+          "service_type": "CABIN_CLEANING",
+          "phase_id": "TA-P2",
+          "required_gse_types": [],
+          "planned_start_offset_min": 10,
+          "planned_end_offset_min": 25,
+          "critical": false
+        }
+      ],
+      "constraints": {
+        "min_connect_time_min": 40,
+        "h2_fueling_not_during_boarding": true
+      }
+    },
+    {
+      "scenario_id": "T001-S02",
+      "name": "Late inbound, compressed turnaround",
+      "airport": "AMS",
+      "stand_id": "E17",
+      "flight_id": "XY987",
+      "aircraft_type": "AMPEL360-Q100",
+      "scheduled_on_block": "2025-11-20T12:20:00Z",
+      "planned_turnaround_duration_min": 40,
+      "phases": [
+        {
+          "phase_id": "TA-P1",
+          "name": "On-block & initial safety",
+          "start_offset_min": 0,
+          "end_offset_min": 4
+        },
+        {
+          "phase_id": "TA-P2",
+          "name": "Deboarding & ground services",
+          "start_offset_min": 4,
+          "end_offset_min": 18
+        },
+        {
+          "phase_id": "TA-P3",
+          "name": "Servicing & fueling",
+          "start_offset_min": 18,
+          "end_offset_min": 30
+        },
+        {
+          "phase_id": "TA-P4",
+          "name": "Boarding & final checks",
+          "start_offset_min": 30,
+          "end_offset_min": 40
+        }
+      ],
+      "service_tasks": [
+        {
+          "task_id": "XY987-GPU",
+          "service_type": "GPU",
+          "phase_id": "TA-P1",
+          "required_gse_types": ["GPU"],
+          "planned_start_offset_min": 1,
+          "planned_end_offset_min": 40,
+          "critical": true
+        },
+        {
+          "task_id": "XY987-BELT-1",
+          "service_type": "BAGGAGE_UNLOAD",
+          "phase_id": "TA-P2",
+          "required_gse_types": ["BELT_LOADER"],
+          "planned_start_offset_min": 6,
+          "planned_end_offset_min": 20,
+          "critical": true
+        },
+        {
+          "task_id": "XY987-H2-FUEL",
+          "service_type": "H2_FUELING",
+          "phase_id": "TA-P3",
+          "required_gse_types": ["H2_FUELING_SKID"],
+          "planned_start_offset_min": 20,
+          "planned_end_offset_min": 32,
+          "critical": true
+        },
+        {
+          "task_id": "XY987-CATER",
+          "service_type": "CATERING",
+          "phase_id": "TA-P2",
+          "required_gse_types": [],
+          "planned_start_offset_min": 8,
+          "planned_end_offset_min": 24,
+          "critical": false
+        }
+      ],
+      "constraints": {
+        "min_connect_time_min": 35,
+        "h2_fueling_not_during_boarding": true
+      }
+    },
+    {
+      "scenario_id": "T001-S03",
+      "name": "Wide-body long-haul styled turnaround (stress on phases & tasks count)",
+      "airport": "FRA",
+      "stand_id": "Z23",
+      "flight_id": "CD456",
+      "aircraft_type": "AMPEL360-Q120",
+      "scheduled_on_block": "2025-11-20T08:30:00Z",
+      "planned_turnaround_duration_min": 90,
+      "phases": [
+        {
+          "phase_id": "TA-P1",
+          "name": "On-block & safety",
+          "start_offset_min": 0,
+          "end_offset_min": 10
+        },
+        {
+          "phase_id": "TA-P2",
+          "name": "Deboarding & early services",
+          "start_offset_min": 10,
+          "end_offset_min": 35
+        },
+        {
+          "phase_id": "TA-P3",
+          "name": "Servicing, fueling & heavy cleaning",
+          "start_offset_min": 35,
+          "end_offset_min": 65
+        },
+        {
+          "phase_id": "TA-P4",
+          "name": "Boarding & close-out",
+          "start_offset_min": 65,
+          "end_offset_min": 90
+        }
+      ],
+      "service_tasks": [
+        {
+          "task_id": "CD456-GPU",
+          "service_type": "GPU",
+          "phase_id": "TA-P1",
+          "required_gse_types": ["GPU"],
+          "planned_start_offset_min": 2,
+          "planned_end_offset_min": 88,
+          "critical": true
+        },
+        {
+          "task_id": "CD456-BELT-FWD",
+          "service_type": "BAGGAGE_UNLOAD",
+          "phase_id": "TA-P2",
+          "required_gse_types": ["BELT_LOADER"],
+          "planned_start_offset_min": 15,
+          "planned_end_offset_min": 40,
+          "critical": true
+        },
+        {
+          "task_id": "CD456-BELT-AFT",
+          "service_type": "BAGGAGE_UNLOAD",
+          "phase_id": "TA-P2",
+          "required_gse_types": ["BELT_LOADER"],
+          "planned_start_offset_min": 18,
+          "planned_end_offset_min": 45,
+          "critical": true
+        },
+        {
+          "task_id": "CD456-H2-FUEL",
+          "service_type": "H2_FUELING",
+          "phase_id": "TA-P3",
+          "required_gse_types": ["H2_FUELING_SKID"],
+          "planned_start_offset_min": 40,
+          "planned_end_offset_min": 65,
+          "critical": true
+        },
+        {
+          "task_id": "CD456-DEICE",
+          "service_type": "DEICING",
+          "phase_id": "TA-P3",
+          "required_gse_types": ["DEICING_TRUCK"],
+          "planned_start_offset_min": 50,
+          "planned_end_offset_min": 75,
+          "critical": false
+        },
+        {
+          "task_id": "CD456-CLEAN-HEAVY",
+          "service_type": "CABIN_CLEANING_HEAVY",
+          "phase_id": "TA-P3",
+          "required_gse_types": [],
+          "planned_start_offset_min": 37,
+          "planned_end_offset_min": 70,
+          "critical": false
+        }
+      ],
+      "constraints": {
+        "min_connect_time_min": 75,
+        "h2_fueling_not_during_boarding": true,
+        "deicing_must_precede_pushback": true
+      }
+    }
+  ]
+}
