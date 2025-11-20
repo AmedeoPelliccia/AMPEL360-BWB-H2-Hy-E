@@ -1,0 +1,277 @@
+{
+  "test_id": "02-20-14-T-002_GSE_Allocation_Cases",
+  "version": "0.1.0",
+  "description": "Validation dataset for the GSE allocation model (RQ-010 to RQ-012, RQ-020). Includes nominal, conflict, and constraint scenarios.",
+  "requirements_covered": [
+    "02-20-14-RQ-010",
+    "02-20-14-RQ-011",
+    "02-20-14-RQ-012",
+    "02-20-14-RQ-020"
+  ],
+  "schema_version": "1.0.0",
+  "families": [
+    {
+      "family_id": "F01",
+      "name": "Nominal availability (no conflicts)",
+      "description": "All required GSE types are available; allocations succeed without overlap.",
+      "gse_inventory": [
+        {
+          "gse_id": "GPU-01",
+          "type": "GPU",
+          "airport": "AMS",
+          "status": "AVAILABLE"
+        },
+        {
+          "gse_id": "BELT-01",
+          "type": "BELT_LOADER",
+          "airport": "AMS",
+          "status": "AVAILABLE"
+        },
+        {
+          "gse_id": "H2-SKID-01",
+          "type": "H2_FUELING_SKID",
+          "airport": "AMS",
+          "status": "AVAILABLE"
+        }
+      ],
+      "turnarounds": [
+        {
+          "turnaround_id": "TRN-AB123-AMS",
+          "stand_id": "E15",
+          "tasks": [
+            {
+              "task_id": "AB123-GPU",
+              "service_type": "GPU",
+              "required_gse_types": ["GPU"],
+              "time_window": ["2025-11-20T12:00:00Z", "2025-11-20T13:00:00Z"]
+            },
+            {
+              "task_id": "AB123-BELT",
+              "service_type": "BAGGAGE_UNLOAD",
+              "required_gse_types": ["BELT_LOADER"],
+              "time_window": ["2025-11-20T12:10:00Z", "2025-11-20T12:40:00Z"]
+            },
+            {
+              "task_id": "AB123-H2",
+              "service_type": "H2_FUELING",
+              "required_gse_types": ["H2_FUELING_SKID"],
+              "time_window": ["2025-11-20T12:20:00Z", "2025-11-20T12:45:00Z"]
+            }
+          ]
+        }
+      ],
+      "expected_allocations": [
+        {
+          "allocation_id": "AL-GPU-AB123",
+          "gse_id": "GPU-01",
+          "turnaround_id": "TRN-AB123-AMS",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "AL-BELT-AB123",
+          "gse_id": "BELT-01",
+          "turnaround_id": "TRN-AB123-AMS",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "AL-H2-AB123",
+          "gse_id": "H2-SKID-01",
+          "turnaround_id": "TRN-AB123-AMS",
+          "status": "PLANNED"
+        }
+      ],
+      "expected_conflicts": []
+    },
+    {
+      "family_id": "F02",
+      "name": "Shortage / overlap conflict",
+      "description": "Two turnarounds sharing one H2 fueling skid with overlapping time windows; expect conflict flag.",
+      "gse_inventory": [
+        {
+          "gse_id": "H2-SKID-02",
+          "type": "H2_FUELING_SKID",
+          "airport": "AMS",
+          "status": "AVAILABLE"
+        }
+      ],
+      "turnarounds": [
+        {
+          "turnaround_id": "TRN-AB123-AMS",
+          "stand_id": "E15",
+          "tasks": [
+            {
+              "task_id": "AB123-H2",
+              "service_type": "H2_FUELING",
+              "required_gse_types": ["H2_FUELING_SKID"],
+              "time_window": ["2025-11-20T12:20:00Z", "2025-11-20T12:45:00Z"]
+            }
+          ]
+        },
+        {
+          "turnaround_id": "TRN-XY987-AMS",
+          "stand_id": "E17",
+          "tasks": [
+            {
+              "task_id": "XY987-H2",
+              "service_type": "H2_FUELING",
+              "required_gse_types": ["H2_FUELING_SKID"],
+              "time_window": ["2025-11-20T12:30:00Z", "2025-11-20T13:00:00Z"]
+            }
+          ]
+        }
+      ],
+      "expected_allocations": [
+        {
+          "allocation_id": "AL-H2-AB123",
+          "gse_id": "H2-SKID-02",
+          "turnaround_id": "TRN-AB123-AMS",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "AL-H2-XY987",
+          "gse_id": "H2-SKID-02",
+          "turnaround_id": "TRN-XY987-AMS",
+          "status": "CONFLICT",
+          "conflict_reason": "H2-SKID-02 overlapping allocation AL-H2-AB123"
+        }
+      ],
+      "expected_conflicts": [
+        {
+          "gse_id": "H2-SKID-02",
+          "conflicting_turnarounds": ["TRN-AB123-AMS", "TRN-XY987-AMS"],
+          "time_overlap_min": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F03",
+      "name": "Constraint violation (H₂ fueling concurrency)",
+      "description": "Two stands have active fueling simultaneously violating H₂ adjacency rule.",
+      "gse_inventory": [
+        {
+          "gse_id": "H2-SKID-A",
+          "type": "H2_FUELING_SKID",
+          "airport": "AMS",
+          "status": "AVAILABLE"
+        },
+        {
+          "gse_id": "H2-SKID-B",
+          "type": "H2_FUELING_SKID",
+          "airport": "AMS",
+          "status": "AVAILABLE"
+        }
+      ],
+      "constraints": {
+        "H2_CONCURRENCY_LIMIT": 1,
+        "conflict_rule": "No simultaneous fueling in adjacent stands (E15,E17)"
+      },
+      "turnarounds": [
+        {
+          "turnaround_id": "TRN-AA111-AMS",
+          "stand_id": "E15",
+          "tasks": [
+            {
+              "task_id": "AA111-H2",
+              "service_type": "H2_FUELING",
+              "required_gse_types": ["H2_FUELING_SKID"],
+              "time_window": ["2025-11-20T11:00:00Z", "2025-11-20T11:30:00Z"]
+            }
+          ]
+        },
+        {
+          "turnaround_id": "TRN-BB222-AMS",
+          "stand_id": "E17",
+          "tasks": [
+            {
+              "task_id": "BB222-H2",
+              "service_type": "H2_FUELING",
+              "required_gse_types": ["H2_FUELING_SKID"],
+              "time_window": ["2025-11-20T11:10:00Z", "2025-11-20T11:40:00Z"]
+            }
+          ]
+        }
+      ],
+      "expected_allocations": [
+        {
+          "allocation_id": "AL-H2-AA111",
+          "gse_id": "H2-SKID-A",
+          "turnaround_id": "TRN-AA111-AMS",
+          "stand_id": "E15",
+          "status": "PLANNED"
+        },
+        {
+          "allocation_id": "AL-H2-BB222",
+          "gse_id": "H2-SKID-B",
+          "turnaround_id": "TRN-BB222-AMS",
+          "stand_id": "E17",
+          "status": "CONFLICT",
+          "conflict_reason": "H₂ fueling adjacency rule violated (E15,E17)"
+        }
+      ],
+      "expected_conflicts": [
+        {
+          "type": "CONSTRAINT_VIOLATION",
+          "rule": "H2 adjacency",
+          "affected_stands": ["E15", "E17"],
+          "turnarounds": ["TRN-AA111-AMS", "TRN-BB222-AMS"]
+        }
+      ]
+    },
+    {
+      "family_id": "F04",
+      "name": "Fault & reallocation",
+      "description": "GSE becomes FAULTED mid-operation; verify reallocation and conflict clearing.",
+      "gse_inventory": [
+        {
+          "gse_id": "BELT-09",
+          "type": "BELT_LOADER",
+          "airport": "AMS",
+          "status": "IN_USE"
+        },
+        {
+          "gse_id": "BELT-10",
+          "type": "BELT_LOADER",
+          "airport": "AMS",
+          "status": "AVAILABLE"
+        }
+      ],
+      "turnarounds": [
+        {
+          "turnaround_id": "TRN-CC333-AMS",
+          "stand_id": "E19",
+          "tasks": [
+            {
+              "task_id": "CC333-BELT",
+              "service_type": "BAGGAGE_UNLOAD",
+              "required_gse_types": ["BELT_LOADER"],
+              "time_window": ["2025-11-20T13:00:00Z", "2025-11-20T13:30:00Z"]
+            }
+          ]
+        }
+      ],
+      "fault_injection": [
+        {
+          "time": "2025-11-20T13:05:00Z",
+          "gse_id": "BELT-09",
+          "new_status": "FAULTED"
+        }
+      ],
+      "expected_allocations": [
+        {
+          "allocation_id": "AL-BELT-CC333-01",
+          "gse_id": "BELT-09",
+          "turnaround_id": "TRN-CC333-AMS",
+          "status": "CANCELLED",
+          "cancellation_reason": "GSE FAULTED mid-task"
+        },
+        {
+          "allocation_id": "AL-BELT-CC333-02",
+          "gse_id": "BELT-10",
+          "turnaround_id": "TRN-CC333-AMS",
+          "status": "PLANNED"
+        }
+      ],
+      "expected_conflicts": []
+    }
+  ]
+}
