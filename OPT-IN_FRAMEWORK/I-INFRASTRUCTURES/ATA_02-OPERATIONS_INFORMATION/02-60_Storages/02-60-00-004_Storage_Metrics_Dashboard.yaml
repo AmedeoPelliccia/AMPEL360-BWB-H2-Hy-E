@@ -1,0 +1,569 @@
+# 02-60-00-004 – Storage Metrics Dashboard Definition
+# This file defines logical metrics and dashboards for monitoring AMPEL360 storage infrastructure
+# Implementation is vendor-agnostic and should be adapted to specific monitoring tools (Grafana, Datadog, etc.)
+
+metadata:
+  document_id: "02-60-00-004"
+  version: "1.0"
+  status: "DRAFT"
+  last_updated: "2025-11-21"
+  generated_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  approver: "[to be completed]"
+
+# ==============================================================================
+# CAPACITY METRICS
+# ==============================================================================
+capacity_metrics:
+  
+  - metric_id: "CAP-001"
+    name: "Total Storage Capacity"
+    description: "Total usable storage capacity across all tiers"
+    unit: "TB"
+    aggregation: "sum"
+    dimensions:
+      - storage_tier
+      - location
+      - environment
+    thresholds:
+      warning: 75
+      critical: 85
+    alert_on: "percentage_used"
+  
+  - metric_id: "CAP-002"
+    name: "Storage Utilization by Tier"
+    description: "Percentage of used capacity per storage tier"
+    unit: "percent"
+    aggregation: "avg"
+    dimensions:
+      - storage_tier
+      - storage_type
+    thresholds:
+      hot_tier:
+        warning: 75
+        critical: 85
+      warm_tier:
+        warning: 80
+        critical: 90
+      cold_tier:
+        warning: 85
+        critical: 95
+  
+  - metric_id: "CAP-003"
+    name: "Growth Rate"
+    description: "Daily/weekly/monthly growth rate in TB"
+    unit: "TB/day"
+    aggregation: "avg"
+    time_windows:
+      - daily
+      - weekly
+      - monthly
+    forecast_enabled: true
+  
+  - metric_id: "CAP-004"
+    name: "Time to Exhaustion"
+    description: "Estimated days until storage tier reaches capacity"
+    unit: "days"
+    calculation: "(usable_capacity - used_capacity) / average_daily_growth"
+    thresholds:
+      warning: 90
+      critical: 30
+    alert_on: "below_threshold"
+
+# ==============================================================================
+# PERFORMANCE METRICS
+# ==============================================================================
+performance_metrics:
+  
+  - metric_id: "PERF-001"
+    name: "IOPS Read"
+    description: "Read input/output operations per second"
+    unit: "iops"
+    aggregation: "avg"
+    dimensions:
+      - storage_array
+      - volume
+      - workload_type
+    percentiles:
+      - p50
+      - p95
+      - p99
+    thresholds:
+      warning: 80000
+      critical: 100000
+  
+  - metric_id: "PERF-002"
+    name: "IOPS Write"
+    description: "Write input/output operations per second"
+    unit: "iops"
+    aggregation: "avg"
+    dimensions:
+      - storage_array
+      - volume
+      - workload_type
+    percentiles:
+      - p50
+      - p95
+      - p99
+  
+  - metric_id: "PERF-003"
+    name: "Latency Read"
+    description: "Read operation latency"
+    unit: "milliseconds"
+    aggregation: "avg"
+    dimensions:
+      - storage_tier
+      - volume
+    percentiles:
+      - p50
+      - p95
+      - p99
+    thresholds:
+      hot_tier_p95:
+        warning: 5
+        critical: 10
+      warm_tier_p95:
+        warning: 20
+        critical: 50
+  
+  - metric_id: "PERF-004"
+    name: "Latency Write"
+    description: "Write operation latency"
+    unit: "milliseconds"
+    aggregation: "avg"
+    dimensions:
+      - storage_tier
+      - volume
+    percentiles:
+      - p50
+      - p95
+      - p99
+  
+  - metric_id: "PERF-005"
+    name: "Throughput Read"
+    description: "Read throughput in MB/s"
+    unit: "MB/s"
+    aggregation: "sum"
+    dimensions:
+      - storage_array
+      - volume
+  
+  - metric_id: "PERF-006"
+    name: "Throughput Write"
+    description: "Write throughput in MB/s"
+    unit: "MB/s"
+    aggregation: "sum"
+    dimensions:
+      - storage_array
+      - volume
+  
+  - metric_id: "PERF-007"
+    name: "Queue Depth"
+    description: "Average I/O queue depth"
+    unit: "count"
+    aggregation: "avg"
+    thresholds:
+      warning: 32
+      critical: 64
+
+# ==============================================================================
+# RELIABILITY METRICS
+# ==============================================================================
+reliability_metrics:
+  
+  - metric_id: "REL-001"
+    name: "Storage Availability"
+    description: "Percentage of time storage is available"
+    unit: "percent"
+    aggregation: "avg"
+    target: 99.95
+    calculation: "(uptime / total_time) * 100"
+  
+  - metric_id: "REL-002"
+    name: "Backup Success Rate"
+    description: "Percentage of successful backup jobs"
+    unit: "percent"
+    aggregation: "avg"
+    target: 99.0
+    thresholds:
+      warning: 95
+      critical: 90
+  
+  - metric_id: "REL-003"
+    name: "Replication Lag"
+    description: "Time lag for asynchronous replication"
+    unit: "seconds"
+    aggregation: "max"
+    dimensions:
+      - source_site
+      - target_site
+    thresholds:
+      warning: 300
+      critical: 600
+  
+  - metric_id: "REL-004"
+    name: "Failed Disk Count"
+    description: "Number of failed disks in arrays"
+    unit: "count"
+    aggregation: "sum"
+    alert_on: "any_failure"
+  
+  - metric_id: "REL-005"
+    name: "MTBF"
+    description: "Mean time between failures"
+    unit: "hours"
+    calculation: "total_uptime / failure_count"
+    target: 8760  # 1 year
+  
+  - metric_id: "REL-006"
+    name: "MTTR"
+    description: "Mean time to repair/recovery"
+    unit: "minutes"
+    aggregation: "avg"
+    target: 60
+    thresholds:
+      warning: 120
+      critical: 240
+
+# ==============================================================================
+# COST METRICS
+# ==============================================================================
+cost_metrics:
+  
+  - metric_id: "COST-001"
+    name: "Cost per TB by Tier"
+    description: "Monthly cost per terabyte of storage"
+    unit: "USD/TB/month"
+    dimensions:
+      - storage_tier
+      - storage_type
+    benchmarks:
+      hot_ssd: 150
+      warm_ssd: 75
+      cold_hdd: 25
+      object_hot: 20
+      object_cold: 10
+      archive: 3
+  
+  - metric_id: "COST-002"
+    name: "Total Storage Cost"
+    description: "Total monthly cost for all storage"
+    unit: "USD/month"
+    aggregation: "sum"
+    dimensions:
+      - storage_tier
+      - environment
+  
+  - metric_id: "COST-003"
+    name: "Cost Trend"
+    description: "Month-over-month cost change"
+    unit: "percent"
+    calculation: "((current_month - previous_month) / previous_month) * 100"
+  
+  - metric_id: "COST-004"
+    name: "Cost Efficiency"
+    description: "Cost per IOPS or cost per GB transferred"
+    unit: "USD/1000_IOPS"
+    aggregation: "avg"
+
+# ==============================================================================
+# CIRCULARITY & SUSTAINABILITY METRICS
+# ==============================================================================
+sustainability_metrics:
+  
+  - metric_id: "SUST-001"
+    name: "Storage Power Consumption"
+    description: "Total power consumed by storage infrastructure"
+    unit: "kWh"
+    aggregation: "sum"
+    dimensions:
+      - storage_tier
+      - location
+  
+  - metric_id: "SUST-002"
+    name: "Storage Carbon Footprint"
+    description: "CO2 equivalent emissions from storage operations"
+    unit: "kg_CO2e/month"
+    calculation: "power_consumption * carbon_intensity_factor"
+    link: "ATA 02-30 Circularity"
+  
+  - metric_id: "SUST-003"
+    name: "Hardware Lifecycle Age"
+    description: "Average age of storage hardware"
+    unit: "years"
+    aggregation: "avg"
+    target_refresh_cycle: 4
+  
+  - metric_id: "SUST-004"
+    name: "Data Deduplication Ratio"
+    description: "Ratio of deduplicated to raw data"
+    unit: "ratio"
+    calculation: "raw_data_size / stored_data_size"
+    target: 5.0
+  
+  - metric_id: "SUST-005"
+    name: "Compression Ratio"
+    description: "Ratio of uncompressed to compressed data"
+    unit: "ratio"
+    dimensions:
+      - storage_tier
+      - data_type
+    targets:
+      time_series: 10.0
+      logs: 5.0
+      backups: 2.0
+
+# ==============================================================================
+# SECURITY METRICS
+# ==============================================================================
+security_metrics:
+  
+  - metric_id: "SEC-001"
+    name: "Encryption Coverage"
+    description: "Percentage of data encrypted at rest"
+    unit: "percent"
+    target: 100.0
+    aggregation: "avg"
+  
+  - metric_id: "SEC-002"
+    name: "Access Violations"
+    description: "Count of unauthorized access attempts"
+    unit: "count/day"
+    aggregation: "sum"
+    alert_on: "any_occurrence"
+  
+  - metric_id: "SEC-003"
+    name: "Vulnerability Scan Results"
+    description: "Number of security vulnerabilities detected"
+    unit: "count"
+    dimensions:
+      - severity
+    thresholds:
+      critical: 0
+      high: 5
+  
+  - metric_id: "SEC-004"
+    name: "Compliance Score"
+    description: "Percentage of compliance checks passed"
+    unit: "percent"
+    target: 100.0
+    frameworks:
+      - ISO_27001
+      - SOC2
+      - GDPR
+
+# ==============================================================================
+# DASHBOARD LAYOUTS
+# ==============================================================================
+dashboards:
+  
+  - dashboard_id: "DASH-001"
+    name: "Executive Storage Overview"
+    description: "High-level storage metrics for management"
+    panels:
+      - panel: "Total Capacity and Utilization"
+        metrics:
+          - CAP-001
+          - CAP-002
+        visualization: "gauge_and_bar_chart"
+      
+      - panel: "Storage Availability"
+        metrics:
+          - REL-001
+        visualization: "single_stat"
+        target: 99.95
+      
+      - panel: "Monthly Cost Trend"
+        metrics:
+          - COST-002
+          - COST-003
+        visualization: "line_chart"
+        time_range: "12_months"
+      
+      - panel: "Capacity Forecast"
+        metrics:
+          - CAP-003
+          - CAP-004
+        visualization: "line_chart_with_forecast"
+        forecast_horizon: "6_months"
+  
+  - dashboard_id: "DASH-002"
+    name: "Storage Operations Dashboard"
+    description: "Detailed operational metrics for storage team"
+    panels:
+      - panel: "Capacity by Tier"
+        metrics:
+          - CAP-002
+        dimensions:
+          - storage_tier
+        visualization: "stacked_bar_chart"
+      
+      - panel: "IOPS and Latency"
+        metrics:
+          - PERF-001
+          - PERF-002
+          - PERF-003
+          - PERF-004
+        visualization: "multi_line_chart"
+      
+      - panel: "Backup Status"
+        metrics:
+          - REL-002
+        visualization: "status_indicator"
+      
+      - panel: "Replication Health"
+        metrics:
+          - REL-003
+        visualization: "heatmap"
+      
+      - panel: "Failed Disks"
+        metrics:
+          - REL-004
+        visualization: "alert_table"
+  
+  - dashboard_id: "DASH-003"
+    name: "Storage Performance Dashboard"
+    description: "Performance metrics and bottleneck analysis"
+    panels:
+      - panel: "Latency Percentiles"
+        metrics:
+          - PERF-003
+          - PERF-004
+        percentiles:
+          - p50
+          - p95
+          - p99
+        visualization: "percentile_line_chart"
+      
+      - panel: "Throughput by Volume"
+        metrics:
+          - PERF-005
+          - PERF-006
+        visualization: "area_chart"
+      
+      - panel: "Queue Depth"
+        metrics:
+          - PERF-007
+        visualization: "line_chart"
+  
+  - dashboard_id: "DASH-004"
+    name: "Storage Sustainability Dashboard"
+    description: "Circularity and sustainability metrics"
+    panels:
+      - panel: "Power Consumption"
+        metrics:
+          - SUST-001
+        visualization: "gauge"
+      
+      - panel: "Carbon Footprint"
+        metrics:
+          - SUST-002
+        visualization: "trend_line"
+        link: "../02-30_Circularity/"
+      
+      - panel: "Data Efficiency"
+        metrics:
+          - SUST-004
+          - SUST-005
+        visualization: "bar_chart"
+      
+      - panel: "Hardware Age Distribution"
+        metrics:
+          - SUST-003
+        visualization: "histogram"
+
+# ==============================================================================
+# ALERTING RULES
+# ==============================================================================
+alerting:
+  
+  - alert_id: "ALERT-001"
+    name: "Storage Capacity Critical"
+    condition: "CAP-002 >= 85"
+    severity: "critical"
+    notification_channels:
+      - email
+      - pagerduty
+      - slack
+    escalation_minutes: 15
+  
+  - alert_id: "ALERT-002"
+    name: "Storage Capacity Warning"
+    condition: "CAP-002 >= 75"
+    severity: "warning"
+    notification_channels:
+      - email
+      - slack
+  
+  - alert_id: "ALERT-003"
+    name: "Time to Exhaustion Critical"
+    condition: "CAP-004 <= 30"
+    severity: "critical"
+    notification_channels:
+      - email
+      - pagerduty
+  
+  - alert_id: "ALERT-004"
+    name: "Backup Failure"
+    condition: "REL-002 < 95"
+    severity: "high"
+    notification_channels:
+      - email
+      - pagerduty
+      - slack
+  
+  - alert_id: "ALERT-005"
+    name: "Replication Lag High"
+    condition: "REL-003 > 600"
+    severity: "high"
+    notification_channels:
+      - email
+      - slack
+  
+  - alert_id: "ALERT-006"
+    name: "Disk Failure Detected"
+    condition: "REL-004 > 0"
+    severity: "high"
+    notification_channels:
+      - email
+      - pagerduty
+  
+  - alert_id: "ALERT-007"
+    name: "Performance Degradation"
+    condition: "PERF-003_p95 > thresholds.critical"
+    severity: "warning"
+    notification_channels:
+      - email
+      - slack
+  
+  - alert_id: "ALERT-008"
+    name: "Security Violation"
+    condition: "SEC-002 > 0"
+    severity: "critical"
+    notification_channels:
+      - email
+      - pagerduty
+      - security_team
+
+# ==============================================================================
+# REFERENCES
+# ==============================================================================
+references:
+  internal:
+    - "02-60-00-001_Storage_Architecture_Overview.md"
+    - "02-60-00-002_Storage_Capacity_Planning.md"
+    - "02-60-00-003_Data_Governance_Policy.md"
+    - "../02-30_Circularity/"
+  external:
+    - "Prometheus metrics format: https://prometheus.io/docs/concepts/metric_types/"
+    - "Grafana dashboard best practices: https://grafana.com/docs/grafana/latest/dashboards/"
+
+# ==============================================================================
+# DOCUMENT CONTROL
+# ==============================================================================
+document_control:
+  generated_by: "AI (GitHub Copilot)"
+  prompted_by: "Amedeo Pelliccia"
+  status: "DRAFT"
+  human_approver: "[to be completed]"
+  repository: "AMPEL360-BWB-H2-Hy-E"
+  last_ai_update: "2025-11-21"
