@@ -22,7 +22,6 @@ CGen Lane 1 – Directory index generator for AMPEL360 / OPT-IN Framework.
 - Default mode is DRY-RUN; use --write to apply changes.
 """
 
-import os
 import argparse
 from pathlib import Path
 from datetime import datetime, timezone
