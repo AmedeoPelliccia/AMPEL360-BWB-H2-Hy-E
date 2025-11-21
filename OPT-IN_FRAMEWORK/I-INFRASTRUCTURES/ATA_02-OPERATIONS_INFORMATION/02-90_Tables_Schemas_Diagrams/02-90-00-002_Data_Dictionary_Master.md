@@ -219,7 +219,7 @@ version_hash VARCHAR(64)
 |------------|-----------|-------------|------|-------------|
 | `altitude_ft` | INTEGER | Altitude | feet | CHECK >= 0 |
 | `airspeed_kts` | NUMERIC(6,2) | Indicated airspeed | knots | CHECK > 0 |
-| `mach_number` | NUMERIC(4,3) | Mach number | - | CHECK > 0 AND < 1 |
+| `mach_number` | NUMERIC(4,3) | Mach number | - | CHECK > 0 AND < 5 |
 | `vertical_speed_fpm` | INTEGER | Vertical speed | ft/min | - |
 | `fuel_flow_kgh` | NUMERIC(8,2) | Fuel flow rate | kg/hr | CHECK >= 0 |
 | `outside_air_temp_degc` | NUMERIC(5,2) | Outside air temperature | °C | - |
