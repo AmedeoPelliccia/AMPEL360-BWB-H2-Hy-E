@@ -207,7 +207,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "## Generation Results" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.check_changes.outputs.has_changes }}" = "true" ]; then
-            echo "✅ Changes detected and committed to branch: \`${{ steps.create_branch.outputs.branch }}\`" >> $GITHUB_STEP_SUMMARY
+            echo "✅ Changes detected and committed to branch: \`cgen/update-${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "A pull request has been created for review." >> $GITHUB_STEP_SUMMARY
           else
