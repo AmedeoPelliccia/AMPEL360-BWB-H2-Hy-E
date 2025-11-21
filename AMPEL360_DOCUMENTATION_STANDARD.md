@@ -230,6 +230,61 @@ ATA_XX-SYSTEM_NAME/
   * How it applies to this ATA chapter
   * Status (`Pending`, `Draft`, `Active`, `Deprecated`)
 
+#### A-LIVE-GP – 14-Folder Lifecycle Skeleton
+
+The standard 14-folder structure used in all `XX-00-00_GENERAL` layers implements the:
+
+**A-LIVE-GP — Aircraft Lifecycle Industrialization and Validation Executive General Plan**
+
+A-LIVE-GP is the canonical lifecycle skeleton for every ATA chapter in the OPT-IN Framework.
+It ensures that all systems, subsystems and interfaces are engineered, validated and industrialized under a consistent, certification-grade plan.
+
+##### A-LIVE-GP Folder Mapping
+
+Each `XX-00-00_GENERAL` chapter uses the following 14 folders to implement A-LIVE-GP:
+
+1. **01_OVERVIEW**
+   Program / chapter mission, scope, architecture context, stakeholders and governance.
+
+2. **02_SAFETY**
+   Safety objectives, FHA/PSSA allocation, risks, mitigations and safety governance.
+
+3. **03_REQUIREMENTS**
+   Structured requirements set (functional, performance, safety, regulatory) with IDs and traceability hooks.
+
+4. **04_DESIGN**
+   Logical and physical architecture, models, design decisions, trades and baselines.
+
+5. **05_INTERFACES**
+   Internal and external interfaces, ICDs, data contracts, infra standards (e.g. ATA 85), and change control.
+
+6. **06_ENGINEERING**
+   Detailed engineering work: analyses, simulations, dimensioning, models, calculations, algorithms.
+
+7. **07_V_AND_V**
+   Verification & Validation strategy, plans, procedures, coverage and results mapping to requirements.
+
+8. **08_PROTOTYPING**
+   Breadboards, rigs, mock-ups, PoCs, pilots, and digital/physical prototyping campaigns (ground + flight where applicable).
+
+9. **09_PRODUCTION_PLANNING**
+   Industrialization, supply chain, producibility, process design, production tooling and ramp-up planning.
+
+10. **10_CERTIFICATION**
+    Certification basis, means of compliance, evidence structure (DO-178C, DO-254, DO-160, CS-25, etc.) and authority interactions.
+
+11. **11_EIS_VERSIONS_TAGS**
+    Entry-Into-Service strategy, versioning model, tags, release notes, in-service modifications and configuration records.
+
+12. **12_SERVICES**
+    In-service support: operations support, maintenance program hooks, digital services, customer services integration.
+
+13. **13_SUBSYSTEMS_COMPONENTS**
+    Breakdown of subsystems and components under the chapter, with allocation to responsible teams and cross-ATA links.
+
+14. **14_OPS_STD_SUSTAIN**
+    Operations standards, procedures, performance standards and sustainability/circularity hooks (integration with ATA 02/99).
+
 ### 2.2 Origin Blocks: 20 / 40 / 50 / 70 / 90
 
 The following “origin blocks” are used consistently:
