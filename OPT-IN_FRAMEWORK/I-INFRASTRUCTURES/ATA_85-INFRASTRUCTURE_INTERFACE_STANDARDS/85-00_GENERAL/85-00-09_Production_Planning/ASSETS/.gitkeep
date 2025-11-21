@@ -1,0 +1,3 @@
+# This file ensures the ASSETS directory is tracked by Git
+# ASSETS contains Plans, Layouts, Contracts, and Risk_Assessments subdirectories
+# for the 85-00-09_Production_Planning node

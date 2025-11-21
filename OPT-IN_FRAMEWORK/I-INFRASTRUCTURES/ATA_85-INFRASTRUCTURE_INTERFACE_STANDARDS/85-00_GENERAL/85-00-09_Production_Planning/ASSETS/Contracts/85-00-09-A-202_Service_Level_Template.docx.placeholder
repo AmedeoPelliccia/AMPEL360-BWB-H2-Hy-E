@@ -1,0 +1,25 @@
+# Placeholder: 85-00-09-A-202_Service_Level_Template.docx
+
+## Description
+Template for service level agreement (SLA) for infrastructure operations.
+
+## Purpose
+This Word document template will provide:
+- Service scope definitions
+- Availability and reliability targets by infrastructure domain
+- Performance metrics and measurement methods
+- Maintenance and support requirements
+- Incident response and escalation procedures
+- Reporting and review requirements
+- Service credits and penalties for non-performance
+- Continuous improvement provisions
+
+## Status
+Placeholder - To be developed with operational input
+
+## Format
+Microsoft Word (.docx)
+
+## References
+- 85-00-09-007_Standardization_and_Framework_Agreements.md
+- Infrastructure domain planning documents (85-00-09-003 through 85-00-09-006)
