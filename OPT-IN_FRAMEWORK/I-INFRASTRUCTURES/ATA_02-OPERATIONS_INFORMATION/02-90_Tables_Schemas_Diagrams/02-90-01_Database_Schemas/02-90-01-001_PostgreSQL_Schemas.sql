@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS operations.flights (
     aircraft_registration VARCHAR(10),
     
     -- Route
-    departure_airport_icao  VARCHAR(4) NOT NULL CHECK (length(departure_airport_icao) = 4),
-    arrival_airport_icao    VARCHAR(4) NOT NULL CHECK (length(arrival_airport_icao) = 4),
+    departure_airport_icao  CHAR(4) NOT NULL,
+    arrival_airport_icao    CHAR(4) NOT NULL,
     
     -- Schedule
     scheduled_departure_utc TIMESTAMPTZ NOT NULL,
