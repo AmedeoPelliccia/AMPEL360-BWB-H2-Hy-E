@@ -1,0 +1,724 @@
+# Circularity Metrics Dashboard Configuration
+# ATA 02 — Operations Information
+# AMPEL360-02-30-00-003
+# Version: 1.0.0
+# Date: 2025-11-21
+# Status: Draft
+
+metadata:
+  identifier: "AMPEL360-02-30-00-003"
+  title: "Circularity Metrics Dashboard Configuration"
+  version: "1.0.0"
+  status: "Draft"
+  created_at: "2025-11-21"
+  modified_at: "2025-11-21"
+  author: "Sustainability Team"
+  scope: "Dashboard configuration and schema for ATA 02 circularity KPIs"
+  description: "Defines configuration, data sources, thresholds, and visualization hints for the circularity KPI dashboard tracking carbon intensity, hardware reuse, storage efficiency, and ESG metrics."
+  
+dashboard:
+  name: "ATA 02 Circularity Metrics"
+  description: "Comprehensive dashboard for tracking sustainability and circular economy KPIs in digital operations"
+  refresh_interval: "15m"  # Refresh every 15 minutes
+  timezone: "UTC"
+  default_time_range: "30d"  # Last 30 days
+  
+sections:
+  - id: "overview"
+    title: "Executive Overview"
+    order: 1
+    description: "High-level circularity scorecard and trend summary"
+    layout: "2x2"
+    
+  - id: "carbon_footprint"
+    title: "Carbon Footprint"
+    order: 2
+    description: "Detailed carbon emissions tracking by scope and category"
+    layout: "3x2"
+    
+  - id: "hardware_lifecycle"
+    title: "Hardware Lifecycle"
+    order: 3
+    description: "Hardware inventory, utilization, reuse, and end-of-life metrics"
+    layout: "2x3"
+    
+  - id: "data_storage"
+    title: "Data & Storage Efficiency"
+    order: 4
+    description: "Storage capacity, energy efficiency, and data lifecycle metrics"
+    layout: "3x2"
+    
+  - id: "software_sustainability"
+    title: "Software Sustainability"
+    order: 5
+    description: "Code efficiency, API performance, and ML model carbon impact"
+    layout: "2x2"
+    
+  - id: "operational_impact"
+    title: "Operational Carbon Impact"
+    order: 6
+    description: "Carbon benefits from operational optimizations"
+    layout: "2x2"
+
+indicators:
+  # ============================================================================
+  # EXECUTIVE OVERVIEW SECTION
+  # ============================================================================
+  
+  - id: "circularity_score"
+    section: "overview"
+    title: "Circularity Score"
+    description: "Composite score (0-100) aggregating all circularity KPIs"
+    unit: "points"
+    visualization: "gauge"
+    calculation: "weighted_average"
+    weights:
+      carbon_intensity_reduction: 0.30
+      hardware_reuse_rate: 0.20
+      storage_efficiency_improvement: 0.15
+      software_carbon_reduction: 0.15
+      operational_carbon_benefits: 0.20
+    thresholds:
+      critical: 40
+      warning: 60
+      good: 75
+      excellent: 85
+    target: 80
+    current_value: null  # To be populated from data sources
+    data_source:
+      type: "calculated"
+      refresh: "hourly"
+      
+  - id: "total_carbon_emissions"
+    section: "overview"
+    title: "Total Carbon Emissions (All Scopes)"
+    description: "Sum of Scope 1, 2, and 3 emissions for ATA 02 digital operations"
+    unit: "tCO2e/month"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "carbon_emissions"
+      query: "SELECT SUM(scope1_emissions + scope2_emissions + scope3_emissions) as total FROM carbon_emissions WHERE ata_chapter='02' GROUP BY month"
+      refresh: "daily"
+    thresholds:
+      baseline: 250  # tCO2e/month (2024 baseline)
+      target_2025: 200  # 20% reduction
+      target_2026: 150  # 40% reduction
+      target_2028: 100  # 60% reduction
+    alerts:
+      - condition: "current > baseline * 1.1"
+        severity: "warning"
+        message: "Emissions exceeding baseline by >10%"
+      - condition: "current > baseline * 1.2"
+        severity: "critical"
+        message: "Emissions exceeding baseline by >20%"
+        
+  - id: "yoy_carbon_reduction"
+    section: "overview"
+    title: "Year-over-Year Carbon Reduction"
+    description: "Percentage reduction in total carbon emissions vs. same period last year"
+    unit: "%"
+    visualization: "single_stat"
+    data_source:
+      type: "calculated"
+      formula: "((last_year_emissions - current_year_emissions) / last_year_emissions) * 100"
+      refresh: "daily"
+    thresholds:
+      critical: -5  # Emissions increased >5%
+      warning: 0
+      good: 10
+      excellent: 20
+    target: 15  # 15% YoY reduction target
+    
+  - id: "circularity_investment_roi"
+    section: "overview"
+    title: "Circularity Investment ROI"
+    description: "Return on investment for circularity initiatives (cost savings + carbon value / investment)"
+    unit: "ratio"
+    visualization: "single_stat"
+    data_source:
+      type: "database"
+      table: "circularity_investments"
+      query: "SELECT (SUM(cost_savings) + SUM(carbon_value)) / SUM(investment) as roi FROM circularity_investments WHERE year=YEAR(CURRENT_DATE)"
+      refresh: "weekly"
+    thresholds:
+      critical: 0.5
+      warning: 1.0
+      good: 1.5
+      excellent: 2.0
+    target: 1.5
+
+  # ============================================================================
+  # CARBON FOOTPRINT SECTION
+  # ============================================================================
+  
+  - id: "scope1_emissions"
+    section: "carbon_footprint"
+    title: "Scope 1 Emissions (Direct)"
+    description: "Direct GHG emissions from owned/controlled sources (backup generators, fleet vehicles)"
+    unit: "tCO2e/month"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "carbon_emissions"
+      column: "scope1_emissions"
+      filter: "ata_chapter='02'"
+      refresh: "daily"
+    thresholds:
+      baseline: 5  # Minimal Scope 1 for digital ops
+      target: 5
+      
+  - id: "scope2_emissions"
+    section: "carbon_footprint"
+    title: "Scope 2 Emissions (Purchased Energy)"
+    description: "Indirect emissions from purchased electricity for data centers and operations"
+    unit: "tCO2e/month"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "carbon_emissions"
+      column: "scope2_emissions"
+      filter: "ata_chapter='02'"
+      refresh: "daily"
+    breakdown:
+      - label: "Data Centers"
+        query: "SELECT SUM(emissions) FROM scope2_emissions WHERE category='data_centers'"
+      - label: "Edge Devices"
+        query: "SELECT SUM(emissions) FROM scope2_emissions WHERE category='edge_devices'"
+      - label: "Network Infrastructure"
+        query: "SELECT SUM(emissions) FROM scope2_emissions WHERE category='network'"
+    thresholds:
+      baseline: 180
+      target_2025: 144  # 20% reduction
+      target_2028: 72   # 60% reduction
+      
+  - id: "scope3_emissions"
+    section: "carbon_footprint"
+    title: "Scope 3 Emissions (Value Chain)"
+    description: "Indirect emissions from hardware procurement, cloud services, and e-waste"
+    unit: "tCO2e/month"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "carbon_emissions"
+      column: "scope3_emissions"
+      filter: "ata_chapter='02'"
+      refresh: "weekly"
+    breakdown:
+      - label: "Hardware Procurement (Cat 1)"
+        query: "SELECT SUM(emissions) FROM scope3_emissions WHERE category='purchased_goods'"
+      - label: "Capital Goods (Cat 2)"
+        query: "SELECT SUM(emissions) FROM scope3_emissions WHERE category='capital_goods'"
+      - label: "Cloud Services"
+        query: "SELECT SUM(emissions) FROM scope3_emissions WHERE category='cloud_services'"
+      - label: "E-Waste (Cat 5)"
+        query: "SELECT SUM(emissions) FROM scope3_emissions WHERE category='waste'"
+    thresholds:
+      baseline: 65
+      target_2025: 52
+      target_2028: 26
+      
+  - id: "carbon_intensity_per_transaction"
+    section: "carbon_footprint"
+    title: "Carbon Intensity per Transaction"
+    description: "Average carbon emissions per digital transaction (gCO2e per API call, DB query, etc.)"
+    unit: "gCO2e/transaction"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "transaction_metrics"
+      query: "SELECT (SUM(carbon_emissions_g) / SUM(transaction_count)) as intensity FROM transaction_metrics WHERE ata='02' GROUP BY day"
+      refresh: "hourly"
+    thresholds:
+      baseline: 0.5
+      target: 0.2
+      excellent: 0.1
+    alerts:
+      - condition: "current > baseline * 1.5"
+        severity: "warning"
+        message: "Transaction carbon intensity degrading"
+        
+  - id: "renewable_energy_percentage"
+    section: "carbon_footprint"
+    title: "Renewable Energy %"
+    description: "Percentage of electricity from renewable sources (market-based method)"
+    unit: "%"
+    visualization: "progress_bar"
+    data_source:
+      type: "database"
+      table: "energy_sources"
+      query: "SELECT (SUM(renewable_kwh) / SUM(total_kwh)) * 100 as renewable_pct FROM energy_sources WHERE ata='02'"
+      refresh: "daily"
+    thresholds:
+      current: 45
+      target_2025: 60
+      target_2026: 80
+      target_2027: 100
+      
+  - id: "emissions_by_category"
+    section: "carbon_footprint"
+    title: "Emissions by Category"
+    description: "Breakdown of emissions by operational category"
+    unit: "tCO2e/month"
+    visualization: "pie_chart"
+    data_source:
+      type: "database"
+      table: "emissions_by_category"
+      query: "SELECT category, SUM(emissions) as emissions FROM emissions_by_category WHERE ata='02' GROUP BY category"
+      refresh: "daily"
+    categories:
+      - "Data Centers"
+      - "Edge Computing"
+      - "Network Infrastructure"
+      - "Software Development"
+      - "ML Training"
+      - "Hardware Embodied"
+      - "Cloud Services"
+
+  # ============================================================================
+  # HARDWARE LIFECYCLE SECTION
+  # ============================================================================
+  
+  - id: "hardware_reuse_rate"
+    section: "hardware_lifecycle"
+    title: "Hardware Reuse Rate"
+    description: "Percentage of decommissioned hardware reused, refurbished, or recycled (vs. waste)"
+    unit: "%"
+    visualization: "gauge"
+    data_source:
+      type: "database"
+      table: "hardware_lifecycle"
+      query: "SELECT (SUM(reused_units + refurbished_units + recycled_units) / SUM(decommissioned_units)) * 100 as reuse_rate FROM hardware_lifecycle WHERE ata='02'"
+      refresh: "weekly"
+    thresholds:
+      critical: 40
+      warning: 60
+      good: 75
+      excellent: 85
+    target: 80
+    
+  - id: "hardware_lifetime_extension"
+    section: "hardware_lifecycle"
+    title: "Average Hardware Lifetime"
+    description: "Average operational lifetime of hardware components vs. manufacturer specification"
+    unit: "years"
+    visualization: "single_stat"
+    data_source:
+      type: "database"
+      table: "hardware_assets"
+      query: "SELECT AVG(DATEDIFF(decommission_date, commission_date) / 365) as avg_lifetime FROM hardware_assets WHERE ata='02' AND status='decommissioned'"
+      refresh: "monthly"
+    baseline:
+      servers: 4.0
+      storage: 5.0
+      efb_devices: 3.0
+      sensors: 6.0
+    targets:
+      servers: 6.0
+      storage: 7.0
+      efb_devices: 5.0
+      sensors: 8.0
+      
+  - id: "efb_device_circularity"
+    section: "hardware_lifecycle"
+    title: "EFB Device Circularity Score"
+    description: "Composite score for EFB device lifecycle management (refurbishment, battery replacement, recycling)"
+    unit: "points (0-100)"
+    visualization: "gauge"
+    data_source:
+      type: "calculated"
+      components:
+        battery_replacement_rate: 0.3
+        refurbishment_rate: 0.4
+        recycling_rate: 0.3
+      refresh: "monthly"
+    thresholds:
+      critical: 50
+      warning: 65
+      good: 75
+      excellent: 85
+    target: 80
+    
+  - id: "server_pue_avg"
+    section: "hardware_lifecycle"
+    title: "Average Data Center PUE"
+    description: "Power Usage Effectiveness (total facility power / IT equipment power)"
+    unit: "ratio"
+    visualization: "single_stat"
+    data_source:
+      type: "database"
+      table: "datacenter_metrics"
+      query: "SELECT AVG(total_power_kw / it_power_kw) as pue FROM datacenter_metrics WHERE ata='02'"
+      refresh: "hourly"
+    thresholds:
+      excellent: 1.2
+      good: 1.3
+      warning: 1.5
+      critical: 1.7
+    target: 1.25
+    
+  - id: "ewaste_diverted"
+    section: "hardware_lifecycle"
+    title: "E-Waste Diverted from Landfill"
+    description: "Percentage of e-waste diverted from landfill through reuse, refurbishment, or certified recycling"
+    unit: "%"
+    visualization: "progress_bar"
+    data_source:
+      type: "database"
+      table: "ewaste_management"
+      query: "SELECT (SUM(diverted_kg) / SUM(total_ewaste_kg)) * 100 as diversion_rate FROM ewaste_management WHERE ata='02'"
+      refresh: "monthly"
+    thresholds:
+      critical: 70
+      warning: 85
+      good: 95
+      excellent: 98
+    target: 95
+
+  # ============================================================================
+  # DATA & STORAGE EFFICIENCY SECTION
+  # ============================================================================
+  
+  - id: "storage_efficiency_index"
+    section: "data_storage"
+    title: "Storage Efficiency Index"
+    description: "Composite metric of deduplication ratio, compression ratio, and data retention compliance"
+    unit: "index (0-100)"
+    visualization: "gauge"
+    data_source:
+      type: "calculated"
+      components:
+        deduplication_ratio: 0.35
+        compression_ratio: 0.35
+        retention_compliance: 0.30
+      refresh: "daily"
+    thresholds:
+      critical: 50
+      warning: 65
+      good: 75
+      excellent: 85
+    target: 80
+    
+  - id: "storage_energy_intensity"
+    section: "data_storage"
+    title: "Storage Energy Intensity"
+    description: "Energy consumption per TB of stored data"
+    unit: "kWh/TB/year"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "storage_metrics"
+      query: "SELECT (SUM(energy_kwh) / SUM(capacity_tb)) as intensity FROM storage_metrics WHERE ata='02' GROUP BY month"
+      refresh: "daily"
+    thresholds:
+      baseline: 150  # kWh/TB/year
+      target: 90     # 40% improvement
+      excellent: 60  # Best-in-class
+      
+  - id: "data_retention_compliance"
+    section: "data_storage"
+    title: "Data Retention Policy Compliance"
+    description: "Percentage of data assets with compliant retention (not under- or over-retained)"
+    unit: "%"
+    visualization: "progress_bar"
+    data_source:
+      type: "database"
+      table: "data_governance"
+      query: "SELECT (SUM(compliant_datasets) / SUM(total_datasets)) * 100 as compliance FROM data_governance WHERE ata='02'"
+      refresh: "weekly"
+    thresholds:
+      critical: 80
+      warning: 90
+      good: 95
+      excellent: 98
+    target: 95
+    
+  - id: "cold_storage_utilization"
+    section: "data_storage"
+    title: "Cold Storage Utilization"
+    description: "Percentage of infrequently accessed data moved to energy-efficient cold storage tiers"
+    unit: "%"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "storage_tiering"
+      query: "SELECT (SUM(cold_storage_tb) / SUM(total_storage_tb)) * 100 as cold_pct FROM storage_tiering WHERE ata='02' GROUP BY month"
+      refresh: "daily"
+    thresholds:
+      baseline: 30
+      target: 60
+      excellent: 75
+      
+  - id: "edge_computing_offload_rate"
+    section: "data_storage"
+    title: "Edge Computing Offload Rate"
+    description: "Percentage of compute tasks processed at edge vs. centralized data centers"
+    unit: "%"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "compute_distribution"
+      query: "SELECT (SUM(edge_compute_hours) / SUM(total_compute_hours)) * 100 as edge_pct FROM compute_distribution WHERE ata='02' GROUP BY week"
+      refresh: "daily"
+    thresholds:
+      baseline: 15
+      target: 35
+      excellent: 50
+
+  # ============================================================================
+  # SOFTWARE SUSTAINABILITY SECTION
+  # ============================================================================
+  
+  - id: "code_efficiency_score"
+    section: "software_sustainability"
+    title: "Code Efficiency Score"
+    description: "Composite metric of code performance, resource utilization, and energy efficiency"
+    unit: "index (0-100)"
+    visualization: "gauge"
+    data_source:
+      type: "calculated"
+      components:
+        cpu_efficiency: 0.35
+        memory_efficiency: 0.25
+        io_efficiency: 0.20
+        algorithm_complexity: 0.20
+      refresh: "daily"
+    thresholds:
+      critical: 50
+      warning: 65
+      good: 75
+      excellent: 85
+    target: 75
+    
+  - id: "api_carbon_intensity"
+    section: "software_sustainability"
+    title: "API Carbon Intensity"
+    description: "Average carbon emissions per 1000 API calls"
+    unit: "gCO2e/1k calls"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "api_metrics"
+      query: "SELECT (SUM(carbon_g) / SUM(call_count)) * 1000 as intensity FROM api_metrics WHERE ata='02' GROUP BY day"
+      refresh: "hourly"
+    thresholds:
+      baseline: 100
+      target: 50
+      excellent: 25
+      
+  - id: "ml_training_carbon_efficiency"
+    section: "software_sustainability"
+    title: "ML Training Carbon Efficiency"
+    description: "Carbon emissions per model training run, trending over time"
+    unit: "kgCO2e/training"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "ml_training_metrics"
+      query: "SELECT model_name, AVG(carbon_kg) as avg_carbon FROM ml_training_metrics WHERE ata='02' GROUP BY model_name, month"
+      refresh: "daily"
+    baseline:
+      delay_predictor_nn: 50
+      performance_nn: 120
+    targets:
+      delay_predictor_nn: 30  # 40% reduction
+      performance_nn: 70      # 42% reduction
+      
+  - id: "green_software_adoption"
+    section: "software_sustainability"
+    title: "Green Software Principles Adoption"
+    description: "Percentage of codebases adhering to green software engineering guidelines"
+    unit: "%"
+    visualization: "progress_bar"
+    data_source:
+      type: "database"
+      table: "code_quality"
+      query: "SELECT (SUM(green_compliant_repos) / SUM(total_repos)) * 100 as adoption FROM code_quality WHERE ata='02'"
+      refresh: "weekly"
+    thresholds:
+      baseline: 20
+      target_2025: 50
+      target_2026: 75
+      target_2027: 90
+
+  # ============================================================================
+  # OPERATIONAL IMPACT SECTION
+  # ============================================================================
+  
+  - id: "flight_planning_carbon_benefit"
+    section: "operational_impact"
+    title: "Flight Planning Optimization Carbon Benefit"
+    description: "Estimated carbon reduction from AI-optimized flight planning (routing, speed, altitude)"
+    unit: "tCO2e/month"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "operational_benefits"
+      query: "SELECT SUM(carbon_saved_kg) / 1000 as carbon_saved_t FROM operational_benefits WHERE category='flight_planning' AND ata='02' GROUP BY month"
+      refresh: "daily"
+    target: 150  # tCO2e/month saved
+    
+  - id: "digital_twin_testing_reduction"
+    section: "operational_impact"
+    title: "Digital Twin Testing Reduction"
+    description: "Percentage reduction in physical testing through digital twin simulations"
+    unit: "%"
+    visualization: "single_stat"
+    data_source:
+      type: "database"
+      table: "testing_metrics"
+      query: "SELECT (1 - (SUM(physical_tests) / SUM(baseline_physical_tests))) * 100 as reduction FROM testing_metrics WHERE ata='02'"
+      refresh: "monthly"
+    thresholds:
+      baseline: 0
+      target: 30
+      excellent: 50
+      
+  - id: "predictive_maintenance_avoided_emissions"
+    section: "operational_impact"
+    title: "Predictive Maintenance Avoided Emissions"
+    description: "Carbon emissions avoided through predictive maintenance (prevented failures, optimized scheduling)"
+    unit: "tCO2e/month"
+    visualization: "time_series"
+    data_source:
+      type: "database"
+      table: "maintenance_benefits"
+      query: "SELECT SUM(avoided_emissions_kg) / 1000 as avoided_t FROM maintenance_benefits WHERE type='predictive' AND ata='02' GROUP BY month"
+      refresh: "daily"
+    target: 80  # tCO2e/month avoided
+    
+  - id: "ai_optimization_net_benefit"
+    section: "operational_impact"
+    title: "AI Optimization Net Carbon Benefit"
+    description: "Net carbon benefit of AI systems (operational savings minus ML training/inference footprint)"
+    unit: "tCO2e/month"
+    visualization: "waterfall_chart"
+    data_source:
+      type: "calculated"
+      formula: "operational_benefits - (training_emissions + inference_emissions)"
+      refresh: "daily"
+    components:
+      - label: "Operational Benefits"
+        query: "SELECT SUM(carbon_saved) FROM operational_benefits WHERE source='ai'"
+      - label: "ML Training Emissions"
+        query: "SELECT -SUM(training_emissions) FROM ml_emissions"
+      - label: "ML Inference Emissions"
+        query: "SELECT -SUM(inference_emissions) FROM ml_emissions"
+    target: 200  # Net positive benefit
+
+# ============================================================================
+# ALERT RULES
+# ============================================================================
+
+alerts:
+  - name: "Emissions Spike Detection"
+    condition: "total_carbon_emissions > rolling_avg_30d * 1.3"
+    severity: "warning"
+    notification_channels: ["email:sustainability@ampel360.aero", "slack:circularity-alerts"]
+    
+  - name: "Storage Efficiency Degradation"
+    condition: "storage_efficiency_index < 65 FOR 7 days"
+    severity: "warning"
+    notification_channels: ["email:data-ops@ampel360.aero"]
+    
+  - name: "Hardware Reuse Rate Below Target"
+    condition: "hardware_reuse_rate < 70"
+    severity: "warning"
+    notification_channels: ["email:it-ops@ampel360.aero"]
+    
+  - name: "Critical Carbon Intensity"
+    condition: "carbon_intensity_per_transaction > baseline * 2"
+    severity: "critical"
+    notification_channels: ["email:sustainability@ampel360.aero", "pagerduty:on-call"]
+    
+  - name: "PUE Threshold Exceeded"
+    condition: "server_pue_avg > 1.5 FOR 24 hours"
+    severity: "warning"
+    notification_channels: ["email:facilities@ampel360.aero"]
+
+# ============================================================================
+# DATA SOURCES CONFIGURATION
+# ============================================================================
+
+data_sources:
+  - name: "carbon_db"
+    type: "postgresql"
+    connection_string: "${CARBON_DB_CONNECTION}"
+    schema: "circularity"
+    tables:
+      - "carbon_emissions"
+      - "energy_sources"
+      - "emissions_by_category"
+    
+  - name: "asset_management"
+    type: "postgresql"
+    connection_string: "${ASSET_DB_CONNECTION}"
+    schema: "assets"
+    tables:
+      - "hardware_assets"
+      - "hardware_lifecycle"
+      - "ewaste_management"
+    
+  - name: "ops_metrics"
+    type: "prometheus"
+    endpoint: "${PROMETHEUS_ENDPOINT}"
+    metrics:
+      - "storage_metrics"
+      - "compute_distribution"
+      - "datacenter_metrics"
+      
+  - name: "apm_tool"
+    type: "api"
+    endpoint: "${APM_API_ENDPOINT}"
+    authentication: "bearer_token"
+    metrics:
+      - "transaction_metrics"
+      - "api_metrics"
+      - "code_quality"
+
+# ============================================================================
+# VISUALIZATION PREFERENCES
+# ============================================================================
+
+visualization:
+  theme: "ampel360_brand"
+  color_palette:
+    primary: "#0066CC"      # AMPEL360 Blue
+    success: "#00A650"      # Green
+    warning: "#FFA500"      # Orange
+    critical: "#DC3545"     # Red
+    neutral: "#6C757D"      # Gray
+    
+  chart_defaults:
+    font_family: "Inter, sans-serif"
+    font_size: 12
+    line_width: 2
+    animation: true
+    responsive: true
+    
+  gauge_ranges:
+    critical: [0, 40]
+    warning: [40, 60]
+    good: [60, 75]
+    excellent: [75, 100]
+
+# ============================================================================
+# EXPORT AND REPORTING
+# ============================================================================
+
+export:
+  formats: ["pdf", "csv", "json"]
+  schedule:
+    monthly_report: "0 0 1 * *"  # First day of month at midnight
+    quarterly_report: "0 0 1 */3 *"  # First day of quarter
+  recipients:
+    monthly: ["sustainability-team@ampel360.aero"]
+    quarterly: ["executive-team@ampel360.aero", "board@ampel360.aero"]
+
+# Document Control
+document_control:
+  generated_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  status: "DRAFT"
+  human_approver: "[to be completed]"
+  repository: "AMPEL360-BWB-H2-Hy-E"
+  last_ai_update: "2025-11-21"
