@@ -1,0 +1,57 @@
+# 85-00-11-A-003: EIS Config Snapshot Template
+
+**NOTE**: This is a placeholder for an Excel file. The actual file should be created using Microsoft Excel or equivalent spreadsheet software.
+
+## Purpose
+Template to capture a frozen EIS configuration snapshot for a specific airline/airport pair.
+
+## Columns
+
+| Column Name | Data Type | Description | Example Value |
+|-------------|-----------|-------------|---------------|
+| SNAPSHOT_ID | Text | Unique snapshot identifier | SNAP-85-FRA-LH-001 |
+| AIRPORT_ICAO | Text | Airport ICAO code | EDDF |
+| AIRPORT_NAME | Text | Airport name | Frankfurt Airport |
+| AIRLINE_ICAO | Text | Airline ICAO code | DLH |
+| AIRLINE_NAME | Text | Airline name | Lufthansa |
+| BASELINE_ID | Text | Applied baseline | BL-85-00-11-011 |
+| GIT_TAG | Text | Associated Git tag | v03.00.00-85-ARCHA-H2HP |
+| CONFIG_VARIANT | Text | Configuration variant | H2_700BAR_CO2_350KW |
+| INSTALLATION_DATE | Date | Date of installation | 2026-09-01 |
+| VALIDATION_DATE | Date | Date of validation | 2026-09-15 |
+| VALIDATION_STATUS | Enum | Validation status | PASSED, FAILED, IN_PROGRESS |
+| DPP_ID | Text | Associated DPP entry | DPP-85-INFRA-FRA-H2-001 |
+| CERTIFICATION_REF | Text | Certification record | CERT-85-2026-002 |
+| H2_FLOW_RATE_KG_H | Number | Actual H2 flow rate measured | 485 |
+| CO2_CHARGING_POWER_KW | Number | Actual CO2 charging power measured | 345 |
+| GSE_POWER_A | Number | Actual GSE power capacity | 395 |
+| CONTACT_NAME | Text | Primary contact at airport | John Doe |
+| CONTACT_EMAIL | Email | Contact email | john.doe@fra.airport |
+| CONTACT_PHONE | Text | Contact phone | +49 69 690 12345 |
+| NOTES | Text | Additional notes | Initial EIS deployment successful |
+
+## Sample Data (First 2 Rows)
+
+| SNAPSHOT_ID | AIRPORT_ICAO | AIRLINE_ICAO | BASELINE_ID | GIT_TAG | INSTALLATION_DATE | VALIDATION_STATUS |
+|-------------|--------------|--------------|-------------|---------|-------------------|-------------------|
+| SNAP-85-FRA-LH-001 | EDDF | DLH | BL-85-00-11-011 | v03.00.00-85-ARCHA-H2HP | 2026-09-01 | PASSED |
+| SNAP-85-LHR-BA-001 | EGLL | BAW | BL-85-00-11-011 | v03.00.00-85-ARCHA-H2HP | 2026-09-15 | PASSED |
+
+## Usage Instructions
+
+1. **Create new snapshot**: Copy this template for each new airport/airline EIS deployment
+2. **Fill in details**: Complete all mandatory fields (SNAPSHOT_ID through VALIDATION_STATUS)
+3. **Validate**: Confirm infrastructure meets baseline requirements
+4. **Archive**: Store completed snapshot in EIS deployment records
+
+---
+
+## Document Control
+
+- **File Format**: Microsoft Excel (.xlsx)
+- **Document ID**: 85-00-11-A-003
+- **Version**: 1.0 (DRAFT)
+- **Last Updated**: 2025-11-21
+- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- Status: **DRAFT** – Subject to human review and approval.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
