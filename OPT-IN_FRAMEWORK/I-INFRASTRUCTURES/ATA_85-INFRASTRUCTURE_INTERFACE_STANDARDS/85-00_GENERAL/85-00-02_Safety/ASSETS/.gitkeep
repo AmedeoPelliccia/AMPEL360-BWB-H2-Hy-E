@@ -1,0 +1,3 @@
+# Placeholder for asset files
+# Actual diagram files (.drawio, .svg) and templates (.xlsx) to be created by engineering team
+# This file ensures the ASSETS directory is tracked in git even if other files are not yet present
