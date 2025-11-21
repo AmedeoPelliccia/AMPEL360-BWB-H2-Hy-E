@@ -1,0 +1,25 @@
+# Placeholder for 85-00-01-A-002_BWB_Infrastructure_Context.svg
+
+This file is a placeholder for the SVG export of the BWB Infrastructure Context diagram.
+
+## Expected Content
+
+SVG export of 85-00-01-A-001_BWB_Infrastructure_Context.drawio for embedding in multiple documentation files.
+
+## File Format
+
+- Format: .svg (Scalable Vector Graphics)
+- Source: Exported from 85-00-01-A-001_BWB_Infrastructure_Context.drawio
+
+## Usage
+
+Referenced in:
+- 85-00-01-001_BWB_Infrastructure_Interface_Overview.md
+- Airport planning guides
+- Training presentations
+
+## Status
+
+- **To be created by**: Design team (export from .drawio source)
+- **Target completion**: [TBD]
+- **Dependencies**: Requires 85-00-01-A-001_BWB_Infrastructure_Context.drawio to be completed first
