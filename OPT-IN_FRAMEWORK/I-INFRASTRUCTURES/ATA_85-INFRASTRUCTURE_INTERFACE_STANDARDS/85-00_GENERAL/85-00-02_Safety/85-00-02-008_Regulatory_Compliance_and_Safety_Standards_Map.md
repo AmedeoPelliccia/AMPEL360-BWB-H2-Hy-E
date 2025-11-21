@@ -146,19 +146,24 @@ Interface safety compliance is **shared** across multiple authorities:
 
 **Responsible Party**: Airport H₂ infrastructure operator (primary) + Aircraft manufacturer (interface compatibility)
 
-### EN 1473 Installation and Equipment for Liquefied Natural Gas / Hydrogen
+### EN 1473 Installation and Equipment for Liquefied Natural Gas (LNG) and Limited Applicability to Liquid Hydrogen (LH₂)
 
-**Scope**: Design, construction, operation of LNG/H₂ installations (primarily European standard)
+**Scope**: Design, construction, operation of LNG installations (primarily European standard). EN 1473 is primarily intended for LNG; its applicability to hydrogen is limited to certain aspects of liquid hydrogen (LH₂) installations, and should not be used as a general hydrogen installation standard.
 
 **Requirements**:
 - Safety systems (pressure relief, leak detection, fire protection)
-- Materials selection (compatible with cryogenic H₂ or high-pressure gas)
+- Materials selection (compatible with cryogenic fluids, including LH₂ where relevant)
 - Inspection and testing (pressure tests, leak tests)
 
 **Interface Safety Application**:
-- If BWB uses liquid H₂ (LH₂) instead of compressed gas → EN 1473 applicable
+- If BWB uses liquid H₂ (LH₂) instead of compressed gas, certain provisions of EN 1473 may be applicable, but only as far as they are relevant to LH₂ and not to hydrogen in general.
 - Cryogenic safety considerations (frostbite, material embrittlement, rapid vaporization)
+- For all hydrogen installations (including compressed and liquid), refer to hydrogen-specific standards below.
 
+**Hydrogen-Specific Standards**:
+- **EN ISO 15916**: Basic considerations for the safety of hydrogen systems (general safety requirements for hydrogen installations)
+- **EN 17268**: Gaseous hydrogen fueling stations – Fueling connectors and interface requirements
+- These standards should be used for hydrogen installations in addition to, or instead of, EN 1473 as appropriate.
 **Evidence**:
 - LH₂ system design approval (if applicable)
 - Cryogenic safety procedures and PPE (personal protective equipment)
