@@ -1,0 +1,150 @@
+# 85-00-11-A-302: EIS KPI Dashboard
+
+**NOTE**: This is a placeholder for an Excel file. The actual file should be created using Microsoft Excel or equivalent spreadsheet software, ideally with pivot tables, charts, and conditional formatting.
+
+## Purpose
+KPI dashboard tracking infrastructure readiness, adoption rate per airport, incidents, and deviations.
+
+## Dashboard Structure
+
+### Summary Sheet
+
+**Key Metrics (Top-Level KPIs)**
+
+| Metric | Current Value | Target | Status | Trend |
+|--------|--------------|--------|--------|-------|
+| **Airports EIS-Ready** | 12 / 20 | 100% | 🟨 60% | ⬆️ +3 this quarter |
+| **Infrastructure Uptime** | 99.5% | >99.5% | 🟢 On Target | ➡️ Stable |
+| **Turnaround Time (avg)** | 47 min | <50 min | 🟢 On Target | ⬇️ Improving |
+| **Incidents (Critical)** | 2 | 0 | 🟥 Off Target | ⬇️ Decreasing |
+| **Operator Satisfaction** | 87% | >85% | 🟢 On Target | ⬆️ Improving |
+| **Training Completion** | 92% | 100% | 🟨 Near Target | ⬆️ Improving |
+
+---
+
+### Airport Readiness Sheet
+
+| Airport | ICAO | Archetype | Baseline | EIS Status | H₂ Ready | CO₂ Ready | GSE Ready | PAX Ready | Overall Score |
+|---------|------|-----------|----------|------------|----------|-----------|-----------|-----------|---------------|
+| Frankfurt | EDDF | A | BL-85-00-11-011 | ✅ Operational | ✅ 700bar | ✅ 350kW | ✅ Automated | ✅ Triple | 100% |
+| London Heathrow | EGLL | A | BL-85-00-11-011 | ✅ Operational | ✅ 700bar | ✅ 350kW | ✅ Automated | ✅ Triple | 100% |
+| Amsterdam | EHAM | A | BL-85-00-11-006 | 🔄 Testing | ✅ 350bar | ✅ 350kW | ✅ Automated | ✅ Triple | 85% |
+| Munich | EDDM | B | BL-85-00-11-005 | ✅ Operational | ✅ 350bar | ⚠️ N/A | ✅ Semi-Auto | ✅ Dual | 95% |
+| Barcelona | LEBL | B | BL-85-00-11-005 | 📅 Planned Q1'27 | 🔄 In Prog | ⚠️ N/A | 🔄 In Prog | ✅ Dual | 40% |
+| Regional X | XXXX | C | BL-85-00-11-007 | 📅 Planned Q3'27 | 📅 Planned | ⚠️ N/A | 📅 Planned | ✅ Basic | 25% |
+
+**Legend**:
+- ✅ Complete / Operational
+- 🔄 In Progress / Testing
+- 📅 Planned
+- ⚠️ Not Applicable
+- 🟥 Issue / Blocked
+
+---
+
+### Infrastructure Uptime Sheet
+
+**Monthly Uptime Tracking**
+
+| Airport | Jan | Feb | Mar | Apr | May | Jun | YTD Avg | Target |
+|---------|-----|-----|-----|-----|-----|-----|---------|--------|
+| EDDF | 99.8% | 99.6% | 99.7% | 99.5% | 99.4% | 99.6% | 99.6% | >99.5% |
+| EGLL | 99.9% | 99.5% | 99.3% | 99.7% | 99.8% | 99.6% | 99.6% | >99.5% |
+| EHAM | - | - | - | 98.5% | 99.1% | 99.3% | 98.9% | >99.5% |
+| EDDM | 99.7% | 99.8% | 99.6% | 99.5% | 99.6% | 99.7% | 99.6% | >99.5% |
+
+**Downtime Causes (YTD)**
+
+| Cause | Total Hours | % of Downtime | Trend |
+|-------|-------------|---------------|-------|
+| Scheduled Maintenance | 120 | 55% | ➡️ Stable |
+| Unscheduled Maintenance | 65 | 30% | ⬇️ Decreasing |
+| Equipment Failure | 25 | 11% | ⬇️ Decreasing |
+| External (weather, power grid) | 8 | 4% | ➡️ Stable |
+
+---
+
+### Incidents and Deviations Sheet
+
+**Incident Log (Last 12 Months)**
+
+| Date | Airport | Severity | Type | Description | Root Cause | Status | Resolution Time |
+|------|---------|----------|------|-------------|------------|--------|-----------------|
+| 2026-09-05 | EDDF | Critical | H₂ Leak | Minor H₂ leak detected during refuelling | Connector seal degradation | ✅ Resolved | 2 hours |
+| 2026-10-12 | EGLL | Major | Power Outage | GSE power loss during turnaround | Grid fault (external) | ✅ Resolved | 45 minutes |
+| 2026-11-03 | EHAM | Minor | Data Link Drop | GSE data link dropped during heavy rain | Insufficient cable weatherproofing | 🔄 In Progress | Ongoing |
+| 2026-11-15 | EDDM | Minor | PAX Door Misalign | PAX boarding door required manual adjustment | High crosswind (35 km/h) | ✅ Resolved | 10 minutes |
+
+**Severity Classification**:
+- **Critical**: Safety-related, regulatory reportable, or >4 hour impact
+- **Major**: Significant operational impact, 1-4 hour delay
+- **Minor**: Limited impact, <1 hour delay, no safety concerns
+
+---
+
+### Operator Satisfaction Sheet
+
+**Quarterly Satisfaction Surveys**
+
+| Quarter | Response Rate | Overall Satisfaction | H₂ Refuelling | CO₂ Charging | GSE | PAX Boarding | Comments |
+|---------|--------------|---------------------|---------------|--------------|-----|--------------|----------|
+| Q4 2025 | 78% | 82% | 85% | 80% | 83% | 81% | Initial feedback positive, minor teething issues |
+| Q1 2026 | 85% | 85% | 88% | 82% | 86% | 84% | Improved after Q4 fixes |
+| Q2 2026 | 88% | 87% | 90% | 85% | 87% | 86% | 700bar rollout smooth at FRA/LHR |
+| Q3 2026 | 90% | 88% | 91% | 87% | 88% | 87% | Automation improvements well-received |
+
+**Target**: >85% overall satisfaction
+
+---
+
+### Training Completion Sheet
+
+**Training Completion by Role**
+
+| Role | Total Personnel | Trained | Certified | Completion % | Target |
+|------|----------------|---------|-----------|--------------|--------|
+| Ground Crew (H₂) | 250 | 235 | 220 | 94% | 100% |
+| Ground Crew (CO₂) | 180 | 165 | 155 | 92% | 100% |
+| Maintenance (H₂) | 120 | 110 | 105 | 92% | 100% |
+| Maintenance (CO₂) | 85 | 75 | 70 | 88% | 100% |
+| Emergency Responders | 200 | 190 | 185 | 95% | 100% |
+| **Total** | **835** | **775** | **735** | **92%** | **100%** |
+
+---
+
+### Performance Metrics Sheet
+
+**Operational Performance (Last 6 Months)**
+
+| Metric | Jan | Feb | Mar | Apr | May | Jun | Target |
+|--------|-----|-----|-----|-----|-----|-----|--------|
+| **Avg Turnaround Time (min)** | 52 | 50 | 49 | 48 | 47 | 46 | <50 |
+| **H₂ Refuelling Rate (kg/h)** | 485 | 490 | 488 | 492 | 495 | 497 | >480 |
+| **CO₂ Charging Power (kW)** | 345 | 348 | 350 | 352 | 350 | 351 | >340 |
+| **GSE Connection Time (min)** | 3.5 | 3.2 | 3.0 | 2.8 | 2.5 | 2.3 | <3.0 |
+| **PAX Boarding Time (min)** | 18 | 17 | 17 | 16 | 16 | 15 | <18 |
+
+---
+
+## Usage Instructions
+
+1. **Update frequency**: Weekly for incidents, monthly for KPIs
+2. **Data sources**:
+   - Airport operational systems
+   - Digital twin monitoring
+   - Operator surveys
+   - Training management system
+3. **Review**: Monthly KPI review by ATA 85 Configuration Lead
+4. **Distribution**: Quarterly reports to CCB, operators, airports
+
+---
+
+## Document Control
+
+- **File Format**: Microsoft Excel (.xlsx) with pivot tables and charts
+- **Document ID**: 85-00-11-A-302
+- **Version**: 1.0 (DRAFT)
+- **Last Updated**: 2025-11-21
+- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- Status: **DRAFT** – Subject to human review and approval.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
