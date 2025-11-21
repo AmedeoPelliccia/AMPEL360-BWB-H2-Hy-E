@@ -1,0 +1,21 @@
+Part_Number,Component_Name,Family,Subsystem_ID,Description,Manufacturer,Manufacturer_PN,Material,Weight_kg,Interface_Type,Lifecycle_Status,Criticality,DPP_Required,Circular_Rating
+85-RCPT-H2F-001-A,H₂ Fueling Receptacle Assembly,RCPT,85-H2-FUEL-001,"High-pressure H₂ receptacle with integrated safety interlock",AeroConnect Systems,AC-H2R-350-001,"SS316L, PTFE seals",2.45,SAE AS50881 H₂ Coupling,Active,Critical,Yes,A
+85-CONN-H2V-001-A,H₂ Vent Coupling,CONN,85-H2-VENT-001,"Low-pressure H₂ vent coupling",AeroConnect Systems,AC-H2V-100-001,"Al6061-T6, Viton seals",0.85,Cam-lock Quick-Disconnect,Active,Important,Yes,A
+85-SENS-H2S-010,H₂ Leak Detection Sensor,SENS,85-H2-SFTY-001,"Electrochemical H₂ sensor (0-4% H₂)",SafeSense Technologies,SS-H2-ECM-001,"Ceramic, Platinum",0.35,4-20mA + CAN-FD,Active,Critical,Yes,B
+85-VALVE-H2F-005,H₂ Shutoff Valve,VALVE,85-H2-FUEL-001,"Pneumatic shutoff valve with manual override",FlowControl Aerospace,FC-H2SV-700-001,"SS316L, PTFE",3.20,Pneumatic Actuated,Active,Critical,Yes,A
+85-CTRL-H2F-020,H₂ Fueling Controller,CTRL,85-H2-FUEL-001,"Embedded controller for fueling sequence",AvionicsTech,AT-IFC-H2-001,"PCB, Aluminum housing",1.15,CAN-FD + Ethernet,Active,Important,Yes,B
+85-RCPT-CO2-001-A,High-Power DC Charging Receptacle,RCPT,85-CO2-CHRG-001,"800V DC fast charging inlet with liquid cooling",PowerLink Systems,PL-CCS2-800-001,"Copper alloy, Thermoplastic",5.60,CCS Type 2,Active,Critical,Yes,A
+85-CONN-CO2T-001-A,CO₂ Battery Thermal Coupling,CONN,85-CO2-THRM-001,"Thermal management quick-disconnect",FluidConnect,FC-QD-WT-001,"SS304, EPDM seals",1.85,Flat-Face QD,Active,Important,Yes,A
+85-SENS-CO2S-015,Battery Temperature Sensor Array,SENS,85-CO2-THRM-001,"8-channel PT1000 RTD array",TempSense Pro,TS-RTD8-PT1000,"RTD elements, Silicone",0.45,RS-485 Modbus,Active,Important,Yes,B
+85-CTRL-CO2-025,Battery Interface Controller,CTRL,85-CO2-CHRG-001,"High-power charging controller with BMS integration",AvionicsTech,AT-BIC-CO2-001,"PCB, Aluminum housing",2.10,CAN-FD + Ethernet,Active,Critical,Yes,B
+85-RCPT-APT-001-A,400Hz AC Ground Power Receptacle,RCPT,85-APT-PWR-001,"MIL-DTL-38999 Series III power inlet",ConnectorTech,CT-MIL-38999-001,"Aluminum alloy, Copper",1.95,MIL-DTL-38999,Active,Important,Yes,A
+85-RCPT-APT-002-A,28V DC Ground Power Receptacle,RCPT,85-APT-PWR-001,"AS50181 DC power inlet",ConnectorTech,CT-AS50181-001,"Aluminum alloy, Copper",1.45,SAE AS50181,Active,Important,Yes,A
+85-RCPT-APT-010-A,Ethernet Data Receptacle,RCPT,85-APT-DATA-001,"Ruggedized RJ45 10GBASE-T receptacle",DataLink Pro,DL-RJ45-10G-001,"Zinc alloy, Gold contacts",0.35,10GBASE-T RJ45,Active,Standard,Yes,A
+85-RCPT-APT-011-A,Fiber Optic Data Receptacle,RCPT,85-APT-DATA-001,"LC duplex fiber optic receptacle (OM4)",FiberOpticsSys,FOS-LC-OM4-001,"Ceramic ferrule, Thermoplastic",0.25,ARINC 801 LC Duplex,Active,Standard,Yes,B
+85-CONN-PAX-001-A,Bridge Docking Adapter,CONN,85-PAX-BRDG-001,"Passenger boarding bridge docking adapter",BridgeTech,BT-PDA-001,"Aluminum alloy, Rubber seal",15.50,Bridge Docking Standard,Active,Important,Yes,A
+85-CONN-PAX-010-A,Evacuation Slide Interface,CONN,85-PAX-EVAC-001,"Emergency slide deployment interface",SafetyFirst Aero,SF-ESI-001,"Aluminum, Kevlar",2.80,Pneumatic Trigger,Active,Critical,Yes,A
+85-SEAL-H2F-001,H₂ Receptacle Seal Kit,SEAL,85-H2-FUEL-001,"Replacement seal kit for H₂ receptacle",SealTech,ST-H2SK-001,"PTFE, Viton",0.15,N/A,Active,Standard,Yes,A
+85-CABL-H2F-050,H₂ System Wiring Harness,CABL,85-H2-FUEL-001,"Shielded wiring harness for H₂ fueling interface",WirePro Aerospace,WP-WH-H2-001,"Copper, PTFE insulation",3.50,AS50881 Wiring,Active,Important,Yes,B
+85-MNTS-H2F-100,Receptacle Mounting Bracket,MNTS,85-H2-FUEL-001,"Structural mounting bracket for H₂ receptacle",StructureTech,ST-MB-H2R-001,"Al7075-T6, Anodized",1.20,Bolted Interface,Active,Important,Yes,A
+85-SENS-ENV-010,Temperature Sensor (RTD PT1000),SENS,85-APT-UTIL-001,"RTD temperature sensor for environmental monitoring",TempSense Pro,TS-RTD-PT1000,"RTD element, SS probe",0.25,4-20mA + RS-485,Active,Standard,Yes,B
+85-SENS-SFTY-001,Fire/Smoke Detector,SENS,85-H2-SFTY-001,"Dual-spectrum optical smoke and heat detector",FireSafe Systems,FS-OSD-001,"Optical chamber, Electronics",0.45,Discrete + 4-20mA,Active,Critical,Yes,B
