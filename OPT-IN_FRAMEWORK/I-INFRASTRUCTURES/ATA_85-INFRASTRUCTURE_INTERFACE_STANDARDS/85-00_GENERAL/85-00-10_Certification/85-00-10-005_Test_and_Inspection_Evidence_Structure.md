@@ -138,6 +138,8 @@ Examples:
 - Gaps allowed for planned-but-not-yet-executed activities
 - Numbering maintained in [ASSETS/Evidence/85-00-10-A-201_Test_Report_Index.xlsx](./ASSETS/Evidence/)
 
+**Note on Naming Convention**: The curly braces `{Interface}`, `{Type}`, `{Seq}` in naming patterns are placeholders to be replaced with actual values. For example, `EVP-85-{Interface}-{Type}-{Sequential}` becomes `EVP-85-H2-T-001` for a hydrogen test evidence package.
+
 ---
 
 ## Evidence Package Structure

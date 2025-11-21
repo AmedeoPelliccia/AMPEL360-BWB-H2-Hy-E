@@ -157,7 +157,7 @@ Compliance will be demonstrated through a combination of:
 - Electromagnetic compatibility during charging
 - Radio frequency interference
 - **Test Plan**: TP-85-BAT-EMC-001
-- **Standard**: DO-160 Section 21
+- **Standard**: DO-160G Section 21 (Emission of Radio Frequency Energy)
 
 #### Battery Interface Inspection
 
