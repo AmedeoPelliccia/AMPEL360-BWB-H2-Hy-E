@@ -184,7 +184,7 @@ jobs:
             - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**
             - Status: **DRAFT** – Subject to human review and approval
             - Repository: `AMPEL360-BWB-H2-Hy-E`
-            - Last AI update: $(date +%Y-%m-%d)
+            - Last AI update: ${{ github.event.head_commit.timestamp }}
             
             ---
             **CGen Principle**: Propose changes via PR, never silent commits

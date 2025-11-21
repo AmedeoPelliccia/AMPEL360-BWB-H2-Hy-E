@@ -155,16 +155,25 @@ def should_index_directory(dir_path: Path, root_path: Path) -> bool:
 
 def process_directory(root_path: Path, dry_run: bool = True) -> None:
     """Recursively traverse directories under root_path and update 00_INDEX.md."""
+    # Cache to avoid re-checking paths
+    processed_paths = set()
+    
     for dir_path in root_path.rglob("*"):
         if not dir_path.is_dir():
             continue
-
+        
+        # Skip if already processed or if it's an ignored directory
+        if dir_path in processed_paths:
+            continue
+        
         # Quick skip for ignored dirs
         if any(part in IGNORE_DIRS for part in dir_path.parts):
             continue
 
         if not should_index_directory(dir_path, root_path):
             continue
+        
+        processed_paths.add(dir_path)
 
         mode = "DRY-RUN" if dry_run else "WRITE"
         print(f"[{mode}] Processing: {dir_path}")
