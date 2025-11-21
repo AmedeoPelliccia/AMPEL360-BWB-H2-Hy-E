@@ -1,0 +1,12 @@
+[
+  {
+    "test_case_id": "02-20-22_Passenger_Experience_Management_TEST_001",
+    "description": "Sample test case for 22 Passenger Experience Management",
+    "inputs": {
+      "parameter": "value"
+    },
+    "expected_output": {
+      "result": "expected"
+    }
+  }
+]

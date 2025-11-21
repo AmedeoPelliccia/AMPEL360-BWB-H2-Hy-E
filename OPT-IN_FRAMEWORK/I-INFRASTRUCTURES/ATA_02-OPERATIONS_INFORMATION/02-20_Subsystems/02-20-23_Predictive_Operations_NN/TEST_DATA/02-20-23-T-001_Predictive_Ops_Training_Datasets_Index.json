@@ -1,0 +1,12 @@
+[
+  {
+    "test_case_id": "02-20-23_Predictive_Operations_NN_TEST_001",
+    "description": "Sample test case for 23 Predictive Operations NN",
+    "inputs": {
+      "parameter": "value"
+    },
+    "expected_output": {
+      "result": "expected"
+    }
+  }
+]
