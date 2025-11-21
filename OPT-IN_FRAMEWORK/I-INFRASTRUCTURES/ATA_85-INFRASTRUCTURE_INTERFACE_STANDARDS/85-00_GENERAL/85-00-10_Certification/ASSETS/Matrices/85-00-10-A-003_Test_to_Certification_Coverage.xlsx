@@ -1,0 +1,29 @@
+# 85-00-10-A-003_Test_to_Certification_Coverage.xlsx
+
+## Placeholder for Test to Certification Coverage Matrix
+
+This file provides an aggregate coverage view showing:
+- Which tests/inspections support which certification objectives
+- Coverage gaps and planned resolution
+- Authority witness test schedule
+- Test report status and evidence location
+
+**Status**: Template to be developed in Excel format
+
+**Columns**:
+- Test/Inspection ID
+- Test Title
+- Interface Type
+- Certification Objective
+- Requirements Covered (list)
+- Test Status
+- Evidence Package ID
+- Authority Witness (Yes/No/Planned)
+- Coverage Assessment
+- Notes
+
+**Reference**: See 85-00-10-003_Compliance_Matrix_Overview.md
+
+---
+
+**Note**: This is a placeholder file. The actual matrix will be created as an Excel workbook (.xlsx) with conditional formatting to highlight coverage gaps.

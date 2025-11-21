@@ -1,0 +1,70 @@
+# 85-00-10-A-302_Issue_Papers_Tracker.xlsx
+
+## Placeholder for Issue Papers Tracker
+
+This file tracks all issue papers, findings, and authority correspondence for ATA 85 certification.
+
+**Status**: Template to be developed in Excel format
+
+**Tracking Sheets**:
+
+1. **Issue Papers Tracker**
+   Columns:
+   - Issue Paper ID (e.g., IP-85-001)
+   - Title
+   - Interface Type (H₂, Battery, GSE, PAX, Multi)
+   - Issue Description
+   - Proposed Resolution
+   - Status (Draft, Submitted, Under Review, Agreed, Closed)
+   - Submission Date
+   - Authority (EASA, FAA, Other)
+   - Authority Contact
+   - Target Resolution Date
+   - Actual Resolution Date
+   - Impact if Not Resolved
+   - Resolution Summary
+   - Owner
+
+2. **Findings Tracker**
+   Columns:
+   - Finding ID
+   - Finding Description
+   - Finding Type (Type 1, Type 2, Type 3/Observation)
+   - Interface Affected
+   - Issue Date
+   - Authority Source
+   - Severity
+   - Owner
+   - Root Cause
+   - Corrective Action Plan
+   - Target Closure Date
+   - Status (Open, Corrective Action In Progress, Pending Authority Review, Closed)
+   - Closure Date
+   - Closure Reference
+
+3. **Authority Correspondence Log**
+   Columns:
+   - Correspondence ID
+   - Date
+   - Type (Letter, Email, Portal Submission, Meeting Minutes)
+   - From
+   - To
+   - Subject
+   - Summary
+   - Action Required (Yes/No)
+   - Response Due Date
+   - Status
+   - File Location
+
+**Features**:
+- Dashboard with summary statistics
+- Status color coding
+- Overdue alerts
+- Filtering and sorting
+- Pivot tables for analysis
+
+**Reference**: See 85-00-10-006_Authority_Engagement_and_Issue_Papers.md
+
+---
+
+**Note**: This is a placeholder file. The actual tracker will be created as an Excel workbook (.xlsx) with multiple worksheets, conditional formatting, and automated status tracking.

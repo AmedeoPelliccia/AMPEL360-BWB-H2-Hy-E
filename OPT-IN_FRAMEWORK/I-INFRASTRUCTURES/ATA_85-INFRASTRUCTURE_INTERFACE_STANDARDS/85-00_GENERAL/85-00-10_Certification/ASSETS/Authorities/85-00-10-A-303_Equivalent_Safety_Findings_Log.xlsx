@@ -1,0 +1,44 @@
+# 85-00-10-A-303_Equivalent_Safety_Findings_Log.xlsx
+
+## Placeholder for Equivalent Safety Findings Log
+
+This file tracks all Equivalent Safety Finding (ESF) requests and their status for ATA 85 interfaces.
+
+**Status**: Template to be developed in Excel format
+
+**Columns**:
+- ESF ID (e.g., ESF-85-001)
+- Title
+- Interface Type (H₂, Battery, GSE, PAX)
+- Regulation Addressed (e.g., CS-25.xxx, NFPA code)
+- Reason for ESF (why standard regulation difficult to meet)
+- Proposed Alternative Approach
+- Safety Justification Summary
+- Supporting Analysis/Test References
+- Request Submission Date
+- Authority (EASA, FAA, Other)
+- Status (Under Development, Submitted, Under Review, Granted, Denied, Withdrawn)
+- Authority Decision Date
+- Authority Conditions (if any)
+- Compliance Approach with Granted ESF
+- Verification Status
+- Owner
+- Notes
+
+**Key ESF Requests** (anticipated):
+- ESF-85-001: H₂ Refuelling Proximity to Terminal
+- ESF-85-002: BWB Evacuation Time Credits
+- ESF-85-003: Battery Charging Power Levels
+- ESF-85-004: Novel Boarding Bridge Configurations
+
+**Features**:
+- Status tracking with color coding
+- Links to supporting documentation
+- Authority decision summaries
+- Compliance tracking for granted ESFs
+
+**Reference**: See 85-00-10-006_Authority_Engagement_and_Issue_Papers.md
+
+---
+
+**Note**: This is a placeholder file. The actual log will be created as an Excel workbook (.xlsx) with data validation, conditional formatting, and detailed tracking capabilities.

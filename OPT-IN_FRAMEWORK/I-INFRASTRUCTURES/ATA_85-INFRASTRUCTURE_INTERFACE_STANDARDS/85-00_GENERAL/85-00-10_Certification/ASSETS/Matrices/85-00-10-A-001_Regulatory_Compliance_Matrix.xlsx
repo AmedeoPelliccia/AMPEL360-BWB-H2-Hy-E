@@ -1,0 +1,28 @@
+# 85-00-10-A-001_Regulatory_Compliance_Matrix.xlsx
+
+## Placeholder for Regulatory Compliance Matrix
+
+This file will contain the master compliance matrix mapping:
+- Regulation/Standard Identifier → ATA 85 Requirement → Verification Method → Evidence Package
+
+**Status**: Template to be developed in Excel format
+
+**Columns**:
+- Reg ID
+- Reg Text
+- Applicability (HIGH/MEDIUM/LOW/N/A)
+- ATA 85 Req ID
+- Req Title
+- Interface (H₂/CO₂ Battery/GSE/PAX/Multi)
+- Verification Method (Test/Analysis/Inspection/Similarity)
+- MoC Reference
+- Evidence ID
+- Status (Planned/In Work/Complete/Approved)
+- Authority Review
+- Notes
+
+**Reference**: See 85-00-10-003_Compliance_Matrix_Overview.md for detailed structure.
+
+---
+
+**Note**: This is a placeholder file. The actual matrix will be created as an Excel workbook (.xlsx) with proper formatting, formulas, and data validation.
