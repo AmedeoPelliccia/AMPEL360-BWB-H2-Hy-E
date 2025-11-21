@@ -70,7 +70,7 @@ Out of scope: Detailed civil works, component-level vendor manuals, and country-
 
 ## 5. Technical Requirements (Implementation)
 
-The following non‑normative implementation requirements guide design. Where formal requirements exist, link to `85-30-03_Requirements/` and TRACE.
+The following non‑normative implementation requirements guide design. Where formal requirements exist, link to `85-00-03_Requirements/` and TRACE.
 
 **IR‑85‑30‑03‑002‑01 — Interconnection**
 Provide an SLD with protective device coordination and specify PCC rating, short‑circuit level, and grounding scheme.

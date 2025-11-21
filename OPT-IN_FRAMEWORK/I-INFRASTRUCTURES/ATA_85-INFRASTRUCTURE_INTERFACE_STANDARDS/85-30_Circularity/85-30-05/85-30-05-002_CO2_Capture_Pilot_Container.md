@@ -173,7 +173,7 @@ These metrics feed into ATA 99 **Circularity & Carbon Accounting** dashboards an
 
 ## 6. Requirements Mapping
 
-This concept document supports and refines the following high-level requirements (to be formalized in `85-30-03_Requirements`):
+This concept document supports and refines the following high-level requirements (to be formalized in `85-00-03_Requirements`):
 
 - **RQ-85-30-05-010 – Containerized Operation**
   The system shall operate autonomously within a standardized containerized footprint (e.g. ISO 20 ft or equivalent), including all capture, synthesis, purification, and packaging functions.
@@ -187,7 +187,7 @@ This concept document supports and refines the following high-level requirements
 - **RQ-85-30-05-016 – Circularity Metrics**
   The system shall provide data necessary to compute CO₂ mineralization, upcycling factor, and battery footprint reduction KPIs under ATA 99.
 
-(Additional detailed requirements to be maintained in `85-30-03_Requirements/` as separate requirement files.)
+(Additional detailed requirements to be maintained in `85-00-03_Requirements/` as separate requirement files.)
 
 ---
 
