@@ -224,7 +224,7 @@ def main() -> None:
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="Simulate run without writing files (default if --write is not set).",
+        help="Explicitly enable dry-run mode (already the default behavior).",
     )
     parser.add_argument(
         "--write",
