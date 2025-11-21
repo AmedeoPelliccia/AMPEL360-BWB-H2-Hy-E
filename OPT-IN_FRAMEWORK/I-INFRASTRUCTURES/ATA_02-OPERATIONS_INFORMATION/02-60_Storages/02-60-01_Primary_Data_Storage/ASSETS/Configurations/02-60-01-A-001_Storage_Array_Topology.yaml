@@ -1,0 +1,268 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# 02-60-01-A-001 – Storage Array Topology
+# Example topology of storage arrays and connectivity for database clusters
+# This is a generic, abstracted configuration (no vendor-specific details or real hostnames)
+
+metadata:
+  asset_id: "02-60-01-A-001"
+  version: "1.0"
+  status: "DRAFT"
+  generated_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  last_updated: "2025-11-21"
+
+# ==============================================================================
+# PRIMARY SITE STORAGE ARRAYS
+# ==============================================================================
+primary_site:
+  location: "Main Data Center - Building A"
+  
+  arrays:
+    - array_id: "PRIMARY-ARRAY-01"
+      vendor: "Dell"
+      model: "PowerStore 9000"
+      role: "Production OLTP"
+      connectivity:
+        - protocol: "iSCSI"
+          ports: 4
+          speed: "25 Gbps"
+          redundancy: "Dual-path multipathing"
+        - protocol: "FC"
+          ports: 4
+          speed: "32 Gbps FC"
+          redundancy: "Dual-fabric"
+      
+      storage_pools:
+        - pool_name: "SSD_Pool_Hot"
+          tier: "Hot"
+          media_type: "NVMe SSD"
+          capacity_tb: 20
+          raid_level: "RAID-10"
+          use_case:
+            - "OLTP hot data"
+            - "Indexes"
+            - "Temp tablespaces"
+        
+        - pool_name: "SSD_Pool_Warm"
+          tier: "Warm"
+          media_type: "SAS SSD"
+          capacity_tb: 15
+          raid_level: "RAID-6"
+          use_case:
+            - "Data warehouse fact tables"
+            - "Reference data"
+            - "Recent historical data"
+      
+      connected_hosts:
+        - hostname: "db-primary-01.zone1.ampel360.local"
+          role: "Primary PostgreSQL"
+          volumes:
+            - "/dev/mapper/pg_oltp_hot"
+            - "/dev/mapper/pg_oltp_indexes"
+        
+        - hostname: "db-primary-02.zone1.ampel360.local"
+          role: "Primary PostgreSQL (replica)"
+          volumes:
+            - "/dev/mapper/pg_oltp_hot_replica"
+
+# ==============================================================================
+# SECONDARY SITE STORAGE ARRAYS (HIGH AVAILABILITY)
+# ==============================================================================
+secondary_site:
+  location: "Main Data Center - Building B"
+  
+  arrays:
+    - array_id: "SECONDARY-ARRAY-01"
+      vendor: "NetApp"
+      model: "AFF A700"
+      role: "Synchronous Replica"
+      connectivity:
+        - protocol: "iSCSI"
+          ports: 4
+          speed: "25 Gbps"
+          redundancy: "Dual-path multipathing"
+        - protocol: "NFS"
+          ports: 2
+          speed: "10 Gbps"
+          version: "NFSv4.1"
+      
+      storage_pools:
+        - pool_name: "SSD_Pool_Replica"
+          tier: "Hot"
+          media_type: "NVMe SSD"
+          capacity_tb: 20
+          raid_level: "RAID-6"
+          use_case:
+            - "Synchronous replica of primary OLTP"
+      
+      connected_hosts:
+        - hostname: "db-standby-01.zone2.ampel360.local"
+          role: "Hot Standby PostgreSQL"
+          volumes:
+            - "/dev/mapper/pg_oltp_hot_standby"
+        
+      replication:
+        type: "Synchronous"
+        source: "PRIMARY-ARRAY-01"
+        rpo: "0 seconds (no data loss)"
+        rto: "< 60 seconds"
+        protocol: "Array-based replication"
+
+# ==============================================================================
+# DR SITE STORAGE ARRAYS
+# ==============================================================================
+dr_site:
+  location: "DR Data Center - Remote Site"
+  distance_from_primary: "100+ km"
+  
+  arrays:
+    - array_id: "DR-ARRAY-01"
+      vendor: "Dell"
+      model: "PowerStore 7000"
+      role: "Asynchronous DR Replica"
+      connectivity:
+        - protocol: "iSCSI"
+          ports: 4
+          speed: "10 Gbps"
+          redundancy: "Dual-path multipathing"
+      
+      storage_pools:
+        - pool_name: "SSD_Pool_DR"
+          tier: "Warm"
+          media_type: "SAS SSD"
+          capacity_tb: 25
+          raid_level: "RAID-6"
+          use_case:
+            - "Disaster recovery replica"
+      
+      connected_hosts:
+        - hostname: "db-dr-01.zone3.ampel360.local"
+          role: "DR PostgreSQL"
+          volumes:
+            - "/dev/mapper/pg_oltp_dr"
+      
+      replication:
+        type: "Asynchronous"
+        source: "PRIMARY-ARRAY-01"
+        rpo: "15 minutes"
+        rto: "4 hours"
+        protocol: "PostgreSQL WAL shipping"
+
+# ==============================================================================
+# NETWORK TOPOLOGY
+# ==============================================================================
+network_topology:
+  storage_networks:
+    - network_name: "Storage_Network_Zone1"
+      vlan: 100
+      subnet: "10.60.1.0/24"
+      purpose: "iSCSI storage traffic - Zone 1"
+      redundancy: "Dual-switch, LACP"
+    
+    - network_name: "Storage_Network_Zone2"
+      vlan: 101
+      subnet: "10.60.2.0/24"
+      purpose: "iSCSI storage traffic - Zone 2"
+      redundancy: "Dual-switch, LACP"
+    
+    - network_name: "Replication_Network"
+      vlan: 150
+      subnet: "10.60.50.0/24"
+      purpose: "Inter-array replication traffic"
+      bandwidth: "10+ Gbps dedicated"
+      encryption: "IPsec"
+  
+  switches:
+    - switch_name: "Storage_SW_Zone1_A"
+      role: "Primary storage switch - Zone 1"
+      ports_used: 24
+    
+    - switch_name: "Storage_SW_Zone1_B"
+      role: "Secondary storage switch - Zone 1"
+      ports_used: 24
+      redundancy: "Active-active with LACP"
+
+# ==============================================================================
+# MULTIPATHING CONFIGURATION
+# ==============================================================================
+multipathing:
+  software: "Linux Device Mapper (dm-multipath)"
+  policy: "service-time"  # Load balance based on service time
+  
+  path_configuration:
+    - device: "/dev/mapper/pg_oltp_hot"
+      paths: 4
+      active_paths: 4
+      policy: "round-robin"
+      priority: "alua"  # Asymmetric Logical Unit Access
+    
+    - device: "/dev/mapper/pg_oltp_indexes"
+      paths: 4
+      active_paths: 4
+      policy: "round-robin"
+      priority: "alua"
+
+# ==============================================================================
+# MONITORING AND ALERTING
+# ==============================================================================
+monitoring:
+  metrics_collection:
+    - metric: "Array availability"
+      interval: "1 minute"
+      alert_threshold: "< 99.9%"
+    
+    - metric: "Disk health"
+      interval: "5 minutes"
+      alert_on: "any failure"
+    
+    - metric: "RAID status"
+      interval: "1 minute"
+      alert_on: "degraded or rebuilding"
+    
+    - metric: "Replication lag"
+      interval: "1 minute"
+      alert_threshold: "> 5 minutes (synchronous should be near-zero)"
+  
+  integration:
+    - system: "Prometheus"
+      exporter: "storage_exporter"
+    
+    - system: "Grafana"
+      dashboard: "Storage Infrastructure Overview"
+
+# ==============================================================================
+# DOCUMENT CONTROL
+# ==============================================================================
+document_control:
+  generated_by: "AI (GitHub Copilot)"
+  prompted_by: "Amedeo Pelliccia"
+  status: "DRAFT"
+  human_approver: "[to be completed]"
+  repository: "AMPEL360-BWB-H2-Hy-E"
+  last_ai_update: "2025-11-21"
