@@ -1,0 +1,12 @@
+[
+  {
+    "test_case_id": "02-20-19_Crew_Resource_Management_TEST_001",
+    "description": "Sample test case for 19 Crew Resource Management",
+    "inputs": {
+      "parameter": "value"
+    },
+    "expected_output": {
+      "result": "expected"
+    }
+  }
+]

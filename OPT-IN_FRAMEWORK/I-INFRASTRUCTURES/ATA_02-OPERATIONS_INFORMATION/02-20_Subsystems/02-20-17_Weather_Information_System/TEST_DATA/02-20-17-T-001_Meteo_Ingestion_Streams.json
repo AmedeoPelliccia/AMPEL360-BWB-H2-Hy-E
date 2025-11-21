@@ -1,0 +1,189 @@
+[
+  {
+    "test_case_id": "INGEST_001_SATELLITE",
+    "description": "Ingest Sentinel-5P CO₂ data for EUROPE_CENTRAL region",
+    "data_source": {
+      "type": "SATELLITE",
+      "provider": "Copernicus_Sentinel-5P",
+      "product_type": "L2__CO____",
+      "coverage": "EUROPE_CENTRAL"
+    },
+    "sample_data": {
+      "timestamp": "2025-11-21T12:00:00Z",
+      "bounding_box": {
+        "lat_min": 49.0,
+        "lat_max": 52.0,
+        "lon_min": 7.0,
+        "lon_max": 10.0
+      },
+      "measurements": [
+        {
+          "lat": 50.11,
+          "lon": 8.68,
+          "co2_ppm": 425.3,
+          "quality_flag": "GOOD"
+        },
+        {
+          "lat": 50.15,
+          "lon": 8.70,
+          "co2_ppm": 418.7,
+          "quality_flag": "GOOD"
+        }
+      ]
+    },
+    "expected_outcome": {
+      "status": "SUCCESS",
+      "records_ingested": 2,
+      "data_quality_score": 95
+    }
+  },
+  {
+    "test_case_id": "INGEST_002_GROUND_METAR",
+    "description": "Ingest METAR data from Frankfurt Airport (EDDF)",
+    "data_source": {
+      "type": "GROUND_STATION",
+      "provider": "ICAO_METAR",
+      "station_icao": "EDDF"
+    },
+    "sample_data": {
+      "timestamp": "2025-11-21T12:00:00Z",
+      "metar_string": "EDDF 211200Z 27015KT 9999 FEW020 SCT040 28/15 Q1015 NOSIG",
+      "parsed": {
+        "wind_dir": 270,
+        "wind_speed_kt": 15,
+        "visibility_m": 9999,
+        "temperature_c": 28,
+        "dewpoint_c": 15,
+        "qnh_hpa": 1015
+      }
+    },
+    "expected_outcome": {
+      "status": "SUCCESS",
+      "data_quality_score": 100
+    }
+  },
+  {
+    "test_case_id": "INGEST_003_AMDAR",
+    "description": "Ingest AMDAR wind data from nearby aircraft",
+    "data_source": {
+      "type": "FLEET_TELEMETRY",
+      "provider": "AMDAR",
+      "aircraft_id": "AMPEL360-002"
+    },
+    "sample_data": {
+      "timestamp": "2025-11-21T12:00:00Z",
+      "position": {
+        "lat": 50.00,
+        "lon": 8.50,
+        "altitude_ft": 35000
+      },
+      "meteorological": {
+        "temperature_c": -54.2,
+        "wind_dir": 250,
+        "wind_speed_kt": 80,
+        "turbulence": "LIGHT"
+      }
+    },
+    "expected_outcome": {
+      "status": "SUCCESS",
+      "data_quality_score": 90
+    }
+  },
+  {
+    "test_case_id": "INGEST_004_ECMWF_MODEL",
+    "description": "Ingest ECMWF IFS global model forecast",
+    "data_source": {
+      "type": "GLOBAL_MODEL",
+      "provider": "ECMWF_IFS",
+      "forecast_horizon_hours": 6
+    },
+    "sample_data": {
+      "timestamp": "2025-11-21T12:00:00Z",
+      "forecast_time": "2025-11-21T18:00:00Z",
+      "grid_resolution": "0.25deg",
+      "parameters": [
+        {
+          "name": "temperature",
+          "level_type": "pressure",
+          "levels": [850, 700, 500, 300],
+          "sample_value": {
+            "lat": 50.0,
+            "lon": 8.5,
+            "level_hpa": 300,
+            "value_k": 220.5
+          }
+        },
+        {
+          "name": "wind_u",
+          "level_type": "pressure",
+          "levels": [850, 700, 500, 300],
+          "sample_value": {
+            "lat": 50.0,
+            "lon": 8.5,
+            "level_hpa": 300,
+            "value_ms": 15.2
+          }
+        }
+      ]
+    },
+    "expected_outcome": {
+      "status": "SUCCESS",
+      "records_ingested": 4,
+      "data_quality_score": 85
+    }
+  },
+  {
+    "test_case_id": "INGEST_005_ONBOARD_LIDAR",
+    "description": "Ingest real-time Lidar aerosol backscatter data",
+    "data_source": {
+      "type": "ONBOARD_SENSOR",
+      "provider": "ATA_34_LIDAR",
+      "aircraft_id": "AMPEL360-001"
+    },
+    "sample_data": {
+      "timestamp": "2025-11-21T12:00:00.500Z",
+      "position": {
+        "lat": 50.11,
+        "lon": 8.68,
+        "altitude_ft": 34000
+      },
+      "lidar_measurements": {
+        "range_ahead_km": 50,
+        "aerosol_backscatter": 0.0015,
+        "detected_layers": [
+          {
+            "altitude_ft": 35000,
+            "thickness_ft": 2000,
+            "type": "CIRRUS"
+          }
+        ]
+      }
+    },
+    "expected_outcome": {
+      "status": "SUCCESS",
+      "real_time_processing": true,
+      "data_quality_score": 98
+    }
+  },
+  {
+    "test_case_id": "INGEST_006_QUALITY_FAILURE",
+    "description": "Test QC rejection of out-of-range temperature data",
+    "data_source": {
+      "type": "GROUND_STATION",
+      "provider": "ICAO_METAR",
+      "station_icao": "EDDF"
+    },
+    "sample_data": {
+      "timestamp": "2025-11-21T12:00:00Z",
+      "parsed": {
+        "temperature_c": 150,
+        "quality_flag": "SUSPICIOUS"
+      }
+    },
+    "expected_outcome": {
+      "status": "REJECTED",
+      "rejection_reason": "RANGE_CHECK_FAILED",
+      "data_quality_score": 0
+    }
+  }
+]

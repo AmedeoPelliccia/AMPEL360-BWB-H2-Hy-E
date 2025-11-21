@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Placeholder SVG for Weather Display and Alert Layouts -->
+  <defs>
+    <style>
+      .title { font: bold 20px sans-serif; fill: #333; }
+      .subtitle { font: 14px sans-serif; fill: #666; }
+      .display { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .alert { fill: #ffebee; stroke: #c62828; stroke-width: 2; }
+      .text { font: 12px sans-serif; fill: #333; }
+      .label { font: bold 14px sans-serif; fill: #333; }
+    </style>
+  </defs>
+  
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <text x="400" y="40" class="title" text-anchor="middle">Weather Display &amp; Alert Layouts</text>
+  <text x="400" y="65" class="subtitle" text-anchor="middle">02-20-17-A-002 (Placeholder)</text>
+  
+  <!-- EFB Display -->
+  <g transform="translate(50, 100)">
+    <rect width="320" height="200" class="display" rx="5"/>
+    <text x="160" y="30" class="label" text-anchor="middle">EFB Moving Map</text>
+    <text x="20" y="60" class="text">🟢 CO₂ Plume Layer</text>
+    <text x="20" y="85" class="text">🔴 Contrail Risk Zones</text>
+    <text x="20" y="110" class="text">🟡 Thermal Risk Stands</text>
+    <text x="20" y="135" class="text">💨 Wind Barbs</text>
+    <text x="20" y="170" class="text">Interactive: Tap for details</text>
+  </g>
+  
+  <!-- Dispatch Dashboard -->
+  <g transform="translate(430, 100)">
+    <rect width="320" height="200" class="display" rx="5"/>
+    <text x="160" y="30" class="label" text-anchor="middle">Dispatch Dashboard</text>
+    <text x="20" y="60" class="text">Flight Status Overview</text>
+    <text x="20" y="85" class="text">✅ AMPEL001: Normal</text>
+    <text x="20" y="110" class="text">⚠️ AMPEL002: Review</text>
+    <text x="20" y="135" class="text">🔴 AMPEL003: Alert</text>
+    <text x="20" y="170" class="text">Auto-refresh: 15 min</text>
+  </g>
+  
+  <!-- Contrail Alert -->
+  <g transform="translate(50, 340)">
+    <rect width="320" height="160" class="alert" rx="5"/>
+    <text x="160" y="30" class="label" text-anchor="middle">⚠️ CONTRAIL ALERT</text>
+    <text x="20" y="60" class="text">FL340 ISSR Detected</text>
+    <text x="20" y="85" class="text">Persistence: 45 minutes</text>
+    <text x="20" y="110" class="text">Recommendation:</text>
+    <text x="20" y="130" class="text">DESCEND TO FL320</text>
+  </g>
+  
+  <!-- Thermal Alert -->
+  <g transform="translate(430, 340)">
+    <rect width="320" height="160" class="alert" rx="5"/>
+    <text x="160" y="30" class="label" text-anchor="middle">🔴 HIGH THERMAL RISK</text>
+    <text x="20" y="60" class="text">Stand G45: 30.2°C</text>
+    <text x="20" y="85" class="text">H₂ Safe Parking: 30 min</text>
+    <text x="20" y="110" class="text">Action Required:</text>
+    <text x="20" y="130" class="text">ACTIVATE GSE COOLING</text>
+  </g>
+  
+  <text x="400" y="580" class="subtitle" text-anchor="middle">See 02-20-17-A-002 document for detailed specifications</text>
+</svg>

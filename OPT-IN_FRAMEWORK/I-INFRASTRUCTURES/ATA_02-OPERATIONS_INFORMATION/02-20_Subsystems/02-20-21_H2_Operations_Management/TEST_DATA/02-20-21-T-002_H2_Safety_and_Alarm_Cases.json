@@ -1,0 +1,12 @@
+[
+  {
+    "test_case_id": "02-20-21_H2_Operations_Management_TEST_001",
+    "description": "Sample test case for 21 H2 Operations Management",
+    "inputs": {
+      "parameter": "value"
+    },
+    "expected_output": {
+      "result": "expected"
+    }
+  }
+]

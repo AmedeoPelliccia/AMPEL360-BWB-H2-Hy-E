@@ -1,0 +1,216 @@
+[
+  {
+    "test_case_id": "PRODUCT_001_THERMAL_RISK",
+    "description": "Generate thermal risk map for Frankfurt stands",
+    "scenario": {
+      "airport": "EDDF",
+      "timestamp": "2025-11-21T12:00:00Z",
+      "weather_conditions": {
+        "ambient_temp_c": 28.5,
+        "solar_insolation_wm2": 800,
+        "wind_speed_ms": 3.0
+      },
+      "stands": [
+        {
+          "stand_id": "G45",
+          "location": "EXPOSED",
+          "concrete_albedo": 0.35,
+          "shadowing": "NONE"
+        },
+        {
+          "stand_id": "H12",
+          "location": "SHADED",
+          "concrete_albedo": 0.35,
+          "shadowing": "TERMINAL_BUILDING"
+        }
+      ]
+    },
+    "expected_product": {
+      "product_id": "WIS-PROD-001",
+      "stands": [
+        {
+          "stand_id": "G45",
+          "current_temp_c": 30.2,
+          "forecast_4h": [30.5, 31.0, 30.8, 30.0],
+          "h2_boiloff_risk": "HIGH",
+          "safe_parking_min": 30,
+          "recommendation": "ACTIVATE_GSE_COOLING"
+        },
+        {
+          "stand_id": "H12",
+          "current_temp_c": 25.1,
+          "forecast_4h": [25.5, 26.0, 25.8, 25.2],
+          "h2_boiloff_risk": "LOW",
+          "safe_parking_min": 180,
+          "recommendation": "NORMAL_OPERATIONS"
+        }
+      ]
+    }
+  },
+  {
+    "test_case_id": "PRODUCT_002_CO2_PLUME",
+    "description": "Generate CO₂ capture opportunity map for Frankfurt-Paris route",
+    "scenario": {
+      "route": "EDDF-LFPG",
+      "timestamp": "2025-11-21T12:00:00Z",
+      "weather_conditions": {
+        "wind_250deg_20kt": true,
+        "industrial_activity": "HIGH"
+      }
+    },
+    "expected_product": {
+      "product_id": "WIS-PROD-002",
+      "region": "EUROPE_CENTRAL",
+      "high_co2_zones": [
+        {
+          "center": {"lat": 50.11, "lon": 8.68},
+          "co2_ppm": 425,
+          "confidence": 0.85,
+          "area_km2": 500
+        }
+      ],
+      "optimal_route_adjustment": {
+        "waypoint_insert": "50.11N/8.68E",
+        "lateral_deviation_km": 15,
+        "estimated_capture_kg": 12.5,
+        "fuel_penalty_kg": 8.0,
+        "net_benefit": "POSITIVE"
+      }
+    }
+  },
+  {
+    "test_case_id": "PRODUCT_003_CONTRAIL_AVOIDANCE",
+    "description": "Generate contrail avoidance recommendations for cruise flight",
+    "scenario": {
+      "route_segment": "EDDF-EDDM",
+      "timestamp": "2025-11-21T12:00:00Z",
+      "atmospheric_conditions": {
+        "fl340": {"temp_c": -54.2, "rh_ice": 110, "issr": true},
+        "fl360": {"temp_c": -56.0, "rh_ice": 95, "issr": false},
+        "fl380": {"temp_c": -58.0, "rh_ice": 88, "issr": false}
+      }
+    },
+    "expected_product": {
+      "product_id": "WIS-PROD-003",
+      "altitude_analysis": [
+        {
+          "fl": 340,
+          "issr_prob": 0.92,
+          "persistence_min": 45,
+          "status": "AVOID",
+          "radiative_forcing": 1.4
+        },
+        {
+          "fl": 360,
+          "issr_prob": 0.15,
+          "persistence_min": 0,
+          "status": "OPTIMAL",
+          "radiative_forcing": 0.0
+        },
+        {
+          "fl": 380,
+          "issr_prob": 0.08,
+          "persistence_min": 0,
+          "status": "CLEAR",
+          "radiative_forcing": 0.0
+        }
+      ],
+      "recommendation": {
+        "action": "ECO_STEP_CLIMB",
+        "from_fl": 340,
+        "to_fl": 360,
+        "fuel_penalty_kg": 15,
+        "climate_benefit": "HIGH"
+      }
+    }
+  },
+  {
+    "test_case_id": "PRODUCT_004_NOWCAST",
+    "description": "Generate 2-hour nowcast for London Heathrow",
+    "scenario": {
+      "airport": "EGLL",
+      "timestamp": "2025-11-21T12:00:00Z",
+      "current_conditions": {
+        "wind": "270/15G25",
+        "visibility_m": 5000,
+        "weather": "SHRA"
+      }
+    },
+    "expected_product": {
+      "product_id": "WIS-PROD-004",
+      "nowcast": [
+        {
+          "valid_time": "12:30",
+          "wind": "270/15G25",
+          "visibility_m": 5000,
+          "weather": "SHRA",
+          "confidence": 0.90
+        },
+        {
+          "valid_time": "13:00",
+          "wind": "280/18G30",
+          "visibility_m": 4000,
+          "weather": "RA",
+          "confidence": 0.85
+        },
+        {
+          "valid_time": "13:30",
+          "wind": "290/20",
+          "visibility_m": 6000,
+          "weather": "FEW020",
+          "confidence": 0.75
+        },
+        {
+          "valid_time": "14:00",
+          "wind": "290/18",
+          "visibility_m": 8000,
+          "weather": "SCT030",
+          "confidence": 0.70
+        }
+      ],
+      "turbulence_risk": "MODERATE",
+      "landing_recommendation": "DELAY_30MIN_FOR_CONDITIONS"
+    }
+  },
+  {
+    "test_case_id": "PRODUCT_005_WIND_OPTIMIZATION",
+    "description": "Generate wind optimization grid for transatlantic route",
+    "scenario": {
+      "route": "KJFK-EGLL",
+      "timestamp": "2025-11-21T12:00:00Z",
+      "flight_levels": [340, 360, 380, 400]
+    },
+    "expected_product": {
+      "product_id": "WIS-PROD-005",
+      "wind_layers": [
+        {
+          "fl": 340,
+          "avg_wind": "250/80",
+          "jet_stream": true,
+          "headwind_component_kt": 60
+        },
+        {
+          "fl": 360,
+          "avg_wind": "260/70",
+          "jet_stream": false,
+          "headwind_component_kt": 50
+        },
+        {
+          "fl": 380,
+          "avg_wind": "270/90",
+          "jet_stream": true,
+          "headwind_component_kt": 70
+        },
+        {
+          "fl": 400,
+          "avg_wind": "260/85",
+          "jet_stream": true,
+          "headwind_component_kt": 65
+        }
+      ],
+      "optimal_fl": 360,
+      "fuel_savings_kg": 120,
+      "time_penalty_min": 2
+    }
+  }
+]
