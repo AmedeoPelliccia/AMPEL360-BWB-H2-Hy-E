@@ -1,0 +1,217 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/power-system-v1.0.json",
+  "title": "Power System Data Schema",
+  "description": "JSON schema for electrical power system data within AMPEL360 BWB-H2-Hy-E aircraft, covering buses, sources, loads and measurements.",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["timestamp", "aircraft_id", "buses", "sources"],
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of measurement"
+    },
+    "aircraft_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{6}$",
+      "description": "Aircraft registration or tail number"
+    },
+    "flight_phase": {
+      "type": "string",
+      "enum": ["ground", "taxi", "takeoff", "climb", "cruise", "descent", "approach", "landing", "emergency"],
+      "description": "Current flight phase"
+    },
+    "buses": {
+      "type": "array",
+      "description": "Power distribution buses",
+      "items": {
+        "type": "object",
+        "required": ["bus_id", "bus_type", "voltage_nominal", "voltage_actual", "frequency"],
+        "properties": {
+          "bus_id": {
+            "type": "string",
+            "description": "Bus identifier (e.g., 'AC_BUS_1', 'DC_ESS_BUS')"
+          },
+          "bus_type": {
+            "type": "string",
+            "enum": ["AC", "DC", "HVDC"],
+            "description": "Bus electrical type"
+          },
+          "voltage_nominal": {
+            "type": "number",
+            "description": "Nominal voltage (V)"
+          },
+          "voltage_actual": {
+            "type": "number",
+            "description": "Actual voltage measurement (V)"
+          },
+          "frequency": {
+            "type": "number",
+            "description": "Frequency for AC buses (Hz), null for DC"
+          },
+          "load_current": {
+            "type": "number",
+            "description": "Total load current (A)"
+          },
+          "power_kw": {
+            "type": "number",
+            "description": "Total power on bus (kW)"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["normal", "degraded", "fault", "offline"],
+            "description": "Bus operational status"
+          },
+          "connected_sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of source_ids connected to this bus"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "description": "Power generation sources",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "source_type", "status"],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "description": "Source identifier (e.g., 'GEN_1', 'APU_GEN', 'BATT_1', 'FC_STACK_1')"
+          },
+          "source_type": {
+            "type": "string",
+            "enum": ["engine_gen", "apu_gen", "fuel_cell", "battery", "gpu", "ram_air_turbine"],
+            "description": "Type of power source"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["online", "offline", "standby", "fault"],
+            "description": "Source operational status"
+          },
+          "output_voltage": {
+            "type": "number",
+            "description": "Output voltage (V)"
+          },
+          "output_current": {
+            "type": "number",
+            "description": "Output current (A)"
+          },
+          "output_power_kw": {
+            "type": "number",
+            "description": "Output power (kW)"
+          },
+          "efficiency_percent": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Source efficiency (%)"
+          },
+          "temperature_c": {
+            "type": "number",
+            "description": "Operating temperature (°C)"
+          },
+          "runtime_hours": {
+            "type": "number",
+            "description": "Cumulative runtime (hours)"
+          }
+        }
+      }
+    },
+    "loads": {
+      "type": "array",
+      "description": "Major electrical loads",
+      "items": {
+        "type": "object",
+        "required": ["load_id", "system", "priority"],
+        "properties": {
+          "load_id": {
+            "type": "string",
+            "description": "Load identifier"
+          },
+          "system": {
+            "type": "string",
+            "description": "System name (e.g., 'Flight Controls', 'ECS', 'IFE')"
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "description": "Load priority (1=critical, 4=comfort)"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["powered", "shed", "standby"],
+            "description": "Load connection status"
+          },
+          "power_kw": {
+            "type": "number",
+            "description": "Current power consumption (kW)"
+          },
+          "bus_id": {
+            "type": "string",
+            "description": "Bus supplying this load"
+          }
+        }
+      }
+    },
+    "power_quality": {
+      "type": "object",
+      "description": "Power quality metrics",
+      "properties": {
+        "thd_percent": {
+          "type": "number",
+          "description": "Total Harmonic Distortion (%)"
+        },
+        "voltage_regulation_percent": {
+          "type": "number",
+          "description": "Voltage regulation within nominal (%)"
+        },
+        "frequency_stability_hz": {
+          "type": "number",
+          "description": "Frequency deviation from nominal (Hz)"
+        }
+      }
+    },
+    "alerts": {
+      "type": "array",
+      "description": "Active power system alerts",
+      "items": {
+        "type": "object",
+        "required": ["alert_id", "severity", "message"],
+        "properties": {
+          "alert_id": {
+            "type": "string",
+            "description": "Unique alert identifier"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["warning", "caution", "advisory"],
+            "description": "Alert severity level"
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable alert message"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Alert generation time"
+          },
+          "affected_components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Component IDs affected by this alert"
+          }
+        }
+      }
+    }
+  }
+}

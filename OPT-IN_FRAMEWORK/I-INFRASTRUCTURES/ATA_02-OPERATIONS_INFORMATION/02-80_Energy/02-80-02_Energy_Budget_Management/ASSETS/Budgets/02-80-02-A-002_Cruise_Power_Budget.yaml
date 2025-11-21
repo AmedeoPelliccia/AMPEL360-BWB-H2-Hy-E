@@ -1,0 +1,208 @@
+# Cruise Power Budget Template
+# AMPEL360 BWB-H2-Hy-E Aircraft
+# ATA 02-80-02 Energy Budget Management
+# Version: 1.0.0
+# Status: TEMPLATE - Values are illustrative only
+
+metadata:
+  document_id: 02-80-02-A-002
+  version: "1.0.0"
+  flight_phase: cruise
+  aircraft_type: AMPEL360_BWB_H2_HyE
+  certification_basis: CS-25.1309
+  last_updated: "2025-11-21"
+  approver: "[to be assigned]"
+  status: DRAFT
+
+# Total available power from all sources
+available_power:
+  total_kw: 150
+  sources:
+    - source: engine_generator_1
+      capacity_kw: 60
+      availability: 0.995
+    - source: engine_generator_2
+      capacity_kw: 60
+      availability: 0.995
+    - source: fuel_cell_stack_1
+      capacity_kw: 30
+      availability: 0.990
+  distribution_losses_kw: 5
+  net_available_kw: 145
+
+# Power allocation by system category
+power_allocation:
+  # Priority 1: Flight-Critical Systems
+  priority_1_flight_critical:
+    allocation_kw: 30
+    percentage: 20.7
+    systems:
+      - system: flight_control_actuation
+        allocation_kw: 20
+        notes: "Primary and backup flight control computers and actuators"
+      - system: primary_flight_displays
+        allocation_kw: 5
+        notes: "PFD, ND for pilots"
+      - system: essential_avionics_cooling
+        allocation_kw: 3
+        notes: "Cooling for flight-critical electronics"
+      - system: essential_navigation
+        allocation_kw: 2
+        notes: "IRS, GPS primary"
+
+  # Priority 2: Essential (Safety-Related) Systems
+  priority_2_essential:
+    allocation_kw: 30
+    percentage: 20.7
+    systems:
+      - system: secondary_communications
+        allocation_kw: 5
+        notes: "VHF2, SATCOM"
+      - system: weather_radar
+        allocation_kw: 3
+        notes: "Weather detection and avoidance"
+      - system: tcas_acas
+        allocation_kw: 2
+        notes: "Traffic collision avoidance"
+      - system: backup_displays
+        allocation_kw: 3
+        notes: "Standby instruments"
+      - system: emergency_lighting
+        allocation_kw: 2
+        notes: "Emergency and escape path lighting"
+      - system: environmental_control_minimum
+        allocation_kw: 15
+        notes: "Minimum cabin pressurization and temperature control"
+
+  # Priority 3: Non-Essential (Operational) Systems
+  priority_3_non_essential:
+    allocation_kw: 45
+    percentage: 31.0
+    systems:
+      - system: cabin_entertainment_ife
+        allocation_kw: 12
+        notes: "In-flight entertainment systems"
+      - system: galley_equipment
+        allocation_kw: 10
+        notes: "Ovens, coffee makers, refrigeration"
+      - system: wifi_connectivity
+        allocation_kw: 5
+        notes: "Passenger and crew WiFi"
+      - system: enhanced_ecs
+        allocation_kw: 10
+        notes: "Additional cabin comfort (above minimum)"
+      - system: non_critical_avionics
+        allocation_kw: 5
+        notes: "EFB charging, enhanced displays"
+      - system: enhanced_lighting
+        allocation_kw: 3
+        notes: "Mood lighting, enhanced cabin lighting"
+
+  # Priority 4: Comfort/Convenience Systems
+  priority_4_comfort:
+    allocation_kw: 10
+    percentage: 6.9
+    systems:
+      - system: passenger_seat_power
+        allocation_kw: 5
+        notes: "USB ports, power outlets for passengers"
+      - system: redundant_galley
+        allocation_kw: 3
+        notes: "Secondary galley circuits"
+      - system: enhanced_cabin_features
+        allocation_kw: 2
+        notes: "Enhanced pressurization, cabin extras"
+
+  # Distribution losses and system overhead
+  distribution_and_overhead:
+    allocation_kw: 10
+    percentage: 6.9
+    components:
+      - component: power_conversion_losses
+        allocation_kw: 5
+        notes: "Inverters, rectifiers, transformers"
+      - component: distribution_losses
+        allocation_kw: 3
+        notes: "Wiring, contactors, circuit protection"
+      - component: cooling_systems
+        allocation_kw: 2
+        notes: "Power electronics cooling"
+
+  # Reserve margin
+  reserve_margin:
+    allocation_kw: 20
+    percentage: 13.8
+    purpose: "Safety margin for unexpected load increases or source degradation"
+    notes: "Per CS-25.1309, adequate power must be available for all foreseeable conditions"
+
+# Total power summary
+power_summary:
+  total_allocated_kw: 145
+  priority_1_kw: 30
+  priority_2_kw: 30
+  priority_3_kw: 45
+  priority_4_kw: 10
+  overhead_kw: 10
+  reserve_kw: 20
+  utilization_percent: 86.2
+
+# Load shedding thresholds
+load_shedding:
+  trigger_conditions:
+    - condition: available_power_below_90_percent
+      action: shed_priority_4
+      target_reduction_kw: 10
+    - condition: available_power_below_75_percent
+      action: shed_priority_3
+      target_reduction_kw: 45
+    - condition: available_power_below_60_percent
+      action: alert_crew_prepare_priority_2_shed
+      target_reduction_kw: 0  # Crew decision
+    - condition: available_power_below_50_percent
+      action: emergency_procedures_crew_initiated
+      target_reduction_kw: varies  # Crew discretion
+
+# Variance thresholds
+variance_monitoring:
+  acceptable_variance_percent: 5
+  investigation_threshold_percent: 10
+  alert_threshold_percent: 15
+  notes: "Variance = (Actual - Budget) / Budget × 100%"
+
+# Performance targets
+performance_targets:
+  energy_intensity_kwh_per_ask: 0.15
+  fuel_cell_efficiency_percent: 50
+  battery_cycle_life_cycles: 3000
+  power_system_availability_percent: 99.9
+
+# Notes and assumptions
+notes:
+  - "This is a template budget for cruise phase operations"
+  - "Actual values must be validated through flight testing and operational data"
+  - "Budget subject to revision based on aircraft configuration and mission requirements"
+  - "All power values are at steady-state cruise conditions (FL350, Mach 0.78)"
+  - "Ambient temperature assumed 25°C cabin, -55°C outside"
+  - "Full passenger load and typical cabin services active"
+
+# References
+references:
+  - standard: CS-25.1309
+    title: "Equipment, Systems, and Installations"
+    url: "https://www.easa.europa.eu/document-library/certification-specifications/cs-25-large-aeroplanes"
+  - standard: CS-25.1351
+    title: "Electrical Systems and Equipment"
+    url: "https://www.easa.europa.eu/document-library/certification-specifications/cs-25-large-aeroplanes"
+  - document: 02-80-00-003_Energy_Management_Strategy.md
+    title: "Energy Management Strategy"
+  - document: 02-80-00-004_Power_Budget_Tracking.md
+    title: "Power Budget Tracking"
+
+# Document control
+document_control:
+  generated_by: "AI (GitHub Copilot)"
+  prompted_by: "Amedeo Pelliccia"
+  repository: "AMPEL360-BWB-H2-Hy-E"
+  last_ai_update: "2025-11-21"
+  approval_status: "DRAFT - Subject to human review and approval"
+  human_approver: "[to be completed]"
