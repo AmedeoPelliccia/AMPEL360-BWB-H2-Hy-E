@@ -1,4 +1,4 @@
-# W[TITLE]B System Architecture
+# W&B System Architecture
 
 ## Purpose
 
