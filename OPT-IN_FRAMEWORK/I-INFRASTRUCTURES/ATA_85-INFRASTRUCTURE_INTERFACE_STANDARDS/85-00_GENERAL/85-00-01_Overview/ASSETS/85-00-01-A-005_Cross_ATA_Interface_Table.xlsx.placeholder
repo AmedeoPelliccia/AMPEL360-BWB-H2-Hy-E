@@ -1,0 +1,62 @@
+# Placeholder for 85-00-01-A-005_Cross_ATA_Interface_Table.xlsx
+
+This file is a placeholder for the comprehensive cross-ATA interface mapping table.
+
+## Expected Content
+
+Excel spreadsheet with the following columns:
+
+### Column Structure
+
+1. **Interface ID** (e.g., INT-H2-001, INT-CO2-001, INT-EVAC-001)
+2. **Interface Name** (e.g., "H₂ Primary Refuelling Port")
+3. **Interface Type** (Physical / Operational / Data / Safety)
+4. **Description** (Brief description of interface purpose and function)
+5. **Physical Location** (Aircraft station, side, height above ground)
+6. **Primary ATA Owner** (Responsible ATA chapter, e.g., ATA 28 Fuel)
+7. **Supporting ATA Chapters** (Other ATAs with interface responsibilities)
+8. **External Stakeholder** (Airport operator, H₂ supplier, emergency services, etc.)
+9. **Applicable Standards** (SAE AS50881, ISO 14687, CS-25.803, etc.)
+10. **Certification Requirement** (Yes/No, reference to certification basis)
+11. **Safety Critical** (Yes/No)
+12. **Operational Impact** (Critical Path / Non-Critical Path for turnaround)
+13. **Status** (Preliminary Design / Detailed Design / Certified / In Service)
+14. **Notes** (Additional comments, open issues, future enhancements)
+
+### Example Rows
+
+| Interface ID | Interface Name | Type | Location | Primary ATA | External Stakeholder | Standards |
+|--------------|----------------|------|----------|-------------|----------------------|-----------|
+| INT-H2-001 | H₂ Primary Refuelling Port | Physical | Station 12.5m, Port | ATA 28 | H₂ Supplier, Airport Ops | SAE AS50881, ISO 14687 |
+| INT-CO2-001 | CO₂ Battery Dock 1 | Physical | Station 18m, Ventral | ATA 80 | Battery Vendor, Airport Power | (TBD) |
+| INT-EVAC-001 | Door 1L Evacuation Slide | Physical | Station 6m, Port | ATA 52 | Airport ARFF | CS-25.803, CS-25.809 |
+| INT-GPU-001 | Primary GPU Connection | Electrical | Station 6m, Port | ATA 24 | Airport Ground Power | MIL-STD-2186 |
+
+### Worksheets
+
+1. **Main Table**: All interfaces listed
+2. **H₂ Interfaces**: Filtered view of hydrogen-related interfaces
+3. **CO₂ Interfaces**: Filtered view of CO₂ battery interfaces
+4. **Evacuation Interfaces**: Filtered view of evacuation and rescue interfaces
+5. **GSE Interfaces**: Filtered view of ground support equipment interfaces
+6. **Summary**: High-level statistics and charts
+
+## File Format
+
+- Format: .xlsx (Microsoft Excel)
+- Alternative: .csv (for version control and automated processing)
+
+## Usage
+
+Referenced in:
+- 85-00-01-001_BWB_Infrastructure_Interface_Overview.md
+- 85-00-01-005_Standards_Regulations_and_Cross_ATA_Map.md
+- ATA chapter interface requirements documents
+- Certification compliance matrices
+
+## Status
+
+- **To be created by**: Systems engineering team
+- **Target completion**: [TBD]
+- **Required for**: Design reviews, certification planning, stakeholder coordination
+- **Maintenance**: Living document, updated as design evolves

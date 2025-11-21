@@ -1,0 +1,99 @@
+# ASSETS Index for 85-00-01 Overview
+# Authoritative catalog of design assets for ATA 85 Infrastructure Interface Standards Overview
+
+metadata:
+  ata_chapter: "85"
+  subfolder: "00"
+  lifecycle_stage: "01"
+  lifecycle_name: "Overview"
+  folder_path: "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_85-INFRASTRUCTURE_INTERFACE_STANDARDS/85-00_GENERAL/85-00-01_Overview/ASSETS"
+  version: "1.0"
+  last_updated: "2025-11-21"
+  status: "Draft"
+  owner: "AMPEL360 Infrastructure Engineering Team"
+
+assets:
+  - id: "85-00-01-A-001"
+    category: "DIAGRAMS"
+    name: "BWB_Infrastructure_Context"
+    filename: "85-00-01-A-001_BWB_Infrastructure_Context.drawio.placeholder"
+    format: "drawio (placeholder)"
+    description: "Overall context diagram showing BWB aircraft on stand with all major infrastructure interfaces (jetways, H₂ refuelling, CO₂ battery docks, GPU, PCA, cargo loaders, rescue access)"
+    status: "Placeholder"
+    referenced_by:
+      - "85-00-01-001_BWB_Infrastructure_Interface_Overview.md"
+    created_date: "2025-11-21"
+    author: "AI (GitHub Copilot) - prompted by Amedeo Pelliccia"
+    
+  - id: "85-00-01-A-002"
+    category: "DIAGRAMS"
+    name: "BWB_Infrastructure_Context"
+    filename: "85-00-01-A-002_BWB_Infrastructure_Context.svg.placeholder"
+    format: "svg (placeholder)"
+    description: "SVG export of BWB Infrastructure Context diagram for embedding in documentation"
+    status: "Placeholder"
+    source: "Exported from 85-00-01-A-001_BWB_Infrastructure_Context.drawio"
+    referenced_by:
+      - "85-00-01-001_BWB_Infrastructure_Interface_Overview.md"
+      - "Airport planning guides"
+      - "Training materials"
+    created_date: "2025-11-21"
+    author: "AI (GitHub Copilot) - prompted by Amedeo Pelliccia"
+    
+  - id: "85-00-01-A-003"
+    category: "DIAGRAMS"
+    name: "H2_and_CO2_Interface_Layers"
+    filename: "85-00-01-A-003_H2_and_CO2_Interface_Layers.svg.placeholder"
+    format: "svg (placeholder)"
+    description: "Layered architecture diagram showing H₂ and CO₂ battery interfaces from physical connectors through data/monitoring to operational/safety layers"
+    status: "Placeholder"
+    referenced_by:
+      - "85-00-01-001_BWB_Infrastructure_Interface_Overview.md"
+      - "85-00-01-002_H2_and_CO2_Energy_Infrastructure_Interfaces.md"
+    created_date: "2025-11-21"
+    author: "AI (GitHub Copilot) - prompted by Amedeo Pelliccia"
+    
+  - id: "85-00-01-A-004"
+    category: "DIAGRAMS"
+    name: "Evacuation_Interface_Scenarios"
+    filename: "85-00-01-A-004_Evacuation_Interface_Scenarios.svg.placeholder"
+    format: "svg (placeholder)"
+    description: "Multiple scenario diagrams showing BWB evacuation with door/slide locations, rescue access routes, and coordination with airport emergency infrastructure"
+    status: "Placeholder"
+    referenced_by:
+      - "85-00-01-001_BWB_Infrastructure_Interface_Overview.md"
+      - "85-00-01-003_Passenger_Evacuation_and_Rescue_Interfaces.md"
+    created_date: "2025-11-21"
+    author: "AI (GitHub Copilot) - prompted by Amedeo Pelliccia"
+    
+  - id: "85-00-01-A-005"
+    category: "DATA"
+    name: "Cross_ATA_Interface_Table"
+    filename: "85-00-01-A-005_Cross_ATA_Interface_Table.xlsx.placeholder"
+    format: "xlsx (placeholder)"
+    description: "Comprehensive table mapping each BWB infrastructure interface to interface ID, description, physical location, owning ATA chapter, external stakeholder, applicable standards, and certification requirements"
+    status: "Placeholder"
+    referenced_by:
+      - "85-00-01-001_BWB_Infrastructure_Interface_Overview.md"
+      - "85-00-01-005_Standards_Regulations_and_Cross_ATA_Map.md"
+    created_date: "2025-11-21"
+    author: "AI (GitHub Copilot) - prompted by Amedeo Pelliccia"
+
+validation:
+  total_assets: 5
+  placeholders: 5
+  completed_assets: 0
+  naming_convention_compliant: true
+  all_referenced_by_docs: true
+  
+notes: |
+  All assets are currently placeholders pending creation by design team, technical illustrators,
+  and systems engineering team. Placeholders include descriptions of expected content to guide
+  asset creation. This INDEX will be updated as assets are completed.
+  
+  Priority for completion:
+  1. 85-00-01-A-002 (BWB Infrastructure Context SVG) - Required for high-level overviews and presentations
+  2. 85-00-01-A-005 (Cross-ATA Interface Table) - Required for systems engineering and certification planning
+  3. 85-00-01-A-003 (H₂ and CO₂ Interface Layers) - Required for detailed energy interface specifications
+  4. 85-00-01-A-004 (Evacuation Interface Scenarios) - Required for CS-25.803 certification demonstrations
+  5. 85-00-01-A-001 (BWB Infrastructure Context drawio source) - Source for A-002, lower priority if SVG created directly

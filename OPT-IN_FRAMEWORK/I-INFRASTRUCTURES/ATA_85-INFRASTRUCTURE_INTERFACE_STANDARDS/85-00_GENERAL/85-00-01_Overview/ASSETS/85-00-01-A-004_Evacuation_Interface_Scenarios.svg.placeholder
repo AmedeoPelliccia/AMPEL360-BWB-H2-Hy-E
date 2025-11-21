@@ -1,0 +1,47 @@
+# Placeholder for 85-00-01-A-004_Evacuation_Interface_Scenarios.svg
+
+This file is a placeholder for the evacuation interface scenarios diagram.
+
+## Expected Content
+
+Multiple scenario views showing:
+
+### Normal Evacuation Scenario
+- All 16 exits (12 Type A doors + 4 Type III overwing)
+- Slide deployment zones (10m x 5m per door)
+- Passenger flow paths to assembly points (100m forward/aft, 30m lateral)
+- ARFF vehicle approach routes
+
+### Degraded Scenario (50% Exits Blocked)
+- 8 exits available (worst-case per CS-25.803)
+- Alternate evacuation routes
+- Evacuation time analysis (still < 90 seconds)
+
+### Emergency Scenario with H₂ Considerations
+- H₂ refuelling zone marked (10m exclusion)
+- Safe evacuation routes avoiding H₂ zone
+- ARFF positioning for H₂ fire response
+
+### Rescue Vehicle Access
+- ARFF truck positioning (20m from aircraft, 45° approach)
+- Aerial platform reach zones (8-12m height capability)
+- Ambulance access to slide termination points
+
+## File Format
+
+- Format: .svg (Scalable Vector Graphics)
+- Style: Plan view (top-down) with multiple scenarios or annotated sections
+
+## Usage
+
+Referenced in:
+- 85-00-01-003_Passenger_Evacuation_and_Rescue_Interfaces.md
+- Airport emergency response plans
+- ARFF training materials
+- CS-25.803 / FAR 25.803 compliance demonstration
+
+## Status
+
+- **To be created by**: Safety engineering team / technical illustrator
+- **Target completion**: [TBD]
+- **Required for**: Certification demonstrations, airport approvals, emergency training
