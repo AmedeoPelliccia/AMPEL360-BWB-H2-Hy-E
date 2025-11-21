@@ -139,7 +139,7 @@ The AMPEL360 operations software stack is designed to support:
 - **Weather Services**: METAR/TAF, GRIB, radar/satellite data
 - **NOTAM Services**: Aeronautical information updates
 - **Airport Systems**: Gate assignment, ground handling coordination
-- **Maintenance Systems**: Integration with [ATA 45 OMS](../../T-TECHNOLOGY/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
+- **Maintenance Systems**: Integration with [ATA 45 OMS](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
 
 ### 5.3 Digital Product Passport (DPP)
 
