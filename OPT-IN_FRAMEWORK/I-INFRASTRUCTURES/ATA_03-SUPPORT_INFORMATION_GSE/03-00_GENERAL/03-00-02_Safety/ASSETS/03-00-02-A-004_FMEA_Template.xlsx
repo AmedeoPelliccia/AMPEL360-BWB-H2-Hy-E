@@ -1,0 +1,29 @@
+PLACEHOLDER FILE - FMEA Template for GSE Components and Operations
+
+This file should be a Microsoft Excel workbook (.xlsx) containing a Failure Modes and Effects Analysis (FMEA) template.
+
+Structure:
+- Component/System
+- Function
+- Failure Mode
+- Effect of Failure
+- Severity (S) [1-10]
+- Cause(s)
+- Occurrence (O) [1-10]
+- Current Controls
+- Detectability (D) [1-10]
+- Risk Priority Number (RPN) = S × O × D
+- Recommended Actions
+- Responsibility
+- Actions Taken
+- Resulting RPN
+
+Example entries should include:
+- H₂ refuelling hose connection leak
+- Tow tractor brake system failure
+- High loader hydraulic cylinder failure
+- GSE battery fire
+
+To be developed by: GSE Safety Manager / Reliability Engineering team
+Status: PLACEHOLDER
+Generated: 2025-11-21
