@@ -1,0 +1,235 @@
+[
+  {
+    "test_case_id": "NN_TEST_001_CONTRAIL",
+    "description": "Classic ISSR condition. Model should predict High Risk.",
+    "model": "CIRRUS_NET",
+    "inputs": {
+      "altitude_ft": 32000,
+      "oat_c": -58,
+      "relative_humidity_ice": 1.10,
+      "vertical_velocity_ms": 0,
+      "atmospheric_stability": "STABLE",
+      "synoptic_pattern": "RIDGE"
+    },
+    "expected_label": {
+      "contrail_formed": true,
+      "persistence_mins": 45,
+      "contrail_probability": 0.92,
+      "radiative_forcing_index": 1.4
+    },
+    "test_criteria": {
+      "probability_threshold": 0.85,
+      "pass_if_above": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_002_CO2_PLUME",
+    "description": "Downwind of Frankfurt industrial zone. Expect elevated CO2.",
+    "model": "CHEM_NET",
+    "inputs": {
+      "lat": 50.11,
+      "lon": 8.68,
+      "altitude_ft": 35000,
+      "wind_dir": 270,
+      "wind_speed_kt": 20,
+      "industrial_activity_index": 0.9,
+      "time_of_day": "14:00",
+      "season": "SUMMER"
+    },
+    "expected_label": {
+      "co2_ppm": 425
+    },
+    "test_criteria": {
+      "acceptable_error_ppm": 15,
+      "pass_if_within": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_003_BOILOFF",
+    "description": "Hot summer afternoon on exposed stand. High thermal risk.",
+    "model": "BOIL_NET",
+    "inputs": {
+      "airport": "EDDF",
+      "stand": "G45",
+      "timestamp": "2025-06-21T14:00:00Z",
+      "solar_insolation_wm2": 900,
+      "concrete_albedo": 0.35,
+      "shadowing": "NONE",
+      "wind_speed_ms": 2.0,
+      "ambient_temp_c": 32.0
+    },
+    "expected_label": {
+      "surface_temp_c": 42.0,
+      "h2_boiloff_risk": "CRITICAL",
+      "safe_parking_min": 15
+    },
+    "test_criteria": {
+      "temp_error_threshold_c": 2.0,
+      "pass_if_within": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_004_CONTRAIL_NO_RISK",
+    "description": "Dry air, no ISSR. Model should predict Low Risk.",
+    "model": "CIRRUS_NET",
+    "inputs": {
+      "altitude_ft": 35000,
+      "oat_c": -55,
+      "relative_humidity_ice": 0.65,
+      "vertical_velocity_ms": -0.5,
+      "atmospheric_stability": "UNSTABLE",
+      "synoptic_pattern": "TROUGH"
+    },
+    "expected_label": {
+      "contrail_formed": false,
+      "persistence_mins": 0,
+      "contrail_probability": 0.08,
+      "radiative_forcing_index": 0.0
+    },
+    "test_criteria": {
+      "probability_threshold": 0.20,
+      "pass_if_below": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_005_CO2_BASELINE",
+    "description": "Open ocean, far from emissions. Expect baseline CO2.",
+    "model": "CHEM_NET",
+    "inputs": {
+      "lat": 45.0,
+      "lon": -30.0,
+      "altitude_ft": 35000,
+      "wind_dir": 270,
+      "wind_speed_kt": 50,
+      "industrial_activity_index": 0.0,
+      "time_of_day": "12:00",
+      "season": "WINTER"
+    },
+    "expected_label": {
+      "co2_ppm": 410
+    },
+    "test_criteria": {
+      "acceptable_error_ppm": 10,
+      "pass_if_within": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_006_BOILOFF_SHADED",
+    "description": "Shaded stand with terminal building shadow. Lower thermal risk.",
+    "model": "BOIL_NET",
+    "inputs": {
+      "airport": "EDDF",
+      "stand": "H12",
+      "timestamp": "2025-06-21T14:00:00Z",
+      "solar_insolation_wm2": 300,
+      "concrete_albedo": 0.35,
+      "shadowing": "TERMINAL_BUILDING",
+      "wind_speed_ms": 3.0,
+      "ambient_temp_c": 32.0
+    },
+    "expected_label": {
+      "surface_temp_c": 30.0,
+      "h2_boiloff_risk": "LOW",
+      "safe_parking_min": 120
+    },
+    "test_criteria": {
+      "temp_error_threshold_c": 2.0,
+      "pass_if_within": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_007_CONTRAIL_MARGINAL",
+    "description": "Marginal ISSR condition (RHi ~ 1.0). Edge case for model.",
+    "model": "CIRRUS_NET",
+    "inputs": {
+      "altitude_ft": 34000,
+      "oat_c": -54.2,
+      "relative_humidity_ice": 1.02,
+      "vertical_velocity_ms": 0.1,
+      "atmospheric_stability": "NEUTRAL",
+      "synoptic_pattern": "WEAK_GRADIENT"
+    },
+    "expected_label": {
+      "contrail_formed": true,
+      "persistence_mins": 15,
+      "contrail_probability": 0.60,
+      "radiative_forcing_index": 0.5
+    },
+    "test_criteria": {
+      "probability_range": [0.50, 0.70],
+      "pass_if_within_range": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_008_CO2_WINTER_PLUME",
+    "description": "Winter heating season increases CO2 emissions in urban areas.",
+    "model": "CHEM_NET",
+    "inputs": {
+      "lat": 51.50,
+      "lon": -0.12,
+      "altitude_ft": 35000,
+      "wind_dir": 90,
+      "wind_speed_kt": 15,
+      "industrial_activity_index": 0.95,
+      "time_of_day": "18:00",
+      "season": "WINTER"
+    },
+    "expected_label": {
+      "co2_ppm": 430
+    },
+    "test_criteria": {
+      "acceptable_error_ppm": 15,
+      "pass_if_within": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_009_MODEL_UNCERTAINTY",
+    "description": "Test model behavior with noisy/incomplete input data.",
+    "model": "CIRRUS_NET",
+    "inputs": {
+      "altitude_ft": 33000,
+      "oat_c": -56,
+      "relative_humidity_ice": null,
+      "vertical_velocity_ms": 0,
+      "atmospheric_stability": "UNKNOWN",
+      "synoptic_pattern": "UNKNOWN"
+    },
+    "expected_label": {
+      "contrail_formed": null,
+      "confidence": 0.30,
+      "fallback_recommendation": "USE_CONSERVATIVE_ASSUMPTION"
+    },
+    "test_criteria": {
+      "confidence_threshold": 0.50,
+      "pass_if_triggers_fallback": true
+    }
+  },
+  {
+    "test_case_id": "NN_TEST_010_VALIDATION_GROUND_TRUTH",
+    "description": "Post-flight validation with actual observed contrail formation.",
+    "model": "CIRRUS_NET",
+    "inputs": {
+      "altitude_ft": 34000,
+      "oat_c": -54.2,
+      "relative_humidity_ice": 1.10,
+      "vertical_velocity_ms": 0,
+      "atmospheric_stability": "STABLE",
+      "synoptic_pattern": "RIDGE"
+    },
+    "predicted_label": {
+      "contrail_formed": true,
+      "persistence_mins": 45,
+      "contrail_probability": 0.92
+    },
+    "ground_truth": {
+      "contrail_observed": true,
+      "actual_persistence_mins": 42,
+      "validation_source": "SATELLITE_IMAGERY"
+    },
+    "test_criteria": {
+      "prediction_correct": true,
+      "persistence_error_threshold_min": 10,
+      "pass_if_within": true
+    }
+  }
+]

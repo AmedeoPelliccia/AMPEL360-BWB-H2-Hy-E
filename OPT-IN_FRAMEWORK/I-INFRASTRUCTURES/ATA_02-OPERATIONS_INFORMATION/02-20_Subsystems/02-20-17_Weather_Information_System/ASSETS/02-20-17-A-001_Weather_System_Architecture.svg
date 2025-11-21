@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Placeholder SVG for Weather System Architecture -->
+  <defs>
+    <style>
+      .title { font: bold 20px sans-serif; fill: #333; }
+      .subtitle { font: 14px sans-serif; fill: #666; }
+      .box { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .text { font: 12px sans-serif; fill: #333; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <text x="400" y="40" class="title" text-anchor="middle">Weather Information System Architecture</text>
+  <text x="400" y="65" class="subtitle" text-anchor="middle">02-20-17-A-001 (Placeholder)</text>
+  
+  <!-- Data Sources Layer -->
+  <rect x="50" y="100" width="700" height="80" class="box" rx="5"/>
+  <text x="400" y="130" class="text">DATA SOURCES</text>
+  <text x="150" y="155" class="text">Satellites</text>
+  <text x="300" y="155" class="text">Global Models</text>
+  <text x="500" y="155" class="text">Ground Stations</text>
+  <text x="650" y="155" class="text">Aircraft Sensors</text>
+  
+  <!-- Ingestion Layer -->
+  <rect x="50" y="200" width="700" height="80" class="box" rx="5"/>
+  <text x="400" y="230" class="text">INGESTION LAYER</text>
+  <text x="200" y="255" class="text">API Gateway</text>
+  <text x="400" y="255" class="text">Parser & Validator</text>
+  <text x="600" y="255" class="text">Protocol Adapters</text>
+  
+  <!-- Processing Layer -->
+  <rect x="50" y="300" width="700" height="80" class="box" rx="5"/>
+  <text x="400" y="330" class="text">PROCESSING LAYER</text>
+  <text x="200" y="355" class="text">Sensor Fusion</text>
+  <text x="400" y="355" class="text">Quality Control</text>
+  <text x="600" y="355" class="text">Voxel Grid Builder</text>
+  
+  <!-- Application Layer -->
+  <rect x="50" y="400" width="700" height="80" class="box" rx="5"/>
+  <text x="400" y="430" class="text">APPLICATION LAYER</text>
+  <text x="200" y="455" class="text">Product Generator</text>
+  <text x="400" y="455" class="text">NN Inference</text>
+  <text x="600" y="455" class="text">Alert Manager</text>
+  
+  <!-- Presentation Layer -->
+  <rect x="50" y="500" width="700" height="80" class="box" rx="5"/>
+  <text x="400" y="530" class="text">PRESENTATION LAYER</text>
+  <text x="150" y="555" class="text">EFB</text>
+  <text x="300" y="555" class="text">Dispatch</text>
+  <text x="500" y="555" class="text">CAOS</text>
+  <text x="650" y="555" class="text">Ground Ops</text>
+  
+  <!-- Arrows -->
+  <line x1="400" y1="180" x2="400" y2="200" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="280" x2="400" y2="300" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="380" x2="400" y2="400" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="480" x2="400" y2="500" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#1976d2" />
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,161 @@
+[
+  {
+    "test_case_id": "FUSION_001_MULTI_SOURCE",
+    "description": "Fuse satellite, model, and aircraft data for same voxel",
+    "inputs": {
+      "voxel_id": "LAT50.11_LON8.68_ALT34000_T1732176000",
+      "sources": [
+        {
+          "type": "SATELLITE",
+          "co2_ppm": 420.0,
+          "uncertainty_ppm": 5.0,
+          "weight": 0.8
+        },
+        {
+          "type": "GLOBAL_MODEL",
+          "co2_ppm": 415.0,
+          "uncertainty_ppm": 10.0,
+          "weight": 0.4
+        },
+        {
+          "type": "AIRCRAFT_SENSOR",
+          "co2_ppm": 422.0,
+          "uncertainty_ppm": 2.0,
+          "weight": 1.0
+        }
+      ]
+    },
+    "expected_output": {
+      "fused_co2_ppm": 421.5,
+      "fused_uncertainty_ppm": 1.8,
+      "source_flags": ["SATELLITE", "MODEL", "AIRCRAFT"],
+      "quality_score": 95
+    }
+  },
+  {
+    "test_case_id": "FUSION_002_INTERPOLATION",
+    "description": "Interpolate voxel value from neighboring measurements",
+    "inputs": {
+      "target_voxel": {
+        "lat": 50.13,
+        "lon": 8.69,
+        "alt_ft": 34500
+      },
+      "neighbor_voxels": [
+        {
+          "lat": 50.11,
+          "lon": 8.68,
+          "alt_ft": 34000,
+          "temperature_k": 220.5,
+          "distance_km": 5.2
+        },
+        {
+          "lat": 50.15,
+          "lon": 8.70,
+          "alt_ft": 35000,
+          "temperature_k": 219.8,
+          "distance_km": 7.1
+        },
+        {
+          "lat": 50.12,
+          "lon": 8.67,
+          "alt_ft": 34000,
+          "temperature_k": 220.2,
+          "distance_km": 3.8
+        }
+      ],
+      "interpolation_method": "IDW",
+      "power": 2
+    },
+    "expected_output": {
+      "interpolated_temperature_k": 220.3,
+      "uncertainty_k": 0.5,
+      "interpolation_confidence": 0.85
+    }
+  },
+  {
+    "test_case_id": "FUSION_003_BIAS_CORRECTION",
+    "description": "Apply learned bias correction to satellite CO₂ data",
+    "inputs": {
+      "satellite_co2_ppm": 428.0,
+      "historical_bias": {
+        "region": "EUROPE_CENTRAL",
+        "season": "SUMMER",
+        "bias_correction_ppm": -8.0
+      }
+    },
+    "expected_output": {
+      "corrected_co2_ppm": 420.0,
+      "bias_applied": true
+    }
+  },
+  {
+    "test_case_id": "FUSION_004_TEMPORAL_SMOOTHING",
+    "description": "Smooth temperature time series to remove noise",
+    "inputs": {
+      "voxel_id": "LAT50.11_LON8.68_ALT34000",
+      "time_series": [
+        {"time": "12:00", "temp_k": 220.5},
+        {"time": "12:15", "temp_k": 220.8},
+        {"time": "12:30", "temp_k": 220.6},
+        {"time": "12:45", "temp_k": 220.9},
+        {"time": "13:00", "temp_k": 220.7}
+      ],
+      "smoothing_method": "MOVING_AVERAGE",
+      "window_size": 3
+    },
+    "expected_output": {
+      "smoothed_series": [
+        {"time": "12:15", "temp_k": 220.63},
+        {"time": "12:30", "temp_k": 220.77},
+        {"time": "12:45", "temp_k": 220.73}
+      ]
+    }
+  },
+  {
+    "test_case_id": "FUSION_005_CONFLICT_RESOLUTION",
+    "description": "Resolve conflicting measurements from different sources",
+    "inputs": {
+      "voxel_id": "LAT50.11_LON8.68_ALT34000",
+      "conflicting_sources": [
+        {
+          "type": "SATELLITE",
+          "temperature_k": 220.5,
+          "uncertainty_k": 2.0,
+          "age_minutes": 30
+        },
+        {
+          "type": "AIRCRAFT_SENSOR",
+          "temperature_k": 218.2,
+          "uncertainty_k": 0.5,
+          "age_minutes": 2
+        }
+      ],
+      "resolution_strategy": "PREFER_FRESH_HIGH_QUALITY"
+    },
+    "expected_output": {
+      "selected_source": "AIRCRAFT_SENSOR",
+      "fused_temperature_k": 218.2,
+      "rationale": "Aircraft sensor is fresher and more accurate"
+    }
+  },
+  {
+    "test_case_id": "FUSION_006_MISSING_DATA_FALLBACK",
+    "description": "Handle missing data with fallback to climatology",
+    "inputs": {
+      "voxel_id": "LAT50.11_LON8.68_ALT34000",
+      "sources": [],
+      "climatological_data": {
+        "month": 11,
+        "avg_temperature_k": 219.5,
+        "std_dev_k": 3.0
+      }
+    },
+    "expected_output": {
+      "fallback_temperature_k": 219.5,
+      "uncertainty_k": 3.0,
+      "quality_score": 40,
+      "warning": "USING_CLIMATOLOGY"
+    }
+  }
+]
