@@ -204,8 +204,8 @@ version_hash VARCHAR(64)
 | Field Name | Data Type | Description | Unit | Constraints |
 |------------|-----------|-------------|------|-------------|
 | `flight_number` | VARCHAR(10) | Flight designator | - | NOT NULL |
-| `departure_airport_icao` | VARCHAR(4) | ICAO airport code | - | NOT NULL, CHECK length=4 |
-| `arrival_airport_icao` | VARCHAR(4) | ICAO airport code | - | NOT NULL, CHECK length=4 |
+| `departure_airport_icao` | VARCHAR(4) | ICAO airport code | - | NOT NULL, CHECK (length(departure_airport_icao) = 4) |
+| `arrival_airport_icao` | VARCHAR(4) | ICAO airport code | - | NOT NULL, CHECK (length(arrival_airport_icao) = 4) |
 | `scheduled_departure_utc` | TIMESTAMPTZ | Scheduled departure time | UTC | NOT NULL |
 | `actual_departure_utc` | TIMESTAMPTZ | Actual departure time | UTC | - |
 | `fuel_planned_kg` | NUMERIC(10,2) | Planned fuel load | kg | CHECK > 0 |
