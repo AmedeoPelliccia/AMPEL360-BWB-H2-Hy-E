@@ -155,7 +155,7 @@ SAFE ←→ RESTRICTED ←→ UNSAFE
 1. **Position dispenser nozzle**: Align with aircraft receptacle, verify mechanical guides engaged
 2. **Connect nozzle** (hand-tight): Insert nozzle, rotate collar clockwise until finger-tight
 3. **Verify alignment**: Check visual indicators (green bands visible if aligned correctly)
-4. **Torque nozzle**: Apply calibrated torque wrench, tighten to 50 Nm ±5 Nm
+4. **Torque nozzle**: Apply calibrated torque wrench, tighten to the value specified by the connector manufacturer and in accordance with SAE J2600 or ISO 17268 (e.g., 50 Nm ±5 Nm for typical connectors; verify actual requirement before use)
 5. **Verify lock**: Check mechanical lock indicator (pin extended, green flag visible)
 6. **Pressurize connector** (low pressure test): Slowly increase pressure to 50 bar, hold 30 seconds
 7. **Leak check**: Technician inspects connector with H₂ leak detector (handheld), observer monitors fixed sensors
