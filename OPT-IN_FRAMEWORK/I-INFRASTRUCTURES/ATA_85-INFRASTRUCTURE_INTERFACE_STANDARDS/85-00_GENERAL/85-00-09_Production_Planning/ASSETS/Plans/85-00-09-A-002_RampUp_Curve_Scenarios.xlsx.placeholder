@@ -1,0 +1,22 @@
+# Placeholder: 85-00-09-A-002_RampUp_Curve_Scenarios.xlsx
+
+## Description
+Production ramp-up curves and scenarios for fleet growth and infrastructure deployment.
+
+## Purpose
+This Excel workbook will contain:
+- Fleet growth scenarios (conservative, base case, optimistic)
+- Airport adoption rate scenarios
+- Infrastructure capacity ramp-up curves
+- Demand vs. capacity analysis
+- Sensitivity analysis and scenario comparison
+
+## Status
+Placeholder - To be developed with scenario modeling
+
+## Format
+Microsoft Excel (.xlsx)
+
+## References
+- 85-00-09-008_Capacity_RampUp_and_Scaling_Scenarios.md
+- 85-00-09-001_Production_Planning_Overview.md

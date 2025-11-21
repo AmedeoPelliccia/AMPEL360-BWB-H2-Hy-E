@@ -1,0 +1,23 @@
+# Placeholder: 85-00-09-A-004_Implementation_Milestones_Gantt.mpp
+
+## Description
+Microsoft Project Gantt chart showing implementation milestones across all infrastructure domains.
+
+## Purpose
+This Microsoft Project file will contain:
+- Detailed Gantt chart of all major milestones
+- Task dependencies and critical path analysis
+- Resource allocation and loading
+- Multi-project view (H₂, CO₂, GSE, Terminals)
+- Baseline vs. actual tracking
+- Risk and issue integration
+
+## Status
+Placeholder - To be developed with detailed project scheduling
+
+## Format
+Microsoft Project (.mpp)
+
+## References
+- All 85-00-09 planning documents
+- 85-00-09-A-001_Master_Production_Schedule.xlsx
