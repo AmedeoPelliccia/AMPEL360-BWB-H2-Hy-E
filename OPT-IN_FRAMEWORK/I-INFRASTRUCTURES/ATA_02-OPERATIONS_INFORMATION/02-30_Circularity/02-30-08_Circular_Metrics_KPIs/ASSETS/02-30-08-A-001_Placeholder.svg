@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect fill="#f0f0f0" width="800" height="600"/>
+  <text x="400" y="300" font-family="Arial" font-size="24" text-anchor="middle" fill="#666">
+    Diagram Placeholder - To Be Developed
+  </text>
+  <text x="400" y="340" font-family="Arial" font-size="16" text-anchor="middle" fill="#888">
+    AMPEL360 ATA 02-30 Circularity Framework
+  </text>
+</svg>
