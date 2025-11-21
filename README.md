@@ -268,7 +268,7 @@ graph LR
 - **28 Requirements** documented across all categories
 - **5 Prototype systems** in development
 
-**📁 Structure Overview:**
+****📁 Structure Overview:**
 
 ---
 
@@ -497,7 +497,7 @@ graph LR
 - [`ATA 40 - AI/CAOS COGNITIVE OPS`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_40-AI_INTEGRATION/)
 - [`ATA 92 - CAOS-ENABLED MAINTENANCE`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/)
 
-</details>
+</details>**
 
 ---
 
