@@ -88,9 +88,17 @@ This overview documentation provides traceability to:
 - **Status**: Active
 - **Last Updated**: 2025-11-21
 
+## Lifecycle Skeleton (A-LIVE-GP)
+
+This `85-00_GENERAL` layer follows the **A-LIVE-GP (Aircraft Lifecycle Industrialization and Validation Executive General Plan)** model.
+
+All content is organized into 14 standard folders (01_Overview … 14_OPS_STD_SUSTAIN), which together implement the end-to-end lifecycle: from concept, safety and requirements through design, V&V, prototyping and industrialization, down to certification, EIS, services and long-term sustainment.
+
+For ATA 85 (Infrastructure Interface Standards), A-LIVE-GP ensures that all infrastructure interfaces—H₂ refuelling farms, CO₂ battery docks, GSE access, passenger evacuation flows, emergency services integration, and airport compatibility—are engineered, validated, certified, and industrialized under a consistent, certification-grade plan that integrates seamlessly with airport operators, energy suppliers, and regulatory authorities.
+
 ## Related Folders
 
-Part of the canonical 14-folder lifecycle:
+Part of the canonical 14-folder lifecycle (A-LIVE-GP):
 1. Overview → 2. Safety → 3. Requirements → 4. Design → 5. Interfaces → 6. Engineering → 7. V&V → 8. Prototyping → 9. Production Planning → 10. Certification → 11. EIS/Versions/Tags → 12. Services → 13. Subsystems/Components → 14. Ops/Std/Sustain
 
 ## Document Control
