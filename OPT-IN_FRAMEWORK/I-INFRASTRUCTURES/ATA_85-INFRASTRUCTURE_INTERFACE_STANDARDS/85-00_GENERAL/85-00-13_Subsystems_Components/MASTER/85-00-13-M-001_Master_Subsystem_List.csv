@@ -1,0 +1,20 @@
+Subsystem_ID,Subsystem_Name,Domain,Category,Description,ATA_Chapters,OPTIN_Pillars,Lifecycle_Status,Owner,Version,Last_Updated
+85-H2-FUEL-001,H₂ Fueling Interface Subsystem,H2,FUEL,"Primary H₂ refueling receptacle and control system","28,85","I,T,N,O",Active,Infrastructure Systems Team,1.2,2025-11-21
+85-H2-VENT-001,H₂ Vent Interface Subsystem,H2,VENT,"H₂ boil-off and pressure relief venting system","28,85","I,T,N,O",Active,Infrastructure Systems Team,1.1,2025-11-21
+85-H2-SFTY-001,H₂ Safety Monitoring Subsystem,H2,SFTY,"Leak detection and fire suppression interfaces","26,28,85","I,T,N,O,P",Active,Safety Systems Team,1.3,2025-11-21
+85-H2-PURGE-001,H₂ Purge Interface Subsystem,H2,PURGE,"Pre/post-flight H₂ system purge connections","28,85","I,T,O",Active,Infrastructure Systems Team,1.0,2025-11-21
+85-CO2-CHRG-001,CO₂ Battery Charging Interface,CO2,CHRG,"High-power DC charging connection and control","24,80,85","I,T,N",Active,Electrical Systems Team,2.0,2025-11-21
+85-CO2-THRM-001,CO₂ Battery Thermal Interface,CO2,THRM,"Battery cooling system ground connections","21,24,85","I,T,N",Active,Thermal Management Team,1.5,2025-11-21
+85-CO2-DATA-001,CO₂ Battery Data Interface,CO2,DATA,"BMS communication and diagnostics","45,85,95","I,T,N",Active,Data Systems Team,1.2,2025-11-21
+85-CO2-SFTY-001,CO₂ Battery Safety Interface,CO2,SFTY,"Emergency shutdown and thermal runaway monitoring","24,26,85","I,T,N,O,P",Active,Safety Systems Team,1.1,2025-11-21
+85-APT-PWR-001,Airport Gate Power Interface,APT,PWR,"400Hz AC and 28V DC ground power connections","24,85","I,T",Active,Electrical Systems Team,1.0,2025-11-21
+85-APT-DATA-001,Airport Data Interface,APT,DATA,"WiFi, fiber, Ethernet network connections","02,45,46,85,95","I,T,N,O",Active,Data Systems Team,1.3,2025-11-21
+85-APT-BRDG-001,Boarding Bridge Interface,APT,BRDG,"Physical docking and environmental seal","52,53,85","I,T,O",Active,Structures Team,1.1,2025-11-21
+85-APT-UTIL-001,Airport Utilities Interface,APT,UTIL,"Water, waste, pneumatics ground connections","12,21,85","I,T",Active,Systems Integration Team,1.0,2025-11-21
+85-GSE-PWR-001,GSE Power Interface,GSE,PWR,"Mobile power cart connections","24,85","I,T",Active,Electrical Systems Team,1.0,2025-11-21
+85-GSE-FUEL-001,GSE H₂ Fueling Interface,GSE,FUEL,"Mobile H₂ fueling unit connection","28,85","I,T,O,P",Active,Infrastructure Systems Team,1.2,2025-11-21
+85-GSE-DATA-001,GSE Data Interface,GSE,DATA,"Diagnostics and maintenance data exchange","05,45,85","I,T,N",Active,Data Systems Team,1.1,2025-11-21
+85-GSE-LIFT-001,GSE Lifting Interface,GSE,LIFT,"Jacking and towing attachment points","10,32,85","I,T",Active,Structures Team,1.0,2025-11-21
+85-PAX-BRDG-001,Passenger Boarding Bridge Interface,PAX,BRDG,"Bridge docking hardware and sensors","52,85","I,T,O",Active,Systems Integration Team,1.2,2025-11-21
+85-PAX-EVAC-001,Emergency Evacuation Interface,PAX,EVAC,"Slide deployment interfaces and interlocks","25,26,52,85","I,T,O,P",Active,Safety Systems Team,1.3,2025-11-21
+85-PAX-DOOR-001,Passenger Door Interface,PAX,DOOR,"Door operation and safety interlocks","52,85","I,T,O",Active,Structures Team,1.1,2025-11-21
