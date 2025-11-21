@@ -133,7 +133,7 @@ The gate turnaround prototype encompasses:
 
 ### 7.3 Emergency Scenarios
 - **Scenario G7**: Medical emergency during boarding
-- **Scenario G8**: Evacuationpreparedness test (rapid deplaning)
+- **Scenario G8**: Evacuation preparedness test (rapid deplaning)
 
 ## 8. Instrumentation and Data Collection
 
