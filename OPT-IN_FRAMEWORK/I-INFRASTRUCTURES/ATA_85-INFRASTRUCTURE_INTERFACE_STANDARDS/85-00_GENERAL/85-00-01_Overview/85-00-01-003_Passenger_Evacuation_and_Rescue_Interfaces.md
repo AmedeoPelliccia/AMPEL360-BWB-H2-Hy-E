@@ -42,10 +42,10 @@ The Blended Wing Body configuration presents distinct evacuation considerations:
    - Improved slide deployment reliability (shorter, less wind-sensitive)
 
 3. **Distributed Emergency Exits**
-   - 12 Type A doors (forward and aft of wing)
-   - 4 Type III overwing exits
-   - 2 ventral emergency hatches (flight deck escape)
-   - Total capacity: > 220 passengers in 90 seconds (CS-25.803 / FAR 25.803 requirement)
+   - 12 Type A doors (forward and aft of wing) - passenger evacuation
+   - 4 Type III overwing exits - passenger evacuation
+   - 2 ventral emergency hatches (flight deck crew escape only)
+   - Total passenger evacuation capacity: 16 exits (12 Type A + 4 Type III) > 220 passengers in 90 seconds (CS-25.803 / FAR 25.803 requirement)
 
 ## Door Locations and Access
 
