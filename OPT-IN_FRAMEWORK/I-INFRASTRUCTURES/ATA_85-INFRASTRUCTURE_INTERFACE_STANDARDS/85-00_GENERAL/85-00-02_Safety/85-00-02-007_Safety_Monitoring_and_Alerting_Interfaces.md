@@ -271,9 +271,6 @@ This document covers:
 **Cryptographic Protection**:
 - **All safety-critical signals** use HMAC (Hash-based Message Authentication Code) with SHA-256
 - **Symmetric key**: Pre-shared key between aircraft and infrastructure (updated periodically, e.g., monthly)
-- **Message format**: `[Data][Timestamp][Sequence_Number][HMAC]`
-  - HMAC computed over Data + Timestamp + Sequence_Number using pre-shared key
-  - Receiver verifies HMAC before accepting data
 
 **Mutual Authentication**:
 - Aircraft and infrastructure exchange certificates (X.509) at connection establishment
