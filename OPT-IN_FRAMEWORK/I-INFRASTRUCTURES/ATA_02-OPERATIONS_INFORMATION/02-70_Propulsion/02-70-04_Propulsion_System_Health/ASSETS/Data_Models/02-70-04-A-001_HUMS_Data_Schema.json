@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HUMS Data Schema",
+  "description": "Health monitoring data for propulsion systems",
+  "type": "object"
+}

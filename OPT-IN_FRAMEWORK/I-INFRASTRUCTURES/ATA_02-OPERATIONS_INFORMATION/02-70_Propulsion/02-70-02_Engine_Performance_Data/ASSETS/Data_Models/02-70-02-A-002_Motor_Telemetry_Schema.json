@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Motor telemetry schema",
+  "description": "Generic data schema for Motor telemetry schema - No proprietary data",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dataType": {
+      "type": "string",
+      "const": "Motor telemetry schema"
+    }
+  },
+  "required": ["timestamp", "dataType"]
+}

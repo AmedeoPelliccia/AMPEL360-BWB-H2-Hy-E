@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fuel cell schema",
+  "description": "Generic data schema for Fuel cell schema - No proprietary data",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dataType": {
+      "type": "string",
+      "const": "Fuel cell schema"
+    }
+  },
+  "required": ["timestamp", "dataType"]
+}
