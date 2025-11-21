@@ -25,7 +25,7 @@ CGen Lane 1 – Directory index generator for AMPEL360 / OPT-IN Framework.
 import argparse
 from pathlib import Path
 from datetime import datetime, timezone
-from typing import Iterable, List, Tuple
+from typing import List, Tuple
 
 # --- CONFIGURATION ---
 
