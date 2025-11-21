@@ -141,6 +141,8 @@ Typical margins:
 
 ### Example: Cruise Phase Budget
 
+> **Note**: All power values in this example are **illustrative only** and do not represent actual aircraft specifications. Actual power budgets must be validated through system design, testing, and certification.
+
 **Total Available Power**: 150 kW (from 2× generators + fuel cell)
 
 | System Category | Planned (kW) | % of Total | Priority |
@@ -167,6 +169,8 @@ Typical margins:
 **Tracking**: Compare actual load (from PDU telemetry) to this budget every second; alert if deviation > 10%.
 
 ### Example: Takeoff Phase Budget
+
+> **Note**: All power values in this example are **illustrative only** and do not represent actual aircraft specifications.
 
 **Total Available Power**: 180 kW (maximum generator output + battery assist)
 
