@@ -5,7 +5,7 @@
   "status": "DRAFT",
   "generated_by": "AI (GitHub Copilot), prompted by Amedeo Pelliccia",
   "last_updated": "2025-11-21",
-  "note": "These are abstract, generic policies. Adapt to specific IAM and security requirements.",
+  "note": "These are abstract, generic policies. Replace all 'ACCOUNT_ID' placeholders with your actual AWS account ID during implementation. Adapt to specific IAM and security requirements.",
   
   "bucket_policies": [
     {

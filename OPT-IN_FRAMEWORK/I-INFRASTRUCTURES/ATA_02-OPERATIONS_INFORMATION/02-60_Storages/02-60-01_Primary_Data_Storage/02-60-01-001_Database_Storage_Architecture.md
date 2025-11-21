@@ -151,10 +151,10 @@ Primary DB (Zone 1)  ──[Async WAL]──>  DR DB (Zone 3)
 
 ### 3.3 Quorum Configuration
 
-For PostgreSQL high availability using Patroni:
+For PostgreSQL high availability using Patroni (which uses etcd for distributed consensus):
 
 ```yaml
-# Etcd quorum configuration
+# Patroni configuration using etcd as distributed consensus store
 quorum:
   minimum_nodes: 3
   nodes:

@@ -82,8 +82,10 @@ Per [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021P
 
 ## References
 
+### Internal Documents
 - [02-60-00-001 Storage Architecture Overview](../02-60-00-001_Storage_Architecture_Overview.md)
-- [ATA 95 Digital Product Passport](../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)
+- ATA 95 Digital Product Passport: `OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/`
+
 - [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206)
 - [MLflow Documentation](https://www.mlflow.org/docs/latest/index.html)
 - [DVC Documentation](https://dvc.org/doc)
