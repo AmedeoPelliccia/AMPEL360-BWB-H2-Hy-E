@@ -230,7 +230,7 @@ jobs:
             cd/publications/**
             release_notes.md
           draft: false
-          prerelease: ${{ github.event.inputs.prerelease == 'true' }}
+          prerelease: ${{ github.event.inputs.prerelease || false }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
