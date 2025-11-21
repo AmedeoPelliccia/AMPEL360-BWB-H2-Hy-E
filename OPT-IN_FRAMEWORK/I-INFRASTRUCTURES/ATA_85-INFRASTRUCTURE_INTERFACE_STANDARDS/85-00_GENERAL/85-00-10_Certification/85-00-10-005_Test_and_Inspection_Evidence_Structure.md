@@ -47,6 +47,8 @@ Generated from testing activities per [85-00-10-004_Conformity_Demonstration_Pla
 
 **Naming Convention**: `EVP-85-{Interface}-T-{Sequential}`
 
+> **Note**: The curly braces `{Interface}`, `{Type}`, `{Seq}` in naming patterns are placeholders to be replaced with actual values. For example, `EVP-85-{Interface}-T-{Sequential}` becomes `EVP-85-H2-T-001` for a hydrogen test evidence package.
+
 Examples:
 - `EVP-85-H2-T-001`: H₂ connector qualification test
 - `EVP-85-PAX-T-010`: Evacuation slide deployment test
@@ -137,8 +139,6 @@ Examples:
 - Assigned in chronological order
 - Gaps allowed for planned-but-not-yet-executed activities
 - Numbering maintained in [ASSETS/Evidence/85-00-10-A-201_Test_Report_Index.xlsx](./ASSETS/Evidence/)
-
-**Note on Naming Convention**: The curly braces `{Interface}`, `{Type}`, `{Seq}` in naming patterns are placeholders to be replaced with actual values. For example, `EVP-85-{Interface}-{Type}-{Sequential}` becomes `EVP-85-H2-T-001` for a hydrogen test evidence package.
 
 ---
 
