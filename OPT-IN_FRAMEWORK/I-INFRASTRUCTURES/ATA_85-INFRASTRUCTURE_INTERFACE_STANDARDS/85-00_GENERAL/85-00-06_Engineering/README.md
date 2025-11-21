@@ -1,33 +1,31 @@
-# 85-00-06_Engineering
+# ATA 85-00-06: Engineering
 
-## Purpose
+## 1. Mission
+The 85-00-06 layer consolidates the engineering assumptions, methods, and analytical evidence that translate the interface requirements in [85-00-05](../85-00-05_Interfaces/README.md) into verifiable solutions for the AMPEL360 BWB H2-Hybrid program.
 
-Approach to analysis, models and simulation
+## 2. Structure
+*   **[General Engineering Set](./)** – Overview documents 001-005.
+*   **[MASTER](./MASTER/README.md)** – Shared assumptions and parameter libraries.
+*   **[AIRPORT_INTERFACE_ENGINEERING](./AIRPORT_INTERFACE_ENGINEERING/README.md)** – Clearance, stand, and pavement studies.
+*   **[H2_INFRASTRUCTURE_ENGINEERING](./H2_INFRASTRUCTURE_ENGINEERING/README.md)** – Refuelling system sizing and safety.
+*   **[CO2_BATTERY_ENGINEERING](./CO2_BATTERY_ENGINEERING/README.md)** – Cryogenic CO2 logistics and storage engineering.
+*   **[GROUND_SERVICES_ENGINEERING](./GROUND_SERVICES_ENGINEERING/README.md)** – GPU/PCA/GSE integration studies.
+*   **[PAX_BOARDING_EVAC_ENGINEERING](./PAX_BOARDING_EVAC_ENGINEERING/README.md)** – Boarding and evacuation modelling.
+*   **[DIGITAL_INFRASTRUCTURE_ENGINEERING](./DIGITAL_INFRASTRUCTURE_ENGINEERING/README.md)** – Data and cyber engineering analyses.
+*   **[ENERGY_INFRASTRUCTURE_ENGINEERING](./ENERGY_INFRASTRUCTURE_ENGINEERING/README.md)** – Grid, microgrid, and renewable integration.
 
-## Scope
+## 3. Governance
+Engineering deliverables follow [SAE ARP4754A](https://www.sae.org/standards/content/arp4754a/) development assurance guidance, and trace requirements to verification evidence through the OPT-IN lifecycle.
 
-This folder is part of the **85-00_GENERAL** layer, which provides governance and lifecycle management for ATA Chapter 85.
 
-## Contents
-
-This folder should contain:
-- Documentation related to approach to analysis, models and simulation
-- Traceability matrices linking to other lifecycle stages
-- Evidence and artifacts supporting this lifecycle phase
-
-## Status
-
-- **Phase**: Engineering
-- **Lifecycle Position**: 06 of 14
-- **Status**: Active
-- **Last Updated**: 2025-11-13
-
-## Related Folders
-
-Part of the canonical 14-folder lifecycle:
-1. Overview → 2. Safety → 3. Requirements → 4. Design → 5. Interfaces → 6. Engineering → 7. V&V → 8. Prototyping → 9. Production Planning → 10. Certification → 11. EIS/Versions/Tags → 12. Services → 13. Subsystems/Components → 14. Ops/Std/Sustain
+---
 
 ## Document Control
 
-- **Standard**: OPT-IN Framework v1.1 (ATA 95 canonical template)
-- **Owner**: AMPEL360 Documentation WG
+- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- Status: **DRAFT** – Subject to human review and approval.
+- Human approver: _[to be completed]_.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
+- Last AI update: 2025-11-21.
+
+---
