@@ -30,6 +30,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Generate Cross-Reference Report
         run: |
@@ -89,6 +90,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Validate Requirements
         run: |
@@ -223,6 +225,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install OpenAI Client
         if: steps.check-permissions.outputs.has_permission == 'true'
@@ -333,6 +336,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install OpenAI Client
         run: pip install openai
@@ -358,7 +362,7 @@ jobs:
             --base-branch "${PR_BASE_REF}" \
             --head-branch "${PR_HEAD_REF}" \
             --report-path "$REPORT_PATH" \
-            --goal "Come to a certifiable, standards-compliant solution by fixing cross-references, adding missing context docs, and wiring version/traceability links so that GenCCC report passes with no warnings."
+            --goal "Come to a certifiable, standards-compliant solution by fixing cross-references, adding missing context docs, and wiring version/traceability links so that GenCCC report passes with[...]"
 
       - name: Detect agent changes
         id: diff
@@ -531,6 +535,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Run GenCCC audit on child
         if: steps.childref.outputs.found == 'true'
@@ -581,6 +586,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Create Baseline
         id: create-baseline
@@ -700,15 +706,15 @@ jobs:
             echo "pooled_issues=$COUNT" >> $GITHUB_OUTPUT
           fi
           
-          # Handle V&V lake with proper output redirection
-          if [ -f "$VV_LAKE" ]; then
-            STANDARDS=$(jq -r '.standards[]?' "$VV_LAKE" | paste -sd, -)
-            PATHS=$(jq -r '.paths[]?' "$VV_LAKE" | paste -sd, -)
-          else
-            echo "::warning::V&V lake not found at $VV_LAKE."
-            STANDARDS=""
-            PATHS=""
+          # Fail if V&V Lake is missing to ensure compliance integrity
+          if [ ! -f "$VV_LAKE" ]; then
+            echo "::error::Critical configuration 'vv_lake.json' missing. Cannot verify compliance."
+            exit 1
           fi
+
+          STANDARDS=$(jq -r '.standards[]?' "$VV_LAKE" | paste -sd, -)
+          PATHS=$(jq -r '.paths[]?' "$VV_LAKE" | paste -sd, -)
+          
           echo "standards=$STANDARDS" >> $GITHUB_OUTPUT
           echo "validation_paths=$PATHS" >> $GITHUB_OUTPUT
 
