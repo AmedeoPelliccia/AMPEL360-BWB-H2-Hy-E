@@ -107,7 +107,7 @@ See [ASSETS/85-00-02-A-003_Safety_Zones_and_Stand_Layout.svg](ASSETS/85-00-02-A-
 - 5-meter separation provides time for fire suppression activation and limits radiant heat flux to <5 kW/m²
 - 3-meter separation from aircraft allows safe emergency disconnect without exposing fuselage to excessive heat
 
-**Verification**: Thermal analysis modeling and fire testing per [UL 9540A](https://standardscatalog.ul.com/ProductDetail.aspx?productId=UL9540A)
+**Verification**: Thermal analysis modeling and fire testing per [UL 9540A](https://standardscatalog.ul.com/search/?q=UL%209540A)
 
 ### Electrical Safety Distance
 
