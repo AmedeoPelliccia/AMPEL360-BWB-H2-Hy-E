@@ -130,9 +130,9 @@ The AMPEL360 operations software stack is designed to support:
 ### 5.1 Aircraft Systems Integration
 
 - **ACARS/SITA**: Bidirectional messaging with aircraft
-- **FDR/CVR**: Flight data recording integration (see [ATA 31](../../T-TECHNOLOGY/D-DATA/ATA_31-INDICATING_RECORDING_RECORDING_FUNCTION/))
+- **FDR/CVR**: Flight data recording integration (see [ATA 31](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_RECORDING_FUNCTION/))
 - **EFB Interface**: Real-time data exchange with on-board EFB
-- **H₂ Fuel System**: Monitoring and control interfaces (see [ATA 28](../../T-TECHNOLOGY/C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_28-FUEL_SAF_CRYOGENIC_H2/))
+- **H₂ Fuel System**: Monitoring and control interfaces (see [ATA 28](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_28-FUEL_SAF_CRYOGENIC_H2/))
 
 ### 5.2 External Systems Integration
 
