@@ -128,19 +128,26 @@ jobs:
           echo "=== Creating Archive Bundle ==="
           ARCHIVE_NAME="ampel360-release-${{ steps.version.outputs.version }}.tar.gz"
           
+          # Build list of files to include, checking existence
+          INCLUDE_FILES=""
+          for file in cd/publications/ OPT-IN_FRAMEWORK/ README.md LICENSE \
+                      AMPEL360_DOCUMENTATION_STANDARD.md AMPEL360_ASSETS_STANDARD.md \
+                      OPT-IN_FRAMEWORK_STANDARD.md CGEN_CI_CD_GUIDE.md \
+                      DIGITAL_TWIN_CONTROL_LOOP.md; do
+            if [ -e "$file" ]; then
+              INCLUDE_FILES="$INCLUDE_FILES $file"
+            else
+              echo "Warning: $file not found, skipping"
+            fi
+          done
+          
           tar -czf "$ARCHIVE_NAME" \
             --exclude='*.git*' \
             --exclude='node_modules' \
             --exclude='__pycache__' \
             --exclude='*.pyc' \
-            cd/publications/ \
-            OPT-IN_FRAMEWORK/ \
-            README.md \
-            LICENSE \
-            AMPEL360_DOCUMENTATION_STANDARD.md \
-            AMPEL360_ASSETS_STANDARD.md \
-            OPT-IN_FRAMEWORK_STANDARD.md \
-            || echo "Archive creation completed"
+            $INCLUDE_FILES \
+            || echo "Archive creation completed with warnings"
           
           echo "archive=$ARCHIVE_NAME" >> $GITHUB_OUTPUT
           

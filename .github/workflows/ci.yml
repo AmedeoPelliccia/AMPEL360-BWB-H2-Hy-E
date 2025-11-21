@@ -47,8 +47,10 @@ jobs:
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           fi
-          # Install minimal test dependencies if they exist
-          pip install pytest 2>/dev/null || echo "pytest not needed"
+          # Install pytest only if tests directory exists
+          if [ -d tests ]; then
+            pip install pytest || echo "pytest installation failed"
+          fi
 
       - name: Python syntax check
         run: |

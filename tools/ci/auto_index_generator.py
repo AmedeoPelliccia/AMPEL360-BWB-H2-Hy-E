@@ -11,7 +11,7 @@ CGen Lane 1 – Directory index generator for AMPEL360 / OPT-IN Framework.
 import os
 import argparse
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Iterable, List, Tuple
 
 # --- CONFIGURATION ---
@@ -185,7 +185,7 @@ def process_directory(root_path: Path, dry_run: bool = True) -> None:
 
         new_content = HEADER_TEMPLATE.format(
             title=title,
-            date=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+            date=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         ) + "\n" + table_content
 
         target_file = dir_path / "00_INDEX.md"
