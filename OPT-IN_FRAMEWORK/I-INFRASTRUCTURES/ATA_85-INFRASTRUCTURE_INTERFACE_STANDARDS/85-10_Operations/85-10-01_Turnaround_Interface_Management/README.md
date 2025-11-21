@@ -89,13 +89,13 @@ This folder contains the **operational view of all infrastructure interfaces dur
 
 ## Performance Metrics
 
-| **Metric** | **Target** | **Source** |
-|-----------|-----------|-----------|
-| **Turnaround Time** | <45 minutes (typical) | ATA 02 + ATA 85 aggregate |
-| **Interface Fault Rate** | <1% | ATA 85 interface logs |
-| **H₂ Refuel Time** | <15 minutes | ATA 85 H₂ system |
-| **CO₂ Exchange Time** | <10 minutes | ATA 85 CO₂ system |
-| **On-Time Performance** | >95% | ATA 02 turnaround system |
+| **Metric** | **Target** | **Source** | **Category** |
+|-----------|-----------|-----------|-----------|
+| **Turnaround Time** | <45 minutes (typical) | ATA 02 + ATA 85 aggregate | Design Goal |
+| **Interface Fault Rate** | <1% | ATA 85 interface logs | Operational KPI |
+| **H₂ Refuel Time** | <15 minutes | ATA 85 H₂ system | Design Goal |
+| **CO₂ Exchange Time** | <10 minutes | ATA 85 CO₂ system | Design Goal |
+| **On-Time Performance** | >95% | ATA 02 turnaround system | Operational KPI |
 
 ---
 
