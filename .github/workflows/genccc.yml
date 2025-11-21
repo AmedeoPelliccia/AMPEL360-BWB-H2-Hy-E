@@ -506,6 +506,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          path: main-repo
 
       - name: Resolve child branch (same-repo vs fork-safe)
         id: childref
@@ -524,11 +525,14 @@ jobs:
         if: steps.childref.outputs.found != 'true'
         run: echo "No child branch found. Skipping verification."
 
-      - name: Checkout child branch
+      - name: Checkout child branch (isolated path)
         if: steps.childref.outputs.found == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.childref.outputs.ref }}
+          path: child-repo
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Set up Python
         if: steps.childref.outputs.found == 'true'
@@ -539,8 +543,10 @@ jobs:
 
       - name: Run GenCCC audit on child
         if: steps.childref.outputs.found == 'true'
+        working-directory: main-repo
+        env:
+          GENCCC_TARGET_ROOT: ${{ github.workspace }}/child-repo
         run: |
-          mkdir -p cd/reports
           python tools/genccc/report.py
 
       - name: Upload Child Audit Artifact
@@ -548,7 +554,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: genccc-cross-reference-audit-child
-          path: cd/reports/cross_reference_audit.md
+          path: child-repo/cd/reports/cross_reference_audit.md
           retention-days: 14
 
       - name: Comment audit status in original PR

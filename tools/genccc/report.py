@@ -12,13 +12,22 @@ Scans markdown files in the repository to:
 Output: cd/reports/cross_reference_audit.md
 """
 
+import os
 import pathlib
 import re
 from typing import List, Set, Tuple
 import sys
 
-# Repository root
-REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
+# Repository roots (default = script location; override via env for sandboxed checkouts)
+_SCRIPT_ROOT = pathlib.Path(__file__).resolve().parents[2]
+_TARGET_ROOT_ENV = os.environ.get("GENCCC_TARGET_ROOT")
+if _TARGET_ROOT_ENV:
+    REPO_ROOT = pathlib.Path(_TARGET_ROOT_ENV).resolve()
+    if not REPO_ROOT.exists():
+        raise SystemExit(f"GENCCC_TARGET_ROOT path does not exist: {REPO_ROOT}")
+else:
+    REPO_ROOT = _SCRIPT_ROOT
+
 FRAMEWORK_ROOT = REPO_ROOT / "OPT-IN_FRAMEWORK"
 REPORT_DIR = REPO_ROOT / "cd" / "reports"
 
