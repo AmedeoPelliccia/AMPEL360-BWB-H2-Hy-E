@@ -39,7 +39,7 @@ The following service products are available to stakeholders in the BWB ecosyste
 
 | Service ID | Name | Stakeholder | Description | Availability |
 | :--- | :--- | :--- | :--- | :--- |
-| **SVC-85-01** | H₂ Refuelling Support | Ground Handler | 24/7 remote guidance for coupling/decoupling issues, leak detection, and emergency procedures | Global |
+| **SVC-85-01** | H₂ Refueling Support | Ground Handler | 24/7 remote guidance for coupling/decoupling issues, leak detection, and emergency procedures | Global |
 | **SVC-85-02** | CO₂ Cartridge Logistics | Airline | Just-In-Time delivery coordination for charged CO₂ battery cartridges | Regional |
 | **SVC-85-03** | Gate Fit Check | Airport | Physical and digital verification of boarding bridge alignment and compatibility | On-demand |
 | **SVC-85-04** | Infrastructure Health Monitoring | Airport Authority | Real-time monitoring and diagnostics of ground-based interface systems | 24/7 |
