@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "H₂ fuel data schema",
+  "description": "Generic data schema for H₂ fuel data schema - No proprietary data",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dataType": {
+      "type": "string",
+      "const": "H₂ fuel data schema"
+    }
+  },
+  "required": ["timestamp", "dataType"]
+}
