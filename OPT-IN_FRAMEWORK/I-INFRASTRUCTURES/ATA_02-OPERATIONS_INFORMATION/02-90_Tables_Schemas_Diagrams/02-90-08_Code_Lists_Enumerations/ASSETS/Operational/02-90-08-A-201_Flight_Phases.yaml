@@ -1,0 +1,189 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# ==============================================================================
+# 02-90-08-A-201: Flight Phases Code List
+# ==============================================================================
+# Purpose: Standardized flight phase codes and descriptions
+# Version: 1.0.0
+# Status: DRAFT
+# Last Updated: 2025-11-21
+# ==============================================================================
+
+flight_phases:
+  - code: "PREFLIGHT"
+    name: "Pre-Flight"
+    name_de: "Vor dem Flug"
+    name_fr: "Pré-vol"
+    description: "Aircraft preparation and boarding"
+    sort_order: 10
+    typical_duration_min: 30
+    characteristics:
+      - "Systems checks"
+      - "Passenger boarding"
+      - "Fuel loading"
+      - "Weight and balance calculation"
+    
+  - code: "TAXI_OUT"
+    name: "Taxi Out"
+    name_de: "Rollen zum Start"
+    name_fr: "Roulage au départ"
+    description: "Taxi from gate to runway"
+    sort_order: 20
+    typical_duration_min: 15
+    characteristics:
+      - "Ground movement"
+      - "Low speed"
+      - "High fuel consumption relative to speed"
+    
+  - code: "TAKEOFF"
+    name: "Takeoff"
+    name_de: "Start"
+    name_fr: "Décollage"
+    description: "Takeoff roll and initial climb"
+    sort_order: 30
+    typical_duration_min: 2
+    characteristics:
+      - "Maximum thrust"
+      - "Rapid acceleration"
+      - "V1, VR, V2 speeds"
+      - "Gear retraction"
+    
+  - code: "CLIMB"
+    name: "Climb"
+    name_de: "Steigflug"
+    name_fr: "Montée"
+    description: "Climb to cruise altitude"
+    sort_order: 40
+    typical_duration_min: 25
+    characteristics:
+      - "High thrust setting"
+      - "Increasing altitude"
+      - "Flaps/slats retraction"
+      - "Positive vertical speed"
+    
+  - code: "CRUISE"
+    name: "Cruise"
+    name_de: "Reiseflug"
+    name_fr: "Croisière"
+    description: "Cruise at altitude"
+    sort_order: 50
+    typical_duration_min: 180
+    characteristics:
+      - "Constant altitude (or stepped)"
+      - "Economical speed"
+      - "Reduced thrust"
+      - "Longest phase of flight"
+    
+  - code: "DESCENT"
+    name: "Descent"
+    name_de: "Sinkflug"
+    name_fr: "Descente"
+    description: "Descent from cruise"
+    sort_order: 60
+    typical_duration_min: 20
+    characteristics:
+      - "Reduced thrust (idle or near-idle)"
+      - "Decreasing altitude"
+      - "Negative vertical speed"
+      - "Speed management"
+    
+  - code: "APPROACH"
+    name: "Approach"
+    name_de: "Anflug"
+    name_fr: "Approche"
+    description: "Final approach to landing"
+    sort_order: 70
+    typical_duration_min: 10
+    characteristics:
+      - "Flaps/slats extension"
+      - "Gear extension"
+      - "Precision navigation"
+      - "ILS/visual approach"
+    
+  - code: "LANDING"
+    name: "Landing"
+    name_de: "Landung"
+    name_fr: "Atterrissage"
+    description: "Landing roll and deceleration"
+    sort_order: 80
+    typical_duration_min: 2
+    characteristics:
+      - "Touchdown"
+      - "Reverse thrust"
+      - "Braking"
+      - "Rapid deceleration"
+    
+  - code: "TAXI_IN"
+    name: "Taxi In"
+    name_de: "Rollen zur Parkposition"
+    name_fr: "Roulage à l'arrivée"
+    description: "Taxi from runway to gate"
+    sort_order: 90
+    typical_duration_min: 10
+    characteristics:
+      - "Ground movement"
+      - "Low speed"
+      - "Navigation to gate"
+    
+  - code: "POSTFLIGHT"
+    name: "Post-Flight"
+    name_de: "Nach dem Flug"
+    name_fr: "Après-vol"
+    description: "Shutdown and passenger deplaning"
+    sort_order: 100
+    typical_duration_min: 20
+    characteristics:
+      - "Systems shutdown"
+      - "Passenger deplaning"
+      - "Aircraft securing"
+
+# Metadata
+metadata:
+  version: "1.0.0"
+  created_date: "2025-11-21"
+  last_updated: "2025-11-21"
+  owner: "AMPEL360 Operations Data Team"
+  source: "Industry standard flight phases"
+  notes: |
+    Flight phases are standardized for consistency across systems.
+    Durations are typical values and vary by aircraft type, flight distance, and conditions.
+
+# Cross-References
+related_schemas:
+  - "../../../02-90-01_Database_Schemas/ASSETS/SQL/02-90-01-A-002_Performance_Data_Schema.sql"
+  - "../../../02-90-02_API_Specifications/ASSETS/OpenAPI/02-90-02-A-001_Flight_Operations_API_v1.yaml"
+
+# ==============================================================================
+# Document Control
+# ==============================================================================
+# Generated with the assistance of AI (GitHub Copilot), prompted by Amedeo Pelliccia
+# Status: DRAFT – Subject to human review and approval
+# Repository: AMPEL360-BWB-H2-Hy-E
+# Last AI update: 2025-11-21
+# ==============================================================================
