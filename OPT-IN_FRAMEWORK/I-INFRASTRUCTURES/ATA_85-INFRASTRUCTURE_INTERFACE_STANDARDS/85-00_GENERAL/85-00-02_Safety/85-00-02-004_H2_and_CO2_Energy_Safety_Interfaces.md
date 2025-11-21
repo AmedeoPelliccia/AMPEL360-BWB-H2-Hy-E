@@ -42,13 +42,14 @@ The H₂ refueling interface implements a **multi-layer interlock system** to pr
 
 | **Interlock** | **Monitoring Parameter** | **Threshold** | **Action on Violation** |
 |---------------|--------------------------|---------------|------------------------|
-| Pressure limit | H₂ pressure in hose and aircraft tank | <700 bar (max) | Emergency shutdown, vent |
+| Pressure limit | H₂ pressure in hose and aircraft tank | <700 bar (max)<sup>1</sup> | Emergency shutdown, vent |
 | Temperature limit | H₂ temperature at connector | -40°C to +85°C | Reduce flow rate or shutdown |
 | Flow rate limit | H₂ mass flow rate | <10 kg/min (max) | Reduce flow or shutdown |
 | Leak detection | H₂ concentration in Zone 1 | <25% LEL | Emergency shutdown, alarm |
 | Connector status | Mechanical lock and seal integrity | Continuous verification | Emergency shutdown |
 | Dead-man switch | Operator presence confirmation | Every 60 seconds | Emergency shutdown |
 
+<sup>1</sup> The maximum allowable refueling pressure is set to 700 bar, which is below the aircraft H₂ tank relief valve setpoint of 800 bar, to provide a safety margin and prevent activation of the relief system during normal operation.
 **Continuous Monitoring**: All parameters sampled at ≥1 Hz, with automatic emergency shutdown on any threshold violation.
 
 ### H₂ Leak Detection System
