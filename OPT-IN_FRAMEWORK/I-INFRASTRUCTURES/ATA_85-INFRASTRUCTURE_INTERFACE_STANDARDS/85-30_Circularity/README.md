@@ -73,7 +73,7 @@ Items within this bucket follow the pattern:
 
 ### Internal Links
 - [ATA 02-90 Tables, Schemas, Diagrams](../../ATA_02-OPERATIONS_INFORMATION/02-90_Tables_Schemas_Diagrams/README.md)
-- [ATA 99 Carbon Accounting](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_99-CARBON_ACCOUNTING/README.md)
+- [ATA 99 Carbon Accounting](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_99-CARBON_ACCOUNTING/README.md)
 - [85-10-03 CO₂ Battery Ground Operations](../85-10_Operations/85-10-03_CO2_Battery_Ground_Operations/README.md)
 
 ### Related ATAs

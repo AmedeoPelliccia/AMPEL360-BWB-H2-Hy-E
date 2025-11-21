@@ -53,7 +53,7 @@ Each MaterialBatch DPP record shall include:
 - RQ-85-30-05-016 – Circularity Metrics
 
 **Related Standards**:
-- [ATA 02-90 Tables, Schemas, Diagrams](../../../../ATA_02-OPERATIONS_INFORMATION/02-90_Tables_Schemas_Diagrams/README.md)
+- [ATA 02-90 Tables, Schemas, Diagrams](../../../ATA_02-OPERATIONS_INFORMATION/02-90_Tables_Schemas_Diagrams/README.md)
 - ATA 02-90-13 DPP Data Structures *(to be created)*
 
 ---
