@@ -1,0 +1,16 @@
+Lifecycle Phase,Activity,CO2e (tonnes),Energy (MWh),Water (m3),Waste (kg),Notes
+Raw Material Extraction,CFRP precursor extraction,145.2,856.3,1250.0,0.0,Carbon fiber and resin production
+Raw Material Extraction,Aluminum mining and refining,52.8,320.5,850.0,0.0,Primary aluminum production
+Raw Material Extraction,Titanium extraction,28.4,180.2,420.0,0.0,Titanium sponge production
+Manufacturing,Composite layup and cure,32.5,215.8,180.0,125.5,Autoclave curing energy
+Manufacturing,Aluminum machining,18.7,95.4,320.0,285.3,CNC machining operations
+Manufacturing,Titanium machining,22.1,112.6,210.0,95.8,Complex fitting machining
+Manufacturing,Assembly operations,15.3,78.9,95.0,42.1,Final assembly and integration
+Manufacturing,Surface treatment and coating,8.4,42.1,125.0,15.2,Primers and topcoats
+Transportation,Supplier to factory,12.8,0.0,0.0,0.0,Road and air freight
+Transportation,Factory to assembly site,5.2,0.0,0.0,0.0,Road freight
+Use Phase,Maintenance (30 years),45.6,0.0,0.0,0.0,Scheduled inspections and repairs
+End of Life,Disassembly,2.1,12.5,5.0,0.0,Decommissioning operations
+End of Life,Recycling (metals),−35.2,0.0,0.0,0.0,Credit for recycled aluminum and titanium
+End of Life,Composite disposal,8.5,0.0,0.0,1250.0,Landfill or energy recovery
+Total,,362.4,1914.3,3455.0,1813.9,Entire lifecycle from cradle to grave

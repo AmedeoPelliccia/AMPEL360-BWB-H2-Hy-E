@@ -1,0 +1,2 @@
+Export ID,File Name,Zone,Assembly,Source File,Export Date,Export Time,Exporter,CAD System,CAD Version,IGES Version,File Size (MB),Checksum (SHA256),Status,Notes
+53-00-04-EXPT-002-001,53-10-1000_Forward_Bulkhead_Assembly.iges,Zone_100_Nose_Section,Forward Bulkhead,CAD/Zone_100/Forward_Bulkhead_Assembly.sldasm,2025-11-22,14:30:00,Engineering Team,CATIA,V5R28,5.3,14.8,[To be calculated],Pending,Legacy format for supplier compatibility

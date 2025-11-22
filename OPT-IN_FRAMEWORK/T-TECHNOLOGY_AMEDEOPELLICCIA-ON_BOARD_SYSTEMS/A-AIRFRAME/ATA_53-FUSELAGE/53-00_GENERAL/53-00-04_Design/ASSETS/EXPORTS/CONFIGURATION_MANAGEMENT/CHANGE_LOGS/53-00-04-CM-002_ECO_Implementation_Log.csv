@@ -1,0 +1,5 @@
+ECO Number,Title,Originator,Date Initiated,Date Approved,Status,Affected Artifacts,Baseline Impact,Implementation Date,Notes
+ECO-2025-042,Forward Bulkhead Lightweighting,Structures Team,2025-07-20,2025-08-01,Implemented,53-10-1000,None,2025-08-15,Weight reduction of 4.2 kg achieved
+ECO-2025-087,Stress Analysis Updates,Analysis Team,2025-09-10,2025-10-01,Implemented,53-10-1000,BL-002,2025-10-15,Incorporated FEA results from full-scale testing
+ECO-2025-089,NLG Attachment Reinforcement,Landing Gear Team,2025-09-15,2025-10-05,Implemented,53-10-2000,BL-002,2025-10-15,Added doublers per landing gear load analysis
+ECO-2025-103,Zone 100 Complete Assembly Update,Integration Team,2025-10-10,2025-10-18,Implemented,53-10-9000,BL-002,2025-10-20,Final assembly configuration for CDR
