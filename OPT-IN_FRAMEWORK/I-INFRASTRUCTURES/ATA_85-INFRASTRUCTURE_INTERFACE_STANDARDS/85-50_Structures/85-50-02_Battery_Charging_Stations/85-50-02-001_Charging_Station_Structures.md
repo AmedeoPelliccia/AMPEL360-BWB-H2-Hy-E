@@ -43,7 +43,7 @@ This document provides detailed structural design specifications, load requireme
 
 - **Primary Function**: [To be detailed based on structure type]
 - **Design Life**: Minimum 50 years
-- **Occupancy/Usage**: [To be specified]
+- **Occupancy/Usage**: Typically unmanned, with periodic maintenance access; occupancy classification per local building code. Final values to be confirmed via site survey and operational requirements.
 - **Environmental Conditions**: Per site-specific requirements
 
 ### 3.2 Performance Requirements
