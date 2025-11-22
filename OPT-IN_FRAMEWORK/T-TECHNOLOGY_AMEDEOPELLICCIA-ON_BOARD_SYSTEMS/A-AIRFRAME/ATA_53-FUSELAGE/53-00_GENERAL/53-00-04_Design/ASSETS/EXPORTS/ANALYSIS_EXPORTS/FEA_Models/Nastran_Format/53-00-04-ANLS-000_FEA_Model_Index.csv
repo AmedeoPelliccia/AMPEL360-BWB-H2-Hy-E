@@ -1,0 +1,5 @@
+Model ID,Model Name,Revision,Analysis Type,Element Count,Node Count,Release Date,Validation Status,Notes
+53-00-04-ANLS-001,Global_Model_53-000,RevD,Static Strength,485632,523847,2025-10-20,Validated,Full fuselage global model
+53-00-04-ANLS-002,Spar_Detail_Model_53-400,RevC,Fatigue & Damage Tolerance,128945,142587,2025-10-18,Validated,Center wing box detail
+53-00-04-ANLS-003,Bulkhead_Detail,RevB,Ultimate Load,95847,102354,2025-10-15,Validated,Forward bulkhead analysis
+53-00-04-ANLS-004,Door_Cutout_Analysis,RevA,Stress Concentration,45632,52147,2025-10-10,Validated,Passenger door cutout region

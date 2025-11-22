@@ -1,0 +1,4 @@
+# As-Built Digital Twin Updates
+# Serial-number-specific delta files
+# Files use 53-00-04-DTW-SNxxxx-xxx_* naming pattern
+# Example: 53-00-04-DTW-SN0001-001_Tail_Number_001_Deltas.json
