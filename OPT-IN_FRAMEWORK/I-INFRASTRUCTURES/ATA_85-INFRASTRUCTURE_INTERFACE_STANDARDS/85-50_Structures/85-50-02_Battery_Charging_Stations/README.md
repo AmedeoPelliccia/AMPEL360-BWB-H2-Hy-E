@@ -29,3 +29,4 @@ This section covers structural infrastructure for battery charging stations, inc
 - **Status**: DRAFT – Subject to human review and approval.
 - **Repository**: `AMPEL360-BWB-H2-Hy-E`
 - **Last AI update**: 2025-11-22.
+- **Authorship**: Generated with the assistance of AI (GitHub Copilot), prompted by Amedeo Pelliccia
