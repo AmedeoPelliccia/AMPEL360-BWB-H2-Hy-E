@@ -11,7 +11,7 @@ DD-85-009,Electrical_Frequency,AC power frequency,Float,Hz,59.5-60.5,60.0,Freque
 DD-85-010,Emergency_Gen_Status,Emergency generator operational status,Enum,N/A,OFF|STANDBY|RUNNING,STANDBY,Generator Controller,Facility Management,Real-time (1s),State machine validation,Emergency Systems,Active
 DD-85-011,Fire_Alarm_Status,Fire detection system alarm status,Boolean,N/A,TRUE|FALSE,FALSE,Fire Detection System,Safety System,Real-time (immediate),Alarm escalation rule,Fire Safety,Active
 DD-85-012,H2_Leak_Detected,Hydrogen leak detection flag,Boolean,N/A,TRUE|FALSE,FALSE,H2 Leak Detectors,Safety System,Real-time (immediate),Emergency shutdown trigger,Safety Systems,Active
-DD-85-013,H2_Leak_Concentration,Hydrogen gas concentration in air,Float,PPM,0.0-40000.0,0.0,H2 Gas Sensor,Safety System,Real-time (1s),LEL calculation (4% = 40000 ppm),Safety Systems,Active
+DD-85-013,H2_Leak_Concentration,Hydrogen gas concentration in air,Integer,PPM,0-1000,0,H2 Gas Sensor,Safety System,Real-time (1s),Safety threshold: 1000 ppm (0.25% LEL; LEL = 40000 ppm),Safety Systems,Active
 DD-85-014,Ambient_Temperature,Outdoor ambient temperature,Float,Celsius,-40.0-50.0,NULL,Weather Station,Environmental Monitoring,Real-time (60s),Sensor health check,Facility Operations,Active
 DD-85-015,Wind_Speed,Wind speed measurement,Float,m/s,0.0-50.0,NULL,Anemometer,Environmental Monitoring,Real-time (10s),Gust detection,Facility Operations,Active
 DD-85-016,Wind_Direction,Wind direction in degrees from North,Float,Degrees,0.0-360.0,NULL,Wind Vane,Environmental Monitoring,Real-time (10s),Compass validation,Facility Operations,Active
