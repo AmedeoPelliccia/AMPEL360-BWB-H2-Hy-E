@@ -1,0 +1,17 @@
+CI_Number,CI_Name,Parent_CI,Zone,Type,Material,Weight_kg,Criticality,Structural_Role,Status,Subsystem,Drawing_Number,Specification
+CI-53-000,ATA 53 Fuselage,AMPEL360,ALL,Assembly,Mixed,45000,Critical,Primary,Detailed,53-00_GENERAL,53-00-0000,53-00-A-001
+CI-53-100,Nose Section,CI-53-000,100,Assembly,CFRP/Metal,3500,Critical,Primary,Detailed,53-20-01_Pressure_Shell_Modules,53-10-0000,53-10-A-001
+CI-53-100-BHD-FWD,Forward Pressure Bulkhead,CI-53-100,100,Bulkhead,CFRP,450,Critical,Primary,Released,53-20-01_Pressure_Shell_Modules,53-10-1000,53-10-S-001
+CI-53-100-FR-100A,Frame 100A,CI-53-100,100,Frame,CFRP,25,High,Primary,Released,53-20-01_Pressure_Shell_Modules,53-10-1001,53-10-S-002
+CI-53-100-SKN-U01,Upper Skin Panel 01,CI-53-100,100,Skin,CFRP,180,Critical,Primary,Released,53-20-01_Pressure_Shell_Modules,53-10-2001,53-10-S-010
+CI-53-200,Forward Cabin,CI-53-000,200,Assembly,CFRP,8500,Critical,Primary,Detailed,53-20-02_Door_Surround_Structure,53-20-0000,53-20-A-001
+CI-53-200-DOOR-1L-FR,Door Frame 1L,CI-53-200,200,Frame,CFRP/Ti,180,Critical,Primary,Released,53-20-02_Door_Surround_Structure,53-20-2010,53-20-S-005
+CI-53-200-FLR-BEAM-S-L,Secondary Floor Beams Left,CI-53-200,200,Beam,Aluminum,180,High,Secondary,Released,53-20-03_Cabin_Floor_and_Supports,53-20-3002,53-20-S-020
+CI-53-300,Mid Cabin,CI-53-000,300,Assembly,CFRP,10500,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-30-0000,53-30-A-001
+CI-53-400,Center Wing Box,CI-53-000,400,Assembly,CFRP,12000,Critical,Primary,Detailed,53-20-04_Centerbody_Landing_Gear_Bays,53-40-0000,53-40-A-001
+CI-53-400-SPAR-FWD,Forward Wing Spar,CI-53-400,400,Spar,CFRP,2200,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-1000,53-40-S-001
+CI-53-400-SPAR-REAR,Rear Wing Spar,CI-53-400,400,Spar,CFRP,2000,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-1010,53-40-S-002
+CI-53-400-BAY-MLG-L,Left Main Landing Gear Bay,CI-53-400,400,Bay,CFRP/Ti,850,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-2000,53-40-S-010
+CI-53-500,Aft Cabin,CI-53-000,500,Assembly,CFRP,7000,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-50-0000,53-50-A-001
+CI-53-600,Tail Section,CI-53-000,600,Assembly,CFRP/Ti,3500,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-60-0000,53-60-A-001
+CI-53-600-BHD-AFT,Aft Pressure Bulkhead,CI-53-600,600,Bulkhead,CFRP,420,Critical,Primary,Detailed,53-20-01_Pressure_Shell_Modules,53-60-1000,53-60-S-001

@@ -1,0 +1,71 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# CI Definition Template
+# Copy this template into each CI folder and customize.
+
+ci_metadata:
+  ci_number: "CI-53-XXX-XXXX-XXX"
+  ci_name: "Descriptive Name"
+  parent_ci: "CI-53-XXX"
+  zone: "XXX"  # 100, 200, 300, 400, 500, 600
+
+classification:
+  type: "[Assembly|Skin|Frame|Spar|Beam|Bulkhead|Fitting|Door|Panel|Column|Rib|Track|Bay|Other]"
+  criticality: "[Critical|High|Medium|Low]"
+  material_primary: "[CFRP|GFRP|Aluminum|Titanium|Steel|Mixed]"
+  structural_role: "[Primary|Secondary]"
+
+physical_properties:
+  weight_target_kg: 0.0
+  weight_actual_kg: 0.0
+  weight_margin_percent: 0.0
+  cg_x: 0.0
+  cg_y: 0.0
+  cg_z: 0.0
+
+status:
+  design_status: "[Concept|Preliminary|Detailed|Released|Obsolete]"
+  analysis_status: "[Not Started|In Progress|Complete]"
+  test_status: "[Not Started|In Progress|Complete]"
+  production_status: "[Design|Tooling|Production|Complete]"
+
+traceability:
+  requirements: []          # e.g. ["RQ-53-00-01-001","RQ-53-00-01-002"]
+  parent_drawing: ""
+  specification: ""
+  subsystem_ref: ""         # e.g. "53-20-04_Centerbody_Landing_Gear_Bays"
+
+interfaces: []              # list of interface objects if needed
+
+approval:
+  design_approved_by: ""
+  design_approved_date: ""
+  certification_authority: "[EASA|FAA|Both|N/A]"
+
+notes: ""
