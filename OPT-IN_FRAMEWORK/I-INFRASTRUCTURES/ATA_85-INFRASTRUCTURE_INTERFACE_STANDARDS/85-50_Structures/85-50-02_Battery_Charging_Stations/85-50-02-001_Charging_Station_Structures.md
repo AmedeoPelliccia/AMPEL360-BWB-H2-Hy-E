@@ -76,8 +76,18 @@ Per [ASCE 7](https://www.asce.org/) and [Eurocode](https://eurocodes.jrc.ec.euro
 
 ### 4.2 Load Magnitudes
 
-[To be detailed based on structure type and site conditions]
+Preliminary load magnitudes shall be determined based on:
+- Equipment manufacturer datasheets (e.g., charging unit weight, canopy weight)
+- Site survey data (e.g., snow load, wind speed, seismic zone)
+- Applicable standards (e.g., ASCE 7, Eurocode)
 
+Example preliminary values (to be confirmed during detailed design):
+- Dead Load: Charging unit (500–1500 kg per unit), canopy (20–50 kg/m²)
+- Live Load: Maintenance personnel (2.0 kN/m²), vehicle impact (as per local code)
+- Wind Load: As per site wind speed (refer to ASCE 7/Eurocode)
+- Seismic Load: As per site seismic classification (refer to ASCE 7/Eurocode)
+
+Final load magnitudes to be sourced from manufacturer datasheets and site-specific surveys.
 ---
 
 ## 5. Material Selection
