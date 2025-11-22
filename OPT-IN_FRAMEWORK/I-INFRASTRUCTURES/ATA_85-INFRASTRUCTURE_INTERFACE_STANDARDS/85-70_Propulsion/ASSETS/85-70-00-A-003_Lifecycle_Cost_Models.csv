@@ -1,0 +1,8 @@
+Cost Category,Battery Electric,H2 Fuel Cell,Hybrid,Diesel (Baseline),Unit
+Initial Purchase,100,180,140,80,Index
+Installation & Integration,10,15,12,5,k EUR
+Annual Energy Cost,12,18,15,25,k EUR
+Annual Maintenance,8,12,15,20,k EUR
+Battery/FC Replacement (10 yr),30,50,40,5,k EUR
+Total 15-Year TCO,280,420,350,380,k EUR
+Payback vs Diesel,4-5,8-10,5-7,N/A,years

@@ -1,0 +1,5 @@
+Equipment Type,Fuel Cell Type,Power Output (kW),H2 Capacity (kg),Operating Voltage (VDC),System Efficiency (%),Operating Temp (°C),Refueling Time (min),Range (km),Weight (kg),Standards Compliance
+H2 Fuel Cell Tug,PEM,150-250,40-60,600-800,50-60,-30 to +40,5-10,300-400,20000,"ISO 19881, SAE J2579, IEC 62282-2"
+H2 Heavy Duty Loader,PEM,200-350,60-80,600-800,50-60,-30 to +40,8-12,250-350,42000,"ISO 19881, SAE J2579, IEC 62282-2"
+H2 Belt Loader,PEM,50-100,20-30,400-600,50-60,-25 to +40,3-5,200-300,11000,"ISO 19881, SAE J2579, IEC 62282-2"
+H2 Baggage Tractor,PEM,40-80,15-25,400-600,50-60,-30 to +50,3-5,250-350,2200,"ISO 19881, SAE J2579, IEC 62282-2"
