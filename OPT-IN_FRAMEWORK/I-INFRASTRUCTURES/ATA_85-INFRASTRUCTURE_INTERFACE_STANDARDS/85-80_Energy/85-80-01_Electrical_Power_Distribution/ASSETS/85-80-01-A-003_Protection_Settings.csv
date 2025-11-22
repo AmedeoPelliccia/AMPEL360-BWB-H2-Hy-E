@@ -1,0 +1,65 @@
+# 85-80-01-A-003 Protection Relay Settings
+# AMPEL360 BWB-H2-Hy-E Airport Infrastructure
+# Generated: 2025-11-22
+# Status: DRAFT - Placeholder for actual protection coordination study
+
+Device_ID,Location,Relay_Type,Function_ANSI,Pickup_Setting,Time_Delay_sec,Curve_Type,CT_Ratio,VT_Ratio,Comments
+PR001,Main_Grid_33kV_Incomer,SEL_751,50/51,3200A / 1600A,0.1 / 0.5,Inst / IEC_SI,4000:5,33000:110,Main incomer protection
+PR002,Feeder_33kV_Substation_A,SEL_751,50/51,800A / 400A,0.1 / 0.8,Inst / IEC_SI,1000:5,33000:110,Feeder to Substation A
+PR003,Feeder_33kV_Substation_B,SEL_751,50/51,800A / 400A,0.1 / 0.8,Inst / IEC_SI,1000:5,33000:110,Feeder to Substation B
+PR004,Feeder_33kV_H2_Facility,SEL_751,50/51,1200A / 600A,0.1 / 0.8,Inst / IEC_SI,1500:5,33000:110,Feeder to H2 production
+PR005,Transformer_33/11kV_A,SEL_487E,87T,0.3 / 0.5,0.0,Percentage,2000:5 / 1000:5,N/A,Differential protection Tx A
+PR006,Transformer_33/11kV_B,SEL_487E,87T,0.3 / 0.5,0.0,Percentage,2000:5 / 1000:5,N/A,Differential protection Tx B
+PR007,HV_Side_Transformer_A,SEL_751,50/51,2400A / 1200A,0.1 / 0.6,Inst / IEC_VI,3000:5,33000:110,HV overcurrent backup
+PR008,LV_Side_Transformer_A,SEL_751,50/51,1600A / 800A,0.1 / 0.4,Inst / IEC_SI,2000:5,11000:110,LV overcurrent backup
+PR009,11kV_Feeder_A1,SEL_751,50/51,400A / 200A,0.1 / 0.5,Inst / IEC_SI,500:5,11000:110,Feeder to distribution A1
+PR010,11kV_Feeder_A2,SEL_751,50/51,400A / 200A,0.1 / 0.5,Inst / IEC_SI,500:5,11000:110,Feeder to distribution A2
+PR011,11kV_Feeder_B1,SEL_751,50/51,500A / 250A,0.1 / 0.5,Inst / IEC_SI,630:5,11000:110,Feeder to distribution B1
+PR012,11kV_Feeder_B2,SEL_751,50/51,400A / 200A,0.1 / 0.5,Inst / IEC_SI,500:5,11000:110,Feeder to distribution B2
+PR013,PV_Connection_11kV,SEL_751,50/51/27/59,600A / 300A,0.1 / 0.5,Inst / IEC_SI,800:5,11000:110,Solar PV interconnection with UV/OV
+PR014,BESS_Connection_11kV,SEL_751,50/51/27/59,400A / 200A,0.1 / 0.5,Inst / IEC_SI,500:5,11000:110,Battery storage interconnection
+
+# Earth Fault Protection Settings
+Device_ID,Location,Function_ANSI,Pickup_Setting_A,Time_Delay_sec,Curve_Type,Sensitivity,Comments
+EF001,Main_Grid_33kV,50N/51N,320A / 160A,0.2 / 0.8,Inst / IEC_VI,Medium,Sensitive earth fault main incomer
+EF002,Feeder_33kV_A,50N/51N,80A / 40A,0.2 / 1.0,Inst / IEC_VI,High,SEF feeder Substation A
+EF003,Feeder_33kV_B,50N/51N,80A / 40A,0.2 / 1.0,Inst / IEC_VI,High,SEF feeder Substation B
+EF004,Feeder_33kV_H2,50N/51N,120A / 60A,0.2 / 1.0,Inst / IEC_VI,High,SEF feeder H2 facility
+EF005,Transformer_A_HV,50N/51N,240A / 120A,0.2 / 0.8,Inst / IEC_EI,Medium,Backup earth fault HV side
+EF006,Transformer_A_LV,50N/51N,160A / 80A,0.1 / 0.5,Inst / IEC_SI,High,LV earth fault protection
+EF007,11kV_Feeder_A1,50N/51N,40A / 20A,0.1 / 0.6,Inst / IEC_SI,High,SEF 11kV feeder A1
+EF008,11kV_Feeder_B1,50N/51N,50A / 25A,0.1 / 0.6,Inst / IEC_SI,High,SEF 11kV feeder B1
+
+# Undervoltage and Overvoltage Protection
+Device_ID,Location,Function_ANSI,UV_Pickup_kV,UV_Delay_sec,OV_Pickup_kV,OV_Delay_sec,Comments
+UV001,Main_Grid_33kV,27,26.4 (80%),2.0,36.3 (110%),1.0,Grid connection UV/OV
+UV002,Substation_A_11kV,27,8.8 (80%),1.5,12.1 (110%),1.0,Distribution UV/OV
+UV003,Substation_B_11kV,27,8.8 (80%),1.5,12.1 (110%),1.0,Distribution UV/OV
+UV004,PV_Interconnection,27/59,9.35 (85%),2.0,11.55 (105%),0.5,Anti-islanding protection
+UV005,BESS_Interconnection,27/59,9.35 (85%),1.0,11.55 (105%),0.5,Grid support compliance
+
+# Directional and Distance Protection
+Device_ID,Location,Function_ANSI,Zone_1_Reach_ohm,Zone_2_Reach_ohm,Zone_3_Reach_ohm,Comments
+DI001,33kV_Ring_Main,67,N/A,N/A,N/A,Directional overcurrent for ring operation
+DI002,Main_Grid_Connection,21,12.5 (80% line),25.0 (120% line),37.5 (150% + 50%),Distance protection for transmission line
+
+# Coordination Study Summary
+# - Discrimination time between stages: 0.3s minimum
+# - Backup protection time-graded with primary
+# - Auto-reclose: Single-shot on 33kV feeders disabled on 11kV
+# - SEF settings provide sensitive earth fault detection
+# - Anti-islanding for DER per IEEE 1547
+# - Arc flash incident energy calculated per IEEE 1584 (see separate study)
+
+# Notes:
+# - Settings are preliminary and subject to detailed coordination study
+# - CT/VT ratios to be confirmed based on actual equipment
+# - Relay models are examples (SEL) - actual make/model per procurement
+# - Testing required after commissioning and any system modifications
+# - Annual verification of protection settings recommended
+
+# Document Control
+# Generated with assistance of AI (GitHub Copilot) prompted by Amedeo Pelliccia
+# Status: DRAFT - Subject to human review and approval by protection engineer
+# Repository: AMPEL360-BWB-H2-Hy-E
+# Last AI update: 2025-11-22
