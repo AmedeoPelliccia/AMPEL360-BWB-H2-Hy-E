@@ -14,7 +14,7 @@ last_updated: "2025-11-22"
 
 ## Purpose
 
-This document defines requirements, specifications, and operational procedures for saf storage tanks within the AMPEL360 BWB-H2-Hy-E infrastructure program.
+This document defines requirements, specifications, and operational procedures for SAF storage tanks within the AMPEL360 BWB-H2-Hy-E infrastructure program.
 
 ## Key Requirements
 
