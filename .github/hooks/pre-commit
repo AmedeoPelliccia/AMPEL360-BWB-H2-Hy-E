@@ -20,8 +20,12 @@ WARNINGS=0
 echo ""
 echo "🎨 Checking drawing filenames for Q100 model code..."
 
-# Get staged SVG files that look like drawings (XX-XX-XXXX pattern)
-DRAWINGS=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.svg$' | grep -E '[0-9]{2}-[0-9]{2}-[0-9]{4}' || true)
+# Get staged SVG files that look like drawings (basename must match XX-XX-XXXX pattern)
+DRAWINGS=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.svg$' | while read -r file; do
+    if [[ $(basename "$file") =~ ^[0-9]{2}-[0-9]{2}-[0-9]{4} ]]; then
+        echo "$file"
+    fi
+done || true)
 
 if [ -n "$DRAWINGS" ]; then
     MISSING_Q100=()

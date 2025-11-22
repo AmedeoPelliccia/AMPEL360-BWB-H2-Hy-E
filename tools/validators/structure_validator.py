@@ -93,11 +93,17 @@ class StructureValidator:
             missing_lifecycle = []
             for folder in self.MANDATORY_LIFECYCLE_FOLDERS:
                 # Allow flexible naming (01_Overview or 01_OVERVIEW)
-                pattern = f"*-00-{folder.split('_')[0]}_*"
-                matches = list(general_dir.glob(pattern))
-                
-                if not matches:
-                    missing_lifecycle.append(folder)
+                # Extract folder number (e.g., '01' from '01_Overview')
+                if '_' in folder:
+                    folder_num = folder.split('_')[0]
+                    pattern = f"*-00-{folder_num}_*"
+                    matches = list(general_dir.glob(pattern))
+                    
+                    if not matches:
+                        missing_lifecycle.append(folder)
+                else:
+                    # Folder name doesn't follow expected format, skip validation
+                    logger.warning(f"Unexpected folder name format: {folder}")
             
             if missing_lifecycle:
                 warnings.append(
@@ -138,8 +144,12 @@ class StructureValidator:
                 ext = file_path.suffix.lower()
                 
                 if ext in self.FORBIDDEN_EXTENSIONS:
-                    relative_path = file_path.relative_to(self.repo_root)
-                    forbidden_files.append(str(relative_path))
+                    try:
+                        relative_path = file_path.relative_to(self.repo_root)
+                        forbidden_files.append(str(relative_path))
+                    except ValueError:
+                        # File is not under repo_root, use absolute path
+                        forbidden_files.append(str(file_path))
         
         return forbidden_files
     

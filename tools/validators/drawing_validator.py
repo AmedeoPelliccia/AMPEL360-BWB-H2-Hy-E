@@ -6,6 +6,10 @@ Validates drawing filenames against the Q100 standard format:
 
 SAFETY-CRITICAL: Correct naming is essential for traceability.
 DO-178C Level C - Major failure condition.
+
+Requirements:
+- Python 3.9+ (uses tuple[...] type hint syntax)
+- Model code is hardcoded to 'Q100' for this project
 """
 
 import re
