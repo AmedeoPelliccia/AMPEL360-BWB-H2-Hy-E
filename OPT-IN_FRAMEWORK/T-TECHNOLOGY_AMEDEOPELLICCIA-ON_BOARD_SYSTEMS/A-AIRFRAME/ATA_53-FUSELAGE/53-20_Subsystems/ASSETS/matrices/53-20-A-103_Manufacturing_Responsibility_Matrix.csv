@@ -1,0 +1,11 @@
+Component_ID,Component_Name,Supplier,Manufacturing_Method,Lead_Time_Weeks,Status
+53-20-01-U,Upper Shell,Internal/OEM,AFP + Autoclave,24,Production
+53-20-01-L,Lower Shell,Internal/OEM,AFP + Autoclave,26,Production
+53-20-01-S,Side Shells,Tier-1 Supplier,AFP + Autoclave,20,Production
+53-20-01-B,Bulkheads,Tier-1 Supplier,Hand Layup + Autoclave,16,Production
+53-20-02-All,Door Frames,Tier-1 Supplier,Forging + Machining,18,Production
+53-20-03-B,Floor Beams,Tier-2 Supplier,Extrusion + Machining,12,Production
+53-20-03-P,Floor Panels,Tier-2 Supplier,Sandwich Bonding,10,Production
+53-20-04-All,LG Bay Structures,Internal/OEM,Hybrid Layup,22,Development
+53-20-05-All,Liner Attach,Tier-2 Supplier,Machining + Forming,8,Production
+53-20-06-All,Systems Supports,Multiple Suppliers,Various,6-14,Production

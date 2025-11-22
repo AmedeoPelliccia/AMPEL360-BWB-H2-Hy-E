@@ -1,0 +1,11 @@
+Report_ID,Component,Load_Case,Max_Stress_MPa,Allowable_MPa,Margin,Date,Status
+SR-53-20-001,Upper Shell,2.5g Maneuver,385,450,0.17,2025-10-15,Approved
+SR-53-20-002,Lower Shell,Landing Impact,412,480,0.17,2025-10-18,Approved
+SR-53-20-003,Side Shell,Gust + Pressure,368,450,0.22,2025-10-20,Approved
+SR-53-20-004,Fwd Bulkhead,Ultimate Pressure,285,350,0.23,2025-10-25,Approved
+SR-53-20-005,Aft Bulkhead,Ultimate Pressure,312,400,0.28,2025-10-28,Approved
+SR-53-20-006,Long Splice,Ultimate Tension,620,830,0.34,2025-11-05,Approved
+SR-53-20-007,Circ Splice,Ultimate Bending,740,830,0.12,2025-11-08,Approved
+SR-53-20-008,Door Frame,Pressure + Hinge,458,525,0.15,2025-11-12,In Review
+SR-53-20-009,Floor Beam,9g Emergency,395,465,0.18,2025-11-15,In Review
+SR-53-20-010,LG Fitting,Landing Ultimate,687,890,0.30,2025-11-18,In Review

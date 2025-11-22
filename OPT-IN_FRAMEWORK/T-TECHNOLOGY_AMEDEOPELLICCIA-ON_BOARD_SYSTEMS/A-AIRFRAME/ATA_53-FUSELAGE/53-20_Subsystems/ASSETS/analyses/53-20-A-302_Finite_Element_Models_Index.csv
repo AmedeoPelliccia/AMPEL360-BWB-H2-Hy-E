@@ -1,0 +1,10 @@
+Model_ID,Description,Software,Elements,Nodes,Analysis_Type,Status
+FEM-53-20-G01,Global Fuselage Model,ANSYS,2.4M,3.1M,Static/Dynamic,Active
+FEM-53-20-01,Upper Shell Detail,ANSYS,485K,625K,Static/Buckling,Complete
+FEM-53-20-02,Lower Shell Detail,ANSYS,520K,685K,Static/Buckling,Complete
+FEM-53-20-03,Side Shell Detail,ANSYS,380K,495K,Static/Buckling,Complete
+FEM-53-20-04,Forward Bulkhead,NASTRAN,125K,165K,Static/Pressure,Complete
+FEM-53-20-05,Aft Bulkhead,NASTRAN,142K,185K,Static/Pressure,Complete
+FEM-53-20-06,Door Frame Detail,ABAQUS,95K,125K,Static/Contact,Active
+FEM-53-20-07,Floor Beam System,NASTRAN,285K,365K,Static/Dynamic,Active
+FEM-53-20-08,Landing Gear Bay,ANSYS,425K,550K,Static/Fatigue,Active
