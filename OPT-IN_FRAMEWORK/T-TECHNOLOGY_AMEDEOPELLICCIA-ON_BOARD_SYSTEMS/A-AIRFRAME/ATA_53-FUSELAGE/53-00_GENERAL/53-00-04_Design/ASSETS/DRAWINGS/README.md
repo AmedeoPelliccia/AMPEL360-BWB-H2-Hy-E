@@ -6,7 +6,7 @@ The `DRAWINGS` directory contains the **2D design authority** for the AMPEL360 B
 
 These drawings are:
 
-- The graphical reference for **Configuration Items (CIs)** in [53-00-04_Design/02_Configuration_Items/](../../02_Configuration_Items/).
+- The graphical reference for **Configuration Items (CIs)** in `53-00-04_Design/02_Configuration_Items/`. <!-- TODO: Create target directory and update this link -->
 - The basis for **assemblies** in [53-00-04_Design/ASSETS/ASSEMBLIES/](../ASSEMBLIES/).
 - Inputs and evidence for **53-50_Structures** analysis and [53-00-03_Requirements](../../../53-00-03_Requirements/) verification.
 
@@ -243,8 +243,9 @@ This file is the **single source of truth** for:
 
 ## Integration with Other Structures
 
-* **CIs ([53-00-04 / 02_Configuration_Items](../../02_Configuration_Items/))**
+* **CIs (53-00-04 / 02_Configuration_Items)**
   Each CI's `CI_Definition.yaml` and `Design_Description.md` should reference its primary and secondary drawings by `Drawing_Number`.
+  <!-- TODO: Create 02_Configuration_Items directory and update this link -->
 
 * **Assemblies ([53-00-04 / ASSETS/ASSEMBLIES](../ASSEMBLIES/))**
   Assembly YAMLs (e.g. `ASM-53-400-001_Forward_Wing_Spar_Assembly.yaml`) should point to their main assembly drawings in this folder.
@@ -269,7 +270,7 @@ The `ASSETS` subfolder contains the standards that govern all drawings:
 * `Material_Call_Out_Standards.md` – standard material annotations.
 * `Drawing_Revision_Process.md` – how revisions are controlled and recorded.
 * `CAD_Layer_Standards.csv` – mandatory layer structure for CAD/authoring tools.
-* `Drawing_Sizes_ISO_5457.csv` – allowed drawing sizes and formats (see [ISO 5457](https://www.iso.org/standard/5524.html)).
+* `Drawing_Sizes_ISO_5457.csv` – allowed drawing sizes and formats (see [ISO 5457](https://www.iso.org/standard/46590.html)).
 * `Master_Drawing_Register.csv` – global register as described above.
 
 All new drawings MUST:
