@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400" height="900" viewBox="0 0 1400 900">
+  <title>85-90-04 H2 P&ID Diagram - ATA 85 Infrastructure</title>
+  
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title Block -->
+  <rect x="10" y="10" width="1380" height="70" fill="#003366" stroke="#000" stroke-width="2"/>
+  <text x="700" y="50" font-family="Arial, sans-serif" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">
+    ATA 85 - Hydrogen (H2) Piping &amp; Instrumentation Diagram (P&amp;ID)
+  </text>
+  
+  <!-- Document Info -->
+  <rect x="10" y="810" width="1380" height="80" fill="#e9ecef" stroke="#000" stroke-width="1"/>
+  <text x="20" y="835" font-family="Arial, sans-serif" font-size="12" fill="#000">
+    <tspan x="20" dy="0">Document: 85-90-04_H2_PandID_Diagrams.svg | Sheet: 1 of 1 (Overview)</tspan>
+    <tspan x="20" dy="15">Status: DRAFT - Placeholder for detailed H2 P&amp;ID diagrams per ISO 14687 and ASME B31.12</tspan>
+    <tspan x="20" dy="15">Revision: A | Date: 2025-11-22 | Owner: AMPEL360 H2 Systems Engineering</tspan>
+    <tspan x="20" dy="15">Note: Detailed P&amp;IDs shall be developed by process engineers using professional tools (AutoCAD P&amp;ID, SmartPlant, etc.)</tspan>
+  </text>
+  
+  <!-- Main H2 Storage Tank -->
+  <ellipse cx="200" cy="300" rx="80" ry="120" fill="#e3f2fd" stroke="#1565c0" stroke-width="3"/>
+  <text x="200" y="290" font-family="Arial, sans-serif" font-size="14" fill="#000" text-anchor="middle" font-weight="bold">LH2 TANK</text>
+  <text x="200" y="310" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle">TK-101</text>
+  <text x="200" y="330" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">10,000 kg</text>
+  <text x="200" y="345" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">-253°C</text>
+  
+  <!-- Level Indicator -->
+  <rect x="240" y="260" width="30" height="80" fill="#fff" stroke="#000" stroke-width="1"/>
+  <text x="255" y="305" font-family="Arial, sans-serif" font-size="10" fill="#000" text-anchor="middle">LI</text>
+  <text x="255" y="318" font-family="Arial, sans-serif" font-size="8" fill="#000" text-anchor="middle">101</text>
+  
+  <!-- Pressure Indicator -->
+  <circle cx="200" cy="200" r="20" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="200" y="203" font-family="Arial, sans-serif" font-size="10" fill="#000" text-anchor="middle">PI</text>
+  <text x="200" y="215" font-family="Arial, sans-serif" font-size="8" fill="#000" text-anchor="middle">101</text>
+  
+  <!-- Temperature Indicator -->
+  <circle cx="150" cy="350" r="20" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="150" y="353" font-family="Arial, sans-serif" font-size="10" fill="#000" text-anchor="middle">TI</text>
+  <text x="150" y="365" font-family="Arial, sans-serif" font-size="8" fill="#000" text-anchor="middle">101</text>
+  
+  <!-- Vacuum Jacket -->
+  <ellipse cx="200" cy="300" rx="90" ry="130" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="200" y="450" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle" font-style="italic">Vacuum Insulation</text>
+  
+  <!-- Piping from Tank -->
+  <line x1="280" y1="300" x2="380" y2="300" stroke="#1565c0" stroke-width="4"/>
+  <text x="330" y="290" font-family="Arial, sans-serif" font-size="9" fill="#000">2" SCH 10S</text>
+  
+  <!-- Isolation Valve -->
+  <polygon points="380,285 400,300 380,315" fill="#fff" stroke="#000" stroke-width="2"/>
+  <line x1="390" y1="280" x2="390" y2="320" stroke="#000" stroke-width="2"/>
+  <text x="390" y="340" font-family="Arial, sans-serif" font-size="9" fill="#000" text-anchor="middle">V-101</text>
+  <text x="390" y="352" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">MOV</text>
+  
+  <!-- Pipeline -->
+  <line x1="400" y1="300" x2="500" y2="300" stroke="#1565c0" stroke-width="4"/>
+  
+  <!-- Pressure Relief Valve -->
+  <line x1="450" y1="300" x2="450" y2="230" stroke="#1565c0" stroke-width="3"/>
+  <path d="M 440 230 L 450 210 L 460 230 Z" fill="#fff" stroke="#f00" stroke-width="2"/>
+  <text x="450" y="200" font-family="Arial, sans-serif" font-size="9" fill="#f00" text-anchor="middle">PSV-101</text>
+  <text x="450" y="190" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">Set: 6 bar</text>
+  
+  <!-- Vent to Flare -->
+  <line x1="450" y1="210" x2="450" y2="150" stroke="#f00" stroke-width="2" stroke-dasharray="3,3"/>
+  <text x="470" y="180" font-family="Arial, sans-serif" font-size="8" fill="#f00">To Flare</text>
+  
+  <!-- Vaporizer -->
+  <rect x="500" y="250" width="120" height="100" fill="#fff3e0" stroke="#e65100" stroke-width="3" rx="10"/>
+  <text x="560" y="285" font-family="Arial, sans-serif" font-size="14" fill="#000" text-anchor="middle" font-weight="bold">VAPORIZER</text>
+  <text x="560" y="305" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle">V-101</text>
+  <text x="560" y="325" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">500 kg/h</text>
+  
+  <!-- Heat arrows -->
+  <path d="M 520 330 L 520 345 M 540 330 L 540 345 M 560 330 L 560 345 M 580 330 L 580 345 M 600 330 L 600 345" 
+        stroke="#ff5722" stroke-width="2" fill="none"/>
+  <text x="560" y="365" font-family="Arial, sans-serif" font-size="9" fill="#e65100" text-anchor="middle">Heat Exchange</text>
+  
+  <!-- Temperature & Pressure after Vaporizer -->
+  <circle cx="650" cy="300" r="20" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="650" y="303" font-family="Arial, sans-serif" font-size="9" fill="#000" text-anchor="middle">TI</text>
+  <text x="650" y="314" font-family="Arial, sans-serif" font-size="7" fill="#000" text-anchor="middle">102</text>
+  
+  <!-- GH2 Pipeline -->
+  <line x1="620" y1="300" x2="750" y2="300" stroke="#4caf50" stroke-width="4"/>
+  <text x="685" y="290" font-family="Arial, sans-serif" font-size="9" fill="#000">GH2 2" SCH 40</text>
+  
+  <!-- Flow Control Valve -->
+  <polygon points="750,285 770,300 750,315" fill="#fff" stroke="#000" stroke-width="2"/>
+  <line x1="760" y1="280" x2="760" y2="320" stroke="#000" stroke-width="2"/>
+  <circle cx="760" cy="300" r="8" fill="#fff" stroke="#000" stroke-width="1"/>
+  <text x="760" y="340" font-family="Arial, sans-serif" font-size="9" fill="#000" text-anchor="middle">FCV-101</text>
+  
+  <!-- Flow Meter -->
+  <circle cx="830" cy="300" r="25" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="830" y="303" font-family="Arial, sans-serif" font-size="10" fill="#000" text-anchor="middle">FI</text>
+  <text x="830" y="315" font-family="Arial, sans-serif" font-size="8" fill="#000" text-anchor="middle">101</text>
+  <line x1="770" y1="300" x2="805" y2="300" stroke="#4caf50" stroke-width="4"/>
+  <line x1="855" y1="300" x2="950" y2="300" stroke="#4caf50" stroke-width="4"/>
+  
+  <!-- Pressure Regulator -->
+  <rect x="950" y="280" width="50" height="40" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="975" y="303" font-family="Arial, sans-serif" font-size="9" fill="#000" text-anchor="middle">PCV</text>
+  <text x="975" y="315" font-family="Arial, sans-serif" font-size="8" fill="#000" text-anchor="middle">101</text>
+  <text x="975" y="340" font-family="Arial, sans-serif" font-size="8" fill="#666" text-anchor="middle">35 bar</text>
+  
+  <!-- Pipeline to Dispenser -->
+  <line x1="1000" y1="300" x2="1100" y2="300" stroke="#4caf50" stroke-width="4"/>
+  
+  <!-- H2 Leak Detector -->
+  <rect x="1050" y="250" width="40" height="30" fill="#ffebee" stroke="#f00" stroke-width="2"/>
+  <text x="1070" y="268" font-family="Arial, sans-serif" font-size="8" fill="#000" text-anchor="middle">H2</text>
+  <text x="1070" y="278" font-family="Arial, sans-serif" font-size="8" fill="#000" text-anchor="middle">DET</text>
+  <text x="1070" y="295" font-family="Arial, sans-serif" font-size="7" fill="#000" text-anchor="middle">AE-101</text>
+  
+  <!-- Dispenser -->
+  <rect x="1100" y="250" width="100" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="5"/>
+  <text x="1150" y="285" font-family="Arial, sans-serif" font-size="14" fill="#000" text-anchor="middle" font-weight="bold">DISPENSER</text>
+  <text x="1150" y="305" font-family="Arial, sans-serif" font-size="11" fill="#000" text-anchor="middle">D-101</text>
+  <text x="1150" y="325" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">To Aircraft</text>
+  
+  <!-- Breakaway Coupling -->
+  <line x1="1200" y1="300" x2="1250" y2="300" stroke="#4caf50" stroke-width="4"/>
+  <circle cx="1250" cy="300" r="15" fill="#fff" stroke="#f00" stroke-width="2"/>
+  <text x="1250" y="280" font-family="Arial, sans-serif" font-size="8" fill="#f00" text-anchor="middle">Breakaway</text>
+  
+  <!-- Aircraft Connection -->
+  <line x1="1265" y1="300" x2="1320" y2="300" stroke="#4caf50" stroke-width="4"/>
+  <rect x="1320" y="275" width="60" height="50" fill="#bbdefb" stroke="#0d47a1" stroke-width="2"/>
+  <text x="1350" y="298" font-family="Arial, sans-serif" font-size="11" fill="#000" text-anchor="middle" font-weight="bold">AIRCRAFT</text>
+  <text x="1350" y="313" font-family="Arial, sans-serif" font-size="9" fill="#000" text-anchor="middle">H2 Tank</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="520" width="350" height="260" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="225" y="545" font-family="Arial, sans-serif" font-size="14" fill="#000" text-anchor="middle" font-weight="bold">LEGEND &amp; SYMBOLS</text>
+  
+  <line x1="70" y1="565" x2="120" y2="565" stroke="#1565c0" stroke-width="4"/>
+  <text x="130" y="570" font-family="Arial, sans-serif" font-size="10" fill="#000">Liquid H2 (LH2) Line</text>
+  
+  <line x1="70" y1="590" x2="120" y2="590" stroke="#4caf50" stroke-width="4"/>
+  <text x="130" y="595" font-family="Arial, sans-serif" font-size="10" fill="#000">Gaseous H2 (GH2) Line</text>
+  
+  <line x1="70" y1="615" x2="120" y2="615" stroke="#f00" stroke-width="2" stroke-dasharray="3,3"/>
+  <text x="130" y="620" font-family="Arial, sans-serif" font-size="10" fill="#000">Vent / Relief Line</text>
+  
+  <polygon points="70,635 90,650 70,665" fill="#fff" stroke="#000" stroke-width="2"/>
+  <line x1="80" y1="630" x2="80" y2="670" stroke="#000" stroke-width="2"/>
+  <text x="130" y="655" font-family="Arial, sans-serif" font-size="10" fill="#000">Motor Operated Valve (MOV)</text>
+  
+  <circle cx="80" cy="700" r="15" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="80" y="703" font-family="Arial, sans-serif" font-size="9" fill="#000" text-anchor="middle">PI</text>
+  <text x="130" y="705" font-family="Arial, sans-serif" font-size="10" fill="#000">Pressure Indicator</text>
+  
+  <circle cx="80" cy="735" r="15" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="80" y="738" font-family="Arial, sans-serif" font-size="9" fill="#000" text-anchor="middle">TI</text>
+  <text x="130" y="740" font-family="Arial, sans-serif" font-size="10" fill="#000">Temperature Indicator</text>
+  
+  <text x="225" y="770" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle" font-style="italic">
+    See detailed P&amp;ID sheets for complete instrumentation,
+  </text>
+  <text x="225" y="783" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle" font-style="italic">
+    control loops, and safety interlocks
+  </text>
+  
+  <!-- Safety Notes -->
+  <rect x="450" y="520" width="400" height="260" fill="#fff9c4" stroke="#f57c00" stroke-width="2"/>
+  <text x="650" y="545" font-family="Arial, sans-serif" font-size="14" fill="#e65100" text-anchor="middle" font-weight="bold">⚠ SAFETY REQUIREMENTS</text>
+  
+  <text x="460" y="570" font-family="Arial, sans-serif" font-size="10" fill="#000" font-weight="bold">1. Codes &amp; Standards:</text>
+  <text x="470" y="585" font-family="Arial, sans-serif" font-size="9" fill="#000">• ISO 14687 - Hydrogen fuel quality</text>
+  <text x="470" y="600" font-family="Arial, sans-serif" font-size="9" fill="#000">• ASME B31.12 - H2 piping &amp; pipelines</text>
+  <text x="470" y="615" font-family="Arial, sans-serif" font-size="9" fill="#000">• NFPA 2 - Hydrogen technologies code</text>
+  
+  <text x="460" y="640" font-family="Arial, sans-serif" font-size="10" fill="#000" font-weight="bold">2. Design Criteria:</text>
+  <text x="470" y="655" font-family="Arial, sans-serif" font-size="9" fill="#000">• Max operating pressure: 350 bar (GH2)</text>
+  <text x="470" y="670" font-family="Arial, sans-serif" font-size="9" fill="#000">• LH2 operating temp: -253°C</text>
+  <text x="470" y="685" font-family="Arial, sans-serif" font-size="9" fill="#000">• Leak detection: continuous monitoring</text>
+  
+  <text x="460" y="710" font-family="Arial, sans-serif" font-size="10" fill="#000" font-weight="bold">3. Safety Interlocks:</text>
+  <text x="470" y="725" font-family="Arial, sans-serif" font-size="9" fill="#000">• Emergency shutdown system (ESD)</text>
+  <text x="470" y="740" font-family="Arial, sans-serif" font-size="9" fill="#000">• Automated isolation on leak detection</text>
+  <text x="470" y="755" font-family="Arial, sans-serif" font-size="9" fill="#000">• Pressure relief to flare system</text>
+  <text x="470" y="770" font-family="Arial, sans-serif" font-size="9" fill="#000">• Breakaway couplings at dispenser</text>
+  
+  <!-- Reference Standards Box -->
+  <rect x="900" y="520" width="450" height="260" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="1125" y="545" font-family="Arial, sans-serif" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="bold">APPLICABLE STANDARDS &amp; REFERENCES</text>
+  
+  <text x="910" y="570" font-family="Arial, sans-serif" font-size="10" fill="#000" font-weight="bold">Design Codes:</text>
+  <text x="920" y="585" font-family="Arial, sans-serif" font-size="9" fill="#000">• ASME B31.12 - Hydrogen Piping</text>
+  <text x="920" y="600" font-family="Arial, sans-serif" font-size="9" fill="#000">• ASME BPVC Section VIII - Pressure Vessels</text>
+  <text x="920" y="615" font-family="Arial, sans-serif" font-size="9" fill="#000">• ISO 14687 - Hydrogen Fuel Quality</text>
+  
+  <text x="910" y="640" font-family="Arial, sans-serif" font-size="10" fill="#000" font-weight="bold">Safety Standards:</text>
+  <text x="920" y="655" font-family="Arial, sans-serif" font-size="9" fill="#000">• NFPA 2 - Hydrogen Technologies Code</text>
+  <text x="920" y="670" font-family="Arial, sans-serif" font-size="9" fill="#000">• IEC 60079 - Explosive Atmospheres</text>
+  <text x="920" y="685" font-family="Arial, sans-serif" font-size="9" fill="#000">• SAE AS 6858 - H2 Fueling Nozzles</text>
+  
+  <text x="910" y="710" font-family="Arial, sans-serif" font-size="10" fill="#000" font-weight="bold">Instrumentation:</text>
+  <text x="920" y="725" font-family="Arial, sans-serif" font-size="9" fill="#000">• ISA-5.1 - Instrumentation Symbols</text>
+  <text x="920" y="740" font-family="Arial, sans-serif" font-size="9" fill="#000">• IEC 61511 - Functional Safety (SIS)</text>
+  
+  <text x="1125" y="768" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle" font-style="italic">
+    ⚠ PLACEHOLDER - Professional P&amp;IDs required for certification
+  </text>
+</svg>

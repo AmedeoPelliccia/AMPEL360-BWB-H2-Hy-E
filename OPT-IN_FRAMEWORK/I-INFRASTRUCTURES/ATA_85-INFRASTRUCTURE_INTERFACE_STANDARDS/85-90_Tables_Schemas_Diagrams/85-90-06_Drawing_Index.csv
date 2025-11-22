@@ -1,0 +1,31 @@
+Drawing_Number,Drawing_Title,Discipline,Sheet_Size,Revision,Date,Status,Drawn_By,Checked_By,Approved_By,File_Path,Notes
+85-90-DWG-001,Site Layout Master Plan - Overall,Civil,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,85-90-05_Site_Layout_Master_Plan.svg,Conceptual layout placeholder
+85-90-DWG-002,Site Grading and Drainage Plan,Civil,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-003,Apron Pavement Details,Civil,C,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-004,H2 Facility Plot Plan,Civil,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-005,Electrical Single Line Diagram - Overall,Electrical,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,85-90-03_Electrical_Single_Line_Diagrams.svg,Conceptual SLD placeholder
+85-90-DWG-006,Electrical Single Line - H2 Facility,Electrical,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-007,Electrical Single Line - Apron Services,Electrical,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-008,Electrical Single Line - Emergency Power,Electrical,C,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-009,Power Distribution - One-Line Diagram,Electrical,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-010,Lighting Layout - Apron Area,Electrical,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-011,Grounding System Layout,Electrical,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-012,H2 P&ID - Storage and Distribution,Process,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,85-90-04_H2_PandID_Diagrams.svg,Conceptual P&ID placeholder
+85-90-DWG-013,H2 P&ID - Dispensing System,Process,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-014,H2 P&ID - Vaporization System,Process,C,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-015,H2 Safety Systems P&ID,Process,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-016,Fire Protection System Layout,Fire Safety,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-017,H2 Leak Detection System Layout,Safety,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-018,HVAC System Layout - H2 Facility,Mechanical,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-019,Compressed Air System P&ID,Mechanical,C,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-020,Water and Wastewater Systems,Plumbing,C,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-021,Control System Architecture Diagram,I&C,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-022,SCADA System Overview,I&C,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-023,Network Topology Diagram,IT,C,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-024,Security and Access Control Layout,Security,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-025,CCTV Camera Layout,Security,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-026,Telecommunications Infrastructure,Telecom,C,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-027,Aircraft Service Pit Details,Civil,B,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-028,Apron Utility Trenches,Civil,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-029,Storm Water Management Plan,Civil,D,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
+85-90-DWG-030,Architectural - Control Building,Architecture,C,A,2025-11-22,DRAFT,TBD,TBD,TBD,ASSETS/Diagrams/,To be developed
