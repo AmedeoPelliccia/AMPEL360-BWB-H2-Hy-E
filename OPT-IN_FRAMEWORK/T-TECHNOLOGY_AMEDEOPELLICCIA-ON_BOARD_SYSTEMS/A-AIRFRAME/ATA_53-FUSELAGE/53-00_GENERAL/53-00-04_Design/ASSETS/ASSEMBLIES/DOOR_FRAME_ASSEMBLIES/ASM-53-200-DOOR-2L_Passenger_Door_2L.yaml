@@ -108,4 +108,7 @@ links:
   fea_model_description: "../../02_Configuration_Items/Zone_200_Shell/CI-53-200-DOOR-2L_Passenger_Door_2L/ASSETS/Analysis/FEA_Model_Description.md"
   manufacturing_plan: "../../02_Configuration_Items/Zone_200_Shell/CI-53-200-DOOR-2L_Passenger_Door_2L/Manufacturing_Plan.md"
   qc_plan: "../ASSETS/QC_Inspection_Points.csv"
+  # Regulatory compliance references:
+  # - CS-25.783: https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27
+  # - CS-25.365: https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27
   regulatory_compliance: "CS-25.783 (Doors), CS-25.365 (Pressurization Loads)"

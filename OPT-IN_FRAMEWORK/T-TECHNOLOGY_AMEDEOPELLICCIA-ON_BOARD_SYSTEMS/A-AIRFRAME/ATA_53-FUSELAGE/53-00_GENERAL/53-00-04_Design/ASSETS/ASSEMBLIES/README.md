@@ -253,8 +253,8 @@ Assembly definitions link to detailed structural analysis:
 
 All assemblies must comply with:
 - [CS-25 Certification Specifications](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)
-- [DO-178C](https://www.rtca.org/) (for software-controlled assembly processes)
-- [DO-254](https://www.rtca.org/) (for electronic assembly elements)
+- [DO-178C](https://www.rtca.org/content/standards-program) (for software-controlled assembly processes)
+- [DO-254](https://www.rtca.org/content/standards-program) (for electronic assembly elements)
 - Internal standards in `ASSETS/Assembly_Standards.md`
 
 ### Inspection Points

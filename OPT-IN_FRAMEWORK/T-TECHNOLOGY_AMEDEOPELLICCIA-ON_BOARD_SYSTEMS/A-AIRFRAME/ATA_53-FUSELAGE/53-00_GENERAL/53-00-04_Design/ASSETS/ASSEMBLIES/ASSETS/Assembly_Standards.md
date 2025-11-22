@@ -11,31 +11,31 @@ This document defines the assembly standards applicable to all AMPEL360 BWB-H2-H
 ### Certification Specifications
 
 - **[CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)** — Certification Specifications for Large Aeroplanes
-  - CS-25.305 — Strength and Deformation
-  - CS-25.307 — Proof of Structure
-  - CS-25.365 — Pressurization
-  - CS-25.561 — Emergency Landing Conditions
-  - CS-25.562 — Emergency Landing Dynamic Conditions
-  - CS-25.721 — General (Landing Gear)
-  - CS-25.783 — Doors
-  - CS-25.787 — Cargo Compartment Doors
-  - CS-25.789 — Retention of Items of Mass
+  - [CS-25.305](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — Strength and Deformation
+  - [CS-25.307](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — Proof of Structure
+  - [CS-25.365](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — Pressurization
+  - [CS-25.561](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — Emergency Landing Conditions
+  - [CS-25.562](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — Emergency Landing Dynamic Conditions
+  - [CS-25.721](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — General (Landing Gear)
+  - [CS-25.783](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — Doors
+  - [CS-25.787](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — Cargo Compartment Doors
+  - [CS-25.789](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) — Retention of Items of Mass
 
 ### Industry Standards
 
-- **RTCA DO-178C** — Software Considerations in Airborne Systems (for automated assembly processes)
-- **RTCA DO-254** — Design Assurance Guidance for Airborne Electronic Hardware
-- **SAE ARP4754A** — Guidelines for Development of Civil Aircraft and Systems
-- **SAE ARP4761** — Guidelines and Methods for Conducting the Safety Assessment Process
-- **ISO 9001:2015** — Quality Management Systems
-- **AS9100D** — Quality Management Systems for Aviation, Space, and Defense
+- **[RTCA DO-178C](https://www.rtca.org/content/standards-program)** — Software Considerations in Airborne Systems (for automated assembly processes)
+- **[RTCA DO-254](https://www.rtca.org/content/standards-program)** — Design Assurance Guidance for Airborne Electronic Hardware
+- **[SAE ARP4754A](https://www.sae.org/standards/content/arp4754a/)** — Guidelines for Development of Civil Aircraft and Systems
+- **[SAE ARP4761](https://www.sae.org/standards/content/arp4761/)** — Guidelines and Methods for Conducting the Safety Assessment Process
+- **[ISO 9001:2015](https://www.iso.org/standard/62085.html)** — Quality Management Systems
+- **[AS9100D](https://www.sae.org/standards/content/as9100d/)** — Quality Management Systems for Aviation, Space, and Defense
 
 ### Material Standards
 
-- **ASTM D3039** — Standard Test Method for Tensile Properties of Polymer Matrix Composite Materials
-- **ASTM D7264** — Standard Test Method for Flexural Properties of Polymer Matrix Composite Materials
-- **ASTM E1444** — Standard Practice for Magnetic Particle Testing
-- **ASTM E2001** — Standard Guide for Resonant Ultrasound Spectroscopy for Defect Detection
+- **[ASTM D3039](https://www.astm.org/d3039_d3039m-17.html)** — Standard Test Method for Tensile Properties of Polymer Matrix Composite Materials
+- **[ASTM D7264](https://www.astm.org/d7264_d7264m-21.html)** — Standard Test Method for Flexural Properties of Polymer Matrix Composite Materials
+- **[ASTM E1444](https://www.astm.org/e1444_e1444m-16.html)** — Standard Practice for Magnetic Particle Testing
+- **[ASTM E2001](https://www.astm.org/e2001-18.html)** — Standard Guide for Resonant Ultrasound Spectroscopy for Defect Detection
 
 ---
 
@@ -51,8 +51,8 @@ This document defines the assembly standards applicable to all AMPEL360 BWB-H2-H
 
 2. **Personnel Qualifications**
    - Composite Technicians: Minimum 2 years experience or equivalent training
-   - NDT Inspectors: Level II certification per EN 4179 / NAS 410
-   - Quality Engineers: AS9100 Lead Auditor certification or equivalent
+   - NDT Inspectors: Level II certification per [EN 4179](https://asd-stan.org/downloads/en-4179/) / [NAS 410](https://www.aia-aerospace.org/standards/)
+   - Quality Engineers: [AS9100](https://www.sae.org/standards/content/as9100d/) Lead Auditor certification or equivalent
    - Assembly Leads: Minimum 5 years experience in aerospace assembly
 
 3. **Documentation**
@@ -78,8 +78,8 @@ This document defines the assembly standards applicable to all AMPEL360 BWB-H2-H
 3. **NDT Equipment**
    - Ultrasonic C-scan: Calibrated per manufacturer specification
    - X-ray equipment: Annual calibration and dose monitoring
-   - Eddy current: Calibrated per ASTM E1444
-   - Thermography: Calibrated per ISO 18434-1
+   - Eddy current: Calibrated per [ASTM E1444](https://www.astm.org/e1444_e1444m-16.html)
+   - Thermography: Calibrated per [ISO 18434-1](https://www.iso.org/standard/50511.html)
 
 ---
 
@@ -204,7 +204,7 @@ All fasteners must be torqued per the following table unless otherwise specified
 
 - **Method**: Film or digital radiography
 - **Coverage**: 100% of critical fastener clusters, welds, and metallic joints
-- **Acceptance**: Per ASTM E1742 and internal standard
+- **Acceptance**: Per [ASTM E1742](https://www.astm.org/e1742-20.html) and internal standard
 - **Documentation**: Retain images for record
 
 ### Visual Inspection

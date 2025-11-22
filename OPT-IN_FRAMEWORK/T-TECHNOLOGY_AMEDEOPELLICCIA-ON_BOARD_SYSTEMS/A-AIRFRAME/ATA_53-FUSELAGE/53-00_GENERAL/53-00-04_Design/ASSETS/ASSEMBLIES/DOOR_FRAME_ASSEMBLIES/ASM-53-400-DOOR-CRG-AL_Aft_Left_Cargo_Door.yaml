@@ -96,4 +96,6 @@ links:
   fea_model_description: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-DOOR-CRG-AL_Cargo_Door/ASSETS/Analysis/FEA_Model_Description.md"
   manufacturing_plan: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-DOOR-CRG-AL_Cargo_Door/Manufacturing_Plan.md"
   qc_plan: "../ASSETS/QC_Inspection_Points.csv"
+  # Regulatory compliance reference:
+  # - CS-25.787: https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27
   regulatory_compliance: "CS-25.787 (Cargo Compartment Doors)"

@@ -26,22 +26,22 @@ These activities occur simultaneously in different work cells:
 - **Upper Shell Module** (ASM-53-200-001)
   - Assembly Tool: AT-53-200-001
   - Duration: 6 weeks
-  - See: `ASM-53-200-001_Upper_Shell_Module.yaml`
+  - See: [ASM-53-200-001_Upper_Shell_Module.yaml](ASM-53-200-001_Upper_Shell_Module.yaml)
 
 - **Lower Shell Module** (ASM-53-200-002)
   - Assembly Tool: AT-53-200-002
   - Duration: 6 weeks
-  - See: `ASM-53-200-002_Lower_Shell_Module.yaml`
+  - See: [ASM-53-200-002_Lower_Shell_Module.yaml](ASM-53-200-002_Lower_Shell_Module.yaml)
 
 - **Side Shell Left** (ASM-53-300-001)
   - Assembly Tool: AT-53-300-001
   - Duration: 5 weeks
-  - See: `ASM-53-300-001_Side_Shell_Left.yaml`
+  - See: [ASM-53-300-001_Side_Shell_Left.yaml](ASM-53-300-001_Side_Shell_Left.yaml)
 
 - **Side Shell Right** (ASM-53-300-002)
   - Assembly Tool: AT-53-300-002
   - Duration: 5 weeks
-  - See: `ASM-53-300-002_Side_Shell_Right.yaml`
+  - See: [ASM-53-300-002_Side_Shell_Right.yaml](ASM-53-300-002_Side_Shell_Right.yaml)
 
 ### Phase 2: Lower-to-Side Integration (Week 7-8)
 
@@ -101,12 +101,12 @@ These activities occur simultaneously in different work cells:
 
 ### Phase 4: Floor and Door Integration (Week 11-12)
 
-**Step 4.1**: Install floor beam assemblies (see FLOOR_ASSEMBLIES/)
+**Step 4.1**: Install floor beam assemblies (see [FLOOR_ASSEMBLIES](../FLOOR_ASSEMBLIES/))
 - Primary beam grid
 - Floor panels
 - Seat tracks
 
-**Step 4.2**: Install door frame assemblies (see DOOR_FRAME_ASSEMBLIES/)
+**Step 4.2**: Install door frame assemblies (see [DOOR_FRAME_ASSEMBLIES](../DOOR_FRAME_ASSEMBLIES/))
 - 8 passenger door frames
 - 4 cargo door frames
 
