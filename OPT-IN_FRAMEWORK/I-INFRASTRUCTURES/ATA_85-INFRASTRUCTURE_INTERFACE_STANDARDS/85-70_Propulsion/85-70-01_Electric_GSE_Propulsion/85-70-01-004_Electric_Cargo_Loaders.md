@@ -181,7 +181,7 @@ This document defines specifications and requirements for battery-electric cargo
 ### 6.2 Safety Standards
 
 - [ISO 13849-1](https://www.iso.org/standard/69883.html) – Safety-related parts of control systems
-- [EN 1915-2](https://standards.iteh.ai/catalog/standards/cen/1a3a0f0c-0a1e-4f5e-9e6e-5c0f5e5e5e5e/en-1915-2-2013) – Aircraft ground support equipment - Safety requirements - Loader/transporters
+- [EN 1915-2](https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT,FSP_ORG_ID:1915%202,6256) – Aircraft ground support equipment - Safety requirements - Loader/transporters
 - [ISO 23386](https://www.iso.org/standard/75365.html) – Building construction machinery and equipment - Safety requirements
 
 ### 6.3 Electric Vehicle Standards
