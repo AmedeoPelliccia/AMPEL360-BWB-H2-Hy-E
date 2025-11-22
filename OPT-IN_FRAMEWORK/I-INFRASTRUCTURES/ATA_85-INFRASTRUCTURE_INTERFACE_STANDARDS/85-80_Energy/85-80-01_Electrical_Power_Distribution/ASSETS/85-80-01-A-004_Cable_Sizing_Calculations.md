@@ -196,10 +196,10 @@ For copper XLPE (k = 143):
 S_min = √(25000² × 1) / 143
       = √(625,000,000) / 143
       = 25000 / 143
-      = 175 mm²
+      = 174.8 mm²
 ```
 
-**Check:** 240 mm² > 175 mm² ✓
+**Check:** 240 mm² > 174.8 mm² ✓
 
 **Result:** 240 mm² copper XLPE cable is suitable.
 
