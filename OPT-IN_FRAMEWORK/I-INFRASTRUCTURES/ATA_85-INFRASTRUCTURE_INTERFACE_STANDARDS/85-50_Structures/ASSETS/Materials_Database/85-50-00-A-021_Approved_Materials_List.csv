@@ -1,9 +1,9 @@
-Material_ID,Material_Name,Standard,Application,Embodied_Carbon_kgCO2e_per_unit,Recycled_Content_pct,Recyclability_pct
-STL-001,Structural Steel A992,ASTM A992,General framing,1800 per tonne,90,>95
-STL-002,Stainless Steel 316,ASTM A240,H2 components,5500 per tonne,60,>90
-STL-003,9% Ni Steel,ASTM A553,Cryogenic tanks,2300 per tonne,50,>90
-CON-001,Low-Carbon Concrete,ACI 318,Foundations,120 per m3,30 (agg),70
-CON-002,High-Strength Concrete,ACI 318,Special structures,150 per m3,20,70
-REI-001,Rebar Grade 60,ASTM A615,Concrete reinforcement,600 per tonne,95,>95
-INS-001,Mineral Wool,EN 15101,Building insulation,15 per m2,70,70
-INS-002,PU Foam,ISO 4589,Cryogenic insulation,25 per m2,10,20
+Material_ID,Material_Name,Standard,Application,Embodied_Carbon_kgCO2e,Unit,Recycled_Content_pct,Recyclability_pct
+STL-001,Structural Steel A992,ASTM A992,General framing,1800,per tonne,90,>95
+STL-002,Stainless Steel 316,ASTM A240,H2 components,5500,per tonne,60,>90
+STL-003,9% Ni Steel,ASTM A553,Cryogenic tanks,2300,per tonne,50,>90
+CON-001,Low-Carbon Concrete,ACI 318,Foundations,120,per m3,30 (agg),70
+CON-002,High-Strength Concrete,ACI 318,Special structures,150,per m3,20,70
+REI-001,Rebar Grade 60,ASTM A615,Concrete reinforcement,600,per tonne,95,>95
+INS-001,Mineral Wool,EN 15101,Building insulation,15,per m2,70,70
+INS-002,PU Foam,ISO 4589,Cryogenic insulation,25,per m2,10,20

@@ -107,7 +107,7 @@ This document provides guidance on adapting infrastructure structures for cold c
 ## 7. Cross-References
 
 - [85-50-00-003_Material_Selection_Strategy.md](../../../85-50-00-003_Material_Selection_Strategy.md): Material requirements
-- [ASSETS/Design_Criteria/85-50-00-A-015_Snow_Load_Requirements.csv](../../Design_Criteria/): Snow load data
+- [85-50-00-A-015_Snow_Load_Requirements.csv](../../Design_Criteria/85-50-00-A-015_Snow_Load_Requirements.csv): Snow load data
 
 ---
 

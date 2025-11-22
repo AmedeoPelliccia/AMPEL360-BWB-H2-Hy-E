@@ -7,4 +7,4 @@ H2_Storage_Tank,Varies,0,2.5,High,Thermal: -253°C
 Maintenance_Hangar,4.0,5.0,2.0,Site-specific,Snow: per location
 Electrical_Substation,3.5,4.0,1.5,Site-specific,Seismic: critical
 Safety_Barriers,5.0,0,1.5,Site-specific,Blast: 150 kPa
-Aircraft_Apron,5.0,Aircraft_ACN,0.8,Site-specific,Thermal: ±40°C
+Aircraft_Apron,5.0,Per ACN-PCN analysis,0.8,Site-specific,Thermal: ±40°C; BWB landing gear loads per 85-50-09
