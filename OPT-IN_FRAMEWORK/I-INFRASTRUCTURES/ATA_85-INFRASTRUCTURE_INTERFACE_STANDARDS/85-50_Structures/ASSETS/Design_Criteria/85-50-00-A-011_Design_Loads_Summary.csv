@@ -1,0 +1,10 @@
+Structure_Type,Dead_Load_kPa,Live_Load_kPa,Wind_Load_kPa,Seismic_Zone,Special_Loads
+H2_Dispensing_Station,2.5,3.0,1.5,Site-specific,Blast: 100 kPa
+Battery_Charging_Station,2.0,2.5,1.2,Site-specific,Equipment: 5.0 kPa
+Passenger_Jetway,1.5,4.8,2.0,Site-specific,Moving load: 10 kN
+GSE_Hangar,3.0,5.0,1.8,Site-specific,Crane: per design
+H2_Storage_Tank,Varies,0,2.5,High,Thermal: -253°C
+Maintenance_Hangar,4.0,5.0,2.0,Site-specific,Snow: per location
+Electrical_Substation,3.5,4.0,1.5,Site-specific,Seismic: critical
+Safety_Barriers,5.0,0,1.5,Site-specific,Blast: 150 kPa
+Aircraft_Apron,5.0,Per ACN-PCN analysis,0.8,Site-specific,Thermal: ±40°C; BWB landing gear loads per 85-50-09
