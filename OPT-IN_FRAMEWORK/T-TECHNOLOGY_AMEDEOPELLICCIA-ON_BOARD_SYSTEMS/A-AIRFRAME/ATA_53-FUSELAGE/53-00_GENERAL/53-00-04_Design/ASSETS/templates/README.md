@@ -127,8 +127,10 @@ This folder contains standard templates for design documentation in the 53-00-04
 - **Version**: 1.0
 - **Date**: 2025-11-22
 - **Owner**: Configuration Manager
+- **Status**: DRAFT
 - **Repository**: `AMPEL360-BWB-H2-Hy-E`
+
+**AI Assistance**:
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
 - Last AI update: _2025-11-22_.
