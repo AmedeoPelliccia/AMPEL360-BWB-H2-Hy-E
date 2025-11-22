@@ -1,0 +1,10 @@
+Source Format,Target Format,Conversion Tool,Quality Loss,Recommended Use,Validation Required,Notes
+CATIA V5,STEP AP214,CATIA Export,Minimal,Manufacturing & Certification,Yes,Preferred neutral format
+CATIA V5,IGES 5.3,CATIA Export,Moderate,Legacy system compatibility,Yes,Surface-based only
+CATIA V5,JT 10.5,CATIA Export,High (visualization only),Design reviews,No,Lightweight format
+STEP AP214,IGES 5.3,CAD Translator,Moderate,Supplier compatibility,Yes,Fallback option
+STEP AP214,Nastran BDF,HyperMesh,N/A,FEA analysis,Yes,Requires meshing
+CATIA V5,Nastran BDF,HyperMesh,N/A,FEA analysis,Yes,Direct import preferred
+CATIA V5,ANSYS,ANSYS Workbench,N/A,FEA analysis,Yes,Native interface available
+CATIA V5,PDF 3D,3D PDF Exporter,High,Customer deliverables,No,Non-editable format
+STEP AP214,glTF 2.0,Blender/Custom,High,Digital twin visualization,Yes,For web-based viewers

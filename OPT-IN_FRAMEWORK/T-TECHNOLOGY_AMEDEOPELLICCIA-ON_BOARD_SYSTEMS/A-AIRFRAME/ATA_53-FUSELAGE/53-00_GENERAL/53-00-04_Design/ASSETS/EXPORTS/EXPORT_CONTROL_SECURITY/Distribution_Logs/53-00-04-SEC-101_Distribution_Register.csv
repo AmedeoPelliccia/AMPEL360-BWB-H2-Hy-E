@@ -1,0 +1,5 @@
+Distribution ID,Date,Recipient Organization,Recipient Name,Package ID,Export Authorization,Destination Country,Purpose,Return Date,Status
+SEC-101-001,2025-10-25,Supplier A Corporation,John Smith,53-00-04-SPLR-A,License Exception,USA,Manufacturing,N/A,Completed
+SEC-101-002,2025-10-26,Airline Customer XYZ,Jane Doe,53-00-04-CUST-001,EAR99,Germany,Technical Data,N/A,Completed
+SEC-101-003,2025-10-28,Test Facility ABC,Bob Johnson,53-00-04-ANLS-001,EAR99,France,Testing Support,2025-12-01,Active
+SEC-101-004,2025-11-01,Supplier B Ltd,Alice Williams,53-00-04-SPLR-B,License Exception,UK,Manufacturing,N/A,Completed

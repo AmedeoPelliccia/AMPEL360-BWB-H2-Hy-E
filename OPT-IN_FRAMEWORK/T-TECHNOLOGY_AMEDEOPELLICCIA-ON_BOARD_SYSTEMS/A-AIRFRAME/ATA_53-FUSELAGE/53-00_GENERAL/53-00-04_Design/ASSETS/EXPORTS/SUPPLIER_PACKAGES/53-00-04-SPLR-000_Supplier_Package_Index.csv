@@ -1,0 +1,4 @@
+Package ID,Supplier Name,Supplier ID,Part Numbers,Package Date,Revision,Contents,DPP Included,Export Control,Status
+53-00-04-SPLR-A,Supplier A Bulkheads,SPLR-A,"53-10-1000, 53-10-1100",2025-10-20,RevC,"TDP, Drawings, 3D Models, ICD, DPP Template",Yes,EAR99,Released
+53-00-04-SPLR-B,Supplier B Frames,SPLR-B,"53-20-2000, 53-20-2100",2025-10-20,RevB,"TDP, Drawings, 3D Models, Requirements, ICD",Yes,EAR99,Released
+53-00-04-SPLR-C,Supplier C Fittings,SPLR-C,"53-40-1000-1050",2025-10-15,RevA,"Technical Data, Drawings, Requirements",Yes,ITAR Category VIII(a),Under Review
