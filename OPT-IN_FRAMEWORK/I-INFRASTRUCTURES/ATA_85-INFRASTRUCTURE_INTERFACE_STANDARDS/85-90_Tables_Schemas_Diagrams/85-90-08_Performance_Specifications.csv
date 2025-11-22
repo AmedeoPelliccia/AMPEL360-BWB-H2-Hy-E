@@ -2,7 +2,7 @@ Spec_ID,System_Name,Parameter,Specification_Value,Unit,Min_Value,Max_Value,Nomin
 PS-85-001,H2 Refueling System,Dispensing Rate,1000,kg/h,800,1200,1000,±10%,Flow test per SAE AS 6858,SAE AS 6858,Critical,TBD,Target 5-minute refuel time
 PS-85-002,H2 Refueling System,Operating Pressure,350,bar,340,360,350,±2.9%,Pressure calibration,ISO 19880-1,Critical,TBD,700 bar option for future expansion
 PS-85-003,H2 Refueling System,H2 Purity,99.97,%,99.95,100.0,99.97,+0.03%,Gas chromatography,ISO 14687:2019,Critical,TBD,Aviation-grade hydrogen
-PS-85-004,H2 Refueling System,Maximum Impurities - Total,300,ppm,0,300,<100,N/A,Lab analysis,ISO 14687:2019,Critical,TBD,Water + hydrocarbons + other
+PS-85-004,H2 Refueling System,Maximum Impurities - Total,300,ppm,0,300,100,N/A,Lab analysis,ISO 14687:2019,Critical,TBD,Target <100 ppm; 300 ppm is absolute maximum allowed. Water + hydrocarbons + other
 PS-85-005,H2 Refueling System,Connection Time,30,seconds,20,45,30,±15s,Operator trial,SAE AS 6858,Important,TBD,Automated quick disconnect
 PS-85-006,H2 Refueling System,Leak Rate,<1,mL/min @ 350 bar,0,1,0,N/A,Helium leak test,SAE AS 6858,Critical,TBD,Zero leakage target
 PS-85-007,H2 Storage System,Total Capacity,10000,kg,N/A,N/A,10000,N/A,Volumetric calculation,ASME BPVC Sect VIII,Critical,TBD,Three 10000 kg tanks
