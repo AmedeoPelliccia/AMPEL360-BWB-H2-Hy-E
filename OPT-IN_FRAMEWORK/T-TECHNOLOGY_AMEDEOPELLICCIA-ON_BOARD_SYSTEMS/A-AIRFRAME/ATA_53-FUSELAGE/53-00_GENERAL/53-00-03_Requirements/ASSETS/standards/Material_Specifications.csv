@@ -1,0 +1,13 @@
+Material_ID,Material_Name,Material_Type,Specification,Form,Primary_Use_in_Fuselage,Structural_Properties,Certification_Status,Supplier,Remarks
+MAT-53-001,Aluminum 2024-T3,Aluminum Alloy,AMS 4037,Sheet,Fuselage skin,"Ftu=65 ksi, Fty=47 ksi, E=10.5 Msi",Qualified,Multiple suppliers,Standard fuselage skin material
+MAT-53-002,Aluminum 7075-T6,Aluminum Alloy,AMS 4045,Plate,Frames and stringers,"Ftu=80 ksi, Fty=70 ksi, E=10.3 Msi",Qualified,Multiple suppliers,High-strength structural members
+MAT-53-003,IM7/8552 Carbon Epoxy,Composite,AMS 3894,Unidirectional Tape,Composite panels,"Ftu=360 ksi (0°), E1=21.5 Msi",Qualification in progress,Hexcel,Advanced composite structure
+MAT-53-004,IM7/8552 Carbon Epoxy,Composite,AMS 3895,Woven Fabric,Composite panels,"Ftu=140 ksi, E=9.8 Msi",Qualification in progress,Hexcel,Damage tolerant layups
+MAT-53-005,Ti-6Al-4V,Titanium Alloy,AMS 4911,Sheet,Fire barriers and high-temp areas,"Ftu=135 ksi, Fty=125 ksi, E=16.5 Msi",Qualified,Multiple suppliers,Fire protection applications
+MAT-53-006,PEI (Ultem),Thermoplastic,AMS 3645,Film,Interior panels and trim,"Ftu=15 ksi, E=0.5 Msi, UL94 V-0",Qualified,SABIC,Fire-resistant interior
+MAT-53-007,Aramid (Kevlar) Insulation,Fibrous Insulation,AMS 3819,Blanket,Thermal/acoustic insulation,Fire resistant per FAR 25.856,Qualified,DuPont,Burn-through protection
+MAT-53-008,Steel 15-5PH,Stainless Steel,AMS 5659,Bar,Landing gear fittings and attachments,"Ftu=220 ksi, Fty=205 ksi, E=28.5 Msi",Qualified,Multiple suppliers,High-strength fittings
+MAT-53-009,Aluminum Honeycomb 5052,Aluminum Honeycomb,AMS 4431,Core,Floor panels and energy absorbers,"Crush strength varies by density",Qualified,Hexcel/Plascore,Energy absorption
+MAT-53-010,Epoxy Adhesive FM300,Structural Adhesive,AMS 3832,Film,Bonded joints and repairs,"Lap shear=5 ksi, Peel=40 lb/in",Qualified,Cytec,Elevated temperature capability
+MAT-53-011,Sealant PR1440,Polysulfide Sealant,MIL-S-8802,Paste,Fuel tank sealing and joints,Fuel resistant per MIL-S-8802,Qualified,PRC-DeSoto,Pressure vessel sealing
+MAT-53-012,Paint/Primer System,Coating,MIL-PRF-85582,Liquid,Corrosion protection,"Adhesion per ASTM D3359, Salt spray per ASTM B117",Qualified,Akzo Nobel,Exterior protection
