@@ -1,0 +1,44 @@
+version: 2
+
+updates:
+  # 1️⃣ GitHub Actions workflows (.github/workflows)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      timezone: "Europe/Madrid"
+    open-pull-requests-limit: 10
+
+  # 2️⃣ Python – root-level tools (if you have requirements.txt / pyproject.toml)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      timezone: "Europe/Madrid"
+    open-pull-requests-limit: 10
+
+  # 3️⃣ Python – CI scripts under tools/ci (check_dimensions, check_mass_properties, etc.)
+  - package-ecosystem: "pip"
+    directory: "/tools/ci"
+    schedule:
+      interval: "weekly"
+      timezone: "Europe/Madrid"
+    open-pull-requests-limit: 10
+
+  # 4️⃣ Node – doc-meta-enforcer MCP server
+  - package-ecosystem: "npm"
+    directory: "/tools/doc-meta-enforcer-mcp"
+    schedule:
+      interval: "weekly"
+      timezone: "Europe/Madrid"
+    versioning-strategy: "increase-if-necessary"
+    open-pull-requests-limit: 10
+
+  # 5️⃣ Docker – if you add Dockerfiles (can remove if not used yet)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      timezone: "Europe/Madrid"
+    open-pull-requests-limit: 5
+
