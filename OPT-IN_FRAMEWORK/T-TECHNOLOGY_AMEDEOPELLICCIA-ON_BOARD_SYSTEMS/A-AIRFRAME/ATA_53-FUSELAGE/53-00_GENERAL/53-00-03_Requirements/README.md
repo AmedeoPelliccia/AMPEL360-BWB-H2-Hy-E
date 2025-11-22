@@ -140,7 +140,7 @@ All matrices are provided in CSV format for:
 - **Lifecycle Position**: 03 of 14
 - **Status**: Active
 - **Last Updated**: 2025-11-22
-- **Total Requirements**: 35 (across 7 categories)
+- **Total Requirements**: 33 (across 7 categories)
 
 ## Related Folders
 
