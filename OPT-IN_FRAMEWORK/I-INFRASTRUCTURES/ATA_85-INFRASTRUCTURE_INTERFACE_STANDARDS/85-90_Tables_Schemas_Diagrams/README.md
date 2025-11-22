@@ -284,9 +284,9 @@ The structure is **design-driven** and flexible:
 - [85-10 Operations](../../85-10_Operations/) - Operational procedures for ground infrastructure
 
 ### Related ATA Chapters
-- [ATA 02 - Operations Information](../../../ATA_02-OPERATIONS_INFORMATION/) - Flight operations data
-- [ATA 10 - Parking, Mooring, Storage](../../../ATA_10-PARKING_MOORING_STORAGE_RTS/) - Aircraft ground handling
-- [ATA 13 - Hardware and General Tools](../../../ATA_13-HARDWARE_AND_GENERAL_TOOLS/) - GSE specifications
+- [ATA 02 - Operations Information](/ATA_02-OPERATIONS_INFORMATION/) - Flight operations data
+- [ATA 10 - Parking, Mooring, Storage](/ATA_10-PARKING_MOORING_STORAGE_RTS/) - Aircraft ground handling
+- [ATA 13 - Hardware and General Tools](/ATA_13-HARDWARE_AND_GENERAL_TOOLS/) - GSE specifications
 
 ## Status
 
