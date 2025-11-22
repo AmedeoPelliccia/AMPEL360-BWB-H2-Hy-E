@@ -38,7 +38,8 @@ Standards for wind turbine installations at airport facilities.
 
 - [IEC 61400](https://www.iec.ch/) - Wind turbine standards
 - [IEEE 1547](https://standards.ieee.org/) - DER interconnection
-- Local aviation authority regulations
+- [ICAO Annex 14](https://www.icao.int/) - Aerodromes - obstacle limitation surfaces
+- Local aviation authority regulations (FAA/EASA)
 
 ## Document Control
 

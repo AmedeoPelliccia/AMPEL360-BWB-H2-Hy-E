@@ -36,7 +36,7 @@ Standards for flywheel energy storage systems for short-duration, high-power app
 ## Standards
 
 - [IEC 62933](https://www.iec.ch/) - Electrical energy storage systems
-- [ISO 17225](https://www.iso.org/) - Solid biofuels specifications (for composite rotors)
+- [ISO 527](https://www.iso.org/) - Plastics - Determination of tensile properties (for composite rotor materials)
 
 ## Document Control
 
