@@ -150,7 +150,7 @@ This document defines the specifications and requirements for battery-electric b
 ### 6.2 Safety Standards
 
 - [ISO 13849-1](https://www.iso.org/standard/69883.html) – Safety of machinery - Safety-related parts of control systems
-- [EN 1915-1](https://standards.iteh.ai/catalog/standards/cen/1a3a0f0c-0a1e-4f5e-9e6e-5c0f5e5e5e5e/en-1915-1-2013) – Aircraft ground support equipment - General requirements
+- [EN 1915-1](https://www.en-standard.eu/csn-en-1915-1-aircraft-ground-support-equipment-general-requirements/) – Aircraft ground support equipment - General requirements
 - [ANSI/ITSDF B56.1](https://webstore.ansi.org/standards/itsdf/ansiitsdfb561) – Safety standard for low lift and high lift trucks
 
 ### 6.3 Electric Vehicle Standards
