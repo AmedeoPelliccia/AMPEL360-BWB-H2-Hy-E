@@ -129,13 +129,13 @@ Per [85-50-00-003_Material_Selection_Strategy.md](../../85-50-00-003_Material_Se
 
 ### 7.1 General Approach
 
-- [Prefabrication/Site-built]
+- Charging station structures may be constructed using prefabricated modules or site-built methods, depending on site constraints and project requirements. Selection of construction approach should be based on equipment manufacturer recommendations and site survey results.
 - Quality control procedures
 - Inspection and testing requirements
 
 ### 7.2 Special Considerations
 
-- [To be detailed based on structure type]
+- Special construction considerations (e.g., foundation type, anchorage, corrosion protection) will be determined based on the specific charging station structure type. Reference equipment manufacturer documentation and site survey data for final requirements.
 
 ---
 
