@@ -1,0 +1,6 @@
+DetailID,Location,DetailType,FatigueCriticality,InspectionInterval_FH
+FD-001,Frame Sta 12.5 - Stringer Attach,Fastener Hole,High,3000
+FD-002,Door Corner,Cutout,Critical,1500
+FD-003,Window Frame,Cutout,Medium,5000
+FD-004,Landing Gear Fitting,Lug,Critical,1000
+FD-005,Splice Joint Sta 20,Fastener,Medium,4000

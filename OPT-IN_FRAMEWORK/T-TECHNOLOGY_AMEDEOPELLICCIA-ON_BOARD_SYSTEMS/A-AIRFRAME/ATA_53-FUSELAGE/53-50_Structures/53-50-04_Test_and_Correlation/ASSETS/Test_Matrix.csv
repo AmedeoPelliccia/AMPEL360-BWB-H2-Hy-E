@@ -1,0 +1,7 @@
+TestID,TestArticle,TestType,Status,PlannedDate
+T-001,Panel Section A,Static Ultimate,Complete,2025-10-15
+T-002,Frame Assembly,Static Ultimate,Complete,2025-11-01
+T-003,Door Frame,Static + Fatigue,Planned,2026-01-15
+T-004,Landing Gear Fitting,Static Ultimate,In Progress,2025-12-10
+T-005,Full Scale Article,Static Test,Planned,2026-06-01
+T-006,Full Scale Article,Fatigue Test,Planned,2026-09-01

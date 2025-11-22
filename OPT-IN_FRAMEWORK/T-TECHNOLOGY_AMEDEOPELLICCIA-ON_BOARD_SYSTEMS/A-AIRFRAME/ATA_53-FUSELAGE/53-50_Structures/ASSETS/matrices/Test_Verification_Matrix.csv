@@ -1,0 +1,6 @@
+TestID,ComponentTested,TestType,Status,CompletionDate,ReportReference
+T-001,Panel Section A,Static Ultimate,Complete,2025-10-15,TR-001-2025
+T-002,Frame Assembly,Static Ultimate,Complete,2025-11-01,TR-002-2025
+T-003,Landing Gear Fitting,Static Ultimate,In Progress,Planned,TBD
+T-004,Full Scale Article,Static Test,Planned,2026-Q2,TBD
+T-005,Full Scale Article,Fatigue Test,Planned,2026-Q3,TBD

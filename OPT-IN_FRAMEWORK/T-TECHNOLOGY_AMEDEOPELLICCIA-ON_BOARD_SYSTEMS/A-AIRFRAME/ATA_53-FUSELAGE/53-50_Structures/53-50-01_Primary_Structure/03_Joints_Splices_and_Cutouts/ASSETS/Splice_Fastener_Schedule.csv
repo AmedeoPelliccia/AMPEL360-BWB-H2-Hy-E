@@ -1,0 +1,4 @@
+SpliceID,FastenerType,FastenerSize_mm,Pitch_mm,Rows,MaterialSpec
+SP-001,Hi-Lok Titanium,6.35,25,3,NAS1352
+SP-002,Hi-Lok Titanium,4.76,20,2,NAS1352
+SP-003,Hi-Lite,6.35,30,3,HL12
