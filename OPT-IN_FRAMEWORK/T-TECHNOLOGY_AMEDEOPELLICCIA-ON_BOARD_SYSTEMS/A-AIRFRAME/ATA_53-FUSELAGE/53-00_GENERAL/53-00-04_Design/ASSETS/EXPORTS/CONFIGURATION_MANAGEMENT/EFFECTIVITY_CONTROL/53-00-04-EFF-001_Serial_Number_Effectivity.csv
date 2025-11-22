@@ -1,0 +1,6 @@
+Part Number,Description,Revision,Effective Serial Numbers,Effectivity Type,Implementation Date,Supersedes,Notes
+53-10-1000,Forward Bulkhead Assembly,RevC,001-050,Standard,2025-10-20,RevB,CDR baseline configuration
+53-10-1000,Forward Bulkhead Assembly,RevD,051+,Improved,2026-03-01,RevC,Production release with manufacturing optimizations
+53-10-2000,NLG Bay Structure,RevB,001-050,Standard,2025-10-20,RevA,Reinforced attachment points
+53-10-2000,NLG Bay Structure,RevC,051+,Improved,2026-03-01,RevB,Production release configuration
+53-10-9000,Zone 100 Complete Assembly,RevC,001+,Standard,2025-10-20,,Complete zone assembly for all aircraft

@@ -1,0 +1,41 @@
+{
+  "baseline_id": "53-00-04-BL-002",
+  "baseline_name": "CDR Baseline",
+  "baseline_date": "2025-10-20",
+  "milestone": "Critical Design Review",
+  "status": "Approved",
+  "approver": "Chief Engineer - Airframe",
+  "description": "Configuration baseline established at CDR for ATA 53 Fuselage design",
+  "artifacts": [
+    {
+      "artifact_id": "53-10-1000",
+      "name": "Forward_Bulkhead_Assembly",
+      "revision": "RevC",
+      "file": "53-10-1000_RevC_Forward_Bulkhead_Assembly.step",
+      "checksum": "sha256:[to be calculated]",
+      "status": "Released"
+    },
+    {
+      "artifact_id": "53-10-2000",
+      "name": "NLG_Bay_Structure",
+      "revision": "RevB",
+      "file": "53-10-2000_RevB_NLG_Bay_Structure.step",
+      "checksum": "sha256:[to be calculated]",
+      "status": "Released"
+    },
+    {
+      "artifact_id": "53-10-9000",
+      "name": "Zone_100_Complete_Assembly",
+      "revision": "RevC",
+      "file": "53-10-9000_RevC_Zone_100_Complete_Assembly.step",
+      "checksum": "sha256:[to be calculated]",
+      "status": "Released"
+    }
+  ],
+  "requirements_snapshot": {
+    "total_requirements": 278,
+    "verified_requirements": 276,
+    "validation_status": "Complete"
+  },
+  "notes": "CDR baseline with all design changes incorporated. Ready for production preparation."
+}

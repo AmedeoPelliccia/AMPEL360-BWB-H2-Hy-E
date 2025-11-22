@@ -1,0 +1,88 @@
+{
+  "digital_product_passport_id": "53-00-04-DPP-001",
+  "product_name": "ATA 53 Fuselage - Complete Structure",
+  "manufacturer": "AMPEL360 Manufacturing",
+  "compliance_standard": "EU Digital Product Passport Regulation (EU) 2024/xxx",
+  "last_updated": "2025-11-22",
+  "material_composition": {
+    "primary_materials": [
+      {
+        "material_id": "CFRP-001",
+        "material_name": "Carbon Fiber Reinforced Polymer",
+        "percentage_by_weight": 45.5,
+        "specification": "AS4/8552 Unidirectional Tape",
+        "supplier": "Hexcel Corporation",
+        "origin_country": "USA",
+        "certifications": ["AS9100D", "NADCAP"],
+        "recyclability": "Mechanical recycling possible",
+        "hazardous_substances": "None"
+      },
+      {
+        "material_id": "AL-7075-T6",
+        "material_name": "Aluminum Alloy 7075-T6",
+        "percentage_by_weight": 28.3,
+        "specification": "AMS 4045",
+        "supplier": "Alcoa",
+        "origin_country": "USA",
+        "certifications": ["AS9100D"],
+        "recyclability": "100% recyclable",
+        "hazardous_substances": "None"
+      },
+      {
+        "material_id": "TI-6AL-4V",
+        "material_name": "Titanium Alloy Ti-6Al-4V",
+        "percentage_by_weight": 15.2,
+        "specification": "AMS 4911",
+        "supplier": "VSMPO-AVISMA",
+        "origin_country": "Russia",
+        "certifications": ["AS9100D", "EN 9100"],
+        "recyclability": "95% recyclable",
+        "hazardous_substances": "None"
+      },
+      {
+        "material_id": "STEEL-15-5PH",
+        "material_name": "Stainless Steel 15-5 PH",
+        "percentage_by_weight": 8.7,
+        "specification": "AMS 5659",
+        "supplier": "Carpenter Technology",
+        "origin_country": "USA",
+        "certifications": ["AS9100D"],
+        "recyclability": "100% recyclable",
+        "hazardous_substances": "None"
+      }
+    ],
+    "coatings_and_finishes": [
+      {
+        "coating_id": "PRIMER-001",
+        "coating_name": "Epoxy Primer",
+        "percentage_by_weight": 1.8,
+        "specification": "MIL-PRF-23377",
+        "hazardous_substances": "Chromium VI below threshold",
+        "application_areas": "Aluminum surfaces"
+      },
+      {
+        "coating_id": "TOPCOAT-001",
+        "coating_name": "Polyurethane Topcoat",
+        "percentage_by_weight": 0.5,
+        "specification": "MIL-PRF-85285",
+        "hazardous_substances": "None",
+        "application_areas": "External surfaces"
+      }
+    ],
+    "adhesives_and_sealants": [
+      {
+        "adhesive_id": "ADH-001",
+        "adhesive_name": "Structural Adhesive",
+        "percentage_by_weight": 0.3,
+        "specification": "3M Scotch-Weld AF 163-2",
+        "hazardous_substances": "None"
+      }
+    ]
+  },
+  "total_weight_kg": 2847.5,
+  "sustainability_metrics": {
+    "renewable_content_percentage": 0.0,
+    "recycled_content_percentage": 12.5,
+    "recyclability_potential_percentage": 85.0
+  }
+}

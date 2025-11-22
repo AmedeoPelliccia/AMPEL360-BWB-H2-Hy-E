@@ -1,0 +1,51 @@
+{
+  "supply_chain_id": "53-00-04-DPP-004",
+  "product": "ATA 53 Fuselage",
+  "last_updated": "2025-11-22",
+  "tier_1_suppliers": [
+    {
+      "supplier_name": "Hexcel Corporation",
+      "supplier_id": "SPLR-A",
+      "location": "Stamford, CT, USA",
+      "material_supplied": "Carbon Fiber Reinforced Polymer",
+      "certifications": ["AS9100D", "NADCAP", "ISO 14001"],
+      "ethical_compliance": ["UN Global Compact", "Conflict Minerals Free"],
+      "traceability_level": "Batch level",
+      "blockchain_verified": true
+    },
+    {
+      "supplier_name": "Alcoa",
+      "supplier_id": "SPLR-B",
+      "location": "Pittsburgh, PA, USA",
+      "material_supplied": "Aluminum Alloy 7075-T6",
+      "certifications": ["AS9100D", "ISO 14001", "ISO 45001"],
+      "ethical_compliance": ["Responsible Aluminum Initiative", "UN Global Compact"],
+      "traceability_level": "Ingot level",
+      "blockchain_verified": true
+    },
+    {
+      "supplier_name": "VSMPO-AVISMA",
+      "supplier_id": "SPLR-C",
+      "location": "Verkhnyaya Salda, Russia",
+      "material_supplied": "Titanium Alloy Ti-6Al-4V",
+      "certifications": ["EN 9100", "ISO 14001"],
+      "ethical_compliance": ["ISO 26000 Social Responsibility"],
+      "traceability_level": "Heat level",
+      "blockchain_verified": false,
+      "notes": "Alternative supplier being qualified due to geopolitical considerations"
+    }
+  ],
+  "tier_2_suppliers": [
+    {
+      "supplier_name": "Toray Industries",
+      "relationship": "Raw carbon fiber to Hexcel",
+      "location": "Tokyo, Japan",
+      "material": "PAN-based carbon fiber",
+      "certifications": ["ISO 9001", "ISO 14001"]
+    }
+  ],
+  "conflict_minerals_statement": "All materials sourced from conflict-free regions per OECD Due Diligence Guidance",
+  "forced_labor_compliance": "Compliant with ILO Forced Labour Convention and EU Corporate Sustainability Due Diligence Directive",
+  "environmental_certifications": ["ISO 14001 throughout supply chain"],
+  "supply_chain_risk_assessment": "Low risk - diversified supplier base with strategic alternatives identified"
+}
