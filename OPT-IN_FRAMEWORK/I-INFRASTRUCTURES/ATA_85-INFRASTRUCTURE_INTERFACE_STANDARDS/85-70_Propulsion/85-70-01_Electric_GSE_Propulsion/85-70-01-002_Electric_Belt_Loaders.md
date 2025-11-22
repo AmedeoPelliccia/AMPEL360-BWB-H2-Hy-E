@@ -144,7 +144,7 @@ This document defines the specifications and requirements for battery-electric b
 ### 6.1 Aviation Standards
 
 - [EASA Part-145](https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-13212014) – Aircraft maintenance
-- [IATA Ground Operations Manual (IGOM)](https://www.iata.org/en/publications/manuals/ground-operations-manual/) – Ground handling standards
+- [IATA Ground Operations Manual (IGOM)](https://www.iata.org/en/publications/manuals/ground-operations-manual/) – Ground handling standards (**Note: Access requires IATA membership or purchase**)
 - [SAE AS6171](https://www.sae.org/standards/content/as6171/) – Ground support equipment terminology
 
 ### 6.2 Safety Standards
