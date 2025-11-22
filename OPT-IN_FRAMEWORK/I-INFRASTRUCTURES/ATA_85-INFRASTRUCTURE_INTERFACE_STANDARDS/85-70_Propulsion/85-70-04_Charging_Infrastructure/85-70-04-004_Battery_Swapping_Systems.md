@@ -12,7 +12,7 @@
 
 ## 1. Purpose
 
-This document defines requirements for Battery Swapping Systems systems supporting electric GSE operations.
+This document defines requirements for Battery Swapping Systems supporting electric GSE operations.
 
 ---
 
