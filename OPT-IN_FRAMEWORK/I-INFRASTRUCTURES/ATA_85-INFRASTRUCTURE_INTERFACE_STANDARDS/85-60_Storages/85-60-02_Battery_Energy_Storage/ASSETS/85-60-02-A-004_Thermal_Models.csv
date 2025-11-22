@@ -1,0 +1,5 @@
+Component,Heat_Generation_W_per_kWh,Cooling_Type,Coolant_Flow_Rate_L_per_min,Operating_Temp_Min_C,Operating_Temp_Max_C,Alarm_Temp_C,Shutdown_Temp_C
+LFP_Cell,30,Liquid_Glycol,10,15,35,45,60
+NMC_Cell,50,Liquid_Water,15,15,30,40,55
+PCS_Inverter,2500,Air_Forced,N/A,0,40,50,60
+Transformer,3000,Oil_Immersed,N/A,-20,65,80,90

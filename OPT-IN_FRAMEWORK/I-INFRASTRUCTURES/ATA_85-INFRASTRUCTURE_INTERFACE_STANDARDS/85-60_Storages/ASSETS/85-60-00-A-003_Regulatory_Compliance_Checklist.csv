@@ -1,0 +1,6 @@
+Regulation,Applicability,Compliance_Status,Responsible_Party,Due_Date,Notes
+NFPA_2_Hydrogen_Code,H2_Storage,Pending,Safety_Eng,2025-Q4,Design_review_required
+NFPA_855_Battery_Storage,Battery_BESS,Pending,Safety_Eng,2025-Q4,Fire_suppression_design
+EPA_SPCC,All_Liquid_Storage,Pending,Env_Compliance,2025-Q3,Spill_Prevention_Control_Countermeasures
+ICAO_Annex_14,Airport_Infrastructure,Pending,Airport_Ops,2025-Q4,Aerodrome_design_standards
+EU_Battery_Regulation,Battery_Systems,Pending,Procurement,2026-Q1,Sustainability_labeling
