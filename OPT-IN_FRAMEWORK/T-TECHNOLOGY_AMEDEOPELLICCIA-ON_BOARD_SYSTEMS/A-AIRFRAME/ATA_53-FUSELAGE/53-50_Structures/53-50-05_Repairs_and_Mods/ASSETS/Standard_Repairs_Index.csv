@@ -1,0 +1,6 @@
+RepairID,RepairType,ApplicableArea,MaxDamageSize_mm,RepairClass
+RP-001,Skin Patch - Aluminum,Frames,100,Class 1
+RP-002,Skin Patch - CFRP,Skins,150,Class 2
+RP-003,Doubler Installation,All,200,Class 1
+RP-004,Fastener Hole Repair,All,12,Class 1
+RP-005,Composite Patch,CFRP Skins,100,Class 2

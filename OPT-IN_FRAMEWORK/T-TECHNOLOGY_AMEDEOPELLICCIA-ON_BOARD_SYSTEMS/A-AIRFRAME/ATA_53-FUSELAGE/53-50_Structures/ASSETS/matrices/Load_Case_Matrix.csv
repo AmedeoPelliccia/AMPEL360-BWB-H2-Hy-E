@@ -1,0 +1,7 @@
+LoadCaseID,Description,LoadFactor,Condition,Criticality
+LC-001,Positive Maneuver (2.5g),2.5,Flight,High
+LC-002,Negative Maneuver (-1.0g),-1.0,Flight,Medium
+LC-003,Vertical Gust (66 fps),Variable,Flight,High
+LC-004,Landing Impact (3.0g vertical),3.0,Ground,High
+LC-005,Maximum Cabin Pressure,1.0,Flight,High
+LC-006,Emergency Landing (9g forward),9.0,Ground,Critical

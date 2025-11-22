@@ -1,0 +1,10 @@
+Zone,Station_Start_m,Station_End_m,Panel_Type,Thickness_mm,Material,Layup
+Upper_Fwd,0,10,Skin+Stringer,4.5,CFRP,[45/0/-45/90]3s
+Upper_Mid,10,25,Skin+Stringer,5.0,CFRP,[45/0/-45/90]3s+[0]2
+Upper_Aft,25,40,Skin+Stringer,4.0,CFRP,[45/0/-45/90]3s
+Lower_Fwd,0,10,Skin+Stringer,5.5,CFRP,[45/0/-45/90]4s
+Lower_Mid,10,25,Skin+Stringer,6.0,CFRP,[45/0/-45/90]4s+[0]2
+Lower_Aft,25,40,Skin+Stringer,5.0,CFRP,[45/0/-45/90]4s
+Side_Fwd,0,10,Skin+Frame,3.5,CFRP,[45/0/-45/90]2s+[0]
+Side_Mid,10,25,Skin+Frame,4.0,CFRP,[45/0/-45/90]2s+[0]2
+Side_Aft,25,40,Skin+Frame,3.5,CFRP,[45/0/-45/90]2s+[0]
