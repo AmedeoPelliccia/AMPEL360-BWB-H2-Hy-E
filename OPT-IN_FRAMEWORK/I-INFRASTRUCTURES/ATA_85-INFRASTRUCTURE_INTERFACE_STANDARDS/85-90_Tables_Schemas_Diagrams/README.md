@@ -185,7 +185,7 @@ Files follow the pattern: **85-90-XX_DESCRIPTION**
 
 ### Civil and Structural
 - [ASME BPVC Section VIII](https://www.asme.org/codes-standards/find-codes-standards/bpvc-viii-1-bpvc-section-viii-rules-construction-pressure-vessels-division-1) - Pressure vessels
-- [EN 13458](https://standards.iteh.ai/catalog/standards/cen/c3f2e6f8-8e8b-4f8a-8f4e-d1f9e9f5e8e8/en-13458-2-2016) - Cryogenic vessels
+- EN 13458 - Cryogenic vessels (European Standard, see [CEN](https://www.cen.eu/work/areas/chemical/Pages/default.aspx))
 
 ## Usage Guidelines
 
