@@ -15,7 +15,7 @@ last_updated: "2025-11-22"
 
 ## Purpose
 
-The SAF Backup Fuel Storage system provides infrastructure for sustainable aviation fuel (saf) storage for backup and hybrid propulsion aircraft to support AMPEL360 BWB-H2-Hy-E aircraft operations and airport sustainability initiatives.
+The SAF Backup Fuel Storage system provides infrastructure for sustainable aviation fuel (SAF) storage for backup and hybrid propulsion aircraft to support AMPEL360 BWB-H2-Hy-E aircraft operations and airport sustainability initiatives.
 
 ## Key Capabilities
 
