@@ -1,0 +1,51 @@
+Load_ID,Load_Description,Location,Load_Type,Connected_Load_kW,Demand_Factor,Demand_Load_kW,Power_Factor,Voltage_Level,Phase,Circuit_Breaker,Feeder_ID,Load_Category,Priority,Operating_Hours,Notes
+LD-85-001,H2 Refueling Dispenser - Stand A1,Apron Stand A1,Motor,50,0.8,40,0.85,480V,3-phase,CB-H2-A1-01,FDR-H2-01,H2 Systems,Critical,24/7,Continuous operation
+LD-85-002,H2 Refueling Dispenser - Stand A2,Apron Stand A2,Motor,50,0.8,40,0.85,480V,3-phase,CB-H2-A2-01,FDR-H2-01,H2 Systems,Critical,24/7,Continuous operation
+LD-85-003,H2 Vaporizer Unit,H2 Facility,Heater,300,0.9,270,0.95,480V,3-phase,CB-H2-VAP-01,FDR-H2-02,H2 Systems,Critical,24/7,LH2 to GH2 conversion
+LD-85-004,H2 Cryogenic Pump,H2 Storage Area,Motor,75,0.85,64,0.88,480V,3-phase,CB-H2-PUMP-01,FDR-H2-02,H2 Systems,Critical,24/7,LH2 transfer pump
+LD-85-005,H2 Compressor Station,H2 Facility,Motor,150,0.85,128,0.87,480V,3-phase,CB-H2-COMP-01,FDR-H2-03,H2 Systems,Critical,On-demand,High pressure compression
+LD-85-006,Ground Power Unit - Stand A1,Apron Stand A1,Converter,400,1.0,400,0.92,480V,3-phase,CB-GPU-A1-01,FDR-GPU-01,Ground Services,Critical,On-demand,Aircraft ground power
+LD-85-007,Ground Power Unit - Stand A2,Apron Stand A2,Converter,400,1.0,400,0.92,480V,3-phase,CB-GPU-A2-01,FDR-GPU-01,Ground Services,Critical,On-demand,Aircraft ground power
+LD-85-008,Ground Power Unit - Stand A3,Apron Stand A3,Converter,400,1.0,400,0.92,480V,3-phase,CB-GPU-A3-01,FDR-GPU-02,Ground Services,Critical,On-demand,Aircraft ground power
+LD-85-009,Pre-Conditioned Air - Stand A1,Apron Stand A1,HVAC,250,0.9,225,0.88,480V,3-phase,CB-PCA-A1-01,FDR-PCA-01,Ground Services,Important,On-demand,Cabin conditioning
+LD-85-010,Pre-Conditioned Air - Stand A2,Apron Stand A2,HVAC,250,0.9,225,0.88,480V,3-phase,CB-PCA-A2-01,FDR-PCA-01,Ground Services,Important,On-demand,Cabin conditioning
+LD-85-011,Air Start Unit - Apron,Apron Equipment Yard,Motor/Compressor,150,0.85,128,0.86,480V,3-phase,CB-ASU-01,FDR-GSE-01,Ground Services,Important,On-demand,Engine starting
+LD-85-012,Baggage Loader - Stand A1,Apron Stand A1,Motor,75,0.7,53,0.85,480V,3-phase,CB-BL-A1-01,FDR-GSE-02,Ground Services,Important,Per flight,Container handling
+LD-85-013,Baggage Loader - Stand A2,Apron Stand A2,Motor,75,0.7,53,0.85,480V,3-phase,CB-BL-A2-01,FDR-GSE-02,Ground Services,Important,Per flight,Container handling
+LD-85-014,Compressed Air Station,Utility Building,Motor/Compressor,450,0.85,383,0.87,480V,3-phase,CB-AIR-01,FDR-UTIL-01,Utilities,Important,24/7,Instrument air supply
+LD-85-015,Chiller Plant - H2 Facility,H2 Control Building,HVAC,200,0.9,180,0.88,480V,3-phase,CB-HVAC-H2-01,FDR-HVAC-01,HVAC,Important,24/7,H2 facility cooling
+LD-85-016,HVAC - Terminal Building,Terminal Building,HVAC,300,0.8,240,0.87,480V,3-phase,CB-HVAC-TERM-01,FDR-HVAC-02,HVAC,Important,Operating hours,Passenger comfort
+LD-85-017,HVAC - Maintenance Hangar,Maintenance Hangar,HVAC,400,0.75,300,0.86,480V,3-phase,CB-HVAC-MNT-01,FDR-HVAC-03,HVAC,Non-Critical,Operating hours,Maintenance area
+LD-85-018,Fire Pump - H2 Facility,H2 Fire Protection,Motor,200,1.0,200,0.88,480V,3-phase,CB-FIRE-H2-01,FDR-FIRE-01,Fire Safety,Critical,Standby,Emergency fire pump
+LD-85-019,Fire Pump - Main Facility,Fire Station,Motor,150,1.0,150,0.88,480V,3-phase,CB-FIRE-MAIN-01,FDR-FIRE-02,Fire Safety,Critical,Standby,Main fire protection
+LD-85-020,H2 Leak Detection System,H2 Facility,Electronic,10,1.0,10,0.95,230V,1-phase,CB-H2-LEAK-01,FDR-SAFETY-01,Safety,Critical,24/7,Continuous monitoring
+LD-85-021,Fire Alarm Panel,H2 Facility,Electronic,5,1.0,5,0.98,230V,1-phase,CB-FIRE-PANEL-01,FDR-SAFETY-01,Safety,Critical,24/7,Fire detection system
+LD-85-022,Emergency Lighting - H2 Area,H2 Facility,Lighting,20,1.0,20,1.0,230V,1-phase,CB-EMERG-LT-H2,FDR-EMERG-01,Emergency,Critical,24/7,Battery backed
+LD-85-023,Emergency Lighting - Apron,Apron Area,Lighting,50,1.0,50,1.0,230V,Various,CB-EMERG-LT-APR,FDR-EMERG-02,Emergency,Critical,24/7,Safety lighting
+LD-85-024,Apron Floodlighting,Apron Area,Lighting,150,0.95,143,1.0,480V,3-phase,CB-LT-APRON-01,FDR-LIGHT-01,Lighting,Important,Night ops,LED high mast
+LD-85-025,H2 Facility Lighting,H2 Facility,Lighting,40,0.9,36,1.0,230V,Various,CB-LT-H2-01,FDR-LIGHT-02,Lighting,Important,24/7,Explosion-proof fixtures
+LD-85-026,Terminal Building Lighting,Terminal Building,Lighting,80,0.8,64,1.0,230V,Various,CB-LT-TERM-01,FDR-LIGHT-03,Lighting,Important,Operating hours,General illumination
+LD-85-027,Maintenance Hangar Lighting,Maintenance Hangar,Lighting,120,0.85,102,1.0,480V,3-phase,CB-LT-MNT-01,FDR-LIGHT-04,Lighting,Non-Critical,Operating hours,High bay LED
+LD-85-028,SCADA Control System,Control Room,IT/Electronic,30,0.95,29,0.98,230V,1-phase,CB-SCADA-01,FDR-IT-01,Control,Critical,24/7,UPS backed
+LD-85-029,IT Server Room,IT Building,IT/Electronic,100,0.9,90,0.95,230V,3-phase,CB-IT-SERVER-01,FDR-IT-02,IT,Critical,24/7,Data center loads
+LD-85-030,Network Switches,Various Locations,IT/Electronic,25,0.9,23,0.98,230V,1-phase,CB-NET-01,FDR-IT-03,IT,Critical,24/7,Communications backbone
+LD-85-031,CCTV System,Facility Wide,Electronic,15,0.9,14,0.95,230V,1-phase,CB-CCTV-01,FDR-SECURITY-01,Security,Important,24/7,Video surveillance
+LD-85-032,Access Control System,Security Gates,Electronic,10,0.9,9,0.95,230V,1-phase,CB-ACCESS-01,FDR-SECURITY-02,Security,Critical,24/7,Gate and door control
+LD-85-033,Security Lighting - Perimeter,Perimeter Fence,Lighting,60,1.0,60,1.0,230V,Various,CB-LT-SEC-01,FDR-SECURITY-03,Security,Important,Night,Perimeter security
+LD-85-034,Water Pumps - Potable,Water Pumphouse,Motor,30,0.8,24,0.87,480V,3-phase,CB-WATER-01,FDR-UTIL-02,Utilities,Non-Critical,On-demand,Potable water supply
+LD-85-035,Wastewater Pumps,Wastewater Station,Motor,40,0.8,32,0.86,480V,3-phase,CB-WW-01,FDR-UTIL-03,Utilities,Non-Critical,On-demand,Sewage lift station
+LD-85-036,Battery Charging Station,Electrical Building,Charger,250,0.9,225,0.93,480V,3-phase,CB-BATT-CHG-01,FDR-ENERGY-01,Energy Storage,Important,On-demand,ESS charging
+LD-85-037,Weather Station,Facility,Electronic,2,1.0,2,0.95,230V,1-phase,CB-WEATHER-01,FDR-MONITOR-01,Monitoring,Important,24/7,Meteorological sensors
+LD-85-038,Environmental Monitoring,Various,Electronic,5,1.0,5,0.95,230V,1-phase,CB-ENV-MON-01,FDR-MONITOR-02,Monitoring,Important,24/7,Air quality sensors
+LD-85-039,Communication Room HVAC,Telecom Building,HVAC,50,0.9,45,0.88,230V,3-phase,CB-HVAC-COMM-01,FDR-HVAC-04,HVAC,Critical,24/7,Equipment cooling
+LD-85-040,Workshop Equipment,Maintenance Workshop,Motor/Misc,100,0.6,60,0.82,480V,3-phase,CB-WORKSHOP-01,FDR-WORKSHOP-01,Workshop,Non-Critical,Operating hours,Various tools
+LD-85-041,Hangar Doors - Motors,Maintenance Hangar,Motor,60,0.8,48,0.85,480V,3-phase,CB-DOOR-MNT-01,FDR-DOOR-01,Facility,Non-Critical,On-demand,Hangar door operation
+LD-85-042,Passenger Boarding Bridge A1,Gate A1,Motor/HVAC,50,0.8,40,0.87,480V,3-phase,CB-PBB-A1-01,FDR-PBB-01,Passenger Services,Important,Per flight,Jetway operation
+LD-85-043,Passenger Boarding Bridge A2,Gate A2,Motor/HVAC,50,0.8,40,0.87,480V,3-phase,CB-PBB-A2-01,FDR-PBB-01,Passenger Services,Important,Per flight,Jetway operation
+LD-85-044,Potable Water Heater,Water Service,Heater,30,0.9,27,0.98,230V,3-phase,CB-WH-01,FDR-UTIL-04,Utilities,Non-Critical,24/7,Hot water supply
+LD-85-045,De-Icing Fluid Heating,De-Ice Pad,Heater,100,0.85,85,0.95,480V,3-phase,CB-DEICE-HEAT-01,FDR-DEICE-01,De-Icing,Important,Winter ops,Type I/IV fluid heating
+LD-85-046,UPS System - Critical Loads,Electrical Building,UPS,150,0.95,143,0.98,480V,3-phase,CB-UPS-01,FDR-UPS-01,Critical Power,Critical,24/7,10-minute backup
+LD-85-047,Emergency Exit Signs,Facility Wide,Lighting,10,1.0,10,1.0,230V,Various,CB-EXIT-SIGNS,FDR-EMERG-03,Emergency,Critical,24/7,Battery backed
+LD-85-048,Lightning Protection System,Facility Wide,Electronic,3,1.0,3,0.95,230V,1-phase,CB-LIGHT-PROT-01,FDR-SAFETY-02,Safety,Critical,24/7,Surge protection monitoring
+LD-85-049,Fuel Lab Equipment,Fuel Quality Lab,Electronic/Heating,20,0.7,14,0.92,230V,1-phase,CB-LAB-01,FDR-LAB-01,Quality Control,Important,Operating hours,Testing equipment
+LD-85-050,Miscellaneous Receptacles,Various,Receptacle,200,0.3,60,0.85,230V,Various,Various,Various,General,Non-Critical,Variable,General purpose outlets

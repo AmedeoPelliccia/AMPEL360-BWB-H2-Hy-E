@@ -1,0 +1,26 @@
+Interface_ID,From_System,To_System,Interface_Type,Protocol_Standard,Data_Rate,Physical_Connector,Criticality,Certification_Ref,Status,Notes
+INT-85-001,H2 Refueling Dispenser,Aircraft H2 Tank,Mechanical/Fluid,SAE AS 6858,1000 kg/h,QD Coupling,Critical,CS-25.1309,Active,Automated connection with safety interlock
+INT-85-002,Ground Power Unit,Aircraft Electrical,Electrical AC,MIL-STD-704F,400 kVA,MS 3116-24-10,Critical,DO-160G,Active,400V 3-phase 400Hz supply
+INT-85-003,Air Start Unit,Aircraft APU,Pneumatic,ISO 6858,1.5 kg/s @ 40 psi,AS 1055,Critical,ARP 1899,Active,High pressure air delivery
+INT-85-004,PCA Unit,Aircraft ECS,Pneumatic/Thermal,SAE AS 4073,200 kg/min,Ducting Coupling,Important,AS 4073,Active,Temperature & humidity controlled
+INT-85-005,Fire Suppression,H2 Storage Tank,Control Signal,NFPA 409,100 Mbps,Ethernet RJ45,Critical,NFPA 409,Active,Automated fire detection & suppression
+INT-85-006,Potable Water Truck,Aircraft Water System,Mechanical/Fluid,NSF/ANSI 61,100 L/min,Camlock 2.5",Non-Critical,NSF 61,Active,Gravity fill with backflow prevention
+INT-85-007,Waste Water Truck,Aircraft Lavatory,Mechanical/Fluid,EPA Standards,150 L/min,Waste Coupling,Non-Critical,EPA,Active,Vacuum waste removal
+INT-85-008,H2 Leak Detection,Facility Control System,Digital I/O,IEC 60079-29-1,100 kbps,4-20mA Loop,Critical,IEC 60079,Active,Real-time leak monitoring
+INT-85-009,Battery Charger,Aircraft Battery,Electrical DC,SAE J1772,250 kW,CCS Connector,Important,UL 9540,Active,DC fast charging interface
+INT-85-010,Nitrogen Cart,Landing Gear,Mechanical/Fluid,ISO 9809,300 bar,High Pressure QD,Important,ISO 9809,Active,Nitrogen servicing for struts
+INT-85-011,De-Icing Truck,Aircraft Surfaces,Mechanical/Fluid,SAE AS 5900,400 L/min,Spray Nozzle,Critical,AS 5900,Active,Type I/IV fluid application
+INT-85-012,Tow Tractor,Aircraft Nose Gear,Mechanical,SAE AS 755,150 kN DBP,Tow Bar,Critical,AS 755,Active,Automated tow bar connection
+INT-85-013,Boarding Bridge,Aircraft Door,Mechanical,ISO 16004,N/A,Apron Interface,Important,ISO 16004,Active,Automated docking with door sensors
+INT-85-014,Baggage Loader,Aircraft Cargo Door,Mechanical,ISO 8097,3000 kg,Roller Interface,Important,ISO 8097,Active,Container/pallet transfer
+INT-85-015,Hydraulic Test Cart,Aircraft Hydraulic,Mechanical/Fluid,ARP 1899,5000 psi,MS Coupling,Non-Critical,ARP 1899,Active,Ground hydraulic power for testing
+INT-85-016,H2 Vaporizer,H2 Distribution,Mechanical/Fluid,ASME B31.3,500 kg/h,ASME B16.5,Critical,ASME B31.3,Active,LH2 to GH2 phase change
+INT-85-017,Fuel Quality Lab,H2 Storage System,Data/Sample,ASTM D4814,N/A,Sample Port,Important,ASTM D4814,Active,Quality assurance testing
+INT-85-018,Compressor Station,Pneumatic Distribution,Pneumatic,ISO 8573,300 m³/h,Compressed Air,Important,ISO 8573,Active,Instrument air distribution
+INT-85-019,Oxygen Cart,Aircraft Oxygen System,Mechanical/Fluid,FAA AC 00-34A,200 bar,Oxygen QD,Important,FAA AC 00-34A,Active,Emergency O2 servicing
+INT-85-020,Control Room SCADA,All Ground Equipment,Digital Network,IEC 61850,1 Gbps,Fiber Optic,Critical,IEC 61850,Active,Centralized monitoring & control
+INT-85-021,Weather Station,Facility Control,Digital Data,WMO Standards,10 Mbps,Ethernet,Important,ISO 19115,Active,Real-time meteorological data
+INT-85-022,Intercom System,Aircraft Flight Deck,Audio,J-STD-025,64 kbps,RJ11,Non-Critical,TIA-569,Active,Ground crew communication
+INT-85-023,Video Surveillance,Security Control,Video Stream,H.265,20 Mbps,IP Camera,Important,IEC 62676,Active,Apron area monitoring
+INT-85-024,Access Control,Personnel Gate,Digital I/O,ISO 14443,125 kHz,RFID Reader,Critical,ISO 14443,Active,Restricted area access
+INT-85-025,Lightning Protection,Facility Ground,Electrical Ground,IEC 62305,N/A,Ground Grid,Critical,IEC 62305,Active,Facility-wide lightning protection
