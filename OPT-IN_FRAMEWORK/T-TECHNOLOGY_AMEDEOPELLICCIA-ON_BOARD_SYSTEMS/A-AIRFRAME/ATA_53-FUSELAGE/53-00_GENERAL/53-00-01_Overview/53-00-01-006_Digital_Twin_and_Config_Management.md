@@ -245,7 +245,7 @@ Example:
 
 ## 9. Integration with ATA 95 (Digital Product Passport)
 
-Each structural component has a **Digital Product Passport (DPP)** entry in [ATA 95](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/):
+Each structural component has a **Digital Product Passport (DPP)** entry in [ATA 95](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/):
 
 **DPP Content for Frame FR-400-M**:
 - **Identity**: CI-53-400-FR400-M, S/N F400-M-042
@@ -333,7 +333,7 @@ Each structural component has a **Digital Product Passport (DPP)** entry in [ATA
 
 ## References
 
-- [ATA 95 — Digital Product Passport Neural Networks](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)
+- [ATA 95 — Digital Product Passport Neural Networks](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)
 - ISO 10303 (STEP): Standard for the Exchange of Product model data
 - ISO 15926: Integration of lifecycle data for process plants (adapted for aerospace)
 - ATA iSpec 2200: Electronic data exchange standards

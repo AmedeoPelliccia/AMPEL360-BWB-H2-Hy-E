@@ -77,10 +77,10 @@ ATA 53 documentation spans the full structural lifecycle:
 
 ATA 53 is the structural foundation upon which other systems are integrated:
 
-- **[ATA 21 — Air Conditioning & Pressurization](../../../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_21-AIR_CONDITIONING_PRESSURIZATION/)**: Cabin pressure loads, ECS duct penetrations, pack bay structure
-- **[ATA 25 — Equipment & Furnishings](../../../../../../C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)**: Seat rails, galley attachments, lavatory mounting, overhead bin support
+- **[ATA 21 — Air Conditioning & Pressurization](../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_21-AIR_CONDITIONING_PRESSURIZATION/)**: Cabin pressure loads, ECS duct penetrations, pack bay structure
+- **[ATA 25 — Equipment & Furnishings](../../../../C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)**: Seat rails, galley attachments, lavatory mounting, overhead bin support
 - **ATA 27/55/57**: Control surface attachments, stabilizer mounting, wing-to-body fittings
-- **[ATA 32 — Landing Gear](../../../../../../M-MECHANICS/ATA_32-LANDING_GEAR/)**: Main gear and nose gear structural attachments, wheel well boundaries, gear doors interface
+- **[ATA 32 — Landing Gear](../../../../M-MECHANICS/ATA_32-LANDING_GEAR/)**: Main gear and nose gear structural attachments, wheel well boundaries, gear doors interface
 - **ATA 34/42/45**: Avionics racks, IMA chassis mounting, cable routing trays, antenna installations
 - **[ATA 52 — Doors](../../../ATA_52-DOORS/)**: Door cut-outs, door frames, hinge fittings, locking mechanism attachments
 - **[ATA 56 — Windows](../../../ATA_56-WINDOWS/)**: Window apertures, frame reinforcements, transparency mounting
@@ -124,7 +124,7 @@ All fuselage structural elements are tracked in the AMPEL360 digital twin:
 - **FEA Models**: Global and local finite element models for stress/strain analysis
 - **Configuration Items (CIs)**: Each major structural assembly (e.g., forward fuselage section, center body module, aft fuselage) is a distinct CI
 - **Traceability**: Links to requirements (ATA 53-00-03), drawings, analysis reports, test results, certification documents
-- **DPP Integration**: Structural health monitoring neural networks ([ATA 95](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)) reference fuselage structural baselines
+- **DPP Integration**: Structural health monitoring neural networks ([ATA 95](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)) reference fuselage structural baselines
 
 See `53-00-01-006_Digital_Twin_and_Config_Management.md` for details.
 

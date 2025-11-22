@@ -58,7 +58,7 @@ ICDs are maintained in `53-00-05_Interfaces/` and co-owned by ATA 53 and the int
 
 **ICD Reference**: `53-05-ICD-021` (pressurization and ECS structure)
 
-**Links**: [ATA 21](../../../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_21-AIR_CONDITIONING_PRESSURIZATION/)
+**Links**: [ATA 21](../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_21-AIR_CONDITIONING_PRESSURIZATION/)
 
 ---
 
@@ -81,7 +81,7 @@ ICDs are maintained in `53-00-05_Interfaces/` and co-owned by ATA 53 and the int
 
 **ICD Reference**: `53-05-ICD-025` (cabin furnishings attachments)
 
-**Links**: [ATA 25](../../../../../../C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)
+**Links**: [ATA 25](../../../../C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)
 
 ---
 
@@ -142,7 +142,7 @@ ICDs are maintained in `53-00-05_Interfaces/` and co-owned by ATA 53 and the int
 
 **ICD Reference**: `53-05-ICD-032` (landing gear structure)
 
-**Links**: [ATA 32](../../../../../../M-MECHANICS/ATA_32-LANDING_GEAR/)
+**Links**: [ATA 32](../../../../M-MECHANICS/ATA_32-LANDING_GEAR/)
 
 ---
 
@@ -173,7 +173,7 @@ ICDs are maintained in `53-00-05_Interfaces/` and co-owned by ATA 53 and the int
 - **Structural Health Monitoring (SHM) Sensors**: Strain gauges, accelerometers, fiber optic sensors embedded in or attached to fuselage structure
   - ATA 45 manages data acquisition; ATA 53 provides sensor mounting locations and ensures sensor survivability
 - **Access Panels**: ATA 53 provides access panels for inspection and sensor maintenance
-- **Neural Network Integration**: SHM data feeds into AI models (see [ATA 95](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)) for predictive maintenance
+- **Neural Network Integration**: SHM data feeds into AI models (see [ATA 95](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)) for predictive maintenance
 
 **ICD Reference**: `53-05-ICD-045` (maintenance system sensors)
 
@@ -270,7 +270,7 @@ ICDs are maintained in `53-00-05_Interfaces/` and co-owned by ATA 53 and the int
 
 **ICD Reference**: `53-05-ICD-095` (digital twin integration)
 
-**Links**: [ATA 95](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)
+**Links**: [ATA 95](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)
 
 ---
 

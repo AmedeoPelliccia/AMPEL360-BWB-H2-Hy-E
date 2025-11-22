@@ -81,10 +81,10 @@ This `53-00-01_Overview` set gives the **narrative and conceptual baseline** use
 
 Key chapters interacting with ATA 53:
 
-- **[ATA 21 — Air Conditioning & Pressurization](../../../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_21-AIR_CONDITIONING_PRESSURIZATION/)**: Cabin pressure loads, duct routing, pack bay integration.  
-- **[ATA 25 — Equipment & Furnishings](../../../../../../C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)**: Cabin lining, monuments, seat rails, overhead bins attached to fuselage structure.  
+- **[ATA 21 — Air Conditioning & Pressurization](../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_21-AIR_CONDITIONING_PRESSURIZATION/)**: Cabin pressure loads, duct routing, pack bay integration.  
+- **[ATA 25 — Equipment & Furnishings](../../../../C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)**: Cabin lining, monuments, seat rails, overhead bins attached to fuselage structure.  
 - **ATA 27 / 55 / 57**: Control surface and empennage attachments (if applicable for BWB tail or control surfaces).  
-- **[ATA 32 — Landing Gear](../../../../../../M-MECHANICS/ATA_32-LANDING_GEAR/)**: Gear bay structure, load paths from landing gear into primary fuselage framework.  
+- **[ATA 32 — Landing Gear](../../../../M-MECHANICS/ATA_32-LANDING_GEAR/)**: Gear bay structure, load paths from landing gear into primary fuselage framework.  
 - **ATA 45 / 46 / 92**: Integrated modular avionics bays, equipment racks, and systems compartments.  
 - **[ATA 52 — Doors](../../../ATA_52-DOORS/)**: Passenger, service, emergency exits, cargo doors (cut-outs, reinforcements, and door-surround structure).  
 - **[ATA 56 — Windows](../../../ATA_56-WINDOWS/)** (or integrated with 52 depending on your scheme): Window frames and transparency load paths.
@@ -100,7 +100,7 @@ This folder is the **anchor** for fuselage-related digital assets:
 - **CAD/BIM models**: Fuselage outer mold line (OML), frames, skins, decks, pressure bulkheads.  
 - **Analysis models**: Global FEA models, sub-models (e.g., cut-outs, joints), loads models.  
 - **Configuration baselines**: References to configuration items and baselined OML/structure revisions.  
-- **DPP & ATA 95 links**: How fuselage structural elements appear in [Digital Product Passports](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/) and AI/NN traceability (e.g., structural health monitoring NNs).
+- **DPP & ATA 95 links**: How fuselage structural elements appear in [Digital Product Passports](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/) and AI/NN traceability (e.g., structural health monitoring NNs).
 
 Assets are stored under:
 
