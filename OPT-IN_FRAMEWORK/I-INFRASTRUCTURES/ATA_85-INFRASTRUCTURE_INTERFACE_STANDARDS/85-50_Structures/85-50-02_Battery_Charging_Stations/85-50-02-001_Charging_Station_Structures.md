@@ -94,10 +94,10 @@ Final load magnitudes to be sourced from manufacturer datasheets and site-specif
 
 Per [85-50-00-003_Material_Selection_Strategy.md](../../85-50-00-003_Material_Selection_Strategy.md):
 
-- **Primary Structure**: [Steel/Concrete/Other]
+- **Primary Structure**: Steel or precast concrete (typical for equipment shelters)
 - **Foundations**: Reinforced concrete
-- **Protective Coatings**: [As required]
-- **Insulation**: [If applicable]
+- **Protective Coatings**: As required for corrosion and weather protection
+- **Insulation**: Not typically required for unconditioned shelters; specify mineral wool or rigid foam if thermal insulation is needed
 
 **Sustainability Criteria**:
 - Minimum 90% recycled steel content
