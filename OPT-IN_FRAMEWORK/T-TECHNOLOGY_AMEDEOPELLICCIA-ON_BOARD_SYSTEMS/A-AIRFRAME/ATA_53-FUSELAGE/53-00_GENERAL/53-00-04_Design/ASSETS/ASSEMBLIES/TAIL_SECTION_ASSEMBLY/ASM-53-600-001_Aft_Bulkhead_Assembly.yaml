@@ -1,0 +1,86 @@
+assembly_metadata:
+  assembly_id: "ASM-53-600-001"
+  assembly_name: "Aft Bulkhead Assembly"
+  ata_chapter: "53"
+  zone: "600"
+  parent_ci: "CI-53-600-BHD-AFT"
+  related_cis:
+    - "CI-53-600-BHD-AFT-WEB"
+    - "CI-53-600-BHD-AFT-FRAME"
+    - "CI-53-600-BHD-AFT-STIFFEN"
+  structure_classification: "Primary"
+  plm_item_id: "TC-ASM-53-600-001"
+  cad_master_drawing: "53-60-1000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2025-11-22"
+    author: "Tail Structures Team"
+
+components:
+  - part_number: "53-600-1001-01"
+    ci_number: "CI-53-600-BHD-AFT-WEB"
+    description: "Aft Bulkhead Web Structure"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-600-1002-01"
+    ci_number: "CI-53-600-BHD-AFT-FRAME"
+    description: "Aft Bulkhead Frame Ring"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-600-1003-01"
+    ci_number: "CI-53-600-BHD-AFT-STIFFEN"
+    description: "Bulkhead Stiffener Set"
+    quantity: 8
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "FAST-TI-M8-600"
+    ci_number: null
+    description: "Titanium Fasteners M8x30"
+    quantity: 64
+    material: "Ti-6Al-4V"
+    primary_load_path: false
+
+assembly_sequence:
+  step_001: "Position aft bulkhead web on assembly jig AJ-53-600-001"
+  step_002: "Install frame ring with alignment pins"
+  step_003: "Bond stiffeners to web structure"
+  step_004: "Install permanent fasteners"
+  step_005: "Torque fasteners to 45 Nm ±5%"
+  step_006: "Perform dimensional inspection and NDT"
+
+tooling_required:
+  - tooling_id: "AJ-53-600-001"
+    description: "Aft Bulkhead Assembly Jig"
+  - tooling_id: "TW-0-100NM"
+    description: "Torque wrench 0–100 Nm"
+  - tooling_id: "US-CSCAN-01"
+    description: "Ultrasonic C-scan equipment"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.5
+    reference_drawing: "53-60-1000"
+  ndt:
+    method: "Ultrasonic C-scan"
+    coverage: "100% of bond lines"
+    report_ref: "53-50-06-01-001_Aft_Bulkhead_Analysis.md"
+  fasteners:
+    torque_spec_nm: 45
+    torque_tolerance_percent: 5
+    inspection_coverage: "100%"
+  acceptance_criteria:
+    - "Dimensions within ±0.5 mm"
+    - "No NDT indications above Level 2"
+
+links:
+  requirements_traceability_file: "../../02_Configuration_Items/Zone_600_Tail_Section/CI-53-600-BHD-AFT_Aft_Bulkhead/Requirements_Traceability.csv"
+  stress_report: "../../02_Configuration_Items/Zone_600_Tail_Section/CI-53-600-BHD-AFT_Aft_Bulkhead/ASSETS/Analysis/Stress_Analysis_Report.md"
+  fea_model_description: "../../02_Configuration_Items/Zone_600_Tail_Section/CI-53-600-BHD-AFT_Aft_Bulkhead/ASSETS/Analysis/FEA_Model_Description.md"
+  manufacturing_plan: "../../02_Configuration_Items/Zone_600_Tail_Section/CI-53-600-BHD-AFT_Aft_Bulkhead/Manufacturing_Plan.md"
+  qc_plan: "../ASSETS/QC_Inspection_Points.csv"

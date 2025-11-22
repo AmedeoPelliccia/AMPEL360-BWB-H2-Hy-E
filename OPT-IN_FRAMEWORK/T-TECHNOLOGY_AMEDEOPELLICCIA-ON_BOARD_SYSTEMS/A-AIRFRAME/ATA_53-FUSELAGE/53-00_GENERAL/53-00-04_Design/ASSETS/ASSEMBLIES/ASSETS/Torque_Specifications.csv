@@ -1,0 +1,22 @@
+Fastener_Type,Size,Material,Nominal_Torque_Nm,Tolerance_Percent,Min_Torque_Nm,Max_Torque_Nm,Lubrication,Thread_Locking,Verification_Method,Calibration_Frequency_Days
+Bolt,M5x12,Al-7075-T6,15,5,14.25,15.75,Dry,None,Torque Wrench,90
+Bolt,M6x16,Ti-6Al-4V,30,5,28.5,31.5,Dry,None,Torque Wrench,90
+Bolt,M6x20,Ti-6Al-4V,35,5,33.25,36.75,Dry,None,Torque Wrench,90
+Bolt,M8x25,Ti-6Al-4V,45,5,42.75,47.25,Dry,None,Torque Wrench,90
+Bolt,M8x30,Ti-6Al-4V,45,5,42.75,47.25,Dry,None,Torque Wrench,90
+Bolt,M10x30,300M Steel,80,3,77.6,82.4,Light Oil,Loctite 243,Torque Wrench + Angle,60
+Bolt,M10x35,300M Steel,70,3,67.9,72.1,Light Oil,Loctite 243,Torque Wrench + Angle,60
+Bolt,M12x35,Ti-6Al-4V,50,5,47.5,52.5,Dry,None,Torque Wrench,90
+Bolt,M12x40,300M Steel,85,3,82.45,87.55,Light Oil,Loctite 243,Torque Wrench + Angle,60
+Bolt,M14x45,300M Steel,95,3,92.15,97.85,Light Oil,Loctite 243,Torque Wrench + Angle,60
+Bolt,M16x50,300M Steel,120,2,117.6,122.4,Light Oil,Loctite 271,Torque Wrench + Angle,30
+Nut,M6,Ti-6Al-4V,28,5,26.6,29.4,Dry,Lock Nut,Torque Wrench,90
+Nut,M8,Ti-6Al-4V,42,5,39.9,44.1,Dry,Lock Nut,Torque Wrench,90
+Nut,M10,300M Steel,75,3,72.75,77.25,Light Oil,Lock Nut,Torque Wrench,60
+Nut,M12,300M Steel,80,3,77.6,82.4,Light Oil,Lock Nut,Torque Wrench,60
+Nut,M14,300M Steel,90,3,87.3,92.7,Light Oil,Lock Nut,Torque Wrench,60
+Nut,M16,300M Steel,115,2,112.7,117.3,Light Oil,Lock Nut,Torque Wrench,30
+Rivet,4.8mm,Al-2024-T4,N/A,N/A,N/A,N/A,None,None,Pull Force,N/A
+Rivet,6.4mm,Al-2024-T4,N/A,N/A,N/A,N/A,None,None,Pull Force,N/A
+Hi-Lok,HL11,Titanium,40,5,38,42,Dry,Self-Locking,Break-Off Collar,N/A
+Hi-Lok,HL12,Titanium,45,5,42.75,47.25,Dry,Self-Locking,Break-Off Collar,N/A

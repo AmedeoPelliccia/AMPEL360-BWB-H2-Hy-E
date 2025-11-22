@@ -1,0 +1,88 @@
+assembly_metadata:
+  assembly_id: "ASM-53-400-004"
+  assembly_name: "Main Landing Gear Bay Right Assembly"
+  ata_chapter: "53"
+  zone: "400"
+  parent_ci: "CI-53-400-MLG-BAY-R"
+  related_cis:
+    - "CI-53-400-MLG-BAY-R-FRAME"
+    - "CI-53-400-MLG-BAY-R-BEAM"
+    - "CI-53-400-MLG-BAY-R-ATTACH"
+  structure_classification: "Primary"
+  plm_item_id: "TC-ASM-53-400-004"
+  cad_master_drawing: "53-40-4000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2025-11-22"
+    author: "Landing Gear Integration Team"
+
+components:
+  - part_number: "53-400-4001-01"
+    ci_number: "CI-53-400-MLG-BAY-R-FRAME"
+    description: "MLG Bay Right Main Frame"
+    quantity: 1
+    material: "Ti-6Al-4V"
+    primary_load_path: true
+
+  - part_number: "53-400-4002-01"
+    ci_number: "CI-53-400-MLG-BAY-R-BEAM"
+    description: "MLG Bay Support Beams"
+    quantity: 4
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-400-4003-01"
+    ci_number: "CI-53-400-MLG-BAY-R-ATTACH"
+    description: "MLG Attachment Trunnion"
+    quantity: 1
+    material: "Steel 300M"
+    primary_load_path: true
+
+  - part_number: "FAST-STEEL-M16-MLG"
+    ci_number: null
+    description: "Ultra-High-Strength Fasteners M16x50"
+    quantity: 48
+    material: "300M Steel"
+    primary_load_path: true
+
+assembly_sequence:
+  step_001: "Position main frame on assembly jig AJ-53-400-004"
+  step_002: "Install support beams with precision alignment"
+  step_003: "Install MLG attachment trunnion"
+  step_004: "Install ultra-high-strength fasteners"
+  step_005: "Torque fasteners to 120 Nm ±2%"
+  step_006: "Perform dimensional and NDT inspection"
+  step_007: "Conduct proof load test at 150% design load"
+
+tooling_required:
+  - tooling_id: "AJ-53-400-004"
+    description: "MLG Bay Right Assembly Jig"
+  - tooling_id: "TW-0-200NM"
+    description: "Torque wrench 0–200 Nm (calibrated)"
+  - tooling_id: "LOAD-TEST-500KN"
+    description: "Proof load test fixture 500 kN"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.2
+    reference_drawing: "53-40-4000"
+  ndt:
+    method: "X-ray and ultrasonic"
+    coverage: "100% of all joints"
+    report_ref: "53-50-01-04-004_MLG_Bay_Right_Analysis.md"
+  fasteners:
+    torque_spec_nm: 120
+    torque_tolerance_percent: 2
+    inspection_coverage: "100%"
+  acceptance_criteria:
+    - "Dimensions within ±0.2 mm"
+    - "Proof load test passed"
+    - "No NDT indications"
+
+links:
+  requirements_traceability_file: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-MLG-BAY-R_MLG_Bay_Right/Requirements_Traceability.csv"
+  stress_report: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-MLG-BAY-R_MLG_Bay_Right/ASSETS/Analysis/Stress_Analysis_Report.md"
+  fea_model_description: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-MLG-BAY-R_MLG_Bay_Right/ASSETS/Analysis/FEA_Model_Description.md"
+  manufacturing_plan: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-MLG-BAY-R_MLG_Bay_Right/Manufacturing_Plan.md"
+  qc_plan: "../ASSETS/QC_Inspection_Points.csv"

@@ -1,0 +1,111 @@
+assembly_metadata:
+  assembly_id: "ASM-53-300-DOOR-4R"
+  assembly_name: "Passenger Door 4R Frame Assembly"
+  ata_chapter: "53"
+  zone: "300"
+  parent_ci: "CI-53-300-DOOR-4R"
+  related_cis:
+    - "CI-53-300-DOOR-4R-FRAME"
+    - "CI-53-300-DOOR-4R-REINF"
+    - "CI-53-300-DOOR-4R-HINGE"
+    - "CI-53-300-DOOR-4R-LATCH"
+  structure_classification: "Primary"
+  plm_item_id: "TC-ASM-53-300-DOOR-4R"
+  cad_master_drawing: "53-52-4020"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2025-11-22"
+    author: "Doors and Openings Team"
+
+components:
+  - part_number: "53-300-D4R-001"
+    ci_number: "CI-53-300-DOOR-4R-FRAME"
+    description: "Door Frame Structure"
+    quantity: 1
+    material: "Al-7075-T6"
+    primary_load_path: true
+
+  - part_number: "53-300-D4R-002"
+    ci_number: "CI-53-300-DOOR-4R-REINF"
+    description: "Door Frame Reinforcement Doublers"
+    quantity: 4
+    material: "Ti-6Al-4V"
+    primary_load_path: true
+
+  - part_number: "53-300-D4R-003"
+    ci_number: "CI-53-300-DOOR-4R-HINGE"
+    description: "Door Hinge Fittings"
+    quantity: 3
+    material: "Steel 300M"
+    primary_load_path: true
+
+  - part_number: "53-300-D4R-004"
+    ci_number: "CI-53-300-DOOR-4R-LATCH"
+    description: "Door Latch Mechanisms"
+    quantity: 2
+    material: "Steel 300M"
+    primary_load_path: true
+
+  - part_number: "FAST-STEEL-M12-DOOR"
+    ci_number: null
+    description: "High-Strength Steel Fasteners M12x40"
+    quantity: 96
+    material: "300M Steel"
+    primary_load_path: true
+
+  - part_number: "SEAL-SILICONE-DOOR"
+    ci_number: null
+    description: "Door Environmental Seal"
+    quantity: 1
+    material: "Silicone"
+    primary_load_path: false
+
+assembly_sequence:
+  step_001: "Position door frame on assembly jig AJ-53-DOOR-4R"
+  step_002: "Install reinforcement doublers at hinge and latch locations"
+  step_003: "Install hinge fittings with precision alignment pins"
+  step_004: "Install latch mechanisms and verify operation"
+  step_005: "Install high-strength fasteners per schedule"
+  step_006: "Torque all fasteners to 85 Nm ±3%"
+  step_007: "Install environmental seal with adhesive"
+  step_008: "Perform dimensional inspection"
+  step_009: "Conduct door operation test (100 cycles)"
+  step_010: "Perform pressure seal test"
+
+tooling_required:
+  - tooling_id: "AJ-53-DOOR-4R"
+    description: "Door Frame Assembly Jig"
+  - tooling_id: "TW-0-150NM"
+    description: "Torque wrench 0–150 Nm"
+  - tooling_id: "DOOR-OP-TEST-01"
+    description: "Door operation test fixture"
+  - tooling_id: "SEAL-TEST-01"
+    description: "Pressure seal test equipment"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.2
+    reference_drawing: "53-52-4020"
+  ndt:
+    method: "X-ray and ultrasonic"
+    coverage: "100% of critical fastener holes"
+    report_ref: "53-50-05-4R-001_Door_Frame_Analysis.md"
+  fasteners:
+    torque_spec_nm: 85
+    torque_tolerance_percent: 3
+    inspection_coverage: "100% torque verification"
+  acceptance_criteria:
+    - "Frame dimensions within ±0.2 mm"
+    - "Hinge alignment within ±0.1 mm"
+    - "Door operation smooth through full range"
+    - "Pressure seal holds 2× cabin differential"
+    - "NDT indications within acceptable limits per CS-25.783"
+
+links:
+  requirements_traceability_file: "../../02_Configuration_Items/Zone_300_Shell/CI-53-300-DOOR-4R_Passenger_Door_4R/Requirements_Traceability.csv"
+  stress_report: "../../02_Configuration_Items/Zone_300_Shell/CI-53-300-DOOR-4R_Passenger_Door_4R/ASSETS/Analysis/Stress_Analysis_Report.md"
+  fea_model_description: "../../02_Configuration_Items/Zone_300_Shell/CI-53-300-DOOR-4R_Passenger_Door_4R/ASSETS/Analysis/FEA_Model_Description.md"
+  manufacturing_plan: "../../02_Configuration_Items/Zone_300_Shell/CI-53-300-DOOR-4R_Passenger_Door_4R/Manufacturing_Plan.md"
+  qc_plan: "../ASSETS/QC_Inspection_Points.csv"
+  regulatory_compliance: "CS-25.783 (Doors), CS-25.365 (Pressurization Loads)"

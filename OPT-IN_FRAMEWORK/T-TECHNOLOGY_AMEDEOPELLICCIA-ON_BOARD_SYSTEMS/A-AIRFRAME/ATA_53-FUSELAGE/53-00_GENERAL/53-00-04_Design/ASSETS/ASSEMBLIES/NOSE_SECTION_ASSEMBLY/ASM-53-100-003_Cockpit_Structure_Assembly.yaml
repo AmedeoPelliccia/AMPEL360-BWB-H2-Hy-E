@@ -1,0 +1,110 @@
+assembly_metadata:
+  assembly_id: "ASM-53-100-003"
+  assembly_name: "Cockpit Structure Assembly"
+  ata_chapter: "53"
+  zone: "100"
+  parent_ci: "CI-53-100-CKPT-STRUCT"
+  related_cis:
+    - "CI-53-100-CKPT-FLOOR"
+    - "CI-53-100-CKPT-FRAME"
+    - "CI-53-100-CKPT-WIND-FRAME"
+    - "CI-53-100-CKPT-PANELS"
+  structure_classification: "Primary"
+  plm_item_id: "TC-ASM-53-100-003"
+  cad_master_drawing: "53-10-3000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2025-11-22"
+    author: "Cockpit Systems Team"
+
+components:
+  - part_number: "53-100-3001-01"
+    ci_number: "CI-53-100-CKPT-FLOOR"
+    description: "Cockpit Floor Structure"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-100-3002-01"
+    ci_number: "CI-53-100-CKPT-FRAME"
+    description: "Cockpit Main Frame Assembly"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-100-3003-01"
+    ci_number: "CI-53-100-CKPT-WIND-FRAME"
+    description: "Windshield Frame Structure"
+    quantity: 1
+    material: "Al-7075-T6"
+    primary_load_path: true
+
+  - part_number: "53-100-3004-01"
+    ci_number: "CI-53-100-CKPT-PANELS"
+    description: "Cockpit Side Panel Set"
+    quantity: 2
+    material: "CFRP"
+    primary_load_path: false
+
+  - part_number: "FAST-TI-M6-100"
+    ci_number: null
+    description: "Titanium Fasteners M6x20"
+    quantity: 120
+    material: "Ti-6Al-4V"
+    primary_load_path: false
+
+  - part_number: "SEAL-POLY-100-03"
+    ci_number: null
+    description: "Cockpit Environmental Seal Kit"
+    quantity: 1
+    material: "Polyurethane"
+    primary_load_path: false
+
+assembly_sequence:
+  step_001: "Position cockpit floor structure on assembly jig AJ-53-100-003"
+  step_002: "Install main frame assembly with alignment pins"
+  step_003: "Bond windshield frame to main structure with adhesive EA-9394"
+  step_004: "Install temporary fasteners and verify alignment"
+  step_005: "Install side panels and verify fit"
+  step_006: "Install permanent fasteners per Fastener_Schedules.csv"
+  step_007: "Torque all fasteners to specification (35 Nm ±5%)"
+  step_008: "Install environmental seals and verify cockpit pressurization interfaces"
+  step_009: "Perform dimensional inspection"
+  step_010: "Conduct NDT on all critical bond lines"
+
+tooling_required:
+  - tooling_id: "AJ-53-100-003"
+    description: "Cockpit Structure Assembly Jig"
+  - tooling_id: "TW-0-100NM"
+    description: "Torque wrench 0–100 Nm"
+  - tooling_id: "ALIGN-PIN-SET-01"
+    description: "Precision alignment pin set"
+  - tooling_id: "US-CSCAN-01"
+    description: "Ultrasonic C-scan equipment"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.4
+    reference_drawing: "53-10-3000"
+  ndt:
+    method: "Ultrasonic C-scan"
+    coverage: "100% of bond lines and critical joints"
+    report_ref: "53-50-01-03-001_Cockpit_Structure_Analysis.md"
+  fasteners:
+    torque_spec_nm: 35
+    torque_tolerance_percent: 5
+    inspection_coverage: "100% torque verification"
+  acceptance_criteria:
+    - "All critical dimensions within ±0.4 mm"
+    - "No NDT indications above Level 2 per ST-53-NDT-001"
+    - "All fasteners torqued and documented"
+    - "Windshield frame alignment within ±0.2 mm"
+    - "Pressurization seal integrity verified"
+
+links:
+  requirements_traceability_file: "../../02_Configuration_Items/Zone_100_Nose_Section/CI-53-100-CKPT-STRUCT_Cockpit_Structure/Requirements_Traceability.csv"
+  stress_report: "../../02_Configuration_Items/Zone_100_Nose_Section/CI-53-100-CKPT-STRUCT_Cockpit_Structure/ASSETS/Analysis/Stress_Analysis_Report.md"
+  fea_model_description: "../../02_Configuration_Items/Zone_100_Nose_Section/CI-53-100-CKPT-STRUCT_Cockpit_Structure/ASSETS/Analysis/FEA_Model_Description.md"
+  manufacturing_plan: "../../02_Configuration_Items/Zone_100_Nose_Section/CI-53-100-CKPT-STRUCT_Cockpit_Structure/Manufacturing_Plan.md"
+  qc_plan: "../ASSETS/QC_Inspection_Points.csv"
