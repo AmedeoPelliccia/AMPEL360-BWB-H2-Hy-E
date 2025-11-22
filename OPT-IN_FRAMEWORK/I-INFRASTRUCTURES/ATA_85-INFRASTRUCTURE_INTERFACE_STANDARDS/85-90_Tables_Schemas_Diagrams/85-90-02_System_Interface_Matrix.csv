@@ -1,6 +1,6 @@
 Interface_ID,From_System,To_System,Interface_Type,Protocol_Standard,Data_Rate,Physical_Connector,Criticality,Certification_Ref,Status,Notes
 INT-85-001,H2 Refueling Dispenser,Aircraft H2 Tank,Mechanical/Fluid,SAE AS 6858,1000 kg/h,QD Coupling,Critical,CS-25.1309,Active,Automated connection with safety interlock
-INT-85-002,Ground Power Unit,Aircraft Electrical,Electrical AC,MIL-STD-704F,400 kVA,MS 3116-24-10,Critical,DO-160G,Active,400V 3-phase 400Hz supply
+INT-85-002,Ground Power Unit,Aircraft Electrical,Electrical AC,MIL-STD-704F,400 kVA,MIL-C-5015 Type A,Critical,DO-160G,Active,115/200V or 115/230V AC 3-phase 400Hz supply per MIL-STD-704F
 INT-85-003,Air Start Unit,Aircraft APU,Pneumatic,ISO 6858,1.5 kg/s @ 40 psi,AS 1055,Critical,ARP 1899,Active,High pressure air delivery
 INT-85-004,PCA Unit,Aircraft ECS,Pneumatic/Thermal,SAE AS 4073,200 kg/min,Ducting Coupling,Important,AS 4073,Active,Temperature & humidity controlled
 INT-85-005,Fire Suppression,H2 Storage Tank,Control Signal,NFPA 409,100 Mbps,Ethernet RJ45,Critical,NFPA 409,Active,Automated fire detection & suppression
