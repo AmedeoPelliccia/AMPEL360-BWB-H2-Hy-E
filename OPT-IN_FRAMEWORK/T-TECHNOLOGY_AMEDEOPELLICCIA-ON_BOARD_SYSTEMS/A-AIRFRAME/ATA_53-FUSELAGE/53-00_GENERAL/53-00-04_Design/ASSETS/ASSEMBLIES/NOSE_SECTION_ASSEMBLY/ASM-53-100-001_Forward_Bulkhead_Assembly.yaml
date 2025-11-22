@@ -1,0 +1,109 @@
+assembly_metadata:
+  assembly_id: "ASM-53-100-001"
+  assembly_name: "Forward Bulkhead Assembly"
+  ata_chapter: "53"
+  zone: "100"
+  parent_ci: "CI-53-100-BHD-FWD"
+  related_cis:
+    - "CI-53-100-BHD-FWD-WEB"
+    - "CI-53-100-BHD-FWD-CAP-U"
+    - "CI-53-100-BHD-FWD-CAP-L"
+    - "CI-53-100-BHD-FWD-STIFFEN"
+  structure_classification: "Primary"   # [Primary|Secondary]
+  plm_item_id: "TC-ASM-53-100-001"      # Teamcenter / ENOVIA ID if applicable
+  cad_master_drawing: "53-10-1000"      # Links to drawing number
+  version:
+    design_version: "1.0"
+    status: "Preliminary"               # [Concept|Preliminary|Released|Obsolete]
+    last_update: "2025-11-22"
+    author: "Fuselage Structures Team"
+
+components:
+  - part_number: "53-100-1001-01"
+    ci_number: "CI-53-100-BHD-FWD-WEB"
+    description: "Forward Bulkhead Web Panel"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-100-1002-01"
+    ci_number: "CI-53-100-BHD-FWD-CAP-U"
+    description: "Forward Bulkhead Upper Cap"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-100-1003-01"
+    ci_number: "CI-53-100-BHD-FWD-CAP-L"
+    description: "Forward Bulkhead Lower Cap"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-100-1004-01"
+    ci_number: "CI-53-100-BHD-FWD-STIFFEN"
+    description: "Bulkhead Stiffener Set"
+    quantity: 12
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "FAST-TI-M8-100"
+    ci_number: null
+    description: "Titanium Fasteners M8x25"
+    quantity: 48
+    material: "Ti-6Al-4V"
+    primary_load_path: false
+
+  - part_number: "SEAL-EPDM-100-01"
+    ci_number: null
+    description: "Bulkhead Seal"
+    quantity: 2
+    material: "EPDM"
+    primary_load_path: false
+
+assembly_sequence:
+  step_001: "Position forward bulkhead web on assembly jig AJ-53-100-001"
+  step_002: "Apply tooling alignment marks per procedure PROC-ASM-53-100"
+  step_003: "Install upper cap with adhesive AF-191 and temporary fasteners"
+  step_004: "Install lower cap with adhesive AF-191 and temporary fasteners"
+  step_005: "Position and bond stiffeners per stiffener schedule"
+  step_006: "Install permanent titanium fasteners per Fastener_Schedules.csv"
+  step_007: "Torque all fasteners to specification (45 Nm ±5%)"
+  step_008: "Install bulkhead seals"
+  step_009: "Perform dimensional inspection per QC plan"
+  step_010: "Conduct ultrasonic NDT on all bond lines"
+
+tooling_required:
+  - tooling_id: "AJ-53-100-001"
+    description: "Forward Bulkhead Assembly Jig"
+  - tooling_id: "TW-0-100NM"
+    description: "Torque wrench 0–100 Nm"
+  - tooling_id: "LASER-ALIGN-01"
+    description: "Laser alignment system"
+  - tooling_id: "US-CSCAN-01"
+    description: "Ultrasonic C-scan equipment"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.5
+    reference_drawing: "53-10-1000"
+  ndt:
+    method: "Ultrasonic C-scan"
+    coverage: "100% of bond lines"
+    report_ref: "53-50-01-01-001_Forward_Bulkhead_Analysis.md"
+  fasteners:
+    torque_spec_nm: 45
+    torque_tolerance_percent: 5
+    inspection_coverage: "100% torque verification"
+  acceptance_criteria:
+    - "All critical dimensions within ±0.5 mm"
+    - "No NDT indications above Level 2 per internal standard ST-53-NDT-001"
+    - "All fasteners torqued and documented in QC_Inspection_Points.csv"
+    - "Seal integrity verified per PROC-SEAL-001"
+
+links:
+  requirements_traceability_file: "../../02_Configuration_Items/Zone_100_Nose_Section/CI-53-100-BHD-FWD_Forward_Bulkhead/Requirements_Traceability.csv"
+  stress_report: "../../02_Configuration_Items/Zone_100_Nose_Section/CI-53-100-BHD-FWD_Forward_Bulkhead/ASSETS/Analysis/Stress_Analysis_Report.md"
+  fea_model_description: "../../02_Configuration_Items/Zone_100_Nose_Section/CI-53-100-BHD-FWD_Forward_Bulkhead/ASSETS/Analysis/FEA_Model_Description.md"
+  manufacturing_plan: "../../02_Configuration_Items/Zone_100_Nose_Section/CI-53-100-BHD-FWD_Forward_Bulkhead/Manufacturing_Plan.md"
+  qc_plan: "../ASSETS/QC_Inspection_Points.csv"

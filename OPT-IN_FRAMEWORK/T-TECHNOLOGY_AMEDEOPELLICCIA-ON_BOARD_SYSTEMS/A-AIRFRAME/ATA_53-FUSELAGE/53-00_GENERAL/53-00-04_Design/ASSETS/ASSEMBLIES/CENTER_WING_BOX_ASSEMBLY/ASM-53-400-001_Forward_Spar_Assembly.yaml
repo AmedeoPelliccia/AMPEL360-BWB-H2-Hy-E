@@ -1,0 +1,96 @@
+assembly_metadata:
+  assembly_id: "ASM-53-400-001"
+  assembly_name: "Forward Wing Spar Assembly"
+  ata_chapter: "53"
+  zone: "400"
+  parent_ci: "CI-53-400-SPAR-FWD"
+  related_cis:
+    - "CI-53-400-SPAR-FWD-WEB"
+    - "CI-53-400-SPAR-FWD-CAP-U"
+    - "CI-53-400-SPAR-FWD-CAP-L"
+    - "CI-53-400-SPAR-FWD-FIT"
+  structure_classification: "Primary"   # [Primary|Secondary]
+  plm_item_id: "TC-ASM-53-400-001"      # Teamcenter / ENOVIA ID if applicable
+  cad_master_drawing: "53-40-1000"      # Links to drawing number
+  version:
+    design_version: "1.0"
+    status: "Preliminary"                  # [Concept|Preliminary|Released|Obsolete]
+    last_update: "2025-11-22"
+    author: "Fuselage Structures Team"
+
+components:
+  - part_number: "53-400-1001-01"
+    ci_number: "CI-53-400-SPAR-FWD-WEB"
+    description: "Forward Wing Spar Web"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-400-1002-01"
+    ci_number: "CI-53-400-SPAR-FWD-CAP-U"
+    description: "Forward Wing Spar Upper Cap"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-400-1003-01"
+    ci_number: "CI-53-400-SPAR-FWD-CAP-L"
+    description: "Forward Wing Spar Lower Cap"
+    quantity: 1
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "FIT-TI-6AL4V-001"
+    ci_number: "CI-53-400-SPAR-FWD-FIT"
+    description: "Wing-to-Fuselage Attachment Fittings"
+    quantity: 6
+    material: "Ti-6Al-4V"
+    primary_load_path: true
+
+  - part_number: "SEAL-EPDM-400-01"
+    ci_number: null
+    description: "Spar Access Panel Seal"
+    quantity: 4
+    material: "EPDM"
+    primary_load_path: false
+
+assembly_sequence:
+  step_001: "Position spar web on assembly jig AJ-53-400-001"
+  step_002: "Apply release film and tooling prep as per procedure PROC-ASM-53-400"
+  step_003: "Bond upper cap (adhesive AF-191) and install temporary fasteners"
+  step_004: "Bond lower cap and complete temporary fastening"
+  step_005: "Install permanent titanium fasteners per Fastener_Schedules.csv"
+  step_006: "Torque all fasteners to specification (50 Nm ±5%)"
+  step_007: "Perform dimensional inspection and NDT as per QC plan"
+
+tooling_required:
+  - tooling_id: "AJ-53-400-001"
+    description: "Forward Spar Assembly Jig"
+  - tooling_id: "TW-0-100NM"
+    description: "Torque wrench 0–100 Nm"
+  - tooling_id: "LASER-ALIGN-01"
+    description: "Laser alignment system"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.5
+    reference_drawing: "53-40-1000"
+  ndt:
+    method: "Ultrasonic C-scan"
+    coverage: "100% of bond lines"
+    report_ref: "53-50-01-04-001_Wing_Attachment_Fittings.md"
+  fasteners:
+    torque_spec_nm: 50
+    torque_tolerance_percent: 5
+    inspection_coverage: "100% torque verification"
+  acceptance_criteria:
+    - "All critical dimensions within ±0.5 mm"
+    - "No NDT indications above Level 2 per internal standard ST-53-NDT-001"
+    - "All fasteners torqued and documented in QC_Inspection_Points.csv"
+
+links:
+  requirements_traceability_file: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-SPAR-FWD_Forward_Wing_Spar/Requirements_Traceability.csv"
+  stress_report: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-SPAR-FWD_Forward_Wing_Spar/ASSETS/Analysis/Stress_Analysis_Report.md"
+  fea_model_description: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-SPAR-FWD_Forward_Wing_Spar/ASSETS/Analysis/FEA_Model_Description.md"
+  manufacturing_plan: "../../02_Configuration_Items/Zone_400_Center_Wing_Box/CI-53-400-SPAR-FWD_Forward_Wing_Spar/Manufacturing_Plan.md"
+  qc_plan: "../ASSETS/QC_Inspection_Points.csv"

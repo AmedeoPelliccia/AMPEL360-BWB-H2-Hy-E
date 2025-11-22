@@ -1,0 +1,28 @@
+Inspection_ID,Assembly_ID,Inspection_Point,Type,Method,Acceptance_Criteria,Frequency,Hold_Point,Inspector_Level,Documentation_Required
+QC-53-100-001,ASM-53-100-001,Bulkhead Web Positioning,Dimensional,Laser Tracker,±0.5 mm,First Article + 100%,Yes,II,Dimensional Report
+QC-53-100-002,ASM-53-100-001,Cap Bonding,Process,Visual,Complete Coverage,100%,Yes,I,Photo Evidence
+QC-53-100-003,ASM-53-100-001,Fastener Torque,Mechanical,Torque Wrench,45 Nm ±5%,100%,Yes,II,Torque Log
+QC-53-100-004,ASM-53-100-001,Bond Line NDT,NDT,Ultrasonic C-scan,No Level 2+ Indications,100%,Yes,II,C-scan Images
+QC-53-200-001,ASM-53-200-001,Skin Layup,Process,Visual + Ultrasonic,No Wrinkles or Voids,100%,Yes,II,Layup Log + NDT
+QC-53-200-002,ASM-53-200-001,Stringer Alignment,Dimensional,Laser Alignment,±0.3 mm,First Article + 10%,Yes,II,Alignment Report
+QC-53-200-003,ASM-53-200-001,Pressure Test,Functional,Pressure Gauge,1.5× Cabin Diff for 10 min,100%,Yes,III,Pressure Test Report
+QC-53-DOOR-001,ALL DOORS,Frame Dimensions,Dimensional,CMM,±0.2 mm,First Article + 100%,Yes,II,CMM Report
+QC-53-DOOR-002,ALL DOORS,Hinge Alignment,Dimensional,Laser Tracker,±0.1 mm,100%,Yes,II,Alignment Report
+QC-53-DOOR-003,ALL DOORS,Door Operation,Functional,Cycle Test,100 Cycles Smooth,100%,Yes,I,Cycle Log
+QC-53-DOOR-004,ALL DOORS,Seal Test,Functional,Pressure Test,2× Cabin Differential,100%,Yes,II,Seal Test Report
+QC-53-DOOR-005,ALL DOORS,Fastener Torque,Mechanical,Torque Wrench,85 Nm ±3%,100%,Yes,II,Torque Log
+QC-53-FLOOR-001,ASM-53-FLOOR-001,Beam Grid Spacing,Dimensional,Tape Measure + Laser,±0.6 mm,First Article + 10%,Yes,II,Dimensional Report
+QC-53-FLOOR-002,ASM-53-FLOOR-003,Seat Track Alignment,Dimensional,Laser Template,±0.3 mm,100%,Yes,II,Alignment Report
+QC-53-FLOOR-003,ASM-53-FLOOR-003,Pull-Out Test,Mechanical,Load Test,>150% Design Load,Sample (5%),No,III,Test Report
+QC-53-400-001,ASM-53-400-001,Spar Web Positioning,Dimensional,Laser Tracker,±0.5 mm,First Article + 100%,Yes,II,Dimensional Report
+QC-53-400-002,ASM-53-400-001,Wing Attach Fittings,Dimensional + NDT,CMM + X-ray,±0.2 mm + No Indications,100%,Yes,III,CMM + X-ray Reports
+QC-53-400-003,ASM-53-400-003,MLG Trunnion Install,Dimensional + Mechanical,CMM + Torque,±0.2 mm + 120 Nm ±2%,100%,Yes,III,CMM + Torque + Photos
+QC-53-400-004,ASM-53-400-003,MLG Proof Load,Mechanical,Load Test,150% Design Load,100%,Yes,III,Load Test Report
+QC-53-600-001,ASM-53-600-001,Aft Bulkhead NDT,NDT,Ultrasonic C-scan,No Level 2+ Indications,100%,Yes,II,C-scan Images
+QC-53-600-002,ASM-53-600-002,Empennage Attach Fittings,NDT + Mechanical,X-ray + Torque,No Indications + 95 Nm ±3%,100%,Yes,III,X-ray + Torque Log
+QC-53-600-003,ASM-53-600-002,Empennage Proof Load,Mechanical,Load Test,150% Design Load,100%,Yes,III,Load Test Report
+QC-53-PRESS-001,PRESSURE SHELL,Shell Assembly Dimension,Dimensional,3D Laser Scan,±1.0 mm Overall,100%,Yes,III,3D Scan Report
+QC-53-PRESS-002,PRESSURE SHELL,Pressure Test,Functional,Pressure + Strain,1.5× Diff + Strain Limits,100%,Yes,III,Pressure + Strain Report
+QC-53-FINAL-001,ALL ASSEMBLIES,Final Visual Inspection,Visual,Direct Visual,No Visible Defects,100%,Yes,I,Photo Evidence
+QC-53-FINAL-002,ALL ASSEMBLIES,Documentation Complete,Administrative,Document Review,All Travelers Signed,100%,Yes,II,Traveler Package
+QC-53-FINAL-003,ALL ASSEMBLIES,Traceability Verification,Administrative,Database Check,All S/N Recorded,100%,Yes,II,Traceability Report

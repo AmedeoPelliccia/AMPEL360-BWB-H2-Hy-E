@@ -1,0 +1,41 @@
+Tooling_ID,Description,Type,Accuracy_mm,Calibration_Frequency_Months,Last_Calibration,Next_Due,Status,Location,Responsible_Team
+AJ-53-100-001,Forward Bulkhead Assembly Jig,Fixture,0.2,12,2025-01-15,2026-01-15,Active,Building A Bay 3,Nose Section Team
+AJ-53-100-002,NLG Bay Assembly Jig,Fixture,0.2,12,2025-02-10,2026-02-10,Active,Building A Bay 2,Landing Gear Team
+AJ-53-100-003,Cockpit Structure Assembly Jig,Fixture,0.3,12,2025-03-05,2026-03-05,Active,Building A Bay 1,Cockpit Team
+AT-53-200-001,Upper Shell Assembly Tool,Layup Tool,0.5,6,2025-06-01,2025-12-01,Active,Building B Bay 1,Shell Team
+AT-53-200-002,Lower Shell Assembly Tool,Layup Tool,0.5,6,2025-06-01,2025-12-01,Active,Building B Bay 2,Shell Team
+AT-53-300-001,Side Shell Left Assembly Tool,Layup Tool,0.5,6,2025-06-15,2025-12-15,Active,Building B Bay 3,Shell Team
+AT-53-300-002,Side Shell Right Assembly Tool,Layup Tool,0.5,6,2025-06-15,2025-12-15,Active,Building B Bay 4,Shell Team
+FAF-53-200,Final Assembly Fixture,Master Fixture,0.2,12,2025-01-01,2026-01-01,Active,Building C Final Assembly,Integration Team
+FAF-53-FLOOR-001,Floor Beam Assembly Fixture,Fixture,0.3,12,2025-04-01,2026-04-01,Active,Building A Bay 5,Floor Team
+AJ-53-DOOR-1L,Door Frame Assembly Jig 1L,Fixture,0.2,12,2025-05-01,2026-05-01,Active,Building D Bay 1,Doors Team
+AJ-53-DOOR-1R,Door Frame Assembly Jig 1R,Fixture,0.2,12,2025-05-01,2026-05-01,Active,Building D Bay 2,Doors Team
+AJ-53-DOOR-2L,Door Frame Assembly Jig 2L,Fixture,0.2,12,2025-05-01,2026-05-01,Active,Building D Bay 3,Doors Team
+AJ-53-DOOR-2R,Door Frame Assembly Jig 2R,Fixture,0.2,12,2025-05-01,2026-05-01,Active,Building D Bay 4,Doors Team
+AJ-53-DOOR-3L,Door Frame Assembly Jig 3L,Fixture,0.2,12,2025-05-15,2026-05-15,Active,Building D Bay 5,Doors Team
+AJ-53-DOOR-3R,Door Frame Assembly Jig 3R,Fixture,0.2,12,2025-05-15,2026-05-15,Active,Building D Bay 6,Doors Team
+AJ-53-DOOR-4L,Door Frame Assembly Jig 4L,Fixture,0.2,12,2025-05-15,2026-05-15,Active,Building D Bay 7,Doors Team
+AJ-53-DOOR-4R,Door Frame Assembly Jig 4R,Fixture,0.2,12,2025-05-15,2026-05-15,Active,Building D Bay 8,Doors Team
+AJ-53-CARGO-CRG-FL,Cargo Door Jig FL,Fixture,0.3,12,2025-07-01,2026-07-01,Active,Building D Bay 9,Cargo Team
+AJ-53-CARGO-CRG-FR,Cargo Door Jig FR,Fixture,0.3,12,2025-07-01,2026-07-01,Active,Building D Bay 10,Cargo Team
+AJ-53-CARGO-CRG-AL,Cargo Door Jig AL,Fixture,0.3,12,2025-07-01,2026-07-01,Active,Building D Bay 11,Cargo Team
+AJ-53-CARGO-CRG-AR,Cargo Door Jig AR,Fixture,0.3,12,2025-07-01,2026-07-01,Active,Building D Bay 12,Cargo Team
+AJ-53-400-001,Forward Spar Assembly Jig,Fixture,0.2,12,2025-02-01,2026-02-01,Active,Building E Bay 1,Wing Box Team
+AJ-53-400-002,Rear Spar Assembly Jig,Fixture,0.2,12,2025-02-01,2026-02-01,Active,Building E Bay 2,Wing Box Team
+AJ-53-400-003,MLG Bay Left Assembly Jig,Fixture,0.1,6,2025-08-01,2026-02-01,Active,Building E Bay 3,Landing Gear Team
+AJ-53-400-004,MLG Bay Right Assembly Jig,Fixture,0.1,6,2025-08-01,2026-02-01,Active,Building E Bay 4,Landing Gear Team
+AJ-53-600-001,Aft Bulkhead Assembly Jig,Fixture,0.2,12,2025-03-01,2026-03-01,Active,Building F Bay 1,Tail Team
+AJ-53-600-002,Empennage Attachment Jig,Fixture,0.2,12,2025-03-15,2026-03-15,Active,Building F Bay 2,Tail Team
+AM-53-600-003,Tail Cone Assembly Mandrel,Mandrel,0.5,12,2025-04-01,2026-04-01,Active,Building F Bay 3,Tail Team
+LASER-ALIGN-01,Laser Alignment System,Measurement,0.05,3,2025-09-01,2025-12-01,Active,Portable,Metrology
+LASER-ALIGN-02,Multi-Axis Laser System,Measurement,0.05,3,2025-09-01,2025-12-01,Active,Portable,Metrology
+LASER-TRACK-01,Laser Tracker System,Measurement,0.05,1,2025-10-01,2025-11-01,Active,Portable,Metrology
+TW-0-50NM,Torque Wrench 0-50 Nm,Hand Tool,±2%,3,2025-09-01,2025-12-01,Active,Tool Crib A,QC Team
+TW-0-100NM,Torque Wrench 0-100 Nm,Hand Tool,±2%,3,2025-09-01,2025-12-01,Active,Tool Crib A,QC Team
+TW-0-150NM,Torque Wrench 0-150 Nm,Hand Tool,±2%,3,2025-09-01,2025-12-01,Active,Tool Crib B,QC Team
+TW-0-200NM,Torque Wrench 0-200 Nm,Hand Tool,±2%,3,2025-09-01,2025-12-01,Active,Tool Crib B,QC Team
+US-CSCAN-01,Ultrasonic C-Scan Equipment,NDT,Per Mfg,6,2025-07-01,2026-01-01,Active,NDT Lab,NDT Team
+LOAD-TEST-100KN,Load Test Fixture 100kN,Test Equipment,±1%,12,2025-01-15,2026-01-15,Active,Test Lab 1,Test Team
+LOAD-TEST-250KN,Load Test Fixture 250kN,Test Equipment,±1%,12,2025-01-15,2026-01-15,Active,Test Lab 2,Test Team
+LOAD-TEST-500KN,Load Test Fixture 500kN,Test Equipment,±1%,6,2025-08-01,2026-02-01,Active,Test Lab 3,Test Team
+PRESS-TEST-01,Pressure Test Equipment,Test Equipment,±0.5%,6,2025-08-15,2026-02-15,Active,Pressure Test Lab,Test Team
