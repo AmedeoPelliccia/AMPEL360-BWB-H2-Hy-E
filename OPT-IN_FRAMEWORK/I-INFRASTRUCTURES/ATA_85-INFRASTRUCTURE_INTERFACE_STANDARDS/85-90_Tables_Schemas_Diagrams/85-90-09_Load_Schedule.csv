@@ -48,4 +48,4 @@ LD-85-046,UPS System - Critical Loads,Electrical Building,UPS,150,0.95,143,0.98,
 LD-85-047,Emergency Exit Signs,Facility Wide,Lighting,10,1.0,10,1.0,230V,Various,CB-EXIT-SIGNS,FDR-EMERG-03,Emergency,Critical,24/7,Battery backed
 LD-85-048,Lightning Protection System,Facility Wide,Electronic,3,1.0,3,0.95,230V,1-phase,CB-LIGHT-PROT-01,FDR-SAFETY-02,Safety,Critical,24/7,Surge protection monitoring
 LD-85-049,Fuel Lab Equipment,Fuel Quality Lab,Electronic/Heating,20,0.7,14,0.92,230V,1-phase,CB-LAB-01,FDR-LAB-01,Quality Control,Important,Operating hours,Testing equipment
-LD-85-050,Miscellaneous Receptacles,Various,Receptacle,200,0.3,60,0.85,230V,Various,Various,Various,General,Non-Critical,Variable,General purpose outlets
+LD-85-050,Miscellaneous Receptacles,Various,Receptacle,200,0.6,120,0.9,230V,Various,Various,Various,General,Non-Critical,Variable,Assumed 60% demand factor per NEC Table 220.42 for commercial facility; power factor averaged for mixed office and cleaning equipment loads.
