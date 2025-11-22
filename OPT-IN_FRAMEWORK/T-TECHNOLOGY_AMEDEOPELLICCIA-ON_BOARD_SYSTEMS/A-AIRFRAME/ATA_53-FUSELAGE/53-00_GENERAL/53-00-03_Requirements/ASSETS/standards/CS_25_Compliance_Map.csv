@@ -1,0 +1,45 @@
+Requirement_ID,Requirement_Title,CS_25_Paragraph,CS_25_Title,Compliance_Method,Compliance_Status,Evidence_Document,Remarks
+53-00-03-01-001,Ultimate Load Capability,CS-25.303,Factor of Safety,"Test, Analysis",PLANNED,V&V-53-001,Ultimate load = 1.5 × limit load
+53-00-03-01-001,Ultimate Load Capability,CS-25.305,Strength and Deformation,"Test, Analysis",PLANNED,V&V-53-001,No failure for 3 seconds
+53-00-03-01-002,Limit Load Elastic Behavior,CS-25.305,Strength and Deformation,"Test, Analysis",PLANNED,V&V-53-003,Elastic behavior at limit loads
+53-00-03-01-002,Limit Load Elastic Behavior,CS-25.301,Loads,"Test, Analysis",PLANNED,V&V-53-003,All limit load cases
+53-00-03-01-003,Stiffness and Deflection Control,CS-25.305,Strength and Deformation,Analysis,PLANNED,V&V-53-005,Deflection limits
+53-00-03-01-003,Stiffness and Deflection Control,CS-25.629,Aeroelastic Stability Requirements,Analysis,PLANNED,V&V-53-006,Flutter and divergence
+53-00-03-01-004,Environmental Durability,CS-25.307,Proof of Structure,"Test, Analysis",PLANNED,V&V-53-008,Environmental testing
+53-00-03-01-004,Environmental Durability,CS-25.603,Materials,Test,PLANNED,V&V-53-009,Material qualification
+53-00-03-01-004,Environmental Durability,CS-25.609,Protection of Structure,Inspection,PLANNED,V&V-53-010,Corrosion protection
+53-00-03-02-001,Maximum Differential Pressure,CS-25.365,Pressurized Compartment Loads,"Test, Analysis",PLANNED,V&V-53-014,9.3 psi max differential
+53-00-03-02-001,Maximum Differential Pressure,CS-25.841,Pressurized Cabins,Test,PLANNED,V&V-53-015,Proof and burst tests
+53-00-03-02-002,Pressure Cycle Endurance,CS-25.571,Damage Tolerance and Fatigue Evaluation,"Test, Analysis",PLANNED,V&V-53-017,60000 cycle life goal
+53-00-03-02-003,Emergency Decompression Resistance,CS-25.365(e),Sudden Release of Pressure,Analysis,PLANNED,V&V-53-020,Decompression scenarios
+53-00-03-02-004,Pressure Relief Systems,CS-25.841(b),Pressurized Cabins - Relief Valves,Test,PLANNED,V&V-53-023,Relief valve function
+53-00-03-02-004,Pressure Relief Systems,CS-25.1309,Equipment Systems and Installations,"FMEA, Test",PLANNED,V&V-53-024,System safety analysis
+53-00-03-02-005,Fuselage Skin Fatigue Pressurization,CS-25.571,Damage Tolerance and Fatigue Evaluation,"Test, Analysis",PLANNED,V&V-53-026,Skin and joint fatigue
+53-00-03-03-001,Damage Growth Prediction,CS-25.571,Damage Tolerance and Fatigue Evaluation,Analysis,PLANNED,V&V-53-030,Crack growth analysis
+53-00-03-03-002,Crack Arrest Features,CS-25.571(b),Damage Tolerance Evaluation,"Test, Analysis",PLANNED,V&V-53-032,Fail-safe design
+53-00-03-03-003,Inspectability Requirements,CS-25.571,Damage Tolerance and Fatigue Evaluation,Analysis,PLANNED,V&V-53-035,Inspection intervals
+53-00-03-03-003,Inspectability Requirements,CS-25.1529,Instructions for Continued Airworthiness,Documentation,PLANNED,Maintenance Manual,Inspection procedures
+53-00-03-03-004,SHM for Damage Detection,CS-25.1309,Equipment Systems and Installations,"Test, Demonstration",PLANNED,V&V-53-038,SHM system qualification
+53-00-03-03-005,Composite Damage Tolerance,CS-25.571,Damage Tolerance and Fatigue Evaluation,"Test, Analysis",PLANNED,V&V-53-041,Composite-specific evaluation
+53-00-03-03-005,Composite Damage Tolerance,CS-25.603,Materials,Test,PLANNED,V&V-53-042,Composite material qualification
+53-00-03-04-001,Emergency Landing Loads,CS-25.561,Emergency Landing Conditions,"Test, Analysis",PLANNED,V&V-53-044,Static ultimate loads
+53-00-03-04-001,Emergency Landing Loads,CS-25.562,Emergency Landing Dynamic Conditions,Test,PLANNED,V&V-53-045,Dynamic testing
+53-00-03-04-002,Occupant Protection,CS-25.562,Emergency Landing Dynamic Conditions,Test,PLANNED,V&V-53-047,Occupant injury criteria
+53-00-03-04-002,Occupant Protection,CS-25.785,Seats Berths Safety Belts and Harnesses,Test,PLANNED,V&V-53-048,Restraint system loads
+53-00-03-04-003,Energy Absorption Structures,CS-25.562,Emergency Landing Dynamic Conditions,Test,PLANNED,V&V-53-050,Energy absorber testing
+53-00-03-04-004,Post-Crash Egress,CS-25.803,Emergency Evacuation,Demonstration,PLANNED,V&V-53-054,90-second evacuation
+53-00-03-04-004,Post-Crash Egress,CS-25.807,Emergency Exits,Test,PLANNED,V&V-53-053,Exit functionality after crash
+53-00-03-05-001,Fire Resistance Materials,CS-25.853,Compartment Interiors,Test,PLANNED,V&V-53-056,Flammability testing
+53-00-03-05-002,Burn Through Resistance,CS-25.856,Thermal/Acoustic Insulation Materials,Test,PLANNED,V&V-53-059,Burn-through testing
+53-00-03-05-003,Smoke and Toxicity Limits,CS-25.853,Compartment Interiors,Test,PLANNED,V&V-53-062,Smoke density testing
+53-00-03-05-004,Fire Containment Barriers,CS-25.855,Cargo Compartment Fire Protection,Test,PLANNED,V&V-53-065,Fire barrier testing
+53-00-03-05-004,Fire Containment Barriers,CS-25.869,Fire Protection: Systems,"Test, Inspection",PLANNED,V&V-53-066,Fire seal qualification
+53-00-03-06-001,Door Frame Integration,CS-25.783,Doors,Test,PLANNED,V&V-53-068,Door functionality
+53-00-03-06-002,Window Integration,CS-25.773,Pilot Compartment View,Inspection,PLANNED,V&V-53-069,Optical quality
+53-00-03-06-002,Window Integration,CS-25.775,Windshields and Windows,Test,PLANNED,V&V-53-070,Window strength
+53-00-03-06-003,Systems Penetrations,CS-25.869,Fire Protection: Systems,Test,PLANNED,V&V-53-071,Fire seal testing
+53-00-03-06-004,Cargo Floor Integration,CS-25.787,Cargo and Baggage Compartments,Test,PLANNED,V&V-53-072,Floor strength
+53-00-03-06-005,Landing Gear Attachments,CS-25.721,General - Powerplant Installations,"Test, Analysis",PLANNED,V&V-53-073,Attachment strength
+53-00-03-07-001,Sensor Network Coverage,CS-25.1309,Equipment Systems and Installations,Analysis,PLANNED,V&V-53-074,Coverage analysis
+53-00-03-07-003,Damage Detection Sensitivity,CS-25.571,Damage Tolerance and Fatigue Evaluation,Test,PLANNED,V&V-53-076,POD validation
+53-00-03-07-004,Predictive Analytics Integration,CS-25.1529,Instructions for Continued Airworthiness,Documentation,PLANNED,Maintenance Manual,CBM procedures
