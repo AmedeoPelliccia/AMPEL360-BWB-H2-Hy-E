@@ -42,7 +42,7 @@ This document provides detailed structural design specifications, load requireme
 
 ### 3.1 Functional Requirements
 
-- **Primary Function**: [Structure-specific functionality]
+- **Primary Function**: Enable simultaneous multi-door boarding and deboarding for BWB aircraft, accommodating the wide fuselage configuration.
 - **Design Life**: Minimum 50 years
 - **Occupancy/Usage**: Per operational requirements
 - **Environmental Conditions**: Site-specific per [ASSETS/Site_Specific/](../ASSETS/Site_Specific/)
