@@ -38,8 +38,8 @@ Proper integration of interfaces is critical for safe operation, structural inte
 - 53-00-03-04-003 (Energy Absorption Structures)
 
 ### Verification Activities
-- V&V-53-73: Landing Gear Attachments Verification
-- V&V-53-173: Integration Testing
+- V&V-53-073: Landing Gear Attachments Verification
+- V&V-53-074: Integration Testing
 
 ## Assumptions and Constraints
 - Design based on worst-case loading scenarios

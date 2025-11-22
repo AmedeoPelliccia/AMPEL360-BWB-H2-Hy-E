@@ -38,8 +38,8 @@ Proper integration of interfaces is critical for safe operation, structural inte
 - 53-00-03-05-004 (Fire Containment Barriers)
 
 ### Verification Activities
-- V&V-53-71: Systems Penetrations Verification
-- V&V-53-171: Integration Testing
+- V&V-53-071: Systems Penetrations Verification
+- V&V-53-072: Integration Testing
 
 ## Assumptions and Constraints
 - Design based on worst-case loading scenarios

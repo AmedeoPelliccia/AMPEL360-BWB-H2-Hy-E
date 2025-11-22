@@ -39,8 +39,8 @@ Effective SHM enables condition-based maintenance, reduces inspection burden, im
 - 53-00-03-07-003 (Damage Detection Sensitivity)
 
 ### Verification Activities
-- V&V-53-78: False Alarm Rate Limits Verification
-- V&V-53-178: System Performance Testing
+- V&V-53-078: False Alarm Rate Limits Verification
+- V&V-53-079: Integration Testing
 
 ## Assumptions and Constraints
 - SHM technology: piezoelectric sensors, guided wave inspection

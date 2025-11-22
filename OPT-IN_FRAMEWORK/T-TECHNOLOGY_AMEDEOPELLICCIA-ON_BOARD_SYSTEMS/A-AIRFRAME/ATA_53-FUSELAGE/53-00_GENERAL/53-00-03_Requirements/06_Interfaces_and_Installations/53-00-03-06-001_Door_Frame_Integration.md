@@ -38,8 +38,8 @@ Proper integration of interfaces is critical for safe operation, structural inte
 - 53-00-03-04-004 (Post-Crash Egress)
 
 ### Verification Activities
-- V&V-53-69: Door Frame Integration Verification
-- V&V-53-169: Integration Testing
+- V&V-53-069: Door Frame Integration Verification
+- V&V-53-070: Integration Testing
 
 ## Assumptions and Constraints
 - Design based on worst-case loading scenarios

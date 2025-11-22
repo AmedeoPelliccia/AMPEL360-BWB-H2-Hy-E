@@ -39,8 +39,8 @@ Effective SHM enables condition-based maintenance, reduces inspection burden, im
 - 53-00-03-07-003 (Damage Detection Sensitivity)
 
 ### Verification Activities
-- V&V-53-77: Predictive Analytics Integration Verification
-- V&V-53-177: System Performance Testing
+- V&V-53-077: Predictive Analytics Integration Verification
+- V&V-53-078: Integration Testing
 
 ## Assumptions and Constraints
 - SHM technology: piezoelectric sensors, guided wave inspection

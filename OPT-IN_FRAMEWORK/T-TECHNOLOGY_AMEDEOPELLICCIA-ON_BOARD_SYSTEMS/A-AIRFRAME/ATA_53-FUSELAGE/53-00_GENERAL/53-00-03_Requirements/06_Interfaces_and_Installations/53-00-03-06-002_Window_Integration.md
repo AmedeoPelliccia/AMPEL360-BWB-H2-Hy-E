@@ -38,8 +38,8 @@ Proper integration of interfaces is critical for safe operation, structural inte
 - 53-00-03-03-001 (Damage Growth Prediction)
 
 ### Verification Activities
-- V&V-53-70: Window Integration Verification
-- V&V-53-170: Integration Testing
+- V&V-53-070: Window Integration Verification
+- V&V-53-071: Integration Testing
 
 ## Assumptions and Constraints
 - Design based on worst-case loading scenarios
