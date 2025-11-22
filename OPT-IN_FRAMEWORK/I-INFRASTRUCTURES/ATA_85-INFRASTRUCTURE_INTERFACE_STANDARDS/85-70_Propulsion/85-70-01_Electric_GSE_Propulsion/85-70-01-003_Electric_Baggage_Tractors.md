@@ -159,7 +159,7 @@ This document defines specifications and requirements for battery-electric bagga
 
 - [ISO 3691-4](https://www.iso.org/standard/66916.html) – Industrial trucks - Safety requirements - Driverless trucks
 - [ISO 6682-1](https://www.iso.org/standard/45086.html) – Earth-moving machinery - Zones of comfort and reach for controls
-- [EN 1755](https://standards.iteh.ai/catalog/standards/cen/5e5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/en-1755-2000) – Transportable gas cylinders - Refillable
+- [EN 1175](https://standards.iteh.ai/catalog/standards/cen/2e5e5e5e-2e5e-2e5e-2e5e-2e5e2e5e2e5e/en-1175-2020) – Safety of industrial trucks – Electrical requirements
 
 ### 6.3 Electric Vehicle Standards
 
