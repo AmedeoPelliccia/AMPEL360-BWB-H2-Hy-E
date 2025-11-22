@@ -33,7 +33,7 @@ The Battery Energy Storage System (BESS) provides grid-scale energy storage to s
 - Large-scale fire with toxic fumes (lithium-ion thermal runaway)
 - Loss of backup power to critical systems (H2 compression, safety lighting)
 - Grid instability (if providing frequency regulation services)
-- Environmental contamination (battery electrolyte leak age)
+- Environmental contamination (battery electrolyte leakage)
 
 See: [85-20-00-004_Subsystem_Criticality_Classification.md](../../85-20_Subsystems/85-20-00-004_Subsystem_Criticality_Classification.md)
 

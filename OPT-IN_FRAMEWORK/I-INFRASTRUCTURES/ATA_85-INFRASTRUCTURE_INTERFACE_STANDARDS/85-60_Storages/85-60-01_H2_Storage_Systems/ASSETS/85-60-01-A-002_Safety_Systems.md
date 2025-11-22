@@ -61,7 +61,7 @@ This asset document provides comprehensive safety system specifications, safety 
 - **High-High Pressure:** 98% of design pressure — Action required (reduce pressure)
 
 **ESD Triggers:**
-- LH2tank over-pressure (>design pressure)
+- LH2 tank over-pressure (>design pressure)
 - GH2 vessel over-pressure (>design pressure)
 - Compressor discharge high pressure (>design pressure downstream equipment)
 
