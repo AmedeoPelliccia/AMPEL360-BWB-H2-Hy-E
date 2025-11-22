@@ -383,12 +383,8 @@ When a CI changes, the process is governed by:
   - Clarified boundaries with `53-00-03_Requirements`, `53-20_Subsystems`, and `53-50_Structures`.
 - **v1.0 (2025-11-15)** – Initial design folder structure (overview, ICDs, design analysis approach).
 
----
-
-## Document Control
-
+**AI Assistance:**
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
 - Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
 - Last AI update: _2025-11-22_.
