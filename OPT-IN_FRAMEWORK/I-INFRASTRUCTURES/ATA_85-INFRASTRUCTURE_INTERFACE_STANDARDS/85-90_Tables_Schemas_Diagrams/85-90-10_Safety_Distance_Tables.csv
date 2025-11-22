@@ -37,7 +37,7 @@ SD-85-035,Fuel Storage (if applicable),Water Wells,100,150,EPA 40 CFR 280,Contam
 SD-85-036,Fuel Storage (if applicable),Surface Water,30,50,EPA 40 CFR 112,Contamination,High,Spill containment; SPCC plan,Environmental permit,TBD,Surface water protection
 SD-85-037,High Voltage Overhead Lines,Buildings,5,8,NESC Section 234,Electrical Hazard,Medium,Adequate clearance,Survey + inspection,TBD,Electrical safety clearance
 SD-85-038,High Voltage Overhead Lines,Ground Level,8,10,NESC Section 232,Electrical Hazard,High,Conductor height,Survey + inspection,TBD,Public safety clearance
-SD-85-039,Lightning Protection Mast,Protected Structure,0,0,IEC 62305-3,Lightning Strike,High,Mast height per rolling sphere,Lightning study,TBD,Protection zone radius calculated
+SD-85-039,Lightning Protection Mast,Protected Structure,Calculated per design,Calculated per design,IEC 62305-3,Lightning Strike,High,Mast height per rolling sphere,Lightning study,TBD,Protection zone radius calculated
 SD-85-040,Perimeter Fence,Buildings,3,5,Local Security Code,Security/Access,Low,Clear zone for patrol,Security assessment,TBD,Perimeter surveillance
 SD-85-041,Security Gate,Roadway,10,15,Local Traffic Code,Vehicle Queue,Low,Adequate queuing space,Traffic study,TBD,Vehicle stacking length
 SD-85-042,H2 Safety Exclusion Zone,Public Access,50,75,NFPA 2 (composite),Fire/Explosion,High,Fencing; signage; monitoring,Composite of SD-85-001 to 009,TBD,Overall H2 facility safety perimeter
