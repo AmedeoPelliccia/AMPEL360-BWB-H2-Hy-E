@@ -10,7 +10,7 @@ This document provides the master index of all Configuration Items (CIs) for the
 - **Description**: Complete fuselage assembly
 - **Weight Target**: 45,000 kg
 - **Material**: Mixed (CFRP primary, metals secondary)
-- **Status**: Production
+- **Status**: Detailed Design
 - **Criticality**: Critical
 
 ## 3. Zone-Level CIs

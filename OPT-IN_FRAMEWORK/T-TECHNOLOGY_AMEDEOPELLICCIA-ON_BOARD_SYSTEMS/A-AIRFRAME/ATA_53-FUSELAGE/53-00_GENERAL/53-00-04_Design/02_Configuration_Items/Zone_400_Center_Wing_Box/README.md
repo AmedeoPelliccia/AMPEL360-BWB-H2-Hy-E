@@ -30,14 +30,14 @@ Zone 400 is the structural heart of the BWB, where:
 
 | CI Number | CI Name | Type | Weight (kg) | Structural Role | Status |
 |-----------|---------|------|-------------|-----------------|--------|
-| CI-53-400 | Center Wing Box | Assembly | 12,000 | Primary | Production |
-| CI-53-400-SPAR-FWD | Forward Wing Spar | Spar | 2,200 | Primary | Production |
-| CI-53-400-SPAR-REAR | Rear Wing Spar | Spar | 2,000 | Primary | Production |
-| CI-53-400-BAY-MLG-L | Left Main Gear Bay | Bay | 850 | Primary | Production |
-| CI-53-400-BAY-MLG-R | Right Main Gear Bay | Bay | 850 | Primary | Production |
+| CI-53-400 | Center Wing Box | Assembly | 12,000 | Primary | Detailed |
+| CI-53-400-SPAR-FWD | Forward Wing Spar | Spar | 2,200 | Primary | Released |
+| CI-53-400-SPAR-REAR | Rear Wing Spar | Spar | 2,000 | Primary | Released |
+| CI-53-400-BAY-MLG-L | Left Main Gear Bay | Bay | 850 | Primary | Released |
+| CI-53-400-BAY-MLG-R | Right Main Gear Bay | Bay | 850 | Primary | Released |
 | CI-53-400-RIB-001 | Wing Rib 001 | Rib | 120 | Primary | Detailed |
-| CI-53-400-SKN-U-001 | Upper Skin Panel 001 | Skin | 450 | Primary | Production |
-| CI-53-400-SKN-L-001 | Lower Skin Panel 001 | Skin | 420 | Primary | Production |
+| CI-53-400-SKN-U-001 | Upper Skin Panel 001 | Skin | 450 | Primary | Released |
+| CI-53-400-SKN-L-001 | Lower Skin Panel 001 | Skin | 420 | Primary | Released |
 
 ## Zone Index
 
@@ -121,12 +121,12 @@ CI-53-400-SPAR-FWD_Forward_Wing_Spar/
 
 ## Status and Maturity
 
-**Overall Zone Status**: Production (most CIs released)
+**Overall Zone Status**: Design Released (most CIs released for manufacturing preparation)
 
 **Design Maturity**: 85% (as of 2025-11-22)
-- 90% of primary structure released
-- 75% of secondary structure released
-- 60% of fittings and brackets released
+- 90% of primary structure design released
+- 75% of secondary structure design released
+- 60% of fittings and brackets at detailed design stage
 
 ## Risk Items
 
