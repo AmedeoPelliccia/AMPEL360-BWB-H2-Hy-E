@@ -1,0 +1,5 @@
+ComponentID,ComponentName,LoadCase,MS,Status
+S-001,Floor Beam Forward,9g Emergency,0.18,PASS
+S-002,Seat Track Mid-Cabin,16g Dynamic,0.22,PASS
+S-003,Overhead Bin Support,9g Forward,0.15,PASS
+S-004,Monument Hard Point,Combined,0.12,PASS

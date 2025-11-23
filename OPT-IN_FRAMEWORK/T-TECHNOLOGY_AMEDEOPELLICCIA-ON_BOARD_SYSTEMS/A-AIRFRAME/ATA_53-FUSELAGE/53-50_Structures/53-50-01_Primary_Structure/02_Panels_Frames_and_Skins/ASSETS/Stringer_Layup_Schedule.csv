@@ -1,0 +1,5 @@
+StringerType,Location,CrossSection,Layup,PliesCount,Height_mm,Width_mm,Mass_kg_m
+A-Heavy,Upper_Mid,Hat-Section,[0]8/[45/-45]2,20,40,25,0.45
+B-Standard,Upper_All,Hat-Section,[0]6/[45/-45]2,16,35,20,0.35
+C-Standard,Lower_All,Hat-Section,[0]6/[45/-45]2,16,35,20,0.35
+D-Light,Side,J-Section,[0]4/[45/-45],10,25,15,0.20

@@ -1,0 +1,6 @@
+ComponentID,ComponentName,StaticAnalysis,BucklingAnalysis,FatigueAnalysis,DamageToleranceAnalysis,Status
+C-001,Upper Shell Panel Station 10-15,Complete,Complete,In Progress,Planned,70%
+C-002,Lower Shell Panel Station 10-15,Complete,Complete,Complete,Complete,100%
+C-003,Frame Station 12.5m,Complete,Complete,Planned,Planned,50%
+C-004,Stringer Type A,Complete,In Progress,Planned,Planned,40%
+C-005,Landing Gear Fitting LH,Complete,N/A,Complete,Complete,100%

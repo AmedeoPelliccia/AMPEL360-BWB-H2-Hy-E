@@ -1,0 +1,12 @@
+FrameStation_m,FrameType,Spacing_mm,CrossSection,Material,Weight_kg
+2.5,Bulkhead,N/A,Dome,Al-7075,45
+5.0,Heavy,500,Channel-200mm,Al-7075,12
+7.5,Standard,500,Channel-150mm,Al-7075,8
+10.0,Standard,500,Channel-150mm,Al-7075,8
+12.5,Heavy,500,Channel-200mm,Al-7075,12
+15.0,Standard,600,Channel-150mm,Al-7075,8
+17.5,Standard,600,Channel-150mm,Al-7075,8
+20.0,Heavy,600,Channel-200mm,Al-7075,12
+25.0,Standard,600,Channel-150mm,Al-7075,8
+30.0,Heavy,600,Channel-200mm,Al-7075,12
+38.0,Bulkhead,N/A,Dome,Al-7075,40
