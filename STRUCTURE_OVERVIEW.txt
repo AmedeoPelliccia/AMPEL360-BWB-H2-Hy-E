@@ -143,20 +143,33 @@ OPT-IN FRAMEWORK/
 14-FOLDER LIFECYCLE SKELETON (applied to all 83 ATA chapters):
 ---------------------------------------------------------------
 Each ATA chapter contains:
-  01_OVERVIEW/
-  02_SAFETY/
-  03_REQUIREMENTS/
-  04_DESIGN/
-  05_INTERFACES/
-  06_ENGINEERING/
-  07_V_AND_V/
-  08_PROTOTYPING/
-  09_PRODUCTION_PLANNING/
-  10_CERTIFICATION/
-  11_OPERATIONS_AND_MAINTENANCE/
-  12_ASSETS_MANAGEMENT/
-  13_SUBSYSTEMS_AND_COMPONENTS/
-  14_META_GOVERNANCE/
+XX-00_GENERAL/
+├── XX-00-01_Overview/
+├── XX-00-02_Safety/
+├── XX-00-03_Requirements/
+├── XX-00-04_Design/
+├── XX-00-05_Interfaces/
+├── XX-00-06_Engineering/
+├── XX-00-07_V_AND_V/
+├── XX-00-08_Prototyping/
+├── XX-00-09_Production_Planning/
+├── XX-00-10_Certification/
+├── XX-00-11_EIS_Versions_Tags/
+├── XX-00-12_Services/
+├── XX-00-13_Subsystems_Components/
+└── XX-00-14_Ops_Std_Sustain/
+
+### Cross-ATA Buckets (Mandatory in Every Chapter)
+```
+├── XX-10_Operations/
+├── XX-20_Subsystems/
+├── XX-30_Circularity/
+├── XX-40_Software/
+├── XX-50_Structures/
+├── XX-60_Storages/
+├── XX-70_Propulsion/
+├── XX-80_Energy/
+└── XX-90_Tables_Schemas_Diagrams/
 
 DOCUMENTATION FILES:
 --------------------
