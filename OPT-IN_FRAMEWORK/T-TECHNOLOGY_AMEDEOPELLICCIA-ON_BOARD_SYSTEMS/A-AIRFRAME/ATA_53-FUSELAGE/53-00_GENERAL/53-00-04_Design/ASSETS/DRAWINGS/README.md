@@ -230,7 +230,7 @@ Drawing_Number,Title,Zone,Type,CI_Reference,Assembly_ID,Revision,Status,CAD_File
 Drawing_Number,Title,Zone,Folder,Type,CI_Reference,Assembly_ID,Revision,Status,CAD_File
 53-10-0000,Zone 100 General Arrangement,100,ZONE_100_NOSE_SECTION,GA,CI-53-100,,A,Released,53-10-0000_Zone_100_General_Arrangement.svg
 53-40-1000,Forward Wing Spar Assembly,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-SPAR-FWD,ASM-53-400-001,A,Released,53-40-1000_Forward_Wing_Spar_Assembly.svg
-53-JS-2000,Circumferential Splice Zone 100–200,ALL,JOINTS_AND_SPLICES,Joint,,,"A",Released,53-JS-2000_Circumferential_Splice_Zone_100_200.svg
+53-JS-2000,Circumferential Splice Zone 100–200,ALL,JOINTS_AND_SPLICES,Joint,,,A,Released,53-JS-2000_Circumferential_Splice_Zone_100_200.svg
 ```
 
 This file is the **single source of truth** for:
