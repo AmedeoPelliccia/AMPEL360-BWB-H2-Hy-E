@@ -412,9 +412,9 @@ SN0100UP,0100,9999,ALL,Series production
 ```
 Format: ASM-[ATA]-[ZONE]-[SEQUENCE]_Description.yaml
 
-Example: ASM-53-400-001_Forward_Spar_Assembly.yaml
+Example: ASM-57-400-001_Forward_Spar_Assembly.yaml
   ASM    = Assembly prefix
-  53     = ATA Chapter
+  57     = ATA Chapter (Wings)
   400    = Zone
   001    = Sequence number
 ```
