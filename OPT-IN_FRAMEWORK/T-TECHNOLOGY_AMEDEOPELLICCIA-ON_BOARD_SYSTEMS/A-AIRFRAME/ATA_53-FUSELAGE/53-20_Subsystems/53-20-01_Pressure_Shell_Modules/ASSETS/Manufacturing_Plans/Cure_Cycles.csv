@@ -1,0 +1,4 @@
+Material,Cure_Temp_C,Hold_Time_min,Pressure_Bar,Vacuum,Ramp_Rate_C_min
+IM7/8552,177,120,6.9,Yes,2.0
+T800/M21,180,120,7.0,Yes,2.5
+PR-1776_Sealant,60,240,Ambient,No,N/A

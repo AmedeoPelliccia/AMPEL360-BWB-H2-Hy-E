@@ -1,0 +1,7 @@
+Subsystem_ID,Subsystem_Name,Interfaces_With,Interface_Type,Criticality,Status
+53-20-01,Pressure Shell Modules,53-20-02|53-20-03|53-20-04|53-20-05,Structural|Pressure,Critical,Active
+53-20-02,Door Surround Structure,53-20-01|ATA-52,Structural|Mechanical,Critical,Active
+53-20-03,Cabin Floor and Supports,53-20-01|53-20-04,Structural|Load Transfer,Critical,Active
+53-20-04,Landing Gear Bays,53-20-01|53-20-03|ATA-32,Structural|Mechanical,Critical,Active
+53-20-05,Cabin Liner Attach,53-20-01|ATA-25,Mechanical|Interior,Medium,Active
+53-20-06,ECS and Systems Supports,53-20-01|ATA-21|ATA-24|ATA-29,Mechanical|Systems,Medium,Active

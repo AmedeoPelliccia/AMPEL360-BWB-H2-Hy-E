@@ -1,0 +1,14 @@
+# AI-INFERRED DATA - NOT ACTUAL STRESS REPORTS
+# NO STRESS ANALYSIS HAS BEEN PERFORMED - These are placeholder projections
+# All stress values, margins, dates, and status are AI-generated estimates
+Report_ID,Component,Projected_Load_Case,Projected_Max_Stress_MPa,Allowable_MPa,Projected_Margin,Projected_Date,Status
+SR-53-20-001,Upper Shell,2.5g Maneuver (planned),385 (AI-inferred),450,0.17 (projected),TBD,NOT PERFORMED
+SR-53-20-002,Lower Shell,Landing Impact (planned),412 (AI-inferred),480,0.17 (projected),TBD,NOT PERFORMED
+SR-53-20-003,Side Shell,Gust + Pressure (planned),368 (AI-inferred),450,0.22 (projected),TBD,NOT PERFORMED
+SR-53-20-004,Fwd Bulkhead,Ultimate Pressure (planned),285 (AI-inferred),350,0.23 (projected),TBD,NOT PERFORMED
+SR-53-20-005,Aft Bulkhead,Ultimate Pressure (planned),312 (AI-inferred),400,0.28 (projected),TBD,NOT PERFORMED
+SR-53-20-006,Long Splice,Ultimate Tension (planned),620 (AI-inferred),830,0.34 (projected),TBD,NOT PERFORMED
+SR-53-20-007,Circ Splice,Ultimate Bending (planned),740 (AI-inferred),830,0.12 (projected),TBD,NOT PERFORMED
+SR-53-20-008,Door Frame,Pressure + Hinge (planned),458 (AI-inferred),525,0.15 (projected),TBD,NOT PERFORMED
+SR-53-20-009,Floor Beam,9g Emergency (planned),395 (AI-inferred),465,0.18 (projected),TBD,NOT PERFORMED
+SR-53-20-010,LG Fitting,Landing Ultimate (planned),687 (AI-inferred),890,0.30 (projected),TBD,NOT PERFORMED
