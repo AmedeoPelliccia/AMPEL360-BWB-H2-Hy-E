@@ -1,7 +1,7 @@
-# 53-00-03-06-004: Cargo Floor Integration
+# [53-00-03-06-004](./53-00-03-06-004_Cargo_Floor_Integration.md): Cargo Floor Integration
 
 ## Requirement ID
-**53-00-03-06-004**
+**[53-00-03-06-004](./53-00-03-06-004_Cargo_Floor_Integration.md)**
 
 ## Title
 Cargo Floor Integration
@@ -30,12 +30,12 @@ Proper integration of interfaces is critical for safe operation, structural inte
 ## Traceability
 
 ### Parent Requirements
-- CS-25.561 (Emergency Landing Conditions)
-- CS-25.787 (Cargo and Baggage Compartments)
+- [CS-25.561](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Landing Conditions)
+- [CS-25.787](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Cargo and Baggage Compartments)
 
 ### Related Requirements
-- 53-00-03-04-001 (Emergency Landing Loads)
-- 53-00-03-04-002 (Occupant Protection)
+- [53-00-03-04-001](../04_Crashworthiness/53-00-03-04-001_Emergency_Landing_Loads.md) (Emergency Landing Loads)
+- [53-00-03-04-002](../04_Crashworthiness/53-00-03-04-002_Occupant_Protection.md) (Occupant Protection)
 
 ### Verification Activities
 - V&V-53-072: Cargo Floor Integration Verification
@@ -45,7 +45,7 @@ Proper integration of interfaces is critical for safe operation, structural inte
 - Design based on worst-case loading scenarios
 - Compatibility with existing aircraft systems
 - Accessibility for maintenance and inspection
-- Environmental qualification per CS-25.1309
+- Environmental qualification per [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)
 
 ## Priority
 **HIGH**

@@ -1,7 +1,7 @@
-# 53-00-03-04-003: Energy Absorption Structures
+# [53-00-03-04-003](./53-00-03-04-003_Energy_Absorption_Structures.md): Energy Absorption Structures
 
 ## Requirement ID
-**53-00-03-04-003**
+**[53-00-03-04-003](./53-00-03-04-003_Energy_Absorption_Structures.md)**
 
 ## Title
 Energy Absorption Structures
@@ -32,13 +32,13 @@ Controlled energy absorption is essential to reduce peak accelerations experienc
 ## Traceability
 
 ### Parent Requirements
-- CS-25.562 (Emergency Landing Dynamic Conditions)
-- CS-25.561 (Emergency Landing Conditions)
+- [CS-25.562](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Landing Dynamic Conditions)
+- [CS-25.561](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Landing Conditions)
 
 ### Related Requirements
-- 53-00-03-04-001 (Emergency Landing Loads)
-- 53-00-03-04-002 (Occupant Protection)
-- 53-00-03-06-005 (Landing Gear Attachments)
+- [53-00-03-04-001](./53-00-03-04-001_Emergency_Landing_Loads.md) (Emergency Landing Loads)
+- [53-00-03-04-002](./53-00-03-04-002_Occupant_Protection.md) (Occupant Protection)
+- [53-00-03-06-005](../06_Interfaces_and_Installations/53-00-03-06-005_Landing_Gear_Attachments.md) (Landing Gear Attachments)
 
 ### Verification Activities
 - V&V-53-050: Energy Absorber Characterization Tests
@@ -47,7 +47,7 @@ Controlled energy absorption is essential to reduce peak accelerations experienc
 
 ## Assumptions and Constraints
 - Energy absorber materials: aluminum honeycomb, composite crushing elements
-- Design impact velocities per CS-25.562
+- Design impact velocities per [CS-25.562](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)
 - Temperature range for energy absorbers: -55°C to +85°C
 - Maintenance considerations: inspection and replacement criteria
 

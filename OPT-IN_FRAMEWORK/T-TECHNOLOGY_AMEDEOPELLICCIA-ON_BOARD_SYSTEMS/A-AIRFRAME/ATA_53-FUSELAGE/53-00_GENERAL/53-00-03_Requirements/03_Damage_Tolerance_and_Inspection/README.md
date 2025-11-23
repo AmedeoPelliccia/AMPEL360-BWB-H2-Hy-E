@@ -16,9 +16,9 @@ This folder contains requirements related to damage tolerance, crack growth pred
 
 ## Regulatory References
 
-- CS-25.571 (Damage Tolerance and Fatigue Evaluation)
-- CS-25.573 (Damage Tolerance and Fatigue Evaluation of Structure)
-- Advisory Circular AC 25.571-1D
+- [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation)
+- [CS-25.573](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation of Structure)
+- Advisory Circular [AC 25.571-1D](https://www.faa.gov/regulations_policies/advisory_circulars)
 
 ## Related Documentation
 

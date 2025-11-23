@@ -1,7 +1,7 @@
-# 53-00-03-06-001: Door Frame Integration
+# [53-00-03-06-001](./53-00-03-06-001_Door_Frame_Integration.md): Door Frame Integration
 
 ## Requirement ID
-**53-00-03-06-001**
+**[53-00-03-06-001](./53-00-03-06-001_Door_Frame_Integration.md)**
 
 ## Title
 Door Frame Integration
@@ -19,7 +19,7 @@ Proper integration of interfaces is critical for safe operation, structural inte
 1. Door frame maintains structural integrity under combined flight loads and pressurization
 2. Frame distortion <2mm under operational loads
 3. Door seal compression uniform within ±0.5mm
-4. Door operation forces within limits per CS-25.783
+4. Door operation forces within limits per [CS-25.783](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)
 5. Emergency exit doors operable after emergency landing loads
 
 ## Verification Method
@@ -30,12 +30,12 @@ Proper integration of interfaces is critical for safe operation, structural inte
 ## Traceability
 
 ### Parent Requirements
-- CS-25.783 (Doors)
-- CS-25.807 (Emergency Exits)
+- [CS-25.783](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Doors)
+- [CS-25.807](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Exits)
 
 ### Related Requirements
-- 53-00-03-01-003 (Stiffness and Deflection Control)
-- 53-00-03-04-004 (Post-Crash Egress)
+- [53-00-03-01-003](../01_Structural_Integrity/53-00-03-01-003_Stiffness_and_Deflection_Control.md) (Stiffness and Deflection Control)
+- [53-00-03-04-004](../04_Crashworthiness/53-00-03-04-004_Post_Crash_Egress.md) (Post-Crash Egress)
 
 ### Verification Activities
 - V&V-53-069: Door Frame Integration Verification
@@ -45,7 +45,7 @@ Proper integration of interfaces is critical for safe operation, structural inte
 - Design based on worst-case loading scenarios
 - Compatibility with existing aircraft systems
 - Accessibility for maintenance and inspection
-- Environmental qualification per CS-25.1309
+- Environmental qualification per [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)
 
 ## Priority
 **HIGH**

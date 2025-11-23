@@ -15,10 +15,10 @@ This folder contains requirements related to crashworthiness, ensuring occupant 
 
 ## Regulatory References
 
-- CS-25.561 (Emergency Landing Conditions)
-- CS-25.562 (Emergency Landing Dynamic Conditions)
-- CS-25.721 (General - Powerplant Installations)
-- CS-25.803 (Emergency Evacuation)
+- [CS-25.561](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Landing Conditions)
+- [CS-25.562](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Landing Dynamic Conditions)
+- [CS-25.721](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (General - Powerplant Installations)
+- [CS-25.803](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Evacuation)
 
 ## Related Documentation
 

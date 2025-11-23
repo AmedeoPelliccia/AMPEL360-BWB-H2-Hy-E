@@ -15,10 +15,10 @@ This folder contains requirements related to fire resistance, burn-through prote
 
 ## Regulatory References
 
-- CS-25.853 (Compartment Interiors)
-- CS-25.855 (Cargo Compartment Fire Protection)
-- CS-25.856 (Thermal/Acoustic Insulation Materials)
-- CS-25.869 (Fire Protection: Systems)
+- [CS-25.853](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Compartment Interiors)
+- [CS-25.855](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Cargo Compartment Fire Protection)
+- [CS-25.856](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Thermal/Acoustic Insulation Materials)
+- [CS-25.869](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Fire Protection: Systems)
 
 ## Related Documentation
 

@@ -1,7 +1,7 @@
-# 53-00-03-04-002: Occupant Protection
+# [53-00-03-04-002](./53-00-03-04-002_Occupant_Protection.md): Occupant Protection
 
 ## Requirement ID
-**53-00-03-04-002**
+**[53-00-03-04-002](./53-00-03-04-002_Occupant_Protection.md)**
 
 ## Title
 Occupant Protection
@@ -32,13 +32,13 @@ Occupant protection is the primary goal of crashworthiness design. The fuselage 
 ## Traceability
 
 ### Parent Requirements
-- CS-25.562 (Emergency Landing Dynamic Conditions)
-- CS-25.785 (Seats, Berths, Safety Belts, and Harnesses)
+- [CS-25.562](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Landing Dynamic Conditions)
+- [CS-25.785](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Seats, Berths, Safety Belts, and Harnesses)
 
 ### Related Requirements
-- 53-00-03-04-001 (Emergency Landing Loads)
-- 53-00-03-04-003 (Energy Absorption Structures)
-- 53-00-03-04-004 (Post-Crash Egress)
+- [53-00-03-04-001](./53-00-03-04-001_Emergency_Landing_Loads.md) (Emergency Landing Loads)
+- [53-00-03-04-003](./53-00-03-04-003_Energy_Absorption_Structures.md) (Energy Absorption Structures)
+- [53-00-03-04-004](./53-00-03-04-004_Post_Crash_Egress.md) (Post-Crash Egress)
 
 ### Verification Activities
 - V&V-53-047: Occupant Injury Analysis
@@ -49,7 +49,7 @@ Occupant protection is the primary goal of crashworthiness design. The fuselage 
 - Restraint system: 3-point harness for crew, lap belt for passengers
 - Seat pitch: typical commercial aircraft configuration
 - Flooring material: fire-resistant and energy-absorbing
-- Interior certification per CS-25.853 (flammability)
+- Interior certification per [CS-25.853](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (flammability)
 
 ## Priority
 **CRITICAL**

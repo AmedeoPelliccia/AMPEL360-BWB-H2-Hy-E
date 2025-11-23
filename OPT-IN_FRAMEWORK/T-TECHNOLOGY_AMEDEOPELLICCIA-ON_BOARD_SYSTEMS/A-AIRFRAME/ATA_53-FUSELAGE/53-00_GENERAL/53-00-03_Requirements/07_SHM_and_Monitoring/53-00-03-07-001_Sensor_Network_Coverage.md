@@ -1,7 +1,7 @@
-# 53-00-03-07-001: Sensor Network Coverage
+# [53-00-03-07-001](./53-00-03-07-001_Sensor_Network_Coverage.md): Sensor Network Coverage
 
 ## Requirement ID
-**53-00-03-07-001**
+**[53-00-03-07-001](./53-00-03-07-001_Sensor_Network_Coverage.md)**
 
 ## Title
 Sensor Network Coverage
@@ -30,12 +30,12 @@ Effective SHM enables condition-based maintenance, reduces inspection burden, im
 ## Traceability
 
 ### Parent Requirements
-- CS-25.1309 (Equipment, Systems, and Installations)
+- [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Equipment, Systems, and Installations)
 - Internal SHM Strategy
 
 ### Related Requirements
-- 53-00-03-01-005 (Compatibility with SHM Assumptions)
-- 53-00-03-03-004 (SHM for Damage Detection)
+- [53-00-03-01-005](../01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) (Compatibility with SHM Assumptions)
+- [53-00-03-03-004](../03_Damage_Tolerance_and_Inspection/53-00-03-03-004_SHM_for_Damage_Detection.md) (SHM for Damage Detection)
 
 ### Verification Activities
 - V&V-53-074: Sensor Network Coverage Verification

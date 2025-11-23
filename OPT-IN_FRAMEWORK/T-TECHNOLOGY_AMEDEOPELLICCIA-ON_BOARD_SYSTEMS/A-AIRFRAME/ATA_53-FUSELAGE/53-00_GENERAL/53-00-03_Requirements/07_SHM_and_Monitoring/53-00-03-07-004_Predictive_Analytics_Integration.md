@@ -1,7 +1,7 @@
-# 53-00-03-07-004: Predictive Analytics Integration
+# [53-00-03-07-004](./53-00-03-07-004_Predictive_Analytics_Integration.md): Predictive Analytics Integration
 
 ## Requirement ID
-**53-00-03-07-004**
+**[53-00-03-07-004](./53-00-03-07-004_Predictive_Analytics_Integration.md)**
 
 ## Title
 Predictive Analytics Integration
@@ -32,11 +32,11 @@ Effective SHM enables condition-based maintenance, reduces inspection burden, im
 ## Traceability
 
 ### Parent Requirements
-- CS-25.1529 (Instructions for Continued Airworthiness)
+- [CS-25.1529](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Instructions for Continued Airworthiness)
 
 ### Related Requirements
-- 53-00-03-03-001 (Damage Growth Prediction)
-- 53-00-03-07-003 (Damage Detection Sensitivity)
+- [53-00-03-03-001](../03_Damage_Tolerance_and_Inspection/53-00-03-03-001_Damage_Growth_Prediction.md) (Damage Growth Prediction)
+- [53-00-03-07-003](./53-00-03-07-003_Damage_Detection_Sensitivity.md) (Damage Detection Sensitivity)
 
 ### Verification Activities
 - V&V-53-077: Predictive Analytics Integration Verification

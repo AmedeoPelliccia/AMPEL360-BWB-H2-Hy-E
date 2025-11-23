@@ -16,8 +16,8 @@ This folder contains requirements related to Structural Health Monitoring (SHM) 
 
 ## Regulatory References
 
-- CS-25.1309 (Equipment, Systems, and Installations)
-- CS-25.1529 (Instructions for Continued Airworthiness)
+- [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Equipment, Systems, and Installations)
+- [CS-25.1529](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Instructions for Continued Airworthiness)
 - Internal AMPEL360 SHM Strategy Document
 
 ## Related Documentation

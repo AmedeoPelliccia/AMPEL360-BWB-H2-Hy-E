@@ -1,7 +1,7 @@
-# 53-00-03-01-004: Environmental Durability
+# [53-00-03-01-004](./53-00-03-01-004_Environmental_Durability.md): Environmental Durability
 
 ## Requirement ID
-**53-00-03-01-004**
+**[53-00-03-01-004](./53-00-03-01-004_Environmental_Durability.md)**
 
 ## Title
 Environmental Durability
@@ -20,7 +20,7 @@ Environmental factors can degrade structural materials and affect performance ov
 2. Composite materials demonstrate resistance to moisture absorption <1.5% by weight
 3. Metallic components show corrosion protection effectiveness >95% over service life
 4. UV exposure testing (per ASTM G154) shows <10% degradation in composite mechanical properties
-5. Thermal cycling (-55°C to +85°C, per CS-25.307) causes no structural degradation
+5. Thermal cycling (-55°C to +85°C, per [CS-25.307](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)) causes no structural degradation
 6. Salt spray resistance per ASTM B117 (1000 hours minimum)
 
 ## Verification Method
@@ -31,15 +31,15 @@ Environmental factors can degrade structural materials and affect performance ov
 ## Traceability
 
 ### Parent Requirements
-- CS-25.307 (Proof of Structure)
-- CS-25.603 (Materials)
-- CS-25.605 (Fabrication Methods)
-- CS-25.609 (Protection of Structure)
+- [CS-25.307](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Proof of Structure)
+- [CS-25.603](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Materials)
+- [CS-25.605](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Fabrication Methods)
+- [CS-25.609](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Protection of Structure)
 
 ### Related Requirements
-- 53-00-03-01-001 (Ultimate Load Capability)
-- 53-00-03-03-001 (Damage Growth Prediction)
-- 53-00-03-03-004 (SHM for Damage Detection)
+- [53-00-03-01-001](./53-00-03-01-001_Ultimate_Load_Capability.md) (Ultimate Load Capability)
+- [53-00-03-03-001](../03_Damage_Tolerance_and_Inspection/53-00-03-03-001_Damage_Growth_Prediction.md) (Damage Growth Prediction)
+- [53-00-03-03-004](../03_Damage_Tolerance_and_Inspection/53-00-03-03-004_SHM_for_Damage_Detection.md) (SHM for Damage Detection)
 
 ### Verification Activities
 - V&V-53-008: Environmental Durability Test Program
@@ -48,7 +48,7 @@ Environmental factors can degrade structural materials and affect performance ov
 
 ## Assumptions and Constraints
 - Design service goal: 60,000 flight hours or 30 years
-- Environmental envelope per CS-25 Appendix F
+- Environmental envelope per [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) Appendix F
 - Chemical exposure: hydraulic fluid, fuel, de-icing fluids, cleaning agents
 - Maintenance and protective coatings per maintenance manual
 

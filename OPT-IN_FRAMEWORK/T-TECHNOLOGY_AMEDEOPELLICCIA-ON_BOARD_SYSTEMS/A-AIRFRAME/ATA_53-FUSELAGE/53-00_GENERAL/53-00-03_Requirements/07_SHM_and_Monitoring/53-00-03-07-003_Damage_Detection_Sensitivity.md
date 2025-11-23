@@ -1,7 +1,7 @@
-# 53-00-03-07-003: Damage Detection Sensitivity
+# [53-00-03-07-003](./53-00-03-07-003_Damage_Detection_Sensitivity.md): Damage Detection Sensitivity
 
 ## Requirement ID
-**53-00-03-07-003**
+**[53-00-03-07-003](./53-00-03-07-003_Damage_Detection_Sensitivity.md)**
 
 ## Title
 Damage Detection Sensitivity
@@ -31,12 +31,12 @@ Effective SHM enables condition-based maintenance, reduces inspection burden, im
 ## Traceability
 
 ### Parent Requirements
-- CS-25.571 (Damage Tolerance and Fatigue Evaluation)
+- [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation)
 
 ### Related Requirements
-- 53-00-03-03-001 (Damage Growth Prediction)
-- 53-00-03-03-004 (SHM for Damage Detection)
-- 53-00-03-07-005 (False Alarm Rate Limits)
+- [53-00-03-03-001](../03_Damage_Tolerance_and_Inspection/53-00-03-03-001_Damage_Growth_Prediction.md) (Damage Growth Prediction)
+- [53-00-03-03-004](../03_Damage_Tolerance_and_Inspection/53-00-03-03-004_SHM_for_Damage_Detection.md) (SHM for Damage Detection)
+- [53-00-03-07-005](./53-00-03-07-005_False_Alarm_Rate_Limits.md) (False Alarm Rate Limits)
 
 ### Verification Activities
 - V&V-53-076: Damage Detection Sensitivity Verification

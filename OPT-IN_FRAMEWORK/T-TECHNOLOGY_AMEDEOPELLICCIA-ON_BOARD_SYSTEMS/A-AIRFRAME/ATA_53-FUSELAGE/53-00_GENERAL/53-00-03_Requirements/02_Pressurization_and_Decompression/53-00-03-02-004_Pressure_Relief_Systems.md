@@ -1,7 +1,7 @@
-# 53-00-03-02-004: Pressure Relief Systems
+# [53-00-03-02-004](./53-00-03-02-004_Pressure_Relief_Systems.md): Pressure Relief Systems
 
 ## Requirement ID
-**53-00-03-02-004**
+**[53-00-03-02-004](./53-00-03-02-004_Pressure_Relief_Systems.md)**
 
 ## Title
 Pressure Relief Systems
@@ -33,12 +33,12 @@ Pressure relief systems are essential safety features to prevent structural dama
 
 ### Parent Requirements
 - CS-25.841(b) (Pressurized Cabins - Relief Valves)
-- CS-25.1309 (Equipment, Systems, and Installations)
+- [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Equipment, Systems, and Installations)
 
 ### Related Requirements
-- 53-00-03-02-001 (Maximum Differential Pressure)
-- 53-00-03-02-003 (Emergency Decompression Resistance)
-- ATA-21-002 (Cabin Pressure Control System)
+- [53-00-03-02-001](./53-00-03-02-001_Maximum_Differential_Pressure.md) (Maximum Differential Pressure)
+- [53-00-03-02-003](./53-00-03-02-003_Emergency_Decompression_Resistance.md) (Emergency Decompression Resistance)
+- [ATA-21](../../../../../ATA_21-*/README.md)-002 (Cabin Pressure Control System)
 
 ### Verification Activities
 - V&V-53-023: Pressure Relief Valve Testing

@@ -1,7 +1,7 @@
-# 53-00-03-06-005: Landing Gear Attachments
+# [53-00-03-06-005](./53-00-03-06-005_Landing_Gear_Attachments.md): Landing Gear Attachments
 
 ## Requirement ID
-**53-00-03-06-005**
+**[53-00-03-06-005](./53-00-03-06-005_Landing_Gear_Attachments.md)**
 
 ## Title
 Landing Gear Attachments
@@ -30,12 +30,12 @@ Proper integration of interfaces is critical for safe operation, structural inte
 ## Traceability
 
 ### Parent Requirements
-- CS-25.721 (General)
-- CS-25.723 (Shock Absorption Tests)
+- [CS-25.721](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (General)
+- [CS-25.723](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Shock Absorption Tests)
 
 ### Related Requirements
-- 53-00-03-01-001 (Ultimate Load Capability)
-- 53-00-03-04-003 (Energy Absorption Structures)
+- [53-00-03-01-001](../01_Structural_Integrity/53-00-03-01-001_Ultimate_Load_Capability.md) (Ultimate Load Capability)
+- [53-00-03-04-003](../04_Crashworthiness/53-00-03-04-003_Energy_Absorption_Structures.md) (Energy Absorption Structures)
 
 ### Verification Activities
 - V&V-53-073: Landing Gear Attachments Verification
@@ -45,7 +45,7 @@ Proper integration of interfaces is critical for safe operation, structural inte
 - Design based on worst-case loading scenarios
 - Compatibility with existing aircraft systems
 - Accessibility for maintenance and inspection
-- Environmental qualification per CS-25.1309
+- Environmental qualification per [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)
 
 ## Priority
 **HIGH**

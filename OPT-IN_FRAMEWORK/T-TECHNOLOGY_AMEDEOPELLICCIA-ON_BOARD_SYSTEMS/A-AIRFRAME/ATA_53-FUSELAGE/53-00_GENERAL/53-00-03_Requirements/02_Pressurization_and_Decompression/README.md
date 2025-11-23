@@ -16,9 +16,9 @@ This folder contains requirements related to pressurization and decompression ca
 
 ## Regulatory References
 
-- CS-25.365 (Pressurized Compartment Loads)
-- CS-25.571 (Damage Tolerance and Fatigue Evaluation)
-- CS-25.841 (Pressurized Cabins)
+- [CS-25.365](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Pressurized Compartment Loads)
+- [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation)
+- [CS-25.841](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Pressurized Cabins)
 - CS-25.365(e) (Sudden Release of Pressure)
 
 ## Related Documentation

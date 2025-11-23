@@ -16,10 +16,10 @@ This folder contains requirements related to the structural integrity of the fus
 
 ## Regulatory References
 
-- CS-25.301 (Loads)
-- CS-25.303 (Factor of Safety)
-- CS-25.305 (Strength and Deformation)
-- CS-25.561 (Emergency Landing Conditions)
+- [CS-25.301](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Loads)
+- [CS-25.303](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Factor of Safety)
+- [CS-25.305](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Strength and Deformation)
+- [CS-25.561](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Emergency Landing Conditions)
 
 ## Related Documentation
 

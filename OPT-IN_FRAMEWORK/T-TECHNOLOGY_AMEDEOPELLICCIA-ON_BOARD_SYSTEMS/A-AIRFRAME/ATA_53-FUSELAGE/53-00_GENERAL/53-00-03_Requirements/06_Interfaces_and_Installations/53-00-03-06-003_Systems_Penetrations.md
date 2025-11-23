@@ -1,7 +1,7 @@
-# 53-00-03-06-003: Systems Penetrations
+# [53-00-03-06-003](./53-00-03-06-003_Systems_Penetrations.md): Systems Penetrations
 
 ## Requirement ID
-**53-00-03-06-003**
+**[53-00-03-06-003](./53-00-03-06-003_Systems_Penetrations.md)**
 
 ## Title
 Systems Penetrations
@@ -18,7 +18,7 @@ Proper integration of interfaces is critical for safe operation, structural inte
 ## Acceptance Criteria
 1. Penetrations sealed for pressure containment (leakage <0.1 SCFM)
 2. Structural reinforcement at penetrations per stress analysis
-3. Fire seals installed per CS-25.869 where required
+3. Fire seals installed per [CS-25.869](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) where required
 4. Bonding and grounding provisions for lightning protection
 5. Access for inspection and maintenance
 
@@ -30,12 +30,12 @@ Proper integration of interfaces is critical for safe operation, structural inte
 ## Traceability
 
 ### Parent Requirements
-- CS-25.869 (Fire Protection: Systems)
-- CS-25.954 (Fuel System Lightning Protection)
+- [CS-25.869](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Fire Protection: Systems)
+- [CS-25.954](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Fuel System Lightning Protection)
 
 ### Related Requirements
-- 53-00-03-02-001 (Maximum Differential Pressure)
-- 53-00-03-05-004 (Fire Containment Barriers)
+- [53-00-03-02-001](../02_Pressurization_and_Decompression/53-00-03-02-001_Maximum_Differential_Pressure.md) (Maximum Differential Pressure)
+- [53-00-03-05-004](../05_Fire_Smoke_Toxicity/53-00-03-05-004_Fire_Containment_Barriers.md) (Fire Containment Barriers)
 
 ### Verification Activities
 - V&V-53-071: Systems Penetrations Verification
@@ -45,7 +45,7 @@ Proper integration of interfaces is critical for safe operation, structural inte
 - Design based on worst-case loading scenarios
 - Compatibility with existing aircraft systems
 - Accessibility for maintenance and inspection
-- Environmental qualification per CS-25.1309
+- Environmental qualification per [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)
 
 ## Priority
 **HIGH**

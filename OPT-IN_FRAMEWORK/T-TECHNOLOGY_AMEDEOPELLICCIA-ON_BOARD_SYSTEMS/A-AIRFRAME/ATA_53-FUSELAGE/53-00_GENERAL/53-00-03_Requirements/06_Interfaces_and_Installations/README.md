@@ -16,10 +16,10 @@ This folder contains requirements related to interfaces between the fuselage and
 
 ## Regulatory References
 
-- CS-25.783 (Doors)
-- CS-25.773 (Pilot Compartment View)
-- CS-25.785 (Seats, Berths, Safety Belts, and Harnesses)
-- CS-25.721 (General - Powerplant and APU Installations)
+- [CS-25.783](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Doors)
+- [CS-25.773](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Pilot Compartment View)
+- [CS-25.785](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Seats, Berths, Safety Belts, and Harnesses)
+- [CS-25.721](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (General - Powerplant and APU Installations)
 
 ## Related Documentation
 

@@ -1,7 +1,7 @@
-# 53-00-03-02-003: Emergency Decompression Resistance
+# [53-00-03-02-003](./53-00-03-02-003_Emergency_Decompression_Resistance.md): Emergency Decompression Resistance
 
 ## Requirement ID
-**53-00-03-02-003**
+**[53-00-03-02-003](./53-00-03-02-003_Emergency_Decompression_Resistance.md)**
 
 ## Title
 Emergency Decompression Resistance
@@ -32,14 +32,14 @@ Emergency decompression creates dynamic pressure loads and potential debris impa
 
 ### Parent Requirements
 - CS-25.365(e) (Sudden Release of Pressure)
-- CS-25.571 (Damage Tolerance and Fatigue Evaluation)
+- [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation)
 - CS-25.841(a) (Pressurized Cabins)
 
 ### Related Requirements
-- 53-00-03-02-001 (Maximum Differential Pressure)
-- 53-00-03-02-004 (Pressure Relief Systems)
-- 53-00-03-04-002 (Occupant Protection)
-- 53-00-03-03-002 (Crack Arrest Features)
+- [53-00-03-02-001](./53-00-03-02-001_Maximum_Differential_Pressure.md) (Maximum Differential Pressure)
+- [53-00-03-02-004](./53-00-03-02-004_Pressure_Relief_Systems.md) (Pressure Relief Systems)
+- [53-00-03-04-002](../04_Crashworthiness/53-00-03-04-002_Occupant_Protection.md) (Occupant Protection)
+- [53-00-03-03-002](../03_Damage_Tolerance_and_Inspection/53-00-03-03-002_Crack_Arrest_Features.md) (Crack Arrest Features)
 
 ### Verification Activities
 - V&V-53-020: Emergency Decompression Analysis

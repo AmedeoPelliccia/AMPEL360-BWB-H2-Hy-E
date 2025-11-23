@@ -1,7 +1,7 @@
-# 53-00-03-01-005: Compatibility with SHM Assumptions
+# [53-00-03-01-005](./53-00-03-01-005_Compatibility_with_SHM_Assumptions.md): Compatibility with SHM Assumptions
 
 ## Requirement ID
-**53-00-03-01-005**
+**[53-00-03-01-005](./53-00-03-01-005_Compatibility_with_SHM_Assumptions.md)**
 
 ## Title
 Compatibility with SHM Assumptions
@@ -31,14 +31,14 @@ SHM systems rely on specific structural characteristics for effective operation.
 ## Traceability
 
 ### Parent Requirements
-- CS-25.571 (Damage Tolerance and Fatigue Evaluation)
+- [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation)
 - Internal AMPEL360 SHM Strategy Document
 
 ### Related Requirements
-- 53-00-03-01-001 (Ultimate Load Capability)
-- 53-00-03-03-004 (SHM for Damage Detection)
-- 53-00-03-07-001 (Sensor Network Coverage)
-- 53-00-03-07-002 (Data Acquisition Requirements)
+- [53-00-03-01-001](./53-00-03-01-001_Ultimate_Load_Capability.md) (Ultimate Load Capability)
+- [53-00-03-03-004](../03_Damage_Tolerance_and_Inspection/53-00-03-03-004_SHM_for_Damage_Detection.md) (SHM for Damage Detection)
+- [53-00-03-07-001](../07_SHM_and_Monitoring/53-00-03-07-001_Sensor_Network_Coverage.md) (Sensor Network Coverage)
+- [53-00-03-07-002](../07_SHM_and_Monitoring/53-00-03-07-002_Data_Acquisition_Requirements.md) (Data Acquisition Requirements)
 
 ### Verification Activities
 - V&V-53-011: SHM Integration Verification

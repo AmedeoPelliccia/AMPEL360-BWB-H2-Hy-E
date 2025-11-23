@@ -1,7 +1,7 @@
-# 53-00-03-03-003: Inspectability Requirements
+# [53-00-03-03-003](./53-00-03-03-003_Inspectability_Requirements.md): Inspectability Requirements
 
 ## Requirement ID
-**53-00-03-03-003**
+**[53-00-03-03-003](./53-00-03-03-003_Inspectability_Requirements.md)**
 
 ## Title
 Inspectability Requirements
@@ -32,13 +32,13 @@ Effective inspection capability is fundamental to damage tolerance. Structure mu
 ## Traceability
 
 ### Parent Requirements
-- CS-25.571 (Damage Tolerance and Fatigue Evaluation)
-- CS-25.1529 (Instructions for Continued Airworthiness)
+- [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation)
+- [CS-25.1529](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Instructions for Continued Airworthiness)
 
 ### Related Requirements
-- 53-00-03-03-001 (Damage Growth Prediction)
-- 53-00-03-03-004 (SHM for Damage Detection)
-- 53-00-03-07-003 (Damage Detection Sensitivity)
+- [53-00-03-03-001](./53-00-03-03-001_Damage_Growth_Prediction.md) (Damage Growth Prediction)
+- [53-00-03-03-004](./53-00-03-03-004_SHM_for_Damage_Detection.md) (SHM for Damage Detection)
+- [53-00-03-07-003](../07_SHM_and_Monitoring/53-00-03-07-003_Damage_Detection_Sensitivity.md) (Damage Detection Sensitivity)
 
 ### Verification Activities
 - V&V-53-035: POD Study for NDI Methods

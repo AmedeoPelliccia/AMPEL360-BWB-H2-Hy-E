@@ -1,7 +1,7 @@
-# 53-00-03-03-004: SHM for Damage Detection
+# [53-00-03-03-004](./53-00-03-03-004_SHM_for_Damage_Detection.md): SHM for Damage Detection
 
 ## Requirement ID
-**53-00-03-03-004**
+**[53-00-03-03-004](./53-00-03-03-004_SHM_for_Damage_Detection.md)**
 
 ## Title
 SHM for Damage Detection
@@ -32,15 +32,15 @@ SHM provides continuous monitoring of structural integrity, enabling early detec
 ## Traceability
 
 ### Parent Requirements
-- CS-25.1309 (Equipment, Systems, and Installations)
+- [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Equipment, Systems, and Installations)
 - Internal AMPEL360 SHM Strategy Document
 
 ### Related Requirements
-- 53-00-03-01-005 (Compatibility with SHM Assumptions)
-- 53-00-03-03-001 (Damage Growth Prediction)
-- 53-00-03-03-003 (Inspectability Requirements)
-- 53-00-03-07-001 (Sensor Network Coverage)
-- 53-00-03-07-003 (Damage Detection Sensitivity)
+- [53-00-03-01-005](../01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) (Compatibility with SHM Assumptions)
+- [53-00-03-03-001](./53-00-03-03-001_Damage_Growth_Prediction.md) (Damage Growth Prediction)
+- [53-00-03-03-003](./53-00-03-03-003_Inspectability_Requirements.md) (Inspectability Requirements)
+- [53-00-03-07-001](../07_SHM_and_Monitoring/53-00-03-07-001_Sensor_Network_Coverage.md) (Sensor Network Coverage)
+- [53-00-03-07-003](../07_SHM_and_Monitoring/53-00-03-07-003_Damage_Detection_Sensitivity.md) (Damage Detection Sensitivity)
 
 ### Verification Activities
 - V&V-53-038: SHM System Functional Testing
