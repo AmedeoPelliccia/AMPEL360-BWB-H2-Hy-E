@@ -35,7 +35,7 @@ Define the Learning Assurance approach for NN-ECS subsystem in accordance with D
 | Correctness | <1% erroneous values | Statistical outlier detection + manual review |
 | Consistency | No contradictory labels | Cross-validation checks |
 | Representativeness | Coverage of full ODD | ODD coverage analysis |
-| Balance | No class imbalance >5:1 | Distribution analysis |
+| Balance | No data imbalance >5:1 | Distribution analysis |
 
 ### 3.2 Training Data Validation
 - **Source**: Operational flight data + flight test data + synthetic data

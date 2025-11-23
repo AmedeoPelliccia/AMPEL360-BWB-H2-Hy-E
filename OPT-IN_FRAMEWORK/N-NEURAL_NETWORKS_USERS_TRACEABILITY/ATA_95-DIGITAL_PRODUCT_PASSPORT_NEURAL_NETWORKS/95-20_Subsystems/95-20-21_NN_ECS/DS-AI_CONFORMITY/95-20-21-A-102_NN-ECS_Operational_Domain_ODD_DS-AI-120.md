@@ -43,6 +43,8 @@ Define the Operational Domain (OD) of the ECS system and the Operational Design 
 | Altitude | 0 | 14000 | m | FL0-FL450 |
 | Climb/descent rate | -1500 | 1500 | ft/min | Vertical speed |
 
+**Note**: Units reflect actual sensor outputs; altitude in meters (SI) and vertical speed in ft/min (standard aviation). Conversion and consistency checks are performed during data preprocessing.
+
 #### Operational Conditions
 - **Training Data**: 10,000 flight hours across Q100 operations
 - **Validation Data**: 2,000 flight hours from flight test program

@@ -116,7 +116,7 @@ TBD - To be completed with detailed specifications
 - **Rapid Transients**: Prediction accuracy degrades during rapid cabin condition changes
 
 ### 8.2 Prohibited Uses
-- **Safety-Critical Control**: NN outputs are advisory; final control authority rests with certified control laws
+- **Safety-Critical Control**: NN outputs provide optimization recommendations to certified control laws; while the NN contributes to system safety (H2-H3 hazard level), final control authority and safety-critical decisions remain with certified baseline control algorithms that can operate independently
 - **Medical Applications**: Not designed for medical air quality requirements
 - **Standalone Operation**: Requires human oversight and monitoring
 

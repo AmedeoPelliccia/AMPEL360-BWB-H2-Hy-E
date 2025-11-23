@@ -165,7 +165,7 @@ The register (`AI_Subsystems_Register.csv`) contains the following columns:
 
 ## Related Documents
 
-- [EASA First Usable Guidance for Level 1 & 2 Machine Learning Applications](https://www.easa.europa.eu/en/document-library/general-publications/easa-concept-paper-first-usable-guidance-level-1-machine) - EASA AI Guidance
+- [EASA First Usable Guidance for Level 1 & 2 Machine Learning Applications](https://www.easa.europa.eu/en/document-library/general-publications/easa-concept-paper-first-usable-guidance-level-1-machine) - EASA AI Guidance (Concept Paper, published May 2023; verify for latest version)
 - [EU AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) - Official EU legislation
 - `95-00-01-002_Regulatory_and_Standards_Context.md` - Regulatory framework overview
 - `95-00-01-004_DPP_Objectives_for_Neural_Networks.md` - DPP objectives

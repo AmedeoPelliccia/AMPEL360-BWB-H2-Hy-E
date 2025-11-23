@@ -48,7 +48,7 @@ See `ASSETS/` subdirectory for:
 
 - **System Overview**: [../95-20-21-001_ECS_NN_Overview.md](../95-20-21-001_ECS_NN_Overview.md)
 - **AI Subsystems Register**: [../../../95-00_GENERAL/95-00-01_Overview/AI_Subsystems_Register.csv](../../../95-00_GENERAL/95-00-01_Overview/AI_Subsystems_Register.csv)
-- **Copilot Instructions**: [.github/instructions/95-20-21-nn-ecs.instructions.md](../../../../../.github/instructions/95-20-21-nn-ecs.instructions.md)
+- **Copilot Instructions**: [.github/instructions/95-20-21-nn-ecs.instructions.md](/.github/instructions/95-20-21-nn-ecs.instructions.md)
 - **Certification Package**: [../10_CERTIFICATION/](../10_CERTIFICATION/)
 
 ## Document Control
