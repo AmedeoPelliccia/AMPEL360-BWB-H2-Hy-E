@@ -27,11 +27,27 @@
 
 name: APIsec
 
-on: push: branches: [ "main" ] pull_request: branches: [ "main" ] schedule: - cron: '43 19 * * 5' workflow_dispatch:
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '43 19 * * 5'
+  workflow_dispatch:
 
-permissions: contents: read
+permissions:
+  contents: read
 
-jobs: Trigger_APIsec_scan: permissions: security-events: write actions: read runs-on: ubuntu-latest steps: - name: Checkout repository uses: actions/checkout@v4
+jobs:
+  Trigger_APIsec_scan:
+    permissions:
+      security-events: write
+      actions: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
   - name: Validate required secrets
     id: validate_secrets
     run: |
