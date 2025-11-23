@@ -1,0 +1,34 @@
+Requirement_ID,Verification_Method,Test_ID,Analysis_ID,Inspection_ID,Planned_Date,Responsible_Team,Dependencies,Completion_Status,Remarks
+53-00-03-01-001,Test + Analysis,V&V-53-001,V&V-53-002,,2026-Q2,Structures Test Lab,Test article fabrication,NOT_STARTED,Full-scale static test
+53-00-03-01-002,Test + Analysis,V&V-53-003,V&V-53-004,,2026-Q2,Structures Test Lab,Test article fabrication,NOT_STARTED,Strain gauge instrumentation
+53-00-03-01-003,Test + Analysis,V&V-53-005,V&V-53-006,,2026-Q3,Dynamics Lab,Test article assembly,NOT_STARTED,Ground vibration test
+53-00-03-01-004,Test + Analysis,V&V-53-008,V&V-53-009,,2026-Q1,Materials Lab,Material qualification,NOT_STARTED,Environmental chamber tests
+53-00-03-01-005,Test + Analysis,V&V-53-011,V&V-53-012,,2026-Q2,SHM Team,Sensor installation,NOT_STARTED,Wave propagation validation
+53-00-03-02-001,Test + Analysis,V&V-53-014,V&V-53-015,,2026-Q2,Pressure Test Lab,Pressure vessel assembly,NOT_STARTED,Proof and burst tests
+53-00-03-02-002,Test + Analysis,V&V-53-017,V&V-53-018,,2026-Q4,Fatigue Lab,Test article fabrication,NOT_STARTED,120k cycle test (12 months)
+53-00-03-02-003,Analysis + Test,V&V-53-020,V&V-53-021,,2026-Q2,Safety Engineering,CFD model validation,NOT_STARTED,Dynamic decompression analysis
+53-00-03-02-004,Test + Analysis,V&V-53-023,V&V-53-024,,2026-Q1,Systems Integration,Relief valve procurement,NOT_STARTED,Functional testing
+53-00-03-02-005,Test + Analysis,V&V-53-026,V&V-53-027,,2026-Q3,Fatigue Lab,Panel fabrication,NOT_STARTED,Lap joint fatigue tests
+53-00-03-03-001,Analysis + Test,V&V-53-029,V&V-53-030,,2026-Q2,Damage Tolerance,Crack growth specimens,NOT_STARTED,Paris Law validation
+53-00-03-03-002,Test + Analysis,V&V-53-032,V&V-53-033,,2026-Q3,Structures Lab,Pre-cracked panels,NOT_STARTED,Residual strength tests
+53-00-03-03-003,Analysis + Test,V&V-53-035,V&V-53-036,,2026-Q2,NDI Engineering,POD specimens,NOT_STARTED,NDI POD study
+53-00-03-03-004,Test + Demo,V&V-53-038,V&V-53-039,,2026-Q3,SHM Team,SHM system integration,NOT_STARTED,Flight test validation
+53-00-03-03-005,Test + Analysis,V&V-53-041,V&V-53-042,,2026-Q2,Composites Lab,Composite panels,NOT_STARTED,CAI testing program
+53-00-03-04-001,Test + Analysis,V&V-53-044,V&V-53-045,,2026-Q3,Crashworthiness Lab,Test fixtures,NOT_STARTED,Sled tests with dummies
+53-00-03-04-002,Test + Analysis,V&V-53-047,V&V-53-048,,2026-Q3,Cabin Safety,Interior mock-up,NOT_STARTED,Injury assessment
+53-00-03-04-003,Test + Analysis,V&V-53-050,V&V-53-051,,2026-Q2,Crashworthiness Lab,Energy absorber samples,NOT_STARTED,Crush characterization
+53-00-03-04-004,Test + Demo,V&V-53-053,V&V-53-054,,2026-Q4,Cabin Safety,Full cabin mock-up,NOT_STARTED,90-second evacuation demo
+53-00-03-05-001,Test + Inspection,V&V-53-056,V&V-53-057,V&V-53-058,2026-Q1,Fire Safety Lab,Material specimens,NOT_STARTED,Flammability testing
+53-00-03-05-002,Test + Analysis,V&V-53-059,V&V-53-060,,2026-Q1,Fire Safety Lab,Insulation panels,NOT_STARTED,Burn-through testing
+53-00-03-05-003,Test + Analysis,V&V-53-062,V&V-53-063,,2026-Q1,Fire Safety Lab,Material specimens,NOT_STARTED,Smoke and toxicity testing
+53-00-03-05-004,Test + Inspection,V&V-53-065,V&V-53-066,,2026-Q2,Fire Protection,Barrier assemblies,NOT_STARTED,Fire seal qualification
+53-00-03-06-001,Test + Analysis,V&V-53-068,V&V-53-169,,2026-Q2,Doors Team,Door frame assembly,NOT_STARTED,Frame distortion testing
+53-00-03-06-002,Test + Analysis,V&V-53-069,V&V-53-170,,2026-Q2,Windows Team,Window panel assembly,NOT_STARTED,Stress analysis validation
+53-00-03-06-003,Test + Inspection,V&V-53-070,V&V-53-171,,2026-Q1,Systems Integration,Penetration mock-ups,NOT_STARTED,Seal leak testing
+53-00-03-06-004,Test + Analysis,V&V-53-071,V&V-53-172,,2026-Q2,Structures Lab,Floor panel assembly,NOT_STARTED,Floor load testing
+53-00-03-06-005,Test + Analysis,V&V-53-072,V&V-53-173,,2026-Q3,Landing Gear Team,Attachment fittings,NOT_STARTED,Fatigue testing
+53-00-03-07-001,Analysis + Test,V&V-53-074,V&V-53-174,,2026-Q2,SHM Team,Sensor network,NOT_STARTED,Coverage validation
+53-00-03-07-002,Test + Analysis,V&V-53-075,V&V-53-175,,2026-Q2,SHM Team,DAQ system,NOT_STARTED,SNR characterization
+53-00-03-07-003,Test + Analysis,V&V-53-076,V&V-53-176,,2026-Q3,SHM Team,Damage specimens,NOT_STARTED,POD validation
+53-00-03-07-004,Demo + Analysis,V&V-53-077,V&V-53-177,,2026-Q3,SHM Team,Analytics platform,NOT_STARTED,Algorithm validation
+53-00-03-07-005,Analysis + Test,V&V-53-078,V&V-53-178,,2026-Q3,SHM Team,Flight test data,NOT_STARTED,False alarm tracking
