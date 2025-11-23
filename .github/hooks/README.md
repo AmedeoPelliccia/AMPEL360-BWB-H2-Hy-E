@@ -53,7 +53,7 @@ git commit --no-verify
 
 Expected: `XX-XX-XXXX_RevX_Q100_EFF_APP_Description.svg`
 
-Example: `53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg`
+Example: `57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg`
 
 ### Commit Message Format
 

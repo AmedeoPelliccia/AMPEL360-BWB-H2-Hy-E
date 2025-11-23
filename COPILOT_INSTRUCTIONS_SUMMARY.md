@@ -217,12 +217,12 @@ Quick start guide covering:
 
 ### Validate a Drawing Filename
 ```bash
-python tools/validators/drawing_validator.py 53-40-1000_RevC_Q100_ALL_ALL_Spar.svg
+python tools/validators/drawing_validator.py 57-40-1000_RevC_Q100_ALL_ALL_Spar.svg
 ```
 
 ### Validate a CI Number
 ```bash
-python tools/validators/ci_validator.py CI-53-400-SPAR-FWD
+python tools/validators/ci_validator.py CI-57-400-SPAR-FWD
 ```
 
 ### Validate Directory Structure

@@ -32,7 +32,7 @@ pip install -r requirements.txt
 from tools.validators import validate_q100_drawing_filename
 
 # Simple validation (raises ValueError if invalid)
-validate_q100_drawing_filename("53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg")
+validate_q100_drawing_filename("57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg")
 ```
 
 ```python
@@ -41,7 +41,7 @@ from tools.validators import DrawingValidator
 # Detailed validation with error messages
 validator = DrawingValidator()
 is_valid, error, components = validator.validate(
-    "53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg"
+    "57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg"
 )
 
 if is_valid:
@@ -52,7 +52,7 @@ else:
 
 **Expected Format**: `[ATA]-[ZONE]-[SEQUENCE]-[VAR]_Rev[X]_[MODEL]_[EFF]_[APP]_Description.svg`
 
-**Example**: `53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg`
+**Example**: `57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg`
 
 ### CI Number Validation
 
@@ -60,7 +60,7 @@ else:
 from tools.validators import validate_ci_number
 
 # Simple validation
-validate_ci_number("CI-53-400-SPAR-FWD")
+validate_ci_number("CI-57-400-SPAR-FWD")
 ```
 
 ```python
@@ -68,7 +68,7 @@ from tools.validators import CIValidator
 
 # Detailed validation
 validator = CIValidator()
-is_valid, error, components = validator.validate("CI-53-400-SPAR-FWD")
+is_valid, error, components = validator.validate("CI-57-400-SPAR-FWD")
 
 # Validate effectivity and applicability codes
 valid, error = validator.validate_effectivity("SN0100UP")
@@ -77,7 +77,7 @@ valid, error = validator.validate_applicability("PAX")
 
 **Expected Format**: `CI-[ATA]-[ZONE]-[TYPE]-[ID]`
 
-**Example**: `CI-53-400-SPAR-FWD`
+**Example**: `CI-57-400-SPAR-FWD`
 
 ### Directory Structure Validation
 
@@ -113,7 +113,7 @@ All validators can be run from the command line:
 ### Drawing Validator
 
 ```bash
-python tools/validators/drawing_validator.py 53-40-1000_RevC_Q100_ALL_ALL_Spar.svg
+python tools/validators/drawing_validator.py 57-40-1000_RevC_Q100_ALL_ALL_Spar.svg
 
 # Multiple files
 python tools/validators/drawing_validator.py file1.svg file2.svg file3.svg
@@ -122,10 +122,10 @@ python tools/validators/drawing_validator.py file1.svg file2.svg file3.svg
 ### CI Validator
 
 ```bash
-python tools/validators/ci_validator.py CI-53-400-SPAR-FWD
+python tools/validators/ci_validator.py CI-57-400-SPAR-FWD
 
 # Multiple CI numbers
-python tools/validators/ci_validator.py CI-53-400-SPAR-FWD CI-53-200-DOOR-1L
+python tools/validators/ci_validator.py CI-57-400-SPAR-FWD CI-53-200-DOOR-1L
 ```
 
 ### Structure Validator
@@ -159,17 +159,17 @@ python tools/validators/structure_validator.py /path/to/repo
 
 ✅ **Valid**:
 ```
-53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg
+57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg
 53-20-4000-01_RevB_Q100_SN0100UP_PAX_Passenger_Door_1L.step
 85-60-0001_RevDraft_Q100_ALL_ALL_H2_Storage_Infrastructure.svg
 ```
 
 ❌ **Invalid**:
 ```
-53-40-1000_Forward_Wing_Spar.svg                    # Missing Rev, Model, EFF, APP
-53-40-1000_v3_Q100_ALL_ALL_Spar.svg                # Wrong revision format
-53-40-1000_RevC_Q200_ALL_ALL_Spar.svg              # Wrong model (Q200, not Q100)
-53-40-1000_RevC_Q100_INVALID_ALL_Spar.svg          # Invalid effectivity code
+57-40-1000_Forward_Wing_Spar.svg                    # Missing Rev, Model, EFF, APP
+57-40-1000_v3_Q100_ALL_ALL_Spar.svg                # Wrong revision format
+57-40-1000_RevC_Q200_ALL_ALL_Spar.svg              # Wrong model (Q200, not Q100)
+57-40-1000_RevC_Q100_INVALID_ALL_Spar.svg          # Invalid effectivity code
 ```
 
 ### CI Numbers
@@ -186,7 +186,7 @@ python tools/validators/structure_validator.py /path/to/repo
 
 ✅ **Valid**:
 ```
-CI-53-400-SPAR-FWD
+CI-57-400-SPAR-FWD
 CI-53-200-DOOR-1L
 CI-28-600-TANK-LH2-LEFT
 CI-85-60-H2_STORAGE-GND
@@ -278,8 +278,8 @@ This validates:
 from tools.validators import batch_validate_drawings
 
 filenames = [
-    "53-40-1000_RevC_Q100_ALL_ALL_Spar.svg",
-    "53-40-1001_RevB_Q100_ALL_ALL_Cap.svg",
+    "57-40-1000_RevC_Q100_ALL_ALL_Spar.svg",
+    "57-40-1001_RevB_Q100_ALL_ALL_Cap.svg",
     "invalid-filename.svg"
 ]
 
@@ -296,8 +296,8 @@ for filename, (is_valid, error) in results.items():
 from tools.validators import batch_validate_cis
 
 ci_numbers = [
-    "CI-53-400-SPAR-FWD",
-    "CI-53-400-SPAR-AFT",
+    "CI-57-400-SPAR-FWD",
+    "CI-57-400-SPAR-AFT",
     "INVALID-CI"
 ]
 

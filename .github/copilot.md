@@ -173,15 +173,15 @@ Where:
 
 ```
 ✅ CORRECT:
-53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg
+57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg
 53-20-4000_RevB_Q100_SN0100UP_PAX_Passenger_Door_1L.svg
 53-60-3000_RevA_Q100_ALL_ALL_LH2_Tank_Left.svg
 85-60-01-001_RevA_Q100_ALL_ALL_H2_Storage_Infrastructure.svg
 
 ❌ INCORRECT:
-53-40-1000_Forward_Wing_Spar.svg                    # Missing Rev + Model + EFF + APP
-53-40-1000_v3_Forward_Wing_Spar.svg                # Wrong revision format
-53-40-1000_RevC_Forward_Wing_Spar.svg              # Missing Model, EFF, APP
+57-40-1000_Forward_Wing_Spar.svg                    # Missing Rev + Model + EFF + APP
+57-40-1000_v3_Forward_Wing_Spar.svg                # Wrong revision format
+57-40-1000_RevC_Forward_Wing_Spar.svg              # Missing Model, EFF, APP
 ```
 
 ---
@@ -193,9 +193,9 @@ Where:
 ```
 Format: CI-[ATA]-[ZONE]-[TYPE]-[ID]
 
-Example: CI-53-400-SPAR-FWD
+Example: CI-57-400-SPAR-FWD
   CI     = Configuration Item prefix
-  53     = ATA Chapter (Fuselage)
+  57     = ATA Chapter (Wings)
   400    = Zone (Center Wing Box)
   SPAR   = Type (Spar)
   FWD    = ID (Forward)
@@ -372,7 +372,7 @@ def validate_q100_drawing_filename(filename: str) -> bool:
         
     Example:
         >>> validate_q100_drawing_filename(
-        ...     "53-40-1000_RevC_Q100_ALL_ALL_Spar.svg"
+        ...     "57-40-1000_RevC_Q100_ALL_ALL_Spar.svg"
         ... )
         True
     """
@@ -423,25 +423,25 @@ Example: ASM-53-400-001_Forward_Spar_Assembly.yaml
 
 ```yaml
 assembly_metadata:
-  assembly_id: "ASM-53-400-001"
+  assembly_id: "ASM-57-400-001"
   assembly_name: "Forward Wing Spar Assembly"
   assembly_revision: "C"
   model: "Q100"
-  parent_ci: "CI-53-400-SPAR-FWD"
+  parent_ci: "CI-57-400-SPAR-FWD"
   
 q100_configuration:
   effectivity: "SN0100UP"
   applicability: "ALL"
   
 master_drawing:
-  number: "53-40-1000"
+  number: "57-40-1000"
   revision: "C"
   model: "Q100"
-  file: "53-40-1000_RevC_Q100_SN0100UP_ALL_Forward_Wing_Spar.svg"
+  file: "57-40-1000_RevC_Q100_SN0100UP_ALL_Forward_Wing_Spar.svg"
 
 components:
-  - part_number: "53-400-1001-01"
-    ci_number: "CI-53-400-SPAR-FWD-WEB"
+  - part_number: "57-400-1001-01"
+    ci_number: "CI-57-400-SPAR-FWD-WEB"
     description: "Forward Wing Spar Web"
     quantity: 1
     material: "CFRP T800/M21"
@@ -550,9 +550,9 @@ Every physical component MUST have DPP data:
 
 ```json
 {
-  "dpp_id": "DPP-Q100-CI-53-400-SPAR-FWD",
+  "dpp_id": "DPP-Q100-CI-57-400-SPAR-FWD",
   "model": "Q100",
-  "ci_number": "CI-53-400-SPAR-FWD",
+  "ci_number": "CI-57-400-SPAR-FWD",
   "serial_number": "SN0105",
   "material_composition": {
     "CFRP_T800_M21": {
@@ -597,7 +597,7 @@ Scopes:
   mission: Strategic mission (decentralization, etc.)
 
 Examples:
-  feat(ATA-53): Add CI-53-400-SPAR-FWD for Q100 forward wing spar
+  feat(ATA-57): Add CI-57-400-SPAR-FWD for Q100 forward wing spar
   docs(Q100): Update strategic mission with overtourism metrics
   fix(ATA-85): Correct H2 storage capacity calculation
   feat(mission): Add secondary airport route planning module
@@ -615,12 +615,12 @@ from q100_validators import validate_drawing_filename
 
 def test_valid_q100_drawing():
     """Test Q100 drawing filename validation"""
-    filename = "53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg"
+    filename = "57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg"
     assert validate_drawing_filename(filename) == True
 
 def test_missing_model_code():
     """Test filename missing Q100 model code"""
-    filename = "53-40-1000_RevC_ALL_ALL_Forward_Wing_Spar.svg"
+    filename = "57-40-1000_RevC_ALL_ALL_Forward_Wing_Spar.svg"
     with pytest.raises(ValueError, match="Missing model code Q100"):
         validate_drawing_filename(filename)
 
@@ -652,7 +652,7 @@ def test_missing_model_code():
 
 ```bash
 # 1. Create CI directory
-mkdir -p ATA_53-FUSELAGE/53-00_GENERAL/53-00-04_Design/02_Configuration_Items/Zone_400/CI-53-400-SPAR-FWD/
+mkdir -p ATA_57-WINGS/57-00_GENERAL/57-00-04_Design/02_Configuration_Items/Zone_400/CI-57-400-SPAR-FWD/
 
 # 2. Create CI_Definition.yaml (include model: "Q100")
 # 3. Create Design_Description.md
@@ -666,7 +666,7 @@ mkdir -p ATA_53-FUSELAGE/53-00_GENERAL/53-00-04_Design/02_Configuration_Items/Zo
 # Format: XX-XX-XXXX_RevX_Q100_EFF_APP_Description.svg
 
 # Example:
-touch 53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg
+touch 57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg
 
 # MANDATORY fields:
 # - Rev[X]: Revision code
@@ -754,7 +754,7 @@ Located in `tools/validators/`, these tools ensure Q100 compliance:
 from tools.validators import validate_q100_drawing_filename, DrawingValidator
 
 # Quick validation
-validate_q100_drawing_filename("53-40-1000_RevC_Q100_ALL_ALL_Spar.svg")
+validate_q100_drawing_filename("57-40-1000_RevC_Q100_ALL_ALL_Spar.svg")
 
 # Detailed validation
 validator = DrawingValidator()
@@ -774,7 +774,7 @@ is_valid, error, components = validator.validate(filename)
 from tools.validators import validate_ci_number, CIValidator
 
 # Validate CI number format
-validate_ci_number("CI-53-400-SPAR-FWD")
+validate_ci_number("CI-57-400-SPAR-FWD")
 
 # Validate effectivity and applicability
 validator = CIValidator()
@@ -811,10 +811,10 @@ report = validator.generate_report(results)
 
 ```bash
 # Validate drawing filenames
-python tools/validators/drawing_validator.py 53-40-1000_RevC_Q100_ALL_ALL_Spar.svg
+python tools/validators/drawing_validator.py 57-40-1000_RevC_Q100_ALL_ALL_Spar.svg
 
 # Validate CI numbers
-python tools/validators/ci_validator.py CI-53-400-SPAR-FWD
+python tools/validators/ci_validator.py CI-57-400-SPAR-FWD
 
 # Validate directory structure
 python tools/validators/structure_validator.py .
@@ -888,10 +888,10 @@ When creating or modifying components, Copilot should update related files:
 #### Example Update Sequence
 
 ```python
-# Copilot should suggest these updates when adding CI-53-400-SPAR-FWD
+# Copilot should suggest these updates when adding CI-57-400-SPAR-FWD
 
 # 1. Create CI definition
-create_file("CI-53-400-SPAR-FWD/CI_Definition.yaml", ci_yaml_content)
+create_file("CI-57-400-SPAR-FWD/CI_Definition.yaml", ci_yaml_content)
 
 # 2. Update CI database
 append_to_csv("CI_Database.csv", ci_entry)
@@ -900,7 +900,7 @@ append_to_csv("CI_Database.csv", ci_entry)
 append_to_csv("Drawing_Register_Zone_400.csv", drawing_entry)
 
 # 4. Create DPP data
-create_file("CI-53-400-SPAR-FWD/DPP_Data.json", dpp_json_content)
+create_file("CI-57-400-SPAR-FWD/DPP_Data.json", dpp_json_content)
 
 # 5. Update zone dashboard
 update_markdown("Zone_400_Dashboard.md", add_ci_link)

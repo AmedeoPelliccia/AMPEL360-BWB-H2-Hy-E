@@ -25,8 +25,8 @@ bash .github/hooks/setup-hooks.sh
 ### 3. Test Everything Works
 
 ```bash
-python tools/validators/drawing_validator.py 53-40-1000_RevC_Q100_ALL_ALL_Spar.svg
-python tools/validators/ci_validator.py CI-53-400-SPAR-FWD
+python tools/validators/drawing_validator.py 57-40-1000_RevC_Q100_ALL_ALL_Spar.svg
+python tools/validators/ci_validator.py CI-57-400-SPAR-FWD
 python tools/validators/structure_validator.py .
 ```
 
