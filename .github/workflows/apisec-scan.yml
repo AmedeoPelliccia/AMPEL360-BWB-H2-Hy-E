@@ -27,45 +27,53 @@
 
 name: APIsec
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  # Customize trigger events based on your DevSecOps processes.
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  schedule:
-    - cron: '43 19 * * 5'
+on: push: branches: [ "main" ] pull_request: branches: [ "main" ] schedule: - cron: '43 19 * * 5' workflow_dispatch:
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+permissions: contents: read
 
+jobs: Trigger_APIsec_scan: permissions: security-events: write actions: read runs-on: ubuntu-latest steps: - name: Checkout repository uses: actions/checkout@v4
+  - name: Validate required secrets
+    id: validate_secrets
+    run: |
+      if [ -z "${APISEC_USERNAME}" ] || [ -z "${APISEC_PASSWORD}" ]; then
+        echo "ERROR: Missing APIsec secrets. Set secrets.apisec_username and secrets.apisec_password in repository settings."
+        exit 1
+      fi
+    env:
+      APISEC_USERNAME: ${{ secrets.apisec_username }}
+      APISEC_PASSWORD: ${{ secrets.apisec_password }}
 
-permissions:
-  contents: read
+  - name: APIsec scan
+    id: apisec_scan
+    uses: apisec-inc/apisec-run-scan@025432089674a28ba8fb55f8ab06c10215e772ea
+    env:
+      # propagate GitHub run id so the action/script can use it if required
+      GITHUB_RUN_ID: ${{ github.run_id }}
+      APISEC_RUN_ID: ${{ github.run_id }}
+      GITHUB_RUN_NUMBER: ${{ github.run_number }}
+      GITHUB_WORKFLOW: ${{ github.workflow }}
+    with:
+      # credentials (must exist in repo secrets)
+      apisec-username: ${{ secrets.apisec_username }}
+      apisec-password: ${{ secrets.apisec_password }}
+      # project/profile and SARIF file to produce
+      apisec-project: "VAmPI"
+      apisec-profile: "Master"
+      sarif-result-file: "apisec-results.sarif"
+    # increase timeout if scans take longer
+    timeout-minutes: 30
 
-jobs:
+  - name: Check SARIF artifact produced
+    id: sarif_check
+    run: |
+      if [ -f ./apisec-results.sarif ]; then
+        echo "exists=true" >> $GITHUB_OUTPUT
+      else
+        echo "exists=false" >> $GITHUB_OUTPUT
+      fi
 
-  Trigger_APIsec_scan:
-    permissions:
-      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
-      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
-    runs-on: ubuntu-latest
-
-    steps:
-       - name: APIsec scan
-         uses: apisec-inc/apisec-run-scan@025432089674a28ba8fb55f8ab06c10215e772ea
-         with:
-          # The APIsec username with which the scans will be executed
-          apisec-username: ${{ secrets.apisec_username }}
-          # The Password of the APIsec user with which the scans will be executed
-          apisec-password: ${{ secrets.apisec_password}}
-          # The name of the project for security scan
-          apisec-project: "VAmPI"
-          # The name of the sarif format result file The file is written only if this property is provided.
-          sarif-result-file: "apisec-results.sarif"
-       - name: Import results
-         uses: github/codeql-action/upload-sarif@v3
-         with:
-          sarif_file: ./apisec-results.sarif
+  - name: Upload SARIF results to GitHub code scanning
+    if: steps.sarif_check.outputs.exists == 'true'
+    uses: github/codeql-action/upload-sarif@v3
+    with:
+      sarif_file: ./apisec-results.sarif
