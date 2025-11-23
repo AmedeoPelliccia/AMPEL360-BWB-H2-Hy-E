@@ -193,9 +193,9 @@ The `tools/` directory contains validation and automation scripts:
 tools/
 ├── validators/           # Drawing, CI number, and structure validators
 ├── ci/                   # CI/CD scripts and structure validators
-├── doc-meta-enforcer-mcp/ # Documentation metadata enforcement
-├── cgrow/               # Component growth tracking
-├── genccc/              # Code generation utilities
+├── doc-meta-enforcer-mcp/ # MCP server for document control and hyperlinking
+├── cgrow/               # C-GROWTH living documentation lifecycle tools
+├── genccc/              # Cross-reference integrity and doc generation
 └── schemas/             # JSON/YAML schemas for validation
 ```
 
