@@ -1,0 +1,13 @@
+Component,Ply_Number,Orientation_deg,Material,Thickness_mm,Location
+Upper_Shell,1,0,IM7/8552,0.125,All
+Upper_Shell,2,45,IM7/8552,0.125,All
+Upper_Shell,3,-45,IM7/8552,0.125,All
+Upper_Shell,4,90,IM7/8552,0.125,All
+Upper_Shell,5,90,IM7/8552,0.125,All
+Upper_Shell,6,-45,IM7/8552,0.125,All
+Upper_Shell,7,45,IM7/8552,0.125,All
+Upper_Shell,8,0,IM7/8552,0.125,All
+Lower_Shell,1,0,T800/M21,0.125,All
+Lower_Shell,2,45,T800/M21,0.125,All
+Lower_Shell,3,-45,T800/M21,0.125,All
+Lower_Shell,4,90,T800/M21,0.125,All

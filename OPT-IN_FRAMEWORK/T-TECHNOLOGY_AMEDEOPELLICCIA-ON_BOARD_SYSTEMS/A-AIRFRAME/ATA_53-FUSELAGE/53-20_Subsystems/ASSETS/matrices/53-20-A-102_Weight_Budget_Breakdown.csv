@@ -1,0 +1,11 @@
+Subsystem_ID,Component,Weight_kg,Weight_Target_kg,Margin_Percent,Material,Status
+53-20-01,Upper Shell Module,2850,3000,5.0,CFRP,Within Budget
+53-20-01,Lower Shell Module,3200,3400,5.9,CFRP,Within Budget
+53-20-01,Side Shell Modules,1450,1550,6.5,CFRP,Within Budget
+53-20-01,Pressure Bulkheads,580,625,7.2,CFRP/AL,Within Budget
+53-20-02,Door Frames All,425,475,10.5,Ti/CFRP,Within Budget
+53-20-03,Floor Beams,950,1050,9.5,AL/CFRP,Within Budget
+53-20-03,Floor Panels,380,420,9.5,AL Sandwich,Within Budget
+53-20-04,Landing Gear Bays,1250,1350,7.4,Ti/CFRP,Within Budget
+53-20-05,Liner Attach,195,230,15.2,AL,Within Budget
+53-20-06,Systems Supports,285,320,10.9,AL/Steel,Within Budget
