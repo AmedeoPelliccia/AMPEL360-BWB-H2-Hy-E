@@ -36,7 +36,7 @@ Maximum differential pressure represents the most demanding operational conditio
 ### Related Requirements
 - [53-00-03-02-002](./53-00-03-02-002_Pressure_Cycle_Endurance.md) (Pressure Cycle Endurance)
 - [53-00-03-01-001](../01_Structural_Integrity/53-00-03-01-001_Ultimate_Load_Capability.md) (Ultimate Load Capability)
-- [ATA-21](../../../../../ATA_21-*/README.md)-001 (Cabin Pressure Control)
+- ATA-21-001 (Cabin Pressure Control)
 
 ### Verification Activities
 - V&V-53-014: Pressure Vessel Proof Test

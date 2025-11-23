@@ -33,7 +33,7 @@ Compartmentalization limits fire spread and provides time for detection, suppres
 ### Parent Requirements
 - [CS-25.855](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Cargo Compartment Fire Protection)
 - [CS-25.869](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Fire Protection: Systems)
-- CS-25.851 (Fire Extinguishers)
+- [CS-25.851](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Fire Extinguishers)
 
 ### Related Requirements
 - [53-00-03-05-001](./53-00-03-05-001_Fire_Resistance_Materials.md) (Fire Resistance Materials)

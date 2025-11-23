@@ -32,7 +32,7 @@ External post-crash fires represent a significant threat. Fuselage materials mus
 
 ### Parent Requirements
 - [CS-25.856](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Thermal/Acoustic Insulation Materials)
-- CS-25.853(b) (Cargo Compartment Liners)
+- [CS-25.853(b)](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Cargo Compartment Liners)
 
 ### Related Requirements
 - [53-00-03-05-001](./53-00-03-05-001_Fire_Resistance_Materials.md) (Fire Resistance Materials)

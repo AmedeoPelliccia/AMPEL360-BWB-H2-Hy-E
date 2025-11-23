@@ -32,13 +32,13 @@ Pressure relief systems are essential safety features to prevent structural dama
 ## Traceability
 
 ### Parent Requirements
-- CS-25.841(b) (Pressurized Cabins - Relief Valves)
+- [CS-25.841(b)](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Pressurized Cabins - Relief Valves)
 - [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Equipment, Systems, and Installations)
 
 ### Related Requirements
 - [53-00-03-02-001](./53-00-03-02-001_Maximum_Differential_Pressure.md) (Maximum Differential Pressure)
 - [53-00-03-02-003](./53-00-03-02-003_Emergency_Decompression_Resistance.md) (Emergency Decompression Resistance)
-- [ATA-21](../../../../../ATA_21-*/README.md)-002 (Cabin Pressure Control System)
+- ATA-21-002 (Cabin Pressure Control System)
 
 ### Verification Activities
 - V&V-53-023: Pressure Relief Valve Testing

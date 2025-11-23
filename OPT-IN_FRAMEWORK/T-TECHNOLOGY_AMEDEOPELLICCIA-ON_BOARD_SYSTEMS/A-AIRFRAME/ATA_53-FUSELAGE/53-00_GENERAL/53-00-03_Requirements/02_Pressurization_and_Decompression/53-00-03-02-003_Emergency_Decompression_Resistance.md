@@ -31,9 +31,9 @@ Emergency decompression creates dynamic pressure loads and potential debris impa
 ## Traceability
 
 ### Parent Requirements
-- CS-25.365(e) (Sudden Release of Pressure)
+- [CS-25.365(e)](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Sudden Release of Pressure)
 - [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation)
-- CS-25.841(a) (Pressurized Cabins)
+- [CS-25.841(a)](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Pressurized Cabins)
 
 ### Related Requirements
 - [53-00-03-02-001](./53-00-03-02-001_Maximum_Differential_Pressure.md) (Maximum Differential Pressure)

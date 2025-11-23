@@ -32,7 +32,7 @@ Crack arrest features provide fail-safe capability by limiting crack propagation
 
 ### Parent Requirements
 - [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance and Fatigue Evaluation)
-- CS-25.571(b) (Damage Tolerance Evaluation)
+- [CS-25.571(b)](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) (Damage Tolerance Evaluation)
 
 ### Related Requirements
 - [53-00-03-03-001](./53-00-03-03-001_Damage_Growth_Prediction.md) (Damage Growth Prediction)
