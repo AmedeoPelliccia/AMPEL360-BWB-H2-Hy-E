@@ -8,7 +8,7 @@ Ensures the mandatory 14-folder lifecycle and cross-ATA buckets exist.
 import os
 import logging
 from pathlib import Path
-from typing import List, Dict, Set, Optional
+from typing import List, Dict
 
 logger = logging.getLogger(__name__)
 

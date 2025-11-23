@@ -82,7 +82,7 @@ class DrawingValidator:
         Example:
             >>> validator = DrawingValidator()
             >>> valid, err, components = validator.validate(
-            ...     "53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg"
+            ...     "57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar.svg"
             ... )
             >>> valid
             True
@@ -129,7 +129,7 @@ class DrawingValidator:
         return (
             f"Invalid Q100 drawing filename format: '{filename}'\n"
             f"Expected format: [ATA]-[ZONE]-[SEQUENCE]-[VAR]_Rev[X]_Q100_[EFF]_[APP]_Description.svg\n"
-            f"Example: 53-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg"
+            f"Example: 57-40-1000_RevC_Q100_ALL_ALL_Forward_Wing_Spar_Assembly.svg"
         )
 
 
@@ -148,7 +148,7 @@ def validate_q100_drawing_filename(filename: str) -> bool:
         
     Example:
         >>> validate_q100_drawing_filename(
-        ...     "53-40-1000_RevC_Q100_ALL_ALL_Spar.svg"
+        ...     "57-40-1000_RevC_Q100_ALL_ALL_Spar.svg"
         ... )
         True
     """

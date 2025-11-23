@@ -8,7 +8,7 @@ applyTo: "OPT-IN_FRAMEWORK/**/*.md"
 - Preserve any existing **Document ID**, **Version**, **Status**, and **Owner** blocks.
 - When creating a new document:
   - Derive the ID and filename pattern from neighboring files.
-  - Use the correct lifecycle subfolder (e.g. `01_OVERVIEW`, `03_REQUIREMENTS`, `04_DESIGN`, `07_V_AND_V`, `11_OPERATIONS_MAINTENANCE`, etc.).
+  - Use the correct lifecycle subfolder (e.g. `01_OVERVIEW`, `03_REQUIREMENTS`, `04_DESIGN`, `07_V_AND_V`, `11_EIS_Versions_Tags`, etc.).
 - Use **Markdown only** for textual content and **CSV** for tabular data (placed in appropriate `ASSETS/` folders and linked from the Markdown).
 - Prefer **SVG** for diagrams and drawings; reference them under `ASSETS/DRAWINGS/`, `ASSETS/DIAGRAMS/`, or equivalent.
 - If you reference a path that does not yet exist:
