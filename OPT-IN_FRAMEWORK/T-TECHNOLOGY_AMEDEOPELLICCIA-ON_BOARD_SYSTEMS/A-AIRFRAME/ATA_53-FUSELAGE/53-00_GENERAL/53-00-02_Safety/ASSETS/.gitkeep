@@ -1,0 +1,8 @@
+# ASSETS Directory
+
+This directory contains safety-related diagrams and exports for ATA 53-00-02 Fuselage Safety.
+
+## Structure
+
+- `diagrams/`: Safety-related diagrams (load paths, crash scenarios, inspection zones)
+- `exports/`: Generated exports and analysis outputs
