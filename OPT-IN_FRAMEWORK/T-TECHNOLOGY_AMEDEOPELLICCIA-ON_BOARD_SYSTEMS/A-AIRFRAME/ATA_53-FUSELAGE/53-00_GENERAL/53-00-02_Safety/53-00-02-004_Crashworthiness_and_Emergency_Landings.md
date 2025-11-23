@@ -14,9 +14,9 @@ Define the **crashworthiness and emergency landing design philosophy** for the A
 - Structural requirements for survivable crash scenarios.  
 - Load paths and energy absorption mechanisms.  
 - Occupant protection and evacuation considerations.  
-- Integration with landing gear ([ATA 32](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_32-LANDING_GEAR/)) and emergency systems ([ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/)/[ATA 26](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)).
+- Integration with landing gear ([ATA 32](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_32-LANDING_GEAR/)) and emergency systems ([ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)/[ATA 26](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)).
 
-This document focuses on **structural crashworthiness**; occupant restraint systems and evacuation are covered in [ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/).
+This document focuses on **structural crashworthiness**; occupant restraint systems and evacuation are covered in [ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/).
 
 ---
 
@@ -126,7 +126,7 @@ Structural design limits loads transmitted to occupants via:
 
 - **Seat attachment points**: Floor structure designed for seat loads per [CS-25.562](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes).  
 - **Secondary impacts**: Minimize hazardous projections, sharp edges, and loose objects.  
-- **Restraint system interfaces**: Coordination with [ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/) for seat belt and shoulder harness attachment.
+- **Restraint system interfaces**: Coordination with [ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/) for seat belt and shoulder harness attachment.
 
 ---
 
@@ -202,7 +202,7 @@ Fuel tanks and lines shall:
 - Incorporate **frangible fittings** that break away to prevent fuel spillage into cabin.  
 - Meet **[CS-25.721](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)** and [CS-25 Subpart E](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) fuel system crash resistance requirements.
 
-Fuel system design is detailed in [ATA 28 (Fuel)](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L-LIQUIDS/ATA_28-FUEL/); structural interfaces are defined in [53-00-05_Interfaces](../53-00-05_Interfaces/).
+Fuel system design is detailed in [ATA 28 (Fuel)](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_28-FUEL_SAF_CRYOGENIC_H2/); structural interfaces are defined in [53-00-05_Interfaces](../53-00-05_Interfaces/).
 
 ---
 
@@ -255,7 +255,7 @@ For novel BWB configuration:
 
 - **Vertical drop test**: Full-scale or representative section, per [AC 20-146B](https://www.faa.gov/regulations_policies/advisory_circulars).  
 - **Ditching model testing**: Scaled hydrodynamic tests or CFD validation.  
-- **Evacuation demonstration**: Full aircraft with structural integrity maintained post-crash (coordination with [ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/)).
+- **Evacuation demonstration**: Full aircraft with structural integrity maintained post-crash (coordination with [ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)).
 
 Testing plans are detailed in [53-00-07_V_and_V](../53-00-07_V_AND_V/).
 
@@ -298,7 +298,7 @@ Inspection procedures are coordinated with [ATA 05 (Time Limits / Maintenance Ch
 - To **[53-00-04_Design](../53-00-04_Design/)**: Detailed design of crash-resistant features.  
 - To **[53-00-06_Engineering](../53-00-06_Engineering/)**: Crash analysis methods and models.  
 - To **[53-00-07_V_and_V](../53-00-07_V_AND_V/)**: Crash testing and validation activities.  
-- To **[ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/)**: Seat and restraint system integration.  
+- To **[ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)**: Seat and restraint system integration.  
 - To **[ATA 32](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_32-LANDING_GEAR/)**: Landing gear load path coordination.
 
 ---

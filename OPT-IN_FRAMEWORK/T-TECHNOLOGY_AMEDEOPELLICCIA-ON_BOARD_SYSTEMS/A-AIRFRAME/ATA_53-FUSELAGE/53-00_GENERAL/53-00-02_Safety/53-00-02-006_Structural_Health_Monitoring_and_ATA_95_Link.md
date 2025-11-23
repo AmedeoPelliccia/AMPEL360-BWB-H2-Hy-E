@@ -64,7 +64,7 @@ Selection is based on:
 - Structural location (skin, frames, joints, attachments).  
 - Damage type expected (fatigue, corrosion, impact).  
 - Coverage area vs. cost trade-off.  
-- Integration with aircraft systems ([ATA 42 (IMA)](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/O-OPERATING_SYSTEMS/ATA_42-IMA_GOVERNANCE/), [ATA 31 (Indicating/Recording)](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_RECORDING_FUNCTION/)).
+- Integration with aircraft systems ([ATA 42 (IMA)](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/O-OPERATING_SYSTEMS/ATA_42-IMA_GOVERNANCE/), [ATA 31 (Indicating/Recording)](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/)).
 
 ### 3.3 Coverage Philosophy
 
@@ -312,7 +312,7 @@ Testing plans detailed in [53-00-07_V_and_V](../53-00-07_V_AND_V/).
 - To **[53-00-06_Engineering](../53-00-06_Engineering/)**: SHM data used to validate stress/fatigue analyses.  
 - To **[53-00-07_V_and_V](../53-00-07_V_AND_V/)**: SHM system testing and validation activities.  
 - To **[ATA 95](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/)**: Neural network models, DPP integration, AI certification.  
-- To **[ATA 31](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_RECORDING_FUNCTION/)**: Data recording and indication interfaces.  
+- To **[ATA 31](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/)**: Data recording and indication interfaces.  
 - To **[ATA 42](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/O-OPERATING_SYSTEMS/ATA_42-IMA_GOVERNANCE/)**: IMA/computing platform integration.
 
 ---

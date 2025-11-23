@@ -43,7 +43,7 @@ These objectives are refined into formal requirements in [53-00-03_Requirements]
 
 ### 3.2 Load Envelopes
 
-- Limit and ultimate load cases are defined in [ATA 53-xx-03](../53-00-03_Requirements/) and corresponding loads chapters (e.g. [ATA 02](../../../../../../O-ORGANIZATION/ATA_02-OPERATIONS_INFORMATION/) / operations information).  
+- Limit and ultimate load cases are defined in [ATA 53-xx-03](../53-00-03_Requirements/) and corresponding loads chapters (e.g. [ATA 02](../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/) / operations information).  
 - Safety factors and partial factors are captured in [53-00-02-005_Load_Factors_and_Safety_Margins.md](./53-00-02-005_Load_Factors_and_Safety_Margins.md).
 
 ---
@@ -58,7 +58,7 @@ These objectives are refined into formal requirements in [53-00-03_Requirements]
 
 ## 5. Fire, Smoke, Toxicity (FST) – Structural Aspects
 
-- While [ATA 26](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)/[ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/) govern systems and interiors, the fuselage structural design must consider:  
+- While [ATA 26](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)/[ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/) govern systems and interiors, the fuselage structural design must consider:  
   - Fire resistance of structural panels where exposed.  
   - Compatibility of insulation and coatings with FST requirements per [CS-25.853](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes).  
 - Detailed FST considerations are developed in [53-00-02-003_Fire_Smoke_Toxicity_Considerations.md](./53-00-02-003_Fire_Smoke_Toxicity_Considerations.md).
@@ -84,7 +84,7 @@ These objectives are refined into formal requirements in [53-00-03_Requirements]
 
 ## 8. Assumptions & Dependencies
 
-- Load spectra, usage assumptions, and environmental conditions are defined in [ATA 02](../../../../../../O-ORGANIZATION/ATA_02-OPERATIONS_INFORMATION/) and relevant loads documents.  
+- Load spectra, usage assumptions, and environmental conditions are defined in [ATA 02](../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/) and relevant loads documents.  
 - Material properties, allowables, and durability data are maintained in dedicated material chapters and databases.  
 - Maintenance and inspection intervals are defined in coordination with [ATA 05 (Time Limits / Maintenance Checks)](../../../../../../O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/) and the MPD/MSG-3 process.
 
@@ -93,9 +93,9 @@ These objectives are refined into formal requirements in [53-00-03_Requirements]
 ## 9. Traceability
 
 - Top-level safety objectives here shall be traced to:  
-  - System-level safety requirements in [ATA 02](../../../../../../O-ORGANIZATION/ATA_02-OPERATIONS_INFORMATION/) / aircraft-level safety documentation.  
+  - System-level safety requirements in [ATA 02](../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/) / aircraft-level safety documentation.  
   - Fuselage structural requirements in [53-00-03_Requirements](../53-00-03_Requirements/).  
-  - Verification activities in [53-00-07_V_and_V](../53-00-07_V_AND_V/) and **[ATA 99](../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_99-CIRCULARITY_COMPLIANCE/)** safety/circularity dashboards where applicable.
+  - Verification activities in [53-00-07_V_and_V](../53-00-07_V_AND_V/) and **[ATA 99](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_99-CARBON_ACCOUNTING/)** safety/circularity dashboards where applicable.
 
 ---
 

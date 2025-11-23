@@ -41,7 +41,7 @@ Excluded:
 
 - Detailed stress and fatigue calculations at component level.  
 - Detailed maintenance task definitions (MPD / MSG-3 detail – those are downstream).  
-- Operational safety procedures ([ATA 02](../../../../../O-ORGANIZATION/ATA_02-OPERATIONS_INFORMATION/) / Ops / Flight Ops manuals).
+- Operational safety procedures ([ATA 02](../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/) / Ops / Flight Ops manuals).
 
 ---
 
@@ -75,7 +75,7 @@ The `ASSETS/` subfolder stores safety-related diagrams (load paths, crash scenar
 Safety interactions with other chapters include:
 
 - **[ATA 21 (Air Conditioning & Pressurization)](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_PRESSURIZATION/)**: Cabin pressure loads, duct failures, and pressure relief strategies.  
-- **[ATA 25 (Equipment & Furnishings)](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/)**: Interior fittings that may affect post-crash survivability and evacuation.  
+- **[ATA 25 (Equipment & Furnishings)](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)**: Interior fittings that may affect post-crash survivability and evacuation.  
 - **[ATA 26 (Fire Protection)](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)**: Fire detection/suppression systems that rely on fuselage zones and penetrations.  
 - **ATA 27/55/57**: Control surfaces and empennage attachment points from a load and failure propagation perspective.  
 - **[ATA 32 (Landing Gear)](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_32-LANDING_GEAR/)**: Landing and crash loads into fuselage primary structure.  

@@ -114,7 +114,7 @@ Integration of SHM with conventional inspections is detailed in [53-00-02-006_St
 
 Fatigue life is assessed using:
 
-- **Load spectrum**: Defined from operational data ([ATA 02](../../../../../../O-ORGANIZATION/ATA_02-OPERATIONS_INFORMATION/)) and statistical flight profiles.  
+- **Load spectrum**: Defined from operational data ([ATA 02](../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/)) and statistical flight profiles.  
 - **Stress analysis**: FEM-based stress concentration factors at critical locations.  
 - **S-N curves**: Material-specific fatigue curves from test data and databases.  
 - **Damage accumulation**: Miner's rule or equivalent for cumulative fatigue damage.  

@@ -13,10 +13,10 @@ Define the **fire, smoke, and toxicity (FST) considerations** for the AMPEL360 B
 
 - Structural design principles to support fire safety objectives.  
 - Material selection criteria for fire resistance and toxicity.  
-- Integration with fire protection systems ([ATA 26](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)) and interior furnishings ([ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/)).  
+- Integration with fire protection systems ([ATA 26](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)) and interior furnishings ([ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)).  
 - Compliance with regulatory FST requirements.
 
-This document focuses on **structural aspects** of FST; system-level fire protection is covered in [ATA 26](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/).
+This document focuses on **structural aspects** of FST; system-level fire protection is covered in [ATA 26](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/).
 
 ---
 
@@ -146,7 +146,7 @@ The fuselage structure provides mounting points and routing for:
 
 ### 7.2 Interface with ATA 26
 
-Coordination with [ATA 26 (Fire Protection)](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/) ensures:
+Coordination with [ATA 26 (Fire Protection)](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/) ensures:
 
 - Fire zones are properly defined and aligned with structural compartmentalization.  
 - Fire barriers coincide with structural bulkheads where feasible.  
@@ -171,7 +171,7 @@ Depending on novel BWB configuration features:
 
 - **Cargo compartment fire tests**: Demonstrate fire containment and suppression effectiveness.  
 - **Fuselage burnthrough tests**: For post-crash fire scenarios if required by certification authorities.  
-- **Evacuation demonstrations**: Structural integrity during simulated fire exposure (coordination with [ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/) for seats/exits).
+- **Evacuation demonstrations**: Structural integrity during simulated fire exposure (coordination with [ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/) for seats/exits).
 
 Testing plans are detailed in [53-00-07_V_and_V](../53-00-07_V_AND_V/).
 
@@ -240,7 +240,7 @@ If using composite materials extensively:
 - To **[53-00-04_Design](../53-00-04_Design/)**: Material selection and fire barrier design details.  
 - To **[53-00-06_Engineering](../53-00-06_Engineering/)**: FST analysis methods and material databases.  
 - To **[53-00-07_V_and_V](../53-00-07_V_AND_V/)**: FST testing plans and results.  
-- To **[ATA 26](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)**: System-level fire protection integration.
+- To **[ATA 26](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)**: System-level fire protection integration.
 
 ---
 
@@ -249,7 +249,7 @@ If using composite materials extensively:
 - **Material databases**: Current FST properties; new materials require re-qualification.  
 - **Regulatory compliance**: Based on current [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)/[FAR 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25); changes may require updates.  
 - **Fire scenario definitions**: Reflect current understanding; novel BWB scenarios may require additional analysis.  
-- **Coordination with interiors**: FST performance is a system-level property; changes in [ATA 25](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PASSENGER_SYSTEMS/ATA_25-EQUIPMENT_FURNISHINGS/) may affect structural FST strategy.
+- **Coordination with interiors**: FST performance is a system-level property; changes in [ATA 25](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/) may affect structural FST strategy.
 
 ---
 

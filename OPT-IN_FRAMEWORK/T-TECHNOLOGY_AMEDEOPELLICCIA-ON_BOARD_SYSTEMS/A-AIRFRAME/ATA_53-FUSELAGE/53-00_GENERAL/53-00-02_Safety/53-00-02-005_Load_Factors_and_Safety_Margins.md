@@ -301,7 +301,7 @@ Test plans are detailed in [53-00-07_V_and_V](../53-00-07_V_AND_V/).
 - To **[53-00-04_Design](../53-00-04_Design/)**: Structural sizing based on load factors and margins.  
 - To **[53-00-06_Engineering](../53-00-06_Engineering/)**: Detailed load cases, stress analysis, and fatigue analysis.  
 - To **[53-00-07_V_and_V](../53-00-07_V_AND_V/)**: Verification testing to demonstrate compliance.  
-- To **[ATA 02 (Operations Information)](../../../../../../O-ORGANIZATION/ATA_02-OPERATIONS_INFORMATION/)**: Operational load spectrum and usage assumptions.
+- To **[ATA 02 (Operations Information)](../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/)**: Operational load spectrum and usage assumptions.
 
 ---
 
