@@ -447,8 +447,8 @@ All AI-generated content is reviewed and approved by qualified aerospace enginee
 
 ---
 
-**AMPEL360** — Aviation Model by Proactive Engineering is Leading Excellence,
-enabling hydrogen-electric, AI-orchestrated, carbon-negative commercial aviation.
+**AMPEL360** — Aviation Model by Proactive Engineering Leaders 
+is enabling hydrogen-electric, AI-orchestrated, carbon-negative commercial aviation.
 
 **Q100** - *Quantum leap in regional sustainable aviation*
 
