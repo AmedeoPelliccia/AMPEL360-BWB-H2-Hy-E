@@ -12,8 +12,9 @@ This document provides a quick reference view of the AI Subsystems Register, org
 ## Summary Statistics
 
 - **Total AI Systems**: 31
-- **DS.AI IN Scope**: 24 systems
-- **DS.AI OUT Scope**: 5 systems (+ 2 with split classification)
+- **DS.AI IN Scope**: 23 systems (primary classification)
+- **DS.AI OUT Scope**: 5 systems (catastrophic or business-only)
+- **Mixed/Split Scope**: 3 systems (context-dependent)
 
 ## Systems by Domain
 

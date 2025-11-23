@@ -136,15 +136,16 @@ The register (`AI_Subsystems_Register.csv`) contains the following columns:
 
 ## Key Statistics (Current Register)
 
-- **Total AI Systems**: 33
+- **Total AI Systems**: 31
 - **Airborne**: 13 (neural network subsystems)
 - **Ground**: 11 (operations and infrastructure)
-- **Enterprise**: 6 (tools and assistants)
-- **Mixed Domain**: 3
+- **Enterprise**: 4 (tools and assistants)
+- **Mixed Domain**: 3 (airborne+ground hybrid)
 
 ### By DS.AI Scope
-- **IN Scope**: 26 systems
-- **OUT Scope**: 7 systems (5 catastrophic, 2 business-only)
+- **IN Scope**: 23 systems (primary classification)
+- **OUT Scope**: 5 systems (2 catastrophic, 2 business-only, 1 conditional)
+- **Mixed/Split**: 3 systems (context-dependent classification)
 
 ### By Safety Classification
 - **Safety Components**: 21 systems
@@ -164,8 +165,8 @@ The register (`AI_Subsystems_Register.csv`) contains the following columns:
 
 ## Related Documents
 
-- [DS.AI Guideline - EASA](https://www.easa.europa.eu/) (TBD - official link)
-- [EU AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) (Official EU legislation)
+- [EASA First Usable Guidance for Level 1 & 2 Machine Learning Applications](https://www.easa.europa.eu/en/document-library/general-publications/easa-concept-paper-first-usable-guidance-level-1-machine) - EASA AI Guidance
+- [EU AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) - Official EU legislation
 - `95-00-01-002_Regulatory_and_Standards_Context.md` - Regulatory framework overview
 - `95-00-01-004_DPP_Objectives_for_Neural_Networks.md` - DPP objectives
 - Individual subsystem documentation under respective `95-20-XX_*` and `02-20-XX_*` directories
