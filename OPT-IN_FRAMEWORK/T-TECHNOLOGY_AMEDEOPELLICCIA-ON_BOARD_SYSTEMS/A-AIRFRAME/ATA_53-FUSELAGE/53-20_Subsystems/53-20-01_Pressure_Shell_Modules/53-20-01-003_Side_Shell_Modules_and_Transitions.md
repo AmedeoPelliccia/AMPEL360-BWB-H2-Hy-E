@@ -79,7 +79,7 @@ FEA results for transition zones:
 - **Deflection**: 89mm maximum at 2.5g maneuver load
 - **Fatigue Life**: 175,000 flights to detectable crack
 
-Analysis index: [Shell_Module_Analysis_Index.md](ASSETS/FEA_Models/Shell_Module_Analysis_Index.md)
+Analysis index: [Shell_Module_Analysis_Index.md](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/Shell_Module_Analysis_Index.md)
 
 ## Door Integration
 
@@ -140,7 +140,7 @@ Critical load paths through side shells:
 3. **Torsion**: Wing torsion distributed through side panels
 4. **Bending**: Fuselage bending resisted by upper-side-lower continuity
 
-Load analysis: [Global_Load_Analysis_Summary.md](../ASSETS/analyses/53-20-A-301_Global_Load_Analysis_Summary.md)
+Load analysis: [Global_Load_Analysis_Summary.md](../../53-00_GENERAL/53-00-06_Engineering/analyses/53-20-A-301_Global_Load_Analysis_Summary.md)
 
 ## Interfaces
 
@@ -166,7 +166,7 @@ Engineering documentation:
 
 - [Shell_Sections_Assembly.svg](ASSETS/Structural_Drawings/Shell_Sections_Assembly.svg) - Side shell assembly
 - [BWB_Cross_Section.svg](../ASSETS/diagrams/53-20-A-005_BWB_Cross_Section.svg) - Cross-section views
-- FEA models: [ASSETS/FEA_Models/](ASSETS/FEA_Models/)
+- FEA models: [../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/)
 
 ## Status
 

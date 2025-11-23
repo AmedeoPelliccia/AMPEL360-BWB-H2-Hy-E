@@ -1,12 +1,18 @@
 # 53-20-A-305 Damage Tolerance Assessment
 
+## ⚠️ IMPORTANT NOTICE
+
+**This document contains AI-INFERRED projections. NO ACTUAL DAMAGE TOLERANCE ASSESSMENT HAS BEEN PERFORMED.**
+
+All damage scenarios, critical locations, and inspection programs are AI-generated projections based on standard aerospace practices, not actual engineering analysis or test results.
+
 ## Purpose
 
-Documents damage tolerance compliance per [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) for ATA 53-20 Subsystems.
+Documents planned approach for damage tolerance compliance per [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) for ATA 53-20 Subsystems.
 
-## Damage Tolerance Philosophy
+## Planned Damage Tolerance Philosophy
 
-The AMPEL360 fuselage structure employs a **fail-safe** design philosophy with:
+The AMPEL360 fuselage structure is planned to employ a **fail-safe** design philosophy with:
 - Multiple load paths around critical areas
 - Crack stoppers at frame and stringer terminations
 - Slow crack growth materials (CFRP, toughened resins)

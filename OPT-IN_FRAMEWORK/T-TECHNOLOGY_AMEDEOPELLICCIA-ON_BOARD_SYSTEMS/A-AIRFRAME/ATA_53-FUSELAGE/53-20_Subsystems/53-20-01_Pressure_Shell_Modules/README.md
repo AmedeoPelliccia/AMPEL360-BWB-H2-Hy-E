@@ -47,7 +47,7 @@ All pressure shell modules must comply with:
 Detailed design artifacts are organized in the ASSETS directory:
 
 - [Structural_Drawings/](ASSETS/Structural_Drawings/) - Layout drawings and assembly views
-- [FEA_Models/](ASSETS/FEA_Models/) - Finite element analysis models and results
+- [FEA_Models/](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/) - Finite element analysis models and results
 - [Joint_Details/](ASSETS/Joint_Details/) - Splice and joint design details
 - [Manufacturing_Plans/](ASSETS/Manufacturing_Plans/) - Layup schedules and assembly sequences
 

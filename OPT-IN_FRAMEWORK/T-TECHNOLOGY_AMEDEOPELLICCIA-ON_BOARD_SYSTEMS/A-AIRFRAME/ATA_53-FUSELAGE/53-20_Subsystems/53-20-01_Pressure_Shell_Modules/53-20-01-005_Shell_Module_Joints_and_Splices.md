@@ -185,7 +185,7 @@ Assembly procedures: [Assembly_Sequence.md](ASSETS/Manufacturing_Plans/Assembly_
 - **Fastener Pull-Through**: Head pull-through strength, safety margin 2.15
 - **Splice Strap Buckling**: Compression buckling of splice straps, safety margin 1.52
 
-Analysis summary: [FEA_Results_Summary.csv](ASSETS/FEA_Models/FEA_Results_Summary.csv)
+Analysis summary: [FEA_Results_Summary.csv](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/FEA_Results_Summary.csv)
 
 ## Fatigue & Damage Tolerance
 
@@ -201,7 +201,7 @@ Analysis summary: [FEA_Results_Summary.csv](ASSETS/FEA_Models/FEA_Results_Summar
 - **Inspection Access**: All critical joints accessible for inspection
 - **Redundancy**: Bonding + mechanical fastening = fail-safe
 
-Damage tolerance report: [Damage_Tolerance_Assessment.md](../ASSETS/analyses/53-20-A-305_Damage_Tolerance_Assessment.md)
+Damage tolerance report: [Damage_Tolerance_Assessment.md](../../53-00_GENERAL/53-00-06_Engineering/analyses/53-20-A-305_Damage_Tolerance_Assessment.md)
 
 ## Inspection & Maintenance
 

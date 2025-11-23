@@ -36,7 +36,7 @@ Critical load paths for lower shell:
 3. **Cabin Pressure**: Outward pressure resisted by skin-frame-stringer network
 4. **Emergency Landing**: Impact energy absorbed through crushable elements and keel bending
 
-Load cases detailed in [Global Load Analysis](../ASSETS/analyses/53-20-A-301_Global_Load_Analysis_Summary.md).
+Load cases detailed in [Global Load Analysis](../../53-00_GENERAL/53-00-06_Engineering/analyses/53-20-A-301_Global_Load_Analysis_Summary.md).
 
 ## Material Specification
 
@@ -87,7 +87,7 @@ FEA demonstrates adequate margins:
 - **Cargo Floor**: 14.2 kN/m² ultimate load capability (requirement 12.0 kN/m²)
 - **Fatigue Life**: 160,000 flights to detectable damage
 
-Analysis summary: [FEA_Results_Summary.csv](ASSETS/FEA_Models/FEA_Results_Summary.csv)
+Analysis summary: [FEA_Results_Summary.csv](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/FEA_Results_Summary.csv)
 
 ## Landing Gear Integration
 
@@ -143,7 +143,7 @@ Key engineering documents:
 
 - [Lower_Shell_Layout.svg](ASSETS/Structural_Drawings/Lower_Shell_Layout.svg) - Overall layout
 - [Shell_Sections_Assembly.svg](ASSETS/Structural_Drawings/Shell_Sections_Assembly.svg) - Assembly views
-- FEA models: [ASSETS/FEA_Models/](ASSETS/FEA_Models/)
+- FEA models: [../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/)
 
 ## Status
 

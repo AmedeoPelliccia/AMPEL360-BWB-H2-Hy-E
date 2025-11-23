@@ -38,7 +38,7 @@ Pressure bulkheads must comply with:
 - **Environmental Control**: 2 duct penetrations (supply/return)
 - **Hydraulic Lines**: 4 line penetrations with fire seals
 
-Analysis: [FEA_Results_Summary.csv](ASSETS/FEA_Models/FEA_Results_Summary.csv)
+Analysis: [FEA_Results_Summary.csv](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/FEA_Results_Summary.csv)
 
 ## Aft Pressure Bulkhead
 
@@ -118,7 +118,7 @@ Manufacturing plans: [Assembly_Sequence.md](ASSETS/Manufacturing_Plans/Assembly_
 - **Buckling Margin**: 1.42 for skin panels
 - **Fatigue Life**: 185,000 pressurization cycles
 
-Analysis index: [Shell_Module_Analysis_Index.md](ASSETS/FEA_Models/Shell_Module_Analysis_Index.md)
+Analysis index: [Shell_Module_Analysis_Index.md](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/Shell_Module_Analysis_Index.md)
 
 ## Pressure Sealing
 

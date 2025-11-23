@@ -1,0 +1,13 @@
+# AI-INFERRED DATA - NOT ACTUAL FEM MODELS
+# All entries are projected/planned models - NO ACTUAL FEA HAS BEEN CREATED OR RUN
+# Element counts, node counts, and software selections are AI-generated estimates
+Model_ID,Description,Planned_Software,Projected_Elements,Projected_Nodes,Planned_Analysis_Type,Status
+FEM-53-20-G01,Global Fuselage Model (Planned),ANSYS (Proposed),2.4M (estimate),3.1M (estimate),Static/Dynamic,NOT CREATED
+FEM-53-20-01,Upper Shell Detail (Planned),ANSYS (Proposed),485K (estimate),625K (estimate),Static/Buckling,NOT CREATED
+FEM-53-20-02,Lower Shell Detail (Planned),ANSYS (Proposed),520K (estimate),685K (estimate),Static/Buckling,NOT CREATED
+FEM-53-20-03,Side Shell Detail (Planned),ANSYS (Proposed),380K (estimate),495K (estimate),Static/Buckling,NOT CREATED
+FEM-53-20-04,Forward Bulkhead (Planned),NASTRAN (Proposed),125K (estimate),165K (estimate),Static/Pressure,NOT CREATED
+FEM-53-20-05,Aft Bulkhead (Planned),NASTRAN (Proposed),142K (estimate),185K (estimate),Static/Pressure,NOT CREATED
+FEM-53-20-06,Door Frame Detail (Planned),ABAQUS (Proposed),95K (estimate),125K (estimate),Static/Contact,NOT CREATED
+FEM-53-20-07,Floor Beam System (Planned),NASTRAN (Proposed),285K (estimate),365K (estimate),Static/Dynamic,NOT CREATED
+FEM-53-20-08,Landing Gear Bay (Planned),ANSYS (Proposed),425K (estimate),550K (estimate),Static/Fatigue,NOT CREATED

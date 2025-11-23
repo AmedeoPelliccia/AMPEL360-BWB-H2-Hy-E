@@ -48,7 +48,7 @@ Door surround structures must comply with:
 Detailed design artifacts:
 
 - [Frame_Drawings/](ASSETS/Frame_Drawings/) - Door frame layout drawings
-- [Load_Analysis/](ASSETS/Load_Analysis/) - Stress analysis and load calculations
+- [Load_Analysis/](../../53-00_GENERAL/53-00-06_Engineering/Load_Analysis/) - Stress analysis and load calculations
 - [Installation_Procedures/](ASSETS/Installation_Procedures/) - Frame installation procedures
 - [Interface_Specs/](ASSETS/Interface_Specs/) - Interface control documents
 

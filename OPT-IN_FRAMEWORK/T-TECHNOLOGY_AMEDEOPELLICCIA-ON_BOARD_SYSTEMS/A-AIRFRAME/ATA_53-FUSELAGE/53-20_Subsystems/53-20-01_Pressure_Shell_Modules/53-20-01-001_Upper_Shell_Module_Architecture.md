@@ -35,7 +35,7 @@ Critical load paths include:
 3. **Flight Loads**: Aerodynamic forces distributed across entire upper surface
 4. **Emergency Landing**: Vertical acceleration loads (3.0g ultimate)
 
-See [Global Load Analysis](../ASSETS/analyses/53-20-A-301_Global_Load_Analysis_Summary.md) for detailed load cases.
+See [Global Load Analysis](../../53-00_GENERAL/53-00-06_Engineering/analyses/53-20-A-301_Global_Load_Analysis_Summary.md) for detailed load cases.
 
 ## Material Specification
 
@@ -76,7 +76,7 @@ Finite Element Analysis (FEA) results demonstrate:
 - **Buckling Margin**: 1.45 minimum at critical compression panels
 - **Fatigue Life**: 180,000 flights to crack initiation
 
-Analysis index: [Shell_Module_Analysis_Index.md](ASSETS/FEA_Models/Shell_Module_Analysis_Index.md)
+Analysis index: [Shell_Module_Analysis_Index.md](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/Shell_Module_Analysis_Index.md)
 
 ## Inspection & Maintenance
 
@@ -118,7 +118,7 @@ Primary engineering artifacts:
 
 - [Upper_Shell_Layout.svg](ASSETS/Structural_Drawings/Upper_Shell_Layout.svg) - Overall layout drawing
 - [Shell_Sections_Assembly.svg](ASSETS/Structural_Drawings/Shell_Sections_Assembly.svg) - Assembly sequence
-- FEA models located in [ASSETS/FEA_Models/](ASSETS/FEA_Models/)
+- FEA models located in [../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/](../../53-00_GENERAL/53-00-06_Engineering/FEA_Models/)
 
 ## Status
 

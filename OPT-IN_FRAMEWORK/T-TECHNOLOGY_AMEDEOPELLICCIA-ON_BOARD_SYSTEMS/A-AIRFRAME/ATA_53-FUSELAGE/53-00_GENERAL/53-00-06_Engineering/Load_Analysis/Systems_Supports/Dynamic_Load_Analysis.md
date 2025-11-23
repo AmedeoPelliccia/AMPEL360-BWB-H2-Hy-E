@@ -2,6 +2,13 @@
 
 ## Purpose
 
+## ⚠️ IMPORTANT NOTICE
+
+**This document is a placeholder. NO ACTUAL LOAD CALCULATIONS HAVE BEEN PERFORMED.**
+
+All content is AI-generated projection for planning purposes only. Actual engineering analysis must be performed by qualified engineers.
+
+
 This document provides detailed information for Dynamic Load Analysis.
 
 ## Content

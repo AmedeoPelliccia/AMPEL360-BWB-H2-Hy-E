@@ -1,8 +1,14 @@
 # 53-20-A-301 Global Load Analysis Summary
 
+## ⚠️ IMPORTANT NOTICE
+
+**This document contains AI-INFERRED projections based on standard aerospace design practices. NO ACTUAL LOAD ANALYSIS HAS BEEN PERFORMED.**
+
+All load values, stress predictions, and critical load cases are placeholder projections for planning purposes only. Actual structural analysis must be performed and validated by qualified engineers before use in design, certification, or manufacturing decisions.
+
 ## Purpose
 
-Summarizes global structural loads applied to ATA 53-20 Subsystems for design and analysis.
+Documents planned approach for global structural load analysis to be applied to ATA 53-20 Subsystems.
 
 ## Load Categories
 
