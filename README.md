@@ -447,7 +447,7 @@ All AI-generated content is reviewed and approved by qualified aerospace enginee
 
 ---
 
-**AMPEL360** - *Advancing Mobility through Progressive Engineering and Lifecycle Excellence*  
+**AMPEL360** - *Advancing Mobility through Progressive Engineering and lifecycle excellence*  
 **Q100** - *Quantum leap in regional sustainable aviation*
 
 *Making regional air travel sustainable, accessible, and beneficial for communities worldwide.*
