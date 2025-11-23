@@ -38,3 +38,10 @@ Thumbs.db
 /cd/*
 !/cd/README.md
 !/cd/costs/
+
+# Binary document formats
+# These should not be committed to the repository
+*.pdf
+*.xlsx
+*.docx
+*.pptx
