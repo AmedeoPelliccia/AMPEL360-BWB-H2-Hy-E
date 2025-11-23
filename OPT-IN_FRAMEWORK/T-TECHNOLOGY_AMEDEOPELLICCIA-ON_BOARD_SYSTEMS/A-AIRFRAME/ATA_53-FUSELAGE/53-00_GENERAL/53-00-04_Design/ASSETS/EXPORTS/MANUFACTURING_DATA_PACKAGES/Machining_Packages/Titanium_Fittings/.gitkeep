@@ -1,0 +1,8 @@
+# Titanium Fittings Machining Package
+# Contains: CAD models, CNC programs, tool lists, inspection plans, first article reports
+# Example files:
+# - 53-40-1004_RevA_Fitting_01.step
+# - 53-40-1004_RevA_MFG_CNC_Program.nc
+# - 53-40-1004_MFG_Tool_List.csv
+# - 53-40-1004_MFG_Inspection_Plan.pdf
+# - 53-40-1004_MFG_First_Article_Report.pdf

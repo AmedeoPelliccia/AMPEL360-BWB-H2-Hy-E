@@ -1,0 +1,38 @@
+{
+  "baseline_id": "53-00-04-BL-003",
+  "baseline_name": "Production Release Baseline",
+  "baseline_date": "2026-03-01",
+  "milestone": "Production Release",
+  "status": "Released to Manufacturing",
+  "approver": "VP Engineering & Manufacturing",
+  "description": "Configuration baseline for production release of ATA 53 Fuselage",
+  "artifacts": [
+    {
+      "artifact_id": "53-10-1000",
+      "name": "Forward_Bulkhead_Assembly",
+      "revision": "RevD",
+      "file": "53-10-1000_RevD_Forward_Bulkhead_Assembly.step",
+      "checksum": "sha256:[to be calculated]",
+      "status": "Released to Production"
+    },
+    {
+      "artifact_id": "53-10-2000",
+      "name": "NLG_Bay_Structure",
+      "revision": "RevC",
+      "file": "53-10-2000_RevC_NLG_Bay_Structure.step",
+      "checksum": "sha256:[to be calculated]",
+      "status": "Released to Production"
+    }
+  ],
+  "certification_status": {
+    "easa_approval": "Granted",
+    "faa_approval": "Granted",
+    "type_certificate": "TC-AMPEL360-001"
+  },
+  "requirements_snapshot": {
+    "total_requirements": 285,
+    "verified_requirements": 285,
+    "validation_status": "Complete"
+  },
+  "notes": "Final production baseline. All certification requirements met. Manufacturing cleared to begin."
+}

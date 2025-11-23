@@ -1,0 +1,5 @@
+NDA ID,Organization,Signer Name,Signer Title,Execution Date,Expiration Date,NDA Type,Scope,Status,Notes
+NDA-001,Supplier A Corporation,John Smith,VP Engineering,2025-01-15,2030-01-15,Mutual,Fuselage Design Data,Active,Standard 5-year term
+NDA-002,Airline Customer XYZ,Jane Doe,Technical Director,2025-03-20,2028-03-20,One-Way,Technical Publications,Active,Customer NDA
+NDA-003,Test Facility ABC,Bob Johnson,Lab Director,2025-06-10,2027-06-10,Mutual,Analysis Data,Active,Testing support
+NDA-004,Supplier B Ltd,Alice Williams,Program Manager,2025-02-01,2030-02-01,Mutual,Manufacturing Data,Active,Long-term partnership
