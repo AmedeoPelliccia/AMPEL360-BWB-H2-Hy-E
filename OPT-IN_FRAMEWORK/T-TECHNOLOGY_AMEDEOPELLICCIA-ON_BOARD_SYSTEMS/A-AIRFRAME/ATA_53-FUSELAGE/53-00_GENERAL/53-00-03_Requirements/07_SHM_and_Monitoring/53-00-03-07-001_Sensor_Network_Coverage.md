@@ -39,7 +39,7 @@ Effective SHM enables condition-based maintenance, reduces inspection burden, im
 
 ### Verification Activities
 - V&V-53-074: Sensor Network Coverage Verification
-- V&V-53-075: Integration Testing
+- V&V-53-174: Integration Testing
 
 ## Assumptions and Constraints
 - SHM technology: piezoelectric sensors, guided wave inspection

@@ -39,7 +39,7 @@ Effective SHM enables condition-based maintenance, reduces inspection burden, im
 
 ### Verification Activities
 - V&V-53-075: Data Acquisition Requirements Verification
-- V&V-53-076: Integration Testing
+- V&V-53-175: Integration Testing
 
 ## Assumptions and Constraints
 - SHM technology: piezoelectric sensors, guided wave inspection
