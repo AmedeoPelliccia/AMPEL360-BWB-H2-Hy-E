@@ -1,0 +1,11 @@
+Load_Case_ID,Load_Case_Name,Landing_Type,Sink_Rate_fps,Attitude,MLG_Load_Factor,NLG_Load_Factor,Weight,Speed,Reference
+LC-LND-001,2-Point Touchdown Level,Symmetric,10,Level,TBD,0,MLW,1.15 VS0,CS-25.473
+LC-LND-002,2-Point Touchdown Tail Down,Symmetric,10,Tail Down,TBD,0,MLW,1.15 VS0,CS-25.473
+LC-LND-003,3-Point Touchdown,Symmetric,10,Level,TBD,TBD,MLW,1.15 VS0,CS-25.479
+LC-LND-004,One-Wheel Landing,Asymmetric,10,Rolled,TBD,0,MLW,1.15 VS0,CS-25.479
+LC-LND-005,Drift Landing,Asymmetric,10,Crabbed,TBD,0,MLW,1.15 VS0,CS-25.485
+LC-LND-006,Max Braking,Ground,0,Static,1.0,1.0,MTOW,TBD,CS-25.493
+LC-LND-007,Pivot Turn,Ground,0,Static,TBD,TBD,MTOW,TBD,CS-25.499
+LC-LND-008,Unsymmetric Braking,Ground,0,Static,TBD,TBD,MTOW,TBD,CS-25.499
+LC-LND-009,Nose Gear Touchdown,Nose Gear,3,Nose Down,0,TBD,MLW,TBD,CS-25.481
+LC-LND-010,Rejected Takeoff,Ground,0,Dynamic,TBD,TBD,MTOW,VEF,CS-25.109

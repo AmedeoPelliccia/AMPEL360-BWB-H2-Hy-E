@@ -1,0 +1,8 @@
+CI_Number,CI_Name,Parent_CI,Zone,Type,Material,Weight_kg,Criticality,Structural_Role,Status,Subsystem,Drawing_Number,Specification
+CI-53-100,Nose Section,CI-53-000,100,Assembly,CFRP/Metal,3500,Critical,Primary,Detailed,53-20-01_Pressure_Shell_Modules,53-10-0000,53-10-A-001
+CI-53-100-BHD-FWD,Forward Pressure Bulkhead,CI-53-100,100,Bulkhead,CFRP,450,Critical,Primary,Released,53-20-01_Pressure_Shell_Modules,53-10-1000,53-10-S-001
+CI-53-100-FR-100A,Frame 100A,CI-53-100,100,Frame,CFRP,25,High,Primary,Released,53-20-01_Pressure_Shell_Modules,53-10-1001,53-10-S-002
+CI-53-100-SKN-U01,Upper Skin Panel 01,CI-53-100,100,Skin,CFRP,180,Critical,Primary,Released,53-20-01_Pressure_Shell_Modules,53-10-2001,53-10-S-010
+CI-53-100-BAY-NLG,Nose Landing Gear Bay,CI-53-100,100,Bay,CFRP/Ti,320,Critical,Primary,Detailed,53-20-01_Pressure_Shell_Modules,53-10-3000,53-10-S-015
+CI-53-100-FLR-CKPT,Cockpit Floor Structure,CI-53-100,100,Panel,CFRP,150,High,Primary,Detailed,53-20-01_Pressure_Shell_Modules,53-10-4000,53-10-S-020
+CI-53-100-FR-WSHLD,Windshield Frames,CI-53-100,100,Frame,CFRP/Ti,85,Critical,Primary,Detailed,53-20-01_Pressure_Shell_Modules,53-10-5000,53-10-S-025

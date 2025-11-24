@@ -1,0 +1,12 @@
+Interface_ID,ICD_Reference,ATA_Source,ATA_Target,Location,Zone,Load_Fx_kN,Load_Fy_kN,Load_Fz_kN,Load_Mx_kNm,Load_My_kNm,Load_Mz_kNm,Load_Case,Status
+IF-53-25-001,ICD-53-25,53,25,Floor beam attachments,200,TBD,TBD,45,TBD,TBD,TBD,Static + 16g forward,Preliminary
+IF-53-25-002,ICD-53-25,53,25,Seat track rail,200,TBD,15,TBD,TBD,TBD,TBD,Shear,Preliminary
+IF-53-27-001,ICD-53-27,53,27,Horizontal stabilizer attach,600,TBD,TBD,TBD,TBD,TBD,TBD,Limit maneuvering,Preliminary
+IF-53-27-002,ICD-53-27,53,27,Vertical stabilizer attach,600,TBD,TBD,TBD,TBD,TBD,TBD,Limit maneuvering,Preliminary
+IF-53-32-001,ICD-53-32,53,32,Main gear trunnion L,400,TBD,TBD,850,TBD,TBD,TBD,Landing impact,Detailed
+IF-53-32-002,ICD-53-32,53,32,Main gear trunnion R,400,TBD,TBD,850,TBD,TBD,TBD,Landing impact,Detailed
+IF-53-32-003,ICD-53-32,53,32,Nose gear attach,100,TBD,TBD,125,TBD,TBD,TBD,Landing impact,Detailed
+IF-53-52-001,ICD-53-52,53,52,Door 1L frame,200,TBD,TBD,TBD,TBD,TBD,TBD,Pressure + Inertia,Detailed
+IF-53-52-002,ICD-53-52,53,52,Door 1R frame,200,TBD,TBD,TBD,TBD,TBD,TBD,Pressure + Inertia,Detailed
+IF-53-54-001,ICD-53-54,53,54,Left engine fwd mount,400,TBD,TBD,TBD,TBD,TBD,TBD,Max thrust,Preliminary
+IF-53-54-002,ICD-53-54,53,54,Left engine aft mount,400,TBD,TBD,TBD,TBD,TBD,TBD,Max thrust,Preliminary

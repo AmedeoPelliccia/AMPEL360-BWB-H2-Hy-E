@@ -1,0 +1,9 @@
+Action_ID,Description,Owner,Priority,Due_Date,Status,Resolution_Date,Resolution_Notes
+PDR-AI-001,Resolve wing-body blend transition geometry,Chief Designer,High,2025-10-15,Closed,2025-10-10,Updated blend geometry definition
+PDR-AI-002,Address Zone 400 weight growth,Stress Lead,Critical,2025-10-30,Closed,2025-10-28,Optimization study completed; -285kg achieved
+PDR-AI-003,Complete door cutout reinforcement sizing,Detail Design,Medium,2025-11-15,Closed,2025-11-10,Titanium reinforcement added
+PDR-AI-004,Update loads for revised configuration,Loads Team,High,2025-10-20,Closed,2025-10-18,Loads database updated
+PDR-AI-005,Finalize material allowables,Materials Lead,Medium,2025-11-01,Closed,2025-10-30,Allowables approved
+PDR-AI-006,Complete interface control documents,Interface Manager,Medium,2025-11-30,Open,TBD,In progress with ATA 32 and 54
+PDR-AI-007,Update weight tracking database,Weights Lead,Low,2025-12-15,Open,TBD,Ongoing tracking
+PDR-AI-008,Prepare CDR entry package,Program Manager,High,2025-11-30,Open,TBD,In preparation

@@ -1,0 +1,7 @@
+Change_ID,CI_Number,CI_Name,Change_Type,Change_Description,Requested_By,Request_Date,Status,Impact_Assessment,Approval_Date,Implementation_Date
+CHG-53-001,CI-53-400-SPAR-FWD,Forward Wing Spar,Material,Change from T800 to IM7 fiber in high-load region,Stress Team,2025-09-15,Implemented,Weight +15kg; improved fatigue performance,2025-09-25,2025-10-05
+CHG-53-002,CI-53-100-BHD-FWD,Forward Pressure Bulkhead,Geometry,Increased thickness in crown region,Stress Team,2025-09-20,Implemented,Weight +8kg; positive margin improvement,2025-09-28,2025-10-10
+CHG-53-003,CI-53-200-DOOR-1L-FR,Door Frame 1L,Material,Add titanium reinforcement at hinge locations,Doors Team,2025-10-01,Approved,Weight +2kg; improved durability,2025-10-15,Pending
+CHG-53-004,CI-53-400-BAY-MLG-L,Left Main Landing Gear Bay,Geometry,Redesign aft bulkhead for improved load path,Gear Team,2025-10-10,Under Review,Weight impact TBD; improved gear bay access,-,-
+CHG-53-005,CI-53-600-BHD-AFT,Aft Pressure Bulkhead,Design,Add drain provisions per Service Bulletin,Maintenance Team,2025-10-20,Approved,No weight impact; improved serviceability,2025-11-01,Pending
+CHG-53-006,CI-53-300,Mid Cabin,Geometry,Modify wing-body blend transition angle,Aerodynamics Team,2025-11-01,Under Review,Weight impact TBD; improved aerodynamic performance,-,-

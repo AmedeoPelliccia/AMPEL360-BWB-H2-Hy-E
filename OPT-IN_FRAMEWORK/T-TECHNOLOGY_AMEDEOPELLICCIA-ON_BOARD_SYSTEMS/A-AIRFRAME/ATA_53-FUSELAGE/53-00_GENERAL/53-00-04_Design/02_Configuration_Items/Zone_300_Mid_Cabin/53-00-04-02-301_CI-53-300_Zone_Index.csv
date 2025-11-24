@@ -1,0 +1,9 @@
+CI_Number,CI_Name,Parent_CI,Zone,Type,Material,Weight_kg,Criticality,Structural_Role,Status,Subsystem,Drawing_Number,Specification
+CI-53-300,Mid Cabin,CI-53-000,300,Assembly,CFRP,10500,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-30-0000,53-30-A-001
+CI-53-300-SKN-U01,Upper Shell Panel 01,CI-53-300,300,Skin,CFRP,480,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-30-1001,53-30-S-010
+CI-53-300-SKN-L01,Lower Shell Panel 01,CI-53-300,300,Skin,CFRP,450,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-30-1002,53-30-S-011
+CI-53-300-DOOR-2L-FR,Door Frame 2L,CI-53-300,300,Frame,CFRP/Ti,175,Critical,Primary,Preliminary,53-20-02_Door_Surround_Structure,53-30-2010,53-30-S-015
+CI-53-300-EXIT-OW-L,Overwing Exit Left,CI-53-300,300,Frame,CFRP/Ti,120,Critical,Primary,Preliminary,53-20-02_Door_Surround_Structure,53-30-2020,53-30-S-018
+CI-53-300-BLEND-FWD,Forward Blend Structure,CI-53-300,300,Panel,CFRP,650,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-30-3001,53-30-S-020
+CI-53-300-FLR-BEAM-P,Primary Floor Beams,CI-53-300,300,Beam,CFRP,280,Critical,Primary,Preliminary,53-20-03_Cabin_Floor_and_Supports,53-30-4001,53-30-S-025
+CI-53-300-FR-300A,Frame 300A,CI-53-300,300,Frame,CFRP,32,High,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-30-1010,53-30-S-030

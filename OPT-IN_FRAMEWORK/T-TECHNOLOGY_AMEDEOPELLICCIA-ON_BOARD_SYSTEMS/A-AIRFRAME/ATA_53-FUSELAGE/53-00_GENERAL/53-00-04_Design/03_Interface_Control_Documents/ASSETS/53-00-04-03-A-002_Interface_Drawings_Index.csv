@@ -1,0 +1,12 @@
+Drawing_Number,Drawing_Title,Interface_ID,ICD_Reference,Zone,Revision,Status,Date
+53-IF-25-001,Floor Beam to Seat Track Interface,IF-53-25-001,ICD-53-25,200,A,Released,2025-10-15
+53-IF-25-002,Seat Track Rail Installation,IF-53-25-002,ICD-53-25,200,A,Released,2025-10-15
+53-IF-27-001,Horizontal Stabilizer Attachment,IF-53-27-001,ICD-53-27,600,P,Preliminary,2025-09-28
+53-IF-27-002,Vertical Stabilizer Attachment,IF-53-27-002,ICD-53-27,600,P,Preliminary,2025-09-28
+53-IF-32-001,Main Gear Trunnion Interface LH,IF-53-32-001,ICD-53-32,400,B,Released,2025-11-01
+53-IF-32-002,Main Gear Trunnion Interface RH,IF-53-32-002,ICD-53-32,400,B,Released,2025-11-01
+53-IF-32-003,Nose Gear Bay Interface,IF-53-32-003,ICD-53-32,100,A,Released,2025-10-20
+53-IF-52-001,Door 1L Frame Interface,IF-53-52-001,ICD-53-52,200,A,Released,2025-10-18
+53-IF-52-002,Door 1R Frame Interface,IF-53-52-002,ICD-53-52,200,A,Released,2025-10-18
+53-IF-54-001,Engine Mount Interface LH,IF-53-54-001,ICD-53-54,400,P,Preliminary,2025-09-15
+53-IF-54-002,Engine Mount Interface RH,IF-53-54-002,ICD-53-54,400,P,Preliminary,2025-09-15

@@ -1,0 +1,10 @@
+Load_Case_ID,Load_Case_Name,Gust_Type,Gust_Velocity_fps,Speed,Mach,Altitude_ft,Weight,Direction,Delta_Nz,Reference
+LC-GUST-001,Discrete Gust Up VC,Discrete,50,VC,0.85,35000,MTOW,Vertical Up,TBD,CS-25.341
+LC-GUST-002,Discrete Gust Down VC,Discrete,50,VC,0.85,35000,MTOW,Vertical Down,TBD,CS-25.341
+LC-GUST-003,Discrete Gust Up VD,Discrete,25,VD,0.92,25000,MTOW,Vertical Up,TBD,CS-25.341
+LC-GUST-004,Discrete Gust Down VD,Discrete,25,VD,0.92,25000,MTOW,Vertical Down,TBD,CS-25.341
+LC-GUST-005,Continuous Turbulence Cruise,Continuous,TBD,VC,0.85,35000,MTOW,Random,TBD,CS-25.341
+LC-GUST-006,Lateral Gust VC,Discrete,50,VC,0.85,35000,MTOW,Lateral,TBD,CS-25.341
+LC-GUST-007,Lateral Gust VD,Discrete,25,VD,0.92,25000,MTOW,Lateral,TBD,CS-25.341
+LC-GUST-008,Gust at Low Altitude,Discrete,66,VB,0.50,0,MTOW,Vertical Up,TBD,CS-25.341
+LC-GUST-009,Head-on Gust,Discrete,25,VD,0.92,25000,MTOW,Longitudinal,TBD,CS-25.341

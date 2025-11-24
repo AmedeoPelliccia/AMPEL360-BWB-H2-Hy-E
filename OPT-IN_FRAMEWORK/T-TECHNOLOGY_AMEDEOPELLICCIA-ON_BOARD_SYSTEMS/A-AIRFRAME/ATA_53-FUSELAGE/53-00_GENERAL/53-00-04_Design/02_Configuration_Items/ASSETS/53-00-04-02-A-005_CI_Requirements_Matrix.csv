@@ -1,0 +1,17 @@
+CI_Number,CI_Name,RQ-53-00-01-001,RQ-53-00-01-002,RQ-53-00-01-003,RQ-53-00-02-001,RQ-53-00-02-002,RQ-53-00-03-001,RQ-53-00-03-002,RQ-53-00-04-001
+CI-53-000,ATA 53 Fuselage,X,X,X,X,X,X,X,X
+CI-53-100,Nose Section,X,X,X,X,-,X,X,-
+CI-53-100-BHD-FWD,Forward Pressure Bulkhead,X,X,X,X,-,X,-,-
+CI-53-100-FR-100A,Frame 100A,X,X,-,-,-,X,-,-
+CI-53-100-SKN-U01,Upper Skin Panel 01,X,X,X,X,-,X,X,-
+CI-53-200,Forward Cabin,X,X,X,X,X,X,X,X
+CI-53-200-DOOR-1L-FR,Door Frame 1L,X,X,-,X,X,-,-,X
+CI-53-200-FLR-BEAM-S-L,Secondary Floor Beams Left,X,X,-,-,-,-,-,-
+CI-53-300,Mid Cabin,X,X,X,X,X,X,X,X
+CI-53-400,Center Wing Box,X,X,X,X,X,X,X,X
+CI-53-400-SPAR-FWD,Forward Wing Spar,X,X,X,X,X,X,X,-
+CI-53-400-SPAR-REAR,Rear Wing Spar,X,X,X,X,X,X,X,-
+CI-53-400-BAY-MLG-L,Left Main Landing Gear Bay,X,X,X,X,X,X,-,X
+CI-53-500,Aft Cabin,X,X,X,X,-,X,X,-
+CI-53-600,Tail Section,X,X,X,X,-,X,X,-
+CI-53-600-BHD-AFT,Aft Pressure Bulkhead,X,X,X,X,-,X,-,-

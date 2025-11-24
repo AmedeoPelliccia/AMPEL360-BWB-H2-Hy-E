@@ -1,0 +1,9 @@
+Action_ID,Description,Owner,Priority,Due_Date,Status,Resolution_Date,Resolution_Notes
+CDR-AI-001,Complete Zone 300 detailed design,Zone 300 Lead,High,2025-12-01,Open,TBD,In progress
+CDR-AI-002,Complete Zone 500 detailed design,Zone 500 Lead,High,2025-12-05,Open,TBD,In progress
+CDR-AI-003,Complete Zone 600 detailed design,Zone 600 Lead,Medium,2025-12-10,Open,TBD,In progress
+CDR-AI-004,Finalize all ICDs,Interface Manager,Critical,2025-12-01,Open,TBD,ATA 32 and 54 in review
+CDR-AI-005,Complete weight tracking update,Weights Lead,Medium,2025-12-10,Open,TBD,Monthly update scheduled
+CDR-AI-006,Prepare CDR presentation,Design Lead,High,2025-12-12,Open,TBD,Template prepared
+CDR-AI-007,Complete design-level stress analysis,Stress Lead,Critical,2025-12-08,Open,TBD,Zone 400 complete; others in progress
+CDR-AI-008,Release design drawings,Drawing Office,High,2025-12-10,Open,TBD,Zone 100 and 400 released

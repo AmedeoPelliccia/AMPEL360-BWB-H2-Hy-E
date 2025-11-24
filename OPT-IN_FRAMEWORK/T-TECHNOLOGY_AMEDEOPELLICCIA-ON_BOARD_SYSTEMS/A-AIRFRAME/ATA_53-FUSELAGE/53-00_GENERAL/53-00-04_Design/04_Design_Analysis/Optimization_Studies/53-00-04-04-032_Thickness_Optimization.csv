@@ -1,0 +1,13 @@
+CI_Number,CI_Name,Zone,Location,Initial_Thickness_mm,Optimized_Thickness_mm,Weight_Delta_kg,Governing_Load_Case,Governing_Failure_Mode,Status
+CI-53-100-SKN-U01,Upper Skin Panel 01,100,Crown,8.0,7.0,-12,LC-PRES-003,Tension,Complete
+CI-53-100-SKN-L01,Lower Skin Panel 01,100,Keel,7.5,6.5,-10,LC-PRES-003,Tension,Complete
+CI-53-100-BHD-FWD,Forward Pressure Bulkhead,100,Center,10.0,9.0,-8,LC-PRES-003,Tension,Complete
+CI-53-200-SKN-U01,Upper Shell Panel 01,200,Side,7.0,6.0,-25,LC-PRES-001,Tension,Complete
+CI-53-200-SKN-L01,Lower Shell Panel 01,200,Keel,6.5,5.5,-22,LC-COMB-001,Combined,Complete
+CI-53-300-SKN-U01,Upper Shell Panel 01,300,Blend,9.0,8.0,-30,LC-COMB-001,Combined,In Progress
+CI-53-400-SKN-U-001,Upper Skin Panel 001,400,Wing Box,12.0,10.5,-45,LC-COMB-001,Compression,Complete
+CI-53-400-SKN-L-001,Lower Skin Panel 001,400,Wing Box,11.0,10.0,-38,LC-COMB-001,Tension,Complete
+CI-53-400-SPAR-FWD,Forward Wing Spar,400,Web,8.0,7.0,-55,LC-COMB-001,Shear,Complete
+CI-53-400-SPAR-REAR,Rear Wing Spar,400,Web,7.5,6.5,-42,LC-COMB-001,Shear,Complete
+CI-53-500-SKN-U01,Upper Shell Panel 01,500,Side,7.0,6.5,-18,LC-PRES-001,Tension,In Progress
+CI-53-600-SKN-AFT,Aft Skin Panels,600,Tail,6.0,5.5,-15,LC-PRES-001,Tension,In Progress

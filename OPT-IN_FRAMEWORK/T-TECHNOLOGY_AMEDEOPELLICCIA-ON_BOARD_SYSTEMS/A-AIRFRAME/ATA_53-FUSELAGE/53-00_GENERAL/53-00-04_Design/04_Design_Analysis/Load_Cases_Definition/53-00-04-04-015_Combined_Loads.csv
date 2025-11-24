@@ -1,0 +1,10 @@
+Load_Case_ID,Load_Case_Name,Primary_LC,Secondary_LC,Nz_Combined,Pressure_Combined,Description,Critical_Zone,Reference
+LC-COMB-001,2.5g + Pressure,LC-MAN-001,LC-PRES-001,2.5,8.6 psi,Maximum maneuver with cabin pressure,400,CS-25.365
+LC-COMB-002,-1.0g + Pressure,LC-MAN-002,LC-PRES-001,-1.0,8.6 psi,Negative maneuver with cabin pressure,200,CS-25.365
+LC-COMB-003,Gust Up + Pressure,LC-GUST-001,LC-PRES-001,TBD,8.6 psi,Discrete gust with cabin pressure,300,CS-25.341
+LC-COMB-004,Landing + Pressure,LC-LND-001,LC-PRES-006,TBD,0 psi,Landing impact at sea level,400,CS-25.473
+LC-COMB-005,2.5g + Proof Pressure,LC-MAN-001,LC-PRES-003,2.5,9.5 psi,Maneuver with proof pressure,400,CS-25.365
+LC-COMB-006,Emergency Landing Fwd,LC-MAN-012,LC-PRES-005,16g fwd,0 psi,Forward crash with decompression,200,CS-25.561
+LC-COMB-007,Emergency Landing Down,LC-MAN-013,LC-PRES-005,9g down,0 psi,Downward crash with decompression,400,CS-25.561
+LC-COMB-008,Roll + Gust,LC-MAN-005,LC-GUST-006,1.67,8.6 psi,Rolling maneuver with lateral gust,300,CS-25.349
+LC-COMB-009,Fatigue Spectrum,Multiple,Multiple,Per spectrum,Per spectrum,Combined fatigue spectrum,All,CS-25.571
