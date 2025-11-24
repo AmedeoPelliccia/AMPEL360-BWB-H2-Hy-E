@@ -14,9 +14,7 @@ Requirements:
     - Write access to EXPORTS directory
 """
 
-import sys
 import os
-import json
 import hashlib
 import datetime
 import csv
@@ -129,12 +127,12 @@ def main():
         # Export to STEP
         success = export_to_step(source_file, output_file, config["export_settings"])
         
-        if success:
+        if success and output_file.exists():
             # Validate exported file
             validation = validate_step_file(output_file)
             
             # Calculate checksum
-            checksum = calculate_checksum(output_file) if output_file.exists() else "[pending]"
+            checksum = calculate_checksum(output_file)
             
             # Update export log
             export_data = {
@@ -160,6 +158,8 @@ def main():
             print(f"  ✓ Export successful")
             print(f"  ✓ Validation: {validation['result']}")
             print(f"  ✓ Checksum: {checksum[:16]}...")
+        elif success:
+            print(f"  ⚠ Export reported success but output file not found")
         else:
             print(f"  ✗ Export failed")
     
