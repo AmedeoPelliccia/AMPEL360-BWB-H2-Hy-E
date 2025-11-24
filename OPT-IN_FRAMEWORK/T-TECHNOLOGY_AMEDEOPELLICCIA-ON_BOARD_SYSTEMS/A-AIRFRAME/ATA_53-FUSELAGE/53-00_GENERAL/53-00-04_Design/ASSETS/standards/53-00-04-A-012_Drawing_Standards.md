@@ -93,15 +93,9 @@ All changes must be recorded in the revision block with:
 - **Date**: 2025-11-24
 - **Owner**: ATA 53 Drawing Office Lead
 - **Repository**: `AMPEL360-BWB-H2-Hy-E`
-
----
-
-## Document Control
-
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
 - Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
 - Last AI update: _2025-11-24_.
 
 ---
