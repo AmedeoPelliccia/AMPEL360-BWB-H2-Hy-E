@@ -1,11 +1,133 @@
-Layer_Name,Color,Line_Type,Line_Weight,Purpose,Visible
-GEOMETRY,Black,Solid,0.5mm,Main visible geometry,Yes
-HIDDEN,Gray,Dashed,0.35mm,Hidden features,Yes
-CENTER,Red,DashDot,0.25mm,Centerlines and axes,Yes
-DIMENSIONS,Blue,Solid,0.25mm,Dimensions and annotations,Yes
-TEXT,Black,Solid,0.25mm,Notes and labels,Yes
-HATCH,Black,Solid,0.35mm,Section hatching,Yes
-TITLE_BLOCK,Black,Solid,0.5mm,Title block elements,Yes
-BORDER,Black,Solid,0.7mm,Drawing border,Yes
-CONSTRUCTION,Yellow,Dashed,0.25mm,Construction lines (not printed),No
-REFERENCE,Purple,Phantom,0.25mm,Reference geometry,Yes
+Layer_Name,Color_Index,Color_RGB,Linetype,Lineweight_mm,Plot_Style,Frozen,Locked,Plot,Description,ATA_Scope
+# AMPEL360 CAD Layer Standards - ATA 53 Fuselage
+# Document ID: ATA53-DES-STD-LAY-001
+# Version: 1.0 | Date: 2025-11-24 | Status: Active
+# Reference: ISO 128-1, ISO 13567, ASD S1000D
+# ============================================================================================================
+# GEOMETRY LAYERS - Object Definition
+# ============================================================================================================
+53-GEO-VISIBLE,7,255;255;255,Continuous,0.50,Normal,No,No,Yes,Visible object outlines and edges,Primary
+53-GEO-HIDDEN,4,0;255;255,HIDDEN,0.25,Normal,No,No,Yes,Hidden edges and features,Primary
+53-GEO-CENTERLINE,1,255;0;0,CENTER,0.18,Normal,No,No,Yes,Centerlines and axes of symmetry,Primary
+53-GEO-PHANTOM,8,128;128;128,PHANTOM,0.18,Normal,No,No,Yes,Phantom lines - alternate positions,Primary
+53-GEO-BREAKLINE,7,255;255;255,ZIGZAG,0.25,Normal,No,No,Yes,Break lines for shortened views,Primary
+53-GEO-THIN,7,255;255;255,Continuous,0.18,Normal,No,No,Yes,Thin lines - leader lines and hatching outlines,Primary
+53-GEO-CONSTRUCTION,9,128;128;128,Continuous,0.09,NoPlot,No,No,No,Construction geometry - non-plotting,Reference
+# ============================================================================================================
+# ANNOTATION LAYERS - Dimensions and Text
+# ============================================================================================================
+53-DIM-LINEAR,2,255;255;0,Continuous,0.25,Normal,No,No,Yes,Linear dimensions,Primary
+53-DIM-ANGULAR,2,255;255;0,Continuous,0.25,Normal,No,No,Yes,Angular dimensions,Primary
+53-DIM-RADIAL,2,255;255;0,Continuous,0.25,Normal,No,No,Yes,Radius and diameter dimensions,Primary
+53-DIM-ORDINATE,2,255;255;0,Continuous,0.25,Normal,No,No,Yes,Ordinate dimensions - baseline,Primary
+53-DIM-LEADER,2,255;255;0,Continuous,0.18,Normal,No,No,Yes,Leader lines and callouts,Primary
+53-TOL-GDT,2,255;255;0,Continuous,0.25,Normal,No,No,Yes,GD&T feature control frames,Primary
+53-TOL-DATUM,30,255;127;0,Continuous,0.35,Normal,No,No,Yes,Datum feature symbols and targets,Primary
+53-TOL-SURFACE,2,255;255;0,Continuous,0.25,Normal,No,No,Yes,Surface finish symbols,Primary
+53-TEXT-GENERAL,7,255;255;255,Continuous,0.25,Normal,No,No,Yes,General notes and annotations,Primary
+53-TEXT-TITLE,7,255;255;255,Continuous,0.35,Normal,No,No,Yes,Title block text,Primary
+53-TEXT-BALLOON,7,255;255;255,Continuous,0.25,Normal,No,No,Yes,Part balloons and item numbers,Primary
+53-TEXT-FLAG,1,255;0;0,Continuous,0.25,Normal,No,No,Yes,Flag notes and warnings,Primary
+# ============================================================================================================
+# SECTION AND VIEW LAYERS
+# ============================================================================================================
+53-SEC-CUTTING,1,255;0;0,CUTTING,0.50,Normal,No,No,Yes,Section cutting plane lines,Primary
+53-SEC-HATCH,3,0;255;0,Continuous,0.18,Normal,No,No,Yes,Section hatching patterns,Primary
+53-SEC-HATCH-ALT,94,0;191;0,Continuous,0.18,Normal,No,No,Yes,Alternate material hatching,Primary
+53-VIEW-BOUNDARY,5,0;0;255,Continuous,0.35,Normal,No,No,Yes,View boundaries and detail circles,Primary
+53-VIEW-MATCHLINE,6,255;0;255,PHANTOM,0.35,Normal,No,No,Yes,Match lines between sheets,Primary
+# ============================================================================================================
+# STRUCTURAL LAYERS - ATA 53 Specific
+# ============================================================================================================
+53-STR-SKIN,10,255;0;0,Continuous,0.50,Normal,No,No,Yes,Fuselage skin panels,ATA53
+53-STR-FRAME,11,255;127;0,Continuous,0.50,Normal,No,No,Yes,Fuselage frames and rings,ATA53
+53-STR-STRINGER,12,255;255;0,Continuous,0.35,Normal,No,No,Yes,Stringers and longerons,ATA53
+53-STR-BULKHEAD,14,0;127;255,Continuous,0.50,Normal,No,No,Yes,Pressure bulkheads,ATA53
+53-STR-KEEL,13,0;255;0,Continuous,0.50,Normal,No,No,Yes,Keel beam structure,ATA53
+53-STR-FLOOR,15,0;0;255,Continuous,0.50,Normal,No,No,Yes,Floor beams and panels,ATA53
+53-STR-DOOR-FRAME,16,128;0;255,Continuous,0.50,Normal,No,No,Yes,Door and window frames,ATA53
+53-STR-JOINT,17,255;0;127,Continuous,0.35,Normal,No,No,Yes,Structural joints and splices,ATA53
+53-STR-DOUBLER,20,255;127;127,Continuous,0.35,Normal,No,No,Yes,Doublers and reinforcements,ATA53
+53-STR-BRACKET,21,127;255;127,Continuous,0.35,Normal,No,No,Yes,Brackets and fittings,ATA53
+# ============================================================================================================
+# BWB-SPECIFIC LAYERS - Blended Wing Body
+# ============================================================================================================
+53-BWB-CENTERBODY,40,255;191;0,Continuous,0.50,Normal,No,No,Yes,BWB center body structure,ATA53-BWB
+53-BWB-OUTERWING,41,191;255;0,Continuous,0.50,Normal,No,No,Yes,BWB outer wing transition,ATA53-BWB
+53-BWB-BLEND,42,0;255;191,Continuous,0.50,Normal,No,No,Yes,BWB blending zone structure,ATA53-BWB
+53-BWB-CABIN,43,0;191;255,Continuous,0.35,Normal,No,No,Yes,BWB cabin pressure vessel,ATA53-BWB
+53-BWB-CARGO,44,191;0;255,Continuous,0.35,Normal,No,No,Yes,BWB cargo bay structure,ATA53-BWB
+# ============================================================================================================
+# SYSTEMS INTEGRATION LAYERS
+# ============================================================================================================
+53-SYS-ELECTRICAL,60,0;255;255,Continuous,0.25,Normal,No,No,Yes,Electrical routing and provisions,Systems
+53-SYS-HYDRAULIC,61,255;0;0,DASHED,0.25,Normal,No,No,Yes,Hydraulic routing and provisions,Systems
+53-SYS-PNEUMATIC,62,0;0;255,DASHED,0.25,Normal,No,No,Yes,Pneumatic/bleed air routing,Systems
+53-SYS-FUEL,63,255;255;0,DASHED,0.35,Normal,No,No,Yes,Fuel system routing,Systems
+53-SYS-H2-CRYO,64,127;255;255,DASHED,0.35,Normal,No,No,Yes,Hydrogen cryogenic routing,Systems
+53-SYS-ECS,65,0;255;0,DASHED,0.25,Normal,No,No,Yes,Environmental control system,Systems
+53-SYS-AVIONICS,66,255;127;255,Continuous,0.25,Normal,No,No,Yes,Avionics equipment zones,Systems
+53-SYS-GROUNDING,67,0;127;0,Continuous,0.18,Normal,No,No,Yes,Electrical bonding/grounding,Systems
+# ============================================================================================================
+# FASTENER AND HARDWARE LAYERS
+# ============================================================================================================
+53-FST-RIVET,70,7;7;7,Continuous,0.18,Normal,No,No,Yes,Rivet locations,Hardware
+53-FST-BOLT,71,127;127;127,Continuous,0.25,Normal,No,No,Yes,Bolt locations,Hardware
+53-FST-NUTPLATE,72,191;191;191,Continuous,0.25,Normal,No,No,Yes,Nutplate installations,Hardware
+53-FST-HISHEAR,73,255;191;127,Continuous,0.25,Normal,No,No,Yes,Hi-Shear fasteners,Hardware
+53-FST-LOCKBOLT,74,127;191;255,Continuous,0.25,Normal,No,No,Yes,Lockbolt installations,Hardware
+53-FST-PATTERN,75,63;63;63,Continuous,0.09,Normal,No,No,Yes,Fastener pattern centerlines,Hardware
+# ============================================================================================================
+# ZONE AND AREA LAYERS
+# ============================================================================================================
+53-ZONE-BOUNDARY,80,255;0;255,PHANTOM,0.35,Normal,No,No,Yes,Maintenance zone boundaries,Zones
+53-ZONE-ACCESS,81,127;0;255,Continuous,0.25,Normal,No,No,Yes,Access panel locations,Zones
+53-ZONE-HAZARD,82,255;0;0,Continuous,0.50,Normal,No,No,Yes,Hazardous areas - fuel/H2,Zones
+53-ZONE-PRESSURE,83,0;127;255,PHANTOM,0.35,Normal,No,No,Yes,Pressure vessel boundaries,Zones
+53-ZONE-FIRE,84,255;127;0,PHANTOM,0.35,Normal,No,No,Yes,Fire zone boundaries,Zones
+53-ZONE-EMI,85,127;127;255,PHANTOM,0.25,Normal,No,No,Yes,EMI/HIRF protection zones,Zones
+53-ZONE-LIGHTNING,86,255;255;127,PHANTOM,0.35,Normal,No,No,Yes,Lightning strike zones,Zones
+# ============================================================================================================
+# MATERIAL AND FINISH LAYERS
+# ============================================================================================================
+53-MAT-ALUMINUM,90,192;192;192,Continuous,0.18,Normal,No,No,Yes,Aluminum alloy components,Materials
+53-MAT-CFRP,91,63;63;63,Continuous,0.18,Normal,No,No,Yes,Carbon fiber composite,Materials
+53-MAT-TITANIUM,92,127;127;191,Continuous,0.18,Normal,No,No,Yes,Titanium alloy components,Materials
+53-MAT-STEEL,93,127;63;0,Continuous,0.18,Normal,No,No,Yes,Steel components,Materials
+53-MAT-SEALANT,94,0;127;127,Continuous,0.18,Normal,No,No,Yes,Sealant application areas,Materials
+53-MAT-CORROSION,95,127;191;127,DASHED,0.18,Normal,No,No,Yes,Corrosion protection areas,Materials
+# ============================================================================================================
+# REFERENCE AND COORDINATION LAYERS
+# ============================================================================================================
+53-REF-GRID,100,63;63;63,Continuous,0.09,Normal,No,No,No,Reference grid - STA/BL/WL,Reference
+53-REF-STATION,101,127;127;127,CENTER,0.18,Normal,No,No,Yes,Fuselage station lines,Reference
+53-REF-BUTTLINE,102,127;127;127,CENTER,0.18,Normal,No,No,Yes,Buttock lines,Reference
+53-REF-WATERLINE,103,127;127;127,CENTER,0.18,Normal,No,No,Yes,Water lines,Reference
+53-REF-BOUNDARY,104,255;0;255,PHANTOM,0.25,Normal,No,No,Yes,Drawing/model boundaries,Reference
+53-REF-ADJACENT,105,191;191;191,PHANTOM,0.18,Normal,No,No,Yes,Adjacent structure reference,Reference
+53-REF-ENVELOPE,106,0;191;191,PHANTOM,0.25,Normal,No,No,Yes,Clearance envelopes,Reference
+53-REF-MOLD-LINE,107,255;127;255,Continuous,0.18,Normal,No,No,Yes,Outer mold line (OML),Reference
+53-REF-INNER-LINE,108,127;127;255,Continuous,0.18,Normal,No,No,Yes,Inner mold line (IML),Reference
+# ============================================================================================================
+# REVISION AND MARKUP LAYERS
+# ============================================================================================================
+53-REV-CLOUD,200,255;0;0,Continuous,0.35,Normal,No,No,Yes,Revision clouds,Revision
+53-REV-TRIANGLE,200,255;0;0,Continuous,0.25,Normal,No,No,Yes,Revision triangles,Revision
+53-REV-ZONE,201,255;127;0,Continuous,0.25,Normal,No,No,Yes,ECO/ECN affected zones,Revision
+53-MARKUP-COMMENT,210,0;255;0,Continuous,0.25,NoPlot,No,No,No,Review comments - non-plot,Markup
+53-MARKUP-REDLINE,211,255;0;0,Continuous,0.35,NoPlot,No,No,No,Red-line markups - non-plot,Markup
+53-MARKUP-CHECK,212,0;0;255,Continuous,0.25,NoPlot,No,No,No,Checker markups - non-plot,Markup
+# ============================================================================================================
+# TITLE BLOCK AND BORDERS
+# ============================================================================================================
+53-BORDER,7,255;255;255,Continuous,0.70,Normal,No,No,Yes,Drawing border,Format
+53-TITLEBLOCK,7,255;255;255,Continuous,0.35,Normal,No,No,Yes,Title block outlines,Format
+53-LOGO,7,255;255;255,Continuous,0.25,Normal,No,No,Yes,Company logos,Format
+53-ZONE-MAP,8,128;128;128,Continuous,0.18,Normal,No,No,Yes,Zone map grid,Format
+# ============================================================================================================
+# DEFPOINTS AND NON-PLOTTING
+# ============================================================================================================
+DEFPOINTS,7,255;255;255,Continuous,0.00,Normal,No,No,No,Definition points - system layer,System
+53-NOPLOT,8,128;128;128,Continuous,0.18,NoPlot,No,No,No,Non-plotting reference data,System
+53-VIEWPORT,8,128;128;128,Continuous,0.09,NoPlot,No,No,No,Viewport boundaries,System
+53-XREF,8,128;128;128,Continuous,0.18,Normal,No,No,Yes,External reference control,System
