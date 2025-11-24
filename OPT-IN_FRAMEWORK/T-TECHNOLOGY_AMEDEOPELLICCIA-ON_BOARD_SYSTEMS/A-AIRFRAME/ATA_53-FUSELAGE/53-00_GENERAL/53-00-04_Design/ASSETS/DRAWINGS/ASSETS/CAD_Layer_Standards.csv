@@ -1,0 +1,11 @@
+Layer_Name,Color,Line_Type,Line_Weight,Purpose,Visible
+GEOMETRY,Black,Solid,0.5mm,Main visible geometry,Yes
+HIDDEN,Gray,Dashed,0.35mm,Hidden features,Yes
+CENTER,Red,DashDot,0.25mm,Centerlines and axes,Yes
+DIMENSIONS,Blue,Solid,0.25mm,Dimensions and annotations,Yes
+TEXT,Black,Solid,0.25mm,Notes and labels,Yes
+HATCH,Black,Solid,0.35mm,Section hatching,Yes
+TITLE_BLOCK,Black,Solid,0.5mm,Title block elements,Yes
+BORDER,Black,Solid,0.7mm,Drawing border,Yes
+CONSTRUCTION,Yellow,Dashed,0.25mm,Construction lines (not printed),No
+REFERENCE,Purple,Phantom,0.25mm,Reference geometry,Yes

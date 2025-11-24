@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 110" width="480" height="110">
+  <defs>
+    <style>
+      .title-text { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #000; }
+      .label-text { font-family: Arial, sans-serif; font-size: 10px; fill: #000; }
+    </style>
+  </defs>
+  
+  <!-- Title Block Template -->
+  <rect x="0" y="0" width="480" height="110" fill="#f5f5f5" stroke="#000" stroke-width="2"/>
+  
+  <!-- Company Logo Area -->
+  <rect x="10" y="10" width="100" height="40" fill="#e0e0e0" stroke="#000" stroke-width="1"/>
+  <text x="60" y="35" class="label-text" text-anchor="middle">AMPEL360</text>
+  
+  <!-- Drawing Title Area -->
+  <rect x="10" y="55" width="370" height="45" fill="#fff" stroke="#000" stroke-width="1"/>
+  <text x="120" y="25" class="title-text">[DRAWING TITLE]</text>
+  <text x="15" y="70" class="label-text">Drawing No: [XX-XX-XXXX]</text>
+  <text x="15" y="85" class="label-text">Zone: [Zone XXX]</text>
+  <text x="15" y="95" class="label-text">Type: [Type]</text>
+  
+  <!-- Info Fields -->
+  <rect x="385" y="10" width="85" height="90" fill="#fff" stroke="#000" stroke-width="1"/>
+  <text x="390" y="25" class="label-text">Scale: NTS</text>
+  <text x="390" y="40" class="label-text">Rev: [A]</text>
+  <text x="390" y="55" class="label-text">Date: [YYYY-MM-DD]</text>
+  <text x="390" y="70" class="label-text">Status: [Draft]</text>
+  <text x="390" y="85" class="label-text">Sheet: [1 of 1]</text>
+  <text x="390" y="95" class="label-text">Units: mm</text>
+</svg>

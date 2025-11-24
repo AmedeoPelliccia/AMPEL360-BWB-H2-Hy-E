@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1200 850" 
+     width="1200" 
+     height="850">
+  
+  <defs>
+    <style>
+      .title-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #000; }
+      .subtitle-text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+      .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #000; }
+      .dimension-text { font-family: Arial, sans-serif; font-size: 10px; fill: #0066cc; }
+      .drawing-line { stroke: #000; stroke-width: 2; fill: none; }
+      .dimension-line { stroke: #0066cc; stroke-width: 1; fill: none; }
+      .dashed-line { stroke: #666; stroke-width: 1; stroke-dasharray: 5,5; fill: none; }
+      .hidden-line { stroke: #999; stroke-width: 1; stroke-dasharray: 3,3; fill: none; }
+      .center-line { stroke: #cc0000; stroke-width: 1; stroke-dasharray: 10,5,2,5; fill: none; }
+    </style>
+    
+    <!-- Arrow marker for dimensions -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0066cc"/>
+    </marker>
+  </defs>
+  
+  <!-- Drawing Border -->
+  <rect x="10" y="10" width="1180" height="830" 
+        fill="#ffffff" stroke="#000" stroke-width="3"/>
+  
+  <!-- Title Block -->
+  <g id="title-block">
+    <rect x="700" y="720" width="480" height="110" fill="#f5f5f5" stroke="#000" stroke-width="2"/>
+    
+    <!-- Company Logo Area -->
+    <rect x="710" y="730" width="100" height="40" fill="#e0e0e0" stroke="#000" stroke-width="1"/>
+    <text x="760" y="755" class="label-text" text-anchor="middle">AMPEL360</text>
+    
+    <!-- Drawing Title -->
+    <text x="820" y="745" class="title-text">Overhead Bin Layout</text>
+    
+    <!-- Drawing Number and Info -->
+    <line x1="700" y1="770" x2="1180" y2="770" stroke="#000" stroke-width="1"/>
+    <text x="710" y="790" class="label-text">Drawing No: 53-IN-5000</text>
+    <text x="710" y="805" class="label-text">Zone: All Zones</text>
+    <text x="710" y="820" class="label-text">Type: Installation</text>
+    
+    <text x="950" y="790" class="label-text">Scale: NTS</text>
+    <text x="950" y="805" class="label-text">Rev: A</text>
+    <text x="950" y="820" class="label-text">Date: 2025-11-24</text>
+    
+    <text x="1090" y="790" class="label-text">Status: Draft</text>
+    <text x="1090" y="805" class="label-text">Sheet: 1 of 1</text>
+    <text x="1090" y="820" class="label-text">Units: mm</text>
+  </g>
+  
+  <!-- Main Drawing Area -->
+  <g id="main-drawing">
+    <!-- Placeholder technical drawing elements -->
+    
+    <!-- Systems Installation -->
+    <path d="M 150 300 Q 400 200 600 300 T 1050 300" class="drawing-line"/>
+    <path d="M 150 400 Q 400 350 600 400 T 1050 400" class="dashed-line"/>
+    
+    <!-- System components -->
+    <rect x="280" y="280" width="60" height="40" fill="#cce5ff" class="drawing-line"/>
+    <text x="310" y="305" class="label-text" text-anchor="middle">SYS-1</text>
+    
+    <rect x="530" y="380" width="60" height="40" fill="#cce5ff" class="drawing-line"/>
+    <text x="560" y="405" class="label-text" text-anchor="middle">SYS-2</text>
+    
+    <rect x="880" y="280" width="60" height="40" fill="#cce5ff" class="drawing-line"/>
+    <text x="910" y="305" class="label-text" text-anchor="middle">SYS-3</text>
+    
+    <text x="600" y="250" class="subtitle-text" text-anchor="middle">SYSTEMS ROUTING</text>
+    
+  </g>
+  
+  <!-- Notes Section -->
+  <g id="notes">
+    <text x="30" y="740" class="subtitle-text" font-weight="bold">NOTES:</text>
+    <text x="30" y="760" class="label-text">1. All dimensions in millimeters unless noted</text>
+    <text x="30" y="775" class="label-text">2. Material specifications per AMPEL360-MAT-001</text>
+    <text x="30" y="790" class="label-text">3. Manufacturing tolerances per ISO 2768-mK</text>
+    <text x="30" y="805" class="label-text">4. This is a PLACEHOLDER drawing for structure setup</text>
+  </g>
+  
+</svg>
