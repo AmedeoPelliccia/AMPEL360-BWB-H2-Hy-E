@@ -8,10 +8,7 @@ Usage:
     python batch_export_pdf.py --source-dir DRAWINGS/ --output-dir PDF_OUTPUT/
 """
 
-import sys
-import os
-from pathlib import Path
-import datetime
+
 
 def export_to_pdf(source_file, output_file):
     """

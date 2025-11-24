@@ -9,7 +9,6 @@ Usage:
     python generate_baseline_manifest.py --baseline BL-002 --output baseline.json
 """
 
-import sys
 import json
 import datetime
 from pathlib import Path

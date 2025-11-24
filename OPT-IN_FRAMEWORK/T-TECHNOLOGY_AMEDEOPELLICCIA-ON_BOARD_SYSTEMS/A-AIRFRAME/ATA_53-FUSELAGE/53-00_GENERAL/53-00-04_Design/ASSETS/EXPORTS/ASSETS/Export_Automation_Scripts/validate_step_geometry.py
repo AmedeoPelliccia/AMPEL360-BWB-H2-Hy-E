@@ -8,7 +8,7 @@ Usage:
     python validate_step_geometry.py --input file.step --report validation_report.txt
 """
 
-import sys
+import datetime
 from pathlib import Path
 
 def validate_step_file(step_file):
@@ -54,7 +54,7 @@ def generate_report(results, output_file):
     report = f"""STEP File Validation Report
 ============================
 File: {results['file']}
-Validation Date: {Path(__file__).stat().st_mtime}
+Validation Date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
 SUMMARY
 -------
