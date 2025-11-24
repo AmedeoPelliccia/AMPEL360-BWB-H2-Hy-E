@@ -1,0 +1,9 @@
+CI_Number,CI_Name,Parent_CI,Zone,Type,Material,Weight_kg,Criticality,Structural_Role,Status,Subsystem,Drawing_Number,Specification
+CI-53-600,Tail Section,CI-53-000,600,Assembly,CFRP/Ti,3500,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-60-0000,53-60-A-001
+CI-53-600-BHD-AFT,Aft Pressure Bulkhead,CI-53-600,600,Bulkhead,CFRP,420,Critical,Primary,Detailed,53-20-01_Pressure_Shell_Modules,53-60-1000,53-60-S-001
+CI-53-600-CONE,Tail Cone,CI-53-600,600,Panel,CFRP,280,High,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-60-2000,53-60-S-010
+CI-53-600-BAY-APU,APU Bay Structure,CI-53-600,600,Bay,CFRP/Ti,450,High,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-60-3000,53-60-S-015
+CI-53-600-EMP-SUPP-V,Vertical Empennage Supports,CI-53-600,600,Fitting,CFRP/Ti,180,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-60-4001,53-60-S-020
+CI-53-600-EMP-SUPP-H,Horizontal Empennage Supports,CI-53-600,600,Fitting,CFRP/Ti,160,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-60-4002,53-60-S-021
+CI-53-600-FR-600A,Frame 600A,CI-53-600,600,Frame,CFRP,28,High,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-60-1010,53-60-S-025
+CI-53-600-SKN-AFT,Aft Skin Panels,CI-53-600,600,Skin,CFRP,320,High,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-60-5001,53-60-S-030

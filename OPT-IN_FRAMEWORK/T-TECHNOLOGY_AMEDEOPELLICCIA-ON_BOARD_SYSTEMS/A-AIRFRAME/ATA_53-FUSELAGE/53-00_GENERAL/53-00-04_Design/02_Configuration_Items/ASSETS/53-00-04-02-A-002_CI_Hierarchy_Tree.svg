@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>ATA 53 CI Hierarchy Tree</title>
+  <desc>Configuration Items hierarchy for ATA 53 Fuselage - AMPEL360 BWB</desc>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">ATA 53 Fuselage – CI Hierarchy Tree</text>
+  
+  <!-- Top Level CI -->
+  <rect x="330" y="50" width="140" height="40" rx="5" fill="#2c5282" stroke="#1a365d" stroke-width="2"/>
+  <text x="400" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">CI-53-000</text>
+  
+  <!-- Connection lines from top to zones -->
+  <line x1="400" y1="90" x2="400" y2="110" stroke="#4a5568" stroke-width="2"/>
+  <line x1="100" y1="110" x2="700" y2="110" stroke="#4a5568" stroke-width="2"/>
+  <line x1="100" y1="110" x2="100" y2="130" stroke="#4a5568" stroke-width="2"/>
+  <line x1="220" y1="110" x2="220" y2="130" stroke="#4a5568" stroke-width="2"/>
+  <line x1="340" y1="110" x2="340" y2="130" stroke="#4a5568" stroke-width="2"/>
+  <line x1="460" y1="110" x2="460" y2="130" stroke="#4a5568" stroke-width="2"/>
+  <line x1="580" y1="110" x2="580" y2="130" stroke="#4a5568" stroke-width="2"/>
+  <line x1="700" y1="110" x2="700" y2="130" stroke="#4a5568" stroke-width="2"/>
+  
+  <!-- Zone 100 -->
+  <rect x="40" y="130" width="120" height="35" rx="4" fill="#48bb78" stroke="#276749" stroke-width="1.5"/>
+  <text x="100" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">CI-53-100</text>
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2d3748">Nose Section</text>
+  
+  <!-- Zone 200 -->
+  <rect x="160" y="130" width="120" height="35" rx="4" fill="#48bb78" stroke="#276749" stroke-width="1.5"/>
+  <text x="220" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">CI-53-200</text>
+  <text x="220" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2d3748">Forward Cabin</text>
+  
+  <!-- Zone 300 -->
+  <rect x="280" y="130" width="120" height="35" rx="4" fill="#ecc94b" stroke="#b7791f" stroke-width="1.5"/>
+  <text x="340" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1a1a1a" font-weight="bold">CI-53-300</text>
+  <text x="340" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2d3748">Mid Cabin</text>
+  
+  <!-- Zone 400 -->
+  <rect x="400" y="130" width="120" height="35" rx="4" fill="#48bb78" stroke="#276749" stroke-width="1.5"/>
+  <text x="460" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">CI-53-400</text>
+  <text x="460" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2d3748">Center Wing Box</text>
+  
+  <!-- Zone 500 -->
+  <rect x="520" y="130" width="120" height="35" rx="4" fill="#ecc94b" stroke="#b7791f" stroke-width="1.5"/>
+  <text x="580" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1a1a1a" font-weight="bold">CI-53-500</text>
+  <text x="580" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2d3748">Aft Cabin</text>
+  
+  <!-- Zone 600 -->
+  <rect x="640" y="130" width="120" height="35" rx="4" fill="#ecc94b" stroke="#b7791f" stroke-width="1.5"/>
+  <text x="700" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1a1a1a" font-weight="bold">CI-53-600</text>
+  <text x="700" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2d3748">Tail Section</text>
+  
+  <!-- Zone 100 Components -->
+  <line x1="100" y1="165" x2="100" y2="200" stroke="#4a5568" stroke-width="1"/>
+  <rect x="50" y="200" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="100" y="217" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-100-BHD-FWD</text>
+  
+  <rect x="50" y="230" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="100" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-100-FR-100A</text>
+  
+  <rect x="50" y="260" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="100" y="277" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-100-SKN-U01</text>
+  
+  <!-- Zone 200 Components -->
+  <line x1="220" y1="165" x2="220" y2="200" stroke="#4a5568" stroke-width="1"/>
+  <rect x="170" y="200" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="220" y="217" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-200-DOOR-1L-FR</text>
+  
+  <rect x="170" y="230" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="220" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-200-FLR-BEAM</text>
+  
+  <!-- Zone 400 Components -->
+  <line x1="460" y1="165" x2="460" y2="200" stroke="#4a5568" stroke-width="1"/>
+  <rect x="410" y="200" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="460" y="217" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-400-SPAR-FWD</text>
+  
+  <rect x="410" y="230" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="460" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-400-SPAR-REAR</text>
+  
+  <rect x="410" y="260" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="460" y="277" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-400-BAY-MLG-L</text>
+  
+  <!-- Zone 600 Components -->
+  <line x1="700" y1="165" x2="700" y2="200" stroke="#4a5568" stroke-width="1"/>
+  <rect x="650" y="200" width="100" height="25" rx="3" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="700" y="217" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1a1a1a">CI-53-600-BHD-AFT</text>
+  
+  <!-- Legend -->
+  <rect x="20" y="520" width="760" height="70" rx="5" fill="#e2e8f0" stroke="#a0aec0" stroke-width="1"/>
+  <text x="400" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a">Legend</text>
+  
+  <rect x="50" y="550" width="20" height="15" fill="#2c5282" stroke="#1a365d" stroke-width="1"/>
+  <text x="80" y="562" font-family="Arial, sans-serif" font-size="10" fill="#1a1a1a">Top-Level CI</text>
+  
+  <rect x="180" y="550" width="20" height="15" fill="#48bb78" stroke="#276749" stroke-width="1"/>
+  <text x="210" y="562" font-family="Arial, sans-serif" font-size="10" fill="#1a1a1a">Released/Detailed</text>
+  
+  <rect x="340" y="550" width="20" height="15" fill="#ecc94b" stroke="#b7791f" stroke-width="1"/>
+  <text x="370" y="562" font-family="Arial, sans-serif" font-size="10" fill="#1a1a1a">Preliminary</text>
+  
+  <rect x="480" y="550" width="20" height="15" fill="#a0aec0" stroke="#718096" stroke-width="1"/>
+  <text x="510" y="562" font-family="Arial, sans-serif" font-size="10" fill="#1a1a1a">Component CI</text>
+  
+  <!-- Document info -->
+  <text x="20" y="595" font-family="Arial, sans-serif" font-size="8" fill="#718096">Document: 53-00-04-02-A-002_CI_Hierarchy_Tree.svg | Version: 1.0 | Date: 2025-11-24 | AMPEL360-BWB-H2-Hy-E</text>
+</svg>

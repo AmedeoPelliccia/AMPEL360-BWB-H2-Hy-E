@@ -1,0 +1,7 @@
+Item_ID,Description,Zone,CI_Number,Category,Severity,Owner,Status,Due_Date,Resolution,Last_Update
+CRIT-001,Zone 400 weight growth,400,CI-53-400,Weight,High,Stress Lead,Closed,2025-10-30,Optimization complete; -285kg,2025-10-28
+CRIT-002,Wing-body blend transition,300,CI-53-300-BLEND-FWD,Design,Medium,Chief Designer,Closed,2025-10-15,Geometry updated,2025-10-10
+CRIT-003,Landing gear bay loads,400,CI-53-400-BAY-MLG-L,Loads,High,Loads Team,Open,2025-12-01,Analysis in progress,2025-11-20
+CRIT-004,Door frame fatigue,200,CI-53-200-DOOR-1L-FR,Fatigue,Medium,Fatigue Lead,Open,2025-12-15,Test data pending,2025-11-18
+CRIT-005,Aft bulkhead access,600,CI-53-600-BHD-AFT,Manufacturing,Low,Manufacturing,Open,2025-01-15,Design under review,2025-11-15
+CRIT-006,Interface loads with ATA 32,400,Multiple,Interface,High,Interface Mgr,Open,2025-12-01,ICD under review,2025-11-22

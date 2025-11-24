@@ -1,0 +1,9 @@
+Detail_ID,Detail_Name,Zone,CI_Number,Detail_Type,Load_Case,Failure_Mode,Kt,Applied_Stress_MPa,Allowable_Stress_MPa,Margin_of_Safety,Status,Report_Reference
+DET-100-001,Fwd Bulkhead Crown Cutout,100,CI-53-100-BHD-FWD,Cutout,LC-PRES-003,Tension Bypass,2.5,TBD,TBD,TBD,In Progress,53-50-DET-100-001
+DET-100-002,Nose Gear Bay Corner,100,CI-53-100-BAY-NLG,Corner,LC-LND-009,Stress Concentration,3.0,TBD,TBD,TBD,In Progress,53-50-DET-100-002
+DET-200-001,Door Corner Radius,200,CI-53-200-DOOR-1L-FR,Corner,LC-COMB-001,Fatigue,2.8,TBD,TBD,TBD,Complete,53-50-DET-200-001
+DET-200-002,Window Cutout,200,CI-53-200,Cutout,LC-PRES-001,Tension Bypass,2.2,TBD,TBD,TBD,Complete,53-50-DET-200-002
+DET-400-001,Spar Cap Runout,400,CI-53-400-SPAR-FWD,Runout,LC-COMB-001,Delamination,1.5,TBD,TBD,TBD,Complete,53-50-DET-400-001
+DET-400-002,MLG Trunnion Fitting,400,CI-53-400-BAY-MLG-L,Fitting,LC-LND-001,Bearing,1.0,TBD,TBD,TBD,Complete,53-50-DET-400-002
+DET-400-003,Spar Web Access Hole,400,CI-53-400-SPAR-FWD,Cutout,LC-COMB-001,Shear Buckling,1.8,TBD,TBD,TBD,Complete,53-50-DET-400-003
+DET-600-001,Aft Bulkhead Access,600,CI-53-600-BHD-AFT,Cutout,LC-PRES-003,Tension Bypass,2.3,TBD,TBD,TBD,In Progress,53-50-DET-600-001

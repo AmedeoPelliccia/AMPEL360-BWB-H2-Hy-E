@@ -1,0 +1,8 @@
+Zone,Zone_Name,Weight_Target_kg,Weight_Actual_kg,Weight_Delta_kg,Weight_Delta_Percent,Status,CIs_Over_Target,CIs_Under_Target,CIs_TBD,Trend,Last_Update
+100,Nose Section,3500,3580,-80,-2.3,Over Target,4,2,1,Improving,2025-11-22
+200,Forward Cabin,8500,8720,-220,-2.6,Over Target,5,3,1,Stable,2025-11-22
+300,Mid Cabin,10500,TBD,TBD,TBD,TBD,0,0,8,TBD,2025-11-20
+400,Center Wing Box,12000,12285,-285,-2.4,Over Target,6,4,1,Stable,2025-11-22
+500,Aft Cabin,7000,TBD,TBD,TBD,TBD,0,0,8,TBD,2025-11-18
+600,Tail Section,3500,TBD,TBD,TBD,TBD,0,0,8,TBD,2025-11-15
+TOTAL,All Zones,45000,46200,-1200,-2.7,Over Target,15,9,27,Stable,2025-11-22

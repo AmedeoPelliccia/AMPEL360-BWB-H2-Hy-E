@@ -1,0 +1,9 @@
+CI_Number,CI_Name,Parent_CI,Zone,Type,Material,Weight_kg,Criticality,Structural_Role,Status,Subsystem,Drawing_Number,Specification
+CI-53-500,Aft Cabin,CI-53-000,500,Assembly,CFRP,7000,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-50-0000,53-50-A-001
+CI-53-500-SKN-U01,Upper Shell Panel 01,CI-53-500,500,Skin,CFRP,380,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-50-1001,53-50-S-010
+CI-53-500-SKN-L01,Lower Shell Panel 01,CI-53-500,500,Skin,CFRP,350,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-50-1002,53-50-S-011
+CI-53-500-EMP-ATT,Empennage Attachment Structure,CI-53-500,500,Panel,CFRP/Ti,520,Critical,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-50-2001,53-50-S-015
+CI-53-500-GALLEY,Aft Galley Structure,CI-53-500,500,Panel,CFRP,180,Medium,Secondary,Preliminary,53-20-03_Cabin_Floor_and_Supports,53-50-3001,53-50-S-020
+CI-53-500-LAV,Lavatory Structure,CI-53-500,500,Panel,CFRP,160,Medium,Secondary,Preliminary,53-20-03_Cabin_Floor_and_Supports,53-50-3002,53-50-S-021
+CI-53-500-FLR-BEAM,Floor Beams,CI-53-500,500,Beam,CFRP,220,High,Primary,Preliminary,53-20-03_Cabin_Floor_and_Supports,53-50-4001,53-50-S-025
+CI-53-500-FR-500A,Frame 500A,CI-53-500,500,Frame,CFRP,30,High,Primary,Preliminary,53-20-01_Pressure_Shell_Modules,53-50-1010,53-50-S-030
