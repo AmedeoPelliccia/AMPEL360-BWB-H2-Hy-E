@@ -71,7 +71,7 @@ Layer_Name,Color_Index,Color_RGB,Linetype,Lineweight_mm,Plot_Style,Frozen,Locked
 # ============================================================================================================
 # FASTENER AND HARDWARE LAYERS
 # ============================================================================================================
-53-FST-RIVET,70,7;7;7,Continuous,0.18,Normal,No,No,Yes,Rivet locations,Hardware
+53-FST-RIVET,70,64;64;64,Continuous,0.18,Normal,No,No,Yes,Rivet locations,Hardware
 53-FST-BOLT,71,127;127;127,Continuous,0.25,Normal,No,No,Yes,Bolt locations,Hardware
 53-FST-NUTPLATE,72,191;191;191,Continuous,0.25,Normal,No,No,Yes,Nutplate installations,Hardware
 53-FST-HISHEAR,73,255;191;127,Continuous,0.25,Normal,No,No,Yes,Hi-Shear fasteners,Hardware
