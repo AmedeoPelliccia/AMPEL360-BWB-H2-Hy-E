@@ -1,3 +1,28 @@
 # CFD Geometry Exports
-# Files use 53-00-04-ANLS-CFD-xxx_RevX_* naming pattern
-# Used for aerodynamic analysis if applicable
+
+This folder contains exported geometries dedicated to CFD analysis for ATA 53-00-04 (Design).
+
+## Naming convention
+
+Files MUST follow:
+
+`53-00-04-ANLS-CFD-xxx_RevX_*`
+
+- `53-00-04` – ATA / design section identifier.
+- `ANLS` – Analysis artifact.
+- `CFD` – Analysis type: CFD.
+- `xxx` – Component or geometry code (e.g. `FWDSECT`, `WNG`, `DOOR01`).
+- `RevX` – Geometry revision (e.g. `RevA`, `RevB`, `Rev01`).
+- `*` – Optional suffix for format and run details
+  (e.g. `_Geom.stp`, `_Mesh.msh`, `_Run01-Setup.json`, `_Run01-Results.h5`).
+
+## Typical files per geometry
+
+For each geometry `xxx`, the recommended set is:
+
+- Geometry: `53-00-04-ANLS-CFD-xxx_RevX_Geom.stp`
+- Mesh: `53-00-04-ANLS-CFD-xxx_RevX_Mesh.msh`
+- Run setup (optional): `53-00-04-ANLS-CFD-xxx_RevX_RunNN-Setup.*`
+- Run results (optional): `53-00-04-ANLS-CFD-xxx_RevX_RunNN-Results.*`
+
+CFD is **optional**; this folder may be empty apart from `.gitkeep` in programs where no CFD analysis is required.
