@@ -1,38 +1,35 @@
-# 53-50-01-03 Joints, Splices and Cutouts
+# 03 Joints, Splices and Cutouts
 
-## Document Information
+## Overview
 
-- **Document ID**: 53-50-01-03
-- **Title**: Joints, Splices and Cutouts
-- **Version**: 1.0
-- **Date**: 2025-11-22
-- **Status**: Draft
-- **Category**: Structural Design
-- **ATA Chapter**: 53-50 - Fuselage Structures
+This section contains documentation for structural joints, splices, and cutout reinforcements in the AMPEL360 BWB fuselage primary structure.
 
-## Purpose
+## Contents
 
-This document provides detailed design specifications, analysis methodology, and verification data for Joints, Splices and Cutouts in the AMPEL360 BWB primary structure.
+| Document | Description |
+|----------|-------------|
+| [53-50-01-03-001 Longitudinal Splice Design](53-50-01-03-001_Longitudinal_Splice_Design.md) | Crown and keel splice joints |
+| [53-50-01-03-002 Circumferential Splice Design](53-50-01-03-002_Circumferential_Splice_Design.md) | Major barrel joints |
+| [53-50-01-03-003 Door Cutout Reinforcement](53-50-01-03-003_Door_Cutout_Reinforcement.md) | Passenger and cargo door reinforcement |
+| [53-50-01-03-004 Window Cutout Reinforcement](53-50-01-03-004_Window_Cutout_Reinforcement.md) | Window belt structure |
+| [53-50-01-03-005 Systems Penetration Details](53-50-01-03-005_Systems_Penetration_Details.md) | Pressure shell penetrations |
 
-## Scope
+## ASSETS
 
-<!-- To be completed with specific technical content -->
+- [Joint Stress Analysis](ASSETS/Joint_Stress_Analysis.csv)
+- [Splice Fastener Schedule](ASSETS/Splice_Fastener_Schedule.csv)
 
-## Design Requirements
+## Key Design Features
 
-<!-- To be completed -->
-
-## Analysis and Verification
-
-<!-- To be completed -->
+- Fail-safe joint design with damage tolerance
+- Fatigue-resistant fastener patterns
+- Stress concentration mitigation at cutouts
+- Sealant and corrosion protection provisions
 
 ## References
 
-### Regulatory Documents
-- [CS-25 Certification Specifications](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)
-
-### Internal References
-- [53-50-01 Primary Structure Overview](../../README.md)
+- [CS-25.571 Damage Tolerance](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)
+- [53-50-01 Primary Structure Overview](../README.md)
 
 ---
 
@@ -42,6 +39,6 @@ This document provides detailed design specifications, analysis methodology, and
 - Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
 - Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-22
+- Last AI update: 2025-11-25
 
 ---

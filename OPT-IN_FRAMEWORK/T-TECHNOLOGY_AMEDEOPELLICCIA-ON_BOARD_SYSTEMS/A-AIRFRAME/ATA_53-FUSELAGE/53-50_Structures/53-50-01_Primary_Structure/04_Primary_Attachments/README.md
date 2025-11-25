@@ -1,38 +1,33 @@
-# 53-50-01-04 Primary Attachments
+# 04 Primary Attachments
 
-## Document Information
+## Overview
 
-- **Document ID**: 53-50-01-04
-- **Title**: Primary Attachments
-- **Version**: 1.0
-- **Date**: 2025-11-22
-- **Status**: Draft
-- **Category**: Structural Design
-- **ATA Chapter**: 53-50 - Fuselage Structures
+This section contains documentation for primary structural attachments connecting major components to the AMPEL360 BWB fuselage structure.
 
-## Purpose
+## Contents
 
-This document provides detailed design specifications, analysis methodology, and verification data for Primary Attachments in the AMPEL360 BWB primary structure.
+| Document | Description |
+|----------|-------------|
+| [53-50-01-04-001 Wing Attachment Fittings](53-50-01-04-001_Wing_Attachment_Fittings.md) | Wing-to-fuselage interface |
+| [53-50-01-04-002 Landing Gear Attachments](53-50-01-04-002_Landing_Gear_Attachments.md) | MLG and NLG fittings |
+| [53-50-01-04-003 Tail Attachment Fittings](53-50-01-04-003_Tail_Attachment_Fittings.md) | Empennage interface |
+| [53-50-01-04-004 Engine Pylon Attachments](53-50-01-04-004_Engine_Pylon_Attachments.md) | Engine mounting provisions |
 
-## Scope
+## ASSETS
 
-<!-- To be completed with specific technical content -->
+- [Attachment Load Summary](ASSETS/Attachment_Load_Summary.csv)
 
-## Design Requirements
+## Key Design Features
 
-<!-- To be completed -->
-
-## Analysis and Verification
-
-<!-- To be completed -->
+- Titanium and high-strength steel fittings for critical loads
+- Fail-safe load paths with redundancy
+- Safe-life substantiation for PSE elements
+- Precision machining and NDI requirements
 
 ## References
 
-### Regulatory Documents
-- [CS-25 Certification Specifications](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)
-
-### Internal References
-- [53-50-01 Primary Structure Overview](../../README.md)
+- [CS-25.571 Damage Tolerance](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27)
+- [53-50-01 Primary Structure Overview](../README.md)
 
 ---
 
@@ -42,6 +37,6 @@ This document provides detailed design specifications, analysis methodology, and
 - Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
 - Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-22
+- Last AI update: 2025-11-25
 
 ---
