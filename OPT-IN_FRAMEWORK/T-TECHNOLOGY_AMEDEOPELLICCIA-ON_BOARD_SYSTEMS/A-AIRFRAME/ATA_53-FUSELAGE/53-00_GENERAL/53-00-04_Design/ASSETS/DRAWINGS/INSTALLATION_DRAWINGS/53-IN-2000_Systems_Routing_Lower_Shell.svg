@@ -465,10 +465,10 @@
     <rect x="140" y="22" width="45" height="18" fill="#1a1a2e" stroke="#ffd60a" stroke-width="1.5"/>
     
     <!-- Larger, bolder text labels -->
-    <text x="5" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">0</text>
-    <text x="50" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">2</text>
-    <text x="95" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">4</text>
-    <text x="140" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">6</text>
+    <text x="27.5" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">0</text>
+    <text x="72.5" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">2</text>
+    <text x="117.5" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">4</text>
+    <text x="162.5" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">6</text>
     <text x="185" y="55" text-anchor="middle" fill="#ffd60a" font-family="Arial" font-size="12" font-weight="bold">8m</text>
   </g>
 
