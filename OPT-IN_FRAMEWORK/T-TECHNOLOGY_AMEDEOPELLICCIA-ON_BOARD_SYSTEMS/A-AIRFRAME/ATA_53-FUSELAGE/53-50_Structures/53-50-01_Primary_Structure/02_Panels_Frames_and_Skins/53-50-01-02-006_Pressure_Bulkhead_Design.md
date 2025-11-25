@@ -224,7 +224,7 @@ This specification covers:
 - **Dome Forming**: Stretch forming of aluminum sheet; spin forming for small domes
 - **Machining**: 5-axis CNC for peripheral frame and complex regions
 - **Assembly**: Riveting with automated hole drilling; sealant application
-- **NDI**: 100% inspection of welds and critical joints
+- **NDI**: 100% inspection of critical joints and riveted connections
 
 ### Quality Criteria
 
