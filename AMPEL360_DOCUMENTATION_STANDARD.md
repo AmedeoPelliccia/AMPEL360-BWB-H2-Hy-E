@@ -213,11 +213,17 @@ ATA_XX-SYSTEM_NAME/
 │   ├── XX-00-13_Subsystems_Components/  # Subsystems, components and PNR/source management
 │   └── XX-00-14_Ops_Std_Sustain/        # Operational standards, governance, circularity
 │
-├── XX-20-00_Systems/                    # Functional systems (origin block 20)
-├── XX-40-00_Programming_Algorithms/     # SW, logic, NN, algorithms
-├── XX-50-00_Structures/                 # Physical structures / airframe / structural GSE
-├── XX-70-00_Propulsion/                 # Propulsion / energy (70/80 as applicable)
-└── XX-90-00_Tables_Schemas_Diagrams/    # Tables, catalogs, schemas, SDS, training, meta
+ATA_XX-DESCRIPTION/
+├── XX-00_GENERAL/              # (14 lifecycle folders as above)
+├── XX-10_Operations/           # Ops use, turnarounds, procedures
+├── XX-20_Subsystems/           # Functional subsystems (design-driven)
+├── XX-30_Circularity/          # Sustainability, LCA, reuse/recycle, DPP links
+├── XX-40_Software/             # SW, control logic, diagnostics, ML/NN
+├── XX-50_Structures/           # Frames, housings, mounts, structural routes
+├── XX-60_Storages/             # Tanks, reservoirs, accumulators, cryo vessels
+├── XX-70_Propulsion/           # Propulsive interfaces/couplings (if any)
+├── XX-80_Energy/               # Electrical/thermal energy interactions
+└── XX-90_Tables_Schemas_Diagrams/  # Tables, data dicts, catalogs, SDS/training
 ```
 
 ### 2.1 GENERAL Layer
