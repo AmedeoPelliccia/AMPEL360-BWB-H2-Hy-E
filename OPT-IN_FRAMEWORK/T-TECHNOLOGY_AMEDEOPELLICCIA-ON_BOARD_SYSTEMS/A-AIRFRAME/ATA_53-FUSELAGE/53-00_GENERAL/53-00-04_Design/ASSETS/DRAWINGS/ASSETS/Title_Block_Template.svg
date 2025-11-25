@@ -18,8 +18,9 @@
   <rect x="10" y="55" width="370" height="45" fill="#fff" stroke="#000" stroke-width="1"/>
   <text x="120" y="25" class="title-text">[DRAWING TITLE]</text>
   <text x="15" y="70" class="label-text">Drawing No: [XX-XX-XXXX]</text>
-  <text x="15" y="85" class="label-text">Zone: [Zone XXX]</text>
-  <text x="15" y="95" class="label-text">Type: [Type]</text>
+  <text x="15" y="82" class="label-text">Zone: [Zone XXX]</text>
+  <text x="15" y="94" class="label-text">Model: Q100</text>
+  <text x="200" y="70" class="label-text">Type: [Type]</text>
   
   <!-- Info Fields -->
   <rect x="385" y="10" width="85" height="90" fill="#fff" stroke="#000" stroke-width="1"/>

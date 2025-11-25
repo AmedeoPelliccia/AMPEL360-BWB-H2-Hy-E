@@ -44,7 +44,8 @@
     <line x1="700" y1="770" x2="1180" y2="770" stroke="#000" stroke-width="1"/>
     <text x="710" y="790" class="label-text">Drawing No: 53-IN-1000</text>
     <text x="710" y="805" class="label-text">Zone: All Zones</text>
-    <text x="710" y="820" class="label-text">Type: Installation Routing</text>
+    <text x="710" y="820" class="label-text">Model: Q100</text>
+    <text x="850" y="820" class="label-text">Type: Installation Routing</text>
     
     <text x="950" y="790" class="label-text">Scale: NTS</text>
     <text x="950" y="805" class="label-text">Rev: A</text>
