@@ -80,7 +80,7 @@
     <text x="880" y="820" class="label-text">Type: GA</text>
     
     <text x="950" y="790" class="label-text">Scale: NTS</text>
-    <text x="950" y="805" class="label-text">Rev: E</text>
+    <text x="950" y="805" class="label-text">Rev: F</text>
     <text x="950" y="820" class="label-text">Date: 2025-11-25</text>
     
     <text x="1090" y="790" class="label-text">Status: Draft</text>
@@ -157,7 +157,10 @@
       <text x="420" y="100" class="section-label" text-anchor="middle">PORT PASSENGER LOBE</text>
       <text x="420" y="115" class="annotation-large" text-anchor="middle">Independent ECS Zone</text>
       <text x="420" y="130" class="annotation" text-anchor="middle">Curved Pressure Shell</text>
-      <text x="420" y="145" class="annotation" text-anchor="middle">Span: ~9.0m (TBD)</text>
+      
+      <!-- Port lobe dimension callout -->
+      <line x1="200" y1="70" x2="650" y2="70" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+      <text x="425" y="65" class="dimension-text" text-anchor="middle">Span ≈ 9.0 m</text>
       
       <!-- Emergency Egress with CS-25 reference -->
       <line x1="620" y1="80" x2="695" y2="55" stroke="#cc0000" stroke-width="1.5" marker-end="url(#arrow-red)"/>
@@ -183,7 +186,10 @@
       <text x="420" y="510" class="section-label" text-anchor="middle">STARBOARD PASSENGER LOBE</text>
       <text x="420" y="525" class="annotation-large" text-anchor="middle">Independent ECS Zone</text>
       <text x="420" y="540" class="annotation" text-anchor="middle">Curved Pressure Shell</text>
-      <text x="420" y="555" class="annotation" text-anchor="middle">Span: ~9.0m (TBD)</text>
+      
+      <!-- Starboard lobe dimension callout -->
+      <line x1="200" y1="565" x2="650" y2="565" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+      <text x="425" y="578" class="dimension-text" text-anchor="middle">Span ≈ 9.0 m</text>
       
       <!-- Emergency Egress with CS-25 reference -->
       <line x1="620" y1="520" x2="695" y2="545" stroke="#cc0000" stroke-width="1.5" marker-end="url(#arrow-red)"/>
@@ -202,30 +208,45 @@
       <!-- Cryogenic H₂ Tank (inner) -->
       <ellipse cx="420" cy="300" rx="140" ry="75" class="h2-tank"/>
       
-      <!-- Tank Cradle Frames -->
-      <line x1="300" y1="195" x2="300" y2="405" class="frame-line" stroke-width="1.5"/>
-      <line x1="360" y1="195" x2="360" y2="405" class="frame-line" stroke-width="1.5"/>
-      <line x1="420" y1="195" x2="420" y2="405" class="frame-line" stroke-width="1.5"/>
-      <line x1="480" y1="195" x2="480" y2="405" class="frame-line" stroke-width="1.5"/>
-      <line x1="540" y1="195" x2="540" y2="405" class="frame-line" stroke-width="1.5"/>
+      <!-- Tank Cradle Frames (6 frames per thermal analysis) -->
+      <line x1="295" y1="195" x2="295" y2="405" class="frame-line" stroke-width="1.5"/>
+      <line x1="345" y1="195" x2="345" y2="405" class="frame-line" stroke-width="1.5"/>
+      <line x1="395" y1="195" x2="395" y2="405" class="frame-line" stroke-width="1.5"/>
+      <line x1="445" y1="195" x2="445" y2="405" class="frame-line" stroke-width="1.5"/>
+      <line x1="495" y1="195" x2="495" y2="405" class="frame-line" stroke-width="1.5"/>
+      <line x1="545" y1="195" x2="545" y2="405" class="frame-line" stroke-width="1.5"/>
       
       <!-- Cradle frame annotation -->
-      <text x="420" y="188" class="annotation" text-anchor="middle" fill="#666">Tank Cradle Frames (5x)</text>
+      <text x="420" y="188" class="annotation" text-anchor="middle" fill="#666">Tank Cradle Frames (6x)</text>
       
       <!-- Tank Labels -->
       <text x="420" y="290" class="section-label" text-anchor="middle">CRYOGENIC H₂ TANK</text>
-      <text x="420" y="305" class="annotation-large" text-anchor="middle">(LH₂ Storage)</text>
+      <text x="420" y="305" class="annotation-large" text-anchor="middle">(LH₂ Storage - 13,000 kg)</text>
       
-      <!-- Tank dimensions placeholder -->
-      <text x="420" y="320" class="annotation" text-anchor="middle">Ø 4.86m × L 10.0m (185.7 m³)</text>
+      <!-- Tank dimensions with dimension lines -->
+      <!-- Diameter dimension (vertical) -->
+      <line x1="275" y1="225" x2="275" y2="375" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+      <text x="268" y="300" class="dimension-text" text-anchor="end" transform="rotate(-90, 268, 300)">Ø 4.86 m</text>
+      
+      <!-- Length dimension (horizontal) -->
+      <line x1="280" y1="385" x2="560" y2="385" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+      <text x="420" y="398" class="dimension-text" text-anchor="middle">L = 10.0 m</text>
+      
+      <!-- Volume callout -->
+      <text x="420" y="320" class="annotation" text-anchor="middle" font-weight="bold">V = 185.7 m³</text>
+      
+      <!-- Insulation thickness dimension callout -->
+      <line x1="560" y1="300" x2="575" y2="300" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+      <text x="578" y="295" class="annotation" fill="#006600">MLI</text>
+      <text x="578" y="307" class="annotation" fill="#006600">50mm</text>
       
       <!-- Tank bay label -->
-      <text x="460" y="395" class="annotation" text-anchor="middle">Central Wingbox - Tank Bay</text>
+      <text x="460" y="410" class="annotation" text-anchor="middle">Central Wingbox - Tank Bay</text>
       
       <!-- Tank configuration note with leader -->
-      <line x1="560" y1="270" x2="598" y2="240" class="leader-line"/>
-      <text x="602" y="235" class="annotation">Cylindrical (Selected)</text>
-      <text x="602" y="247" class="annotation">(Per thermal pre-analysis)</text>
+      <line x1="560" y1="260" x2="598" y2="225" class="leader-line"/>
+      <text x="602" y="220" class="annotation">Cylindrical ✅</text>
+      <text x="602" y="232" class="annotation">(Per thermal analysis)</text>
       
       <!-- MLI annotation with leader -->
       <line x1="555" y1="345" x2="598" y2="365" class="leader-line"/>
@@ -385,41 +406,63 @@
     <text x="0" y="60" class="label-small">D-D: 53-10-4000 (Avionics Bay)</text>
   </g>
   
-  <!-- Tank Specification Table - Updated with thermal analysis -->
+  <!-- Tank Specification & Heat Load Summary Table -->
   <g id="tank-specs" transform="translate(735, 470)">
-    <text x="0" y="0" class="subtitle-text" font-weight="bold">LH₂ TANK (Thermal Pre-Analysis)</text>
-    <rect x="0" y="10" width="220" height="120" fill="#fff" stroke="#000" stroke-width="1"/>
+    <text x="0" y="0" class="subtitle-text" font-weight="bold">LH₂ TANK THERMAL SUMMARY</text>
+    <rect x="0" y="10" width="220" height="135" fill="#fff" stroke="#000" stroke-width="1"/>
     
     <!-- Table Header -->
     <line x1="0" y1="28" x2="220" y2="28" stroke="#000" stroke-width="0.5"/>
-    <line x1="80" y1="10" x2="80" y2="130" stroke="#000" stroke-width="0.5"/>
+    <line x1="80" y1="10" x2="80" y2="145" stroke="#000" stroke-width="0.5"/>
     
-    <text x="40" y="22" class="label-small" text-anchor="middle" font-weight="bold">Item</text>
-    <text x="150" y="22" class="label-small" text-anchor="middle" font-weight="bold">Specification</text>
+    <text x="40" y="22" class="label-small" text-anchor="middle" font-weight="bold">Parameter</text>
+    <text x="150" y="22" class="label-small" text-anchor="middle" font-weight="bold">Value</text>
     
-    <text x="5" y="40" class="annotation">Config</text>
+    <text x="5" y="40" class="annotation">Configuration</text>
     <text x="85" y="40" class="annotation">Cylindrical ✅</text>
     
-    <text x="5" y="52" class="annotation">Fuel Mass</text>
-    <text x="85" y="52" class="annotation">13,000 kg</text>
+    <text x="5" y="52" class="annotation">Dimensions</text>
+    <text x="85" y="52" class="annotation">Ø 4.86m × L 10.0m</text>
     
     <text x="5" y="64" class="annotation">Volume</text>
     <text x="85" y="64" class="annotation">185.7 m³</text>
     
-    <text x="5" y="76" class="annotation">Dimensions</text>
-    <text x="85" y="76" class="annotation">Ø 4.86m × L 10.0m</text>
+    <text x="5" y="76" class="annotation">Fuel Mass</text>
+    <text x="85" y="76" class="annotation">13,000 kg (LH₂)</text>
     
-    <text x="5" y="88" class="annotation">Heat Load</text>
-    <text x="85" y="88" class="annotation">~190 W</text>
+    <text x="5" y="88" class="annotation">Surface Area</text>
+    <text x="85" y="88" class="annotation">189.9 m²</text>
     
-    <text x="5" y="100" class="annotation">Insulation</text>
-    <text x="85" y="100" class="annotation">MLI (50mm target)</text>
+    <!-- Heat Load Breakdown -->
+    <line x1="0" y1="96" x2="220" y2="96" stroke="#000" stroke-width="0.5"/>
+    <text x="110" y="106" class="annotation" text-anchor="middle" font-weight="bold" fill="#cc0000">HEAT LOAD BUDGET</text>
     
-    <text x="5" y="112" class="annotation">Boil-off</text>
-    <text x="85" y="112" class="annotation">~1.53 kg/hr (0.012%/hr)</text>
+    <text x="5" y="118" class="annotation">Conduction (6 pts)</text>
+    <text x="85" y="118" class="annotation">~50 W</text>
     
-    <text x="5" y="124" class="annotation">Integration</text>
-    <text x="85" y="124" class="annotation">6 cradle frames</text>
+    <text x="5" y="130" class="annotation">Radiation (MLI)</text>
+    <text x="85" y="130" class="annotation">~80 W</text>
+    
+    <text x="5" y="142" class="annotation">Penetrations</text>
+    <text x="85" y="142" class="annotation">~40 W (+20W margin)</text>
+    
+    <text x="140" y="118" class="annotation" font-weight="bold" fill="#cc0000">TOTAL:</text>
+    <text x="140" y="130" class="annotation" font-weight="bold" fill="#cc0000">~190 W</text>
+  </g>
+  
+  <!-- Boil-off & Insulation Summary -->
+  <g id="boiloff-summary" transform="translate(735, 620)">
+    <text x="0" y="0" class="subtitle-text" font-weight="bold">INSULATION &amp; BOIL-OFF</text>
+    <rect x="0" y="10" width="220" height="55" fill="#e6ffe6" stroke="#006600" stroke-width="1"/>
+    
+    <text x="5" y="28" class="annotation">MLI Thickness:</text>
+    <text x="85" y="28" class="annotation" font-weight="bold">50 mm (target)</text>
+    
+    <text x="5" y="42" class="annotation">Boil-off Rate:</text>
+    <text x="85" y="42" class="annotation">~1.53 kg/hr</text>
+    
+    <text x="5" y="56" class="annotation">10-hr Mission Loss:</text>
+    <text x="85" y="56" class="annotation">~15.3 kg (&lt;0.12%)</text>
   </g>
   
   <!-- Notes Section - Increased font size -->
