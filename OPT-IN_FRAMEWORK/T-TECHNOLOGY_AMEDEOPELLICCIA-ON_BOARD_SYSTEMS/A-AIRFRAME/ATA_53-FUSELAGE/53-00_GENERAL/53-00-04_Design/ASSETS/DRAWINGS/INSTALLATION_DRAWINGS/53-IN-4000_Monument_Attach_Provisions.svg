@@ -484,22 +484,22 @@
   <text x="68" y="568" fill="white" font-family="monospace" font-size="8">MAINTENANCE ACCESS</text>
   <text x="68" y="580" fill="#ff9f1c" font-family="monospace" font-size="7">Liner Removal Panel</text>
 
-  <!-- ========== ORIGINAL LEGEND BOX LOCATION - KEEP FOR NOTES/TITLE BLOCK ========== -->
+  <!-- ========== BOTTOM LEGEND - QUICK REFERENCE ========== -->
   <rect x="20" y="875" width="480" height="110" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
-  <text x="35" y="895" fill="#4cc9f0" font-family="Arial" font-size="12" font-weight="bold">LEGEND – ATTACHMENT TYPES (REFERENCE)</text>
+  <text x="35" y="895" fill="#4cc9f0" font-family="Arial" font-size="12" font-weight="bold">QUICK REFERENCE – SYMBOLS</text>
   <line x1="20" y1="903" x2="500" y2="903" stroke="#4cc9f0" stroke-width="0.5"/>
   
-  <!-- Type 1: Floor Hardpoint (Reference) -->
+  <!-- Type 1: Floor Hardpoint -->
   <use href="#sym-primary" x="35" y="912" width="12" height="12"/>
-  <text x="60" y="926" fill="white" font-family="monospace" font-size="9">TYPE 1: FLOOR HARDPOINT (Seat Track/Beam)</text>
+  <text x="60" y="926" fill="white" font-family="monospace" font-size="9">FLOOR HARDPOINT (22kN Ultimate)</text>
 
-  <!-- Type 2: Overhead Tie-Rod (Reference) -->
+  <!-- Type 2: Overhead Tie-Rod -->
   <use href="#sym-secondary" x="34" y="936" width="14" height="14"/>
-  <text x="60" y="954" fill="white" font-family="monospace" font-size="9">TYPE 2: OVERHEAD TIE-ROD (Frame Mounted)</text>
+  <text x="60" y="954" fill="white" font-family="monospace" font-size="9">OVERHEAD TIE-ROD (10kN Ultimate)</text>
 
-  <!-- Type 3: Wall Bracket (Reference) -->
+  <!-- Type 3: Wall Bracket -->
   <use href="#sym-structural" x="34" y="958" width="14" height="14"/>
-  <text x="60" y="976" fill="white" font-family="monospace" font-size="9">TYPE 3: WALL BRACKET (Intercostal)</text>
+  <text x="60" y="976" fill="white" font-family="monospace" font-size="9">WALL BRACKET (15kN Ultimate)</text>
 
   <!-- ========== MONUMENT ZONES LEGEND ========== -->
   <rect x="510" y="875" width="280" height="110" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
