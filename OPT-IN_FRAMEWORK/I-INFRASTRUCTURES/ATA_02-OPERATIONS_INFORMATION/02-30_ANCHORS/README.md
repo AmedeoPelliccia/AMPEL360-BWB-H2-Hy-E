@@ -41,7 +41,7 @@ This documentation covers:
 ## Structure Overview
 
 ### Core Framework
-- **02-30-00-001_Circularity_Framework_Overview.md** — Overall ANCHOR'S framework and strategy alignment
+- [02-30-00-001_ANCHORS_Framework_Overview.md](./02-30-00-001_ANCHORS_Framework_Overview.md) — Overall ANCHOR'S framework and strategy alignment
 - [02-30-00-002_Carbon_Accounting_Methodology.md](./02-30-00-002_Carbon_Accounting_Methodology.md) — Carbon accounting for digital operations
 - [02-30-00-003_Circularity_Metrics_Dashboard.yaml](./02-30-00-003_Circularity_Metrics_Dashboard.yaml) — Dashboard configuration and KPI schema
 - [02-30-00-004_Integration_with_ATA_99_100.md](./02-30-00-004_Integration_with_ATA_99_100.md) — Integration with governance and sustainability layers

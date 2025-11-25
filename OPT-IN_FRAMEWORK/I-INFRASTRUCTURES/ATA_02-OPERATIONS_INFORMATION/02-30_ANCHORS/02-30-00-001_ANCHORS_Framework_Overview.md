@@ -1,15 +1,15 @@
 ---
-Title: "Circularity Framework Overview — ATA 02"
+Title: "ANCHOR'S Framework Overview — ATA 02"
 Identifier: "AMPEL360-02-30-00-001"
 Version: "1.0.0"
 Status: "Draft"
 AccessLevel: "Internal"
 Author: "Sustainability Team"
 CreatedAt: "2025-11-21"
-ModifiedAt: "2025-11-21"
-Scope: "Overall circularity framework for ATA 02 digital operations"
-Abstract: "Explains the circularity framework for digital operations within ATA 02, including principles, domains, stakeholder engagement, and alignment with AMPEL360 sustainability strategy."
-Keywords: ["ATA 02", "Circularity", "Sustainability", "Carbon Management", "Digital Operations"]
+ModifiedAt: "2025-11-25"
+Scope: "Overall ANCHOR'S (Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems) framework for ATA 02 digital operations"
+Abstract: "Explains the ANCHOR'S framework for digital operations within ATA 02, including principles, domains, stakeholder engagement, and alignment with AMPEL360 sustainability strategy."
+Keywords: ["ATA 02", "ANCHORS", "Circularity", "Sustainability", "Carbon Management", "Digital Operations"]
 Compliance:
   - "ATA iSpec 2200"
   - "AMPEL360 Doc Standard v1.5"
@@ -27,11 +27,11 @@ ChangeLog:
   - {version: "1.0.0", date: "2025-11-21", author: "Sustainability Team", change: "Initial creation"}
 ---
 
-# Circularity Framework Overview — ATA 02
+# ANCHOR'S Framework Overview — ATA 02
 
 ## 1. Purpose
 
-This document defines the **circularity framework** for **ATA 02 — Operations Information** within the AMPEL360 program. It establishes:
+This document defines the **ANCHOR'S framework** (Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems) for **ATA 02 — Operations Information** within the AMPEL360 program. It establishes:
 
 - **Core principles** guiding circular economy practices in digital operations
 - **Domain structure** organizing circularity initiatives across hardware, data, software, and operations
