@@ -213,11 +213,31 @@ ATA_XX-SYSTEM_NAME/
 │   ├── XX-00-13_Subsystems_Components/  # Subsystems, components and PNR/source management
 │   └── XX-00-14_Ops_Std_Sustain/        # Operational standards, governance, circularity
 │
-├── XX-20-00_Systems/                    # Functional systems (origin block 20)
-├── XX-40-00_Programming_Algorithms/     # SW, logic, NN, algorithms
-├── XX-50-00_Structures/                 # Physical structures / airframe / structural GSE
-├── XX-70-00_Propulsion/                 # Propulsion / energy (70/80 as applicable)
-└── XX-90-00_Tables_Schemas_Diagrams/    # Tables, catalogs, schemas, SDS, training, meta
+ATA_XX-SYSTEM_NAME/
+├── XX-00-00_GENERAL/
+│   ├── XX-00-01_Overview/               # ATA domain description and global architecture
+│   ├── XX-00-02_Safety/                 # Safety framework and analysis methods
+│   ├── XX-00-03_Requirements/           # Requirements framework and traceability
+│   ├── XX-00-04_Design/                 # Reference architectures and design patterns
+│   ├── XX-00-05_Interfaces/             # General interface rules and ICD templates
+│   ├── XX-00-06_Engineering/            # Approach to analysis, models and simulation
+│   ├── XX-00-07_V_AND_V/                # Global verification & validation strategy
+│   ├── XX-00-08_Prototyping/            # Prototyping and experimentation policy
+│   ├── XX-00-09_Production_Planning/    # Industrialization / deployment strategy
+│   ├── XX-00-10_Certification/          # Certification strategy and MoC catalog
+│   ├── XX-00-11_EIS_Versions_Tags/      # EIS, versions, CM and change control
+│   ├── XX-00-12_Services/               # In-service MRO and service models
+│   ├── XX-00-13_Subsystems_Components/  # Subsystems, components and PNR/source management
+│   └── XX-00-14_Ops_Std_Sustain/        # Operational standards, governance, circularity
+├── XX-10_Operations/           # Ops use, turnarounds, procedures
+├── XX-20_Subsystems/           # Functional subsystems (design-driven)
+├── XX-30_Circularity/          # Sustainability, LCA, reuse/recycle, DPP links
+├── XX-40_Software/             # SW, control logic, diagnostics, ML/NN
+├── XX-50_Structures/           # Frames, housings, mounts, structural routes
+├── XX-60_Storages/             # Tanks, reservoirs, accumulators, cryo vessels
+├── XX-70_Propulsion/           # Propulsive interfaces/couplings (if any)
+├── XX-80_Energy/               # Electrical/thermal energy interactions
+└── XX-90_Tables_Schemas_Diagrams/  # Tables, data dicts, catalogs, SDS/training
 ```
 
 ### 2.1 GENERAL Layer
