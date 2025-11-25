@@ -80,7 +80,7 @@
     <text x="880" y="820" class="label-text">Type: GA</text>
     
     <text x="950" y="790" class="label-text">Scale: NTS</text>
-    <text x="950" y="805" class="label-text">Rev: F</text>
+    <text x="950" y="805" class="label-text">Rev: G</text>
     <text x="950" y="820" class="label-text">Date: 2025-11-25</text>
     
     <text x="1090" y="790" class="label-text">Status: Draft</text>
@@ -336,133 +336,132 @@
     <text x="640" y="172" class="annotation" fill="#666">Wing Planform</text>
   </g>
   
-  <!-- Legend - Positioned top right with color coding -->
-  <g id="legend" transform="translate(735, 40)">
-    <rect x="-5" y="-15" width="200" height="160" fill="#fff" stroke="#000" stroke-width="1" rx="3"/>
-    <text x="0" y="0" class="subtitle-text" font-weight="bold">LEGEND</text>
+  <!-- LEGEND - Moved to top-left with background shading -->
+  <g id="legend" transform="translate(25, 45)">
+    <rect x="-5" y="-15" width="180" height="175" fill="#f8f9fa" stroke="#000" stroke-width="1.5" rx="4"/>
+    <text x="0" y="2" class="subtitle-text" font-weight="bold" font-size="14">LEGEND</text>
     
-    <rect x="0" y="12" width="22" height="12" class="h2-tank"/>
-    <text x="28" y="22" class="label-small">Cryogenic H₂ Tank</text>
+    <rect x="0" y="16" width="24" height="14" class="h2-tank"/>
+    <text x="30" y="27" class="label-text">Cryogenic H₂ Tank</text>
     
-    <ellipse cx="11" cy="38" rx="10" ry="6" class="insulation"/>
-    <text x="28" y="41" class="label-small">MLI Insulation Zone</text>
+    <ellipse cx="12" cy="46" rx="11" ry="7" class="insulation"/>
+    <text x="30" y="50" class="label-text">MLI Insulation Zone</text>
     
-    <rect x="0" y="52" width="22" height="12" class="passenger-lobe-port"/>
-    <text x="28" y="62" class="label-small">Passenger Lobe (Port)</text>
+    <rect x="0" y="62" width="24" height="14" class="passenger-lobe-port"/>
+    <text x="30" y="73" class="label-text">Passenger Lobe (Port)</text>
     
-    <rect x="0" y="70" width="22" height="12" class="passenger-lobe-stbd"/>
-    <text x="28" y="80" class="label-small">Passenger Lobe (Stbd)</text>
+    <rect x="0" y="82" width="24" height="14" class="passenger-lobe-stbd"/>
+    <text x="30" y="93" class="label-text">Passenger Lobe (Stbd)</text>
     
-    <rect x="0" y="88" width="22" height="12" class="cockpit"/>
-    <text x="28" y="98" class="label-small">Cockpit Zone</text>
+    <rect x="0" y="102" width="24" height="14" class="cockpit"/>
+    <text x="30" y="113" class="label-text">Cockpit Zone</text>
     
-    <line x1="0" y1="112" x2="22" y2="112" class="firewall"/>
-    <text x="28" y="115" class="label-small">Firewall Bulkhead</text>
+    <line x1="0" y1="130" x2="24" y2="130" class="firewall"/>
+    <text x="30" y="133" class="label-text">Firewall Bulkhead</text>
     
-    <rect x="0" y="122" width="22" height="10" fill="#ffcc00" stroke="#000" stroke-width="1"/>
-    <text x="28" y="130" class="label-small">Maintenance Access</text>
-    
-    <path d="M 0 145 C 5 140, 15 140, 22 145" class="contour-line" stroke-width="1"/>
-    <text x="28" y="148" class="label-small">Curvature Contour</text>
+    <rect x="0" y="142" width="24" height="12" fill="#ffcc00" stroke="#000" stroke-width="1"/>
+    <text x="30" y="152" class="label-text">Maintenance Access</text>
   </g>
   
-  <!-- ATA 53 Structural Interfaces Table with leader lines -->
-  <g id="structural-interfaces" transform="translate(735, 215)">
-    <text x="0" y="0" class="subtitle-text" font-weight="bold">ATA 53 STRUCTURAL INTERFACES</text>
-    <rect x="0" y="10" width="220" height="95" fill="#fff" stroke="#000" stroke-width="1"/>
+  <!-- ATA 53 STRUCTURAL INTERFACES - Improved bullet alignment with leader lines -->
+  <g id="structural-interfaces" transform="translate(735, 40)">
+    <rect x="-5" y="-15" width="225" height="130" fill="#fff" stroke="#000" stroke-width="1.5" rx="4"/>
+    <text x="0" y="2" class="subtitle-text" font-weight="bold" font-size="14">ATA 53 STRUCTURAL INTERFACES</text>
     
-    <text x="8" y="28" class="label-small">☐ Tank support frames</text>
-    <text x="16" y="40" class="annotation">(load path analysis pending)</text>
+    <text x="8" y="24" class="label-text">• Tank support frames</text>
+    <text x="20" y="38" class="annotation">(load path analysis pending)</text>
     
-    <text x="8" y="55" class="label-small">☐ Bifurcation bulkheads</text>
-    <text x="16" y="67" class="annotation">(firewall rated)</text>
+    <text x="8" y="56" class="label-text">• Bifurcation bulkheads</text>
+    <text x="20" y="70" class="annotation">(firewall rated - see red lines)</text>
     
-    <text x="8" y="82" class="label-small">☐ Venting system points</text>
-    <text x="8" y="98" class="label-small">☐ Maintenance access panels</text>
+    <text x="8" y="88" class="label-text">• Venting system integration</text>
+    <text x="20" y="102" class="annotation">(see green markers)</text>
+    
+    <text x="8" y="120" class="label-text">• Maintenance access panels</text>
     
     <!-- Leader lines to drawing elements -->
-    <line x1="0" y1="35" x2="-80" y2="105" class="leader-line" stroke-dasharray="3,2"/>
-    <line x1="0" y1="60" x2="-80" y2="140" class="leader-line" stroke-dasharray="3,2"/>
+    <line x1="0" y1="30" x2="-60" y2="85" class="leader-line" stroke-dasharray="4,2" marker-end="url(#arrow-leader)"/>
+    <line x1="0" y1="62" x2="-60" y2="130" class="leader-line" stroke-dasharray="4,2" marker-end="url(#arrow-leader)"/>
+    <line x1="0" y1="94" x2="-60" y2="180" class="leader-line" stroke-dasharray="4,2" marker-end="url(#arrow-leader)"/>
   </g>
   
-  <!-- Open Items Box - Updated per thermal pre-analysis -->
-  <g id="open-items" transform="translate(735, 325)">
-    <text x="0" y="0" class="subtitle-text" font-weight="bold">OPEN ITEMS</text>
-    <rect x="0" y="10" width="220" height="85" fill="#fffacd" stroke="#000" stroke-width="1"/>
+  <!-- OPEN ITEMS - Consistent numbering, below structural interfaces -->
+  <g id="open-items" transform="translate(735, 185)">
+    <rect x="-5" y="-15" width="225" height="95" fill="#fffacd" stroke="#d4a300" stroke-width="1.5" rx="4"/>
+    <text x="0" y="2" class="subtitle-text" font-weight="bold" font-size="14">OPEN ITEMS</text>
     
-    <text x="8" y="28" class="label-small">1. ✅ Tank sizing: Cylindrical selected</text>
-    <text x="8" y="43" class="label-small">2. Crash safety analysis (H₂)</text>
-    <text x="8" y="58" class="label-small">3. Evacuation path impact</text>
-    <text x="16" y="70" class="annotation">(CS-25.807 / FAR 25.807)</text>
-    <text x="8" y="85" class="label-small">4. CFD: venting &amp; stratification</text>
+    <text x="8" y="24" class="label-text">1. ✅ Tank sizing: Cylindrical selected</text>
+    <text x="8" y="42" class="label-text">2. Crash safety analysis (H₂ containment)</text>
+    <text x="8" y="60" class="label-text">3. Evacuation path impact assessment</text>
+    <text x="20" y="74" class="annotation">(per CS-25.807 / FAR 25.807)</text>
+    <text x="8" y="92" class="label-text">4. CFD analysis: venting &amp; stratification</text>
   </g>
   
-  <!-- Section Cut Indicators -->
-  <g id="section-cuts" transform="translate(735, 423)">
-    <text x="0" y="0" class="subtitle-text" font-weight="bold">SECTION REFERENCES</text>
-    <text x="0" y="18" class="label-small">A-A: 53-10-1000 (Fwd Bulkhead)</text>
-    <text x="0" y="32" class="label-small">B-B: 53-10-2000 (NLG Bay)</text>
-    <text x="0" y="46" class="label-small">C-C: 53-10-3000 (Cockpit)</text>
-    <text x="0" y="60" class="label-small">D-D: 53-10-4000 (Avionics Bay)</text>
+  <!-- SECTION REFERENCES -->
+  <g id="section-cuts" transform="translate(735, 295)">
+    <rect x="-5" y="-15" width="225" height="75" fill="#f0f0f0" stroke="#000" stroke-width="1" rx="4"/>
+    <text x="0" y="2" class="subtitle-text" font-weight="bold" font-size="12">SECTION REFERENCES</text>
+    <text x="8" y="20" class="label-small">A-A: 53-10-1000 (Fwd Bulkhead)</text>
+    <text x="8" y="34" class="label-small">B-B: 53-10-2000 (NLG Bay)</text>
+    <text x="8" y="48" class="label-small">C-C: 53-10-3000 (Cockpit)</text>
+    <text x="8" y="62" class="label-small">D-D: 53-10-4000 (Avionics Bay)</text>
   </g>
   
-  <!-- Tank Specification & Heat Load Summary Table -->
-  <g id="tank-specs" transform="translate(735, 470)">
-    <text x="0" y="0" class="subtitle-text" font-weight="bold">LH₂ TANK THERMAL SUMMARY</text>
-    <rect x="0" y="10" width="220" height="135" fill="#fff" stroke="#000" stroke-width="1"/>
+  <!-- THERMAL PRE-ANALYSIS SUMMARY - Consolidated table with aligned columns -->
+  <g id="thermal-summary" transform="translate(735, 385)">
+    <rect x="-5" y="-15" width="225" height="235" fill="#e8f4fd" stroke="#0066cc" stroke-width="2" rx="4"/>
+    <text x="110" y="2" class="subtitle-text" font-weight="bold" font-size="14" text-anchor="middle" fill="#0066cc">THERMAL PRE-ANALYSIS SUMMARY</text>
     
-    <!-- Table Header -->
-    <line x1="0" y1="28" x2="220" y2="28" stroke="#000" stroke-width="0.5"/>
-    <line x1="80" y1="10" x2="80" y2="145" stroke="#000" stroke-width="0.5"/>
+    <!-- Tank Parameters Section -->
+    <line x1="-5" y1="12" x2="220" y2="12" stroke="#0066cc" stroke-width="1"/>
+    <text x="5" y="28" class="label-text" font-weight="bold">Tank Parameters</text>
     
-    <text x="40" y="22" class="label-small" text-anchor="middle" font-weight="bold">Parameter</text>
-    <text x="150" y="22" class="label-small" text-anchor="middle" font-weight="bold">Value</text>
+    <!-- Aligned columns -->
+    <text x="10" y="44" class="annotation">Configuration:</text>
+    <text x="100" y="44" class="annotation" font-weight="bold">Cylindrical ✅</text>
     
-    <text x="5" y="40" class="annotation">Configuration</text>
-    <text x="85" y="40" class="annotation">Cylindrical ✅</text>
+    <text x="10" y="58" class="annotation">Dimensions:</text>
+    <text x="100" y="58" class="annotation">Ø 4.86m × L 10.0m</text>
     
-    <text x="5" y="52" class="annotation">Dimensions</text>
-    <text x="85" y="52" class="annotation">Ø 4.86m × L 10.0m</text>
+    <text x="10" y="72" class="annotation">Volume:</text>
+    <text x="100" y="72" class="annotation">185.7 m³</text>
     
-    <text x="5" y="64" class="annotation">Volume</text>
-    <text x="85" y="64" class="annotation">185.7 m³</text>
+    <text x="10" y="86" class="annotation">Fuel Mass:</text>
+    <text x="100" y="86" class="annotation">13,000 kg (LH₂)</text>
     
-    <text x="5" y="76" class="annotation">Fuel Mass</text>
-    <text x="85" y="76" class="annotation">13,000 kg (LH₂)</text>
+    <text x="10" y="100" class="annotation">Surface Area:</text>
+    <text x="100" y="100" class="annotation">189.9 m²</text>
     
-    <text x="5" y="88" class="annotation">Surface Area</text>
-    <text x="85" y="88" class="annotation">189.9 m²</text>
+    <!-- Heat Load Budget Section -->
+    <line x1="-5" y1="110" x2="220" y2="110" stroke="#cc0000" stroke-width="1.5"/>
+    <text x="5" y="126" class="label-text" font-weight="bold" fill="#cc0000">Heat Load Budget</text>
     
-    <!-- Heat Load Breakdown -->
-    <line x1="0" y1="96" x2="220" y2="96" stroke="#000" stroke-width="0.5"/>
-    <text x="110" y="106" class="annotation" text-anchor="middle" font-weight="bold" fill="#cc0000">HEAT LOAD BUDGET</text>
+    <text x="10" y="142" class="annotation">Conduction (6 pts):</text>
+    <text x="120" y="142" class="annotation">~50 W</text>
     
-    <text x="5" y="118" class="annotation">Conduction (6 pts)</text>
-    <text x="85" y="118" class="annotation">~50 W</text>
+    <text x="10" y="156" class="annotation">Radiation (MLI):</text>
+    <text x="120" y="156" class="annotation">~80 W</text>
     
-    <text x="5" y="130" class="annotation">Radiation (MLI)</text>
-    <text x="85" y="130" class="annotation">~80 W</text>
+    <text x="10" y="170" class="annotation">Penetrations:</text>
+    <text x="120" y="170" class="annotation">~40 W (+20W)</text>
     
-    <text x="5" y="142" class="annotation">Penetrations</text>
-    <text x="85" y="142" class="annotation">~40 W (+20W margin)</text>
+    <rect x="5" y="178" width="210" height="18" fill="#ffcccc" stroke="#cc0000" stroke-width="1" rx="2"/>
+    <text x="110" y="191" class="label-text" text-anchor="middle" font-weight="bold" fill="#cc0000">TOTAL HEAT LOAD: ~190 W</text>
     
-    <text x="140" y="118" class="annotation" font-weight="bold" fill="#cc0000">TOTAL:</text>
-    <text x="140" y="130" class="annotation" font-weight="bold" fill="#cc0000">~190 W</text>
-  </g>
-  
-  <!-- Boil-off & Insulation Summary -->
-  <g id="boiloff-summary" transform="translate(735, 620)">
-    <text x="0" y="0" class="subtitle-text" font-weight="bold">INSULATION &amp; BOIL-OFF</text>
-    <rect x="0" y="10" width="220" height="55" fill="#e6ffe6" stroke="#006600" stroke-width="1"/>
+    <!-- Insulation & Boil-off Section -->
+    <line x1="-5" y1="202" x2="220" y2="202" stroke="#006600" stroke-width="1.5"/>
+    <text x="5" y="218" class="label-text" font-weight="bold" fill="#006600">Insulation &amp; Boil-off</text>
     
-    <text x="5" y="28" class="annotation">MLI Thickness:</text>
-    <text x="85" y="28" class="annotation" font-weight="bold">50 mm (target)</text>
+    <text x="10" y="234" class="annotation">MLI Thickness:</text>
+    <text x="100" y="234" class="annotation" font-weight="bold">50 mm (target)</text>
     
-    <text x="5" y="42" class="annotation">Boil-off Rate:</text>
-    <text x="85" y="42" class="annotation">~1.53 kg/hr</text>
+    <text x="10" y="248" class="annotation">Boil-off Rate:</text>
+    <text x="100" y="248" class="annotation">~1.53 kg/hr (0.012%/hr)</text>
     
-    <text x="5" y="56" class="annotation">10-hr Mission Loss:</text>
-    <text x="85" y="56" class="annotation">~15.3 kg (&lt;0.12%)</text>
+    <text x="10" y="262" class="annotation">10-hr Loss:</text>
+    <text x="100" y="262" class="annotation">~15.3 kg (&lt;0.12%)</text>
+    
+    <text x="110" y="280" class="annotation" text-anchor="middle" fill="#006600" font-style="italic">Target insulation for boil-off control</text>
   </g>
   
   <!-- Notes Section - Increased font size -->
