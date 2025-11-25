@@ -43,6 +43,13 @@
       <circle cx="5" cy="5" r="4" fill="none" stroke="#06d6a0" stroke-width="0.8"/>
       <path d="M5,2 L5,8 M3,6 L5,8 L7,6" stroke="#06d6a0" stroke-width="0.8" fill="none" stroke-linecap="round"/>
     </symbol>
+
+    <!-- ECS/Air Conditioning Icon Symbol -->
+    <symbol id="ecsIcon" viewBox="0 0 12 12">
+      <circle cx="6" cy="6" r="5" fill="none" stroke="#06d6a0" stroke-width="0.8"/>
+      <path d="M3,6 C3,4 4,3 6,3 C8,3 9,4 9,6 C9,8 8,9 6,9 C4,9 3,8 3,6" fill="none" stroke="#06d6a0" stroke-width="0.6"/>
+      <path d="M6,3 L6,9 M3.5,4.5 L8.5,7.5 M3.5,7.5 L8.5,4.5" stroke="#06d6a0" stroke-width="0.4"/>
+    </symbol>
   </defs>
   
   <!-- Background Grid -->
@@ -112,6 +119,20 @@
   <text x="100" y="85" text-anchor="middle" fill="#e91e63" font-family="Arial" font-size="11" font-weight="bold">ZONE 100</text>
   <text x="50" y="360" fill="#e91e63" font-family="monospace" font-size="8" transform="rotate(-90,50,360)">ZONE 100 BOUNDARY (ATA 53)</text>
   <text x="1130" y="360" fill="#e91e63" font-family="monospace" font-size="8" transform="rotate(90,1130,360)">ZONE 100 BOUNDARY (ATA 53)</text>
+
+  
+  <!-- Additional Zone 100 Boundary Labels -->
+  <rect x="170" y="75" width="140" height="18" fill="#0a1628" stroke="#e91e63" stroke-width="1" rx="2"/>
+  <text x="240" y="88" text-anchor="middle" fill="#e91e63" font-family="monospace" font-size="8">ZONE 100 FWD LIMIT</text>
+  
+  <rect x="990" y="75" width="140" height="18" fill="#0a1628" stroke="#e91e63" stroke-width="1" rx="2"/>
+  <text x="1060" y="88" text-anchor="middle" fill="#e91e63" font-family="monospace" font-size="8">ZONE 100 AFT LIMIT</text>
+  
+  <!-- Zone boundary dimension callouts -->
+  <line x1="200" y1="95" x2="200" y2="115" stroke="#e91e63" stroke-width="1"/>
+  <line x1="1050" y1="95" x2="1050" y2="115" stroke="#e91e63" stroke-width="1"/>
+  <line x1="200" y1="105" x2="1050" y2="105" stroke="#e91e63" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="625" y="102" text-anchor="middle" fill="#e91e63" font-family="monospace" font-size="7" font-weight="bold">ZONE 100 EXTENT: FS 0 TO FS 800</text>
   
   <!-- Frame Station Lines -->
   <line x1="180" y1="300" x2="180" y2="500" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="8,4"/>
@@ -195,6 +216,10 @@
   <!-- Cargo Door (Bottom View) -->
   <rect x="480" y="360" width="15" height="80" fill="none" stroke="#06d6a0" stroke-width="2" rx="2"/>
   <text x="505" y="405" fill="#06d6a0" font-family="monospace" font-size="7">DOOR</text>
+  <!-- Forward Cargo Door Detail -->
+  <rect x="485" y="335" width="8" height="130" fill="#06d6a0" fill-opacity="0.3" stroke="#06d6a0" stroke-width="1.5"/>
+  <text x="495" y="330" fill="#06d6a0" font-family="monospace" font-size="6" transform="rotate(-90,495,330)">FWD CARGO DOOR</text>
+  <text x="500" y="380" fill="#06d6a0" font-family="monospace" font-size="5">↑ OPEN</text>
   
   <!-- ========== AFT CARGO BAY ========== -->
   <rect x="780" y="330" width="180" height="140" rx="8" ry="8"
@@ -209,6 +234,10 @@
   <!-- AFT Cargo Door -->
   <rect x="960" y="360" width="15" height="80" fill="none" stroke="#06d6a0" stroke-width="2" rx="2"/>
   <text x="985" y="405" fill="#06d6a0" font-family="monospace" font-size="7">DOOR</text>
+  <!-- Aft Cargo Door Detail -->
+  <rect x="955" y="335" width="8" height="130" fill="#06d6a0" fill-opacity="0.3" stroke="#06d6a0" stroke-width="1.5"/>
+  <text x="965" y="330" fill="#06d6a0" font-family="monospace" font-size="6" transform="rotate(-90,965,330)">AFT CARGO DOOR</text>
+  <text x="970" y="380" fill="#06d6a0" font-family="monospace" font-size="5">↑ OPEN</text>
   
   <!-- ========== H2 TANK FOOTPRINT (Below Floor) ========== -->
   <rect x="520" y="360" width="240" height="80" rx="40" ry="40"
@@ -263,6 +292,29 @@
   <path d="M 600,400 C 700,400 800,400 950,400"
         fill="none" stroke="#800000" stroke-width="1.5" stroke-dasharray="8,4" stroke-linecap="round"/>
   <text x="770" y="415" fill="#ff6666" font-family="monospace" font-size="7">FUEL-XFER-1</text>
+
+  <!-- ========== ECS DUCTS (Green Dashed) - ATA 21 ========== -->
+  <!-- Port ECS Duct -->
+  <path d="M 300,360 C 380,330 500,300 700,285 C 850,275 1000,270 1080,275"
+        fill="none" stroke="#06d6a0" stroke-width="6" stroke-dasharray="15,8" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 300,360 C 380,330 500,300 700,285 C 850,275 1000,270 1080,275"
+        fill="none" stroke="#043d2e" stroke-width="3" stroke-dasharray="15,8" stroke-linecap="round"/>
+  
+  <!-- Starboard ECS Duct -->
+  <path d="M 300,440 C 380,470 500,500 700,515 C 850,525 1000,530 1080,525"
+        fill="none" stroke="#06d6a0" stroke-width="6" stroke-dasharray="15,8" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 300,440 C 380,470 500,500 700,515 C 850,525 1000,530 1080,525"
+        fill="none" stroke="#043d2e" stroke-width="3" stroke-dasharray="15,8" stroke-linecap="round"/>
+  
+  <!-- ECS Branch to Cabin -->
+  <path d="M 550,300 L 550,285" fill="none" stroke="#06d6a0" stroke-width="4" stroke-dasharray="8,4"/>
+  <path d="M 750,290 L 750,275" fill="none" stroke="#06d6a0" stroke-width="4" stroke-dasharray="8,4"/>
+  <path d="M 550,500 L 550,515" fill="none" stroke="#06d6a0" stroke-width="4" stroke-dasharray="8,4"/>
+  <path d="M 750,510 L 750,525" fill="none" stroke="#06d6a0" stroke-width="4" stroke-dasharray="8,4"/>
+  
+  <!-- ECS Labels -->
+  <text x="450" y="325" fill="#06d6a0" font-family="monospace" font-size="7">ECS-DUCT-P</text>
+  <text x="450" y="480" fill="#06d6a0" font-family="monospace" font-size="7">ECS-DUCT-S</text>
   
   <!-- ========== DRAIN POINTS ========== -->
   <circle cx="350" cy="470" r="8" fill="none" stroke="#06d6a0" stroke-width="1.5"/>
@@ -313,6 +365,33 @@
   <rect x="580" y="480" width="120" height="30" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="3" stroke-dasharray="5,3"/>
   <text x="640" y="500" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="8">BELLY FAIRING AP-BF-001</text>
   <text x="640" y="525" text-anchor="middle" fill="#5ba3c0" font-family="monospace" font-size="6">FUEL SYSTEM ACCESS</text>
+
+  
+  <!-- ========== ECS SERVICE ACCESS PANELS ========== -->
+  <!-- Port ECS Access -->
+  <rect x="580" y="285" width="55" height="28" fill="none" stroke="#06d6a0" stroke-width="1.5" rx="3"/>
+  <line x1="580" y1="299" x2="635" y2="299" stroke="#06d6a0" stroke-width="0.5"/>
+  <text x="607" y="278" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="7">AP-ECS-P</text>
+  <text x="607" y="310" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="5">ECS ACCESS</text>
+  <use href="#ecsIcon" x="618" y="286" width="12" height="12"/>
+  
+  <!-- Starboard ECS Access -->
+  <rect x="580" y="490" width="55" height="28" fill="none" stroke="#06d6a0" stroke-width="1.5" rx="3"/>
+  <line x1="580" y1="504" x2="635" y2="504" stroke="#06d6a0" stroke-width="0.5"/>
+  <text x="607" y="530" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="7">AP-ECS-S</text>
+  <text x="607" y="501" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="5">ECS ACCESS</text>
+  <use href="#ecsIcon" x="618" y="491" width="12" height="12"/>
+  
+  <!-- Electrical Junction Access Panels -->
+  <rect x="420" y="300" width="45" height="22" fill="none" stroke="#ffd60a" stroke-width="1.5" rx="3"/>
+  <text x="442" y="293" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">AP-EL-101</text>
+  <text x="442" y="318" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="5">ELEC JUNCT</text>
+  <use href="#serviceIcon" x="453" y="303" width="10" height="10"/>
+  
+  <rect x="420" y="478" width="45" height="22" fill="none" stroke="#ffd60a" stroke-width="1.5" rx="3"/>
+  <text x="442" y="510" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">AP-EL-102</text>
+  <text x="442" y="492" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="5">ELEC JUNCT</text>
+  <use href="#serviceIcon" x="453" y="481" width="10" height="10"/>
   
   <!-- ========== STRUCTURAL ANNOTATIONS ========== -->
   <!-- Keel Beam Reference -->
@@ -331,56 +410,68 @@
   <text x="960" y="480" text-anchor="middle" fill="#2a5a7a" font-family="monospace" font-size="6">FB-4</text>
   
   <!-- ========== LEGEND BOX ========== -->
-  <rect x="30" y="780" width="400" height="95" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
-  <text x="40" y="798" fill="#4cc9f0" font-family="Arial" font-size="11" font-weight="bold">LEGEND – LOWER SHELL SYSTEMS ROUTING</text>
-  <line x1="30" y1="805" x2="430" y2="805" stroke="#4cc9f0" stroke-width="0.5"/>
+  <rect x="30" y="775" width="420" height="105" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1.5"/>
+  <text x="40" y="793" fill="#4cc9f0" font-family="Arial" font-size="12" font-weight="bold">LEGEND – LOWER SHELL SYSTEMS ROUTING</text>
+  <line x1="30" y1="800" x2="450" y2="800" stroke="#4cc9f0" stroke-width="0.5"/>
   
+  <!-- Column 1: Line Types -->
   <!-- Electrical -->
-  <line x1="45" y1="822" x2="85" y2="822" stroke="#ffd60a" stroke-width="4"/>
-  <line x1="45" y1="822" x2="85" y2="822" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="4,3"/>
-  <text x="95" y="826" fill="white" font-family="monospace" font-size="9">ELECTRICAL HARNESS (ATA 24)</text>
+  <line x1="45" y1="817" x2="85" y2="817" stroke="#ffd60a" stroke-width="4"/>
+  <line x1="45" y1="817" x2="85" y2="817" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="95" y="821" fill="white" font-family="monospace" font-size="9">ELECTRICAL (ATA 24)</text>
   
   <!-- Hydraulic -->
-  <line x1="45" y1="842" x2="85" y2="842" stroke="#ff6b35" stroke-width="3"/>
-  <text x="95" y="846" fill="white" font-family="monospace" font-size="9">HYDRAULIC LINE (ATA 29)</text>
+  <line x1="45" y1="835" x2="85" y2="835" stroke="#ff6b35" stroke-width="3"/>
+  <text x="95" y="839" fill="white" font-family="monospace" font-size="9">HYDRAULIC (ATA 29)</text>
+  
+  <!-- ECS - NEW -->
+  <line x1="45" y1="853" x2="85" y2="853" stroke="#06d6a0" stroke-width="5" stroke-dasharray="12,6" opacity="0.7"/>
+  <line x1="45" y1="853" x2="85" y2="853" stroke="#043d2e" stroke-width="2.5" stroke-dasharray="12,6"/>
+  <text x="95" y="857" fill="white" font-family="monospace" font-size="9">ECS DUCT (ATA 21) [DASHED]</text>
   
   <!-- Fuel -->
-  <line x1="45" y1="862" x2="85" y2="862" stroke="#ff0000" stroke-width="3" opacity="0.8"/>
-  <line x1="45" y1="862" x2="85" y2="862" stroke="#800000" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="95" y="866" fill="white" font-family="monospace" font-size="9">FUEL LINE (ATA 28)</text>
+  <line x1="45" y1="871" x2="85" y2="871" stroke="#ff0000" stroke-width="3" opacity="0.8"/>
+  <line x1="45" y1="871" x2="85" y2="871" stroke="#800000" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="95" y="875" fill="white" font-family="monospace" font-size="9">FUEL (ATA 28)</text>
   
-  <!-- Second Column -->
-  <!-- Landing Gear Bay -->
-  <rect x="255" y="815" width="30" height="15" fill="url(#gearBayHatch)" stroke="#ff6b35" stroke-width="1"/>
-  <text x="295" y="826" fill="white" font-family="monospace" font-size="9">LANDING GEAR BAY</text>
+  <!-- Column 2: Areas -->
+  <rect x="260" y="810" width="25" height="12" fill="url(#gearBayHatch)" stroke="#ff6b35" stroke-width="1"/>
+  <text x="295" y="820" fill="white" font-family="monospace" font-size="9">LANDING GEAR BAY</text>
   
-  <!-- Cargo Bay -->
-  <rect x="255" y="835" width="30" height="15" fill="url(#cargoHatch)" stroke="#4cc9f0" stroke-width="1"/>
-  <text x="295" y="846" fill="white" font-family="monospace" font-size="9">CARGO COMPARTMENT</text>
+  <rect x="260" y="828" width="25" height="12" fill="url(#cargoHatch)" stroke="#4cc9f0" stroke-width="1"/>
+  <text x="295" y="838" fill="white" font-family="monospace" font-size="9">CARGO COMPARTMENT</text>
   
-  <!-- Access Panel -->
-  <rect x="255" y="855" width="30" height="15" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="2"/>
-  <text x="295" y="866" fill="white" font-family="monospace" font-size="9">ACCESS PANEL</text>
+  <rect x="260" y="846" width="25" height="12" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="2"/>
+  <text x="295" y="856" fill="white" font-family="monospace" font-size="9">ACCESS PANEL</text>
   
-  <!-- Drain Point -->
-  <circle cx="270" cy="880" r="6" fill="none" stroke="#06d6a0" stroke-width="1"/>
-  <text x="295" y="883" fill="white" font-family="monospace" font-size="9">DRAIN POINT</text>
+  <circle cx="272" cy="870" r="5" fill="none" stroke="#06d6a0" stroke-width="1"/>
+  <text x="295" y="874" fill="white" font-family="monospace" font-size="9">DRAIN / ECS ACCESS</text>
   
-  <!-- ========== SCALE BAR ========== -->
-  <g transform="translate(460, 775)">
-    <rect x="-10" y="-5" width="200" height="55" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1" rx="3"/>
-    <text x="90" y="12" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="12" font-weight="bold">SCALE (METERS)</text>
-    <rect x="0" y="20" width="45" height="12" fill="#ffffff" stroke="#4cc9f0" stroke-width="1"/>
-    <rect x="45" y="20" width="45" height="12" fill="#1a1a1a" stroke="#4cc9f0" stroke-width="1"/>
-    <rect x="90" y="20" width="45" height="12" fill="#ffffff" stroke="#4cc9f0" stroke-width="1"/>
-    <rect x="135" y="20" width="45" height="12" fill="#1a1a1a" stroke="#4cc9f0" stroke-width="1"/>
-    <text x="0" y="45" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">0</text>
-    <text x="45" y="45" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">2</text>
-    <text x="90" y="45" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">4</text>
-    <text x="135" y="45" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">6</text>
-    <text x="180" y="45" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">8m</text>
+
+  <!-- ========== SCALE BAR - ENHANCED ========== -->
+  <g transform="translate(455, 770)">
+    <!-- Enhanced background for better contrast -->
+    <rect x="-15" y="-10" width="220" height="70" fill="#000d1a" stroke="#ffd60a" stroke-width="2" rx="5"/>
+    <rect x="-12" y="-7" width="214" height="64" fill="#0a1628" stroke="#4cc9f0" stroke-width="1" rx="4"/>
+    
+    <!-- Title with better visibility -->
+    <text x="95" y="10" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="14" font-weight="bold">SCALE (METERS)</text>
+    <line x1="10" y1="15" x2="180" y2="15" stroke="#ffd60a" stroke-width="0.5"/>
+    
+    <!-- Larger scale bar segments with high contrast -->
+    <rect x="5" y="22" width="45" height="18" fill="#ffffff" stroke="#ffd60a" stroke-width="1.5"/>
+    <rect x="50" y="22" width="45" height="18" fill="#1a1a2e" stroke="#ffd60a" stroke-width="1.5"/>
+    <rect x="95" y="22" width="45" height="18" fill="#ffffff" stroke="#ffd60a" stroke-width="1.5"/>
+    <rect x="140" y="22" width="45" height="18" fill="#1a1a2e" stroke="#ffd60a" stroke-width="1.5"/>
+    
+    <!-- Larger, bolder text labels -->
+    <text x="5" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">0</text>
+    <text x="50" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">2</text>
+    <text x="95" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">4</text>
+    <text x="140" y="55" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">6</text>
+    <text x="185" y="55" text-anchor="middle" fill="#ffd60a" font-family="Arial" font-size="12" font-weight="bold">8m</text>
   </g>
-  
+
   <!-- ========== NOTES ========== -->
   <rect x="680" y="780" width="160" height="95" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
   <text x="690" y="798" fill="#4cc9f0" font-family="Arial" font-size="10" font-weight="bold">NOTES:</text>
