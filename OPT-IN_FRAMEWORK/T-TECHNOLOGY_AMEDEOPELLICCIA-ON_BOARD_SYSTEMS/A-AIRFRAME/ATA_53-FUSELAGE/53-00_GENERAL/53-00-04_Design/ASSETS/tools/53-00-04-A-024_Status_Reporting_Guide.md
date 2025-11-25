@@ -61,15 +61,9 @@ This guide describes the status reporting procedures for the ATA 53 Fuselage des
 - **Date**: 2025-11-24
 - **Owner**: ATA 53 Program Manager
 - **Repository**: `AMPEL360-BWB-H2-Hy-E`
-
----
-
-## Document Control
-
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
 - Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
 - Last AI update: _2025-11-24_.
 
 ---
