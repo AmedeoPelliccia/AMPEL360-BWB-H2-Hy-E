@@ -113,7 +113,7 @@ Documents follow the pattern:
 - Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
 - Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: _2025-11-25_.
+- Last AI update: _2025-11-21_.
 - **Standard**: OPT-IN Framework v1.6
 - **Owner**: AMPEL360 Documentation WG
 
