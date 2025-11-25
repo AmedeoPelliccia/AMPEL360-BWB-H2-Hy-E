@@ -461,7 +461,7 @@ Required = 65 TB / (1 - 0.20) = 81.25 TB
 - [02-60-00-001 Storage Architecture Overview](./02-60-00-001_Storage_Architecture_Overview.md)
 - [02-60-00-003 Data Governance Policy](./02-60-00-003_Data_Governance_Policy.md)
 - [02-60-00-004 Storage Metrics Dashboard](./02-60-00-004_Storage_Metrics_Dashboard.yaml)
-- [ATA 02-30 Circularity](../02-30_Circularity/) – Data lifecycle management
+- [ATA 02-30 Circularity](../02-30_ANCHORS/) – Data lifecycle management
 
 ### 10.2 External References
 

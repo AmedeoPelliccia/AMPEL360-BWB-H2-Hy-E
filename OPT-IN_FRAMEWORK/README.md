@@ -77,7 +77,7 @@ ATA_XX-DESCRIPTION/
 ├── XX-00_GENERAL/                   # 14 lifecycle folders (see below)
 ├── XX-10_Operations/                # Ops use, turnarounds, procedures
 ├── XX-20_Subsystems/                # Functional subsystems (design-driven)
-├── XX-30_Circularity/               # Sustainability, LCA, reuse/recycle, DPP
+├── XX-30_ANCHORS/               # Sustainability, LCA, reuse/recycle, DPP
 ├── XX-40_Software/                  # SW, control logic, diagnostics, ML/NN
 ├── XX-50_Structures/                # Frames, housings, mounts, structural routes
 ├── XX-60_Storages/                  # Tanks, reservoirs, accumulators, cryo vessels

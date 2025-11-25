@@ -243,7 +243,7 @@ Energy operations support AMPEL360 circularity objectives:
 - **Carbon Accounting**: Energy-related emissions tracking
 - **Efficiency Improvements**: Continuous optimization for resource conservation
 
-See [02-30_Circularity](#) for detailed circularity framework.
+See [02-30_ANCHORS](#) for detailed circularity framework.
 
 ## Governance and Traceability
 

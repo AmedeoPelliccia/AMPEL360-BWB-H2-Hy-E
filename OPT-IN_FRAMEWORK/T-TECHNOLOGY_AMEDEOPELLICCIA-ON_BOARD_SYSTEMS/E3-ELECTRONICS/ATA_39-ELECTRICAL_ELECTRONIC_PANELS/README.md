@@ -33,7 +33,7 @@ The following buckets are mandatory in every ATA chapter:
 
 - **39-10_Operations**: Operational procedures and use cases
 - **39-20_Subsystems**: Functional subsystems (design-driven internal structure)
-- **39-30_Circularity**: Sustainability, LCA, and circular economy
+- **39-30_ANCHORS**: Sustainability, LCA, and circular economy
 - **39-40_Software**: Software, control logic, and AI/ML
 - **39-50_Structures**: Physical structures and frames
 - **39-60_Storages**: Tanks, reservoirs, and storage

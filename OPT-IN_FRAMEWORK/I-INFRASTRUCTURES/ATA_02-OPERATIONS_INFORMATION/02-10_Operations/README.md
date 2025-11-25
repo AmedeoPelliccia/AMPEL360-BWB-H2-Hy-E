@@ -92,7 +92,7 @@ Each subfolder must contain at least a `README.md` describing:
   Owns systems, performance models, weight & balance, limitations and flight
   planning artefacts that operations rely on.
 
-- **[`02-30_Circularity/`](../02-30_Circularity/)**  
+- **[`02-30_ANCHORS/`](../02-30_ANCHORS/)**  
   Provides sustainability and circularity constraints that may impact operations
   (e.g. carbon-negative mission profiles).
 

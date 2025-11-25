@@ -82,7 +82,7 @@ ampel360-dev-*/                  # Development environment buckets
 
 - [02-60-00-001 Storage Architecture Overview](../02-60-00-001_Storage_Architecture_Overview.md)
 - [02-60-00-003 Data Governance Policy](../02-60-00-003_Data_Governance_Policy.md)
-- [ATA 02-30 Circularity](../../02-30_Circularity/)
+- [ATA 02-30 Circularity](../../02-30_ANCHORS/)
 - [MinIO Documentation](https://min.io/docs/)
 
 ---

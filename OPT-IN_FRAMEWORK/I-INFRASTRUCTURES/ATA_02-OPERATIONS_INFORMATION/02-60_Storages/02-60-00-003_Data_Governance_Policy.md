@@ -381,7 +381,7 @@ All policy changes must be:
 - [02-60-00-001 Storage Architecture Overview](./02-60-00-001_Storage_Architecture_Overview.md)
 - [02-60-00-002 Storage Capacity Planning](./02-60-00-002_Storage_Capacity_Planning.md)
 - [02-60-12 Storage Security](./02-60-12_Storage_Security/)
-- [ATA 02-30 Circularity](../02-30_Circularity/)
+- [ATA 02-30 Circularity](../02-30_ANCHORS/)
 
 ### External Standards and Regulations
 - [GDPR](https://gdpr.eu/) – General Data Protection Regulation

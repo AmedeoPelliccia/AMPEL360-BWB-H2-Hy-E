@@ -235,7 +235,7 @@ For each subsystem:
 2. Use the local **Scope / Interfaces / CAOS Integration / Certification** sections  
 3. Traverse cross-links to:
    - `../02-10_Operations/` for operational usage
-   - `../02-30_Circularity/` for sustainability constraints
+   - `../02-30_ANCHORS/` for sustainability constraints
    - `../02-90_Tables_Schemas_Diagrams/` for data schemas
    - `/ATA_95-…/` for NN details and traceability
 

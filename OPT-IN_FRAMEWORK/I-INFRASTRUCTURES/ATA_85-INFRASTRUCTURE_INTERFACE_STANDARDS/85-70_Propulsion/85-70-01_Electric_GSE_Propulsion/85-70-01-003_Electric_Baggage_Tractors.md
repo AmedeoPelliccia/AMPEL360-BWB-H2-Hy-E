@@ -220,7 +220,7 @@ This document defines specifications and requirements for battery-electric bagga
 
 - **Battery Recycling**: End-of-life battery recycling plan
 - **Component Reuse**: Design for disassembly and reuse
-- **Circular Economy**: Integration with [85-30_Circularity](../../85-30_Circularity/) framework
+- **Circular Economy**: Integration with [85-30_ANCHORS](../../85-30_ANCHORS/) framework
 - **Energy Source**: Preference for renewable energy charging
 
 ---

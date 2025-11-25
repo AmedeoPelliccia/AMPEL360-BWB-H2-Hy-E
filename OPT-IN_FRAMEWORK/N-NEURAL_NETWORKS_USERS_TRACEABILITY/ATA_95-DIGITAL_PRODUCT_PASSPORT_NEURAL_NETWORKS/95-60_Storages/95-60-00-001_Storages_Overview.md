@@ -72,7 +72,7 @@ Storage systems integrate across multiple ATA chapters:
 95-60_Storages (This Chapter)
      ├── Links to Physical Systems (ATA 21, 24, 28, 29, 31, 38, 49, 70, 80)
      ├── Links to 95-20_Subsystems (component-level details)
-     ├── Links to 95-30_Circularity (lifecycle, maintenance, reuse)
+     ├── Links to 95-30_ANCHORS (lifecycle, maintenance, reuse)
      ├── Links to 95-50_Structures (mounting, integration)
      └── Links to 95-40_Software (monitoring, control, CAOS integration)
 ```

@@ -43,7 +43,7 @@ See: [85-20-00-004_Subsystem_Criticality_Classification.md](../../85-20_Subsyste
 
 **Internal (ATA 85 Subsystems):**
 - [85-20_Subsystems](../../85-20_Subsystems/README.md) — Infrastructure subsystems
-- [85-30_Circularity](../../85-30_Circularity/README.md) — Sustainability and circular economy
+- [85-30_ANCHORS](../../85-30_ANCHORS/README.md) — Sustainability and circular economy
 - [85-80_Energy](../../85-80_Energy/README.md) — Energy management
 
 **Operational Interfaces:**

@@ -15,7 +15,7 @@
 - Integran operaciones aéreas con **sistemas de tierra, AOC y CAOS/AirCCC**  
 - Conectan con **ATA 95 Neural Networks** para capacidades predictivas y optimización  
 
-Es el *hub técnico* de ATA 02: todo lo que consumen `02-10_Operations`, `02-30_Circularity`,
+Es el *hub técnico* de ATA 02: todo lo que consumen `02-10_Operations`, `02-30_ANCHORS`,
 `02-90_Tables_Schemas_Diagrams` y CAOS vive aquí o se referencia desde aquí.
 
 ---

@@ -22,7 +22,7 @@ The **02-60_Storages** section covers:
 
 ## Relationship to Other ATA 02 Sections
 
-- **[ATA 02-30 Circularity](../02-30_Circularity/)** – Data lifecycle management and sustainability
+- **[ATA 02-30 Circularity](../02-30_ANCHORS/)** – Data lifecycle management and sustainability
 - **[ATA 02-40 Software](../02-40_Software/)** – Backend services that consume storage resources
 - **[ATA 02-00 GENERAL](../02-00_GENERAL/)** – Overall operations information framework
 

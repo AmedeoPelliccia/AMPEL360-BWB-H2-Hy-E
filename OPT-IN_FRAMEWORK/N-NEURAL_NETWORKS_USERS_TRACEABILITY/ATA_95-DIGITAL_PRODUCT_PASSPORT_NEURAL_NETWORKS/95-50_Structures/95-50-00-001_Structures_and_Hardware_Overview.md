@@ -345,7 +345,7 @@ This chapter covers **mounting structures, racks, brackets, and installation har
 ### 9.1 Within ATA 95
 - **[95-00-13 Subsystems & Components](../../95-00_GENERAL/95-00-13_Subsystems_Components/)** – Hardware parts list
 - **[95-20 Subsystems](../../95-20_Subsystems/)** – Functional system descriptions
-- **[95-30 Circularity](../../95-30_Circularity/)** – End-of-life disassembly
+- **[95-30 Circularity](../../95-30_ANCHORS/)** – End-of-life disassembly
 
 ### 9.2 To Other ATA Chapters
 - **[ATA 21 - ECS](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/)** – Cooling ducts and manifolds
