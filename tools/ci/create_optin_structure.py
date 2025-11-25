@@ -181,7 +181,7 @@ GENERAL_LIFECYCLE_FOLDERS = [
 CROSS_ATA_BUCKETS = [
     ("10", "Operations", "Ops use, turnarounds, procedures"),
     ("20", "Subsystems", "Functional subsystems (design-driven)"),
-    ("30", "Circularity", "Sustainability, LCA, reuse/recycle, DPP links"),
+    ("30", "ANCHORS", "Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems"),
     ("40", "Software", "SW, control logic, diagnostics, ML/NN"),
     ("50", "Structures", "Frames, housings, mounts, structural routes"),
     ("60", "Storages", "Tanks, reservoirs, accumulators, cryo vessels"),
