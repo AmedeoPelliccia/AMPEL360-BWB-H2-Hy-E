@@ -10,12 +10,6 @@
       <rect width="100" height="100" fill="url(#grid)"/>
       <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#1e4a6e" stroke-width="0.5"/>
     </pattern>
-    
-    <!-- Electrical Harness Pattern -->
-    <pattern id="electricalPattern" patternUnits="userSpaceOnUse" width="8" height="8">
-      <circle cx="4" cy="4" r="1.5" fill="#ffd60a"/>
-    </pattern>
-    
     <!-- Insulation Hatch Pattern -->
     <pattern id="insulationHatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="6" stroke="#f72585" stroke-width="0.5" opacity="0.5"/>
