@@ -210,7 +210,7 @@ Each ATA chapter within this axis follows the mandatory structure:
 - **XX-00_GENERAL/**: 14 lifecycle folders (canonical template from ATA 95)
 - **XX-10_Operations/**: Operational use and procedures
 - **XX-20_Subsystems/**: Functional subsystems
-- **XX-30_Circularity/**: Sustainability and life cycle
+- **XX-30_ANCHORS/**: Sustainability and life cycle
 - **XX-40_Software/**: Software and control logic
 - **XX-50_Structures/**: Physical structures
 - **XX-60_Storages/**: Storage systems
@@ -270,7 +270,7 @@ The following buckets are mandatory in every ATA chapter:
 
 - **{ata_num}-10_Operations**: Operational procedures and use cases
 - **{ata_num}-20_Subsystems**: Functional subsystems (design-driven internal structure)
-- **{ata_num}-30_Circularity**: Sustainability, LCA, and circular economy
+- **{ata_num}-30_ANCHORS**: Sustainability, LCA, and circular economy
 - **{ata_num}-40_Software**: Software, control logic, and AI/ML
 - **{ata_num}-50_Structures**: Physical structures and frames
 - **{ata_num}-60_Storages**: Tanks, reservoirs, and storage

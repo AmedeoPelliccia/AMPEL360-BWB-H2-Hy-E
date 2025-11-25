@@ -160,7 +160,7 @@ ATA_03-SUPPORT_INFORMATION_GSE/
 ├── 03-00_GENERAL/                    # Lifecycle governance
 ├── 03-10_Operations/                 # GSE operational procedures
 ├── 03-20_Subsystems/                 # GSE categories & equipment
-├── 03-30_Circularity/                # Sustainability, electrification
+├── 03-30_ANCHORS/                # Sustainability, electrification
 ├── 03-40_Software/                   # GSE management systems
 ├── 03-50_Structures/                 # GSE physical structures
 ├── 03-60_Storages/                   # Parts inventory, consumables
@@ -384,7 +384,7 @@ required_equipment:
 
 ---
 
-## GSE Electrification Strategy (03-30_Circularity)
+## GSE Electrification Strategy (03-30_ANCHORS)
 
 **AMPEL360's commitment to zero-emission ground operations**
 
@@ -693,7 +693,7 @@ opex_annual:
 
 ---
 
-## DPP Integration (ATA 95 / 03-30_Circularity)
+## DPP Integration (ATA 95 / 03-30_ANCHORS)
 
 ### GSE Digital Product Passport
 

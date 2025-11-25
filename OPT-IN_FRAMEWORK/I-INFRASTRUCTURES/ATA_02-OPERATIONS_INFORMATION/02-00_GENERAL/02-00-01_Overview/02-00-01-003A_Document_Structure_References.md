@@ -57,7 +57,7 @@ At the chapter root for ATA 02, the following **root buckets** are defined. Each
 - `02-20_Subsystems`  
   Subsystem breakdown, interfaces, and behavioral models.
 
-- `02-30_Circularity`  
+- `02-30_ANCHORS`  
   Circularity, re-use, recycling, end-of-life strategies, and related metrics.
 
 - `02-40_Software`  

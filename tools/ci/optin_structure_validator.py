@@ -51,7 +51,7 @@ GENERAL_LIFECYCLE_FOLDERS = [
 CROSS_ATA_BUCKETS = [
     "10_Operations",
     "20_Subsystems",
-    "30_Circularity",
+    "30_ANCHORS",
     "40_Software",
     "50_Structures",
     "60_Storages",

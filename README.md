@@ -105,7 +105,7 @@ Each ATA chapter follows a mandatory 14-folder lifecycle structure plus 9 cross-
 - **XX-00_GENERAL/**: 14 lifecycle folders (Overview → Certification → Operations)
 - **XX-10_Operations/**: Operational procedures and turnarounds
 - **XX-20_Subsystems/**: Functional subsystems (design-driven)
-- **XX-30_Circularity/**: Sustainability, LCA, recycling
+- **XX-30_ANCHORS/**: Sustainability, LCA, recycling
 - **XX-40_Software/**: Control logic, diagnostics, ML/NN
 - **XX-50_Structures/**: Physical structures and supports
 - **XX-60_Storages/**: Tanks, reservoirs, cryogenic vessels
@@ -333,7 +333,7 @@ bash .github/hooks/setup-hooks.sh
 
 ### Sustainability Documentation
 
-Each ATA chapter includes `XX-30_Circularity/` folder with:
+Each ATA chapter includes `XX-30_ANCHORS/` folder with:
 - Life Cycle Assessment (LCA)
 - Carbon accounting
 - Recycling strategies

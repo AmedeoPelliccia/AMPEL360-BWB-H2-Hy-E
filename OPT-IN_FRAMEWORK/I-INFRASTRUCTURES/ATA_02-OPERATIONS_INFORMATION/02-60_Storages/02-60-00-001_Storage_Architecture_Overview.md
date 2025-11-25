@@ -15,7 +15,7 @@ The AMPEL360 storage infrastructure is designed to support:
 - **Scalability** from edge devices to cloud-scale distributed systems
 - **Compliance** with aviation regulations and data protection laws
 - **Cost optimization** through intelligent tiering and lifecycle management
-- **Sustainability** aligned with [ATA 02-30 Circularity](../02-30_Circularity/) principles
+- **Sustainability** aligned with [ATA 02-30 Circularity](../02-30_ANCHORS/) principles
 
 ---
 
@@ -367,7 +367,7 @@ Storage layers are consumed by [ATA 02-40 Software](../02-40_Software/) systems:
 
 ### 5.2 Circularity Integration
 
-Storage lifecycle aligned with [ATA 02-30 Circularity](../02-30_Circularity/):
+Storage lifecycle aligned with [ATA 02-30 Circularity](../02-30_ANCHORS/):
 
 - Data minimization and retention policies
 - Energy-efficient storage technologies
@@ -520,7 +520,7 @@ See [02-60-00-003_Data_Governance_Policy.md](./02-60-00-003_Data_Governance_Poli
 - [02-60-00-002 Storage Capacity Planning](./02-60-00-002_Storage_Capacity_Planning.md)
 - [02-60-00-003 Data Governance Policy](./02-60-00-003_Data_Governance_Policy.md)
 - [02-60-00-004 Storage Metrics Dashboard](./02-60-00-004_Storage_Metrics_Dashboard.yaml)
-- [ATA 02-30 Circularity](../02-30_Circularity/)
+- [ATA 02-30 Circularity](../02-30_ANCHORS/)
 - [ATA 02-40 Software](../02-40_Software/)
 
 ### External Standards

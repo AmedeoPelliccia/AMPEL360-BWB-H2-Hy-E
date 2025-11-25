@@ -231,7 +231,7 @@ ATA_XX-SYSTEM_NAME/
 │   └── XX-00-14_Ops_Std_Sustain/        # Operational standards, governance, circularity
 ├── XX-10_Operations/           # Ops use, turnarounds, procedures
 ├── XX-20_Subsystems/           # Functional subsystems (design-driven)
-├── XX-30_Circularity/          # Sustainability, LCA, reuse/recycle, DPP links
+├── XX-30_ANCHORS/          # Sustainability, LCA, reuse/recycle, DPP links
 ├── XX-40_Software/             # SW, control logic, diagnostics, ML/NN
 ├── XX-50_Structures/           # Frames, housings, mounts, structural routes
 ├── XX-60_Storages/             # Tanks, reservoirs, accumulators, cryo vessels

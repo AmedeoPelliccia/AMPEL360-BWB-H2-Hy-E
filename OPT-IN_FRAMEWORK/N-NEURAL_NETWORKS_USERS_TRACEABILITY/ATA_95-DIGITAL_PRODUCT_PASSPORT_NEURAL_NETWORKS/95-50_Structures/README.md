@@ -91,7 +91,7 @@ Structures include digital hooks for the Computer Aided Operations & Services (C
 ### Within ATA 95
 - **[95-00-13 Subsystems & Components](../95-00_GENERAL/95-00-13_Subsystems_Components/)** – Hardware component library
 - **[95-20 Subsystems](../95-20_Subsystems/)** – Functional neural network systems
-- **[95-30 Circularity](../95-30_Circularity/)** – End-of-life disassembly and recycling
+- **[95-30 Circularity](../95-30_ANCHORS/)** – End-of-life disassembly and recycling
 
 ### To Other ATA Chapters
 - **[ATA 21 - Air Conditioning](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/)** – ECS system details

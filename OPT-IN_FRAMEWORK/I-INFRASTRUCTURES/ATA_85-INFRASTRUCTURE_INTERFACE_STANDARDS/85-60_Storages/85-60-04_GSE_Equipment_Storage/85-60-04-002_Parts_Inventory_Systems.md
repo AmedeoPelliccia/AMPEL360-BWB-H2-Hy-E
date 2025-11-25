@@ -39,7 +39,7 @@ This document defines requirements, specifications, and operational procedures f
 **Related Systems:**
 - [85-20_Subsystems](../../85-20_Subsystems/README.md) — Infrastructure subsystems
 - [85-80_Energy](../../85-80_Energy/README.md) — Energy management
-- [85-30_Circularity](../../85-30_Circularity/README.md) — Sustainability and lifecycle
+- [85-30_ANCHORS](../../85-30_ANCHORS/README.md) — Sustainability and lifecycle
 
 ## Applicable Standards
 

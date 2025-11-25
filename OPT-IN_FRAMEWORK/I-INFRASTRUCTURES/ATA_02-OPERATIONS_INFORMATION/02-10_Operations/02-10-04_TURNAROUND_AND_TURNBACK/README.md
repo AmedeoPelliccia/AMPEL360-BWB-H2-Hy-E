@@ -63,7 +63,7 @@ Out of scope:
 - **Systems & performance providers**  
   → [`../../02-20-00_SYSTEMS/`](../../02-20-00_SYSTEMS/)  
 - **Circularity & sustainability impacts**  
-  → [`../../02-30_Circularity/`](../../02-30_Circularity/)  
+  → [`../../02-30_ANCHORS/`](../../02-30_ANCHORS/)  
 
 For bucket rules, cross-ATA structure and naming, see:  
 → [OPT-IN_FRAMEWORK_STANDARD.md](/OPT-IN_FRAMEWORK_STANDARD.md)
@@ -86,7 +86,7 @@ Recommended internal files / structure:
   - Maintenance tasks and inspections  
 - Cross-links:
   - [`../../02-20-00_SYSTEMS/`](../../02-20-00_SYSTEMS/) (turnaround-related limits)  
-  - [`../../02-30_Circularity/`](../../02-30_Circularity/) (carbon-negative mission design)
+  - [`../../02-30_ANCHORS/`](../../02-30_ANCHORS/) (carbon-negative mission design)
 
 ### 4.2 Turnaround Ground Flow  
 `02-10-04_Turnaround_Ground_Flow.md`

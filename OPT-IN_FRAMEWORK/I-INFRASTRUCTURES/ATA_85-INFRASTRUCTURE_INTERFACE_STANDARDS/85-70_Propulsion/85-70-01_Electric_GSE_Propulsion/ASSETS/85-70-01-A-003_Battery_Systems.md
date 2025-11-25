@@ -280,7 +280,7 @@ This document provides detailed specifications for battery systems used in batte
   - Pyrometallurgy (high-temperature smelting)
   - Hydrometallurgy (chemical leaching)
   - Direct recycling (cathode restoration)
-- **Circular Economy**: Integration with [85-30_Circularity](../../../85-30_Circularity/)
+- **Circular Economy**: Integration with [85-30_ANCHORS](../../../85-30_ANCHORS/)
 
 ---
 
@@ -292,7 +292,7 @@ This document provides detailed specifications for battery systems used in batte
 - [85-70-01-A-004_Charging_Integration.md](./85-70-01-A-004_Charging_Integration.md) – Charging system integration
 - [85-70-04](../../85-70-04_Charging_Infrastructure/) – Charging infrastructure
 - [85-70-06-002_Battery_Health_Monitoring.md](../../85-70-06_Maintenance_and_Diagnostics/85-70-06-002_Battery_Health_Monitoring.md) – Battery diagnostics
-- [85-30_Circularity](../../../85-30_Circularity/) – Lifecycle and recycling
+- [85-30_ANCHORS](../../../85-30_ANCHORS/) – Lifecycle and recycling
 
 ### 10.2 External (Other ATAs)
 

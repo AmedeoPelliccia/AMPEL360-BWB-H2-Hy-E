@@ -486,7 +486,7 @@ dashboards:
         metrics:
           - SUST-002
         visualization: "trend_line"
-        link: "../02-30_Circularity/"
+        link: "../02-30_ANCHORS/"
       
       - panel: "Data Efficiency"
         metrics:
@@ -580,7 +580,7 @@ references:
     - "02-60-00-001_Storage_Architecture_Overview.md"
     - "02-60-00-002_Storage_Capacity_Planning.md"
     - "02-60-00-003_Data_Governance_Policy.md"
-    - "../02-30_Circularity/"
+    - "../02-30_ANCHORS/"
   external:
     - "Prometheus metrics format: https://prometheus.io/docs/concepts/metric_types/"
     - "Grafana dashboard best practices: https://grafana.com/docs/grafana/latest/dashboards/"

@@ -277,7 +277,7 @@ ATA_XX-DESCRIPTION/
 ├── XX-00_GENERAL/              # (14 lifecycle folders as above)
 ├── XX-10_Operations/           # Ops use, turnarounds, procedures
 ├── XX-20_Subsystems/           # Functional subsystems (design-driven)
-├── XX-30_Circularity/          # Sustainability, LCA, reuse/recycle, DPP links
+├── XX-30_ANCHORS/              # Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems
 ├── XX-40_Software/             # SW, control logic, diagnostics, ML/NN
 ├── XX-50_Structures/           # Frames, housings, mounts, structural routes
 ├── XX-60_Storages/             # Tanks, reservoirs, accumulators, cryo vessels
@@ -299,12 +299,18 @@ ATA_XX-DESCRIPTION/
 - Internal structure is free-form
 - Must be navigable and traceable
 
-#### XX-30_Circularity
+#### XX-30_ANCHORS — Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems
 - Sustainability metrics
 - Life Cycle Assessment (LCA)
 - Reuse/recycle strategies
 - Digital Product Passport links
 - Carbon accounting
+- Renewable energy generation and harvesting
+- CO₂ capture & synthesis units
+- Water and waste recovery cycles
+- Fast-rechargeable battery continuous loops
+- Thermal recovery / regenerative systems
+- Resource networks connecting aircraft ↔ ground ↔ infrastructure
 
 #### XX-40_Software
 - Software components
@@ -351,7 +357,7 @@ ATA_XX-DESCRIPTION/
 - **00 General** — General ATA information, audience-based instructions, regulations, governance, standards, configuration & change management.
 - **10 Operations** — Operational use, turnaround, ground/flight ops specifics for the ATA domain.
 - **20 Subsystems** — Functional systems of the domain; main engineering artefacts live here.
-- **30 Circularity** — Sustainability, repairability, reuse/recycle, LCA, carbon accounting.
+- **30 ANCHOR'S** — Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems; sustainability, repairability, reuse/recycle, LCA, carbon accounting, energy harvesting, thermal/water loops, battery logistics.
 - **40 Software** — Embedded apps, controllers, diagnostics, analytics, ML/NN for the domain.
 - **50 Structures** — Frames, housings, supports, structural routes.
 - **60 Storages** — Tanks, reservoirs, accumulators, cryogenic storages (H₂, oils, etc.).
@@ -385,7 +391,7 @@ ATA_79-OIL/
 ├── 79-20_Subsystems/
 │   ├── 79-20-01_Engine_Oil_System/
 │   └── 79-20-02_Oil_Condition_Monitoring/
-├── 79-30_Circularity/
+├── 79-30_ANCHORS/
 │   └── 79-30-01_Waste_Oil_Recovery_LCA/
 ├── 79-40_Software/
 │   └── 79-40-01_Oil_Controller_SW/
