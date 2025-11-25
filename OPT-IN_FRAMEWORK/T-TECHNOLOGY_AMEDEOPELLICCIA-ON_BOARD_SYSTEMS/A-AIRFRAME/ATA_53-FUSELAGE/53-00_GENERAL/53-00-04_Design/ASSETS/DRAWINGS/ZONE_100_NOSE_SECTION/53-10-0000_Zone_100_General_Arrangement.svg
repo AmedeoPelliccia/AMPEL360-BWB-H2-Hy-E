@@ -80,7 +80,7 @@
     <text x="880" y="820" class="label-text">Type: GA</text>
     
     <text x="950" y="790" class="label-text">Scale: NTS</text>
-    <text x="950" y="805" class="label-text">Rev: D</text>
+    <text x="950" y="805" class="label-text">Rev: E</text>
     <text x="950" y="820" class="label-text">Date: 2025-11-25</text>
     
     <text x="1090" y="790" class="label-text">Status: Draft</text>
@@ -217,15 +217,15 @@
       <text x="420" y="305" class="annotation-large" text-anchor="middle">(LH₂ Storage)</text>
       
       <!-- Tank dimensions placeholder -->
-      <text x="420" y="320" class="annotation" text-anchor="middle">Ø ~2.5m × L ~6.5m (TBD)</text>
+      <text x="420" y="320" class="annotation" text-anchor="middle">Ø 4.86m × L 10.0m (185.7 m³)</text>
       
       <!-- Tank bay label -->
       <text x="460" y="395" class="annotation" text-anchor="middle">Central Wingbox - Tank Bay</text>
       
       <!-- Tank configuration note with leader -->
       <line x1="560" y1="270" x2="598" y2="240" class="leader-line"/>
-      <text x="602" y="235" class="annotation">Cylindrical/Toroidal</text>
-      <text x="602" y="247" class="annotation">(TBD thermal analysis)</text>
+      <text x="602" y="235" class="annotation">Cylindrical (Selected)</text>
+      <text x="602" y="247" class="annotation">(Per thermal pre-analysis)</text>
       
       <!-- MLI annotation with leader -->
       <line x1="555" y1="345" x2="598" y2="365" class="leader-line"/>
@@ -364,16 +364,16 @@
     <line x1="0" y1="60" x2="-80" y2="140" class="leader-line" stroke-dasharray="3,2"/>
   </g>
   
-  <!-- Open Items Box -->
+  <!-- Open Items Box - Updated per thermal pre-analysis -->
   <g id="open-items" transform="translate(735, 325)">
     <text x="0" y="0" class="subtitle-text" font-weight="bold">OPEN ITEMS</text>
     <rect x="0" y="10" width="220" height="85" fill="#fffacd" stroke="#000" stroke-width="1"/>
     
-    <text x="8" y="28" class="label-small">1. Tank sizing (mission range)</text>
+    <text x="8" y="28" class="label-small">1. ✅ Tank sizing: Cylindrical selected</text>
     <text x="8" y="43" class="label-small">2. Crash safety analysis (H₂)</text>
-    <text x="8" y="58" class="label-small">3. Evacuation compliance</text>
+    <text x="8" y="58" class="label-small">3. Evacuation path impact</text>
     <text x="16" y="70" class="annotation">(CS-25.807 / FAR 25.807)</text>
-    <text x="8" y="85" class="label-small">4. Thermal analysis (tank config)</text>
+    <text x="8" y="85" class="label-small">4. CFD: venting &amp; stratification</text>
   </g>
   
   <!-- Section Cut Indicators -->
@@ -385,29 +385,41 @@
     <text x="0" y="60" class="label-small">D-D: 53-10-4000 (Avionics Bay)</text>
   </g>
   
-  <!-- Tank Specification Table -->
-  <g id="tank-specs" transform="translate(735, 495)">
-    <text x="0" y="0" class="subtitle-text" font-weight="bold">CENTRAL WINGBOX (H₂ TANK BAY)</text>
-    <rect x="0" y="10" width="220" height="80" fill="#fff" stroke="#000" stroke-width="1"/>
+  <!-- Tank Specification Table - Updated with thermal analysis -->
+  <g id="tank-specs" transform="translate(735, 470)">
+    <text x="0" y="0" class="subtitle-text" font-weight="bold">LH₂ TANK (Thermal Pre-Analysis)</text>
+    <rect x="0" y="10" width="220" height="120" fill="#fff" stroke="#000" stroke-width="1"/>
     
     <!-- Table Header -->
     <line x1="0" y1="28" x2="220" y2="28" stroke="#000" stroke-width="0.5"/>
-    <line x1="80" y1="10" x2="80" y2="90" stroke="#000" stroke-width="0.5"/>
+    <line x1="80" y1="10" x2="80" y2="130" stroke="#000" stroke-width="0.5"/>
     
     <text x="40" y="22" class="label-small" text-anchor="middle" font-weight="bold">Item</text>
     <text x="150" y="22" class="label-small" text-anchor="middle" font-weight="bold">Specification</text>
     
-    <text x="5" y="42" class="annotation">Config</text>
-    <text x="85" y="42" class="annotation">Cylindrical/Toroidal (TBD)</text>
+    <text x="5" y="40" class="annotation">Config</text>
+    <text x="85" y="40" class="annotation">Cylindrical ✅</text>
     
-    <text x="5" y="55" class="annotation">Position</text>
-    <text x="85" y="55" class="annotation">CL, between spars</text>
+    <text x="5" y="52" class="annotation">Fuel Mass</text>
+    <text x="85" y="52" class="annotation">13,000 kg</text>
     
-    <text x="5" y="68" class="annotation">Insulation</text>
-    <text x="85" y="68" class="annotation">MLI (vacuum)</text>
+    <text x="5" y="64" class="annotation">Volume</text>
+    <text x="85" y="64" class="annotation">185.7 m³</text>
     
-    <text x="5" y="81" class="annotation">Integration</text>
-    <text x="85" y="81" class="annotation">Cradle frames FS 360–660</text>
+    <text x="5" y="76" class="annotation">Dimensions</text>
+    <text x="85" y="76" class="annotation">Ø 4.86m × L 10.0m</text>
+    
+    <text x="5" y="88" class="annotation">Heat Load</text>
+    <text x="85" y="88" class="annotation">~190 W</text>
+    
+    <text x="5" y="100" class="annotation">Insulation</text>
+    <text x="85" y="100" class="annotation">MLI (50mm target)</text>
+    
+    <text x="5" y="112" class="annotation">Boil-off</text>
+    <text x="85" y="112" class="annotation">~1.53 kg/hr (0.012%/hr)</text>
+    
+    <text x="5" y="124" class="annotation">Integration</text>
+    <text x="85" y="124" class="annotation">6 cradle frames</text>
   </g>
   
   <!-- Notes Section - Increased font size -->
