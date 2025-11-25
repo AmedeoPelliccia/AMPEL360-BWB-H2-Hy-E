@@ -14,7 +14,7 @@ This document provides the recyclability assessment for the AMPEL360 BWB fuselag
 |----------|-------|-------------|
 | EU Battery Regulation (2023/1542) | Digital Product Passport | DPP framework |
 | ISO 14040/14044 | Life Cycle Assessment | LCA methodology |
-| Ecodesign Regulation (2024/xxxx) | Sustainable products | Design requirements |
+| [Ecodesign for Sustainable Products Regulation (ESPR)](https://environment.ec.europa.eu/publications/proposal-ecodesign-sustainable-products-regulation_en) | Sustainable products | Design requirements |
 | REACH (EC 1907/2006) | Chemical substances | Material restrictions |
 
 ### 2.2 Industry References
