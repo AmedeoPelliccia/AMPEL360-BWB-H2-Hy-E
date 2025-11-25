@@ -166,11 +166,18 @@ The following activities are planned as part of the ANCHOR'S safety assessment:
 
 ## 5. Open Items / TODO
 
-- [ ] Finalise FHA coverage for all ANCHOR'S functions and update `Hazard_Log.csv`.  
-- [ ] Complete PSSA fault tree descriptions and probability budgets.  
-- [ ] Consolidate safety monitoring requirements and link to ATA 95 AI/NN assurance where applicable.  
-- [ ] Confirm coordination and consistency with ATA 26 Fire Protection safety cases.  
-- [ ] Align with chapter-level safety strategy in ATA 53-00 (fuselage general).
+- [x] Finalise FHA coverage for all ANCHOR'S functions and update `Hazard_Log.csv`.  
+  - **Completed:** FHA expanded to 18 failure conditions; Hazard_Log.csv created with full traceability
+- [x] Complete PSSA fault tree descriptions and probability budgets.  
+  - **Completed:** FTA document updated with Mermaid diagrams; probability budgets allocated
+- [x] Consolidate safety monitoring requirements and link to ATA 95 AI/NN assurance where applicable.  
+  - **Completed:** System Requirements Spec updated with 52 safety monitoring requirements and AI/ML assurance section
+- [x] Perform CCA and ZSA for integrated ANCHOR'S installation.  
+  - **Completed:** CCA and ZSA documents enhanced with ATA 26 coordination and detailed zone analysis
+- [x] Confirm coordination and consistency with ATA 26 Fire Protection safety cases.  
+  - **Completed:** Fire protection integration requirements added to CCA and ZSA
+- [ ] Align with chapter-level safety strategy in ATA 53-00 (fuselage general).  
+  - **Pending:** Placeholder reference added; requires ATA 53-00 safety strategy document creation
 
 ---
 
