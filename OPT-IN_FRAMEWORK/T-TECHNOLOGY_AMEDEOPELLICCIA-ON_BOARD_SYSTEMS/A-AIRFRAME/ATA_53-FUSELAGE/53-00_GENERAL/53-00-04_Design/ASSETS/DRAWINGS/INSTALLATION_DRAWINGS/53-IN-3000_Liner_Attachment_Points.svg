@@ -510,7 +510,7 @@
   
   <!-- Maintenance Access Legend Entry -->
   <rect x="540" y="838" width="20" height="14" rx="2" fill="#3a86ff" fill-opacity="0.6" stroke="#3a86ff" stroke-width="1"/>
-  <text x="565" y="849" fill="#3a86ff" font-family="monospace" font-size="9">ACCESS</text>
+  <text x="565" y="849" fill="white" font-family="monospace" font-size="9">ACCESS</text>
   
   <!-- ========== LEGACY LEGEND BOX (for detailed reference) ========== -->
   <rect x="20" y="875" width="580" height="110" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
@@ -542,7 +542,6 @@
   <text x="445" y="977" fill="white" font-family="monospace" font-size="9">LINER INSTALLATION ZONE</text>
   
   <!-- Maintenance Access Legend -->
-  <rect x="420" y="968" width="0" height="0"/>
   <g transform="translate(540, 925)">
     <rect x="-10" y="-7" width="20" height="14" rx="2" fill="#3a86ff" fill-opacity="0.6" stroke="#3a86ff" stroke-width="1"/>
     <line x1="-7" y1="0" x2="7" y2="0" stroke="white" stroke-width="1"/>
