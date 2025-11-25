@@ -212,9 +212,6 @@ ATA_XX-SYSTEM_NAME/
 │   ├── XX-00-12_Services/               # In-service MRO and service models
 │   ├── XX-00-13_Subsystems_Components/  # Subsystems, components and PNR/source management
 │   └── XX-00-14_Ops_Std_Sustain/        # Operational standards, governance, circularity
-│
-ATA_XX-DESCRIPTION/
-├── XX-00_GENERAL/              # (14 lifecycle folders as above)
 ├── XX-10_Operations/           # Ops use, turnarounds, procedures
 ├── XX-20_Subsystems/           # Functional subsystems (design-driven)
 ├── XX-30_Circularity/          # Sustainability, LCA, reuse/recycle, DPP links
