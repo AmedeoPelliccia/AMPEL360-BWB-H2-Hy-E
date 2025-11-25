@@ -10,18 +10,34 @@
       .title-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #000; }
       .subtitle-text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
       .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #000; }
+      .label-small { font-family: Arial, sans-serif; font-size: 10px; fill: #000; }
       .dimension-text { font-family: Arial, sans-serif; font-size: 10px; fill: #0066cc; }
       .drawing-line { stroke: #000; stroke-width: 2; fill: none; }
+      .drawing-line-thin { stroke: #000; stroke-width: 1; fill: none; }
       .dimension-line { stroke: #0066cc; stroke-width: 1; fill: none; }
       .dashed-line { stroke: #666; stroke-width: 1; stroke-dasharray: 5,5; fill: none; }
       .hidden-line { stroke: #999; stroke-width: 1; stroke-dasharray: 3,3; fill: none; }
       .center-line { stroke: #cc0000; stroke-width: 1; stroke-dasharray: 10,5,2,5; fill: none; }
+      .h2-tank { stroke: #0066cc; stroke-width: 2; fill: #cce5ff; fill-opacity: 0.5; }
+      .insulation { stroke: #006600; stroke-width: 1; stroke-dasharray: 2,2; fill: none; }
+      .passenger-lobe { stroke: #000; stroke-width: 2; fill: #f5f5f5; fill-opacity: 0.3; }
+      .cockpit { stroke: #000; stroke-width: 2; fill: #e6e6e6; fill-opacity: 0.4; }
+      .firewall { stroke: #cc0000; stroke-width: 2; fill: none; }
+      .frame-line { stroke: #666; stroke-width: 1; fill: none; }
+      .annotation { font-family: Arial, sans-serif; font-size: 9px; fill: #333; }
+      .section-label { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #000; }
     </style>
     
     <!-- Arrow marker for dimensions -->
     <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
             markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#0066cc"/>
+    </marker>
+    
+    <!-- Arrow marker for annotations -->
+    <marker id="arrow-black" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
     </marker>
   </defs>
   
@@ -38,49 +54,256 @@
     <text x="760" y="755" class="label-text" text-anchor="middle">AMPEL360</text>
     
     <!-- Drawing Title -->
-    <text x="820" y="745" class="title-text">Zone 100 General Arrangement</text>
+    <text x="820" y="745" class="title-text">Zone 100 BWB Fuselage - H₂ Integration</text>
     
     <!-- Drawing Number and Info -->
     <line x1="700" y1="770" x2="1180" y2="770" stroke="#000" stroke-width="1"/>
     <text x="710" y="790" class="label-text">Drawing No: 53-10-0000</text>
-    <text x="710" y="805" class="label-text">Zone: Zone 100</text>
-    <text x="710" y="820" class="label-text">Model: Q100</text>
-    <text x="850" y="820" class="label-text">Type: GA</text>
+    <text x="710" y="805" class="label-text">Zone: Zone 100 (Forward Fuselage)</text>
+    <text x="710" y="820" class="label-text">Model: BWB-H2</text>
+    <text x="880" y="820" class="label-text">Type: GA</text>
     
     <text x="950" y="790" class="label-text">Scale: NTS</text>
-    <text x="950" y="805" class="label-text">Rev: A</text>
-    <text x="950" y="820" class="label-text">Date: 2025-11-24</text>
+    <text x="950" y="805" class="label-text">Rev: B</text>
+    <text x="950" y="820" class="label-text">Date: 2025-11-25</text>
     
     <text x="1090" y="790" class="label-text">Status: Draft</text>
     <text x="1090" y="805" class="label-text">Sheet: 1 of 1</text>
     <text x="1090" y="820" class="label-text">Units: mm</text>
   </g>
   
-  <!-- Main Drawing Area -->
-  <g id="main-drawing">
-    <!-- Placeholder technical drawing elements -->
+  <!-- Main Drawing Area - Plan View -->
+  <g id="plan-view">
+    <text x="400" y="45" class="subtitle-text" font-weight="bold" text-anchor="middle">PLAN VIEW - BWB FORWARD FUSELAGE WITH H₂ INTEGRATION</text>
     
-    <!-- General Arrangement View -->
-    <rect x="100" y="100" width="1000" height="500" class="drawing-line" rx="20"/>
-    <line x1="100" y1="350" x2="1100" y2="350" class="center-line"/>
-    <line x1="600" y1="100" x2="600" y2="600" class="center-line"/>
+    <!-- BWB Outer Mold Line -->
+    <path d="M 80 300 
+             Q 100 180, 200 120 
+             L 700 80 
+             L 700 520 
+             Q 100 420, 80 300" 
+          class="drawing-line" fill="#fafafa"/>
     
-    <!-- Section markers -->
-    <circle cx="300" cy="350" r="80" class="drawing-line"/>
-    <circle cx="600" cy="350" r="80" class="drawing-line"/>
-    <circle cx="900" cy="350" r="80" class="drawing-line"/>
+    <!-- Center Line -->
+    <line x1="50" y1="300" x2="720" y2="300" class="center-line"/>
+    <text x="40" y="305" class="annotation" text-anchor="end">CL</text>
     
-    <text x="600" y="80" class="subtitle-text" text-anchor="middle">GENERAL ARRANGEMENT</text>
+    <!-- Cockpit Area (Forward Apex) -->
+    <g id="cockpit-area">
+      <path d="M 80 300 Q 100 220, 170 180 L 170 420 Q 100 380, 80 300" 
+            class="cockpit"/>
+      <text x="125" y="305" class="section-label" text-anchor="middle">COCKPIT</text>
+      <text x="125" y="318" class="annotation" text-anchor="middle">2-Crew Flight Deck</text>
+    </g>
     
+    <!-- Nose Gear Bay -->
+    <g id="nose-gear-bay">
+      <rect x="100" y="265" width="60" height="70" rx="5" class="drawing-line" fill="#ddd"/>
+      <text x="130" y="295" class="annotation" text-anchor="middle">NLG</text>
+      <text x="130" y="307" class="annotation" text-anchor="middle">Bay</text>
+    </g>
+    
+    <!-- Central Wingbox / H₂ Tank Bay -->
+    <g id="h2-tank-bay">
+      <!-- Tank Bay Structure -->
+      <rect x="260" y="200" width="320" height="200" rx="10" class="drawing-line-thin" fill="#f0f8ff" stroke-dasharray="5,3"/>
+      
+      <!-- Cylindrical/Toroidal H₂ Tank (shown as ellipse in plan view) -->
+      <ellipse cx="420" cy="300" rx="120" ry="70" class="h2-tank"/>
+      
+      <!-- MLI Insulation boundary -->
+      <ellipse cx="420" cy="300" rx="130" ry="80" class="insulation"/>
+      
+      <!-- Cradle Frames -->
+      <line x1="320" y1="200" x2="320" y2="400" class="frame-line"/>
+      <line x1="420" y1="200" x2="420" y2="400" class="frame-line"/>
+      <line x1="520" y1="200" x2="520" y2="400" class="frame-line"/>
+      
+      <!-- Labels -->
+      <text x="420" y="295" class="section-label" text-anchor="middle">H₂ TANK</text>
+      <text x="420" y="310" class="annotation" text-anchor="middle">(Cryogenic Storage)</text>
+      <text x="420" y="385" class="annotation" text-anchor="middle">Central Wingbox - Tank Bay</text>
+      
+      <!-- Tank configuration note -->
+      <text x="590" y="215" class="annotation">Cylindrical/Toroidal</text>
+      <text x="590" y="227" class="annotation">(TBD by thermal analysis)</text>
+    </g>
+    
+    <!-- Port Passenger Lobe -->
+    <g id="port-lobe">
+      <path d="M 200 120 
+               L 600 85 
+               L 600 190 
+               L 260 200 
+               L 200 180 
+               Z" 
+            class="passenger-lobe"/>
+      <text x="400" y="140" class="section-label" text-anchor="middle">PORT PASSENGER LOBE</text>
+      <text x="400" y="155" class="annotation" text-anchor="middle">Independent ECS Zone</text>
+      
+      <!-- Emergency Egress Arrow -->
+      <line x1="580" y1="130" x2="650" y2="100" stroke="#cc0000" stroke-width="1" marker-end="url(#arrow-black)"/>
+      <text x="660" y="105" class="annotation" fill="#cc0000">Emergency Egress</text>
+    </g>
+    
+    <!-- Starboard Passenger Lobe -->
+    <g id="starboard-lobe">
+      <path d="M 200 480 
+               L 600 515 
+               L 600 410 
+               L 260 400 
+               L 200 420 
+               Z" 
+            class="passenger-lobe"/>
+      <text x="400" y="465" class="section-label" text-anchor="middle">STARBOARD PASSENGER LOBE</text>
+      <text x="400" y="480" class="annotation" text-anchor="middle">Independent ECS Zone</text>
+      
+      <!-- Emergency Egress Arrow -->
+      <line x1="580" y1="470" x2="650" y2="500" stroke="#cc0000" stroke-width="1" marker-end="url(#arrow-black)"/>
+      <text x="660" y="505" class="annotation" fill="#cc0000">Emergency Egress</text>
+    </g>
+    
+    <!-- Bifurcation Bulkheads with Firewall Rating -->
+    <g id="bifurcation-bulkheads">
+      <line x1="260" y1="200" x2="260" y2="115" class="firewall"/>
+      <line x1="260" y1="400" x2="260" y2="485" class="firewall"/>
+      <text x="235" y="160" class="annotation" fill="#cc0000" transform="rotate(-90 235 160)">FIREWALL</text>
+      <text x="235" y="445" class="annotation" fill="#cc0000" transform="rotate(-90 235 445)">FIREWALL</text>
+    </g>
+    
+    <!-- Front and Rear Spars indication -->
+    <g id="spar-references">
+      <line x1="280" y1="195" x2="280" y2="405" class="dashed-line"/>
+      <text x="285" y="415" class="annotation">Front Spar</text>
+      
+      <line x1="560" y1="195" x2="560" y2="405" class="dashed-line"/>
+      <text x="565" y="415" class="annotation">Rear Spar</text>
+    </g>
+    
+    <!-- Venting System Integration Points -->
+    <g id="venting-points">
+      <circle cx="350" y="210" r="5" fill="#006600" stroke="#000" stroke-width="1"/>
+      <circle cx="490" y="210" r="5" fill="#006600" stroke="#000" stroke-width="1"/>
+      <text x="420" y="205" class="annotation" text-anchor="middle" fill="#006600">Venting Integration Points</text>
+    </g>
+    
+    <!-- Maintenance Access Panels -->
+    <g id="maintenance-access">
+      <rect x="340" y="390" width="30" height="15" fill="#ffcc00" stroke="#000" stroke-width="1"/>
+      <rect x="450" y="390" width="30" height="15" fill="#ffcc00" stroke="#000" stroke-width="1"/>
+      <text x="420" y="418" class="annotation" text-anchor="middle">Maintenance Access Panels</text>
+    </g>
+    
+    <!-- Frame Station References -->
+    <g id="frame-stations">
+      <line x1="100" y1="55" x2="100" y2="545" class="dimension-line" stroke-dasharray="2,2"/>
+      <text x="100" y="555" class="dimension-text" text-anchor="middle">FS 0</text>
+      
+      <line x1="260" y1="55" x2="260" y2="545" class="dimension-line" stroke-dasharray="2,2"/>
+      <text x="260" y="555" class="dimension-text" text-anchor="middle">FS XXX</text>
+      
+      <line x1="580" y1="55" x2="580" y2="545" class="dimension-line" stroke-dasharray="2,2"/>
+      <text x="580" y="555" class="dimension-text" text-anchor="middle">FS XXX</text>
+      
+      <line x1="700" y1="55" x2="700" y2="545" class="dimension-line" stroke-dasharray="2,2"/>
+      <text x="700" y="555" class="dimension-text" text-anchor="middle">FS XXX</text>
+    </g>
+    
+    <!-- Dimension: NLG Bay -->
+    <line x1="100" y1="575" x2="170" y2="575" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="135" y="590" class="dimension-text" text-anchor="middle">NLG Bay: FS 0 – FS XXX</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(750, 60)">
+    <text x="0" y="0" class="subtitle-text" font-weight="bold">LEGEND</text>
+    <rect x="0" y="10" width="20" height="10" class="h2-tank"/>
+    <text x="25" y="18" class="label-small">H₂ Cryogenic Tank</text>
+    
+    <line x1="0" y1="30" x2="20" y2="30" class="insulation"/>
+    <text x="25" y="33" class="label-small">MLI Insulation Boundary</text>
+    
+    <rect x="0" y="40" width="20" height="10" class="passenger-lobe"/>
+    <text x="25" y="48" class="label-small">Passenger Lobe</text>
+    
+    <line x1="0" y1="60" x2="20" y2="60" class="firewall"/>
+    <text x="25" y="63" class="label-small">Firewall Rated Bulkhead</text>
+    
+    <line x1="0" y1="75" x2="20" y2="75" class="center-line"/>
+    <text x="25" y="78" class="label-small">Centerline</text>
+    
+    <rect x="0" y="85" width="20" height="8" fill="#ffcc00" stroke="#000" stroke-width="1"/>
+    <text x="25" y="93" class="label-small">Maintenance Access</text>
+    
+    <circle cx="10" cy="110" r="4" fill="#006600" stroke="#000" stroke-width="1"/>
+    <text x="25" y="113" class="label-small">Venting Point</text>
+  </g>
+  
+  <!-- ATA 53 Structural Interfaces Table -->
+  <g id="structural-interfaces" transform="translate(750, 190)">
+    <text x="0" y="0" class="subtitle-text" font-weight="bold">ATA 53 STRUCTURAL INTERFACES</text>
+    <rect x="0" y="10" width="400" height="100" fill="#fff" stroke="#000" stroke-width="1"/>
+    
+    <text x="10" y="30" class="label-small">☐ Tank support frames (load path analysis pending)</text>
+    <text x="10" y="50" class="label-small">☐ Bifurcation bulkheads with firewall rating</text>
+    <text x="10" y="70" class="label-small">☐ Venting system integration points</text>
+    <text x="10" y="90" class="label-small">☐ Maintenance access panel locations</text>
+  </g>
+  
+  <!-- Open Items Box -->
+  <g id="open-items" transform="translate(750, 310)">
+    <text x="0" y="0" class="subtitle-text" font-weight="bold">OPEN ITEMS</text>
+    <rect x="0" y="10" width="400" height="90" fill="#fffacd" stroke="#000" stroke-width="1"/>
+    
+    <text x="10" y="30" class="label-small">1. Tank sizing based on mission range requirements</text>
+    <text x="10" y="48" class="label-small">2. Crash safety analysis for H₂ containment</text>
+    <text x="10" y="66" class="label-small">3. Evacuation path compliance (CS-25 / FAR 25)</text>
+    <text x="10" y="84" class="label-small">4. Thermal analysis for tank configuration selection</text>
+  </g>
+  
+  <!-- Section Cut Indicators -->
+  <g id="section-cuts">
+    <text x="750" y="420" class="subtitle-text" font-weight="bold">SECTION REFERENCES</text>
+    <text x="750" y="440" class="label-small">A-A: See 53-10-1000 (Forward Bulkhead)</text>
+    <text x="750" y="455" class="label-small">B-B: See 53-10-2000 (NLG Bay Structure)</text>
+    <text x="750" y="470" class="label-small">C-C: See 53-10-3000 (Cockpit Structure)</text>
+    <text x="750" y="485" class="label-small">D-D: See 53-10-4000 (Avionics Bay)</text>
+  </g>
+  
+  <!-- Tank Specification Table -->
+  <g id="tank-specs" transform="translate(750, 505)">
+    <text x="0" y="0" class="subtitle-text" font-weight="bold">CENTRAL WINGBOX (H₂ TANK BAY)</text>
+    <rect x="0" y="10" width="400" height="75" fill="#fff" stroke="#000" stroke-width="1"/>
+    
+    <!-- Table Header -->
+    <line x1="0" y1="30" x2="400" y2="30" stroke="#000" stroke-width="0.5"/>
+    <line x1="150" y1="10" x2="150" y2="85" stroke="#000" stroke-width="0.5"/>
+    
+    <text x="75" y="23" class="label-small" text-anchor="middle" font-weight="bold">Component</text>
+    <text x="275" y="23" class="label-small" text-anchor="middle" font-weight="bold">Specification</text>
+    
+    <text x="10" y="45" class="label-small">Tank Configuration</text>
+    <text x="160" y="45" class="label-small">Cylindrical/Toroidal (TBD)</text>
+    
+    <text x="10" y="58" class="label-small">Position</text>
+    <text x="160" y="58" class="label-small">Centerline, between front/rear spars</text>
+    
+    <text x="10" y="71" class="label-small">Insulation</text>
+    <text x="160" y="71" class="label-small">Multi-layer vacuum insulation (MLI)</text>
+    
+    <text x="10" y="84" class="label-small">Structural Integration</text>
+    <text x="160" y="84" class="label-small">Dedicated cradle frames at FS XXX–XXX</text>
   </g>
   
   <!-- Notes Section -->
   <g id="notes">
-    <text x="30" y="740" class="subtitle-text" font-weight="bold">NOTES:</text>
-    <text x="30" y="760" class="label-text">1. All dimensions in millimeters unless noted</text>
-    <text x="30" y="775" class="label-text">2. Material specifications per AMPEL360-MAT-001</text>
-    <text x="30" y="790" class="label-text">3. Manufacturing tolerances per ISO 2768-mK</text>
-    <text x="30" y="805" class="label-text">4. This is a PLACEHOLDER drawing for structure setup</text>
+    <text x="30" y="620" class="subtitle-text" font-weight="bold">NOTES:</text>
+    <text x="30" y="640" class="label-text">1. All dimensions in millimeters unless noted</text>
+    <text x="30" y="655" class="label-text">2. Material specifications per AMPEL360-MAT-001</text>
+    <text x="30" y="670" class="label-text">3. Manufacturing tolerances per ISO 2768-mK</text>
+    <text x="30" y="685" class="label-text">4. H₂ tank design per EASA CS-25 and applicable hydrogen safety standards</text>
+    <text x="30" y="700" class="label-text">5. Bifurcated cabin configuration requires independent ECS zones (ATA 21)</text>
+    <text x="30" y="715" class="label-text">6. Emergency egress paths routed outboard per CS-25 / FAR 25 requirements</text>
   </g>
   
 </svg>
