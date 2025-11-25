@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- AMPEL360 Model: Q100 - Standard Symbol Library for ATA 53 Drawings -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
     <style>
@@ -6,7 +7,7 @@
     </style>
   </defs>
   
-  <text x="400" y="30" class="label" text-anchor="middle" font-size="18px" font-weight="bold">AMPEL360 Standard Symbol Library</text>
+  <text x="400" y="30" class="label" text-anchor="middle" font-size="18px" font-weight="bold">AMPEL360 Q100 Standard Symbol Library</text>
   
   <!-- Fastener Symbols -->
   <g id="fasteners" transform="translate(50,60)">
