@@ -75,6 +75,26 @@
            Q 80,400 120,400"
         fill="none" stroke="#4cc9f0" stroke-width="2.5"/>
   
+  <!-- ========== ZONE 100 BOUNDARY ANNOTATION ========== -->
+  <!-- Zone 100 Boundary Highlight -->
+  <path d="M 120,400 
+           Q 80,400 100,340 
+           C 140,280 200,220 320,180
+           C 450,135 650,110 900,95
+           C 1000,90 1080,100 1100,120
+           L 1120,400
+           L 1100,680
+           C 1080,700 1000,710 900,705
+           C 650,690 450,665 320,620
+           C 200,580 140,520 100,460
+           Q 80,400 120,400"
+        fill="none" stroke="#e91e63" stroke-width="1.5" stroke-dasharray="20,5,5,5" opacity="0.8"/>
+  <!-- Zone 100 Boundary Labels -->
+  <rect x="40" y="70" width="120" height="22" fill="#0a1628" stroke="#e91e63" stroke-width="1.5" rx="3"/>
+  <text x="100" y="85" text-anchor="middle" fill="#e91e63" font-family="Arial" font-size="11" font-weight="bold">ZONE 100</text>
+  <text x="50" y="360" fill="#e91e63" font-family="monospace" font-size="8" transform="rotate(-90,50,360)">ZONE 100 BOUNDARY (ATA 53)</text>
+  <text x="1130" y="360" fill="#e91e63" font-family="monospace" font-size="8" transform="rotate(90,1130,360)">ZONE 100 BOUNDARY (ATA 53)</text>
+  
   <!-- Wing Curvature Contour Lines -->
   <path d="M 200,380 C 300,340 500,300 800,280" fill="none" stroke="#2a5a7a" stroke-width="0.8" stroke-dasharray="10,5"/>
   <path d="M 200,420 C 300,460 500,500 800,520" fill="none" stroke="#2a5a7a" stroke-width="0.8" stroke-dasharray="10,5"/>
@@ -85,27 +105,34 @@
   <text x="820" y="272" fill="#2a5a7a" font-family="monospace" font-size="7" transform="rotate(-8,820,272)">UPPER CONTOUR +200mm</text>
   <text x="820" y="540" fill="#2a5a7a" font-family="monospace" font-size="7" transform="rotate(8,820,540)">UPPER CONTOUR -200mm</text>
   
-  <!-- Frame Station Lines -->
+  <!-- Frame Station Lines - Enhanced with background labels for quick identification -->
   <line x1="180" y1="300" x2="180" y2="500" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <text x="180" y="290" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">FS 0</text>
+  <rect x="155" y="278" width="50" height="16" fill="#0a1628" stroke="#ffd60a" stroke-width="0.5" rx="2"/>
+  <text x="180" y="290" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="12" font-weight="bold">FS 0</text>
   
   <line x1="280" y1="250" x2="280" y2="550" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <text x="280" y="240" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">FS 100</text>
+  <rect x="250" y="228" width="60" height="16" fill="#0a1628" stroke="#ffd60a" stroke-width="0.5" rx="2"/>
+  <text x="280" y="240" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="12" font-weight="bold">FS 100</text>
   
   <line x1="400" y1="210" x2="400" y2="590" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <text x="400" y="200" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">FS 200</text>
+  <rect x="370" y="188" width="60" height="16" fill="#0a1628" stroke="#ffd60a" stroke-width="0.5" rx="2"/>
+  <text x="400" y="200" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="12" font-weight="bold">FS 200</text>
   
   <line x1="550" y1="175" x2="550" y2="625" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <text x="550" y="165" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">FS 350</text>
+  <rect x="520" y="153" width="60" height="16" fill="#0a1628" stroke="#ffd60a" stroke-width="0.5" rx="2"/>
+  <text x="550" y="165" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="12" font-weight="bold">FS 350</text>
   
   <line x1="720" y1="150" x2="720" y2="650" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <text x="720" y="140" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">FS 500</text>
+  <rect x="690" y="128" width="60" height="16" fill="#0a1628" stroke="#ffd60a" stroke-width="0.5" rx="2"/>
+  <text x="720" y="140" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="12" font-weight="bold">FS 500</text>
   
   <line x1="900" y1="130" x2="900" y2="670" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <text x="900" y="120" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">FS 650</text>
+  <rect x="870" y="108" width="60" height="16" fill="#0a1628" stroke="#ffd60a" stroke-width="0.5" rx="2"/>
+  <text x="900" y="120" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="12" font-weight="bold">FS 650</text>
   
   <line x1="1050" y1="130" x2="1050" y2="670" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <text x="1050" y="120" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">FS 800</text>
+  <rect x="1020" y="108" width="60" height="16" fill="#0a1628" stroke="#ffd60a" stroke-width="0.5" rx="2"/>
+  <text x="1050" y="120" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="12" font-weight="bold">FS 800</text>
   
   <!-- Cockpit Zone -->
   <path d="M 120,400 Q 100,400 115,355 C 140,310 170,280 220,260 
@@ -177,12 +204,12 @@
   <rect x="585" y="213" width="20" height="15" fill="#ffd60a" stroke="#1a1a1a" stroke-width="1"/>
   <text x="595" y="240" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="7">EJB-2</text>
   
-  <!-- ECS DUCTS (Cyan) - ATA 21 -->
+  <!-- ECS DUCTS (Cyan) - ATA 21 - Dashed lines for layer separation -->
   <!-- Port ECS Duct -->
   <path d="M 240,365 C 300,340 400,310 550,290 C 700,270 850,260 1000,258"
-        fill="none" stroke="#06d6a0" stroke-width="8" stroke-opacity="0.7" stroke-linecap="round"/>
+        fill="none" stroke="#06d6a0" stroke-width="8" stroke-opacity="0.7" stroke-linecap="round" stroke-dasharray="12,6"/>
   <path d="M 240,365 C 300,340 400,310 550,290 C 700,270 850,260 1000,258"
-        fill="none" stroke="#043d2e" stroke-width="4" stroke-linecap="round"/>
+        fill="none" stroke="#043d2e" stroke-width="4" stroke-linecap="round" stroke-dasharray="12,6"/>
   <!-- Port ECS outlets -->
   <circle cx="450" cy="305" r="6" fill="#06d6a0" stroke="#043d2e" stroke-width="1.5"/>
   <circle cx="600" cy="282" r="6" fill="#06d6a0" stroke="#043d2e" stroke-width="1.5"/>
@@ -191,9 +218,9 @@
   
   <!-- Starboard ECS Duct -->
   <path d="M 240,435 C 300,460 400,490 550,510 C 700,530 850,540 1000,542"
-        fill="none" stroke="#06d6a0" stroke-width="8" stroke-opacity="0.7" stroke-linecap="round"/>
+        fill="none" stroke="#06d6a0" stroke-width="8" stroke-opacity="0.7" stroke-linecap="round" stroke-dasharray="12,6"/>
   <path d="M 240,435 C 300,460 400,490 550,510 C 700,530 850,540 1000,542"
-        fill="none" stroke="#043d2e" stroke-width="4" stroke-linecap="round"/>
+        fill="none" stroke="#043d2e" stroke-width="4" stroke-linecap="round" stroke-dasharray="12,6"/>
   <!-- Starboard ECS outlets -->
   <circle cx="450" cy="495" r="6" fill="#06d6a0" stroke="#043d2e" stroke-width="1.5"/>
   <circle cx="600" cy="518" r="6" fill="#06d6a0" stroke="#043d2e" stroke-width="1.5"/>
@@ -242,39 +269,68 @@
   
   <!-- ========== MAINTENANCE ACCESS PANELS ========== -->
   
-  <!-- Port Side Access Panels -->
+  <!-- Service Icon Definition (wrench symbol) -->
+  <!-- Port Side Access Panels with service icons -->
   <rect x="340" y="195" width="40" height="25" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="3"/>
   <line x1="360" y1="195" x2="360" y2="220" stroke="#88c0d0" stroke-width="1"/>
   <text x="360" y="188" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="7">AP-101P</text>
+  <!-- Service icon -->
+  <circle cx="375" cy="207" r="5" fill="none" stroke="#ffd60a" stroke-width="1"/>
+  <text x="375" y="210" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">🔧</text>
   
   <rect x="500" y="175" width="40" height="25" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="3"/>
   <line x1="520" y1="175" x2="520" y2="200" stroke="#88c0d0" stroke-width="1"/>
   <text x="520" y="168" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="7">AP-102P</text>
+  <!-- Service icon -->
+  <circle cx="535" cy="187" r="5" fill="none" stroke="#ffd60a" stroke-width="1"/>
+  <text x="535" y="190" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">🔧</text>
   
   <rect x="700" y="155" width="50" height="30" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="3"/>
   <line x1="725" y1="155" x2="725" y2="185" stroke="#88c0d0" stroke-width="1"/>
   <line x1="700" y1="170" x2="750" y2="170" stroke="#88c0d0" stroke-width="1"/>
   <text x="725" y="148" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="7">AP-103P</text>
   <text x="725" y="196" text-anchor="middle" fill="#5ba3c0" font-family="monospace" font-size="6">ECS ACCESS</text>
+  <!-- Service icon -->
+  <circle cx="745" cy="162" r="5" fill="none" stroke="#ffd60a" stroke-width="1"/>
+  <text x="745" y="165" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">🔧</text>
   
-  <!-- Starboard Side Access Panels -->
+  <!-- Starboard Side Access Panels with service icons -->
   <rect x="340" y="580" width="40" height="25" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="3"/>
   <line x1="360" y1="580" x2="360" y2="605" stroke="#88c0d0" stroke-width="1"/>
   <text x="360" y="618" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="7">AP-101S</text>
+  <!-- Service icon -->
+  <circle cx="375" cy="592" r="5" fill="none" stroke="#ffd60a" stroke-width="1"/>
+  <text x="375" y="595" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">🔧</text>
   
   <rect x="500" y="600" width="40" height="25" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="3"/>
   <line x1="520" y1="600" x2="520" y2="625" stroke="#88c0d0" stroke-width="1"/>
   <text x="520" y="638" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="7">AP-102S</text>
+  <!-- Service icon -->
+  <circle cx="535" cy="612" r="5" fill="none" stroke="#ffd60a" stroke-width="1"/>
+  <text x="535" y="615" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">🔧</text>
   
   <rect x="700" y="615" width="50" height="30" fill="none" stroke="#88c0d0" stroke-width="1.5" rx="3"/>
   <line x1="725" y1="615" x2="725" y2="645" stroke="#88c0d0" stroke-width="1"/>
   <line x1="700" y1="630" x2="750" y2="630" stroke="#88c0d0" stroke-width="1"/>
   <text x="725" y="658" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="7">AP-103S</text>
+  <!-- Service icon -->
+  <circle cx="745" cy="637" r="5" fill="none" stroke="#ffd60a" stroke-width="1"/>
+  <text x="745" y="640" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">🔧</text>
   
   <!-- Tank Access Panel (Top) -->
   <rect x="640" y="340" width="60" height="25" fill="none" stroke="#f72585" stroke-width="2" rx="3" stroke-dasharray="5,2"/>
   <text x="670" y="333" text-anchor="middle" fill="#f72585" font-family="monospace" font-size="7">AP-H2-001</text>
   <text x="670" y="372" text-anchor="middle" fill="#ffb3d9" font-family="monospace" font-size="6">TANK INSPECTION</text>
+  
+  <!-- ========== HEAT LOAD SUMMARY INSET ========== -->
+  <rect x="995" y="450" width="155" height="85" fill="#0d1f38" stroke="#f72585" stroke-width="1.5" rx="3"/>
+  <text x="1072" y="467" text-anchor="middle" fill="#f72585" font-family="Arial" font-size="9" font-weight="bold">THERMAL PRE-ANALYSIS</text>
+  <line x1="1000" y1="472" x2="1145" y2="472" stroke="#f72585" stroke-width="0.5"/>
+  <text x="1005" y="486" fill="#ffb3d9" font-family="monospace" font-size="7">Tank Heat Load: 2.8 kW</text>
+  <text x="1005" y="498" fill="#ffb3d9" font-family="monospace" font-size="7">Insulation: MLI 50mm</text>
+  <text x="1005" y="510" fill="#ffb3d9" font-family="monospace" font-size="7">Boil-off Rate: 0.15%/day</text>
+  <text x="1005" y="522" fill="#06d6a0" font-family="monospace" font-size="7">Status: PRELIMINARY</text>
+  <text x="1005" y="534" fill="#88c0d0" font-family="monospace" font-size="6">REF: 53-TH-001</text>
   
   <!-- ========== LEGEND BOX ========== -->
   <rect x="30" y="780" width="400" height="95" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
@@ -287,9 +343,9 @@
   <text x="95" y="826" fill="white" font-family="monospace" font-size="9">ELECTRICAL HARNESS (ATA 24)</text>
   
   <!-- ECS -->
-  <line x1="45" y1="842" x2="85" y2="842" stroke="#06d6a0" stroke-width="6" opacity="0.7"/>
-  <line x1="45" y1="842" x2="85" y2="842" stroke="#043d2e" stroke-width="3"/>
-  <text x="95" y="846" fill="white" font-family="monospace" font-size="9">ECS DUCT (ATA 21)</text>
+  <line x1="45" y1="842" x2="85" y2="842" stroke="#06d6a0" stroke-width="6" opacity="0.7" stroke-dasharray="8,4"/>
+  <line x1="45" y1="842" x2="85" y2="842" stroke="#043d2e" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="95" y="846" fill="white" font-family="monospace" font-size="9">ECS DUCT (ATA 21) - DASHED</text>
   
   <!-- Hydraulic -->
   <line x1="45" y1="862" x2="85" y2="862" stroke="#ff6b35" stroke-width="3"/>
