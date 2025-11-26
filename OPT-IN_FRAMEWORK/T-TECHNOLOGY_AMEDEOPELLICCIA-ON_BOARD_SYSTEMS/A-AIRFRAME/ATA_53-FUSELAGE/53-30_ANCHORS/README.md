@@ -72,35 +72,43 @@ Where:
 
 ### 2.3 Band Allocation Diagram
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                    53-30 ANCHORS SUBSYSTEM BANDS                        │
-└─────────────────────────────────────────────────────────────────────────┘
-
-    00          10          20          30          40          50
-    ║           ║           ║           ║           ║           ║
-    ▼           ▼           ▼           ▼           ▼           ▼
-┌───────┐   ┌───────┐   ┌───────┐   ┌───────┐   ┌───────┐   ┌───────┐
-│GENERAL│   │HARVEST│   │  CO₂  │   │ WATER │   │BATTERY│   │CIRCULR│
-│       │   │       │   │CAPTURE│   │RECYCLE│   │ LOOPS │   │STRUCT │
-│Overview   │Airflow│   │  DAC  │   │ Grey- │   │Quick- │   │       │
-│Safety │   │Condens│   │Mineral│   │ water │   │ Swap  │   │Reuse  │
-│Require│   │Waste  │   │Solidif│   │  UV   │   │ BMS   │   │Modular│
-│Design │   │ Heat  │   │       │   │       │   │Thermal│   │  DfD  │
-└───────┘   └───────┘   └───────┘   └───────┘   └───────┘   └───────┘
-
-    60          70          80          90          95
-    ║           ║           ║           ║           ║
-    ▼           ▼           ▼           ▼           ▼
-┌───────┐   ┌───────┐   ┌───────┐   ┌───────┐   ┌───────┐
-│STORAGE│   │RESERVD│   │ENERGY │   │ DATA  │   │ANCHORS│
-│CONDUCT│   │       │   │RENEW- │   │SCHEMAS│   │NETWORK│
-│       │   │       │   │ ABLES │   │       │   │       │
-│Tanks  │   │   —   │   │ Solar │   │  DPP  │   │Resourc│
-│Cartrid│   │       │   │Vibrat │   │ Event │   │Thermal│
-│Manifld│   │       │   │  TEG  │   │Catalog│   │ CO₂   │
-│CryoInt│   │       │   │HeatRec│   │DataDic│   │ Water │
-└───────┘   └───────┘   └───────┘   └───────┘   └───────┘
+```mermaid
+flowchart TB
+    subgraph ANCHORS["53-30 ANCHORS SUBSYSTEM BANDS"]
+        direction LR
+        
+        subgraph Row1["Primary Bands"]
+            B00["**00 GENERAL**<br/>Overview<br/>Safety<br/>Requirements<br/>Design"]
+            B10["**10 HARVESTING**<br/>Airflow<br/>Condensate<br/>Waste Heat"]
+            B20["**20 CO₂ CAPTURE**<br/>DAC<br/>Mineralization<br/>Solidification"]
+            B30["**30 WATER**<br/>Greywater<br/>UV Disinfection<br/>Potable"]
+            B40["**40 BATTERY**<br/>QuickSwap<br/>BMS<br/>Thermal Regen"]
+            B50["**50 CIRCULAR**<br/>Reusable Mounts<br/>Modular<br/>DfD"]
+        end
+        
+        subgraph Row2["Secondary Bands"]
+            B60["**60 STORAGE**<br/>Tanks<br/>Cartridges<br/>Manifolds<br/>Cryogenic"]
+            B70["**70 RESERVED**<br/>—<br/>Future Use"]
+            B80["**80 ENERGY**<br/>Solar<br/>Vibration<br/>TEG<br/>Heat Recovery"]
+            B90["**90 DATA**<br/>DPP Schema<br/>Event Catalog<br/>Data Dictionary"]
+            B95["**95 NETWORKS**<br/>ResourceBus<br/>ThermalBus<br/>CO₂Bus<br/>WaterBus"]
+        end
+    end
+    
+    B00 --> B10 --> B20 --> B30 --> B40 --> B50
+    B60 --> B70 --> B80 --> B90 --> B95
+    
+    style B00 fill:#e1f5fe,stroke:#01579b
+    style B10 fill:#e8f5e9,stroke:#1b5e20
+    style B20 fill:#fff3e0,stroke:#e65100
+    style B30 fill:#e3f2fd,stroke:#0d47a1
+    style B40 fill:#fce4ec,stroke:#880e4f
+    style B50 fill:#f3e5f5,stroke:#4a148c
+    style B60 fill:#efebe9,stroke:#3e2723
+    style B70 fill:#f5f5f5,stroke:#616161
+    style B80 fill:#fffde7,stroke:#f57f17
+    style B90 fill:#e0f2f1,stroke:#004d40
+    style B95 fill:#fbe9e7,stroke:#bf360c
 ```
 
 ### 2.4 Reserved Bands
@@ -369,28 +377,30 @@ The following are enforced by `/tools/ci/doc_meta_enforcer.py`:
 
 ## Quick Reference Card
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                    53-30 ANCHORS QUICK REFERENCE                        │
-└─────────────────────────────────────────────────────────────────────────┘
-
-FORMAT:  53-30-XX-YY_Description
-
-BANDS:
-  00 = General (lifecycle)     60 = Storages & conduction
-  10 = Harvesting              80 = Energy renewables
-  20 = CO₂ capture             90 = Data & schemas
-  30 = Water recycling         95 = ANCHORS networks
-  40 = Battery loops           70 = Reserved
-  50 = Circular structures
-
-ASSETS:
-  FIG-NNN = Diagrams (.mermaid, .svg)
-  DAT-NNN = Data files (.csv)
-  TBL-NNN = Tables (.csv)
-  TR-NNN  = Test reports (.md)
-
-NOTE: Band 95 = ANCHORS-internal networks ≠ ATA 95 (Neural Networks)
+```mermaid
+mindmap
+  root((53-30 ANCHORS))
+    FORMAT
+      53-30-XX-YY_Description
+    BANDS
+      00 General lifecycle
+      10 Harvesting
+      20 CO₂ capture
+      30 Water recycling
+      40 Battery loops
+      50 Circular structures
+      60 Storages & conduction
+      70 Reserved
+      80 Energy renewables
+      90 Data & schemas
+      95 ANCHORS networks
+    ASSETS
+      FIG-NNN Diagrams
+      DAT-NNN Data files
+      TBL-NNN Tables
+      TR-NNN Test reports
+    NOTE
+      Band 95 ≠ ATA 95
 ```
 
 ---
