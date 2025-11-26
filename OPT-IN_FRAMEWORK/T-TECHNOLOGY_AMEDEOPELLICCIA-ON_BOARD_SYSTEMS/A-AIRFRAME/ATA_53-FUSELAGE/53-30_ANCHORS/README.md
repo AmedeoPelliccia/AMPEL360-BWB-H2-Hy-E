@@ -82,12 +82,31 @@ This bucket defines the sustainability, circularity, and regenerative systems in
 
 Items within this bucket follow the pattern:
 
-- **53-30-XX-YY_DESCRIPTION**
-  - 53 = ATA chapter (Fuselage)
-  - 30 = Bucket number (ANCHORS)
-  - XX = Subsystem (00=General, 10=Harvesting, 20=CO₂, 30=Water, 40=Battery)
-  - YY = Component/sub-subsystem number
-  - DESCRIPTION = Descriptive name
+**53-30-XX-YY_DESCRIPTION**
+
+Where:
+
+- `53` = ATA chapter (**Fuselage**).
+- `30` = Bucket number (**ANCHORS**).
+- `XX` = Subsystem band:
+
+  - `00` = General (lifecycle skeleton)
+  - `10` = Harvesting (airflow, condensate, waste-heat, etc.)
+  - `20` = CO₂ capture and conversion
+  - `30` = Water / waste recycling
+  - `40` = Battery loops (QuickSwap, thermal regen, SoH loops)
+  - `60` = Continuous storages and conduction  
+    (tanks, cartridges, reservoirs, manifolds, long-duration loops)
+  - `80` = Energy renewables (solar, vibration, thermoelectric, heat recovery)
+  - `90` = Data & schemas  
+    (including DPP, event catalogs, interface tables)
+  - `95` = ANCHORS networks  
+    (ResourceBus / ThermalBus / CO₂ / Water intra-ANCHORS routing)
+
+- `YY` = Component / sub-subsystem number within the band.
+- `DESCRIPTION` = Short descriptive name, using `_` as separator.
+
+> Note: `XX = 95` denotes **ANCHORS-internal networks** and must not be confused with **ATA 95** (Neural Networks), which remains a separate chapter referenced via ICDs.
 
 ---
 
@@ -139,6 +158,6 @@ The 53-30-00_GENERAL folder contains the complete 14-phase lifecycle documentati
 - Status: **DRAFT** — Subject to human review and approval.
 - Human approver: _[to be completed]_.
 - Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-25
+- Last AI update: 2025-11-26
 - **Standard**: OPT-IN Framework v1.1
 - **Owner**: AMPEL360 Documentation WG
