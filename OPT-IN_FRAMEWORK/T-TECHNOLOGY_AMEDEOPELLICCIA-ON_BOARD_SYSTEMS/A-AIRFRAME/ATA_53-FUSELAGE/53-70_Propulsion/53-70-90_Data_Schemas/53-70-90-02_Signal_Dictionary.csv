@@ -14,4 +14,4 @@ SIG-PROP-012,FAN4_REGEN_PWR,Float32,kW,0,200,100,CAN,MCU_4,Mode_Manager,Fan 4 re
 SIG-PROP-013,REGEN_ENABLE,Boolean,-,0,1,10,AFDX,Mode_Manager,MCU_All,Regeneration enable command
 SIG-PROP-014,REGEN_POWER_CMD,Float32,kW,0,800,100,AFDX,Mode_Manager,MCU_All,Regeneration power command
 SIG-PROP-015,BATTERY_ACCEPT,Boolean,-,0,1,10,CAN,BMS,Mode_Manager,Battery acceptance flag
-SIG-PROP-016,EMERGENCY_ISO,Boolean,-,0,1,Async,Discrete,Safety_Supervisor,All,Emergency isolation command
+SIG-PROP-016,EMERGENCY_ISOLATION,Boolean,-,0,1,Async,Discrete,Safety_Supervisor,All,Emergency isolation command

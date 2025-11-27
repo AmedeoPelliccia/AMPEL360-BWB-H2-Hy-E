@@ -35,7 +35,7 @@ The Regenerative Systems section covers:
 | [53-70-60-03_Battery_Acceptance.md](./53-70-60-03_Battery_Acceptance.md) | Battery Acceptance | PLANNED |
 | [53-70-60-04_Regen_Safety_Analysis.md](./53-70-60-04_Regen_Safety_Analysis.md) | Regen Safety Analysis | PLANNED |
 
-## Regeneration Specifications
+## Regenerative Specifications
 
 | Phase | Duration | Regen Power | Energy Recovered |
 |-------|----------|-------------|------------------|
