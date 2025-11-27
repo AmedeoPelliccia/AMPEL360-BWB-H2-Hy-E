@@ -385,8 +385,10 @@ class ConfigDriftDetector:
             data = asdict(report)
             # Convert enums to strings
             for item in data.get("drift_items", []):
-                item["drift_type"] = item["drift_type"].value if hasattr(item["drift_type"], "value") else item["drift_type"]
-                item["severity"] = item["severity"].value if hasattr(item["severity"], "value") else item["severity"]
+                if isinstance(item["drift_type"], Enum):
+                    item["drift_type"] = item["drift_type"].value
+                if isinstance(item["severity"], Enum):
+                    item["severity"] = item["severity"].value
             json.dump(data, f, indent=2)
         
         # Save Markdown
