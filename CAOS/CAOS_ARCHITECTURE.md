@@ -35,60 +35,81 @@ CAOS is a **multi-layer operational intelligence framework** that spans:
 - **Regional hubs** (AirCCC-R)
 - **Fleet core** (AirCCC-F)
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        CAOS ARCHITECTURE                            │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │                    PRESENTATION LAYER                        │   │
-│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │   │
-│  │  │   EFB    │  │  OCC     │  │   MRO    │  │ Regulator│    │   │
-│  │  │  Portal  │  │ Dashboard│  │  Portal  │  │  Access  │    │   │
-│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │   │
-│  └─────────────────────────────────────────────────────────────┘   │
-│                              │                                      │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │                    APPLICATION LAYER                         │   │
-│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │   │
-│  │  │   ICA    │  │   MRO    │  │   Ops    │  │   DPP    │    │   │
-│  │  │  Agent   │  │  Agent   │  │  Agent   │  │  Agent   │    │   │
-│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │   │
-│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐                  │   │
-│  │  │ ANCHORS  │  │   SHM    │  │  Energy  │                  │   │
-│  │  │  Agent   │  │  Agent   │  │  Agent   │                  │   │
-│  │  └──────────┘  └──────────┘  └──────────┘                  │   │
-│  └─────────────────────────────────────────────────────────────┘   │
-│                              │                                      │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │                    INTELLIGENCE LAYER                        │   │
-│  │  ┌──────────────────┐  ┌──────────────────┐                 │   │
-│  │  │   NN Models      │  │   Digital Twins  │                 │   │
-│  │  │   (ATA 95)       │  │   Service Twins  │                 │   │
-│  │  └──────────────────┘  └──────────────────┘                 │   │
-│  │  ┌──────────────────┐  ┌──────────────────┐                 │   │
-│  │  │   MLOps          │  │   Analytics      │                 │   │
-│  │  │   Pipeline       │  │   Engine         │                 │   │
-│  │  └──────────────────┘  └──────────────────┘                 │   │
-│  └─────────────────────────────────────────────────────────────┘   │
-│                              │                                      │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │                    DATA LAYER                                │   │
-│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │   │
-│  │  │  Event   │  │  Time    │  │   DPP    │  │  Config  │    │   │
-│  │  │   Bus    │  │  Series  │  │  Store   │  │  Store   │    │   │
-│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │   │
-│  └─────────────────────────────────────────────────────────────┘   │
-│                              │                                      │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │                    INTEGRATION LAYER                         │   │
-│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │   │
-│  │  │  ARINC   │  │  AFDX    │  │   CAN    │  │  Ethernet│    │   │
-│  │  │   429    │  │          │  │          │  │          │    │   │
-│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │   │
-│  └─────────────────────────────────────────────────────────────┘   │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    %% CAOS Architecture – GitHub-compatible flowchart
+
+    %% Presentation Layer
+    subgraph Presentation_Layer["Presentation Layer"]
+        efb[EFB Portal]
+        occ[OCC Dashboard]
+        mro[MRO Portal]
+        reg[Regulator Access]
+    end
+
+    %% Application Layer – CAOS Agents
+    subgraph Application_Layer["Application Layer – CAOS Agents"]
+        ica[ICA Agent]
+        mroA[MRO Agent]
+        ops[Ops Agent]
+        dpp[DPP Agent]
+        anchors[ANCHORS Agent]
+        shm[SHM Agent]
+        energy[Energy Agent]
+    end
+
+    %% Intelligence Layer
+    subgraph Intelligence_Layer["Intelligence Layer"]
+        nn[NN Models ATA 95]
+        dt[Digital Twins]
+        st[Service Twins]
+        mlops[MLOps Pipeline]
+        an[Analytics Engine]
+    end
+
+    %% Data Layer
+    subgraph Data_Layer["Data Layer"]
+        bus[CAOS Event Bus]
+        ts[Time Series Store]
+        dppStore[DPP Store]
+        cfg[Config Store]
+    end
+
+    %% Integration Layer – Buses and Protocols
+    subgraph Integration_Layer["Integration Layer – Buses and Protocols"]
+        arinc[ARINC429]
+        afdx[AFDX]
+        can[CAN]
+        eth[Ethernet IP]
+    end
+
+    %% Presentation -> Application
+    efb --> ops
+    occ --> ops
+    mro --> mroA
+    reg --> dpp
+
+    %% Application -> Intelligence
+    ica --> nn
+    mroA --> an
+    ops --> nn
+    dpp --> an
+    anchors --> dt
+    shm --> nn
+    energy --> dt
+
+    %% Intelligence -> Data
+    nn --> bus
+    an --> bus
+    dt --> ts
+    st --> ts
+    mlops --> cfg
+
+    %% Data -> Integration
+    bus --> arinc
+    bus --> afdx
+    bus --> can
+    bus --> eth
 ```
 
 ---
