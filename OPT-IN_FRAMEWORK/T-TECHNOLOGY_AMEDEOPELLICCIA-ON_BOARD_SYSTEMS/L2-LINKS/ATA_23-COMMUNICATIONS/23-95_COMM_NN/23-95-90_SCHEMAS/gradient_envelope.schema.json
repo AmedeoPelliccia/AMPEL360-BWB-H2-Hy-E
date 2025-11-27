@@ -145,7 +145,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "Differential privacy delta parameter - probability of privacy failure (typically 1e-5)"
+          "description": "Probability that the privacy guarantee (epsilon) fails. Typically set to 1e-5 or smaller."
         },
         "clipping_bound": {
           "type": "number",

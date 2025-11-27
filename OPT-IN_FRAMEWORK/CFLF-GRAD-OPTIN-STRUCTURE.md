@@ -35,7 +35,7 @@ OPT-IN_FRAMEWORK/
 │
 ├── N-NEURAL_NETWORKS_USERS_TRACEABILITY/
 │   └── ATA_97-NEURAL_NETWORK_MODELS/
-│       └── 97-40_SOFTWARE/
+│       └── 97-40_Software/
 │           └── 97-40-20_FEDERATED_LEARNING/     ← MODELS & TRAINING
 │               ├── 97-40-20-00_GENERAL/         # 14 lifecycle folders
 │               ├── 97-40-20-10_DP_SGD/          # Privacy-preserving training
