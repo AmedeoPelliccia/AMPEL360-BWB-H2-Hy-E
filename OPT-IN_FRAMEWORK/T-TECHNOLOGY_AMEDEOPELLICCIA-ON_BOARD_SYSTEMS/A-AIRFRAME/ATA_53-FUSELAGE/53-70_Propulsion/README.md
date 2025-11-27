@@ -761,17 +761,17 @@ flowchart TB
 
 | Band | Documents Planned | Documents Created | Status |
 |------|-------------------|-------------------|--------|
-| 00 General | 4 | 1 | 25% |
-| 10 Fuel Cell | 5 | 0 | 0% |
-| 20 Turbine | 3 | 0 | 0% |
-| 30 Motor | 4 | 0 | 0% |
-| 40 Power Electronics | 3 | 0 | 0% |
-| 50 Thermal | 4 | 0 | 0% |
-| 60 Regenerative | 4 | 0 | 0% |
-| 70 Control | 4 | 0 | 0% |
-| 80 Safety | 4 | 0 | 0% |
-| 90 Schemas | 3 | 0 | 0% |
-| **Total** | **38** | **1** | **3%** |
+| 00 General | 5 | 5 | 100% |
+| 10 Fuel Cell | 6 | 6 | 100% |
+| 20 Turbine | 4 | 4 | 100% |
+| 30 Motor | 5 | 5 | 100% |
+| 40 Power Electronics | 4 | 4 | 100% |
+| 50 Thermal | 5 | 5 | 100% |
+| 60 Regenerative | 5 | 5 | 100% |
+| 70 Control | 5 | 5 | 100% |
+| 80 Safety | 5 | 5 | 100% |
+| 90 Schemas | 4 | 4 | 100% |
+| **Total** | **48** | **48** | **100%** |
 
 ---
 

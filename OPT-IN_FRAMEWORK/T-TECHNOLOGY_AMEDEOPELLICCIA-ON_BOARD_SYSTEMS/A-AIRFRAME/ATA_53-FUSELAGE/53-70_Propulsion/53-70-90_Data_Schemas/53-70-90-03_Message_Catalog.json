@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "53-70-90-03 Message Catalog",
+  "description": "Control messages for propulsion interface communications",
+  "version": "1.0",
+  "date": "2025-11-27",
+  "status": "DRAFT",
+  "messages": {
+    "POWER_DEMAND": {
+      "message_id": "MSG-PROP-001",
+      "direction": "ANCHORS_TO_PROPULSION",
+      "protocol": "AFDX",
+      "rate_hz": 10,
+      "description": "Power demand request from ANCHORS to propulsion",
+      "fields": [
+        {
+          "name": "fc_power_demand",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 1100,
+          "description": "Total fuel cell power demand"
+        },
+        {
+          "name": "tg_power_demand",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 1700,
+          "description": "Total turbo-generator power demand"
+        },
+        {
+          "name": "fan_power_demand",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 2400,
+          "description": "Total fan motor power demand"
+        }
+      ]
+    },
+    "POWER_AVAILABLE": {
+      "message_id": "MSG-PROP-002",
+      "direction": "PROPULSION_TO_ANCHORS",
+      "protocol": "AFDX",
+      "rate_hz": 10,
+      "description": "Available power report from propulsion to ANCHORS",
+      "fields": [
+        {
+          "name": "fc_power_available",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 1100,
+          "description": "Available fuel cell power"
+        },
+        {
+          "name": "tg_power_available",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 1700,
+          "description": "Available turbo-generator power"
+        },
+        {
+          "name": "total_power_available",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 3000,
+          "description": "Total available propulsion power"
+        }
+      ]
+    },
+    "REGEN_REQUEST": {
+      "message_id": "MSG-PROP-003",
+      "direction": "ANCHORS_TO_PROPULSION",
+      "protocol": "AFDX",
+      "rate_hz": 10,
+      "description": "Regeneration request from ANCHORS to motor controllers",
+      "fields": [
+        {
+          "name": "regen_enable",
+          "type": "boolean",
+          "description": "Regeneration enable flag"
+        },
+        {
+          "name": "regen_power_limit",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 800,
+          "description": "Maximum regeneration power limit"
+        }
+      ]
+    },
+    "REGEN_STATUS": {
+      "message_id": "MSG-PROP-004",
+      "direction": "PROPULSION_TO_ANCHORS",
+      "protocol": "AFDX",
+      "rate_hz": 10,
+      "description": "Regeneration status from motor controllers to ANCHORS",
+      "fields": [
+        {
+          "name": "regen_active",
+          "type": "boolean",
+          "description": "Regeneration active flag"
+        },
+        {
+          "name": "regen_power_actual",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 800,
+          "description": "Actual regeneration power"
+        },
+        {
+          "name": "regen_energy_recovered",
+          "type": "float32",
+          "unit": "kWh",
+          "min": 0,
+          "max": 500,
+          "description": "Total energy recovered this flight"
+        }
+      ]
+    },
+    "THERMAL_STATUS": {
+      "message_id": "MSG-PROP-005",
+      "direction": "PROPULSION_TO_ANCHORS",
+      "protocol": "CAN",
+      "rate_hz": 1,
+      "description": "Thermal status from propulsion to ANCHORS thermal manager",
+      "fields": [
+        {
+          "name": "fc_coolant_temp",
+          "type": "float32",
+          "unit": "degC",
+          "min": 20,
+          "max": 90,
+          "description": "Fuel cell coolant temperature"
+        },
+        {
+          "name": "tg_exhaust_temp",
+          "type": "float32",
+          "unit": "degC",
+          "min": 100,
+          "max": 650,
+          "description": "Turbine exhaust temperature"
+        },
+        {
+          "name": "motor_coolant_temp",
+          "type": "float32",
+          "unit": "degC",
+          "min": 20,
+          "max": 80,
+          "description": "Motor coolant temperature"
+        },
+        {
+          "name": "heat_recovery_power",
+          "type": "float32",
+          "unit": "kW",
+          "min": 0,
+          "max": 400,
+          "description": "Total heat recovery power"
+        }
+      ]
+    },
+    "FAULT_STATUS": {
+      "message_id": "MSG-PROP-006",
+      "direction": "BIDIRECTIONAL",
+      "protocol": "AFDX",
+      "rate_hz": 10,
+      "description": "Fault status exchange between ANCHORS and propulsion",
+      "fields": [
+        {
+          "name": "fault_code",
+          "type": "uint16",
+          "description": "Fault code (0 = no fault)"
+        },
+        {
+          "name": "fault_severity",
+          "type": "uint8",
+          "min": 0,
+          "max": 3,
+          "description": "Fault severity (0=none, 1=warning, 2=caution, 3=critical)"
+        },
+        {
+          "name": "isolation_required",
+          "type": "boolean",
+          "description": "Isolation action required"
+        }
+      ]
+    }
+  },
+  "document_control": {
+    "generated_by": "AI (GitHub Copilot)",
+    "prompted_by": "Amedeo Pelliccia",
+    "status": "DRAFT",
+    "human_approver": "[to be completed]",
+    "repository": "AMPEL360-BWB-H2-Hy-E",
+    "last_update": "2025-11-27"
+  }
+}
