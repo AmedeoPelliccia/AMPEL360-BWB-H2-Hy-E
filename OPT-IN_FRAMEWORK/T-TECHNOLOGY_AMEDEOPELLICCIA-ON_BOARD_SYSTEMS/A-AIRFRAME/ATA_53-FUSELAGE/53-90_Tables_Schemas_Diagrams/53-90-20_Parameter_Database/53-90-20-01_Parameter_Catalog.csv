@@ -1,0 +1,51 @@
+Parameter_ID,Name,Category,Default,Min,Max,Units,Bucket,Description
+P_BAT_TMS_T_HIGH_WARN,Temp High Warning,Tunable,45,40,55,°C,53-20,Battery high temperature warning threshold
+P_BAT_TMS_T_HIGH_LIM,Temp High Limit,Tunable,55,50,60,°C,53-20,Battery high temperature limit for shutdown
+P_BAT_TMS_T_CRIT,Temp Critical,Fixed,60,-,-,°C,53-20,Critical battery temperature (hardware limit)
+P_BAT_TMS_T_LOW_WARN,Temp Low Warning,Tunable,5,0,10,°C,53-20,Battery low temperature warning threshold
+P_BAT_TMS_T_LOW_LIM,Temp Low Limit,Tunable,0,-5,5,°C,53-20,Battery low temperature limit for heating
+P_BAT_TMS_COOL_GAIN,Cooling PID Gain,Tunable,2.5,0.5,10,-,53-40,TMS cooling loop proportional gain
+P_BAT_TMS_COOL_TI,Cooling PID Ti,Tunable,30,5,120,s,53-40,TMS cooling loop integral time constant
+P_BAT_TMS_COOL_TD,Cooling PID Td,Tunable,5,0,30,s,53-40,TMS cooling loop derivative time constant
+P_BAT_TMS_HEAT_RATE,Max Heat Rate,Configurable,5,1,10,°C/min,53-20,Maximum battery heating rate
+P_BAT_TMS_PUMP_MIN,Pump Min Speed,Tunable,30,20,50,%,53-80,Minimum battery cooling pump speed
+P_BAT_TMS_PUMP_MAX,Pump Max Speed,Fixed,100,-,-,%,53-80,Maximum battery cooling pump speed
+P_BAT_SOC_MIN_OP,Min Operating SOC,Configurable,20,15,30,%,53-80,Minimum SOC for normal operation
+P_BAT_SOC_WARN,SOC Warning Level,Configurable,25,20,35,%,53-80,SOC level for low battery warning
+P_BAT_SOC_REGEN_MAX,Max Regen SOC,Configurable,95,90,100,%,53-80,Maximum SOC to accept regeneration
+P_CO2_CTRL_FLOW_NOM,Nominal Flow,Tunable,25,10,40,L/min,53-20,Nominal CO2 capture flow rate
+P_CO2_CTRL_FLOW_MAX,Maximum Flow,Fixed,50,-,-,L/min,53-20,Maximum CO2 capture flow rate
+P_CO2_CTRL_P_MIN,Minimum Pressure,Tunable,0.5,0.2,1.0,bar,53-20,Minimum operating pressure
+P_CO2_CTRL_P_MAX,Maximum Pressure,Fixed,5,-,-,bar,53-20,Maximum operating pressure
+P_CO2_CART_FULL_LVL,Cartridge Full Level,Configurable,90,85,95,%,53-60,Level indicating cartridge is full
+P_CO2_CART_SWAP_LVL,Cartridge Swap Level,Configurable,85,80,90,%,53-10,Level triggering cartridge swap alert
+P_CO2_REACTOR_T_SET,Reactor Temp Setpoint,Tunable,150,120,180,°C,53-20,CO2 mineralization reactor setpoint
+P_CO2_REACTOR_T_MAX,Reactor Temp Max,Fixed,200,-,-,°C,53-20,Maximum reactor temperature
+P_H2O_TANK_LOW_WARN,Tank Low Warning,Configurable,20,10,30,%,53-60,Water tank low level warning
+P_H2O_TANK_LOW_LIM,Tank Low Limit,Configurable,10,5,15,%,53-60,Water tank minimum level
+P_H2O_T_MAX,Max Water Temp,Tunable,45,40,50,°C,53-60,Maximum potable water temperature
+P_H2O_QUALITY_MIN,Min Quality Score,Configurable,80,70,90,score,53-60,Minimum acceptable water quality score
+P_TH_HT_T_SETPOINT,HT Bus Setpoint,Tunable,85,75,90,°C,53-80,High-temp bus target temperature
+P_TH_LT_T_SETPOINT,LT Bus Setpoint,Tunable,50,40,55,°C,53-80,Low-temp bus target temperature
+P_TH_HT_PUMP_SPD_MIN,HT Pump Min Speed,Tunable,30,20,50,%,53-80,HT bus pump minimum speed
+P_TH_LT_PUMP_SPD_MIN,LT Pump Min Speed,Tunable,40,25,60,%,53-80,LT bus pump minimum speed
+P_TH_HT_P_MIN,HT Bus Min Pressure,Tunable,1.5,1.0,2.0,bar,53-80,HT bus minimum operating pressure
+P_TH_LT_P_MIN,LT Bus Min Pressure,Tunable,1.0,0.5,1.5,bar,53-80,LT bus minimum operating pressure
+P_TH_VALVE_DEADBAND,Valve Deadband,Tunable,2,1,5,%,53-80,Thermal valve control deadband
+P_EMS_BAT_SOC_MIN,Min Battery SOC,Configurable,20,15,30,%,53-80,Minimum battery SOC for operation
+P_EMS_REGEN_MAX,Max Regen Power,Fixed,800,-,-,kW,53-70,Maximum regeneration power
+P_EMS_SHED_LVL_1,Load Shed Level 1,Configurable,50,40,60,% SOC,53-80,SOC trigger for level 1 shedding
+P_EMS_SHED_LVL_2,Load Shed Level 2,Configurable,40,30,50,% SOC,53-80,SOC trigger for level 2 shedding
+P_EMS_SHED_LVL_3,Load Shed Level 3,Configurable,30,20,40,% SOC,53-80,SOC trigger for level 3 shedding
+P_EMS_POWER_MARGIN,Power Margin,Tunable,10,5,20,%,53-80,Power allocation safety margin
+P_SS_WD_TIMEOUT,Watchdog Timeout,Fixed,100,-,-,ms,53-40,Safety watchdog timeout period
+P_SS_ISO_DELAY,Isolation Delay,Tunable,50,20,100,ms,53-40,Delay before safety isolation
+P_SS_FAULT_PERSIST,Fault Persistence,Tunable,3,1,5,cycles,53-40,Fault detection persistence filter
+P_SS_INTERLOCK_TIME,Interlock Hold Time,Tunable,500,200,1000,ms,53-40,Interlock engagement hold time
+P_MM_INIT_TIMEOUT,Init Timeout,Tunable,10,5,30,s,53-40,System initialization timeout
+P_MM_MODE_DELAY,Mode Change Delay,Tunable,200,100,500,ms,53-40,Delay between mode transitions
+P_MM_AUTO_THRESHOLD,Auto Mode Threshold,Configurable,85,80,95,%,53-40,Confidence for auto mode entry
+P_NN_CONF_THRESH,NN Confidence Threshold,Tunable,0.85,0.70,0.95,-,53-40,Minimum NN output confidence
+P_NN_TIMEOUT,NN Inference Timeout,Tunable,80,50,100,ms,53-40,Maximum NN inference time
+P_NN_FALLBACK_DELAY,NN Fallback Delay,Tunable,3,1,10,cycles,53-40,Cycles before NN fallback
+P_NN_LEARNING_RATE,NN Learning Rate,Adaptive,0.001,0.0001,0.01,-,53-40,Online learning rate (if enabled)

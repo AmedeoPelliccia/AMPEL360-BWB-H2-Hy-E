@@ -1,0 +1,17 @@
+VL_ID,Name,Source,Destinations,BAG_ms,MTU_bytes,DAL,Priority,Description
+VL_5301,ANCH_MM_STATUS,Mode_Manager,All,20,512,C,Medium,Mode manager status broadcast
+VL_5302,ANCH_BAT_DATA,BMS,TMS/EMS/SS,10,256,B,High,Battery pack data (temps/voltage/current)
+VL_5303,ANCH_BAT_CMD,TMS,BMS,20,128,B,High,Battery management commands
+VL_5304,ANCH_TH_DATA,THC,EMS/HMI,50,256,C,Medium,Thermal bus data (temps/flows)
+VL_5305,ANCH_TH_CMD,EMS,THC,50,128,C,Medium,Thermal control commands
+VL_5306,ANCH_CO2_DATA,CO2C,EMS/HMI,100,256,C,Medium,CO2 capture system data
+VL_5307,ANCH_H2O_DATA,WTC,HMI,200,128,D,Low,Water treatment system data
+VL_5308,ANCH_EMS_DATA,EMS,HMI/FADEC,50,512,C,Medium,Energy management status
+VL_5309,ANCH_SS_STATUS,SS,All,10,128,B,Critical,Safety supervisor status
+VL_5310,ANCH_SS_CMD,SS,All,10,64,B,Critical,Safety supervisor commands
+VL_5311,ANCH_HMI_DISP,MM,DU,100,1024,D,Low,HMI display data
+VL_5312,ANCH_MAINT,BITE,CMC,500,512,D,Low,Maintenance and diagnostics data
+VL_5313,ANCH_DPP_EVT,DPP,Ground,1000,256,D,Low,Digital product passport events
+VL_5314,ANCH_NN_STATUS,NN,MM/SS,20,256,C,Medium,Neural network inference status
+VL_5315,ANCH_TH_HT_DATA,THC,EMS,50,128,C,Medium,HT bus specific data
+VL_5316,ANCH_TH_LT_DATA,THC,EMS,50,128,C,Medium,LT bus specific data

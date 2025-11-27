@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/53-90-20-02_Parameter_Schema.json",
+  "title": "ANCHORS Parameter Definition Schema",
+  "description": "JSON Schema for validating ANCHORS configurable parameters",
+  "type": "object",
+  "required": ["param_id", "name", "category", "default", "units", "bucket"],
+  "properties": {
+    "param_id": {
+      "type": "string",
+      "pattern": "^P_[A-Z0-9]+_[A-Z0-9_]+$",
+      "description": "Unique parameter identifier"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 64,
+      "description": "Human-readable parameter name"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["Fixed", "Tunable", "Configurable", "Adaptive"],
+      "description": "Parameter modification category"
+    },
+    "default": {
+      "type": "number",
+      "description": "Default parameter value"
+    },
+    "min": {
+      "type": ["number", "null"],
+      "description": "Minimum allowed value (null for Fixed)"
+    },
+    "max": {
+      "type": ["number", "null"],
+      "description": "Maximum allowed value (null for Fixed)"
+    },
+    "units": {
+      "type": "string",
+      "description": "Engineering units"
+    },
+    "bucket": {
+      "type": "string",
+      "pattern": "^53-(0[0-9]|[1-8][0-9]|90)$",
+      "description": "ATA 53 bucket where parameter is used"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 256,
+      "description": "Parameter description"
+    },
+    "modification": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "string",
+          "enum": ["Factory", "Engineering", "Maintenance", "Automatic"],
+          "description": "Who can modify this parameter"
+        },
+        "approval_required": {
+          "type": "boolean",
+          "description": "Whether approval is needed for changes"
+        },
+        "audit_log": {
+          "type": "boolean",
+          "description": "Whether changes are logged"
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "step": {
+          "type": "number",
+          "description": "Minimum adjustment step"
+        },
+        "precision": {
+          "type": "integer",
+          "description": "Decimal places of precision"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Parameters that must be checked together"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "requirement_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "safety_impact": {
+          "type": "string",
+          "enum": ["None", "Low", "Medium", "High", "Critical"]
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "param_id": "P_BAT_TMS_T_HIGH_LIM",
+      "name": "Temp High Limit",
+      "category": "Tunable",
+      "default": 55,
+      "min": 50,
+      "max": 60,
+      "units": "°C",
+      "bucket": "53-20",
+      "description": "Battery high temperature limit for shutdown",
+      "modification": {
+        "authority": "Engineering",
+        "approval_required": true,
+        "audit_log": true
+      },
+      "validation": {
+        "step": 1,
+        "precision": 0,
+        "dependencies": ["P_BAT_TMS_T_HIGH_WARN", "P_BAT_TMS_T_CRIT"]
+      },
+      "traceability": {
+        "requirement_ids": ["REQ-BAT-010", "SSR-001"],
+        "safety_impact": "High"
+      }
+    }
+  ]
+}

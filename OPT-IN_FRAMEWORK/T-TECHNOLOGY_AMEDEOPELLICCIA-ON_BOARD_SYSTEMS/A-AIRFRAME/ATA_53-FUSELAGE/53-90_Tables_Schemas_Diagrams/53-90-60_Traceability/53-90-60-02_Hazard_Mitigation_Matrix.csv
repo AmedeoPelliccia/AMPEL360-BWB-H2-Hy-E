@@ -1,0 +1,16 @@
+Hazard_ID,Hazard_Description,Severity,Likelihood,Risk_Level,Mitigation,Design_Reference,DSR_ID,Verification_Method,Status
+H-001,Battery thermal runaway,Catastrophic,Remote,High,TMS monitoring and containment vessel,53-60-10,DSR-005,HIL Test,Verified
+H-002,Battery fire propagation to cabin,Catastrophic,Extremely Remote,Medium,Isolation bulkhead and suppression system,53-60-10,DSR-006,Rig Test,Pending
+H-003,CO2 cartridge over-pressure,Hazardous,Remote,Medium,Pressure relief valve and burst disc,53-60-20,DSR-003,Pressure Test,Verified
+H-004,CO2 leak into cabin atmosphere,Major,Probable,High,CO2 detection and ventilation routing,53-20-20,DSR-002,Integration Test,Pending
+H-005,Thermal coolant leak,Major,Remote,Low,Leak detection sensors and isolation valves,53-80-20,DSR-007,Leak Test,Pending
+H-006,Loss of battery cooling,Hazardous,Remote,Medium,Redundant cooling and load shedding,53-20-01,DSR-008,HIL Test,Pending
+H-007,HV electrical shock during maintenance,Hazardous,Extremely Remote,Low,Interlock switches and grounding,53-80-60,DSR-012,Procedure Review,Verified
+H-008,Water contamination,Minor,Remote,Low,Quality monitoring and filtration,53-60-30,DSR-009,Sample Test,Pending
+H-009,Thermal bus over-temperature,Major,Remote,Low,Temperature limiting and bypass,53-80-20,DSR-010,HIL Test,Pending
+H-010,Loss of safety supervisor,Catastrophic,Extremely Improbable,Medium,Redundant SS and watchdog,53-40-50,DSR-011,HIL Test,Verified
+H-011,Battery cell imbalance,Major,Probable,Medium,BMS balancing and monitoring,53-20-01,DSR-013,Integration Test,Pending
+H-012,Neural network incorrect output,Major,Remote,Low,Confidence monitoring and fallback,53-40-95,DSR-014,HIL Test,Pending
+H-013,QuickSwap incomplete engagement,Hazardous,Remote,Medium,Mechanical interlock and verification,53-60-10,DSR-015,Mechanical Test,Pending
+H-014,Regeneration over-voltage,Major,Remote,Low,Voltage limiting and dissipation,53-70-01,DSR-016,Test,Pending
+H-015,Loss of communication bus,Major,Remote,Low,Redundant buses and fallback mode,53-30-01,DSR-017,Integration Test,Pending
