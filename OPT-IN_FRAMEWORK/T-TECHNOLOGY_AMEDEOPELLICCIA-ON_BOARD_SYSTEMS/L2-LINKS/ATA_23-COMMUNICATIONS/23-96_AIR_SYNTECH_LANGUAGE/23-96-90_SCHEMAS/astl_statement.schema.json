@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/astl/statement.json",
+  "title": "AST-L Statement Schema",
+  "description": "JSON Schema for AST-L (Air SynTech Language) statements - the native language of the intelligent aircraft",
+  "type": "object",
+  "required": ["entity", "predicate", "value"],
+  "properties": {
+    "entity": {
+      "description": "Subject identifier (ATA reference or prefixed entity)",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": { "const": "ata_reference" },
+            "chapter": { "type": "string", "pattern": "^[0-9]{2}$" },
+            "section": { "type": "string", "pattern": "^[0-9]{2}$" },
+            "item": { "type": "string", "pattern": "^[0-9]{2}$" },
+            "description": { "type": "string" }
+          },
+          "required": ["type", "chapter", "section", "item"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "const": "prefixed_entity" },
+            "prefix": {
+              "type": "string",
+              "enum": ["CAOS", "ANCHORS", "DPP", "FAirCCC", "NN", "CI"]
+            },
+            "path": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 1
+            }
+          },
+          "required": ["type", "prefix", "path"]
+        }
+      ]
+    },
+    "predicate": {
+      "description": "Relationship or property name",
+      "type": "string",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9_]*$"
+    },
+    "value": {
+      "description": "Object or value",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "boolean" },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "const": "typed_value" },
+            "typeName": { "type": "string" },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": {
+                "oneOf": [
+                  { "type": "string" },
+                  { "type": "number" },
+                  { "type": "boolean" }
+                ]
+              }
+            }
+          },
+          "required": ["type", "typeName"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "const": "enum" },
+            "value": {
+              "type": "string",
+              "enum": ["HIGH", "MEDIUM", "LOW", "CRITICAL", "NORMAL", "DEGRADED", "FAILED"]
+            }
+          },
+          "required": ["type", "value"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": { "const": "entity_reference" },
+            "entity": { "$ref": "#/properties/entity" }
+          },
+          "required": ["type", "entity"]
+        }
+      ]
+    },
+    "contexts": {
+      "description": "Contextual modifiers",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "value": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" },
+              { "type": "null" }
+            ]
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "lifecycle": {
+      "description": "OPT-IN lifecycle phase",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^L[0-9]{2}$"
+        },
+        "phase": {
+          "type": "string",
+          "enum": [
+            "OVERVIEW", "SAFETY", "REQUIREMENTS", "DESIGN", "INTERFACES",
+            "ENGINEERING", "VV", "PROTOTYPING", "PRODUCTION", "CERTIFICATION",
+            "EIS", "SERVICES", "SUBSYSTEMS", "OPERATIONS"
+          ]
+        }
+      },
+      "required": ["code", "phase"]
+    },
+    "metadata": {
+      "description": "Statement metadata",
+      "type": "object",
+      "properties": {
+        "source": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "version": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    }
+  },
+  "examples": [
+    {
+      "entity": {
+        "type": "ata_reference",
+        "chapter": "53",
+        "section": "30",
+        "item": "21",
+        "description": "CO2Separator"
+      },
+      "predicate": "flow_in",
+      "value": {
+        "type": "typed_value",
+        "typeName": "Air",
+        "parameters": {
+          "kg/s": 0.84
+        }
+      },
+      "contexts": [
+        { "name": "CRUISE" }
+      ],
+      "lifecycle": {
+        "code": "L06",
+        "phase": "ENGINEERING"
+      }
+    },
+    {
+      "entity": {
+        "type": "prefixed_entity",
+        "prefix": "FAirCCC",
+        "path": ["A", "Node4321"]
+      },
+      "predicate": "sends",
+      "value": {
+        "type": "typed_value",
+        "typeName": "GradientEnvelope",
+        "parameters": {
+          "version": 4
+        }
+      },
+      "contexts": [
+        { "name": "eps", "value": 0.3 }
+      ],
+      "lifecycle": {
+        "code": "L09",
+        "phase": "PRODUCTION"
+      }
+    },
+    {
+      "entity": {
+        "type": "prefixed_entity",
+        "prefix": "CAOS",
+        "path": ["Event", "SHMA", "RivetF12"]
+      },
+      "predicate": "severity",
+      "value": {
+        "type": "enum",
+        "value": "HIGH"
+      },
+      "contexts": [
+        { "name": "INFLIGHT" }
+      ],
+      "lifecycle": {
+        "code": "L07",
+        "phase": "VV"
+      }
+    }
+  ]
+}
