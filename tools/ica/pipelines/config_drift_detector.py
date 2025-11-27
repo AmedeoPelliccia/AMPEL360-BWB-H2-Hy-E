@@ -1,6 +1,18 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 #!/usr/bin/env python3
-# SPDX-License-Identifier: Apache-2.0
-# Copyright (c) 2025 AMPEL360 Project Contributors
 
 """
 config_drift_detector.py
@@ -156,29 +168,30 @@ class ConfigDriftDetector:
             return DriftSeverity.MEDIUM if drift_type != DriftType.MODIFIED else DriftSeverity.LOW
     
     def get_file_list(self, ref: str) -> Dict[str, str]:
-        """Get list of files and their checksums at a specific ref."""
+        """Get list of files and their checksums at a specific ref.
+        
+        Optimized to use a single git ls-tree call instead of O(n) subprocess calls.
+        """
         files = {}
         try:
-            # Get file list at ref
+            # Get file list with hashes in one call
             result = subprocess.run(
-                ["git", "ls-tree", "-r", "--name-only", ref],
+                ["git", "ls-tree", "-r", ref],
                 cwd=self.repo_root,
                 capture_output=True,
                 text=True,
                 check=True
             )
             
-            for filepath in result.stdout.strip().split("\n"):
-                if filepath and not filepath.startswith("."):
-                    # Get file content hash
-                    hash_result = subprocess.run(
-                        ["git", "rev-parse", f"{ref}:{filepath}"],
-                        cwd=self.repo_root,
-                        capture_output=True,
-                        text=True
-                    )
-                    if hash_result.returncode == 0:
-                        files[filepath] = hash_result.stdout.strip()[:16]
+            for line in result.stdout.strip().split("\n"):
+                if line:
+                    # Parse: mode type hash    path
+                    parts = line.split()
+                    if len(parts) >= 4:
+                        file_hash = parts[2]
+                        filepath = " ".join(parts[3:])  # Handle paths with spaces
+                        if not filepath.startswith("."):
+                            files[filepath] = file_hash[:16]
         except subprocess.CalledProcessError as e:
             logger.error(f"Failed to get file list for {ref}: {e}")
         
