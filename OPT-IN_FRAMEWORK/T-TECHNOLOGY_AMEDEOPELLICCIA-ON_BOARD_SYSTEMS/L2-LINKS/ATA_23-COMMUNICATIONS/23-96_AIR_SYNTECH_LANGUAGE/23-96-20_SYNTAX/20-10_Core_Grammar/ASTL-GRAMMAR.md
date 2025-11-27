@@ -112,7 +112,7 @@ special         = " " | "." | "-" | "_" | "/" | "(" | ")" ;
 | `#L06_ENGINEERING` | Engineering | Engineering analysis |
 | `#L07_VV` | V&V | Verification & Validation |
 | `#L08_PROTOTYPING` | Prototyping | Prototype development |
-| `#L09_PRODUCTION` | Production | Production planning |
+| `#L09_PRODUCTION_PLANNING` | Production Planning | Production planning |
 | `#L10_CERTIFICATION` | Certification | Certification evidence |
 | `#L11_EIS` | EIS | Entry into service |
 | `#L12_SERVICES` | Services | Maintenance & service |
@@ -159,7 +159,7 @@ special         = " " | "." | "-" | "_" | "/" | "(" | ")" ;
 
 ### FAirCCC Gradient Statement
 ```astl
-FAirCCC.A.Node4321 : sends : GradientEnvelope(version=4, sparse=true) @eps=0.3 #L09_PRODUCTION
+FAirCCC.A.Node4321 : sends : GradientEnvelope(version=4, sparse=true) @eps=0.3 #L09_PRODUCTION_PLANNING
 ```
 
 ### CAOS Event Statement

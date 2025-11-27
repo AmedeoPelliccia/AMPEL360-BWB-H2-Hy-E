@@ -158,7 +158,7 @@ DPP.Battery.0021 : carbon_origin : ANCHORS.CO2.Solid #L11_OPERATIONS
 │                                                                             │
 │   ┌─────────────────────────────────────────────────────────────────────┐  │
 │   │                         AST-L (23-96)                               │  │
-│   │           "El lenguaje nativo de la aeronave inteligente"          │  │
+│   │           "The native language of the intelligent aircraft"        │  │
 │   │                                                                     │  │
 │   │   Semantics │ Syntax │ Synopsis │ Technology │ Ontology │ Tools   │  │
 │   └─────────────────────────────────────────────────────────────────────┘  │

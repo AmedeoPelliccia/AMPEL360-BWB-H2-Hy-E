@@ -119,7 +119,7 @@
           "type": "string",
           "enum": [
             "OVERVIEW", "SAFETY", "REQUIREMENTS", "DESIGN", "INTERFACES",
-            "ENGINEERING", "VV", "PROTOTYPING", "PRODUCTION", "CERTIFICATION",
+            "ENGINEERING", "VV", "PROTOTYPING", "PRODUCTION_PLANNING", "CERTIFICATION",
             "EIS", "SERVICES", "SUBSYSTEMS", "OPERATIONS"
           ]
         }
@@ -181,7 +181,7 @@
       ],
       "lifecycle": {
         "code": "L09",
-        "phase": "PRODUCTION"
+        "phase": "PRODUCTION_PLANNING"
       }
     },
     {
