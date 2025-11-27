@@ -80,6 +80,17 @@ The **ICA Agent** is responsible for:
 
 ---
 
+## Safety / Authority Boundaries
+
+- The agent provides **decision support**, not autonomous authority.
+- Certified documentation baselines and human reviewers (engineering, airworthiness) **remain the final decision-makers**.
+- The agent **must not**:
+  - Modify certified parameters or approved ICA content.
+  - Bypass documented engineering review processes.
+  - Generate ICA content without traceable source linkage.
+
+---
+
 ## Integration Points
 
 ```mermaid

@@ -84,6 +84,17 @@ The **MRO Agent** is responsible for:
 
 ---
 
+## Safety / Authority Boundaries
+
+- The agent provides **decision support**, not autonomous authority.
+- Certified maintenance procedures and human technicians (MRO, engineering) **remain the final decision-makers**.
+- The agent **must not**:
+  - Modify certified maintenance procedures or intervals.
+  - Bypass documented maintenance approval processes.
+  - Generate work orders without traceable source linkage.
+
+---
+
 ## Integration Points
 
 ```mermaid

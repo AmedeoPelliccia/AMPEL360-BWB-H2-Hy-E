@@ -84,6 +84,17 @@ The **DPP Agent** is responsible for:
 
 ---
 
+## Safety / Authority Boundaries
+
+- The agent provides **decision support**, not autonomous authority.
+- Certified configuration baselines and human reviewers (configuration management, airworthiness) **remain the final decision-makers**.
+- The agent **must not**:
+  - Modify certified configuration or lifecycle records.
+  - Bypass documented configuration management processes.
+  - Generate DPP entries without traceable source linkage.
+
+---
+
 ## Integration Points
 
 ```mermaid

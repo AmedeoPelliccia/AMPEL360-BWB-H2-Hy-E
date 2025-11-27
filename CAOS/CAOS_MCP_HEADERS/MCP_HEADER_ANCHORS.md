@@ -86,6 +86,17 @@ The **ANCHORS Agent** is responsible for:
 
 ---
 
+## Safety / Authority Boundaries
+
+- The agent provides **decision support**, not autonomous authority.
+- Certified structural limits and human reviewers (structures engineering, MRO) **remain the final decision-makers**.
+- The agent **must not**:
+  - Modify certified structural parameters or limits.
+  - Bypass documented structural assessment processes.
+  - Generate structural alerts without traceable source linkage.
+
+---
+
 ## Integration Points
 
 ```mermaid

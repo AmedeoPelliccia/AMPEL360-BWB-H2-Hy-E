@@ -99,6 +99,17 @@ The **Ops Agent** is responsible for:
 
 ---
 
+## Safety / Authority Boundaries
+
+- The agent provides **decision support**, not autonomous authority.
+- Certified aircraft systems (FMS, autoflight, protection laws) and human operators (crew, dispatch, OCC) **remain the final decision-makers**.
+- The agent **must not**:
+  - Modify certified parameters or flight protections.
+  - Override crew decisions or ATC clearances.
+  - Generate operational directives without traceable source linkage.
+
+---
+
 ## Integration Points
 
 ```mermaid
