@@ -107,6 +107,71 @@ Each ATA chapter follows a mandatory 14-folder lifecycle structure plus 9 cross-
 - **XX-20_Subsystems/**: Functional subsystems (design-driven)
 - **XX-30_ANCHORS/**: Sustainability, LCA, recycling
 - **XX-40_Software/**: Control logic, diagnostics, ML/NN
+  <details>
+  <summary>Example: 53-40_SOFTWARE/ (ATA 53 Fuselage Software)</summary>
+
+  ```
+  53-40_SOFTWARE/
+  ├── 53-40-00_GENERAL/               # Band 00 - General SW view for ATA 53
+  │   ├── 53-40-00-01_SW_Overview.md
+  │   ├── 53-40-00-02_SW_Architecture.md
+  │   ├── 53-40-00-03_SW_Design_Rules.md
+  │   ├── 53-40-00-04_SW_Safety_Classification.md
+  │   └── ASSETS/
+  │       └── DIAGRAMS/
+  │           ├── 53-40-00-02_FIG-001_SW_Context.mermaid
+  │           └── 53-40-00-02_FIG-001_SW_Context.svg
+  │
+  ├── 53-40-10_CONTROL_LOGIC/         # Band 10
+  │   ├── 53-40-10-00_General/
+  │   ├── 53-40-10-01_Anchors_Mode_Manager/
+  │   ├── 53-40-10-02_CO2_Capture_Controller/
+  │   ├── 53-40-10-03_Battery_TMS_Controller/
+  │   └── 53-40-10-04_Water_Treatment_Controller/
+  │
+  ├── 53-40-20_DIAGNOSTICS_BITE/      # Band 20
+  │   ├── 53-40-20-01_Anchors_BITE_Design/
+  │   ├── 53-40-20-02_Fault_Catalog/
+  │   └── 53-40-20-03_Health_Monitoring/
+  │
+  ├── 53-40-30_INTERFACES_BUSES/      # Band 30
+  │   ├── 53-40-30-01_Anchors_Network_Stack/
+  │   ├── 53-40-30-02_AFDX_Bindings/
+  │   └── 53-40-30-03_CAN_Bindings/
+  │
+  ├── 53-40-40_APPLICATIONS_HMI/      # Band 40
+  │   ├── 53-40-40-01_Anchors_System_Page/
+  │   └── 53-40-40-02_Crew_Alerting_Logic/
+  │
+  ├── 53-40-50_SAFETY_SUPERVISION/    # Band 50
+  │   ├── 53-40-50-01_Safety_Supervisor/
+  │   ├── 53-40-50-02_Limit_Monitors/
+  │   └── 53-40-50-03_Fallback_Logic/
+  │
+  ├── 53-40-60_TOOLING_EMULATION/     # Band 60
+  │   ├── 53-40-60-01_SIL_Framework/
+  │   └── 53-40-60-02_HIL_Framework/
+  │
+  ├── 53-40-70_TESTS/                 # Band 70
+  │   ├── 53-40-70-01_Test_Strategy/
+  │   ├── 53-40-70-02_Test_Vectors/
+  │   └── 53-40-70-03_Coverage_Reports/
+  │
+  ├── 53-40-80_AUTOCODING_CONFIG/     # Band 80
+  │   ├── 53-40-80-01_Parameter_Sets/
+  │   └── 53-40-80-02_Config_Packs/
+  │
+  ├── 53-40-90_DATA_MODELS_SCHEMAS/   # Band 90
+  │   ├── 53-40-90-01_Signal_Dictionary/
+  │   ├── 53-40-90-02_Log_Format_Schema/
+  │   └── 53-40-90-03_Parameter_Database/
+  │
+  └── 53-40-95_NN_INTEGRATION/        # Band 95
+      ├── 53-40-95-01_CO2_Controller_NN/
+      ├── 53-40-95-02_Predictive_Maintenance_NN/
+      └── 53-40-95-03_Safety_Envelope/
+  ```
+  </details>
 - **XX-50_Structures/**: Physical structures and supports
 - **XX-60_Storages/**: Tanks, reservoirs, cryogenic vessels
 - **XX-70_Propulsion/**: Propulsive interfaces
@@ -442,7 +507,7 @@ All AI-generated content is reviewed and approved by qualified aerospace enginee
 - **Status**: ACTIVE - Continuously maintained
 - **Version**: 1.0
 - **Repository**: `AMPEL360-BWB-H2-Hy-E`
-- **Last Update**: 2025-11-23
+- **Last Update**: 2025-11-27
 - **Maintained By**: AMPEL360 Q100 Documentation Team
 
 ---

@@ -1,0 +1,93 @@
+%% 53-40-00-02_FIG-001_SW_Context.mermaid
+%% Software Context Diagram for ATA 53-40 ANCHORS Software
+%% Version: 1.0
+
+flowchart TB
+    subgraph EXTERNAL["External Systems"]
+        CAOS["ATA 02-20<br/>CAOS Platform"]
+        IMA["ATA 42<br/>IMA"]
+        ECS["ATA 21<br/>ECS"]
+        FUEL["ATA 28<br/>Fuel System"]
+    end
+
+    subgraph SW53["53-40 SOFTWARE"]
+        direction TB
+        
+        subgraph GENERAL["00 General"]
+            ARCH["Architecture"]
+            RULES["Design Rules"]
+            SAFETY["Safety Classification"]
+        end
+        
+        subgraph CONTROL["10 Control Logic"]
+            MM["Mode Manager"]
+            CO2C["CO₂ Controller"]
+            BATC["Battery TMS"]
+            H2OC["Water Treatment"]
+        end
+        
+        subgraph DIAG["20 Diagnostics"]
+            BITE["BITE Manager"]
+            FAULT["Fault Handler"]
+            HEALTH["Health Monitor"]
+        end
+        
+        subgraph IFACE["30 Interfaces"]
+            AFDX["AFDX Stack"]
+            CAN["CAN Stack"]
+        end
+        
+        subgraph HMI["40 Applications"]
+            SYNOP["System Page"]
+            ALERT["Alerting Logic"]
+        end
+        
+        subgraph SAFESW["50 Safety"]
+            SUPER["Safety Supervisor"]
+            LIMITS["Limit Monitors"]
+            FALLBK["Fallback Logic"]
+        end
+        
+        subgraph NNINT["95 NN Integration"]
+            WRAP["NN Wrapper"]
+            ENV["Safety Envelope"]
+        end
+    end
+
+    subgraph PLANT["53-30 ANCHORS Physical Systems"]
+        CO2SYS["CO₂ Capture"]
+        BATSYS["Battery System"]
+        H2OSYS["Water System"]
+        HARV["Harvesting"]
+    end
+
+    subgraph ATA95["ATA 95 Neural Networks"]
+        MODELS["NN Models"]
+        TRAIN["Training Pipeline"]
+    end
+
+    %% External connections
+    CAOS <-->|"Status/Config"| IFACE
+    IMA <-->|"Partition hosting"| SW53
+    ECS <-->|"Air handling"| CONTROL
+    FUEL <-->|"H₂ coordination"| CONTROL
+
+    %% Internal connections
+    MM --> CO2C
+    MM --> BATC
+    MM --> H2OC
+    SUPER --> MM
+    LIMITS --> CONTROL
+    FALLBK <--> NNINT
+    WRAP <--> MODELS
+    ENV --> CONTROL
+    
+    %% Plant connections
+    CONTROL --> PLANT
+    PLANT --> DIAG
+    
+    %% Styling
+    style SW53 fill:#e3f2fd,stroke:#1565c0
+    style PLANT fill:#e8f5e9,stroke:#2e7d32
+    style ATA95 fill:#f3e5f5,stroke:#7b1fa2
+    style EXTERNAL fill:#fff3e0,stroke:#ef6c00
