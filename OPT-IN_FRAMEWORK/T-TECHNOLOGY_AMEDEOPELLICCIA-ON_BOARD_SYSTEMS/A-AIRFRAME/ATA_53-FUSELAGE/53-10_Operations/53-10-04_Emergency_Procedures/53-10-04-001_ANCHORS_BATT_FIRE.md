@@ -55,7 +55,7 @@ This procedure defines the crew response to ANCHORS battery thermal runaway (fir
 ## 7. Related Documents
 
 - [53-10-03-001_ANCHORS_BATT_TEMP_HI.md](../53-10-03_Abnormal_Procedures/53-10-03-001_ANCHORS_BATT_TEMP_HI.md) — High temp caution
-- 53-30-00-02_Thermal_Runaway_Mitigation.md — Design mitigations
+- [53-30-00-02_Thermal_Runaway_Mitigation.md](../../53-30_ANCHORS/53-30-00_GENERAL/53-30-00-02_Safety/53-30-00-02_Thermal_Runaway_Mitigation.md) — Design mitigations
 
 ---
 

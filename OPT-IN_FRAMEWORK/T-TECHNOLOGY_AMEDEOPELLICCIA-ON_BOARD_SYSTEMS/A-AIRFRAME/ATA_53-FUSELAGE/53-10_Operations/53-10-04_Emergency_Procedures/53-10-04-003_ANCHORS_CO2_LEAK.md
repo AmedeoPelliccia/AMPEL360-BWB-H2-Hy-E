@@ -56,7 +56,7 @@ This procedure defines the crew response to CO₂ release to cabin emergency.
 ## 7. Related Documents
 
 - [53-10-03-002_ANCHORS_CO2_SYS_FAULT.md](../53-10-03_Abnormal_Procedures/53-10-03-002_ANCHORS_CO2_SYS_FAULT.md) — System fault
-- 53-30-00-02_H2_CO2_Safety_Provisions.md — Safety provisions
+- [53-30-00-02_H2_CO2_Safety_Provisions.md](../../53-30_ANCHORS/53-30-00_GENERAL/53-30-00-02_Safety/53-30-00-02_H2_CO2_Safety_Provisions.md) — Safety provisions
 
 ---
 

@@ -397,7 +397,7 @@ flowchart TB
 | 6 | **Notify cabin crew** | Prepare passengers |
 | 7 | **Land ASAP** | Do not delay |
 
-> **Reference:** 53-30-00-02_Thermal_Runaway_Mitigation.md
+> **Reference:** [53-30-00-02_Thermal_Runaway_Mitigation.md](../53-30_ANCHORS/53-30-00_GENERAL/53-30-00-02_Safety/53-30-00-02_Thermal_Runaway_Mitigation.md)
 
 ### 6.2 ANCHORS Bay Depressurization
 
@@ -423,7 +423,7 @@ flowchart TB
 | 5 | If > 5000 ppm: **Crew O₂** | Protect crew |
 | 6 | **Notify cabin** | Passenger awareness |
 
-> **Reference:** 53-30-00-02_H2_CO2_Safety_Provisions.md
+> **Reference:** [53-30-00-02_H2_CO2_Safety_Provisions.md](../53-30_ANCHORS/53-30-00_GENERAL/53-30-00-02_Safety/53-30-00-02_H2_CO2_Safety_Provisions.md)
 
 ---
 
@@ -728,6 +728,7 @@ flowchart TB
 ├── 53-10-22_Controls/
 │   └── 53-10-22-001_ANCHORS_Panel_Operations.md
 └── FORMS/
+    ├── README.md                          ← Forms index
     ├── 53-10-F-001_Turnaround_Checklist.pdf
     ├── 53-10-F-002_QuickSwap_Log.pdf
     └── 53-10-F-003_Discrepancy_Report.pdf
@@ -754,7 +755,7 @@ flowchart TB
 | 53-10-20-001     | Alert Messages Catalog       | 1.0     | DRAFT        |
 | 53-10-21-001     | Alert Message Procedures     | 1.0     | DRAFT        |
 | 53-10-22-001     | Controls Panel Operations    | 1.0     | DRAFT        |
-### 11.2 Related Forms
+### 11.3 Related Forms
 
 | Form ID | Title | Use |
 |---------|-------|-----|
@@ -786,12 +787,12 @@ flowchart TB
 
 ### AI Disclosure
 
-- **Generated with assistance of:** AI (Claude, Anthropic), AI (ChatGPT, OpenAI)
+- **Generated with assistance of:** AI (GitHub Copilot)
 - **Prompted by:** Amedeo Pelliccia
 - **Status:** DRAFT — Subject to human review and approval
 - **Human approver:** [To be completed]
 - **Repository:** `AMPEL360-BWB-H2-Hy-E`
-- **Last AI update:** 2025-11-26
+- **Last AI update:** 2025-11-27
 
 ---
 
