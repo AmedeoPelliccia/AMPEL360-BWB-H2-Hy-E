@@ -23,13 +23,13 @@ Covers all SHM interfaces with:
 
 | ICD Number | Title | Source ATA | Target ATA | Status | Priority |
 |------------|-------|------------|------------|--------|----------|
-| ICD-53-24-SHM-001 | Electrical Power Interface | 53 | 24 | Draft | Critical |
-| ICD-53-31-SHM-001 | Display Recording Interface | 53 | 31 | Draft | Critical |
-| ICD-53-42-SHM-001 | IMA Processing Interface | 53 | 42 | Draft | Critical |
-| ICD-53-45-SHM-001 | CMS Maintenance Interface | 53 | 45 | Draft | Critical |
-| ICD-53-46-SHM-001 | Information Systems Interface | 53 | 46 | Draft | Major |
-| ICD-53-57-SHM-001 | Wing Body Junction Interface | 53 | 57 | Draft | Critical |
-| ICD-53-73-SHM-001 | H2 Tank Structure Interface | 53 | 73 | Draft | Critical |
+| [ICD-53-24-SHM-001](./ICD-53-24-SHM-001_Electrical_Power_Interface.md) | Electrical Power Interface | 53 | 24 | Draft | Critical |
+| [ICD-53-31-SHM-001](./ICD-53-31-SHM-001_Display_Recording_Interface.md) | Display Recording Interface | 53 | 31 | Draft | Critical |
+| [ICD-53-42-SHM-001](./ICD-53-42-SHM-001_IMA_Processing_Interface.md) | IMA Processing Interface | 53 | 42 | Draft | Critical |
+| [ICD-53-45-SHM-001](./ICD-53-45-SHM-001_CMS_Maintenance_Interface.md) | CMS Maintenance Interface | 53 | 45 | Draft | Critical |
+| ICD-53-46-SHM-001 | Information Systems Interface | 53 | 46 | Planned | Major |
+| [ICD-53-57-SHM-001](./ICD-53-57-SHM-001_Wing_Body_Junction_Interface.md) | Wing Body Junction Interface | 53 | 57 | Draft | Critical |
+| ICD-53-73-SHM-001 | H2 Tank Structure Interface | 53 | 73 | Planned | Critical |
 
 ## Interface Categories
 
