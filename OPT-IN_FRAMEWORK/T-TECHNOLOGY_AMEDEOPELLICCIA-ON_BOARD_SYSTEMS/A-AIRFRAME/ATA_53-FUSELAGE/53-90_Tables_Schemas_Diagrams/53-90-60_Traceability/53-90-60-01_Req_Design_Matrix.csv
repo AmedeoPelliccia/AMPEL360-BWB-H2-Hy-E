@@ -1,0 +1,23 @@
+Requirement_ID,Requirement_Title,Design_Element,Bucket,Design_Doc,VV_Method,Test_ID,Status
+REQ-BAT-001,Battery operating voltage range,Battery pack design,53-60-10,53-60-10-01_STG_Overview.md,Analysis,TC-BAT-001,Verified
+REQ-BAT-002,Battery energy capacity,Cell selection and configuration,53-60-10,53-60-10-01_STG_Overview.md,Test,TC-BAT-002,Verified
+REQ-BAT-003,Battery discharge rate,BMS discharge control,53-20-01,53-20-01_Pressure_Shell.md,Test,TC-BAT-003,Pending
+REQ-BAT-010,Thermal jacket temperature range,Insulation design,53-60-10,53-60-10-01_STG_Overview.md,Test,TC-BAT-010,Verified
+REQ-BAT-011,Battery cooling capacity,TMS cooling loop design,53-20-01,53-20-01_Pressure_Shell.md,Test,TC-BAT-011,Pending
+REQ-BAT-020,Battery isolation time,Safety supervisor logic,53-40-50,53-40-50_Safety_Supervision.md,HIL,TC-BAT-020,Verified
+REQ-CO2-001,CO2 cartridge capacity,Cartridge sizing,53-60-20,53-60-20_Storages.md,Analysis,TC-CO2-001,Verified
+REQ-CO2-002,CO2 capture rate,Capture system design,53-20-20,53-20-02_Door_Surround.md,Test,TC-CO2-002,Pending
+REQ-CO2-010,CO2 operating pressure,Vessel design pressure,53-60-20,53-60-20_Storages.md,Test,TC-CO2-010,Verified
+REQ-CO2-011,CO2 reactor temperature,Reactor thermal design,53-60-20,53-60-20_Storages.md,Test,TC-CO2-011,Pending
+REQ-H2O-001,Water tank capacity,Tank sizing,53-60-30,53-60-30_Storages.md,Analysis,TC-H2O-001,Verified
+REQ-H2O-002,Water quality monitoring,Sensor selection,53-20-03,53-20-03_Cabin_Floor.md,Test,TC-H2O-002,Pending
+REQ-TH-001,PCM type selection,Material specification,53-60-40,53-60-40_Storages.md,Test,TC-TH-001,Verified
+REQ-TH-002,HT bus temperature range,Heat exchanger design,53-80-20,53-80-20_Energy.md,Test,TC-TH-002,Pending
+REQ-TH-003,LT bus temperature range,Cooling system design,53-80-20,53-80-20_Energy.md,Test,TC-TH-003,Pending
+REQ-NRG-001,ANCHORS total power consumption,Electrical design,53-80-10,53-80-10_Energy.md,Test,TC-NRG-001,Pending
+REQ-NRG-010,Power quality standards,Converter design,53-80-30,53-80-30_Energy.md,Test,TC-NRG-010,Pending
+REQ-NRG-020,Regeneration power capacity,Motor/generator design,53-70-01,53-70-01_Propulsion.md,Test,TC-NRG-020,Pending
+SSR-001,Over-temperature detection,TMS control algorithm,53-40-10,53-40-10_Control_Logic.md,HIL,TC-SSR-001,Verified
+SSR-002,Safety isolation response time,Safety supervisor design,53-40-50,53-40-50_Safety_Supervision.md,HIL,TC-SSR-002,Verified
+SSR-003,Fault detection latency,BITE design,53-40-20,53-40-20_Diagnostics.md,HIL,TC-SSR-003,Pending
+SSR-004,Watchdog timeout,Safety supervisor design,53-40-50,53-40-50_Safety_Supervision.md,HIL,TC-SSR-004,Verified

@@ -1,0 +1,32 @@
+Figure_ID,Title,Type,Bucket,Format,Status,Path,Description
+FIG-53-00-001,ANCHORS System Overview,Block,53-00,Mermaid,Complete,figures/FIG-53-00-001_System_Overview.mermaid,High-level system block diagram
+FIG-53-00-002,Zone Boundaries,Layout,53-00,Mermaid,Complete,figures/FIG-53-00-002_Zone_Boundaries.mermaid,Physical zone layout diagram
+FIG-53-00-003,Interface Boundaries,ICD,53-00,Mermaid,Complete,figures/FIG-53-00-003_Interface_Boundaries.mermaid,System interface control diagram
+FIG-53-00-004,Scope Decision Tree,Flow,53-00,Mermaid,Complete,figures/FIG-53-00-004_Scope_Decision.mermaid,Decision tree for system scope
+FIG-53-00-010,Layered Architecture,Block,53-00,Mermaid,Complete,figures/FIG-53-00-010_Layered_Arch.mermaid,Software/hardware layer diagram
+FIG-53-00-011,Functional Decomposition,Hierarchy,53-00,Mermaid,Complete,figures/FIG-53-00-011_Func_Decomp.mermaid,Functional breakdown structure
+FIG-53-00-012,Data Bus Architecture,Block,53-00,Mermaid,Complete,figures/FIG-53-00-012_Data_Bus.mermaid,AFDX and CAN bus topology
+FIG-53-00-015,DPP Data Flow,Flow,53-00,Mermaid,Complete,figures/FIG-53-00-015_DPP_Flow.mermaid,Digital Product Passport data flow
+FIG-53-10-001,Operations State Machine,State,53-10,Mermaid,Complete,figures/FIG-53-10-001_Ops_State.mermaid,Operating mode state machine
+FIG-53-10-002,Turnaround Sequence,Sequence,53-10,Mermaid,Pending,figures/FIG-53-10-002_Turnaround.mermaid,Ground turnaround sequence
+FIG-53-20-001,Battery TMS Block,Block,53-20,Mermaid,Pending,figures/FIG-53-20-001_BAT_TMS.mermaid,Battery thermal management block
+FIG-53-20-002,CO2 Capture Block,Block,53-20,Mermaid,Pending,figures/FIG-53-20-002_CO2_Capture.mermaid,CO2 capture subsystem block
+FIG-53-20-003,Water System Block,Block,53-20,Mermaid,Pending,figures/FIG-53-20-003_H2O_System.mermaid,Water treatment system block
+FIG-53-30-001,Circularity Flow,Flow,53-30,Mermaid,Complete,figures/FIG-53-30-001_Circularity.mermaid,Circular economy flow diagram
+FIG-53-40-001,SW Context Diagram,Context,53-40,Mermaid,Complete,figures/FIG-53-40-001_SW_Context.mermaid,Software context diagram
+FIG-53-40-002,SW Layered Architecture,Block,53-40,ASCII,Complete,figures/FIG-53-40-002_SW_Layers.txt,Software layer structure
+FIG-53-40-003,Partition Allocation,Block,53-40,Mermaid,Complete,figures/FIG-53-40-003_Partitions.mermaid,IMA partition allocation
+FIG-53-40-004,Data Flow,Flow,53-40,Mermaid,Complete,figures/FIG-53-40-004_Data_Flow.mermaid,Software data flow diagram
+FIG-53-40-005,Safety Monitor,Block,53-40,Mermaid,Complete,figures/FIG-53-40-005_Safety_Mon.mermaid,Safety supervisor architecture
+FIG-53-60-001,Storage Architecture,Block,53-60,Mermaid,Complete,figures/FIG-53-60-001_Storage_Arch.mermaid,Storage subsystem architecture
+FIG-53-60-002,QuickSwap Interface,Interface,53-60,Mermaid,Complete,figures/FIG-53-60-002_QuickSwap.mermaid,QuickSwap mechanical interface
+FIG-53-60-003,Minerite Lifecycle,State,53-60,Mermaid,Complete,figures/FIG-53-60-003_Minerite.mermaid,CO2 cartridge lifecycle states
+FIG-53-70-001,Propulsion Interface,Block,53-70,Mermaid,Complete,figures/FIG-53-70-001_Prop_Interface.mermaid,Propulsion system interface
+FIG-53-70-002,Electric Fan Architecture,Block,53-70,Mermaid,Complete,figures/FIG-53-70-002_E_Fan.mermaid,Electric fan motor architecture
+FIG-53-70-003,Thermal Recovery,Block,53-70,Mermaid,Complete,figures/FIG-53-70-003_Thermal_Rec.mermaid,Waste heat recovery diagram
+FIG-53-70-004,Regen Modes,State,53-70,Mermaid,Complete,figures/FIG-53-70-004_Regen_Modes.mermaid,Regeneration mode state machine
+FIG-53-80-001,Energy Architecture,Block,53-80,Mermaid,Complete,figures/FIG-53-80-001_Energy_Arch.mermaid,Energy distribution architecture
+FIG-53-80-002,Dual Thermal Bus,Block,53-80,Mermaid,Complete,figures/FIG-53-80-002_Dual_TH.mermaid,HT/LT thermal bus diagram
+FIG-53-80-003,EMS Architecture,Block,53-80,Mermaid,Complete,figures/FIG-53-80-003_EMS.mermaid,Energy management system
+FIG-53-80-004,Bidirectional Flow,State,53-80,Mermaid,Complete,figures/FIG-53-80-004_Bidir_Flow.mermaid,Bidirectional power flow
+FIG-53-90-001,Data Architecture,Block,53-90,Mermaid,Complete,figures/FIG-53-90-001_Data_Arch.mermaid,53-90 data spine architecture

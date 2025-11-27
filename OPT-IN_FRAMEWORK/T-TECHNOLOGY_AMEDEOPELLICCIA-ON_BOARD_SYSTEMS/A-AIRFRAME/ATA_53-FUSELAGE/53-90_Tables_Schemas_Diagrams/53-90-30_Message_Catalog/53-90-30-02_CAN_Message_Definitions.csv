@@ -1,0 +1,39 @@
+CAN_ID_Hex,Name,Node,Direction,DLC,Rate_Hz,Content_Description
+0x100,BAT_CELL_TEMP_1,BMS,TX,8,10,Cells 1-4 temperatures (4x int16)
+0x101,BAT_CELL_TEMP_2,BMS,TX,8,10,Cells 5-8 temperatures (4x int16)
+0x102,BAT_CELL_TEMP_3,BMS,TX,8,10,Cells 9-12 temperatures (4x int16)
+0x103,BAT_CELL_TEMP_4,BMS,TX,8,10,Cells 13-16 temperatures (4x int16)
+0x110,BAT_CELL_VOLT_1,BMS,TX,8,10,Cells 1-4 voltages (4x uint16)
+0x111,BAT_CELL_VOLT_2,BMS,TX,8,10,Cells 5-8 voltages (4x uint16)
+0x112,BAT_CELL_VOLT_3,BMS,TX,8,10,Cells 9-12 voltages (4x uint16)
+0x113,BAT_CELL_VOLT_4,BMS,TX,8,10,Cells 13-16 voltages (4x uint16)
+0x120,BAT_PACK_STATUS,BMS,TX,8,10,SOC/SOH/Faults/Status
+0x121,BAT_ISOLATION,BMS,TX,4,1,Isolation resistance/status
+0x130,TMS_PUMP_CMD,TMS,TX,4,10,Pump speed command (0-100%)
+0x131,TMS_VALVE_CMD,TMS,TX,4,10,Valve position command (0-100%)
+0x132,TMS_FAN_CMD,TMS,TX,4,10,Cooling fan speed command
+0x140,TMS_SENSOR_1,RTD,TX,8,10,RTD readings group 1
+0x141,TMS_SENSOR_2,RTD,TX,8,10,RTD readings group 2
+0x200,CO2_VALVE_CMD,CO2C,TX,4,1,CO2 valve commands
+0x201,CO2_CART_STATUS,CART,TX,8,1,Cartridge fill levels (4x uint16)
+0x202,CO2_REACTOR_DATA,CO2C,TX,8,1,Reactor temp/pressure/flow
+0x210,CO2_PUMP_CMD,CO2C,TX,4,1,CO2 pump speed command
+0x300,TH_PUMP_HT_CMD,THC,TX,4,10,HT bus pump command
+0x301,TH_PUMP_LT_CMD,THC,TX,4,10,LT bus pump command
+0x302,TH_VALVE_CMD,THC,TX,8,10,All thermal valve commands
+0x303,TH_3WAY_CMD,THC,TX,4,10,3-way valve position
+0x310,TH_SENSOR_HT,RTD,TX,8,10,HT bus temperatures
+0x311,TH_SENSOR_LT,RTD,TX,8,10,LT bus temperatures
+0x400,SENSOR_TEMP_1,RTD,TX,8,10,Temperature sensor group 1
+0x401,SENSOR_TEMP_2,RTD,TX,8,10,Temperature sensor group 2
+0x410,SENSOR_PRESS_1,PT,TX,8,1,Pressure transducer group 1
+0x411,SENSOR_PRESS_2,PT,TX,8,1,Pressure transducer group 2
+0x420,SENSOR_FLOW_1,FM,TX,8,1,Flow meter group 1
+0x421,SENSOR_FLOW_2,FM,TX,8,1,Flow meter group 2
+0x500,H2O_TANK_DATA,WTC,TX,8,1,Tank level/temp/pressure
+0x501,H2O_QUALITY,WTC,TX,4,0.1,Water quality sensor data
+0x600,SS_HEARTBEAT,SS,TX,4,100,Safety supervisor heartbeat
+0x601,SS_FAULT_DATA,SS,TX,8,10,Active fault information
+0x610,SS_INTERLOCK,SS,TX,4,10,Interlock status
+0x700,NN_INFERENCE,NN,TX,8,10,NN output/confidence
+0x701,NN_STATUS,NN,TX,4,1,NN operational status

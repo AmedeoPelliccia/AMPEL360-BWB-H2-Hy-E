@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/53-90-10-02_Signal_Schema.json",
+  "title": "ANCHORS Signal Definition Schema",
+  "description": "JSON Schema for validating ANCHORS signal definitions in the 53-90 data spine",
+  "type": "object",
+  "required": ["signal_id", "name", "type", "range", "units", "source", "destination", "rate_hz", "dal"],
+  "properties": {
+    "signal_id": {
+      "type": "string",
+      "pattern": "^ANCH_[A-Z0-9]+_[TPFLVIWSDACX]_[A-Z0-9_]+$",
+      "description": "Unique signal identifier following naming convention"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 64,
+      "description": "Human-readable signal name"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["T", "P", "F", "L", "V", "I", "W", "S", "D", "A", "C", "X"],
+      "description": "Signal type code (T=Temp, P=Pressure, F=Flow, etc.)"
+    },
+    "range": {
+      "type": "object",
+      "required": ["min", "max"],
+      "properties": {
+        "min": {
+          "type": "number",
+          "description": "Minimum valid value"
+        },
+        "max": {
+          "type": "number",
+          "description": "Maximum valid value"
+        }
+      },
+      "description": "Valid operating range"
+    },
+    "units": {
+      "type": "string",
+      "description": "Engineering units (SI preferred)"
+    },
+    "source": {
+      "type": "string",
+      "description": "Source component or LRU"
+    },
+    "destination": {
+      "type": "string",
+      "description": "Destination component(s)"
+    },
+    "rate_hz": {
+      "type": "number",
+      "minimum": 0.001,
+      "maximum": 1000,
+      "description": "Update rate in Hertz"
+    },
+    "dal": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"],
+      "description": "Development Assurance Level per DO-178C"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 256,
+      "description": "Detailed signal description"
+    },
+    "fault_handling": {
+      "type": "object",
+      "properties": {
+        "timeout_ms": {
+          "type": "integer",
+          "description": "Signal timeout in milliseconds"
+        },
+        "default_value": {
+          "type": "number",
+          "description": "Value to use on signal loss"
+        },
+        "fail_safe_action": {
+          "type": "string",
+          "description": "Action on signal failure"
+        }
+      }
+    },
+    "scaling": {
+      "type": "object",
+      "properties": {
+        "raw_min": {
+          "type": "number"
+        },
+        "raw_max": {
+          "type": "number"
+        },
+        "eng_min": {
+          "type": "number"
+        },
+        "eng_max": {
+          "type": "number"
+        }
+      },
+      "description": "Raw to engineering unit conversion"
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "requirement_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "test_case_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "signal_id": "ANCH_BAT_T_CELL_MAX",
+      "name": "Battery Cell Temp Max",
+      "type": "T",
+      "range": {"min": -40, "max": 80},
+      "units": "°C",
+      "source": "BMS",
+      "destination": "TMS",
+      "rate_hz": 10,
+      "dal": "B",
+      "description": "Maximum temperature across all battery cells",
+      "fault_handling": {
+        "timeout_ms": 200,
+        "default_value": 25,
+        "fail_safe_action": "ISOLATE"
+      }
+    }
+  ]
+}

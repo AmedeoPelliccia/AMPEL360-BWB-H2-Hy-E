@@ -1,0 +1,13 @@
+Drawing_ID,Title,Type,Zone,Format,Sheet_Count,Status,CAD_System,Description
+DWG-53-50-001,Structural Frame Assembly,3D,Zone_53-30,STEP,1,Pending,CATIA,Main structural frame for ANCHORS bay
+DWG-53-50-002,QuickSwap Bay Structure,3D,Zone_53-30,STEP,1,Pending,CATIA,QuickSwap cartridge bay structure
+DWG-53-50-003,Battery Mounting Frame,3D,Zone_53-30-E,STEP,1,Pending,CATIA,Battery pack mounting structure
+DWG-53-50-004,Thermal Bus Routing,3D,Zone_53-30,STEP,1,Pending,CATIA,HT/LT coolant line routing
+DWG-53-60-001,Battery Pack Housing,3D,Zone_53-30-E,STEP,2,Pending,CATIA,Battery pack enclosure assembly
+DWG-53-60-002,CO2 Cartridge Assembly,3D,Zone_53-30-F,STEP,1,Pending,CATIA,CO2 mineralization cartridge
+DWG-53-60-003,Water Tank Assembly,3D,Zone_53-30-G,STEP,1,Pending,CATIA,Potable water tank assembly
+DWG-53-60-004,PCM Reservoir,3D,Zone_53-30,STEP,1,Pending,CATIA,Phase change material storage
+DWG-53-80-001,HVDC Distribution Panel,2D,Zone_53-10,PDF,3,Pending,CATIA,High voltage DC distribution
+DWG-53-80-002,Thermal Bus Schematic,2D,Zone_53-30,PDF,2,Pending,CATIA,HT/LT bus P&ID schematic
+DWG-53-80-003,Electrical Harness Layout,2D,Zone_53,PDF,5,Pending,CATIA,Wiring harness routing
+DWG-53-80-004,Sensor Installation,2D,Zone_53-30,PDF,4,Pending,CATIA,Sensor mounting locations

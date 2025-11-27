@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/53-90-40-01_Signal_Schema.json",
+  "title": "ANCHORS Signal Definition Schema v1.0",
+  "description": "Formal JSON Schema for validating ANCHORS signal definitions",
+  "type": "object",
+  "required": ["signal_id", "name", "type", "range", "units", "source", "destination", "rate_hz", "dal"],
+  "additionalProperties": false,
+  "properties": {
+    "signal_id": {
+      "type": "string",
+      "pattern": "^ANCH_[A-Z0-9]+_[TPFLVIWSDACX]_[A-Z0-9_]+$",
+      "minLength": 10,
+      "maxLength": 32,
+      "description": "Unique signal identifier following ANCHORS naming convention"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 64,
+      "description": "Human-readable signal name"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["T", "P", "F", "L", "V", "I", "W", "S", "D", "A", "C", "X"],
+      "description": "Signal type code"
+    },
+    "range": {
+      "type": "object",
+      "required": ["min", "max"],
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" }
+      }
+    },
+    "units": {
+      "type": "string",
+      "maxLength": 16,
+      "description": "Engineering units (SI preferred)"
+    },
+    "source": {
+      "type": "string",
+      "maxLength": 16,
+      "description": "Source LRU or component"
+    },
+    "destination": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Destination LRU(s) or component(s)"
+    },
+    "rate_hz": {
+      "type": "number",
+      "minimum": 0.001,
+      "maximum": 1000,
+      "description": "Signal update rate in Hz"
+    },
+    "dal": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"],
+      "description": "Development Assurance Level"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "scaling": {
+      "type": "object",
+      "properties": {
+        "raw_type": { "type": "string", "enum": ["int8", "uint8", "int16", "uint16", "int32", "uint32", "float32"] },
+        "raw_min": { "type": "number" },
+        "raw_max": { "type": "number" },
+        "offset": { "type": "number" },
+        "factor": { "type": "number" }
+      }
+    },
+    "fault_handling": {
+      "type": "object",
+      "properties": {
+        "timeout_ms": { "type": "integer", "minimum": 1, "maximum": 60000 },
+        "default_value": { "type": "number" },
+        "fail_safe_action": { "type": "string", "enum": ["USE_DEFAULT", "HOLD_LAST", "ISOLATE", "ALERT"] }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "requirement_ids": { "type": "array", "items": { "type": "string" } },
+        "test_case_ids": { "type": "array", "items": { "type": "string" } },
+        "hazard_ids": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

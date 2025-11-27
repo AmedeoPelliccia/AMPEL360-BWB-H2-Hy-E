@@ -1,0 +1,52 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd'}}}%%
+flowchart LR
+    subgraph EXTERNAL["EXTERNAL SYSTEMS"]
+        DOORS[Requirements\nDOORS]
+        CAD[CAD Models\nCATIA]
+        GIT[Software\nGit]
+        TEST[Test Results\nVectorCAST]
+    end
+    
+    subgraph SW_CONTEXT["53-40 SOFTWARE CONTEXT"]
+        direction TB
+        
+        subgraph APP["APPLICATION LAYER"]
+            MM_SW[Mode Manager]
+            TMS_SW[TMS Controller]
+            CO2_SW[CO2 Controller]
+            EMS_SW[EMS Controller]
+        end
+        
+        subgraph SAFETY["SAFETY LAYER"]
+            SS_SW[Safety Supervisor]
+            WD[Watchdog]
+            LIMIT[Limit Monitors]
+        end
+        
+        subgraph PLATFORM["PLATFORM LAYER"]
+            IMA[IMA Platform]
+            AFDX_DRV[AFDX Driver]
+            CAN_DRV[CAN Driver]
+        end
+    end
+    
+    subgraph HW["HARDWARE"]
+        SENSORS[Sensors]
+        ACTUATORS[Actuators]
+        BMS_HW[BMS Hardware]
+    end
+    
+    DOORS -->|Requirements| SW_CONTEXT
+    CAD -->|Interface Defs| SW_CONTEXT
+    GIT -->|Source Code| SW_CONTEXT
+    SW_CONTEXT -->|Results| TEST
+    
+    APP --> SAFETY
+    SAFETY --> PLATFORM
+    PLATFORM --> HW
+    HW --> PLATFORM
+    
+    style SW_CONTEXT fill:#e8f5e9,stroke:#43a047
+    style SAFETY fill:#ffebee,stroke:#c62828
+    style APP fill:#e3f2fd,stroke:#1976d2
+    style PLATFORM fill:#fff3e0,stroke:#f57c00

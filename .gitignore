@@ -45,3 +45,4 @@ Thumbs.db
 *.xlsx
 *.docx
 *.pptx
+_codeql_detected_source_root

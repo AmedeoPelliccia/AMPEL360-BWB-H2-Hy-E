@@ -231,6 +231,62 @@ Each ATA chapter follows a mandatory 14-folder lifecycle structure plus 9 cross-
   ```
   </details>
 - **XX-90_Tables_Schemas_Diagrams/**: Technical data and catalogs
+  <details>
+  <summary>Example: 53-90_Tables_Schemas_Diagrams/ (ATA 53 Fuselage Data)</summary>
+
+  ```
+  53-90_Tables_Schemas_Diagrams/
+  ├── 53-90-00_General/
+  │   ├── 53-90-00-01_TSD_Overview.md          ← This document
+  │   ├── 53-90-00-02_Data_Governance.md
+  │   └── 53-90-00-03_Naming_Conventions.md
+  ├── 53-90-10_Signal_Dictionary/
+  │   ├── 53-90-10-01_Signal_Catalog.csv
+  │   ├── 53-90-10-02_Signal_Schema.json
+  │   └── 53-90-10-03_Signal_Validation.md
+  ├── 53-90-20_Parameter_Database/
+  │   ├── 53-90-20-01_Parameter_Catalog.csv
+  │   ├── 53-90-20-02_Parameter_Schema.json
+  │   └── 53-90-20-03_Parameter_Management.md
+  ├── 53-90-30_Message_Catalog/
+  │   ├── 53-90-30-01_AFDX_VL_Definitions.csv
+  │   ├── 53-90-30-02_CAN_Message_Definitions.csv
+  │   ├── 53-90-30-03_Message_Structures.h
+  │   └── 53-90-30-04_ICD_Message_Format.md
+  ├── 53-90-40_Schema_Definitions/
+  │   ├── 53-90-40-01_Signal_Schema.json
+  │   ├── 53-90-40-02_Parameter_Schema.json
+  │   ├── 53-90-40-03_DPP_Event_Schema.json
+  │   ├── 53-90-40-04_DMC_Schema.xsd
+  │   └── 53-90-40-05_Schema_Catalog.md
+  ├── 53-90-50_Diagram_Index/
+  │   ├── 53-90-50-01_Figure_Catalog.csv
+  │   ├── 53-90-50-02_Drawing_Catalog.csv
+  │   ├── 53-90-50-03_Schematic_Catalog.csv
+  │   └── figures/
+  │       ├── FIG-53-00-001_System_Overview.mermaid
+  │       ├── FIG-53-40-001_SW_Context.mermaid
+  │       └── ...
+  ├── 53-90-60_Traceability/
+  │   ├── 53-90-60-01_Req_Design_Matrix.csv
+  │   ├── 53-90-60-02_Hazard_Mitigation_Matrix.csv
+  │   ├── 53-90-60-03_Signal_Test_Matrix.csv
+  │   └── 53-90-60-04_Traceability_Report.md
+  ├── 53-90-70_DPP_Schemas/
+  │   ├── 53-90-70-01_Component_Record.json
+  │   ├── 53-90-70-02_Event_Types.md
+  │   ├── 53-90-70-03_Circular_Metrics.md
+  │   └── 53-90-70-04_DPP_Integration.md
+  ├── 53-90-80_Data_Dictionary/
+  │   ├── 53-90-80-01_Abbreviations.csv
+  │   ├── 53-90-80-02_Glossary.md
+  │   └── 53-90-80-03_Units_Conventions.md
+  └── 53-90-90_Validation/
+      ├── 53-90-90-01_Schema_Validation_Rules.md
+      ├── 53-90-90-02_BREX_Rules.xml
+      └── 53-90-90-03_Data_Quality_Metrics.md
+  ```
+  </details>
 
 See [OPT-IN_FRAMEWORK_STANDARD.md](OPT-IN_FRAMEWORK_STANDARD.md) for complete specification.
 
