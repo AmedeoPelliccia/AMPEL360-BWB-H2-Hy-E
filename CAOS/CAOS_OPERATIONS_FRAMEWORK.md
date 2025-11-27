@@ -14,35 +14,46 @@ This document describes the operational framework for deploying and managing CAO
 
 ### 1.1 Three-Tier Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   Cloud Computing Campus (CCC)              │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐     │
-│  │ MLOps Pipeline│  │Service Twins │  │  Governance  │     │
-│  │ Model Training│  │  Simulation  │  │  Human-Loop  │     │
-│  └──────────────┘  └──────────────┘  └──────────────┘     │
-└─────────────────────────────────────────────────────────────┘
-                            ▲  ▼
-                    Federated Learning
-                      Model Distribution
-                            ▲  ▼
-┌─────────────────────────────────────────────────────────────┐
-│              Edge Intelligence (Aircraft / Ground)           │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐     │
-│  │ Local Models │  │ Real-time     │  │  Actuators   │     │
-│  │ Low Latency  │  │ Decision      │  │  Control     │     │
-│  └──────────────┘  └──────────────┘  └──────────────┘     │
-└─────────────────────────────────────────────────────────────┘
-                            ▲  ▼
-                      Telemetry & Commands
-                            ▲  ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    Physical Assets                           │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐     │
-│  │   Sensors    │  │  Fuel Cells  │  │  Propulsion  │     │
-│  │   IoT        │  │  Batteries   │  │  Systems     │     │
-│  └──────────────┘  └──────────────┘  └──────────────┘     │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    %% Three-Tier Architecture: CAOS Operations Framework
+
+    %% Top Level: Cloud Computing Campus
+    subgraph CCC["Cloud Computing Campus (CCC)"]
+        mlops["MLOps Pipeline<br>Model Training"]
+        twins["Service Twins<br>Simulation"]
+        governance["Governance<br>Human-Loop"]
+    end
+
+    %% Middle Level: Edge Intelligence (Aircraft / Ground)
+    subgraph EDGE["Edge Intelligence<br>(Aircraft / Ground)"]
+        local_models["Local Models<br>Low Latency"]
+        realtime["Real-time Decision"]
+        actuators["Actuators<br>Control"]
+    end
+
+    %% Bottom Level: Physical Assets
+    subgraph PHYSICAL["Physical Assets"]
+        sensors["Sensors<br>IoT"]
+        fuel_cells["Fuel Cells<br>Batteries"]
+        propulsion["Propulsion<br>Systems"]
+    end
+
+    %% Connections
+    CCC -->|Federated Learning<br>Model Distribution| EDGE
+    EDGE -->|Telemetry & Commands| PHYSICAL
+    PHYSICAL -->|Telemetry & Commands| EDGE
+    EDGE -->|Federated Learning<br>Model Updates| CCC
+
+    %% Internal connections (top-down order in each subgraph)
+    mlops --- twins
+    twins --- governance
+
+    local_models --- realtime
+    realtime --- actuators
+
+    sensors --- fuel_cells
+    fuel_cells --- propulsion
 ```
 
 ### 1.2 OODA Loop Implementation
@@ -122,17 +133,20 @@ The CCC is the central intelligence hub for:
 
 ### 3.2 MLOps Pipeline
 
-```
-┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│  Data        │    │  Training    │    │  Validation  │    │  Staging     │
-│  Preparation │───▶│  Pipeline    │───▶│  Testing     │───▶│  Approval    │
-└──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
-                                                                     │
-                                                                     ▼
-┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│  Monitoring  │◀───│  Production  │◀───│  Canary      │◀───│  Deployment  │
-│  Feedback    │    │  Operation   │    │  Testing     │    │  Rollout     │
-└──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
+```mermaid
+flowchart LR
+    data[Data<br>Preparation]
+    train[Training<br>Pipeline]
+    validate[Validation<br>Testing]
+    staging[Staging<br>Approval]
+    monitor[Monitoring<br>Feedback]
+    prod[Production<br>Operation]
+    canary[Canary<br>Testing]
+    deploy[Deployment<br>Rollout]
+
+    data --> train --> validate --> staging
+    staging --> deploy --> canary --> prod --> monitor
+    monitor -.-> data
 ```
 
 ### 3.3 Human-in-the-Loop Oversight
@@ -349,17 +363,17 @@ class CircularEconomyAnalyzer:
 
 ### 7.3 Circular Value Chain
 
-```
-┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│  Design for  │───▶│  Operations  │───▶│ End-of-Life  │
-│  Circularity │    │  with CAOS   │    │  Assessment  │
-└──────────────┘    └──────────────┘    └──────────────┘
-       ▲                                         │
-       │                                         ▼
-       │                                  ┌──────────────┐
-       │                                  │ Refurbish/   │
-       └──────────────────────────────────│ Remanufacture│
-                                          └──────────────┘
+```mermaid
+flowchart LR
+    design["Design for<br>Circularity"]
+    ops["Operations<br>with CAOS"]
+    eol["End-of-Life<br>Assessment"]
+    refurb["Refurbish/<br>Remanufacture"]
+
+    design --> ops --> eol
+    eol --> refurb
+    refurb --> design
+
 ```
 
 CAOS provides the operational data that makes circular decisions optimal, not just compliant.
