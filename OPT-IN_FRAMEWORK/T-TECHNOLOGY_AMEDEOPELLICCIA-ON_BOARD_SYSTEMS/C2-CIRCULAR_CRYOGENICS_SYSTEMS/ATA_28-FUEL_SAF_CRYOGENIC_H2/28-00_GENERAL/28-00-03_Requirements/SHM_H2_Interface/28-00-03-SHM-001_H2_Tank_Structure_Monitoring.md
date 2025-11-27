@@ -12,7 +12,7 @@ SHM_H2_Interface
 ## Description
 The SHM system shall monitor the structural integrity of hydrogen fuel tank support structures, cryogenic zone interfaces, and tank-fuselage attachments. The monitoring system shall operate effectively across the extreme temperature range associated with liquid hydrogen storage (-253°C to ambient).
 
-This requirement addresses the unique challenges of SHM in cryogenic environments and ensures compliance with parent requirement [53-00-03-01-005](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md).
+This requirement addresses the unique challenges of SHM in cryogenic environments and ensures compliance with parent requirement [53-00-03-01-005](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md).
 
 ## Rationale
 Hydrogen tank structure monitoring is critical for:
@@ -109,7 +109,7 @@ For the AMPEL360 BWB hydrogen-hybrid aircraft:
 ### Parent Requirements
 | Requirement | Title | Source |
 |-------------|-------|--------|
-| [53-00-03-01-005](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) | Compatibility with SHM Assumptions | Primary SHM Requirement |
+| [53-00-03-01-005](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) | Compatibility with SHM Assumptions | Primary SHM Requirement |
 | [CS-25.571](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) | Damage Tolerance and Fatigue Evaluation | EASA CS-25 |
 | CS-25.981 | Fuel Tank Ignition Prevention | EASA CS-25 |
 | EASA SC H2-001 | Hydrogen Fuel Systems (anticipated) | Special Condition |
@@ -117,7 +117,7 @@ For the AMPEL360 BWB hydrogen-hybrid aircraft:
 ### Related Requirements
 | Requirement ID | Title | Relationship |
 |----------------|-------|--------------|
-| [53-00-03-07-001](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/07_SHM_and_Monitoring/53-00-03-07-001_Sensor_Network_Coverage.md) | Sensor Network Coverage | System integration |
+| [53-00-03-07-001](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/07_SHM_and_Monitoring/53-00-03-07-001_Sensor_Network_Coverage.md) | Sensor Network Coverage | System integration |
 | 28-00-03-01-001 | H2 Tank Structural Requirements | Structure design basis |
 | 73-00-03-SHM-001 | H2 System Interface SHM | Fuel system interface |
 

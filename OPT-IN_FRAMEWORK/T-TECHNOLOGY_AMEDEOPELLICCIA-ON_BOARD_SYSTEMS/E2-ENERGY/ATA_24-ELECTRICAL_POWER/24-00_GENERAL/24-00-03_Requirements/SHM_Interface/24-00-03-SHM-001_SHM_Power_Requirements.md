@@ -17,7 +17,7 @@ The electrical power system shall provide dedicated, reliable power supply to th
 - Data storage and transmission equipment
 - Built-In Test Equipment (BITE)
 
-This requirement ensures the SHM system receives stable, high-quality power to enable accurate damage detection in accordance with parent requirement [53-00-03-01-005](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md).
+This requirement ensures the SHM system receives stable, high-quality power to enable accurate damage detection in accordance with parent requirement [53-00-03-01-005](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md).
 
 ## Rationale
 The SHM system requires dedicated electrical power for:
@@ -110,14 +110,14 @@ For the AMPEL360 BWB hydrogen-hybrid aircraft:
 ### Parent Requirements
 | Requirement | Title | Source |
 |-------------|-------|--------|
-| [53-00-03-01-005](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) | Compatibility with SHM Assumptions | Primary SHM Requirement |
+| [53-00-03-01-005](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) | Compatibility with SHM Assumptions | Primary SHM Requirement |
 | [CS-25.1351](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) | General (Electrical Systems) | EASA CS-25 |
 | [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) | Equipment, Systems, and Installations | EASA CS-25 |
 
 ### Related Requirements
 | Requirement ID | Title | Relationship |
 |----------------|-------|--------------|
-| [53-00-03-07-002](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/07_SHM_and_Monitoring/53-00-03-07-002_Data_Acquisition_Requirements.md) | Data Acquisition Requirements | Data system power needs |
+| [53-00-03-07-002](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/07_SHM_and_Monitoring/53-00-03-07-002_Data_Acquisition_Requirements.md) | Data Acquisition Requirements | Data system power needs |
 | 24-00-03-01-001 | Electrical Load Analysis | System-wide load management |
 | 24-00-03-02-001 | Essential Bus Requirements | Bus architecture |
 

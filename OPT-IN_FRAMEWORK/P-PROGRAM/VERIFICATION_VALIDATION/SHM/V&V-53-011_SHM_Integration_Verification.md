@@ -52,8 +52,8 @@ Verify complete integration of the Structural Health Monitoring system with airc
 | Requirement | Criteria | Method |
 |-------------|----------|--------|
 | [53-00-03-01-005](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) | System integration | Test |
-| 53-00-03-07-001 | Sensor coverage | Analysis + Test |
-| 53-00-03-07-002 | Data acquisition | Test |
+| [53-00-03-07-001](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/07_SHM_and_Monitoring/53-00-03-07-001_Sensor_Network_Coverage.md) | Sensor coverage | Analysis + Test |
+| [53-00-03-07-002](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/07_SHM_and_Monitoring/53-00-03-07-002_Data_Acquisition_Requirements.md) | Data acquisition | Test |
 
 ## Schedule
 | Phase | Duration | Prerequisites |

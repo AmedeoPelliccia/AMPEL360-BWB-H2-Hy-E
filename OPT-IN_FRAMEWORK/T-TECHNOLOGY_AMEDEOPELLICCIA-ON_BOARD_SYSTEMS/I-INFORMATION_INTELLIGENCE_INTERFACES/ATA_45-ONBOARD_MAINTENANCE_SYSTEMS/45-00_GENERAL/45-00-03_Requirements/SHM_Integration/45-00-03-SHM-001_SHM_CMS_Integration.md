@@ -17,7 +17,7 @@ The Central Maintenance System (CMS) shall integrate with the Structural Health 
 - Data download and archival capabilities
 - Ground-based diagnostic interface
 
-This requirement ensures effective maintenance integration in accordance with parent requirement [53-00-03-01-005](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md).
+This requirement ensures effective maintenance integration in accordance with parent requirement [53-00-03-01-005](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md).
 
 ## Rationale
 CMS integration with SHM is essential for:
@@ -111,14 +111,14 @@ For the AMPEL360 BWB hydrogen-hybrid aircraft:
 ### Parent Requirements
 | Requirement | Title | Source |
 |-------------|-------|--------|
-| [53-00-03-01-005](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) | Compatibility with SHM Assumptions | Primary SHM Requirement |
+| [53-00-03-01-005](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) | Compatibility with SHM Assumptions | Primary SHM Requirement |
 | [CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) | Equipment, Systems, and Installations | EASA CS-25 |
 | [CS-25.1529](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) | Instructions for Continued Airworthiness | EASA CS-25 |
 
 ### Related Requirements
 | Requirement ID | Title | Relationship |
 |----------------|-------|--------------|
-| [53-00-03-07-002](../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/07_SHM_and_Monitoring/53-00-03-07-002_Data_Acquisition_Requirements.md) | Data Acquisition Requirements | Data source |
+| [53-00-03-07-002](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/07_SHM_and_Monitoring/53-00-03-07-002_Data_Acquisition_Requirements.md) | Data Acquisition Requirements | Data source |
 | 45-00-03-01-001 | CMS General Requirements | System architecture |
 | 31-00-03-SHM-001 | SHM Display Requirements | Display interface |
 
