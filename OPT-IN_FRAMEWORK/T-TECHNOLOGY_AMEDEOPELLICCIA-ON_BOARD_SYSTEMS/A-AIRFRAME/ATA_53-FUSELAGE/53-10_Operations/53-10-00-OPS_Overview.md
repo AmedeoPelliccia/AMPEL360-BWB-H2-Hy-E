@@ -735,18 +735,25 @@ flowchart TB
 
 ### 11.2 Current Documents
 
-| Doc ID | Title | Version | Status |
-|--------|-------|---------|--------|
-| 53-10-00 | Operations Overview | 1.0 | This document |
-| 53-10-01 | Pre-flight Procedures | TBD | Planned |
-| 53-10-02 | Normal Operations | TBD | Planned |
-| 53-10-03 | Abnormal Procedures | TBD | Planned |
-| 53-10-04 | Emergency Procedures | TBD | Planned |
-| 53-10-10 | Turnaround Operations | TBD | Planned |
-| 53-10-11 | QuickSwap Procedures | TBD | Planned |
-| 53-10-12 | Servicing Procedures | TBD | Planned |
-| 53-10-20 | Alert Messages Catalog | TBD | Planned |
-
+| Doc ID           | Title                        | Version | Status        |
+|------------------|------------------------------|---------|--------------|
+| 53-10-00-001     | Operations Overview          | 1.0     | This document|
+| 53-10-01-001     | Pre-flight Procedures        | 1.0     | DRAFT        |
+| 53-10-01-002     | Pre-flight Checklist         | 1.0     | DRAFT        |
+| 53-10-02-001     | Normal Operations            | 1.0     | DRAFT        |
+| 53-10-03-001     | Abnormal Procedures          | 1.0     | DRAFT        |
+| 53-10-03-002     | Abnormal Checklist           | 1.0     | DRAFT        |
+| 53-10-04-001     | Emergency Procedures         | 1.0     | DRAFT        |
+| 53-10-04-002     | Emergency Checklist          | 1.0     | DRAFT        |
+| 53-10-04-003     | Emergency Quick Reference    | 1.0     | DRAFT        |
+| 53-10-10-001     | Turnaround Operations        | 1.0     | DRAFT        |
+| 53-10-11-001     | QuickSwap Procedures         | 1.0     | DRAFT        |
+| 53-10-11-002     | QuickSwap Checklist          | 1.0     | DRAFT        |
+| 53-10-12-001     | Servicing Procedures         | 1.0     | DRAFT        |
+| 53-10-13-001     | Servicing Checklist          | 1.0     | DRAFT        |
+| 53-10-20-001     | Alert Messages Catalog       | 1.0     | DRAFT        |
+| 53-10-21-001     | Alert Message Procedures     | 1.0     | DRAFT        |
+| 53-10-22-001     | Controls Panel Operations    | 1.0     | DRAFT        |
 ### 11.2 Related Forms
 
 | Form ID | Title | Use |
