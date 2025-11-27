@@ -75,3 +75,9 @@ The CFLF-GRAD (Collaborative Federated Learning Fabric - Gradient) channel enabl
 ---
 
 *Note: This is a stub document. GenCCC will auto-link and expand this content based on the FAirCCC architecture specification.*
+
+---
+
+- **Authorship:** Content generated through prompt engineering methods using AI assistants and agent tools, prompted and partially reviewed by **Amedeo Pelliccia**, with automated checking tools for validation.
+- Status: **DRAFT**
+- Repository: `AMPEL360-BWB-H2-Hy-E`

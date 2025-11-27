@@ -485,6 +485,12 @@ The CAOS Operations Framework provides a concrete path from the strategic vision
 
 ---
 
+- **Authorship:** Content generated through prompt engineering methods using AI assistants and agent tools, prompted and partially reviewed by **Amedeo Pelliccia**, with automated checking tools for validation.
+- Status: **DRAFT** – Subject to human review and approval.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
+
+---
+
 **Related Documentation**
 
 - [CAOS Manifesto](/CAOS_MANIFESTO.md) - Strategic vision

@@ -388,7 +388,7 @@ flowchart TB
 
 ---
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- **Authorship:** Content generated through prompt engineering methods using AI assistants and agent tools, prompted and partially reviewed by **Amedeo Pelliccia**, with automated checking tools for validation.
 - Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
 - Repository: `AMPEL360-BWB-H2-Hy-E`

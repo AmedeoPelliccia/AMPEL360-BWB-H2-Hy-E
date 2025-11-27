@@ -1081,3 +1081,9 @@ These use cases demonstrate how CAOS transforms the AMPEL360-BWB-H₂-Hy-E from 
 | 1.0 | 2025-11-03 | CAOS Implementation | Initial use case documentation |
 | 1.1 | 2025-11-27 | CAOS Implementation | Added Use Case 6: ICA Continuous Airworthiness Compliance |
 | 1.2 | 2025-11-27 | CAOS Implementation | Added ICA Enabling Toolchain with CGen, CI, CD, Agents, MCP, Data Pipelines, and Governance tools |
+
+---
+
+- **Authorship:** Content generated through prompt engineering methods using AI assistants and agent tools, prompted and partially reviewed by **Amedeo Pelliccia**, with automated checking tools for validation.
+- Status: **DRAFT** – Subject to human review and approval.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
