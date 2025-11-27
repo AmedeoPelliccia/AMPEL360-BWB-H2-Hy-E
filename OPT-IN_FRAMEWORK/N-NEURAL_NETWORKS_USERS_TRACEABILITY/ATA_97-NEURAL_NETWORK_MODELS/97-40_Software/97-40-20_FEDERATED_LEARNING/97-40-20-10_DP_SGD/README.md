@@ -203,23 +203,30 @@ Even when used primarily for **non-safety channels**:
 
 ## 9. Directory Structure (97-40-20-10_DP_SGD)
 
-Expected internal structure:
+Expected internal structure with consistent ID numbering:
 
 ```text
 97-40-20-10_DP_SGD/
-├── README.md                      # This file
+├── README.md                                          # This file (97-40-20-10-000)
 ├── SPEC/
-│   └── DP-SGD-SPEC.md             # Formal/technical specification
+│   └── 97-40-20-10-001_DP-SGD_Specification.md       # Formal specification
 ├── CONFIG/
-│   ├── dp_sgd_profiles.yaml       # Approved DP profiles
-│   └── dp_sgd_defaults.yaml       # Default parameters per model family
+│   ├── 97-40-20-10-101_DP-SGD_Profiles.yaml          # Approved DP profiles
+│   └── 97-40-20-10-102_DP-SGD_Defaults.yaml          # Default parameters
 ├── IMPLEMENTATION_NOTES/
-│   └── framework_guides.md        # Notes per ML framework
+│   └── 97-40-20-10-301_DP-SGD_Framework_Guides.md    # Framework-specific notes
 ├── TESTS/
-│   └── privacy_utility_reports/   # Trade-off and evaluation reports
+│   └── 97-40-20-10-701_Privacy_Utility_Reports.md    # Trade-off evaluations
 └── SCHEMAS/
-    └── dp_sgd_run_metadata.json   # Metadata schema for CAOS/DPP logging
-````
+    └── 97-40-20-10-901_DP-SGD_Run_Metadata.schema.json  # CAOS/DPP logging
+```
+
+**ID Numbering Convention:**
+- `0xx` → Specifications (formal documents)
+- `1xx` → Configuration (profiles, defaults)
+- `3xx` → Implementation notes
+- `7xx` → Tests and evaluation reports
+- `9xx` → Schemas and machine-readable artifacts
 
 This structure can evolve as the program grows, but **README.md remains the anchor** for the bucket.
 

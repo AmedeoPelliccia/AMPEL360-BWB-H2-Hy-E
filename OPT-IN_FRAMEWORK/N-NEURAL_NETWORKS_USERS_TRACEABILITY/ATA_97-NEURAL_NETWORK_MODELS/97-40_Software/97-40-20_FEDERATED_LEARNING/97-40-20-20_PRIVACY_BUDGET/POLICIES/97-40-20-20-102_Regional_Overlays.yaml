@@ -1,0 +1,77 @@
+# 97-40-20-20-102 — Regional Overlays
+# Region and regulator-specific privacy budget rules
+#
+# Document ID: 97-40-20-20-102_Regional_Overlays
+# Version: 1.0
+# Date: 2025-11-27
+# Status: DRAFT
+
+regions:
+  EU_GDPR:
+    description: "European Union - GDPR compliant settings"
+    applies_to:
+      - EASA_member_states
+    overrides:
+      max_epsilon: 1.0  # Stricter than default
+      require_consent_tracking: true
+      data_retention_days: 730
+      right_to_erasure: true
+    audit_requirements:
+      dpo_notification: true
+      impact_assessment: true
+      annual_review: true
+
+  US_FAA:
+    description: "United States - FAA jurisdiction"
+    applies_to:
+      - US_domestic
+      - US_territories
+    overrides:
+      max_epsilon: 5.0
+      require_consent_tracking: false
+    audit_requirements:
+      faa_reporting: true
+      annual_review: true
+
+  UK_CAA:
+    description: "United Kingdom - CAA post-Brexit"
+    applies_to:
+      - UK_domestic
+    overrides:
+      max_epsilon: 2.0
+      uk_dpa_compliance: true
+    audit_requirements:
+      ico_notification: true
+      annual_review: true
+
+  ASIA_PACIFIC:
+    description: "Asia-Pacific region - variable regulations"
+    applies_to:
+      - APAC_region
+    overrides:
+      max_epsilon: 5.0
+      local_data_residency: true
+    audit_requirements:
+      annual_review: true
+
+  SIMULATION:
+    description: "Simulation/Testing - no regional restrictions"
+    applies_to:
+      - simulation_environments
+      - test_benches
+    overrides:
+      max_epsilon: null
+      require_consent_tracking: false
+    audit_requirements:
+      annual_review: false
+
+# Default if no region matches
+default_region: "EU_GDPR"
+
+# Metadata
+metadata:
+  document_id: "97-40-20-20-102"
+  version: "1.0"
+  created: "2025-11-27"
+  author: "AMPEL360 Documentation WG"
+  status: "DRAFT"

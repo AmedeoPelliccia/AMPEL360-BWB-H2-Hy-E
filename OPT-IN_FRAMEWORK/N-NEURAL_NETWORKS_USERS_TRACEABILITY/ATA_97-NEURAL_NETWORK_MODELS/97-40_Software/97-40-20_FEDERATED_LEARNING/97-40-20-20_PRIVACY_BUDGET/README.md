@@ -245,24 +245,31 @@ This enables **auditable, regulator-facing evidence** of privacy-aware learning.
 
 ## 9. Directory Structure (97-40-20-20_PRIVACY_BUDGET)
 
-Recommended internal structure:
+Recommended internal structure with consistent ID numbering:
 
 ```text
 97-40-20-20_PRIVACY_BUDGET/
-├── README.md                          # This file
+├── README.md                                              # This file (97-40-20-20-000)
 ├── SPEC/
-│   └── Privacy_Budget_Model.md        # Formal definition of budgets and scopes
+│   └── 97-40-20-20-001_Privacy_Budget_Model.md           # Formal specification
 ├── POLICIES/
-│   ├── privacy_profiles.yaml          # HIGH/BALANCED/OTHER profiles
-│   └── regional_overlays.yaml         # Region/regulator-specific rules
+│   ├── 97-40-20-20-101_Privacy_Profiles.yaml             # Privacy profiles
+│   └── 97-40-20-20-102_Regional_Overlays.yaml            # Regional rules
 ├── ACCOUNTANTS/
-│   ├── rdp_accountant_notes.md        # RDP configuration notes
-│   └── accountant_selection.md        # Criteria and rationale
+│   ├── 97-40-20-20-301_RDP_Accountant_Notes.md           # RDP configuration
+│   └── 97-40-20-20-302_Accountant_Selection.md           # Selection criteria
 ├── REPORTS/
-│   └── budget_usage_examples.md       # Example scenarios and budget traces
+│   └── 97-40-20-20-701_Budget_Usage_Examples.md          # Usage examples
 └── SCHEMAS/
-    └── privacy_budget_run.schema.json # Schema for logging privacy usage per run
-````
+    └── 97-40-20-20-901_Privacy_Budget_Run.schema.json    # CAOS/DPP logging
+```
+
+**ID Numbering Convention:**
+- `0xx` → Specifications (formal documents)
+- `1xx` → Policies and configuration
+- `3xx` → Implementation notes (accountants)
+- `7xx` → Reports and examples
+- `9xx` → Schemas and machine-readable artifacts
 
 As the program evolves, additional artifacts (dashboards, scripts, configs) may be added under these folders.
 

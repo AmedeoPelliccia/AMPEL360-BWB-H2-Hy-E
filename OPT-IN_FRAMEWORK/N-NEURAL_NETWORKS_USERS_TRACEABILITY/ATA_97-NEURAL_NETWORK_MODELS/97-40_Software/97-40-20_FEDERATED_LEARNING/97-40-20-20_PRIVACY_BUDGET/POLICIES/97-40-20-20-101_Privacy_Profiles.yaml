@@ -1,0 +1,89 @@
+# 97-40-20-20-101 — Privacy Profiles
+# Privacy budget profiles for AMPEL360 federated learning
+#
+# Document ID: 97-40-20-20-101_Privacy_Profiles
+# Version: 1.0
+# Date: 2025-11-27
+# Status: DRAFT
+
+profiles:
+  HIGH_PRIVACY:
+    description: "Maximum privacy protection for sensitive data categories"
+    budget:
+      epsilon_max: 1.0
+      delta_max: 1.0e-6
+    scope:
+      per_model: true
+      per_aircraft: true
+      rolling_window_days: 365
+    enforcement:
+      require_dp_sgd: true
+      allow_relaxation: false
+      governance_review_threshold: 0.5
+    data_categories:
+      - passenger_telemetry
+      - crew_behavior
+      - personal_identifiable_info
+    accountant: "RDP"
+
+  BALANCED_PRIVACY:
+    description: "Standard privacy protection for operational data"
+    budget:
+      epsilon_max: 5.0
+      delta_max: 1.0e-5
+    scope:
+      per_model: true
+      per_aircraft: true
+      rolling_window_days: 365
+    enforcement:
+      require_dp_sgd: true
+      allow_relaxation: false
+      governance_review_threshold: 0.8
+    data_categories:
+      - operational_performance
+      - maintenance_events
+      - h2_efficiency_data
+    accountant: "RDP"
+
+  RELAXED_PRIVACY:
+    description: "Relaxed privacy for non-sensitive environmental data"
+    budget:
+      epsilon_max: 10.0
+      delta_max: 1.0e-4
+    scope:
+      per_model: true
+      per_aircraft: false
+      rolling_window_days: 180
+    enforcement:
+      require_dp_sgd: false
+      allow_relaxation: true
+      governance_review_threshold: 0.9
+    data_categories:
+      - environmental_sensors
+      - weather_data
+      - route_optimization
+    accountant: "MOMENTS"
+
+  NO_BUDGET:
+    description: "No privacy budget tracking - synthetic data only"
+    budget:
+      epsilon_max: null
+      delta_max: null
+    scope:
+      per_model: false
+      per_aircraft: false
+    enforcement:
+      require_dp_sgd: false
+      allow_relaxation: true
+    data_categories:
+      - synthetic_training
+      - simulation_benchmarks
+    accountant: null
+
+# Metadata
+metadata:
+  document_id: "97-40-20-20-101"
+  version: "1.0"
+  created: "2025-11-27"
+  author: "AMPEL360 Documentation WG"
+  status: "DRAFT"

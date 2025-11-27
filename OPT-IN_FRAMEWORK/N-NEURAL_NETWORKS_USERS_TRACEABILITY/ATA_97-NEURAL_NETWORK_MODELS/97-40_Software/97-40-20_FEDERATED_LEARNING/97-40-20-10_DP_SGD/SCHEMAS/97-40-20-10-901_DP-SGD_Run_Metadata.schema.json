@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/dp-sgd/run-metadata.json",
+  "title": "97-40-20-10-901 DP-SGD Run Metadata Schema",
+  "description": "Schema for logging DP-SGD training run metadata to CAOS/DPP",
+  "type": "object",
+  "required": [
+    "document_id",
+    "run_id",
+    "model_id",
+    "profile_id",
+    "dp_config",
+    "privacy_spent",
+    "timestamp"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "const": "97-40-20-10-901"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Unique identifier for this training run",
+      "pattern": "^RUN-[0-9A-Z]{8,}$"
+    },
+    "model_id": {
+      "type": "string",
+      "description": "Reference to model in DPP (ATA 97)"
+    },
+    "profile_id": {
+      "type": "string",
+      "description": "Privacy profile used",
+      "enum": ["HIGH_PRIVACY", "BALANCED_PRIVACY", "RELAXED_PRIVACY", "SIMULATION_ONLY"]
+    },
+    "dp_config": {
+      "type": "object",
+      "description": "DP-SGD configuration used",
+      "properties": {
+        "clip_norm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "noise_multiplier": {
+          "type": "number",
+          "minimum": 0
+        },
+        "batch_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "num_steps": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sampling_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": ["clip_norm", "noise_multiplier", "num_steps"]
+    },
+    "privacy_spent": {
+      "type": "object",
+      "description": "Privacy consumed by this run",
+      "properties": {
+        "epsilon": {
+          "type": "number",
+          "minimum": 0
+        },
+        "delta": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "accountant_type": {
+          "type": "string",
+          "enum": ["RDP", "MOMENTS", "GAUSSIAN"]
+        }
+      },
+      "required": ["epsilon", "delta", "accountant_type"]
+    },
+    "node_info": {
+      "type": "object",
+      "description": "CFLF node information",
+      "properties": {
+        "node_type": {
+          "type": "string",
+          "enum": ["A", "G", "R", "F"]
+        },
+        "node_id": {
+          "type": "string"
+        },
+        "aircraft_id": {
+          "type": "string"
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "caos_event_id": {
+      "type": "string",
+      "description": "Reference to CAOS event if logged"
+    },
+    "dpp_reference": {
+      "type": "string",
+      "description": "Reference to DPP lifecycle entry"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+# 97-40-20-10-102 — DP-SGD Defaults
+# Default parameters for DP-SGD per model family
+#
+# Document ID: 97-40-20-10-102_DP-SGD_Defaults
+# Version: 1.0
+# Date: 2025-11-27
+# Status: DRAFT
+
+defaults:
+  # Default profile to use when none specified
+  default_profile: "BALANCED_PRIVACY"
+  
+  # Accountant configuration
+  accountant:
+    type: "RDP"
+    orders: [1.5, 2, 3, 4, 5, 10, 20, 50, 100]
+  
+  # Training defaults
+  training:
+    learning_rate: 0.01
+    momentum: 0.9
+    batch_size: 32
+    epochs_per_round: 1
+  
+  # Safety margins
+  safety:
+    budget_warning_threshold: 0.8  # Warn at 80% budget consumed
+    budget_hard_limit: 0.95        # Stop at 95% budget consumed
+    require_signed_config: true
+    allow_runtime_override: false
+
+# Model family specific overrides
+model_families:
+  H2_MANAGEMENT:
+    default_profile: "BALANCED_PRIVACY"
+    clip_norm_override: 1.5
+    
+  PREDICTIVE_MAINTENANCE:
+    default_profile: "BALANCED_PRIVACY"
+    clip_norm_override: 1.0
+    
+  ANCHORS_CARBON:
+    default_profile: "HIGH_PRIVACY"
+    clip_norm_override: 0.5
+    
+  ENVIRONMENTAL_SENSORS:
+    default_profile: "RELAXED_PRIVACY"
+    clip_norm_override: 2.0
+
+# Metadata
+metadata:
+  document_id: "97-40-20-10-102"
+  version: "1.0"
+  created: "2025-11-27"
+  author: "AMPEL360 Documentation WG"
+  status: "DRAFT"
