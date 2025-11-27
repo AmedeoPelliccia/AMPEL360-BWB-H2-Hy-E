@@ -1,47 +1,38 @@
-# CAOS INDEX
+# CAOS — Computer Aided Operations & Services
 
-## CAOS — Computer Aided Operations & Services
+## Master Index and Canonical Definition
 
-### *(Continuous Airworthiness in Operations & Services)*
+| Field               | Value                                                      |
+|---------------------|------------------------------------------------------------|
+| **Document ID**     | CAOS-00-INDEX-001                                          |
+| **Version**         | 2.0                                                        |
+| **Date**            | 2025-11-27                                                 |
+| **Status**          | DRAFT                                                      |
+| **Classification**  | ARCHITECTURE / CROSS-ATA                                   |
+| **Owner**           | AMPEL360 CAOS / Operations & Services WG                   |
+| **Programme**       | AMPEL360-BWB-H₂-Hy-E Q100                                  |
 
-**AMPEL360 Official Definition – Cross-ATA Standard**
+---
 
-CAOS is the **AMPEL360 integrated digital framework** that ensures **Continuous Airworthiness**, **operational integrity**, and **service readiness** by combining:
+## 1. Canonical Definition
 
-* **Real-time digital twins**
-* **Automated technical publication workflows**
-* **Agentic documentation generation and verification**
-* **Operational analytics and predictive maintenance**
-* **Lifecycle traceability via DPP**
-* **In-service monitoring and automated ICA updates**
+### 1.1 Formal Definition
 
-It is simultaneously:
+**CAOS (Computer Aided Operations & Services) is the AMPEL360 operational intelligence framework that guarantees Continuous Airworthiness by providing: real-time state awareness, digital-twin-driven procedural updates, automated ICA/MRO publication generation, compliance verification, and fleet-level service optimization across the full lifecycle of the aircraft.**
 
-1. **A continuous airworthiness architecture**
-2. **A Computer Aided Operations & Services system**
-3. **A digital nervous system for operations, publications, and fleet monitoring**
+CAOS is:
+
+- A **Continuous Airworthiness architecture**  
+- A **Computer Aided Operations & Services system**  
+- The **digital nervous system** that connects operations, technical publications, MRO, DPP, and predictive analytics.
 
 CAOS is to Operations & Services what CAD/CAE is to Design — but **for operational management, ICA, and MRO intelligence**.
 
----
+### 1.2 Short Definition (for headers, YAML, DMC)
 
-## Formal Definition
+> **CAOS — Computer Aided Operations & Services (Continuous Airworthiness in Operations & Services).**
 
-*For use in headers, MCP prompts, ICA sections:*
-
-**CAOS (Computer Aided Operations & Services) is the AMPEL360 operational intelligence framework that guarantees Continuous Airworthiness by providing: real-time state awareness, DT-driven procedural updates, automated ICA/MRO publication generation, compliance verification, and fleet-level service optimization across the full lifecycle of the aircraft.**
-
----
-
-## Short Definition
-
-*For metadata headers, YAML, DMC, document control:*
-
-**CAOS — Computer Aided Operations & Services (Continuous Airworthiness in Ops & Services).**
-
----
-
-## Extended Definition
+### 1.3 Extended Definition
 
 *For section intros, CAOS Index, ICDs, ATA 02/95/97 integration:*
 
@@ -67,91 +58,9 @@ CAOS ensures:
 
 ---
 
-## CAOS & ICA — The Relationship
+## 2. Scope and Objectives
 
-**CAOS is the mechanism; ICA is the outcome.**
-
-CAOS continuously maintains, validates, and updates the ICA baseline across:
-
-* AMM (Aircraft Maintenance Manual)
-* CMM (Component Maintenance Manual)
-* TSM (Troubleshooting Manual)
-* MPD (Maintenance Planning Document)
-* FIM (Fault Isolation Manual)
-* WDM (Wiring Diagram Manual)
-* SRM (Structural Repair Manual)
-* MEL/CDL (Minimum Equipment List / Configuration Deviation List)
-* Troubleshooting tools
-* Ops procedures
-
-This creates **living ICA**, updated automatically through CI/CD + MCP agents, with AI verification and change-impact analysis.
-
----
-
-## Use-Case Phrase
-
-*Optimized for prompts, docs, MCP headers:*
-
-> **Remark: CAOS ensures effective Continuous Airworthiness compliance by:**
->
-> * **Automating ICA and MRO documentation** through agentic technical publication workflows
-> * **Providing real-time digital-twin revision updates** for procedural accuracy
-> * **Delivering in-service operational support** via high-context expert chatbots
-> * **Enabling continuous monitoring** with event-driven DPP traceability
-
----
-
-## Where CAOS Must Appear in the Repo (Authoritative)
-
-### 1. ATA_02 — Operations Information
-
-* 02-00-00_GENERAL → CAOS Overview Section
-* 02-20-00 Digital Ops Platform → CAOS core nodes
-* 02-30-00 Hydrogen Fuel Data → CAOS energy ops integration
-
-### 2. ATA_95 — Neural Networks
-
-* Predictive operations & fleet intelligence
-* Model governance, thresholds, trend detection
-
-### 3. ATA_97 — DPP
-
-* Lifecycle traceability → ICA → MRO → End of Life
-
-### 4. CAOS_INDEX.md
-
-* Top-level cross-ATA index
-* Links to Ops, Digital Twin, ICA, MCP agents, CI/CD
-
-### 5. MCP Agents
-
-All doc, ICA, and MRO agents must load CAOS context in header:
-
-```
-CAOS/ICA Operational Context:
-- Continuous Airworthiness via Computer Aided Operations & Services
-- Automated documentation enforcement
-- Real-time DT/MRO integration
-- ICA-ready publication standards (ATA/iSpec/S1000D compliant)
-```
-
----
-
-## Purpose of CAOS
-
-CAOS (**Computer Aided Operations and Services**) defines the **operational intelligence layer** for AMPEL360:
-
-- Orchestrates **data, models, documents, and workflows** across the fleet  
-- Provides **decision support** to humans (pilots, dispatch, maintenance, ops)  
-- Enables **Continuous Computing** via the **C-GROWTH / C-GROWTH²** lifecycle  
-- Integrates **AirCCC** (Aircraft Cloud Computing Campus) with ground and enterprise systems  
-
-CAOS is **advisory by design** and **safety-bounded**. It does **not** replace certified control laws.  
-It augments operations with **predictive, data-driven, and explainable intelligence**.
-
----
-
-## Scope
+### 2.1 Scope
 
 CAOS covers:
 
@@ -170,9 +79,9 @@ It does **not** define:
 
 ---
 
-## Core Concepts
+## 3. Core Concepts
 
-### AirCCC – Aircraft Cloud Computing Campus
+### 3.1 AirCCC – Aircraft Cloud Computing Campus
 
 **AirCCC** is the distributed compute fabric behind CAOS:
 
@@ -190,7 +99,35 @@ AirCCC operates under configuration:
 See:  
 - `O-ORGANIZATION/STANDARDS/AMPEL360-AirCCC-ARCH-001_*.md`
 
-### C-GROWTH – Circular Intelligence Lifecycle
+### 3.2 Key ATA Anchors
+
+| ATA | Role in CAOS                                               |
+|-----|------------------------------------------------------------|
+| **02** | Digital Operations Information (CAOS core context)      |
+| **12** | Servicing & turnarounds, ground servicing integration   |
+| **21** | ECS, cabin environment, CO₂/IAQ monitoring              |
+| **22** | Auto Flight / FMS — guidance modes, autonomous profiles, flight envelope constraints |
+| **23** | Communications — VHF/SATCOM, datalinks, CPDLC/ADS-C, ATM connectivity |
+| **24** | Electrical power states and loads                       |
+| **28** | H₂ fuel / energy system operating modes                 |
+| **34** | Navigation — GNSS/IRS/Sensors feeding FMS and CAOS trajectory awareness |
+| **42** | Integrated Modular Avionics (IMA) platform for CAOS apps, NN hosting and partitions |
+| **44** | Cabin Systems — cabin networks, IFE/connectivity as CAOS information surfaces |
+| **45** | Central Maintenance System (CMS/BITE) — fault logging, reports, CAOS/MRO bridge |
+| **46** | Information Systems (EFB, airline IT, datalinks) — CAOS front-end and connectivity |
+| **47** | Tank inerting safety and operational constraints        |
+| **53** | Fuselage / ANCHORS / SHM integration                    |
+| **85** | Ground Support Equipment & circular infrastructure      |
+| **95** | NN models for predictive monitoring and optimization    |
+| **97** | Digital Product Passport and lifecycle traceability     |
+
+### 3.3 Digital Platform & Autonomy Backbone
+
+- **22/34** — Autonomous navigation spine: FMS, guidance and nav sensors driving CAOS trajectory- and phase-of-flight–aware decisions
+- **23/46** — ATM and datalink: CPDLC, ADS-C, airline IT connections for CAOS "brain ↔ world" integration
+- **42/44** — Onboard data planes: IMA and cabin networks hosting CAOS services and surfaces
+
+### 3.4 C-GROWTH – Circular Intelligence Lifecycle
 
 C-GROWTH defines **how CAOS learns and evolves**:
 
@@ -204,7 +141,7 @@ C-GROWTH defines **how CAOS learns and evolves**:
 See:  
 - `O-ORGANIZATION/STANDARDS/C-GROWTH_Methodology_Specification.md`
 
-### C-GROWTH² – Constellation Intelligence
+### 3.5 C-GROWTH² – Constellation Intelligence
 
 C-GROWTH² extends C-GROWTH from **single system** to **multi-fleet, multi-generation** evolution:
 
@@ -248,6 +185,7 @@ CAOS is structured in **four main layers**:
 ### Root-Level CAOS Documents
 
 - `CAOS_INDEX.md` *(this file)* – Master index & concept overview  
+- `CAOS_CROSS_ATA_MAP.md` – Cross-ATA integration map (autonomy, ATM, data exchanges)
 - `CAOS_MANIFESTO.md` – Vision, principles, long-term goals  
 - `CAOS_OPERATIONS_FRAMEWORK.md` – Operational playbook (roles, RACI, phases)  
 - `CAOS_USE_CASES.md` – Concrete scenarios & user journeys
@@ -337,6 +275,7 @@ All new intelligence, automation, and documentation capabilities should register
 |---------|------|--------|---------|
 | 1.0 | 2025-11-03 | CAOS Implementation | Initial CAOS Index documentation |
 | 2.0 | 2025-11-27 | CAOS Implementation | Added authoritative CAOS definitions, ICA relationship, MCP agent context |
+| 2.1 | 2025-11-27 | CAOS Implementation | Added Key ATA Anchors table, autonomy backbone (22/23/34/42/44/46) |
 
 ---
 
