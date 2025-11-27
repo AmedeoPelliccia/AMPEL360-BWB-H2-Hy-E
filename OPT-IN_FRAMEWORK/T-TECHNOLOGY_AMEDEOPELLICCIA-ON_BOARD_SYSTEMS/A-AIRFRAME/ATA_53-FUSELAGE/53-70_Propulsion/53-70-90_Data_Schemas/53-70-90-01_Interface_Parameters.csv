@@ -1,0 +1,16 @@
+Parameter_ID,Name,Type,Unit,Min,Max,Description,Source,Destination,Reference
+PROP-PARAM-001,FC_Power_Output,Float,kW,0,550,Fuel cell power output,Fuel Cell,ANCHORS,ICD-71-001
+PROP-PARAM-002,FC_Voltage,Float,VDC,650,850,Fuel cell output voltage,Fuel Cell,ANCHORS,ICD-71-002
+PROP-PARAM-003,FC_Water_Rate,Float,L/hr,0,45,Water production rate,Fuel Cell,ANCHORS,REQ-PROP-010
+PROP-PARAM-004,FC_Waste_Heat,Float,kW,0,250,Fuel cell waste heat,Fuel Cell,ANCHORS,REQ-PROP-020
+PROP-PARAM-005,FC_Coolant_Temp,Float,°C,20,85,Fuel cell coolant temperature,Fuel Cell,ANCHORS,ICD-71-003
+PROP-PARAM-006,TG_Power_Output,Float,kW,0,850,Turbo-generator power output,Turbine,ANCHORS,ICD-72-001
+PROP-PARAM-007,TG_Voltage,Float,VAC,380,420,Turbo-generator voltage (3-phase),Turbine,ANCHORS,ICD-72-002
+PROP-PARAM-008,TG_Exhaust_Temp,Float,°C,100,650,Turbine exhaust temperature,Turbine,ANCHORS,ICD-72-010
+PROP-PARAM-009,Fan_Power,Float,kW,0,600,Electric fan motor power,ANCHORS,Fan Motor,ICD-72-010
+PROP-PARAM-010,Fan_Voltage,Float,VDC,600,700,Fan motor voltage,ANCHORS,Fan Motor,ICD-72-011
+PROP-PARAM-011,Regen_Power,Float,kW,0,200,Regeneration power per motor,Fan Motor,ANCHORS,REQ-PROP-040
+PROP-PARAM-012,Battery_SoC,Float,%,0,100,Battery state of charge,BMS,ANCHORS,ICD-60-001
+PROP-PARAM-013,Battery_Accept,Boolean,-,0,1,Battery acceptance flag,BMS,ANCHORS,REQ-PROP-045
+PROP-PARAM-014,Thermal_Bus_HT,Float,°C,60,95,High temp thermal bus temperature,ANCHORS,Thermal,ICD-80-001
+PROP-PARAM-015,Thermal_Bus_LT,Float,°C,35,60,Low temp thermal bus temperature,ANCHORS,Thermal,ICD-80-002
