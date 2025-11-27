@@ -1,7 +1,7 @@
 {
   "name": "doc-meta-enforcer-mcp",
   "version": "0.1.0",
-  "description": "MCP server that enforces document control blocks and hyperlinks standards/regulations in AMPEL360 documentation",
+  "description": "MCP server that enforces document control blocks and hyperlinks standards/regulations and internal cross references in AMPEL360 documentation",
   "main": "dist/server.js",
   "bin": {
     "doc-meta-enforcer": "dist/server.js"
