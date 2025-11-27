@@ -1,6 +1,6 @@
 Drawing_Number,Title,Zone,Type,CI_Reference,Assembly_ID,Revision,Status,CAD_File,Owner,Checker,Approver,Last_Updated,Comments
-53-60-0000,Zone 600 General Arrangement,600,GA,CI-53-600-00,,A,Draft,53-60-0000_Zone_600_General_Arrangement_Q100.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
-53-60-1000,Aft Pressure Bulkhead Assembly,600,Assembly,CI-53-600-10,ASM-53-600-100,A,Draft,53-60-1000_Aft_Pressure_Bulkhead_Assembly_Q100.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
-53-60-1001,Aft Bulkhead Details,600,Detail,CI-53-600-10,,A,Draft,53-60-1001_Aft_Bulkhead_Details_Q100.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
-53-60-2000,Tail Cone Structure,600,Assembly,CI-53-600-20,ASM-53-600-200,A,Draft,53-60-2000_Tail_Cone_Structure_Q100.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
-53-60-3000,APU Bay Structure,600,Assembly,CI-53-600-30,ASM-53-600-300,A,Draft,53-60-3000_APU_Bay_Structure_Q100.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
+53-60-0000,Zone 600 General Arrangement,600,GA,CI-53-600-00,,A,Draft,Q100_53-60-0000_Zone_600_General_Arrangement.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
+53-60-1000,Aft Pressure Bulkhead Assembly,600,Assembly,CI-53-600-10,ASM-53-600-100,A,Draft,Q100_53-60-1000_Aft_Pressure_Bulkhead_Assembly.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
+53-60-1001,Aft Bulkhead Details,600,Detail,CI-53-600-10,,A,Draft,Q100_53-60-1001_Aft_Bulkhead_Details.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
+53-60-2000,Tail Cone Structure,600,Assembly,CI-53-600-20,ASM-53-600-200,A,Draft,Q100_53-60-2000_Tail_Cone_Structure.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
+53-60-3000,APU Bay Structure,600,Assembly,CI-53-600-30,ASM-53-600-300,A,Draft,Q100_53-60-3000_APU_Bay_Structure.svg,Engineering,QA,Authority,2025-11-24,"Placeholder drawing - awaiting detail"
