@@ -1,0 +1,238 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "53-60-90-02_DPP_Schema.json",
+  "title": "Storage Unit Digital Product Passport Schema",
+  "description": "Schema for Digital Product Passport data for ATA 53-60 storage units",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["dpp_header", "unit_identity", "lifecycle"],
+  "properties": {
+    "dpp_header": {
+      "type": "object",
+      "description": "DPP metadata header",
+      "required": ["schema_version", "created_date", "last_updated"],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Schema version number"
+        },
+        "created_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "DPP creation date"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last update timestamp"
+        }
+      }
+    },
+    "unit_identity": {
+      "type": "object",
+      "description": "Storage unit identification",
+      "required": ["unit_id", "unit_type", "serial_number"],
+      "properties": {
+        "unit_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Unique unit identifier (UUID)"
+        },
+        "unit_type": {
+          "type": "string",
+          "enum": ["BATTERY_PACK", "CO2_CARTRIDGE", "WATER_TANK", "THERMAL_ACCUMULATOR"],
+          "description": "Type of storage unit"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "Manufacturer serial number"
+        },
+        "part_number": {
+          "type": "string",
+          "description": "Part number"
+        },
+        "manufacturer": {
+          "type": "string",
+          "description": "Manufacturer name"
+        },
+        "manufacturing_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of manufacture"
+        },
+        "batch_number": {
+          "type": "string",
+          "description": "Production batch number"
+        }
+      }
+    },
+    "specifications": {
+      "type": "object",
+      "description": "Unit specifications",
+      "properties": {
+        "capacity": {
+          "type": "number",
+          "description": "Unit capacity (unit-specific)"
+        },
+        "capacity_unit": {
+          "type": "string",
+          "description": "Capacity unit of measure"
+        },
+        "mass_empty": {
+          "type": "number",
+          "description": "Empty mass in kg"
+        },
+        "mass_full": {
+          "type": "number",
+          "description": "Full mass in kg"
+        },
+        "operating_temp_min": {
+          "type": "number",
+          "description": "Minimum operating temperature °C"
+        },
+        "operating_temp_max": {
+          "type": "number",
+          "description": "Maximum operating temperature °C"
+        },
+        "operating_pressure_max": {
+          "type": "number",
+          "description": "Maximum operating pressure bar"
+        }
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "description": "Lifecycle data",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["MANUFACTURED", "CERTIFIED", "IN_SERVICE", "REMOVED", "RECYCLED", "SCRAPPED"],
+          "description": "Current lifecycle status"
+        },
+        "certification_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Certification date"
+        },
+        "certification_reference": {
+          "type": "string",
+          "description": "Certification document reference"
+        },
+        "installation_date": {
+          "type": "string",
+          "format": "date",
+          "description": "First installation date"
+        },
+        "total_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total service cycles"
+        },
+        "total_operating_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total operating hours"
+        },
+        "remaining_life_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Estimated remaining life percentage"
+        }
+      }
+    },
+    "service_history": {
+      "type": "array",
+      "description": "Service event history",
+      "items": {
+        "type": "object",
+        "required": ["event_date", "event_type"],
+        "properties": {
+          "event_date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Event timestamp"
+          },
+          "event_type": {
+            "type": "string",
+            "enum": ["INSTALL", "REMOVE", "SERVICE", "INSPECTION", "REPAIR", "TEST"],
+            "description": "Type of service event"
+          },
+          "aircraft_registration": {
+            "type": "string",
+            "description": "Aircraft registration"
+          },
+          "location": {
+            "type": "string",
+            "description": "Airport or facility location"
+          },
+          "technician_id": {
+            "type": "string",
+            "description": "Technician identifier"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Event notes"
+          }
+        }
+      }
+    },
+    "operational_data": {
+      "type": "object",
+      "description": "Current operational data (unit-specific)",
+      "properties": {
+        "current_fill_level": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Current fill level percentage"
+        },
+        "last_charge_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last charge/fill date"
+        },
+        "temperature_history": {
+          "type": "array",
+          "description": "Recent temperature readings",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": { "type": "string", "format": "date-time" },
+              "value": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "sustainability": {
+      "type": "object",
+      "description": "Sustainability and circularity data",
+      "properties": {
+        "material_composition": {
+          "type": "object",
+          "description": "Material breakdown by percentage",
+          "additionalProperties": { "type": "number" }
+        },
+        "recyclability_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Recyclability percentage"
+        },
+        "embodied_carbon_kg": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Embodied carbon in kg CO2e"
+        },
+        "end_of_life_pathway": {
+          "type": "string",
+          "enum": ["RECYCLE", "REFURBISH", "REUSE", "DISPOSE"],
+          "description": "Planned end-of-life pathway"
+        }
+      }
+    }
+  }
+}

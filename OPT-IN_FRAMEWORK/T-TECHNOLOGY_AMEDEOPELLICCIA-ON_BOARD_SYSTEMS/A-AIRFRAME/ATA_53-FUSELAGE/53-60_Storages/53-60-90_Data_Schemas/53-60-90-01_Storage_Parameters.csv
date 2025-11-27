@@ -1,0 +1,35 @@
+Parameter_ID,System,Parameter_Name,Description,Unit,Data_Type,Min_Value,Max_Value,Default_Value,Sampling_Rate_Hz,Reference
+STG-BAT-001,Battery,BatteryPackVoltage,Total battery pack voltage,VDC,float,650,850,750,10,REQ-BAT-001
+STG-BAT-002,Battery,BatteryPackCurrent,Total battery pack current,A,float,-400,400,0,10,REQ-BAT-002
+STG-BAT-003,Battery,BatterySOC,State of charge,percent,float,0,100,50,1,REQ-BAT-003
+STG-BAT-004,Battery,BatteryTemperature,Average cell temperature,degC,float,-40,60,25,1,REQ-BAT-010
+STG-BAT-005,Battery,CoolantInletTemp,Coolant inlet temperature,degC,float,10,50,25,1,REQ-BAT-051
+STG-BAT-006,Battery,CoolantOutletTemp,Coolant outlet temperature,degC,float,10,60,30,1,REQ-BAT-052
+STG-BAT-007,Battery,CoolantFlowRate,Coolant flow rate,L_per_min,float,0,25,15,1,REQ-BAT-011
+STG-BAT-008,Battery,CoolantPressure,Coolant circuit pressure,bar,float,0,6,3,1,REQ-BAT-012
+STG-BAT-009,Battery,PackInsulationR,Insulation resistance,MOhm,float,0,1000,500,0.1,REQ-BAT-041
+STG-BAT-010,Battery,PackLatchStatus,Latch engaged status,boolean,bool,0,1,1,1,REQ-QS-025
+STG-CO2-001,CO2,CartridgeFillLevel_1,Cartridge 1 fill level,percent,float,0,100,0,0.1,REQ-CO2-001
+STG-CO2-002,CO2,CartridgeFillLevel_2,Cartridge 2 fill level,percent,float,0,100,0,0.1,REQ-CO2-001
+STG-CO2-003,CO2,CartridgeFillLevel_3,Cartridge 3 fill level,percent,float,0,100,0,0.1,REQ-CO2-001
+STG-CO2-004,CO2,CartridgeFillLevel_4,Cartridge 4 fill level,percent,float,0,100,0,0.1,REQ-CO2-001
+STG-CO2-005,CO2,ManifoldPressure,CO2 manifold pressure,bar,float,0,3,1,1,REQ-CO2-010
+STG-CO2-006,CO2,CartridgeTemp_Avg,Average cartridge temperature,degC,float,-20,80,40,0.5,REQ-CO2-011
+STG-CO2-007,CO2,CO2FlowRate,CO2 flow rate to cartridges,kg_per_hr,float,0,25,10,1,REQ-CO2-020
+STG-CO2-008,CO2,CartridgeLatch_1,Cartridge 1 latch status,boolean,bool,0,1,1,1,DSR-011
+STG-CO2-009,CO2,CartridgeLatch_2,Cartridge 2 latch status,boolean,bool,0,1,1,1,DSR-011
+STG-CO2-010,CO2,CartridgeLatch_3,Cartridge 3 latch status,boolean,bool,0,1,1,1,DSR-011
+STG-CO2-011,CO2,CartridgeLatch_4,Cartridge 4 latch status,boolean,bool,0,1,1,1,DSR-011
+STG-H2O-001,Water,TankLevel,Water tank level,percent,float,0,100,50,1,REQ-H2O-030
+STG-H2O-002,Water,TankTemperature,Water temperature,degC,float,0,50,20,0.5,REQ-H2O-011
+STG-H2O-003,Water,LowLevelAlert,Low level alert,boolean,bool,0,1,0,1,REQ-H2O-050
+STG-H2O-004,Water,OverflowActive,Overflow drain active,boolean,bool,0,1,0,1,REQ-H2O-026
+STG-H2O-005,Water,WaterQualityOK,Water quality status,boolean,bool,0,1,1,0.1,REQ-H2O-080
+STG-TH-001,Thermal,PCMTemperature,PCM average temperature,degC,float,20,70,45,1,REQ-TH-002
+STG-TH-002,Thermal,PCMState,PCM phase state,enum,int,0,2,1,1,REQ-TH-002
+STG-TH-003,Thermal,ThermalCharge,Thermal storage charge level,percent,float,0,100,50,1,REQ-TH-004
+STG-TH-004,Thermal,HTFInletTemp,Heat transfer fluid inlet temp,degC,float,20,70,40,1,REQ-TH-100
+STG-TH-005,Thermal,HTFOutletTemp,Heat transfer fluid outlet temp,degC,float,20,70,45,1,REQ-TH-101
+STG-TH-006,Thermal,HTFFlowRate,HTF flow rate,L_per_min,float,0,20,10,1,REQ-TH-112
+STG-TH-007,Thermal,BufferPressure,Buffer tank pressure,bar,float,0,5,2,1,REQ-TH-033
+STG-TH-008,Thermal,BufferLevel,Buffer tank level,percent,float,0,100,70,0.5,REQ-TH-060
