@@ -74,6 +74,33 @@ The CFLF-GRAD (Collaborative Federated Learning Fabric - Gradient) channel enabl
 
 ---
 
+## OPT-IN Framework Mapping
+
+CFLF-GRAD is the upstream learning channel. The FAirCCC system uses a dual-location OPT-IN architecture:
+
+### Dual-Location Structure
+
+| Axis | Location | Focus |
+|------|----------|-------|
+| **N-Axis** | `N-NEURAL_NETWORKS/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-20_FEDERATED_LEARNING/` | What to learn |
+| **L2-LINKS** | `T-TECHNOLOGY/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/23-95-60_PROTOCOLS/60-10_CFLF_GRAD/` | How to transmit |
+
+### Separation of Concerns
+
+| Aspect | N-Axis (97-40-20) | L2-LINKS (23-95-60-10) |
+|--------|-------------------|------------------------|
+| **Content** | DP-SGD, privacy, aggregation | Feature gate, transport, SecAgg |
+| **Schemas** | Gradient format schema | Transport envelope schema |
+
+### Related Documents
+
+* [CFLF-GRAD OPT-IN Structure Master Mapping](../../OPT-IN_FRAMEWORK/CFLF-GRAD-OPTIN-STRUCTURE.md)
+* [CUC OPT-IN Structure](../../OPT-IN_FRAMEWORK/CUC-OPTIN-STRUCTURE.md)
+* [97-40-20_FEDERATED_LEARNING README](../../OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-20_FEDERATED_LEARNING/README.md)
+* [23-95_COMM_NN README](../../OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/README.md)
+
+---
+
 *Note: This is a stub document. GenCCC will auto-link and expand this content based on the FAirCCC architecture specification.*
 
 ---
