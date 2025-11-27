@@ -226,30 +226,39 @@ SHM Sensor Network Architecture
 | [53-00-03-07-002](../07_SHM_and_Monitoring/53-00-03-07-002_Data_Acquisition_Requirements.md) | Data Acquisition Requirements | Data system interface |
 
 ### Child Requirements
-| Requirement ID | Title | Component |
-|----------------|-------|-----------|
-| 53-10-03-01-005 | Forward Fuselage SHM Compatibility | Forward Fuselage |
-| 53-20-03-01-005 | Center Fuselage SHM Compatibility | Center Fuselage |
-| 53-30-03-01-005 | Aft Fuselage SHM Compatibility | Aft Fuselage |
-| 53-40-03-01-005 | Wing-Body Junction SHM Compatibility | Wing Integration |
-| 53-73-03-01-001 | H2 Tank Interface SHM Compatibility | H2 System Interface |
+| Requirement ID | Title | Component | Status |
+|----------------|-------|-----------|--------|
+| [57-00-03-07-001](../../../../ATA_57-WINGS/57-00_GENERAL/57-00-03_Requirements/07_SHM_and_Monitoring/57-00-03-07-001_Wing_SHM_Compatibility.md) | Wing SHM Compatibility | Wing/BWB Junction | Draft |
+| [24-00-03-SHM-001](../../../../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/24-00_GENERAL/24-00-03_Requirements/SHM_Interface/24-00-03-SHM-001_SHM_Power_Requirements.md) | SHM Power Requirements | Electrical Power | Draft |
+| [45-00-03-SHM-001](../../../../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/45-00_GENERAL/45-00-03_Requirements/SHM_Integration/45-00-03-SHM-001_SHM_CMS_Integration.md) | SHM CMS Integration | Central Maintenance | Draft |
+| [28-00-03-SHM-001](../../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_28-FUEL_SAF_CRYOGENIC_H2/28-00_GENERAL/28-00-03_Requirements/SHM_H2_Interface/28-00-03-SHM-001_H2_Tank_Structure_Monitoring.md) | H2 Tank Structure Monitoring | Cryogenic Fuel System | Draft |
+| [54-00-03-07-001](../../../../ATA_54-NACELLES_PYLONS/54-00_GENERAL/54-00-03_Requirements/07_SHM_and_Monitoring/54-00-03-07-001_Nacelle_Structure_SHM.md) | Nacelle Structure SHM | Nacelles/Pylons | Draft |
+| [55-00-03-07-001](../../../../ATA_55-STABILIZERS/55-00_GENERAL/55-00-03_Requirements/07_SHM_and_Monitoring/55-00-03-07-001_Empennage_SHM_Compatibility.md) | Empennage SHM Compatibility | Stabilizers | Draft |
+| [52-00-03-07-001](../../../../ATA_52-DOORS/52-00_GENERAL/52-00-03_Requirements/07_SHM_and_Monitoring/52-00-03-07-001_Door_Surround_SHM.md) | Door Surround SHM | Door Structures | Draft |
 
 ### Interface Requirements
 | Interface | Document | Content |
 |-----------|----------|---------|
-| SHM System | ICD-53-SHM-001 | Sensor specifications, data protocols |
-| Electrical System | ICD-53-24-001 | Power requirements, wire routing |
-| Avionics | ICD-53-31-001 | Data transmission, display integration |
-| Maintenance System | ICD-53-45-001 | Diagnostic access, replacement procedures |
+| Master ICD Register | [ICD-SHM-000](../../../../../L2-LINKS/INTERFACE_CONTROL/SHM_INTERFACES/ICD-SHM-000_Master_Interface_Register.md) | All SHM interfaces index |
+| Electrical System | [ICD-53-24-SHM-001](../../../../../L2-LINKS/INTERFACE_CONTROL/SHM_INTERFACES/ICD-53-24-SHM-001_Electrical_Power_Interface.md) | Power requirements, wire routing |
+| Wing-Body Junction | [ICD-53-57-SHM-001](../../../../../L2-LINKS/INTERFACE_CONTROL/SHM_INTERFACES/ICD-53-57-SHM-001_Wing_Body_Junction_Interface.md) | Sensor network at BWB junction |
+| Maintenance System | [ICD-53-45-SHM-001](../../../../../L2-LINKS/INTERFACE_CONTROL/SHM_INTERFACES/ICD-53-45-SHM-001_CMS_Maintenance_Interface.md) | CMS data interface |
+
+### Cross-ATA Traceability
+For the complete traceability matrix of SHM requirements across all ATA chapters, see:
+- [SHM Cross-ATA Traceability Matrix](../ASSETS/matrices/SHM_Cross_ATA_Traceability_Matrix.csv)
 
 ### Verification Activities
 | Activity ID | Title | Type | Status |
 |-------------|-------|------|--------|
 | V&V-53-011 | SHM Integration Verification | Analysis + Test | Planned |
+| [V&V-53-011](../../../../../../P-PROGRAM/VERIFICATION_VALIDATION/SHM/V&V-53-011_SHM_Integration_Verification.md) | SHM Integration Verification | Analysis + Test | Planned |
 | V&V-53-012 | Sensor Placement Validation | Analysis | Planned |
 | V&V-53-013 | Signal Propagation Testing | Test | Planned |
-| V&V-53-014 | POD Demonstration | Test | Planned |
+| [V&V-53-014](../../../../../../P-PROGRAM/VERIFICATION_VALIDATION/SHM/V&V-53-014_POD_Demonstration.md) | POD Demonstration | Test | Planned |
 | V&V-53-015 | Environmental Performance Test | Test | Planned |
+
+For the complete V&V program documentation, see the [SHM V&V Program](../../../../../../P-PROGRAM/VERIFICATION_VALIDATION/SHM/README.md).
 
 ## Assumptions and Constraints
 
