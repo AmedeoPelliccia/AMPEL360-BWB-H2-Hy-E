@@ -185,10 +185,22 @@ CAOS is structured in **four main layers**:
 ### Root-Level CAOS Documents
 
 - `CAOS_INDEX.md` *(this file)* – Master index & concept overview  
+- `CAOS_ARCHITECTURE.md` – Logical and technical architecture (~15 KB)
 - `CAOS_CROSS_ATA_MAP.md` – Cross-ATA integration map (autonomy, ATM, data exchanges)
+- `CAOS_CI_CD_PIPELINE.yaml` – GitHub Actions workflow for CAOS validation
 - `CAOS_MANIFESTO.md` – Vision, principles, long-term goals  
 - `CAOS_OPERATIONS_FRAMEWORK.md` – Operational playbook (roles, RACI, phases)  
 - `CAOS_USE_CASES.md` – Concrete scenarios & user journeys
+
+### MCP Agent Headers
+
+Located in `CAOS_MCP_HEADERS/`:
+
+- `MCP_HEADER_ICA.md` – ICA / Technical Publications agent context
+- `MCP_HEADER_MRO.md` – MRO / Maintenance agent context
+- `MCP_HEADER_OPS.md` – Operations / OCC / Crew agent context
+- `MCP_HEADER_DPP.md` – DPP / Lifecycle agent context
+- `MCP_HEADER_ANCHORS.md` – ANCHORS / SHM agent context
 
 *(These may be created/extended over time using C-GROWTH.)*
 
@@ -276,6 +288,7 @@ All new intelligence, automation, and documentation capabilities should register
 | 1.0 | 2025-11-03 | CAOS Implementation | Initial CAOS Index documentation |
 | 2.0 | 2025-11-27 | CAOS Implementation | Added authoritative CAOS definitions, ICA relationship, MCP agent context |
 | 2.1 | 2025-11-27 | CAOS Implementation | Added Key ATA Anchors table, autonomy backbone (22/23/34/42/44/46) |
+| 3.0 | 2025-11-27 | CAOS Implementation | Complete package: Architecture, CI/CD pipeline, MCP headers |
 
 ---
 
