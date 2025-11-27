@@ -145,7 +145,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "Delta parameter (typically 1e-5)"
+          "description": "Differential privacy delta parameter - probability of privacy failure (typically 1e-5)"
         },
         "clipping_bound": {
           "type": "number",

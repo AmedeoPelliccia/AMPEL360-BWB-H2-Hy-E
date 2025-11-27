@@ -16,6 +16,18 @@ This document defines the **dual-location architecture** for the CFLF-GRAD (Coll
 
 ---
 
+## Version Compatibility
+
+| Component | Version | Compatibility |
+|-----------|---------|---------------|
+| N-Axis (97-40-20) | 1.0 | Requires L2-LINKS ≥ 1.0 |
+| L2-LINKS (23-95) | 1.0 | Requires N-Axis ≥ 1.0 |
+| Gradient Envelope Schema | 1.0.0 | Compatible with both |
+
+**Note:** Both components must be updated together when major version changes occur to ensure protocol compatibility.
+
+---
+
 ## Dual-Location Architecture
 
 ```
