@@ -1,7 +1,16 @@
-# 02-00-03-SHM-001: Operational SHM Procedures
+# 02-00-03-SHM-001: Operational SHM Procedures (Enhanced)
 
-## Document ID
-**02-00-03-SHM-001**
+| Field | Value |
+|-------|-------|
+| **Document ID** | 02-00-03-SHM-001 |
+| **Version** | 2.0 |
+| **Date** | 2025-11-27 |
+| **Status** | DRAFT |
+| **Classification** | OPERATIONS / PROCEDURES |
+| **ATA Chapter** | 02 (Operations Information) |
+| **Aircraft** | AMPEL360 BWB H2 Hy-E Q100 |
+
+---
 
 ## Title
 Operational Procedures for Structural Health Monitoring
@@ -118,6 +127,8 @@ SHM CAUTION
 
 | Field | Value |
 |-------|-------|
+| Version | 2.0 |
+| Classification | OPERATIONS / PROCEDURES |
 | Generated with | AI assistance (GitHub Copilot) |
 | Prompted by | **Amedeo Pelliccia** |
 | Status | **DRAFT** |
