@@ -1,0 +1,50 @@
+# Envelope Sampler Configuration
+# OFEC-60-60-10-10 Configuration
+# Version: 1.0
+
+# Base sample rates by flight phase (Hz)
+phase_rates:
+  GROUND: 0.1
+  TAXI: 0.5
+  TAKEOFF: 10.0
+  CLIMB: 5.0
+  CRUISE: 1.0
+  DESCENT: 5.0
+  APPROACH: 10.0
+  LANDING: 10.0
+
+# Sample timing
+timing:
+  max_latency_ms: 50          # Maximum acceptable sample latency
+  stale_threshold_ms: 100     # Mark stale if older than this
+  jitter_tolerance_ms: 10     # Acceptable timing jitter
+
+# Buffer configuration
+buffer:
+  size: 100                   # Number of samples to buffer
+  overflow_policy: drop_oldest
+  min_samples_before_send: 1
+
+# Event-driven sampling
+events:
+  advisory_change: true       # Sample immediately on advisory change
+  exceedance_start: true      # Sample immediately on exceedance
+  phase_transition: true      # Sample immediately on phase change
+
+# Quality settings
+quality:
+  require_valid_margins: true
+  require_valid_advisory: true
+  allow_partial: false        # Send partial data if some sources invalid
+
+# Data sources
+sources:
+  margin_calculator:
+    path: "97-40-40-10"
+    timeout_ms: 20
+  advisory_engine:
+    path: "97-40-40-20"
+    timeout_ms: 20
+  flight_phase:
+    path: "ATA22"
+    timeout_ms: 50
