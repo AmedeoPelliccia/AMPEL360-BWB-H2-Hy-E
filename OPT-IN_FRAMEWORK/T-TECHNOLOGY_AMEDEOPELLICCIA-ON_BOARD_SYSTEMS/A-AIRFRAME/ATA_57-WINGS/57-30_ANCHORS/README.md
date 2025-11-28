@@ -30,6 +30,8 @@ This bucket provides a **design-driven home** for sustainability, circularity, L
 
 This is a **cross-ATA root bucket** present in every ATA chapter as `XX-30_ANCHORS`. It provides a consistent location for sustainability, LCA, reuse/recycle, and DPP links.
 
+For **ATA 57 (Wings)**, this bucket is **MANDATORY** because wings contribute significantly to aircraft LCA and circularity.
+
 ## Internal Structure
 
 The internal structure of this bucket is **design-driven** and flexible:
