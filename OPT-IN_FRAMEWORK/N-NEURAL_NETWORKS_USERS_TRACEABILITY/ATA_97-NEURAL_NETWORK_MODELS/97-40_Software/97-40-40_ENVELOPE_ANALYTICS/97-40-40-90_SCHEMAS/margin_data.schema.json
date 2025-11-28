@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/ofec/margin_data.schema.json",
+  "title": "Margin Data",
+  "description": "Individual margin calculation result",
+  "type": "object",
+  "required": ["parameter", "current_value", "limit_value", "margin_absolute", "margin_pct", "timestamp"],
+  "properties": {
+    "parameter": {
+      "type": "string",
+      "enum": ["alpha", "speed_low", "speed_high", "load_factor_pos", "load_factor_neg", "altitude", "bank_angle"],
+      "description": "Parameter type"
+    },
+    "current_value": {
+      "type": "number",
+      "description": "Current parameter value"
+    },
+    "limit_value": {
+      "type": "number",
+      "description": "Limit value for the parameter"
+    },
+    "margin_absolute": {
+      "type": "number",
+      "description": "Absolute margin (limit - current)"
+    },
+    "margin_pct": {
+      "type": "number",
+      "minimum": -100,
+      "maximum": 100,
+      "description": "Margin as percentage"
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of measurement"
+    },
+    "validity": {
+      "type": "string",
+      "enum": ["VALID", "INVALID", "STALE", "UNKNOWN"],
+      "default": "VALID"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

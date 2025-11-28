@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/ofec/performance_report.schema.json",
+  "title": "Performance Report",
+  "description": "Post-flight envelope performance report",
+  "type": "object",
+  "required": ["report_id", "aircraft_id", "flight_id", "generated_at", "summary"],
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "aircraft_id": {
+      "type": "string"
+    },
+    "flight_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "flight_info": {
+      "type": "object",
+      "properties": {
+        "departure": { "type": "string" },
+        "arrival": { "type": "string" },
+        "departure_time": { "type": "string", "format": "date-time" },
+        "arrival_time": { "type": "string", "format": "date-time" },
+        "duration_minutes": { "type": "number" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "total_samples": { "type": "integer" },
+        "normal_pct": { "type": "number" },
+        "caution_pct": { "type": "number" },
+        "warning_pct": { "type": "number" },
+        "critical_pct": { "type": "number" },
+        "exceedance_count": { "type": "integer" }
+      },
+      "required": ["total_samples", "exceedance_count"]
+    },
+    "margin_statistics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "min_margin_pct": { "type": "number" },
+          "avg_margin_pct": { "type": "number" },
+          "max_margin_pct": { "type": "number" },
+          "std_dev": { "type": "number" }
+        }
+      }
+    },
+    "exceedances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parameter": { "type": "string" },
+          "severity": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "duration_sec": { "type": "number" },
+          "peak_margin_pct": { "type": "number" }
+        }
+      }
+    },
+    "phase_breakdown": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "duration_sec": { "type": "number" },
+          "avg_margin_pct": { "type": "number" },
+          "min_margin_pct": { "type": "number" }
+        }
+      }
+    }
+  }
+}

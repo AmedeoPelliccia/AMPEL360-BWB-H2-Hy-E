@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/ofec/envelope_state.schema.json",
+  "title": "Envelope State Message",
+  "description": "Complete flight envelope state for OFEC telemetry",
+  "type": "object",
+  "required": ["envelope_id", "aircraft_id", "timestamp", "flight_phase", "margins", "advisory", "metadata"],
+  "properties": {
+    "envelope_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique message identifier"
+    },
+    "aircraft_id": {
+      "type": "string",
+      "pattern": "^MSN-[A-Z0-9]+-[0-9]+$",
+      "description": "Aircraft serial number"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp of the sample"
+    },
+    "flight_phase": {
+      "type": "string",
+      "enum": ["GROUND", "TAXI", "TAKEOFF", "CLIMB", "CRUISE", "DESCENT", "APPROACH", "LANDING"],
+      "description": "Current flight phase"
+    },
+    "margins": {
+      "$ref": "#/$defs/margins"
+    },
+    "h2_specific": {
+      "$ref": "#/$defs/h2_specific"
+    },
+    "advisory": {
+      "$ref": "#/$defs/advisory"
+    },
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    }
+  },
+  "$defs": {
+    "margins": {
+      "type": "object",
+      "description": "All envelope margins",
+      "properties": {
+        "alpha": {
+          "$ref": "#/$defs/alpha_margin"
+        },
+        "speed": {
+          "$ref": "#/$defs/speed_margin"
+        },
+        "load_factor": {
+          "$ref": "#/$defs/load_factor_margin"
+        },
+        "altitude": {
+          "$ref": "#/$defs/altitude_margin"
+        },
+        "bank_angle": {
+          "$ref": "#/$defs/bank_angle_margin"
+        }
+      },
+      "required": ["alpha", "speed", "load_factor", "altitude", "bank_angle"]
+    },
+    "alpha_margin": {
+      "type": "object",
+      "properties": {
+        "current_deg": { "type": "number" },
+        "limit_deg": { "type": "number" },
+        "margin_deg": { "type": "number" },
+        "margin_pct": { "type": "number", "minimum": -100, "maximum": 100 }
+      },
+      "required": ["current_deg", "limit_deg", "margin_deg", "margin_pct"]
+    },
+    "speed_margin": {
+      "type": "object",
+      "properties": {
+        "current_kts": { "type": "number", "minimum": 0 },
+        "vmin_kts": { "type": "number", "minimum": 0 },
+        "vmax_kts": { "type": "number", "minimum": 0 },
+        "margin_low_pct": { "type": "number" },
+        "margin_high_pct": { "type": "number" }
+      },
+      "required": ["current_kts", "vmin_kts", "vmax_kts", "margin_low_pct", "margin_high_pct"]
+    },
+    "load_factor_margin": {
+      "type": "object",
+      "properties": {
+        "current_g": { "type": "number" },
+        "limit_positive_g": { "type": "number" },
+        "limit_negative_g": { "type": "number" },
+        "margin_positive_pct": { "type": "number" },
+        "margin_negative_pct": { "type": "number" }
+      },
+      "required": ["current_g", "limit_positive_g", "limit_negative_g", "margin_positive_pct", "margin_negative_pct"]
+    },
+    "altitude_margin": {
+      "type": "object",
+      "properties": {
+        "current_ft": { "type": "number" },
+        "ceiling_ft": { "type": "number" },
+        "margin_ft": { "type": "number" },
+        "margin_pct": { "type": "number" }
+      },
+      "required": ["current_ft", "ceiling_ft", "margin_ft", "margin_pct"]
+    },
+    "bank_angle_margin": {
+      "type": "object",
+      "properties": {
+        "current_deg": { "type": "number" },
+        "limit_deg": { "type": "number" },
+        "margin_deg": { "type": "number" },
+        "margin_pct": { "type": "number" }
+      },
+      "required": ["current_deg", "limit_deg", "margin_deg", "margin_pct"]
+    },
+    "h2_specific": {
+      "type": "object",
+      "description": "H2-specific envelope constraints",
+      "properties": {
+        "fuel_temp_margin_k": { "type": "number" },
+        "tank_pressure_margin_pct": { "type": "number" },
+        "boil_off_rate_margin_pct": { "type": "number" }
+      }
+    },
+    "advisory": {
+      "type": "object",
+      "description": "Advisory state",
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": ["NORMAL", "CAUTION", "WARNING", "CRITICAL"]
+        },
+        "active_advisories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parameter": { "type": "string" },
+              "message": { "type": "string" }
+            }
+          }
+        },
+        "trend": {
+          "type": "string",
+          "enum": ["IMPROVING", "STABLE", "DEGRADING"]
+        }
+      },
+      "required": ["level", "trend"]
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "sample_rate_hz": { "type": "number", "minimum": 0.1, "maximum": 100 },
+        "encoding": { "type": "string", "enum": ["JSON", "CBOR"] },
+        "schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" }
+      },
+      "required": ["sample_rate_hz", "encoding", "schema_version"]
+    }
+  }
+}
