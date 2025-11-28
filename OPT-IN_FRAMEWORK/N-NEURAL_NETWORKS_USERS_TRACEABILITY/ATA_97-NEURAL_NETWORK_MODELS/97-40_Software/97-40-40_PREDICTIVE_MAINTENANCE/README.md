@@ -6,18 +6,18 @@ This section contains the neural network models and supporting infrastructure fo
 
 ## Structure Overview
 
-| Section | Purpose |
-|---------|---------|
-| 97-40-40-00_GENERAL | Lifecycle folders (14 mandatory) |
-| 97-40-40-10_DATA_INGESTION | Telemetry data preprocessing |
-| 97-40-40-20_FEATURE_ENGINEERING | Feature extraction and transformation |
-| 97-40-40-30_RUL_MODELS | Remaining Useful Life estimation models |
-| 97-40-40-40_ANOMALY_DETECTION | Anomaly detection models |
-| 97-40-40-50_MAINTENANCE_OPTIMIZATION | Maintenance scheduling optimization |
-| 97-40-40-60_CAOS_INTEGRATION | CAOS platform integration |
-| 97-40-40-70_EVALUATION | Model evaluation and benchmarking |
-| 97-40-40-80_MODEL_GOVERNANCE | Model lifecycle management |
-| 97-40-40-90_SCHEMAS | Data and model schemas |
+| Subchapter | Purpose |
+|------------|---------|
+| 97-40-40_GENERAL-PREDICTIVE-MAINTENANCE | 14 mandatory lifecycle documents |
+| 97-40-41-DATA_INGESTION | Telemetry data preprocessing |
+| 97-40-42-FEATURE_ENGINEERING | Feature extraction and transformation |
+| 97-40-43-RUL_MODELS | Remaining Useful Life estimation models |
+| 97-40-44-ANOMALY_DETECTION | Anomaly detection models |
+| 97-40-45-MAINTENANCE_OPTIMIZATION | Maintenance scheduling optimization |
+| 97-40-46-CAOS_INTEGRATION | CAOS platform integration |
+| 97-40-47-EVALUATION | Model evaluation and benchmarking |
+| 97-40-48-MODEL_GOVERNANCE | Model lifecycle management |
+| 97-40-49-SCHEMAS | Data and model schemas |
 
 ## RUL Model Categories
 
@@ -28,9 +28,20 @@ This section contains the neural network models and supporting infrastructure fo
 | Thermal | Temperature profiles | System RUL |
 | Cycle-based | Landing/maneuver cycles | Fatigue RUL |
 
+## Alignment with ATA 23-95-60
+
+| ATA 97 Subchapter | Corresponding ATA 23 Subchapter |
+|-------------------|--------------------------------|
+| 97-40-41-DATA_INGESTION | 23-95-62-GROUND_INGESTION |
+| 97-40-42-FEATURE_ENGINEERING | 23-95-63-REGIONAL_AGGREGATOR |
+| 97-40-43-RUL_MODELS | 23-95-64-FLEET_ANALYTICS |
+| 97-40-44-ANOMALY_DETECTION | 23-95-64-FLEET_ANALYTICS |
+| 97-40-45-MAINTENANCE_OPTIMIZATION | 23-95-64-FLEET_ANALYTICS |
+| 97-40-49-SCHEMAS | 23-95-69-SCHEMAS |
+
 ## Related Sections
 
-- [60-60_PMT Protocol](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/23-95-60_PROTOCOLS/60-60_PMT/) — PMT communication protocol
+- [23-95-60_PROTOCOLS](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/23-95-60_PROTOCOLS/) — PMT communication protocols
 - [97-40-20 Federated Learning](../97-40-20_FEDERATED_LEARNING/) — Privacy-preserving model training
 
 ---
