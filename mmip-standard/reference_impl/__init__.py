@@ -10,6 +10,7 @@ from .mmip_protocol import (
     ApplyMode,
     CapsuleType,
     ExportPolicy,
+    LinkType,
     ProducerType,
     RetentionPolicy,
     Scope,
@@ -41,6 +42,7 @@ __all__ = [
     "RetentionPolicy",
     "ProducerType",
     "ApplyMode",
+    "LinkType",
     # Data classes
     "Provenance",
     "CapsuleLink",

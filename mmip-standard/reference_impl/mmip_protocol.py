@@ -90,11 +90,20 @@ class Provenance:
     source_capsule_ids: List[str] = field(default_factory=list)
 
 
+class LinkType(str, Enum):
+    """Types of links between capsules in the DAG."""
+
+    SUMMARIZES = "summarizes"
+    DERIVED_FROM = "derived_from"
+    REPLIES_TO = "replies_to"
+    REFERENCES = "references"
+
+
 @dataclass
 class CapsuleLink:
     """Link between capsules in the DAG."""
 
-    link_type: str  # "summarizes", "derived_from", "replies_to", "references"
+    link_type: LinkType
     target_id: str
 
 

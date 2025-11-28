@@ -85,7 +85,7 @@
       "type": "array",
       "description": "Array of memory capsules in this envelope",
       "items": {
-        "$ref": "./capsule.json"
+        "$ref": "https://mmip.org/schemas/v0.1/capsule.json"
       }
     },
     "links": {

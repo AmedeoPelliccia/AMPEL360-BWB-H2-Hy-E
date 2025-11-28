@@ -382,7 +382,7 @@ MMIP MUST support:
       "type": "user_message",
       "scope": "session",
       "content": {
-        "text": "Formalise the MMIP standard"
+        "text": "Formalize the MMIP standard"
       },
       "provenance": {
         "source": "user",
