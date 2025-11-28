@@ -351,6 +351,8 @@ SHM Compatibility Test Program (V&V-53-016/017/018/019)
 | [V&V-53-019](../../53-00-07_V_AND_V/V&V-53-019_Environmental_SHM_Test. md) | Environmental Performance Test | Test | Planned | `../../53-00-07_V_AND_V/` |
 | [V&V-53-020](../../53-00-07_V_AND_V/V&V-53-020_EMI_EMC_Test.  md) | EMI/EMC Test | Test | Planned | `../../53-00-07_V_AND_V/` |
 
+For the complete V&V program documentation, see the [SHM V&V Program](../../../../../../P-PROGRAM/VERIFICATION_VALIDATION/SHM/README.md).
+
 ## Assumptions and Constraints
 
 ### Assumptions
