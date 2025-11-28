@@ -148,7 +148,8 @@ class AdvisoryEngine:
         
         # Determine overall level (worst case)
         if advisories:
-            overall_level = max(a.level for a in advisories)
+            max_level_value = max(a.level.value for a in advisories)
+            overall_level = AdvisoryLevel(max_level_value)
         else:
             overall_level = AdvisoryLevel.NORMAL
         

@@ -8,7 +8,7 @@ This module analyzes margin trends over time.
 from collections import deque
 from dataclasses import dataclass
 from enum import Enum
-from typing import Dict, Optional
+from typing import Dict
 import time
 
 
@@ -123,10 +123,13 @@ class TrendAnalyzer:
             slope = numerator / denominator
         
         # Slope represents margin change over time:
-        # - Positive slope means margin is increasing = improving
-        # - Negative slope means margin is decreasing = degrading
-        # We negate so that positive rate = degrading (intuitive for thresholds)
-        margin_change_rate = -slope
+        # - Positive slope means margin is increasing (moving away from limit) = improving
+        # - Negative slope means margin is decreasing (approaching limit) = degrading
+        # The rate is kept as-is: positive rate = margin improving, negative rate = margin degrading
+        # This aligns with the threshold interpretation where:
+        # - rate < IMPROVING_THRESHOLD (negative threshold) triggers IMPROVING
+        # - rate > DEGRADING_THRESHOLD (positive threshold) triggers DEGRADING
+        margin_change_rate = slope
         
         # Calculate confidence (R-squared)
         if n > 2:
@@ -139,11 +142,11 @@ class TrendAnalyzer:
             confidence = 0.5
         
         # Determine direction based on margin change rate:
-        # - rate < threshold (negative) means margin is increasing = IMPROVING
-        # - rate > threshold (positive) means margin is decreasing = DEGRADING
-        if margin_change_rate < self.IMPROVING_THRESHOLD:
+        # - rate > DEGRADING_THRESHOLD (positive) means margin is increasing = IMPROVING
+        # - rate < IMPROVING_THRESHOLD (negative) means margin is decreasing = DEGRADING
+        if margin_change_rate > self.DEGRADING_THRESHOLD:
             direction = TrendDirection.IMPROVING
-        elif margin_change_rate > self.DEGRADING_THRESHOLD:
+        elif margin_change_rate < self.IMPROVING_THRESHOLD:
             direction = TrendDirection.DEGRADING
         else:
             direction = TrendDirection.STABLE

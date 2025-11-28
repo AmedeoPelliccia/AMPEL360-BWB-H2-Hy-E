@@ -7,7 +7,7 @@ This module provides recovery suggestions for low margin conditions.
 
 from dataclasses import dataclass
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 
 class RecoveryPriority(Enum):

@@ -5,7 +5,7 @@ OFEC-60-60-10-20 - Aircraft Publisher
 This module handles CBOR encoding for OFEC messages.
 """
 
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 import struct
 import io
 

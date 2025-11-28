@@ -6,7 +6,7 @@ This module handles storage of validated OFEC telemetry data.
 """
 
 from dataclasses import dataclass
-from typing import Dict, List, Optional, Iterator
+from typing import Dict, List, Optional
 from collections import defaultdict
 import time
 import threading
@@ -152,8 +152,9 @@ class TelemetryStore:
                     r for r in records if r.received_at > cutoff
                 ]
                 
-                removed += original_count - len(self._records[aircraft_id])
-                self._record_count -= (original_count - len(self._records[aircraft_id]))
+                records_removed = original_count - len(self._records[aircraft_id])
+                removed += records_removed
+                self._record_count -= records_removed
         
         return removed
     

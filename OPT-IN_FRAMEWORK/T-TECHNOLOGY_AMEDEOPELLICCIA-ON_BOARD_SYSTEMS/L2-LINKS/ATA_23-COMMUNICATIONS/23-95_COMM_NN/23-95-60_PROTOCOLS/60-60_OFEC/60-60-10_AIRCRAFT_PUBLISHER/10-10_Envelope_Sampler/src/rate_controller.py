@@ -6,7 +6,7 @@ This module manages sampling rate based on flight phase and system state.
 """
 
 from enum import Enum
-from typing import Dict, Optional
+from typing import Dict
 import time
 
 

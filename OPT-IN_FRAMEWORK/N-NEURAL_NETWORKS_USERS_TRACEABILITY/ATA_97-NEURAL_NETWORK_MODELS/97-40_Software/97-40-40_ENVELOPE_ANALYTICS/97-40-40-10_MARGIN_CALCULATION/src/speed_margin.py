@@ -141,6 +141,11 @@ def calculate_speed_margins(
     margin_high_kts = vmax - cas
     
     # Calculate percentages relative to usable speed range
+    # Note: This differs from other margin calculations (e.g., alpha) which use the limit as denominator.
+    # For speed, using the usable range (vmax - vmin) as denominator provides a symmetric percentage
+    # interpretation for both low and high margins, where 50% means the aircraft is centered
+    # in the speed envelope. This design choice ensures consistent interpretation across
+    # both margin directions.
     speed_range = vmax - vmin
     if speed_range > 0:
         margin_low_pct = (margin_low_kts / speed_range) * 100

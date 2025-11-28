@@ -9,6 +9,11 @@ from dataclasses import dataclass
 from typing import Dict, List, Optional, Callable
 from enum import Enum
 import time
+import logging
+
+
+# Set up module logger
+logger = logging.getLogger(__name__)
 
 
 class AlertSeverity(Enum):
@@ -164,7 +169,15 @@ class AlertProcessor:
         
         for margin_type, margin_field in margin_checks:
             margin_data = margins.get(margin_type, {})
-            margin_pct = margin_data.get(margin_field, 100)
+            margin_pct = margin_data.get(margin_field)
+            
+            # Log warning if margin field is missing - may indicate sensor or pipeline issue
+            if margin_pct is None:
+                logger.warning(
+                    f"Missing margin field '{margin_field}' for type '{margin_type}' - "
+                    f"possible sensor or data pipeline issue"
+                )
+                continue  # Skip processing for missing data rather than masking it
             
             if margin_pct < 0:
                 # Exceedance

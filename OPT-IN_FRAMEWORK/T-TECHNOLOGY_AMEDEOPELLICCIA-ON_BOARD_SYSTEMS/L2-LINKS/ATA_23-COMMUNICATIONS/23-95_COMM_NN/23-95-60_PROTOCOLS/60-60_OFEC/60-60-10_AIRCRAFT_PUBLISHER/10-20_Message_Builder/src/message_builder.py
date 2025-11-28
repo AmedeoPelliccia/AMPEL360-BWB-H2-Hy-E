@@ -6,7 +6,7 @@ This module constructs OFEC messages from envelope samples.
 """
 
 from dataclasses import dataclass
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 import uuid
 import time
 

@@ -12,7 +12,9 @@
 
 ## 1. Introduction
 
-This document outlines the certification approach for the Envelope Analytics subsystem (ATA 97-40-40) under [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/group/cs-25-large-aeroplanes) and [DO-178C](https://www.rtca.org/products/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/) guidelines.
+This document outlines the certification approach for the Envelope Analytics subsystem (ATA 97-40-40) under [EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/group/cs-25-large-aeroplanes) (Amendment 28, effective 2024) and [DO-178C](https://www.rtca.org/products/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/) (December 2011) guidelines.
+
+> **Note:** External URLs for certification standards may change over time. The versions referenced above are current as of document creation. For auditable traceability, official copies of applicable standards should be maintained in the project's controlled document repository.
 
 ---
 

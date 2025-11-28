@@ -11,6 +11,11 @@ from typing import Dict, Optional, Callable
 import time
 import threading
 import queue
+import logging
+
+
+# Set up module logger
+logger = logging.getLogger(__name__)
 
 
 class FlightPhase(Enum):
@@ -169,7 +174,7 @@ class PhaseAwarePublisher:
                         self._retry_queue.put((message, 0, time.time()))
                 
             except Exception as e:
-                print(f"Publishing error: {e}")
+                logger.error(f"Publishing error: {e}")
                 time.sleep(0.1)
     
     def _retry_loop(self):
@@ -202,7 +207,7 @@ class PhaseAwarePublisher:
                     self._retry_queue.put((message, retry_count + 1, first_attempt))
                 
             except Exception as e:
-                print(f"Retry error: {e}")
+                logger.error(f"Retry error: {e}")
     
     @property
     def current_config(self) -> PublishConfig:
