@@ -7,30 +7,15 @@ process, including handoff to MRO and engineering evaluation workflows.
 
 ## Repair Decision Flow
 
-```
-Damage Discovered
-       │
-       ▼
-┌──────────────────┐
-│ Initial Assessment│
-│ (Line Maintenance)│
-└────────┬─────────┘
-         │
-         ▼
-┌──────────────────┐     No      ┌─────────────────┐
-│ Within SRM Limits?├───────────►│ Engineering Eval │
-└────────┬─────────┘             └────────┬────────┘
-         │ Yes                            │
-         ▼                                ▼
-┌──────────────────┐             ┌─────────────────┐
-│ SRM Repair       │             │ Major Repair or │
-│ (Line or Base)   │             │ Custom Solution │
-└────────┬─────────┘             └────────┬────────┘
-         │                                │
-         ▼                                ▼
-┌─────────────────────────────────────────────────┐
-│              Return to Service                   │
-└─────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    A[Damage Discovered] --> B[Initial Assessment<br/>Line Maintenance]
+    B --> C{Within SRM Limits?}
+    C -->|Yes| D[SRM Repair<br/>Line or Base]
+    C -->|No| E[Engineering Eval]
+    E --> F[Major Repair or<br/>Custom Solution]
+    D --> G[Return to Service]
+    F --> G
 ```
 
 ## Engineering Evaluation Interface
