@@ -1,0 +1,62 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e8f5e9', 'primaryBorderColor': '#43a047'}}}%%
+flowchart TB
+    subgraph ANCHORS["ANCHORS SYSTEM OVERVIEW"]
+        direction TB
+        
+        subgraph CONTROL["CONTROL LAYER"]
+            MM[Mode Manager]
+            SS[Safety Supervisor]
+            EMS[Energy Management]
+        end
+        
+        subgraph THERMAL["THERMAL SUBSYSTEMS"]
+            TMS[Battery TMS]
+            THC[Thermal Harvest]
+            HT[HT Bus]
+            LT[LT Bus]
+        end
+        
+        subgraph CIRCULAR["CIRCULAR SUBSYSTEMS"]
+            CO2[CO2 Capture]
+            H2O[Water Treatment]
+            DPP[DPP Tracking]
+        end
+        
+        subgraph STORAGE["STORAGE"]
+            BAT[Battery Packs]
+            CART[CO2 Cartridges]
+            TANK[Water Tank]
+            PCM[PCM Reservoir]
+        end
+        
+        subgraph INTERFACES["INTERFACES"]
+            FADEC[FADEC]
+            ECS[ECS]
+            HMI[Flight Deck]
+            GSE[Ground Support]
+        end
+    end
+    
+    MM --> SS
+    MM --> EMS
+    SS --> TMS
+    SS --> CO2
+    EMS --> THC
+    
+    TMS --> BAT
+    THC --> HT
+    THC --> LT
+    CO2 --> CART
+    H2O --> TANK
+    
+    EMS --> FADEC
+    MM --> HMI
+    DPP --> GSE
+    THC --> ECS
+    
+    style ANCHORS fill:#e3f2fd,stroke:#1976d2
+    style CONTROL fill:#fff3e0,stroke:#f57c00
+    style THERMAL fill:#fce4ec,stroke:#c2185b
+    style CIRCULAR fill:#e8f5e9,stroke:#43a047
+    style STORAGE fill:#f3e5f5,stroke:#7b1fa2
+    style INTERFACES fill:#e0e0e0,stroke:#616161

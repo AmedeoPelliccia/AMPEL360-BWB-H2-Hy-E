@@ -1,27 +1,66 @@
-# CAOS INDEX  
-**Computer Aided Operations and Services – Master Index**
+# CAOS — Computer Aided Operations & Services
 
-> CAOS is the digital nervous system of the AMPEL360 program.  
-> It connects aircraft, ground, fleet operations, documentation, and AI services  
-> into a single, observable, continuously evolving operational fabric.
+## Master Index and Canonical Definition
 
----
-
-## 1. Purpose of CAOS
-
-CAOS (**Computer Aided Operations and Services**) defines the **operational intelligence layer** for AMPEL360:
-
-- Orchestrates **data, models, documents, and workflows** across the fleet  
-- Provides **decision support** to humans (pilots, dispatch, maintenance, ops)  
-- Enables **Continuous Computing** via the **C-GROWTH / C-GROWTH²** lifecycle  
-- Integrates **AirCCC** (Aircraft Cloud Computing Campus) with ground and enterprise systems  
-
-CAOS is **advisory by design** and **safety-bounded**. It does **not** replace certified control laws.  
-It augments operations with **predictive, data-driven, and explainable intelligence**.
+| Field               | Value                                                      |
+|---------------------|------------------------------------------------------------|
+| **Document ID**     | CAOS-00-INDEX-001                                          |
+| **Version**         | 2.0                                                        |
+| **Date**            | 2025-11-27                                                 |
+| **Status**          | DRAFT                                                      |
+| **Classification**  | ARCHITECTURE / CROSS-ATA                                   |
+| **Owner**           | AMPEL360 CAOS / Operations & Services WG                   |
+| **Programme**       | AMPEL360-BWB-H₂-Hy-E Q100                                  |
 
 ---
 
-## 2. Scope
+## 1. Canonical Definition
+
+### 1.1 Formal Definition
+
+**CAOS (Computer Aided Operations & Services) is the AMPEL360 operational intelligence framework that guarantees Continuous Airworthiness by providing: real-time state awareness, digital-twin-driven procedural updates, automated ICA/MRO publication generation, compliance verification, and fleet-level service optimization across the full lifecycle of the aircraft.**
+
+CAOS is:
+
+- A **Continuous Airworthiness architecture**  
+- A **Computer Aided Operations & Services system**  
+- The **digital nervous system** that connects operations, technical publications, MRO, DPP, and predictive analytics.
+
+CAOS is to Operations & Services what CAD/CAE is to Design — but **for operational management, ICA, and MRO intelligence**.
+
+### 1.2 Short Definition (for headers, YAML, DMC)
+
+> **CAOS — Computer Aided Operations & Services (Continuous Airworthiness in Operations & Services).**
+
+### 1.3 Extended Definition
+
+*For section intros, CAOS Index, ICDs, ATA 02/95/97 integration:*
+
+CAOS is the **continuous airworthiness backbone** for AMPEL360.
+It unifies:
+
+* **Operations Information (ATA 02)**
+* **Neural Networks and Predictive Ops (ATA 95)**
+* **Digital Product Passport (ATA 97)**
+* **Technical Publications / ICA / MRO documentation**
+* **Real-time in-service data ingestion**
+* **Automated change propagation to manuals / procedures**
+* **Dispatch, OCC, maintenance decision support**
+* **Cross-ATA event correlation (SHM ↔ ANCHORS ↔ EMS ↔ ECS)**
+
+CAOS ensures:
+
+1. **Every operational decision is informed by digital-twin correlated data**
+2. **Every ICA/MRO document is continuously versioned and validated**
+3. **Every fleet trend is captured, analyzed, and reflected in procedures**
+4. **Every system change triggers automated documentation verification**
+5. **Every aircraft state is traceable across operations, maintenance, safety, and compliance**
+
+---
+
+## 2. Scope and Objectives
+
+### 2.1 Scope
 
 CAOS covers:
 
@@ -60,7 +99,35 @@ AirCCC operates under configuration:
 See:  
 - `O-ORGANIZATION/STANDARDS/AMPEL360-AirCCC-ARCH-001_*.md`
 
-### 3.2 C-GROWTH – Circular Intelligence Lifecycle
+### 3.2 Key ATA Anchors
+
+| ATA | Role in CAOS                                               |
+|-----|------------------------------------------------------------|
+| **02** | Digital Operations Information (CAOS core context)      |
+| **12** | Servicing & turnarounds, ground servicing integration   |
+| **21** | ECS, cabin environment, CO₂/IAQ monitoring              |
+| **22** | Auto Flight / FMS — guidance modes, autonomous profiles, flight envelope constraints |
+| **23** | Communications — VHF/SATCOM, datalinks, CPDLC/ADS-C, ATM connectivity |
+| **24** | Electrical power states and loads                       |
+| **28** | H₂ fuel / energy system operating modes                 |
+| **34** | Navigation — GNSS/IRS/Sensors feeding FMS and CAOS trajectory awareness |
+| **42** | Integrated Modular Avionics (IMA) platform for CAOS apps, NN hosting and partitions |
+| **44** | Cabin Systems — cabin networks, IFE/connectivity as CAOS information surfaces |
+| **45** | Central Maintenance System (CMS/BITE) — fault logging, reports, CAOS/MRO bridge |
+| **46** | Information Systems (EFB, airline IT, datalinks) — CAOS front-end and connectivity |
+| **47** | Tank inerting safety and operational constraints        |
+| **53** | Fuselage / ANCHORS / SHM integration                    |
+| **85** | Ground Support Equipment & circular infrastructure      |
+| **95** | NN models for predictive monitoring and optimization    |
+| **97** | Digital Product Passport and lifecycle traceability     |
+
+### 3.3 Digital Platform & Autonomy Backbone
+
+- **22/34** — Autonomous navigation spine: FMS, guidance and nav sensors driving CAOS trajectory- and phase-of-flight–aware decisions
+- **23/46** — ATM and datalink: CPDLC, ADS-C, airline IT connections for CAOS "brain ↔ world" integration
+- **42/44** — Onboard data planes: IMA and cabin networks hosting CAOS services and surfaces
+
+### 3.4 C-GROWTH – Circular Intelligence Lifecycle
 
 C-GROWTH defines **how CAOS learns and evolves**:
 
@@ -74,7 +141,7 @@ C-GROWTH defines **how CAOS learns and evolves**:
 See:  
 - `O-ORGANIZATION/STANDARDS/C-GROWTH_Methodology_Specification.md`
 
-### 3.3 C-GROWTH² – Constellation Intelligence
+### 3.5 C-GROWTH² – Constellation Intelligence
 
 C-GROWTH² extends C-GROWTH from **single system** to **multi-fleet, multi-generation** evolution:
 
@@ -88,7 +155,7 @@ See:
 
 ---
 
-## 4. CAOS Architecture Layers
+## CAOS Architecture Layers
 
 CAOS is structured in **four main layers**:
 
@@ -113,18 +180,31 @@ CAOS is structured in **four main layers**:
 
 ---
 
-## 5. File & System Entry Points
+## File & System Entry Points
 
-### 5.1 Root-Level CAOS Documents
+### Root-Level CAOS Documents
 
 - `CAOS_INDEX.md` *(this file)* – Master index & concept overview  
+- `CAOS_ARCHITECTURE.md` – Logical and technical architecture (~15 KB)
+- `CAOS_CROSS_ATA_MAP.md` – Cross-ATA integration map (autonomy, ATM, data exchanges)
+- `CAOS_CI_CD_PIPELINE.yaml` – GitHub Actions workflow for CAOS validation
 - `CAOS_MANIFESTO.md` – Vision, principles, long-term goals  
 - `CAOS_OPERATIONS_FRAMEWORK.md` – Operational playbook (roles, RACI, phases)  
 - `CAOS_USE_CASES.md` – Concrete scenarios & user journeys
 
+### MCP Agent Headers
+
+Located in `CAOS_MCP_HEADERS/`:
+
+- `MCP_HEADER_ICA.md` – ICA / Technical Publications agent context
+- `MCP_HEADER_MRO.md` – MRO / Maintenance agent context
+- `MCP_HEADER_OPS.md` – Operations / OCC / Crew agent context
+- `MCP_HEADER_DPP.md` – DPP / Lifecycle agent context
+- `MCP_HEADER_ANCHORS.md` – ANCHORS / SHM agent context
+
 *(These may be created/extended over time using C-GROWTH.)*
 
-### 5.2 Tools and Automation (CAOS-Aware)
+### Tools and Automation (CAOS-Aware)
 
 - `tools/ci/check_dimensions.py` – Geometry baseline watchdog  
 - `tools/ci/check_mass_properties.py` – Mass properties watchdog  
@@ -133,7 +213,7 @@ CAOS is structured in **four main layers**:
 - `tools/cg/` (planned) – Continuous documentation growth and section expansion  
 - `tools/cgrowth/` (planned) – C-GROWTH orchestrators (CG/CR/CO/CW/CT/CH)
 
-### 5.3 CD – Continuous Delivery & Data
+### CD – Continuous Delivery & Data
 
 - `cd/api.py` – Programmatic API surface for CD artifacts  
 - `cd/geometry/` – Generated geometry deviation reports  
@@ -142,7 +222,7 @@ CAOS is structured in **four main layers**:
 
 ---
 
-## 6. Governance & Safety Boundaries
+## Governance & Safety Boundaries
 
 CAOS is designed to respect **aviation safety regulations**:
 
@@ -161,7 +241,7 @@ Key standards CAOS aligns with:
 
 ---
 
-## 7. How to Navigate CAOS
+## How to Navigate CAOS
 
 1. **Understand the Intelligence Fabric**  
    - Start with `AMPEL360-AirCCC-ARCH-001_*.md` in  
@@ -186,7 +266,7 @@ Key standards CAOS aligns with:
 
 ---
 
-## 8. Roadmap (High Level)
+## Roadmap (High Level)
 
 - Integrate **C-GROWTH orchestrators** (CG/CR/CO/CW/CT/CH) as scheduled workflows  
 - Extend **GenCCC** to full GenCCC-CG (continuous cross-reference growth)  
@@ -198,3 +278,22 @@ Key standards CAOS aligns with:
 
 **CAOS is the umbrella under which AMPEL360 evolves as a living, learning, and certifiable operational system.**  
 All new intelligence, automation, and documentation capabilities should register themselves here, or link from here, as the program grows.
+
+---
+
+## Document Control
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 1.0 | 2025-11-03 | CAOS Implementation | Initial CAOS Index documentation |
+| 2.0 | 2025-11-27 | CAOS Implementation | Added authoritative CAOS definitions, ICA relationship, MCP agent context |
+| 2.1 | 2025-11-27 | CAOS Implementation | Added Key ATA Anchors table, autonomy backbone (22/23/34/42/44/46) |
+| 3.0 | 2025-11-27 | CAOS Implementation | Complete package: Architecture, CI/CD pipeline, MCP headers |
+
+---
+
+- **Authorship:** Content generated through prompt engineering methods using AI assistants and agent tools, prompted and partially reviewed by **Amedeo Pelliccia**, with automated checking tools for validation.
+- Status: **DRAFT** – Subject to human review and approval.
+- Human approver: _[to be completed]_.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
+- Last AI update: _2025-11-27_.

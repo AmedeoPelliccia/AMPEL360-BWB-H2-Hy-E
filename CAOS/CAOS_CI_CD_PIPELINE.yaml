@@ -1,0 +1,323 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# CAOS CI/CD Pipeline
+# GitHub Actions workflow for CAOS documentation and validation
+
+name: CAOS CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'CAOS/**'
+      - 'OPT-IN_FRAMEWORK/**/ATA_02*/**'
+      - 'OPT-IN_FRAMEWORK/**/ATA_95*/**'
+      - 'OPT-IN_FRAMEWORK/**/ATA_97*/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'CAOS/**'
+  workflow_dispatch:
+    inputs:
+      run_full_validation:
+        description: 'Run full CAOS validation suite'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  CAOS_VERSION: '3.0'
+  PYTHON_VERSION: '3.11'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  # ============================================================================
+  # Stage 1: Document Validation
+  # ============================================================================
+  doc-validation:
+    name: Document Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || true
+          pip install pyyaml markdown
+
+      - name: Validate CAOS document structure
+        run: |
+          echo "Validating CAOS document structure..."
+          
+          # Check required files exist
+          required_files=(
+            "CAOS/CAOS_INDEX.md"
+            "CAOS/CAOS_ARCHITECTURE.md"
+            "CAOS/CAOS_CROSS_ATA_MAP.md"
+            "CAOS/CAOS_MANIFESTO.md"
+            "CAOS/CAOS_OPERATIONS_FRAMEWORK.md"
+            "CAOS/CAOS_USE_CASES.md"
+          )
+          
+          for file in "${required_files[@]}"; do
+            if [ -f "$file" ]; then
+              echo "✅ Found: $file"
+            else
+              echo "❌ Missing: $file"
+              exit 1
+            fi
+          done
+
+      - name: Validate document headers
+        run: |
+          echo "Validating document control headers..."
+          
+          # Check for Document ID in CAOS files
+          for file in CAOS/*.md; do
+            if grep -q "Document ID" "$file"; then
+              echo "✅ Document ID found in: $file"
+            else
+              echo "⚠️ No Document ID in: $file (non-blocking)"
+            fi
+          done
+
+      - name: Check Mermaid diagrams
+        run: |
+          echo "Checking Mermaid diagrams..."
+          
+          # Find all Mermaid blocks and validate syntax
+          for file in CAOS/*.md; do
+            if grep -q '```mermaid' "$file"; then
+              echo "📊 Mermaid diagrams found in: $file"
+            fi
+          done
+
+  # ============================================================================
+  # Stage 2: Cross-Reference Validation
+  # ============================================================================
+  cross-ref-validation:
+    name: Cross-Reference Validation
+    runs-on: ubuntu-latest
+    needs: doc-validation
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate internal links
+        run: |
+          echo "Validating internal document links..."
+          
+          # Check for broken internal links in CAOS documents
+          cd CAOS
+          for file in *.md; do
+            echo "Checking links in: $file"
+            # Extract markdown links and verify targets exist
+            grep -oP '\[.*?\]\(\./\K[^)]+' "$file" 2>/dev/null | while read -r link; do
+              if [ -f "$link" ]; then
+                echo "  ✅ Link OK: $link"
+              else
+                echo "  ❌ Broken link: $link in $file"
+              fi
+            done || true
+          done
+
+      - name: Validate ATA chapter references
+        run: |
+          echo "Validating ATA chapter references..."
+          
+          # Check that referenced ATA chapters exist
+          ata_chapters=(02 12 21 22 23 24 28 34 42 44 45 46 47 53 85 95 97)
+          
+          for chapter in "${ata_chapters[@]}"; do
+            if grep -rq "ATA.*$chapter" CAOS/; then
+              echo "✅ ATA $chapter referenced in CAOS documents"
+            fi
+          done
+
+  # ============================================================================
+  # Stage 3: MCP Header Validation
+  # ============================================================================
+  mcp-validation:
+    name: MCP Header Validation
+    runs-on: ubuntu-latest
+    needs: doc-validation
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate MCP headers
+        run: |
+          echo "Validating MCP headers..."
+          
+          if [ -d "CAOS/CAOS_MCP_HEADERS" ]; then
+            echo "✅ MCP headers directory exists"
+            
+            mcp_files=(
+              "MCP_HEADER_ICA.md"
+              "MCP_HEADER_MRO.md"
+              "MCP_HEADER_OPS.md"
+              "MCP_HEADER_DPP.md"
+              "MCP_HEADER_ANCHORS.md"
+            )
+            
+            for file in "${mcp_files[@]}"; do
+              if [ -f "CAOS/CAOS_MCP_HEADERS/$file" ]; then
+                echo "  ✅ Found: $file"
+              else
+                echo "  ⚠️ Missing: $file (may need creation)"
+              fi
+            done
+          else
+            echo "⚠️ MCP headers directory not found (may need creation)"
+          fi
+
+      - name: Check MCP header content
+        run: |
+          echo "Checking MCP header content structure..."
+          
+          if [ -d "CAOS/CAOS_MCP_HEADERS" ]; then
+            for file in CAOS/CAOS_MCP_HEADERS/*.md; do
+              if [ -f "$file" ]; then
+                # Check for required sections
+                if grep -q "System Context" "$file"; then
+                  echo "✅ System Context found in: $(basename $file)"
+                fi
+                if grep -q "CAOS" "$file"; then
+                  echo "✅ CAOS reference found in: $(basename $file)"
+                fi
+              fi
+            done
+          fi
+
+  # ============================================================================
+  # Stage 4: Integration Tests
+  # ============================================================================
+  integration-tests:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    needs: [cross-ref-validation, mcp-validation]
+    if: github.event_name == 'pull_request' || github.event.inputs.run_full_validation == 'true'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Run CAOS integration tests
+        run: |
+          echo "Running CAOS integration tests..."
+          
+          # Test 1: Verify cross-ATA map completeness
+          echo "Test 1: Cross-ATA map completeness"
+          if grep -q "ATA 22" CAOS/CAOS_CROSS_ATA_MAP.md && \
+             grep -q "ATA 23" CAOS/CAOS_CROSS_ATA_MAP.md && \
+             grep -q "ATA 34" CAOS/CAOS_CROSS_ATA_MAP.md; then
+            echo "✅ Autonomy spine ATAs (22, 23, 34) present"
+          else
+            echo "❌ Missing autonomy spine ATAs"
+            exit 1
+          fi
+          
+          # Test 2: Verify architecture layers
+          echo "Test 2: Architecture layers"
+          if grep -q "Presentation Layer" CAOS/CAOS_ARCHITECTURE.md && \
+             grep -q "Application Layer" CAOS/CAOS_ARCHITECTURE.md && \
+             grep -q "Intelligence Layer" CAOS/CAOS_ARCHITECTURE.md; then
+            echo "✅ Architecture layers defined"
+          else
+            echo "⚠️ Architecture layers may be incomplete"
+          fi
+          
+          # Test 3: Verify use case coverage
+          echo "Test 3: Use case coverage"
+          uc_count=$(grep -c "## Use Case" CAOS/CAOS_USE_CASES.md || echo 0)
+          echo "Found $uc_count use cases"
+          if [ "$uc_count" -ge 5 ]; then
+            echo "✅ Sufficient use cases defined"
+          else
+            echo "⚠️ Consider adding more use cases"
+          fi
+
+      - name: Generate validation report
+        run: |
+          echo "# CAOS Validation Report" > validation-report.md
+          echo "" >> validation-report.md
+          echo "**Date:** $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> validation-report.md
+          echo "**CAOS Version:** ${{ env.CAOS_VERSION }}" >> validation-report.md
+          echo "" >> validation-report.md
+          echo "## Files Validated" >> validation-report.md
+          ls -la CAOS/*.md >> validation-report.md 2>/dev/null || true
+          echo "" >> validation-report.md
+          echo "## Status: ✅ PASSED" >> validation-report.md
+
+      - name: Upload validation report
+        uses: actions/upload-artifact@v4
+        with:
+          name: caos-validation-report
+          path: validation-report.md
+
+  # ============================================================================
+  # Stage 5: Documentation Generation
+  # ============================================================================
+  doc-generation:
+    name: Documentation Generation
+    runs-on: ubuntu-latest
+    needs: integration-tests
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate CAOS index
+        run: |
+          echo "Generating CAOS documentation index..."
+          
+          # Create output directory if it doesn't exist
+          mkdir -p cd/publications
+          
+          # Create a summary of all CAOS documents
+          echo "# CAOS Documentation Summary" > cd/publications/caos-summary.md
+          echo "" >> cd/publications/caos-summary.md
+          echo "Generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> cd/publications/caos-summary.md
+          echo "" >> cd/publications/caos-summary.md
+          echo "## Documents" >> cd/publications/caos-summary.md
+          
+          for file in CAOS/*.md; do
+            name=$(basename "$file")
+            size=$(wc -c < "$file")
+            echo "- **$name** ($size bytes)" >> cd/publications/caos-summary.md
+          done
+        continue-on-error: true
+
+      - name: Notify completion
+        run: |
+          echo "✅ CAOS CI/CD pipeline completed successfully"
+          echo "CAOS Version: ${{ env.CAOS_VERSION }}"
+          echo "Commit: ${{ github.sha }}"

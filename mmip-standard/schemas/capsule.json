@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mmip.org/schemas/v0.1/capsule.json",
+  "title": "MMIP Memory Capsule",
+  "description": "Atomic unit of memory containing content, metadata, scopes, and policies as defined in MMIP v0.1 Section 4.1",
+  "type": "object",
+  "required": ["capsule_id", "type", "scope", "content", "provenance"],
+  "properties": {
+    "capsule_id": {
+      "type": "string",
+      "description": "Unique identifier for this capsule"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "user_message",
+        "model_message",
+        "summary",
+        "annotation",
+        "upload",
+        "file_ref",
+        "metadata"
+      ],
+      "description": "The type of memory capsule"
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["user_long_term", "session", "task", "agent_local"],
+      "description": "The scope/lifetime of this capsule"
+    },
+    "content": {
+      "type": "object",
+      "description": "Raw or structured content of the capsule",
+      "additionalProperties": true
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata including tags, domain, embeddings, size, tokens",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Tags for categorization and search"
+        },
+        "domain": {
+          "type": "string",
+          "description": "Domain or subject area"
+        },
+        "token_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of tokens in the content"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Size of content in bytes"
+        },
+        "embedding_ref": {
+          "type": "string",
+          "description": "Reference to vector embedding"
+        }
+      },
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Who created the capsule, when, and from what source",
+      "required": ["timestamp"],
+      "properties": {
+        "creator_id": {
+          "type": "string",
+          "description": "ID of the creator (user, model, agent, tool)"
+        },
+        "creator_type": {
+          "type": "string",
+          "enum": ["user", "model", "agent", "tool", "system"],
+          "description": "Type of creator"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of creation"
+        },
+        "source_tool": {
+          "type": "string",
+          "description": "Tool or system that generated this capsule"
+        },
+        "source_capsule_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "IDs of capsules this was derived from"
+        }
+      },
+      "additionalProperties": true
+    },
+    "policies": {
+      "type": "object",
+      "description": "Export, visibility, and retention policies",
+      "properties": {
+        "export": {
+          "type": "string",
+          "enum": ["allow", "redact", "forbid"],
+          "description": "Export policy for this capsule"
+        },
+        "visibility": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of visibility scopes (e.g., 'owner_only', 'all_models', 'no_external_providers')"
+        },
+        "retention": {
+          "type": "string",
+          "enum": ["ephemeral", "session", "long_term", "never_persist"],
+          "description": "Retention policy"
+        },
+        "redaction_rules": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Redaction rules to apply (e.g., 'PII', 'secrets')"
+        }
+      },
+      "additionalProperties": true
+    },
+    "links": {
+      "type": "array",
+      "description": "DAG relationships to other capsules",
+      "items": {
+        "type": "object",
+        "required": ["type", "target_id"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["summarizes", "derived_from", "replies_to", "references"],
+            "description": "Type of relationship"
+          },
+          "target_id": {
+            "type": "string",
+            "description": "ID of the target capsule"
+          }
+        }
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Vendor-specific extensions (MUST NOT break schema compatibility)",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

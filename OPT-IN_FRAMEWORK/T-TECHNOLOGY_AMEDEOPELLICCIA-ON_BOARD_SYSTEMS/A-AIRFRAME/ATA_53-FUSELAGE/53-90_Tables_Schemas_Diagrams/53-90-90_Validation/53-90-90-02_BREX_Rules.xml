@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  53-90-90-02 BREX Rules
+  Business Rules Exchange (BREX) for ANCHORS Documentation
+  Version: 1.0
+  Date: 2025-11-27
+  
+  Copyright (c) 2025 AMPEL360 Program
+  Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+-->
+<brex xmlns="http://www.s1000d.org/brex"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.s1000d.org/brex brex.xsd">
+
+  <identification>
+    <brexId>BREX-ANCH-001</brexId>
+    <title>ANCHORS Documentation Business Rules</title>
+    <issueInfo>
+      <issueNumber>1</issueNumber>
+      <inWork>0</inWork>
+      <issueDate>2025-11-27</issueDate>
+    </issueInfo>
+  </identification>
+
+  <description>
+    <para>
+      This BREX defines the business rules for ANCHORS (ATA 53) technical documentation,
+      ensuring consistency and compliance with S1000D and OPT-IN Framework standards.
+    </para>
+  </description>
+
+  <!-- ============================================================ -->
+  <!-- STRUCTURAL RULES -->
+  <!-- ============================================================ -->
+  
+  <structuralRules>
+    
+    <!-- Document ID Format -->
+    <structRule ruleId="BR-ANCH-001" severity="error">
+      <objectPath>//@documentId</objectPath>
+      <objectValue valueForm="pattern">^53-90-[0-9]{2}-[0-9]{2}$</objectValue>
+      <message>Document ID must follow pattern 53-90-XX-YY</message>
+    </structRule>
+
+    <!-- Bucket Number Range -->
+    <structRule ruleId="BR-ANCH-002" severity="error">
+      <objectPath>//bucket</objectPath>
+      <objectValue valueForm="pattern">^53-(0[0-9]|[1-8][0-9]|90)$</objectValue>
+      <message>Bucket must be valid ATA 53 bucket (53-00 to 53-90)</message>
+    </structRule>
+
+    <!-- Signal ID Format -->
+    <structRule ruleId="BR-ANCH-010" severity="error">
+      <objectPath>//signalId</objectPath>
+      <objectValue valueForm="pattern">^ANCH_[A-Z0-9]+_[TPFLVIWSDACX]_[A-Z0-9_]+$</objectValue>
+      <message>Signal ID must follow ANCHORS naming convention</message>
+    </structRule>
+
+    <!-- Parameter ID Format -->
+    <structRule ruleId="BR-ANCH-011" severity="error">
+      <objectPath>//paramId</objectPath>
+      <objectValue valueForm="pattern">^P_[A-Z0-9]+_[A-Z0-9_]+$</objectValue>
+      <message>Parameter ID must follow pattern P_SYSTEM_NAME</message>
+    </structRule>
+
+    <!-- Component ID Format -->
+    <structRule ruleId="BR-ANCH-012" severity="error">
+      <objectPath>//componentId</objectPath>
+      <objectValue valueForm="pattern">^ANCH-[A-Z]{3}-[0-9]{6}$</objectValue>
+      <message>Component ID must follow pattern ANCH-XXX-NNNNNN</message>
+    </structRule>
+
+    <!-- VL ID Range -->
+    <structRule ruleId="BR-ANCH-020" severity="error">
+      <objectPath>//vlId</objectPath>
+      <objectValue valueForm="range" min="5300" max="5399"/>
+      <message>AFDX VL ID must be in range 5300-5399</message>
+    </structRule>
+
+    <!-- DAL Values -->
+    <structRule ruleId="BR-ANCH-030" severity="error">
+      <objectPath>//dal</objectPath>
+      <objectValue valueForm="list">A|B|C|D|E</objectValue>
+      <message>DAL must be A, B, C, D, or E</message>
+    </structRule>
+
+  </structuralRules>
+
+  <!-- ============================================================ -->
+  <!-- SEMANTIC RULES -->
+  <!-- ============================================================ -->
+
+  <semanticRules>
+
+    <!-- Safety Signal Rate -->
+    <semanticRule ruleId="BR-ANCH-100" severity="error">
+      <condition>
+        <if>//dal = 'B' and //rateHz &lt; 10</if>
+        <then>false</then>
+      </condition>
+      <message>DAL B signals must have update rate ≥ 10 Hz</message>
+    </semanticRule>
+
+    <!-- Safety Signal Timeout -->
+    <semanticRule ruleId="BR-ANCH-101" severity="error">
+      <condition>
+        <if>//dal = 'B' and not(//timeoutMs)</if>
+        <then>false</then>
+      </condition>
+      <message>DAL B signals must define fault handling timeout</message>
+    </semanticRule>
+
+    <!-- Parameter Range Validity -->
+    <semanticRule ruleId="BR-ANCH-110" severity="error">
+      <condition>
+        <if>//min &gt;= //max</if>
+        <then>false</then>
+      </condition>
+      <message>Parameter minimum must be less than maximum</message>
+    </semanticRule>
+
+    <!-- Default Within Range -->
+    <semanticRule ruleId="BR-ANCH-111" severity="error">
+      <condition>
+        <if>//default &lt; //min or //default &gt; //max</if>
+        <then>false</then>
+      </condition>
+      <message>Default value must be within min/max range</message>
+    </semanticRule>
+
+    <!-- Fixed Parameter No Range -->
+    <semanticRule ruleId="BR-ANCH-112" severity="warning">
+      <condition>
+        <if>//category = 'Fixed' and (//min or //max)</if>
+        <then>false</then>
+      </condition>
+      <message>Fixed parameters should not have min/max values</message>
+    </semanticRule>
+
+    <!-- VL BAG Minimum -->
+    <semanticRule ruleId="BR-ANCH-120" severity="error">
+      <condition>
+        <if>//bagMs &lt; 2</if>
+        <then>false</then>
+      </condition>
+      <message>AFDX BAG must be at least 2ms</message>
+    </semanticRule>
+
+    <!-- VL MTU Maximum -->
+    <semanticRule ruleId="BR-ANCH-121" severity="error">
+      <condition>
+        <if>//mtuBytes &gt; 1518</if>
+        <then>false</then>
+      </condition>
+      <message>AFDX MTU must not exceed 1518 bytes</message>
+    </semanticRule>
+
+    <!-- CAN DLC Maximum -->
+    <semanticRule ruleId="BR-ANCH-130" severity="error">
+      <condition>
+        <if>//dlc &gt; 8</if>
+        <then>false</then>
+      </condition>
+      <message>CAN DLC must not exceed 8 bytes</message>
+    </semanticRule>
+
+  </semanticRules>
+
+  <!-- ============================================================ -->
+  <!-- NOTATION RULES -->
+  <!-- ============================================================ -->
+
+  <notationRules>
+
+    <!-- SI Units Preferred -->
+    <notationRule ruleId="BR-ANCH-200" severity="info">
+      <context>Temperature units</context>
+      <rule>Use °C for temperature, not °F</rule>
+    </notationRule>
+
+    <notationRule ruleId="BR-ANCH-201" severity="info">
+      <context>Pressure units</context>
+      <rule>Use bar or Pa for pressure, not psi (except cockpit displays)</rule>
+    </notationRule>
+
+    <notationRule ruleId="BR-ANCH-202" severity="info">
+      <context>Flow rate units</context>
+      <rule>Use L/min for volumetric flow, kg/s for mass flow</rule>
+    </notationRule>
+
+    <!-- Naming Conventions -->
+    <notationRule ruleId="BR-ANCH-210" severity="warning">
+      <context>File naming</context>
+      <rule>Use underscores, not spaces or hyphens in file names</rule>
+    </notationRule>
+
+    <notationRule ruleId="BR-ANCH-211" severity="warning">
+      <context>ID naming</context>
+      <rule>Use UPPERCASE for IDs and codes</rule>
+    </notationRule>
+
+  </notationRules>
+
+</brex>

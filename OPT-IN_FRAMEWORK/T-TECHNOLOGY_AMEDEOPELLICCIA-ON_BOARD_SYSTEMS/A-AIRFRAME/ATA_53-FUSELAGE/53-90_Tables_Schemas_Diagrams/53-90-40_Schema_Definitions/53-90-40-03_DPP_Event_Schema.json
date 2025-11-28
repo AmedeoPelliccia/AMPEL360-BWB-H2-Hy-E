@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/53-90-40-03_DPP_Event_Schema.json",
+  "title": "ANCHORS DPP Event Schema v1.0",
+  "description": "Digital Product Passport event schema for ANCHORS component lifecycle tracking",
+  "type": "object",
+  "required": ["event_id", "event_type", "timestamp", "component_id"],
+  "additionalProperties": false,
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique event identifier (UUID v4)"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "INSTALLATION",
+        "REMOVAL",
+        "MAINTENANCE",
+        "FAULT",
+        "SWAP",
+        "CALIBRATION",
+        "SOFTWARE_UPDATE",
+        "CONFIGURATION",
+        "INSPECTION",
+        "OVERHAUL",
+        "MODIFICATION",
+        "END_OF_LIFE"
+      ],
+      "description": "Type of lifecycle event"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event timestamp in ISO 8601 format"
+    },
+    "component_id": {
+      "type": "string",
+      "pattern": "^ANCH-[A-Z]{3}-[0-9]{6}$",
+      "description": "Component identifier"
+    },
+    "msn": {
+      "type": "string",
+      "pattern": "^Q100-[0-9]{4}$",
+      "description": "Aircraft Manufacturer Serial Number"
+    },
+    "flight_id": {
+      "type": "string",
+      "description": "Flight identifier if applicable"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "zone": {
+          "type": "string",
+          "pattern": "^Zone [0-9]{2}-[0-9]{2}-[A-Z]$"
+        },
+        "position": {
+          "type": "string"
+        },
+        "station": {
+          "type": "string"
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Event-specific data payload"
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "flight_hours": { "type": "number", "minimum": 0 },
+        "cycles": { "type": "integer", "minimum": 0 },
+        "calendar_days": { "type": "integer", "minimum": 0 },
+        "soh_pct": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "operator_id": {
+      "type": "string",
+      "description": "Personnel identifier"
+    },
+    "work_order": {
+      "type": "string",
+      "description": "Associated work order number"
+    },
+    "signature": {
+      "type": "string",
+      "description": "Digital signature for audit"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "hash": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "event_type": { "const": "INSTALLATION" } } },
+      "then": {
+        "required": ["msn", "location"],
+        "properties": {
+          "data": {
+            "properties": {
+              "previous_msn": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "REMOVAL" } } },
+      "then": {
+        "required": ["msn"],
+        "properties": {
+          "data": {
+            "required": ["reason", "condition"],
+            "properties": {
+              "reason": { "type": "string" },
+              "condition": { "type": "string", "enum": ["SERVICEABLE", "REPAIRABLE", "SCRAP"] }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "FAULT" } } },
+      "then": {
+        "properties": {
+          "data": {
+            "required": ["fault_code", "severity"],
+            "properties": {
+              "fault_code": { "type": "string" },
+              "severity": { "type": "string", "enum": ["INFO", "WARNING", "CAUTION", "FAULT"] },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "SWAP" } } },
+      "then": {
+        "properties": {
+          "data": {
+            "required": ["old_component_id", "new_component_id"],
+            "properties": {
+              "old_component_id": { "type": "string" },
+              "new_component_id": { "type": "string" },
+              "swap_reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "component_id": "ANCH-BAT-000001",
+  "component_type": "BATTERY_PACK",
+  "serial_number": "BP-2025-001234",
+  "part_number": "53-60-10-001",
+  "manufacturer": {
+    "name": "AMPEL Energy Systems",
+    "cage_code": "AMPEL",
+    "country": "EU"
+  },
+  "manufacture_date": "2025-06-15",
+  "certification": {
+    "easa_approval": "ETSO-C179b",
+    "faa_approval": "TSO-C179b",
+    "certification_date": "2025-05-01",
+    "validity_date": "2030-05-01"
+  },
+  "specifications": {
+    "capacity_kwh": 50,
+    "voltage_nominal": 750,
+    "voltage_max": 900,
+    "voltage_min": 600,
+    "current_max": 500,
+    "mass_kg": 120,
+    "dimensions": {
+      "length_mm": 800,
+      "width_mm": 400,
+      "height_mm": 300
+    },
+    "chemistry": "LFP",
+    "cell_count": 16
+  },
+  "lifecycle": {
+    "status": "IN_SERVICE",
+    "installation_date": "2025-07-01",
+    "current_msn": "Q100-0001",
+    "current_location": "Zone 53-30-E",
+    "position": "Battery Bay 1",
+    "flight_hours": 1250.5,
+    "cycles": 456,
+    "calendar_days": 180,
+    "soh_pct": 98.2,
+    "remaining_useful_life_pct": 95
+  },
+  "maintenance": {
+    "last_inspection_date": "2025-10-15",
+    "next_inspection_date": "2026-01-15",
+    "inspection_interval_fh": 500,
+    "overhaul_limit_fh": 10000,
+    "time_since_overhaul": 1250.5
+  },
+  "sustainability": {
+    "embodied_carbon_kg": 2450,
+    "recyclability_pct": 92,
+    "recycled_content_pct": 35,
+    "material_passport_id": "MP-BAT-2025-001234",
+    "circularity_index": 0.78,
+    "critical_materials": ["lithium", "iron", "phosphate"]
+  },
+  "materials": [
+    {"material": "LiFePO4", "mass_kg": 65, "recyclable": true},
+    {"material": "Aluminum", "mass_kg": 25, "recyclable": true},
+    {"material": "Copper", "mass_kg": 15, "recyclable": true},
+    {"material": "Plastics", "mass_kg": 10, "recyclable": false},
+    {"material": "Electronics", "mass_kg": 5, "recyclable": true}
+  ],
+  "events": [
+    {
+      "event_id": "evt-001",
+      "event_type": "INSTALLATION",
+      "timestamp": "2025-07-01T10:30:00Z",
+      "msn": "Q100-0001",
+      "location": {"zone": "Zone 53-30-E", "position": "Bay 1"},
+      "operator_id": "MNT-001",
+      "work_order": "WO-2025-00123"
+    },
+    {
+      "event_id": "evt-002",
+      "event_type": "INSPECTION",
+      "timestamp": "2025-10-15T14:00:00Z",
+      "data": {"findings": "Normal wear", "soh_pct": 98.2},
+      "operator_id": "MNT-002",
+      "work_order": "WO-2025-00456"
+    }
+  ],
+  "documents": [
+    {"type": "Certificate", "id": "CERT-BAT-001", "url": "/docs/certs/BAT-001.pdf"},
+    {"type": "Technical Data", "id": "TD-BAT-001", "url": "/docs/tech/BAT-001.pdf"},
+    {"type": "Material Safety", "id": "MSDS-BAT-001", "url": "/docs/safety/BAT-001.pdf"}
+  ]
+}

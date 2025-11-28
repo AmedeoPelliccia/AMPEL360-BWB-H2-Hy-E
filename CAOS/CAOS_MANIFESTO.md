@@ -227,6 +227,12 @@ For the AMPEL360-BWB-H₂-Hy-E project, CAOS provides the intelligent operationa
 
 ---
 
+- **Authorship:** Content generated through prompt engineering methods using AI assistants and agent tools, prompted and partially reviewed by **Amedeo Pelliccia**, with automated checking tools for validation.
+- Status: **DRAFT** – Subject to human review and approval.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
+
+---
+
 **References**
 
 - OPT-IN Framework Documentation
