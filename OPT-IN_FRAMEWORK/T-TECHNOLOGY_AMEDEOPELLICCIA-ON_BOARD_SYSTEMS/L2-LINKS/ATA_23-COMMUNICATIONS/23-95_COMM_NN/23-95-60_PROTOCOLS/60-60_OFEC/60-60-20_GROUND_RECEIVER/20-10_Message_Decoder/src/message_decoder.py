@@ -8,6 +8,9 @@ This module decodes CBOR-encoded OFEC messages.
 from typing import Dict, Any, Optional
 import struct
 import io
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class CBORDecoder:
@@ -149,8 +152,11 @@ class MessageDecoder:
             message = self._cbor_decoder.decode(data)
             self._message_count += 1
             return message
-        except Exception as e:
-            print(f"Decode error: {e}")
+        except ValueError as e:
+            logger.error("CBOR decode error - invalid format: %s", e)
+            return None
+        except struct.error as e:
+            logger.error("CBOR decode error - malformed data: %s", e)
             return None
     
     @property

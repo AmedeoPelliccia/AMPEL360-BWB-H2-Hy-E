@@ -33,18 +33,19 @@ class OFECAuth:
     # Token lifetime (seconds)
     TOKEN_LIFETIME = 3600  # 1 hour
     
-    # Secret key for HMAC (in production, load from secure storage)
-    _secret_key: bytes = secrets.token_bytes(32)
-    
-    def __init__(self, aircraft_id: str):
+    def __init__(self, aircraft_id: str, secret_key: Optional[bytes] = None):
         """
         Initialize authentication handler.
         
         Args:
             aircraft_id: Aircraft identifier
+            secret_key: HMAC secret key (should be loaded from secure storage
+                       in production; if None, generates a random key for testing)
         """
         self._aircraft_id = aircraft_id
         self._current_token: Optional[AuthToken] = None
+        # In production, secret_key should be loaded from TPM or secure vault
+        self._secret_key = secret_key if secret_key else secrets.token_bytes(32)
     
     def generate_token(self) -> AuthToken:
         """
@@ -90,13 +91,13 @@ class OFECAuth:
     
     def sign_message(self, message: bytes) -> bytes:
         """
-        Sign a message with HMAC.
+        Sign a message with HMAC-SHA256.
         
         Args:
             message: Message bytes to sign
             
         Returns:
-            HMAC signature
+            HMAC-SHA256 signature (32 bytes)
         """
         return hmac.new(
             self._secret_key,

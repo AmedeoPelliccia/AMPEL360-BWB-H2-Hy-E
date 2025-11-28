@@ -122,8 +122,11 @@ class TrendAnalyzer:
         else:
             slope = numerator / denominator
         
-        # Rate is negative slope (higher margin = improving = negative rate)
-        rate = -slope
+        # Slope represents margin change over time:
+        # - Positive slope means margin is increasing = improving
+        # - Negative slope means margin is decreasing = degrading
+        # We negate so that positive rate = degrading (intuitive for thresholds)
+        margin_change_rate = -slope
         
         # Calculate confidence (R-squared)
         if n > 2:
@@ -135,10 +138,12 @@ class TrendAnalyzer:
         else:
             confidence = 0.5
         
-        # Determine direction
-        if rate < self.IMPROVING_THRESHOLD:
+        # Determine direction based on margin change rate:
+        # - rate < threshold (negative) means margin is increasing = IMPROVING
+        # - rate > threshold (positive) means margin is decreasing = DEGRADING
+        if margin_change_rate < self.IMPROVING_THRESHOLD:
             direction = TrendDirection.IMPROVING
-        elif rate > self.DEGRADING_THRESHOLD:
+        elif margin_change_rate > self.DEGRADING_THRESHOLD:
             direction = TrendDirection.DEGRADING
         else:
             direction = TrendDirection.STABLE
@@ -146,7 +151,7 @@ class TrendAnalyzer:
         return TrendResult(
             parameter=parameter,
             direction=direction,
-            rate=round(rate, 3),
+            rate=round(margin_change_rate, 3),
             confidence=round(confidence, 2),
             window_seconds=round(time_span, 1)
         )
