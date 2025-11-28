@@ -4,7 +4,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | OFEC-23-95-60-60-OV-001 |
+| **Document ID** | OFEC-23-95-67-00-OV-001 |
 | **Version** | 1.0 |
 | **Status** | DRAFT |
 | **Classification** | INTERNAL |
@@ -13,7 +13,7 @@
 
 ## 1. Introduction
 
-The OFEC Protocol (60-60) defines the transport layer for Operational Flight Envelope Channel data within the FAirCCC architecture. This is the L2-LINKS component that handles how envelope data is transmitted from aircraft to ground systems.
+The OFEC Protocol (23-95-67) defines the transport layer for Operational Flight Envelope Channel data within the FAirCCC architecture. This is the L2-LINKS component that handles how envelope data is transmitted from aircraft to ground systems.
 
 ### 1.1 Purpose
 
@@ -24,7 +24,7 @@ The OFEC Protocol (60-60) defines the transport layer for Operational Flight Env
 
 ### 1.2 Relationship to N-Axis
 
-| N-Axis (97-40-40) | L2-LINKS (60-60) |
+| N-Axis (97-40-40) | L2-LINKS (23-95-67) |
 |-------------------|------------------|
 | What data means | How to transmit |
 | Margin calculations | Message encoding |
@@ -37,11 +37,11 @@ The OFEC Protocol (60-60) defines the transport layer for Operational Flight Env
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    OFEC PROTOCOL (60-60)                    │
+│                    OFEC PROTOCOL (23-95-67)                    │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  ┌───────────────────────────────────────────────────────┐ │
-│  │              AIRCRAFT PUBLISHER (60-60-10)            │ │
+│  │              AIRCRAFT PUBLISHER (23-95-67-10)            │ │
 │  │  ┌─────────────┐  ┌─────────────┐  ┌──────────────┐  │ │
 │  │  │  Envelope   │  │   Message   │  │ Phase-Aware  │  │ │
 │  │  │  Sampler    │─▶│   Builder   │─▶│  Publisher   │  │ │
@@ -51,7 +51,7 @@ The OFEC Protocol (60-60) defines the transport layer for Operational Flight Env
 │                            │ mTLS 1.3 / CBOR                │
 │                            ▼                                │
 │  ┌───────────────────────────────────────────────────────┐ │
-│  │               GROUND RECEIVER (60-60-20)              │ │
+│  │               GROUND RECEIVER (23-95-67-20)              │ │
 │  │  ┌─────────────┐  ┌─────────────┐  ┌──────────────┐  │ │
 │  │  │   Message   │  │ Validation  │  │   Storage    │  │ │
 │  │  │   Decoder   │─▶│   Engine    │─▶│   Handler    │  │ │
@@ -60,7 +60,7 @@ The OFEC Protocol (60-60) defines the transport layer for Operational Flight Env
 │                            │                                │
 │                            ▼                                │
 │  ┌───────────────────────────────────────────────────────┐ │
-│  │            REGIONAL AGGREGATOR (60-60-30)             │ │
+│  │            REGIONAL AGGREGATOR (23-95-67-30)             │ │
 │  │  ┌─────────────┐  ┌─────────────┐  ┌──────────────┐  │ │
 │  │  │ Multi-A/C   │  │   Fleet     │  │   Uplink     │  │ │
 │  │  │ Aggregation │─▶│  Analytics  │─▶│  to Core     │  │ │
@@ -76,11 +76,11 @@ The OFEC Protocol (60-60) defines the transport layer for Operational Flight Env
 
 | Component | ATA Reference | Purpose |
 |-----------|---------------|---------|
-| Aircraft Publisher | 60-60-10 | Sample, encode, publish envelope data |
-| Ground Receiver | 60-60-20 | Decode, validate, store, alert |
-| Regional Aggregator | 60-60-30 | Multi-aircraft aggregation, fleet analytics |
-| Security | 60-60-40 | Authentication, encryption, integrity |
-| Schemas | 60-60-90 | Transport message formats |
+| Aircraft Publisher | 23-95-67-10 | Sample, encode, publish envelope data |
+| Ground Receiver | 23-95-67-20 | Decode, validate, store, alert |
+| Regional Aggregator | 23-95-67-30 | Multi-aircraft aggregation, fleet analytics |
+| Security | 23-95-67-40 | Authentication, encryption, integrity |
+| Schemas | 23-95-67-90 | Transport message formats |
 
 ---
 
