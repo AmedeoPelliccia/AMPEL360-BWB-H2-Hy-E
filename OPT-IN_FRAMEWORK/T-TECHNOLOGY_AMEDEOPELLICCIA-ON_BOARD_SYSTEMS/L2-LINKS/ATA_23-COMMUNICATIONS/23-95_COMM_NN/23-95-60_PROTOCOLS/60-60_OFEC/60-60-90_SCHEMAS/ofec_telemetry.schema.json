@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/ofec/transport/ofec_telemetry.schema.json",
+  "title": "OFEC Telemetry Message",
+  "description": "Complete OFEC telemetry message for transport",
+  "type": "object",
+  "required": ["header", "payload", "signature"],
+  "properties": {
+    "header": {
+      "type": "object",
+      "properties": {
+        "message_id": { "type": "string", "format": "uuid" },
+        "aircraft_id": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "sequence": { "type": "integer", "minimum": 0 },
+        "priority": { "type": "string", "enum": ["LOW", "MEDIUM", "HIGH"] },
+        "protocol_version": { "type": "string" }
+      },
+      "required": ["message_id", "aircraft_id", "timestamp", "sequence", "protocol_version"]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "envelope_state": { "$ref": "#/$defs/envelope_state" }
+      },
+      "required": ["envelope_state"]
+    },
+    "signature": {
+      "type": "object",
+      "properties": {
+        "algorithm": { "type": "string", "enum": ["HMAC-SHA256", "ECDSA-P256"] },
+        "value": { "type": "string" }
+      },
+      "required": ["algorithm", "value"]
+    }
+  },
+  "$defs": {
+    "envelope_state": {
+      "type": "object",
+      "properties": {
+        "flight_phase": { "type": "string" },
+        "margins": { "type": "object" },
+        "h2_specific": { "type": "object" },
+        "advisory": { "type": "object" }
+      }
+    }
+  }
+}
