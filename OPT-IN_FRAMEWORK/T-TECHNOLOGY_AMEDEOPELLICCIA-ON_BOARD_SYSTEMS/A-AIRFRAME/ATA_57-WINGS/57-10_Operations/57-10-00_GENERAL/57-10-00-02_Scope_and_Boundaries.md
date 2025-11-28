@@ -10,7 +10,7 @@
 
 - Detailed structural design and certification evidence
   (managed under [57-00_WINGS_GENERAL](../../57-00_GENERAL/)).
-- Detailed repair manuals content (ATA 57-40 / SRM).
+- Detailed repair manuals content (ATA 57-50_STRUCTURES / SRM).
 - Non-wing structures (fuselage, empennage, landing gear).
 
 ## Interfaces
