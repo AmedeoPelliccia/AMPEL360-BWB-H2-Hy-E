@@ -42,7 +42,7 @@
 
 The **Models Memory Inheritance Protocol (MMIP)** defines a vendor-agnostic, transport-agnostic standard for representing, storing, sharing, inheriting, redacting, and exporting **memory capsules** between generative AI models, tools, and agentic workflows.
 
-MMIP enables continuity of context across:
+MMIP enables **automatic** continuity of context across:
 
 - Model switches (e.g., reasoning → code → image)
 - Tool calls
@@ -50,6 +50,8 @@ MMIP enables continuity of context across:
 - Playground or IDE sessions
 
 ...without requiring users to manually re-enter context.
+
+**Key principle**: Model or session shifts trigger automatic inheritance of relevant memory (thread + context packages) by default, rather than starting from scratch. This ensures seamless context continuity while respecting user-defined policies.
 
 MMIP also provides user-level control: browsing, managing, grouping, redacting, exporting, and injecting context as **Context Packages**.
 
@@ -336,16 +338,38 @@ MMIP MUST support:
 
 ## 10. Reference Behaviors
 
+### Default Automatic Inheritance
+
+MMIP implementations MUST automatically inherit relevant memory on model or session shifts by default. This ensures context continuity without requiring manual re-entry of information.
+
+**Default behavior on model/session shift**:
+
+1. The system MUST automatically invoke `INHERIT_CONTEXT` with the current thread and applicable context packages
+2. The incoming model/session MUST receive the composed Memory Envelope
+3. Context MUST NOT be reset unless explicitly requested by the user or policy
+
+This default can be overridden by:
+- Explicit user action (e.g., "start fresh")
+- Policy rules that restrict inheritance
+- System configuration for specific use cases
+
 ### Switching Models
 
-- MUST NOT reset context
-- SHOULD re-request context via `INHERIT_CONTEXT`
+- MUST NOT reset context (automatic inheritance is the default)
+- MUST automatically invoke `INHERIT_CONTEXT` on model switch
 - MUST enforce policies of included capsules
+- MAY allow user override to start without inherited context
+
+### Session Shifts
+
+- MUST preserve thread continuity across session boundaries by default
+- MUST automatically load applicable context packages on session resume
+- MUST respect retention policies when determining what to inherit
 
 ### Agent Pipelines
 
 - Each agent MUST declare which packages it requires
-- Pipelines SHOULD maintain thread continuity
+- Pipelines MUST maintain thread continuity by default
 - Tools MUST receive minimal-privilege summaries
 
 ### User Exports

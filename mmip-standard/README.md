@@ -8,7 +8,7 @@
 
 The **Models Memory Inheritance Protocol (MMIP)** defines a vendor-agnostic, transport-agnostic standard for representing, storing, sharing, inheriting, redacting, and exporting **memory capsules** between generative AI models, tools, and agentic workflows.
 
-MMIP enables continuity of context across:
+MMIP enables **automatic** continuity of context across:
 
 - **Model switches** (e.g., reasoning → code → image)
 - **Tool calls**
@@ -16,6 +16,10 @@ MMIP enables continuity of context across:
 - **Playground or IDE sessions**
 
 ...without requiring users to manually re-enter context.
+
+### Core Principle: Automatic Inheritance by Default
+
+**Model or session shifts trigger automatic inheritance of relevant memory (thread + context packages) by default**, rather than starting from scratch. This ensures seamless context continuity while respecting user-defined policies.
 
 MMIP also provides **user-level control**: browsing, managing, grouping, redacting, exporting, and injecting context as **Context Packages**.
 
