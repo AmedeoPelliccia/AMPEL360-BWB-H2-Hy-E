@@ -1,29 +1,26 @@
-# 97-40-20-30_COMPRESSION — COMPRESSION
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 97-40-20-30 — Compression
 
 ## Purpose
 
-Documentation and artifacts for COMPRESSION in the CFLF-GRAD (Federated Learning) bucket.
+Gradient compression techniques to reduce communication overhead while preserving model quality.
 
----
+## Techniques
 
-## Scope
+| Technique | Description |
+|-----------|-------------|
+| **Top-k Sparsification** | Keep only top k% of gradient values |
+| **Random-k Sparsification** | Randomly sample k% of gradient values |
+| **Quantization** | Reduce precision (8-bit, 16-bit) |
+| **Error Feedback** | Accumulate compression errors |
 
-- TBD - To be defined by domain expert
+## Default Configuration
 
----
+- **Sparsification:** Top-k (k=1%)
+- **Quantization:** 8-bit
+- **Error Feedback:** Enabled
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

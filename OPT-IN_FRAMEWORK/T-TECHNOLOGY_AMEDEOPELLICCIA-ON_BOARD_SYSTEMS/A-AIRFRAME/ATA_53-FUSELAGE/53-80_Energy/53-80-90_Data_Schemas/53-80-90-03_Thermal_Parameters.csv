@@ -1,0 +1,43 @@
+Parameter_ID,Name,Description,Unit,Range_Min,Range_Max,Nominal,Resolution,Source,Rate_Hz,Bus,Category,Safety_Critical
+THM-P-001,HT_SUPPLY_TEMP,HT bus supply temperature,°C,-40,120,85,0.1,RTD Pt100,1,HT,Temperature,Yes
+THM-P-002,HT_RETURN_TEMP,HT bus return temperature,°C,-40,120,70,0.1,RTD Pt100,1,HT,Temperature,No
+THM-P-003,HT_FLOW_RATE,HT bus flow rate,L/min,0,200,100,0.1,Ultrasonic,1,HT,Flow,Yes
+THM-P-004,HT_PRESSURE,HT bus system pressure,bar,0,6,2.5,0.01,Pressure transducer,1,HT,Pressure,Yes
+THM-P-005,HT_LEVEL,HT expansion tank level,%,0,100,90,1,Ultrasonic,0.1,HT,Level,No
+THM-P-010,LT_SUPPLY_TEMP,LT bus supply temperature,°C,-40,80,50,0.1,RTD Pt100,1,LT,Temperature,Yes
+THM-P-011,LT_RETURN_TEMP,LT bus return temperature,°C,-40,80,55,0.1,RTD Pt100,1,LT,Temperature,No
+THM-P-012,LT_FLOW_RATE,LT bus flow rate,L/min,0,300,150,0.1,Ultrasonic,1,LT,Flow,Yes
+THM-P-013,LT_PRESSURE,LT bus system pressure,bar,0,5,2.0,0.01,Pressure transducer,1,LT,Pressure,Yes
+THM-P-014,LT_LEVEL,LT expansion tank level,%,0,100,88,1,Ultrasonic,0.1,LT,Level,No
+THM-P-020,FC_INLET_TEMP,Fuel cell coolant inlet temp,°C,-40,100,65,0.1,RTD Pt100,1,HT,HX-01,No
+THM-P-021,FC_OUTLET_TEMP,Fuel cell coolant outlet temp,°C,-40,100,80,0.1,RTD Pt100,1,HT,HX-01,No
+THM-P-022,FC_HEAT_RATE,Fuel cell heat transfer rate,kW,0,300,200,0.1,Calculated,1,HT,HX-01,No
+THM-P-030,TURB_INLET_TEMP,Turbine HX liquid inlet temp,°C,-40,100,80,0.1,RTD Pt100,1,HT,HX-02,No
+THM-P-031,TURB_OUTLET_TEMP,Turbine HX liquid outlet temp,°C,-40,120,95,0.1,RTD Pt100,1,HT,HX-02,No
+THM-P-032,TURB_HEAT_RATE,Turbine heat transfer rate,kW,0,200,150,0.1,Calculated,1,HT,HX-02,No
+THM-P-040,COUP_HT_IN,Coupling HX HT side inlet,°C,-40,100,85,0.1,RTD Pt100,1,Coupling,HX-03,No
+THM-P-041,COUP_HT_OUT,Coupling HX HT side outlet,°C,-40,100,70,0.1,RTD Pt100,1,Coupling,HX-03,No
+THM-P-042,COUP_LT_IN,Coupling HX LT side inlet,°C,-40,80,50,0.1,RTD Pt100,1,Coupling,HX-03,No
+THM-P-043,COUP_LT_OUT,Coupling HX LT side outlet,°C,-40,80,60,0.1,RTD Pt100,1,Coupling,HX-03,No
+THM-P-044,COUP_HEAT_RATE,Coupling HX heat transfer,kW,0,100,50,0.1,Calculated,1,Coupling,HX-03,No
+THM-P-050,CABIN_HX_IN,Cabin HX liquid inlet temp,°C,-40,100,85,0.1,RTD Pt100,1,Sink,HX-04,No
+THM-P-051,CABIN_HX_OUT,Cabin HX liquid outlet temp,°C,-40,100,65,0.1,RTD Pt100,1,Sink,HX-04,No
+THM-P-052,CABIN_HEAT_RATE,Cabin heat transfer rate,kW,0,120,80,0.1,Calculated,1,Sink,HX-04,No
+THM-P-060,RAD_L_IN,Left radiator inlet temp,°C,-40,80,55,0.1,RTD Pt100,1,Sink,HX-06,No
+THM-P-061,RAD_L_OUT,Left radiator outlet temp,°C,-40,80,45,0.1,RTD Pt100,1,Sink,HX-06,No
+THM-P-062,RAD_R_IN,Right radiator inlet temp,°C,-40,80,55,0.1,RTD Pt100,1,Sink,HX-07,No
+THM-P-063,RAD_R_OUT,Right radiator outlet temp,°C,-40,80,45,0.1,RTD Pt100,1,Sink,HX-07,No
+THM-P-064,RAD_TOTAL_HEAT,Total radiator heat rejection,kW,0,250,120,0.1,Calculated,1,Sink,Radiator,No
+THM-P-070,HT_PUMP1_SPD,HT pump 1 speed,%,0,100,70,0.1,VFD feedback,1,Actuator,Pump,No
+THM-P-071,HT_PUMP2_SPD,HT pump 2 (backup) speed,%,0,100,0,0.1,VFD feedback,1,Actuator,Pump,No
+THM-P-072,LT_PUMP1_SPD,LT pump 1 speed,%,0,100,70,0.1,VFD feedback,1,Actuator,Pump,No
+THM-P-073,LT_PUMP2_SPD,LT pump 2 (backup) speed,%,0,100,0,0.1,VFD feedback,1,Actuator,Pump,No
+THM-P-080,VALVE_CABIN_POS,Cabin heat valve position,%,0,100,50,0.1,Position feedback,1,Actuator,Valve,No
+THM-P-081,VALVE_DEICE_POS,De-ice valve position,%,0,100,0,0.1,Position feedback,1,Actuator,Valve,No
+THM-P-082,VALVE_COUP_POS,Coupling valve position,%,0,100,30,0.1,Position feedback,1,Actuator,Valve,No
+THM-P-083,VALVE_RAD_L_POS,Left radiator bypass position,%,0,100,50,0.1,Position feedback,1,Actuator,Valve,No
+THM-P-084,VALVE_RAD_R_POS,Right radiator bypass position,%,0,100,50,0.1,Position feedback,1,Actuator,Valve,No
+THM-P-090,THERMAL_EFF,Thermal recovery efficiency,%,0,100,65,0.1,Calculated,0.1,Performance,Metric,No
+THM-P-091,HEAT_RECOVERED,Total heat recovered,kW,0,300,150,0.1,Calculated,1,Performance,Metric,No
+THM-P-092,HEAT_REJECTED,Total heat rejected,kW,0,250,100,0.1,Calculated,1,Performance,Metric,No
+THM-P-093,ENERGY_RECOVERED,Cumulative thermal energy,kWh,0,1000,0,0.01,Calculated,1,Performance,Metric,No

@@ -1,29 +1,27 @@
-# 97-40-20-60_MODEL_GOVERNANCE — MODEL GOVERNANCE
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 97-40-20-60 — Model Governance
 
 ## Purpose
 
-Documentation and artifacts for MODEL GOVERNANCE in the CFLF-GRAD (Federated Learning) bucket.
+Policies, approvals, and kill switches for federated learning models.
 
----
+## Governance Features
 
-## Scope
+| Feature | Description |
+|---------|-------------|
+| **Approval Workflow** | Multi-stakeholder sign-off |
+| **Kill Switches** | Emergency model disabling |
+| **Rollback** | Version reversion capability |
+| **Audit Trail** | Complete change history |
 
-- TBD - To be defined by domain expert
+## Policy Areas
 
----
+- Model deployment criteria
+- Performance thresholds
+- Safety classification
+- Privacy compliance
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

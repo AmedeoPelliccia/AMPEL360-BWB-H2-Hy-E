@@ -1,35 +1,31 @@
-# 23-95-20_GROUND_NODE — GROUND NODE (FAirCCC-G)
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 23-95-20 — Ground Node (FAirCCC-G)
 
 ## Purpose
 
-Documentation and artifacts for the FAirCCC-G (GROUND NODE) in the FAirCCC architecture.
+The Ground Node is the ground station component of the FAirCCC infrastructure. It receives gradient envelopes from aircraft, validates them, and stages them for regional aggregation.
 
----
+## Responsibilities
 
-## Node Role
+| Function | Description |
+|----------|-------------|
+| **Signature Verification** | Validate TPM signatures |
+| **Schema Validation** | Check envelope format |
+| **Poison Detection** | Outlier gradient filtering |
+| **Staging** | Queue for regional uplink |
 
-FAirCCC-G is a key component of the FAirCCC hierarchical architecture.
+## Interfaces
 
----
+- **Upstream:** Aircraft Node (23-95-10)
+- **Downstream:** Regional Node (23-95-30)
 
-## Scope
+## Security
 
-- TBD - To be defined by domain expert
-
----
+- Certificate chain validation
+- DP budget enforcement
+- Contribution thresholds
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

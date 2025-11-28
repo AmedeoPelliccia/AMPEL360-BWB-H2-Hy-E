@@ -1,35 +1,31 @@
-# 23-95-10_AIRCRAFT_NODE — AIRCRAFT NODE (FAirCCC-A)
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 23-95-10 — Aircraft Node (FAirCCC-A)
 
 ## Purpose
 
-Documentation and artifacts for the FAirCCC-A (AIRCRAFT NODE) in the FAirCCC architecture.
+The Aircraft Node is the on-aircraft component of the FAirCCC (Federated Aircraft Communication & Computation Core) infrastructure. It handles local gradient preparation, signing, and transport initiation.
 
----
+## Responsibilities
 
-## Node Role
+| Function | Description |
+|----------|-------------|
+| **Feature Gate** | Limits, units validation, PII removal |
+| **Envelope Preparation** | Package gradients with metadata |
+| **TPM Signing** | Hardware-anchored signature |
+| **Transport Initiation** | Queue and send to ground node |
 
-FAirCCC-A is a key component of the FAirCCC hierarchical architecture.
+## Interfaces
 
----
+- **Upstream:** Local training subsystem (97-40-20-40)
+- **Downstream:** Ground Node (23-95-20)
 
-## Scope
+## Security
 
-- TBD - To be defined by domain expert
-
----
+- TPM-anchored key storage
+- Secure boot attestation
+- SBOM hash inclusion
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/53-90-40-02_Parameter_Schema.json",
+  "title": "ANCHORS Parameter Definition Schema v1.0",
+  "description": "Formal JSON Schema for validating ANCHORS configurable parameters",
+  "type": "object",
+  "required": ["param_id", "name", "category", "default", "units", "bucket"],
+  "additionalProperties": false,
+  "properties": {
+    "param_id": {
+      "type": "string",
+      "pattern": "^P_[A-Z0-9]+_[A-Z0-9_]+$",
+      "minLength": 5,
+      "maxLength": 40,
+      "description": "Unique parameter identifier"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 64,
+      "description": "Human-readable parameter name"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["Fixed", "Tunable", "Configurable", "Adaptive"],
+      "description": "Parameter modification category"
+    },
+    "default": {
+      "type": "number",
+      "description": "Default parameter value"
+    },
+    "min": {
+      "type": ["number", "null"],
+      "description": "Minimum allowed value (null for Fixed parameters)"
+    },
+    "max": {
+      "type": ["number", "null"],
+      "description": "Maximum allowed value (null for Fixed parameters)"
+    },
+    "units": {
+      "type": "string",
+      "maxLength": 16,
+      "description": "Engineering units"
+    },
+    "bucket": {
+      "type": "string",
+      "pattern": "^53-(0[0-9]|[1-8][0-9]|90)$",
+      "description": "ATA 53 bucket reference"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "data_type": {
+      "type": "string",
+      "enum": ["int8", "uint8", "int16", "uint16", "int32", "uint32", "float32", "float64"],
+      "description": "Storage data type"
+    },
+    "persistence": {
+      "type": "string",
+      "enum": ["VOLATILE", "NVM", "EEPROM", "FLASH"],
+      "description": "Storage persistence type"
+    },
+    "modification": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "string",
+          "enum": ["Factory", "Engineering", "Maintenance", "Automatic"]
+        },
+        "approval_required": { "type": "boolean" },
+        "audit_log": { "type": "boolean" },
+        "reboot_required": { "type": "boolean" }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "step": { "type": "number", "description": "Minimum adjustment increment" },
+        "precision": { "type": "integer", "description": "Decimal places" },
+        "dependencies": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "requirement_ids": { "type": "array", "items": { "type": "string" } },
+        "safety_impact": { "type": "string", "enum": ["None", "Low", "Medium", "High", "Critical"] }
+      }
+    }
+  }
+}

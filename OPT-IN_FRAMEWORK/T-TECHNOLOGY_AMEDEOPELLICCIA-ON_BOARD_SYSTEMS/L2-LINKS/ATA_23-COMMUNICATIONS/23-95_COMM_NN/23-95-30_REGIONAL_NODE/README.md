@@ -1,35 +1,31 @@
-# 23-95-30_REGIONAL_NODE — REGIONAL NODE (FAirCCC-R)
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 23-95-30 — Regional Node (FAirCCC-R)
 
 ## Purpose
 
-Documentation and artifacts for the FAirCCC-R (REGIONAL NODE) in the FAirCCC architecture.
+The Regional Node coordinates secure aggregation across multiple ground stations and provides checkpointing and uplink to the Fleet Core.
 
----
+## Responsibilities
 
-## Node Role
+| Function | Description |
+|----------|-------------|
+| **Coordination** | Wait for N≥T clients |
+| **SecAgg Server** | Secure aggregation orchestration |
+| **Checkpointing** | Save intermediate states |
+| **Uplink** | Forward aggregated gradients |
 
-FAirCCC-R is a key component of the FAirCCC hierarchical architecture.
+## Interfaces
 
----
+- **Upstream:** Ground Nodes (23-95-20)
+- **Downstream:** Fleet Core (23-95-40)
 
-## Scope
+## Aggregation Protocol
 
-- TBD - To be defined by domain expert
-
----
+- Wait for minimum client threshold
+- Unmask sum only (secure aggregation)
+- Apply FedAvg or FedAdam
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

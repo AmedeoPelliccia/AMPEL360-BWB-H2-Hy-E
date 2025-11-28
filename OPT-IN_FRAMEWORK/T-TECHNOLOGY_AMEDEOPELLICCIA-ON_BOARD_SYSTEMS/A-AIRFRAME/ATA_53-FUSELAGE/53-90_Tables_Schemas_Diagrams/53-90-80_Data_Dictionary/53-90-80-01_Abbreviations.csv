@@ -1,0 +1,65 @@
+Abbreviation,Full_Term,Context,Category,Definition
+ANCH,ANCHORS,System,System,Aircraft Networks Circular Harvesting Operating and Renewable Systems
+AFDX,Avionics Full-Duplex Switched Ethernet,Communication,Protocol,ARINC 664 Part 7 deterministic Ethernet network
+BAG,Bandwidth Allocation Gap,Communication,Parameter,AFDX virtual link transmission interval
+BAT,Battery,Subsystem,Component,Battery pack and management system
+BITE,Built-In Test Equipment,Diagnostics,System,Self-test and fault detection capability
+BMS,Battery Management System,Subsystem,Component,Battery monitoring and control unit
+BWB,Blended Wing Body,Aircraft,Configuration,Aircraft configuration type
+CAN,Controller Area Network,Communication,Protocol,Serial bus protocol for component communication
+CFRP,Carbon Fiber Reinforced Polymer,Material,Structure,Composite material for structural components
+CMC,Central Maintenance Computer,System,Component,Aircraft maintenance data concentrator
+CO2,Carbon Dioxide,Chemical,Compound,Target gas for capture system
+CO2C,CO2 Capture Controller,Subsystem,Component,CO2 capture system controller
+DAL,Development Assurance Level,Safety,Classification,DO-178C software criticality level (A-E)
+DPP,Digital Product Passport,Data,System,Component lifecycle tracking system
+DSR,Design Safety Requirement,Safety,Requirement,Derived safety requirement from hazard mitigation
+ECS,Environmental Control System,System,Component,Cabin air conditioning and pressurization
+EMS,Energy Management System,Subsystem,Component,Power distribution and optimization controller
+EOL,End of Life,Lifecycle,Phase,Component retirement and disposal phase
+ETSO,European Technical Standard Order,Certification,Standard,EASA equipment certification standard
+FADEC,Full Authority Digital Engine Control,System,Component,Engine electronic control unit
+FC,Fuel Cell,Power,Component,Hydrogen fuel cell power source
+FHA,Functional Hazard Assessment,Safety,Analysis,System-level hazard identification
+FM,Flow Meter,Sensor,Component,Volumetric flow measurement device
+GSE,Ground Support Equipment,Operations,Equipment,Ground-based aircraft servicing equipment
+HMI,Human-Machine Interface,System,Component,Flight deck display and control interface
+HT,High Temperature,Thermal,Bus,High temperature thermal distribution bus (>70°C)
+HVDC,High Voltage Direct Current,Electrical,Distribution,High voltage DC power distribution
+ICD,Interface Control Document,Documentation,Type,Interface specification document
+IMA,Integrated Modular Avionics,Architecture,System,Shared computing platform for avionics
+ISO,Isolation,Safety,Function,Electrical/mechanical isolation for safety
+LCA,Life Cycle Assessment,Sustainability,Analysis,Environmental impact assessment methodology
+LH2,Liquid Hydrogen,Fuel,Type,Cryogenic hydrogen fuel (-253°C)
+LRU,Line Replaceable Unit,Maintenance,Component,Field-replaceable equipment unit
+LS,Level Sensor,Sensor,Component,Fill level measurement device
+LT,Low Temperature,Thermal,Bus,Low temperature thermal distribution bus (<70°C)
+MM,Mode Manager,Software,Component,Operating mode control software
+MRO,Maintenance Repair and Overhaul,Operations,Organization,Aircraft maintenance service provider
+MSN,Manufacturer Serial Number,Identification,Number,Aircraft unique identifier
+MTU,Maximum Transmission Unit,Communication,Parameter,Maximum AFDX frame size in bytes
+NN,Neural Network,Software,Algorithm,Machine learning inference system
+NVM,Non-Volatile Memory,Hardware,Storage,Persistent data storage
+OEM,Original Equipment Manufacturer,Organization,Type,Aircraft or component manufacturer
+PCM,Phase Change Material,Material,Thermal,Thermal energy storage material
+PE,Power Electronics,Electrical,Component,Power conversion equipment
+PEM,Proton Exchange Membrane,Technology,Fuel Cell,Hydrogen fuel cell membrane technology
+PSSA,Preliminary System Safety Assessment,Safety,Analysis,Initial system safety evaluation
+PT,Pressure Transducer,Sensor,Component,Pressure measurement device
+QA,Quality Assurance,Process,Organization,Quality control function
+RTD,Resistance Temperature Detector,Sensor,Component,Precision temperature sensor
+SAF,Sustainable Aviation Fuel,Fuel,Type,Low-carbon aviation fuel
+SOC,State of Charge,Battery,Metric,Battery energy remaining (%)
+SOH,State of Health,Battery,Metric,Battery capacity degradation (%)
+SS,Safety Supervisor,Software,Component,Safety monitoring software function
+SSA,System Safety Assessment,Safety,Analysis,Final system safety evaluation
+SSCB,Solid State Circuit Breaker,Electrical,Component,Electronic power switching device
+TG,Turbo-Generator,Power,Component,Turbine-driven electrical generator
+TH,Thermal,Subsystem,Category,Thermal management subsystem
+THC,Thermal Harvest Controller,Subsystem,Component,Waste heat recovery controller
+TMS,Thermal Management System,Subsystem,System,Temperature control system
+TSO,Technical Standard Order,Certification,Standard,FAA equipment certification standard
+US,Ultrasonic Sensor,Sensor,Component,Ultrasonic flow measurement device
+VL,Virtual Link,Communication,AFDX,AFDX unidirectional communication path
+WD,Watchdog,Safety,Function,Safety monitoring timer
+WTC,Water Treatment Controller,Subsystem,Component,Potable water system controller

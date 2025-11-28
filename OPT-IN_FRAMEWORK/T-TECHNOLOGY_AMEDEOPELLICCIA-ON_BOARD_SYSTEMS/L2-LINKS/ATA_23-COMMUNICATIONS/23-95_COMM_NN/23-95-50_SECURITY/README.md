@@ -1,29 +1,29 @@
-# 23-95-50_SECURITY — SECURITY
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 23-95-50 — Security
 
 ## Purpose
 
-Documentation and artifacts for SECURITY in the FAirCCC Communications Neural Network subsystem.
+This folder contains security specifications, authentication protocols, and encryption standards for the COMM_NN subsystem.
 
----
+## Security Features
 
-## Scope
+| Feature | Implementation |
+|---------|----------------|
+| **Encryption** | mTLS (TLS 1.3) |
+| **Encoding** | CBOR for gradient envelopes |
+| **Authentication** | TPM-anchored signatures |
+| **Attestation** | SBOM hash + model hash + build provenance |
+| **Secure Aggregation** | Pairwise masks or threshold secret sharing |
 
-- TBD - To be defined by domain expert
+## Threat Mitigations
 
----
+- Poisoned gradient detection
+- Server-side DP enforcement
+- Contribution thresholds
+- Anomaly filters
+- Per-model kill-switches
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

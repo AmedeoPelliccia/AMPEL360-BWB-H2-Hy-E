@@ -176,7 +176,117 @@ Each ATA chapter follows a mandatory 14-folder lifecycle structure plus 9 cross-
 - **XX-60_Storages/**: Tanks, reservoirs, cryogenic vessels
 - **XX-70_Propulsion/**: Propulsive interfaces
 - **XX-80_Energy/**: Electrical/thermal energy systems
+  <details>
+  <summary>Example: 53-80_Energy/ (ATA 53 Fuselage Energy)</summary>
+
+  ```
+  53-80_Energy/
+  ├── 53-80-00_General/
+  │   ├── 53-80-00-01_NRG_Overview.md          ← This document
+  │   ├── 53-80-00-02_Design_Rules.md
+  │   ├── 53-80-00-03_Energy_Principles.md
+  │   └── 53-80-00-04_Safety_Requirements.md
+  ├── 53-80-10_Electrical_Distribution/
+  │   ├── 53-80-10-01_HVDC_Bus_Design.md
+  │   ├── 53-80-10-02_Load_Management.md
+  │   ├── 53-80-10-03_Power_Routing.md
+  │   ├── 53-80-10-04_Bus_Tie_Control.md
+  │   └── 53-80-10-05_ICD_24-001_HVDC.md
+  ├── 53-80-20_Thermal_Distribution/
+  │   ├── 53-80-20-01_Dual_Thermal_Bus.md
+  │   ├── 53-80-20-02_Coolant_System.md
+  │   ├── 53-80-20-03_Heat_Exchanger_Catalog.md
+  │   ├── 53-80-20-04_Thermal_Control.md
+  │   └── 53-80-20-05_ICD_21-001_ECS.md
+  ├── 53-80-30_Power_Conversion/
+  │   ├── 53-80-30-01_DCDC_Specifications.md
+  │   ├── 53-80-30-02_Bidirectional_Flow.md
+  │   ├── 53-80-30-03_Converter_Control.md
+  │   └── 53-80-30-04_EMI_EMC.md
+  ├── 53-80-40_Energy_Management/
+  │   ├── 53-80-40-01_EMS_Architecture.md
+  │   ├── 53-80-40-02_Load_Balancing.md
+  │   ├── 53-80-40-03_Thermal_Optimization.md
+  │   ├── 53-80-40-04_Regen_Maximization.md
+  │   └── 53-80-40-05_Load_Shedding.md
+  ├── 53-80-50_Interfaces/
+  │   ├── 53-80-50-01_ATA24_Interface.md
+  │   ├── 53-80-50-02_ATA21_Interface.md
+  │   └── 53-80-50-03_ATA72_Interface.md
+  ├── 53-80-60_Protection/
+  │   ├── 53-80-60-01_Electrical_Protection.md
+  │   ├── 53-80-60-02_SSCB_Specifications.md
+  │   ├── 53-80-60-03_Thermal_Protection.md
+  │   └── 53-80-60-04_Fault_Detection.md
+  ├── 53-80-70_Monitoring/
+  │   ├── 53-80-70-01_Power_Monitoring.md
+  │   └── 53-80-70-02_Thermal_Monitoring.md
+  ├── 53-80-80_Efficiency/
+  │   ├── 53-80-80-01_Efficiency_Optimization.md
+  │   └── 53-80-80-02_Loss_Analysis.md
+  └── 53-80-90_Data_Schemas/
+      ├── 53-80-90-01_Energy_Parameters.csv
+      ├── 53-80-90-02_Signal_Dictionary.csv
+      └── 53-80-90-03_Thermal_Parameters.csv
+  ```
+  </details>
 - **XX-90_Tables_Schemas_Diagrams/**: Technical data and catalogs
+  <details>
+  <summary>Example: 53-90_Tables_Schemas_Diagrams/ (ATA 53 Fuselage Data)</summary>
+
+  ```
+  53-90_Tables_Schemas_Diagrams/
+  ├── 53-90-00_General/
+  │   ├── 53-90-00-01_TSD_Overview.md          ← This document
+  │   ├── 53-90-00-02_Data_Governance.md
+  │   └── 53-90-00-03_Naming_Conventions.md
+  ├── 53-90-10_Signal_Dictionary/
+  │   ├── 53-90-10-01_Signal_Catalog.csv
+  │   ├── 53-90-10-02_Signal_Schema.json
+  │   └── 53-90-10-03_Signal_Validation.md
+  ├── 53-90-20_Parameter_Database/
+  │   ├── 53-90-20-01_Parameter_Catalog.csv
+  │   ├── 53-90-20-02_Parameter_Schema.json
+  │   └── 53-90-20-03_Parameter_Management.md
+  ├── 53-90-30_Message_Catalog/
+  │   ├── 53-90-30-01_AFDX_VL_Definitions.csv
+  │   ├── 53-90-30-02_CAN_Message_Definitions.csv
+  │   ├── 53-90-30-03_Message_Structures.h
+  │   └── 53-90-30-04_ICD_Message_Format.md
+  ├── 53-90-40_Schema_Definitions/
+  │   ├── 53-90-40-01_Signal_Schema.json
+  │   ├── 53-90-40-02_Parameter_Schema.json
+  │   ├── 53-90-40-03_DPP_Event_Schema.json
+  │   ├── 53-90-40-04_DMC_Schema.xsd
+  │   └── 53-90-40-05_Schema_Catalog.md
+  ├── 53-90-50_Diagram_Index/
+  │   ├── 53-90-50-01_Figure_Catalog.csv
+  │   ├── 53-90-50-02_Drawing_Catalog.csv
+  │   ├── 53-90-50-03_Schematic_Catalog.csv
+  │   └── figures/
+  │       ├── FIG-53-00-001_System_Overview.mermaid
+  │       ├── FIG-53-40-001_SW_Context.mermaid
+  │       └── ...
+  ├── 53-90-60_Traceability/
+  │   ├── 53-90-60-01_Req_Design_Matrix.csv
+  │   ├── 53-90-60-02_Hazard_Mitigation_Matrix.csv
+  │   ├── 53-90-60-03_Signal_Test_Matrix.csv
+  │   └── 53-90-60-04_Traceability_Report.md
+  ├── 53-90-70_DPP_Schemas/
+  │   ├── 53-90-70-01_Component_Record.json
+  │   ├── 53-90-70-02_Event_Types.md
+  │   ├── 53-90-70-03_Circular_Metrics.md
+  │   └── 53-90-70-04_DPP_Integration.md
+  ├── 53-90-80_Data_Dictionary/
+  │   ├── 53-90-80-01_Abbreviations.csv
+  │   ├── 53-90-80-02_Glossary.md
+  │   └── 53-90-80-03_Units_Conventions.md
+  └── 53-90-90_Validation/
+      ├── 53-90-90-01_Schema_Validation_Rules.md
+      ├── 53-90-90-02_BREX_Rules.xml
+      └── 53-90-90-03_Data_Quality_Metrics.md
+  ```
+  </details>
 
 See [OPT-IN_FRAMEWORK_STANDARD.md](OPT-IN_FRAMEWORK_STANDARD.md) for complete specification.
 

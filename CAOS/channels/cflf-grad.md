@@ -4,6 +4,21 @@
 **Safety Classification:** Non-safety only  
 **Related Standard:** AMPEL360-FAirCCC-ARCH-001 §4.1, §7
 
+---
+
+## OPT-IN Framework Integration
+
+The CFLF-GRAD system is structured across two OPT-IN axes for proper separation of concerns:
+
+| Axis | Location | Focus |
+|------|----------|-------|
+| **N-Axis (Neural Networks)** | [`97-40-20_FEDERATED_LEARNING`](../../OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-20_FEDERATED_LEARNING/97-40-20-README.md) | Model training, DP-SGD, governance, evaluation |
+| **L2-LINKS (ATA 23)** | [`23-95_COMM_NN`](../../OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/23-95-README.md) | Transport protocols, secure aggregation, communication |
+
+**Master Structure Document:** [`CFLF-GRAD-OPTIN-STRUCTURE.md`](../../OPT-IN_FRAMEWORK/CFLF-GRAD-OPTIN-STRUCTURE.md)
+
+---
+
 ## Purpose
 
 The CFLF-GRAD (Collaborative Federated Learning Fabric - Gradient) channel enables privacy-preserving machine learning by transmitting DP-masked sparse gradient deltas from aircraft to the learning infrastructure for model updates.
@@ -55,7 +70,9 @@ The CFLF-GRAD (Collaborative Federated Learning Fabric - Gradient) channel enabl
 
 ## Data Schema
 
-*Detailed CFLF-GRAD envelope schema in AMPEL360-FAirCCC-ARCH-001 §7.2*
+*Detailed CFLF-GRAD envelope schema:*
+- [`gradient_envelope.schema.json`](../../OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/23-95-90_SCHEMAS/gradient_envelope.schema.json)
+- AMPEL360-FAirCCC-ARCH-001 §7.2
 
 ## Security & Transport
 
@@ -74,30 +91,13 @@ The CFLF-GRAD (Collaborative Federated Learning Fabric - Gradient) channel enabl
 
 ---
 
-## OPT-IN Framework Mapping
+## Related OPT-IN Documentation
 
-CFLF-GRAD is the upstream learning channel. The FAirCCC system uses a dual-location OPT-IN architecture:
-
-### Dual-Location Structure
-
-| Axis | Location | Focus |
-|------|----------|-------|
-| **N-Axis** | `N-NEURAL_NETWORKS/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-20_FEDERATED_LEARNING/` | What to learn |
-| **L2-LINKS** | `T-TECHNOLOGY/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/23-95-60_PROTOCOLS/60-10_CFLF_GRAD/` | How to transmit |
-
-### Separation of Concerns
-
-| Aspect | N-Axis (97-40-20) | L2-LINKS (23-95-60-10) |
-|--------|-------------------|------------------------|
-| **Content** | DP-SGD, privacy, aggregation | Feature gate, transport, SecAgg |
-| **Schemas** | Gradient format schema | Transport envelope schema |
-
-### Related Documents
-
-* [CFLF-GRAD OPT-IN Structure Master Mapping](../../OPT-IN_FRAMEWORK/CFLF-GRAD-OPTIN-STRUCTURE.md)
-* [CUC OPT-IN Structure](../../OPT-IN_FRAMEWORK/CUC-OPTIN-STRUCTURE.md)
-* [97-40-20_FEDERATED_LEARNING README](../../OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-20_FEDERATED_LEARNING/README.md)
-* [23-95_COMM_NN README](../../OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/README.md)
+| Document | Description |
+|----------|-------------|
+| [`DP-SGD-SPEC.md`](../../OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-20_FEDERATED_LEARNING/97-40-20-10_DP_SGD/DP-SGD-SPEC.md) | Differential Privacy SGD specification |
+| [`gradient_envelope.schema.json`](../../OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/23-95-90_SCHEMAS/gradient_envelope.schema.json) | Gradient envelope JSON schema |
+| [`CFLF-GRAD-OPTIN-STRUCTURE.md`](../../OPT-IN_FRAMEWORK/CFLF-GRAD-OPTIN-STRUCTURE.md) | Master OPT-IN structure mapping |
 
 ---
 

@@ -1,29 +1,23 @@
-# 97-40-20-90_SCHEMAS — SCHEMAS
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 97-40-20-90 — Schemas
 
 ## Purpose
 
-Documentation and artifacts for SCHEMAS in the CFLF-GRAD (Federated Learning) bucket.
+JSON schemas and data format specifications for model artifacts.
 
----
+## Schemas
 
-## Scope
+- Model definition schema
+- Training configuration schema
+- Evaluation results schema
+- Deployment manifest schema
 
-- TBD - To be defined by domain expert
+## Format
 
----
+- **Primary:** JSON Schema (draft-07)
+- **Validation:** jsonschema library
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

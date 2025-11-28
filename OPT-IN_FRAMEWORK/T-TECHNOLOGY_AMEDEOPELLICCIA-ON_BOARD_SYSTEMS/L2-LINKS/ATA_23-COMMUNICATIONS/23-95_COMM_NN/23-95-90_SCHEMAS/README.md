@@ -1,29 +1,23 @@
-# 23-95-90_SCHEMAS — SCHEMAS
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 23-95-90 — Schemas
 
 ## Purpose
 
-Documentation and artifacts for SCHEMAS in the FAirCCC Communications Neural Network subsystem.
+This folder contains JSON schemas and data format specifications for the COMM_NN transport layer.
 
----
+## Schemas
 
-## Scope
+| Schema | Description |
+|--------|-------------|
+| [`gradient_envelope.schema.json`](./gradient_envelope.schema.json) | CFLF-GRAD envelope format |
 
-- TBD - To be defined by domain expert
+## Encoding
 
----
+- **Primary:** CBOR (Concise Binary Object Representation)
+- **Fallback:** JSON
+- **Compression:** Optional gzip
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

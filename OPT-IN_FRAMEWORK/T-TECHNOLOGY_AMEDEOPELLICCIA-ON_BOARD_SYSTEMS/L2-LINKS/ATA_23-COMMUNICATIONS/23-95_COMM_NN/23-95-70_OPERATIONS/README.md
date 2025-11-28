@@ -1,29 +1,27 @@
-# 23-95-70_OPERATIONS — OPERATIONS
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 23-95-70 — Operations
 
 ## Purpose
 
-Documentation and artifacts for OPERATIONS in the FAirCCC Communications Neural Network subsystem.
+This folder contains operational procedures, monitoring configurations, and incident response protocols for the COMM_NN subsystem.
 
----
+## Operational Areas
 
-## Scope
+| Area | Description |
+|------|-------------|
+| **Monitoring** | System health, throughput, latency |
+| **Alerting** | Threshold-based notifications |
+| **Incidents** | Response procedures |
+| **Maintenance** | Scheduled maintenance windows |
 
-- TBD - To be defined by domain expert
+## Key Metrics
 
----
+- Gradient envelope throughput
+- End-to-end latency
+- Aggregation success rate
+- Privacy budget consumption
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

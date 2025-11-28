@@ -1,29 +1,27 @@
-# 97-40-20-80_MODELS — MODELS
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 97-40-20-80 — Models
 
 ## Purpose
 
-Documentation and artifacts for MODELS in the CFLF-GRAD (Federated Learning) bucket.
+Model definitions for federated learning use cases.
 
----
+## Model Categories
 
-## Scope
+| Model | Type | Description |
+|-------|------|-------------|
+| **H₂ Optimization** | h2_optimization | Hydrogen efficiency models |
+| **Predictive Maintenance** | predictive_maintenance | Failure prediction |
+| **ANCHORS** | anchors | Sustainability metrics |
+| **Turnaround Ops** | turnaround_ops | Operations optimization |
 
-- TBD - To be defined by domain expert
+## Model Artifacts
 
----
+- Architecture definitions
+- Hyperparameter configurations
+- Training configurations
+- Deployment manifests
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

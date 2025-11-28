@@ -1,29 +1,27 @@
-# 97-40-20-70_EVALUATION — EVALUATION
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 97-40-20-70 — Evaluation
 
 ## Purpose
 
-Documentation and artifacts for EVALUATION in the CFLF-GRAD (Federated Learning) bucket.
+Model evaluation including drift detection, fairness assessment, and benchmarking.
 
----
+## Evaluation Areas
 
-## Scope
+| Area | Description |
+|------|-------------|
+| **Drift Detection** | Monitor for data/concept drift |
+| **Fairness** | Bias and fairness metrics |
+| **Performance** | Accuracy, latency benchmarks |
+| **Robustness** | Adversarial testing |
 
-- TBD - To be defined by domain expert
+## Metrics
 
----
+- Model accuracy vs baseline
+- Distribution shift indicators
+- Fairness metrics (demographic parity, equalized odds)
+- Resource utilization
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

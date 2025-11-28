@@ -1,29 +1,27 @@
-# 97-40-20-50_AGGREGATION — AGGREGATION
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 97-40-20-50 — Aggregation
 
 ## Purpose
 
-Documentation and artifacts for AGGREGATION in the CFLF-GRAD (Federated Learning) bucket.
+Server-side aggregation algorithms for combining client gradients.
 
----
+## Algorithms
 
-## Scope
+| Algorithm | Description |
+|-----------|-------------|
+| **FedAvg** | Weighted averaging of client updates |
+| **FedAdam** | Adaptive learning rate aggregation |
+| **FedProx** | Proximal term for heterogeneous data |
 
-- TBD - To be defined by domain expert
+## Aggregation Pipeline
 
----
+1. Collect gradients from N≥T clients
+2. Apply secure aggregation unmask
+3. Run selected aggregation algorithm
+4. Update global model
+5. Checkpoint and version
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

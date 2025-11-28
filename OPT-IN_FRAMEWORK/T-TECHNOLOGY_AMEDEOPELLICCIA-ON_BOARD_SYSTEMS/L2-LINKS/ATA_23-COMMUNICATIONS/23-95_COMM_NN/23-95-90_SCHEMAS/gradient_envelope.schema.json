@@ -1,0 +1,262 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/cflf-grad/gradient_envelope.schema.json",
+  "title": "CFLF-GRAD Gradient Envelope",
+  "description": "Schema for DP-masked sparse gradient deltas transmitted in the CFLF-GRAD channel",
+  "type": "object",
+  "required": [
+    "envelope_id",
+    "version",
+    "timestamp",
+    "source",
+    "model",
+    "gradients",
+    "privacy",
+    "attestation",
+    "signature"
+  ],
+  "properties": {
+    "envelope_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for this gradient envelope"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Envelope schema version (semver)",
+      "examples": ["1.0.0"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of envelope creation"
+    },
+    "source": {
+      "type": "object",
+      "description": "Source aircraft identification",
+      "required": ["aircraft_id", "node_type"],
+      "properties": {
+        "aircraft_id": {
+          "type": "string",
+          "description": "Anonymized aircraft identifier"
+        },
+        "node_type": {
+          "type": "string",
+          "enum": ["FAirCCC-A", "FAirCCC-G", "FAirCCC-R", "FAirCCC-F"],
+          "description": "Node type in FAirCCC hierarchy"
+        },
+        "flight_phase": {
+          "type": "string",
+          "enum": ["ground", "taxi", "takeoff", "cruise", "descent", "landing", "maintenance"],
+          "description": "Current flight phase"
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "description": "Target model information",
+      "required": ["model_id", "model_version", "model_type"],
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "description": "Model identifier (e.g., h2_efficiency_v3)"
+        },
+        "model_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Model version (semver)"
+        },
+        "model_type": {
+          "type": "string",
+          "enum": ["h2_optimization", "predictive_maintenance", "turnaround_ops", "anchors", "other"],
+          "description": "Model category"
+        },
+        "safety_classification": {
+          "type": "string",
+          "enum": ["non_safety", "advisory", "safety_related"],
+          "default": "non_safety",
+          "description": "Safety classification (CFLF-GRAD only handles non_safety)"
+        }
+      }
+    },
+    "gradients": {
+      "type": "object",
+      "description": "DP-masked sparse gradient data",
+      "required": ["format", "compression", "data"],
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": ["sparse_coo", "sparse_csr", "dense"],
+          "description": "Gradient storage format"
+        },
+        "compression": {
+          "type": "object",
+          "properties": {
+            "sparsification": {
+              "type": "string",
+              "enum": ["top_k", "random_k", "threshold", "none"],
+              "description": "Sparsification method"
+            },
+            "sparsity_ratio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Fraction of non-zero elements"
+            },
+            "quantization": {
+              "type": "string",
+              "enum": ["int8", "int16", "float16", "float32", "none"],
+              "description": "Quantization level"
+            }
+          }
+        },
+        "shape": {
+          "type": "array",
+          "items": {"type": "integer"},
+          "description": "Original tensor shape"
+        },
+        "data": {
+          "type": "string",
+          "contentEncoding": "base64",
+          "description": "Base64-encoded CBOR gradient data"
+        },
+        "checksum": {
+          "type": "string",
+          "description": "SHA-256 hash of unencoded data"
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "description": "Differential privacy parameters",
+      "required": ["dp_enabled", "epsilon_spent", "delta"],
+      "properties": {
+        "dp_enabled": {
+          "type": "boolean",
+          "description": "Whether DP was applied"
+        },
+        "epsilon_spent": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Privacy budget spent for this contribution"
+        },
+        "delta": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Probability that the privacy guarantee (epsilon) fails. Typically set to 1e-5 or smaller."
+        },
+        "clipping_bound": {
+          "type": "number",
+          "minimum": 0,
+          "description": "L2 clipping bound used"
+        },
+        "noise_multiplier": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Gaussian noise multiplier"
+        },
+        "samples_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of local samples used"
+        },
+        "secure_aggregation": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "protocol": {
+              "type": "string",
+              "enum": ["pairwise_masks", "threshold_secret_sharing", "none"]
+            },
+            "mask_id": {
+              "type": "string",
+              "description": "Secure aggregation mask identifier"
+            }
+          }
+        }
+      }
+    },
+    "attestation": {
+      "type": "object",
+      "description": "Build and provenance attestation",
+      "required": ["sbom_hash", "model_hash"],
+      "properties": {
+        "sbom_hash": {
+          "type": "string",
+          "description": "SHA-256 of software bill of materials"
+        },
+        "model_hash": {
+          "type": "string",
+          "description": "SHA-256 of local model weights"
+        },
+        "build_provenance": {
+          "type": "string",
+          "description": "Build system provenance URI"
+        },
+        "tpm_quote": {
+          "type": "string",
+          "contentEncoding": "base64",
+          "description": "TPM attestation quote"
+        }
+      }
+    },
+    "signature": {
+      "type": "object",
+      "description": "Cryptographic signature",
+      "required": ["algorithm", "value"],
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["ECDSA-P384", "Ed25519"],
+          "description": "Signature algorithm"
+        },
+        "value": {
+          "type": "string",
+          "contentEncoding": "base64",
+          "description": "Base64-encoded signature"
+        },
+        "key_id": {
+          "type": "string",
+          "description": "Signing key identifier"
+        },
+        "certificate_chain": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "X.509 certificate chain (PEM-encoded)"
+        }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "description": "Transport routing metadata",
+      "properties": {
+        "channel": {
+          "type": "string",
+          "enum": ["CFLF-GRAD", "CFLF-MODEL", "CFLF-TELEM", "CFLF-SAFETY"],
+          "default": "CFLF-GRAD"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["low", "normal", "high"],
+          "default": "normal"
+        },
+        "ttl_hours": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 72,
+          "description": "Time-to-live in hours"
+        },
+        "preemptible": {
+          "type": "boolean",
+          "default": true,
+          "description": "Can be delayed for higher priority traffic"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

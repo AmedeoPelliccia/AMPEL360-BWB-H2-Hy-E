@@ -1,35 +1,31 @@
-# 23-95-40_FLEET_CORE — FLEET CORE (FAirCCC-F)
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 23-95-40 — Fleet Core (FAirCCC-F)
 
 ## Purpose
 
-Documentation and artifacts for the FAirCCC-F (FLEET CORE) in the FAirCCC architecture.
+The Fleet Core is the central hub of the FAirCCC infrastructure. It maintains the model registry, manages release candidates, and integrates with CAOS and DPP systems.
 
----
+## Responsibilities
 
-## Node Role
+| Function | Description |
+|----------|-------------|
+| **Registry** | Model version management |
+| **Release** | Produce release candidates |
+| **DPP Integration** | Digital Product Passport sync |
+| **CAOS Integration** | Channel orchestration |
 
-FAirCCC-F is a key component of the FAirCCC hierarchical architecture.
+## Interfaces
 
----
+- **Upstream:** Regional Nodes (23-95-30)
+- **Downstream:** Model distribution (CFLF-MODEL channel)
 
-## Scope
+## Integrations
 
-- TBD - To be defined by domain expert
-
----
+- CAOS (Collaborative Autonomous Operations System)
+- DPP (Digital Product Passport)
+- SATCOM for model distribution
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

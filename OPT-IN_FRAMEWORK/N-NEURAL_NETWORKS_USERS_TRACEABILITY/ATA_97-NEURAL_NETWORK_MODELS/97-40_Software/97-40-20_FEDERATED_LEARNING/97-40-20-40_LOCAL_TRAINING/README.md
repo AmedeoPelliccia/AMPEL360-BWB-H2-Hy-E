@@ -1,29 +1,27 @@
-# 97-40-20-40_LOCAL_TRAINING — LOCAL TRAINING
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 97-40-20-40 — Local Training
 
 ## Purpose
 
-Documentation and artifacts for LOCAL TRAINING in the CFLF-GRAD (Federated Learning) bucket.
+On-aircraft model training protocols and configurations.
 
----
+## Training Configuration
 
-## Scope
+| Parameter | Description |
+|-----------|-------------|
+| **Local Epochs** | Number of epochs per round |
+| **Batch Size** | Samples per batch |
+| **Learning Rate** | Local update step size |
+| **Data Retention** | Local data lifecycle |
 
-- TBD - To be defined by domain expert
+## Constraints
 
----
+- Limited compute resources
+- Battery/power considerations
+- Network availability windows
+- Privacy-first data handling
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27

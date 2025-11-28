@@ -1,0 +1,28 @@
+Parameter_ID,Name,Description,Unit,Range_Min,Range_Max,Nominal,Resolution,Source,Rate_Hz,Category,Safety_Critical
+NRG-P-001,HVDC_BUS_V,HVDC bus voltage,VDC,600,900,750,0.1,Voltage transducer,10,Electrical,Yes
+NRG-P-002,HVDC_BUS_I,HVDC bus current,A,0,300,100,0.1,Current transducer,10,Electrical,Yes
+NRG-P-003,HVDC_POWER,Calculated bus power,kW,0,250,80,0.1,Calculated,10,Electrical,No
+NRG-P-004,CH01_CURRENT,Channel 1 current (Battery TMS),A,0,80,40,0.1,Current transducer,10,Electrical,Yes
+NRG-P-005,CH02_CURRENT,Channel 2 current (CO2 Capture),A,0,50,25,0.1,Current transducer,10,Electrical,No
+NRG-P-006,CH03_CURRENT,Channel 3 current (Water System),A,0,20,8,0.1,Current transducer,10,Electrical,No
+NRG-P-007,CH04_CURRENT,Channel 4 current (Thermal Pumps),A,0,35,20,0.1,Current transducer,10,Electrical,No
+NRG-P-008,CH05_CURRENT,Channel 5 current (Controls 28V),A,0,200,150,0.1,Current transducer,10,Electrical,Yes
+NRG-P-010,BATTERY_SOC,Battery state of charge,%,0,100,80,0.1,BMS,1,Storage,Yes
+NRG-P-011,BATTERY_SOH,Battery state of health,%,0,100,98,0.1,BMS,0.1,Storage,No
+NRG-P-012,BATTERY_VOLTAGE,Battery pack voltage,VDC,600,850,750,0.1,BMS,10,Storage,Yes
+NRG-P-013,BATTERY_CURRENT,Battery pack current,A,-300,300,0,0.1,BMS,10,Storage,Yes
+NRG-P-014,BATTERY_TEMP_MAX,Maximum battery cell temperature,°C,-40,70,35,0.1,BMS,1,Storage,Yes
+NRG-P-015,BATTERY_TEMP_MIN,Minimum battery cell temperature,°C,-40,70,30,0.1,BMS,1,Storage,No
+NRG-P-020,DCDC01_PIN,DCDC-01 input power,kW,0,210,100,0.1,Calculated,10,Conversion,No
+NRG-P-021,DCDC01_POUT,DCDC-01 output power,kW,0,200,98,0.1,Calculated,10,Conversion,No
+NRG-P-022,DCDC01_EFF,DCDC-01 efficiency,%,0,100,98,0.1,Calculated,1,Conversion,No
+NRG-P-023,DCDC01_TEMP,DCDC-01 baseplate temperature,°C,-40,100,55,0.1,RTD,1,Conversion,Yes
+NRG-P-030,REGEN_POWER,Regeneration power available,kW,0,800,0,0.1,Calculated,10,Regeneration,No
+NRG-P-031,REGEN_ACCEPT,Regeneration power accepted,kW,0,800,0,0.1,Command,10,Regeneration,No
+NRG-P-032,REGEN_ENERGY,Cumulative regeneration energy,kWh,0,500,0,0.01,Calculated,1,Regeneration,No
+NRG-P-040,LOAD_TOTAL,Total ANCHORS load,kW,0,150,80,0.1,Calculated,10,Load,No
+NRG-P-041,LOAD_PRIORITY,Current load shed priority,Level,1,5,1,1,EMS,1,Load,No
+NRG-P-042,LOAD_MARGIN,Available power margin,kW,-50,100,70,0.1,Calculated,1,Load,No
+NRG-P-050,SYSTEM_EFF,Overall system efficiency,%,0,100,75,0.1,Calculated,0.1,Performance,No
+NRG-P-051,ENERGY_CONSUMED,Cumulative energy consumed,kWh,0,10000,0,0.01,Calculated,1,Performance,No
+NRG-P-052,ENERGY_RECOVERED,Cumulative energy recovered,kWh,0,5000,0,0.01,Calculated,1,Performance,No

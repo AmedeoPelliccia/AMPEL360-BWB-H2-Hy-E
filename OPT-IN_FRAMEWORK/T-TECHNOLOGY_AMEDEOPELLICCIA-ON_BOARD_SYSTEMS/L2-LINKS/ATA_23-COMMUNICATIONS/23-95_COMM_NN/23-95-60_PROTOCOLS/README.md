@@ -1,29 +1,27 @@
-# 23-95-60_PROTOCOLS — PROTOCOLS
-
-**Version:** 1.0  
-**Date:** 2025-11-27  
-**Status:** Draft
-
----
+# 23-95-60 — Protocols
 
 ## Purpose
 
-Documentation and artifacts for PROTOCOLS in the FAirCCC Communications Neural Network subsystem.
+This folder contains protocol specifications for the four CFLF channels.
 
----
+## Protocol Channels
 
-## Scope
+| Channel | Direction | Data Type | Safety |
+|---------|-----------|-----------|--------|
+| **CFLF-GRAD** | A→G→R→F | DP-masked gradients | Non-safety |
+| **CFLF-MODEL** | F→R→G→A | Trained models | Non-safety |
+| **CFLF-TELEM** | A→G→R→F | Anonymized telemetry | Non-safety |
+| **CFLF-SAFETY** | F→R→G→A | Safety models | DO-178C/ML |
 
-- TBD - To be defined by domain expert
+## Transport Characteristics
 
----
+- **GRAD:** Low-rate, best-effort, preemptible
+- **MODEL:** Medium-rate, guaranteed delivery
+- **TELEM:** Low-rate, sampled
+- **SAFETY:** High-priority, verified delivery
 
 ## Document Control
 
-- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
-- Status: **DRAFT** – Subject to human review and approval.
-- Human approver: _[to be completed]_.
-- Repository: `AMPEL360-BWB-H2-Hy-E`
-- Last AI update: 2025-11-27.
-
----
+- Standard: OPT-IN Framework v1.2
+- Status: Active
+- Last Updated: 2025-11-27
