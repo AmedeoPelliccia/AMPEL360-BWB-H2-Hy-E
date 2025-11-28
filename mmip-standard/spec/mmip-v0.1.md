@@ -409,7 +409,7 @@ This default can be overridden by:
         "text": "Formalize the MMIP standard"
       },
       "provenance": {
-        "source": "user",
+        "creator_type": "user",
         "timestamp": "2025-11-28T12:34:56Z"
       }
     }

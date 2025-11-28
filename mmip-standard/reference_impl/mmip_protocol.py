@@ -165,7 +165,7 @@ class Capsule:
 class Producer:
     """Information about the producer of an envelope."""
 
-    producer_id: str
+    id: str  # Maps to JSON schema field "id"
     role: str
     producer_type: Optional[ProducerType] = None
     name: Optional[str] = None
@@ -176,7 +176,7 @@ class Producer:
 class Integrity:
     """Integrity verification information."""
 
-    hash_value: Optional[str] = None
+    hash: Optional[str] = None  # Maps to JSON schema field "hash"
     signature: Optional[str] = None
     signed_by: Optional[str] = None
     signed_at: Optional[datetime] = None
