@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.io/schemas/57-10-90_wing_margin_event.schema.json",
+  "title": "Wing Margin Event",
+  "description": "Schema for wing margin exceedance events",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^EVT-57-[0-9]{8}-[0-9]{6}$",
+      "description": "Unique event identifier"
+    },
+    "aircraft_id": {
+      "type": "string",
+      "pattern": "^Q100-[0-9]{3}$",
+      "description": "Aircraft identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event timestamp (ISO 8601)"
+    },
+    "flight_id": {
+      "type": "string",
+      "description": "Flight identifier"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": ["margin_caution", "margin_warning", "limit_exceedance"],
+      "description": "Type of margin event"
+    },
+    "parameter": {
+      "type": "string",
+      "enum": ["speed", "mach", "g_positive", "g_negative", "aoa"],
+      "description": "Parameter that triggered the event"
+    },
+    "values": {
+      "type": "object",
+      "properties": {
+        "measured": {
+          "type": "number",
+          "description": "Measured value"
+        },
+        "limit": {
+          "type": "number",
+          "description": "Applicable limit"
+        },
+        "margin_pct": {
+          "type": "number",
+          "description": "Margin consumed (%)"
+        },
+        "duration_s": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Duration of event (seconds)"
+        }
+      },
+      "required": ["measured", "limit"]
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "altitude_ft": {
+          "type": "number",
+          "description": "Altitude at event"
+        },
+        "airspeed_kts": {
+          "type": "number",
+          "description": "Airspeed at event"
+        },
+        "mach": {
+          "type": "number",
+          "description": "Mach number at event"
+        },
+        "configuration": {
+          "type": "string",
+          "description": "Aircraft configuration"
+        }
+      }
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["info", "warning", "critical"],
+      "description": "Event severity"
+    }
+  },
+  "required": ["event_id", "aircraft_id", "timestamp", "event_type", "parameter", "values", "severity"]
+}
