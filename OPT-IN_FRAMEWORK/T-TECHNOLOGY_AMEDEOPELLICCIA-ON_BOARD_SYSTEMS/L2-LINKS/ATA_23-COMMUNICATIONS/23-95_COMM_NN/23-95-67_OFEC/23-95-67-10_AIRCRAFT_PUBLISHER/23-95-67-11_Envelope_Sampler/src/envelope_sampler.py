@@ -1,6 +1,6 @@
 """
 Envelope Sampler
-OFEC-60-60-10-10 - Aircraft Publisher
+OFEC-23-95-67-11 - Aircraft Publisher
 
 This module samples envelope analytics data at phase-appropriate rates.
 """

@@ -1,6 +1,6 @@
 """
 OFEC Authentication
-OFEC-60-60-40-10 - Security
+OFEC-23-95-67-41 - Security
 
 This module handles authentication for OFEC communications.
 """

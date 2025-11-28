@@ -1,6 +1,6 @@
 """
 Alert Processor
-OFEC-60-60-20-40 - Ground Receiver
+OFEC-23-95-67-24 - Ground Receiver
 
 This module processes envelope data and generates alerts.
 """

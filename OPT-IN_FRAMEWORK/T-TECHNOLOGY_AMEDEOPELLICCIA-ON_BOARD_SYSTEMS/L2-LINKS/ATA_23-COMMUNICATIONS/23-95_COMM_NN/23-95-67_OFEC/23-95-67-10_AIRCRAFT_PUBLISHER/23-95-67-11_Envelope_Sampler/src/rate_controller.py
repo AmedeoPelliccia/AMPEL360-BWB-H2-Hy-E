@@ -1,6 +1,6 @@
 """
 Rate Controller
-OFEC-60-60-10-10 - Aircraft Publisher
+OFEC-23-95-67-11 - Aircraft Publisher
 
 This module manages sampling rate based on flight phase and system state.
 """

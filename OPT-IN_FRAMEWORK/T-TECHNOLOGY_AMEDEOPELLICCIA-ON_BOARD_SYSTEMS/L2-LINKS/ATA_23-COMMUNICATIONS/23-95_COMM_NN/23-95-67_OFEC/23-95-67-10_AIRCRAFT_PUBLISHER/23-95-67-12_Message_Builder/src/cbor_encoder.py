@@ -1,6 +1,6 @@
 """
 CBOR Encoder
-OFEC-60-60-10-20 - Aircraft Publisher
+OFEC-23-95-67-12 - Aircraft Publisher
 
 This module handles CBOR encoding for OFEC messages.
 """

@@ -1,6 +1,6 @@
 """
 Message Builder
-OFEC-60-60-10-20 - Aircraft Publisher
+OFEC-23-95-67-12 - Aircraft Publisher
 
 This module constructs OFEC messages from envelope samples.
 """

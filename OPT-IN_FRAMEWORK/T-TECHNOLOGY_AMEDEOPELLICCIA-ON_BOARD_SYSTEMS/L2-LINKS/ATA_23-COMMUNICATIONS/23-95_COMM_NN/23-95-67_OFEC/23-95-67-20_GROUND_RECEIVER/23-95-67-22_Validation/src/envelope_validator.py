@@ -1,6 +1,6 @@
 """
 Envelope Validator
-OFEC-60-60-20-20 - Ground Receiver
+OFEC-23-95-67-22 - Ground Receiver
 
 This module validates decoded OFEC messages.
 """

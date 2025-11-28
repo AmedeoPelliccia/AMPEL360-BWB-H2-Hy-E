@@ -1,6 +1,6 @@
 """
 Phase-Aware Publisher
-OFEC-60-60-10-30 - Aircraft Publisher
+OFEC-23-95-67-13 - Aircraft Publisher
 
 This module publishes OFEC messages with phase-aware rate control.
 """

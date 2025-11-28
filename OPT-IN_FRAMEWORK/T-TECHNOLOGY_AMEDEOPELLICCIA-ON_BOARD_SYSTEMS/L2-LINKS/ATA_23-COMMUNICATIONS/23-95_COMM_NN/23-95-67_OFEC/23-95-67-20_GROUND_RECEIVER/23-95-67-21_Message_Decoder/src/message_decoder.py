@@ -1,6 +1,6 @@
 """
 Message Decoder
-OFEC-60-60-20-10 - Ground Receiver
+OFEC-23-95-67-21 - Ground Receiver
 
 This module decodes CBOR-encoded OFEC messages.
 """

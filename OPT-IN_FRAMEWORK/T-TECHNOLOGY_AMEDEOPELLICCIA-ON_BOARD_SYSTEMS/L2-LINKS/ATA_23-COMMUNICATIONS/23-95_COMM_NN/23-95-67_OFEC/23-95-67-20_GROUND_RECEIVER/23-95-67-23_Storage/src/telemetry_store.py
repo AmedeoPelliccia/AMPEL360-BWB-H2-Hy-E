@@ -1,6 +1,6 @@
 """
 Telemetry Store
-OFEC-60-60-20-30 - Ground Receiver
+OFEC-23-95-67-23 - Ground Receiver
 
 This module handles storage of validated OFEC telemetry data.
 """
