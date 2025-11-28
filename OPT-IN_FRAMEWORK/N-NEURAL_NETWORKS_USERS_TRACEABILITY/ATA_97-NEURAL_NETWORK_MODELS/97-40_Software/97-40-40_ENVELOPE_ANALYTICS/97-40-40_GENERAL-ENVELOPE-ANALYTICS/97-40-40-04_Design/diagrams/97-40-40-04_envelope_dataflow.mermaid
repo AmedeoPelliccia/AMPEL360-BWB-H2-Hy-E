@@ -1,0 +1,63 @@
+graph TD
+    subgraph Input["Data Acquisition"]
+        NAV[ATA 34 Navigation]
+        FC[ATA 27 Flight Controls]
+        H2[ATA 28 H₂ Fuel]
+        AF[ATA 22 Auto Flight]
+    end
+
+    subgraph Models["Envelope Models (97-40-40-30)"]
+        AERO[Aerodynamic Model]
+        STRUCT[Structural Model]
+        PROP[Propulsion Model]
+        H2M[H₂ Specific Model]
+    end
+
+    subgraph Calculation["Margin Calculation (97-40-40-10)"]
+        ALPHA[α Margin]
+        SPEED[Speed Margin]
+        LOAD[Load Factor]
+        ALT[Altitude Margin]
+        BANK[Bank Angle]
+    end
+
+    subgraph Advisory["Advisory Logic (97-40-40-20)"]
+        ENGINE[Advisory Engine]
+        TREND[Trend Analyzer]
+        EXCEED[Exceedance Detector]
+        RECOVER[Recovery Advisor]
+    end
+
+    subgraph Output["Output"]
+        OFEC[OFEC Protocol]
+        CAOS[CAOS Events]
+        DPP[DPP Records]
+    end
+
+    NAV --> ALPHA
+    NAV --> SPEED
+    NAV --> ALT
+    NAV --> BANK
+    FC --> LOAD
+    FC --> BANK
+    H2 --> H2M
+    AF --> ENGINE
+
+    AERO --> ALPHA
+    STRUCT --> LOAD
+    PROP --> SPEED
+    H2M --> ENGINE
+
+    ALPHA --> ENGINE
+    SPEED --> ENGINE
+    LOAD --> ENGINE
+    ALT --> ENGINE
+    BANK --> ENGINE
+
+    ENGINE --> TREND
+    ENGINE --> EXCEED
+    TREND --> RECOVER
+
+    ENGINE --> OFEC
+    EXCEED --> CAOS
+    TREND --> DPP

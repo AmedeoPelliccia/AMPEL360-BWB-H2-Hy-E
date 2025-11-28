@@ -1,0 +1,38 @@
+flowchart LR
+    subgraph Inputs["Input Parameters"]
+        AOA[Current α]
+        STALL[Stall α]
+        CONFIG[Configuration]
+    end
+
+    subgraph Model["Aerodynamic Model"]
+        LOOKUP[Limit Lookup]
+        INTERP[Interpolation]
+        ADJUST[Config Adjustment]
+    end
+
+    subgraph Calculation["Margin Calculation"]
+        DIFF[Compute Difference]
+        PCT[Compute Percentage]
+        VALID[Validate Range]
+    end
+
+    subgraph Output["Output"]
+        ABS[Absolute Margin]
+        REL[Relative Margin %]
+        STATUS[Margin Status]
+    end
+
+    AOA --> DIFF
+    STALL --> LOOKUP
+    CONFIG --> ADJUST
+
+    LOOKUP --> INTERP
+    INTERP --> ADJUST
+    ADJUST --> DIFF
+
+    DIFF --> ABS
+    DIFF --> PCT
+    ABS --> VALID
+    PCT --> REL
+    VALID --> STATUS

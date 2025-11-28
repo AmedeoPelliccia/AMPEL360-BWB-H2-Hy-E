@@ -1,0 +1,42 @@
+graph LR
+    subgraph Fleet["Fleet (F)"]
+        FC[Fleet Core]
+    end
+
+    subgraph Regional["Regional Hubs (R)"]
+        R1[Regional Hub 1]
+        R2[Regional Hub 2]
+        R3[Regional Hub 3]
+    end
+
+    subgraph Ground["Ground Stations (G)"]
+        G1[Ground Station 1]
+        G2[Ground Station 2]
+        G3[Ground Station 3]
+        G4[Ground Station 4]
+    end
+
+    subgraph Aircraft["Aircraft (A)"]
+        A1[Aircraft 1]
+        A2[Aircraft 2]
+        A3[Aircraft 3]
+        A4[Aircraft 4]
+        A5[Aircraft 5]
+        A6[Aircraft 6]
+    end
+
+    A1 --> G1
+    A2 --> G1
+    A3 --> G2
+    A4 --> G3
+    A5 --> G3
+    A6 --> G4
+
+    G1 --> R1
+    G2 --> R1
+    G3 --> R2
+    G4 --> R3
+
+    R1 --> FC
+    R2 --> FC
+    R3 --> FC

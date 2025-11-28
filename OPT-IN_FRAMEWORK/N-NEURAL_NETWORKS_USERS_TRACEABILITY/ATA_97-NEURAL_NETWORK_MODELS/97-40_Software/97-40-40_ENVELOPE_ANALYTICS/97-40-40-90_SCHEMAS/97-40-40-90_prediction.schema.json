@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/ofec/prediction.schema.json",
+  "title": "Prediction",
+  "description": "Predictive dynamics output",
+  "type": "object",
+  "required": ["prediction_id", "timestamp", "horizon_sec", "predictions"],
+  "properties": {
+    "prediction_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time when prediction was made"
+    },
+    "aircraft_id": {
+      "type": "string"
+    },
+    "horizon_sec": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 300,
+      "description": "Prediction horizon in seconds"
+    },
+    "predictions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "predicted_margin_pct": {
+            "type": "number"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "trend": {
+            "type": "string",
+            "enum": ["IMPROVING", "STABLE", "DEGRADING"]
+          },
+          "rate_per_sec": {
+            "type": "number"
+          },
+          "time_to_limit_sec": {
+            "type": "number",
+            "description": "Estimated time to reach limit (null if not approaching)"
+          }
+        },
+        "required": ["predicted_margin_pct", "confidence", "trend"]
+      }
+    },
+    "anomalies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parameter": { "type": "string" },
+          "type": { 
+            "type": "string",
+            "enum": ["UNUSUAL_TREND", "RAPID_CHANGE", "OUT_OF_PATTERN", "SENSOR_DRIFT"]
+          },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "model_info": {
+      "type": "object",
+      "properties": {
+        "model_version": { "type": "string" },
+        "algorithm": { "type": "string" },
+        "training_date": { "type": "string", "format": "date" }
+      }
+    }
+  }
+}

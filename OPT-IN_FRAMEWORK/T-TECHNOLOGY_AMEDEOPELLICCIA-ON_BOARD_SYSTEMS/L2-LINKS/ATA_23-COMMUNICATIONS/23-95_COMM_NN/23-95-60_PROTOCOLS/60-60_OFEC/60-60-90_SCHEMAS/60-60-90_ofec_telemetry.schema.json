@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/ofec/transport/ofec_telemetry.schema.json",
+  "title": "OFEC Telemetry Message",
+  "description": "Complete OFEC telemetry message for transport",
+  "type": "object",
+  "required": ["header", "payload", "signature"],
+  "properties": {
+    "header": {
+      "type": "object",
+      "properties": {
+        "message_id": { "type": "string", "format": "uuid" },
+        "aircraft_id": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "sequence": { "type": "integer", "minimum": 0 },
+        "priority": { "type": "string", "enum": ["LOW", "MEDIUM", "HIGH"] },
+        "protocol_version": { "type": "string" }
+      },
+      "required": ["message_id", "aircraft_id", "timestamp", "sequence", "protocol_version"]
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "envelope_state": { "$ref": "#/$defs/envelope_state" }
+      },
+      "required": ["envelope_state"]
+    },
+    "signature": {
+      "type": "object",
+      "properties": {
+        "algorithm": { "type": "string", "enum": ["HMAC-SHA256", "ECDSA-P256"] },
+        "value": { "type": "string" }
+      },
+      "required": ["algorithm", "value"]
+    }
+  },
+  "$defs": {
+    "envelope_state": {
+      "type": "object",
+      "description": "Core envelope state data. For full validation, reference the N-Axis schema at 97-40-40-90_SCHEMAS/envelope_state.schema.json",
+      "required": ["flight_phase", "margins", "advisory"],
+      "properties": {
+        "flight_phase": { 
+          "type": "string",
+          "enum": ["GROUND", "TAXI", "TAKEOFF", "CLIMB", "CRUISE", "DESCENT", "APPROACH", "LANDING"]
+        },
+        "margins": { 
+          "type": "object",
+          "description": "Margin data for all envelope parameters",
+          "required": ["alpha", "speed", "load_factor"],
+          "properties": {
+            "alpha": { "$ref": "#/$defs/margin_entry" },
+            "speed": { "$ref": "#/$defs/speed_margin" },
+            "load_factor": { "$ref": "#/$defs/load_margin" },
+            "altitude": { "$ref": "#/$defs/margin_entry" },
+            "bank_angle": { "$ref": "#/$defs/margin_entry" }
+          }
+        },
+        "h2_specific": { 
+          "type": "object",
+          "description": "H2-specific envelope constraints (optional)"
+        },
+        "advisory": { 
+          "type": "object",
+          "required": ["level"],
+          "properties": {
+            "level": { 
+              "type": "string",
+              "enum": ["NORMAL", "CAUTION", "WARNING", "CRITICAL"]
+            },
+            "active_advisories": { "type": "array" },
+            "trend": { 
+              "type": "string",
+              "enum": ["IMPROVING", "STABLE", "DEGRADING"]
+            }
+          }
+        }
+      }
+    },
+    "margin_entry": {
+      "type": "object",
+      "required": ["margin_pct"],
+      "properties": {
+        "current": { "type": "number" },
+        "limit": { "type": "number" },
+        "margin_pct": { "type": "number" }
+      }
+    },
+    "speed_margin": {
+      "type": "object",
+      "required": ["margin_low_pct", "margin_high_pct"],
+      "properties": {
+        "current_kts": { "type": "number" },
+        "vmin_kts": { "type": "number" },
+        "vmax_kts": { "type": "number" },
+        "margin_low_pct": { "type": "number" },
+        "margin_high_pct": { "type": "number" }
+      }
+    },
+    "load_margin": {
+      "type": "object",
+      "required": ["margin_positive_pct", "margin_negative_pct"],
+      "properties": {
+        "current_g": { "type": "number" },
+        "limit_positive_g": { "type": "number" },
+        "limit_negative_g": { "type": "number" },
+        "margin_positive_pct": { "type": "number" },
+        "margin_negative_pct": { "type": "number" }
+      }
+    }
+  }
+}
