@@ -1,0 +1,77 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# 97-40-20-10-101 — DP-SGD Profiles
+# Approved differential privacy configurations for CFLF-GRAD federated learning
+#
+# Document ID: 97-40-20-10-101_DP-SGD_Profiles
+# Version: 1.0
+# Date: 2025-11-27
+# Status: DRAFT
+
+profiles:
+  HIGH_PRIVACY:
+    description: "Maximum privacy protection for sensitive data"
+    clip_norm: 1.0
+    noise_multiplier: 1.5
+    max_steps_per_round: 100
+    target_epsilon: 1.0
+    target_delta: 1.0e-6
+    use_cases:
+      - passenger_telemetry
+      - crew_behavior_data
+      - operational_performance
+
+  BALANCED_PRIVACY:
+    description: "Balanced privacy-utility trade-off"
+    clip_norm: 1.0
+    noise_multiplier: 1.0
+    max_steps_per_round: 500
+    target_epsilon: 3.0
+    target_delta: 1.0e-5
+    use_cases:
+      - predictive_maintenance
+      - h2_efficiency_optimization
+      - route_optimization
+
+  RELAXED_PRIVACY:
+    description: "Relaxed privacy for non-sensitive data"
+    clip_norm: 2.0
+    noise_multiplier: 0.5
+    max_steps_per_round: 1000
+    target_epsilon: 8.0
+    target_delta: 1.0e-5
+    use_cases:
+      - environmental_sensors
+      - public_weather_data
+      - synthetic_simulation_data
+
+  SIMULATION_ONLY:
+    description: "No DP required - synthetic/simulated data only"
+    clip_norm: null
+    noise_multiplier: 0.0
+    max_steps_per_round: null
+    target_epsilon: null
+    target_delta: null
+    use_cases:
+      - synthetic_training_data
+      - simulation_benchmarks
+
+# Metadata
+metadata:
+  document_id: "97-40-20-10-101"
+  version: "1.0"
+  created: "2025-11-27"
+  author: "AMPEL360 Documentation WG"
+  status: "DRAFT"

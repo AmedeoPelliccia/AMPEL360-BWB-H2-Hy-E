@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/privacy-budget/run.json",
+  "title": "97-40-20-20-901 Privacy Budget Run Schema",
+  "description": "Schema for logging privacy budget usage per federated learning run",
+  "type": "object",
+  "required": [
+    "document_id",
+    "run_id",
+    "model_id",
+    "profile_id",
+    "budget_scope",
+    "consumption",
+    "timestamp"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "const": "97-40-20-20-901"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Unique identifier for this training run",
+      "pattern": "^RUN-[0-9A-Z]{8,}$"
+    },
+    "model_id": {
+      "type": "string",
+      "description": "Reference to model in DPP (ATA 97)"
+    },
+    "profile_id": {
+      "type": "string",
+      "description": "Privacy profile applied",
+      "enum": ["HIGH_PRIVACY", "BALANCED_PRIVACY", "RELAXED_PRIVACY", "NO_BUDGET"]
+    },
+    "budget_scope": {
+      "type": "object",
+      "description": "Scope of budget tracking",
+      "properties": {
+        "scope_type": {
+          "type": "string",
+          "enum": ["per_model", "per_aircraft", "per_fleet", "per_region"]
+        },
+        "scope_id": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string",
+          "enum": ["EU_GDPR", "US_FAA", "UK_CAA", "ASIA_PACIFIC", "SIMULATION"]
+        },
+        "rolling_window_days": {
+          "type": "integer"
+        }
+      },
+      "required": ["scope_type", "scope_id"]
+    },
+    "consumption": {
+      "type": "object",
+      "description": "Privacy consumed by this run",
+      "properties": {
+        "epsilon_spent": {
+          "type": "number",
+          "minimum": 0
+        },
+        "delta_spent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "epsilon_cumulative": {
+          "type": "number",
+          "minimum": 0
+        },
+        "epsilon_remaining": {
+          "type": "number"
+        },
+        "epsilon_max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "utilization_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": ["epsilon_spent", "epsilon_cumulative", "epsilon_max"]
+    },
+    "accountant": {
+      "type": "object",
+      "description": "Accountant configuration used",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["RDP", "MOMENTS", "GAUSSIAN", "zCDP"]
+        },
+        "orders": {
+          "type": "array",
+          "items": {"type": "number"}
+        }
+      }
+    },
+    "dp_mechanism": {
+      "type": "object",
+      "description": "Reference to DP mechanism used",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["DP-SGD", "LOCAL_DP", "SHUFFLE_DP"]
+        },
+        "config_ref": {
+          "type": "string",
+          "description": "Reference to mechanism config (e.g., 97-40-20-10-101)"
+        }
+      }
+    },
+    "alerts": {
+      "type": "array",
+      "description": "Alerts triggered by this run",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["WARNING", "HARD_STOP", "GOVERNANCE_REVIEW"]
+          },
+          "threshold": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "caos_event_id": {
+      "type": "string",
+      "description": "Reference to CAOS event if logged"
+    },
+    "dpp_reference": {
+      "type": "string",
+      "description": "Reference to DPP lifecycle entry"
+    }
+  }
+}

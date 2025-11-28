@@ -89,6 +89,33 @@ Each CUC package contains:
 
 ---
 
+## OPT-IN Framework Mapping
+
+CUC is the downstream complement to CFLF-GRAD. The FAirCCC system uses a dual-location OPT-IN architecture:
+
+### Dual-Location Structure
+
+| Axis | Location | Focus |
+|------|----------|-------|
+| **N-Axis** | `N-NEURAL_NETWORKS/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-30_MODEL_DEPLOYMENT/` | What to deploy |
+| **L2-LINKS** | `T-TECHNOLOGY/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/23-95-60_PROTOCOLS/60-50_CUC/` | How to install |
+
+### Separation of Concerns
+
+| Aspect | N-Axis (97-40-30) | L2-LINKS (23-95-60-50) |
+|--------|-------------------|------------------------|
+| **Content** | Bundle, safety case, governance | HSM signing, distribution, install |
+| **Schemas** | Bundle manifest schema | Transport envelope schema |
+
+### Related Documents
+
+* [CUC OPT-IN Structure Master Mapping](../../OPT-IN_FRAMEWORK/CUC-OPTIN-STRUCTURE.md)
+* [CFLF-GRAD OPT-IN Structure](../../OPT-IN_FRAMEWORK/CFLF-GRAD-OPTIN-STRUCTURE.md)
+* [97-40-30_MODEL_DEPLOYMENT README](../../OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-30_MODEL_DEPLOYMENT/README.md)
+* [23-95_COMM_NN README](../../OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/README.md)
+
+---
+
 *Note: This is a stub document. GenCCC will auto-link and expand this content based on the FAirCCC architecture specification.*
 
 ---
