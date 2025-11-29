@@ -1,0 +1,11 @@
+Hazard_ID,Title,Category,Severity,Probability,Phase,Source,Mitigations,Status,FHA_Reference,Requirements,Notes
+H-57-STR-01,Loss of wing structural integrity,Structural,Catastrophic,Extremely Improbable,All,FHA,Damage tolerance design; multiple load paths; scheduled inspections; SHM,Open,FHA-57-001,REQ-57-SAF-001,Primary structural hazard
+H-57-STR-02,Failure of wing-fuselage attachment,Structural,Catastrophic,Extremely Improbable,All,FHA,Redundant attachment points; inspections; load monitoring,Open,FHA-57-002,REQ-57-SAF-002,Critical interface
+H-57-STR-03,Failure of pylon attachment,Structural,Catastrophic,Extremely Improbable,All,FHA,Redundant attachment; inspections; fail-safe design,Open,FHA-57-003,REQ-57-SAF-003,Propulsion interface
+H-57-STR-04,Undetected fatigue damage leading to failure,Structural,Catastrophic,Extremely Improbable,All,FHA,Inspection program; SHM; damage tolerance,Open,FHA-57-004,REQ-57-SAF-004,Detection-based mitigation
+H-57-AER-01,Wing flutter within flight envelope,Aeroelastic,Catastrophic,Extremely Improbable,Cruise,FHA,Flutter analysis; flutter margin >15% VD; mass balance,Open,FHA-57-005,REQ-57-SAF-005,Dynamic aeroelastic hazard
+H-57-AER-02,Aileron control reversal,Aeroelastic,Hazardous,Extremely Remote,High speed,FHA,Stiffness design; reversal speed analysis,Open,FHA-57-006,REQ-57-SAF-006,Static aeroelastic hazard
+H-57-CTL-01,Loss of aileron function,Control Surface,Hazardous,Extremely Remote,All,FHA,Redundant actuation; spoilers backup,Open,FHA-57-007,REQ-57-SAF-007,Roll control hazard
+H-57-CTL-02,Asymmetric flap deployment,Control Surface,Hazardous,Extremely Remote,Takeoff Landing,FHA,Symmetric deployment monitoring; position sensors,Open,FHA-57-008,REQ-57-SAF-008,High lift hazard
+H-57-FUE-01,Fuel tank structural failure,Fuel,Catastrophic,Extremely Improbable,All,FHA,Integral tank design; pressure relief; inspections,Open,FHA-57-009,REQ-57-SAF-009,Fuel containment hazard
+H-57-ICE-01,Loss of ice protection leading to unsafe ice accumulation,Ice Protection,Hazardous,Extremely Remote,Icing conditions,FHA,Redundant ice protection; monitoring; operational limits,Open,FHA-57-010,REQ-57-SAF-010,Ice protection hazard
