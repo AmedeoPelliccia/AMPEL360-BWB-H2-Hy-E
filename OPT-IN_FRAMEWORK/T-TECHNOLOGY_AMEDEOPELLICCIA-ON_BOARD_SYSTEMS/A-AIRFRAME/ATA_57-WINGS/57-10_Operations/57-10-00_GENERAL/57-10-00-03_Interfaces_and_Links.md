@@ -9,7 +9,7 @@ that interface with the Wing Operations (ATA 57-10) chapter.
 
 | Reference | Description |
 |-----------|-------------|
-| [57-00_WINGS_GENERAL](../../57-00_GENERAL/) | Source of truth for all lifecycle aspects (safety, requirements, design, certification) |
+| [57-00_GENERAL](../../57-00_GENERAL/) | Source of truth for all lifecycle aspects (safety, requirements, design, certification) |
 
 ## Telemetry and Data Flows
 

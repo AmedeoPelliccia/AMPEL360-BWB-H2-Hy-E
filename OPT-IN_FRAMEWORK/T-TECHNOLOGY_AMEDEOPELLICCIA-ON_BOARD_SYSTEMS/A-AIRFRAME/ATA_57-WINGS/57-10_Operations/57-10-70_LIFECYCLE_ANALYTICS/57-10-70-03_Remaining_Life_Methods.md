@@ -103,7 +103,7 @@ Where:
 ## References
 
 - [57-10-70-01_Usage_Index_Definition](./57-10-70-01_Usage_Index_Definition.md)
-- [57-00_WINGS_GENERAL](../../57-00_GENERAL/) (design life data)
+- [57-00_GENERAL](../../57-00_GENERAL/) (design life data)
 
 ---
 

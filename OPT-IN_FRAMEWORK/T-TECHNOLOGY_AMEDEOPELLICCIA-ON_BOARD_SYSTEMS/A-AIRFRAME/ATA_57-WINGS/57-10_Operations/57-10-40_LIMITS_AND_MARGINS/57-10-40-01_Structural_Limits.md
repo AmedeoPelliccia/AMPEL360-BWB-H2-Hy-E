@@ -61,7 +61,7 @@ limits, operational limits, and limit margins.
 ## References
 
 - [57-10-40-02_Operational_Margins](./57-10-40-02_Operational_Margins.md)
-- [57-00_WINGS_GENERAL](../../57-00_GENERAL/) (detailed certification data)
+- [57-00_GENERAL](../../57-00_GENERAL/) (detailed certification data)
 
 ---
 

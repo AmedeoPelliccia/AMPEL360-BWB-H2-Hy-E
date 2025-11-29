@@ -61,7 +61,7 @@ CFD-derived data feeds into:
 ## References
 
 - [57-10-50-02_Flight_Test_Correlation](./57-10-50-02_Flight_Test_Correlation.md)
-- [57-00_WINGS_GENERAL](../../57-00_GENERAL/) (design aerodynamics)
+- [57-00_GENERAL](../../57-00_GENERAL/) (design aerodynamics)
 
 ---
 

@@ -6,7 +6,7 @@ Provide a lean, operations-focused view of ATA 57 **WING OPERATIONS**,
 covering in-service usage, inspection, repair, SHM, analytics, and CAOS integration.
 
 Lifecycle aspects (safety, requirements, design, certification) are
-owned by **[57-00_WINGS_GENERAL](../57-00_GENERAL/)** and are NOT duplicated here.
+owned by **[57-00_GENERAL](../57-00_GENERAL/)** and are NOT duplicated here.
 
 ## Directory Structure
 
@@ -81,7 +81,7 @@ Items within this bucket follow the pattern:
 
 | Reference | Description |
 |-----------|-------------|
-| [57-00_WINGS_GENERAL](../57-00_GENERAL/) | Lifecycle skeleton (source of truth) |
+| [57-00_GENERAL](../57-00_GENERAL/) | Lifecycle skeleton (source of truth) |
 | 23-95-60-60_OFEC | Envelope telemetry transport |
 | 97-40-40_ENVELOPE_ANALYTICS | Envelope margin & advisory NN |
 | CAOS Framework | Cognitive Aerospace Operations System |

@@ -73,7 +73,7 @@ Based on flight test correlation, the following model updates apply:
 ## References
 
 - [57-10-50-01_CFD_Baseline_Models](./57-10-50-01_CFD_Baseline_Models.md)
-- [57-00_WINGS_GENERAL](../../57-00_GENERAL/) (V&V records)
+- [57-00_GENERAL](../../57-00_GENERAL/) (V&V records)
 
 ---
 
