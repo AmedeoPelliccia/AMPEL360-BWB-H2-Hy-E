@@ -1,0 +1,18 @@
+flowchart TD
+    subgraph Mission Profile
+        A[Taxi] --> B[Takeoff]
+        B --> C[Climb]
+        C --> D[Cruise]
+        D --> E[Descent]
+        E --> F[Approach]
+        F --> G[Landing]
+        G --> H[Taxi]
+    end
+
+    subgraph Load Factors
+        B -.-> |1.0-1.3 G| LF1[Takeoff Loads]
+        C -.-> |1.0-1.2 G| LF2[Climb Loads]
+        D -.-> |0.95-1.05 G| LF3[Cruise Loads]
+        E -.-> |0.9-1.1 G| LF4[Descent Loads]
+        F -.-> |1.0-1.3 G| LF5[Approach Loads]
+    end

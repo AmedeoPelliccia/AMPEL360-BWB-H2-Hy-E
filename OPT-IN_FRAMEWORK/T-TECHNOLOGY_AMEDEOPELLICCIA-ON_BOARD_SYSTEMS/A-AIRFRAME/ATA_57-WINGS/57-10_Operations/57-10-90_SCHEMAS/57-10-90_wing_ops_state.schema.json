@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.io/schemas/57-10-90_wing_ops_state.schema.json",
+  "title": "Wing Operational State",
+  "description": "Schema for wing operational state messages",
+  "type": "object",
+  "properties": {
+    "aircraft_id": {
+      "type": "string",
+      "pattern": "^Q100-[0-9]{3}$",
+      "description": "Aircraft identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Message timestamp (ISO 8601)"
+    },
+    "flight_phase": {
+      "type": "string",
+      "enum": ["ground", "taxi", "takeoff", "climb", "cruise", "descent", "approach", "landing"],
+      "description": "Current flight phase"
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "flaps": {
+          "type": "string",
+          "enum": ["0", "1", "2", "full"],
+          "description": "Flap setting"
+        },
+        "slats": {
+          "type": "string",
+          "enum": ["retracted", "extended"],
+          "description": "Slat position"
+        },
+        "spoilers": {
+          "type": "string",
+          "enum": ["retracted", "armed", "deployed"],
+          "description": "Spoiler state"
+        }
+      },
+      "required": ["flaps", "slats", "spoilers"]
+    },
+    "loads": {
+      "type": "object",
+      "properties": {
+        "nz": {
+          "type": "number",
+          "description": "Normal load factor (G)"
+        },
+        "root_bending_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 150,
+          "description": "Root bending as % of limit"
+        }
+      },
+      "required": ["nz"]
+    },
+    "margins": {
+      "type": "object",
+      "properties": {
+        "speed_margin_kts": {
+          "type": "number",
+          "description": "Speed margin to VMO (knots)"
+        },
+        "mach_margin": {
+          "type": "number",
+          "description": "Mach margin to MMO"
+        },
+        "g_margin": {
+          "type": "number",
+          "description": "G margin to limit"
+        }
+      }
+    },
+    "shm_status": {
+      "type": "string",
+      "enum": ["normal", "advisory", "caution", "warning"],
+      "description": "Overall SHM status"
+    }
+  },
+  "required": ["aircraft_id", "timestamp", "flight_phase", "configuration"]
+}
