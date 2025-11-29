@@ -38,6 +38,22 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Interface Cross-References
+
+| ATA Chapter | Description | Status |
+|-------------|-------------|--------|
+| [ATA 28](../../../../../../E2-ENERGY/ATA_28-FUEL/README.md) | Fuel | Interface specification |
+| [ATA 73](../../../../../../P-PROPULSION/ATA_73-ENGINE_FUEL_AND_CONTROL/README.md) | Engine Fuel and Control | Interface specification |
+
+## Internal Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-05_Interfaces](../../../../57-00_GENERAL/57-00-05_Interfaces/README.md) | Wing-level interfaces | Global interface control |
+| [57-26-01_Overview](./57-26-01_Overview.md) | Overview | Subsystem overview |
+| [57-26-04_Design](./57-26-04_Design.md) | Design | Design specifications |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

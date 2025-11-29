@@ -38,6 +38,22 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Engineering Standards Reference
+
+Engineering analysis follows:
+
+- [ARP4754A](https://www.sae.org/standards/content/arp4754a/) — Guidelines for Development of Civil Aircraft and Systems
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) — Certification Specifications
+
+## Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-06_Engineering](../../../../57-00_GENERAL/57-00-06_Engineering/README.md) | Wing-level engineering | Global engineering analysis |
+| [57-25-04_Design](./57-25-04_Design.md) | Design | Design specifications |
+| [57-25-07_V_AND_V](./57-25-07_V_AND_V.md) | V&V | Verification evidence |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

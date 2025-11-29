@@ -38,6 +38,23 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Requirements Standards Reference
+
+Requirements management follows:
+
+- [ARP4754A](https://www.sae.org/standards/content/arp4754a/) — Guidelines for Development of Civil Aircraft and Systems
+- [DO-178C](https://www.rtca.org/products/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/) — Software Considerations (for software-related requirements)
+
+## Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-03_Requirements](../../../../57-00_GENERAL/57-00-03_Requirements/README.md) | Wing-level requirements | Global requirements |
+| [57-21-02_Safety](./57-21-02_Safety.md) | Safety | Safety requirements |
+| [57-21-04_Design](./57-21-04_Design.md) | Design | Design specifications |
+| [57-21-07_V_AND_V](./57-21-07_V_AND_V.md) | V&V | Verification matrix |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

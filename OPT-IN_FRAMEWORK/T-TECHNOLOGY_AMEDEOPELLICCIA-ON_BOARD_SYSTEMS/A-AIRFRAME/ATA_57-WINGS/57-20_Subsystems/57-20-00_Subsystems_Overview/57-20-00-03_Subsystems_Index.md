@@ -63,6 +63,19 @@ This document provides a comprehensive index of all physical subsystems within t
 
 ---
 
+
+## Applicable Standards and Regulations
+
+| Standard | Description | Link |
+|----------|-------------|------|
+| [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | EASA Certification Specifications for Large Aeroplanes | EASA |
+| [14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) | FAA Airworthiness Standards: Transport Category Airplanes | FAA |
+| [DO-178C](https://www.rtca.org/products/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/) | Software Considerations in Airborne Systems | RTCA |
+| [DO-254](https://www.rtca.org/products/do-254/) | Design Assurance Guidance for Airborne Electronic Hardware | RTCA |
+| [ARP4754A](https://www.sae.org/standards/content/arp4754a/) | Guidelines for Development of Civil Aircraft and Systems | SAE |
+| [ARP4761](https://www.sae.org/standards/content/arp4761/) | Guidelines for Safety Assessment of Civil Airborne Systems | SAE |
+| [Part 21](https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-7482012) | EASA Production Organization Approval | EASA |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

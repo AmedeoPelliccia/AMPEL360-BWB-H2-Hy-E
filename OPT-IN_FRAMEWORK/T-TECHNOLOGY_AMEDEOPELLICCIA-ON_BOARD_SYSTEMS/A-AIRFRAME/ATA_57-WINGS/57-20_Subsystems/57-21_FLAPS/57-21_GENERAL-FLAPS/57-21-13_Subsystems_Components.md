@@ -38,6 +38,22 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Component Standards Reference
+
+Component documentation follows:
+
+- [ARP4754A](https://www.sae.org/standards/content/arp4754a/) — System/Component Hierarchy
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) — Component Requirements
+
+## Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-13_Subsystems_Components](../../../../57-00_GENERAL/57-00-13_Subsystems_Components/README.md) | Wing-level components | Global component breakdown |
+| [57-21-04_Design](./57-21-04_Design.md) | Design | Design specifications |
+| [57-21-05_Interfaces](./57-21-05_Interfaces.md) | Interfaces | Interface control |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

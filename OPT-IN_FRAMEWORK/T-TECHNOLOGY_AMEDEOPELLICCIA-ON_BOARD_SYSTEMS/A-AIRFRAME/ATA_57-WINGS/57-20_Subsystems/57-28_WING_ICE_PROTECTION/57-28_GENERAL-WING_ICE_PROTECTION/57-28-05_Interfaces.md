@@ -38,6 +38,23 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Interface Cross-References
+
+| ATA Chapter | Description | Status |
+|-------------|-------------|--------|
+| [ATA 30](../../../../../../E1-ENVIRONMENT/ATA_30-ICE_AND_RAIN_PROTECTION/README.md) | Ice and Rain Protection | Interface specification |
+| [ATA 21](../../../../../../E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING/README.md) | Air Conditioning | Interface specification |
+| [ATA 36](../../../../../../E1-ENVIRONMENT/ATA_36-PNEUMATIC/README.md) | Pneumatic | Interface specification |
+
+## Internal Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-05_Interfaces](../../../../57-00_GENERAL/57-00-05_Interfaces/README.md) | Wing-level interfaces | Global interface control |
+| [57-28-01_Overview](./57-28-01_Overview.md) | Overview | Subsystem overview |
+| [57-28-04_Design](./57-28-04_Design.md) | Design | Design specifications |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

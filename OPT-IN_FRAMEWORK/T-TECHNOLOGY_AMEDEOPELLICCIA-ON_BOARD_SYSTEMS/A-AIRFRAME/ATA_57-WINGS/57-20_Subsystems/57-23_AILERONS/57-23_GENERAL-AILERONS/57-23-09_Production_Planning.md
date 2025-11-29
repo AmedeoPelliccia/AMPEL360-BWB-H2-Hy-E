@@ -38,6 +38,22 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Production Standards Reference
+
+Production planning follows:
+
+- [Part 21](https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-7482012) — EASA Production Organization Approval
+- [AS9100D](https://www.sae.org/standards/content/as9100d/) — Quality Management Systems
+
+## Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-09_Production_Planning](../../../../57-00_GENERAL/57-00-09_Production_Planning/README.md) | Wing-level production | Global production plan |
+| [57-23-04_Design](./57-23-04_Design.md) | Design | Design specifications |
+| [57-23-08_Prototyping](./57-23-08_Prototyping.md) | Prototyping | Prototype results |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

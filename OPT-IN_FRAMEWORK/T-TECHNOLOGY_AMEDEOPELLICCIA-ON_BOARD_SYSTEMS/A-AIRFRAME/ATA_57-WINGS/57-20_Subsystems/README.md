@@ -112,6 +112,17 @@ Each subsystem follows the canonical lifecycle:
 
 ---
 
+
+## Applicable Standards and Regulations
+
+| Standard | Description | Authority |
+|----------|-------------|-----------|
+| [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | Certification Specifications for Large Aeroplanes | EASA |
+| [14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) | Airworthiness Standards: Transport Category Airplanes | FAA |
+| [DO-178C](https://www.rtca.org/products/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/) | Software Considerations in Airborne Systems | RTCA |
+| [ARP4754A](https://www.sae.org/standards/content/arp4754a/) | Guidelines for Development of Civil Aircraft and Systems | SAE |
+| [ARP4761](https://www.sae.org/standards/content/arp4761/) | Guidelines for Safety Assessment | SAE |
+
 ## Document Control
 
 - **Standard**: OPT-IN Framework v1.2

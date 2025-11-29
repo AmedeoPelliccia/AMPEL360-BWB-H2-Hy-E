@@ -38,6 +38,22 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Operational Standards Reference
+
+Operational standards follow:
+
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) — Operational Requirements
+- [Part 21](https://www.easa.europa.eu/en/document-library/regulations/commission-regulation-eu-no-7482012) — Continued Airworthiness
+
+## Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-14_Ops_Std_Sustain](../../../../57-00_GENERAL/57-00-14_Ops_Std_Sustain/README.md) | Wing-level operations | Global operational standards |
+| [57-22-12_Services](./57-22-12_Services.md) | Services | Maintenance procedures |
+| [57-22-10_Certification](./57-22-10_Certification.md) | Certification | Certification requirements |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

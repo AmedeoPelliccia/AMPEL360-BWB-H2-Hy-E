@@ -38,6 +38,22 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Configuration Management Standards Reference
+
+Configuration management follows:
+
+- [DO-178C](https://www.rtca.org/products/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/) — Software Configuration Management
+- [ARP4754A](https://www.sae.org/standards/content/arp4754a/) — Configuration Management
+
+## Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-11_EIS_Versions_Tags](../../../../57-00_GENERAL/57-00-11_EIS_Versions_Tags/README.md) | Wing-level CM | Global configuration management |
+| [57-23-10_Certification](./57-23-10_Certification.md) | Certification | Certification baselines |
+| [57-23-04_Design](./57-23-04_Design.md) | Design | Design versions |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

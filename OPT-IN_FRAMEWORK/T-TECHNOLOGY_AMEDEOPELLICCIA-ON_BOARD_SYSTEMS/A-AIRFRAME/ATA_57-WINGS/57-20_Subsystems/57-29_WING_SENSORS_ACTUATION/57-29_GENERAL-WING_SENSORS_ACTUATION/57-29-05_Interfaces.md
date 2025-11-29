@@ -38,6 +38,23 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Interface Cross-References
+
+| ATA Chapter | Description | Status |
+|-------------|-------------|--------|
+| [ATA 22](../../../../../../L1-LOGICS/ATA_22-AUTO_FLIGHT/README.md) | Auto Flight | Interface specification |
+| [ATA 27](../../../../../../M-MECHANICS/ATA_27-FLIGHT_CONTROLS/README.md) | Flight Controls | Interface specification |
+| [ATA 31](../../../../../../I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_31-INSTRUMENTS/README.md) | Instruments | Interface specification |
+
+## Internal Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-05_Interfaces](../../../../57-00_GENERAL/57-00-05_Interfaces/README.md) | Wing-level interfaces | Global interface control |
+| [57-29-01_Overview](./57-29-01_Overview.md) | Overview | Subsystem overview |
+| [57-29-04_Design](./57-29-04_Design.md) | Design | Design specifications |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

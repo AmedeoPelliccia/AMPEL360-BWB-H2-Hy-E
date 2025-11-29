@@ -38,6 +38,30 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Cross-References
+
+### Internal Documentation
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-01_Overview](../../../../57-00_GENERAL/57-00-01_Overview/README.md) | Wing-level overview | Global wing governance |
+| [57-20-00-01_Overview](../../57-20-00_Subsystems_Overview/57-20-00-01_Overview.md) | Subsystems overview | 57-20 layer description |
+| [57-21-02_Safety](./57-21-02_Safety.md) | Safety | Safety framework |
+| [57-21-03_Requirements](./57-21-03_Requirements.md) | Requirements | Requirements traceability |
+| [57-21-10_Certification](./57-21-10_Certification.md) | Certification | Certification evidence |
+
+
+## Applicable Standards and Regulations
+
+| Standard | Description | Link |
+|----------|-------------|------|
+| [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | EASA Certification Specifications for Large Aeroplanes | EASA |
+| [14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) | FAA Airworthiness Standards: Transport Category Airplanes | FAA |
+| [DO-178C](https://www.rtca.org/products/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/) | Software Considerations in Airborne Systems | RTCA |
+| [ARP4754A](https://www.sae.org/standards/content/arp4754a/) | Guidelines for Development of Civil Aircraft and Systems | SAE |
+| [ARP4761](https://www.sae.org/standards/content/arp4761/) | Guidelines for Safety Assessment of Civil Airborne Systems | SAE |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

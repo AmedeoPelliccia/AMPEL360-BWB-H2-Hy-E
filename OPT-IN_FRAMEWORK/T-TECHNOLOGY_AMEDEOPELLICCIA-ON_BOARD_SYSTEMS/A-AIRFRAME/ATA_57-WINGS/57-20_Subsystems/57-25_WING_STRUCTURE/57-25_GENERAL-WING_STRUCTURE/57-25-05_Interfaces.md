@@ -38,6 +38,23 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Interface Cross-References
+
+| ATA Chapter | Description | Status |
+|-------------|-------------|--------|
+| [ATA 53](../../../../../../A-AIRFRAME/ATA_53-FUSELAGE/README.md) | Fuselage | Interface specification |
+| [ATA 55](../../../../../../A-AIRFRAME/ATA_55-STABILIZERS/README.md) | Stabilizers | Interface specification |
+| [ATA 51](../../../../../../A-AIRFRAME/ATA_51-STANDARD_PRACTICES/README.md) | Standard Practices | Interface specification |
+
+## Internal Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-05_Interfaces](../../../../57-00_GENERAL/57-00-05_Interfaces/README.md) | Wing-level interfaces | Global interface control |
+| [57-25-01_Overview](./57-25-01_Overview.md) | Overview | Subsystem overview |
+| [57-25-04_Design](./57-25-04_Design.md) | Design | Design specifications |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.

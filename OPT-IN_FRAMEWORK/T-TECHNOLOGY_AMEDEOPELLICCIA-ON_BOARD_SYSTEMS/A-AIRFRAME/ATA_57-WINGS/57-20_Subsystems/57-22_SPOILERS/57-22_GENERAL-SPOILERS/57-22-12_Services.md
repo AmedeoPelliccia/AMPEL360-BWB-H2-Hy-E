@@ -38,6 +38,22 @@ TBD - To be completed by domain expert.
 
 ---
 
+
+## Maintenance Standards Reference
+
+Maintenance and service documentation follows:
+
+- [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) — Continued Airworthiness
+- [ATA iSpec 2200](https://publications.airlines.org/CommerceProductDetail.aspx?Product=268) — Information Standards
+
+## Cross-References
+
+| Document | Path | Description |
+|----------|------|-------------|
+| [57-00-12_Services](../../../../57-00_GENERAL/57-00-12_Services/README.md) | Wing-level services | Global maintenance plan |
+| [57-22-14_Ops_Std_Sustain](./57-22-14_Ops_Std_Sustain.md) | Operations | Operational standards |
+| [57-22-10_Certification](./57-22-10_Certification.md) | Certification | Certification requirements |
+
 ## Document Control
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
