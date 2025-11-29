@@ -167,34 +167,6 @@ assets:
     version: "0.1.0"
     checksum: "<filled-by-CI>"
 
-  # MODELS - FEM
-  - id: "57-00-04-M020"
-    category: "MODL"
-    title: "Wing FEM Model"
-    source: "ASSETS/MODELS/FEM/57-00-04-M020_Wing_FEM.inp"
-    exports: []
-    links:
-      reqs: ["REQ-57-00-004"]
-      odd: []
-      safety: ["HAZ-57-001"]
-    status: "Draft"
-    version: "0.1.0"
-    checksum: "<filled-by-CI>"
-
-  # MODELS - CFD
-  - id: "57-00-04-M040"
-    category: "MODL"
-    title: "Wing CFD Surface Mesh"
-    source: "ASSETS/MODELS/CFD/57-00-04-M040_Wing_SurfaceMesh.msh"
-    exports: []
-    links:
-      reqs: ["REQ-57-00-005"]
-      odd: []
-      safety: []
-    status: "Draft"
-    version: "0.1.0"
-    checksum: "<filled-by-CI>"
-
   # PARTS
   - id: "57-00-04-P001"
     category: "PART"

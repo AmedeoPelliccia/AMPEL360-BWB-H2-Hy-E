@@ -51,12 +51,6 @@ This folder is part of the **57-00_GENERAL** layer, which provides governance an
 │   │   ├── GEOMETRY/
 │   │   │   ├── 57-00-04-M001_Wing_Geometry.step
 │   │   │   └── .gitkeep
-│   │   ├── FEM/
-│   │   │   ├── 57-00-04-M020_Wing_FEM.inp
-│   │   │   └── .gitkeep
-│   │   ├── CFD/
-│   │   │   ├── 57-00-04-M040_Wing_SurfaceMesh.msh
-│   │   │   └── .gitkeep
 │   │   └── .gitkeep
 │   │
 │   ├── PARTS/
@@ -98,7 +92,7 @@ This folder should contain:
 | **DRAWINGS** | Engineering drawings | `.dwg`, `.dxf`, `.pdf` |
 | **EXPORTS** | Rendered outputs | `.png`, `.pdf`, `.expt` |
 | **INSTALLATIONS** | Installation layouts, diagrams, BIM/CAD models | `.png`, `.mermaid`, `.bim` |
-| **MODELS** | Geometry, FEM, and CFD models | `.step`, `.inp`, `.msh` |
+| **MODELS** | Geometry models | `.step`, `.stp` |
 | **PARTS** | Individual component models | `.step`, `.stp` |
 | **PRODUCTS** | Product-level documentation | `.pdf`, `.md` |
 | **TEMPLATES** | CAD and documentation templates | `.dwt`, `.md` |

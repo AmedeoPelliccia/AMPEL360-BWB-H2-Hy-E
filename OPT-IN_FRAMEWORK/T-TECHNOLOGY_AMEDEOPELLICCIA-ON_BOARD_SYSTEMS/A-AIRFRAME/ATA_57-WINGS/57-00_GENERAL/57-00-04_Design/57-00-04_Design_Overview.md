@@ -44,7 +44,7 @@ Design assets are organized in the `ASSETS/` folder following the AMPEL360 stand
 - **DRAWINGS/** — Engineering drawings (DWG, DXF)
 - **EXPORTS/** — Rendered outputs (PNG, PDF, EXPT)
 - **INSTALLATIONS/** — Installation layouts and diagrams
-- **MODELS/** — Geometry, FEM, and CFD models
+- **MODELS/** — Geometry models (FEM and CFD models are in Engineering folder)
 - **PARTS/** — Individual component models
 - **PRODUCTS/** — Product-level documentation
 - **TEMPLATES/** — CAD and documentation templates
