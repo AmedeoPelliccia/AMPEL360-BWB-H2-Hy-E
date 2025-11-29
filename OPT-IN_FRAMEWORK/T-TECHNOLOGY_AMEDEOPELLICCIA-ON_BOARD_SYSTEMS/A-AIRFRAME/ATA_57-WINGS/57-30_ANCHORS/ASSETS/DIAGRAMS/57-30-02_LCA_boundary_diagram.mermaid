@@ -1,0 +1,94 @@
+%% 57-30-02 — LCA Boundary Diagram
+%% ATA Chapter: 57 – Wings
+%% Bucket: 57-30_ANCHORS
+
+flowchart LR
+    subgraph CRADLE["Cradle (Raw Materials)"]
+        direction TB
+        RAW1["Carbon Fiber<br/>Production"]
+        RAW2["Aluminum<br/>Extraction"]
+        RAW3["Titanium<br/>Mining"]
+        RAW4["Epoxy Resin<br/>Synthesis"]
+    end
+
+    subgraph GATE["Manufacturing (Gate)"]
+        direction TB
+        MFG1["Prepreg<br/>Production"]
+        MFG2["Layup &<br/>Autoclave"]
+        MFG3["Machining &<br/>Assembly"]
+        MFG4["Quality Control<br/>& Testing"]
+    end
+
+    subgraph USE["Use Phase"]
+        direction TB
+        OPS1["Flight<br/>Operations"]
+        OPS2["Scheduled<br/>Maintenance"]
+        OPS3["Unscheduled<br/>Repairs"]
+        OPS4["Component<br/>Replacement"]
+    end
+
+    subgraph EOL["End of Life"]
+        direction TB
+        EOL1["Disassembly"]
+        EOL2["Material<br/>Sorting"]
+        EOL3["Recycling<br/>Processing"]
+        EOL4["Disposal /<br/>Landfill"]
+    end
+
+    subgraph CIRCULAR["Circular Flows"]
+        direction TB
+        REC1["Reclaimed<br/>Carbon Fiber"]
+        REC2["Recycled<br/>Aluminum"]
+        REC3["Component<br/>Re-Use"]
+    end
+
+    %% Main lifecycle flow
+    RAW1 --> MFG1
+    RAW2 --> MFG3
+    RAW3 --> MFG3
+    RAW4 --> MFG1
+    
+    MFG1 --> MFG2
+    MFG2 --> MFG3
+    MFG3 --> MFG4
+    
+    MFG4 --> OPS1
+    OPS1 --> OPS2
+    OPS2 --> OPS3
+    OPS3 --> OPS4
+    
+    OPS4 --> EOL1
+    EOL1 --> EOL2
+    EOL2 --> EOL3
+    EOL2 --> EOL4
+
+    %% Circular feedback
+    EOL3 --> REC1
+    EOL3 --> REC2
+    EOL1 --> REC3
+    
+    REC1 -.-> MFG1
+    REC2 -.-> MFG3
+    REC3 -.-> OPS4
+
+    %% LCA Boundary marker
+    subgraph BOUNDARY["LCA System Boundary"]
+        CRADLE
+        GATE
+        USE
+        EOL
+        CIRCULAR
+    end
+
+    %% Styling
+    classDef raw fill:#E6E6FA,stroke:#9370DB
+    classDef mfg fill:#98FB98,stroke:#32CD32
+    classDef use fill:#87CEFA,stroke:#4169E1
+    classDef eol fill:#FFB6C1,stroke:#DC143C
+    classDef circ fill:#FAFAD2,stroke:#BDB76B
+
+    class RAW1,RAW2,RAW3,RAW4 raw
+    class MFG1,MFG2,MFG3,MFG4 mfg
+    class OPS1,OPS2,OPS3,OPS4 use
+    class EOL1,EOL2,EOL3,EOL4 eol
+    class REC1,REC2,REC3 circ
