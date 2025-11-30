@@ -1,91 +1,220 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 1200 850" 
-     width="1200" 
-     height="850">
-  
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <title>Q100_57-00-04 Flap Well Envelope</title>
+  <desc>ATA 57 Wings: Flap well opening, flap neutral and deployed envelopes (15° take-off, 35° landing), hinge/track line and structural clearances, dimensions in mm.</desc>
+
+  <metadata>
+    <units>mm</units>
+    <program>AMEDEOPELLICCIA</program>
+    <chapter>ATA_57</chapter>
+    <section>57-00-04 Design</section>
+    <fileID>Q100_57-00-04_Flap_Well_Envelope</fileID>
+    <revision>R0</revision>
+    <generator>AI-assisted generation (Copilot/ChatGPT) prompted by Amedeo Pelliccia</generator>
+  </metadata>
+
+  <style>
+    .bg { fill: #f7f9fc; }
+    .ref { stroke: #888888; stroke-width: 1.5; fill: none; }
+    .neutral { stroke: #1F3B6F; stroke-width: 1.5; fill: none; }
+    .envTO { stroke: #2AA1FF; stroke-width: 1.5; fill: rgba(42,161,255,0.16); }
+    .envLDG { stroke: #FF6F5E; stroke-width: 1.5; fill: rgba(255,111,94,0.16); }
+    .hinge { stroke: #222222; stroke-width: 1.5; stroke-dasharray: 6 4; }
+    .cutout { stroke: #000000; stroke-width: 1.5; fill: none; }
+    .dim { stroke: #000000; stroke-width: 1; fill: none; marker-end: url(#arrow); }
+    .dim-double { stroke: #000000; stroke-width: 1; fill: none; marker-start: url(#arrow); marker-end: url(#arrow); }
+    .text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #111111; font-size: 12px; }
+    .text-dim { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #111111; font-size: 11px; }
+    .text-title { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; fill: #111111; font-size: 16px; font-weight: bold; }
+    .legend { font-size: 12px; }
+    .axis { stroke: #000000; stroke-width: 1; marker-end: url(#arrow); }
+    .scalebar { stroke: #000000; stroke-width: 1.5; }
+  </style>
+
   <defs>
-    <style>
-      .title-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #000; }
-      .subtitle-text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
-      .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #000; }
-      .dimension-text { font-family: Arial, sans-serif; font-size: 10px; fill: #0066cc; }
-      .drawing-line { stroke: #000; stroke-width: 2; fill: none; }
-      .dimension-line { stroke: #0066cc; stroke-width: 1; fill: none; }
-      .dashed-line { stroke: #666; stroke-width: 1; stroke-dasharray: 5,5; fill: none; }
-      .hidden-line { stroke: #999; stroke-width: 1; stroke-dasharray: 3,3; fill: none; }
-      .center-line { stroke: #cc0000; stroke-width: 1; stroke-dasharray: 10,5,2,5; fill: none; }
-    </style>
-    
-    <!-- Arrow marker for dimensions -->
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0066cc"/>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#000000" />
     </marker>
   </defs>
-  
-  <!-- Drawing Border -->
-  <rect x="10" y="10" width="1180" height="830" 
-        fill="#ffffff" stroke="#000" stroke-width="3"/>
-  
-  <!-- Title Block -->
-  <g id="title-block">
-    <rect x="700" y="720" width="480" height="110" fill="#f5f5f5" stroke="#000" stroke-width="2"/>
-    
-    <!-- Company Logo Area -->
-    <rect x="710" y="730" width="100" height="40" fill="#e0e0e0" stroke="#000" stroke-width="1"/>
-    <text x="760" y="755" class="label-text" text-anchor="middle">AMPEL360</text>
-    
-    <!-- Drawing Title -->
-    <text x="820" y="745" class="title-text">Flap Well Envelope</text>
-    
-    <!-- Drawing Number and Info -->
-    <line x1="700" y1="770" x2="1180" y2="770" stroke="#000" stroke-width="1"/>
-    <text x="710" y="790" class="label-text">Drawing No: 57-00-04-Flap-Well-Envelope</text>
-    <text x="710" y="805" class="label-text">ATA: 57-00-04 Wings</text>
-    <text x="710" y="820" class="label-text">Model: Q100</text>
-    <text x="850" y="820" class="label-text">Type: Envelope Drawing</text>
-    
-    <text x="950" y="790" class="label-text">Scale: NTS</text>
-    <text x="950" y="805" class="label-text">Rev: A</text>
-    <text x="950" y="820" class="label-text">Date: 2025-11-30</text>
-    
-    <text x="1090" y="790" class="label-text">Status: Draft</text>
-    <text x="1090" y="805" class="label-text">Sheet: 1 of 1</text>
-    <text x="1090" y="820" class="label-text">Units: mm</text>
+
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+
+  <!-- Header -->
+  <g id="header">
+    <text class="text-title" x="24" y="32">Q100 57-00-04 Flap Well Envelope</text>
+    <text class="text" x="24" y="52">Units: mm, ° | Views: Top &amp; Side | Rev R0 | ATA 57 Wings</text>
   </g>
-  
-  <!-- Main Drawing Area -->
-  <g id="main-drawing">
-    <!-- Placeholder technical drawing elements -->
-    
-    <!-- Wing Outline View -->
-    <path d="M 200 350 Q 400 200 800 300 L 1000 350 L 800 400 Q 400 500 200 350" class="drawing-line"/>
-    <line x1="200" y1="350" x2="1000" y2="350" class="center-line"/>
-    <line x1="600" y1="150" x2="600" y2="550" class="center-line"/>
-    
-    <!-- Reference Points -->
-    <circle cx="300" cy="350" r="8" fill="#000"/>
-    <circle cx="500" cy="320" r="8" fill="#000"/>
-    <circle cx="700" cy="340" r="8" fill="#000"/>
-    <circle cx="900" cy="350" r="8" fill="#000"/>
-    
-    <!-- Dimensions -->
-    <line x1="200" y1="620" x2="1000" y2="620" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-    <text x="600" y="640" class="dimension-text" text-anchor="middle">SPAN DIMENSION</text>
-    
-    <text x="600" y="80" class="subtitle-text" text-anchor="middle">FLAP WELL ENVELOPE</text>
-    
+
+  <!-- Axes indicator -->
+  <g id="axes" transform="translate(1150,760)">
+    <line class="axis" x1="0" y1="0" x2="80" y2="0"/>
+    <text class="text" x="90" y="4">X (span)</text>
+    <line class="axis" x1="0" y1="0" x2="0" y2="-80"/>
+    <text class="text" x="-8" y="-90">Y (chord)</text>
+    <line class="axis" x1="0" y1="0" x2="40" y2="40"/>
+    <text class="text" x="48" y="50">Z (vertical)</text>
+    <!-- Scale bar with ticks -->
+    <g id="scalebar">
+      <line class="scalebar" x1="0" y1="70" x2="100" y2="70"/>
+      <line class="scalebar" x1="0" y1="65" x2="0" y2="75"/>
+      <line class="scalebar" x1="50" y1="67" x2="50" y2="73"/>
+      <line class="scalebar" x1="100" y1="65" x2="100" y2="75"/>
+      <text class="text-dim" x="0" y="88" text-anchor="middle">0</text>
+      <text class="text-dim" x="50" y="88" text-anchor="middle">500</text>
+      <text class="text-dim" x="100" y="88" text-anchor="middle">1000 mm</text>
+      <text class="text-dim" x="50" y="105" text-anchor="middle" font-style="italic">Not to scale</text>
+    </g>
   </g>
-  
-  <!-- Notes Section -->
-  <g id="notes">
-    <text x="30" y="740" class="subtitle-text" font-weight="bold">NOTES:</text>
-    <text x="30" y="760" class="label-text">1. All dimensions in millimeters unless noted</text>
-    <text x="30" y="775" class="label-text">2. Material specifications per AMPEL360-MAT-001</text>
-    <text x="30" y="790" class="label-text">3. Manufacturing tolerances per ISO 2768-mK</text>
-    <text x="30" y="805" class="label-text">4. This is a PLACEHOLDER drawing for structure setup</text>
+
+  <!-- TOP VIEW GROUP -->
+  <g id="top_view" transform="translate(80,90)">
+    <text class="text-title" x="0" y="0">TOP VIEW</text>
+    
+    <!-- Wing trailing edge reference line -->
+    <line class="ref" x1="0" y1="220" x2="900" y2="220"/>
+    <text class="text" x="910" y="224">Wing TE reference</text>
+    
+    <!-- Wing leading edge reference (partial) -->
+    <line class="ref" x1="100" y1="80" x2="820" y2="80"/>
+    <text class="text" x="830" y="84">Wing ref chord</text>
+    
+    <!-- Fuselage / fairing side (inboard) -->
+    <rect class="ref" x="30" y="120" width="80" height="100" rx="2"/>
+    <text class="text" x="35" y="110">Fuselage / fairing (inboard)</text>
+    
+    <!-- Flap well opening (cut-out) -->
+    <rect class="cutout" x="120" y="130" width="700" height="90" rx="2"/>
+    <text class="text" x="130" y="122">Flap well opening</text>
+    
+    <!-- Flap neutral position -->
+    <rect class="neutral" x="128" y="140" width="650" height="70" rx="3"/>
+    <text class="text" x="138" y="132" fill="#1F3B6F">Flap (neutral)</text>
+    
+    <!-- Aileron region (outboard) -->
+    <rect class="ref" x="840" y="120" width="80" height="100" rx="2"/>
+    <text class="text" x="845" y="110">Aileron region (outboard)</text>
+    
+    <!-- Hinge / track line (along flap span) -->
+    <line class="hinge" x1="128" y1="175" x2="778" y2="175"/>
+    <text class="text" x="440" y="165" text-anchor="middle">Hinge / track line</text>
+    
+    <!-- Side clearance: inboard -->
+    <line class="dim-double" x1="110" y1="175" x2="128" y2="175"/>
+    <text class="text-dim" x="100" y="195" text-anchor="middle">8 mm</text>
+    <text class="text" x="35" y="250">Side clearance (each side)</text>
+    
+    <!-- Side clearance: outboard -->
+    <line class="dim-double" x1="778" y1="175" x2="820" y2="175"/>
+    <text class="text-dim" x="799" y="165" text-anchor="middle">8 mm</text>
+    
+    <!-- Clearance to aileron -->
+    <line class="dim-double" x1="778" y1="260" x2="840" y2="260"/>
+    <text class="text-dim" x="809" y="278" text-anchor="middle">15 mm</text>
+    <text class="text" x="845" y="278">Clearance to aileron at full flap</text>
+    
+    <!-- Spanwise flap length dimension -->
+    <line class="dim-double" x1="128" y1="290" x2="778" y2="290"/>
+    <text class="text-dim" x="453" y="308" text-anchor="middle">Spanwise flap length (segment): 2200 mm</text>
+    
+    <!-- Flap well opening chord dimension -->
+    <line class="dim-double" x1="80" y1="130" x2="80" y2="220"/>
+    <text class="text-dim" x="60" y="180" text-anchor="middle" transform="rotate(-90,60,180)">700 mm</text>
+    <text class="text" x="20" y="330">Flap well opening chord</text>
   </g>
-  
+
+  <!-- SIDE VIEW GROUP -->
+  <g id="side_view" transform="translate(80,460)">
+    <text class="text-title" x="0" y="0">SIDE VIEW (Kinematic Envelope)</text>
+    
+    <!-- Wing chord reference line -->
+    <line class="ref" x1="0" y1="140" x2="900" y2="140"/>
+    <text class="text" x="910" y="144">Wing ref chord</text>
+    
+    <!-- Hinge / track line (vertical in side view) -->
+    <line class="hinge" x1="180" y1="40" x2="180" y2="280"/>
+    <text class="text" x="190" y="35">Hinge / track line</text>
+    
+    <!-- Hinge offset dimension -->
+    <line class="dim-double" x1="120" y1="140" x2="180" y2="140"/>
+    <text class="text-dim" x="150" y="155" text-anchor="middle">120 mm</text>
+    <text class="text" x="100" y="300">Hinge offset aft of wing ref chord</text>
+    
+    <!-- Neutral position rectangle (0°) -->
+    <rect class="neutral" x="180" y="115" width="450" height="50" rx="2"/>
+    <text class="text" x="640" y="145" fill="#1F3B6F">Flap 0° (neutral)</text>
+    
+    <!-- Flap 15° (TO) envelope -->
+    <path class="envTO" d="M180,115 L180,85 Q280,50 480,45 L630,50 L630,90 L180,115 Z"/>
+    <text class="text" x="640" y="70" fill="#2AA1FF">Flap 15° (TO)</text>
+    
+    <!-- Flap 35° (LDG) envelope -->
+    <path class="envLDG" d="M180,165 L180,210 Q280,270 480,290 L630,295 L630,200 L180,165 Z"/>
+    <text class="text" x="640" y="280" fill="#FF6F5E">Flap 35° (LDG)</text>
+    
+    <!-- Angular indication for 15° (TO) -->
+    <path d="M200,115 A35,35 0 0,1 225,90" stroke="#2AA1FF" stroke-width="1" fill="none"/>
+    <text class="text-dim" x="235" y="93" fill="#2AA1FF">15°</text>
+    
+    <!-- Angular indication for 35° (LDG) -->
+    <path d="M200,165 A35,35 0 0,0 240,200" stroke="#FF6F5E" stroke-width="1" fill="none"/>
+    <text class="text-dim" x="250" y="205" fill="#FF6F5E">35°</text>
+    
+    <!-- Flap chord dimension in side view -->
+    <line class="dim-double" x1="180" y1="330" x2="630" y2="330"/>
+    <text class="text-dim" x="405" y="348" text-anchor="middle">Flap chord (projected): 650 mm</text>
+    
+    <!-- Lower skin clearance at 35° -->
+    <line class="dim-double" x1="630" y1="295" x2="630" y2="340"/>
+    <text class="text-dim" x="680" y="320" text-anchor="start">10 mm</text>
+    <text class="text" x="700" y="340">Lower skin clearance at 35°</text>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(1020,90)">
+    <rect x="0" y="0" width="330" height="210" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4"/>
+    <text class="text" x="10" y="22" font-weight="bold">LEGEND</text>
+    
+    <!-- Neutral flap outline -->
+    <line x1="15" y1="48" x2="45" y2="48" stroke="#1F3B6F" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="52">Neutral flap outline</text>
+    
+    <!-- Flap envelope 15° (TO) -->
+    <rect x="15" y="68" width="30" height="15" fill="rgba(42,161,255,0.16)" stroke="#2AA1FF" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="80">Flap envelope 15° (TO)</text>
+    
+    <!-- Flap envelope 35° (LDG) -->
+    <rect x="15" y="98" width="30" height="15" fill="rgba(255,111,94,0.16)" stroke="#FF6F5E" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="110">Flap envelope 35° (LDG)</text>
+    
+    <!-- Flap well opening -->
+    <rect x="15" y="128" width="30" height="15" fill="none" stroke="#000000" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="140">Flap well opening</text>
+    
+    <!-- Hinge / track line -->
+    <line x1="15" y1="163" x2="45" y2="163" class="hinge"/>
+    <text class="text legend" x="55" y="167">Hinge / track line (dashed)</text>
+    
+    <!-- Wing TE / ref line -->
+    <line x1="15" y1="188" x2="45" y2="188" stroke="#888888" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="192">Wing TE / ref line</text>
+  </g>
+
+  <!-- Key Dimensions -->
+  <g id="dimensions" transform="translate(1020,320)">
+    <rect x="0" y="0" width="330" height="190" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4"/>
+    <text class="text" x="10" y="22" font-weight="bold">KEY DIMENSIONS</text>
+    <text class="text-dim" x="15" y="48">Spanwise flap length (segment): 2200 mm</text>
+    <text class="text-dim" x="15" y="68">Flap chord (projected): 650 mm</text>
+    <text class="text-dim" x="15" y="88">Flap well opening chord: 700 mm</text>
+    <text class="text-dim" x="15" y="108">Hinge offset aft of wing ref: 120 mm</text>
+    <text class="text-dim" x="15" y="128">Deflection angle (TO): 15°</text>
+    <text class="text-dim" x="15" y="148">Deflection angle (LDG): 35°</text>
+    <text class="text-dim" x="15" y="168">Side clearance (each side): 8 mm (min)</text>
+    <text class="text-dim" x="15" y="188">Lower skin clearance at 35°: 10 mm (min)</text>
+  </g>
+
+  <!-- Notes -->
+  <g id="notes" transform="translate(24,860)">
+    <text class="text">Note: Dimensions are illustrative. Validate flap angles, clearances, and station coordinates against Q100 design authority and systems integration data.</text>
+  </g>
+
 </svg>
