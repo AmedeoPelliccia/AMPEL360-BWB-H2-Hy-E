@@ -9,7 +9,7 @@
 
 ## 1. Purpose
 
-This document provides a **link to the Structural Repair Manual (SRM)** content in [57-50_STRUCTURES](../../57-50_Structures/) and related structural maintenance information.
+This document provides a **link to the Structural Repair Manual (SRM)** content in [57-50_Structures](../../../57-50_Structures/) and related structural maintenance information.
 
 ---
 
@@ -17,7 +17,7 @@ This document provides a **link to the Structural Repair Manual (SRM)** content 
 
 The SRM content for ATA 57 is organized in:
 
-- [57-50_STRUCTURES](../../57-50_Structures/) — Primary structural documentation  
+- [57-50_Structures](../../../57-50_Structures/) — Primary structural documentation  
 
 ### 2.1 SRM Chapter Organization
 
@@ -108,7 +108,7 @@ Structural Health Monitoring (SHM) interfaces with maintenance through:
 
 ## 8. References
 
-- [57-50_Structures](../../57-50_Structures/) — Structural documentation  
+- [57-50_Structures](../../../57-50_Structures/) — Structural documentation  
 - [57-00-02-90_MRO_Safety_Policies.md](./57-00-02-90_MRO_Safety_Policies.md) — MRO safety policies  
 - [ATA 95](../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/) — SHM systems  
 

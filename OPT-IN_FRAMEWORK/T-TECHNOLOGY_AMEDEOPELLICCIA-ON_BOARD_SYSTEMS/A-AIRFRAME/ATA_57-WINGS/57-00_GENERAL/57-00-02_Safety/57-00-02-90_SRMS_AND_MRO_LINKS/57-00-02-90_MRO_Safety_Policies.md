@@ -165,7 +165,7 @@ This document defines **high-level maintenance safety policies** for the ATA 57 
 ## 9. References
 
 - [57-00-02-90_SRM_Reference_Map.md](./57-00-02-90_SRM_Reference_Map.md)  
-- [57-50_Structures](../../57-50_Structures/) — Structural documentation  
+- [57-50_Structures](../../../57-50_Structures/) — Structural documentation  
 - [ATA 05](../../../../../O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/) — Time limits and checks  
 
 ---
