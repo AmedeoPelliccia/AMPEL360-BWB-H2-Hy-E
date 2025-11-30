@@ -189,13 +189,13 @@
     <text class="text-dim" x="15" y="85">Hinge offset aft of wing ref: 60 mm</text>
     <text class="text-dim" x="15" y="105">Max deflection up: 25°</text>
     <text class="text-dim" x="15" y="125">Max deflection down: 15°</text>
-    <text class="text-dim" x="15" y="145">Tip clearance at full defl.: 12 mm (min)</text>
+    <text class="text-dim" x="15" y="145">Tip clearance at full deflection: 12 mm (min)</text>
     <text class="text-dim" x="15" y="165">Flap interface clearance: 10 mm (min)</text>
   </g>
 
   <!-- Notes -->
   <g id="notes" transform="translate(24,860)">
-    <text class="text">Note: Dimensions are illustrative. Validate deflection angles, clearances, and station coordinates via design authority and evacuation/systems integration studies.</text>
+    <text class="text">Note: Dimensions are illustrative. Validate deflection angles, clearances, and station coordinates via design authority and flight control systems integration studies.</text>
   </g>
 
 </svg>
