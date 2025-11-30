@@ -52,14 +52,16 @@
     <line class="axis" x1="0" y1="0" x2="40" y2="40"/>
     <text class="text" x="48" y="50">Z (vertical)</text>
     <!-- Scale bar with ticks -->
-    <line class="scalebar" x1="0" y1="70" x2="100" y2="70"/>
-    <line class="scalebar" x1="0" y1="65" x2="0" y2="75"/>
-    <line class="scalebar" x1="50" y1="67" x2="50" y2="73"/>
-    <line class="scalebar" x1="100" y1="65" x2="100" y2="75"/>
-    <text class="text-dim" x="0" y="88" text-anchor="middle">0</text>
-    <text class="text-dim" x="50" y="88" text-anchor="middle">500</text>
-    <text class="text-dim" x="100" y="88" text-anchor="middle">1000 mm</text>
-    <text class="text-dim" x="50" y="105" text-anchor="middle" font-style="italic">Not to scale</text>
+    <g id="scalebar">
+      <line class="scalebar" x1="0" y1="70" x2="100" y2="70"/>
+      <line class="scalebar" x1="0" y1="65" x2="0" y2="75"/>
+      <line class="scalebar" x1="50" y1="67" x2="50" y2="73"/>
+      <line class="scalebar" x1="100" y1="65" x2="100" y2="75"/>
+      <text class="text-dim" x="0" y="88" text-anchor="middle">0</text>
+      <text class="text-dim" x="50" y="88" text-anchor="middle">500</text>
+      <text class="text-dim" x="100" y="88" text-anchor="middle">1000 mm</text>
+      <text class="text-dim" x="50" y="105" text-anchor="middle" font-style="italic">Not to scale</text>
+    </g>
   </g>
 
   <!-- TOP VIEW GROUP -->
