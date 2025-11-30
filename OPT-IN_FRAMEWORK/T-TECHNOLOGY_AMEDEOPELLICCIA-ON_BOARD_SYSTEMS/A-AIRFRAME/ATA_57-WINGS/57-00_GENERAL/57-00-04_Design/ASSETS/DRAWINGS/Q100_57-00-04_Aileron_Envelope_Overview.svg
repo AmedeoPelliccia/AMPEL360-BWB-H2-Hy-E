@@ -1,91 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" 
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 1200 850" 
-     width="1200" 
-     height="850">
-  
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <title>Q100_57-00-04 Aileron Envelope Overview</title>
+  <desc>ATA 57 Wings: Aileron neutral and deflection envelopes with hinge line, clearances, and dimensions in mm.</desc>
+
+  <metadata>
+    <units>mm</units>
+    <program>AMEDEOPELLICCIA</program>
+    <chapter>ATA_57</chapter>
+    <section>57-00-04 Design</section>
+    <fileID>Q100_57-00-04_Aileron_Envelope_Overview</fileID>
+    <revision>R0</revision>
+  </metadata>
+
+  <style>
+    .bg { fill: #f7f9fc; }
+    .ref { stroke: #888888; stroke-width: 1.5; fill: none; }
+    .neutral { stroke: #1F3B6F; stroke-width: 1.5; fill: none; }
+    .upEnv { stroke: #2AA1FF; stroke-width: 1.5; fill: rgba(42,161,255,0.16); }
+    .downEnv { stroke: #FF6F5E; stroke-width: 1.5; fill: rgba(255,111,94,0.16); }
+    .hinge { stroke: #222222; stroke-width: 1.5; stroke-dasharray: 6 4; }
+    .dim { stroke: #000000; stroke-width: 1; fill: none; marker-end: url(#arrow); }
+    .dim-double { stroke: #000000; stroke-width: 1; fill: none; marker-start: url(#arrow); marker-end: url(#arrow); }
+    .text { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #111111; font-size: 12px; }
+    .text-dim { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #111111; font-size: 11px; }
+    .text-title { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #111111; font-size: 16px; font-weight: bold; }
+    .legend { font-size: 12px; }
+    .axis { stroke: #000000; stroke-width: 1; marker-end: url(#arrow); }
+    .scalebar { stroke: #000000; stroke-width: 1.5; }
+  </style>
+
   <defs>
-    <style>
-      .title-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #000; }
-      .subtitle-text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
-      .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #000; }
-      .dimension-text { font-family: Arial, sans-serif; font-size: 10px; fill: #0066cc; }
-      .drawing-line { stroke: #000; stroke-width: 2; fill: none; }
-      .dimension-line { stroke: #0066cc; stroke-width: 1; fill: none; }
-      .dashed-line { stroke: #666; stroke-width: 1; stroke-dasharray: 5,5; fill: none; }
-      .hidden-line { stroke: #999; stroke-width: 1; stroke-dasharray: 3,3; fill: none; }
-      .center-line { stroke: #cc0000; stroke-width: 1; stroke-dasharray: 10,5,2,5; fill: none; }
-    </style>
-    
-    <!-- Arrow marker for dimensions -->
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0066cc"/>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#000000" />
     </marker>
   </defs>
-  
-  <!-- Drawing Border -->
-  <rect x="10" y="10" width="1180" height="830" 
-        fill="#ffffff" stroke="#000" stroke-width="3"/>
-  
-  <!-- Title Block -->
-  <g id="title-block">
-    <rect x="700" y="720" width="480" height="110" fill="#f5f5f5" stroke="#000" stroke-width="2"/>
-    
-    <!-- Company Logo Area -->
-    <rect x="710" y="730" width="100" height="40" fill="#e0e0e0" stroke="#000" stroke-width="1"/>
-    <text x="760" y="755" class="label-text" text-anchor="middle">AMPEL360</text>
-    
-    <!-- Drawing Title -->
-    <text x="820" y="745" class="title-text">Aileron Envelope Overview</text>
-    
-    <!-- Drawing Number and Info -->
-    <line x1="700" y1="770" x2="1180" y2="770" stroke="#000" stroke-width="1"/>
-    <text x="710" y="790" class="label-text">Drawing No: 57-00-04-Aileron-Envelope-Overview</text>
-    <text x="710" y="805" class="label-text">ATA: 57-00-04 Wings</text>
-    <text x="710" y="820" class="label-text">Model: Q100</text>
-    <text x="850" y="820" class="label-text">Type: Envelope Drawing</text>
-    
-    <text x="950" y="790" class="label-text">Scale: NTS</text>
-    <text x="950" y="805" class="label-text">Rev: A</text>
-    <text x="950" y="820" class="label-text">Date: 2025-11-30</text>
-    
-    <text x="1090" y="790" class="label-text">Status: Draft</text>
-    <text x="1090" y="805" class="label-text">Sheet: 1 of 1</text>
-    <text x="1090" y="820" class="label-text">Units: mm</text>
+
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+
+  <!-- Header -->
+  <g id="header">
+    <text class="text-title" x="24" y="32">Q100 57-00-04 Aileron Envelope Overview</text>
+    <text class="text" x="24" y="52">Units: mm, ° | View: Top &amp; Side | Rev R0 | ATA 57 Wings</text>
   </g>
-  
-  <!-- Main Drawing Area -->
-  <g id="main-drawing">
-    <!-- Placeholder technical drawing elements -->
-    
-    <!-- Wing Outline View -->
-    <path d="M 200 350 Q 400 200 800 300 L 1000 350 L 800 400 Q 400 500 200 350" class="drawing-line"/>
-    <line x1="200" y1="350" x2="1000" y2="350" class="center-line"/>
-    <line x1="600" y1="150" x2="600" y2="550" class="center-line"/>
-    
-    <!-- Reference Points -->
-    <circle cx="300" cy="350" r="8" fill="#000"/>
-    <circle cx="500" cy="320" r="8" fill="#000"/>
-    <circle cx="700" cy="340" r="8" fill="#000"/>
-    <circle cx="900" cy="350" r="8" fill="#000"/>
-    
-    <!-- Dimensions -->
-    <line x1="200" y1="620" x2="1000" y2="620" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-    <text x="600" y="640" class="dimension-text" text-anchor="middle">SPAN DIMENSION</text>
-    
-    <text x="600" y="80" class="subtitle-text" text-anchor="middle">AILERON ENVELOPE OVERVIEW</text>
-    
+
+  <!-- Axes indicator -->
+  <g id="axes" transform="translate(1150,760)">
+    <line class="axis" x1="0" y1="0" x2="80" y2="0"/>
+    <text class="text" x="90" y="4">X (span)</text>
+    <line class="axis" x1="0" y1="0" x2="0" y2="-80"/>
+    <text class="text" x="-8" y="-90">Y (chord)</text>
+    <line class="axis" x1="0" y1="0" x2="40" y2="40"/>
+    <text class="text" x="48" y="50">Z (vertical)</text>
+    <!-- Scale bar with ticks -->
+    <g id="scalebar">
+      <line class="scalebar" x1="0" y1="70" x2="100" y2="70"/>
+      <line class="scalebar" x1="0" y1="65" x2="0" y2="75"/>
+      <line class="scalebar" x1="50" y1="67" x2="50" y2="73"/>
+      <line class="scalebar" x1="100" y1="65" x2="100" y2="75"/>
+      <text class="text-dim" x="0" y="88" text-anchor="middle">0</text>
+      <text class="text-dim" x="50" y="88" text-anchor="middle">500</text>
+      <text class="text-dim" x="100" y="88" text-anchor="middle">1000 mm</text>
+      <text class="text-dim" x="50" y="105" text-anchor="middle" font-style="italic">Not to scale</text>
+    </g>
   </g>
-  
-  <!-- Notes Section -->
-  <g id="notes">
-    <text x="30" y="740" class="subtitle-text" font-weight="bold">NOTES:</text>
-    <text x="30" y="760" class="label-text">1. All dimensions in millimeters unless noted</text>
-    <text x="30" y="775" class="label-text">2. Material specifications per AMPEL360-MAT-001</text>
-    <text x="30" y="790" class="label-text">3. Manufacturing tolerances per ISO 2768-mK</text>
-    <text x="30" y="805" class="label-text">4. This is a PLACEHOLDER drawing for structure setup</text>
+
+  <!-- TOP VIEW GROUP -->
+  <g id="top_view" transform="translate(80,90)">
+    <text class="text-title" x="0" y="0">TOP VIEW</text>
+    
+    <!-- Wing trailing edge reference line -->
+    <line class="ref" x1="0" y1="220" x2="900" y2="220"/>
+    <text class="text" x="910" y="224">Wing TE reference</text>
+    
+    <!-- Wing leading edge reference (partial) -->
+    <line class="ref" x1="100" y1="80" x2="820" y2="80"/>
+    <text class="text" x="830" y="84">Wing ref chord</text>
+    
+    <!-- Tip region (outboard) -->
+    <rect class="ref" x="30" y="120" width="80" height="100" rx="2"/>
+    <text class="text" x="35" y="110">Tip region</text>
+    
+    <!-- Aileron outline (neutral) -->
+    <rect class="neutral" x="120" y="140" width="600" height="80" rx="3"/>
+    <text class="text" x="130" y="132" fill="#1F3B6F">Aileron (neutral outline)</text>
+    
+    <!-- Flap interface region (inboard) -->
+    <rect class="ref" x="740" y="120" width="100" height="100" rx="2"/>
+    <text class="text" x="745" y="110">Flap interface</text>
+    
+    <!-- Hinge line (along aileron span) -->
+    <line class="hinge" x1="120" y1="180" x2="720" y2="180"/>
+    <text class="text" x="400" y="170" text-anchor="middle">Hinge line</text>
+    
+    <!-- Clearance dimension: Tip -->
+    <line class="dim-double" x1="100" y1="180" x2="30" y2="180"/>
+    <text class="text-dim" x="65" y="195" text-anchor="middle">12 mm (min)</text>
+    <text class="text" x="30" y="250">Clearance to tip</text>
+    
+    <!-- Clearance dimension: Flap -->
+    <line class="dim-double" x1="720" y1="180" x2="740" y2="180"/>
+    <text class="text-dim" x="730" y="168" text-anchor="middle">10</text>
+    <text class="text" x="745" y="250">Clearance to flap: 10 mm (min)</text>
+    
+    <!-- Spanwise aileron length dimension -->
+    <line class="dim-double" x1="120" y1="270" x2="720" y2="270"/>
+    <text class="text-dim" x="420" y="290" text-anchor="middle">Spanwise aileron length: 1800 mm</text>
+    
+    <!-- Aileron chord dimension (projected) -->
+    <line class="dim-double" x1="80" y1="140" x2="80" y2="220"/>
+    <text class="text-dim" x="60" y="185" text-anchor="middle" transform="rotate(-90,60,185)">450 mm</text>
+    <text class="text" x="20" y="320">Aileron chord (projected)</text>
   </g>
-  
+
+  <!-- SIDE VIEW GROUP -->
+  <g id="side_view" transform="translate(80,460)">
+    <text class="text-title" x="0" y="0">SIDE VIEW</text>
+    
+    <!-- Wing chord reference line -->
+    <line class="ref" x1="0" y1="140" x2="900" y2="140"/>
+    <text class="text" x="910" y="144">Wing ref chord</text>
+    
+    <!-- Hinge line (vertical in side view) -->
+    <line class="hinge" x1="180" y1="60" x2="180" y2="220"/>
+    <text class="text" x="190" y="55">Hinge line</text>
+    
+    <!-- Hinge offset dimension -->
+    <line class="dim-double" x1="120" y1="140" x2="180" y2="140"/>
+    <text class="text-dim" x="150" y="155" text-anchor="middle">60 mm</text>
+    <text class="text" x="100" y="250">Hinge offset aft of wing ref chord</text>
+    
+    <!-- Neutral position rectangle -->
+    <rect class="neutral" x="180" y="115" width="350" height="50" rx="2"/>
+    <text class="text" x="540" y="145" fill="#1F3B6F">Neutral</text>
+    
+    <!-- Max up envelope (arc representation) -->
+    <path class="upEnv" d="M180,115 L180,90 A180,180 0 0,1 480,40 L530,40 L530,115 Z"/>
+    <text class="text" x="540" y="50" fill="#2AA1FF">Max Up 25°</text>
+    
+    <!-- Max down envelope (arc representation) -->
+    <path class="downEnv" d="M180,165 L180,190 A180,180 0 0,0 480,240 L530,240 L530,165 Z"/>
+    <text class="text" x="540" y="250" fill="#FF6F5E">Max Down 15°</text>
+    
+    <!-- Aileron chord dimension in side view -->
+    <line class="dim-double" x1="180" y1="280" x2="530" y2="280"/>
+    <text class="text-dim" x="355" y="298" text-anchor="middle">Aileron chord: 450 mm</text>
+    
+    <!-- Angular indication for max up -->
+    <path d="M200,115 A30,30 0 0,1 220,95" stroke="#2AA1FF" stroke-width="1" fill="none"/>
+    <text class="text-dim" x="230" y="98" fill="#2AA1FF">25°</text>
+    
+    <!-- Angular indication for max down -->
+    <path d="M200,165 A30,30 0 0,0 220,185" stroke="#FF6F5E" stroke-width="1" fill="none"/>
+    <text class="text-dim" x="230" y="195" fill="#FF6F5E">15°</text>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(1020,90)">
+    <rect x="0" y="0" width="320" height="180" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4"/>
+    <text class="text" x="10" y="22" font-weight="bold">LEGEND</text>
+    
+    <!-- Neutral outline -->
+    <line x1="15" y1="45" x2="45" y2="45" stroke="#1F3B6F" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="49">Neutral outline</text>
+    
+    <!-- Max up envelope -->
+    <rect x="15" y="65" width="30" height="15" fill="rgba(42,161,255,0.16)" stroke="#2AA1FF" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="77">Max up envelope (25°)</text>
+    
+    <!-- Max down envelope -->
+    <rect x="15" y="95" width="30" height="15" fill="rgba(255,111,94,0.16)" stroke="#FF6F5E" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="107">Max down envelope (15°)</text>
+    
+    <!-- Hinge line -->
+    <line x1="15" y1="130" x2="45" y2="130" class="hinge"/>
+    <text class="text legend" x="55" y="134">Hinge line (dashed)</text>
+    
+    <!-- Wing TE reference -->
+    <line x1="15" y1="155" x2="45" y2="155" stroke="#888888" stroke-width="1.5"/>
+    <text class="text legend" x="55" y="159">Wing TE / ref line</text>
+  </g>
+
+  <!-- Dimensions -->
+  <g id="dimensions" transform="translate(1020,290)">
+    <rect x="0" y="0" width="320" height="170" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4"/>
+    <text class="text" x="10" y="22" font-weight="bold">KEY DIMENSIONS</text>
+    <text class="text-dim" x="15" y="45">Spanwise aileron length: 1800 mm</text>
+    <text class="text-dim" x="15" y="65">Aileron chord (projected): 450 mm</text>
+    <text class="text-dim" x="15" y="85">Hinge offset aft of wing ref: 60 mm</text>
+    <text class="text-dim" x="15" y="105">Max deflection up: 25°</text>
+    <text class="text-dim" x="15" y="125">Max deflection down: 15°</text>
+    <text class="text-dim" x="15" y="145">Tip clearance at full deflection: 12 mm (min)</text>
+    <text class="text-dim" x="15" y="165">Flap interface clearance: 10 mm (min)</text>
+  </g>
+
+  <!-- Notes -->
+  <g id="notes" transform="translate(24,860)">
+    <text class="text">Note: Dimensions are illustrative. Validate deflection angles, clearances, and station coordinates via design authority and flight control systems integration studies.</text>
+  </g>
+
 </svg>
