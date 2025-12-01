@@ -59,7 +59,7 @@ This document defines the materials specification for the Left Windshield Panel 
 
 ## 5. Circularity & Sustainability
 
-**Link to ANCHORS**: See [56-30-01_Glass_Recycling_LCA](../../../../56-30_ANCHORS/56-30-01_Glass_Recycling_LCA/) for end-of-life material recovery procedures.
+**Link to ANCHORS**: See [56-30-01_Glass_Recycling_LCA](../../../../../56-30_ANCHORS/56-30-01_Glass_Recycling_LCA/) for end-of-life material recovery procedures.
 
 ---
 

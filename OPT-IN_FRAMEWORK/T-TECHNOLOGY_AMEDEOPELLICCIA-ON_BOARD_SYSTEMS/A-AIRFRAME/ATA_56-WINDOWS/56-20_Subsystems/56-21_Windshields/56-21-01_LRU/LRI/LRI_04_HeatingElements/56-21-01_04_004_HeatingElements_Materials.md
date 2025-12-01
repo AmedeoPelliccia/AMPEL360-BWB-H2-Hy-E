@@ -47,7 +47,7 @@ This document defines the materials specification for the Windshield Heating Ele
 
 ## 5. Circularity & Sustainability
 
-**Link to ANCHORS**: See [56-30-03_Heating_Element_Reuse](../../../../56-30_ANCHORS/56-30-03_Heating_Element_Reuse/) for end-of-life recovery procedures.
+**Link to ANCHORS**: See [56-30-03_Heating_Element_Reuse](../../../../../56-30_ANCHORS/56-30-03_Heating_Element_Reuse/) for end-of-life recovery procedures.
 
 ---
 
