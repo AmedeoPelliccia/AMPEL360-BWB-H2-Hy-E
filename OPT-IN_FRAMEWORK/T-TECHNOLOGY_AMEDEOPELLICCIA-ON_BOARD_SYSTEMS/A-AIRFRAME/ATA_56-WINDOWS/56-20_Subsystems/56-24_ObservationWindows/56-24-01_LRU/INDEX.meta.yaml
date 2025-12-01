@@ -1,0 +1,40 @@
+# INDEX.meta.yaml — LRU_56-24-01 Upper Deck Panoramic Window
+# ATA 56 – Windows | Subsystem 24 – Observation Windows (BWB-Specific)
+
+metadata:
+  document_id: LRU_56-24-01
+  title: Upper Deck Panoramic Window
+  ata_chapter: 56
+  ata_subsystem: 24
+  sequence: 01
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+  bwb_specific: true
+
+lru:
+  part_number: PN-56-24-01-001
+  nomenclature: Upper Deck Panoramic Window
+  manufacturer: TBD
+
+lri_components:
+  - id: LRI_01
+    name: CurvedGlassPanel
+    folder: ./LRI/LRI_01_CurvedGlassPanel/
+
+  - id: LRI_02
+    name: StructuralFrame
+    folder: ./LRI/LRI_02_StructuralFrame/
+
+  - id: LRI_03
+    name: UVFilter
+    folder: ./LRI/LRI_03_UVFilter/
+
+  - id: LRI_04
+    name: ThermalControl
+    folder: ./LRI/LRI_04_ThermalControl/
+
+  - id: LRI_05
+    name: SmartDimming
+    folder: ./LRI/LRI_05_SmartDimming/

@@ -1,0 +1,40 @@
+# INDEX.meta.yaml — LRU_56-23-02 Overwing Emergency Exit Window
+# ATA 56 – Windows | Subsystem 23 – Cabin Windows
+
+metadata:
+  document_id: LRU_56-23-02
+  title: Overwing Emergency Exit Window
+  ata_chapter: 56
+  ata_subsystem: 23
+  sequence: 02
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+lru:
+  part_number: PN-56-23-02-001
+  nomenclature: Overwing Emergency Exit Window
+  manufacturer: TBD
+  exit_type: Type III
+
+lri_components:
+  - id: LRI_01
+    name: ExitPanel
+    folder: ./LRI/LRI_01_ExitPanel/
+
+  - id: LRI_02
+    name: HandleAssembly
+    folder: ./LRI/LRI_02_HandleAssembly/
+
+  - id: LRI_03
+    name: HingeSystem
+    folder: ./LRI/LRI_03_HingeSystem/
+
+  - id: LRI_04
+    name: PlacardAssembly
+    folder: ./LRI/LRI_04_PlacardAssembly/
+
+  - id: LRI_05
+    name: SealingSystem
+    folder: ./LRI/LRI_05_SealingSystem/
