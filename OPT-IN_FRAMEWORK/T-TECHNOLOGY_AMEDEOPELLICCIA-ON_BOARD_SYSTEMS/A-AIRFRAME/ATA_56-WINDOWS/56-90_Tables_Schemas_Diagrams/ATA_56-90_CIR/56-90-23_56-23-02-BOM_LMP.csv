@@ -1,0 +1,17 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-23-02-001,LRI_01,PN-56-23-02-01-001,5340-XX-XXX-XXXX,XXXXX,Exit Panel Assembly,1,EA,1,N,120,Critical,21,Make,FAR 25.807,UNL,R1-Glass/metal recovery,Emergency exit window panel
+2,PN-56-23-02-001,LRI_01,PN-56-23-02-01-010,5340-XX-XXX-XXXX,XXXXX,Exit Glass Pane,1,EA,1,N,120,Critical,14,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,Structural exit panel glass
+3,PN-56-23-02-001,LRI_01,PN-56-23-02-01-020,5340-XX-XXX-XXXX,XXXXX,Exit Panel Frame,1,EA,1,N,90,Critical,10,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Reinforced aluminum frame
+4,PN-56-23-02-001,LRI_02,PN-56-23-02-02-001,1680-XX-XXX-XXXX,XXXXX,Handle Assembly,1,EA,1,Y,30,Critical,7,Make,FAR 25.807,UNL,R1-Metal recycling,Emergency release handle
+5,PN-56-23-02-001,LRI_02,PN-56-23-02-02-010,5315-XX-XXX-XXXX,XXXXX,Release Handle,1,EA,1,Y,15,Critical,5,Buy,MIL-STD-1472,UNL,R1-Aluminum recycling 100%,Red anodized T-handle
+6,PN-56-23-02-001,LRI_02,PN-56-23-02-02-020,5315-XX-XXX-XXXX,XXXXX,Handle Bracket,1,EA,1,Y,10,Standard,3,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Mounting bracket
+7,PN-56-23-02-001,LRI_03,PN-56-23-02-03-001,3040-XX-XXX-XXXX,XXXXX,Hinge System,1,SET,1,N,60,Critical,14,Make,FAR 25.807,UNL,R1-Steel recycling,Exit panel hinge mechanism
+8,PN-56-23-02-001,LRI_03,PN-56-23-02-03-010,5340-XX-XXX-XXXX,XXXXX,Hinge Assembly,2,EA,1,Y,30,Standard,7,Buy,MS27419,UNL,R1-Steel recycling,Self-aligning hinge
+9,PN-56-23-02-001,LRI_03,PN-56-23-02-03-020,5305-XX-XXX-XXXX,XXXXX,Hinge Pin,2,EA,1,Y,15,Standard,3,Buy,AMS 4911,UNL,R1-Titanium recycling 100%,Titanium hinge pins
+10,PN-56-23-02-001,LRI_04,PN-56-23-02-04-001,9905-XX-XXX-XXXX,XXXXX,Placard Assembly,1,SET,1,Y,15,Standard,5,Make,FAR 25.807,UNL,R2-Plastic/adhesive separation,Emergency instruction placards
+11,PN-56-23-02-001,LRI_04,PN-56-23-02-04-010,9905-XX-XXX-XXXX,XXXXX,EXIT Placard,1,EA,1,Y,10,Standard,3,Buy,FAR 25.811,UNL,R2-LED/plastic separation,Illuminated EXIT sign
+12,PN-56-23-02-001,LRI_04,PN-56-23-02-04-020,9905-XX-XXX-XXXX,XXXXX,Instruction Placard,1,EA,1,Y,10,Standard,3,Buy,FAR 25.807,UNL,R2-Plastic recycling,Pictogram instructions
+13,PN-56-23-02-001,LRI_05,PN-56-23-02-05-001,5330-XX-XXX-XXXX,XXXXX,Sealing System,1,SET,1,Y,45,Critical,7,Make,FAR 25.775,36,R4-Rubber compound disposal,Pressure sealing assembly
+14,PN-56-23-02-001,LRI_05,PN-56-23-02-05-010,5330-XX-XXX-XXXX,XXXXX,Primary Seal,1,EA,1,Y,30,Standard,3,Buy,MIL-R-25897,36,R4-Silicone thermal recovery,Inflatable pressure seal
+15,PN-56-23-02-001,LRI_05,PN-56-23-02-05-020,5330-XX-XXX-XXXX,XXXXX,Weather Seal,1,EA,1,Y,20,Standard,3,Buy,AMS 3303,48,R4-EPDM recycling,EPDM perimeter seal
+16,PN-56-23-02-001,LRI_05,PN-56-23-02-05-030,4820-XX-XXX-XXXX,XXXXX,Seal Inflation Valve,1,EA,1,Y,15,Standard,3,Buy,MS27413,UNL,R1-Brass recycling,Schrader valve

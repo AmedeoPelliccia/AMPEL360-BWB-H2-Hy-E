@@ -1,0 +1,21 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-21-01-001,LRI_01,PN-56-21-01-01-001,5340-XX-XXX-XXXX,XXXXX,Left Windshield Panel,1,EA,1,N,240,Critical,30,Make,FAR 25.775,UNL,R1-Glass/Acrylic recovery,Captain-side forward view panel
+2,PN-56-21-01-001,LRI_01,PN-56-21-01-01-010,5340-XX-XXX-XXXX,XXXXX,Glass Outer Ply,1,EA,1,N,240,Critical,21,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,6mm aluminosilicate
+3,PN-56-21-01-001,LRI_01,PN-56-21-01-01-020,5340-XX-XXX-XXXX,XXXXX,Acrylic Inner Ply,1,EA,1,N,240,Critical,21,Buy,MIL-P-25690,60,R2-PMMA chemical recycling,8mm stretched PMMA - UV sensitive
+4,PN-56-21-01-001,LRI_01,PN-56-21-01-01-030,5999-XX-XXX-XXXX,XXXXX,PVB Interlayer,2,EA,1,N,120,Standard,14,Buy,SAE AS8003,24,R2-PVB recovery process,0.76mm with heating film - humidity controlled
+5,PN-56-21-01-001,LRI_02,PN-56-21-01-02-001,5340-XX-XXX-XXXX,XXXXX,Right Windshield Panel,1,EA,1,N,240,Critical,30,Make,FAR 25.775,UNL,R1-Glass/Acrylic recovery,FO-side forward view panel
+6,PN-56-21-01-001,LRI_02,PN-56-21-01-02-010,5340-XX-XXX-XXXX,XXXXX,Glass Outer Ply,1,EA,2,N,240,Critical,21,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,6mm aluminosilicate - interchangeable with LRI_01
+7,PN-56-21-01-001,LRI_02,PN-56-21-01-02-020,5340-XX-XXX-XXXX,XXXXX,Acrylic Inner Ply,1,EA,2,N,240,Critical,21,Buy,MIL-P-25690,60,R2-PMMA chemical recycling,8mm stretched PMMA - interchangeable with LRI_01
+8,PN-56-21-01-001,LRI_02,PN-56-21-01-02-030,5999-XX-XXX-XXXX,XXXXX,PVB Interlayer,2,EA,2,N,120,Standard,14,Buy,SAE AS8003,24,R2-PVB recovery process,0.76mm - interchangeable with LRI_01
+9,PN-56-21-01-001,LRI_03,PN-56-21-01-03-001,5340-XX-XXX-XXXX,XXXXX,Center Windshield Panel (BWB),1,EA,1,N,300,Critical,45,Make,FAR 25.775,UNL,R1-Glass/Acrylic recovery,BWB-specific center panel
+10,PN-56-21-01-001,LRI_03,PN-56-21-01-03-010,5340-XX-XXX-XXXX,XXXXX,Glass Outer Ply (Enhanced),1,EA,1,N,300,Critical,28,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,8mm aluminosilicate enhanced
+11,PN-56-21-01-001,LRI_03,PN-56-21-01-03-020,5340-XX-XXX-XXXX,XXXXX,Acrylic Inner Ply (Enhanced),1,EA,1,N,300,Critical,28,Buy,MIL-P-25690,60,R2-PMMA chemical recycling,10mm stretched PMMA
+12,PN-56-21-01-001,LRI_03,PN-56-21-01-03-030,5999-XX-XXX-XXXX,XXXXX,PVB Interlayer (Enhanced),2,EA,1,N,150,Standard,14,Buy,SAE AS8003,24,R2-PVB recovery process,1.14mm with heating film
+13,PN-56-21-01-001,LRI_04,PN-56-21-01-04-001,6150-XX-XXX-XXXX,XXXXX,Heating Element Set,3,SET,1,Y,60,Critical,7,Buy,MIL-DTL-87157,UNL,R3-Precious metal recovery (ITO),ITO conductive coating
+14,PN-56-21-01-001,LRI_04,PN-56-21-01-04-010,5935-XX-XXX-XXXX,XXXXX,Power Connector,6,EA,1,Y,15,Standard,3,Buy,MIL-DTL-38999,UNL,R2-Copper/aluminum recovery,2-pin 115VAC rated
+15,PN-56-21-01-001,LRI_04,PN-56-21-01-04-020,5961-XX-XXX-XXXX,XXXXX,RTD Temperature Sensor,6,EA,1,Y,20,Standard,5,Buy,MIL-PRF-22684,UNL,R3-Platinum recovery,PT100 type
+16,PN-56-21-01-001,LRI_05,PN-56-21-01-05-001,5330-XX-XXX-XXXX,XXXXX,Frame Retention System,1,SET,1,N,300,Critical,21,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Aluminum 7075-T6 frame
+17,PN-56-21-01-001,LRI_05,PN-56-21-01-05-010,5330-XX-XXX-XXXX,XXXXX,Primary Seal,3,EA,1,Y,45,Standard,5,Buy,MIL-R-25897,36,R4-Silicone thermal recovery,Silicone compression seal - temp controlled
+18,PN-56-21-01-001,LRI_05,PN-56-21-01-05-020,5330-XX-XXX-XXXX,XXXXX,Secondary Seal O-Ring,3,EA,1,Y,30,Standard,3,Buy,AMS 7276,48,R4-Fluorocarbon incineration,Fluorocarbon Viton
+19,PN-56-21-01-001,LRI_05,PN-56-21-01-05-030,5305-XX-XXX-XXXX,XXXXX,Frame Fastener Set,1,KIT,1,Y,60,Standard,2,Buy,NAS1801,UNL,R1-Titanium recycling 100%,Titanium Ti-6Al-4V bolts
+20,PN-56-21-01-001,LRI_05,PN-56-21-01-05-040,8030-XX-XXX-XXXX,XXXXX,Sealant Compound,1,EA,1,Y,30,Standard,3,Buy,MIL-PRF-81733,12,R5-Hazmat disposal required,Polysulfide sealant - refrigerated
