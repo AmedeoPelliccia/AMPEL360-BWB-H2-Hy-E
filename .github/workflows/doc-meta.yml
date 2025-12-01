@@ -1,15 +1,18 @@
 name: Doc Meta Enforcement
 
 on:
+  workflow_dispatch:  # optional: allows manual/API trigger
   pull_request:
     paths:
-      - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/**"
+      - "OPT-IN_FRAMEWORK/**"
       - "tools/ci/doc_meta_enforcer.py"
       - ".github/workflows/doc-meta.yml"
   push:
-    branches: [main]
+    branches:
+      - "main"
+      - "copilot/**"   # any branch whose name starts with "copilot/"
     paths:
-      - "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/**"
+      - "OPT-IN_FRAMEWORK/**"
       - "tools/ci/doc_meta_enforcer.py"
       - ".github/workflows/doc-meta.yml"
 
@@ -18,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      actions: write  # for uploading artifacts
+      actions: write          # for uploading artifacts
       security-events: write  # for uploading SARIF results
 
     steps:
@@ -74,6 +77,10 @@ jobs:
 
       - name: Fail if issues found
         if: steps.check_doc_meta.outcome == 'failure'
+        run: |
+          echo "::error title=Document metadata issues::Run 'python tools/ci/doc_meta_enforcer.py --fix' locally to resolve."
+          exit 1
+
         run: |
           echo "::error title=Document metadata issues::Run 'python tools/ci/doc_meta_enforcer.py --fix' locally to resolve."
           exit 1
