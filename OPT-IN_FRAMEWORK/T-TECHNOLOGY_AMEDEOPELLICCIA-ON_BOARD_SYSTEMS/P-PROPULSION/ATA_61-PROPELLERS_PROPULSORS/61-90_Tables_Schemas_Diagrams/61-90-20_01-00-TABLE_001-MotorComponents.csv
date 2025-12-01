@@ -1,0 +1,31 @@
+ItemID,Illustrated(Y/N),Component,SubAssembly,PartNumber,Material,Quantity,MassPerUnit_kg,Location_mm,MaintenanceMarking(Y/N),LifeLimit_FH,Certification_Ref
+STA-01,Y,Stator Core Stack,Stator Assembly,PN-EM-COR-001,M19 Silicon Steel,1,145.0,Axial: 0-380,Y,50000,CS-25.1309
+STA-02,Y,Phase Winding Set,Stator Assembly,PN-EM-WDG-001,Cu Litz Class H,1,22.0,Slots 1-72,Y,50000,CS-25.1353
+STA-03,N,Slot Liner Set,Stator Assembly,PN-EM-SLT-001,Nomex 410,72,0.015,Each slot,N,-,-
+STA-04,N,Slot Wedge Set,Stator Assembly,PN-EM-WDG-002,G10 Fiberglass,72,0.008,Each slot,N,-,-
+STA-05,Y,End Winding Support (DE),Stator Assembly,PN-EM-END-001,Al-6061-T6,1,0.85,DE end,Y,50000,-
+STA-06,Y,End Winding Support (NDE),Stator Assembly,PN-EM-END-002,Al-6061-T6,1,0.85,NDE end,Y,50000,-
+STA-07,Y,RTD Sensor (Slot 6),Stator Assembly,PN-EM-RTD-001,PT100 Class A,1,0.02,Slot 6,Y,25000,-
+STA-08,Y,RTD Sensor (Slot 30),Stator Assembly,PN-EM-RTD-001,PT100 Class A,1,0.02,Slot 30,Y,25000,-
+STA-09,Y,RTD Sensor (Slot 54),Stator Assembly,PN-EM-RTD-001,PT100 Class A,1,0.02,Slot 54,Y,25000,-
+ROT-01,Y,Motor Shaft,Rotor Assembly,PN-EM-SHF-001,4340 Steel Q&T,1,42.0,Central,Y,75000,CS-25.571
+ROT-02,Y,Rotor Core Stack,Rotor Assembly,PN-EM-RCR-001,M19 Silicon Steel,1,48.0,Axial: 70-450,Y,50000,-
+ROT-03,Y,Permanent Magnet (Pole 1-12),Rotor Assembly,PN-EM-MAG-001,NdFeB N48UH,24,1.4,V-config each pole,Y,50000,-
+ROT-04,Y,Magnet Retention Sleeve,Rotor Assembly,PN-EM-RET-001,Carbon Fiber,1,1.2,OD: 415mm,Y,50000,-
+ROT-05,N,Balance Weight Set,Rotor Assembly,PN-EM-BAL-001,Tungsten Alloy,AR,0.05,Balance planes,N,-,-
+ROT-06,Y,Rotor End Plate (DE),Rotor Assembly,PN-EM-EPL-001,Al-7075-T6,1,0.75,DE end,Y,50000,-
+ROT-07,Y,Rotor End Plate (NDE),Rotor Assembly,PN-EM-EPL-002,Al-7075-T6,1,0.65,NDE end,Y,50000,-
+BRG-01,Y,DE Angular Contact Bearing,Bearing System,PN-EM-BDE-001,7220-BECBP,1,4.8,DE position,Y,30000,-
+BRG-02,Y,NDE Cylindrical Roller Bearing,Bearing System,PN-EM-BND-001,NU 220 ECM,1,4.2,NDE position,Y,30000,-
+BRG-03,Y,Bearing Housing (DE),Bearing System,PN-EM-BHS-001,Al-7075-T6,1,3.5,DE housing,Y,50000,-
+BRG-04,Y,Bearing Housing (NDE),Bearing System,PN-EM-BHS-002,Al-7075-T6,1,3.2,NDE housing,Y,50000,-
+BRG-05,Y,Labyrinth Seal Set,Bearing System,PN-EM-SEL-001,Stainless Steel,4,0.18,Each bearing face,Y,15000,-
+BRG-06,Y,Lip Seal Set,Bearing System,PN-EM-SEL-002,Viton,4,0.08,Each bearing face,Y,10000,-
+HSG-01,Y,Housing Body (Main Barrel),Housing Assembly,PN-EM-HBY-001,Al-7075-T6,1,48.0,Central structure,Y,75000,CS-25.571
+HSG-02,Y,End Cap (DE),Housing Assembly,PN-EM-ECP-001,Al-7075-T6,1,5.5,DE end,Y,50000,-
+HSG-03,Y,End Cap (NDE),Housing Assembly,PN-EM-ECP-002,Al-7075-T6,1,4.8,NDE end,Y,50000,-
+HSG-04,Y,Mounting Flange,Housing Assembly,PN-EM-FLG-001,4340 Steel,1,3.2,Aft face,Y,75000,-
+HSG-05,Y,Lifting Lug (Upper),Housing Assembly,PN-EM-LFT-001,4340 Steel,1,0.25,12 oclock,Y,-,-
+HSG-06,Y,Lifting Lug (Lower),Housing Assembly,PN-EM-LFT-001,4340 Steel,1,0.25,6 oclock,Y,-,-
+HSG-07,Y,Coolant Inlet Port,Housing Assembly,PN-EM-PRT-001,SS 316,1,0.15,12 oclock,Y,50000,-
+HSG-08,Y,Coolant Outlet Port,Housing Assembly,PN-EM-PRT-002,SS 316,1,0.15,6 oclock,Y,50000,-
