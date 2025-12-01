@@ -114,9 +114,105 @@ CUC is the downstream complement to CFLF-GRAD. The FAirCCC system uses a dual-lo
 * [97-40-30_MODEL_DEPLOYMENT README](../../OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_97-NEURAL_NETWORK_MODELS/97-40_Software/97-40-30_MODEL_DEPLOYMENT/README.md)
 * [23-95_COMM_NN README](../../OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/23-95_COMM_NN/README.md)
 
+## Data Schema
+### Message Format
+```json
+{
+  "header": {
+    "channel_id": "string",
+    "timestamp": "ISO8601",
+    "sequence_number": "integer",
+    "source_node": "string",
+    "destination_node": "string"
+  },
+  "payload": {
+    // Channel-specific payload structure
+  },
+  "signature": "base64"
+}
+```
+
+## Protocol Details
+### Communication Flow (F→R→G→A (Fleet Core to Regional to Ground to Aircraft))
+
+1. **Connection Establishment**: mTLS handshake with mutual authentication
+2. **Data Transmission**: CBOR-encoded messages with signature verification
+3. **Acknowledgment**: Receiver confirms receipt and validation
+4. **Error Recovery**: Automatic retry with exponential backoff
+
+## Error Handling
+### Error Codes
+
+| Code | Description | Recovery Action |
+|------|-------------|------------------|
+| E001 | Authentication failure | Re-establish mTLS connection |
+| E002 | Invalid signature | Reject message, log incident |
+| E003 | Malformed payload | Request retransmission |
+| E004 | Sequence number gap | Request missing messages |
+| E005 | Timeout | Retry with exponential backoff |
+
+## Performance Metrics
+### Expected Performance
+
+| Metric | Target | Measurement Method |
+|--------|--------|--------------------|
+| Latency | < 100ms (p95) | End-to-end message timing |
+| Throughput | ≥ 1000 msg/sec | Messages per second |
+| Reliability | 99.99% | Successful transmissions |
+| Data Loss | < 0.01% | Missing sequence numbers |
+
+## Implementation Notes
+### Client Implementation
+
+```python
+# Example client implementation
+class ChannelClient:
+    def __init__(self, node_id: str, tpm_cert_path: str):
+        self.node_id = node_id
+        self.cert = load_tpm_certificate(tpm_cert_path)
+        self.connection = None
+    
+    def connect(self):
+        # Establish mTLS connection
+        pass
+    
+    def send_message(self, payload: dict):
+        # Send CBOR-encoded message
+        pass
+```
+
+## Testing & Validation
+### Test Scenarios
+
+1. **Happy Path Testing**
+   - Normal message transmission
+   - Acknowledgment handling
+   - Performance under load
+
+2. **Error Condition Testing**
+   - Network interruption
+   - Invalid authentication
+   - Malformed messages
+
+3. **Security Testing**
+   - Certificate validation
+   - Signature verification
+   - Replay attack prevention
+
+## Compliance
+### Standards Mapping
+
+| Standard | Requirement | Implementation |
+|----------|-------------|----------------|
+| DO-326A | Security process | mTLS + attestation |
+| EASA AI L2 | Advisory scope | Non-safety classification |
+| ARP4754A | System architecture | Documented interfaces |
+
+
+
 ---
 
-*Note: This is a stub document. GenCCC will auto-link and expand this content based on the FAirCCC architecture specification.*
+*Last updated: 2025-12-01 by GenCCC continuous generation*
 
 ---
 
