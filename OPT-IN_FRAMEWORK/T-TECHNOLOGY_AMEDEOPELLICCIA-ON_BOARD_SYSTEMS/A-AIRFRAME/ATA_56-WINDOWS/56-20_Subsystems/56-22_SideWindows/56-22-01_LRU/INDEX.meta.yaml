@@ -1,0 +1,39 @@
+# INDEX.meta.yaml — LRU_56-22-01 Captain Side Window Assembly
+# ATA 56 – Windows | Subsystem 22 – Side Windows
+
+metadata:
+  document_id: LRU_56-22-01
+  title: Captain Side Window Assembly
+  ata_chapter: 56
+  ata_subsystem: 22
+  sequence: 01
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+lru:
+  part_number: PN-56-22-01-001
+  nomenclature: Captain Side Window Assembly
+  manufacturer: TBD
+
+lri_components:
+  - id: LRI_01
+    name: FixedPanel
+    folder: ./LRI/LRI_01_FixedPanel/
+
+  - id: LRI_02
+    name: SlidingPanel
+    folder: ./LRI/LRI_02_SlidingPanel/
+
+  - id: LRI_03
+    name: SlidingMechanism
+    folder: ./LRI/LRI_03_SlidingMechanism/
+
+  - id: LRI_04
+    name: Seals
+    folder: ./LRI/LRI_04_Seals/
+
+  - id: LRI_05
+    name: EmergencyRelease
+    folder: ./LRI/LRI_05_EmergencyRelease/

@@ -1,0 +1,40 @@
+# INDEX.meta.yaml — LRU_56-25-01 Windshield Heating Controller
+# ATA 56 – Windows | Subsystem 25 – Window Heating
+
+metadata:
+  document_id: LRU_56-25-01
+  title: Windshield Heating Controller
+  ata_chapter: 56
+  ata_subsystem: 25
+  sequence: 01
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+lru:
+  part_number: PN-56-25-01-001
+  nomenclature: Windshield Heating Controller
+  manufacturer: TBD
+  tso: TSO-C16a
+
+lri_components:
+  - id: LRI_01
+    name: PowerController
+    folder: ./LRI/LRI_01_PowerController/
+
+  - id: LRI_02
+    name: TemperatureSensors
+    folder: ./LRI/LRI_02_TemperatureSensors/
+
+  - id: LRI_03
+    name: CurrentMonitoring
+    folder: ./LRI/LRI_03_CurrentMonitoring/
+
+  - id: LRI_04
+    name: OverheatProtection
+    folder: ./LRI/LRI_04_OverheatProtection/
+
+  - id: LRI_05
+    name: DiagnosticInterface
+    folder: ./LRI/LRI_05_DiagnosticInterface/

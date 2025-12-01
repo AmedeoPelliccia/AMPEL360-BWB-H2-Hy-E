@@ -1,0 +1,82 @@
+# INDEX.meta.yaml — ATA 56-90 CIR Configuration Item References
+# ATA 56 – Windows | CIR Assets
+
+metadata:
+  cir_id: ATA_56-90_CIR
+  title: Configuration Item References for ATA 56 Windows
+  ata_chapter: 56
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+assets:
+  # 56-21 Windshields
+  - id: 56-90-21_56-21-FIG_001
+    subsystem: 56-21
+    type: Figure
+    format: SVG
+    description: Windshield Assembly Overview
+    file: 56-90-21_56-21-FIG_001-WindshieldAssembly.svg
+    status: Placeholder
+
+  - id: 56-90-21_56-21-TABLE_001
+    subsystem: 56-21
+    type: Table
+    format: CSV
+    description: Windshield Specifications
+    file: 56-90-21_56-21-TABLE_001-WindshieldSpecs.csv
+    status: Placeholder
+
+  # 56-22 Side Windows
+  - id: 56-90-22_56-22-FIG_001
+    subsystem: 56-22
+    type: Figure
+    format: SVG
+    description: Side Window Assembly
+    file: 56-90-22_56-22-FIG_001-SideWindowAssembly.svg
+    status: Placeholder
+
+  # 56-23 Cabin Windows
+  - id: 56-90-23_56-23-FIG_001
+    subsystem: 56-23
+    type: Figure
+    format: SVG
+    description: Cabin Window Assembly
+    file: 56-90-23_56-23-FIG_001-CabinWindowAssembly.svg
+    status: Placeholder
+
+  # 56-25 Window Heating
+  - id: 56-90-25_56-25-TABLE_001
+    subsystem: 56-25
+    type: Table
+    format: CSV
+    description: Heating Load Profiles
+    file: 56-90-25_56-25-TABLE_001-HeatingLoadProfiles.csv
+    status: Placeholder
+
+  # 56-26 Rain Repellent
+  - id: 56-90-26_56-26-FIG_001
+    subsystem: 56-26
+    type: Figure
+    format: SVG
+    description: Rain Repellent Schematic
+    file: 56-90-26_56-26-FIG_001-RainRepellentSchematic.svg
+    status: Placeholder
+
+  # Legacy Template Assets
+  - id: 56-90-20_56-02-FIG_001
+    subsystem: Template
+    type: Figure
+    format: SVG
+    description: ComponentA Assembly (Template)
+    file: 56-90-20_56-02-FIG_001-ComponentA.svg
+    status: Template
+
+  - id: 56-90-20_56-02-TABLE_001
+    subsystem: Template
+    type: Table
+    format: CSV
+    description: ComponentA Specs (Template)
+    file: 56-90-20_56-02-TABLE_001-ComponentA.csv
+    status: Template
