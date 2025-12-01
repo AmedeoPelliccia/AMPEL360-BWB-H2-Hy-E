@@ -1,0 +1,40 @@
+# INDEX.meta.yaml — LRI_04 Heating Elements
+# ATA 56-21-01 Forward Windshield Assembly
+
+metadata:
+  lri_id: LRI_04
+  name: HeatingElements
+  parent_lru: LRU_56-21-01
+  ata_chapter: 56
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+component:
+  nomenclature: Windshield Heating Elements
+  description: Integrated anti-ice/anti-fog heating film
+  quantity: 3
+  location: Embedded in windshield panels
+  part_number: PN-56-21-01-04-001
+
+documents:
+  - id: 56-21-01_04_001
+    title: Heating Elements Design
+    file: 56-21-01_04_001_HeatingElements_Design.md
+    type: Design
+
+  - id: 56-21-01_04_002
+    title: Heating Elements Requirements
+    file: 56-21-01_04_002_HeatingElements_Requirements.md
+    type: Requirements
+
+  - id: 56-21-01_04_003
+    title: Heating Elements Interfaces
+    file: 56-21-01_04_003_HeatingElements_Interfaces.md
+    type: Interfaces
+
+  - id: 56-21-01_04_004
+    title: Heating Elements Materials
+    file: 56-21-01_04_004_HeatingElements_Materials.md
+    type: Materials
