@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <title>61-20-01 Electric Motor Harness Diagram</title>
+  <desc>Electrical harness routing for AMPEL360 Q100 Electric Motor (61-20-01)</desc>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title Block -->
+  <rect x="10" y="10" width="780" height="50" fill="#2c3e50" rx="5"/>
+  <text x="400" y="42" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">
+    61-20-01 Electric Motor — Harness Diagram
+  </text>
+  
+  <!-- Motor Symbol -->
+  <g transform="translate(350, 280)">
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#3498db" stroke-width="3"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Electric</text>
+    <text x="0" y="22" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Motor</text>
+    <text x="0" y="39" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">4 MW PMSM</text>
+    <!-- Motor symbol M -->
+    <circle cx="0" cy="-45" r="15" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <text x="0" y="-40" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">M</text>
+  </g>
+  
+  <!-- PCU Box -->
+  <g transform="translate(100, 150)">
+    <rect x="-60" y="-40" width="120" height="80" fill="#ecf0f1" stroke="#e74c3c" stroke-width="2" rx="5"/>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50" font-weight="bold">PCU</text>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">61-20-04</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">Power &amp; Control</text>
+  </g>
+  
+  <!-- Health Sensing Box -->
+  <g transform="translate(100, 400)">
+    <rect x="-60" y="-40" width="120" height="80" fill="#ecf0f1" stroke="#27ae60" stroke-width="2" rx="5"/>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50" font-weight="bold">Health Sensing</text>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">61-20-06</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">DAQ System</text>
+  </g>
+  
+  <!-- Cooling Loop Box -->
+  <g transform="translate(620, 280)">
+    <rect x="-60" y="-40" width="120" height="80" fill="#ecf0f1" stroke="#3498db" stroke-width="2" rx="5"/>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50" font-weight="bold">Cooling Loop</text>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">61-20-05</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">Thermal Mgmt</text>
+  </g>
+  
+  <!-- Power Cable (3-Phase) -->
+  <g>
+    <path d="M 160 150 Q 250 150 270 220" fill="none" stroke="#e74c3c" stroke-width="6"/>
+    <path d="M 160 150 Q 250 150 270 220" fill="none" stroke="#c0392b" stroke-width="4" stroke-dasharray="10,5"/>
+    <text x="200" y="165" font-family="Arial, sans-serif" font-size="10" fill="#c0392b" font-weight="bold">J1 Power</text>
+    <text x="200" y="178" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d">3×4/0 AWG</text>
+  </g>
+  
+  <!-- Resolver Cable -->
+  <g>
+    <path d="M 160 170 Q 280 200 290 250" fill="none" stroke="#9b59b6" stroke-width="2"/>
+    <text x="220" y="215" font-family="Arial, sans-serif" font-size="10" fill="#9b59b6" font-weight="bold">J2 Resolver</text>
+    <text x="220" y="228" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d">6-pin STP</text>
+  </g>
+  
+  <!-- Temperature Sensors Cable -->
+  <g>
+    <path d="M 160 400 Q 250 380 280 320" fill="none" stroke="#27ae60" stroke-width="2"/>
+    <text x="200" y="360" font-family="Arial, sans-serif" font-size="10" fill="#27ae60" font-weight="bold">J3 Temp RTDs</text>
+    <text x="200" y="373" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d">24-pin, 6×PT1000</text>
+  </g>
+  
+  <!-- Vibration Sensors Cable -->
+  <g>
+    <path d="M 160 420 Q 250 430 285 340" fill="none" stroke="#f39c12" stroke-width="2"/>
+    <text x="200" y="445" font-family="Arial, sans-serif" font-size="10" fill="#f39c12" font-weight="bold">J4 Vibration</text>
+    <text x="200" y="458" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d">6-pin, 3×IEPE</text>
+  </g>
+  
+  <!-- Cooling Interface (Fluid) -->
+  <g>
+    <path d="M 430 280 L 560 280" fill="none" stroke="#3498db" stroke-width="4" stroke-dasharray="15,5"/>
+    <text x="495" y="270" font-family="Arial, sans-serif" font-size="10" fill="#3498db" font-weight="bold">Coolant</text>
+    <text x="495" y="300" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d">In/Out Ports</text>
+  </g>
+  
+  <!-- Connector Symbols -->
+  <g transform="translate(270, 220)">
+    <rect x="-10" y="-8" width="20" height="16" fill="#e74c3c" rx="2"/>
+    <text x="0" y="4" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">J1</text>
+  </g>
+  
+  <g transform="translate(290, 250)">
+    <rect x="-10" y="-8" width="20" height="16" fill="#9b59b6" rx="2"/>
+    <text x="0" y="4" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">J2</text>
+  </g>
+  
+  <g transform="translate(280, 320)">
+    <rect x="-10" y="-8" width="20" height="16" fill="#27ae60" rx="2"/>
+    <text x="0" y="4" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">J3</text>
+  </g>
+  
+  <g transform="translate(285, 340)">
+    <rect x="-10" y="-8" width="20" height="16" fill="#f39c12" rx="2"/>
+    <text x="0" y="4" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">J4</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(550, 450)">
+    <rect x="0" y="0" width="220" height="130" fill="white" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+    <text x="110" y="20" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50" font-weight="bold">Legend</text>
+    
+    <line x1="10" y1="40" x2="40" y2="40" stroke="#e74c3c" stroke-width="4"/>
+    <text x="50" y="44" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Power (3-Phase AC)</text>
+    
+    <line x1="10" y1="60" x2="40" y2="60" stroke="#9b59b6" stroke-width="2"/>
+    <text x="50" y="64" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Resolver Feedback</text>
+    
+    <line x1="10" y1="80" x2="40" y2="80" stroke="#27ae60" stroke-width="2"/>
+    <text x="50" y="84" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Temperature Sensors</text>
+    
+    <line x1="10" y1="100" x2="40" y2="100" stroke="#f39c12" stroke-width="2"/>
+    <text x="50" y="104" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Vibration Sensors</text>
+    
+    <line x1="10" y1="120" x2="40" y2="120" stroke="#3498db" stroke-width="3" stroke-dasharray="8,4"/>
+    <text x="50" y="124" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Coolant Flow</text>
+  </g>
+  
+  <!-- Document Info -->
+  <g transform="translate(10, 560)">
+    <text font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d">
+      Document: 61-20-01_03_002_HarnessDiagram.svg | Version: 1.0 | Date: 2025-12-01 | OPT-IN Framework v1.2
+    </text>
+  </g>
+</svg>

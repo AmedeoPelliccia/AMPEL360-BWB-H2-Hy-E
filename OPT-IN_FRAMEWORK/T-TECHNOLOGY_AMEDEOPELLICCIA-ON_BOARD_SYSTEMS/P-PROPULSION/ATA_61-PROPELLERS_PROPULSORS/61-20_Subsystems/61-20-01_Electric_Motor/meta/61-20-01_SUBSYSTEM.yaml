@@ -1,0 +1,121 @@
+# 61-20-01 Electric Motor — Subsystem Metadata
+# AMPEL360 BWB H₂ Hy-E Q100 Programme
+# OPT-IN Framework v1.2
+
+subsystem:
+  id: 61-20-01
+  name: Electric_Motor
+  full_name: "61-20-01_Electric_Motor"
+  ata_chapter: "61"
+  ata_section: "20"
+  ata_subsection: "01"
+  description: "4 MW Permanent Magnet Synchronous Motor for EDF Propulsor"
+
+classification:
+  axis: T-TECHNOLOGY
+  bucket: P-PROPULSION
+  category: Subsystems
+  parent: 61-20_Subsystems
+
+programme:
+  name: AMPEL360
+  variant: "BWB H₂ Hy-E"
+  model: Q100
+  aircraft_type: Large_Aeroplane
+
+ownership:
+  owner: AMPEL360 Propulsion Team
+  responsible_engineer: TBD
+  supplier: TBD
+  coe: Electrical_Propulsion
+
+versioning:
+  version: "1.0"
+  status: draft
+  maturity: preliminary
+  last_updated: "2025-12-01"
+  change_authority: CCB_Propulsion
+
+standards:
+  framework: OPT-IN_v1.2
+  certification_basis:
+    - CS-E
+    - CS-25
+  environmental: DO-160G
+  software: DO-178C
+  hardware: DO-254
+
+interfaces:
+  internal:
+    - id: 61-20-02
+      name: Ducted_Fan
+      type: mechanical
+      description: Shaft coupling
+    - id: 61-20-04
+      name: Propulsor_Control_Unit
+      type: electrical
+      description: Power and control
+    - id: 61-20-05
+      name: Cooling_Loop
+      type: thermal
+      description: Coolant interface
+    - id: 61-20-06
+      name: Health_Sensing
+      type: electrical
+      description: Temperature and vibration sensors
+  cross_ata:
+    - ata: "24"
+      name: Electrical_Power
+      type: power_supply
+    - ata: "72"
+      name: Engine_Integration
+      type: installation
+    - ata: "45"
+      name: Central_Maintenance
+      type: data
+
+safety:
+  dal: A
+  failure_condition: Hazardous
+  linked_fha: ATA61-FHA-001
+  linked_pssa: ATA61-PSSA-001
+
+lifecycle:
+  design_life_fh: 60000
+  design_cycles: 30000
+  calendar_life_years: 25
+  tbo_fh: 15000
+
+files:
+  specifications:
+    - 61-20-01_01_001_Specifications.md
+    - 61-20-01_01_002_MassProperties.yaml
+  performance:
+    - 61-20-01_02_001_TorqueSpeed.csv
+    - 61-20-01_02_002_EfficiencyMap.csv
+  interfaces:
+    - 61-20-01_03_001_Electrical_Interface.md
+    - 61-20-01_03_002_HarnessDiagram.svg
+  thermal:
+    - 61-20-01_04_001_Thermal_Requirements.md
+    - 61-20-01_04_002_Cooling_Interface.yaml
+  reliability:
+    - 61-20-01_05_001_Reliability_Data.md
+    - 61-20-01_05_002_Maintenance_Procedures.md
+  certification:
+    - 61-20-01_06_001_Certification_Evidence.md
+    - 61-20-01_06_002_TestReports/
+  models:
+    - 61-20-01_07_001_Models_Tables/
+  sysml:
+    - SysML/ATA61_EDF_Propulsor.sysml
+  changelog:
+    - 61-20-01_08_001_CHANGELOG.md
+
+tags:
+  - electric_motor
+  - PMSM
+  - 4MW
+  - propulsion
+  - EDF
+  - Q100

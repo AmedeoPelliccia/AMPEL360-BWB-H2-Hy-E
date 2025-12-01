@@ -1,0 +1,18 @@
+# 61-20-01 Electric Motor — Lookup Table: Torque-Speed
+# AMPEL360 BWB H₂ Hy-E Q100 Programme
+# OPT-IN Framework v1.2
+#
+# Interpolated torque-speed-power data for motor control and simulation
+#
+Speed_rpm,Torque_Max_Nm,Power_Max_kW,Torque_Cont_Nm,Power_Cont_kW
+0,15278,0,12732,0
+500,15278,800,12732,667
+1000,15278,1600,12732,1333
+1500,15278,2400,12732,2000
+2000,15278,3200,12732,2667
+2500,14400,3770,12000,3142
+3000,12732,4000,10610,3333
+3500,10914,4000,9095,3333
+3600,10610,4000,10610,4000
+4000,9549,4000,9549,4000
+4200,9095,4000,9095,4000

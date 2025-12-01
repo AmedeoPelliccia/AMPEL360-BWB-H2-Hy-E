@@ -1,0 +1,148 @@
+# 61-20-01 Electric Motor — Mass Properties
+# AMPEL360 BWB H₂ Hy-E Q100 Programme
+# OPT-IN Framework v1.2
+
+metadata:
+  document_id: 61-20-01_01_002_MassProperties
+  subsystem: 61-20-01_Electric_Motor
+  ata_chapter: "61"
+  version: "1.0"
+  last_updated: "2025-12-01"
+  owner: AMPEL360 Propulsion Team
+  status: draft
+  units: SI
+
+mass_properties:
+  total_mass:
+    value: 280
+    unit: kg
+    tolerance: "+5%"
+    notes: "Dry mass without coolant"
+
+  mass_breakdown:
+    stator_assembly:
+      value: 145
+      unit: kg
+      components:
+        - name: stator_core
+          value: 85
+          unit: kg
+          material: silicon_steel_laminations
+        - name: stator_windings
+          value: 48
+          unit: kg
+          material: copper
+        - name: insulation_potting
+          value: 12
+          unit: kg
+          material: epoxy_composite
+
+    rotor_assembly:
+      value: 95
+      unit: kg
+      components:
+        - name: rotor_core
+          value: 55
+          unit: kg
+          material: silicon_steel_laminations
+        - name: permanent_magnets
+          value: 28
+          unit: kg
+          material: NdFeB_N48SH
+        - name: rotor_sleeve
+          value: 8
+          unit: kg
+          material: inconel_718
+        - name: shaft
+          value: 4
+          unit: kg
+          material: steel_4340
+
+    housing_structure:
+      value: 30
+      unit: kg
+      components:
+        - name: main_housing
+          value: 18
+          unit: kg
+          material: aluminum_7075
+        - name: end_bells
+          value: 8
+          unit: kg
+          material: aluminum_7075
+        - name: cooling_jacket
+          value: 4
+          unit: kg
+          material: aluminum_6061
+
+    bearings_seals:
+      value: 6
+      unit: kg
+      components:
+        - name: drive_end_bearing
+          value: 2.5
+          unit: kg
+          type: hybrid_ceramic
+        - name: non_drive_end_bearing
+          value: 2.0
+          unit: kg
+          type: hybrid_ceramic
+        - name: seals_misc
+          value: 1.5
+          unit: kg
+
+    sensors_harness:
+      value: 4
+      unit: kg
+      components:
+        - name: resolver
+          value: 1.2
+          unit: kg
+        - name: temperature_sensors
+          value: 0.3
+          unit: kg
+        - name: internal_harness
+          value: 2.5
+          unit: kg
+
+center_of_gravity:
+  reference_frame: motor_mounting_flange
+  x: 0.0
+  y: 0.0
+  z: 260
+  unit: mm
+  notes: "Z along shaft axis, positive toward fan"
+
+moments_of_inertia:
+  reference: center_of_gravity
+  Ixx: 8.5
+  Iyy: 8.5
+  Izz: 12.5
+  unit: kg_m2
+  notes: "Z is shaft axis"
+
+products_of_inertia:
+  Ixy: 0.0
+  Ixz: 0.0
+  Iyz: 0.0
+  unit: kg_m2
+
+fluid_masses:
+  coolant_capacity:
+    value: 3.5
+    unit: L
+    density: 1.05
+    mass: 3.7
+    notes: "50/50 glycol-water mix"
+
+wet_mass:
+  value: 283.7
+  unit: kg
+  notes: "Including coolant fill"
+
+target_vs_actual:
+  target_mass: 275
+  current_estimate: 280
+  margin: -1.8
+  unit: "%"
+  notes: "Slightly over target, optimization ongoing"
