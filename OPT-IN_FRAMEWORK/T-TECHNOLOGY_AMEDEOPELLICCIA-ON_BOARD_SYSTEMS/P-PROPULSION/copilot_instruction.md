@@ -1,4 +1,4 @@
-```
+```markdown
 Propulsion System
 Architecture: Distributed Electric Propulsion
 Power: 16 MW (4× 4 MW ducted fans)
