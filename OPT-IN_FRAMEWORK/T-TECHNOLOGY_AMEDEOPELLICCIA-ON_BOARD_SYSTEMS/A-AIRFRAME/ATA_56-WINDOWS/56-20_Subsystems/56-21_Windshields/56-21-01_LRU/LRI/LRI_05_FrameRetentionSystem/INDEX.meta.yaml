@@ -1,0 +1,40 @@
+# INDEX.meta.yaml — LRI_05 Frame Retention System
+# ATA 56-21-01 Forward Windshield Assembly
+
+metadata:
+  lri_id: LRI_05
+  name: FrameRetentionSystem
+  parent_lru: LRU_56-21-01
+  ata_chapter: 56
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+component:
+  nomenclature: Frame Retention System
+  description: Structural attachment, seals, and fasteners
+  quantity: 1
+  location: Perimeter of all windshield panels
+  part_number: PN-56-21-01-05-001
+
+documents:
+  - id: 56-21-01_05_001
+    title: Frame Retention Design
+    file: 56-21-01_05_001_FrameRetention_Design.md
+    type: Design
+
+  - id: 56-21-01_05_002
+    title: Frame Retention Requirements
+    file: 56-21-01_05_002_FrameRetention_Requirements.md
+    type: Requirements
+
+  - id: 56-21-01_05_003
+    title: Frame Retention Interfaces
+    file: 56-21-01_05_003_FrameRetention_Interfaces.md
+    type: Interfaces
+
+  - id: 56-21-01_05_004
+    title: Frame Retention Materials
+    file: 56-21-01_05_004_FrameRetention_Materials.md
+    type: Materials
