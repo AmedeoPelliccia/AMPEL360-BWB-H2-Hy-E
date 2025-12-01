@@ -1,0 +1,89 @@
+# 61-20-02 Ducted Fan — Subsystem Metadata
+
+subsystem:
+  id: 61-20-02
+  name: Ducted_Fan
+  ata_chapter: 61
+  ata_title: Propellers / Propulsors
+  axis: P-PROPULSION
+  bucket: 61-20_Subsystems
+  programme: AMPEL360 BWB H₂ Hy-E Q100
+
+status:
+  lifecycle: Active
+  version: "1.2"
+  last_updated: "2025-12-01"
+  owner: AMPEL360 Propulsion Team
+
+lru:
+  id: LRU-61-20-02
+  name: Ducted Fan Assembly (DFA)
+  part_number: PN-EDF-DFA-001
+  mtbf_hours: 25000
+  mttr_hours: 4
+  interchangeable: true
+
+lri_list:
+  - id: LRI-61-20-02-01
+    name: Rotor Assembly
+    part_number: PN-DF-ROT-001
+    description: Rotating blade assembly (14 blades, Ti-6Al-4V/CFRP)
+
+  - id: LRI-61-20-02-02
+    name: Stator Assembly
+    part_number: PN-DF-STA-001
+    description: Fixed vane assembly (21 vanes, CFRP)
+
+  - id: LRI-61-20-02-03
+    name: Nacelle Duct Assembly
+    part_number: PN-DF-NAC-001
+    description: Inlet/exhaust duct with fan case and acoustic liners
+
+interfaces:
+  internal:
+    - target: 61-20-01_Electric_Motor
+      type: Mechanical
+      description: Shaft coupling interface (4 MW torque transfer)
+
+    - target: 61-20-03_Blade_System
+      type: Design
+      description: Blade geometry libraries and material specifications
+
+    - target: 61-20-06_Health_Sensing
+      type: Electrical
+      description: Vibration and strain sensor interfaces
+
+  cross_ata:
+    - target: ATA 57 Wings
+      type: Structural
+      description: Nacelle mount / pylon interface
+
+    - target: ATA 71 Power Plant
+      type: Integration
+      description: Propulsion group installation standards
+
+    - target: ATA 72 Engine
+      type: Functional
+      description: Propulsion system integration
+
+certification:
+  references:
+    - CS-25.571  # Damage tolerance and fatigue
+    - CS-25.573  # Damage tolerance
+    - CS-25.631  # Bird strike
+    - CS-E 810   # Blade containment
+    - CS-36      # Noise certification
+
+documentation:
+  standard: OPT-IN Framework v1.2
+  generation: AI-assisted (GitHub Copilot)
+  approval_status: Pending human review
+  cm_reference: 61-00-11_EIS_Versions_Tags
+
+cir_assets:
+  figures:
+    - 61-90-20_02-01-FIG_001  # Rotor blade geometry
+    - 61-90-20_02-02-FIG_001  # Stator vane geometry
+    - 61-90-20_02-03-FIG_001  # Nacelle assembly
+  tables:
+    - 61-90-20_02-02-TABLE_003  # Blade coordinates with BOM/LMP
