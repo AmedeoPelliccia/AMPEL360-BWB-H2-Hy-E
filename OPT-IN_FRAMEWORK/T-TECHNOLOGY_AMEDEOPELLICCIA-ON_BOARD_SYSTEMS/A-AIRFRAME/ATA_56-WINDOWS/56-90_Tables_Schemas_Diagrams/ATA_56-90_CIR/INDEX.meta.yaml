@@ -1,16 +1,99 @@
-# INDEX.meta.yaml — ATA 56-90 CIR Configuration Item References
+# INDEX.meta.yaml — ATA 56-90 CIR Central Illustration Repository
 # ATA 56 – Windows | CIR Assets
 
 metadata:
   cir_id: ATA_56-90_CIR
-  title: Configuration Item References for ATA 56 Windows
+  title: Central Illustration Repository for ATA 56 Windows
   ata_chapter: 56
-  version: "1.0"
+  version: "1.1"
   status: DRAFT
   created: 2025-12-01
   last_updated: 2025-12-01
 
-assets:
+bom_lmp_assets:
+  # Bill of Materials / Line Maintenance Parts
+  - id: 56-90-21_56-21-01-BOM_LMP
+    subsystem: 56-21
+    lru: 56-21-01
+    type: BOM_LMP
+    format: CSV
+    description: Forward Windshield Assembly BOM with LMP traceability
+    file: 56-90-21_56-21-01-BOM_LMP.csv
+    status: Active
+
+  - id: 56-90-22_56-22-01-BOM_LMP
+    subsystem: 56-22
+    lru: 56-22-01
+    type: BOM_LMP
+    format: CSV
+    description: Captain Side Window Assembly BOM with LMP traceability
+    file: 56-90-22_56-22-01-BOM_LMP.csv
+    status: Active
+
+  - id: 56-90-23_56-23-01-BOM_LMP
+    subsystem: 56-23
+    lru: 56-23-01
+    type: BOM_LMP
+    format: CSV
+    description: Standard Cabin Window Unit BOM with LMP traceability
+    file: 56-90-23_56-23-01-BOM_LMP.csv
+    status: Active
+
+  - id: 56-90-23_56-23-02-BOM_LMP
+    subsystem: 56-23
+    lru: 56-23-02
+    type: BOM_LMP
+    format: CSV
+    description: Overwing Emergency Exit Window BOM with LMP traceability
+    file: 56-90-23_56-23-02-BOM_LMP.csv
+    status: Active
+
+  - id: 56-90-24_56-24-01-BOM_LMP
+    subsystem: 56-24
+    lru: 56-24-01
+    type: BOM_LMP
+    format: CSV
+    description: Upper Deck Panoramic Window BOM with LMP traceability
+    file: 56-90-24_56-24-01-BOM_LMP.csv
+    status: Active
+
+  - id: 56-90-25_56-25-01-BOM_LMP
+    subsystem: 56-25
+    lru: 56-25-01
+    type: BOM_LMP
+    format: CSV
+    description: Windshield Heating Controller BOM with LMP traceability
+    file: 56-90-25_56-25-01-BOM_LMP.csv
+    status: Active
+
+  - id: 56-90-26_56-26-01-BOM_LMP
+    subsystem: 56-26
+    lru: 56-26-01
+    type: BOM_LMP
+    format: CSV
+    description: Rain Repellent System BOM with LMP traceability
+    file: 56-90-26_56-26-01-BOM_LMP.csv
+    status: Active
+
+  - id: 56-90-27_56-27-01-BOM_LMP
+    subsystem: 56-27
+    lru: 56-27-01
+    type: BOM_LMP
+    format: CSV
+    description: Wiper Drive Unit BOM with LMP traceability
+    file: 56-90-27_56-27-01-BOM_LMP.csv
+    status: Active
+
+  - id: 56-90-28_56-28-01-BOM_LMP
+    subsystem: 56-28
+    lru: 56-28-01
+    type: BOM_LMP
+    format: CSV
+    description: Smart Glass Control Unit BOM with LMP traceability
+    file: 56-90-28_56-28-01-BOM_LMP.csv
+    status: Active
+
+figure_assets:
   # 56-21 Windshields
   - id: 56-90-21_56-21-FIG_001
     subsystem: 56-21

@@ -1,0 +1,18 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-25-01-001,LRI_01,PN-56-25-01-01-001,6110-XX-XXX-XXXX,XXXXX,Power Controller Assembly,1,EA,1,N,90,Critical,21,Make,TSO-C16a,UNL,R2-Electronics recycling,Main power regulation unit
+2,PN-56-25-01-001,LRI_01,PN-56-25-01-01-010,5995-XX-XXX-XXXX,XXXXX,Controller PCB,1,EA,1,Y,60,Critical,14,Buy,DO-178C DAL-C,UNL,R2-PCB recycling (WEEE),Main controller board
+3,PN-56-25-01-001,LRI_01,PN-56-25-01-01-020,5961-XX-XXX-XXXX,XXXXX,SSR Module,6,EA,1,Y,30,Standard,7,Buy,MIL-PRF-28800,UNL,R2-Semiconductor recovery,Solid state relay 25A
+4,PN-56-25-01-001,LRI_01,PN-56-25-01-01-030,5935-XX-XXX-XXXX,XXXXX,Power Connector,2,EA,1,Y,15,Standard,3,Buy,MIL-DTL-38999,UNL,R2-Copper/aluminum recovery,115VAC input connector
+5,PN-56-25-01-001,LRI_01,PN-56-25-01-01-040,5950-XX-XXX-XXXX,XXXXX,Transformer,1,EA,1,N,45,Standard,10,Buy,MIL-DTL-27,UNL,R2-Copper/iron core recovery,400Hz power transformer
+6,PN-56-25-01-001,LRI_02,PN-56-25-01-02-001,5961-XX-XXX-XXXX,XXXXX,Temperature Sensor Set,6,SET,1,Y,30,Standard,7,Buy,MIL-PRF-22684,UNL,R3-Platinum recovery,Panel temperature monitoring
+7,PN-56-25-01-001,LRI_02,PN-56-25-01-02-010,5961-XX-XXX-XXXX,XXXXX,RTD Sensor PT100,6,EA,1,Y,15,Standard,5,Buy,MIL-PRF-22684,UNL,R3-Platinum recovery,Resistance temp detector
+8,PN-56-25-01-001,LRI_02,PN-56-25-01-02-020,5935-XX-XXX-XXXX,XXXXX,Sensor Connector,6,EA,1,Y,10,Standard,3,Buy,MIL-DTL-38999,UNL,R2-Copper recovery,4-pin mini connector
+9,PN-56-25-01-001,LRI_03,PN-56-25-01-03-001,6625-XX-XXX-XXXX,XXXXX,Current Monitor Module,1,EA,1,Y,45,Standard,14,Make,DO-160G,UNL,R2-Electronics recycling,Power consumption tracking
+10,PN-56-25-01-001,LRI_03,PN-56-25-01-03-010,5961-XX-XXX-XXXX,XXXXX,Current Transducer,3,EA,1,Y,20,Standard,7,Buy,MIL-PRF-28800,UNL,R2-Ferrite/copper recovery,Hall effect sensor
+11,PN-56-25-01-001,LRI_03,PN-56-25-01-03-020,5995-XX-XXX-XXXX,XXXXX,Signal Conditioner,1,EA,1,Y,30,Standard,7,Buy,DO-160G,UNL,R2-PCB recycling (WEEE),Current signal processor
+12,PN-56-25-01-001,LRI_04,PN-56-25-01-04-001,5930-XX-XXX-XXXX,XXXXX,Overheat Protection,1,SET,1,Y,30,Critical,10,Make,TSO-C16a,UNL,R2-Mixed electronics,Thermal runaway prevention
+13,PN-56-25-01-001,LRI_04,PN-56-25-01-04-010,5945-XX-XXX-XXXX,XXXXX,Thermal Cutoff,6,EA,1,Y,15,Critical,5,Buy,UL 94V-0,UNL,R2-Bimetal recovery,70C auto-shutdown
+14,PN-56-25-01-001,LRI_04,PN-56-25-01-04-020,5930-XX-XXX-XXXX,XXXXX,Reset Switch,1,EA,1,Y,10,Standard,3,Buy,MIL-PRF-28750,UNL,R1-Metal/plastic separation,Manual reset switch
+15,PN-56-25-01-001,LRI_05,PN-56-25-01-05-001,5895-XX-XXX-XXXX,XXXXX,Diagnostic Interface,1,EA,1,Y,45,Standard,14,Make,DO-178C,UNL,R2-Electronics recycling,BITE and fault reporting
+16,PN-56-25-01-001,LRI_05,PN-56-25-01-05-010,5935-XX-XXX-XXXX,XXXXX,ARINC 429 Interface,1,EA,1,Y,30,Standard,10,Buy,ARINC 429,UNL,R2-PCB recycling (WEEE),Data bus interface
+17,PN-56-25-01-001,LRI_05,PN-56-25-01-05-020,5935-XX-XXX-XXXX,XXXXX,Test Connector,1,EA,1,Y,15,Standard,5,Buy,MIL-DTL-38999,UNL,R2-Copper recovery,Ground test port

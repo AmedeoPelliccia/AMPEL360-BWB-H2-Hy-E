@@ -1,0 +1,18 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-27-01-001,LRI_01,PN-56-27-01-01-001,1680-XX-XXX-XXXX,XXXXX,Motor Assembly,1,EA,1,N,60,Critical,14,Make,MIL-M-7969,UNL,R2-Motor/gearbox separation,Wiper drive motor
+2,PN-56-27-01-001,LRI_01,PN-56-27-01-01-010,6105-XX-XXX-XXXX,XXXXX,DC Motor,1,EA,1,Y,45,Critical,10,Buy,MIL-M-7969,UNL,R2-Copper/magnet recovery,28VDC permanent magnet
+3,PN-56-27-01-001,LRI_01,PN-56-27-01-01-020,3010-XX-XXX-XXXX,XXXXX,Gearbox,1,EA,1,N,30,Standard,7,Make,MIL-G-45204,UNL,R1-Steel recycling,50:1 reduction gear
+4,PN-56-27-01-001,LRI_01,PN-56-27-01-01-030,5935-XX-XXX-XXXX,XXXXX,Motor Connector,1,EA,1,Y,15,Standard,3,Buy,MIL-DTL-38999,UNL,R2-Copper recovery,4-pin power connector
+5,PN-56-27-01-001,LRI_02,PN-56-27-01-02-001,3040-XX-XXX-XXXX,XXXXX,Linkage Arm Assembly,1,EA,1,N,45,Standard,10,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Mechanical linkage system
+6,PN-56-27-01-001,LRI_02,PN-56-27-01-02-010,5340-XX-XXX-XXXX,XXXXX,Drive Arm,1,EA,1,Y,30,Standard,7,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Primary drive arm
+7,PN-56-27-01-001,LRI_02,PN-56-27-01-02-020,5340-XX-XXX-XXXX,XXXXX,Wiper Arm,1,EA,1,Y,20,Standard,5,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Blade mount arm
+8,PN-56-27-01-001,LRI_02,PN-56-27-01-02-030,3110-XX-XXX-XXXX,XXXXX,Pivot Bearing,2,EA,1,Y,15,Standard,3,Buy,MIL-B-17931,60,R1-Steel recycling,Sealed bearing - grease limited life
+9,PN-56-27-01-001,LRI_03,PN-56-27-01-03-001,2540-XX-XXX-XXXX,XXXXX,Wiper Blade Assembly,1,EA,1,Y,10,Standard,3,Buy,SAE J903,24,R4-Rubber disposal,Windshield contact blade - rubber aging
+10,PN-56-27-01-001,LRI_03,PN-56-27-01-03-010,2540-XX-XXX-XXXX,XXXXX,Blade Insert,1,EA,1,Y,5,Standard,2,Buy,SAE J903,18,R4-Silicone disposal,Silicone rubber blade - UV sensitive
+11,PN-56-27-01-001,LRI_03,PN-56-27-01-03-020,2540-XX-XXX-XXXX,XXXXX,Blade Holder,1,EA,1,Y,5,Standard,2,Buy,SAE J903,UNL,R1-Stainless steel recycling,Stainless steel holder
+12,PN-56-27-01-001,LRI_04,PN-56-27-01-04-001,5930-XX-XXX-XXXX,XXXXX,Park Switch Assembly,1,EA,1,Y,20,Standard,7,Make,MIL-S-8805,UNL,R2-Electronics recycling,Auto-park position sensing
+13,PN-56-27-01-001,LRI_04,PN-56-27-01-04-010,5930-XX-XXX-XXXX,XXXXX,Limit Switch,1,EA,1,Y,15,Standard,5,Buy,MIL-S-8805,UNL,R2-Metal/plastic separation,Mechanical limit switch
+14,PN-56-27-01-001,LRI_04,PN-56-27-01-04-020,5930-XX-XXX-XXXX,XXXXX,Cam Actuator,1,EA,1,Y,10,Standard,3,Make,AMS 4045,UNL,R1-Aluminum recycling,Switch actuator cam
+15,PN-56-27-01-001,LRI_05,PN-56-27-01-05-001,5998-XX-XXX-XXXX,XXXXX,Speed Controller,1,EA,1,Y,30,Standard,10,Make,DO-160G,UNL,R2-Electronics recycling,Variable speed control
+16,PN-56-27-01-001,LRI_05,PN-56-27-01-05-010,5998-XX-XXX-XXXX,XXXXX,PWM Controller,1,EA,1,Y,20,Standard,7,Buy,DO-160G,UNL,R2-PCB recycling (WEEE),Pulse width modulator
+17,PN-56-27-01-001,LRI_05,PN-56-27-01-05-020,5935-XX-XXX-XXXX,XXXXX,Control Connector,1,EA,1,Y,10,Standard,3,Buy,MIL-DTL-38999,UNL,R2-Copper recovery,6-pin control connector
