@@ -16,10 +16,6 @@
 
 name: License Compliance & Headers
 
-permissions:
-  contents: read
-  pull-requests: write
-
 on:
   pull_request:
     paths:
@@ -37,6 +33,9 @@ jobs:
     name: License Header & Compliance Check
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
 
     steps:
       - name: Checkout
@@ -44,8 +43,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Collect changed files in the PR and filter by the same extensions
-      # as in .licenserc.yaml: py, js, ts, sh, yml, yaml.
+      # Collect changed files in the PR and filter by extensions of interest
       - name: Get changed files (PR only)
         id: changed-files
         if: github.event_name == 'pull_request'
@@ -55,13 +53,13 @@ jobs:
 
           git fetch origin ${{ github.base_ref }} --depth=1
 
-          # All changed files between base and head
-          git diff --name-only origin/${{ github.base_ref }}...${{ github.sha }} > changed_files.txt || true
+          # List all changed files between base and head
+          git diff --name-only origin/${{ github.base_ref }}...${{ github.sha }} > changed_files.txt
 
           echo "All changed files:"
           cat changed_files.txt || true
 
-          # Filter to the same extensions as .licenserc.yaml
+          # Restrict to the file types we care about
           CHANGED_FILTERED=$(grep -E '\.(py|js|ts|sh|ya?ml)$' changed_files.txt || true)
           printf "%s\n" "$CHANGED_FILTERED" > changed_filtered.txt
 
@@ -78,6 +76,7 @@ jobs:
           echo "Running license header check on changed files only:"
           echo "${{ steps.changed-files.outputs.files }}"
 
+          # Use skywalking-eyes via Docker to pass explicit file list
           docker run --rm \
             -v "$PWD":/github/workspace \
             -w /github/workspace \
@@ -95,7 +94,7 @@ jobs:
           echo "No created or modified *.py, *.js, *.ts, *.sh, *.yml, or *.yaml files in this PR."
           echo "Skipping license header scan."
 
-      # License header scan for pushes to main: full baseline (all files per .licenserc.yaml)
+      # License header scan for pushes to main: full baseline (all files per config)
       - name: License header scan (full baseline on push)
         if: github.event_name == 'push'
         uses: apache/skywalking-eyes/header@v0.6.0
@@ -104,7 +103,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Generate SBOM (full repo on push)
+      # Generate SBOM for dependencies (push only, full repo)
       - name: Generate SBOM (syft) for repo
         if: github.event_name == 'push'
         uses: anchore/sbom-action@v0
@@ -113,7 +112,7 @@ jobs:
           format: spdx-json
           output-file: sbom.spdx.json
 
-      # Optional SBOM on PRs (non-blocking, still full repo)
+      # Optionally, non-blocking SBOM for PRs (still full, but best-effort)
       - name: Generate SBOM (syft) for PR (non-blocking)
         if: github.event_name == 'pull_request'
         continue-on-error: true
@@ -179,13 +178,11 @@ jobs:
             const fs = require('fs');
             let summary = '📋 **License Compliance Check**\n\n';
 
-            const changedFiles = `{{ steps.changed-files.outputs.files }}`.trim();
-
-            if (changedFiles === '') {
-              summary += 'ℹ️ No relevant source files (*.py, *.js, *.ts, *.sh, *.yml, *.yaml) were created or modified in this PR.\n';
-              summary += '✅ SPDX header check: Skipped (no applicable files changed)\n';
+            summary += '✅ SPDX header check: ';
+            if ('{{ steps.changed-files.outputs.files }}'.trim() === '') {
+              summary += 'Skipped (no relevant files changed in this PR)\n';
             } else {
-              summary += '✅ SPDX header check: Passed for created or modified files in this PR\n';
+              summary += 'Passed for created/modified files in this PR\n';
             }
 
             summary += '✅ SBOM generated: `sbom.spdx.json` (see artifacts)\n';
@@ -206,12 +203,13 @@ jobs:
             }
 
             summary += '\n📦 Artifacts uploaded: `license-compliance-${{ github.sha }}`';
-            summary += '\n\n*Scope: license headers checked only on created or modified files in this pull request, ';
-            summary += 'for the configured file types and paths in `.licenserc.yaml`.*';
+            summary += '\n\n*All created or modified source files in this pull request comply with Apache-2.0 license header requirements (within the configured file types and paths).*';
 
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: summary
-            });
+            })
+```)
+```
