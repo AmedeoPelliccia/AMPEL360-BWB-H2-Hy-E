@@ -1,8 +1,8 @@
-# ATA 56-90 CIR — Central Illustration Repository
+# ATA 56-90 CIR — Common Illustration Repository
 
 ## Overview
 
-This folder contains **Central Illustration Repository (CIR)** assets for ATA Chapter 56 (Windows) subsystems. CIR assets include figures (SVG), tables (CSV), Bill of Materials (BOM), and schemas referenced by LRU and LRI documentation.
+This folder contains **Common Illustration Repository (CIR)** assets for ATA Chapter 56 (Windows) subsystems. Each XX-90 folder in the OPT-IN ATA Framework serves as the CIR for that ATA chapter. CIR assets include figures (SVG), tables (CSV), Bill of Materials (BOM), and schemas referenced by LRU and LRI documentation.
 
 ## Naming Convention
 
