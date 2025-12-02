@@ -319,8 +319,6 @@ Every chapter includes `XX-30_ANCHORS/` for LCA, carbon accounting and DPP integ
 | Technology subsystems       | 15     |
 | Lifecycle folders / chapter | 14     |
 | Cross-ATA buckets / chapter | 9      |
-| Total folders               | 1,162  |
-| Documentation files         | 1,900+ |
 
 ---
 
