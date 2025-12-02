@@ -31,7 +31,7 @@ ATA_56-20_SUBSYSTEM_TEMPLATE/
 | **LRI** | Line Replaceable Item |
 | **BOM** | Bill of Materials |
 | **LMP** | Line Maintenance Parts |
-| **CIR** | Configuration Item Reference |
+| **CIR** | Common Illustration Repository |
 
 ## How to Use
 

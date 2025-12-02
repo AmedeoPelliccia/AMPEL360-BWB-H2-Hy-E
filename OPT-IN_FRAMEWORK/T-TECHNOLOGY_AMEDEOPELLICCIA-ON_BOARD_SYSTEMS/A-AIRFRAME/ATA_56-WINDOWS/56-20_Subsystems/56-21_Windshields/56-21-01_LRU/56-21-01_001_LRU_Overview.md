@@ -126,7 +126,7 @@ The AMPEL360 BWB configuration introduces unique requirements:
 
 ---
 
-## 6. Configuration Item References (CIR)
+## 6. Common Illustration Repository (CIR)
 
 **Location**: `../../../56-90_Tables_Schemas_Diagrams/ATA_56-90_CIR/`
 
