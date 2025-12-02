@@ -65,9 +65,15 @@ flowchart LR
     SAF -.->|backup| FC
     DC --> M1 & M2 & M3 & M4
 
-    style LH2 fill:#e1f5fe
-    style FC fill:#fff9c4
-    style BAT fill:#c8e6c9
+    style LH2 fill:#e1f5fe,color:#000
+    style FC fill:#fff9c4,color:#000
+    style BAT fill:#c8e6c9,color:#000
+    style SAF fill:#ffcdd2,color:#000
+    style DC fill:#fff3e0,color:#000
+    style M1 fill:#e8eaf6,color:#000
+    style M2 fill:#e8eaf6,color:#000
+    style M3 fill:#e8eaf6,color:#000
+    style M4 fill:#e8eaf6,color:#000
 ````
 
 ### Structure
@@ -81,15 +87,22 @@ flowchart LR
 ## Key Technologies
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryTextColor": "#222222",
+    "fontFamily": "Inter,Segoe UI,Roboto,sans-serif"
+  }
+}}%%
 mindmap
   root((Q100<br/>Technologies))
     BWB Aerodynamics
       +30% L/D ratio
       Integrated structure
       -40% noise footprint
-    H₂-Electric
-      Zero CO₂ flight
-      Cryogenic LH₂
+    H2-Electric
+      Zero CO2 flight
+      Cryogenic LH2
       Distributed redundancy
     CAOS
       AI-assisted design
@@ -135,11 +148,11 @@ flowchart TB
         C2["C2 – Circular/Cryo"]
     end
 
-    style O fill:#ffcdd2
-    style P fill:#f8bbd9
-    style T fill:#c5cae9
-    style I fill:#b2dfdb
-    style N fill:#fff9c4
+    style O fill:#ffcdd2,color:#000
+    style P fill:#f8bbd9,color:#000
+    style T fill:#c5cae9,color:#000
+    style I fill:#b2dfdb,color:#000
+    style N fill:#fff9c4,color:#000
 ```
 
 ### ATA Chapter Structure
@@ -306,7 +319,8 @@ Every chapter includes `XX-30_ANCHORS/` for LCA, carbon accounting and DPP integ
 | Technology subsystems       | 15     |
 | Lifecycle folders / chapter | 14     |
 | Cross-ATA buckets / chapter | 9      |
-
+| Total folders               | 1,162  |
+| Documentation files         | 1,900+ |
 
 ---
 
@@ -383,6 +397,11 @@ See [LICENSE](LICENSE) for full terms.
 **Q100** — Quantum-scale leap in regional sustainable aviation.
 
 ---
+
+*Document control: Version 2.0 · Status: ACTIVE · Last update: 2025-12-01*
+*Generated with AI assistance, prompted by Amedeo Pelliccia.*
+
+
 
 *Document control: Version 2.0 · Status: ACTIVE · Last update: 2025-12-01*
 *Generated with AI assistance, prompted by Amedeo Pelliccia.*
