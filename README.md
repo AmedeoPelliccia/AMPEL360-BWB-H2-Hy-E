@@ -1,630 +1,386 @@
-# AMPEL360 BWB-H2-Hy-E
+# AMPEL360 BWB-H₂-Hy-E Q100
 
-**Revolutionary Blended-Wing-Body Hydrogen-Hybrid Aircraft Program**  
-*Sustainable Regional Air Connectivity Through Advanced Aerospace Engineering*
+**Revolutionary Blended-Wing-Body Hydrogen-Hybrid Electric Aircraft**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/docs-OPT--IN%20Framework-green.svg)](OPT-IN_FRAMEWORK/)
-[![Aircraft Model](https://img.shields.io/badge/Model-Q100-orange.svg)](#q100-aircraft-specifications)
-[![Certification](https://img.shields.io/badge/Certification-EASA%20CS--25%20%7C%20FAA%20Part%2025-red.svg)](#certification-and-compliance)
+[![Documentation](https://img.shields.io/badge/Framework-OPT--IN%20v1.1-green.svg)](OPT-IN_FRAMEWORK/)
+[![Model](https://img.shields.io/badge/Aircraft-Q100-orange.svg)](#aircraft-specifications)
+[![Certification](https://img.shields.io/badge/Target-EASA%20CS--25%20%7C%20FAA%20Part%2025-red.svg)](#certification)
+[![EIS](https://img.shields.io/badge/EIS-2029--Q2-purple.svg)](#roadmap)
 
 ---
 
-## 🌍 Strategic Mission
+## Overview
 
-**AMPEL360 Q100** is designed to revolutionize regional air travel by **decentralizing aviation** and **combating tourism massification**. Our goal is to enable direct connections between secondary airports and smaller cities, reducing pressure on overcrowded hubs while supporting sustainable economic development.
+**AMPEL360 Q100** is a 100-passenger blended-wing-body aircraft powered by hydrogen-electric propulsion, designed to transform regional aviation through zero-emission flight and intelligent decentralization of air travel.
 
-### Core Objectives
+### Strategic Mission
 
-- **Decongest Major Hubs**: Enable point-to-point routes bypassing overcrowded airports
-- **Prevent Overtourism**: Distribute tourism from overloaded cities (Barcelona, Venice, Amsterdam) to emerging destinations
-- **Combat Gentrification**: Reduce housing pressure in major tourist hotspots
-- **Regional Development**: Bring international connectivity to cities with 100K-500K population
-
-### Example Routes
-
-- **Bilbao ↔ Lyon** (bypass Madrid-Paris hubs)
-- **Porto ↔ Bologna** (bypass Lisbon-Milan hubs)
-- **Gdansk ↔ Toulouse** (direct, no hub connection)
-- **Distribute tourism**: Instead of everyone flying to Barcelona → Girona, Tarragona, Zaragoza
-
----
-
-## ✈️ Q100 Aircraft Specifications
-
-### Model Identity
-
-- **Model Code**: Q100 (Quantum 100)
-- **Configuration**: Blended Wing Body (BWB)
-- **Capacity**: 100 passengers (single-class) / 90 passengers (dual-class)
-- **Range**: 3,500 km (1,890 nm)
-- **Market Category**: Short-Haul Regional Connectivity
-
-### Key Performance
-
-| Parameter | Specification |
+| Challenge | Q100 Solution |
 |-----------|---------------|
-| **Cruise Speed** | Mach 0.78 |
-| **Length** | 42.0 m |
-| **Wingspan** | 55.0 m |
-| **MTOW** | 65,000 kg |
-| **OEW** | 35,000 kg |
-| **Max Payload** | 17,000 kg |
+| Hub Congestion | Point-to-point routes between secondary airports (100K–500K population) |
+| Overtourism | Distribute connectivity beyond saturated destinations |
+| Carbon Emissions | Zero CO₂ in flight via hydrogen fuel cells |
 
-### Propulsion System
+**Example Routes:** Bilbao ↔ Lyon · Porto ↔ Bologna · Gdansk ↔ Toulouse
 
-- **Architecture**: Distributed Electric Propulsion
-- **Power**: 16 MW (4× 4 MW ducted fans)
-- **Primary Energy**: Liquid Hydrogen (LH₂) - 3,000 kg capacity
-- **Fuel Cells**: 20 MW PEM stacks
-- **Batteries**: 5 MWh lithium-ion
-- **Backup Fuel**: 500 L SAF (Sustainable Aviation Fuel)
+---
+
+## Aircraft Specifications
+
+### Performance
+
+| Parameter | Value | Parameter | Value |
+|-----------|-------|-----------|-------|
+| Capacity | 100 pax (single) / 90 pax (dual) | Range | 3,500 km (1,890 nm) |
+| Cruise Speed | Mach 0.78 | MTOW | 65,000 kg |
+| Wingspan | 55.0 m | Length | 42.0 m |
+| OEW | 35,000 kg | Max Payload | 17,000 kg |
+
+### Propulsion Architecture
+
+```mermaid
+flowchart LR
+    subgraph Storage["**Energy Storage**"]
+        LH2["🧊 LH₂ Tank<br/>3,000 kg @ -253°C"]
+        BAT["🔋 Battery<br/>5 MWh Li-ion"]
+        SAF["⛽ SAF Reserve<br/>500 L"]
+    end
+
+    subgraph Conversion["**Power Conversion**"]
+        FC["⚡ PEM Fuel Cells<br/>20 MW"]
+        DC["DC/DC<br/>Converters"]
+    end
+
+    subgraph Propulsion["**Distributed Propulsion**"]
+        M1["Motor 1<br/>4 MW"]
+        M2["Motor 2<br/>4 MW"]
+        M3["Motor 3<br/>4 MW"]
+        M4["Motor 4<br/>4 MW"]
+    end
+
+    LH2 --> FC
+    FC --> DC
+    BAT <--> DC
+    SAF -.->|backup| FC
+    DC --> M1 & M2 & M3 & M4
+
+    style LH2 fill:#e1f5fe
+    style FC fill:#fff9c4
+    style BAT fill:#c8e6c9
+```
 
 ### Structure
 
-- **Primary Material**: CFRP (65% by weight)
-- **Fuselage Mass**: 15,000 kg
-- **Design Philosophy**: Lightweight, high-strength composites optimized for BWB configuration
+- **Primary Material:** CFRP (65% by weight)
+- **Configuration:** Blended Wing Body → +30% aerodynamic efficiency
+- **Cabin Width:** Up to 22 m for flexible interior layouts
 
 ---
 
-## 📚 Repository Structure
+## Key Technologies
 
-This repository implements the **OPT-IN Framework**, a comprehensive documentation topology for aerospace programs with full certification traceability.
-
-### OPT-IN Framework Axes
-
-```
-OPT-IN_FRAMEWORK/
-├── O-ORGANIZATION/                           # Policies, limitations, maintenance
-├── P-PROGRAM/                                # Geometry, handling, servicing
-├── T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/  # On-board systems
-│   ├── A-AIRFRAME/                          # Structure, doors, windows, wings
-│   ├── M-MECHANICS/                         # Hydraulics, landing gear, pneumatics
-│   ├── E1-ENVIRONMENT/                      # Air conditioning, fire protection
-│   ├── D-DATA/                              # Recording systems
-│   ├── E2-ENERGY/                           # Electrical power systems
-│   ├── O-OPERATING_SYSTEMS/                 # IMA governance
-│   ├── P-PROPULSION/                        # Engines, fuel control
-│   ├── E3-ELECTRONICS/                      # Navigation, avionics
-│   ├── L1-LOGICS/                           # Autoflight, control laws
-│   ├── L2-LINKS/                            # Communications, networks
-│   ├── I-INFORMATION_INTELLIGENCE_INTERFACES/ # Displays, maintenance systems
-│   ├── C1-COCKPIT_CABIN_CARGO/              # Interior systems
-│   ├── C2-CIRCULAR_CRYOGENICS_SYSTEMS/      # H₂ fuel systems
-│   ├── I2-R_AND_D/                          # AI integration, advanced features
-│   └── A2-AERODYNAMICS/                     # Aerodynamic manipulation
-├── I-INFRASTRUCTURES/                        # Airports, H₂ infrastructure
-└── N-NEURAL_NETWORKS_USERS_TRACEABILITY/     # Digital Product Passport, AI
+```mermaid
+mindmap
+  root((Q100<br/>Technologies))
+    BWB Aerodynamics
+      +30% L/D ratio
+      Integrated structure
+      -40% noise footprint
+    H₂-Electric
+      Zero CO₂ flight
+      Cryogenic LH₂
+      Distributed redundancy
+    CAOS
+      AI-assisted design
+      Predictive maintenance
+      NN flight control
+    Digital Product Passport
+      Lifecycle traceability
+      Circular metrics
+      Audit automation
 ```
 
-### Standard ATA Chapter Structure
-
-Each ATA chapter follows a mandatory 14-folder lifecycle structure plus 9 cross-ATA buckets:
-
-- **XX-00_GENERAL/**: 14 lifecycle folders (Overview → Certification → Operations)
-- **XX-10_Operations/**: Operational procedures and turnarounds
-- **XX-20_Subsystems/**: Functional subsystems (design-driven)
-- **XX-30_ANCHORS/**: Sustainability, LCA, recycling
-- **XX-40_Software/**: Control logic, diagnostics, ML/NN
-  <details>
-  <summary>Example: 53-40_SOFTWARE/ (ATA 53 Fuselage Software)</summary>
-
-  ```
-  53-40_SOFTWARE/
-  ├── 53-40-00_GENERAL/               # Band 00 - General SW view for ATA 53
-  │   ├── 53-40-00-01_SW_Overview.md
-  │   ├── 53-40-00-02_SW_Architecture.md
-  │   ├── 53-40-00-03_SW_Design_Rules.md
-  │   ├── 53-40-00-04_SW_Safety_Classification.md
-  │   └── ASSETS/
-  │       └── DIAGRAMS/
-  │           ├── 53-40-00-02_FIG-001_SW_Context.mermaid
-  │           └── 53-40-00-02_FIG-001_SW_Context.svg
-  │
-  ├── 53-40-10_CONTROL_LOGIC/         # Band 10
-  │   ├── 53-40-10-00_General/
-  │   ├── 53-40-10-01_Anchors_Mode_Manager/
-  │   ├── 53-40-10-02_CO2_Capture_Controller/
-  │   ├── 53-40-10-03_Battery_TMS_Controller/
-  │   └── 53-40-10-04_Water_Treatment_Controller/
-  │
-  ├── 53-40-20_DIAGNOSTICS_BITE/      # Band 20
-  │   ├── 53-40-20-01_Anchors_BITE_Design/
-  │   ├── 53-40-20-02_Fault_Catalog/
-  │   └── 53-40-20-03_Health_Monitoring/
-  │
-  ├── 53-40-30_INTERFACES_BUSES/      # Band 30
-  │   ├── 53-40-30-01_Anchors_Network_Stack/
-  │   ├── 53-40-30-02_AFDX_Bindings/
-  │   └── 53-40-30-03_CAN_Bindings/
-  │
-  ├── 53-40-40_APPLICATIONS_HMI/      # Band 40
-  │   ├── 53-40-40-01_Anchors_System_Page/
-  │   └── 53-40-40-02_Crew_Alerting_Logic/
-  │
-  ├── 53-40-50_SAFETY_SUPERVISION/    # Band 50
-  │   ├── 53-40-50-01_Safety_Supervisor/
-  │   ├── 53-40-50-02_Limit_Monitors/
-  │   └── 53-40-50-03_Fallback_Logic/
-  │
-  ├── 53-40-60_TOOLING_EMULATION/     # Band 60
-  │   ├── 53-40-60-01_SIL_Framework/
-  │   └── 53-40-60-02_HIL_Framework/
-  │
-  ├── 53-40-70_TESTS/                 # Band 70
-  │   ├── 53-40-70-01_Test_Strategy/
-  │   ├── 53-40-70-02_Test_Vectors/
-  │   └── 53-40-70-03_Coverage_Reports/
-  │
-  ├── 53-40-80_AUTOCODING_CONFIG/     # Band 80
-  │   ├── 53-40-80-01_Parameter_Sets/
-  │   └── 53-40-80-02_Config_Packs/
-  │
-  ├── 53-40-90_DATA_MODELS_SCHEMAS/   # Band 90
-  │   ├── 53-40-90-01_Signal_Dictionary/
-  │   ├── 53-40-90-02_Log_Format_Schema/
-  │   └── 53-40-90-03_Parameter_Database/
-  │
-  └── 53-40-95_NN_INTEGRATION/        # Band 95
-      ├── 53-40-95-01_CO2_Controller_NN/
-      ├── 53-40-95-02_Predictive_Maintenance_NN/
-      └── 53-40-95-03_Safety_Envelope/
-  ```
-  </details>
-- **XX-50_Structures/**: Physical structures and supports
-- **XX-60_Storages/**: Tanks, reservoirs, cryogenic vessels
-- **XX-70_Propulsion/**: Propulsive interfaces
-- **XX-80_Energy/**: Electrical/thermal energy systems
-  <details>
-  <summary>Example: 53-80_Energy/ (ATA 53 Fuselage Energy)</summary>
-
-  ```
-  53-80_Energy/
-  ├── 53-80-00_General/
-  │   ├── 53-80-00-01_NRG_Overview.md          ← This document
-  │   ├── 53-80-00-02_Design_Rules.md
-  │   ├── 53-80-00-03_Energy_Principles.md
-  │   └── 53-80-00-04_Safety_Requirements.md
-  ├── 53-80-10_Electrical_Distribution/
-  │   ├── 53-80-10-01_HVDC_Bus_Design.md
-  │   ├── 53-80-10-02_Load_Management.md
-  │   ├── 53-80-10-03_Power_Routing.md
-  │   ├── 53-80-10-04_Bus_Tie_Control.md
-  │   └── 53-80-10-05_ICD_24-001_HVDC.md
-  ├── 53-80-20_Thermal_Distribution/
-  │   ├── 53-80-20-01_Dual_Thermal_Bus.md
-  │   ├── 53-80-20-02_Coolant_System.md
-  │   ├── 53-80-20-03_Heat_Exchanger_Catalog.md
-  │   ├── 53-80-20-04_Thermal_Control.md
-  │   └── 53-80-20-05_ICD_21-001_ECS.md
-  ├── 53-80-30_Power_Conversion/
-  │   ├── 53-80-30-01_DCDC_Specifications.md
-  │   ├── 53-80-30-02_Bidirectional_Flow.md
-  │   ├── 53-80-30-03_Converter_Control.md
-  │   └── 53-80-30-04_EMI_EMC.md
-  ├── 53-80-40_Energy_Management/
-  │   ├── 53-80-40-01_EMS_Architecture.md
-  │   ├── 53-80-40-02_Load_Balancing.md
-  │   ├── 53-80-40-03_Thermal_Optimization.md
-  │   ├── 53-80-40-04_Regen_Maximization.md
-  │   └── 53-80-40-05_Load_Shedding.md
-  ├── 53-80-50_Interfaces/
-  │   ├── 53-80-50-01_ATA24_Interface.md
-  │   ├── 53-80-50-02_ATA21_Interface.md
-  │   └── 53-80-50-03_ATA72_Interface.md
-  ├── 53-80-60_Protection/
-  │   ├── 53-80-60-01_Electrical_Protection.md
-  │   ├── 53-80-60-02_SSCB_Specifications.md
-  │   ├── 53-80-60-03_Thermal_Protection.md
-  │   └── 53-80-60-04_Fault_Detection.md
-  ├── 53-80-70_Monitoring/
-  │   ├── 53-80-70-01_Power_Monitoring.md
-  │   └── 53-80-70-02_Thermal_Monitoring.md
-  ├── 53-80-80_Efficiency/
-  │   ├── 53-80-80-01_Efficiency_Optimization.md
-  │   └── 53-80-80-02_Loss_Analysis.md
-  └── 53-80-90_Data_Schemas/
-      ├── 53-80-90-01_Energy_Parameters.csv
-      ├── 53-80-90-02_Signal_Dictionary.csv
-      └── 53-80-90-03_Thermal_Parameters.csv
-  ```
-  </details>
-- **XX-90_Tables_Schemas_Diagrams/**: Technical data and catalogs
-  <details>
-  <summary>Example: 53-90_Tables_Schemas_Diagrams/ (ATA 53 Fuselage Data)</summary>
-
-  ```
-  53-90_Tables_Schemas_Diagrams/
-  ├── 53-90-00_General/
-  │   ├── 53-90-00-01_TSD_Overview.md          ← This document
-  │   ├── 53-90-00-02_Data_Governance.md
-  │   └── 53-90-00-03_Naming_Conventions.md
-  ├── 53-90-10_Signal_Dictionary/
-  │   ├── 53-90-10-01_Signal_Catalog.csv
-  │   ├── 53-90-10-02_Signal_Schema.json
-  │   └── 53-90-10-03_Signal_Validation.md
-  ├── 53-90-20_Parameter_Database/
-  │   ├── 53-90-20-01_Parameter_Catalog.csv
-  │   ├── 53-90-20-02_Parameter_Schema.json
-  │   └── 53-90-20-03_Parameter_Management.md
-  ├── 53-90-30_Message_Catalog/
-  │   ├── 53-90-30-01_AFDX_VL_Definitions.csv
-  │   ├── 53-90-30-02_CAN_Message_Definitions.csv
-  │   ├── 53-90-30-03_Message_Structures.h
-  │   └── 53-90-30-04_ICD_Message_Format.md
-  ├── 53-90-40_Schema_Definitions/
-  │   ├── 53-90-40-01_Signal_Schema.json
-  │   ├── 53-90-40-02_Parameter_Schema.json
-  │   ├── 53-90-40-03_DPP_Event_Schema.json
-  │   ├── 53-90-40-04_DMC_Schema.xsd
-  │   └── 53-90-40-05_Schema_Catalog.md
-  ├── 53-90-50_Diagram_Index/
-  │   ├── 53-90-50-01_Figure_Catalog.csv
-  │   ├── 53-90-50-02_Drawing_Catalog.csv
-  │   ├── 53-90-50-03_Schematic_Catalog.csv
-  │   └── figures/
-  │       ├── FIG-53-00-001_System_Overview.mermaid
-  │       ├── FIG-53-40-001_SW_Context.mermaid
-  │       └── ...
-  ├── 53-90-60_Traceability/
-  │   ├── 53-90-60-01_Req_Design_Matrix.csv
-  │   ├── 53-90-60-02_Hazard_Mitigation_Matrix.csv
-  │   ├── 53-90-60-03_Signal_Test_Matrix.csv
-  │   └── 53-90-60-04_Traceability_Report.md
-  ├── 53-90-70_DPP_Schemas/
-  │   ├── 53-90-70-01_Component_Record.json
-  │   ├── 53-90-70-02_Event_Types.md
-  │   ├── 53-90-70-03_Circular_Metrics.md
-  │   └── 53-90-70-04_DPP_Integration.md
-  ├── 53-90-80_Data_Dictionary/
-  │   ├── 53-90-80-01_Abbreviations.csv
-  │   ├── 53-90-80-02_Glossary.md
-  │   └── 53-90-80-03_Units_Conventions.md
-  └── 53-90-90_Validation/
-      ├── 53-90-90-01_Schema_Validation_Rules.md
-      ├── 53-90-90-02_BREX_Rules.xml
-      └── 53-90-90-03_Data_Quality_Metrics.md
-  ```
-  </details>
-
-See [OPT-IN_FRAMEWORK_STANDARD.md](OPT-IN_FRAMEWORK_STANDARD.md) for complete specification.
-
 ---
 
-## 🚀 Key Technologies & Innovations
+## OPT-IN Framework
 
-### 1. Blended Wing Body (BWB) Design
-- **30% more aerodynamic efficiency** vs. conventional tube-and-wing
-- Integrated structure reduces weight and drag
-- Cabin width up to 22 m for innovative interior layouts
+The repository implements **OPT-IN Framework v1.1**, a certification-grade documentation topology.
 
-### 2. Hydrogen-Electric Propulsion
-- **Zero CO₂ emissions** during flight
-- Cryogenic LH₂ storage at -253°C
-- PEM fuel cells with 5 MWh battery backup
-- Distributed electric propulsion for redundancy and efficiency
+### Framework Architecture
 
-### 3. AI-Driven Operations (CAOS Framework)
-- **CAOS** (Cognitive Aerospace Operations System)
-- AI-assisted design optimization
-- Predictive maintenance
-- Energy management and route optimization
-- Neural network integration for flight control
+```mermaid
+flowchart TB
+    subgraph OPTIN["**OPT-IN FRAMEWORK**"]
+        O["**O** - Organization<br/>ATA 00, 01, 04, 05"]
+        P["**P** - Program<br/>ATA 06–09, 12"]
+        T["**T** - Technology<br/>15 subsystems"]
+        I["**I** - Infrastructures<br/>ATA 02, 03, 10, 13"]
+        N["**N** - Neural Networks<br/>ATA 95–98"]
+    end
 
-### 4. Digital Product Passport (DPP)
-- Complete lifecycle traceability
-- Component-level tracking
-- Sustainability metrics
-- Circular economy integration
-- Neural network training and monitoring
+    T --> T_SUB
 
-### 5. Certification-Grade Documentation
-- Full OPT-IN Framework implementation
-- Requirements traceability
-- V&V evidence tracking
-- DO-178C, DO-254, DO-160 compliance
-- EASA CS-25 / FAA Part 25 aligned
+    subgraph T_SUB["**Technology Subsystems**"]
+        direction LR
+        A["A-Airframe"]
+        M["M-Mechanics"]
+        E1["E1-Environment"]
+        E2["E2-Energy"]
+        PP["P-Propulsion"]
+        E3["E3-Electronics"]
+        L1["L1-Logics"]
+        L2["L2-Links"]
+        C1["C1-Cockpit/Cabin"]
+        C2["C2-Circular/Cryo"]
+    end
 
----
-
-## 📖 Key Documentation
-
-### Getting Started
-
-- **[STRUCTURE_OVERVIEW.txt](STRUCTURE_OVERVIEW.txt)**: Complete framework statistics (83 ATA chapters, 1,162 folders)
-- **[OPT-IN_FRAMEWORK_STANDARD.md](OPT-IN_FRAMEWORK_STANDARD.md)**: Mandatory structure and validation rules
-- **[AMPEL360_DOCUMENTATION_STANDARD.md](AMPEL360_DOCUMENTATION_STANDARD.md)**: Documentation conventions
-- **[OPTIN_FRAMEWORK_STRUCTURE.md](OPTIN_FRAMEWORK_STRUCTURE.md)**: Framework navigation guide
-
-### Core Documents
-
-- **[AI-ASI-TP.md](AI-ASI-TP.md)**: AI-Driven Aerospace Sustainable Industry Transition Proposal
-- **[DIGITAL_TWIN_CONTROL_LOOP.md](DIGITAL_TWIN_CONTROL_LOOP.md)**: Digital twin architecture
-- **[CAOS_OPERATIONS_FRAMEWORK.md](CAOS/CAOS_OPERATIONS_FRAMEWORK.md)**: Cognitive operations system
-- **[ATA_03_NUMBERING_GUIDE.md](ATA_03_NUMBERING_GUIDE.md)**: Numbering conventions
-
-### Implementation Guides
-
-- **[IMPLEMENTATION_COMPLETE.md](IMPLEMENTATION_COMPLETE.md)**: Copilot instructions implementation status
-- **[COPILOT_INSTRUCTIONS_SUMMARY.md](COPILOT_INSTRUCTIONS_SUMMARY.md)**: GitHub Copilot integration guide
-- **[CGEN_CI_CD_GUIDE.md](CGEN_CI_CD_GUIDE.md)**: CI/CD pipeline documentation
-
-### Policies
-
-- **[POLICY_OPEN_SOURCE.md](POLICY_OPEN_SOURCE.md)**: Open source strategy
-- **[LICENSE](LICENSE)**: Apache License 2.0
-- **[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)**: Third-party attributions
-
----
-
-## 🛠️ Tools & Validation
-
-### Repository Tools
-
-The `tools/` directory contains validation and automation scripts:
-
-```
-tools/
-├── validators/           # Drawing, CI number, and structure validators
-├── ci/                   # CI/CD scripts and structure validators
-├── doc-meta-enforcer-mcp/ # MCP server for document control and hyperlinking
-├── cgrow/               # C-GROWTH living documentation lifecycle tools
-├── genccc/              # Cross-reference integrity and doc generation
-└── schemas/             # JSON/YAML schemas for validation
+    style O fill:#ffcdd2
+    style P fill:#f8bbd9
+    style T fill:#c5cae9
+    style I fill:#b2dfdb
+    style N fill:#fff9c4
 ```
 
-### Automated Validation
+### ATA Chapter Structure
 
-- **Structure Validation**: Ensures OPT-IN Framework compliance
-- **Drawing Validation**: Validates Q100 drawing naming conventions
-- **CI Number Validation**: Validates component identification numbers
-- **Documentation Validation**: Checks metadata, links, and formatting
-- **Security Scanning**: Bandit and CodeQL integration
+Every chapter follows a mandatory dual-layer architecture:
 
-### CI/CD Workflows
+```mermaid
+flowchart TB
+    subgraph ATA["**ATA_XX-DESCRIPTION/**"]
+        subgraph GEN["**XX-00_GENERAL** — 14 Lifecycle Folders"]
+            G01["01 Overview"]
+            G02["02 Safety"]
+            G03["03 Requirements"]
+            G04["04 Design"]
+            G05["05 Interfaces"]
+            G06["06 Engineering"]
+            G07["07 V&V"]
+            G08["08 Prototyping"]
+            G09["09 Production"]
+            G10["10 Certification"]
+            G11["11 EIS/Tags"]
+            G12["12 Services"]
+            G13["13 Subsystems"]
+            G14["14 Ops/Sustain"]
+        end
 
-Located in `.github/workflows/`:
+        subgraph BUCKETS["**Cross-ATA Buckets** — 9 Mandatory"]
+            B10["10 Operations"]
+            B20["20 Subsystems"]
+            B30["30 ANCHORS"]
+            B40["40 Software"]
+            B50["50 Structures"]
+            B60["60 Storages"]
+            B70["70 Propulsion"]
+            B80["80 Energy"]
+            B90["90 Schemas"]
+        end
+    end
 
-- **Q100 Validation**: Complete validation suite
-- **OPT-IN Structure Check**: Framework structure enforcement
-- **Documentation Validation**: Metadata and link checking
-- **Copilot Setup**: GitHub Copilot environment preparation
+    style GEN fill:#e3f2fd
+    style BUCKETS fill:#f3e5f5
+    style B30 fill:#c8e6c9
+```
+
+### Cross-ATA Bucket Definitions
+
+| Bucket | Purpose |
+|--------|---------|
+| **00 General** | Governance, standards, configuration & change management |
+| **10 Operations** | Turnaround, ground/flight ops procedures |
+| **20 Subsystems** | Functional systems, main engineering artefacts |
+| **30 ANCHORS** | Sustainability, repairability, LCA, carbon accounting, DPP |
+| **40 Software** | Embedded apps, controllers, diagnostics, ML/NN |
+| **50 Structures** | Frames, housings, supports, structural routes |
+| **60 Storages** | Tanks, reservoirs, cryogenic vessels |
+| **70 Propulsion** | Propulsive interface items/couplings |
+| **80 Energy** | Electrical/thermal conversion & distribution |
+| **90 Schemas** | Data schemas, catalogs, drawing indexes, SDS |
 
 ---
 
-## 🏗️ Quick Start for Contributors
+## Getting Started
 
 ### Prerequisites
 
 ```bash
-# Python 3.9+ required
-python --version
-
-# Install dependencies
+python --version  # Requires 3.9+
 pip install -r requirements.txt
 ```
 
 ### Repository Navigation
 
-1. **Find Your ATA Chapter**: Navigate to `OPT-IN_FRAMEWORK/` → select axis (O/P/T/I/N) → find ATA chapter
-2. **Lifecycle Documentation**: Go to `XX-00_GENERAL/` → select lifecycle folder (01-14)
-3. **System Documentation**: Go to cross-ATA buckets (XX-10 through XX-90)
+```mermaid
+flowchart LR
+    A["1. Select Axis<br/>O/P/T/I/N"] --> B["2. Find ATA Chapter<br/>XX-DESCRIPTION"]
+    B --> C{"Document Type?"}
+    C -->|Lifecycle| D["XX-00_GENERAL/<br/>folders 01-14"]
+    C -->|System| E["XX-10 to XX-90<br/>buckets"]
+```
 
-### Validation Tools
+### Validation Commands
 
 ```bash
-# Validate structure
+# Structure compliance
 python tools/validators/structure_validator.py .
 
-# Validate drawing names
-python tools/validators/drawing_validator.py <drawing_file.svg>
+# Drawing naming (Q100 conventions)
+python tools/validators/drawing_validator.py <file.svg>
 
-# Validate CI numbers
+# CI number format
 python tools/validators/ci_validator.py <CI-XX-XXX-XXX-XXX>
 
-# Validate documentation
+# Documentation metadata
 python tools/validate_documentation_structure.py
 ```
 
-### Pre-commit Hooks
+### Pre-commit Setup
 
 ```bash
-# Install hooks
 bash .github/hooks/setup-hooks.sh
-
-# Hooks automatically validate:
-# - Q100 model code usage
-# - Forbidden file extensions
-# - Strategic mission scope
-# - DO-178C compliance
+# Validates: Q100 model code · Forbidden extensions · DO-178C markers
 ```
 
 ---
 
-## 📊 Statistics
+## Certification
 
-- **Total ATA Chapters**: 83
-- **Main Axes**: 5 (O-P-T-I-N)
-- **T-Technology Subsystems**: 15
-- **Lifecycle Folders per Chapter**: 14
-- **Cross-ATA Buckets per Chapter**: 9
-- **Total Development Folders**: 1,162
-- **Documentation Files**: 1,900+ README.md files
-- **Lines of Documentation**: 50,000+
+### Regulatory Framework
 
----
+```mermaid
+flowchart TB
+    subgraph Primary["**Airworthiness**"]
+        EASA["EASA CS-25"]
+        FAA["FAA Part 25"]
+        SC["Special Conditions<br/>BWB, H₂, DEP"]
+    end
 
-## 🎯 Certification and Compliance
+    subgraph SW["**Software**"]
+        DO178["DO-178C<br/>DAL A-E"]
+        DO254["DO-254<br/>Hardware"]
+        DO160["DO-160G<br/>Environmental"]
+    end
 
-### Regulatory Basis
+    subgraph Safety["**Safety Process**"]
+        ARP4754["ARP4754A<br/>Development"]
+        ARP4761["ARP4761<br/>Safety Assessment"]
+        DO326["DO-326A<br/>Cybersecurity"]
+    end
 
-- **EASA CS-25**: Certification Specifications for Large Aeroplanes
-- **FAA 14 CFR Part 25**: Airworthiness Standards
-- **Special Conditions**: BWB configuration, H₂ fuel systems, distributed propulsion
+    Primary --> SW --> Safety
 
-### Software Standards
+    style EASA fill:#ffcdd2
+    style FAA fill:#ffcdd2
+    style DO178 fill:#c5cae9
+```
 
-- **DO-178C**: Software Considerations in Airborne Systems (DAL A-E)
-- **DO-254**: Design Assurance Guidance for Airborne Electronic Hardware
-- **DO-160**: Environmental Conditions and Test Procedures
+### Documentation Standards
 
-### Industry Standards
-
-- **ATA iSpec 2200**: Documentation Standards
-- **S1000D**: Technical Publications Specification
-- **ISO 15926**: Industrial Data Integration
-
-### Safety & Security
-
-- **CS-25.1309**: Equipment, systems, and installations (FHA, PSSA, SSA)
-- **ARP4754A**: Development of Civil Aircraft and Systems
-- **ARP4761**: Safety Assessment Process
-- **DO-326A / ED-202A**: Airworthiness Security Process Specification
-
-### Entry Into Service (EIS)
-
-- **Target**: 2029-Q2
-- **Type Certification**: EASA + FAA parallel certification
-- **Production Certification**: Part 21 compliance
+ATA iSpec 2200 · S1000D · ISO 15926
 
 ---
 
-## 🌱 Sustainability & Circularity
+## Sustainability
 
-### Environmental Performance
+| Metric | Target |
+|--------|--------|
+| **Flight CO₂** | Zero (H₂ fuel cells → H₂O) |
+| **Lifecycle Emissions** | −60% vs conventional |
+| **Community Noise** | −40% (BWB shielding) |
+| **End-of-Life Recovery** | 85% materials recyclable |
 
-- **Zero Flight CO₂**: Hydrogen fuel cells emit only water vapor
-- **Lifecycle Emissions**: 60% reduction vs. conventional aircraft
-- **Noise**: BWB configuration reduces community noise by 40%
-- **Recyclability**: 85% of materials recoverable at end-of-life
-
-### Circular Economy Integration
-
-- **Digital Product Passport**: Full component lifecycle tracking
-- **Material Traceability**: From raw material to recycling
-- **Energy Accounting**: Embodied energy tracking
-- **Reuse Strategy**: Design for disassembly and component reuse
-
-### Sustainability Documentation
-
-Each ATA chapter includes `XX-30_ANCHORS/` folder with:
-- Life Cycle Assessment (LCA)
-- Carbon accounting
-- Recycling strategies
-- Sustainability metrics
+Every chapter includes **XX-30_ANCHORS/** for LCA, carbon accounting, and DPP integration.
 
 ---
 
-## 🤝 Contributing
+## Repository Statistics
 
-We welcome contributions from aerospace engineers, software developers, sustainability experts, and documentation specialists.
-
-### Contribution Guidelines
-
-1. **Read the Standards**: Familiarize yourself with OPT-IN Framework and documentation standards
-2. **Follow the Structure**: All contributions must comply with the mandatory structure
-3. **Validate Your Work**: Run validation tools before committing
-4. **Document Your Changes**: Update relevant README files and traceability matrices
-5. **Use GitHub Copilot Instructions**: Follow guidelines in `.github/copilot.md`
-
-### Areas for Contribution
-
-- **Technical Documentation**: System design, requirements, interfaces
-- **Validation & Verification**: Test procedures, analysis results
-- **Certification Evidence**: Compliance documentation
-- **Sustainability**: LCA, circularity strategies
-- **Software Development**: Control algorithms, diagnostics, AI integration
-- **Infrastructure**: H₂ production, distribution, airport integration
+| Metric | Value |
+|--------|-------|
+| ATA Chapters | 83 |
+| OPT-IN Axes | 5 |
+| Technology Subsystems | 15 |
+| Lifecycle Folders/Chapter | 14 |
+| Cross-ATA Buckets/Chapter | 9 |
+| Total Folders | 1,162 |
+| Documentation Files | 1,900+ |
 
 ---
 
-## 📄 License
+## Key Documentation
 
-This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
+| Document | Description |
+|----------|-------------|
+| [`OPT-IN_FRAMEWORK_STANDARD.md`](OPT-IN_FRAMEWORK_STANDARD.md) | Mandatory structure & validation rules |
+| [`AMPEL360_DOCUMENTATION_STANDARD.md`](AMPEL360_DOCUMENTATION_STANDARD.md) | Writing conventions |
+| [`AI-ASI-TP.md`](AI-ASI-TP.md) | AI integration strategy |
+| [`DIGITAL_TWIN_CONTROL_LOOP.md`](DIGITAL_TWIN_CONTROL_LOOP.md) | Digital twin architecture |
+| [`CAOS/CAOS_OPERATIONS_FRAMEWORK.md`](CAOS/CAOS_OPERATIONS_FRAMEWORK.md) | Cognitive operations system |
+| [`.github/copilot.md`](.github/copilot.md) | GitHub Copilot integration |
 
-### Copyright Notice
+---
+
+## Tools
+
+```
+tools/
+├── validators/              # Structure, drawing, CI validation
+├── ci/                      # CI/CD scripts
+├── doc-meta-enforcer-mcp/   # Document control MCP server
+├── cgrow/                   # C-GROWTH living doc lifecycle
+├── genccc/                  # Cross-reference & doc generation
+└── schemas/                 # JSON/YAML validation schemas
+```
+
+---
+
+## Contributing
+
+We welcome contributions from aerospace engineers, software developers, and documentation specialists.
+
+1. Read [`OPT-IN_FRAMEWORK_STANDARD.md`](OPT-IN_FRAMEWORK_STANDARD.md)
+2. Follow mandatory structure
+3. Run validation tools before commit
+4. Update traceability matrices
+
+**Areas:** Technical Documentation · V&V Evidence · Certification Artifacts · Sustainability/LCA · Software/ML · Infrastructure
+
+---
+
+## License
 
 ```
 Copyright 2025 AMPEL360 Program
 Concept and Direction: Amedeo Pelliccia
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Licensed under the Apache License, Version 2.0
 ```
 
----
-
-## 🔗 Links & Resources
-
-### Official Documentation
-
-- [OPT-IN Framework README](OPT-IN_FRAMEWORK/README.md)
-- [CAOS Operations Framework](CAOS/CAOS_OPERATIONS_FRAMEWORK.md)
-- [GitHub Copilot Instructions](.github/copilot.md)
-- [Validation Tools Documentation](tools/validators/README.md)
-
-### External Standards
-
-- [EASA CS-25](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27)
-- [FAA Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)
-- [DO-178C](https://www.rtca.org/content/standards-guidance-documents)
-- [ATA iSpec 2200](https://www.ataebiz.org/)
-
-### Project Resources
-
-- **Issues**: [GitHub Issues](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/discussions)
-- **Wiki**: [Project Wiki](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki)
+See [LICENSE](LICENSE) for full terms.
 
 ---
 
-## 📧 Contact & Support
+## Links
 
-**Project Lead**: Amedeo Pelliccia  
-**Program**: AMPEL360 Q100 BWB-H2-Hy-E  
-**Framework**: OPT-IN (O-P-T-I-N) Documentation Architecture
-
-For technical questions, certification inquiries, or collaboration opportunities, please open an issue on GitHub or contact the program team.
-
----
-
-## 🎓 AI & Documentation Note
-
-This repository extensively uses **AI-assisted development** and **GitHub Copilot integration**:
-
-- **Documentation**: AI-generated content, prompted by Amedeo Pelliccia
-- **Design Support**: AI-driven trade space exploration and optimization
-- **Code Generation**: GitHub Copilot assists with software development
-- **Validation**: AI-powered checks for compliance and quality
-
-All AI-generated content is reviewed and approved by qualified aerospace engineers and subject matter experts. See [AI-ASI-TP.md](AI-ASI-TP.md) for the complete AI integration strategy.
+| Resource | URL |
+|----------|-----|
+| Issues | [GitHub Issues](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues) |
+| Discussions | [GitHub Discussions](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/discussions) |
+| Wiki | [Project Wiki](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) |
+| EASA CS-25 | [easa.europa.eu](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) |
+| DO-178C | [rtca.org](https://www.rtca.org/content/standards-guidance-documents) |
 
 ---
 
-## Document Control
+**AMPEL360** — Aviation Model by Proactive Engineering Leaders
 
-- **Generated with the assistance of AI** (GitHub Copilot), prompted by **Amedeo Pelliccia**
-- **Status**: ACTIVE - Continuously maintained
-- **Version**: 1.0
-- **Repository**: `AMPEL360-BWB-H2-Hy-E`
-- **Last Update**: 2025-11-27
-- **Maintained By**: AMPEL360 Q100 Documentation Team
+*Enabling hydrogen-electric, AI-orchestrated, carbon-negative commercial aviation*
+
+**Q100** — Quantum leap in regional sustainable aviation
 
 ---
 
-**AMPEL360** — Aviation Model by Proactive Engineering Leaders 
-is enabling hydrogen-electric, AI-orchestrated, carbon-negative commercial aviation.
-
-**Q100** - *Quantum leap in regional sustainable aviation*
-
-*Making regional air travel sustainable, accessible, and beneficial for communities worldwide.*
+*Document Control: Version 2.0 · Status: ACTIVE · Last Update: 2025-12*
+*Generated with AI assistance, prompted by Amedeo Pelliccia*
