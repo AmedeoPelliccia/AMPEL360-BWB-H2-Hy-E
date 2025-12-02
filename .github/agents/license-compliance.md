@@ -110,7 +110,6 @@ After applying changes, the agent should provide a short summary, e.g.:
 - Reminder to re-run CI or local checks:
 
   ```bash
-  # Example local check (if configured)
   skywalking-eyes header check -c .licenserc.yaml
   ```
 
@@ -122,45 +121,44 @@ The agent should be aware of the following CI steps and help the user understand
 
 ### 4.1 Header Scan
 
-* CI uses `apache/skywalking-eyes/header` action (check `.github/workflows/license-compliance.yml` for current version):
+CI uses `apache/skywalking-eyes/header` action (see `.github/workflows/license-compliance.yml`):
 
-  ```yaml
-  - name: License header scan
-    uses: apache/skywalking-eyes/header@<version>
-    with:
-      config: .licenserc.yaml
-  ```
+```yaml
+- name: License header scan
+  uses: apache/skywalking-eyes/header@<version>
+  with:
+    config: .licenserc.yaml
+```
 
-* If the user pastes CI logs with failures, the agent should:
+If the user pastes CI logs with failures, the agent should:
 
-  * Identify the files and missing/incorrect headers.
-  * Propose concrete patches to make the header scan pass.
+- Identify the files and missing/incorrect headers.
+- Propose concrete patches to make the header scan pass.
 
 ### 4.2 SBOM Generation
 
-* CI uses:
+CI uses:
 
-  ```yaml
-  - name: Generate SBOM (syft)
-    uses: anchore/sbom-action@v0
-  ```
+```yaml
+- name: Generate SBOM (syft)
+  uses: anchore/sbom-action@v0
+```
 
-* The agent **does not need** to edit the SBOM, but should:
+The agent **does not need** to edit the SBOM, but should:
 
-  * Explain to users that SBOM is generated automatically.
-  * Optionally point to `sbom.spdx.json` as the **authoritative dependency list** for audits.
+- Explain to users that SBOM is generated automatically.
+- Optionally point to `sbom.spdx.json` as the **authoritative dependency list** for audits.
 
 ### 4.3 Python Dependency Licenses
 
-* If `requirements*.txt`, `setup.py` or `pyproject.toml` exist, CI runs `pip-licenses`.
+If `requirements*.txt`, `setup.py` or `pyproject.toml` exist, CI runs `pip-licenses`.
 
-* The agent should:
+The agent should:
 
-  * Explain how `python-licenses.md` is generated.
-  * If the user asks, highlight dependencies with **non-Apache-compatible** licenses and suggest:
-
-    * Replacement libraries, or
-    * Isolation / containment strategies.
+- Explain how `python-licenses.md` is generated.
+- If the user asks, highlight dependencies with **non-Apache-compatible** licenses and suggest:
+  - Replacement libraries, or
+  - Isolation / containment strategies.
 
 ---
 
@@ -171,13 +169,11 @@ The agent must follow these rules when proposing edits:
 1. **Do not alter functional code** except to insert or adjust license headers.
 2. **Do not change the SPDX identifier** (`Apache-2.0`) unless explicitly instructed by a human.
 3. **Maintain formatting**:
-
-   * Preserve blank lines between header and code.
-   * Respect project style (e.g. maximum line length) where obvious.
+   - Preserve blank lines between header and code.
+   - Respect project style (e.g. maximum line length) where obvious.
 4. Prefer **minimal diffs**:
-
-   * Only touch the lines required for proper headers.
-   * Avoid reformatting unrelated sections.
+   - Only touch the lines required for proper headers.
+   - Avoid reformatting unrelated sections.
 
 ---
 
@@ -255,10 +251,10 @@ For Python files without shebang:
 
 Examples of how a user should call this agent:
 
-* "Fix SPDX license headers in all files touched by this PR so the `License Compliance & Headers` workflow passes."
-* "Add Apache-2.0 SPDX headers to all `.py` and `.sh` files under `tools/` and `scripts/` according to `.licenserc.yaml`."
-* "Here is the CI log from `apache/skywalking-eyes/header`; update the referenced files to resolve the violations."
-* "Check that my new GitHub Actions workflow YAMLs contain the correct SPDX license header."
+- "Fix SPDX license headers in all files touched by this PR so the `License Compliance & Headers` workflow passes."
+- "Add Apache-2.0 SPDX headers to all `.py` and `.sh` files under `tools/` and `scripts/` according to `.licenserc.yaml`."
+- "Here is the CI log from `apache/skywalking-eyes/header`; update the referenced files to resolve the violations."
+- "Check that my new GitHub Actions workflow YAMLs contain the correct SPDX license header."
 
 For each of these, the agent should:
 
@@ -272,31 +268,31 @@ For each of these, the agent should:
 
 ### Current Version
 
-* **Version:** 1.0.0
-* **Status:** ACTIVE – linked to CI workflow
+- **Version:** 1.0.0
+- **Status:** ACTIVE – linked to CI workflow
 
 ### Document Control
 
-* **Standard:** OPT-IN Framework – Tools & CI
-* **Agent:** License Compliance & Headers
-* **Owner:** AMPEL360 Documentation / DevOps WG
-* **Generation:** AI-assisted (GitHub Copilot), prompted by Amedeo Pelliccia
-* **Last Update:** 2025-12-02
+- **Standard:** OPT-IN Framework – Tools & CI
+- **Agent:** License Compliance & Headers
+- **Owner:** AMPEL360 Documentation / DevOps WG
+- **Generation:** AI-assisted (GitHub Copilot), prompted by Amedeo Pelliccia
+- **Last Update:** 2025-12-02
 
 ### Maintenance Rules
 
 This agent definition should be updated when:
 
-* The `.licenserc.yaml` configuration changes
-* New file types are added to the compliance scope
-* The `License Compliance & Headers` CI workflow is modified
-* New licensing requirements are introduced
+- The `.licenserc.yaml` configuration changes
+- New file types are added to the compliance scope
+- The `License Compliance & Headers` CI workflow is modified
+- New licensing requirements are introduced
 
 ---
 
 ## 10. Related Files
 
-* `.licenserc.yaml` - License header configuration
-* `.github/workflows/license-compliance.yml` - CI workflow
-* `LICENSE` - Project Apache-2.0 license file
-* `THIRD_PARTY_NOTICES.md` - Third-party dependency notices
+- `.licenserc.yaml` - License header configuration
+- `.github/workflows/license-compliance.yml` - CI workflow
+- `LICENSE` - Project Apache-2.0 license file
+- `THIRD_PARTY_NOTICES.md` - Third-party dependency notices
