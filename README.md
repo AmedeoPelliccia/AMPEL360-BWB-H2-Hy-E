@@ -149,6 +149,36 @@ flowchart TB
     style N fill:#fff9c4,color:#000
 ```
 
+### Lifecycle Clusters
+
+The AMPEL360 program is organized into six functional lifecycle clusters:
+
+```mermaid
+flowchart LR
+    LC1["LC-01<br/>Design<br/>Engineering"]
+    LC2["LC-02<br/>Certification"]
+    LC3["LC-03<br/>Operations<br/>MRO"]
+    LC4["LC-04<br/>Data AI<br/>DPP"]
+    LC5["LC-05<br/>Organization<br/>Management"]
+    LC6["LC-06<br/>Resources<br/>Finance"]
+    
+    style LC1 fill:#e3f2fd,stroke:#1565c0
+    style LC2 fill:#fce4ec,stroke:#c2185b
+    style LC3 fill:#e8f5e9,stroke:#2e7d32
+    style LC4 fill:#f3e5f5,stroke:#7b1fa2
+    style LC5 fill:#fff8e1,stroke:#f9a825
+    style LC6 fill:#ffebee,stroke:#c62828
+```
+
+| Cluster | Description |
+|---------|-------------|
+| **LC-01** Design Engineering | System design, engineering analysis, architecture development |
+| **LC-02** Certification | Regulatory compliance, airworthiness, certification evidence |
+| **LC-03** Operations MRO | Flight operations, maintenance, repair, and overhaul |
+| **LC-04** Data AI DPP | Data management, AI/ML systems, Digital Product Passport |
+| **LC-05** Organization Management | Program management, governance, stakeholder coordination |
+| **LC-06** Resources Finance | Resource allocation, financial management, supply chain |
+
 ### ATA Chapter Structure
 
 Every `ATA_XX-DESCRIPTION/` chapter follows a mandatory dual-layer architecture.
