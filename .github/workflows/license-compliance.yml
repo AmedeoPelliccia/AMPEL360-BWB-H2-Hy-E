@@ -1,4 +1,3 @@
-```yaml
 # Copyright 2025 AMPEL360 Project Contributors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -213,4 +212,5 @@ jobs:
               repo: context.repo.repo,
               body: summary
             })
+```)
 ```
