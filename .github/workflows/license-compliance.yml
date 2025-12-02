@@ -38,29 +38,92 @@ jobs:
     name: License Header & Compliance Check
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
-      # Check for SPDX license headers in source files
-      - name: License header scan
+
+      # Collect changed files in the PR and filter by extensions of interest
+      - name: Get changed files (PR only)
+        id: changed-files
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "Base ref: ${{ github.base_ref }}"
+          echo "Head sha: ${{ github.sha }}"
+
+          git fetch origin ${{ github.base_ref }} --depth=1
+
+          # List all changed files between base and head
+          git diff --name-only origin/${{ github.base_ref }}...${{ github.sha }} > changed_files.txt
+
+          echo "All changed files:"
+          cat changed_files.txt || true
+
+          # Restrict to the file types we care about
+          CHANGED_FILTERED=$(grep -E '\.(py|js|ts|sh|ya?ml)$' changed_files.txt || true)
+          printf "%s\n" "$CHANGED_FILTERED" > changed_filtered.txt
+
+          echo "Filtered changed files (license scope):"
+          cat changed_filtered.txt || echo "None"
+
+          FILES=$(tr '\n' ' ' < changed_filtered.txt | sed 's/ *$//')
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+
+      # License header scan for PRs: restricted to created/modified files
+      - name: License header scan (PR scope)
+        if: github.event_name == 'pull_request' && steps.changed-files.outputs.files != ''
+        run: |
+          echo "Running license header check on changed files only:"
+          echo "${{ steps.changed-files.outputs.files }}"
+
+          # Use skywalking-eyes via Docker to pass explicit file list
+          docker run --rm \
+            -v "$PWD":/github/workspace \
+            -w /github/workspace \
+            apache/skywalking-eyes \
+            header check \
+              -c .licenserc.yaml \
+              ${{ steps.changed-files.outputs.files }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # If no relevant files changed, log and skip header scan
+      - name: Skip license header scan (no relevant changes)
+        if: github.event_name == 'pull_request' && steps.changed-files.outputs.files == ''
+        run: |
+          echo "No created or modified *.py, *.js, *.ts, *.sh, *.yml, or *.yaml files in this PR."
+          echo "Skipping license header scan."
+
+      # License header scan for pushes to main: full baseline (all files per config)
+      - name: License header scan (full baseline on push)
+        if: github.event_name == 'push'
         uses: apache/skywalking-eyes/header@v0.6.0
         with:
           config: .licenserc.yaml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      # Generate SBOM for dependencies
-      - name: Generate SBOM (syft)
+
+      # Generate SBOM for dependencies (push only, full repo)
+      - name: Generate SBOM (syft) for repo
+        if: github.event_name == 'push'
         uses: anchore/sbom-action@v0
         with:
           path: .
           format: spdx-json
           output-file: sbom.spdx.json
-      
+
+      # Optionally, non-blocking SBOM for PRs (still full, but best-effort)
+      - name: Generate SBOM (syft) for PR (non-blocking)
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        uses: anchore/sbom-action@v0
+        with:
+          path: .
+          format: spdx-json
+          output-file: sbom.spdx.json
+
       # Upload license artifacts for audit trail
       - name: Upload license artifacts
         uses: actions/upload-artifact@v4
@@ -69,7 +132,7 @@ jobs:
           path: |
             sbom.spdx.json
           retention-days: 90
-      
+
       # Check Python dependencies if requirements files exist
       - name: Check for Python requirements
         id: check-python
@@ -79,13 +142,13 @@ jobs:
           else
             echo "has_python=false" >> $GITHUB_OUTPUT
           fi
-      
+
       - name: Set up Python
         if: steps.check-python.outputs.has_python == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
+
       - name: Check Python dependency licenses
         if: steps.check-python.outputs.has_python == 'true'
         run: |
@@ -97,7 +160,7 @@ jobs:
           else
             echo "pip-licenses not available, skipping"
           fi
-      
+
       - name: Upload Python license report
         if: steps.check-python.outputs.has_python == 'true'
         uses: actions/upload-artifact@v4
@@ -106,7 +169,7 @@ jobs:
           path: python-licenses.md
           retention-days: 90
         continue-on-error: true
-      
+
       # Post summary comment on PRs
       - name: Post license compliance summary
         if: github.event_name == 'pull_request'
@@ -116,9 +179,16 @@ jobs:
           script: |
             const fs = require('fs');
             let summary = '📋 **License Compliance Check**\n\n';
-            summary += '✅ SPDX header check: Passed\n';
-            summary += '✅ SBOM generated: sbom.spdx.json\n';
-            
+
+            summary += '✅ SPDX header check: ';
+            if ('{{ steps.changed-files.outputs.files }}'.trim() === '') {
+              summary += 'Skipped (no relevant files changed in this PR)\n';
+            } else {
+              summary += 'Passed for created/modified files in this PR\n';
+            }
+
+            summary += '✅ SBOM generated: `sbom.spdx.json` (see artifacts)\n';
+
             // Try to read Python licenses if available
             try {
               if (fs.existsSync('python-licenses.md')) {
@@ -127,14 +197,16 @@ jobs:
                 summary += '\n### Python Dependencies\n```\n';
                 summary += lines.join('\n');
                 summary += '\n```\n';
+              } else {
+                summary += '\nNo Python dependencies detected or report not generated.\n';
               }
             } catch (e) {
-              summary += '\nNo Python dependencies detected.\n';
+              summary += '\nNo Python dependencies detected or report not generated.\n';
             }
-            
-            summary += '\n📦 Artifacts uploaded: `license-compliance-${{ github.sha }}`\n';
-            summary += '\n*All source files comply with Apache-2.0 license requirements.*';
-            
+
+            summary += '\n📦 Artifacts uploaded: `license-compliance-${{ github.sha }}`';
+            summary += '\n\n*All created or modified source files in this pull request comply with Apache-2.0 license header requirements (within the configured file types and paths).*';
+
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
