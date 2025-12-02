@@ -122,11 +122,11 @@ The agent should be aware of the following CI steps and help the user understand
 
 ### 4.1 Header Scan
 
-* CI uses:
+* CI uses `apache/skywalking-eyes/header` action (check `.github/workflows/license-compliance.yml` for current version):
 
   ```yaml
   - name: License header scan
-    uses: apache/skywalking-eyes/header@v0.6.0
+    uses: apache/skywalking-eyes/header@<version>
     with:
       config: .licenserc.yaml
   ```
@@ -183,37 +183,15 @@ The agent must follow these rules when proposing edits:
 
 ## 6. Exclude Patterns
 
-The agent should respect the exclusions defined in `.licenserc.yaml`:
+The agent should respect the exclusions defined in `.licenserc.yaml`. Always refer to the `.licenserc.yaml` file for the authoritative list of exclude patterns. Common exclusions include:
 
-```yaml
-excludes:
-  # Exclude generated reports and outputs
-  - "cd/reports/**"
-  - "cd/baselines/**"
-  - "cd/costs/**"
-  
-  # Exclude documentation
-  - "**/*.md"
-  - "**/*.txt"
-  - "**/*.rst"
-  
-  # Exclude configuration files
-  - "**/.git/**"
-  - "**/.github/**/*.md"
-  - "**/node_modules/**"
-  - "**/venv/**"
-  - "**/__pycache__/**"
-  - "**/*.pyc"
-  
-  # Exclude data files
-  - "**/*.json"
-  - "**/*.csv"
-  - "**/*.xml"
-  
-  # Exclude third-party or vendored code
-  - "**/third_party/**"
-  - "**/vendor/**"
-```
+- Generated reports and outputs (`cd/reports/**`, `cd/baselines/**`, `cd/costs/**`)
+- Documentation files (`**/*.md`, `**/*.txt`, `**/*.rst`)
+- Configuration and system files (`**/.git/**`, `**/node_modules/**`, `**/venv/**`)
+- Data files (`**/*.json`, `**/*.csv`, `**/*.xml`)
+- Third-party or vendored code (`**/third_party/**`, `**/vendor/**`)
+
+> **Note:** Always check the current `.licenserc.yaml` for the most up-to-date exclude patterns.
 
 When a file matches an exclude pattern, the agent should:
 - **Not modify the file**
