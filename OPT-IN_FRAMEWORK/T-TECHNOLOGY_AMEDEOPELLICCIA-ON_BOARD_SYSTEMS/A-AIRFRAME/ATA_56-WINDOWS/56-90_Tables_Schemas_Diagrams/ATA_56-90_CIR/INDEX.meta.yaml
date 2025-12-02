@@ -1,9 +1,10 @@
-# INDEX.meta.yaml — ATA 56-90 CIR Central Illustration Repository
+# INDEX.meta.yaml — ATA 56-90 CIR Common Illustration Repository
 # ATA 56 – Windows | CIR Assets
+# Note: Each XX-90 folder in OPT-IN ATA Framework is the CIR for that chapter
 
 metadata:
   cir_id: ATA_56-90_CIR
-  title: Central Illustration Repository for ATA 56 Windows
+  title: Common Illustration Repository for ATA 56 Windows
   ata_chapter: 56
   version: "1.1"
   status: DRAFT
