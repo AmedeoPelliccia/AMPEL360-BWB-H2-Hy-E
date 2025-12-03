@@ -124,17 +124,4 @@ This confirms that **security, license compliance and SBOM generation** are alre
 
 ---
 
-## 4. Governance Hooks (for LC-04 / ATA 96 / ATA 98)
 
----
-
-## 5. Navigation
-
-* Back to Data/AI/DPP: [[LC-04_Data_AI_DPP_Home]]
-* DPP / SBOM integration: [[ATA_96_Digital_Product_Passport]]
-* Traceability & audit: [[ATA_98_Traceability_and_Audit]]
-* Security & scans: [[AI_ML_Safety_and_Lifecycle_ATA_95-98]]
-
-```
-::contentReference[oaicite:0]{index=0}
-```
