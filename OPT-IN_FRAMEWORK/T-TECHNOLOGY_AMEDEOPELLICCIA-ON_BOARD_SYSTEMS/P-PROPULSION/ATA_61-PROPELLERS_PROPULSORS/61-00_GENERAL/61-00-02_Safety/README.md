@@ -1,33 +1,137 @@
-# 61-00-02_Safety
+# 61-00-02_Safety — Propulsor System Safety Assessment
 
-## Purpose
+## 1. Purpose
 
-Safety framework and analysis methods
+This folder contains the **safety assessment documentation** for the **ATA 61 Propellers/Propulsors** domain within the AMPEL360 BWB H2/Hybrid-Electric aircraft program.
 
-## Scope
+It provides a structured collection of safety analyses following [ARP4761A](https://www.sae.org/standards/content/arp4761a/) methodology, including:
 
-This folder is part of the **61-00_GENERAL** layer, which provides governance and lifecycle management for ATA Chapter 61.
+- **System Functional Hazard Assessment (SFHA)**
+- **Preliminary System Safety Assessment (PSSA)**
+- **Fault Tree Analysis (FTA)**
+- **Failure Modes and Effects Analysis (FMEA)**
+- **Common Cause Analysis (CCA)**
+- **Safety Traceability Matrix**
 
-## Contents
+---
 
-This folder should contain:
-- Documentation related to safety framework and analysis methods
-- Traceability matrices linking to other lifecycle stages
-- Evidence and artifacts supporting this lifecycle phase
+## 2. Scope
 
-## Status
+This folder is part of the **61-00_GENERAL** layer, which provides governance and lifecycle management for ATA Chapter 61. The safety assessments cover:
+
+- Electric Ducted Fan (EDF) propulsor units
+- Electric motor systems (4 MW-class)
+- Propulsor Control Units (PCU)
+- Blade systems and ducted fan assemblies
+- Health sensing and monitoring systems
+- Cooling loop interfaces
+
+### Regulatory Alignment
+
+The safety assessments align with:
+
+- [EASA CS-25.1309](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) — Equipment, Systems, and Installations
+- [FAA 14 CFR 25.1309](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) — Equipment, Systems, and Installations
+- [SAE ARP4754A](https://www.sae.org/standards/content/arp4754a/) — Guidelines for Development of Civil Aircraft and Systems
+- [SAE ARP4761A](https://www.sae.org/standards/content/arp4761a/) — Guidelines and Methods for Conducting the Safety Assessment Process
+
+---
+
+## 3. Folder Structure
+
+```text
+61-00-02_Safety/
+├── README.md
+│
+├── SFHA/
+│   └── 61-00-02-SFHA-001_Propulsor_System_Hazards.md
+│
+├── PSSA/
+│   └── 61-00-02-PSSA-001_Preliminary_Safety_Assessment.md
+│
+├── FTA/
+│   └── 61-00-02-FTA-001_Propulsor_Failure_Trees.md
+│
+├── FMEA/
+│   └── 61-00-02-FMEA-001_Component_Failure_Modes.md
+│
+├── CCA/
+│   └── 61-00-02-CCA-001_Common_Cause_Analysis.md
+│
+└── Traceability/
+    └── 61-00-02-TRC-001_Safety_Traceability_Matrix.md
+```
+
+---
+
+## 4. Contents Summary
+
+| Folder | Document | Purpose |
+|--------|----------|---------|
+| **SFHA/** | [61-00-02-SFHA-001](./SFHA/61-00-02-SFHA-001_Propulsor_System_Hazards.md) | System Functional Hazard Assessment identifying propulsor-related hazards and their severity classifications |
+| **PSSA/** | [61-00-02-PSSA-001](./PSSA/61-00-02-PSSA-001_Preliminary_Safety_Assessment.md) | Preliminary System Safety Assessment deriving safety requirements and design assurance levels |
+| **FTA/** | [61-00-02-FTA-001](./FTA/61-00-02-FTA-001_Propulsor_Failure_Trees.md) | Fault Tree Analysis for top-level propulsor failure events |
+| **FMEA/** | [61-00-02-FMEA-001](./FMEA/61-00-02-FMEA-001_Component_Failure_Modes.md) | Component-level Failure Modes and Effects Analysis |
+| **CCA/** | [61-00-02-CCA-001](./CCA/61-00-02-CCA-001_Common_Cause_Analysis.md) | Common Cause Analysis including ZSA, PRA, and CMA |
+| **Traceability/** | [61-00-02-TRC-001](./Traceability/61-00-02-TRC-001_Safety_Traceability_Matrix.md) | Safety traceability matrix linking hazards, requirements, and mitigations |
+
+---
+
+## 5. Safety Assessment Process Overview
+
+The safety assessment follows the V-model integration with design activities:
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    ARP4761A Safety Assessment Process                    │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│   ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐             │
+│   │  FHA    │───▶│  PSSA   │───▶│  SSA    │───▶│  ASA    │             │
+│   │ (SFHA)  │    │         │    │         │    │         │             │
+│   └─────────┘    └─────────┘    └─────────┘    └─────────┘             │
+│        │              │              │              │                   │
+│        ▼              ▼              ▼              ▼                   │
+│   ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐             │
+│   │ Hazard  │    │ Safety  │    │ Design  │    │ Certif. │             │
+│   │ Ident.  │    │ Reqs    │    │ Verif.  │    │ Evidence│             │
+│   └─────────┘    └─────────┘    └─────────┘    └─────────┘             │
+│                                                                         │
+│   Supporting Analyses: FTA, FMEA, CCA, DD, MA                          │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 6. Status
 
 - **Phase**: Safety
 - **Lifecycle Position**: 02 of 14
 - **Status**: Active
-- **Last Updated**: 2025-11-13
+- **Last Updated**: 2025-12-03
 
-## Related Folders
+---
+
+## 7. Related Folders
 
 Part of the canonical 14-folder lifecycle:
-1. Overview → 2. Safety → 3. Requirements → 4. Design → 5. Interfaces → 6. Engineering → 7. V&V → 8. Prototyping → 9. Production Planning → 10. Certification → 11. EIS/Versions/Tags → 12. Services → 13. Subsystems/Components → 14. Ops/Std/Sustain
 
-## Document Control
+1. [Overview](../61-00-01_Overview/) → **2. Safety** → 3. Requirements → 4. Design → 5. Interfaces → 6. Engineering → 7. V&V → 8. Prototyping → 9. Production Planning → 10. Certification → 11. EIS/Versions/Tags → 12. Services → 13. Subsystems/Components → 14. Ops/Std/Sustain
 
-- **Standard**: OPT-IN Framework v1.1 (ATA 95 canonical template)
-- **Owner**: AMPEL360 Documentation WG
+### Cross-References
+
+- [61-00-01 Overview](../61-00-01_Overview/) — Domain description and architecture
+- [61-00-03 Requirements](../61-00-03_Requirements/) — System requirements (derived from safety requirements)
+- [61-20 Subsystems](../../61-20_Subsystems/) — Detailed subsystem specifications
+
+---
+
+## 8. Document Control
+
+- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- Status: **DRAFT** – Subject to human review and approval.
+- Human approver: _[to be completed]_.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
+- Last AI update: _2025-12-03_.
+
+---
