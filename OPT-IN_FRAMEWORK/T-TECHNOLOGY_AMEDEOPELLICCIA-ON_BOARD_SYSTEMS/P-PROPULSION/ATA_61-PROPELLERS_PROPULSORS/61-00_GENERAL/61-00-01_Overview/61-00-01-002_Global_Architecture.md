@@ -243,11 +243,11 @@ The Blended Wing Body configuration enhances propulsor integration:
 
 ### Related ATA Chapters
 
-- [ATA 24 Electrical Power](../../ATA_24-ELECTRICAL_POWER/)
-- [ATA 28 Fuel (H₂)](../../ATA_28-FUEL_SAF_CRYOGENIC_H2/)
-- [ATA 54 Nacelles/Pylons](../../ATA_54-NACELLES_PYLONS/)
-- [ATA 71 Power Plant](../../../P-PROPULSION/ATA_71-POWER_PLANT/)
-- [ATA 76 Engine Controls](../../../P-PROPULSION/ATA_76-ENGINE_CONTROLS/)
+- [ATA 24 Electrical Power](../../../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/)
+- [ATA 28 Fuel (H₂)](../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_28-FUEL_SAF_CRYOGENIC_H2/)
+- [ATA 54 Nacelles/Pylons](../../../../A-AIRFRAME/ATA_54-NACELLES_PYLONS/)
+- [ATA 71 Power Plant](../../../ATA_71-POWER_PLANT/)
+- [ATA 76 Engine Controls](../../../ATA_76-ENGINE_CONTROLS/)
 
 ---
 

@@ -60,8 +60,8 @@ Part of the canonical 14-folder lifecycle:
 | [ATA 24](../../../../E2-ENERGY/ATA_24-ELECTRICAL_POWER/) | Electrical Power | Power supply to propulsors |
 | [ATA 28](../../../../C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_28-FUEL_SAF_CRYOGENIC_H2/) | Fuel (SAF & Cryogenic H₂) | H₂ thermal interface, fuel for power generation |
 | [ATA 54](../../../../A-AIRFRAME/ATA_54-NACELLES_PYLONS/) | Nacelles/Pylons | Structural mounting, aerodynamic integration |
-| [ATA 71](../../ATA_71-POWER_PLANT/) | Power Plant | Overall propulsion system integration |
-| [ATA 76](../../ATA_76-ENGINE_CONTROLS/) | Engine Controls | Control system integration |
+| [ATA 71](../../../ATA_71-POWER_PLANT/) | Power Plant | Overall propulsion system integration |
+| [ATA 76](../../../ATA_76-ENGINE_CONTROLS/) | Engine Controls | Control system integration |
 
 ---
 
