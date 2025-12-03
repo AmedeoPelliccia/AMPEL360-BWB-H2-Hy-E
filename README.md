@@ -69,33 +69,60 @@
 
 ```mermaid
 flowchart LR
-    subgraph Storage["**Energy Storage**"]
+    %% ===============================
+    %% STORAGE
+    %% ===============================
+    subgraph Storage["Energy Storage"]
         LH2["🧊 LH₂ Tank<br/>3,000 kg @ -253°C"]
         BAT["🔋 Battery<br/>5 MWh Li-ion"]
         SAF["⛽ SAF Reserve<br/>500 L"]
     end
 
-    subgraph Conversion["**Power Conversion**"]
+    %% ===============================
+    %% CONVERSION
+    %% ===============================
+    subgraph Conversion["Power Conversion"]
         FC["⚡ PEM Fuel Cells<br/>20 MW"]
         DC["DC/DC<br/>Converters"]
     end
 
-    subgraph Propulsion["**Distributed Propulsion**"]
+    %% ===============================
+    %% PROPULSION
+    %% ===============================
+    subgraph Propulsion["Distributed Propulsion"]
         M1["Motor 1<br/>4 MW"]
         M2["Motor 2<br/>4 MW"]
         M3["Motor 3<br/>4 MW"]
         M4["Motor 4<br/>4 MW"]
     end
 
+    %% ===============================
+    %% FLOWS
+    %% ===============================
     LH2 --> FC
     FC --> DC
     BAT <--> DC
     SAF -.->|backup| FC
     DC --> M1 & M2 & M3 & M4
 
-    style LH2 fill:#e1f5fe
-    style FC fill:#fff9c4
-    style BAT fill:#c8e6c9
+    %% ===============================
+    %% STYLES
+    %% ===============================
+
+    %% Storage group (light blue/green)
+    style LH2 fill:#e1f5fe,stroke:#0288d1,color:#000
+    style BAT fill:#e8f5e9,stroke:#2e7d32,color:#000
+    style SAF fill:#fff3e0,stroke:#ef6c00,color:#000
+
+    %% Conversion group (light yellow)
+    style FC fill:#fff9c4,stroke:#f9a825,color:#000
+    style DC fill:#fff9c4,stroke:#f9a825,color:#000
+
+    %% Propulsion group (light grey-blue)
+    style M1 fill:#eceff1,stroke:#455a64,color:#000
+    style M2 fill:#eceff1,stroke:#455a64,color:#000
+    style M3 fill:#eceff1,stroke:#455a64,color:#000
+    style M4 fill:#eceff1,stroke:#455a64,color:#000
 ````
 
 ### Structure
@@ -286,19 +313,19 @@ bash .github/hooks/setup-hooks.sh
 
 ```mermaid
 flowchart TB
-    subgraph Primary["**Airworthiness**"]
+    subgraph Primary["Airworthiness"]
         EASA["EASA CS-25"]
         FAA["FAA 14 CFR Part 25"]
         SC["Special Conditions<br/>BWB, H₂, DEP"]
     end
 
-    subgraph SW["**Software & Hardware**"]
+    subgraph SW["Software & Hardware"]
         DO178["DO-178C<br/>DAL A–E"]
         DO254["DO-254<br/>Hardware"]
         DO160["DO-160G<br/>Environmental"]
     end
 
-    subgraph Safety["**Safety Process**"]
+    subgraph Safety["Safety Process"]
         ARP4754["ARP4754A<br/>System Development"]
         ARP4761["ARP4761<br/>Safety Assessment"]
         DO326["DO-326A<br/>Cybersecurity"]
@@ -306,9 +333,20 @@ flowchart TB
 
     Primary --> SW --> Safety
 
-    style EASA fill:#ffcdd2
-    style FAA fill:#ffcdd2
-    style DO178 fill:#c5cae9
+    %% Airworthiness nodes
+    style EASA fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#000
+    style FAA fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#000
+    style SC   fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#000
+
+    %% Software & Hardware nodes
+    style DO178 fill:#e8eaf6,stroke:#283593,stroke-width:1px,color:#000
+    style DO254 fill:#e8eaf6,stroke:#283593,stroke-width:1px,color:#000
+    style DO160 fill:#e8eaf6,stroke:#283593,stroke-width:1px,color:#000
+
+    %% Safety Process nodes
+    style ARP4754 fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px,color:#000
+    style ARP4761 fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px,color:#000
+    style DO326  fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px,color:#000
 ```
 
 ### Documentation Standards
