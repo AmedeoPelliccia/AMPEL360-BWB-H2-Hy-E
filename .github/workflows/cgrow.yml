@@ -119,6 +119,7 @@ jobs:
         if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'cr'
         run: |
           echo "=== Running CR Phase ==="
+          mkdir -p cd/reports
           if [ -f tools/cgrow/cr_review.py ]; then
             python tools/cgrow/cr_review.py --verbose
           else
@@ -129,6 +130,7 @@ jobs:
         if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'co'
         run: |
           echo "=== Running CO Phase ==="
+          mkdir -p cd/reports
           if [ -f tools/cgrow/co_optimize.py ]; then
             python tools/cgrow/co_optimize.py --verbose
           else
@@ -139,6 +141,7 @@ jobs:
         if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'cw'
         run: |
           echo "=== Running CW Phase ==="
+          mkdir -p cd/reports
           if [ -f tools/cgrow/cw_integrate.py ]; then
             python tools/cgrow/cw_integrate.py --verbose
           else
@@ -149,6 +152,7 @@ jobs:
         if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'ct'
         run: |
           echo "=== Running CT Phase ==="
+          mkdir -p cd/reports
           if [ -f tools/cgrow/ct_test.py ]; then
             python tools/cgrow/ct_test.py --verbose
           else
@@ -156,14 +160,23 @@ jobs:
           fi
       
       - name: CH - Circular Healing
+        # Healing runs when explicitly requested or as part of 'all',
+        # and it can adapt to failures in previous steps via job.status.
         if: needs.check-trigger.outputs.phase == 'all' || needs.check-trigger.outputs.phase == 'ch'
         env:
           CGROW_PHASE: ${{ needs.check-trigger.outputs.phase }}
           CGROW_STATUS: ${{ job.status }}
         run: |
           echo "=== Running CH Phase ==="
+          mkdir -p cd/reports
           if [ -f tools/cgrow/ch_heal.py ]; then
-            python tools/cgrow/ch_heal.py --verbose --phase "$CGROW_PHASE" --status "$CGROW_STATUS"
+            # CH can inspect CR/CT reports such as:
+            # - cd/reports/cr_review_*.sarif
+            # - cd/reports/ct_testing_*.md
+            python tools/cgrow/ch_heal.py --verbose \
+              --phase "$CGROW_PHASE" \
+              --status "$CGROW_STATUS" \
+              --reports-dir "cd/reports"
           else
             echo "WARNING: tools/cgrow/ch_heal.py not found, skipping CH phase."
           fi
