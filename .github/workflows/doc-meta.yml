@@ -9,7 +9,7 @@ on:
       - ".github/workflows/doc-meta.yml"
   push:
     branches:
-      - "main"
+      - "MAIN"
       - "copilot/**"   # any branch whose name starts with "copilot/"
     paths:
       - "OPT-IN_FRAMEWORK/**"
