@@ -1,0 +1,39 @@
+# INDEX.meta.yaml — LRU_56-28-01 Smart Glass Control Unit
+# ATA 56 – Windows | Subsystem 28 – Smart Glass
+
+metadata:
+  document_id: LRU_56-28-01
+  title: Smart Glass Control Unit
+  ata_chapter: 56
+  ata_subsystem: 28
+  sequence: 01
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+lru:
+  part_number: PN-56-28-01-001
+  nomenclature: Smart Glass Control Unit
+  manufacturer: TBD
+
+lri_components:
+  - id: LRI_01
+    name: ElectrochromicFilm
+    folder: ./LRI/LRI_01_ElectrochromicFilm/
+
+  - id: LRI_02
+    name: VoltageController
+    folder: ./LRI/LRI_02_VoltageController/
+
+  - id: LRI_03
+    name: LightSensors
+    folder: ./LRI/LRI_03_LightSensors/
+
+  - id: LRI_04
+    name: PassengerInterface
+    folder: ./LRI/LRI_04_PassengerInterface/
+
+  - id: LRI_05
+    name: PowerSupply
+    folder: ./LRI/LRI_05_PowerSupply/

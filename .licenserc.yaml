@@ -2,7 +2,8 @@ header:
   license:
     spdx-id: Apache-2.0
     copyright-owner: AMPEL360 Project Contributors
-    
+
+  # File types that MUST carry a license header
   paths:
     - "**/*.py"
     - "**/*.js"
@@ -10,35 +11,37 @@ header:
     - "**/*.sh"
     - "**/*.yml"
     - "**/*.yaml"
-  
+
+  # Exclusions (never enforce headers here)
   excludes:
     # Exclude generated reports and outputs
     - "cd/reports/**"
     - "cd/baselines/**"
     - "cd/costs/**"
-    
+
     # Exclude documentation
     - "**/*.md"
     - "**/*.txt"
     - "**/*.rst"
-    
-    # Exclude configuration files
+
+    # Exclude configuration / environment / cache
     - "**/.git/**"
     - "**/.github/**/*.md"
     - "**/node_modules/**"
     - "**/venv/**"
     - "**/__pycache__/**"
     - "**/*.pyc"
-    
+
     # Exclude data files
     - "**/*.json"
     - "**/*.csv"
     - "**/*.xml"
-    
+
     # Exclude third-party or vendored code
     - "**/third_party/**"
     - "**/vendor/**"
-  
+
+  # Only comment on failures (GitHub PR comment)
   comment: on-failure
 
 # Dependency license configuration

@@ -1,0 +1,19 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-24-01-001,LRI_01,PN-56-24-01-01-001,5340-XX-XXX-XXXX,XXXXX,Curved Glass Panel,1,EA,1,N,240,Critical,45,Make,FAR 25.775,UNL,R1-Specialty glass recovery,BWB panoramic viewing surface
+2,PN-56-24-01-001,LRI_01,PN-56-24-01-01-010,5340-XX-XXX-XXXX,XXXXX,Curved Outer Glass,1,EA,1,N,240,Critical,35,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,Compound curved glass pane
+3,PN-56-24-01-001,LRI_01,PN-56-24-01-01-020,5340-XX-XXX-XXXX,XXXXX,Curved Inner Acrylic,1,EA,1,N,180,Critical,28,Buy,MIL-P-25690,60,R2-PMMA chemical recycling,Optical quality PMMA - UV sensitive
+4,PN-56-24-01-001,LRI_02,PN-56-24-01-02-001,5340-XX-XXX-XXXX,XXXXX,Structural Frame,1,EA,1,N,180,Critical,28,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Load-bearing frame assembly
+5,PN-56-24-01-001,LRI_02,PN-56-24-01-02-010,5340-XX-XXX-XXXX,XXXXX,Frame Section A,2,EA,1,N,90,Standard,14,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Upper frame sections
+6,PN-56-24-01-001,LRI_02,PN-56-24-01-02-020,5340-XX-XXX-XXXX,XXXXX,Frame Section B,2,EA,1,N,90,Standard,14,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Lower frame sections
+7,PN-56-24-01-001,LRI_02,PN-56-24-01-02-030,5330-XX-XXX-XXXX,XXXXX,Frame Seal Kit,1,KIT,1,Y,60,Standard,7,Buy,MIL-R-25897,36,R4-Silicone thermal recovery,Frame perimeter seals
+8,PN-56-24-01-001,LRI_03,PN-56-24-01-03-001,5340-XX-XXX-XXXX,XXXXX,UV Filter Assembly,1,EA,1,Y,60,Standard,14,Make,SAE AMS3072,48,R2-Film/frame separation,UV protection layer
+9,PN-56-24-01-001,LRI_03,PN-56-24-01-03-010,5340-XX-XXX-XXXX,XXXXX,UV Filter Film,1,EA,1,Y,45,Standard,10,Buy,SAE AMS3072,36,R4-Specialty film disposal,High-altitude UV blocking - temp sensitive
+10,PN-56-24-01-001,LRI_03,PN-56-24-01-03-020,5340-XX-XXX-XXXX,XXXXX,Filter Frame,1,EA,1,Y,30,Standard,5,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Aluminum retainer frame
+11,PN-56-24-01-001,LRI_04,PN-56-24-01-04-001,6150-XX-XXX-XXXX,XXXXX,Thermal Control Unit,1,EA,1,N,90,Critical,21,Make,DO-160G,UNL,R2-Electronics recycling,Active heating/cooling system
+12,PN-56-24-01-001,LRI_04,PN-56-24-01-04-010,6150-XX-XXX-XXXX,XXXXX,Heating Element,2,EA,1,Y,45,Standard,10,Buy,MIL-DTL-87157,UNL,R3-Precious metal recovery,Resistive heating film
+13,PN-56-24-01-001,LRI_04,PN-56-24-01-04-020,5895-XX-XXX-XXXX,XXXXX,Temperature Sensor,4,EA,1,Y,20,Standard,5,Buy,MIL-PRF-22684,UNL,R3-Platinum recovery,PT100 RTD sensors
+14,PN-56-24-01-001,LRI_04,PN-56-24-01-04-030,4120-XX-XXX-XXXX,XXXXX,Cooling Fan,2,EA,1,Y,30,Standard,7,Buy,MIL-STD-810G,UNL,R2-Motor/plastic separation,DC brushless fan
+15,PN-56-24-01-001,LRI_05,PN-56-24-01-05-001,5340-XX-XXX-XXXX,XXXXX,Smart Dimming Unit,1,EA,1,N,120,Critical,28,Make,SAE ARP5673,UNL,R3-Electrochromic recovery,Electrochromic integration
+16,PN-56-24-01-001,LRI_05,PN-56-24-01-05-010,5340-XX-XXX-XXXX,XXXXX,Electrochromic Film,1,EA,1,Y,90,Critical,21,Buy,SAE ARP5673,60,R3-Tungsten oxide recovery,Variable tint layer - humidity controlled
+17,PN-56-24-01-001,LRI_05,PN-56-24-01-05-020,5995-XX-XXX-XXXX,XXXXX,Driver Electronics,1,EA,1,Y,45,Standard,14,Buy,DO-160G,UNL,R2-PCB recycling (WEEE),Tint control electronics
+18,PN-56-24-01-001,LRI_05,PN-56-24-01-05-030,6135-XX-XXX-XXXX,XXXXX,Power Supply,1,EA,1,Y,30,Standard,10,Buy,DO-160G,UNL,R2-Electronics recycling,Low-voltage DC supply

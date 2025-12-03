@@ -1,0 +1,39 @@
+# INDEX.meta.yaml — LRU_56-27-01 Wiper Drive Unit
+# ATA 56 – Windows | Subsystem 27 – Wiper Systems
+
+metadata:
+  document_id: LRU_56-27-01
+  title: Wiper Drive Unit
+  ata_chapter: 56
+  ata_subsystem: 27
+  sequence: 01
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+lru:
+  part_number: PN-56-27-01-001
+  nomenclature: Wiper Drive Unit
+  manufacturer: TBD
+
+lri_components:
+  - id: LRI_01
+    name: MotorAssembly
+    folder: ./LRI/LRI_01_MotorAssembly/
+
+  - id: LRI_02
+    name: LinkageArm
+    folder: ./LRI/LRI_02_LinkageArm/
+
+  - id: LRI_03
+    name: WiperBlade
+    folder: ./LRI/LRI_03_WiperBlade/
+
+  - id: LRI_04
+    name: ParkSwitch
+    folder: ./LRI/LRI_04_ParkSwitch/
+
+  - id: LRI_05
+    name: SpeedController
+    folder: ./LRI/LRI_05_SpeedController/

@@ -1,0 +1,91 @@
+# INDEX.meta.yaml — LRU_56-21-01 Forward Windshield Assembly
+# ATA 56 – Windows | Subsystem 21 – Windshields
+
+metadata:
+  document_id: LRU_56-21-01
+  title: Forward Windshield Assembly
+  ata_chapter: 56
+  ata_subsystem: 21
+  sequence: 01
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+  owner: AMPEL360 Documentation WG
+
+lru:
+  part_number: PN-56-21-01-001
+  nomenclature: Forward Windshield Assembly
+  manufacturer: TBD
+  cage_code: TBD
+  weight_kg: TBD
+  environmental_rating: DO-160G
+  bird_strike_rating: FAR 25.775
+
+lri_components:
+  - id: LRI_01
+    name: LeftWindshieldPanel
+    description: Captain-side forward view panel
+    quantity: 1
+    folder: ./LRI/LRI_01_LeftWindshieldPanel/
+
+  - id: LRI_02
+    name: RightWindshieldPanel
+    description: First Officer-side forward view panel
+    quantity: 1
+    folder: ./LRI/LRI_02_RightWindshieldPanel/
+
+  - id: LRI_03
+    name: CenterWindshieldPanel
+    description: BWB-specific center view panel
+    quantity: 1
+    folder: ./LRI/LRI_03_CenterWindshieldPanel/
+
+  - id: LRI_04
+    name: HeatingElements
+    description: Integrated anti-ice/anti-fog heating film
+    quantity: 3
+    folder: ./LRI/LRI_04_HeatingElements/
+
+  - id: LRI_05
+    name: FrameRetentionSystem
+    description: Structural attachment, seals, and fasteners
+    quantity: 1
+    folder: ./LRI/LRI_05_FrameRetentionSystem/
+
+interfaces:
+  - id: IF-56-21-001
+    connected_system: Window Heating Controller
+    ata: 56-25
+    type: Electrical
+
+  - id: IF-56-21-002
+    connected_system: Electrical Power Distribution
+    ata: 24
+    type: Electrical
+
+  - id: IF-56-21-003
+    connected_system: Rain Repellent System
+    ata: 56-26
+    type: Fluid/Mechanical
+
+  - id: IF-56-21-004
+    connected_system: Wiper Systems
+    ata: 56-27
+    type: Mechanical
+
+  - id: IF-56-21-005
+    connected_system: Flight Deck Structure
+    ata: 53
+    type: Structural
+
+cir_references:
+  - id: 56-90-21_56-21-FIG_001
+    type: Figure
+    format: SVG
+    path: ../../../56-90_Tables_Schemas_Diagrams/ATA_56-90_CIR/56-90-21_56-21-FIG_001-WindshieldAssembly.svg
+
+  - id: 56-90-21_56-21-TABLE_001
+    type: Table
+    format: CSV
+    path: ../../../56-90_Tables_Schemas_Diagrams/ATA_56-90_CIR/56-90-21_56-21-TABLE_001-WindshieldSpecs.csv

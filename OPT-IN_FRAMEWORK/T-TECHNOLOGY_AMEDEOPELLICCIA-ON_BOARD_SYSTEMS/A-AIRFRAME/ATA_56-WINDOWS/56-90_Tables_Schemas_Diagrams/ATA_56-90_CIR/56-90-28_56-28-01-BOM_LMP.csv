@@ -1,0 +1,19 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-28-01-001,LRI_01,PN-56-28-01-01-001,5340-XX-XXX-XXXX,XXXXX,Electrochromic Film Set,1,SET,1,N,120,Critical,28,Buy,SAE ARP5673,60,R3-Electrochromic recovery,Variable tint layer - humidity controlled
+2,PN-56-28-01-001,LRI_01,PN-56-28-01-01-010,5340-XX-XXX-XXXX,XXXXX,EC Active Layer,1,EA,1,N,90,Critical,21,Buy,SAE ARP5673,48,R3-Tungsten oxide recovery,Tungsten oxide layer
+3,PN-56-28-01-001,LRI_01,PN-56-28-01-01-020,5340-XX-XXX-XXXX,XXXXX,Ion Storage Layer,1,EA,1,N,90,Critical,21,Buy,SAE ARP5673,48,R3-Nickel oxide recovery,Nickel oxide layer
+4,PN-56-28-01-001,LRI_01,PN-56-28-01-01-030,5340-XX-XXX-XXXX,XXXXX,ITO Electrode,2,EA,1,N,60,Standard,14,Buy,SAE ARP5673,UNL,R3-Indium tin oxide recovery,Transparent conductor
+5,PN-56-28-01-001,LRI_02,PN-56-28-01-02-001,5995-XX-XXX-XXXX,XXXXX,Voltage Controller,1,EA,1,Y,60,Critical,21,Make,DO-160G,UNL,R2-Electronics recycling,Tint level control electronics
+6,PN-56-28-01-001,LRI_02,PN-56-28-01-02-010,5995-XX-XXX-XXXX,XXXXX,Controller PCB,1,EA,1,Y,45,Critical,14,Buy,DO-178C DAL-C,UNL,R2-PCB recycling (WEEE),Main controller board
+7,PN-56-28-01-001,LRI_02,PN-56-28-01-02-020,5961-XX-XXX-XXXX,XXXXX,DAC Module,1,EA,1,Y,30,Standard,7,Buy,DO-160G,UNL,R2-Semiconductor recovery,Digital-to-analog converter
+8,PN-56-28-01-001,LRI_02,PN-56-28-01-02-030,5961-XX-XXX-XXXX,XXXXX,Op-Amp Module,2,EA,1,Y,20,Standard,5,Buy,DO-160G,UNL,R2-Semiconductor recovery,Voltage driver amplifier
+9,PN-56-28-01-001,LRI_03,PN-56-28-01-03-001,6680-XX-XXX-XXXX,XXXXX,Light Sensor Set,1,SET,1,Y,30,Standard,10,Buy,MIL-STD-810G,UNL,R2-Electronics recycling,Ambient light detection
+10,PN-56-28-01-001,LRI_03,PN-56-28-01-03-010,6680-XX-XXX-XXXX,XXXXX,Photodiode,2,EA,1,Y,20,Standard,7,Buy,MIL-STD-810G,UNL,R2-Silicon recovery,Silicon photodiode
+11,PN-56-28-01-001,LRI_03,PN-56-28-01-03-020,5995-XX-XXX-XXXX,XXXXX,Signal Conditioner,1,EA,1,Y,15,Standard,5,Buy,DO-160G,UNL,R2-PCB recycling (WEEE),Light level processor
+12,PN-56-28-01-001,LRI_04,PN-56-28-01-04-001,5895-XX-XXX-XXXX,XXXXX,Passenger Interface,1,EA,1,Y,20,Standard,10,Make,MIL-STD-1472,UNL,R2-Electronics/plastic separation,Individual window controls
+13,PN-56-28-01-001,LRI_04,PN-56-28-01-04-010,5930-XX-XXX-XXXX,XXXXX,Dimming Switch,1,EA,1,Y,15,Standard,5,Buy,MIL-STD-1472,UNL,R2-Touch panel recycling,Touch-sensitive control
+14,PN-56-28-01-001,LRI_04,PN-56-28-01-04-020,6220-XX-XXX-XXXX,XXXXX,LED Indicator,1,EA,1,Y,10,Standard,3,Buy,MIL-L-6363,UNL,R2-LED recovery,Tint level indicator
+15,PN-56-28-01-001,LRI_05,PN-56-28-01-05-001,6135-XX-XXX-XXXX,XXXXX,Power Supply Unit,1,EA,1,Y,45,Standard,14,Make,DO-160G,UNL,R2-Electronics recycling,Low-voltage DC supply
+16,PN-56-28-01-001,LRI_05,PN-56-28-01-05-010,6130-XX-XXX-XXXX,XXXXX,DC-DC Converter,1,EA,1,Y,30,Standard,10,Buy,DO-160G,UNL,R2-Transformer/capacitor recovery,28V to 3V converter
+17,PN-56-28-01-001,LRI_05,PN-56-28-01-05-020,5920-XX-XXX-XXXX,XXXXX,EMI Filter,1,EA,1,Y,20,Standard,5,Buy,MIL-STD-461,UNL,R2-Ferrite/capacitor recovery,Input line filter
+18,PN-56-28-01-001,LRI_05,PN-56-28-01-05-030,5935-XX-XXX-XXXX,XXXXX,Power Connector,1,EA,1,Y,10,Standard,3,Buy,MIL-DTL-38999,UNL,R2-Copper recovery,3-pin power connector

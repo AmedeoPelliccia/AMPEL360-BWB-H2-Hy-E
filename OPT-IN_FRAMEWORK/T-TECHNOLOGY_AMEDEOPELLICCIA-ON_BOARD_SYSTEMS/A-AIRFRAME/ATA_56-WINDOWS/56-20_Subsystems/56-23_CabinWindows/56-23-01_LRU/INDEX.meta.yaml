@@ -1,0 +1,43 @@
+# INDEX.meta.yaml — LRU_56-23-01 Standard Cabin Window Unit
+# ATA 56 – Windows | Subsystem 23 – Cabin Windows
+
+metadata:
+  document_id: LRU_56-23-01
+  title: Standard Cabin Window Unit
+  ata_chapter: 56
+  ata_subsystem: 23
+  sequence: 01
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+lru:
+  part_number: PN-56-23-01-001
+  nomenclature: Standard Cabin Window Unit
+  manufacturer: TBD
+
+lri_components:
+  - id: LRI_01
+    name: OuterPane
+    folder: ./LRI/LRI_01_OuterPane/
+
+  - id: LRI_02
+    name: MiddlePane
+    folder: ./LRI/LRI_02_MiddlePane/
+
+  - id: LRI_03
+    name: InnerPane
+    folder: ./LRI/LRI_03_InnerPane/
+
+  - id: LRI_04
+    name: BreathingHole
+    folder: ./LRI/LRI_04_BreathingHole/
+
+  - id: LRI_05
+    name: RetainingRing
+    folder: ./LRI/LRI_05_RetainingRing/
+
+  - id: LRI_06
+    name: WindowShade
+    folder: ./LRI/LRI_06_WindowShade/
