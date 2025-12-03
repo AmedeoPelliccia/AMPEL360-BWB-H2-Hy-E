@@ -58,6 +58,23 @@ EXCLUDE_FILES = frozenset({
 })
 
 
+def find_repo_root(start_path: Path) -> Path:
+    """Find the repository root by searching for .git directory.
+
+    Args:
+        start_path: The starting path to search from.
+
+    Returns:
+        The repository root path, or the start_path if not found.
+    """
+    current = start_path.resolve()
+    while current != current.parent:
+        if (current / ".git").exists():
+            return current
+        current = current.parent
+    return start_path.resolve()
+
+
 def find_markdown_files(base_dir: Path) -> List[Path]:
     """Find all markdown files in the wiki directory.
 
@@ -67,11 +84,14 @@ def find_markdown_files(base_dir: Path) -> List[Path]:
     Returns:
         A list of Path objects for all markdown files found.
     """
+    # Directories to exclude (these exact names anywhere in path)
+    exclude_dirs = frozenset({".git", ".github", "node_modules"})
+
     md_files: List[Path] = []
     for path in base_dir.rglob("*.md"):
-        # Exclude .git, .github, and node_modules directories
-        parts = {p.name for p in path.parents}
-        if ".git" in parts or ".github" in parts or "node_modules" in parts:
+        # Check if any part of the path is an excluded directory
+        path_parts = set(path.relative_to(base_dir).parts[:-1])  # Exclude filename
+        if path_parts & exclude_dirs:
             continue
         if path.name in EXCLUDE_FILES:
             continue
@@ -224,8 +244,9 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    # Determine paths
-    repo_root = Path(__file__).resolve().parents[2]
+    # Determine paths - use find_repo_root for robustness
+    script_dir = Path(__file__).resolve().parent
+    repo_root = find_repo_root(script_dir)
     wiki_dir = args.wiki_dir if args.wiki_dir else repo_root
     sidebar_path = args.sidebar if args.sidebar else wiki_dir / "_Sidebar.md"
 
