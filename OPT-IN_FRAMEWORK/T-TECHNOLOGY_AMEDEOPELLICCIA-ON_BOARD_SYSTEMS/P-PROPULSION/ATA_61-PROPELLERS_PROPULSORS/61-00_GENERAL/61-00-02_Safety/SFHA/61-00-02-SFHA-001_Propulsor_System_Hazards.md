@@ -227,7 +227,7 @@ Per [CS-25.1309(a)](https://www.easa.europa.eu/en/document-library/certification
 
 ### Internal References
 
-- [61-00-02-000 Safety README](../README.md)
+- [README.md](../README.md)
 - [61-00-02-PSSA-001 Preliminary Safety Assessment](../PSSA/61-00-02-PSSA-001_Preliminary_Safety_Assessment.md)
 - [61-00-02-FTA-001 Propulsor Failure Trees](../FTA/61-00-02-FTA-001_Propulsor_Failure_Trees.md)
 - [61-00-02-TRC-001 Safety Traceability Matrix](../Traceability/61-00-02-TRC-001_Safety_Traceability_Matrix.md)

@@ -41,7 +41,7 @@ The safety assessments align with:
 
 ```text
 61-00-02_Safety/
-├── 61-00-02-000_README.md
+├── README.md
 │
 ├── SFHA/
 │   └── 61-00-02-SFHA-001_Propulsor_System_Hazards.md
