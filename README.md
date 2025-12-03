@@ -1,16 +1,44 @@
 # AMPEL360 BWB-H₂-Hy-E Q100
+### Revolutionary Blended-Wing-Body Hydrogen-Hybrid Electric Aircraft
 
-**Revolutionary Blended-Wing-Body Hydrogen-Hybrid Electric Aircraft**
+<p align="center">
+  <svg width="800" height="100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#FF0000" />
+        <stop offset="16.67%" style="stop-color:#FF7F00" />
+        <stop offset="33.33%" style="stop-color:#FFFF00" />
+        <stop offset="50%" style="stop-color:#00FF00" />
+        <stop offset="66. 67%" style="stop-color:#0000FF" />
+        <stop offset="83.33%" style="stop-color:#9400D3" />
+        <stop offset="100%" style="stop-color:#FF00FF" />
+      </linearGradient>
+    </defs>
+    <text x="400" y="65" font-family="'Roboto Mono', monospace" font-size="48" font-weight="700" text-anchor="middle" fill="url(#rainbow)">
+  <pre style="line-height:1.2">
+<span style="color:#2196F3">█████╗ </span><span style="color:#4CAF50">███╗   ███╗</span><span style="color:#FF9800">██████╗ </span><span style="color:#E91E63">███████╗</span><span style="color:#9C27B0">██╗     </span><span style="color:#00BCD4">██████╗  ██████╗  ██████╗</span>
+<span style="color:#2196F3">██╔══██╗</span><span style="color:#4CAF50">████╗ ████║</span><span style="color:#FF9800">██╔══██╗</span><span style="color:#E91E63">██╔════╝</span><span style="color:#9C27B0">██║     </span><span style="color:#00BCD4">╚════██╗██╔════╝ ██╔═████╗</span>
+<span style="color:#2196F3">███████║</span><span style="color:#4CAF50">██╔████╔██║</span><span style="color:#FF9800">██████╔╝</span><span style="color:#E91E63">█████╗  </span><span style="color:#9C27B0">██║      </span><span style="color:#00BCD4">█████╔╝███████╗ ██║██╔██║</span>
+<span style="color:#2196F3">██╔══██║</span><span style="color:#4CAF50">██║╚██╔╝██║</span><span style="color:#FF9800">██╔═══╝ </span><span style="color:#E91E63">██╔══╝  </span><span style="color:#9C27B0">██║      </span><span style="color:#00BCD4">╚═══██╗██╔═══██╗████╔╝██║</span>
+<span style="color:#2196F3">██║  ██║</span><span style="color:#4CAF50">██║ ╚═╝ ██║</span><span style="color:#FF9800">██║     </span><span style="color:#E91E63">███████╗</span><span style="color:#9C27B0">███████╗</span><span style="color:#00BCD4">██████╔╝╚██████╔╝╚██████╔╝</span>
+<span style="color:#2196F3">╚═╝  ╚═╝</span><span style="color:#4CAF50">╚═╝     ╚═╝</span><span style="color:#FF9800">╚═╝     </span><span style="color:#E91E63">╚══════╝</span><span style="color:#9C27B0">╚══════╝</span><span style="color:#00BCD4">╚═════╝  ╚═════╝  ╚═════╝</span>
+</pre>
+    </text>
+  </svg>
+</p>
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/Framework-OPT--IN%20v1.1-green.svg)](OPT-IN_FRAMEWORK/)
-[![Model](https://img.shields.io/badge/Aircraft-Q100-orange.svg)](#aircraft-specifications)
-[![Certification](https://img.shields.io/badge/Target-EASA%20CS--25%20%7C%20FAA%20Part%2025-red.svg)](#certification)
-[![EIS](https://img.shields.io/badge/EIS-2029--Q2-purple.svg)](#roadmap)
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" />
+  <img src="https://img.shields.io/badge/Framework-OPT--IN%20v1.1-green.svg" />
+  <img src="https://img.shields. io/badge/Aircraft-Q100-orange.svg" />
+  <img src="https://img.shields. io/badge/Target-EASA%20CS--25%20|%20FAA%20Part%2025-red.svg" />
+  <img src="https://img. shields.io/badge/EIS-2029--Q2-purple.svg" />
+</p>
 
 ---
 
-## Overview
+## 🚀 Overview
 
 **AMPEL360 Q100** is a 100-passenger blended-wing-body aircraft powered by hydrogen-electric propulsion, designed to transform regional aviation through near-zero-emission flight and intelligent decentralization of air traffic.
 
