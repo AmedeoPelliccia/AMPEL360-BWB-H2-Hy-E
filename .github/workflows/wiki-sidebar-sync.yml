@@ -57,17 +57,47 @@ jobs:
         run: |
           python tools/wiki/sidebar_sync.py
 
-      - name: Show sidebar diff (if any)
+      - name: Check for sidebar changes
+        id: sidebar-check
         run: |
           if git diff --quiet -- _Sidebar.md; then
             echo "No changes detected in _Sidebar.md"
+            echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "Changes detected in _Sidebar.md:"
             git diff -- _Sidebar.md
+            echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
+      - name: Verify sidebar update
+        run: |
+          echo "=== Current _Sidebar.md content ==="
+          cat _Sidebar.md
+          echo ""
+          echo "=== Sidebar sync verification complete ==="
+
+      - name: Add job summary
+        run: |
+          echo "## Wiki Sidebar Sync Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.sidebar-check.outputs.changed }}" == "true" ]; then
+            echo "✅ **Sidebar updated** - A PR will be created with the changes." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Changes:" >> $GITHUB_STEP_SUMMARY
+            echo '```diff' >> $GITHUB_STEP_SUMMARY
+            git diff -- _Sidebar.md >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ **Sidebar is up to date** - No changes needed." >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Current Sidebar Content:" >> $GITHUB_STEP_SUMMARY
+          echo '```markdown' >> $GITHUB_STEP_SUMMARY
+          cat _Sidebar.md >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
       - name: Create Pull Request for sidebar update
-        if: github.repository == 'AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E'
+        if: github.repository == 'AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E' && steps.sidebar-check.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "chore(wiki): sync _Sidebar.md with internal links"
