@@ -1,4 +1,3 @@
-```yaml
 ---
 title: AMPEL360 SBOM Snapshot (SPDX)
 applicability: [LC-04, LC-06]
@@ -17,7 +16,7 @@ source_tooling:
 sbom_created: "2025-12-03T11:48:52Z"
 status: ACTIVE
 ---
-```
+
 
 # AMPEL360 SBOM Snapshot (SPDX)
 
