@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <title>61-90-20_01-01-FIG_001 — Electric Motor Stator Assembly</title>
+  <desc>Exploded view of 4 MW PMSM stator assembly showing core, windings, and sensors</desc>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title Block -->
+  <rect x="10" y="10" width="780" height="40" fill="#2c3e50" rx="3"/>
+  <text x="400" y="35" fill="white" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">
+    61-90-20_01-01-FIG_001 — Stator Assembly Exploded View
+  </text>
+  
+  <!-- Drawing Area -->
+  <rect x="20" y="60" width="550" height="480" fill="white" stroke="#ddd"/>
+  
+  <!-- Stator Core (cylindrical representation) -->
+  <ellipse cx="290" cy="300" rx="180" ry="40" fill="#8e9bae" stroke="#4a5568" stroke-width="2"/>
+  <rect x="110" y="180" width="360" height="120" fill="#a0aec0" stroke="#4a5568" stroke-width="2"/>
+  <ellipse cx="290" cy="180" rx="180" ry="40" fill="#cbd5e0" stroke="#4a5568" stroke-width="2"/>
+  
+  <!-- Slot pattern indication -->
+  <g stroke="#4a5568" stroke-width="1" fill="none">
+    <line x1="150" y1="180" x2="150" y2="300"/>
+    <line x1="180" y1="175" x2="180" y2="305"/>
+    <line x1="210" y1="170" x2="210" y2="310"/>
+    <line x1="240" y1="168" x2="240" y2="312"/>
+    <line x1="270" y1="167" x2="270" y2="313"/>
+    <line x1="300" y1="167" x2="300" y2="313"/>
+    <line x1="330" y1="168" x2="330" y2="312"/>
+    <line x1="360" y1="170" x2="360" y2="310"/>
+    <line x1="390" y1="175" x2="390" y2="305"/>
+    <line x1="420" y1="180" x2="420" y2="300"/>
+  </g>
+  
+  <!-- Windings (simplified coil representation) -->
+  <g fill="#e53e3e" stroke="#c53030" stroke-width="1.5">
+    <ellipse cx="290" cy="130" rx="140" ry="25"/>
+    <ellipse cx="290" cy="350" rx="140" ry="25"/>
+  </g>
+  <text x="290" y="135" font-family="Arial" font-size="10" fill="white" text-anchor="middle">END WINDINGS (DE)</text>
+  <text x="290" y="355" font-family="Arial" font-size="10" fill="white" text-anchor="middle">END WINDINGS (NDE)</text>
+  
+  <!-- RTD Sensors -->
+  <g fill="#38a169">
+    <circle cx="170" cy="240" r="8"/>
+    <circle cx="290" cy="230" r="8"/>
+    <circle cx="410" cy="240" r="8"/>
+  </g>
+  
+  <!-- End Winding Supports -->
+  <rect x="160" y="100" width="260" height="15" fill="#4299e1" stroke="#2b6cb0" rx="2"/>
+  <rect x="160" y="365" width="260" height="15" fill="#4299e1" stroke="#2b6cb0" rx="2"/>
+  
+  <!-- Callout Lines and Labels -->
+  <g stroke="#2d3748" stroke-width="1" fill="none">
+    <!-- Core callout -->
+    <line x1="470" y1="240" x2="520" y2="200"/>
+    <!-- Winding callout -->
+    <line x1="430" y1="130" x2="520" y2="130"/>
+    <!-- RTD callout -->
+    <line x1="410" y1="248" x2="520" y2="280"/>
+    <!-- Support callout -->
+    <line x1="420" y1="107" x2="520" y2="90"/>
+  </g>
+  
+  <!-- Legend Panel -->
+  <rect x="580" y="60" width="200" height="200" fill="#f7fafc" stroke="#e2e8f0" rx="5"/>
+  <text x="680" y="85" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">COMPONENTS</text>
+  
+  <rect x="595" y="100" width="15" height="15" fill="#a0aec0" stroke="#4a5568"/>
+  <text x="620" y="112" font-family="Arial" font-size="10">Stator Core (M19)</text>
+  
+  <rect x="595" y="125" width="15" height="15" fill="#e53e3e" stroke="#c53030"/>
+  <text x="620" y="137" font-family="Arial" font-size="10">Phase Windings (Cu)</text>
+  
+  <rect x="595" y="150" width="15" height="15" fill="#38a169"/>
+  <text x="620" y="162" font-family="Arial" font-size="10">RTD Sensors (PT100)</text>
+  
+  <rect x="595" y="175" width="15" height="15" fill="#4299e1" stroke="#2b6cb0"/>
+  <text x="620" y="187" font-family="Arial" font-size="10">End Winding Supports</text>
+  
+  <!-- Specifications Panel -->
+  <rect x="580" y="270" width="200" height="150" fill="#f7fafc" stroke="#e2e8f0" rx="5"/>
+  <text x="680" y="295" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">SPECIFICATIONS</text>
+  
+  <text x="595" y="315" font-family="Arial" font-size="9">OD: 640 mm</text>
+  <text x="595" y="330" font-family="Arial" font-size="9">ID (Bore): 420 mm</text>
+  <text x="595" y="345" font-family="Arial" font-size="9">Stack Length: 380 mm</text>
+  <text x="595" y="360" font-family="Arial" font-size="9">Slots: 72</text>
+  <text x="595" y="375" font-family="Arial" font-size="9">Core Mass: 145 kg</text>
+  <text x="595" y="390" font-family="Arial" font-size="9">Winding Mass: 22 kg</text>
+  <text x="595" y="405" font-family="Arial" font-size="9">Total Mass: 175 kg</text>
+  
+  <!-- Document Control -->
+  <rect x="580" y="430" width="200" height="110" fill="#edf2f7" stroke="#e2e8f0" rx="5"/>
+  <text x="595" y="450" font-family="Arial" font-size="9" font-weight="bold">Document Control</text>
+  <text x="595" y="470" font-family="Arial" font-size="8">ATA: 61-20-01</text>
+  <text x="595" y="485" font-family="Arial" font-size="8">LRI: LRI-61-20-01-01</text>
+  <text x="595" y="500" font-family="Arial" font-size="8">PN: PN-EM-STA-001</text>
+  <text x="595" y="515" font-family="Arial" font-size="8">Rev: 1.0 | 2025-12-01</text>
+  <text x="595" y="530" font-family="Arial" font-size="8">AMPEL360 Q100</text>
+  
+  <!-- Scale indicator -->
+  <line x1="50" y1="520" x2="150" y2="520" stroke="#2d3748" stroke-width="2"/>
+  <text x="100" y="535" font-family="Arial" font-size="9" text-anchor="middle">100 mm</text>
+</svg>

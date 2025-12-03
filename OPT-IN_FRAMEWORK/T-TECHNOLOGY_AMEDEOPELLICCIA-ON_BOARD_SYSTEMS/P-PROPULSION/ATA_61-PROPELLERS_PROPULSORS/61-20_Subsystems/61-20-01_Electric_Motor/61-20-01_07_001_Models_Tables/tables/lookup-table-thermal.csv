@@ -1,0 +1,22 @@
+# 61-20-01 Electric Motor — Lookup Table: Thermal Resistance Network
+# AMPEL360 BWB H₂ Hy-E Q100 Programme
+# OPT-IN Framework v1.2
+#
+# Thermal network parameters for transient thermal analysis
+#
+Node_From,Node_To,Resistance_K_per_W,Capacitance_J_per_K,Description
+winding_U,stator_core,0.012,8500,Slot insulation
+winding_V,stator_core,0.012,8500,Slot insulation
+winding_W,stator_core,0.012,8500,Slot insulation
+stator_core,cooling_jacket,0.008,45000,Core to jacket
+cooling_jacket,coolant,0.004,2500,Jacket to coolant
+stator_core,air_gap,0.15,1000,Core to air gap
+air_gap,rotor_surface,0.10,800,Air gap convection
+rotor_surface,rotor_core,0.025,25000,Rotor surface to core
+rotor_core,magnets,0.020,12000,Core to magnets
+rotor_core,shaft,0.030,8000,Core to shaft
+shaft,DE_bearing,0.05,1500,Shaft to DE bearing
+shaft,NDE_bearing,0.05,1500,Shaft to NDE bearing
+DE_bearing,housing,0.02,2000,Bearing to housing
+NDE_bearing,housing,0.02,2000,Bearing to housing
+housing,ambient,0.10,35000,Housing to ambient

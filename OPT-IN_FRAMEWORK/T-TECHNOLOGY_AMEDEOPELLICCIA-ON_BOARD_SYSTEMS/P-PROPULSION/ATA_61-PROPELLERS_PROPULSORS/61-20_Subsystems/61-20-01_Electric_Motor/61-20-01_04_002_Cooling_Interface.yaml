@@ -1,0 +1,179 @@
+# 61-20-01 Electric Motor — Cooling Interface Definition
+# AMPEL360 BWB H₂ Hy-E Q100 Programme
+# OPT-IN Framework v1.2
+
+metadata:
+  document_id: 61-20-01_04_002_Cooling_Interface
+  subsystem: 61-20-01_Electric_Motor
+  interface_with: 61-20-05_Cooling_Loop
+  ata_chapter: "61"
+  version: "1.0"
+  last_updated: "2025-12-01"
+  owner: AMPEL360 Propulsion Team
+  status: draft
+
+coolant_properties:
+  type: ethylene_glycol_water
+  mixture_ratio: "50/50"
+  density:
+    value: 1050
+    unit: kg/m3
+    temperature: 20
+  specific_heat:
+    value: 3400
+    unit: J/(kg·K)
+  viscosity:
+    value: 3.5
+    unit: mPa·s
+    temperature: 40
+  thermal_conductivity:
+    value: 0.42
+    unit: W/(m·K)
+
+inlet_port:
+  designation: COOL-IN
+  location:
+    x: -150
+    y: 0
+    z: 200
+    reference: motor_mounting_flange
+    unit: mm
+  connector:
+    type: quick_disconnect
+    size: DN25
+    material: aluminum_6061
+    seal: viton_o_ring
+  flow_direction: into_motor
+  conditions:
+    temperature:
+      nominal: 35
+      max: 40
+      min: -20
+      unit: degC
+    pressure:
+      nominal: 3.0
+      max: 5.0
+      min: 1.5
+      unit: bar
+    flow_rate:
+      nominal: 60
+      min: 45
+      max: 80
+      unit: L/min
+
+outlet_port:
+  designation: COOL-OUT
+  location:
+    x: -150
+    y: 0
+    z: 320
+    reference: motor_mounting_flange
+    unit: mm
+  connector:
+    type: quick_disconnect
+    size: DN25
+    material: aluminum_6061
+    seal: viton_o_ring
+  flow_direction: out_of_motor
+  conditions:
+    temperature:
+      nominal: 55
+      max: 75
+      design_rise: 20
+      unit: degC
+    pressure:
+      nominal: 1.5
+      min: 1.0
+      unit: bar
+    flow_rate:
+      nominal: 60
+      unit: L/min
+
+internal_circuit:
+  type: spiral_jacket
+  passes: 2
+  flow_path:
+    - inlet_manifold
+    - stator_jacket_lower
+    - stator_jacket_upper
+    - outlet_manifold
+  pressure_drop:
+    value: 1.5
+    unit: bar
+    at_flow_rate: 60
+  volume:
+    value: 3.5
+    unit: L
+  heat_transfer_area:
+    value: 0.85
+    unit: m2
+  heat_transfer_coefficient:
+    value: 5000
+    unit: W/(m2·K)
+    notes: forced_convection
+
+thermal_performance:
+  heat_rejection_capacity:
+    nominal: 140
+    max: 200
+    unit: kW
+  thermal_resistance:
+    winding_to_coolant: 0.025
+    core_to_coolant: 0.030
+    unit: K/W
+  time_constant:
+    thermal: 180
+    unit: s
+
+sensors:
+  coolant_inlet_temp:
+    type: PT1000
+    location: inlet_manifold
+    range: "-40 to 120"
+    unit: degC
+  coolant_outlet_temp:
+    type: PT1000
+    location: outlet_manifold
+    range: "-40 to 120"
+    unit: degC
+  flow_switch:
+    type: paddle
+    setpoint: 30
+    unit: L/min
+    notes: low_flow_alarm
+
+protection:
+  low_flow_alarm:
+    threshold: 40
+    unit: L/min
+    action: warning
+  low_flow_shutdown:
+    threshold: 30
+    unit: L/min
+    action: derate_50_percent
+  high_outlet_temp:
+    threshold: 70
+    unit: degC
+    action: derate_75_percent
+  critical_outlet_temp:
+    threshold: 80
+    unit: degC
+    action: shutdown
+
+maintenance:
+  drain_point:
+    location: bottom_of_jacket
+    access: external
+  fill_point:
+    location: inlet_manifold
+    access: external
+  bleed_point:
+    location: top_of_jacket
+    access: external
+  coolant_change_interval:
+    value: 5000
+    unit: FH
+  filter_requirement:
+    mesh_size: 100
+    unit: micron
+    location: upstream_of_motor
