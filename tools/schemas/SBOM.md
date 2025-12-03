@@ -1,3 +1,24 @@
+```yaml
+---
+title: AMPEL360 SBOM Snapshot (SPDX)
+applicability: [LC-04, LC-06]
+axis: N
+linked_ata:
+  - ATA_95
+  - ATA_96
+  - ATA_97
+  - ATA_98
+artefact_type: SBOM
+spdx_version: SPDX-2.3
+source_tooling:
+  - protobom
+  - github_dependency_graph
+  - automatic_dependency_submission
+sbom_created: "2025-12-03T11:48:52Z"
+status: ACTIVE
+---
+```
+
 # AMPEL360 SBOM Snapshot (SPDX)
 
 ## 0. Applicability & Context
@@ -105,26 +126,6 @@ This confirms that **security, license compliance and SBOM generation** are alre
 ---
 
 ## 4. Governance Hooks (for LC-04 / ATA 96 / ATA 98)
-
-Recommended front-matter when storing this SPDX file and its wiki summary inside OPT-IN:
-
-```yaml
-applicability: [LC-04, LC-06]
-axis: N
-linked_ata:
-  - ATA_95
-  - ATA_96
-  - ATA_97
-  - ATA_98
-artefact_type: SBOM
-spdx_version: "SPDX-2.3"
-source_tooling:
-  - protobom
-  - github_dependency_graph
-  - automatic_dependency_submission
-license_declared_project: "Apache-2.0"
-sbom_created: "2025-12-03T11:48:52Z"
-````
 
 ---
 
