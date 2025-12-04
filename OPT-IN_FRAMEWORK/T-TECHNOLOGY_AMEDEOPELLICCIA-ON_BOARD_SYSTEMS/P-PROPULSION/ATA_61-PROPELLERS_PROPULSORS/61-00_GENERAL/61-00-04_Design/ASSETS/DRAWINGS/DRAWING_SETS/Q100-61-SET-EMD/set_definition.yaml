@@ -1,0 +1,92 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-SET-EMD — Electric Motor Drive Drawing Set Definition
+
+set_id: "Q100-61-SET-EMD"
+name: "Electric Motor Drive Set"
+version: "1.0"
+status: "Active"
+owner: "AMPEL360 Propulsion Engineering"
+created: "2025-12-04"
+last_updated: "2025-12-04"
+
+# Scope Definition
+scope:
+  ata_sections:
+    - "61-30"
+  description: |
+    Engineering drawings for electric motor drive system components
+    including motor, controller, power electronics, and cooling.
+
+# Subsystems covered by this set
+subsystems:
+  - id: "EMD-MOTOR"
+    name: "Electric Motor"
+    description: "Permanent magnet synchronous motor assembly"
+    drawing_prefix: "Q100-61-DRW-EMD-MOTOR"
+
+  - id: "EMD-CTRL"
+    name: "Motor Controller"
+    description: "Motor controller and inverter unit"
+    drawing_prefix: "Q100-61-DRW-EMD-CTRL"
+
+  - id: "EMD-PWR"
+    name: "Power Electronics"
+    description: "Power distribution and conversion electronics"
+    drawing_prefix: "Q100-61-DRW-EMD-PWR"
+
+  - id: "EMD-COOL"
+    name: "Cooling System"
+    description: "Motor and electronics thermal management"
+    drawing_prefix: "Q100-61-DRW-EMD-COOL"
+
+  - id: "EMD-SENS"
+    name: "Sensors"
+    description: "Temperature, speed, and position sensors"
+    drawing_prefix: "Q100-61-DRW-EMD-SENS"
+
+# Drawing types applicable to this set
+drawing_types:
+  - DRW  # Engineering drawings
+  - SCH  # Schematics
+  - ICD  # Interface control drawings
+  - INST # Installation drawings
+
+# External interfaces
+interfaces:
+  - system: "Q100-61-SET-OFP"
+    description: "Motor-to-hub mechanical interface"
+  - system: "Q100-61-SET-MNT"
+    description: "Motor mounting interface"
+  - system: "ATA 24"
+    description: "Electrical power distribution"
+  - system: "ATA 80"
+    description: "Energy storage interface"
+
+# Requirements traceability
+requirements:
+  source_docs:
+    - "61-00-03_Requirements/RQ-61-EMD-*.md"
+  safety_items:
+    - "FMEA-61-EMD-001"
+
+# Revision history
+revisions:
+  - version: "1.0"
+    date: "2025-12-04"
+    author: "AMPEL360 Engineering"
+    description: "Initial set definition"

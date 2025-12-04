@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-TPL-A0-LANDSCAPE — A0 Landscape Drawing Template
+  Size: 1189mm x 841mm
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1189mm"
+     height="841mm"
+     viewBox="0 0 1189 841">
+  
+  <title>Q100-61-TPL-A0-LANDSCAPE — AMPEL360 Drawing Template</title>
+  <desc>A0 Landscape drawing template for ATA 61 Propellers/Propulsors</desc>
+  
+  <defs>
+    <style>
+      .border { stroke: #000000; stroke-width: 0.7; fill: none; }
+      .thin { stroke: #000000; stroke-width: 0.18; fill: none; }
+      .text-title { font-family: Arial, Helvetica, sans-serif; font-size: 5; fill: #000000; }
+      .text-normal { font-family: Arial, Helvetica, sans-serif; font-size: 2.5; fill: #000000; }
+    </style>
+  </defs>
+  
+  <!-- Drawing Border -->
+  <rect x="20" y="10" width="1159" height="821" class="border"/>
+  
+  <!-- Inner Border -->
+  <rect x="25" y="15" width="1149" height="811" class="thin"/>
+  
+  <!-- Title Block Area (bottom right) -->
+  <rect x="929" y="726" width="250" height="100" class="border"/>
+  
+  <!-- Title Block Content -->
+  <g transform="translate(934,731)">
+    <text x="0" y="10" class="text-title">AMPEL360-BWB-H2-Hy-E</text>
+    <text x="0" y="25" class="text-normal">Q100 Program — ATA 61</text>
+    <line x1="0" y1="30" x2="240" y2="30" class="thin"/>
+    <text x="0" y="40" class="text-normal">TITLE:</text>
+    <text x="0" y="55" class="text-normal">DRAWING NO:</text>
+    <text x="0" y="70" class="text-normal">REV:</text>
+    <text x="60" y="70" class="text-normal">SHEET:</text>
+    <text x="0" y="85" class="text-normal">SCALE:</text>
+    <text x="60" y="85" class="text-normal">DATE:</text>
+  </g>
+  
+  <!-- Revision Block Area -->
+  <rect x="929" y="626" width="250" height="95" class="border"/>
+  <text x="934" y="640" class="text-normal">REVISION HISTORY</text>
+  
+  <!-- Zone Markers -->
+  <g class="text-normal">
+    <!-- Horizontal zones A-H -->
+    <text x="5" y="60">A</text>
+    <text x="5" y="160">B</text>
+    <text x="5" y="260">C</text>
+    <text x="5" y="360">D</text>
+    <text x="5" y="460">E</text>
+    <text x="5" y="560">F</text>
+    <text x="5" y="660">G</text>
+    <text x="5" y="760">H</text>
+    
+    <!-- Vertical zones 1-12 -->
+    <text x="70" y="838">1</text>
+    <text x="170" y="838">2</text>
+    <text x="270" y="838">3</text>
+    <text x="370" y="838">4</text>
+    <text x="470" y="838">5</text>
+    <text x="570" y="838">6</text>
+    <text x="670" y="838">7</text>
+    <text x="770" y="838">8</text>
+    <text x="870" y="838">9</text>
+    <text x="970" y="838">10</text>
+    <text x="1070" y="838">11</text>
+    <text x="1150" y="838">12</text>
+  </g>
+  
+  <!-- Fold Marks -->
+  <line x1="210" y1="10" x2="210" y2="15" class="thin"/>
+  <line x1="420" y1="10" x2="420" y2="15" class="thin"/>
+  <line x1="20" y1="297" x2="25" y2="297" class="thin"/>
+  
+  <!-- Template Placeholder Text -->
+  <text x="594" y="420" text-anchor="middle" class="text-title" style="fill: #cccccc;">
+    A0 LANDSCAPE TEMPLATE — PLACE DRAWING CONTENT HERE
+  </text>
+  
+</svg>

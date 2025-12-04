@@ -1,0 +1,102 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-SET-FPS — Full Propulsor System Drawing Set Definition
+
+set_id: "Q100-61-SET-FPS"
+name: "Full Propulsor System Set"
+version: "1.0"
+status: "Active"
+owner: "AMPEL360 Propulsion Engineering"
+created: "2025-12-04"
+last_updated: "2025-12-04"
+
+# Scope Definition
+scope:
+  ata_sections:
+    - "61-00"
+    - "61-60"
+  description: |
+    System-level drawings for complete propulsor assembly and integration
+    including interface control and system schematics.
+
+# Subsystems covered by this set
+subsystems:
+  - id: "FPS-ASSY"
+    name: "Assembly Drawings"
+    description: "Complete propulsor assembly drawings"
+    drawing_prefix: "Q100-61-DRW-FPS-ASSY"
+
+  - id: "FPS-SYS"
+    name: "System Schematics"
+    description: "System-level schematic diagrams"
+    drawing_prefix: "Q100-61-SCH-FPS-SYS"
+
+  - id: "FPS-INT"
+    name: "Interface Control"
+    description: "System interface control documents"
+    drawing_prefix: "Q100-61-ICD-FPS-INT"
+
+  - id: "FPS-INST"
+    name: "Installation"
+    description: "System installation drawings"
+    drawing_prefix: "Q100-61-INST-FPS-INST"
+
+  - id: "FPS-DIAG"
+    name: "System Diagrams"
+    description: "Block diagrams and flow diagrams"
+    drawing_prefix: "Q100-61-DIAG-FPS-DIAG"
+
+# Drawing types applicable to this set
+drawing_types:
+  - DRW  # Engineering drawings
+  - SCH  # Schematics
+  - ICD  # Interface control drawings
+  - INST # Installation drawings
+  - DIAG # Diagrams
+
+# External interfaces
+interfaces:
+  - system: "Q100-61-SET-OFP"
+    description: "Open fan propulsor subsystem"
+  - system: "Q100-61-SET-EMD"
+    description: "Electric motor drive subsystem"
+  - system: "Q100-61-SET-PV"
+    description: "Propeller variants"
+  - system: "Q100-61-SET-MNT"
+    description: "Mounting system"
+  - system: "ATA 24"
+    description: "Electrical power system"
+  - system: "ATA 28"
+    description: "Fuel system (H₂)"
+  - system: "ATA 31"
+    description: "Flight controls interface"
+  - system: "ATA 80"
+    description: "Energy storage (CO₂ battery)"
+
+# Requirements traceability
+requirements:
+  source_docs:
+    - "61-00-03_Requirements/RQ-61-FPS-*.md"
+  safety_items:
+    - "FMEA-61-FPS-001"
+
+# Revision history
+revisions:
+  - version: "1.0"
+    date: "2025-12-04"
+    author: "AMPEL360 Engineering"
+    description: "Initial set definition"

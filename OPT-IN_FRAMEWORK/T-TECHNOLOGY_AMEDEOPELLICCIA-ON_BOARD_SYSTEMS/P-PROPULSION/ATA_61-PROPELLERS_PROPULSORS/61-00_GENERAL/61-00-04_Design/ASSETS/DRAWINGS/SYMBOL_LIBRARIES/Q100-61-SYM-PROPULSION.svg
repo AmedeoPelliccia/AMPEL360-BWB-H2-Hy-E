@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-SYM-PROPULSION — Propulsion-Specific Symbol Library
+  Reference: Q100 Project Standard
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200mm"
+     height="150mm"
+     viewBox="0 0 200 150">
+  
+  <title>Q100-61-SYM-PROPULSION — Propulsion Symbol Library</title>
+  <desc>Propulsion-specific symbols for ATA 61 propulsion drawings</desc>
+  
+  <defs>
+    <style>
+      .symbol { stroke: #000000; stroke-width: 0.35; fill: none; }
+      .filled { stroke: #000000; stroke-width: 0.35; fill: #000000; }
+      .text { font-family: Arial, sans-serif; font-size: 3; fill: #000000; }
+    </style>
+    
+    <!-- Propeller/Fan Blade Symbol -->
+    <symbol id="prop-blade" viewBox="0 0 40 12">
+      <path d="M0,6 C10,0 30,0 40,6 C30,12 10,12 0,6" class="symbol"/>
+    </symbol>
+    
+    <!-- Hub Symbol -->
+    <symbol id="prop-hub" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="8" class="symbol"/>
+      <circle cx="10" cy="10" r="3" class="filled"/>
+    </symbol>
+    
+    <!-- Electric Motor (Propulsion) Symbol -->
+    <symbol id="prop-motor" viewBox="0 0 30 20">
+      <rect x="0" y="0" width="30" height="20" class="symbol"/>
+      <text x="15" y="13" text-anchor="middle" class="text" style="font-size: 5;">M</text>
+      <line x1="0" y1="10" x2="-5" y2="10" class="symbol"/>
+      <line x1="30" y1="10" x2="35" y2="10" class="symbol"/>
+    </symbol>
+    
+    <!-- Inverter/Controller Symbol -->
+    <symbol id="prop-inverter" viewBox="0 0 30 20">
+      <rect x="0" y="0" width="30" height="20" class="symbol"/>
+      <text x="15" y="13" text-anchor="middle" class="text" style="font-size: 4;">INV</text>
+    </symbol>
+    
+    <!-- H2 Fuel Cell Symbol -->
+    <symbol id="prop-fuelcell" viewBox="0 0 30 24">
+      <rect x="0" y="0" width="30" height="24" class="symbol"/>
+      <text x="15" y="10" text-anchor="middle" class="text" style="font-size: 4;">H₂</text>
+      <text x="15" y="18" text-anchor="middle" class="text" style="font-size: 3;">FC</text>
+    </symbol>
+    
+    <!-- CO2 Battery Symbol -->
+    <symbol id="prop-co2-battery" viewBox="0 0 30 24">
+      <rect x="0" y="0" width="30" height="24" class="symbol"/>
+      <text x="15" y="10" text-anchor="middle" class="text" style="font-size: 4;">CO₂</text>
+      <text x="15" y="18" text-anchor="middle" class="text" style="font-size: 3;">BAT</text>
+    </symbol>
+    
+    <!-- Nacelle Symbol -->
+    <symbol id="prop-nacelle" viewBox="0 0 50 20">
+      <ellipse cx="25" cy="10" rx="24" ry="9" class="symbol"/>
+    </symbol>
+    
+    <!-- Pylon Symbol -->
+    <symbol id="prop-pylon" viewBox="0 0 12 30">
+      <polygon points="0,0 12,0 8,30 4,30" class="symbol"/>
+    </symbol>
+    
+    <!-- Pitch Actuator Symbol -->
+    <symbol id="prop-pitch" viewBox="0 0 24 16">
+      <rect x="0" y="0" width="24" height="16" class="symbol"/>
+      <text x="12" y="10" text-anchor="middle" class="text" style="font-size: 3;">PITCH</text>
+    </symbol>
+    
+  </defs>
+  
+  <!-- Symbol Display Grid -->
+  <text x="100" y="10" text-anchor="middle" class="text" style="font-size: 5; font-weight: bold;">
+    PROPULSION SYMBOLS — Q100-61-SYM-PROPULSION
+  </text>
+  
+  <g transform="translate(10,25)">
+    <use xlink:href="#prop-blade" x="0" y="0" width="40" height="12"/>
+    <text x="20" y="22" text-anchor="middle" class="text">Blade</text>
+  </g>
+  
+  <g transform="translate(60,22)">
+    <use xlink:href="#prop-hub" x="0" y="0" width="20" height="20"/>
+    <text x="10" y="28" text-anchor="middle" class="text">Hub</text>
+  </g>
+  
+  <g transform="translate(95,23)">
+    <use xlink:href="#prop-motor" x="0" y="0" width="30" height="20"/>
+    <text x="15" y="30" text-anchor="middle" class="text">Motor</text>
+  </g>
+  
+  <g transform="translate(140,23)">
+    <use xlink:href="#prop-inverter" x="0" y="0" width="30" height="20"/>
+    <text x="15" y="30" text-anchor="middle" class="text">Inverter</text>
+  </g>
+  
+  <g transform="translate(10,60)">
+    <use xlink:href="#prop-fuelcell" x="0" y="0" width="30" height="24"/>
+    <text x="15" y="34" text-anchor="middle" class="text">H₂ Fuel Cell</text>
+  </g>
+  
+  <g transform="translate(50,60)">
+    <use xlink:href="#prop-co2-battery" x="0" y="0" width="30" height="24"/>
+    <text x="15" y="34" text-anchor="middle" class="text">CO₂ Battery</text>
+  </g>
+  
+  <g transform="translate(95,64)">
+    <use xlink:href="#prop-nacelle" x="0" y="0" width="50" height="20"/>
+    <text x="25" y="30" text-anchor="middle" class="text">Nacelle</text>
+  </g>
+  
+  <g transform="translate(155,55)">
+    <use xlink:href="#prop-pylon" x="0" y="0" width="12" height="30"/>
+    <text x="6" y="40" text-anchor="middle" class="text">Pylon</text>
+  </g>
+  
+  <g transform="translate(10,105)">
+    <use xlink:href="#prop-pitch" x="0" y="0" width="24" height="16"/>
+    <text x="12" y="26" text-anchor="middle" class="text">Pitch Actuator</text>
+  </g>
+  
+</svg>

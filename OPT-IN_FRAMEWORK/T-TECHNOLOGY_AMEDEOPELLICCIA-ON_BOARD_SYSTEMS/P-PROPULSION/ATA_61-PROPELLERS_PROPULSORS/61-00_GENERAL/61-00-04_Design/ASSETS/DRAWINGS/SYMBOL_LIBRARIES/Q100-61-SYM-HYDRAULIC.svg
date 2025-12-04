@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-SYM-HYDRAULIC — Hydraulic System Symbol Library
+  Reference: ISO 1219
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200mm"
+     height="150mm"
+     viewBox="0 0 200 150">
+  
+  <title>Q100-61-SYM-HYDRAULIC — Hydraulic Symbol Library</title>
+  <desc>Hydraulic system symbols for ATA 61 propulsion drawings</desc>
+  
+  <defs>
+    <style>
+      .symbol { stroke: #000000; stroke-width: 0.35; fill: none; }
+      .filled { stroke: #000000; stroke-width: 0.35; fill: #000000; }
+      .text { font-family: Arial, sans-serif; font-size: 3; fill: #000000; }
+    </style>
+    
+    <!-- Hydraulic Pump Symbol -->
+    <symbol id="pump-hydraulic" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="8" class="symbol"/>
+      <polygon points="10,4 14,16 6,16" class="filled"/>
+    </symbol>
+    
+    <!-- Hydraulic Motor Symbol -->
+    <symbol id="motor-hydraulic" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="8" class="symbol"/>
+      <polygon points="10,16 14,4 6,4" class="filled"/>
+    </symbol>
+    
+    <!-- Check Valve Symbol -->
+    <symbol id="valve-check" viewBox="0 0 20 16">
+      <line x1="0" y1="8" x2="8" y2="8" class="symbol"/>
+      <line x1="12" y1="8" x2="20" y2="8" class="symbol"/>
+      <polygon points="8,3 8,13 12,8" class="symbol"/>
+      <line x1="12" y1="3" x2="12" y2="13" class="symbol"/>
+    </symbol>
+    
+    <!-- Relief Valve Symbol -->
+    <symbol id="valve-relief" viewBox="0 0 24 20">
+      <rect x="4" y="2" width="16" height="16" class="symbol"/>
+      <line x1="0" y1="10" x2="4" y2="10" class="symbol"/>
+      <line x1="20" y1="10" x2="24" y2="10" class="symbol"/>
+      <polygon points="8,6 16,6 12,14" class="symbol"/>
+    </symbol>
+    
+    <!-- Cylinder Symbol -->
+    <symbol id="cylinder" viewBox="0 0 40 16">
+      <rect x="0" y="2" width="36" height="12" class="symbol"/>
+      <line x1="30" y1="2" x2="30" y2="14" class="symbol"/>
+      <line x1="36" y1="8" x2="40" y2="8" class="symbol"/>
+    </symbol>
+    
+    <!-- Filter Symbol -->
+    <symbol id="filter" viewBox="0 0 16 20">
+      <rect x="2" y="0" width="12" height="20" class="symbol"/>
+      <line x1="4" y1="5" x2="12" y2="15" class="symbol"/>
+      <line x1="4" y1="15" x2="12" y2="5" class="symbol"/>
+    </symbol>
+    
+    <!-- Reservoir Symbol -->
+    <symbol id="reservoir" viewBox="0 0 24 16">
+      <rect x="0" y="4" width="24" height="12" class="symbol"/>
+      <line x1="0" y1="0" x2="0" y2="4" class="symbol"/>
+      <line x1="24" y1="0" x2="24" y2="4" class="symbol"/>
+    </symbol>
+    
+  </defs>
+  
+  <!-- Symbol Display Grid -->
+  <text x="100" y="10" text-anchor="middle" class="text" style="font-size: 5; font-weight: bold;">
+    HYDRAULIC SYMBOLS — Q100-61-SYM-HYDRAULIC
+  </text>
+  
+  <g transform="translate(20,25)">
+    <use xlink:href="#pump-hydraulic" x="0" y="0" width="20" height="20"/>
+    <text x="10" y="28" text-anchor="middle" class="text">Pump</text>
+  </g>
+  
+  <g transform="translate(60,25)">
+    <use xlink:href="#motor-hydraulic" x="0" y="0" width="20" height="20"/>
+    <text x="10" y="28" text-anchor="middle" class="text">Motor</text>
+  </g>
+  
+  <g transform="translate(100,27)">
+    <use xlink:href="#valve-check" x="0" y="0" width="20" height="16"/>
+    <text x="10" y="26" text-anchor="middle" class="text">Check Valve</text>
+  </g>
+  
+  <g transform="translate(140,25)">
+    <use xlink:href="#valve-relief" x="0" y="0" width="24" height="20"/>
+    <text x="12" y="28" text-anchor="middle" class="text">Relief Valve</text>
+  </g>
+  
+  <g transform="translate(20,70)">
+    <use xlink:href="#cylinder" x="0" y="0" width="40" height="16"/>
+    <text x="20" y="24" text-anchor="middle" class="text">Cylinder</text>
+  </g>
+  
+  <g transform="translate(80,65)">
+    <use xlink:href="#filter" x="0" y="0" width="16" height="20"/>
+    <text x="8" y="28" text-anchor="middle" class="text">Filter</text>
+  </g>
+  
+  <g transform="translate(120,67)">
+    <use xlink:href="#reservoir" x="0" y="0" width="24" height="16"/>
+    <text x="12" y="26" text-anchor="middle" class="text">Reservoir</text>
+  </g>
+  
+</svg>

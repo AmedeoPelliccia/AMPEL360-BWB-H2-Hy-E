@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-SYM-PNEUMATIC — Pneumatic System Symbol Library
+  Reference: ISO 1219
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200mm"
+     height="150mm"
+     viewBox="0 0 200 150">
+  
+  <title>Q100-61-SYM-PNEUMATIC — Pneumatic Symbol Library</title>
+  <desc>Pneumatic system symbols for ATA 61 propulsion drawings</desc>
+  
+  <defs>
+    <style>
+      .symbol { stroke: #000000; stroke-width: 0.35; fill: none; }
+      .filled { stroke: #000000; stroke-width: 0.35; fill: #000000; }
+      .text { font-family: Arial, sans-serif; font-size: 3; fill: #000000; }
+    </style>
+    
+    <!-- Compressor Symbol -->
+    <symbol id="compressor" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="8" class="symbol"/>
+      <polygon points="6,6 14,6 10,14" class="symbol"/>
+    </symbol>
+    
+    <!-- Air Motor Symbol -->
+    <symbol id="motor-air" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="8" class="symbol"/>
+      <polygon points="6,14 14,14 10,6" class="symbol"/>
+    </symbol>
+    
+    <!-- Pneumatic Valve 3/2 Symbol -->
+    <symbol id="valve-3-2" viewBox="0 0 30 20">
+      <rect x="0" y="0" width="15" height="20" class="symbol"/>
+      <rect x="15" y="0" width="15" height="20" class="symbol"/>
+      <line x1="7.5" y1="0" x2="7.5" y2="-5" class="symbol"/>
+      <line x1="7.5" y1="20" x2="7.5" y2="25" class="symbol"/>
+      <line x1="22.5" y1="20" x2="22.5" y2="25" class="symbol"/>
+    </symbol>
+    
+    <!-- Exhaust Symbol -->
+    <symbol id="exhaust" viewBox="0 0 12 10">
+      <polygon points="6,0 0,10 12,10" class="symbol"/>
+      <line x1="2" y1="8" x2="10" y2="8" class="symbol"/>
+      <line x1="3" y1="6" x2="9" y2="6" class="symbol"/>
+    </symbol>
+    
+    <!-- Silencer Symbol -->
+    <symbol id="silencer" viewBox="0 0 16 12">
+      <rect x="0" y="0" width="16" height="12" class="symbol"/>
+      <line x1="3" y1="3" x2="13" y2="3" class="symbol"/>
+      <line x1="3" y1="6" x2="13" y2="6" class="symbol"/>
+      <line x1="3" y1="9" x2="13" y2="9" class="symbol"/>
+    </symbol>
+    
+    <!-- Quick Connector Symbol -->
+    <symbol id="quick-connect" viewBox="0 0 16 12">
+      <circle cx="8" cy="6" r="5" class="symbol"/>
+      <line x1="0" y1="6" x2="3" y2="6" class="symbol"/>
+      <line x1="13" y1="6" x2="16" y2="6" class="symbol"/>
+    </symbol>
+    
+  </defs>
+  
+  <!-- Symbol Display Grid -->
+  <text x="100" y="10" text-anchor="middle" class="text" style="font-size: 5; font-weight: bold;">
+    PNEUMATIC SYMBOLS — Q100-61-SYM-PNEUMATIC
+  </text>
+  
+  <g transform="translate(20,25)">
+    <use xlink:href="#compressor" x="0" y="0" width="20" height="20"/>
+    <text x="10" y="28" text-anchor="middle" class="text">Compressor</text>
+  </g>
+  
+  <g transform="translate(60,25)">
+    <use xlink:href="#motor-air" x="0" y="0" width="20" height="20"/>
+    <text x="10" y="28" text-anchor="middle" class="text">Air Motor</text>
+  </g>
+  
+  <g transform="translate(100,25)">
+    <use xlink:href="#valve-3-2" x="0" y="0" width="30" height="20"/>
+    <text x="15" y="28" text-anchor="middle" class="text">3/2 Valve</text>
+  </g>
+  
+  <g transform="translate(150,25)">
+    <use xlink:href="#exhaust" x="0" y="0" width="12" height="10"/>
+    <text x="6" y="20" text-anchor="middle" class="text">Exhaust</text>
+  </g>
+  
+  <g transform="translate(20,70)">
+    <use xlink:href="#silencer" x="0" y="0" width="16" height="12"/>
+    <text x="8" y="20" text-anchor="middle" class="text">Silencer</text>
+  </g>
+  
+  <g transform="translate(60,69)">
+    <use xlink:href="#quick-connect" x="0" y="0" width="16" height="12"/>
+    <text x="8" y="22" text-anchor="middle" class="text">Quick Connect</text>
+  </g>
+  
+</svg>
