@@ -11,14 +11,25 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+#
 # SPDX-License-Identifier: Apache-2.0
 
 """CGen Docs utilities package."""
 
 from .context import load_context_snippets, load_global_context
 from .ai import run_deepen_evolve_prompt, AIResponse
-from .diff import write_sidecar, apply_changes
+from .diff import (
+    write_sidecar,
+    apply_changes,
+    create_backup,
+    compute_diff_summary,
+    utc_now,
+    BackupManager,
+    DiffEngine,
+    SidecarWriter,
+    DocumentWriter,
+    CGenWriter,
+)
 from .metadata import update_wave_log
 
 __all__ = [
@@ -28,5 +39,13 @@ __all__ = [
     "AIResponse",
     "write_sidecar",
     "apply_changes",
+    "create_backup",
+    "compute_diff_summary",
+    "utc_now",
+    "BackupManager",
+    "DiffEngine",
+    "SidecarWriter",
+    "DocumentWriter",
+    "CGenWriter",
     "update_wave_log",
 ]
