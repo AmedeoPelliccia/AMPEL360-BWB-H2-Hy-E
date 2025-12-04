@@ -11,22 +11,29 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+#
 # SPDX-License-Identifier: Apache-2.0
 
 """
 AI integration utilities for CGen Docs Waves.
 
-This module provides the interface to AI models for document processing.
-It handles API calls, retries, and response parsing.
+This module provides the interface to AI models for document processing,
+including request construction, retries, safety controls, and response parsing.
+
+Governance principles:
+- CGen proposes, humans dispose.
+- All AI outputs must undergo human review before merge.
+- No AI call may modify document identity (IDs, ATA numbers, file paths).
 """
+
+from __future__ import annotations
 
 import logging
 import os
 import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -35,9 +42,13 @@ OPENAI_API_KEY_VAR = "OPENAI_API_KEY"
 GITHUB_COPILOT_API_VAR = "GITHUB_TOKEN"
 
 
+# ---------------------------------------------------------------------------
+# Response container
+# ---------------------------------------------------------------------------
+
 @dataclass
 class AIResponse:
-    """Container for AI model response data."""
+    """Structured container for AI model response data."""
 
     content: str
     summary: str = ""
@@ -47,24 +58,32 @@ class AIResponse:
     metadata: Dict[str, Any] = field(default_factory=dict)
 
 
+# ---------------------------------------------------------------------------
+# API Client Resolution
+# ---------------------------------------------------------------------------
+
 def get_api_client():
-    """Get the appropriate API client based on environment.
-
-    Returns:
-        API client instance or None if no credentials available
     """
-    # Check for OpenAI API key
+    Return an OpenAI API client if available.
+
+    The lookup is deliberately simple to allow mocking or future extensions.
+    """
     openai_key = os.environ.get(OPENAI_API_KEY_VAR)
-    if openai_key:
-        try:
-            import openai
+    if not openai_key:
+        logger.info("AI integration disabled (missing %s)", OPENAI_API_KEY_VAR)
+        return None
 
-            return openai.OpenAI(api_key=openai_key)
-        except ImportError:
-            logger.warning("OpenAI package not installed")
+    try:
+        import openai
+        return openai.OpenAI(api_key=openai_key)
+    except ImportError:
+        logger.warning("OpenAI Python package not installed.")
+        return None
 
-    return None
 
+# ---------------------------------------------------------------------------
+# Core execution entry point
+# ---------------------------------------------------------------------------
 
 def run_deepen_evolve_prompt(
     prompt: str,
@@ -72,34 +91,36 @@ def run_deepen_evolve_prompt(
     dry_run: bool = False,
     max_retries: int = 3,
 ) -> Optional[AIResponse]:
-    """Execute the deepen and evolve prompt against an AI model.
+    """
+    Execute the deepen/evolve prompt against an AI model with retry handling.
 
     Args:
-        prompt: The complete prompt to send to the model
-        ai_policy: AI policy configuration from batch
-        dry_run: If True, return mock response without calling API
-        max_retries: Maximum number of retry attempts
+        prompt: The prompt to send to the AI model.
+        ai_policy: The AI policy controlling model selection and limits.
+        dry_run: If True, bypasses the actual API and returns a mock response.
+        max_retries: Maximum number of retry attempts.
 
     Returns:
-        AIResponse with model output, or None on failure
+        AIResponse or None if all attempts fail.
     """
+
     if dry_run:
         return _mock_response(prompt, ai_policy)
 
     client = get_api_client()
     if client is None:
-        logger.warning("No API client available, using mock response")
+        logger.warning("No API client available; falling back to mock response.")
         return _mock_response(prompt, ai_policy)
 
     model = ai_policy.get("model", "gpt-4o")
     fallback_model = ai_policy.get("fallback_model", "gpt-4o-mini")
     max_tokens = ai_policy.get("max_output_tokens", 8000)
-    temperature = ai_policy.get("temperature", 0.2)
+    temperature = ai_policy.get("temperature", 0.15)
 
     for attempt in range(max_retries):
-        try:
-            current_model = model if attempt == 0 else fallback_model
+        current_model = model if attempt == 0 else fallback_model
 
+        try:
             logger.info("Calling AI model: %s (attempt %d)", current_model, attempt + 1)
 
             response = client.chat.completions.create(
@@ -108,9 +129,10 @@ def run_deepen_evolve_prompt(
                     {
                         "role": "system",
                         "content": (
-                            "You are the CGen Docs Wave assistant for AMPEL360 BWB H2 Hy-E Q100. "
-                            "Your role is to improve documentation while maintaining structure "
-                            "and certification-friendly wording."
+                            "You are the CGen Docs Wave assistant for AMPEL360. "
+                            "Improve documentation only, maintaining structure, "
+                            "conservatism, and certification-aligned language. "
+                            "Do NOT create or modify document IDs or ATA numbering."
                         ),
                     },
                     {"role": "user", "content": prompt},
@@ -121,8 +143,6 @@ def run_deepen_evolve_prompt(
 
             choice = response.choices[0]
             content = choice.message.content or ""
-
-            # Extract summary from content if present
             summary = _extract_summary(content)
 
             return AIResponse(
@@ -132,109 +152,94 @@ def run_deepen_evolve_prompt(
                 tokens_used=response.usage.total_tokens if response.usage else 0,
                 finish_reason=choice.finish_reason or "",
                 metadata={
-                    "prompt_tokens": (
-                        response.usage.prompt_tokens if response.usage else 0
-                    ),
-                    "completion_tokens": (
-                        response.usage.completion_tokens if response.usage else 0
-                    ),
+                    "prompt_tokens": response.usage.prompt_tokens if response.usage else 0,
+                    "completion_tokens": response.usage.completion_tokens if response.usage else 0,
                     "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "model": current_model,
                 },
             )
 
         except Exception as e:
-            logger.warning("API call failed (attempt %d): %s", attempt + 1, e)
+            logger.warning(
+                "AI model call failed for model %s (attempt %d/%d): %s",
+                current_model, attempt + 1, max_retries, e,
+            )
+
             if attempt < max_retries - 1:
-                wait_time = (attempt + 1) * 2
-                logger.info("Retrying in %d seconds...", wait_time)
-                time.sleep(wait_time)
+                backoff = (attempt + 1) * 2
+                logger.info("Retrying in %d seconds...", backoff)
+                time.sleep(backoff)
             else:
-                logger.error("All API attempts failed")
+                logger.error("All retry attempts exhausted.")
                 return None
 
     return None
 
 
+# ---------------------------------------------------------------------------
+# Summary extraction
+# ---------------------------------------------------------------------------
+
 def _extract_summary(content: str) -> str:
-    """Extract the CGen Wave Summary from content.
-
-    Args:
-        content: Full AI response content
-
-    Returns:
-        Summary text or empty string
     """
-    start_marker = "<!-- CGen Wave Summary -->"
-    end_marker = "<!-- /CGen Wave Summary -->"
+    Extract the CGen Wave Summary section from an AI-generated document.
+    Returns the summary text or "".
+    """
+    markers = [
+        ("<!-- CGen Wave Summary -->", "<!-- /CGen Wave Summary -->"),
+        ("<!-- CGen Wave Summary", "-->"),
+    ]
 
-    # Also try alternate markers
-    if start_marker not in content:
-        start_marker = "<!-- CGen Wave Summary"
-        end_marker = "-->"
-
-    try:
-        if start_marker in content:
-            start_idx = content.index(start_marker) + len(start_marker)
-            if end_marker in content[start_idx:]:
+    for start_marker, end_marker in markers:
+        try:
+            if start_marker in content:
+                start_idx = content.index(start_marker) + len(start_marker)
                 end_idx = content.index(end_marker, start_idx)
                 return content[start_idx:end_idx].strip()
-    except ValueError:
-        pass
+        except ValueError:
+            continue
 
     return ""
 
 
+# ---------------------------------------------------------------------------
+# Mock Responses
+# ---------------------------------------------------------------------------
+
 def _mock_response(prompt: str, ai_policy: Dict[str, Any]) -> AIResponse:
-    """Generate a mock response for dry-run mode.
-
-    Args:
-        prompt: The prompt that would be sent
-        ai_policy: AI policy configuration
-
-    Returns:
-        Mock AIResponse
-    """
-    logger.info("[MOCK] Would call model: %s", ai_policy.get("model", "gpt-4o"))
+    """Return a deterministic mock response for dry-run and fallback modes."""
+    logger.info("[MOCK] Returning simulated AI response.")
     logger.debug("[MOCK] Prompt length: %d chars", len(prompt))
 
     return AIResponse(
         content="[DRY-RUN: No changes made]",
-        summary="Dry-run mode - no AI processing performed",
-        model=ai_policy.get("model", "gpt-4o") + " (mock)",
+        summary="Dry-run mode: no AI processing performed.",
+        model=(ai_policy.get("model") or "mock-model") + " (mock)",
         tokens_used=0,
         finish_reason="mock",
         metadata={
-            "dry_run": True,
             "timestamp": datetime.now(timezone.utc).isoformat(),
+            "dry_run": True,
         },
     )
 
 
+# ---------------------------------------------------------------------------
+# Token Estimation Utilities
+# ---------------------------------------------------------------------------
+
 def estimate_tokens(text: str) -> int:
-    """Estimate the number of tokens in text.
-
-    Args:
-        text: Text to estimate tokens for
-
-    Returns:
-        Estimated token count (rough approximation)
-    """
-    # Rough estimate: 1 token ≈ 4 characters
+    """Estimate token count using a simple 4 chars/token heuristic."""
     return len(text) // 4
 
 
 def truncate_to_tokens(text: str, max_tokens: int) -> str:
-    """Truncate text to approximately max_tokens.
-
-    Args:
-        text: Text to truncate
-        max_tokens: Maximum tokens to allow
-
-    Returns:
-        Truncated text
+    """
+    Truncate text to approx. max_tokens using the 4 chars/token heuristic.
     """
     max_chars = max_tokens * 4
     if len(text) <= max_chars:
         return text
 
-    return text[:max_chars] + "\n\n[...content truncated due to token limit...]"
+    return text[:max_chars] + "\n\n[...content truncated due to token limit...]\n"
+
