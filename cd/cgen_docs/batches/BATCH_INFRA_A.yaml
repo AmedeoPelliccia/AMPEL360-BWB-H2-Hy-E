@@ -1,0 +1,82 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# SPDX-License-Identifier: Apache-2.0
+
+# CGen Docs Waves - Batch Configuration
+# I-INFRASTRUCTURES - Wave A
+
+batch_id: BATCH_INFRA_A
+name: "I-INFRASTRUCTURES – Wave A"
+description: |
+  First wave covering Infrastructure systems (ATA 02, ground support, facilities).
+  Focus on deepening documentation, adding cross-references, and normalizing
+  document control sections.
+frequency: "P3D"          # Every 3 days (informational)
+owner: "Amedeo Pelliccia"
+version: "1.0"
+created_at: "2025-12-04"
+
+scope:
+  - path: OPT-IN_FRAMEWORK/I-INFRASTRUCTURES
+    patterns:
+      - "**/*.md"
+    exclude:
+      - "**/00_INDEX.md"
+      - "**/*_CGEN_DRAFT.md"
+
+targets:
+  - type: deepen_sections
+    description: "Expand high-level sections and fill TBD/TBR markers"
+    priority: 1
+
+  - type: add_cross_references
+    description: "Add links to ATA chapters, LC cards, operational docs"
+    priority: 2
+
+  - type: normalize_doc_control
+    description: "Standardize Document Control sections"
+    priority: 3
+
+  - type: clarify_open_points
+    description: "Document TODOs and next steps"
+    priority: 4
+
+context_sources:
+  - path: OPT-IN_FRAMEWORK/README.md
+    role: "framework_overview"
+
+  - path: OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/README.md
+    role: "axis_overview"
+
+  - path: OPT-IN_FRAMEWORK/ATA_CHAPTER_INDEX.md
+    role: "ata_reference"
+
+ai_policy:
+  model: "gpt-5.1-codex"
+  fallback_model: "gpt-4o"
+  max_tokens_per_doc: 6000
+  max_output_tokens: 8000
+  temperature: 0.2
+  require_human_review: true
+  write_mode: "inplace"
+  draft_suffix: "_CGEN_DRAFT"
+
+output:
+  update_sidecars: true
+  sidecar_extension: ".cgen.yaml"
+  log_to_jsonl: true
+  log_path: "cd/cgen_docs/logs"
+
+# END OF BATCH CONFIGURATION
