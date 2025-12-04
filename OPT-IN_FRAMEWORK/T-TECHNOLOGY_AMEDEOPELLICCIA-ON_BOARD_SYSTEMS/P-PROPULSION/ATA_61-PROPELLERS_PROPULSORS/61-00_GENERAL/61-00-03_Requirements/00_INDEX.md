@@ -31,6 +31,7 @@ This folder contains all **requirements documentation** for the Q100 Propulsor S
 | ID | Document | Status | Version |
 |----|----------|--------|---------|
 | 61-00-03-REF-002 | [[61-00-03-REF-002_Gap_Closure_Response]] | DRAFT | 0.1 |
+| 61-00-03-REF-003 | [[61-00-03-REF-003_Performance_Validation]] | VALIDATED | 0.1 |
 
 ---
 
