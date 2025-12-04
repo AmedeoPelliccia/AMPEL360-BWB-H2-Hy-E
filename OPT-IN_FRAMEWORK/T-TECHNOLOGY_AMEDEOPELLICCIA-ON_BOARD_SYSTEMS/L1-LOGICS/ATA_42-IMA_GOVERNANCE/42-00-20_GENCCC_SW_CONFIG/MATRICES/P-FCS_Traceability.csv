@@ -1,0 +1,11 @@
+REQ_ID,REQ_Title,DO178C_Level,Design_ID,Code_Module,Code_Function,Test_ID,Test_Result,Hazard_ID,CERT_Evidence,AI_Assisted,Verification_Status,Last_Updated
+REQ-42-FCS-001,FCS Pitch Control Response,A,DES-42-FCS-001,fcs_pitch.c,pitch_control(),TEST-42-FCS-001,Pass,HAZ-FCS-001,CERT-FCS-001,No,Verified,2025-12-04
+REQ-42-FCS-002,FCS Roll Control Response,A,DES-42-FCS-002,fcs_roll.c,roll_control(),TEST-42-FCS-002,Pass,HAZ-FCS-001,CERT-FCS-001,No,Verified,2025-12-04
+REQ-42-FCS-003,FCS Yaw Damper Function,A,DES-42-FCS-003,fcs_yaw.c,yaw_damper(),TEST-42-FCS-003,Pass,HAZ-FCS-002,CERT-FCS-002,No,Verified,2025-12-04
+REQ-42-FCS-004,FCS Autopilot Engage,A,DES-42-FCS-004,fcs_ap.c,ap_engage(),TEST-42-FCS-004,Pending,HAZ-FCS-003,TBD,Yes,In_Review,2025-12-04
+REQ-42-FCS-005,FCS Autopilot Disengage,A,DES-42-FCS-005,fcs_ap.c,ap_disengage(),TEST-42-FCS-005,Pending,HAZ-FCS-003,TBD,Yes,In_Review,2025-12-04
+REQ-42-FCS-006,FCS Stick Force Gradient,A,DES-42-FCS-006,fcs_feel.c,calc_force_gradient(),TEST-42-FCS-006,TBD,HAZ-FCS-004,TBD,No,Planned,2025-12-04
+REQ-42-FCS-007,FCS Envelope Protection,A,DES-42-FCS-007,fcs_envelope.c,check_envelope(),TEST-42-FCS-007,TBD,HAZ-FCS-005,TBD,No,Planned,2025-12-04
+REQ-42-FCS-008,FCS Redundancy Management,A,DES-42-FCS-008,fcs_redundancy.c,manage_redundancy(),TEST-42-FCS-008,TBD,HAZ-FCS-006,TBD,No,Planned,2025-12-04
+REQ-42-FCS-009,FCS Fault Detection,A,DES-42-FCS-009,fcs_fault.c,detect_fault(),TEST-42-FCS-009,TBD,HAZ-FCS-007,TBD,No,Planned,2025-12-04
+REQ-42-FCS-010,FCS ARINC 653 Interface,A,DES-42-FCS-010,fcs_arinc653.c,partition_init(),TEST-42-FCS-010,TBD,HAZ-FCS-008,TBD,No,Planned,2025-12-04
