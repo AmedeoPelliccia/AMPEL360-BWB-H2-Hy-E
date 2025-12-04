@@ -34,10 +34,11 @@ share/python-wheels/
 Thumbs.db
 
 # Generated artifacts (CI reports, publications, releases)
-# Exclude most cd/ content but keep structure documentation and costs
+# Exclude most cd/ content but keep structure documentation, costs, and cgen_docs
 /cd/*
 !/cd/README.md
 !/cd/costs/
+!/cd/cgen_docs/
 
 # Binary document formats
 # These should not be committed to the repository
