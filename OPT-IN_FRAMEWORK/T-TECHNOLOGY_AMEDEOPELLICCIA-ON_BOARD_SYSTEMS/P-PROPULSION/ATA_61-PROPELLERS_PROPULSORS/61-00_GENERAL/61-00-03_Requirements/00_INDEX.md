@@ -26,6 +26,12 @@ This folder contains all **requirements documentation** for the Q100 Propulsor S
 | 61-00-03-007 | [[61-00-03-007_Maintainability_and_Reliability_Requirements]] | DRAFT | 0.1 |
 | 61-00-03-008 | [[61-00-03-008_Digital_and_AI_Requirements]] | DRAFT | 0.1 |
 
+### Reference Documents
+
+| ID | Document | Status | Version |
+|----|----------|--------|---------|
+| 61-00-03-REF-002 | [[61-00-03-REF-002_Gap_Closure_Response]] | DRAFT | 0.1 |
+
 ---
 
 ## Requirements Hierarchy
