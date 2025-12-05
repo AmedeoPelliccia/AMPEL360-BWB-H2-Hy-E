@@ -1,4 +1,4 @@
-- name: Doc meta validation
+name: Doc meta validation
 
 on:
   workflow_dispatch:  # optional: allows manual/API trigger
