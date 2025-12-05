@@ -20,7 +20,7 @@ CAD/
 | Directory | Formats | Purpose |
 |-----------|---------|---------|
 | PRODUCTS/CATIA | .CATProduct, .CATPart | Native CATIA V5/V6 files |
-| PRODUCTS/SOLIDWORKS | .sldasm, .sldprt | Native SolidWorks files |
+| PRODUCTS/SOLIDWORKS | .sldasm, .sldprt | Native SOLIDWORKS files |
 | PRODUCTS/NX | .prt | Native Siemens NX files |
 | NEUTRAL | .step, .stp, .jt | Vendor-neutral exchange |
 | VISUALIZATION | .stl, .3dpdf | Lightweight viewing |
@@ -65,7 +65,7 @@ FAN_[COMPONENT]_ASSY.[extension]
 Parts are linked from:
 
 ```
-../../../../PARTS/
+../../../../../../PARTS/
 ```
 
 Ensure CAD system search paths include the PARTS directory.

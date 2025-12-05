@@ -76,7 +76,7 @@ The DMU directory contains digital mock-up studies for:
 All parts and sub-assemblies are linked from:
 
 ```
-../../../../PARTS/
+../../../../../PARTS/
 ../OPEN_FAN_PROPULSOR/
 ../ELECTRIC_MOTOR_DRIVE/
 ../PROPELLER_VARIANTS/
