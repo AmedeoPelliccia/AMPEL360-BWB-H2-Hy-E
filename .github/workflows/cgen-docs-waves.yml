@@ -76,7 +76,7 @@ jobs:
               2) BATCH_ID="BATCH_INFRA_A" ;;
             esac
           fi
-          echo "batch_id=$BATCH_ID" >> $GITHUB_OUTPUT
+          echo "batch_id=$BATCH_ID" >> "$GITHUB_OUTPUT"
           echo "Running batch: $BATCH_ID"
 
       # ---------------------------------------------------------
@@ -104,10 +104,11 @@ jobs:
         id: check_changes
         run: |
           if git diff --quiet && git diff --cached --quiet; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
             echo "No changes detected"
           else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            echo "Changes detected:"
             git diff --stat
           fi
 
@@ -119,18 +120,20 @@ jobs:
         run: |
           mkdir -p cd/cgen_docs/logs
           python - << 'EOF'
-from tools.cgen_docs.utils.metadata import generate_wave_report
-import pathlib
+          from tools.cgen_docs.utils.metadata import generate_wave_report
+          import pathlib
 
-log_dir = pathlib.Path('cd/cgen_docs/logs')
-batch_id = "${{ steps.batch.outputs.batch_id }}"
+          log_dir = pathlib.Path("cd/cgen_docs/logs")
+          batch_id = "${{ steps.batch.outputs.batch_id }}"
 
-if log_dir.exists():
-    report = generate_wave_report(log_dir, batch_id)
-    path = log_dir / f"{batch_id}_report.md"
-    path.write_text(report)
-    print("Report generated:", path)
-EOF
+          if log_dir.exists():
+              report = generate_wave_report(log_dir, batch_id)
+              report_file = log_dir / f"{batch_id}_report.md"
+              report_file.write_text(report, encoding="utf-8")
+              print(f"Report generated: {report_file}")
+          else:
+              print("Log directory does not exist, skipping report.")
+          EOF
 
       # ---------------------------------------------------------
       # Create PR
@@ -182,7 +185,8 @@ EOF
       # ---------------------------------------------------------
       - name: Summary
         run: |
-          echo "## CGen Docs Wave Summary" >> $GITHUB_STEP_SUMMARY
-          echo "- **Batch**: ${{ steps.batch.outputs.batch_id }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Changes detected**: ${{ steps.check_changes.outputs.has_changes }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Run number**: ${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
+          echo "## CGen Docs Wave Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Batch**: ${{ steps.batch.outputs.batch_id }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Changes detected**: ${{ steps.check_changes.outputs.has_changes }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Run number**: ${{ github.run_number }}" >> "$GITHUB_STEP_SUMMARY"
+
