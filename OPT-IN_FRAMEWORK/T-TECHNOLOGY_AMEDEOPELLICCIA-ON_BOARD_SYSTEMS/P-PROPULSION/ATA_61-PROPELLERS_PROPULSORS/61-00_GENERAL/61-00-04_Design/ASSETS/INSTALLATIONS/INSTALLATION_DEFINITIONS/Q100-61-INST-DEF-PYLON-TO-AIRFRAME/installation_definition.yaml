@@ -1,0 +1,110 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+# Q100-61-INST-DEF-PYLON-TO-AIRFRAME — Pylon to Airframe Installation Definition
+# AMPEL360-BWB-H2-Hy-E Hybrid Propulsion System
+
+installation:
+  id: "Q100-61-INST-DEF-PYLON-TO-AIRFRAME"
+  name: "Pylon to Airframe Installation"
+  version: "1.0.0"
+  status: "Draft"
+  ata_chapter: "61"
+  program: "Q100"
+
+  description: |
+    Defines the interface and mounting requirements for attaching the 
+    propulsion pylon to the BWB airframe structure.
+
+  mechanical:
+    mount_type: "Four-point redundant attachment with fail-safe design"
+    
+    upper_attachment:
+      type: "Lug and pin fitting"
+      quantity: 2
+      ultimate_load_kN: 500
+      fasteners:
+        - type: "NAS6610-32"
+          quantity: 4
+          torque_Nm: 180
+          safety_wire: true
+      fitting_material: "Ti-6Al-4V"
+    
+    lower_attachment:
+      type: "Clevis and bolt fitting"
+      quantity: 2
+      ultimate_load_kN: 600
+      fasteners:
+        - type: "NAS6612-36"
+          quantity: 4
+          torque_Nm: 220
+          safety_wire: true
+      fitting_material: "Ti-6Al-4V"
+    
+    shear_pins:
+      type: "Close tolerance shear pin"
+      quantity: 4
+      shear_capacity_kN: 150
+      material: "17-4 PH stainless"
+      installation_fit: "Interference 0.01-0.03 mm"
+    
+    fail_safe:
+      redundancy_level: "Dual load path"
+      inspection_interval_fh: 3000
+      crack_detection_method: "Eddy current"
+
+  electrical_routing:
+    conduits:
+      - id: "COND-61-001"
+        size_mm: 50
+        type: "EMI shielded"
+        contents: "Main power cables"
+      - id: "COND-61-002"
+        size_mm: 25
+        type: "EMI shielded"
+        contents: "Control and sensor cables"
+    
+    through_structure_seals:
+      type: "Firewall fitting"
+      rating: "FAR 25.867 compliant"
+
+  fluid_routing:
+    penetrations:
+      - id: "PEN-61-001"
+        size_mm: 32
+        type: "Bulkhead fitting"
+        medium: "Coolant"
+        pressure_rating_bar: 10
+      - id: "PEN-61-002"
+        size_mm: 16
+        type: "Bulkhead fitting"
+        medium: "Lube oil"
+        pressure_rating_bar: 15
+
+  clearances:
+    operational:
+      wing_flex_allowance_mm: 50
+      thermal_expansion_mm: 5
+    maintenance:
+      upper_access_mm: 1000
+      lower_access_mm: 800
+
+  weight:
+    pylon_structure_kg: 180
+    attachment_hardware_kg: 25
+    margin_percent: 10
+
+  references:
+    icds:
+      - "ICD-61-003"
+      - "ICD-53-001"
+    drawings:
+      - "Q100-61-DRW-MNT-PYLON-001"
+      - "Q100-53-DRW-STR-ATTACHMENT-001"
+    requirements:
+      - "REQ-61-STR-001"
+      - "REQ-61-STR-002"
+      - "REQ-61-STR-003"
+    safety:
+      - "HZ-61-0010"
+      - "HZ-61-0011"

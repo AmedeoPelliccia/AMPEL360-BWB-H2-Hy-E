@@ -1,0 +1,116 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+# Q100-61-INST-DEF-CONTROLLER-TO-NACELLE — Controller to Nacelle Installation Definition
+# AMPEL360-BWB-H2-Hy-E Hybrid Propulsion System
+
+installation:
+  id: "Q100-61-INST-DEF-CONTROLLER-TO-NACELLE"
+  name: "Controller to Nacelle Installation"
+  version: "1.0.0"
+  status: "Draft"
+  ata_chapter: "61"
+  program: "Q100"
+
+  description: |
+    Defines the interface and mounting requirements for installing the 
+    motor controller (inverter) within the nacelle structure.
+
+  mechanical:
+    mount_type: "Slide-in rail mount with vibration isolation"
+    
+    mounting_rails:
+      type: "Captive rail system"
+      material: "Aluminum 6061-T6"
+      fasteners:
+        - type: "MS21250-06"
+          quantity: 8
+          torque_Nm: 12
+      quick_release: true
+      extraction_force_N: 50
+    
+    vibration_isolation:
+      type: "Wire rope isolators"
+      quantity: 4
+      natural_frequency_Hz: 25
+      isolation_efficiency_percent: 90
+    
+    dimensions:
+      length_mm: 450
+      width_mm: 300
+      height_mm: 200
+      weight_kg: 35
+
+  electrical:
+    dc_input:
+      voltage_range_V: "650-800"
+      current_max_A: 500
+      connector: "High-current terminal block"
+      cable_size_awg: "2/0"
+      
+    ac_output:
+      phases: 3
+      voltage_max_V: 560
+      current_max_A: 600
+      frequency_max_Hz: 800
+      connector: "High-current terminal block"
+      cable_size_awg: "2/0"
+      
+    control_interface:
+      connector: "MIL-DTL-38999-III-19"
+      signals:
+        - type: "CAN bus"
+          quantity: 2
+        - type: "ARINC-429"
+          quantity: 2
+        - type: "Discrete"
+          quantity: 12
+        - type: "Analog"
+          quantity: 8
+    
+    emi_shielding:
+      enclosure_type: "Fully shielded aluminum"
+      attenuation_dB: 80
+      grounding: "Multi-point chassis ground"
+
+  thermal:
+    heat_dissipation_kW: 8
+    cooling_method: "Liquid cold plate"
+    
+    cold_plate:
+      material: "Aluminum 6061-T6"
+      flow_path: "Serpentine"
+      contact_area_cm2: 800
+      interface_material: "Thermal gap pad, 6 W/mK"
+    
+    coolant_interface:
+      inlet_connector: "Quick-disconnect QD-C-16"
+      outlet_connector: "Quick-disconnect QD-C-16"
+      flow_rate_lpm: 20
+      pressure_drop_bar: 0.3
+      inlet_temp_max_C: 45
+      
+    temperature_limits:
+      junction_max_C: 150
+      case_max_C: 100
+      ambient_operating_C: "-40 to +55"
+
+  clearances:
+    access_panel_mm: 300
+    cable_bend_radius_mm: 150
+    cooling_line_access_mm: 100
+
+  references:
+    icds:
+      - "ICD-61-020"
+      - "ICD-61-021"
+    drawings:
+      - "Q100-61-DRW-EMD-CTRL-001"
+      - "Q100-61-INST-EMD-CTRL-001"
+    requirements:
+      - "REQ-61-CTRL-001"
+      - "REQ-61-CTRL-002"
+      - "REQ-61-CTRL-003"
+    safety:
+      - "HZ-61-0030"
+      - "HZ-61-0031"
