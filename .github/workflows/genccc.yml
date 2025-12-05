@@ -732,7 +732,9 @@ jobs:
           CHANGED="${{ steps.prctx.outputs.md_changed }}"
           VV_LAKE="base/cd/vv_lake.json"
 
-          CHECKLIST="- [ ] Cross-references validated against: ${VALIDATION_PATHS:-n/a}
+          env:
+  CHECKLIST: "- [ ] Cross-references validated against: ${VALIDATION_PATHS:-n/a}"
+
 - [ ] Standards compliance (${STANDARDS:-n/a})
 - [ ] Traceability links complete"
           if [ -n "$CHANGED" ]; then
