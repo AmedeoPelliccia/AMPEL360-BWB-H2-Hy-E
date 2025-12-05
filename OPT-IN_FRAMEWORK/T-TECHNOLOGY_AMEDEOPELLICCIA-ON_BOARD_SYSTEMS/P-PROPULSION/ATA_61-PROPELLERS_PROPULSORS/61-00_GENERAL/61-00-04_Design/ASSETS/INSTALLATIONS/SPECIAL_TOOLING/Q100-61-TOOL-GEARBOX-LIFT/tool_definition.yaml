@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+tool_id: "Q100-61-TOOL-004"
+name: "Gearbox Lift Fixture"
+part_number: "Q100-61-TOOL-GEARBOX-LIFT"
+category: "A - Lifting"
+capacity_kg: 500

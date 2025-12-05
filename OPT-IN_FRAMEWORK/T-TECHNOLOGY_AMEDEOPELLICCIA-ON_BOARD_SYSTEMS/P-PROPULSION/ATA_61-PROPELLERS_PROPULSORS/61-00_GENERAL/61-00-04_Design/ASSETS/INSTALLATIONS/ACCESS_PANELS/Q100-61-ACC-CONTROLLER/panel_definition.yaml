@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+panel_id: "Q100-61-ACC-CONTROLLER-001"
+name: "Controller Bay Access"
+type: "Standard Access"
+fasteners:
+  type: "Dzus"
+  quantity: 10
+access_provides:
+  - "Controller inspection"
+  - "Connection check"
+  - "Controller R&R"

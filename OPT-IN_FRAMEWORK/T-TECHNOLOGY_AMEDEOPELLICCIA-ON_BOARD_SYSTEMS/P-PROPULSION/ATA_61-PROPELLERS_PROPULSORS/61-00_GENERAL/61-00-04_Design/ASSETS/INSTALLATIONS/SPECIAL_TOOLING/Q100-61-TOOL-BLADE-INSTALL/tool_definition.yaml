@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+tool_id: "Q100-61-TOOL-002"
+name: "Blade Installation Tool"
+part_number: "Q100-61-TOOL-BLADE-INSTALL"
+category: "C - Installation"
+application: "Fan blade installation and removal"

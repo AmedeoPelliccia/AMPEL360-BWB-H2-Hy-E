@@ -1,0 +1,78 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+# Q100-61-ACC-PANEL-INDEX — Access Panel Master Index
+# AMPEL360-BWB-H2-Hy-E Hybrid Propulsion System
+
+panels:
+  - id: "Q100-61-ACC-NACELLE-FWD-001"
+    location: "Nacelle Forward, Upper"
+    type: "Quick Access"
+    fasteners: "Latches (4x)"
+    size_mm: "400 x 300"
+    access_provides:
+      - "Fan inspection"
+      - "Pitch mechanism view"
+    frequency: "Daily/Preflight"
+
+  - id: "Q100-61-ACC-NACELLE-FWD-002"
+    location: "Nacelle Forward, Lower"
+    type: "Standard Access"
+    fasteners: "Dzus (8x)"
+    size_mm: "350 x 250"
+    access_provides:
+      - "Gearbox front bearing"
+      - "Lube system view"
+    frequency: "A-Check"
+
+  - id: "Q100-61-ACC-NACELLE-AFT-001"
+    location: "Nacelle Aft, Upper"
+    type: "Standard Access"
+    fasteners: "Dzus (12x)"
+    size_mm: "500 x 400"
+    access_provides:
+      - "Motor rear"
+      - "Cooling connections"
+    frequency: "A-Check"
+
+  - id: "Q100-61-ACC-NACELLE-AFT-002"
+    location: "Nacelle Aft, Lower"
+    type: "Structural Access"
+    fasteners: "Bolted (16x)"
+    size_mm: "600 x 400"
+    access_provides:
+      - "Motor removal"
+      - "Controller access"
+    frequency: "C-Check"
+
+  - id: "Q100-61-ACC-GEARBOX-001"
+    location: "Gearbox Side"
+    type: "Standard Access"
+    fasteners: "Dzus (6x)"
+    size_mm: "300 x 200"
+    access_provides:
+      - "Gearbox inspection"
+      - "Oil level check"
+      - "Filter access"
+    frequency: "A-Check"
+
+  - id: "Q100-61-ACC-MOTOR-001"
+    location: "Motor Side"
+    type: "Standard Access"
+    fasteners: "Dzus (8x)"
+    size_mm: "350 x 300"
+    access_provides:
+      - "Motor inspection"
+      - "Sensor access"
+    frequency: "A-Check"
+
+  - id: "Q100-61-ACC-CONTROLLER-001"
+    location: "Controller Bay"
+    type: "Standard Access"
+    fasteners: "Dzus (10x)"
+    size_mm: "500 x 350"
+    access_provides:
+      - "Controller inspection"
+      - "Connection check"
+      - "Controller R&R"
+    frequency: "A-Check"

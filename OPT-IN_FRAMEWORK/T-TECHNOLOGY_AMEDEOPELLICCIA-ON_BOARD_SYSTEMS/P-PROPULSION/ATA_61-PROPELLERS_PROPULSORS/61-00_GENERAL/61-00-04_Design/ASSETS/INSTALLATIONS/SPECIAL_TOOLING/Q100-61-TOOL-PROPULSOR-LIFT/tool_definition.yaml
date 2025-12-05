@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+# Tool Definition — Propulsor Lift Fixture
+
+tool_id: "Q100-61-TOOL-001"
+name: "Propulsor Lift Fixture"
+part_number: "Q100-61-TOOL-PROPULSOR-LIFT"
+
+category: "A - Lifting Equipment"
+
+specifications:
+  capacity_kg: 1000
+  safety_factor: 4
+  weight_kg: 85
+  material: "Steel, painted"
+  attachment_points: 4
+
+dimensions:
+  length_mm: 2200
+  width_mm: 1800
+  height_mm: 400
+
+interfaces:
+  crane_attachment: "Single point, swivel hook"
+  propulsor_attachment: "4-point bolt pattern"
+  spreader_bar: "Integrated"
+
+inspection_requirements:
+  - "Visual inspection before each use"
+  - "Annual load test"
+  - "Replace if damaged"
+
+storage:
+  location: "Tool crib, dedicated rack"
+  environment: "Indoor, dry"

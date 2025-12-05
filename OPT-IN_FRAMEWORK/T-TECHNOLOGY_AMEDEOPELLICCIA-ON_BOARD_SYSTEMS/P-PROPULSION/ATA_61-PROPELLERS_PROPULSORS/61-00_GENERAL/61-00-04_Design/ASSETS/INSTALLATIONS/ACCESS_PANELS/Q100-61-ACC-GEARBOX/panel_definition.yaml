@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+panel_id: "Q100-61-ACC-GEARBOX-001"
+name: "Gearbox Access Panel"
+type: "Standard Access"
+fasteners:
+  type: "Dzus"
+  quantity: 6
+access_provides:
+  - "Gearbox inspection"
+  - "Oil level check"
+  - "Filter access"

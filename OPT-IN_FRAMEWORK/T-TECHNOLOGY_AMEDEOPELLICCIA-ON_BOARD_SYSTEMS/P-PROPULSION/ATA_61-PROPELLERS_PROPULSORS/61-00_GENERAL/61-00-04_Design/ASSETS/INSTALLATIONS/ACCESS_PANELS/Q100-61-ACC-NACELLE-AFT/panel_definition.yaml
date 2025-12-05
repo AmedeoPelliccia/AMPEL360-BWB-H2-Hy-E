@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+# Panel Definition — Nacelle Aft
+
+panel_id: "Q100-61-ACC-NACELLE-AFT-001"
+name: "Nacelle Aft Upper Access"
+location:
+  zone: "Nacelle Aft"
+  position: "Upper"
+  station: "FS 2000-2500"
+
+type: "Standard Access"
+material: "Aluminum alloy"
+thickness_mm: 1.6
+
+dimensions:
+  length_mm: 500
+  width_mm: 400
+  hinge: "None (removable)"
+
+fasteners:
+  type: "Dzus fasteners"
+  quantity: 12
+  part_number: "Dzus 6L"
+
+access_provides:
+  - "Motor rear section"
+  - "Cooling line connections"
+  - "Electrical umbilical"

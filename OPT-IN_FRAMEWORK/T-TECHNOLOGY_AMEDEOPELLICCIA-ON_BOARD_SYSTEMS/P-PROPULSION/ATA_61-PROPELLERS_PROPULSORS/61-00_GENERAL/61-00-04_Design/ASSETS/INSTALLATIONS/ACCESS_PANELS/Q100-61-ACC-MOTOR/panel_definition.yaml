@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright AMPEL360 Project Contributors
+
+panel_id: "Q100-61-ACC-MOTOR-001"
+name: "Motor Access Panel"
+type: "Standard Access"
+fasteners:
+  type: "Dzus"
+  quantity: 8
+access_provides:
+  - "Motor inspection"
+  - "Sensor access"
