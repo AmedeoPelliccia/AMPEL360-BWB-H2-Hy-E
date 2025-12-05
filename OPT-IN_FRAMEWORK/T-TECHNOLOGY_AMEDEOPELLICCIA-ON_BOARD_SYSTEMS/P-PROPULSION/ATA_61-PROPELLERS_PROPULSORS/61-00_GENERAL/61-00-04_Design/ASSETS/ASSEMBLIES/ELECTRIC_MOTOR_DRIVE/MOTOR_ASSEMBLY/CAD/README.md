@@ -35,7 +35,7 @@ MOTOR_[COMPONENT]_ASSY.[extension]
 Parts are linked from:
 
 ```
-../../../../PARTS/
+../../../../../../PARTS/
 ```
 
 ---
