@@ -688,22 +688,15 @@ jobs:
               body
             });
 
-  # ---------------------------------------------------------------------------
-  # 5) Enforce completion targets and set a status on PR head commit
-  # ---------------------------------------------------------------------------
+    # 5) Enforce completion targets and set a status on PR head commit
   completion_check:
     name: Enforce Completion Targets (Audit Compliance & Actions)
     needs: [verify_child_proposal]
     if: always() && needs.verify_child_proposal.result != 'skipped'
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    steps:
-      - name: Ensure jq is available
-        run: |
-          if ! command -v jq >/dev/null 2>&1; then
-            sudo apt-get update && sudo apt-get install -y jq
-          fi
 
+    steps:
       - name: Checkout Base for V&V Lake Access
         uses: actions/checkout@v4
         with:
@@ -718,31 +711,12 @@ jobs:
           name: genccc-cross-reference-audit-child
           path: reports
 
-      - name: Ensure audit file exists (fallback)
-        run: |
-          mkdir -p reports
-          if [ ! -f "reports/cross_reference_audit.md" ]; then
-            echo "::warning::Audit artifact not found. Creating fallback audit report."
-            {
-              echo "# Fallback Audit Report"
-              echo "Generated automatically because the upstream artifact was missing."
-            } > reports/cross_reference_audit.md
-          fi
-
-        - name: Ensure vv_lake.json exists
+      - name: Ensure vv_lake.json exists
         run: |
           mkdir -p base/cd
           if [ ! -f "base/cd/vv_lake.json" ]; then
             echo "::warning::vv_lake.json missing. Creating default template."
             echo '{"standards":["UTCS-CORE","ATA-95","OPT-IN"],"paths":[],"checklists":{"contextual":[]}}' > base/cd/vv_lake.json
-          fi
-
-{
-  "standards": ["UTCS-CORE", "ATA-95", "OPT-IN"],
-  "paths": [],
-  "checklists": { "contextual": [] }
-}
-EOF
           fi
 
       - name: Collect PR context (head sha & changed files)
@@ -765,9 +739,9 @@ EOF
             });
             const mdChanged = files
               .map(f => f.filename)
-              .filter(n => n.endsWith('.md'))
+              .filter(name => name.endsWith('.md'))
               .join(', ');
-            core.setOutput('head_sha', headSha);
+            core.setOutput('head_sha', pr.head.sha);
             core.setOutput('md_changed', mdChanged);
 
       - name: Pool Verification Points from Artifacts
@@ -778,37 +752,37 @@ EOF
 
           if [ ! -f "$AUDIT_FILE" ]; then
             echo "::warning::Audit file not found at $AUDIT_FILE. Counting issues as 0."
-            echo "pooled_issues=0" >> "$GITHUB_OUTPUT"
+            echo "pooled_issues=0" >> $GITHUB_OUTPUT
           else
             COUNT=$(grep -Ei "warning|error|issue" "$AUDIT_FILE" | wc -l || echo 0)
-            echo "pooled_issues=$COUNT" >> "$GITHUB_OUTPUT"
+            echo "pooled_issues=$COUNT" >> $GITHUB_OUTPUT
           fi
+
           STANDARDS=$(jq -r '.standards[]?' "$VV_LAKE" | paste -sd, -)
           PATHS=$(jq -r '.paths[]?' "$VV_LAKE" | paste -sd, -)
 
-          echo "standards=$STANDARDS" >> "$GITHUB_OUTPUT"
-          echo "validation_paths=$PATHS" >> "$GITHUB_OUTPUT"
+          echo "standards=$STANDARDS" >> $GITHUB_OUTPUT
+          echo "validation_paths=$PATHS" >> $GITHUB_OUTPUT
 
-      - name: Build Contextual Checklist
+      - name: Build checklist summary
         id: checklist
-        env:
-          STANDARDS: ${{ steps.pool.outputs.standards }}
-          VALIDATION_PATHS: ${{ steps.pool.outputs.validation_paths }}
-          CHANGED: ${{ steps.prctx.outputs.md_changed }}
-          VV_LAKE: base/cd/vv_lake.json
         run: |
           CHECKLIST=""
+          STANDARDS="${{ steps.pool.outputs.standards }}"
+          VALIDATION_PATHS="${{ steps.pool.outputs.validation_paths }}"
+          CHANGED="${{ steps.prctx.outputs.md_changed }}"
 
-          # Base checklist items
           CHECKLIST="$CHECKLIST"$'\n'"- [ ] Cross-references validated against: ${VALIDATION_PATHS:-n/a}"
-          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Standards compliance (${STANDARDS:-n/a})"
-          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Traceability links complete"
+          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Standards compliance: ${STANDARDS:-n/a}"
           CHECKLIST="$CHECKLIST"$'\n'"- [ ] Contextual validation for changed files: ${CHANGED:-n/a}"
 
-          # Enrich checklist with contextual items from V&V lake (if present)
-          if [ -f "${VV_LAKE:-}" ]; then
+          if [ -n "${CHANGED:-}" ]; then
+            CHECKLIST="$CHECKLIST"$'\n'"- [ ] Reviewed changes: ${CHANGED}"
+          fi
+
+          if [ -f "base/cd/vv_lake.json" ]; then
             EXTRA=$(
-              jq -r '.checklists.contextual[]?' "$VV_LAKE" 2>/dev/null \
+              jq -r '.checklists.contextual[]?' "base/cd/vv_lake.json" 2>/dev/null \
               | sed 's/^/- [ ] /' \
               || true
             )
@@ -817,43 +791,40 @@ EOF
             fi
           fi
 
-          # Append to job summary
           echo "## GenCCC Contextual Checklist" >> "$GITHUB_STEP_SUMMARY"
           printf '%s\n' "$CHECKLIST" >> "$GITHUB_STEP_SUMMARY"
 
-          # Emit multiline output for downstream steps
           {
             echo "checklist<<EOF"
             printf '%s\n' "$CHECKLIST"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Evaluate Completion Targets
-        id: evaluate
-        env:
-          POOLED_ISSUES: ${{ steps.pool.outputs.pooled_issues }}
-          VALIDATION_PATHS: ${{ steps.pool.outputs.validation_paths }}
-          CHECKLIST: ${{ steps.checklist.outputs.checklist }}
+      - name: Validate Against All Eventual Contextual Paths
+        id: validate
         run: |
-          ISSUES="${POOLED_ISSUES:-0}"
-          PATHS="${VALIDATION_PATHS:-}"
-          VALID=true
+          ISSUES="${{ steps.pool.outputs.pooled_issues }}"
+          PATHS="${{ steps.pool.outputs.validation_paths }}"
+          CHECKLIST="${{ steps.checklist.outputs.checklist }}"
 
+          VALID=true
           if [ "${ISSUES:-0}" -gt 0 ]; then
             VALID=false
+            echo "::error::Validation failed: ${ISSUES} unresolved audit issues."
           fi
-
           if [ -z "$PATHS" ]; then
             VALID=false
+            echo "::warning::No validation paths defined in V&V lake."
           fi
 
           if [ "$VALID" = true ]; then
-            UPDATED_CHECKLIST="$(printf '%s\n' "$CHECKLIST" | sed 's/- \[ \]/- [x]/g')"
+            UPDATED_CHECKLIST="$(printf "%s\n" "$CHECKLIST" | sed 's/- \[ \]/- [x]/g')"
           else
             UPDATED_CHECKLIST="$CHECKLIST"
           fi
 
-          echo "validation_passed=$VALID" >> "$GITHUB_OUTPUT"
+          echo "validation_passed=$VALID" >> $GITHUB_OUTPUT
+
           {
             echo "updated_checklist<<EOF"
             printf "%s\n" "$UPDATED_CHECKLIST"
@@ -863,7 +834,7 @@ EOF
       - name: Set PR Status Check (on PR head SHA)
         uses: actions/github-script@v7
         env:
-          VALIDATION_PASSED: ${{ steps.evaluate.outputs.validation_passed }}
+          VALIDATION_PASSED: ${{ steps.validate.outputs.validation_passed }}
           POOLED_ISSUES: ${{ steps.pool.outputs.pooled_issues }}
           PR_HEAD_SHA: ${{ steps.prctx.outputs.head_sha }}
         with:
@@ -872,7 +843,6 @@ EOF
             const passed = (process.env.VALIDATION_PASSED === 'true');
             const issues = process.env.POOLED_ISSUES || '0';
             const sha = process.env.PR_HEAD_SHA;
-
             await github.rest.repos.createCommitStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -888,15 +858,16 @@ EOF
       - name: Post Contextual Checklist in PR
         uses: actions/github-script@v7
         env:
-          UPDATED_CHECKLIST: ${{ steps.evaluate.outputs.updated_checklist }}
-          VALIDATION_PASSED: ${{ steps.evaluate.outputs.validation_passed }}
+          UPDATED_CHECKLIST: ${{ steps.validate.outputs.updated_checklist }}
+          VALIDATION_PASSED: ${{ steps.validate.outputs.validation_passed }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const checklist = process.env.UPDATED_CHECKLIST || '';
             const passed = (process.env.VALIDATION_PASSED === 'true');
             const body = passed
-              ? `🎯 **Completion Targets Achieved!**\n\nContextual checklist (auto-validated):\n\n${process.env.UPDATED_CHECKLIST}\n\nAll validation paths covered. Ready for merge.`
-              : `⚠️ **Completion Targets Incomplete**\n\nContextual checklist (review required):\n\n${process.env.UPDATED_CHECKLIST}\n\nAddress issues to meet standards and paths.`;
+              ? `🎯 **Completion Targets Achieved!**\n\nContextual checklist (auto-validated):\n\n${checklist}\n\nAll validation paths covered. Ready for merge.`
+              : `⚠️ **Completion Targets Incomplete**\n\nContextual checklist (review required):\n\n${checklist}\n\nAddress issues to meet standards and paths.`;
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -905,8 +876,7 @@ EOF
             });
 
       - name: Fail Workflow on Incomplete Targets
-        if: steps.evaluate.outputs.validation_passed != 'true'
+        if: steps.validate.outputs.validation_passed != 'true'
         run: |
           echo "::error::Completion targets not met. Review pooled points and checklist."
           exit 1
-
