@@ -1,0 +1,253 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Material Cross Reference — ATA 61 Parts
+# This file provides material specification mapping and equivalencies
+# for parts used in the Q100 program propulsion system.
+
+version: 1
+ata_chapter: "61"
+program: "Q100"
+owner: "AMPEL360 Materials Engineering"
+last_updated: "2025-12-05"
+status: "Draft"
+
+# Metallic Materials
+metallic_materials:
+  # Titanium Alloys
+  - id: "MAT-TI6AL4V"
+    name: "Titanium 6Al-4V"
+    specifications:
+      primary: "AMS 4911"
+      alternatives:
+        - "MIL-T-9046"
+        - "ASTM B348"
+        - "AMS 4928"
+    properties:
+      density_kg_m3: 4430
+      yield_strength_mpa: 880
+      ultimate_strength_mpa: 950
+      max_temp_c: 315
+    applications:
+      - "Fan hub"
+      - "Planet carrier"
+      - "Mount links"
+      - "Pitch links"
+
+  # High-Strength Steels
+  - id: "MAT-4340"
+    name: "AISI 4340 Steel"
+    specifications:
+      primary: "AMS 6414"
+      alternatives:
+        - "MIL-S-5000"
+        - "ASTM A322"
+    properties:
+      density_kg_m3: 7850
+      yield_strength_mpa: 1100
+      ultimate_strength_mpa: 1280
+      max_temp_c: 200
+    applications:
+      - "Motor shaft"
+      - "Thrust link"
+
+  - id: "MAT-300M"
+    name: "300M Ultra-High Strength Steel"
+    specifications:
+      primary: "AMS 6257"
+      alternatives:
+        - "AMS 6417"
+    properties:
+      density_kg_m3: 7850
+      yield_strength_mpa: 1520
+      ultimate_strength_mpa: 1930
+      max_temp_c: 230
+    applications:
+      - "High-stress structural links"
+      - "Fatigue-critical components"
+
+  # Bearing Steels
+  - id: "MAT-52100"
+    name: "AISI 52100 Bearing Steel"
+    specifications:
+      primary: "AMS 6440"
+      alternatives:
+        - "ASTM A295"
+        - "ISO 683-17"
+    properties:
+      density_kg_m3: 7830
+      hardness_hrc: 62
+      max_temp_c: 150
+    applications:
+      - "Ball bearings"
+      - "Roller bearings"
+
+  - id: "MAT-9310"
+    name: "AISI 9310 Gear Steel"
+    specifications:
+      primary: "AMS 6265"
+      alternatives:
+        - "MIL-S-7393"
+    properties:
+      density_kg_m3: 7850
+      surface_hardness_hrc: 62
+      core_hardness_hrc: 35
+      max_temp_c: 180
+    applications:
+      - "Sun gear"
+      - "Planet gears"
+      - "Ring gear"
+
+  # Aluminum Alloys
+  - id: "MAT-A356-T6"
+    name: "A356-T6 Cast Aluminum"
+    specifications:
+      primary: "AMS 4217"
+      alternatives:
+        - "ASTM B108"
+        - "SAE J452"
+    properties:
+      density_kg_m3: 2680
+      yield_strength_mpa: 185
+      ultimate_strength_mpa: 260
+      max_temp_c: 175
+    applications:
+      - "Motor housing"
+      - "Gearbox housing"
+      - "End bells"
+
+  - id: "MAT-6061-T6"
+    name: "6061-T6 Aluminum"
+    specifications:
+      primary: "AMS 4027"
+      alternatives:
+        - "ASTM B209"
+        - "QQ-A-250/11"
+    properties:
+      density_kg_m3: 2700
+      yield_strength_mpa: 275
+      ultimate_strength_mpa: 310
+      max_temp_c: 175
+    applications:
+      - "Controller heatsink"
+      - "Cooling jacket"
+      - "Structural brackets"
+
+  # Electrical Steels
+  - id: "MAT-M19"
+    name: "M19 Silicon Steel"
+    specifications:
+      primary: "ASTM A677"
+      alternatives:
+        - "IEC 60404-8-4"
+    properties:
+      density_kg_m3: 7650
+      core_loss_w_kg: 3.94  # at 1.5T, 60Hz
+      saturation_t: 2.0
+    applications:
+      - "Stator core"
+      - "Rotor core"
+
+  # Copper Alloys
+  - id: "MAT-COPPER-OFE"
+    name: "Oxygen-Free Copper"
+    specifications:
+      primary: "ASTM B170"
+      alternatives:
+        - "AMS 4602"
+    properties:
+      density_kg_m3: 8940
+      conductivity_iacs: 101
+      max_temp_c: 200
+    applications:
+      - "Stator windings"
+      - "Busbars"
+
+# Composite Materials
+composite_materials:
+  - id: "MAT-CFRP-IM7"
+    name: "Carbon Fiber Reinforced Polymer (IM7/8552)"
+    specifications:
+      primary: "AMS 4915"
+      prepreg: "Hexcel 8552/IM7"
+    properties:
+      density_kg_m3: 1580
+      tensile_strength_mpa: 2350
+      tensile_modulus_gpa: 164
+      max_temp_c: 120
+    applications:
+      - "Fan blades"
+      - "Propeller blades"
+      - "Nacelle barrels"
+
+  - id: "MAT-GFRP-S2"
+    name: "S2 Glass Fiber Reinforced Polymer"
+    specifications:
+      primary: "MIL-HDBK-17"
+    properties:
+      density_kg_m3: 2000
+      tensile_strength_mpa: 1850
+      tensile_modulus_gpa: 87
+      max_temp_c: 120
+    applications:
+      - "Secondary structures"
+      - "Impact protection"
+
+# Magnetic Materials
+magnetic_materials:
+  - id: "MAT-NDFEB-N42SH"
+    name: "NdFeB N42SH"
+    specifications:
+      primary: "IEC 60404-8-1"
+    properties:
+      density_kg_m3: 7500
+      br_t: 1.29
+      hcj_ka_m: 1590
+      max_temp_c: 150
+    applications:
+      - "Rotor magnets"
+
+# Elastomeric Materials
+elastomeric_materials:
+  - id: "MAT-FKM"
+    name: "Fluorocarbon Rubber (FKM/Viton)"
+    specifications:
+      primary: "MIL-PRF-83248"
+      alternatives:
+        - "AMS 7276"
+    properties:
+      density_kg_m3: 1800
+      hardness_shore_a: 75
+      min_temp_c: -20
+      max_temp_c: 200
+    applications:
+      - "O-rings"
+      - "Seals"
+
+  - id: "MAT-SILICONE"
+    name: "Silicone Rubber"
+    specifications:
+      primary: "AMS 3302"
+      alternatives:
+        - "MIL-R-25988"
+    properties:
+      density_kg_m3: 1100
+      hardness_shore_a: 60
+      min_temp_c: -60
+      max_temp_c: 200
+    applications:
+      - "Vibration dampers"
+      - "Environmental seals"

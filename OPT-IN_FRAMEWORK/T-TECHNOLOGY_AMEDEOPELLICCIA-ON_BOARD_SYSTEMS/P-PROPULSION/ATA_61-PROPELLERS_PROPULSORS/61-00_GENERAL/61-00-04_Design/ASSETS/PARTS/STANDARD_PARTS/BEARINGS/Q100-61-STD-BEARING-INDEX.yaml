@@ -1,0 +1,132 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-STD-BEARING-INDEX — Standard Bearing Catalog for ATA 61
+# This file catalogs standard bearings used in propulsion system assemblies.
+
+version: 1
+ata_chapter: "61"
+program: "Q100"
+owner: "AMPEL360 Propulsion Engineering"
+last_updated: "2025-12-05"
+status: "Draft"
+
+# Bearing Categories
+categories:
+  ball_bearings:
+    description: "Deep groove and angular contact ball bearings"
+    standards:
+      - "ABEC 5/7"
+      - "MIL-B-17931"
+    items:
+      - part_number: "6206-2RS"
+        description: "Deep groove ball bearing, 30x62x16mm"
+        type: "Deep Groove"
+        precision: "ABEC 5"
+        material: "52100 Steel"
+        applications: ["General purpose shafts"]
+
+      - part_number: "7206AC"
+        description: "Angular contact bearing, 30x62x16mm, 25° contact"
+        type: "Angular Contact"
+        precision: "ABEC 7"
+        material: "52100 Steel"
+        applications: ["High-speed motor shafts"]
+
+  roller_bearings:
+    description: "Cylindrical and spherical roller bearings"
+    standards:
+      - "RBEC"
+      - "ISO 492"
+    items:
+      - part_number: "NU206E"
+        description: "Cylindrical roller bearing, 30x62x16mm"
+        type: "Cylindrical Roller"
+        precision: "P5"
+        material: "52100 Steel"
+        applications: ["High radial load shafts"]
+
+      - part_number: "22206E"
+        description: "Spherical roller bearing, 30x62x20mm"
+        type: "Spherical Roller"
+        precision: "P5"
+        material: "52100 Steel"
+        applications: ["Misalignment compensation"]
+
+  spherical_plain_bearings:
+    description: "Self-aligning spherical plain bearings"
+    standards:
+      - "MIL-B-81820"
+      - "AS81820"
+    items:
+      - part_number: "GE20ES-2RS"
+        description: "Spherical plain bearing, 20x35x16mm"
+        type: "Spherical Plain"
+        material: "Chrome Steel / PTFE"
+        applications: ["Mount linkages", "Articulating joints"]
+
+      - part_number: "GEWZ16ES-2RS"
+        description: "Spherical plain bearing, maintenance-free"
+        type: "Spherical Plain"
+        material: "Stainless / PTFE"
+        applications: ["Control linkages"]
+
+  needle_bearings:
+    description: "Needle roller bearings for compact applications"
+    standards:
+      - "INA"
+      - "SKF"
+    items:
+      - part_number: "HK2020"
+        description: "Drawn cup needle bearing, 20x26x20mm"
+        type: "Needle Roller"
+        material: "52100 Steel"
+        applications: ["Planet gear pins"]
+
+# Lubrication
+lubrication:
+  oil:
+    specification: "MIL-PRF-23699"
+    type: "Synthetic ester"
+    applications: ["High-speed bearings", "Gearbox bearings"]
+
+  grease:
+    specification: "MIL-PRF-23827"
+    type: "Synthetic"
+    applications: ["Sealed bearings", "Spherical plain bearings"]
+
+# Material Specifications
+material_specs:
+  rings_52100:
+    specification: "AMS 6440"
+    hardness: "58-65 HRC"
+
+  rings_m50:
+    specification: "AMS 6491"
+    hardness: "60-65 HRC"
+    applications: ["High temperature"]
+
+  ceramic_rolling_elements:
+    specification: "AMS 2700"
+    material: "Silicon Nitride (Si3N4)"
+    applications: ["Hybrid bearings"]
+
+# Installation Guidelines
+guidelines:
+  handling: "Clean room procedures for precision bearings"
+  mounting: "Use proper tooling, do not apply force through rolling elements"
+  preload: "Set preload per assembly drawing requirements"
+  inspection: "Check for rotation quality and axial/radial clearance"
