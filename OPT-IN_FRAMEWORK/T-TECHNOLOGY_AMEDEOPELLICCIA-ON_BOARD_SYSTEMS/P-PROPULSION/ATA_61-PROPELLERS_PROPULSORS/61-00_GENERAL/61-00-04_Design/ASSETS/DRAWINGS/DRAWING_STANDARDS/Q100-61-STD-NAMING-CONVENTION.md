@@ -50,13 +50,13 @@ Q100-61-[TYPE]-[SYSTEM]-[COMPONENT].[ext]
 
 ## 3. System Codes
 
-| Code | System Name | ATA Sections |
-|------|-------------|--------------|
-| OFP | Open Fan Propulsor | 61-10, 61-20 |
-| EMD | Electric Motor Drive | 61-30 |
-| PV | Propeller Variants | 61-40 |
-| MNT | Mounting System | 61-50 |
-| FPS | Full Propulsor System | 61-00, 61-60 |
+| Code | System Name | OPT-IN Buckets |
+|------|-------------|----------------|
+| OFP | Open Fan Propulsor | 61-20_Subsystems, 61-50_Structures, 61-70_Propulsion |
+| EMD | Electric Motor Drive | 61-40_Software, 61-80_Energy |
+| PV | Propeller Variants | 61-20_Subsystems |
+| MNT | Mounting System | 61-50_Structures |
+| FPS | Full Propulsor System | 61-00_GENERAL, 61-70_Propulsion, 61-90_Tables_Schemas_Diagrams |
 
 ---
 

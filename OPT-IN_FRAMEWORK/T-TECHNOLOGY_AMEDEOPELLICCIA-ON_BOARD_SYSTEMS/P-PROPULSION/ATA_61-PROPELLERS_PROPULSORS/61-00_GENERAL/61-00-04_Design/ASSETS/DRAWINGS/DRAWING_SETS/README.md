@@ -6,13 +6,13 @@ Drawing sets organize related drawings into logical groups that support specific
 
 ## Available Sets
 
-| Set ID           | Name                     | ATA Sections | Status |
-|------------------|--------------------------|--------------|--------|
-| Q100-61-SET-OFP  | Open Fan Propulsor Set   | 61-10, 61-20 | Active |
-| Q100-61-SET-EMD  | Electric Motor Drive Set | 61-30        | Active |
-| Q100-61-SET-PV   | Propeller Variants Set   | 61-40        | Active |
-| Q100-61-SET-MNT  | Mounting System Set      | 61-50        | Active |
-| Q100-61-SET-FPS  | Full Propulsor System Set| 61-00, 61-60 | Active |
+| Set ID           | Name                     | OPT-IN Buckets | Status |
+|------------------|--------------------------|----------------|--------|
+| Q100-61-SET-OFP  | Open Fan Propulsor Set   | 61-20_Subsystems, 61-50_Structures, 61-70_Propulsion | Active |
+| Q100-61-SET-EMD  | Electric Motor Drive Set | 61-40_Software, 61-80_Energy | Active |
+| Q100-61-SET-PV   | Propeller Variants Set   | 61-20_Subsystems | Active |
+| Q100-61-SET-MNT  | Mounting System Set      | 61-50_Structures | Active |
+| Q100-61-SET-FPS  | Full Propulsor System Set| 61-00_GENERAL, 61-70_Propulsion, 61-90_Tables_Schemas_Diagrams | Active |
 
 ## Master Index
 

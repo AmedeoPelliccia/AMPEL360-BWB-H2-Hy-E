@@ -26,9 +26,10 @@ last_updated: "2025-12-04"
 
 # Scope Definition
 scope:
-  ata_sections:
-    - "61-10"
-    - "61-20"
+  optin_buckets:
+    - "61-20_Subsystems"
+    - "61-50_Structures"
+    - "61-70_Propulsion"
   description: |
     Engineering drawings for open-fan propulsor blades, hub, nacelle,
     and pitch control mechanism components.

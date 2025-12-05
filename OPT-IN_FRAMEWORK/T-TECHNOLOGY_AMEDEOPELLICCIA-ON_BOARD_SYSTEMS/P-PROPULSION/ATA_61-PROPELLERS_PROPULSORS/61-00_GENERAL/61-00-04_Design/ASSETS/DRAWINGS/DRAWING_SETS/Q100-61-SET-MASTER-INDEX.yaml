@@ -30,9 +30,10 @@ sets:
   - id: "Q100-61-SET-OFP"
     name: "Open Fan Propulsor Set"
     description: "Engineering drawings for open-fan propulsor blades, hub, and nacelle"
-    ata_sections:
-      - "61-10"
-      - "61-20"
+    optin_buckets:
+      - "61-20_Subsystems"
+      - "61-50_Structures"
+      - "61-70_Propulsion"
     subsystems:
       - "Fan blades"
       - "Hub assembly"
@@ -45,8 +46,9 @@ sets:
   - id: "Q100-61-SET-EMD"
     name: "Electric Motor Drive Set"
     description: "Engineering drawings for electric motor drive system components"
-    ata_sections:
-      - "61-30"
+    optin_buckets:
+      - "61-40_Software"
+      - "61-80_Energy"
     subsystems:
       - "Electric motor"
       - "Motor controller"
@@ -59,8 +61,8 @@ sets:
   - id: "Q100-61-SET-PV"
     name: "Propeller Variants Set"
     description: "Engineering drawings for propeller blade variants and configurations"
-    ata_sections:
-      - "61-40"
+    optin_buckets:
+      - "61-20_Subsystems"
     subsystems:
       - "Blade variants"
       - "Material specifications"
@@ -72,8 +74,8 @@ sets:
   - id: "Q100-61-SET-MNT"
     name: "Mounting System Set"
     description: "Engineering drawings for propulsor mounting and structural integration"
-    ata_sections:
-      - "61-50"
+    optin_buckets:
+      - "61-50_Structures"
     subsystems:
       - "Engine mounts"
       - "Pylon structure"
@@ -86,9 +88,10 @@ sets:
   - id: "Q100-61-SET-FPS"
     name: "Full Propulsor System Set"
     description: "System-level drawings for complete propulsor assembly and integration"
-    ata_sections:
-      - "61-00"
-      - "61-60"
+    optin_buckets:
+      - "61-00_GENERAL"
+      - "61-70_Propulsion"
+      - "61-90_Tables_Schemas_Diagrams"
     subsystems:
       - "System integration"
       - "Interface control"

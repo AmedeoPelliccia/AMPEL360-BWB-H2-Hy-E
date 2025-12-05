@@ -26,9 +26,10 @@ last_updated: "2025-12-04"
 
 # Scope Definition
 scope:
-  ata_sections:
-    - "61-00"
-    - "61-60"
+  optin_buckets:
+    - "61-00_GENERAL"
+    - "61-70_Propulsion"
+    - "61-90_Tables_Schemas_Diagrams"
   description: |
     System-level drawings for complete propulsor assembly and integration
     including interface control and system schematics.

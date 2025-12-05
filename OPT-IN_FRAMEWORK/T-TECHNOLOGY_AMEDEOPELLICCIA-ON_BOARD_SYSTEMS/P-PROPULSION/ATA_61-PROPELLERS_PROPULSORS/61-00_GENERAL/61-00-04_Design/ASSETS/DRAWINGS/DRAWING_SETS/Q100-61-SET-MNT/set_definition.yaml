@@ -26,8 +26,8 @@ last_updated: "2025-12-04"
 
 # Scope Definition
 scope:
-  ata_sections:
-    - "61-50"
+  optin_buckets:
+    - "61-50_Structures"
   description: |
     Engineering drawings for propulsor mounting and structural
     integration including engine mounts, pylon, and vibration isolation.

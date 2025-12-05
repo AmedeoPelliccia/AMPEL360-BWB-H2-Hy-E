@@ -22,7 +22,7 @@ This document lists all drawings included in the Electric Motor Drive (EMD) draw
 | _No drawings yet_ | - | - | - | - |
 
 > **Note**: Individual motor drawings will be added as development progresses.
-> Drawings are stored in `61-30_ANCHORS/` under their respective ASSETS folders.
+> Drawings are stored in `61-40_Software/` and `61-80_Energy/` under their respective ASSETS folders.
 
 ---
 

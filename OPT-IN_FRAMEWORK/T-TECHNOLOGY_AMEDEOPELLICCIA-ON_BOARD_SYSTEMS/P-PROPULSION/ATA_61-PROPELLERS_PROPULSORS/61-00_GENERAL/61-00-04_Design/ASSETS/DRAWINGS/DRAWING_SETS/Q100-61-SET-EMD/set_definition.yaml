@@ -26,8 +26,9 @@ last_updated: "2025-12-04"
 
 # Scope Definition
 scope:
-  ata_sections:
-    - "61-30"
+  optin_buckets:
+    - "61-40_Software"
+    - "61-80_Energy"
   description: |
     Engineering drawings for electric motor drive system components
     including motor, controller, power electronics, and cooling.

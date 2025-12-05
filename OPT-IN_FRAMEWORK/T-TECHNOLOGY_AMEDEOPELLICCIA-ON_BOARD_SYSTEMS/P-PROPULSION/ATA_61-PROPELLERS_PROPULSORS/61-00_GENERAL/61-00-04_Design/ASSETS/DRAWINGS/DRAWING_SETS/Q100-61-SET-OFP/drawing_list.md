@@ -22,7 +22,7 @@ This document lists all drawings included in the Open Fan Propulsor (OFP) drawin
 | _No drawings yet_ | - | - | - | - |
 
 > **Note**: Individual blade drawings will be added as development progresses.
-> Drawings are stored in `61-10_Operations/` and `61-20_Subsystems/` under their respective ASSETS folders.
+> Drawings are stored in `61-20_Subsystems/`, `61-50_Structures/`, and `61-70_Propulsion/` under their respective ASSETS folders.
 
 ---
 

@@ -22,7 +22,7 @@ This document lists all drawings included in the Propeller Variants (PV) drawing
 | _No drawings yet_ | - | - | - | - |
 
 > **Note**: Individual variant drawings will be added as development progresses.
-> Drawings are stored in `61-40_Software/` under their respective ASSETS folders.
+> Drawings are stored in `61-20_Subsystems/` under their respective ASSETS folders.
 
 ---
 

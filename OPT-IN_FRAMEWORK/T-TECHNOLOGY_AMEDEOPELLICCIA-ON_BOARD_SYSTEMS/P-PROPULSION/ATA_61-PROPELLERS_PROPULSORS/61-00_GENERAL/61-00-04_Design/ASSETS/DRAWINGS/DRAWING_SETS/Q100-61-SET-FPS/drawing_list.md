@@ -22,7 +22,7 @@ This document lists all drawings included in the Full Propulsor System (FPS) dra
 | _No drawings yet_ | - | - | - | - |
 
 > **Note**: System-level drawings will be added as integration progresses.
-> Drawings are stored in `61-00_GENERAL/` and `61-60_Storages/` under their respective ASSETS folders.
+> Drawings are stored in `61-00_GENERAL/`, `61-70_Propulsion/`, and `61-90_Tables_Schemas_Diagrams/` under their respective ASSETS folders.
 
 ---
 

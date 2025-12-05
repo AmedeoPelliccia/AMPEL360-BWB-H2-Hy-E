@@ -26,8 +26,8 @@ last_updated: "2025-12-04"
 
 # Scope Definition
 scope:
-  ata_sections:
-    - "61-40"
+  optin_buckets:
+    - "61-20_Subsystems"
   description: |
     Engineering drawings for propeller blade variants including
     different configurations, materials, and performance specifications.
