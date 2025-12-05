@@ -729,12 +729,14 @@ jobs:
             } > reports/cross_reference_audit.md
           fi
 
-      - name: Ensure vv_lake.json exists
+        - name: Ensure vv_lake.json exists
         run: |
           mkdir -p base/cd
           if [ ! -f "base/cd/vv_lake.json" ]; then
             echo "::warning::vv_lake.json missing. Creating default template."
-            cat <<EOF > base/cd/vv_lake.json
+            echo '{"standards":["UTCS-CORE","ATA-95","OPT-IN"],"paths":[],"checklists":{"contextual":[]}}' > base/cd/vv_lake.json
+          fi
+
 {
   "standards": ["UTCS-CORE", "ATA-95", "OPT-IN"],
   "paths": [],
