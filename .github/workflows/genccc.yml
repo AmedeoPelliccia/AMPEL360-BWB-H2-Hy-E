@@ -765,7 +765,7 @@ EOF
               .map(f => f.filename)
               .filter(n => n.endsWith('.md'))
               .join(', ');
-            core.setOutput('head_sha', pr.head.sha);
+            core.setOutput('head_sha', headSha);
             core.setOutput('md_changed', mdChanged);
 
       - name: Pool Verification Points from Artifacts
@@ -781,7 +781,6 @@ EOF
             COUNT=$(grep -Ei "warning|error|issue" "$AUDIT_FILE" | wc -l || echo 0)
             echo "pooled_issues=$COUNT" >> "$GITHUB_OUTPUT"
           fi
-
           STANDARDS=$(jq -r '.standards[]?' "$VV_LAKE" | paste -sd, -)
           PATHS=$(jq -r '.paths[]?' "$VV_LAKE" | paste -sd, -)
 
@@ -797,23 +796,30 @@ EOF
           VV_LAKE: base/cd/vv_lake.json
         run: |
           CHECKLIST=""
+
+          # Base checklist items
           CHECKLIST="$CHECKLIST"$'\n'"- [ ] Cross-references validated against: ${VALIDATION_PATHS:-n/a}"
           CHECKLIST="$CHECKLIST"$'\n'"- [ ] Standards compliance (${STANDARDS:-n/a})"
           CHECKLIST="$CHECKLIST"$'\n'"- [ ] Traceability links complete"
           CHECKLIST="$CHECKLIST"$'\n'"- [ ] Contextual validation for changed files: ${CHANGED:-n/a}"
 
-          EXTRA=$(
-            jq -r '.checklists.contextual[]?' "$VV_LAKE" 2>/dev/null \
-            | sed 's/^/- [ ] /' \
-            || true
-          )
-          if [ -n "$EXTRA" ]; then
-            CHECKLIST="$CHECKLIST"$'\n'"$EXTRA"
+          # Enrich checklist with contextual items from V&V lake (if present)
+          if [ -f "${VV_LAKE:-}" ]; then
+            EXTRA=$(
+              jq -r '.checklists.contextual[]?' "$VV_LAKE" 2>/dev/null \
+              | sed 's/^/- [ ] /' \
+              || true
+            )
+            if [ -n "$EXTRA" ]; then
+              CHECKLIST="$CHECKLIST"$'\n'"$EXTRA"
+            fi
           fi
 
+          # Append to job summary
           echo "## GenCCC Contextual Checklist" >> "$GITHUB_STEP_SUMMARY"
           printf '%s\n' "$CHECKLIST" >> "$GITHUB_STEP_SUMMARY"
 
+          # Emit multiline output for downstream steps
           {
             echo "checklist<<EOF"
             printf '%s\n' "$CHECKLIST"
@@ -831,9 +837,10 @@ EOF
           PATHS="${VALIDATION_PATHS:-}"
           VALID=true
 
-          if [ "$ISSUES" -gt 0 ]; then
+          if [ "${ISSUES:-0}" -gt 0 ]; then
             VALID=false
           fi
+
           if [ -z "$PATHS" ]; then
             VALID=false
           fi
@@ -845,10 +852,9 @@ EOF
           fi
 
           echo "validation_passed=$VALID" >> "$GITHUB_OUTPUT"
-
           {
             echo "updated_checklist<<EOF"
-            printf '%s\n' "$UPDATED_CHECKLIST"
+            printf "%s\n" "$UPDATED_CHECKLIST"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 

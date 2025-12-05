@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-SYM-SURFACE-FINISH — Surface Finish Symbol Library
+  Reference: ISO 1302
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200mm"
+     height="150mm"
+     viewBox="0 0 200 150">
+  
+  <title>Q100-61-SYM-SURFACE-FINISH — Surface Finish Symbol Library</title>
+  <desc>Surface finish symbols for ATA 61 propulsion drawings</desc>
+  
+  <defs>
+    <style>
+      .symbol { stroke: #000000; stroke-width: 0.35; fill: none; }
+      .filled { stroke: #000000; stroke-width: 0.35; fill: #000000; }
+      .text { font-family: Arial, sans-serif; font-size: 3; fill: #000000; }
+    </style>
+    
+    <!-- Basic Surface Symbol -->
+    <symbol id="surface-basic" viewBox="0 0 16 16">
+      <polyline points="0,16 8,0 16,16" class="symbol"/>
+    </symbol>
+    
+    <!-- Machined Surface Symbol -->
+    <symbol id="surface-machined" viewBox="0 0 16 20">
+      <polyline points="0,16 8,0 16,16" class="symbol"/>
+      <line x1="0" y1="20" x2="16" y2="20" class="symbol"/>
+    </symbol>
+    
+    <!-- Ground Surface Symbol -->
+    <symbol id="surface-ground" viewBox="0 0 16 16">
+      <polyline points="0,16 8,0 16,16" class="symbol"/>
+      <circle cx="8" cy="10" r="3" class="symbol"/>
+    </symbol>
+    
+    <!-- Lapped Surface Symbol -->
+    <symbol id="surface-lapped" viewBox="0 0 16 20">
+      <polyline points="0,16 8,0 16,16" class="symbol"/>
+      <path d="M4,18 Q8,14 12,18" class="symbol"/>
+    </symbol>
+    
+    <!-- All Surfaces Symbol -->
+    <symbol id="surface-all" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="8" class="symbol"/>
+      <polyline points="5,15 10,5 15,15" class="symbol"/>
+    </symbol>
+    
+    <!-- Ra Roughness Symbol -->
+    <symbol id="surface-ra" viewBox="0 0 24 20">
+      <polyline points="0,16 8,0 16,16" class="symbol"/>
+      <text x="18" y="10" class="text" style="font-size: 4;">Ra</text>
+    </symbol>
+    
+  </defs>
+  
+  <!-- Symbol Display Grid -->
+  <text x="100" y="10" text-anchor="middle" class="text" style="font-size: 5; font-weight: bold;">
+    SURFACE FINISH SYMBOLS — Q100-61-SYM-SURFACE-FINISH
+  </text>
+  
+  <g transform="translate(20,25)">
+    <use xlink:href="#surface-basic" x="0" y="0" width="16" height="16"/>
+    <text x="8" y="26" text-anchor="middle" class="text">Basic</text>
+  </g>
+  
+  <g transform="translate(55,23)">
+    <use xlink:href="#surface-machined" x="0" y="0" width="16" height="20"/>
+    <text x="8" y="30" text-anchor="middle" class="text">Machined</text>
+  </g>
+  
+  <g transform="translate(95,25)">
+    <use xlink:href="#surface-ground" x="0" y="0" width="16" height="16"/>
+    <text x="8" y="26" text-anchor="middle" class="text">Ground</text>
+  </g>
+  
+  <g transform="translate(135,23)">
+    <use xlink:href="#surface-lapped" x="0" y="0" width="16" height="20"/>
+    <text x="8" y="30" text-anchor="middle" class="text">Lapped</text>
+  </g>
+  
+  <g transform="translate(20,60)">
+    <use xlink:href="#surface-all" x="0" y="0" width="20" height="20"/>
+    <text x="10" y="28" text-anchor="middle" class="text">All Surfaces</text>
+  </g>
+  
+  <g transform="translate(60,60)">
+    <use xlink:href="#surface-ra" x="0" y="0" width="24" height="20"/>
+    <text x="12" y="28" text-anchor="middle" class="text">Ra Value</text>
+  </g>
+  
+</svg>

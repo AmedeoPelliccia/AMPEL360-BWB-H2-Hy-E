@@ -1,0 +1,87 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-SET-PV — Propeller Variants Drawing Set Definition
+
+set_id: "Q100-61-SET-PV"
+name: "Propeller Variants Set"
+version: "1.0"
+status: "Active"
+owner: "AMPEL360 Propulsion Engineering"
+created: "2025-12-04"
+last_updated: "2025-12-04"
+
+# Scope Definition
+scope:
+  optin_buckets:
+    - "61-20_Subsystems"
+  description: |
+    Engineering drawings for propeller blade variants including
+    different configurations, materials, and performance specifications.
+
+# Subsystems covered by this set
+subsystems:
+  - id: "PV-STD"
+    name: "Standard Blade Variant"
+    description: "Baseline propeller blade design"
+    drawing_prefix: "Q100-61-DRW-PV-STD"
+
+  - id: "PV-HE"
+    name: "High-Efficiency Variant"
+    description: "Optimized blade design for maximum efficiency"
+    drawing_prefix: "Q100-61-DRW-PV-HE"
+
+  - id: "PV-COMP"
+    name: "Composite Variant"
+    description: "Advanced composite material blade design"
+    drawing_prefix: "Q100-61-DRW-PV-COMP"
+
+  - id: "PV-MET"
+    name: "Metallic Variant"
+    description: "Metallic blade design for specific applications"
+    drawing_prefix: "Q100-61-DRW-PV-MET"
+
+  - id: "PV-REG"
+    name: "Regional Configuration"
+    description: "Mission-specific blade configurations"
+    drawing_prefix: "Q100-61-DRW-PV-REG"
+
+# Drawing types applicable to this set
+drawing_types:
+  - DRW  # Engineering drawings
+  - DIAG # Diagrams
+  - ICD  # Interface control drawings
+
+# External interfaces
+interfaces:
+  - system: "Q100-61-SET-OFP"
+    description: "Blade-to-hub interface"
+  - system: "Q100-61-SET-FPS"
+    description: "System integration requirements"
+
+# Requirements traceability
+requirements:
+  source_docs:
+    - "61-00-03_Requirements/RQ-61-PV-*.md"
+  safety_items:
+    - "FMEA-61-PV-001"
+
+# Revision history
+revisions:
+  - version: "1.0"
+    date: "2025-12-04"
+    author: "AMPEL360 Engineering"
+    description: "Initial set definition"

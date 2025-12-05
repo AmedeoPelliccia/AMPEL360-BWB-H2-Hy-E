@@ -1,4 +1,4 @@
-name: Doc Meta Enforcement
+name: Doc meta validation
 
 on:
   workflow_dispatch:  # optional: allows manual/API trigger
@@ -54,7 +54,7 @@ jobs:
           sarif_file: doc_meta_results.sarif
           category: doc-metadata
 
-      - name: Add job summary
+           - name: Add job summary
         if: steps.check_doc_meta.outcome == 'failure'
         run: |
           echo "## 📋 Document Metadata Issues Found" >> $GITHUB_STEP_SUMMARY
@@ -77,10 +77,6 @@ jobs:
 
       - name: Fail if issues found
         if: steps.check_doc_meta.outcome == 'failure'
-        run: |
-          echo "::error title=Document metadata issues::Run 'python tools/ci/doc_meta_enforcer.py --fix' locally to resolve."
-          exit 1
-
         run: |
           echo "::error title=Document metadata issues::Run 'python tools/ci/doc_meta_enforcer.py --fix' locally to resolve."
           exit 1
