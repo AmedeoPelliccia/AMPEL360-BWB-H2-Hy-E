@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Q100-61-TPL-DRW-A0-LANDSCAPE.svg
+  A0 Landscape Drawing Sheet Format (1189 × 841 mm)
+  
+  Template for AMPEL360-BWB-H2-Hy-E Q100 Program
+  ATA Chapter 61 - Propellers/Propulsors
+  
+  Usage:
+  - Import into CAD/drawing application
+  - Add title block from TITLE_BLOCKS/
+  - Configure drawing-specific fields
+-->
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="1189mm" height="841mm" 
+     viewBox="0 0 1189 841">
+  
+  <!-- Sheet Border -->
+  <rect x="20" y="20" width="1149" height="801" 
+        fill="none" stroke="#000" stroke-width="0.7"/>
+  
+  <!-- Drawing Area Border -->
+  <rect x="25" y="25" width="1139" height="791" 
+        fill="none" stroke="#000" stroke-width="0.35"/>
+  
+  <!-- Title Block Area (Bottom Right) -->
+  <rect x="929" y="741" width="235" height="75" 
+        fill="none" stroke="#000" stroke-width="0.35"/>
+  
+  <!-- Revision Block Area (Above Title Block) -->
+  <rect x="929" y="666" width="235" height="75" 
+        fill="none" stroke="#000" stroke-width="0.35"/>
+  
+  <!-- Zone Grid Reference - Horizontal -->
+  <g id="zone-grid-horizontal" stroke="#000" stroke-width="0.18">
+    <!-- Add zone markers A-L across top -->
+    <text x="119" y="18" font-size="5" text-anchor="middle">A</text>
+    <text x="238" y="18" font-size="5" text-anchor="middle">B</text>
+    <text x="357" y="18" font-size="5" text-anchor="middle">C</text>
+    <text x="476" y="18" font-size="5" text-anchor="middle">D</text>
+    <text x="595" y="18" font-size="5" text-anchor="middle">E</text>
+    <text x="714" y="18" font-size="5" text-anchor="middle">F</text>
+    <text x="833" y="18" font-size="5" text-anchor="middle">G</text>
+    <text x="952" y="18" font-size="5" text-anchor="middle">H</text>
+    <text x="1071" y="18" font-size="5" text-anchor="middle">J</text>
+  </g>
+  
+  <!-- Zone Grid Reference - Vertical -->
+  <g id="zone-grid-vertical" stroke="#000" stroke-width="0.18">
+    <!-- Add zone markers 1-8 along left side -->
+    <text x="17" y="122" font-size="5" text-anchor="middle">1</text>
+    <text x="17" y="222" font-size="5" text-anchor="middle">2</text>
+    <text x="17" y="322" font-size="5" text-anchor="middle">3</text>
+    <text x="17" y="422" font-size="5" text-anchor="middle">4</text>
+    <text x="17" y="522" font-size="5" text-anchor="middle">5</text>
+    <text x="17" y="622" font-size="5" text-anchor="middle">6</text>
+    <text x="17" y="722" font-size="5" text-anchor="middle">7</text>
+    <text x="17" y="822" font-size="5" text-anchor="middle">8</text>
+  </g>
+  
+  <!-- Template Info (to be removed in actual drawings) -->
+  <text x="594" y="420" font-size="12" text-anchor="middle" fill="#999">
+    Q100-61-TPL-DRW-A0-LANDSCAPE
+  </text>
+  <text x="594" y="440" font-size="8" text-anchor="middle" fill="#999">
+    A0 Sheet Format Template (1189 × 841 mm)
+  </text>
+  
+</svg>

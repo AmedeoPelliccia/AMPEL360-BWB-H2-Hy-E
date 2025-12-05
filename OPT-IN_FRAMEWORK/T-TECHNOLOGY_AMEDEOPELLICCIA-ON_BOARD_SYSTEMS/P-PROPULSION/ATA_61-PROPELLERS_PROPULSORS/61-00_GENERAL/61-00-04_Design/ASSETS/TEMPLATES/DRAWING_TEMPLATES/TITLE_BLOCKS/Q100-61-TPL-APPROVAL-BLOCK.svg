@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Q100-61-TPL-APPROVAL-BLOCK.svg
+  Drawing Approval Signatures Block
+  
+  Template for AMPEL360-BWB-H2-Hy-E Q100 Program
+  ATA Chapter 61 - Propellers/Propulsors
+  
+  Usage:
+  - Import into sheet format
+  - Position in title block area
+  - Collect approvals before release
+-->
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="90mm" height="40mm" 
+     viewBox="0 0 90 40">
+  
+  <!-- Approval Block Outer Border -->
+  <rect x="0" y="0" width="90" height="40" 
+        fill="none" stroke="#000" stroke-width="0.5"/>
+  
+  <!-- Header Row -->
+  <rect x="0" y="0" width="90" height="8" 
+        fill="#f0f0f0" stroke="#000" stroke-width="0.25"/>
+  
+  <!-- Column Dividers -->
+  <line x1="25" y1="0" x2="25" y2="40" stroke="#000" stroke-width="0.25"/>
+  <line x1="55" y1="0" x2="55" y2="40" stroke="#000" stroke-width="0.25"/>
+  <line x1="75" y1="0" x2="75" y2="40" stroke="#000" stroke-width="0.25"/>
+  
+  <!-- Row Dividers -->
+  <line x1="0" y1="16" x2="90" y2="16" stroke="#000" stroke-width="0.18"/>
+  <line x1="0" y1="24" x2="90" y2="24" stroke="#000" stroke-width="0.18"/>
+  <line x1="0" y1="32" x2="90" y2="32" stroke="#000" stroke-width="0.18"/>
+  
+  <!-- Header Labels -->
+  <g font-size="2" font-weight="bold" fill="#000">
+    <text x="12.5" y="5" text-anchor="middle">ROLE</text>
+    <text x="40" y="5" text-anchor="middle">NAME</text>
+    <text x="65" y="5" text-anchor="middle">SIGNATURE</text>
+    <text x="82.5" y="5" text-anchor="middle">DATE</text>
+  </g>
+  
+  <!-- Role Labels -->
+  <g font-size="2" fill="#000">
+    <text x="12.5" y="13" text-anchor="middle">PREPARED</text>
+    <text x="12.5" y="21" text-anchor="middle">CHECKED</text>
+    <text x="12.5" y="29" text-anchor="middle">APPROVED</text>
+    <text x="12.5" y="37" text-anchor="middle">RELEASED</text>
+  </g>
+  
+  <!-- Placeholder Values (replace when using) -->
+  <g font-size="2" fill="#999">
+    <!-- Row 1 - Prepared -->
+    <text x="40" y="13" text-anchor="middle">[Name]</text>
+    <text x="82.5" y="13" text-anchor="middle">[Date]</text>
+    
+    <!-- Row 2 - Checked -->
+    <text x="40" y="21" text-anchor="middle">[Name]</text>
+    <text x="82.5" y="21" text-anchor="middle">[Date]</text>
+    
+    <!-- Row 3 - Approved -->
+    <text x="40" y="29" text-anchor="middle">[Name]</text>
+    <text x="82.5" y="29" text-anchor="middle">[Date]</text>
+    
+    <!-- Row 4 - Released -->
+    <text x="40" y="37" text-anchor="middle">[Name]</text>
+    <text x="82.5" y="37" text-anchor="middle">[Date]</text>
+  </g>
+  
+</svg>
