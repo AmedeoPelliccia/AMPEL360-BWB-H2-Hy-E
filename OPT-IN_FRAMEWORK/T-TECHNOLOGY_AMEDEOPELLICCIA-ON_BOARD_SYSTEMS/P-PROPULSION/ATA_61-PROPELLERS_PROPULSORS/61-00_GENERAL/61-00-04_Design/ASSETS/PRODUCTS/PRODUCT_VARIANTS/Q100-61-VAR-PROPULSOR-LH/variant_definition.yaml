@@ -1,0 +1,78 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-VAR-PROPULSOR-LH — Variant Definition
+# AMPEL360 BWB H2 Hy-E Left Hand Propulsor
+
+variant:
+  id: Q100-61-VAR-PROPULSOR-LH
+  name: Left Hand Propulsor
+  base_product: Q100-61-PROD-PROPULSOR-SYSTEM
+  revision: A
+  status: DRAFT
+  position: left
+  program: Q100
+
+description:
+  short: >-
+    Left-hand (port side) propulsor variant
+  long: >-
+    The Q100-61-VAR-PROPULSOR-LH is configured for left wing mounting on the 
+    AMPEL360 BWB aircraft. It features mirrored mounting hardware, clockwise
+    fan rotation (viewed from front), and left-side optimized wiring routing.
+
+position:
+  side: left
+  location: wing
+  sub_position: inboard  # or outboard
+  coordinates:
+    x_mm: TBD
+    y_mm: TBD
+    z_mm: TBD
+  thrust_vector:
+    azimuth_deg: 180  # Aft
+    elevation_deg: 0
+
+rotation:
+  direction: clockwise  # Viewed from front
+  counter_rotate_with: Q100-61-VAR-PROPULSOR-RH
+
+mounting:
+  type: mirrored
+  pylon_interface: IF-61-001-LH
+  attachment_points: 4
+
+wiring:
+  routing: left_side
+  harness_variant: LH
+
+software:
+  pitch_control_logic: mirrored
+  rotation_sense: positive
+
+effectivity:
+  configurations:
+    - twin_wing
+    - tri_propulsor
+  msn_range:
+    from: 1
+    to: null
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

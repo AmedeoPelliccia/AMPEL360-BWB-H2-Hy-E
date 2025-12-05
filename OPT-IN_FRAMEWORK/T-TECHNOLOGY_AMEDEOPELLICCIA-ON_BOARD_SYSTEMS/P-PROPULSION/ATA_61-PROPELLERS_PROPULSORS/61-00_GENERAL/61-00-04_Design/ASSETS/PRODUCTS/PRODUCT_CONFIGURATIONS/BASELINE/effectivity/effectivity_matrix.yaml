@@ -1,0 +1,130 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-CFG-BASELINE-R01 — Initial Baseline Configuration
+# AMPEL360 BWB H2 Hy-E Propulsion System
+
+baseline:
+  id: Q100-61-CFG-BASELINE-R01
+  name: Initial Certification Baseline
+  revision: R01
+  status: DRAFT
+  effective_date: TBD
+  program: Q100
+  ata_chapter: "61"
+
+description: >-
+  Initial configuration baseline for the Q100 program propulsion system.
+  This baseline defines the certified configuration for type certification.
+
+products:
+  propulsor_system:
+    id: Q100-61-PROD-PROPULSOR-SYSTEM
+    revision: A
+    configuration:
+      open_fan_unit:
+        id: Q100-61-PROD-OPEN-FAN-UNIT
+        revision: A
+        blade_count: 12
+        blade_material: CFRP
+        pitch_range_deg: [-5, 30]
+        diameter_m: 2.8
+        
+      electric_drive_unit:
+        id: Q100-61-PROD-ELECTRIC-DRIVE-UNIT
+        revision: A
+        motor_count: 2
+        motor_power_kW: 500
+        voltage_vdc: 800
+        inverter_type: SiC
+        
+      gearbox_unit:
+        id: Q100-61-PROD-GEARBOX-UNIT
+        revision: A
+        ratio: "3.5:1"
+        type: planetary
+        
+      nacelle_unit:
+        id: Q100-61-PROD-NACELLE-UNIT
+        revision: A
+        material: composite
+        thrust_reverser: cascade
+        
+      controller_unit:
+        id: Q100-61-PROD-CONTROLLER-UNIT
+        revision: A
+        fadec_channels: 2
+        dal_level: A
+
+software_baseline:
+  fadec:
+    part_number: Q100-61-SW-FADEC
+    version: TBD
+    dal: A
+  motor_control:
+    part_number: Q100-61-SW-MC
+    version: TBD
+    dal: A
+  health_monitoring:
+    part_number: Q100-61-SW-HMU
+    version: TBD
+    dal: B
+
+hardware_baseline:
+  fadec:
+    part_number: Q100-61-P-FADEC
+    revision: TBD
+  inverter:
+    part_number: Q100-61-P-INV
+    revision: TBD
+  motor:
+    part_number: Q100-61-P-MOTOR
+    revision: TBD
+
+options_included:
+  - none  # Baseline configuration
+
+options_available:
+  - Q100-61-OPT-HIGH-POWER
+  - Q100-61-OPT-EXTENDED-RANGE
+  - Q100-61-OPT-REDUCED-NOISE
+  - Q100-61-OPT-SAF-OPTIMIZED
+
+effectivity:
+  msn_from: 1
+  msn_to: null
+  reference: effectivity/effectivity_matrix.yaml
+
+certification:
+  target_date: TBD
+  standards:
+    - CS-E
+    - FAR-33
+    - CS-25.1309
+  status: planned
+
+change_history:
+  - revision: R01
+    date: TBD
+    description: Initial baseline release
+    author: TBD
+    approved_by: TBD
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

@@ -1,0 +1,7 @@
+Level,Item_Number,Part_Number,Description,Quantity,UOM,Make_Buy
+0,1,Q100-61-PROD-ELECTRIC-DRIVE-UNIT,Electric Drive Unit,1,EA,MAKE
+1,1.1,Q100-61-P-MOTOR,Electric Motor PMSM 500kW,2,EA,BUY
+1,1.2,Q100-61-P-INV,SiC Inverter 600kW,2,EA,BUY
+1,1.3,Q100-61-P-HV-JB,HV Junction Box 800VDC,1,EA,MAKE
+1,1.4,Q100-61-P-COOL-PUMP,Cooling Pump,1,EA,BUY
+1,1.5,Q100-61-P-HX,Heat Exchanger,1,EA,BUY

@@ -1,0 +1,93 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-VAR-PROPULSOR-LH — Delta from Baseline
+# Differences from Q100-61-PROD-PROPULSOR-SYSTEM baseline (RH)
+
+delta:
+  variant: Q100-61-VAR-PROPULSOR-LH
+  baseline: Q100-61-PROD-PROPULSOR-SYSTEM
+  baseline_config: Q100-61-CFG-PROPULSOR-BASELINE
+
+changes:
+  mechanical:
+    - component: Fan Assembly
+      change: Mirror rotation direction
+      baseline: Counter-clockwise
+      variant: Clockwise
+      
+    - component: Mounting Hardware
+      change: Mirrored attachment geometry
+      baseline: Right-side optimized
+      variant: Left-side optimized
+      affected_parts:
+        - Q100-61-P-MNT-BRK-LH
+        - Q100-61-P-MNT-LINK-LH
+        
+    - component: Gearbox
+      change: Rotation direction reversal
+      baseline: Standard
+      variant: Mirrored output
+      
+  electrical:
+    - component: Wiring Harness
+      change: Left-side routing
+      baseline: Q100-61-P-WH-MAIN
+      variant: Q100-61-P-WH-MAIN-LH
+      
+    - component: Motor Phase Sequence
+      change: Reversed for opposite rotation
+      baseline: U-V-W
+      variant: U-W-V
+      
+  software:
+    - component: Pitch Control
+      change: Mirrored control logic
+      baseline: Standard algorithm
+      variant: Inverted pitch command
+      
+    - component: Rotation Sense
+      change: Sign convention
+      baseline: Positive = CCW
+      variant: Positive = CW
+
+unchanged:
+  - Electric motors (same power rating)
+  - Inverters (same specification)
+  - FADEC hardware (same LRU)
+  - Nacelle structure (symmetric)
+  - Gearbox internals (same ratio)
+  - Controller unit (same hardware)
+
+part_number_mapping:
+  - baseline: Q100-61-P-MNT-BRK
+    variant: Q100-61-P-MNT-BRK-LH
+  - baseline: Q100-61-P-MNT-LINK
+    variant: Q100-61-P-MNT-LINK-LH
+  - baseline: Q100-61-P-WH-MAIN
+    variant: Q100-61-P-WH-MAIN-LH
+  - baseline: Q100-61-P-FAN-BLADE
+    variant: Q100-61-P-FAN-BLADE-LH
+
+interchangeability:
+  with_baseline: no
+  reason: Mirrored rotation and mounting
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

@@ -1,0 +1,143 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-PROD-NACELLE-UNIT — Product Structure
+# AMPEL360 BWB H2 Hy-E Nacelle Unit
+
+product_structure:
+  id: Q100-61-PROD-NACELLE-UNIT
+  name: Nacelle Unit
+  version: "1.0"
+  parent: Q100-61-PROD-PROPULSOR-SYSTEM
+  
+hierarchy:
+  - level: 0
+    id: Q100-61-PROD-NACELLE-UNIT
+    name: Nacelle Unit
+    type: sub_product
+    
+    assemblies:
+      - id: 61-00-04-A420
+        name: NACELLE_ASSEMBLY
+        path: "../../ASSEMBLIES/OPEN_FAN_PROPULSOR/"
+        
+    sub_assemblies:
+      - id: 61-00-04-A421
+        name: INLET_COWL_ASSEMBLY
+        components:
+          - name: Inlet Cowl Shell
+            part_number: Q100-61-P-NAC-INLET
+            quantity: 1
+            material: CFRP
+          - name: Inlet Lip
+            part_number: Q100-61-P-NAC-LIP
+            quantity: 1
+            material: Aluminum
+          - name: Anti-ice Duct
+            part_number: Q100-61-P-NAC-AICE
+            quantity: 1
+            
+      - id: 61-00-04-A422
+        name: FAN_COWL_ASSEMBLY
+        components:
+          - name: Fan Cowl Panel LH
+            part_number: Q100-61-P-NAC-FCL-L
+            quantity: 1
+            material: CFRP
+          - name: Fan Cowl Panel RH
+            part_number: Q100-61-P-NAC-FCL-R
+            quantity: 1
+            material: CFRP
+          - name: Fan Cowl Hinge
+            part_number: Q100-61-P-NAC-FCL-HNG
+            quantity: 4
+          - name: Fan Cowl Latch
+            part_number: Q100-61-P-NAC-FCL-LCH
+            quantity: 6
+            
+      - id: 61-00-04-A423
+        name: CORE_COWL_ASSEMBLY
+        components:
+          - name: Core Cowl Panel LH
+            part_number: Q100-61-P-NAC-CCL-L
+            quantity: 1
+            material: CFRP
+          - name: Core Cowl Panel RH
+            part_number: Q100-61-P-NAC-CCL-R
+            quantity: 1
+            material: CFRP
+          - name: Core Cowl Hinge
+            part_number: Q100-61-P-NAC-CCL-HNG
+            quantity: 2
+            
+      - id: 61-00-04-A424
+        name: THRUST_REVERSER_ASSEMBLY
+        components:
+          - name: Cascade Panel
+            part_number: Q100-61-P-NAC-TR-CASC
+            quantity: 24
+            material: Composite
+          - name: Blocker Door
+            part_number: Q100-61-P-NAC-TR-BLK
+            quantity: 2
+          - name: Actuator
+            part_number: Q100-61-P-NAC-TR-ACT
+            quantity: 4
+            type: Hydraulic
+          - name: Control Valve
+            part_number: Q100-61-P-NAC-TR-VLV
+            quantity: 2
+            
+      - id: 61-00-04-A425
+        name: ACOUSTIC_LINER_ASSEMBLY
+        components:
+          - name: Inlet Acoustic Panel
+            part_number: Q100-61-P-NAC-ACO-IN
+            quantity: 8
+          - name: Fan Case Acoustic Panel
+            part_number: Q100-61-P-NAC-ACO-FC
+            quantity: 12
+          - name: Aft Acoustic Panel
+            part_number: Q100-61-P-NAC-ACO-AFT
+            quantity: 8
+            
+      - id: 61-00-04-A426
+        name: STRUCTURAL_ASSEMBLY
+        components:
+          - name: Forward Bulkhead
+            part_number: Q100-61-P-NAC-BHD-FWD
+            quantity: 1
+            material: Aluminum
+          - name: Aft Bulkhead
+            part_number: Q100-61-P-NAC-BHD-AFT
+            quantity: 1
+            material: Aluminum
+          - name: Nacelle Frame
+            part_number: Q100-61-P-NAC-FRAME
+            quantity: 4
+            material: Aluminum
+          - name: Fire Wall
+            part_number: Q100-61-P-NAC-FW
+            quantity: 1
+            material: Titanium
+
+bom_reference: "../../BILL_OF_MATERIALS/Q100-61-BOM-NACELLE-UNIT/"
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

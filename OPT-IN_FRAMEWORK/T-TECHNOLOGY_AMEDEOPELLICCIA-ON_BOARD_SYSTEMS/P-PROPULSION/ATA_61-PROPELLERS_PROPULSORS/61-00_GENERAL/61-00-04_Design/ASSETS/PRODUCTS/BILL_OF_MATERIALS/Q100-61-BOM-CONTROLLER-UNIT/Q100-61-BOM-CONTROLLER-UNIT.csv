@@ -1,0 +1,7 @@
+Level,Item_Number,Part_Number,Description,Quantity,UOM,Make_Buy,DAL
+0,1,Q100-61-PROD-CONTROLLER-UNIT,Controller Unit,1,EA,MAKE,
+1,1.1,Q100-61-P-FADEC-A,FADEC Channel A,1,EA,MAKE,A
+1,1.2,Q100-61-P-FADEC-B,FADEC Channel B,1,EA,MAKE,A
+1,1.3,Q100-61-P-MC,Motor Controller Card,2,EA,BUY,
+1,1.4,Q100-61-P-PMU,Power Management Unit,1,EA,BUY,
+1,1.5,Q100-61-P-HMU,Health Monitoring Unit,1,EA,MAKE,

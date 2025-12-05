@@ -1,0 +1,122 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-PROD-ELECTRIC-DRIVE-UNIT — Product Structure
+# AMPEL360 BWB H2 Hy-E Electric Drive Unit
+
+product_structure:
+  id: Q100-61-PROD-ELECTRIC-DRIVE-UNIT
+  name: Electric Drive Unit
+  version: "1.0"
+  parent: Q100-61-PROD-PROPULSOR-SYSTEM
+  
+hierarchy:
+  - level: 0
+    id: Q100-61-PROD-ELECTRIC-DRIVE-UNIT
+    name: Electric Drive Unit
+    type: sub_product
+    
+    assemblies:
+      - id: 61-00-04-A450
+        name: ELECTRIC_MOTOR_DRIVE
+        path: "../../ASSEMBLIES/ELECTRIC_MOTOR_DRIVE/"
+        
+    sub_assemblies:
+      - id: 61-00-04-A451
+        name: MOTOR_ASSEMBLY
+        components:
+          - name: Electric Motor 1
+            part_number: Q100-61-P-MOTOR-1
+            quantity: 1
+            type: PMSM
+            power_kW: 500
+          - name: Electric Motor 2
+            part_number: Q100-61-P-MOTOR-2
+            quantity: 1
+            type: PMSM
+            power_kW: 500
+          - name: Motor Bearing Front
+            part_number: Q100-61-P-MTR-BRG-F
+            quantity: 2
+            type: Angular contact
+          - name: Motor Bearing Rear
+            part_number: Q100-61-P-MTR-BRG-R
+            quantity: 2
+            type: Roller
+            
+      - id: 61-00-04-A452
+        name: POWER_ELECTRONICS_ASSEMBLY
+        components:
+          - name: SiC Inverter 1
+            part_number: Q100-61-P-INV-1
+            quantity: 1
+            power_kW: 600
+          - name: SiC Inverter 2
+            part_number: Q100-61-P-INV-2
+            quantity: 1
+            power_kW: 600
+          - name: DC Link Capacitor
+            part_number: Q100-61-P-DC-CAP
+            quantity: 2
+            capacitance_uF: 1000
+          - name: Gate Driver
+            part_number: Q100-61-P-GATE-DRV
+            quantity: 2
+            
+      - id: 61-00-04-A453
+        name: HV_DISTRIBUTION_ASSEMBLY
+        components:
+          - name: HV Junction Box
+            part_number: Q100-61-P-HV-JB
+            quantity: 1
+            voltage_vdc: 800
+          - name: HV Contactor
+            part_number: Q100-61-P-HV-CONT
+            quantity: 2
+            type: Latching
+          - name: HV Cable Harness
+            part_number: Q100-61-P-HV-HARNESS
+            quantity: 1
+            
+      - id: 61-00-04-A454
+        name: COOLING_ASSEMBLY
+        components:
+          - name: Cooling Jacket Motor 1
+            part_number: Q100-61-P-COOL-JKT-1
+            quantity: 1
+          - name: Cooling Jacket Motor 2
+            part_number: Q100-61-P-COOL-JKT-2
+            quantity: 1
+          - name: Inverter Cold Plate
+            part_number: Q100-61-P-INV-CP
+            quantity: 2
+          - name: Cooling Pump
+            part_number: Q100-61-P-COOL-PUMP
+            quantity: 1
+          - name: Heat Exchanger
+            part_number: Q100-61-P-HX
+            quantity: 1
+          - name: Expansion Tank
+            part_number: Q100-61-P-EXP-TANK
+            quantity: 1
+
+bom_reference: "../../BILL_OF_MATERIALS/Q100-61-BOM-ELECTRIC-DRIVE-UNIT/"
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD
