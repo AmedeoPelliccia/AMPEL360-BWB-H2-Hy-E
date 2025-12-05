@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-SYM-ELECTRICAL — Electrical Schematic Symbol Library
+  Reference: IEC 60617 / IEEE Std 315
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200mm"
+     height="150mm"
+     viewBox="0 0 200 150">
+  
+  <title>Q100-61-SYM-ELECTRICAL — Electrical Symbol Library</title>
+  <desc>Electrical schematic symbols for ATA 61 propulsion drawings</desc>
+  
+  <defs>
+    <style>
+      .symbol { stroke: #000000; stroke-width: 0.35; fill: none; }
+      .filled { stroke: #000000; stroke-width: 0.35; fill: #000000; }
+      .text { font-family: Arial, sans-serif; font-size: 3; fill: #000000; }
+    </style>
+    
+    <!-- DC Motor Symbol -->
+    <symbol id="motor-dc" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="8" class="symbol"/>
+      <text x="10" y="12" text-anchor="middle" class="text">M</text>
+      <line x1="0" y1="10" x2="2" y2="10" class="symbol"/>
+      <line x1="18" y1="10" x2="20" y2="10" class="symbol"/>
+    </symbol>
+    
+    <!-- AC Motor Symbol -->
+    <symbol id="motor-ac" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="8" class="symbol"/>
+      <text x="10" y="12" text-anchor="middle" class="text">M</text>
+      <path d="M6,10 Q8,6 10,10 Q12,14 14,10" class="symbol"/>
+    </symbol>
+    
+    <!-- Inverter Symbol -->
+    <symbol id="inverter" viewBox="0 0 24 20">
+      <rect x="2" y="2" width="20" height="16" class="symbol"/>
+      <text x="12" y="12" text-anchor="middle" class="text">INV</text>
+    </symbol>
+    
+    <!-- Contactor Symbol -->
+    <symbol id="contactor" viewBox="0 0 20 24">
+      <line x1="10" y1="0" x2="10" y2="8" class="symbol"/>
+      <line x1="10" y1="16" x2="10" y2="24" class="symbol"/>
+      <circle cx="10" cy="9" r="1" class="filled"/>
+      <circle cx="10" cy="15" r="1" class="filled"/>
+      <line x1="10" y1="10" x2="16" y2="14" class="symbol"/>
+    </symbol>
+    
+    <!-- Fuse Symbol -->
+    <symbol id="fuse" viewBox="0 0 20 8">
+      <rect x="0" y="2" width="20" height="4" class="symbol"/>
+      <line x1="5" y1="4" x2="15" y2="4" class="symbol"/>
+    </symbol>
+    
+    <!-- Ground Symbol -->
+    <symbol id="ground" viewBox="0 0 12 12">
+      <line x1="6" y1="0" x2="6" y2="4" class="symbol"/>
+      <line x1="2" y1="4" x2="10" y2="4" class="symbol"/>
+      <line x1="3" y1="6" x2="9" y2="6" class="symbol"/>
+      <line x1="4" y1="8" x2="8" y2="8" class="symbol"/>
+    </symbol>
+    
+    <!-- Battery Symbol -->
+    <symbol id="battery" viewBox="0 0 12 20">
+      <line x1="6" y1="0" x2="6" y2="4" class="symbol"/>
+      <line x1="2" y1="4" x2="10" y2="4" class="symbol"/>
+      <line x1="4" y1="8" x2="8" y2="8" class="symbol"/>
+      <line x1="2" y1="12" x2="10" y2="12" class="symbol"/>
+      <line x1="4" y1="16" x2="8" y2="16" class="symbol"/>
+      <line x1="6" y1="16" x2="6" y2="20" class="symbol"/>
+    </symbol>
+    
+  </defs>
+  
+  <!-- Symbol Display Grid -->
+  <text x="100" y="10" text-anchor="middle" class="text" style="font-size: 5; font-weight: bold;">
+    ELECTRICAL SYMBOLS — Q100-61-SYM-ELECTRICAL
+  </text>
+  
+  <g transform="translate(20,25)">
+    <use xlink:href="#motor-dc" x="0" y="0" width="20" height="20"/>
+    <text x="10" y="28" text-anchor="middle" class="text">DC Motor</text>
+  </g>
+  
+  <g transform="translate(60,25)">
+    <use xlink:href="#motor-ac" x="0" y="0" width="20" height="20"/>
+    <text x="10" y="28" text-anchor="middle" class="text">AC Motor</text>
+  </g>
+  
+  <g transform="translate(100,25)">
+    <use xlink:href="#inverter" x="0" y="0" width="24" height="20"/>
+    <text x="12" y="28" text-anchor="middle" class="text">Inverter</text>
+  </g>
+  
+  <g transform="translate(140,25)">
+    <use xlink:href="#contactor" x="0" y="0" width="20" height="24"/>
+    <text x="10" y="32" text-anchor="middle" class="text">Contactor</text>
+  </g>
+  
+  <g transform="translate(20,70)">
+    <use xlink:href="#fuse" x="0" y="0" width="20" height="8"/>
+    <text x="10" y="18" text-anchor="middle" class="text">Fuse</text>
+  </g>
+  
+  <g transform="translate(60,70)">
+    <use xlink:href="#ground" x="0" y="0" width="12" height="12"/>
+    <text x="6" y="22" text-anchor="middle" class="text">Ground</text>
+  </g>
+  
+  <g transform="translate(100,65)">
+    <use xlink:href="#battery" x="0" y="0" width="12" height="20"/>
+    <text x="6" y="28" text-anchor="middle" class="text">Battery</text>
+  </g>
+  
+</svg>
