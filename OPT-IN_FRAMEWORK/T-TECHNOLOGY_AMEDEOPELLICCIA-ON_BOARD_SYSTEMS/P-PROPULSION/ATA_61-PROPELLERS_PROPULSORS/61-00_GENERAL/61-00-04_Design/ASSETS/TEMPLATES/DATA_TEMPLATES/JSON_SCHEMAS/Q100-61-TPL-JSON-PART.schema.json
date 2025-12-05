@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Q100-61-TPL-JSON-PART.schema.json",
+  "title": "Part Data Schema",
+  "description": "JSON Schema for validating part data",
+  "type": "object",
+  "required": ["part_number", "revision", "title"],
+  "properties": {
+    "part_number": {
+      "type": "string",
+      "pattern": "^Q100-61-[A-Z]+-[0-9]+$",
+      "description": "Unique part identifier"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[A-Z]$",
+      "description": "Revision letter"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "Part title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["Part", "Detail", "Standard", "Consumable"]
+    },
+    "material": {
+      "type": "string"
+    },
+    "mass": {
+      "type": "object",
+      "properties": {
+        "value": { "type": "number", "minimum": 0 },
+        "unit": { "type": "string", "enum": ["kg", "g", "lb"] }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "Review", "Released", "Obsolete"]
+    }
+  }
+}

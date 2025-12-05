@@ -1,0 +1,78 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Template ID: Q100-61-TPL-YAML-MATERIAL
+# Version: 1.0
+# Description: Material Data Schema Template
+
+schema_version: "1.0"
+template_id: "Q100-61-TPL-YAML-MATERIAL"
+
+material:
+  # Identification (Required)
+  material_id: "[REQUIRED: e.g., MAT-AL7075-T6]"
+  name: "[REQUIRED: Material name]"
+  specification: "[REQUIRED: e.g., AMS 4045]"
+  
+  # Classification
+  category: "[Metal | Polymer | Composite | Ceramic | Other]"
+  subcategory: "[Aluminum | Steel | Titanium | CFRP | etc.]"
+  grade: "[Material grade]"
+  temper: "[Temper condition]"
+  
+  # Mechanical Properties
+  mechanical:
+    tensile_strength:
+      ultimate: { value: 0.0, unit: "MPa" }
+      yield: { value: 0.0, unit: "MPa" }
+    elongation: { value: 0.0, unit: "%" }
+    modulus_elasticity: { value: 0.0, unit: "GPa" }
+    poisson_ratio: 0.0
+    hardness: { value: 0.0, unit: "HRC" }
+    fatigue_strength: { value: 0.0, unit: "MPa", cycles: 1e7 }
+  
+  # Physical Properties
+  physical:
+    density: { value: 0.0, unit: "kg/m3" }
+    melting_point: { value: 0.0, unit: "C" }
+    thermal_conductivity: { value: 0.0, unit: "W/m-K" }
+    specific_heat: { value: 0.0, unit: "J/kg-K" }
+    cte: { value: 0.0, unit: "1e-6/C" }
+    electrical_resistivity: { value: 0.0, unit: "ohm-m" }
+  
+  # Chemical Composition
+  composition:
+    - element: "[Element symbol]"
+      min_percent: 0.0
+      max_percent: 0.0
+      nominal_percent: 0.0
+  
+  # Processing
+  processing:
+    form: "[Sheet | Plate | Bar | Forging | Casting]"
+    heat_treatment: ""
+    surface_treatment: ""
+  
+  # Approvals
+  approvals:
+    aerospace_specs: []  # AMS, MIL-SPEC, etc.
+    oem_approvals: []
+  
+  # Document Control
+  document_control:
+    version: "1.0"
+    status: "DRAFT"
+    source: "[Data source]"
+    date_created: ""
+    last_modified: ""

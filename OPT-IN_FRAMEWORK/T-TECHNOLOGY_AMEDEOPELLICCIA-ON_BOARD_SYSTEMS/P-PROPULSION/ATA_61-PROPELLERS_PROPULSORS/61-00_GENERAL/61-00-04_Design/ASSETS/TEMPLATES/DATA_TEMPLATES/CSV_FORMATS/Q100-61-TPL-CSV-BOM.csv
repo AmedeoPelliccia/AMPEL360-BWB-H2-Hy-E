@@ -1,0 +1,4 @@
+Find_Number,Part_Number,Revision,Description,Quantity,Unit,Category,Make_Buy,Material,Mass_kg,Notes
+1,[REQUIRED],[Rev],[Item Description],1,EA,Part,Buy,[Material],0.000,
+2,,,,,EA,,,,,
+3,,,,,EA,,,,,

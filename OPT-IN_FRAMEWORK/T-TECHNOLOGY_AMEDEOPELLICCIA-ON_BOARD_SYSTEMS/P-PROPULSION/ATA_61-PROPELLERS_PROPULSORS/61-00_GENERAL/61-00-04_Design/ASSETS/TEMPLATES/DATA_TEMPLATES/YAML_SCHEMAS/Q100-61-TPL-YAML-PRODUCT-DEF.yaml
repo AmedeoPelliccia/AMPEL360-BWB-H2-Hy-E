@@ -1,0 +1,95 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Template ID: Q100-61-TPL-YAML-PRODUCT-DEF
+# Version: 1.0
+# Description: Product Definition Schema Template
+
+schema_version: "1.0"
+template_id: "Q100-61-TPL-YAML-PRODUCT-DEF"
+
+product:
+  # Identification (Required)
+  product_number: "[REQUIRED: e.g., Q100-61-PROD-001]"
+  revision: "[REQUIRED: e.g., A]"
+  title: "[REQUIRED: Product Title]"
+  description: "[REQUIRED: Brief description]"
+  
+  # Classification
+  ata_chapter: 61
+  category: "PRODUCT"
+  product_type: "[REQUIRED: LRU | SRU | Component]"
+  
+  # Configuration
+  configuration:
+    baseline: "[Configuration baseline ID]"
+    effectivity:
+      aircraft: "[Aircraft model]"
+      from_serial: ""
+      to_serial: ""
+    options: []
+    variants: []
+  
+  # Physical Properties
+  physical:
+    mass:
+      value: 0.0
+      unit: "kg"
+      max_mass: 0.0
+    envelope:
+      length: { value: 0.0, unit: "mm" }
+      width: { value: 0.0, unit: "mm" }
+      height: { value: 0.0, unit: "mm" }
+  
+  # Performance
+  performance:
+    - parameter: "[Parameter name]"
+      value: 0.0
+      unit: "[Unit]"
+      tolerance: 0.0
+      min: 0.0
+      max: 0.0
+  
+  # Top-Level Assemblies
+  assemblies:
+    - assembly_number: "[REQUIRED]"
+      quantity: 1
+      configuration: "Standard"
+  
+  # Interfaces
+  interfaces:
+    mechanical: []
+    electrical: []
+    data: []
+    fluid: []
+  
+  # Certification
+  certification:
+    type_certificate: ""
+    qualification_status: "Pending"  # Pending | Qualified | Certified
+    environmental_category: "[DO-160 category]"
+  
+  # Lifecycle
+  lifecycle:
+    status: "Draft"
+    design_life_hours: 0
+    design_life_cycles: 0
+  
+  # Document Control
+  document_control:
+    version: "1.0"
+    status: "DRAFT"
+    author: ""
+    date_created: ""
+    last_modified: ""

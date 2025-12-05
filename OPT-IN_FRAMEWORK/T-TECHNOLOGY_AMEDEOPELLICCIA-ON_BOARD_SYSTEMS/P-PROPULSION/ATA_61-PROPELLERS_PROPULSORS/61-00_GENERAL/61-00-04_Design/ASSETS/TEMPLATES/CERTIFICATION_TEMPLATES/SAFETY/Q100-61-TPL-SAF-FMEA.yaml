@@ -1,0 +1,68 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Template ID: Q100-61-TPL-SAF-FMEA
+# Version: 1.0
+# Description: FMEA Template
+
+schema_version: "1.0"
+template_id: "Q100-61-TPL-SAF-FMEA"
+
+fmea:
+  header:
+    document_id: "[REQUIRED: e.g., 61-00-04-FMEA-001]"
+    title: "[REQUIRED: FMEA Title]"
+    subject: "[REQUIRED: System/Product]"
+    revision: "A"
+    date: "[YYYY-MM-DD]"
+    analyst: ""
+  
+  scope:
+    system: "[System name]"
+    boundary: "[Analysis boundary]"
+    assumptions: []
+    exclusions: []
+  
+  failure_modes:
+    - id: "FM-001"
+      item: "[REQUIRED: Item/Component]"
+      function: "[Item function]"
+      failure_mode: "[REQUIRED: How it fails]"
+      failure_cause: "[What causes the failure]"
+      local_effect: "[Effect on item]"
+      system_effect: "[Effect on system]"
+      end_effect: "[Effect on aircraft/mission]"
+      severity: 0  # 1-10 scale
+      occurrence: 0  # 1-10 scale
+      detection: 0  # 1-10 scale
+      rpn: 0  # Risk Priority Number = S × O × D
+      current_controls: "[Detection/prevention methods]"
+      recommended_actions: "[Recommended improvements]"
+      responsibility: ""
+      target_date: ""
+      action_taken: ""
+      revised_rpn: 0
+    
+    # Add more failure modes as needed
+  
+  summary:
+    total_failure_modes: 0
+    critical_items: 0
+    high_rpn_items: 0
+  
+  document_control:
+    version: "1.0"
+    status: "DRAFT"
+    author: ""
+    approved_by: ""
