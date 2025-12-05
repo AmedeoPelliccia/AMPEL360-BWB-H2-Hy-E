@@ -732,15 +732,22 @@ jobs:
           CHANGED="${{ steps.prctx.outputs.md_changed }}"
           VV_LAKE="base/cd/vv_lake.json"
 
-               - name: Build checklist summary
+                     - name: Build checklist summary
         run: |
-          CHECKLIST="- [ ] Cross-references validated against: ${VALIDATION_PATHS:-n/a}
-          - [ ] Standards compliance (${STANDARDS:-n/a})
-          - [ ] Traceability links complete"
-
+          CHECKLIST="$CHECKLIST
+          - [ ] Contextual validation for changed files: $CHANGED"
+          
           if [ -n "$CHANGED" ]; then
             CHECKLIST="$CHECKLIST
-          - [ ] Changes reviewed (${CHANGED})"
+            - [ ] Reviewed changes: $CHANGED"
+          fi
+
+          if [ -f "$VV_LAKE" ]; then
+            EXTRA=$(jq -r '.checklists.contextual[]?' "$VV_LAKE" 2>/dev/null | sed 's/^/- [ ] /' || true)
+            if [ -n "$EXTRA" ]; then
+              CHECKLIST="$CHECKLIST
+              $EXTRA"
+            fi
           fi
 
           echo "$CHECKLIST" >> "$GITHUB_STEP_SUMMARY"
