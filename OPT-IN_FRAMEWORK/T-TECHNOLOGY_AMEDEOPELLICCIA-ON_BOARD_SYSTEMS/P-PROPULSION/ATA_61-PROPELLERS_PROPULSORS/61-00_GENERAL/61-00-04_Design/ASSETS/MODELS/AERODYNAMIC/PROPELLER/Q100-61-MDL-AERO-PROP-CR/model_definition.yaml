@@ -1,0 +1,82 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Model Definition: Q100-61-MDL-AERO-PROP-CR
+# Contra-Rotating Propeller CFD Model
+
+model_id: Q100-61-MDL-AERO-PROP-CR
+model_name: Contra-Rotating Propeller CFD Model
+version: 1.0.0
+status: Draft
+
+domain: AERO
+component: PROPELLER
+model_type: CFD
+
+description: |
+  CFD model for the contra-rotating open-rotor propeller configuration.
+  Captures interaction effects between forward and aft blade rows.
+
+software:
+  name: ANSYS CFX
+  version: "2024 R1"
+  license: Commercial
+
+geometry:
+  source: ASSETS/ASSEMBLIES/Q100-61-ASSY-PROP-CR
+  format: STEP
+  components:
+    - forward_rotor
+    - aft_rotor
+    - hub
+
+mesh:
+  type: Structured/unstructured hybrid
+  elements: TBD
+  domain: Full annulus or periodic sector
+  files: mesh/
+
+physics:
+  equations: URANS
+  turbulence_model: k-ω SST
+  unsteady: Yes, for rotor-rotor interaction
+  timestep: Per blade passing period
+
+operating_conditions:
+  reference: MODEL_LIBRARY/STANDARD_CONDITIONS/
+  parameters:
+    forward_rpm: 1800
+    aft_rpm: -1700
+    speed_ratio: 0.944
+
+outputs:
+  - name: total_thrust_N
+    description: Combined thrust
+  - name: net_torque_Nm
+    description: Residual torque
+  - name: interaction_losses
+    description: Efficiency penalty from interaction
+
+traceability:
+  requirements:
+    - REQ-61-AERO-010
+  certification:
+    - CS-25.929
+
+document_control:
+  created_by: AMPEL360 Propulsion Analysis Team
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

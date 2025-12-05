@@ -1,0 +1,211 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Model Definition: Q100-61-MDL-DYN-POWER-SYSTEM
+# Hybrid Power System Dynamics Model
+# CRITICAL MODEL FOR HYBRID-ELECTRIC INTEGRATION
+
+model_id: Q100-61-MDL-DYN-POWER-SYSTEM
+model_name: Hybrid Power System Dynamics Model
+version: 1.0.0
+status: Draft
+
+domain: DYN
+component: POWER_SYSTEM
+model_type: Dynamic_Simulation
+
+description: |
+  **CRITICAL MODEL FOR HYBRID-ELECTRIC PROPULSION**
+  
+  Integrated dynamic model of the hybrid power system combining:
+  - H₂ PEM fuel cell stack
+  - CO₂ battery (closed-loop peak-power buffering)
+  - Power electronics (inverters, DC-DC converters)
+  - DC bus voltage regulation
+  - Power management and load sharing
+  
+  This model is essential for sizing, control design, and mission
+  energy analysis of the AMPEL360-BWB-H2-Hy-E aircraft.
+
+software:
+  name: MATLAB/Simulink Simscape
+  version: "R2024a"
+  alternatives:
+    - Dymola/Modelica
+    - GT-SUITE
+  license: Commercial
+
+subsystems:
+
+  h2_fuel_cell:
+    description: H₂ PEM Fuel Cell Stack Model
+    model_type: Electrochemical + Thermal
+    parameters:
+      stack_power_kW: TBD
+      operating_voltage_V: 200-400
+      operating_current_A: 0-500
+      efficiency_peak_percent: 60
+      response_time_s: 0.5
+      h2_consumption_kg_kWh: TBD
+    phenomena:
+      - Nernst equation (open-circuit voltage)
+      - Activation losses (Tafel equation)
+      - Ohmic losses (membrane resistance)
+      - Concentration losses (mass transport)
+      - Thermal dynamics (cooling coupling)
+    inputs:
+      - h2_pressure_bar
+      - air_flow_kg_s
+      - coolant_temp_C
+      - power_demand_kW
+    outputs:
+      - stack_voltage_V
+      - stack_current_A
+      - h2_consumption_kg_s
+      - heat_rejection_kW
+      - efficiency_percent
+    files: h2_fuel_cell/
+
+  co2_battery:
+    description: CO₂ Battery Closed-Loop Peak-Power Buffer
+    model_type: Electrochemical + Thermal
+    parameters:
+      capacity_kWh: TBD
+      peak_power_kW: TBD
+      discharge_rate_C: 5
+      charge_rate_C: 3
+      round_trip_efficiency: 0.85
+      operating_temp_range_C: 0-45
+    phenomena:
+      - State of charge dynamics
+      - Voltage-SOC relationship
+      - Internal resistance (temperature dependent)
+      - Charge/discharge power limits
+      - Thermal behavior
+    inputs:
+      - power_command_kW
+      - temperature_C
+    outputs:
+      - battery_voltage_V
+      - battery_current_A
+      - state_of_charge
+      - heat_generation_W
+      - available_power_kW
+    files: co2_battery/
+
+  power_electronics:
+    description: Inverters and DC-DC Converters
+    model_type: Average or Switching
+    components:
+      - motor_inverter: 3-phase VSI, 800V DC, TBD kVA
+      - fc_dc_dc: Boost converter, 200-400V to 800V
+      - battery_dc_dc: Bidirectional, 400V to 800V
+    parameters:
+      switching_frequency_kHz: 10
+      efficiency_percent: 98
+    outputs:
+      - inverter_current_A
+      - dc_link_voltage_V
+      - power_flow_kW
+    files: power_electronics/
+
+  dc_bus:
+    description: High-Voltage DC Distribution
+    parameters:
+      nominal_voltage_V: 800
+      voltage_range_V: 650-900
+      capacitance_mF: TBD
+    outputs:
+      - bus_voltage_V
+      - voltage_ripple_V
+
+power_management:
+  description: Load Sharing and Energy Management
+  strategy:
+    - Fuel cell provides base load (high efficiency region)
+    - Battery provides peak power (takeoff, climb)
+    - Battery recharged during cruise (fuel cell excess)
+    - Emergency power capability
+  control_modes:
+    - load_following: FC follows demand, battery supplements
+    - soc_regulation: Maintain battery SOC target
+    - efficiency_optimal: Minimize total H₂ consumption
+    - fault_mode: Degraded operation scenarios
+
+operating_scenarios:
+  - id: DYN01
+    name: Takeoff transient
+    description: Max power demand, battery + FC
+    duration_s: 120
+  - id: DYN02
+    name: Climb
+    description: High power, battery recharge beginning
+    duration_s: 1200
+  - id: DYN03
+    name: Cruise
+    description: Steady state, FC dominant, battery charge
+    duration_s: 14400
+  - id: DYN04
+    name: Descent
+    description: Low power, regeneration possible
+    duration_s: 1200
+  - id: DYN05
+    name: FC failure
+    description: Battery-only emergency power
+    duration_s: 600
+
+outputs:
+  - name: fc_power_kW
+    description: Fuel cell output power
+  - name: battery_power_kW
+    description: Battery power (positive = discharge)
+  - name: motor_power_kW
+    description: Power to propulsion motor
+  - name: dc_bus_voltage_V
+    description: DC bus voltage
+  - name: soc_percent
+    description: Battery state of charge
+  - name: h2_consumption_kg
+    description: Cumulative H₂ used
+  - name: system_efficiency
+    description: Propulsion efficiency (thrust power / H₂ energy)
+  files: results/
+
+validation:
+  method: Hardware-in-the-loop (HIL) testing
+  data_source: Power system test bench
+  metrics:
+    - voltage_accuracy_percent: 2
+    - power_accuracy_percent: 3
+    - soc_accuracy_percent: 5
+
+traceability:
+  requirements:
+    - REQ-61-PWR-001
+    - REQ-61-PWR-002
+    - REQ-61-PWR-003
+    - REQ-61-PERF-010
+  interfaces:
+    - ICD-61-PWR-001
+    - ICD-28-FC-001
+  certification:
+    - CS-25.1309
+    - CS-25.1351
+
+document_control:
+  created_by: AMPEL360 Power Systems Team
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

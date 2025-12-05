@@ -1,0 +1,52 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Material Definition: Q100-61-MAT-COPPER-WINDING
+# Copper for Motor Windings
+
+material_id: Q100-61-MAT-COPPER-WINDING
+material_name: Electrolytic Copper (Magnet Wire)
+category: ELECTROMAGNETIC
+specification: ASTM B3 / IEC 60317
+application: Motor stator windings
+
+electrical:
+  resistivity_ohm_m: 1.72e-8
+  temperature_coefficient_1_K: 0.00393
+  conductivity_percent_IACS: 100
+
+mechanical:
+  density_kg_m3: 8960
+  youngs_modulus_GPa: 117
+  yield_strength_MPa: 70
+  ultimate_strength_MPa: 220
+
+thermal:
+  conductivity_W_mK: 401
+  specific_heat_J_kgK: 385
+  expansion_coeff_1_K: 16.5e-6
+
+insulation:
+  class: H
+  max_temp_C: 180
+  breakdown_voltage_kV: 5
+
+source: CDA Copper Data
+status: Approved
+
+document_control:
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

@@ -1,0 +1,146 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Model Definition: Q100-61-MDL-THM-MOTOR
+# Electric Motor Thermal Management Model
+
+model_id: Q100-61-MDL-THM-MOTOR
+model_name: Electric Motor Thermal Model
+version: 1.0.0
+status: Draft
+
+domain: THM
+component: MOTOR
+model_type: CFD_Network
+
+description: |
+  Thermal management model for the high power-density PMSM electric motor.
+  Predicts winding hot spot temperature, cooling system performance, and
+  thermal derating limits. Critical for hybrid-electric propulsion design.
+
+software:
+  name: Motor-CAD / ANSYS Fluent
+  version: "2024"
+  alternatives:
+    - Star-CCM+
+    - OpenFOAM (CHT)
+  license: Commercial
+
+geometry:
+  source: ASSETS/ASSEMBLIES/Q100-61-ASSY-MOTOR
+  format: STEP
+  components:
+    - stator_core
+    - stator_windings
+    - rotor
+    - housing
+    - cooling_jacket
+
+heat_sources:
+  source: Q100-61-MDL-EM-MOTOR-2D
+  components:
+    - name: copper_losses
+      location: Stator windings
+      type: Volumetric heat generation
+      value: From EM model (I²R + AC losses)
+    - name: iron_losses
+      location: Stator core
+      type: Volumetric heat generation
+      value: From EM model (hysteresis + eddy)
+    - name: magnet_losses
+      location: Rotor magnets
+      type: Volumetric heat generation
+      value: From EM model
+    - name: windage
+      location: Air gap
+      type: Surface heat flux
+      value: Analytical estimate
+  files: heat_sources/
+
+cooling:
+  type: Liquid cooling jacket
+  coolant: Water-glycol 50/50
+  inlet_temperature_C: 40
+  flow_rate_lpm:
+    min: 5
+    design: 15
+    max: 25
+  jacket_design: Spiral or axial channels
+  files: cooling/
+
+operating_conditions:
+  reference: MODEL_LIBRARY/STANDARD_CONDITIONS/
+  ambient_temperature_C:
+    min: -40
+    design: 25
+    max: 55
+  power_profiles:
+    - takeoff: 5 minutes at max power
+    - climb: 20 minutes at 90% power
+    - cruise: Continuous at 60% power
+
+outputs:
+  - name: winding_hotspot_temp_C
+    description: Maximum winding temperature
+    limit: 180 (Class H insulation)
+  - name: magnet_temp_C
+    description: PM temperature
+    limit: 150 (N48SH grade)
+  - name: bearing_temp_C
+    description: Bearing race temperature
+    limit: 120
+  - name: coolant_outlet_temp_C
+    description: Cooling system outlet
+  - name: heat_rejection_kW
+    description: Total heat to coolant
+  - name: thermal_resistance_K_kW
+    description: Winding to coolant R_th
+  files: results/
+
+analysis_cases:
+  - id: THM01
+    name: Continuous cruise
+    description: Steady state at cruise power
+  - id: THM02
+    name: Takeoff transient
+    description: 5-minute max power transient
+  - id: THM03
+    name: Hot day derating
+    description: Performance at ISA+30°C
+  - id: THM04
+    name: Cooling system failure
+    description: Degraded cooling scenario
+
+validation:
+  method: Motor thermal test
+  data_source: Propulsor rig test data
+  metrics:
+    - temperature_accuracy_C: 5
+    - transient_response_accuracy_percent: 10
+
+traceability:
+  requirements:
+    - REQ-61-THM-001
+    - REQ-61-THM-002
+  interfaces:
+    - ICD-61-COOL-001
+  certification:
+    - CS-25.1043
+
+document_control:
+  created_by: AMPEL360 Thermal Analysis Team
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia
