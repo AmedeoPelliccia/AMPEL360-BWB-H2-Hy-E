@@ -11,20 +11,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+#
 # CGen - Continuous Generation
 #
-# This workflow runs AI/automation to generate and update documentation,
-# diagrams, indexes, and traceability artifacts. All changes are proposed
-# via bot PRs for human review - never silent commits.
+# Intención corregida:
+# - CGen SOLO genera o actualiza documentación donde:
+#   * el fichero es nuevo, o
+#   * el fichero está marcado como CGenManaged: true (en su front-matter), o
+#   * el fichero es puramente técnico de CGen (reports, tablas, etc.).
+# - CGen NUNCA debe sobrescribir documentación manual no marcada como CGenManaged.
+# - Todas las modificaciones se proponen vía PR de bot, nunca con commits silenciosos.
 #
-# CGen Lane Responsibilities:
-# - Generate/update documentation, diagrams, indexes
-# - Build traceability artifacts (GenCCC reports, cross-ref maps)
-# - Propose new assets (placeholder docs, skeletons) as PRs
-# - Rebuild indexes and dashboards on schedule
-#
-# Principle: CGen PROPOSES via bot PRs, humans approve
+# Principio: CGen PROPOSES via bot PRs, humans approve.
 
 name: CGen - Continuous Generation
 
@@ -81,6 +79,8 @@ jobs:
           git config user.name "ampel360-cgen-bot"
           git config user.email "ampel360-cgen-bot@users.noreply.github.com"
 
+      # ====== CGen lanes (sin cambios conceptuales) ======
+
       - name: Generate summary tables
         run: |
           echo "=== Generating Summary Tables ==="
@@ -98,7 +98,7 @@ jobs:
           if [ -f tools/genccc/report.py ]; then
             python tools/genccc/report.py || echo "GenCCC baseline report completed with warnings"
           else
-            echo "GenCCC report.py not found - skipping"
+            echo "genccc/report.py not found - skipping"
           fi
 
       - name: Generate traceability matrices
@@ -129,6 +129,8 @@ jobs:
             echo "generate.py not found - skipping"
           fi
 
+      # ====== Detección de cambios brutos ======
+
       - name: Check for changes
         id: check_changes
         run: |
@@ -141,6 +143,91 @@ jobs:
             echo "Changes detected"
           fi
 
+      # ====== Capa de seguridad 1: SOLO ficheros gestionados por CGen ======
+      # Regla:
+      # - Si se modifica un .md dentro de OPT-IN_FRAMEWORK, debe cumplir UNA de estas:
+      #   * Es un fichero NUEVO (A/?? en git status)
+      #   * Contiene 'CGenManaged: true' en su front-matter
+      # En caso contrario, se aborta el workflow y NO se crea PR.
+
+      - name: Validate changed markdown files are CGen-managed
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          echo "=== Validating changed markdown files under OPT-IN_FRAMEWORK ==="
+          git status --short > status.txt
+
+          CHANGED_FILES=$(git diff --name-only)
+          VIOLATIONS=0
+
+          for f in $CHANGED_FILES; do
+            # Solo nos preocupan de .md bajo OPT-IN_FRAMEWORK
+            case "$f" in
+              OPT-IN_FRAMEWORK/*.md|OPT-IN_FRAMEWORK/*/*.md|OPT-IN_FRAMEWORK/*/*/*.md|OPT-IN_FRAMEWORK/*/*/*/*.md)
+                echo "Inspecting $f ..."
+                STATUS_LINE=$(grep " $f$" status.txt || true)
+                CODE="${STATUS_LINE:0:2}"
+
+                # Si es un fichero nuevo (A o ??), lo aceptamos (es un hueco rellenado)
+                if [ "$CODE" = "A " ] || [ "$CODE" = "??" ]; then
+                  echo " -> NEW file (status $CODE), allowed for CGen."
+                  continue
+                fi
+
+                # Si es un fichero existente, debe declararse como CGenManaged: true
+                if ! grep -q 'CGenManaged: true' "$f"; then
+                  echo "::error::File $f was modified but is NOT marked 'CGenManaged: true'."
+                  VIOLATIONS=$((VIOLATIONS+1))
+                else
+                  echo " -> Existing file marked CGenManaged: true, allowed."
+                fi
+                ;;
+              *)
+                # Cambios fuera de OPT-IN_FRAMEWORK o no .md → no aplicamos esta política
+                :
+                ;;
+            esac
+          done
+
+          if [ "$VIOLATIONS" -gt 0 ]; then
+            echo "::error::CGen attempted to modify non-managed markdown files under OPT-IN_FRAMEWORK. Aborting PR creation."
+            exit 1
+          fi
+
+          echo "All modified markdown files under OPT-IN_FRAMEWORK are either new or CGenManaged. OK."
+
+      # ====== Capa de seguridad 2: límite de líneas borradas ======
+      # Regla:
+      # - Si el total de líneas borradas en el diff supera un umbral, se considera sospechoso.
+      #   (Evita borrados masivos por plantillas vacías).
+      # - El umbral se puede ajustar; empezamos conservador (p.ej. 500 líneas).
+
+      - name: Check for destructive changes (line deletions)
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          echo "=== Checking for destructive changes (line deletions) ==="
+          git diff --numstat > diff_numstat.txt || true
+
+          if [ ! -s diff_numstat.txt ]; then
+            echo "No diff stats found, skipping destructive change check."
+            exit 0
+          fi
+
+          TOTAL_DELETED=$(awk '{del+=$2} END {print del}' diff_numstat.txt)
+          echo "Total lines deleted across all files: $TOTAL_DELETED"
+
+          THRESHOLD_DELETIONS=500
+
+          if [ "$TOTAL_DELETED" -gt "$THRESHOLD_DELETIONS" ]; then
+            echo "::error::CGen deleted more than $THRESHOLD_DELETIONS lines ($TOTAL_DELETED). Blocking PR."
+            echo "Diff summary:"
+            cat diff_numstat.txt
+            exit 1
+          fi
+
+          echo "Line deletions within safe threshold. OK."
+
+      # ====== Creación del Pull Request (solo si todo lo anterior ha pasado) ======
+
       - name: Create Pull Request
         if: steps.check_changes.outputs.has_changes == 'true'
         uses: peter-evans/create-pull-request@v6
@@ -151,39 +238,39 @@ jobs:
           title: "CGen: Automated documentation & reports update"
           commit-message: |
             CGen: automated documentation & reports update
-            
+
             Generated by Continuous Generation pipeline:
             - Summary tables updated
             - GenCCC baseline report
             - Traceability matrices
             - Document indexes refreshed
-            
+
             AI assistance: GitHub Copilot, prompted by Amedeo Pelliccia
             Status: DRAFT - Subject to human review and approval
           body: |
             ## CGen Automated Update
-            
+
             This PR contains automated updates from the Continuous Generation pipeline.
-            
+
             ### Changes Include:
             - 📊 Summary tables updated
             - 🔗 GenCCC baseline report
             - 📋 Traceability matrices
             - 📑 Document indexes refreshed
             - 🔄 Cross-reference updates
-            
+
             ### Review Instructions:
             1. Review the generated content for accuracy
             2. Verify cross-references are correct
             3. Check that AI-generated content has proper Document Control sections
             4. Approve and merge if all looks good
-            
+
             ### Document Control
             - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**
             - Status: **DRAFT** – Subject to human review and approval
             - Repository: `AMPEL360-BWB-H2-Hy-E`
             - Last AI update: ${{ github.event.head_commit.timestamp }}
-            
+
             ---
             **CGen Principle**: Propose changes via PR, never silent commits
           labels: |
@@ -209,7 +296,7 @@ jobs:
           if [ "${{ steps.check_changes.outputs.has_changes }}" = "true" ]; then
             echo "✅ Changes detected and committed to branch: \`cgen/update-${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "A pull request has been created for review." >> $GITHUB_STEP_SUMMARY
+            echo "A pull request has been created for review (subject to CGen safety checks)." >> $GITHUB_STEP_SUMMARY
           else
             echo "ℹ️ No changes needed - all artifacts are up to date" >> $GITHUB_STEP_SUMMARY
           fi
@@ -220,4 +307,4 @@ jobs:
           echo "- Traceability matrices" >> $GITHUB_STEP_SUMMARY
           echo "- Document indexes" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**CGen Principle**: Propose via bot PRs, humans approve" >> $GITHUB_STEP_SUMMARY
+          echo "**CGen Principle (corrected)**: Propose via bot PRs, only on managed/placeholder content; humans approve." >> $GITHUB_STEP_SUMMARY
