@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-This document defines the Type Certification Milestone milestone for AMPEL360 BWB-H2-Hy-E, establishing entry and exit criteria, deliverables, and success metrics.
+This document defines the Type Certification Milestone for AMPEL360 BWB-H2-Hy-E, establishing entry and exit criteria, deliverables, and success metrics.
 
 ## 2. Scope
 
