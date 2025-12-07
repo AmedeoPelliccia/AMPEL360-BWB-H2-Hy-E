@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Q100-61-TPL-SYM-WELD.svg
+  Welding Symbol Library
+  
+  Template for AMPEL360-BWB-H2-Hy-E Q100 Program
+  ATA Chapter 61 - Propellers/Propulsors
+  
+  Reference Standard: AWS A2.4
+  
+  Usage:
+  - Import into drawing
+  - Copy required symbols
+  - Scale and position as needed
+-->
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="200mm" height="120mm" 
+     viewBox="0 0 200 120">
+  
+  <!-- Symbol Library Header -->
+  <text x="100" y="8" font-size="5" font-weight="bold" text-anchor="middle">
+    WELDING SYMBOL LIBRARY (AWS A2.4)
+  </text>
+  
+  <!-- Fillet Welds Section -->
+  <g transform="translate(5, 15)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">FILLET WELDS</text>
+    
+    <!-- Fillet Weld Arrow Side -->
+    <g transform="translate(0, 5)">
+      <polygon points="0,8 8,8 8,0" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Fillet (Arrow Side)</text>
+    </g>
+    
+    <!-- Fillet Weld Other Side -->
+    <g transform="translate(60, 5)">
+      <polygon points="0,0 8,0 8,8" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Fillet (Other Side)</text>
+    </g>
+  </g>
+  
+  <!-- Groove Welds Section -->
+  <g transform="translate(5, 35)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">GROOVE WELDS</text>
+    
+    <!-- V-Groove -->
+    <g transform="translate(0, 5)">
+      <polygon points="0,8 4,0 8,8" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">V-Groove</text>
+    </g>
+    
+    <!-- Bevel -->
+    <g transform="translate(45, 5)">
+      <polygon points="0,8 4,0 4,8" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Bevel</text>
+    </g>
+    
+    <!-- U-Groove -->
+    <g transform="translate(90, 5)">
+      <path d="M 0 8 L 0 4 Q 4 0 8 4 L 8 8" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">U-Groove</text>
+    </g>
+    
+    <!-- J-Groove -->
+    <g transform="translate(135, 5)">
+      <path d="M 0 8 L 0 4 Q 4 0 4 4 L 4 8" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">J-Groove</text>
+    </g>
+  </g>
+  
+  <!-- Plug and Slot Welds Section -->
+  <g transform="translate(5, 55)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">PLUG &amp; SLOT WELDS</text>
+    
+    <!-- Plug Weld -->
+    <g transform="translate(0, 5)">
+      <rect x="0" y="0" width="8" height="8" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Plug Weld</text>
+    </g>
+    
+    <!-- Slot Weld -->
+    <g transform="translate(50, 5)">
+      <rect x="0" y="2" width="12" height="4" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="16" y="6" font-size="2.5">Slot Weld</text>
+    </g>
+  </g>
+  
+  <!-- Seam and Spot Welds Section -->
+  <g transform="translate(5, 75)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">SEAM &amp; SPOT WELDS</text>
+    
+    <!-- Spot Weld -->
+    <g transform="translate(0, 5)">
+      <circle cx="4" cy="4" r="4" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Spot Weld</text>
+    </g>
+    
+    <!-- Seam Weld -->
+    <g transform="translate(50, 5)">
+      <ellipse cx="6" cy="4" rx="6" ry="4" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="16" y="6" font-size="2.5">Seam Weld</text>
+    </g>
+  </g>
+  
+  <!-- Supplementary Symbols Section -->
+  <g transform="translate(5, 95)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">SUPPLEMENTARY SYMBOLS</text>
+    
+    <!-- Weld All Around -->
+    <g transform="translate(0, 5)">
+      <circle cx="4" cy="4" r="4" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Weld All Around</text>
+    </g>
+    
+    <!-- Field Weld -->
+    <g transform="translate(55, 5)">
+      <polygon points="0,8 4,0 8,8" fill="#000" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Field Weld</text>
+    </g>
+    
+    <!-- Flush Contour -->
+    <g transform="translate(110, 5)">
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Flush Contour</text>
+    </g>
+    
+    <!-- Convex Contour -->
+    <g transform="translate(155, 5)">
+      <path d="M 0 6 Q 4 0 8 6" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">Convex</text>
+    </g>
+  </g>
+  
+</svg>

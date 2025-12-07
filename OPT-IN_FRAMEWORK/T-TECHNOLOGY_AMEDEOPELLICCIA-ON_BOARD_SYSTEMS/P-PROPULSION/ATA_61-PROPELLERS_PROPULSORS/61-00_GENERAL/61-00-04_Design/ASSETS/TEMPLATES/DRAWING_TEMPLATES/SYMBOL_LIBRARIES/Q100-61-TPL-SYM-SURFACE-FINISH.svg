@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Q100-61-TPL-SYM-SURFACE-FINISH.svg
+  Surface Finish Symbol Library
+  
+  Template for AMPEL360-BWB-H2-Hy-E Q100 Program
+  ATA Chapter 61 - Propellers/Propulsors
+  
+  Reference Standards: ISO 1302, ASME Y14.36
+  
+  Usage:
+  - Import into drawing
+  - Copy required symbols
+  - Scale and position as needed
+-->
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="180mm" height="100mm" 
+     viewBox="0 0 180 100">
+  
+  <!-- Symbol Library Header -->
+  <text x="90" y="8" font-size="5" font-weight="bold" text-anchor="middle">
+    SURFACE FINISH SYMBOL LIBRARY (ISO 1302)
+  </text>
+  
+  <!-- Basic Surface Symbols Section -->
+  <g transform="translate(5, 15)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">BASIC SURFACE SYMBOLS</text>
+    
+    <!-- Basic Symbol (any process) -->
+    <g transform="translate(0, 5)">
+      <path d="M 0 10 L 5 0 L 10 10" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="15" y="7" font-size="2.5">Basic (any process)</text>
+    </g>
+    
+    <!-- Material Removal Required -->
+    <g transform="translate(60, 5)">
+      <path d="M 0 10 L 5 0 L 10 10" fill="none" stroke="#000" stroke-width="0.5"/>
+      <line x1="0" y1="5" x2="10" y2="5" stroke="#000" stroke-width="0.5"/>
+      <text x="15" y="7" font-size="2.5">Material removal required</text>
+    </g>
+    
+    <!-- Material Removal Prohibited -->
+    <g transform="translate(130, 5)">
+      <path d="M 0 10 L 5 0 L 10 10" fill="none" stroke="#000" stroke-width="0.5"/>
+      <circle cx="5" cy="5" r="3" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="15" y="7" font-size="2.5">No removal</text>
+    </g>
+  </g>
+  
+  <!-- Surface Roughness Values Section -->
+  <g transform="translate(5, 40)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">ROUGHNESS VALUES</text>
+    
+    <!-- Ra Value Example -->
+    <g transform="translate(0, 5)">
+      <path d="M 0 12 L 6 0 L 12 12" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="3" y="7" font-size="3">Ra</text>
+      <text x="8" y="5" font-size="2.5">3.2</text>
+      <text x="18" y="8" font-size="2.5">Ra = 3.2 μm</text>
+    </g>
+    
+    <!-- Rz Value Example -->
+    <g transform="translate(70, 5)">
+      <path d="M 0 12 L 6 0 L 12 12" fill="none" stroke="#000" stroke-width="0.5"/>
+      <text x="3" y="7" font-size="3">Rz</text>
+      <text x="8" y="5" font-size="2.5">12.5</text>
+      <text x="18" y="8" font-size="2.5">Rz = 12.5 μm</text>
+    </g>
+  </g>
+  
+  <!-- Lay Direction Symbols Section -->
+  <g transform="translate(5, 65)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">LAY DIRECTION SYMBOLS</text>
+    
+    <!-- Parallel -->
+    <g transform="translate(0, 5)">
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">= Parallel to edge</text>
+    </g>
+    
+    <!-- Perpendicular -->
+    <g transform="translate(55, 5)">
+      <line x1="4" y1="0" x2="4" y2="8" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">⊥ Perpendicular</text>
+    </g>
+    
+    <!-- Crossed -->
+    <g transform="translate(110, 5)">
+      <line x1="0" y1="8" x2="8" y2="0" stroke="#000" stroke-width="0.5"/>
+      <line x1="0" y1="0" x2="8" y2="8" stroke="#000" stroke-width="0.5"/>
+      <text x="12" y="6" font-size="2.5">X Crossed</text>
+    </g>
+  </g>
+  
+  <!-- Common Ra Values Reference -->
+  <g transform="translate(5, 85)">
+    <text x="0" y="0" font-size="3.5" font-weight="bold">COMMON Ra VALUES (μm)</text>
+    <text x="0" y="8" font-size="2.5">0.4 | 0.8 | 1.6 | 3.2 | 6.3 | 12.5 | 25 | 50</text>
+  </g>
+  
+</svg>

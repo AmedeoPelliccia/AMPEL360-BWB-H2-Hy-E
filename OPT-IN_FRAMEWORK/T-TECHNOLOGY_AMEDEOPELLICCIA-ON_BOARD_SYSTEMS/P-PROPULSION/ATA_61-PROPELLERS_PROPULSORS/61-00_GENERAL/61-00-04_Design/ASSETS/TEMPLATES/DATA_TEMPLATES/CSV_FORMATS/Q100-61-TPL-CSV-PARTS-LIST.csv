@@ -1,0 +1,3 @@
+Part_Number,Revision,Description,Category,Material,Mass_kg,Make_Buy,Supplier,Lead_Time_Days,Status,Notes
+[REQUIRED],[Rev],[Description],Part,[Material],0.000,Buy,[Supplier],0,Draft,
+,,,,,,,,,,

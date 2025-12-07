@@ -1,0 +1,74 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Template ID: Q100-61-TPL-SAF-FTA
+# Version: 1.0
+# Description: Fault Tree Analysis Template
+
+schema_version: "1.0"
+template_id: "Q100-61-TPL-SAF-FTA"
+
+fta:
+  header:
+    document_id: "[REQUIRED: e.g., 61-00-04-FTA-001]"
+    title: "[REQUIRED: FTA Title]"
+    subject: "[REQUIRED: System/Product]"
+    revision: "A"
+    date: "[YYYY-MM-DD]"
+    analyst: ""
+  
+  top_event:
+    id: "TE-001"
+    description: "[REQUIRED: Top undesired event]"
+    safety_objective: "[Required probability]"
+  
+  gates:
+    - id: "G-001"
+      type: "OR"  # OR | AND | INHIBIT | PRIORITY_AND
+      inputs: ["BE-001", "BE-002"]
+      output: "TE-001"
+      description: "[Gate description]"
+    
+    # Add more gates as needed
+  
+  basic_events:
+    - id: "BE-001"
+      description: "[REQUIRED: Basic event description]"
+      probability: 0.0  # Probability of occurrence
+      source: "[Data source]"
+      notes: ""
+    
+    - id: "BE-002"
+      description: ""
+      probability: 0.0
+      source: ""
+      notes: ""
+  
+  cut_sets:
+    minimal_cut_sets:
+      - order: 1
+        events: ["BE-001"]
+        probability: 0.0
+    # Add more cut sets
+  
+  results:
+    top_event_probability: 0.0
+    safety_objective_met: false
+    dominant_contributors: []
+  
+  document_control:
+    version: "1.0"
+    status: "DRAFT"
+    author: ""
+    approved_by: ""
