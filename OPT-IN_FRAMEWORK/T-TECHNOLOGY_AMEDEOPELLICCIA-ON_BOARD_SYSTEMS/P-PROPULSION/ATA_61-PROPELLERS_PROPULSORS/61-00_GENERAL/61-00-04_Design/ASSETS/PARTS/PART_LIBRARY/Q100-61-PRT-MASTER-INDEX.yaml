@@ -1,0 +1,415 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-PRT-MASTER-INDEX — Master Index of Parts for ATA 61
+# This file maintains the authoritative list of all parts for the
+# Q100 program propulsion system (ATA 61 - Propellers/Propulsors).
+
+version: 1
+ata_chapter: "61"
+program: "Q100"
+owner: "AMPEL360 Propulsion Engineering"
+last_updated: "2025-12-05"
+status: "Draft"
+
+# Naming Convention Reference
+naming_convention:
+  pattern: "Q100-61-PRT-[SYSTEM]-[COMPONENT]"
+  systems:
+    FAN: "Fan components"
+    NACELLE: "Nacelle components"
+    GEARBOX: "Gearbox components"
+    MOTOR: "Motor components"
+    CTRL: "Controller components"
+    PROP: "Propeller components"
+    MNT: "Mounting components"
+    STD: "Standard parts"
+
+# Parts Registry by Category
+parts:
+  # Fan Components (5 parts)
+  fan_components:
+    category: "FAN_COMPONENTS"
+    description: "Fan blades, hub, spinner, and related components"
+    parts:
+      - id: "Q100-61-PRT-FAN-BLADE"
+        name: "Fan Blade"
+        description: "High-efficiency composite fan blade with variable pitch capability"
+        material: "CFRP Composite"
+        status: "Draft"
+        revision: "A"
+        location: "./FAN_COMPONENTS/Q100-61-PRT-FAN-BLADE/"
+
+      - id: "Q100-61-PRT-FAN-HUB"
+        name: "Fan Hub"
+        description: "Central mounting hub with pitch bearing interfaces"
+        material: "Ti-6Al-4V"
+        status: "Draft"
+        revision: "A"
+        location: "./FAN_COMPONENTS/Q100-61-PRT-FAN-HUB/"
+
+      - id: "Q100-61-PRT-FAN-SPINNER"
+        name: "Fan Spinner"
+        description: "Aerodynamic nose cone with de-icing provisions"
+        material: "Aluminum Alloy"
+        status: "Draft"
+        revision: "A"
+        location: "./FAN_COMPONENTS/Q100-61-PRT-FAN-SPINNER/"
+
+      - id: "Q100-61-PRT-FAN-RETENTION"
+        name: "Blade Retention"
+        description: "Blade root retention hardware and locking mechanism"
+        material: "High-Strength Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./FAN_COMPONENTS/Q100-61-PRT-FAN-RETENTION/"
+
+      - id: "Q100-61-PRT-FAN-PITCH-MECHANISM"
+        name: "Pitch Mechanism"
+        description: "Variable pitch actuation mechanism"
+        material: "Steel/Aluminum"
+        status: "Draft"
+        revision: "A"
+        location: "./FAN_COMPONENTS/Q100-61-PRT-FAN-PITCH-MECHANISM/"
+
+  # Nacelle Components (5 parts)
+  nacelle_components:
+    category: "NACELLE_COMPONENTS"
+    description: "Nacelle structure, liners, and thrust reverser"
+    parts:
+      - id: "Q100-61-PRT-NACELLE-OUTER-BARREL"
+        name: "Outer Barrel"
+        description: "External nacelle skin with aerodynamic contour"
+        material: "CFRP Composite"
+        status: "Draft"
+        revision: "A"
+        location: "./NACELLE_COMPONENTS/Q100-61-PRT-NACELLE-OUTER-BARREL/"
+
+      - id: "Q100-61-PRT-NACELLE-INNER-BARREL"
+        name: "Inner Barrel"
+        description: "Internal flow path lining"
+        material: "Composite"
+        status: "Draft"
+        revision: "A"
+        location: "./NACELLE_COMPONENTS/Q100-61-PRT-NACELLE-INNER-BARREL/"
+
+      - id: "Q100-61-PRT-NACELLE-INLET-LIP"
+        name: "Inlet Lip"
+        description: "Leading edge inlet with anti-ice provisions"
+        material: "Aluminum Alloy"
+        status: "Draft"
+        revision: "A"
+        location: "./NACELLE_COMPONENTS/Q100-61-PRT-NACELLE-INLET-LIP/"
+
+      - id: "Q100-61-PRT-NACELLE-ACOUSTIC-LINER"
+        name: "Acoustic Liner"
+        description: "Sound-absorbing treatment panels"
+        material: "Honeycomb Core"
+        status: "Draft"
+        revision: "A"
+        location: "./NACELLE_COMPONENTS/Q100-61-PRT-NACELLE-ACOUSTIC-LINER/"
+
+      - id: "Q100-61-PRT-NACELLE-THRUST-REVERSER"
+        name: "Thrust Reverser"
+        description: "Thrust reverser structure and actuation"
+        material: "Composite/Aluminum"
+        status: "Draft"
+        revision: "A"
+        location: "./NACELLE_COMPONENTS/Q100-61-PRT-NACELLE-THRUST-REVERSER/"
+
+  # Gearbox Components (6 parts)
+  gearbox_components:
+    category: "GEARBOX_COMPONENTS"
+    description: "Planetary gearset and housing components"
+    parts:
+      - id: "Q100-61-PRT-GEARBOX-SUN-GEAR"
+        name: "Sun Gear"
+        description: "Central input gear of planetary gearset"
+        material: "AISI 9310 Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./GEARBOX_COMPONENTS/Q100-61-PRT-GEARBOX-SUN-GEAR/"
+
+      - id: "Q100-61-PRT-GEARBOX-PLANET-GEAR"
+        name: "Planet Gear"
+        description: "Intermediate planet gears"
+        material: "Case-Hardened Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./GEARBOX_COMPONENTS/Q100-61-PRT-GEARBOX-PLANET-GEAR/"
+
+      - id: "Q100-61-PRT-GEARBOX-RING-GEAR"
+        name: "Ring Gear"
+        description: "Outer ring gear with internal teeth"
+        material: "Case-Hardened Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./GEARBOX_COMPONENTS/Q100-61-PRT-GEARBOX-RING-GEAR/"
+
+      - id: "Q100-61-PRT-GEARBOX-CARRIER"
+        name: "Planet Carrier"
+        description: "Carrier structure supporting planet gears"
+        material: "Ti-6Al-4V"
+        status: "Draft"
+        revision: "A"
+        location: "./GEARBOX_COMPONENTS/Q100-61-PRT-GEARBOX-CARRIER/"
+
+      - id: "Q100-61-PRT-GEARBOX-HOUSING"
+        name: "Gearbox Housing"
+        description: "Main housing structure with oil galleries"
+        material: "Cast Aluminum A356"
+        status: "Draft"
+        revision: "A"
+        location: "./GEARBOX_COMPONENTS/Q100-61-PRT-GEARBOX-HOUSING/"
+
+      - id: "Q100-61-PRT-GEARBOX-BEARING"
+        name: "Gearbox Bearing"
+        description: "Main shaft and planet bearings"
+        material: "52100 Bearing Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./GEARBOX_COMPONENTS/Q100-61-PRT-GEARBOX-BEARING/"
+
+  # Motor Components (9 parts)
+  motor_components:
+    category: "MOTOR_COMPONENTS"
+    description: "Electric motor stator, rotor, housing, and shaft"
+    parts:
+      - id: "Q100-61-PRT-MOTOR-STATOR-CORE"
+        name: "Stator Core"
+        description: "Laminated silicon steel stator core"
+        material: "M19 Silicon Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-STATOR-CORE/"
+
+      - id: "Q100-61-PRT-MOTOR-STATOR-WINDING"
+        name: "Stator Winding"
+        description: "Concentrated or distributed winding assembly"
+        material: "Copper"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-STATOR-WINDING/"
+
+      - id: "Q100-61-PRT-MOTOR-ROTOR-CORE"
+        name: "Rotor Core"
+        description: "Laminated rotor core with magnet pockets"
+        material: "M19 Silicon Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-ROTOR-CORE/"
+
+      - id: "Q100-61-PRT-MOTOR-ROTOR-MAGNET"
+        name: "Rotor Magnet"
+        description: "Rare-earth permanent magnets (NdFeB)"
+        material: "NdFeB N42SH"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-ROTOR-MAGNET/"
+
+      - id: "Q100-61-PRT-MOTOR-HOUSING"
+        name: "Motor Housing"
+        description: "Main housing with cooling jacket integration"
+        material: "Cast Aluminum A356-T6"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-HOUSING/"
+
+      - id: "Q100-61-PRT-MOTOR-END-BELL-DE"
+        name: "End Bell (Drive End)"
+        description: "Drive-end bearing housing"
+        material: "Cast Aluminum"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-END-BELL-DE/"
+
+      - id: "Q100-61-PRT-MOTOR-END-BELL-NDE"
+        name: "End Bell (Non-Drive End)"
+        description: "Non-drive-end bearing housing with resolver"
+        material: "Cast Aluminum"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-END-BELL-NDE/"
+
+      - id: "Q100-61-PRT-MOTOR-SHAFT"
+        name: "Motor Shaft"
+        description: "High-speed main shaft"
+        material: "4340 Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-SHAFT/"
+
+      - id: "Q100-61-PRT-MOTOR-COOLING-JACKET"
+        name: "Cooling Jacket"
+        description: "Liquid cooling jacket for thermal management"
+        material: "Aluminum Alloy"
+        status: "Draft"
+        revision: "A"
+        location: "./MOTOR_COMPONENTS/Q100-61-PRT-MOTOR-COOLING-JACKET/"
+
+  # Controller Components (4 parts)
+  controller_components:
+    category: "CONTROLLER_COMPONENTS"
+    description: "Motor controller enclosure, heatsink, and power electronics"
+    parts:
+      - id: "Q100-61-PRT-CTRL-ENCLOSURE"
+        name: "Controller Enclosure"
+        description: "Main housing for power electronics"
+        material: "Cast Aluminum"
+        status: "Draft"
+        revision: "A"
+        location: "./CONTROLLER_COMPONENTS/Q100-61-PRT-CTRL-ENCLOSURE/"
+
+      - id: "Q100-61-PRT-CTRL-HEATSINK"
+        name: "Controller Heatsink"
+        description: "Thermal management baseplate"
+        material: "Aluminum 6061-T6"
+        status: "Draft"
+        revision: "A"
+        location: "./CONTROLLER_COMPONENTS/Q100-61-PRT-CTRL-HEATSINK/"
+
+      - id: "Q100-61-PRT-CTRL-POWER-MODULE"
+        name: "Power Module"
+        description: "IGBT/SiC power semiconductor module"
+        material: "Various"
+        status: "Draft"
+        revision: "A"
+        location: "./CONTROLLER_COMPONENTS/Q100-61-PRT-CTRL-POWER-MODULE/"
+
+      - id: "Q100-61-PRT-CTRL-BUSBAR"
+        name: "DC Busbar"
+        description: "High-current DC distribution bar"
+        material: "Copper, Nickel Plated"
+        status: "Draft"
+        revision: "A"
+        location: "./CONTROLLER_COMPONENTS/Q100-61-PRT-CTRL-BUSBAR/"
+
+  # Propeller Components (6 parts)
+  propeller_components:
+    category: "PROPELLER_COMPONENTS"
+    description: "Propeller blades and pitch control mechanisms"
+    parts:
+      - id: "Q100-61-PRT-PROP-BLADE-FWD"
+        name: "Forward Propeller Blade"
+        description: "Forward-rotating propeller blade"
+        material: "CFRP Composite"
+        status: "Draft"
+        revision: "A"
+        location: "./PROPELLER_COMPONENTS/Q100-61-PRT-PROP-BLADE-FWD/"
+
+      - id: "Q100-61-PRT-PROP-BLADE-AFT"
+        name: "Aft Propeller Blade"
+        description: "Aft-rotating propeller blade (counter-rotation)"
+        material: "CFRP Composite"
+        status: "Draft"
+        revision: "A"
+        location: "./PROPELLER_COMPONENTS/Q100-61-PRT-PROP-BLADE-AFT/"
+
+      - id: "Q100-61-PRT-PROP-PITCH-ACTUATOR"
+        name: "Pitch Actuator"
+        description: "Hydraulic or electric pitch change actuator"
+        material: "Steel/Aluminum"
+        status: "Draft"
+        revision: "A"
+        location: "./PROPELLER_COMPONENTS/Q100-61-PRT-PROP-PITCH-ACTUATOR/"
+
+      - id: "Q100-61-PRT-PROP-PITCH-LINK"
+        name: "Pitch Link"
+        description: "Mechanical linkage for pitch actuation"
+        material: "Ti-6Al-4V"
+        status: "Draft"
+        revision: "A"
+        location: "./PROPELLER_COMPONENTS/Q100-61-PRT-PROP-PITCH-LINK/"
+
+      - id: "Q100-61-PRT-PROP-BETA-TUBE"
+        name: "Beta Tube"
+        description: "Central pitch control tube"
+        material: "Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./PROPELLER_COMPONENTS/Q100-61-PRT-PROP-BETA-TUBE/"
+
+      - id: "Q100-61-PRT-PROP-BLADE-BEARING"
+        name: "Blade Bearing"
+        description: "Blade root pitch bearing"
+        material: "52100 Bearing Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./PROPELLER_COMPONENTS/Q100-61-PRT-PROP-BLADE-BEARING/"
+
+  # Mounting Components (5 parts)
+  mounting_components:
+    category: "MOUNTING_COMPONENTS"
+    description: "Propulsor mounting and structural attachment"
+    parts:
+      - id: "Q100-61-PRT-MNT-FWD-MOUNT"
+        name: "Forward Mount"
+        description: "Forward thrust and vertical load mount"
+        material: "Ti-6Al-4V"
+        status: "Draft"
+        revision: "A"
+        location: "./MOUNTING_COMPONENTS/Q100-61-PRT-MNT-FWD-MOUNT/"
+
+      - id: "Q100-61-PRT-MNT-AFT-MOUNT"
+        name: "Aft Mount"
+        description: "Aft vertical and lateral load mount"
+        material: "Ti-6Al-4V"
+        status: "Draft"
+        revision: "A"
+        location: "./MOUNTING_COMPONENTS/Q100-61-PRT-MNT-AFT-MOUNT/"
+
+      - id: "Q100-61-PRT-MNT-THRUST-LINK"
+        name: "Thrust Link"
+        description: "Primary thrust reaction link"
+        material: "4340 Steel"
+        status: "Draft"
+        revision: "A"
+        location: "./MOUNTING_COMPONENTS/Q100-61-PRT-MNT-THRUST-LINK/"
+
+      - id: "Q100-61-PRT-MNT-SIDE-LINK"
+        name: "Side Link"
+        description: "Lateral load reaction link"
+        material: "Ti-6Al-4V"
+        status: "Draft"
+        revision: "A"
+        location: "./MOUNTING_COMPONENTS/Q100-61-PRT-MNT-SIDE-LINK/"
+
+      - id: "Q100-61-PRT-MNT-VIBRATION-DAMPER"
+        name: "Vibration Damper"
+        description: "Elastomeric vibration isolation mount"
+        material: "Metal-Bonded Elastomer"
+        status: "Draft"
+        revision: "A"
+        location: "./MOUNTING_COMPONENTS/Q100-61-PRT-MNT-VIBRATION-DAMPER/"
+
+# Summary Statistics
+summary:
+  total_custom_parts: 40
+  categories:
+    fan_components: 5
+    nacelle_components: 5
+    gearbox_components: 6
+    motor_components: 9
+    controller_components: 4
+    propeller_components: 6
+    mounting_components: 5
+
+# Program Context
+program_context:
+  aircraft: "AMPEL360-BWB-H2-Hy-E"
+  propulsion_type: "Hybrid H₂ PEM fuel-cells with open-fan propulsors"
+  energy_storage: "Closed-loop CO₂ battery for peak-power buffering"
+  fuel_compatibility: "SAF compatible"
