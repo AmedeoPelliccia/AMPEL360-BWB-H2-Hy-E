@@ -26,7 +26,7 @@ ChangeLog:
 
 ## 1. Purpose
 
-This document establishes standards and requirements for **gse downtime management** supporting the AMPEL360 BWB H₂ Hy-E aircraft Ground Support Equipment operations.
+This document establishes standards and requirements for **GSE downtime reduction and management strategies** supporting the AMPEL360 BWB H₂ Hy-E aircraft Ground Support Equipment operations.
 
 ## 2. Scope
 

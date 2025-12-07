@@ -26,7 +26,7 @@ ChangeLog:
 
 ## 1. Purpose
 
-This document establishes standards and requirements for **gse sustainment plan** supporting the AMPEL360 BWB H₂ Hy-E aircraft Ground Support Equipment operations.
+This document establishes standards and requirements for **GSE sustainment planning and lifecycle support strategy** supporting the AMPEL360 BWB H₂ Hy-E aircraft Ground Support Equipment operations.
 
 ## 2. Scope
 
