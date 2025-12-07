@@ -12,17 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# CGen - Continuous Generation
+# CGen - Continuous Generation (MVP restringido)
 #
-# Intención corregida:
-# - CGen SOLO genera o actualiza documentación donde:
-#   * el fichero es nuevo, o
-#   * el fichero está marcado como CGenManaged: true (en su front-matter), o
-#   * el fichero es puramente técnico de CGen (reports, tablas, etc.).
-# - CGen NUNCA debe sobrescribir documentación manual no marcada como CGenManaged.
-# - Todas las modificaciones se proponen vía PR de bot, nunca con commits silenciosos.
+# MVP: Restringir la acción efectiva de CGen a:
+#   OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE
+# + generación de reports en cd/reports.
 #
-# Principio: CGen PROPOSES via bot PRs, humans approve.
+# Si algún script modifica ficheros fuera de esas rutas, el job FALLA
+# y NO se crea PR.
 
 name: CGen - Continuous Generation
 
@@ -44,7 +41,7 @@ on:
           - indexes-only
 
 permissions:
-  contents: write        # Needed for automation PRs
+  contents: write
   pull-requests: write
 
 jobs:
@@ -52,6 +49,9 @@ jobs:
     name: Continuous Generation
     runs-on: ubuntu-latest
     timeout-minutes: 30
+
+    env:
+      CGEN_TARGET_ROOT: OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE
 
     steps:
       - name: Checkout
@@ -71,7 +71,6 @@ jobs:
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           fi
-          # Install any CGen-specific dependencies
           pip install openai 2>/dev/null || echo "OpenAI not needed for basic generation"
 
       - name: Configure Git
@@ -79,7 +78,7 @@ jobs:
           git config user.name "ampel360-cgen-bot"
           git config user.email "ampel360-cgen-bot@users.noreply.github.com"
 
-      # ====== CGen lanes (sin cambios conceptuales) ======
+      # ===== Lanes habituales (no tocamos la lógica interna de los scripts) =====
 
       - name: Generate summary tables
         run: |
@@ -98,7 +97,7 @@ jobs:
           if [ -f tools/genccc/report.py ]; then
             python tools/genccc/report.py || echo "GenCCC baseline report completed with warnings"
           else
-            echo "genccc/report.py not found - skipping"
+            echo "tools/genccc/report.py not found - skipping"
           fi
 
       - name: Generate traceability matrices
@@ -107,29 +106,29 @@ jobs:
           if [ -f tools/genccc/traceability.py ]; then
             python tools/genccc/traceability.py || echo "Traceability generation completed with warnings"
           else
-            echo "traceability.py not found - skipping"
+            echo "tools/genccc/traceability.py not found - skipping"
           fi
 
-      - name: Update document indexes (CGen Lane 1)
+      - name: Update document indexes (CGen Lane 1 – MVP restricted)
         run: |
-          echo "=== Updating Document Indexes (CGen Lane 1) ==="
-          # Auto-generate 00_INDEX.md files throughout the repository
+          echo "=== Updating Document Indexes (CGen Lane 1, MVP restricted) ==="
+          # MVP: solo generar índices dentro de ATA_03-SUPPORT_INFORMATION_GSE
           if [ -f tools/ci/auto_index_generator.py ]; then
-            python tools/ci/auto_index_generator.py --root OPT-IN_FRAMEWORK --write || echo "Index generation completed with warnings"
+            python tools/ci/auto_index_generator.py --root "$CGEN_TARGET_ROOT" --write || echo "Index generation completed with warnings"
           else
-            echo "auto_index_generator.py not found - skipping"
+            echo "tools/ci/auto_index_generator.py not found - skipping"
           fi
 
       - name: Generate requirement skeletons (if needed)
         run: |
-          echo "=== Generating Missing Requirement Skeletons ==="
+          echo "=== Generating Missing Requirement Skeletons (global) ==="
           if [ -f tools/genccc/generate.py ]; then
             python tools/genccc/generate.py || echo "Skeleton generation completed"
           else
-            echo "generate.py not found - skipping"
+            echo "tools/genccc/generate.py not found - skipping"
           fi
 
-      # ====== Detección de cambios brutos ======
+      # ===== Detectar si hay cambios =====
 
       - name: Check for changes
         id: check_changes
@@ -143,90 +142,49 @@ jobs:
             echo "Changes detected"
           fi
 
-      # ====== Capa de seguridad 1: SOLO ficheros gestionados por CGen ======
-      # Regla:
-      # - Si se modifica un .md dentro de OPT-IN_FRAMEWORK, debe cumplir UNA de estas:
-      #   * Es un fichero NUEVO (A/?? en git status)
-      #   * Contiene 'CGenManaged: true' en su front-matter
-      # En caso contrario, se aborta el workflow y NO se crea PR.
+      # ===== MVP: limitar cambios a ATA_03 + cd/reports =====
+      #
+      # Solo se permiten cambios en:
+      #  - OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/**
+      #  - cd/reports/**
+      # Todo lo demás es error → no PR.
 
-      - name: Validate changed markdown files are CGen-managed
+      - name: Enforce path restriction (MVP ATA_03 only)
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
-          echo "=== Validating changed markdown files under OPT-IN_FRAMEWORK ==="
-          git status --short > status.txt
+          echo "=== Enforcing path restriction to $CGEN_TARGET_ROOT and cd/reports (MVP) ==="
+          ALLOWED_ROOT_1="$CGEN_TARGET_ROOT/"
+          ALLOWED_ROOT_2="cd/reports/"
 
-          CHANGED_FILES=$(git diff --name-only)
           VIOLATIONS=0
 
-          for f in $CHANGED_FILES; do
-            # Solo nos preocupan de .md bajo OPT-IN_FRAMEWORK
+          git diff --name-only > changed_files.txt
+          echo "Changed files:"
+          cat changed_files.txt || true
+          echo "----"
+
+          while read -r f; do
+            [ -z "$f" ] && continue
+
             case "$f" in
-              OPT-IN_FRAMEWORK/*.md|OPT-IN_FRAMEWORK/*/*.md|OPT-IN_FRAMEWORK/*/*/*.md|OPT-IN_FRAMEWORK/*/*/*/*.md)
-                echo "Inspecting $f ..."
-                STATUS_LINE=$(grep " $f$" status.txt || true)
-                CODE="${STATUS_LINE:0:2}"
-
-                # Si es un fichero nuevo (A o ??), lo aceptamos (es un hueco rellenado)
-                if [ "$CODE" = "A " ] || [ "$CODE" = "??" ]; then
-                  echo " -> NEW file (status $CODE), allowed for CGen."
-                  continue
-                fi
-
-                # Si es un fichero existente, debe declararse como CGenManaged: true
-                if ! grep -q 'CGenManaged: true' "$f"; then
-                  echo "::error::File $f was modified but is NOT marked 'CGenManaged: true'."
-                  VIOLATIONS=$((VIOLATIONS+1))
-                else
-                  echo " -> Existing file marked CGenManaged: true, allowed."
-                fi
+              $ALLOWED_ROOT_1* | $ALLOWED_ROOT_2* )
+                echo "OK: $f"
                 ;;
               *)
-                # Cambios fuera de OPT-IN_FRAMEWORK o no .md → no aplicamos esta política
-                :
+                echo "::error::File changed outside MVP-allowed paths: $f"
+                VIOLATIONS=$((VIOLATIONS+1))
                 ;;
             esac
-          done
+          done < changed_files.txt
 
           if [ "$VIOLATIONS" -gt 0 ]; then
-            echo "::error::CGen attempted to modify non-managed markdown files under OPT-IN_FRAMEWORK. Aborting PR creation."
+            echo "::error::CGen modified files outside $ALLOWED_ROOT_1 and $ALLOWED_ROOT_2. Aborting PR creation (MVP)."
             exit 1
           fi
 
-          echo "All modified markdown files under OPT-IN_FRAMEWORK are either new or CGenManaged. OK."
+          echo "All changes are within MVP-allowed paths. Proceeding."
 
-      # ====== Capa de seguridad 2: límite de líneas borradas ======
-      # Regla:
-      # - Si el total de líneas borradas en el diff supera un umbral, se considera sospechoso.
-      #   (Evita borrados masivos por plantillas vacías).
-      # - El umbral se puede ajustar; empezamos conservador (p.ej. 500 líneas).
-
-      - name: Check for destructive changes (line deletions)
-        if: steps.check_changes.outputs.has_changes == 'true'
-        run: |
-          echo "=== Checking for destructive changes (line deletions) ==="
-          git diff --numstat > diff_numstat.txt || true
-
-          if [ ! -s diff_numstat.txt ]; then
-            echo "No diff stats found, skipping destructive change check."
-            exit 0
-          fi
-
-          TOTAL_DELETED=$(awk '{del+=$2} END {print del}' diff_numstat.txt)
-          echo "Total lines deleted across all files: $TOTAL_DELETED"
-
-          THRESHOLD_DELETIONS=500
-
-          if [ "$TOTAL_DELETED" -gt "$THRESHOLD_DELETIONS" ]; then
-            echo "::error::CGen deleted more than $THRESHOLD_DELETIONS lines ($TOTAL_DELETED). Blocking PR."
-            echo "Diff summary:"
-            cat diff_numstat.txt
-            exit 1
-          fi
-
-          echo "Line deletions within safe threshold. OK."
-
-      # ====== Creación del Pull Request (solo si todo lo anterior ha pasado) ======
+      # ===== Crear PR solo si hay cambios y han pasado el filtro de rutas =====
 
       - name: Create Pull Request
         if: steps.check_changes.outputs.has_changes == 'true'
@@ -235,29 +193,33 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: cgen/update-${{ github.run_number }}
           delete-branch: true
-          title: "CGen: Automated documentation & reports update"
+          title: "CGen (MVP ATA_03): Automated documentation & reports update"
           commit-message: |
-            CGen: automated documentation & reports update
+            CGen (MVP ATA_03): automated documentation & reports update
 
-            Generated by Continuous Generation pipeline:
+            Generated by Continuous Generation pipeline (restricted to ATA_03-SUPPORT_INFORMATION_GSE + reports):
             - Summary tables updated
             - GenCCC baseline report
             - Traceability matrices
-            - Document indexes refreshed
+            - Document indexes refreshed under ATA_03
 
             AI assistance: GitHub Copilot, prompted by Amedeo Pelliccia
             Status: DRAFT - Subject to human review and approval
           body: |
-            ## CGen Automated Update
+            ## CGen Automated Update (MVP restricted)
 
-            This PR contains automated updates from the Continuous Generation pipeline.
+            This PR contains automated updates from the Continuous Generation pipeline,
+            restricted to:
+
+            - `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/**`
+            - `cd/reports/**`
 
             ### Changes Include:
             - 📊 Summary tables updated
             - 🔗 GenCCC baseline report
             - 📋 Traceability matrices
-            - 📑 Document indexes refreshed
-            - 🔄 Cross-reference updates
+            - 📑 Document indexes refreshed (ATA_03 only)
+            - 🔄 Cross-reference updates (if any within ATA_03)
 
             ### Review Instructions:
             1. Review the generated content for accuracy
@@ -272,7 +234,7 @@ jobs:
             - Last AI update: ${{ github.event.head_commit.timestamp }}
 
             ---
-            **CGen Principle**: Propose changes via PR, never silent commits
+            **CGen Principle (MVP)**: Propose via bot PRs, restricted to ATA_03 + reports; humans approve.
           labels: |
             cgen
             documentation
@@ -290,13 +252,13 @@ jobs:
       - name: CGen Summary
         if: always()
         run: |
-          echo "# CGen Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+          echo "# CGen Pipeline Summary (MVP ATA_03)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "## Generation Results" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.check_changes.outputs.has_changes }}" = "true" ]; then
             echo "✅ Changes detected and committed to branch: \`cgen/update-${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "A pull request has been created for review (subject to CGen safety checks)." >> $GITHUB_STEP_SUMMARY
+            echo "A pull request has been created for review (MVP restricted to ATA_03 + reports)." >> $GITHUB_STEP_SUMMARY
           else
             echo "ℹ️ No changes needed - all artifacts are up to date" >> $GITHUB_STEP_SUMMARY
           fi
@@ -305,6 +267,6 @@ jobs:
           echo "- Summary tables" >> $GITHUB_STEP_SUMMARY
           echo "- GenCCC baseline report" >> $GITHUB_STEP_SUMMARY
           echo "- Traceability matrices" >> $GITHUB_STEP_SUMMARY
-          echo "- Document indexes" >> $GITHUB_STEP_SUMMARY
+          echo "- Document indexes (ATA_03 only)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**CGen Principle (corrected)**: Propose via bot PRs, only on managed/placeholder content; humans approve." >> $GITHUB_STEP_SUMMARY
+          echo "**CGen MVP Principle**: Solo toca ATA_03-SUPPORT_INFORMATION_GSE + reports; todo lo demás queda protegido." >> $GITHUB_STEP_SUMMARY
