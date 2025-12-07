@@ -10,7 +10,7 @@ Language: "en"
 CreatedAt: "2025-12-07"
 ModifiedAt: "2025-12-07"
 Abstract: "Programs and procedures for GSE component reuse and equipment refurbishment."
-Keywords: ["ANCHORS","GSE","GSE","Sustainability","Ground Support"]
+Keywords: ["ANCHORS","GSE","Reuse","Sustainability","Ground Support"]
 Compliance:
   - "ATA iSpec 2200"
   - "ISO 14001"

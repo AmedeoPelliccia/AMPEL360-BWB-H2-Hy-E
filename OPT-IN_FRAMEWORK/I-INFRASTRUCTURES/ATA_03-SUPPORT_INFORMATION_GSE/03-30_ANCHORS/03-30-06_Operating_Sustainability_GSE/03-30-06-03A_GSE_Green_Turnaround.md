@@ -10,7 +10,7 @@ Language: "en"
 CreatedAt: "2025-12-07"
 ModifiedAt: "2025-12-07"
 Abstract: "Green turnaround procedures optimizing sustainability in aircraft ground handling."
-Keywords: ["ANCHORS","GSE","GSE","Sustainability","Ground Support"]
+Keywords: ["ANCHORS","GSE","Green Turnaround","Sustainability","Ground Support"]
 Compliance:
   - "ATA iSpec 2200"
   - "ISO 14001"

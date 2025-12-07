@@ -10,7 +10,7 @@ Language: "en"
 CreatedAt: "2025-12-07"
 ModifiedAt: "2025-12-07"
 Abstract: "Fleet-wide connectivity solutions enabling coordinated operations and real-time monitoring."
-Keywords: ["ANCHORS","GSE","GSE","Sustainability","Ground Support"]
+Keywords: ["ANCHORS","GSE","Fleet Management","Sustainability","Ground Support"]
 Compliance:
   - "ATA iSpec 2200"
   - "ISO 14001"

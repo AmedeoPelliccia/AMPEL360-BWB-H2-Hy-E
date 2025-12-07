@@ -10,7 +10,7 @@ Language: "en"
 CreatedAt: "2025-12-07"
 ModifiedAt: "2025-12-07"
 Abstract: "Regenerative braking systems to recover kinetic energy during GSE operations."
-Keywords: ["ANCHORS","GSE","GSE","Sustainability","Ground Support"]
+Keywords: ["ANCHORS","GSE","Regenerative Braking","Sustainability","Ground Support"]
 Compliance:
   - "ATA iSpec 2200"
   - "ISO 14001"

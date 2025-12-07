@@ -10,7 +10,7 @@ Language: "en"
 CreatedAt: "2025-12-07"
 ModifiedAt: "2025-12-07"
 Abstract: "Circular economy strategy for GSE design, procurement, and end-of-life management."
-Keywords: ["ANCHORS","GSE","GSE","Sustainability","Ground Support"]
+Keywords: ["ANCHORS","GSE","Circular Economy","Sustainability","Ground Support"]
 Compliance:
   - "ATA iSpec 2200"
   - "ISO 14001"
