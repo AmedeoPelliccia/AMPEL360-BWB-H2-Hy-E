@@ -145,7 +145,7 @@
 - [ATA 03-00-13](../03-00_GENERAL/03-00-13_Subsystems_Components/README.md) — GSE Subsystems & Components
 - [ATA 03-10](../03-10_Operations/README.md) — GSE Operations
 - [ATA 03-30](../03-30_ANCHORS/README.md) — ANCHORS (Support Standards)
-- [ATA 28](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_28-FUEL/README.md) — Fuel System (Aircraft)
+- [ATA 28](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENICS_SYSTEMS/ATA_28-FUEL_SAF_CRYOGENIC_H2/README.md) — Fuel System (Aircraft)
 
 ### Key Standards
 - **IEC 61508** — Functional Safety (SIL certification)
