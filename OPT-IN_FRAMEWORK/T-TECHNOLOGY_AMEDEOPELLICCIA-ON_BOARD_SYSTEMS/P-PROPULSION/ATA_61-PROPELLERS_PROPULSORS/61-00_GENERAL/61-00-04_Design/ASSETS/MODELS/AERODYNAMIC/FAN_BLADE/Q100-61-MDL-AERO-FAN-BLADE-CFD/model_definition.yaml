@@ -1,0 +1,152 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Model Definition: Q100-61-MDL-AERO-FAN-BLADE-CFD
+# Fan Blade Computational Fluid Dynamics Model
+
+model_id: Q100-61-MDL-AERO-FAN-BLADE-CFD
+model_name: Fan Blade CFD Analysis Model
+version: 1.0.0
+status: Draft
+
+domain: AERO
+component: FAN_BLADE
+model_type: CFD
+
+description: |
+  Three-dimensional Reynolds-Averaged Navier-Stokes (RANS) CFD model for 
+  the open-fan propulsor blade. Predicts aerodynamic performance including 
+  thrust, torque, and efficiency across the operating envelope.
+
+software:
+  name: ANSYS Fluent
+  version: "2024 R1"
+  alternatives:
+    - OpenFOAM 11
+    - STAR-CCM+ 2024.1
+  license: Commercial
+
+geometry:
+  source: ASSETS/PARTS/Q100-61-PART-FAN-BLADE
+  format: STEP
+  revision: A
+  description: Full 3D blade geometry with hub interface
+
+mesh:
+  type: Unstructured polyhedral with boundary layer prisms
+  elements: TBD
+  y_plus_target: 1.0
+  refinement_zones:
+    - leading_edge
+    - trailing_edge
+    - tip_gap
+  files: mesh/
+
+physics:
+  equations: Reynolds-Averaged Navier-Stokes (RANS)
+  turbulence_model: k-ω SST
+  compressibility: Compressible (ideal gas)
+  assumptions:
+    - Steady-state (time-averaged)
+    - Single blade passage with periodic boundaries
+    - Frozen rotor for stator interaction
+  limitations:
+    - Does not capture unsteady separation
+    - Tip gap model simplified
+    - Transition not modeled
+
+boundary_conditions:
+  inlet:
+    type: Total pressure inlet
+    total_pressure: Per operating condition
+    total_temperature: Per operating condition
+    flow_direction: Axial
+  outlet:
+    type: Static pressure outlet
+    static_pressure: Per operating condition
+  blade:
+    type: No-slip wall
+    roughness: Smooth
+  periodic:
+    type: Rotational periodic
+    number_of_passages: Per blade count
+  shroud:
+    type: Counter-rotating wall
+  hub:
+    type: Rotating wall
+  files: boundary_conditions/
+
+operating_conditions:
+  reference: MODEL_LIBRARY/STANDARD_CONDITIONS/
+  points:
+    - id: COND-SEA-LEVEL
+      description: Takeoff at sea level
+    - id: COND-CRUISE-FL350
+      description: Cruise at FL350
+    - id: COND-HOT-DAY
+      description: Hot day takeoff
+  parameters:
+    rotational_speed_rpm:
+      min: 0
+      max: 2500
+      design: 1850
+    advance_ratio:
+      min: 0.3
+      max: 1.2
+      design: 0.8
+
+outputs:
+  - name: thrust_N
+    description: Blade thrust force
+    type: scalar
+  - name: torque_Nm
+    description: Blade torque
+    type: scalar
+  - name: power_kW
+    description: Shaft power consumed
+    type: scalar
+  - name: propulsive_efficiency
+    description: Thrust power / shaft power
+    type: scalar
+  - name: pressure_coefficient_Cp
+    description: Surface pressure distribution
+    type: field
+  - name: mach_number
+    description: Flow Mach number field
+    type: field
+
+validation:
+  method: Comparison with wind tunnel test data
+  data_source: TBD - Propulsor rig test
+  metrics:
+    - thrust_accuracy_percent: 3
+    - efficiency_accuracy_points: 0.02
+  files: validation/
+
+traceability:
+  requirements:
+    - REQ-61-AERO-001
+    - REQ-61-AERO-002
+  interfaces:
+    - ICD-61-AERO-001
+  certification:
+    - CS-25.929
+
+document_control:
+  created_by: AMPEL360 Propulsion Analysis Team
+  created_date: 2025-12-05
+  last_modified: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

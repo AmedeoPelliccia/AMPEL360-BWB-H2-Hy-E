@@ -1,0 +1,48 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Material Definition: Q100-61-MAT-TITANIUM-TI6AL4V
+# Titanium Alloy Ti-6Al-4V for Disk and Hub
+
+material_id: Q100-61-MAT-TITANIUM-TI6AL4V
+material_name: Titanium Ti-6Al-4V
+category: STRUCTURAL
+specification: AMS 4911 (Sheet), AMS 4928 (Bar)
+application: Fan disk, hub, leading edge protection
+
+mechanical:
+  density_kg_m3: 4430
+  youngs_modulus_GPa: 114
+  poissons_ratio: 0.34
+  shear_modulus_GPa: 44
+  yield_strength_MPa: 880
+  ultimate_strength_MPa: 950
+  elongation_percent: 14
+  fatigue_limit_MPa: 500
+  fracture_toughness_MPa_sqrt_m: 75
+
+thermal:
+  conductivity_W_mK: 6.7
+  specific_heat_J_kgK: 526
+  expansion_coeff_1_K: 8.6e-6
+  max_service_temp_C: 315
+
+source: MIL-HDBK-5J / MMPDS
+status: Approved
+
+document_control:
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

@@ -1,0 +1,154 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Model Definition: Q100-61-MDL-EM-MOTOR-2D
+# Electric Motor 2D Electromagnetic Model
+
+model_id: Q100-61-MDL-EM-MOTOR-2D
+model_name: Electric Motor 2D EM Analysis
+version: 1.0.0
+status: Draft
+
+domain: EM
+component: MOTOR
+model_type: FEA_2D
+
+description: |
+  Two-dimensional finite element electromagnetic model of the PMSM motor.
+  Primary model for torque, efficiency, and loss prediction. Key model
+  for hybrid-electric propulsion system design.
+
+software:
+  name: ANSYS Maxwell 2D / Motor-CAD
+  version: "2024 R1"
+  alternatives:
+    - JMAG
+    - FEMM (open source)
+  license: Commercial
+
+geometry:
+  source: ASSETS/PARTS/Q100-61-PART-MOTOR
+  format: 2D cross-section
+  parameters:
+    stator_od_mm: TBD
+    stator_id_mm: TBD
+    air_gap_mm: 1.0
+    slot_count: 48
+    pole_count: 8
+    magnet_type: Surface mounted
+  files: geometry/
+
+materials:
+  laminations:
+    ref: Q100-61-MAT-SILICON-STEEL
+    grade: M19 29 gauge
+    stacking_factor: 0.95
+  magnets:
+    ref: Q100-61-MAT-NDFEB-MAGNET
+    grade: N48SH
+    Br_T: 1.35
+    Hcj_kA_m: 1350
+  windings:
+    ref: Q100-61-MAT-COPPER-WINDING
+    fill_factor: 0.45
+  files: materials/
+
+windings:
+  configuration: Distributed, double-layer
+  layers: 2
+  coils_per_pole_per_phase: 2
+  slots_per_pole_per_phase: 2
+  turns_per_coil: TBD
+  parallel_paths: 1
+  connection: Wye
+  files: windings/
+
+physics:
+  analysis_types:
+    - magnetostatic: Torque, flux linkage at DC
+    - transient: Cogging torque, ripple, harmonics
+    - ac_loss: Eddy currents in windings and magnets
+  mesh:
+    elements: Second-order triangular
+    air_gap_layers: 4
+    adaptive_refinement: Yes
+  boundary_conditions:
+    - outer_stator: Natural (A=0)
+    - inner_rotor: Natural (A=0)
+    - periodic: Anti-periodic sector
+
+operating_points:
+  base_speed_rpm: 1850
+  max_speed_rpm: 2500
+  rated_torque_Nm: TBD
+  peak_torque_Nm: TBD
+  dc_bus_voltage_V: 800
+  current_density_A_mm2:
+    continuous: 8
+    peak: 15
+
+outputs:
+  - name: torque_speed_curve
+    description: T vs. n at rated current
+    type: curve
+  - name: efficiency_map
+    description: η(T, n) including all losses
+    type: 2D_map
+  - name: copper_losses_W
+    description: DC + AC winding losses
+    type: scalar
+  - name: iron_losses_W
+    description: Stator and rotor core losses
+    type: scalar
+  - name: magnet_losses_W
+    description: PM eddy current losses
+    type: scalar
+  - name: Ld_Lq_mH
+    description: d-q inductances
+    type: scalars
+  - name: back_emf_V
+    description: Line-to-line EMF at base speed
+    type: waveform
+  - name: cogging_torque_Nm
+    description: Peak-to-peak cogging
+    type: scalar
+  - name: torque_ripple_percent
+    description: At rated current
+    type: scalar
+  files: results/
+
+validation:
+  method: Locked rotor and back-EMF testing
+  data_source: Motor dyno test
+  metrics:
+    - torque_accuracy_percent: 3
+    - efficiency_accuracy_points: 0.01
+    - inductance_accuracy_percent: 10
+
+traceability:
+  requirements:
+    - REQ-61-EM-001
+    - REQ-61-EM-002
+    - REQ-61-PERF-005
+  interfaces:
+    - ICD-61-PWR-001
+  certification:
+    - CS-25.1309
+
+document_control:
+  created_by: AMPEL360 Electric Drive Team
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

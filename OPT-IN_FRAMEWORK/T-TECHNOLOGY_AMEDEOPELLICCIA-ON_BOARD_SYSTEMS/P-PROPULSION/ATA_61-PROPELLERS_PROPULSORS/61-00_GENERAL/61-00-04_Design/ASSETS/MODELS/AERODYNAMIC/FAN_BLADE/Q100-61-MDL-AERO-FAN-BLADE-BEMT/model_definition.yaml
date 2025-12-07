@@ -1,0 +1,142 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Model Definition: Q100-61-MDL-AERO-FAN-BLADE-BEMT
+# Fan Blade Blade Element Momentum Theory Model
+
+model_id: Q100-61-MDL-AERO-FAN-BLADE-BEMT
+model_name: Fan Blade BEMT Analysis Model
+version: 1.0.0
+status: Draft
+
+domain: AERO
+component: FAN_BLADE
+model_type: BEMT
+
+description: |
+  Blade Element Momentum Theory (BEMT) model for rapid aerodynamic 
+  performance prediction of the open-fan propulsor. Provides thrust, 
+  torque, and efficiency estimates for design trade studies and 
+  off-design performance mapping.
+
+software:
+  name: MATLAB/Python Custom Code
+  version: "R2024a / Python 3.11"
+  alternatives:
+    - XROTOR
+    - JavaProp
+    - QPROP
+  license: Open source / Custom
+
+geometry:
+  source: ASSETS/PARTS/Q100-61-PART-FAN-BLADE
+  format: Blade definition CSV (r, chord, twist, airfoil)
+  revision: A
+  sections:
+    - root: MODEL_LIBRARY/AIRFOILS/Q100-61-AFL-FAN-ROOT
+    - mid: MODEL_LIBRARY/AIRFOILS/Q100-61-AFL-FAN-MID
+    - tip: MODEL_LIBRARY/AIRFOILS/Q100-61-AFL-FAN-TIP
+
+airfoil_data:
+  source: airfoil_data/
+  format: Polar tables (alpha, Cl, Cd, Cm)
+  mach_range:
+    - 0.3
+    - 0.5
+    - 0.7
+    - 0.8
+  reynolds_range:
+    - 1.0e6
+    - 3.0e6
+    - 5.0e6
+
+physics:
+  equations: Blade Element Momentum Theory
+  corrections:
+    - Prandtl tip loss factor
+    - Hub loss factor
+    - Compressibility correction (Prandtl-Glauert)
+    - Post-stall model
+  assumptions:
+    - Steady flow
+    - 2D airfoil behavior at each section
+    - No radial flow
+    - Wake contraction neglected
+  limitations:
+    - Less accurate near stall
+    - No unsteady effects
+    - Simplified tip vortex modeling
+
+operating_conditions:
+  reference: MODEL_LIBRARY/STANDARD_CONDITIONS/
+  parameters:
+    rotational_speed_rpm:
+      min: 500
+      max: 2500
+    advance_ratio:
+      min: 0.2
+      max: 1.5
+    altitude_m:
+      min: 0
+      max: 12000
+
+outputs:
+  - name: thrust_N
+    description: Total blade thrust
+    type: scalar
+  - name: torque_Nm
+    description: Total blade torque
+    type: scalar
+  - name: propulsive_efficiency
+    description: η = T·V / P
+    type: scalar
+  - name: power_coefficient_Cp
+    description: Cp = P / (ρ·n³·D⁵)
+    type: scalar
+  - name: thrust_coefficient_Ct
+    description: Ct = T / (ρ·n²·D⁴)
+    type: scalar
+  - name: spanwise_loading
+    description: dT/dr, dQ/dr distributions
+    type: array
+
+performance_maps:
+  format: CSV
+  files: performance_maps/
+  contents:
+    - thrust_map.csv
+    - torque_map.csv
+    - efficiency_map.csv
+
+validation:
+  method: Cross-validation with CFD and test data
+  data_source: Q100-61-MDL-AERO-FAN-BLADE-CFD results
+  metrics:
+    - thrust_accuracy_percent: 5
+    - efficiency_accuracy_points: 0.03
+
+traceability:
+  requirements:
+    - REQ-61-AERO-001
+    - REQ-61-PERF-001
+  interfaces:
+    - ICD-61-PERF-001
+
+document_control:
+  created_by: AMPEL360 Propulsion Analysis Team
+  created_date: 2025-12-05
+  last_modified: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia
