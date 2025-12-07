@@ -1,0 +1,215 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-PROD-PROPULSOR-SYSTEM — Product Structure
+# AMPEL360 BWB H2 Hy-E Hybrid-Electric Propulsion System
+
+product_structure:
+  id: Q100-61-PROD-PROPULSOR-SYSTEM
+  name: Integrated Propulsor System
+  version: "1.0"
+  
+hierarchy:
+  - level: 0
+    id: Q100-61-PROD-PROPULSOR-SYSTEM
+    name: Integrated Propulsor System
+    type: top_level
+    children:
+    
+      - level: 1
+        id: Q100-61-PROD-OPEN-FAN-UNIT
+        name: Open Fan Unit
+        type: sub_product
+        quantity: 1
+        reference: "../Q100-61-PROD-OPEN-FAN-UNIT/"
+        assemblies:
+          - id: 61-00-04-A401
+            name: OPEN_FAN_PROPULSOR
+            path: "../../ASSEMBLIES/OPEN_FAN_PROPULSOR/"
+        components:
+          - category: Fan Blades
+            quantity: 12
+            material: CFRP
+          - category: Fan Hub
+            quantity: 1
+            material: Ti-6Al-4V
+          - category: Spinner
+            quantity: 1
+            material: Composite
+          - category: Pitch Actuation
+            quantity: 12
+            material: Various
+            
+      - level: 1
+        id: Q100-61-PROD-ELECTRIC-DRIVE-UNIT
+        name: Electric Drive Unit
+        type: sub_product
+        quantity: 1
+        reference: "../Q100-61-PROD-ELECTRIC-DRIVE-UNIT/"
+        assemblies:
+          - id: 61-00-04-A450
+            name: ELECTRIC_MOTOR_DRIVE
+            path: "../../ASSEMBLIES/ELECTRIC_MOTOR_DRIVE/"
+        components:
+          - category: Electric Motors
+            quantity: 2
+            type: Permanent Magnet Synchronous Motor
+            power_kW: 500
+          - category: Power Electronics
+            quantity: 2
+            type: SiC Inverter
+          - category: Cooling System
+            quantity: 1
+            type: Liquid Cooled
+          - category: HV Junction
+            quantity: 1
+            voltage_vdc: 800
+            
+      - level: 1
+        id: Q100-61-PROD-GEARBOX-UNIT
+        name: Gearbox Unit
+        type: sub_product
+        quantity: 1
+        reference: "../Q100-61-PROD-GEARBOX-UNIT/"
+        assemblies:
+          - id: 61-00-04-A430
+            name: GEARBOX_ASSEMBLY
+            path: "../../ASSEMBLIES/OPEN_FAN_PROPULSOR/"
+        components:
+          - category: Reduction Gear
+            quantity: 1
+            ratio: "3.5:1"
+          - category: Input Shaft
+            quantity: 1
+            material: Steel
+          - category: Output Shaft
+            quantity: 1
+            material: Steel
+          - category: Bearings
+            quantity: 6
+            type: Various
+          - category: Lubrication System
+            quantity: 1
+            type: Self-contained
+            
+      - level: 1
+        id: Q100-61-PROD-NACELLE-UNIT
+        name: Nacelle Unit
+        type: sub_product
+        quantity: 1
+        reference: "../Q100-61-PROD-NACELLE-UNIT/"
+        assemblies:
+          - id: 61-00-04-A420
+            name: NACELLE_ASSEMBLY
+            path: "../../ASSEMBLIES/OPEN_FAN_PROPULSOR/"
+        components:
+          - category: Inlet Cowl
+            quantity: 1
+            material: Composite
+          - category: Fan Cowl
+            quantity: 1
+            material: Composite
+          - category: Core Cowl
+            quantity: 1
+            material: Composite
+          - category: Thrust Reverser
+            quantity: 1
+            type: Cascade
+          - category: Acoustic Liners
+            quantity: 1
+            type: Broadband absorption
+            
+      - level: 1
+        id: Q100-61-PROD-CONTROLLER-UNIT
+        name: Controller Unit
+        type: sub_product
+        quantity: 1
+        reference: "../Q100-61-PROD-CONTROLLER-UNIT/"
+        assemblies:
+          - id: 61-00-04-A452
+            name: CONTROLLER_ASSEMBLY
+            path: "../../ASSEMBLIES/ELECTRIC_MOTOR_DRIVE/"
+        components:
+          - category: FADEC
+            quantity: 2
+            type: Dual-channel
+            architecture: DAL A
+          - category: Motor Controllers
+            quantity: 2
+            type: Integrated
+          - category: Power Management Unit
+            quantity: 1
+            type: Intelligent
+          - category: Sensors
+            quantity: multiple
+            types:
+              - Temperature
+              - Vibration
+              - Position
+              - Current
+              - Voltage
+          - category: Health Monitoring Unit
+            quantity: 1
+            type: Integrated
+
+integration:
+  mechanical:
+    mount_points: 4
+    pylon_interface: IF-61-001
+    weight_distribution:
+      front_percent: 45
+      rear_percent: 55
+      
+  electrical:
+    hv_connection: IF-61-002
+    voltage_vdc: 800
+    max_current_a: 1500
+    cables:
+      - type: HV power
+        gauge: "4/0 AWG equivalent"
+      - type: Signal
+        specification: MIL-DTL-38999
+        
+  data:
+    bus_interface: IF-61-003
+    protocols:
+      - name: ARINC-429
+        channels: 4
+        rate: high_speed
+      - name: CAN-FD
+        channels: 2
+        rate: 5_Mbps
+    health_data:
+      - vibration
+      - temperature
+      - performance
+      
+  fluid:
+    cooling:
+      interface: IF-61-004
+      flow_rate_lpm: 40
+      inlet_temp_max_c: 60
+    fire_suppression:
+      interface: IF-61-005
+      agent: Novec_1230
+
+bom_reference: "../../BILL_OF_MATERIALS/Q100-61-BOM-PROPULSOR-SYSTEM/"
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

@@ -1,0 +1,95 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-OPT-HIGH-POWER — High Power Option
+# AMPEL360 BWB H2 Hy-E Propulsion System
+
+option:
+  id: Q100-61-OPT-HIGH-POWER
+  name: High Power Option
+  version: "1.0"
+  status: DRAFT
+  program: Q100
+
+description:
+  short: Increased motor power for MTOW variants
+  long: >-
+    The High Power Option provides increased motor power output for aircraft
+    configurations requiring higher thrust capability, such as MTOW (Maximum
+    Takeoff Weight) variants or high-altitude operations.
+
+performance_delta:
+  motor_power:
+    baseline_kW: 500
+    option_kW: 600
+    increase_percent: 20
+  thrust:
+    baseline_kN: 85
+    option_kN: 102
+    increase_percent: 20
+  peak_power:
+    baseline_kW: 1200
+    option_kW: 1440
+    increase_percent: 20
+
+changes:
+  hardware:
+    - component: Electric Motor
+      baseline: Q100-61-P-MOTOR
+      option: Q100-61-P-MOTOR-HP
+      change: Higher power winding
+      
+    - component: Power Inverter
+      baseline: Q100-61-P-INV
+      option: Q100-61-P-INV-HP
+      change: Higher current rating
+      
+    - component: Cooling System
+      baseline: Standard
+      option: Enhanced
+      change: Increased cooling capacity
+      
+  software:
+    - component: Motor Control
+      change: Updated power limits and thermal management
+      
+weight_impact:
+  delta_kg: +15
+  reason: Larger motor windings and enhanced cooling
+
+cost_impact:
+  category: medium
+  reason: Motor and inverter upgrades
+
+compatibility:
+  products:
+    - Q100-61-PROD-PROPULSOR-SYSTEM
+  variants:
+    - Q100-61-VAR-PROPULSOR-LH
+    - Q100-61-VAR-PROPULSOR-RH
+    - Q100-61-VAR-PROPULSOR-CENTER
+  excludes:
+    - Q100-61-OPT-EXTENDED-RANGE  # Mutually exclusive
+
+certification:
+  impact: Minor amendment to type certificate
+  additional_testing: Required for increased power ratings
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

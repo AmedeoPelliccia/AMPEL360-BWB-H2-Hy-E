@@ -1,0 +1,123 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-BOM-PROPULSOR-SYSTEM — Bill of Materials
+# AMPEL360 BWB H2 Hy-E Integrated Propulsor System
+
+bom:
+  id: Q100-61-BOM-PROPULSOR-SYSTEM
+  product: Q100-61-PROD-PROPULSOR-SYSTEM
+  version: "1.0"
+  status: DRAFT
+  program: Q100
+
+header:
+  top_level_part: Q100-61-PROD-PROPULSOR-SYSTEM
+  description: Integrated Propulsor System
+  quantity_per_aircraft: 2  # Twin configuration base
+  unit_of_measure: EA
+
+items:
+  # Level 0 - Top Level
+  - level: 0
+    item: 1
+    part_number: Q100-61-PROD-PROPULSOR-SYSTEM
+    description: Integrated Propulsor System
+    quantity: 1
+    uom: EA
+    make_buy: MAKE
+    
+  # Level 1 - Major Sub-Products
+  - level: 1
+    item: 1.1
+    part_number: Q100-61-PROD-OPEN-FAN-UNIT
+    description: Open Fan Unit
+    quantity: 1
+    uom: EA
+    make_buy: MAKE
+    parent: Q100-61-PROD-PROPULSOR-SYSTEM
+    bom_reference: ../Q100-61-BOM-OPEN-FAN-UNIT/
+    
+  - level: 1
+    item: 1.2
+    part_number: Q100-61-PROD-ELECTRIC-DRIVE-UNIT
+    description: Electric Drive Unit
+    quantity: 1
+    uom: EA
+    make_buy: MAKE
+    parent: Q100-61-PROD-PROPULSOR-SYSTEM
+    bom_reference: ../Q100-61-BOM-ELECTRIC-DRIVE-UNIT/
+    
+  - level: 1
+    item: 1.3
+    part_number: Q100-61-PROD-GEARBOX-UNIT
+    description: Gearbox Unit
+    quantity: 1
+    uom: EA
+    make_buy: MAKE
+    parent: Q100-61-PROD-PROPULSOR-SYSTEM
+    bom_reference: ../Q100-61-BOM-GEARBOX-UNIT/
+    
+  - level: 1
+    item: 1.4
+    part_number: Q100-61-PROD-NACELLE-UNIT
+    description: Nacelle Unit
+    quantity: 1
+    uom: EA
+    make_buy: MAKE
+    parent: Q100-61-PROD-PROPULSOR-SYSTEM
+    bom_reference: ../Q100-61-BOM-NACELLE-UNIT/
+    
+  - level: 1
+    item: 1.5
+    part_number: Q100-61-PROD-CONTROLLER-UNIT
+    description: Controller Unit
+    quantity: 1
+    uom: EA
+    make_buy: MAKE
+    parent: Q100-61-PROD-PROPULSOR-SYSTEM
+    bom_reference: ../Q100-61-BOM-CONTROLLER-UNIT/
+
+  # Level 1 - Installation Hardware
+  - level: 1
+    item: 1.6
+    part_number: Q100-61-P-INSTALL-KIT
+    description: Installation Hardware Kit
+    quantity: 1
+    uom: KIT
+    make_buy: BUY
+    parent: Q100-61-PROD-PROPULSOR-SYSTEM
+    
+  - level: 1
+    item: 1.7
+    part_number: Q100-61-P-HARNESS-SYS
+    description: System Wiring Harness
+    quantity: 1
+    uom: EA
+    make_buy: MAKE
+    parent: Q100-61-PROD-PROPULSOR-SYSTEM
+
+summary:
+  total_level_1_items: 7
+  make_items: 6
+  buy_items: 1
+  estimated_weight_kg: 1850
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD
