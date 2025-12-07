@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Q100-61-TPL-JSON-PRODUCT.schema.json",
+  "title": "Product Data Schema",
+  "description": "JSON Schema for validating product data",
+  "type": "object",
+  "required": ["product_number", "revision", "title"],
+  "properties": {
+    "product_number": {
+      "type": "string",
+      "pattern": "^Q100-61-PROD-[0-9]+$"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[A-Z]$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "product_type": {
+      "type": "string",
+      "enum": ["LRU", "SRU", "Component"]
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "baseline": { "type": "string" },
+        "effectivity": {
+          "type": "object",
+          "properties": {
+            "aircraft": { "type": "string" },
+            "from_serial": { "type": "string" },
+            "to_serial": { "type": "string" }
+          }
+        }
+      }
+    },
+    "assemblies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "assembly_number": { "type": "string" },
+          "quantity": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "certification": {
+      "type": "object",
+      "properties": {
+        "qualification_status": {
+          "type": "string",
+          "enum": ["Pending", "Qualified", "Certified"]
+        }
+      }
+    }
+  }
+}

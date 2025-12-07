@@ -1,0 +1,188 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-PROD-PROPULSOR-SYSTEM — Product Definition
+# AMPEL360 BWB H2 Hy-E Hybrid-Electric Propulsion System
+
+product:
+  id: Q100-61-PROD-PROPULSOR-SYSTEM
+  name: Integrated Propulsor System
+  revision: A
+  status: DRAFT
+  level: top-level
+  ata_chapter: "61"
+  program: Q100
+
+description:
+  short: >-
+    Complete hybrid-electric propulsor system for AMPEL360 BWB aircraft
+  long: >-
+    The Q100-61-PROD-PROPULSOR-SYSTEM is the top-level integrated propulsion 
+    system product for the AMPEL360 BWB H2 Hy-E hybrid-electric aircraft.
+    It comprises an open-fan rotor assembly, dual electric motors, reduction
+    gearbox, nacelle structure, and full-authority digital control system.
+    The system receives power from H₂ PEM fuel cells with CO₂ battery buffering
+    and operates on an 800 VDC electrical architecture.
+
+power_architecture:
+  primary_source: H₂ PEM Fuel Cell
+  fuel_cell_power_kW: 500  # 2× 250 kW
+  peak_buffer: Closed-loop CO₂ Battery
+  distribution_voltage_VDC: 800
+  saf_backup: true
+
+performance:
+  thrust:
+    max_kN: 85
+    cruise_kN: 35
+    idle_kN: 5
+    reverse_kN: 25
+  power:
+    continuous_kW: 1000
+    peak_kW: 1200
+    peak_duration_s: 30
+  efficiency:
+    propulsive_percent: 92
+    overall_percent: 88
+  noise:
+    certification_standard: "ICAO Chapter 14"
+    epndb_target: TBD
+  emissions:
+    co2_g_per_kWh: 0  # Zero direct emissions (electric)
+    nox_g_per_kN: 0
+
+physical:
+  fan_diameter_m: 2.8
+  length_m: 3.2
+  max_width_m: 3.0
+  weight_dry_kg: 1850
+  weight_wet_kg: 1920
+  bypass_ratio: 25  # Effective, open-fan
+
+sub_products:
+  - id: Q100-61-PROD-OPEN-FAN-UNIT
+    name: Open Fan Unit
+    quantity: 1
+    required: true
+  - id: Q100-61-PROD-ELECTRIC-DRIVE-UNIT
+    name: Electric Drive Unit
+    quantity: 1
+    required: true
+  - id: Q100-61-PROD-GEARBOX-UNIT
+    name: Gearbox Unit
+    quantity: 1
+    required: true
+  - id: Q100-61-PROD-NACELLE-UNIT
+    name: Nacelle Unit
+    quantity: 1
+    required: true
+  - id: Q100-61-PROD-CONTROLLER-UNIT
+    name: Controller Unit
+    quantity: 1
+    required: true
+
+configuration:
+  baseline: Q100-61-CFG-PROPULSOR-BASELINE
+  revision: R01
+  effectivity:
+    from_msn: 1
+    to_msn: null  # Open-ended
+    
+variants:
+  - id: Q100-61-VAR-PROPULSOR-LH
+    position: left
+  - id: Q100-61-VAR-PROPULSOR-RH
+    position: right
+  - id: Q100-61-VAR-PROPULSOR-CENTER
+    position: center
+  - id: Q100-61-VAR-PROPULSOR-EXTENDED-RANGE
+    position: any
+
+options:
+  - id: Q100-61-OPT-HIGH-POWER
+    description: Increased motor power for MTOW variants
+  - id: Q100-61-OPT-EXTENDED-RANGE
+    description: Optimized for long-range cruise efficiency
+  - id: Q100-61-OPT-REDUCED-NOISE
+    description: Enhanced acoustic treatment
+  - id: Q100-61-OPT-SAF-OPTIMIZED
+    description: Optimized for SAF fuel operation
+
+interfaces:
+  mechanical:
+    - id: IF-61-001
+      type: pylon_mount
+      ata: "71"
+  electrical:
+    - id: IF-61-002
+      type: power_input
+      voltage_vdc: 800
+      ata: "24"
+  data:
+    - id: IF-61-003
+      type: control_bus
+      protocols: 
+        - ARINC-429
+        - CAN-FD
+      ata: "45"
+  fluid:
+    - id: IF-61-004
+      type: cooling
+      medium: glycol-water
+    - id: IF-61-005
+      type: fire_suppression
+      ata: "26"
+
+certification:
+  standards:
+    - code: CS-E
+      authority: EASA
+      status: planned
+    - code: FAR-33
+      authority: FAA
+      status: planned
+    - code: CS-25.1309
+      authority: EASA
+      status: planned
+    - code: ICAO-Annex-16-Vol-I
+      authority: ICAO
+      status: planned
+    - code: ICAO-Annex-16-Vol-II
+      authority: ICAO
+      status: planned
+  target_date: TBD
+
+lifecycle:
+  phase: development
+  milestones:
+    pdr: TBD
+    cdr: TBD
+    first_article: TBD
+    certification: TBD
+    eis: TBD
+
+references:
+  requirements: "../../../61-00-03_Requirements/"
+  safety: "../../../61-00-02_Safety/"
+  verification: "../../../61-00-07_V_AND_V/"
+  interfaces: "../../../61-00-05_Interfaces/"
+  assemblies: "../../ASSEMBLIES/"
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

@@ -1,0 +1,155 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-PROD-CONTROLLER-UNIT — Product Structure
+# AMPEL360 BWB H2 Hy-E Controller Unit
+
+product_structure:
+  id: Q100-61-PROD-CONTROLLER-UNIT
+  name: Controller Unit
+  version: "1.0"
+  parent: Q100-61-PROD-PROPULSOR-SYSTEM
+  
+hierarchy:
+  - level: 0
+    id: Q100-61-PROD-CONTROLLER-UNIT
+    name: Controller Unit
+    type: sub_product
+    
+    assemblies:
+      - id: 61-00-04-A452
+        name: CONTROLLER_ASSEMBLY
+        path: "../../ASSEMBLIES/ELECTRIC_MOTOR_DRIVE/"
+        
+    sub_assemblies:
+      - id: 61-00-04-A4521
+        name: FADEC_ASSEMBLY
+        components:
+          - name: FADEC Channel A
+            part_number: Q100-61-P-FADEC-A
+            quantity: 1
+            dal: A
+          - name: FADEC Channel B
+            part_number: Q100-61-P-FADEC-B
+            quantity: 1
+            dal: A
+          - name: FADEC Enclosure
+            part_number: Q100-61-P-FADEC-ENC
+            quantity: 1
+            material: Aluminum
+          - name: FADEC Backplane
+            part_number: Q100-61-P-FADEC-BP
+            quantity: 1
+            
+      - id: 61-00-04-A4522
+        name: MOTOR_CONTROL_ASSEMBLY
+        components:
+          - name: Motor Controller Card 1
+            part_number: Q100-61-P-MC-1
+            quantity: 1
+          - name: Motor Controller Card 2
+            part_number: Q100-61-P-MC-2
+            quantity: 1
+          - name: Gate Driver Board
+            part_number: Q100-61-P-GD-BRD
+            quantity: 2
+          - name: Current Sensor Module
+            part_number: Q100-61-P-I-SENS
+            quantity: 6
+            
+      - id: 61-00-04-A4523
+        name: POWER_MANAGEMENT_ASSEMBLY
+        components:
+          - name: PMU Main Board
+            part_number: Q100-61-P-PMU-MAIN
+            quantity: 1
+          - name: Load Management Module
+            part_number: Q100-61-P-PMU-LOAD
+            quantity: 1
+          - name: Energy Optimization Module
+            part_number: Q100-61-P-PMU-OPT
+            quantity: 1
+            
+      - id: 61-00-04-A4524
+        name: HEALTH_MONITORING_ASSEMBLY
+        components:
+          - name: HMU Main Board
+            part_number: Q100-61-P-HMU-MAIN
+            quantity: 1
+          - name: Vibration Processing Module
+            part_number: Q100-61-P-HMU-VIB
+            quantity: 1
+          - name: Prognostics Module
+            part_number: Q100-61-P-HMU-PROG
+            quantity: 1
+            
+      - id: 61-00-04-A4525
+        name: IO_ASSEMBLY
+        components:
+          - name: Analog Input Module
+            part_number: Q100-61-P-IO-AIN
+            quantity: 2
+          - name: Analog Output Module
+            part_number: Q100-61-P-IO-AOUT
+            quantity: 1
+          - name: Digital I/O Module
+            part_number: Q100-61-P-IO-DIO
+            quantity: 2
+          - name: ARINC-429 Interface
+            part_number: Q100-61-P-IO-429
+            quantity: 1
+          - name: CAN-FD Interface
+            part_number: Q100-61-P-IO-CAN
+            quantity: 1
+            
+      - id: 61-00-04-A4526
+        name: POWER_SUPPLY_ASSEMBLY
+        components:
+          - name: Power Supply Unit A
+            part_number: Q100-61-P-PSU-A
+            quantity: 1
+            input: 28VDC
+          - name: Power Supply Unit B
+            part_number: Q100-61-P-PSU-B
+            quantity: 1
+            input: 28VDC
+          - name: Isolation Module
+            part_number: Q100-61-P-PSU-ISO
+            quantity: 1
+            
+      - id: 61-00-04-A4527
+        name: HARNESS_ASSEMBLY
+        components:
+          - name: Main Wiring Harness
+            part_number: Q100-61-P-WH-MAIN
+            quantity: 1
+          - name: Sensor Harness
+            part_number: Q100-61-P-WH-SENS
+            quantity: 1
+          - name: Power Harness
+            part_number: Q100-61-P-WH-PWR
+            quantity: 1
+          - name: Data Bus Harness
+            part_number: Q100-61-P-WH-DATA
+            quantity: 1
+
+bom_reference: "../../BILL_OF_MATERIALS/Q100-61-BOM-CONTROLLER-UNIT/"
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

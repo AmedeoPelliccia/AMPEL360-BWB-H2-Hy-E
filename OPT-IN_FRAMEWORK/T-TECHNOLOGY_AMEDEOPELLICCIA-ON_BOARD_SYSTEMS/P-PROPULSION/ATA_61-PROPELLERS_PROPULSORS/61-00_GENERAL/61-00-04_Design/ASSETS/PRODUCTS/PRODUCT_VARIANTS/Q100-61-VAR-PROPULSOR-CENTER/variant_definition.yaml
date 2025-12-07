@@ -1,0 +1,91 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-VAR-PROPULSOR-CENTER — Variant Definition
+# AMPEL360 BWB H2 Hy-E Center/Tail Propulsor
+
+variant:
+  id: Q100-61-VAR-PROPULSOR-CENTER
+  name: Center Propulsor
+  base_product: Q100-61-PROD-PROPULSOR-SYSTEM
+  revision: A
+  status: DRAFT
+  position: center
+  program: Q100
+
+description:
+  short: >-
+    Center/tail-mounted propulsor with BLI inlet and thrust vectoring
+  long: >-
+    The Q100-61-VAR-PROPULSOR-CENTER is configured for tail centerline 
+    mounting on the AMPEL360 BWB aircraft in tri-propulsor configuration. 
+    It features a Boundary Layer Ingestion (BLI) optimized inlet design 
+    and optional thrust vectoring capability for enhanced control authority.
+
+position:
+  side: center
+  location: tail
+  sub_position: centerline
+  coordinates:
+    x_mm: TBD
+    y_mm: 0  # Centerline
+    z_mm: TBD
+  thrust_vector:
+    azimuth_deg: 180  # Aft, vectoring ±15°
+    elevation_deg: 0  # Vectoring ±15°
+
+rotation:
+  direction: counter_clockwise  # Single direction
+  counter_rotate_with: null
+
+mounting:
+  type: tail_center
+  interface: IF-61-001-CTR
+  attachment_points: 6
+  thrust_frame: integrated
+
+features:
+  thrust_vectoring:
+    enabled: true
+    range_azimuth_deg: 15
+    range_elevation_deg: 15
+    actuation: electromechanical
+  boundary_layer_ingestion:
+    enabled: true
+    inlet_design: BLI_optimized
+    efficiency_benefit_percent: 3
+
+wiring:
+  routing: centerline
+  harness_variant: CTR
+
+software:
+  pitch_control_logic: standard
+  thrust_vectoring_control: active
+  rotation_sense: negative
+
+effectivity:
+  configurations:
+    - tri_propulsor
+  msn_range:
+    from: 1
+    to: null
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

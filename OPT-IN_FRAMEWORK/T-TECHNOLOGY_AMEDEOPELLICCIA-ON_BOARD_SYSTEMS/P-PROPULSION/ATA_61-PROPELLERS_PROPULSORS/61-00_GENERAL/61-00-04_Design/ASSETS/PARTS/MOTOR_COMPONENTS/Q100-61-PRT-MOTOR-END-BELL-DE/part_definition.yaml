@@ -1,0 +1,126 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-PRT-MOTOR-END-BELL-DE — Part Definition
+# This file contains the authoritative part metadata for End Bell (Drive End)
+
+# Part Identification
+part_id: "Q100-61-PRT-MOTOR-END-BELL-DE"
+name: "End Bell (Drive End)"
+description: "Drive-end bearing housing"
+revision: "A"
+status: "Draft"
+category: "MOTOR"  # System category
+created_date: "2025-12-05"
+last_modified: "2025-12-05"
+
+# Physical Properties
+physical:
+  mass_kg: 18.0
+  mass_tolerance_kg: 0.1
+  center_of_gravity:
+    x_mm: 0.0
+    y_mm: 0.0
+    z_mm: 0.0
+  material:
+    primary: "Cast Aluminum"
+    specification: "TBD"
+    supplier: "TBD"
+
+# Geometry Summary
+geometry:
+  type: "Solid"
+  bounding_box:
+    length_mm: 0.0
+    width_mm: 0.0
+    height_mm: 0.0
+  volume_mm3: 0.0
+  surface_area_mm2: 0.0
+
+# CAD File References
+cad_files:
+  native:
+    catia:
+      path: "CAD/NATIVE/CATIA/"
+      filename: "Q100-61-PRT-MOTOR-END-BELL-DE.CATPart"
+      version: "V5R21"
+      status: "Placeholder"
+    solidworks:
+      path: "CAD/NATIVE/SOLIDWORKS/"
+      filename: "Q100-61-PRT-MOTOR-END-BELL-DE.sldprt"
+      version: "2024"
+      status: "Placeholder"
+    nx:
+      path: "CAD/NATIVE/NX/"
+      filename: "Q100-61-PRT-MOTOR-END-BELL-DE.prt"
+      version: "NX12"
+      status: "Placeholder"
+  neutral:
+    step:
+      path: "CAD/NEUTRAL/"
+      filename: "Q100-61-PRT-MOTOR-END-BELL-DE.step"
+      format: "AP242"
+      status: "Placeholder"
+    jt:
+      path: "CAD/NEUTRAL/"
+      filename: "Q100-61-PRT-MOTOR-END-BELL-DE.jt"
+      format: "JT 10.5"
+      status: "Placeholder"
+
+# Specifications References
+specifications:
+  material_spec: "TBD"
+  process_spec: "TBD"
+  inspection_spec: "TBD"
+  test_spec: "TBD"
+
+# Manufacturing Information
+manufacturing:
+  process: "Cast"
+  supplier: "TBD"
+  lead_time_weeks: 0
+  make_buy: "TBD"
+  tooling_required: false
+
+# Quality Requirements
+quality:
+  inspection_level: "Level II"
+  critical_dimensions: []
+  special_processes: []
+  certifications: []
+  first_article_required: true
+
+# Assembly References
+assemblies: []
+
+# Traceability
+traceability:
+  requirements: []
+  verification: []
+  drawings: []
+
+# Revision History
+revision_history:
+  - revision: "A"
+    date: "2025-12-05"
+    author: "AMPEL360 Engineering"
+    description: "Initial release"
+    ecn: "TBD"
+
+# Approval (to be completed)
+approval:
+  status: "Draft"
+  approvals: []

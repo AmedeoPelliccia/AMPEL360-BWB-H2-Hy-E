@@ -1,0 +1,164 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-PROD-CONTROLLER-UNIT — Product Definition
+# AMPEL360 BWB H2 Hy-E Controller Unit
+
+product:
+  id: Q100-61-PROD-CONTROLLER-UNIT
+  name: Controller Unit
+  revision: A
+  status: DRAFT
+  level: sub-product
+  parent: Q100-61-PROD-PROPULSOR-SYSTEM
+  ata_chapter: "61"
+  program: Q100
+
+description:
+  short: >-
+    Dual-channel FADEC with integrated motor control and health monitoring
+  long: >-
+    The Q100-61-PROD-CONTROLLER-UNIT provides full-authority digital control 
+    of the hybrid-electric propulsion system. It features a dual-channel 
+    architecture for DAL A certification, integrated motor control algorithms, 
+    power management, and comprehensive health monitoring with prognostic 
+    capabilities.
+
+performance:
+  architecture: dual_channel
+  control_rate_kHz: 10
+  health_parameters: 100+
+  dal_level: A
+  response_time_ms: 10
+  
+physical:
+  length_m: 0.4
+  width_m: 0.3
+  height_m: 0.2
+  weight_kg: 45
+  cooling: conduction
+
+components:
+  - name: FADEC Channel A
+    quantity: 1
+    dal: A
+    processor: Multi-core
+    weight_kg: 8
+  - name: FADEC Channel B
+    quantity: 1
+    dal: A
+    processor: Multi-core
+    weight_kg: 8
+  - name: Motor Controller 1
+    quantity: 1
+    type: Integrated
+    weight_kg: 5
+  - name: Motor Controller 2
+    quantity: 1
+    type: Integrated
+    weight_kg: 5
+  - name: Power Management Unit
+    quantity: 1
+    type: Intelligent
+    weight_kg: 4
+  - name: Health Monitoring Unit
+    quantity: 1
+    type: Integrated
+    weight_kg: 3
+  - name: I/O Module
+    quantity: 2
+    type: Analog/Digital
+    weight_kg: 2
+  - name: Power Supply Unit
+    quantity: 2
+    type: Redundant
+    weight_kg: 3
+  - name: Wiring Harness
+    quantity: 1
+    weight_kg: 5
+
+sensors:
+  temperature:
+    - motor_winding_ch1
+    - motor_winding_ch2
+    - inverter_ch1
+    - inverter_ch2
+    - gearbox_oil
+    - bearing_1
+    - bearing_2
+  vibration:
+    - motor_radial
+    - motor_axial
+    - gearbox
+    - fan
+  position:
+    - rotor_position_ch1
+    - rotor_position_ch2
+    - pitch_angle
+  current:
+    - phase_u_ch1
+    - phase_v_ch1
+    - phase_w_ch1
+    - phase_u_ch2
+    - phase_v_ch2
+    - phase_w_ch2
+  voltage:
+    - dc_bus
+    - inverter_output_ch1
+    - inverter_output_ch2
+
+interfaces:
+  - id: IF-CTL-001
+    to: Q100-61-PROD-ELECTRIC-DRIVE-UNIT
+    type: electrical
+    description: Motor control and feedback
+  - id: IF-CTL-002
+    to: Q100-61-PROD-OPEN-FAN-UNIT
+    type: electrical
+    description: Pitch control and feedback
+  - id: IF-CTL-003
+    to: Aircraft Data Bus
+    type: data
+    protocols:
+      - ARINC-429
+      - CAN-FD
+  - id: IF-CTL-004
+    to: Sensors
+    type: electrical
+    description: Analog and digital sensor inputs
+
+certification:
+  standards:
+    - code: DO-178C
+      level: DAL A
+    - code: DO-254
+      level: DAL A
+    - code: DO-160G
+      sections: all
+    - code: ARP-4754A
+      level: FDAL A
+  software:
+    lines_of_code: TBD
+    safety_criticality: catastrophic
+
+assembly_reference: "../../ASSEMBLIES/ELECTRIC_MOTOR_DRIVE/"
+bom_reference: "../../BILL_OF_MATERIALS/Q100-61-BOM-CONTROLLER-UNIT/"
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

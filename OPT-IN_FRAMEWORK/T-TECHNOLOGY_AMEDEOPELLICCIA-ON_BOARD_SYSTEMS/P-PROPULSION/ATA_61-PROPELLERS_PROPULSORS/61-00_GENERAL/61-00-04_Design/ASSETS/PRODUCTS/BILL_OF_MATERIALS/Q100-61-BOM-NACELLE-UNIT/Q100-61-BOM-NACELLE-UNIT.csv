@@ -1,0 +1,7 @@
+Level,Item_Number,Part_Number,Description,Quantity,UOM,Make_Buy,Material
+0,1,Q100-61-PROD-NACELLE-UNIT,Nacelle Unit,1,EA,MAKE,
+1,1.1,Q100-61-P-NAC-INLET,Inlet Cowl,1,EA,MAKE,CFRP
+1,1.2,Q100-61-P-NAC-FCL,Fan Cowl,2,EA,MAKE,CFRP
+1,1.3,Q100-61-P-NAC-CCL,Core Cowl,2,EA,MAKE,CFRP
+1,1.4,Q100-61-P-NAC-TR,Thrust Reverser Assembly,1,EA,MAKE,
+1,1.5,Q100-61-P-NAC-ACO,Acoustic Liner Panels,1,SET,BUY,

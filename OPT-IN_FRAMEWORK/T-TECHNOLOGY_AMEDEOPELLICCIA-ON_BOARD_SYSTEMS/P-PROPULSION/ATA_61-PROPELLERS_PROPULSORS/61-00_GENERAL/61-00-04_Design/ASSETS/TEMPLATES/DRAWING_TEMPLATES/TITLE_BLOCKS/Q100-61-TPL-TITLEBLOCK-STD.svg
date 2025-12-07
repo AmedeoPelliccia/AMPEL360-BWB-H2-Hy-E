@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Q100-61-TPL-TITLEBLOCK-STD.svg
+  Standard Drawing Title Block
+  
+  Template for AMPEL360-BWB-H2-Hy-E Q100 Program
+  ATA Chapter 61 - Propellers/Propulsors
+  
+  Usage:
+  - Import into sheet format
+  - Position in bottom-right corner
+  - Fill in required fields
+-->
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="180mm" height="50mm" 
+     viewBox="0 0 180 50">
+  
+  <!-- Title Block Outer Border -->
+  <rect x="0" y="0" width="180" height="50" 
+        fill="none" stroke="#000" stroke-width="0.5"/>
+  
+  <!-- Horizontal Dividers -->
+  <line x1="0" y1="10" x2="180" y2="10" stroke="#000" stroke-width="0.25"/>
+  <line x1="0" y1="30" x2="180" y2="30" stroke="#000" stroke-width="0.25"/>
+  <line x1="0" y1="40" x2="180" y2="40" stroke="#000" stroke-width="0.25"/>
+  
+  <!-- Vertical Dividers -->
+  <line x1="90" y1="0" x2="90" y2="10" stroke="#000" stroke-width="0.25"/>
+  <line x1="45" y1="30" x2="45" y2="50" stroke="#000" stroke-width="0.25"/>
+  <line x1="90" y1="30" x2="90" y2="50" stroke="#000" stroke-width="0.25"/>
+  <line x1="120" y1="30" x2="120" y2="50" stroke="#000" stroke-width="0.25"/>
+  <line x1="150" y1="30" x2="150" y2="50" stroke="#000" stroke-width="0.25"/>
+  
+  <!-- Labels (to be filled in) -->
+  <g font-size="2.5" fill="#666">
+    <!-- Top Row -->
+    <text x="2" y="4">PROGRAM</text>
+    <text x="92" y="4">ATA CHAPTER</text>
+    
+    <!-- Drawing Number and Title Area -->
+    <text x="2" y="14">DRAWING TITLE</text>
+    
+    <!-- Bottom Rows -->
+    <text x="2" y="33">DRAWN BY</text>
+    <text x="47" y="33">CHECKED BY</text>
+    <text x="92" y="33">SIZE</text>
+    <text x="122" y="33">SCALE</text>
+    <text x="152" y="33">SHEET</text>
+    
+    <text x="2" y="43">DATE</text>
+    <text x="47" y="43">DATE</text>
+    <text x="92" y="43">DWG NO.</text>
+    <text x="152" y="43">REV</text>
+  </g>
+  
+  <!-- Placeholder Values (replace when using) -->
+  <g font-size="4" fill="#000">
+    <text x="2" y="8">[Q100]</text>
+    <text x="92" y="8">[61]</text>
+    <text x="2" y="25">[DRAWING TITLE]</text>
+    <text x="2" y="38">[NAME]</text>
+    <text x="47" y="38">[NAME]</text>
+    <text x="92" y="38">[A3]</text>
+    <text x="122" y="38">[1:1]</text>
+    <text x="152" y="38">[1/1]</text>
+    <text x="2" y="48">[DATE]</text>
+    <text x="47" y="48">[DATE]</text>
+    <text x="92" y="48">[61-00-04-AXXX]</text>
+    <text x="152" y="48">[A]</text>
+  </g>
+  
+  <!-- AMPEL360 Logo Placeholder -->
+  <rect x="130" y="12" width="48" height="16" fill="none" stroke="#999" stroke-width="0.18"/>
+  <text x="154" y="22" font-size="3" text-anchor="middle" fill="#999">LOGO</text>
+  
+</svg>

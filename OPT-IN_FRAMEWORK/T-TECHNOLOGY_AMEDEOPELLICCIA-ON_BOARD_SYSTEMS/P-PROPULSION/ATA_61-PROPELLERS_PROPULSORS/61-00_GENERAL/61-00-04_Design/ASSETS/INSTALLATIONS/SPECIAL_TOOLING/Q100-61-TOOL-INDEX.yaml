@@ -1,0 +1,66 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-TOOL-INDEX — Special Tooling Master Index
+# AMPEL360-BWB-H2-Hy-E Hybrid Propulsion System
+
+tools:
+  - id: "Q100-61-TOOL-001"
+    name: "Propulsor Lift Fixture"
+    category: "A - Lifting"
+    part_number: "Q100-61-TOOL-PROPULSOR-LIFT"
+    capacity_kg: 1000
+    calibration_interval: "None"
+    inspection_interval: "Before each use"
+    storage: "Tool crib"
+    
+  - id: "Q100-61-TOOL-002"
+    name: "Blade Installation Tool"
+    category: "C - Installation"
+    part_number: "Q100-61-TOOL-BLADE-INSTALL"
+    application: "Blade root engagement"
+    calibration_interval: "None"
+    inspection_interval: "Before each use"
+    
+  - id: "Q100-61-TOOL-003"
+    name: "Motor Alignment Fixture"
+    category: "B - Alignment"
+    part_number: "Q100-61-TOOL-MOTOR-ALIGN"
+    accuracy_mm: 0.01
+    calibration_interval: "Annual"
+    
+  - id: "Q100-61-TOOL-004"
+    name: "Gearbox Lift Fixture"
+    category: "A - Lifting"
+    part_number: "Q100-61-TOOL-GEARBOX-LIFT"
+    capacity_kg: 500
+    calibration_interval: "None"
+    inspection_interval: "Before each use"
+    
+  - id: "Q100-61-TOOL-005"
+    name: "Fan Balance Fixture"
+    category: "D - Test"
+    part_number: "Q100-61-TOOL-BALANCE-FIXTURE"
+    sensitivity_g_mm: 1
+    calibration_interval: "Annual"
+    
+  - id: "Q100-61-TOOL-006"
+    name: "Torque Multiplier"
+    category: "C - Installation"
+    part_number: "Q100-61-TOOL-TORQUE-MULT"
+    ratio: "4:1"
+    range_Nm: "50-600"
+    calibration_interval: "Annual"

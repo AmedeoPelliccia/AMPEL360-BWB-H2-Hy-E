@@ -1,0 +1,150 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-STD-FASTENER-INDEX — Standard Fastener Catalog for ATA 61
+# This file catalogs standard fasteners used in propulsion system assemblies.
+
+version: 1
+ata_chapter: "61"
+program: "Q100"
+owner: "AMPEL360 Propulsion Engineering"
+last_updated: "2025-12-05"
+status: "Draft"
+
+# Fastener Categories
+categories:
+  bolts:
+    description: "Structural bolts for assembly joints"
+    standards:
+      - "AN3 - AN20"
+      - "NAS1303 - NAS1320"
+      - "MS21250"
+    items:
+      - part_number: "AN4-10A"
+        description: "Bolt, machine, 1/4-28 x 5/8"
+        material: "Alloy Steel, Cadmium Plated"
+        specification: "AN4"
+        applications: ["General structural"]
+
+      - part_number: "NAS1306-6"
+        description: "Bolt, internal wrenching, 1/4-28 x 3/8"
+        material: "Alloy Steel"
+        specification: "NAS1306"
+        applications: ["High-strength joints"]
+
+      - part_number: "MS21250-05016"
+        description: "Bolt, hex head, close tolerance"
+        material: "Alloy Steel"
+        specification: "MS21250"
+        applications: ["Precision fits"]
+
+  nuts:
+    description: "Self-locking and standard nuts"
+    standards:
+      - "MS21042"
+      - "AN363"
+      - "AN365"
+    items:
+      - part_number: "MS21042-4"
+        description: "Nut, self-locking, 1/4-28"
+        material: "Steel, Cadmium Plated"
+        specification: "MS21042"
+        applications: ["Vibration-resistant joints"]
+
+      - part_number: "AN363-428"
+        description: "Nut, plain, 1/4-28"
+        material: "Steel"
+        specification: "AN363"
+        applications: ["General purpose"]
+
+  washers:
+    description: "Flat and spring washers"
+    standards:
+      - "AN960"
+      - "AN970"
+      - "NAS1149"
+    items:
+      - part_number: "AN960-416"
+        description: "Washer, flat, 1/4 ID"
+        material: "Steel, Cadmium Plated"
+        specification: "AN960"
+        applications: ["Load distribution"]
+
+      - part_number: "NAS1149F0463P"
+        description: "Washer, flat, stainless"
+        material: "CRES"
+        specification: "NAS1149"
+        applications: ["Corrosion-resistant assemblies"]
+
+  screws:
+    description: "Machine and pan head screws"
+    standards:
+      - "MS24693"
+      - "AN526"
+      - "AN507"
+    items:
+      - part_number: "MS24693-C52"
+        description: "Screw, machine, flat head, #10-32"
+        material: "Alloy Steel"
+        specification: "MS24693"
+        applications: ["Access panels"]
+
+  rivets:
+    description: "Solid and blind rivets"
+    standards:
+      - "MS20470"
+      - "NAS1097"
+    items:
+      - part_number: "MS20470AD4-5"
+        description: "Rivet, solid, 1/8 dia"
+        material: "Aluminum 2117-T4"
+        specification: "MS20470"
+        applications: ["Sheet metal assembly"]
+
+  pins:
+    description: "Alignment and locking pins"
+    standards:
+      - "MS24665"
+      - "AN416"
+    items:
+      - part_number: "MS24665-134"
+        description: "Pin, cotter, 1/16 x 3/4"
+        material: "CRES"
+        specification: "MS24665"
+        applications: ["Safety locking"]
+
+# Material Specifications
+material_specs:
+  alloy_steel:
+    specification: "MIL-S-8879"
+    finish: "Cadmium plate per QQ-P-416"
+    temperature_limit: "450°F"
+
+  stainless_steel:
+    specification: "A-A-59441"
+    grade: "CRES 300 series"
+    finish: "Passivated"
+
+  titanium:
+    specification: "MIL-T-9047"
+    grade: "Ti-6Al-4V"
+    finish: "Anodized"
+
+# Usage Guidelines
+guidelines:
+  torque_values: "Per assembly drawing callouts or NASM 1312-4"
+  thread_locking: "Use Loctite 242 or equivalent where specified"
+  inspection: "Visual and dimensional per AS9100 requirements"

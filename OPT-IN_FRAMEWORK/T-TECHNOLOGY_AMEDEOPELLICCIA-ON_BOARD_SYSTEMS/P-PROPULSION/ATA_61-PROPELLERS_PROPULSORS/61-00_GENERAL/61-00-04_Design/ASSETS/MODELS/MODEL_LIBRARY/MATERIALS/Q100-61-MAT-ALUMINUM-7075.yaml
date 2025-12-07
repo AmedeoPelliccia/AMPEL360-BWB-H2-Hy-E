@@ -1,0 +1,48 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Material Definition: Q100-61-MAT-ALUMINUM-7075
+# Aluminum Alloy 7075-T6 for Housings
+
+material_id: Q100-61-MAT-ALUMINUM-7075
+material_name: Aluminum 7075-T6
+category: STRUCTURAL
+specification: AMS 4045 (Sheet), AMS 4122 (Forging)
+application: Motor housing, gearbox housing, nacelle frames
+
+mechanical:
+  density_kg_m3: 2810
+  youngs_modulus_GPa: 71.7
+  poissons_ratio: 0.33
+  shear_modulus_GPa: 26.9
+  yield_strength_MPa: 503
+  ultimate_strength_MPa: 572
+  elongation_percent: 11
+  fatigue_limit_MPa: 159
+  fracture_toughness_MPa_sqrt_m: 29
+
+thermal:
+  conductivity_W_mK: 130
+  specific_heat_J_kgK: 960
+  expansion_coeff_1_K: 23.4e-6
+  max_service_temp_C: 120
+
+source: MIL-HDBK-5J / MMPDS
+status: Approved
+
+document_control:
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

@@ -1,0 +1,48 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Standard Conditions: Q100-61-COND-COLD-DAY
+# ISA-30°C Cold Day Conditions
+
+condition_id: Q100-61-COND-COLD-DAY
+condition_name: ISA-30°C Cold Day
+standard: ISA
+isa_deviation_C: -30
+
+atmosphere:
+  altitude_m: 0
+  altitude_ft: 0
+  pressure_Pa: 101325
+  temperature_K: 258.15
+  temperature_C: -15.0
+  temperature_F: 5.0
+  density_kg_m3: 1.367
+  speed_of_sound_m_s: 322.1
+  viscosity_Pa_s: 1.650e-5
+
+flight:
+  mach: 0.0
+  true_airspeed_m_s: 0.0
+
+application: |
+  Cold day starting, cold soak conditions, lubricant viscosity
+
+source: ICAO Standard Atmosphere - 30°C
+status: Approved
+
+document_control:
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

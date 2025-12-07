@@ -11,20 +11,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# CGen - Continuous Generation
 #
-# This workflow runs AI/automation to generate and update documentation,
-# diagrams, indexes, and traceability artifacts. All changes are proposed
-# via bot PRs for human review - never silent commits.
+# CGen - Continuous Generation (MVP restringido)
 #
-# CGen Lane Responsibilities:
-# - Generate/update documentation, diagrams, indexes
-# - Build traceability artifacts (GenCCC reports, cross-ref maps)
-# - Propose new assets (placeholder docs, skeletons) as PRs
-# - Rebuild indexes and dashboards on schedule
+# MVP: Restringir la acción efectiva de CGen a:
+#   OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE
+# + generación de reports en cd/reports.
 #
-# Principle: CGen PROPOSES via bot PRs, humans approve
+# Si algún script modifica ficheros fuera de esas rutas, el job FALLA
+# y NO se crea PR.
 
 name: CGen - Continuous Generation
 
@@ -46,7 +41,7 @@ on:
           - indexes-only
 
 permissions:
-  contents: write        # Needed for automation PRs
+  contents: write
   pull-requests: write
 
 jobs:
@@ -54,6 +49,9 @@ jobs:
     name: Continuous Generation
     runs-on: ubuntu-latest
     timeout-minutes: 30
+
+    env:
+      CGEN_TARGET_ROOT: OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE
 
     steps:
       - name: Checkout
@@ -73,13 +71,14 @@ jobs:
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           fi
-          # Install any CGen-specific dependencies
           pip install openai 2>/dev/null || echo "OpenAI not needed for basic generation"
 
       - name: Configure Git
         run: |
           git config user.name "ampel360-cgen-bot"
           git config user.email "ampel360-cgen-bot@users.noreply.github.com"
+
+      # ===== Lanes habituales (no tocamos la lógica interna de los scripts) =====
 
       - name: Generate summary tables
         run: |
@@ -98,7 +97,7 @@ jobs:
           if [ -f tools/genccc/report.py ]; then
             python tools/genccc/report.py || echo "GenCCC baseline report completed with warnings"
           else
-            echo "GenCCC report.py not found - skipping"
+            echo "tools/genccc/report.py not found - skipping"
           fi
 
       - name: Generate traceability matrices
@@ -107,27 +106,29 @@ jobs:
           if [ -f tools/genccc/traceability.py ]; then
             python tools/genccc/traceability.py || echo "Traceability generation completed with warnings"
           else
-            echo "traceability.py not found - skipping"
+            echo "tools/genccc/traceability.py not found - skipping"
           fi
 
-      - name: Update document indexes (CGen Lane 1)
+      - name: Update document indexes (CGen Lane 1 – MVP restricted)
         run: |
-          echo "=== Updating Document Indexes (CGen Lane 1) ==="
-          # Auto-generate 00_INDEX.md files throughout the repository
+          echo "=== Updating Document Indexes (CGen Lane 1, MVP restricted) ==="
+          # MVP: solo generar índices dentro de ATA_03-SUPPORT_INFORMATION_GSE
           if [ -f tools/ci/auto_index_generator.py ]; then
-            python tools/ci/auto_index_generator.py --root OPT-IN_FRAMEWORK --write || echo "Index generation completed with warnings"
+            python tools/ci/auto_index_generator.py --root "$CGEN_TARGET_ROOT" --write || echo "Index generation completed with warnings"
           else
-            echo "auto_index_generator.py not found - skipping"
+            echo "tools/ci/auto_index_generator.py not found - skipping"
           fi
 
       - name: Generate requirement skeletons (if needed)
         run: |
-          echo "=== Generating Missing Requirement Skeletons ==="
+          echo "=== Generating Missing Requirement Skeletons (global) ==="
           if [ -f tools/genccc/generate.py ]; then
             python tools/genccc/generate.py || echo "Skeleton generation completed"
           else
-            echo "generate.py not found - skipping"
+            echo "tools/genccc/generate.py not found - skipping"
           fi
+
+      # ===== Detectar si hay cambios =====
 
       - name: Check for changes
         id: check_changes
@@ -141,6 +142,50 @@ jobs:
             echo "Changes detected"
           fi
 
+      # ===== MVP: limitar cambios a ATA_03 + cd/reports =====
+      #
+      # Solo se permiten cambios en:
+      #  - OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/**
+      #  - cd/reports/**
+      # Todo lo demás es error → no PR.
+
+      - name: Enforce path restriction (MVP ATA_03 only)
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          echo "=== Enforcing path restriction to $CGEN_TARGET_ROOT and cd/reports (MVP) ==="
+          ALLOWED_ROOT_1="$CGEN_TARGET_ROOT/"
+          ALLOWED_ROOT_2="cd/reports/"
+
+          VIOLATIONS=0
+
+          git diff --name-only > changed_files.txt
+          echo "Changed files:"
+          cat changed_files.txt || true
+          echo "----"
+
+          while read -r f; do
+            [ -z "$f" ] && continue
+
+            case "$f" in
+              $ALLOWED_ROOT_1* | $ALLOWED_ROOT_2* )
+                echo "OK: $f"
+                ;;
+              *)
+                echo "::error::File changed outside MVP-allowed paths: $f"
+                VIOLATIONS=$((VIOLATIONS+1))
+                ;;
+            esac
+          done < changed_files.txt
+
+          if [ "$VIOLATIONS" -gt 0 ]; then
+            echo "::error::CGen modified files outside $ALLOWED_ROOT_1 and $ALLOWED_ROOT_2. Aborting PR creation (MVP)."
+            exit 1
+          fi
+
+          echo "All changes are within MVP-allowed paths. Proceeding."
+
+      # ===== Crear PR solo si hay cambios y han pasado el filtro de rutas =====
+
       - name: Create Pull Request
         if: steps.check_changes.outputs.has_changes == 'true'
         uses: peter-evans/create-pull-request@v6
@@ -148,44 +193,48 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: cgen/update-${{ github.run_number }}
           delete-branch: true
-          title: "CGen: Automated documentation & reports update"
+          title: "CGen (MVP ATA_03): Automated documentation & reports update"
           commit-message: |
-            CGen: automated documentation & reports update
-            
-            Generated by Continuous Generation pipeline:
+            CGen (MVP ATA_03): automated documentation & reports update
+
+            Generated by Continuous Generation pipeline (restricted to ATA_03-SUPPORT_INFORMATION_GSE + reports):
             - Summary tables updated
             - GenCCC baseline report
             - Traceability matrices
-            - Document indexes refreshed
-            
+            - Document indexes refreshed under ATA_03
+
             AI assistance: GitHub Copilot, prompted by Amedeo Pelliccia
             Status: DRAFT - Subject to human review and approval
           body: |
-            ## CGen Automated Update
-            
-            This PR contains automated updates from the Continuous Generation pipeline.
-            
+            ## CGen Automated Update (MVP restricted)
+
+            This PR contains automated updates from the Continuous Generation pipeline,
+            restricted to:
+
+            - `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/**`
+            - `cd/reports/**`
+
             ### Changes Include:
             - 📊 Summary tables updated
             - 🔗 GenCCC baseline report
             - 📋 Traceability matrices
-            - 📑 Document indexes refreshed
-            - 🔄 Cross-reference updates
-            
+            - 📑 Document indexes refreshed (ATA_03 only)
+            - 🔄 Cross-reference updates (if any within ATA_03)
+
             ### Review Instructions:
             1. Review the generated content for accuracy
             2. Verify cross-references are correct
             3. Check that AI-generated content has proper Document Control sections
             4. Approve and merge if all looks good
-            
+
             ### Document Control
             - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**
             - Status: **DRAFT** – Subject to human review and approval
             - Repository: `AMPEL360-BWB-H2-Hy-E`
             - Last AI update: ${{ github.event.head_commit.timestamp }}
-            
+
             ---
-            **CGen Principle**: Propose changes via PR, never silent commits
+            **CGen Principle (MVP)**: Propose via bot PRs, restricted to ATA_03 + reports; humans approve.
           labels: |
             cgen
             documentation
@@ -203,13 +252,13 @@ jobs:
       - name: CGen Summary
         if: always()
         run: |
-          echo "# CGen Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+          echo "# CGen Pipeline Summary (MVP ATA_03)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "## Generation Results" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.check_changes.outputs.has_changes }}" = "true" ]; then
             echo "✅ Changes detected and committed to branch: \`cgen/update-${{ github.run_number }}\`" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "A pull request has been created for review." >> $GITHUB_STEP_SUMMARY
+            echo "A pull request has been created for review (MVP restricted to ATA_03 + reports)." >> $GITHUB_STEP_SUMMARY
           else
             echo "ℹ️ No changes needed - all artifacts are up to date" >> $GITHUB_STEP_SUMMARY
           fi
@@ -218,6 +267,6 @@ jobs:
           echo "- Summary tables" >> $GITHUB_STEP_SUMMARY
           echo "- GenCCC baseline report" >> $GITHUB_STEP_SUMMARY
           echo "- Traceability matrices" >> $GITHUB_STEP_SUMMARY
-          echo "- Document indexes" >> $GITHUB_STEP_SUMMARY
+          echo "- Document indexes (ATA_03 only)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**CGen Principle**: Propose via bot PRs, humans approve" >> $GITHUB_STEP_SUMMARY
+          echo "**CGen MVP Principle**: Solo toca ATA_03-SUPPORT_INFORMATION_GSE + reports; todo lo demás queda protegido." >> $GITHUB_STEP_SUMMARY

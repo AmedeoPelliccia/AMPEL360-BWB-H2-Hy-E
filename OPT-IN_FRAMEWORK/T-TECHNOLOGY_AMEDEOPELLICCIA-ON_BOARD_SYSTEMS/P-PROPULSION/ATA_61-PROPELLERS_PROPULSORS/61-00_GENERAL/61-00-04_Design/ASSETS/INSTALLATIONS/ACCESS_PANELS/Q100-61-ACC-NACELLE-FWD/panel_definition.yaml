@@ -1,0 +1,45 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Panel Definition — Nacelle Forward
+
+panel_id: "Q100-61-ACC-NACELLE-FWD-001"
+name: "Nacelle Forward Upper Access"
+location:
+  zone: "Nacelle Forward"
+  position: "Upper centerline"
+  station: "FS 1200-1600"
+
+type: "Quick Access"
+material: "Carbon fiber composite"
+thickness_mm: 2.5
+
+dimensions:
+  length_mm: 400
+  width_mm: 300
+  hinge: "Forward edge"
+
+fasteners:
+  type: "Quarter-turn latches"
+  quantity: 4
+  part_number: "Camloc 4002"
+
+access_provides:
+  - "Fan blade visual inspection"
+  - "Pitch mechanism access"
+  - "Spinner retention check"
+
+inspection_frequency: "Daily/Preflight"
