@@ -1,0 +1,32 @@
+# VISUALS — Propulsor Installation
+
+This folder contains visual references for the propulsor installation procedure.
+
+## Contents
+
+Place the following visual assets here:
+- Installation sequence diagrams
+- Rigging arrangement photos
+- Alignment reference photos
+- Torque sequence diagrams
+- Connection routing diagrams
+
+## Naming Convention
+
+```
+Q100-61-INST-VIS-PROPULSOR-[DESCRIPTION]-[SEQ].svg
+```
+
+Examples:
+- Q100-61-INST-VIS-PROPULSOR-LIFT-FIXTURE-001.svg
+- Q100-61-INST-VIS-PROPULSOR-TORQUE-PATTERN-001.svg
+- Q100-61-INST-VIS-PROPULSOR-ROUTING-001.svg
+
+---
+
+## Document Control
+
+- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- Status: **DRAFT** – Subject to human review and approval.
+
+---

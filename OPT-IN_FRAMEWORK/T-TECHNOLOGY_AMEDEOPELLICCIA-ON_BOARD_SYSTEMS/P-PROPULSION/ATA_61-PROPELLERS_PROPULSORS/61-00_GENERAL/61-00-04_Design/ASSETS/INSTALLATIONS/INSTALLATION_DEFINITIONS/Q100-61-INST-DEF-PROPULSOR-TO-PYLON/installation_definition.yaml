@@ -1,0 +1,141 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-INST-DEF-PROPULSOR-TO-PYLON — Propulsor to Pylon Installation Definition
+# AMPEL360-BWB-H2-Hy-E Hybrid Propulsion System
+
+installation:
+  id: "Q100-61-INST-DEF-PROPULSOR-TO-PYLON"
+  name: "Propulsor to Pylon Installation"
+  version: "1.0.0"
+  status: "Draft"
+  ata_chapter: "61"
+  program: "Q100"
+
+  description: |
+    Defines the interface and mounting requirements for installing the 
+    open-fan propulsor assembly onto the pylon structure.
+
+  mechanical:
+    mount_type: "Three-point suspended mount with vibration isolation"
+    
+    forward_mount:
+      type: "Spherical bearing mount"
+      quantity: 2
+      load_capacity_kN: 150
+      fasteners:
+        - type: "NAS6604-24"
+          quantity: 4
+          torque_Nm: 95
+          safety_wire: true
+      alignment_tolerance_mm: 0.5
+    
+    aft_mount:
+      type: "Thrust link attachment"
+      quantity: 2
+      load_capacity_kN: 200
+      fasteners:
+        - type: "NAS6606-28"
+          quantity: 4
+          torque_Nm: 135
+          safety_wire: true
+      alignment_tolerance_mm: 0.3
+    
+    thrust_link:
+      type: "Adjustable rod end"
+      quantity: 2
+      max_thrust_kN: 180
+      fasteners:
+        - type: "NAS6604-20"
+          quantity: 2
+          torque_Nm: 75
+          safety_wire: true
+    
+    vibration_isolation:
+      type: "Elastomeric isolators"
+      natural_frequency_Hz: 15
+      damping_ratio: 0.15
+
+  electrical:
+    power_umbilical:
+      connector: "MIL-DTL-38999-III"
+      shell_size: 25
+      contacts: 37
+      voltage_max_V: 800
+      current_max_A: 400
+      
+    control_umbilical:
+      connector: "MIL-DTL-38999-III"
+      shell_size: 19
+      contacts: 61
+      voltage_max_V: 28
+      signal_types:
+        - "ARINC-429"
+        - "CAN bus"
+        - "Discrete"
+        - "Analog"
+
+  fluid:
+    cooling_supply:
+      connector: "Quick-disconnect QD-C-25"
+      size_mm: 25
+      pressure_max_bar: 6
+      flow_min_lpm: 50
+      medium: "Propylene glycol/water 50/50"
+      
+    cooling_return:
+      connector: "Quick-disconnect QD-C-25"
+      size_mm: 25
+      pressure_max_bar: 4
+      flow_min_lpm: 50
+      medium: "Propylene glycol/water 50/50"
+      
+    lubrication:
+      connector: "Quick-disconnect QD-L-12"
+      size_mm: 12
+      pressure_max_bar: 10
+      flow_min_lpm: 15
+      medium: "MIL-PRF-23699"
+
+  clearances:
+    operational:
+      blade_tip_mm: 50
+      nacelle_pylon_mm: 25
+      exhaust_zone_mm: 100
+    maintenance:
+      access_forward_mm: 800
+      access_aft_mm: 600
+      tool_clearance_mm: 150
+
+  weight:
+    propulsor_dry_kg: 450
+    installation_hardware_kg: 35
+    fluid_charge_kg: 25
+
+  references:
+    icds:
+      - "ICD-61-001"
+      - "ICD-61-002"
+    drawings:
+      - "Q100-61-DRW-MNT-MOUNT-001"
+      - "Q100-61-INST-MNT-PYLON-001"
+    requirements:
+      - "REQ-61-MNT-001"
+      - "REQ-61-MNT-002"
+      - "REQ-61-MNT-003"
+    safety:
+      - "HZ-61-0001"
+      - "HZ-61-0002"
