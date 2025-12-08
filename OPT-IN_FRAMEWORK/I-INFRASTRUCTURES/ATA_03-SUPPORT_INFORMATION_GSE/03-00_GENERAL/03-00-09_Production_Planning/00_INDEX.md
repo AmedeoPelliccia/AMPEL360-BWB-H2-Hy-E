@@ -6,5 +6,154 @@
 
 ## 📂 Directory Contents
 
+This directory contains comprehensive documentation for Ground Support Equipment (GSE) production planning aligned with the AMPEL360 BWB H2 Hy-E aircraft program.
 
-*This directory is currently empty.*
+---
+
+## 📋 Overview Documents
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [README.md](./README.md) | Production Planning Overview | Purpose and scope of production planning folder |
+
+---
+
+## 📁 03-00-09-01: GSE Production Strategy
+
+Strategic planning and capacity management for GSE production.
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [03-00-09-01-01A](./03-00-09-01_GSE_Production_Strategy/03-00-09-01-01A_GSE_Production_Philosophy.md) | GSE Production Philosophy | Production philosophy, principles, and strategic vision |
+| [03-00-09-01-02A](./03-00-09-01_GSE_Production_Strategy/03-00-09-01-02A_GSE_Make_Buy_Analysis.md) | GSE Make-Buy Analysis | Make-or-buy decision framework and analysis |
+| [03-00-09-01-03A](./03-00-09-01_GSE_Production_Strategy/03-00-09-01-03A_GSE_Production_Roadmap.md) | GSE Production Roadmap | Production phases, milestones, and timeline |
+| [03-00-09-01-04A](./03-00-09-01_GSE_Production_Strategy/03-00-09-01-04A_GSE_Capacity_Planning.md) | GSE Capacity Planning | Production capacity requirements and scaling strategy |
+
+---
+
+## 📁 03-00-09-02: H2 GSE Production
+
+Hydrogen-specific GSE production planning and supplier qualification.
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [03-00-09-02-01A](./03-00-09-02_H2_GSE_Production/03-00-09-02-01A_LH2_Fueling_GSE_Production.md) | LH2 Fueling GSE Production | Liquid hydrogen fueling equipment production specifications |
+| [03-00-09-02-02A](./03-00-09-02_H2_GSE_Production/03-00-09-02-02A_Cryogenic_GSE_Manufacturing.md) | Cryogenic GSE Manufacturing | Cryogenic GSE manufacturing processes (-253°C) |
+| [03-00-09-02-03A](./03-00-09-02_H2_GSE_Production/03-00-09-02-03A_H2_Safety_GSE_Production.md) | H2 Safety GSE Production | Hydrogen safety equipment production requirements |
+| [03-00-09-02-04A](./03-00-09-02_H2_GSE_Production/03-00-09-02-04A_H2_GSE_Supplier_Qualification.md) | H2 GSE Supplier Qualification | Supplier qualification for hydrogen GSE components |
+
+---
+
+## 📁 03-00-09-03: GSE Manufacturing Processes
+
+Manufacturing methods, assembly, welding, and surface treatment.
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [03-00-09-03-01A](./03-00-09-03_GSE_Manufacturing_Processes/03-00-09-03-01A_GSE_Fabrication_Methods.md) | GSE Fabrication Methods | Fabrication processes for GSE components |
+| [03-00-09-03-02A](./03-00-09-03_GSE_Manufacturing_Processes/03-00-09-03-02A_GSE_Assembly_Processes.md) | GSE Assembly Processes | Assembly procedures and quality controls |
+| [03-00-09-03-03A](./03-00-09-03_GSE_Manufacturing_Processes/03-00-09-03-03A_GSE_Welding_Specifications.md) | GSE Welding Specifications | Welding specs for H2-compatible and cryogenic welding |
+| [03-00-09-03-04A](./03-00-09-03_GSE_Manufacturing_Processes/03-00-09-03-04A_GSE_Surface_Treatment.md) | GSE Surface Treatment | Surface treatment and finishing processes |
+
+---
+
+## 📁 03-00-09-04: GSE Supply Chain
+
+Supplier management, sourcing, procurement, and logistics.
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [03-00-09-04-01A](./03-00-09-04_GSE_Supply_Chain/03-00-09-04-01A_GSE_Supplier_Management.md) | GSE Supplier Management | Supplier management strategy and processes |
+| [03-00-09-04-02A](./03-00-09-04_GSE_Supply_Chain/03-00-09-04-02A_GSE_Component_Sourcing.md) | GSE Component Sourcing | Component and subassembly sourcing strategy |
+| [03-00-09-04-03A](./03-00-09-04_GSE_Supply_Chain/03-00-09-04-03A_GSE_Material_Procurement.md) | GSE Material Procurement | Raw material and consumables procurement |
+| [03-00-09-04-04A](./03-00-09-04_GSE_Supply_Chain/03-00-09-04-04A_GSE_Logistics_Planning.md) | GSE Logistics Planning | Transportation, warehousing, and distribution |
+
+---
+
+## 📁 03-00-09-05: GSE Quality Production
+
+Quality planning, inspection, NCR management, and first article inspection.
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [03-00-09-05-01A](./03-00-09-05_GSE_Quality_Production/03-00-09-05-01A_GSE_Production_Quality_Plan.md) | GSE Production Quality Plan | Quality objectives, processes, and responsibilities |
+| [03-00-09-05-02A](./03-00-09-05_GSE_Quality_Production/03-00-09-05-02A_GSE_Inspection_Points.md) | GSE Inspection Points | Inspection points and quality gates |
+| [03-00-09-05-03A](./03-00-09-05_GSE_Quality_Production/03-00-09-05-03A_GSE_NCR_Management.md) | GSE NCR Management | Non-conformance report management and CAPA |
+| [03-00-09-05-04A](./03-00-09-05_GSE_Quality_Production/03-00-09-05-04A_GSE_First_Article_Inspection.md) | GSE First Article Inspection | First article inspection process and requirements |
+
+---
+
+## 📁 03-00-09-06: GSE Production Scheduling
+
+Master scheduling, work orders, resource allocation, and lead time management.
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [03-00-09-06-01A](./03-00-09-06_GSE_Production_Scheduling/03-00-09-06-01A_GSE_Master_Schedule.md) | GSE Master Schedule | Master production schedule aligned with aircraft program |
+| [03-00-09-06-02A](./03-00-09-06_GSE_Production_Scheduling/03-00-09-06-02A_GSE_Work_Orders.md) | GSE Work Orders | Work order management and shop floor control |
+| [03-00-09-06-03A](./03-00-09-06_GSE_Production_Scheduling/03-00-09-06-03A_GSE_Resource_Allocation.md) | GSE Resource Allocation | Resource allocation strategies and optimization |
+| [03-00-09-06-04A](./03-00-09-06_GSE_Production_Scheduling/03-00-09-06-04A_GSE_Lead_Time_Management.md) | GSE Lead Time Management | Lead time measurement and reduction strategies |
+
+---
+
+## 📁 03-00-09-07: GSE Production Facilities
+
+Factory layout, production equipment, tooling, and facility safety.
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [03-00-09-07-01A](./03-00-09-07_GSE_Production_Facilities/03-00-09-07-01A_GSE_Factory_Layout.md) | GSE Factory Layout | Factory layout design and production flow |
+| [03-00-09-07-02A](./03-00-09-07_GSE_Production_Facilities/03-00-09-07-02A_GSE_Production_Equipment.md) | GSE Production Equipment | Production equipment specifications and maintenance |
+| [03-00-09-07-03A](./03-00-09-07_GSE_Production_Facilities/03-00-09-07-03A_GSE_Tooling_Requirements.md) | GSE Tooling Requirements | Tooling design, fabrication, and lifecycle management |
+| [03-00-09-07-04A](./03-00-09-07_GSE_Production_Facilities/03-00-09-07-04A_GSE_Facility_Safety.md) | GSE Facility Safety | Safety requirements for H2 and cryogenic operations |
+
+---
+
+## 📁 03-00-09-08: GSE Production Metrics
+
+KPIs, efficiency metrics, cost tracking, and delivery performance.
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| [03-00-09-08-01A](./03-00-09-08_GSE_Production_Metrics/03-00-09-08-01A_GSE_Production_KPIs.md) | GSE Production KPIs | Key performance indicators for GSE production |
+| [03-00-09-08-02A](./03-00-09-08_GSE_Production_Metrics/03-00-09-08-02A_GSE_Efficiency_Metrics.md) | GSE Efficiency Metrics | Productivity, utilization, and throughput metrics |
+| [03-00-09-08-03A](./03-00-09-08_GSE_Production_Metrics/03-00-09-08-03A_GSE_Cost_Tracking.md) | GSE Cost Tracking | Cost tracking and variance analysis |
+| [03-00-09-08-04A](./03-00-09-08_GSE_Production_Metrics/03-00-09-08-04A_GSE_Delivery_Performance.md) | GSE Delivery Performance | On-time delivery and schedule performance metrics |
+
+---
+
+## 📊 Document Statistics
+
+- **Total Documents:** 32 production planning documents
+- **Total Subdirectories:** 8 major topic areas
+- **Coverage:** Complete GSE production planning framework
+- **Status:** All documents at Rev A (Initial Release)
+
+---
+
+## 🔗 Cross-References
+
+### Related ATA 03 Sections
+- [03-00-06 Engineering](../03-00-06_Engineering/) - GSE design and engineering
+- [03-00-07 V&V](../03-00-07_V_AND_V/) - GSE verification and validation
+- [03-00-08 Prototyping](../03-00-08_Prototyping/) - GSE prototyping activities
+- [03-00-10 Certification](../03-00-10_Certification/) - GSE certification requirements
+
+### Related Standards
+- ATA iSpec 2200 - Information Standards for Aviation Maintenance
+- SAE ARP1796 - GSE Design Requirements
+- SAE AS6968 - Hydrogen Aircraft Refueling
+- ISO 19880 - Gaseous Hydrogen Fueling Stations
+- ASME B31.12 - Hydrogen Piping and Pipelines
+- AWS D1.1 - Structural Welding Code
+- ISO 9001 - Quality Management Systems
+
+---
+
+## 📝 Document Control
+
+- **Owner:** AMPEL360 Production Planning Team
+- **Approver:** GSE Production Manager
+- **Review Cycle:** Quarterly or upon significant change
+- **Last Major Update:** 2025-12-07
+- **Next Scheduled Review:** 2026-03-07
