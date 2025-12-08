@@ -75,7 +75,7 @@ This document covers:
   - ATA 03-00-06 (Engineering)
   - ATA 03-00-07 (V&V)
   - ATA 03-00-08 (Prototyping)
-- Parent Document: {doc_data['parent']}
+- Parent Document: 03-00-09_Production_Planning
 - Related GSE Engineering: 03-00-06_Engineering
 - Related GSE Prototyping: 03-00-08_Prototyping
 
