@@ -24,7 +24,7 @@ Proper electrical grounding is critical for safe GSE operations, particularly fo
 | Parameter | Specification | Tolerance |
 |-----------|---------------|-----------|
 | Bonding Resistance | < 1.0 Ω | Aircraft to ground |
-| H2 Fueling Bonding | < 0.1 Ω | Aircraft to H2 GSE |
+| H2 Fueling Bonding | < 0.1 Ω | Aircraft to H2 GSE (10× stricter for static discharge prevention with H₂) |
 | Ground Cable Size | AWG 2 minimum | Green/yellow insulation |
 | Ground Connection Points | 6 locations minimum | Around aircraft perimeter |
 | Connector Type | Copper clamp, 50mm² contact | Cadmium plated |
