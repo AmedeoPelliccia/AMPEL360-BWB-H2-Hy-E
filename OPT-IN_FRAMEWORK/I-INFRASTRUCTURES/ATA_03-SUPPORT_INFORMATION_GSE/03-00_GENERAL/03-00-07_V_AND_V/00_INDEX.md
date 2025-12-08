@@ -116,7 +116,7 @@ This directory contains comprehensive Verification and Validation (V&V) document
 - **Document ID**: 03-00-07-00-INDEX
 - **Version**: 1.0.0
 - **Status**: Active
-- **Last Update**: 2025-12-07
+- **Last Update**: 2025-12-08
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**
 - **Repository**: `AMPEL360-BWB-H2-Hy-E`
 - **Classification**: Internal Use
