@@ -575,16 +575,29 @@ jobs:
         env:
           GENCCC_TARGET_ROOT: ${{ github.workspace }}/child-repo
         run: |
+          echo "Running GenCCC audit on child branch..."
           mkdir -p cd/reports
           python tools/genccc/report.py
+          
+          # Verify the audit file was created
+          if [ -f "cd/reports/cross_reference_audit.md" ]; then
+            echo "✅ Audit report generated successfully"
+            echo "File size: $(wc -c < cd/reports/cross_reference_audit.md) bytes"
+            echo "First 20 lines:"
+            head -n 20 cd/reports/cross_reference_audit.md || true
+          else
+            echo "::error::Failed to generate audit report at cd/reports/cross_reference_audit.md"
+            exit 1
+          fi
 
       - name: Upload Child Audit Artifact
         if: steps.childref.outputs.found == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: genccc-cross-reference-audit-child
-          path: cd/reports/cross_reference_audit.md
-          retention-days: 14
+          path: main-repo/cd/reports/cross_reference_audit.md
+          retention-days: 30
+          if-no-files-found: error
 
       - name: Comment audit status in original PR
         if: steps.childref.outputs.found == 'true'
@@ -710,6 +723,16 @@ jobs:
         with:
           name: genccc-cross-reference-audit-child
           path: reports
+      
+      - name: Check Artifact Download Status
+        id: check-artifact
+        run: |
+          if [ "${{ steps.dl-audit.outcome }}" != "success" ]; then
+            echo "::warning::Artifact download failed. The genccc-cross-reference-audit-child artifact was not found."
+            echo "artifact_found=false" >> $GITHUB_OUTPUT
+          else
+            echo "artifact_found=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Ensure vv_lake.json exists
         run: |
@@ -749,13 +772,30 @@ jobs:
         run: |
           AUDIT_FILE="reports/cross_reference_audit.md"
           VV_LAKE="base/cd/vv_lake.json"
+          ARTIFACT_FOUND="${{ steps.check-artifact.outputs.artifact_found }}"
 
           if [ ! -f "$AUDIT_FILE" ]; then
-            echo "::warning::Audit file not found at $AUDIT_FILE. Counting issues as 0."
-            echo "pooled_issues=0" >> $GITHUB_OUTPUT
+            if [ "$ARTIFACT_FOUND" = "false" ]; then
+              echo "::error::Audit file not found at $AUDIT_FILE. Artifact 'genccc-cross-reference-audit-child' was not downloaded."
+              echo "::error::This indicates the upstream job 'verify_child_proposal' did not generate or upload the artifact successfully."
+              echo "::error::Check the 'verify_child_proposal' job to ensure:"
+              echo "::error::  1. The job completed successfully"
+              echo "::error::  2. The audit script ran and created cd/reports/cross_reference_audit.md"
+              echo "::error::  3. The artifact was uploaded with name 'genccc-cross-reference-audit-child'"
+              echo "::error::  4. The artifact has not expired (retention-days: 14)"
+              echo "pooled_issues=-1" >> $GITHUB_OUTPUT
+              echo "audit_missing=true" >> $GITHUB_OUTPUT
+            else
+              echo "::warning::Audit file not found at $AUDIT_FILE even though artifact was downloaded. Counting issues as 0."
+              echo "pooled_issues=0" >> $GITHUB_OUTPUT
+              echo "audit_missing=false" >> $GITHUB_OUTPUT
+            fi
           else
+            echo "✅ Found audit file at $AUDIT_FILE"
             COUNT=$(grep -Ei "warning|error|issue" "$AUDIT_FILE" | wc -l || echo 0)
+            echo "Found $COUNT issues in audit file"
             echo "pooled_issues=$COUNT" >> $GITHUB_OUTPUT
+            echo "audit_missing=false" >> $GITHUB_OUTPUT
           fi
 
           STANDARDS=$(jq -r '.standards[]?' "$VV_LAKE" | paste -sd, -)
@@ -806,14 +846,35 @@ jobs:
           ISSUES="${{ steps.pool.outputs.pooled_issues }}"
           PATHS="${{ steps.pool.outputs.validation_paths }}"
           CHECKLIST="${{ steps.checklist.outputs.checklist }}"
+          AUDIT_MISSING="${{ steps.pool.outputs.audit_missing }}"
 
           VALID=true
-          if [ "${ISSUES:-0}" -gt 0 ]; then
+          ERROR_DETAILS=""
+          
+          # Check if audit artifact is missing (critical error)
+          if [ "$AUDIT_MISSING" = "true" ]; then
             VALID=false
+            ERROR_DETAILS="${ERROR_DETAILS}• **Critical**: Audit artifact 'genccc-cross-reference-audit-child' not found"$'\n'
+            ERROR_DETAILS="${ERROR_DETAILS}  - Check verify_child_proposal job status"$'\n'
+            ERROR_DETAILS="${ERROR_DETAILS}  - Verify artifact upload step succeeded"$'\n'
+            ERROR_DETAILS="${ERROR_DETAILS}  - Confirm artifact name matches exactly"$'\n'
+            echo "::error::Audit artifact missing. Cannot validate completion targets."
+          fi
+          
+          # Check for unresolved issues (only if we have an audit file)
+          if [ "${ISSUES:-0}" -eq -1 ]; then
+            # Special case: audit file missing, already handled above
+            :
+          elif [ "${ISSUES:-0}" -gt 0 ]; then
+            VALID=false
+            ERROR_DETAILS="${ERROR_DETAILS}• Found ${ISSUES} unresolved audit issues"$'\n'
             echo "::error::Validation failed: ${ISSUES} unresolved audit issues."
           fi
+          
+          # Check validation paths
           if [ -z "$PATHS" ]; then
             VALID=false
+            ERROR_DETAILS="${ERROR_DETAILS}• No validation paths defined in V&V lake"$'\n'
             echo "::warning::No validation paths defined in V&V lake."
           fi
 
@@ -824,6 +885,12 @@ jobs:
           fi
 
           echo "validation_passed=$VALID" >> $GITHUB_OUTPUT
+          
+          {
+            echo "error_details<<EOF"
+            printf "%s" "$ERROR_DETAILS"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
           {
             echo "updated_checklist<<EOF"
@@ -860,14 +927,30 @@ jobs:
         env:
           UPDATED_CHECKLIST: ${{ steps.validate.outputs.updated_checklist }}
           VALIDATION_PASSED: ${{ steps.validate.outputs.validation_passed }}
+          ERROR_DETAILS: ${{ steps.validate.outputs.error_details }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const checklist = process.env.UPDATED_CHECKLIST || '';
             const passed = (process.env.VALIDATION_PASSED === 'true');
-            const body = passed
-              ? `🎯 **Completion Targets Achieved!**\n\nContextual checklist (auto-validated):\n\n${checklist}\n\nAll validation paths covered. Ready for merge.`
-              : `⚠️ **Completion Targets Incomplete**\n\nContextual checklist (review required):\n\n${checklist}\n\nAddress issues to meet standards and paths.`;
+            const errorDetails = process.env.ERROR_DETAILS || '';
+            
+            let body = '';
+            if (passed) {
+              body = `🎯 **Completion Targets Achieved!**\n\nContextual checklist (auto-validated):\n\n${checklist}\n\nAll validation paths covered. Ready for merge.`;
+            } else {
+              body = `⚠️ **Completion Targets Incomplete**\n\nContextual checklist (review required):\n\n${checklist}\n\n`;
+              if (errorDetails) {
+                body += `### Issues Found\n\n${errorDetails}\n\n`;
+              }
+              body += `### Next Steps\n\n`;
+              body += `1. Review the error details above\n`;
+              body += `2. Check the [workflow run logs](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) for more information\n`;
+              body += `3. If artifact is missing, verify the \`verify_child_proposal\` job completed successfully\n`;
+              body += `4. Address any audit issues found\n`;
+              body += `5. Re-run the workflow after fixes`;
+            }
+            
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -878,5 +961,51 @@ jobs:
       - name: Fail Workflow on Incomplete Targets
         if: steps.validate.outputs.validation_passed != 'true'
         run: |
-          echo "::error::Completion targets not met. Review pooled points and checklist."
+          AUDIT_MISSING="${{ steps.pool.outputs.audit_missing }}"
+          ISSUES="${{ steps.pool.outputs.pooled_issues }}"
+          PATHS="${{ steps.pool.outputs.validation_paths }}"
+          
+          echo "::error::════════════════════════════════════════════════════════════════"
+          echo "::error::Completion targets not met. Review details below:"
+          echo "::error::════════════════════════════════════════════════════════════════"
+          
+          if [ "$AUDIT_MISSING" = "true" ]; then
+            echo "::error::"
+            echo "::error::❌ CRITICAL: Audit artifact missing"
+            echo "::error::"
+            echo "::error::The artifact 'genccc-cross-reference-audit-child' was not found."
+            echo "::error::"
+            echo "::error::Troubleshooting steps:"
+            echo "::error::  1. Check if 'verify_child_proposal' job ran and completed successfully"
+            echo "::error::  2. Verify the job's audit generation step created the file:"
+            echo "::error::     - Expected path: cd/reports/cross_reference_audit.md"
+            echo "::error::  3. Confirm the artifact upload step succeeded:"
+            echo "::error::     - uses: actions/upload-artifact@v4"
+            echo "::error::     - name: genccc-cross-reference-audit-child"
+            echo "::error::     - path: cd/reports/cross_reference_audit.md"
+            echo "::error::  4. Check artifact has not expired (retention-days: 14)"
+            echo "::error::  5. Verify compatible artifact versions (both upload and download use v4)"
+            echo "::error::"
+          fi
+          
+          if [ "${ISSUES:-0}" -gt 0 ]; then
+            echo "::error::"
+            echo "::error::❌ Found ${ISSUES} unresolved audit issues"
+            echo "::error::"
+            echo "::error::Review the audit report to address these issues."
+            echo "::error::"
+          fi
+          
+          if [ -z "$PATHS" ]; then
+            echo "::error::"
+            echo "::error::⚠️  No validation paths defined in V&V lake"
+            echo "::error::"
+            echo "::error::Update base/cd/vv_lake.json to include validation paths."
+            echo "::error::"
+          fi
+          
+          echo "::error::════════════════════════════════════════════════════════════════"
+          echo "::error::See the PR comment for detailed next steps."
+          echo "::error::════════════════════════════════════════════════════════════════"
+          
           exit 1
