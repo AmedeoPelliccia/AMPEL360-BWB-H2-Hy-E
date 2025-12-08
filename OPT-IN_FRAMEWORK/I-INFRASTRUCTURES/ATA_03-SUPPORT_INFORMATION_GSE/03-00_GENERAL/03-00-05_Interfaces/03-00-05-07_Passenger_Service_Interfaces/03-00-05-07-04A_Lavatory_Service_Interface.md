@@ -14,7 +14,7 @@ Covers lavatory service panel access, connections, and procedures for waste tank
 ### 4.1 Overview
 Integrated lavatory service panel provides waste drain and potable water fill connections for aircraft sanitation systems.
 
-## ### 4.2 Physical Characteristics
+### 4.2 Physical Characteristics
 | Parameter | Specification | Tolerance |
 |-----------|---------------|-----------|
 | Service Panel Location | Aft fuselage, starboard side | FS 550 |
