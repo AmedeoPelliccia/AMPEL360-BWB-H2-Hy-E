@@ -17,11 +17,11 @@ This document defines efficiency metrics for GSE production, including productiv
 
 This document covers:
 - Overall Equipment Effectiveness (OEE)
-- labor productivity metrics
-- cycle time metrics
-- throughput and output metrics
-- resource utilization
-- waste and scrap metrics
+- Labor productivity metrics
+- Cycle time metrics
+- Throughput and output metrics
+- Resource utilization
+- Waste and scrap metrics
 
 ---
 
@@ -74,7 +74,7 @@ This document covers:
   - ATA 03-00-06 (Engineering)
   - ATA 03-00-07 (V&V)
   - ATA 03-00-08 (Prototyping)
-- Parent Document: {doc_data['parent']}
+- Parent Document: 03-00-09_Production_Planning
 - Related GSE Engineering: 03-00-06_Engineering
 - Related GSE Prototyping: 03-00-08_Prototyping
 

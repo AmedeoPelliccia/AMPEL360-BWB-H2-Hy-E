@@ -17,12 +17,12 @@ This document defines Key Performance Indicators (KPIs) for GSE production to me
 
 This document covers:
 - Production KPI framework
-- quality KPIs
-- delivery KPIs
-- cost KPIs
-- safety KPIs
+- Quality KPIs
+- Delivery KPIs
+- Cost KPIs
+- Safety KPIs
 - KPI targets and thresholds
-- reporting and review cadence
+- Reporting and review cadence
 
 ---
 

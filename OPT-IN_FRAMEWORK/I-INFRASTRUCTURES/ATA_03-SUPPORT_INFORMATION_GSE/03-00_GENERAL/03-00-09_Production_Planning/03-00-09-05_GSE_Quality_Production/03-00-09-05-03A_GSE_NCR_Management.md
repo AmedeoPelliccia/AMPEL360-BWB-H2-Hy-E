@@ -17,13 +17,11 @@ This document defines the Non-Conformance Report (NCR) management process for GS
 
 This document covers:
 - NCR identification and reporting
-- root cause analysis procedures
-- disposition process (use-as-is
-- rework
-- scrap)
-- corrective and preventive actions (CAPA)
-- trend analysis and reporting
-- lessons learned integration
+- Root cause analysis procedures
+- Disposition process (use-as-is, rework, scrap)
+- Corrective and preventive actions (CAPA)
+- Trend analysis and reporting
+- Lessons learned integration
 
 ---
 
@@ -76,7 +74,7 @@ This document covers:
   - ATA 03-00-06 (Engineering)
   - ATA 03-00-07 (V&V)
   - ATA 03-00-08 (Prototyping)
-- Parent Document: {doc_data['parent']}
+- Parent Document: 03-00-09_Production_Planning
 - Related GSE Engineering: 03-00-06_Engineering
 - Related GSE Prototyping: 03-00-08_Prototyping
 

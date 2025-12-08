@@ -17,12 +17,12 @@ This document defines cost tracking and management for GSE production, including
 
 This document covers:
 - Cost accounting structure
-- direct material costs
-- direct labor costs
-- manufacturing overhead allocation
-- cost variance analysis
-- cost reduction initiatives
-- cost reporting
+- Direct material costs
+- Direct labor costs
+- Manufacturing overhead allocation
+- Cost variance analysis
+- Cost reduction initiatives
+- Cost reporting
 
 ---
 
@@ -75,7 +75,7 @@ This document covers:
   - ATA 03-00-06 (Engineering)
   - ATA 03-00-07 (V&V)
   - ATA 03-00-08 (Prototyping)
-- Parent Document: {doc_data['parent']}
+- Parent Document: 03-00-09_Production_Planning
 - Related GSE Engineering: 03-00-06_Engineering
 - Related GSE Prototyping: 03-00-08_Prototyping
 
