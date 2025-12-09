@@ -12,7 +12,7 @@
 
 ## 2. Description
 
-UV-resistant protective cover for wing surfaces
+UV-resistant protective cover for wing surfaces during extended storage periods. Heavy-duty polyester fabric with UV stabilizers protects against sun damage, rain, ice, bird droppings, and airborne contaminants. Covers approximately 30 m² of wing surface per unit. Features reinforced grommets for tie-down, breathable fabric to prevent moisture buildup, and reflective surface to minimize heat absorption. Provides environmental protection for paint, composite surfaces, and leading edge devices during storage periods exceeding 7 days
 
 ## 3. Technical Specifications
 

@@ -12,7 +12,7 @@
 
 ## 2. Description
 
-Pitot tube protective cover
+Pitot tube protective cover for pitot-static system protection during ground operations and storage. Bright red cover with "REMOVE BEFORE FLIGHT" streamer ensures visibility and removal before flight. Protects pitot tubes and static ports from insect nests, moisture ingress, ice formation, and contamination that could cause erroneous airspeed indications. Soft foam-backed design prevents damage to delicate sensors. Required per ATA Chapter 34 (Navigation) maintenance procedures whenever aircraft is unattended on ground for more than 2 hours
 
 ## 3. Technical Specifications
 

@@ -12,7 +12,7 @@
 
 ## 2. Description
 
-Engine protective cover for storage
+Engine protective cover for storage periods exceeding 48 hours. Custom-fitted cover protects engine nacelle, inlet, and exhaust from environmental contamination including rain, dust, insects, and FOD (Foreign Object Damage). Fire-resistant fabric (NFPA 701 compliant) with moisture barrier. Includes inlet plug integration and exhaust cover. Prevents corrosion of hot section components and protects turbine blades from contamination. Suitable for both hydrogen fuel cell propulsion and hybrid engine configurations on AMPEL360 BWB aircraft
 
 ## 3. Technical Specifications
 

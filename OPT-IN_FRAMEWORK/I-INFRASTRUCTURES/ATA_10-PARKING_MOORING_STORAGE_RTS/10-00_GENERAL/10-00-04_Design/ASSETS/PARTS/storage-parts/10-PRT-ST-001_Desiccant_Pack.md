@@ -12,7 +12,7 @@
 
 ## 2. Description
 
-Moisture-absorbing desiccant pack for long-term storage
+Moisture-absorbing desiccant pack for long-term aircraft storage. Contains silica gel beads (Type II per MIL-D-3464) with color-indicating capability. Provides humidity control in enclosed spaces such as cockpit, avionics bays, and engine inlets. Each pack absorbs up to 40% of its weight in moisture. Color indicator changes from blue (dry) to pink (saturated) for visual monitoring. Recommended replacement when 80% saturation reached or after 12 months
 
 ## 3. Technical Specifications
 

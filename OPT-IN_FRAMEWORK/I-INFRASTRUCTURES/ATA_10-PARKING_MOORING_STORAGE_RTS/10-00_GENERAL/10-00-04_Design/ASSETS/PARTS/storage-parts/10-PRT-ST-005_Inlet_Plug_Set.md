@@ -12,7 +12,7 @@
 
 ## 2. Description
 
-Engine inlet plugs to prevent FOD
+Engine inlet plug set to prevent FOD (Foreign Object Damage) during ground operations and storage. Set includes inflatable or rigid plugs sized for engine intake diameters. Plugs seal engine inlet to prevent bird nests, small animals, debris, rain, and ice from entering compressor section. Each plug clearly marked "REMOVE BEFORE ENGINE START" with red streamers. Inflatable design conforms to varying inlet sizes and prevents accidental engine start with plug installed (blocks airflow). Critical for preventing costly engine damage from ingested objects during parking periods
 
 ## 3. Technical Specifications
 
