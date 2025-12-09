@@ -16,7 +16,7 @@ Real-time and historical telemetry data collection, transmission, and storage fo
 
 ## 2. Scope
 
-This GSE software specification defines requirements, architecture, and operational characteristics for gse telemetry software supporting the AMPEL360 BWB H2-Hybrid Electric aircraft ground operations.
+This GSE software specification defines requirements, architecture, and operational characteristics for GSE telemetry software supporting the AMPEL360 BWB H2-Hybrid Electric aircraft ground operations.
 
 ---
 
