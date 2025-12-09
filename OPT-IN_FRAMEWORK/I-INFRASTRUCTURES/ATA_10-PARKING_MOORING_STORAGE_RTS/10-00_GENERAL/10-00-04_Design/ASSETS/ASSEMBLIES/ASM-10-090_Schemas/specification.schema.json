@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.com/schemas/specification.schema.json",
+  "title": "AMPEL360 Specification Document",
+  "description": "Schema for assembly specification metadata",
+  "type": "object",
+  "required": ["spec_id", "title", "assembly_id", "spec_type"],
+  "properties": {
+    "spec_id": {
+      "type": "string",
+      "pattern": "^Q100-10-[0-9]{3}-SPEC-[0-9]{3}$",
+      "description": "Specification identifier"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 150,
+      "description": "Specification title"
+    },
+    "assembly_id": {
+      "type": "string",
+      "pattern": "^ASM-10-[0-9]{3}$",
+      "description": "Parent assembly identifier"
+    },
+    "spec_type": {
+      "type": "string",
+      "enum": [
+        "Load",
+        "Material",
+        "Interface",
+        "Performance",
+        "Safety",
+        "Environmental",
+        "Installation",
+        "Test",
+        "Maintenance",
+        "General"
+      ],
+      "description": "Type of specification"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "For Review", "Released", "Superseded", "Obsolete"],
+      "description": "Specification status"
+    },
+    "revision": {
+      "type": "string",
+      "description": "Specification revision"
+    },
+    "scope": {
+      "type": "string",
+      "description": "Scope and applicability of the specification"
+    },
+    "requirements": {
+      "type": "array",
+      "description": "List of requirements defined in this specification",
+      "items": {
+        "type": "object",
+        "required": ["req_id", "description"],
+        "properties": {
+          "req_id": {
+            "type": "string",
+            "description": "Requirement identifier"
+          },
+          "description": {
+            "type": "string",
+            "description": "Requirement description"
+          },
+          "criticality": {
+            "type": "string",
+            "enum": ["Mandatory", "Highly Desired", "Desired"],
+            "description": "Requirement criticality"
+          },
+          "verification_method": {
+            "type": "string",
+            "enum": ["Test", "Analysis", "Inspection", "Demonstration"],
+            "description": "How this requirement will be verified"
+          },
+          "traceability": {
+            "type": "array",
+            "description": "Traceability to higher-level requirements or regulations",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "applicable_standards": {
+      "type": "array",
+      "description": "Standards applicable to this specification",
+      "items": {
+        "type": "object",
+        "properties": {
+          "standard_id": {
+            "type": "string",
+            "description": "Standard identifier (e.g., 'CS-25.561', 'SAE AS8015')"
+          },
+          "title": {
+            "type": "string",
+            "description": "Standard title"
+          },
+          "clauses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Specific clauses or sections applicable"
+          }
+        }
+      }
+    },
+    "test_methods": {
+      "type": "array",
+      "description": "Test methods specified",
+      "items": {
+        "type": "object",
+        "properties": {
+          "method_id": {
+            "type": "string",
+            "description": "Test method identifier"
+          },
+          "description": {
+            "type": "string",
+            "description": "Test method description"
+          },
+          "acceptance_criteria": {
+            "type": "string",
+            "description": "Pass/fail criteria"
+          }
+        }
+      }
+    },
+    "materials_specified": {
+      "type": "array",
+      "description": "Materials specified in this document",
+      "items": {
+        "type": "object",
+        "properties": {
+          "material_id": {
+            "type": "string",
+            "description": "Material specification (e.g., 'AL 7075-T6')"
+          },
+          "application": {
+            "type": "string",
+            "description": "Where this material is used"
+          },
+          "properties": {
+            "type": "object",
+            "description": "Key material properties",
+            "properties": {
+              "tensile_strength_mpa": {
+                "type": "number",
+                "description": "Tensile strength in MPa"
+              },
+              "yield_strength_mpa": {
+                "type": "number",
+                "description": "Yield strength in MPa"
+              },
+              "density_kg_m3": {
+                "type": "number",
+                "description": "Density in kg/m³"
+              },
+              "temperature_range_c": {
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "type": "number"
+                  },
+                  "max": {
+                    "type": "number"
+                  }
+                },
+                "description": "Operating temperature range in Celsius"
+              }
+            }
+          }
+        }
+      }
+    },
+    "interfaces": {
+      "type": "array",
+      "description": "Interfaces specified",
+      "items": {
+        "type": "object",
+        "properties": {
+          "interface_id": {
+            "type": "string",
+            "description": "Interface identifier"
+          },
+          "connected_to": {
+            "type": "string",
+            "description": "What this interfaces with"
+          },
+          "interface_type": {
+            "type": "string",
+            "enum": ["Mechanical", "Electrical", "Fluid", "Data", "Thermal"],
+            "description": "Type of interface"
+          },
+          "specifications": {
+            "type": "string",
+            "description": "Interface specifications"
+          }
+        }
+      }
+    },
+    "related_documents": {
+      "type": "array",
+      "description": "Related documents",
+      "items": {
+        "type": "object",
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "description": "Document identifier"
+          },
+          "title": {
+            "type": "string",
+            "description": "Document title"
+          },
+          "relationship": {
+            "type": "string",
+            "enum": ["References", "Referenced By", "Supersedes", "Superseded By", "Related"],
+            "description": "Relationship to this specification"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Document metadata",
+      "properties": {
+        "created_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date (ISO 8601)"
+        },
+        "approved_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Approval date (ISO 8601)"
+        },
+        "author": {
+          "type": "string",
+          "description": "Specification author"
+        },
+        "technical_reviewer": {
+          "type": "string",
+          "description": "Technical reviewer"
+        },
+        "approver": {
+          "type": "string",
+          "description": "Approving authority"
+        }
+      }
+    }
+  }
+}
