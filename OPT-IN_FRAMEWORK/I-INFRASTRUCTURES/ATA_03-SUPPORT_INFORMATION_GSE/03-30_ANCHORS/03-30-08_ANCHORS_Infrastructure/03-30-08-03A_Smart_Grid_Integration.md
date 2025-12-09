@@ -23,7 +23,7 @@ Links:
 
 ## 1. Purpose
 
-This document specifies the **Smart Grid Integration** component of the ANCHORS framework for Ground Support Equipment supporting the AMPEL360 BWB H₂ Hy-E aircraft. It defines requirements, specifications, and implementation approaches for smart grid integration enabling v2g, demand response, and energy optimization.
+This document specifies the **Smart Grid Integration** component of the ANCHORS framework for Ground Support Equipment supporting the AMPEL360 BWB H₂ Hy-E aircraft. It defines requirements, specifications, and implementation approaches for smart grid integration enabling V2G, demand response, and energy optimization.
 
 ## 2. Scope
 
