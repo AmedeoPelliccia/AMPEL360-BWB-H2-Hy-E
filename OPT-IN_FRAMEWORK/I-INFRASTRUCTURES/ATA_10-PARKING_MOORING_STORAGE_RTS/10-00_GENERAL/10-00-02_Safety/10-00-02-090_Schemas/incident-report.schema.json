@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/safety/incident-report.schema.json",
+  "title": "Incident Report",
+  "description": "Schema for incident and near-miss reporting in ATA 10-00-02 Safety framework",
+  "type": "object",
+  "required": ["incident_id", "incident_date", "incident_type", "severity", "description"],
+  "properties": {
+    "incident_id": {
+      "type": "string",
+      "description": "Unique incident identifier"
+    },
+    "incident_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time of incident"
+    },
+    "incident_type": {
+      "type": "string",
+      "enum": [
+        "NEAR_MISS",
+        "FIRST_AID",
+        "MEDICAL_TREATMENT",
+        "LOST_TIME_INJURY",
+        "PROPERTY_DAMAGE",
+        "ENVIRONMENTAL",
+        "FIRE",
+        "H2_LEAK",
+        "HV_INCIDENT",
+        "OTHER"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["CATASTROPHIC", "HAZARDOUS", "MAJOR", "MINOR", "NEGLIGIBLE"]
+    },
+    "location": {
+      "type": "string",
+      "description": "Location where incident occurred"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "description": "Detailed description of what happened"
+    },
+    "personnel_involved": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "injury_type": { "type": "string" }
+        }
+      }
+    },
+    "immediate_actions": {
+      "type": "string",
+      "description": "Actions taken immediately following incident"
+    },
+    "root_causes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Identified root causes"
+    },
+    "corrective_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string" },
+          "owner": { "type": "string" },
+          "target_date": { "type": "string", "format": "date" },
+          "status": { "type": "string", "enum": ["OPEN", "IN_PROGRESS", "COMPLETED"] }
+        }
+      }
+    },
+    "reported_by": {
+      "type": "string"
+    },
+    "report_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "investigation_status": {
+      "type": "string",
+      "enum": ["PENDING", "IN_PROGRESS", "COMPLETED", "CLOSED"]
+    }
+  }
+}

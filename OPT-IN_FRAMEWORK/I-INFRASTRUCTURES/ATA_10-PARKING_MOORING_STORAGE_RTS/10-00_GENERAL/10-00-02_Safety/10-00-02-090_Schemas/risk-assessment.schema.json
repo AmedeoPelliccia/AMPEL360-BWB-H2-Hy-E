@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/safety/risk-assessment.schema.json",
+  "title": "Risk Assessment Entry",
+  "description": "Schema for risk assessment tracking in ATA 10-00-02 Safety framework",
+  "type": "object",
+  "required": ["assessment_id", "hazard_id", "initial_risk", "residual_risk", "status"],
+  "properties": {
+    "assessment_id": {
+      "type": "string",
+      "description": "Unique risk assessment identifier"
+    },
+    "hazard_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]+-[0-9]{3}$",
+      "description": "Linked hazard identifier"
+    },
+    "initial_risk": {
+      "type": "object",
+      "required": ["severity", "likelihood", "level"],
+      "properties": {
+        "severity": {
+          "type": "string",
+          "enum": ["CATASTROPHIC", "HAZARDOUS", "MAJOR", "MINOR", "NEGLIGIBLE"]
+        },
+        "likelihood": {
+          "type": "string",
+          "enum": ["FREQUENT", "PROBABLE", "OCCASIONAL", "REMOTE", "EXTREMELY_REMOTE"]
+        },
+        "level": {
+          "type": "string",
+          "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
+        }
+      }
+    },
+    "residual_risk": {
+      "type": "object",
+      "required": ["severity", "likelihood", "level"],
+      "properties": {
+        "severity": {
+          "type": "string",
+          "enum": ["CATASTROPHIC", "HAZARDOUS", "MAJOR", "MINOR", "NEGLIGIBLE"]
+        },
+        "likelihood": {
+          "type": "string",
+          "enum": ["FREQUENT", "PROBABLE", "OCCASIONAL", "REMOTE", "EXTREMELY_REMOTE"]
+        },
+        "level": {
+          "type": "string",
+          "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
+        },
+        "acceptable": {
+          "type": "boolean",
+          "description": "Whether residual risk meets ALARP criteria"
+        }
+      }
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "control_id": { "type": "string" },
+          "description": { "type": "string" },
+          "effectiveness": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] }
+        }
+      }
+    },
+    "assessment_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "assessor": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["DRAFT", "UNDER_REVIEW", "APPROVED", "REQUIRES_UPDATE"]
+    }
+  }
+}
