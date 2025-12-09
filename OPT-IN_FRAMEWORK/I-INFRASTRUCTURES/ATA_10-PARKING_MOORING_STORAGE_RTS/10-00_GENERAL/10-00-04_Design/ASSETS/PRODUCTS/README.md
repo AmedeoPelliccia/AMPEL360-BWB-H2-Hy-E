@@ -189,6 +189,7 @@ BWB-specific products address:
 3. Update `00_INDEX.md` when adding new products
 4. Validate against `product-metadata.schema.json`
 5. Include all required sections per template
+6. **Note**: Some product files contain TBD placeholders for detailed specifications - these should be completed with actual values as product development progresses
 
 ### For Product Users
 1. Consult `00_INDEX.md` for product catalog
@@ -196,6 +197,7 @@ BWB-specific products address:
 3. Check product status (ACTIVE/OBSOLETE/SUPERSEDED)
 4. Review related parts and installation documentation
 5. Ensure compliance with local regulations
+6. **Note**: Products marked with TBD values require detailed specification before procurement
 
 ### For Certification Engineers
 1. Verify certification data completeness
@@ -203,6 +205,7 @@ BWB-specific products address:
 3. Review test data and verification evidence
 4. Confirm traceability to requirements
 5. Audit revision history for change control
+6. Complete all TBD values with certified specifications
 
 ## 11. Maintenance and Updates
 

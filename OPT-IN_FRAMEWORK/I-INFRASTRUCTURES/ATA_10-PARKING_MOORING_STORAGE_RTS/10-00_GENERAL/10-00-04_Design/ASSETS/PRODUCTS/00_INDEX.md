@@ -4,7 +4,7 @@
 
 This index provides a complete catalog of all product and kit documentation in the PRODUCTS directory. Products are organized by category and include links to detailed specifications.
 
-**Total Products**: 33
+**Total Products**: 30
 **Last Updated**: 2025-12-09
 
 ---
