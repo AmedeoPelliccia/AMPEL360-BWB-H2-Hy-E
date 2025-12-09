@@ -214,7 +214,7 @@ The LH2 Fueling Control Software manages the complete automated fueling process,
 ### 6.1 Related ATA Chapters
 - [ATA 03-00-13](../../03-00_GENERAL/03-00-13_Subsystems_Components/README.md) — GSE Subsystems & Components
 - [ATA 03-10](../../03-10_Operations/README.md) — GSE Operations
-- [ATA 28](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_28-FUEL/README.md) — Fuel System (Aircraft side)
+- [ATA 28](../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_28-FUEL/README.md) — Fuel System (Aircraft side)
 
 ### 6.2 Parent Document
 - [03-40-02_H2_GSE_Software](./README.md) — H2 GSE Software Overview
