@@ -79,7 +79,18 @@ def get_package_type(filename: str) -> str:
 
 def load_package_index(package_dir: Path, filename: str) -> Optional[Dict]:
     """Load package index file if it exists."""
-    base_name = filename.rsplit(".", 2)[0] if filename.endswith(".tar.gz") else filename.rsplit(".", 1)[0]
+    # Handle compound extensions like .tar.gz more robustly
+    if filename.endswith(".tar.gz"):
+        base_name = filename[:-7]  # Remove .tar.gz
+    elif filename.endswith(".tar"):
+        base_name = filename[:-4]  # Remove .tar
+    elif filename.endswith(".zip"):
+        base_name = filename[:-4]  # Remove .zip
+    elif filename.endswith(".7z"):
+        base_name = filename[:-3]  # Remove .7z
+    else:
+        base_name = filename.rsplit(".", 1)[0]
+    
     index_file = package_dir / f"{base_name}.index.json"
     
     if index_file.exists():

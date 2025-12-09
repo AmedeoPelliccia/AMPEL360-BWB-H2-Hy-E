@@ -117,7 +117,9 @@ fi
 
 echo -e "${GREEN}=== AMPEL360 Package Signer ===${NC}"
 echo "Package: $(basename "$PACKAGE_FILE")"
-echo "Size:    $(stat -f%z "$PACKAGE_FILE" 2>/dev/null || stat -c%s "$PACKAGE_FILE") bytes"
+# Portable file size calculation
+FILE_SIZE=$(wc -c < "$PACKAGE_FILE" | tr -d ' ')
+echo "Size:    ${FILE_SIZE} bytes"
 echo ""
 
 # Check GPG keys

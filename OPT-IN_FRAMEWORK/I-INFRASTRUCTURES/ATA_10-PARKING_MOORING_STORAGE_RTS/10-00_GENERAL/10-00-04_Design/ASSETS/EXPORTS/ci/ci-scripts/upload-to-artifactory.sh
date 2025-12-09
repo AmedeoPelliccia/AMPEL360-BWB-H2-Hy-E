@@ -146,8 +146,12 @@ upload_artifactory() {
         return 0
     fi
     
+    # Create secure temporary file for response
+    RESPONSE_FILE=$(mktemp)
+    trap "rm -f ${RESPONSE_FILE}" EXIT
+    
     # Upload with curl
-    HTTP_CODE=$(curl -s -o /tmp/artifactory-response.txt -w "%{http_code}" \
+    HTTP_CODE=$(curl -s -o "${RESPONSE_FILE}" -w "%{http_code}" \
         -u "${ARTIFACTORY_USER}:${ARTIFACTORY_API_KEY}" \
         -T "${PACKAGE_FILE}" \
         "${UPLOAD_URL}")
@@ -178,7 +182,7 @@ upload_artifactory() {
         return 0
     else
         echo -e "${RED}  ✗ Upload failed (HTTP ${HTTP_CODE})${NC}" >&2
-        cat /tmp/artifactory-response.txt >&2
+        cat "${RESPONSE_FILE}" >&2
         return 1
     fi
 }

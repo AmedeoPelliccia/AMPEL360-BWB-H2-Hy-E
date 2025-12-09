@@ -107,7 +107,9 @@ PACKAGE_NAME=$(basename "$PACKAGE_FILE")
 
 echo -e "${GREEN}=== AMPEL360 Package Verifier ===${NC}"
 echo "Package: ${PACKAGE_NAME}"
-echo "Size:    $(stat -f%z "$PACKAGE_FILE" 2>/dev/null || stat -c%s "$PACKAGE_FILE") bytes"
+# Portable file size calculation
+FILE_SIZE=$(wc -c < "$PACKAGE_FILE" | tr -d ' ')
+echo "Size:    ${FILE_SIZE} bytes"
 echo ""
 
 # Track verification results
@@ -171,24 +173,28 @@ if [[ "$SKIP_SIGNATURE" == false ]]; then
             echo -e "${YELLOW}  Skipping signature verification${NC}"
             ((CHECKS_SKIPPED++))
         else
+            # Create secure temporary file
+            GPG_LOG=$(mktemp)
+            trap "rm -f ${GPG_LOG}" EXIT
+            
             # Verify signature
-            if gpg --verify "$SIG_FILE" "$PACKAGE_FILE" 2>&1 | tee /tmp/gpg-verify.log | grep -q "Good signature"; then
+            if gpg --verify "$SIG_FILE" "$PACKAGE_FILE" 2>&1 | tee "${GPG_LOG}" | grep -q "Good signature"; then
                 echo -e "${GREEN}  ✓ Signature valid${NC}"
                 
                 # Extract signer info
-                KEY_ID=$(grep "using" /tmp/gpg-verify.log | grep -oE '[A-F0-9]{16}' | head -1 || echo "unknown")
-                SIGNER=$(grep "Good signature" /tmp/gpg-verify.log | sed 's/.*from "//' | sed 's/".*//' || echo "unknown")
+                KEY_ID=$(grep "using" "${GPG_LOG}" | grep -oE '[A-F0-9]{16}' | head -1 || echo "unknown")
+                SIGNER=$(grep "Good signature" "${GPG_LOG}" | sed 's/.*from "//' | sed 's/".*//' || echo "unknown")
                 
                 echo "    Signed by: ${SIGNER}"
                 echo "    Key ID:    ${KEY_ID}"
                 ((CHECKS_PASSED++))
             else
                 echo -e "${RED}  ✗ Signature verification failed${NC}" >&2
-                cat /tmp/gpg-verify.log >&2
+                cat "${GPG_LOG}" >&2
                 ((CHECKS_FAILED++))
             fi
             
-            rm -f /tmp/gpg-verify.log
+            rm -f "${GPG_LOG}"
         fi
     fi
 else

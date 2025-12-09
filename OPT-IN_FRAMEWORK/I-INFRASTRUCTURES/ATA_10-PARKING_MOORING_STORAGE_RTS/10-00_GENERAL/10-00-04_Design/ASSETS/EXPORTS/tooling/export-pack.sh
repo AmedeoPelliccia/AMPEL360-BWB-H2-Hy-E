@@ -127,6 +127,12 @@ echo "Package Type: ${PACKAGE_TYPE}"
 echo "Output Dir:   ${OUTPUT_DIR}"
 echo ""
 
+# Helper function for portable file size
+get_file_size() {
+    wc -c < "$1" | tr -d ' '
+}
+
+
 # Create temporary working directory
 TEMP_DIR=$(mktemp -d)
 trap "rm -rf ${TEMP_DIR}" EXIT
@@ -250,7 +256,7 @@ tar -czf "${OUTPUT_FILE}" -C "${TEMP_DIR}" "${PACKAGE_NAME}"
 # Generate package-level checksum
 sha256sum "${OUTPUT_FILE}" | awk '{print $1}' > "${OUTPUT_FILE}.sha256"
 
-FILE_SIZE=$(stat -f%z "${OUTPUT_FILE}" 2>/dev/null || stat -c%s "${OUTPUT_FILE}")
+FILE_SIZE=$(get_file_size "${OUTPUT_FILE}")
 echo -e "${GREEN}  ✓ Package created: ${OUTPUT_FILE}${NC}"
 echo -e "${GREEN}  ✓ Size: ${FILE_SIZE} bytes${NC}"
 

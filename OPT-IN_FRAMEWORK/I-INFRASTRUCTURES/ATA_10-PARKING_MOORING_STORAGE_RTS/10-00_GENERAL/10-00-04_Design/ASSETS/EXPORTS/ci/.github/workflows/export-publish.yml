@@ -102,7 +102,7 @@ jobs:
       
       - name: Generate date stamp
         id: date
-        run: echo "date=$(date +%Y%m%d)" >> $GITHUB_OUTPUT
+        run: echo "date=$(date -u +%Y%m%d)" >> $GITHUB_OUTPUT
       
       - name: Build package
         run: |
