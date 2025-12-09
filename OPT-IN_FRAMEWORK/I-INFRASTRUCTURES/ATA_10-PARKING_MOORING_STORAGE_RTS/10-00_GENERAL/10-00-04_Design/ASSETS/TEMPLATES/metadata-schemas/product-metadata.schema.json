@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Product Metadata Schema",
+  "type": "object",
+  "required": ["product_number", "title"],
+  "properties": {
+    "product_number": {"type": "string"},
+    "title": {"type": "string"},
+    "category": {"type": "string"},
+    "included_parts": {"type": "array", "items": {"type": "string"}},
+    "h2_compatible": {"type": "boolean"},
+    "bwb_specific": {"type": "boolean"},
+    "certifications": {"type": "array", "items": {"type": "string"}}
+  }
+}

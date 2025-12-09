@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Part Metadata Schema",
+  "type": "object",
+  "required": ["part_number", "description"],
+  "properties": {
+    "part_number": {"type": "string"},
+    "cage_code": {"type": "string"},
+    "description": {"type": "string"},
+    "category": {"type": "string"},
+    "material": {"type": "string"},
+    "weight": {"type": "number"},
+    "h2_compatible": {"type": "boolean"},
+    "cryo_rated": {"type": "boolean"}
+  }
+}
