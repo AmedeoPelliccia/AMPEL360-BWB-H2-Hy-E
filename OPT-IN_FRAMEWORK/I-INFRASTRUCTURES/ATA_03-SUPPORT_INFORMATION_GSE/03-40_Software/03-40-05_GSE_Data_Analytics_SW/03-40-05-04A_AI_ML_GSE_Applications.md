@@ -16,7 +16,7 @@ Artificial intelligence and machine learning applications for GSE optimization, 
 
 ## 2. Scope
 
-This GSE software specification defines requirements, architecture, and operational characteristics for ai/ml gse applications supporting the AMPEL360 BWB H2-Hybrid Electric aircraft ground operations.
+This GSE software specification defines requirements, architecture, and operational characteristics for AI/ML GSE applications supporting the AMPEL360 BWB H2-Hybrid Electric aircraft ground operations.
 
 ---
 
