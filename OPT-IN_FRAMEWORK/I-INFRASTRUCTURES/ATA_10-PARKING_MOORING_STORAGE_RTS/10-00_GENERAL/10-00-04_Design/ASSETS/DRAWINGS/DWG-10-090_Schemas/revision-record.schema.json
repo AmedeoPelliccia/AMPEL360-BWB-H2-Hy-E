@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "revision-record.schema.json",
+  "title": "AMPEL360 Drawing Revision Record",
+  "description": "Schema for tracking drawing revisions",
+  "type": "object",
+  "required": ["revision", "date", "description", "author"],
+  "properties": {
+    "revision": {
+      "type": "string",
+      "description": "Revision identifier (A-Z or numeric)",
+      "pattern": "^[A-Z]$|^[0-9]{1,2}$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of revision in ISO 8601 format"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of changes made in this revision",
+      "maxLength": 500
+    },
+    "author": {
+      "type": "string",
+      "description": "Name or identifier of the person who made the revision",
+      "maxLength": 100
+    },
+    "approved_by": {
+      "type": "string",
+      "description": "Name or identifier of the approver",
+      "maxLength": 100
+    },
+    "approved_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of approval in ISO 8601 format"
+    }
+  }
+}

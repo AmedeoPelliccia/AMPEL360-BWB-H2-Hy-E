@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "drawing-metadata.schema.json",
+  "title": "AMPEL360 Drawing Metadata",
+  "type": "object",
+  "required": ["drawing_number", "title", "type", "revision", "status"],
+  "properties": {
+    "drawing_number": {
+      "type": "string",
+      "pattern": "^Q100-10-[0-9]{3,4}-[0-9]{3}-[A-Z]{2,3}$"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "type": {
+      "type": "string",
+      "enum": ["GA", "DET", "ASY", "INS", "SCH", "ZON", "SAF", "LBL", "FLW", "CHK", "LOC", "OPR"]
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[A-Z]$|^[0-9]{1,2}$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "Preliminary", "Released", "Superseded", "Obsolete"]
+    },
+    "size": {
+      "type": "string",
+      "enum": ["A0", "A1", "A2", "A3", "A4"]
+    },
+    "scale": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["Unclassified", "Internal", "Confidential", "Restricted"]
+    },
+    "h2_related": {
+      "type": "boolean"
+    },
+    "hv_related": {
+      "type": "boolean"
+    },
+    "safety_critical": {
+      "type": "boolean"
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "created_by": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "approved_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "supersedes": {
+      "type": "string"
+    },
+    "superseded_by": {
+      "type": "string"
+    },
+    "related_assemblies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "related_requirements": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

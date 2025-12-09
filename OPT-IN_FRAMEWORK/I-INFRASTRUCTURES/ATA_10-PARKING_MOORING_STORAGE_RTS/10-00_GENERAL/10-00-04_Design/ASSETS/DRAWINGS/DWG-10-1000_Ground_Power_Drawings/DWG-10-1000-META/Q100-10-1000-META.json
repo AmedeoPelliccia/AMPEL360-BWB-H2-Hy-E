@@ -1,0 +1,18 @@
+{
+  "series": "DWG-10-1000",
+  "title": "Ground Power Drawings",
+  "description": "Ground power drawings for battery charging and shore power connection",
+  "ata_chapter": "10",
+  "h2_related": false,
+  "hv_related": true,
+  "safety_critical": false,
+  "drawings": [],
+  "revision_history": [
+    {
+      "revision": "0",
+      "date": "2025-12-09",
+      "description": "Initial directory structure creation",
+      "author": "AI Assistant (GitHub Copilot)"
+    }
+  ]
+}
