@@ -16,7 +16,7 @@ Internet of Things (IoT) connectivity enabling cloud integration, remote monitor
 
 ## 2. Scope
 
-This GSE software specification defines requirements, architecture, and operational characteristics for iot connectivity software supporting the AMPEL360 BWB H2-Hybrid Electric aircraft ground operations.
+This GSE software specification defines requirements, architecture, and operational characteristics for IoT connectivity software supporting the AMPEL360 BWB H2-Hybrid Electric aircraft ground operations.
 
 ---
 
