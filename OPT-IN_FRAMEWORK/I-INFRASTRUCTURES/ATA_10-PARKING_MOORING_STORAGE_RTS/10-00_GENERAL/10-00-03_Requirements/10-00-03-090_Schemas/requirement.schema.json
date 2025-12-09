@@ -9,7 +9,7 @@
     "id": {
       "type": "string",
       "pattern": "^REQ-10-[A-Z]{3}-[0-9]{3}-[FPIRC]$",
-      "description": "Unique requirement identifier following pattern REQ-10-[CAT]-[SEQ]-[TYPE]",
+      "description": "Unique requirement identifier following pattern REQ-10-[CAT]-[SEQ]-[TYPE] where TYPE is: F=Functional, P=Performance, I=Interface, R=Regulatory-derived, C=Constraint",
       "examples": [
         "REQ-10-REG-001-C",
         "REQ-10-FUN-023-F",

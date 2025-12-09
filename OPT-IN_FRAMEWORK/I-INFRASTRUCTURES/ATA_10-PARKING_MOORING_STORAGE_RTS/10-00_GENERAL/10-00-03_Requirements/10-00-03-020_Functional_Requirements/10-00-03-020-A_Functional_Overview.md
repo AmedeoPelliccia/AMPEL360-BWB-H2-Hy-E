@@ -16,13 +16,19 @@
 
 ## 1. Purpose
 
-This document defines requirements for functional overview in the context of ATA Chapter 10 — Parking, Mooring, Storage, and Return-to-Service (RTS) operations for the AMPEL360 Q100 aircraft.
+This document provides an overview of the functional requirements structure for ATA Chapter 10 — Parking, Mooring, Storage, and Return-to-Service (RTS) operations. It serves as an introduction to the five major functional requirement categories: Parking (020-B), Mooring (020-C), Storage (020-D), RTS (020-E), and Ground Support Equipment (020-F), and explains how these requirements support the unique hydrogen-electric propulsion and blended-wing-body configuration of the AMPEL360 Q100 aircraft.
 
 ---
 
 ## 2. Scope
 
-_[To be completed with specific scope definition]_
+This overview covers:
+- Organization and structure of functional requirements across five subcategories
+- Key functional capabilities required for ground operations
+- Hydrogen-specific functional considerations
+- BWB configuration impacts on functional requirements
+- Relationships between functional requirement categories
+- Integration with other requirement types (regulatory, performance, safety, etc.)
 
 ---
 
