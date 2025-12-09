@@ -186,7 +186,7 @@ Refer to: **10-INST-H2-001 - H2 Parking Safety System Setup**
 ### 10.2 Related Procedures
 - 10-INST-H2-001: H2 Parking Safety System Setup
 - 10-INST-H2-002: H2 Safety Zone Management
-- 10-INST-H2-003: H2 Emergency Response Procedures
+- 10-INST-H2-900: H2 Emergency Response Procedures (common)
 - 10-INST-H2-004: H2 Sensor Calibration
 
 ### 10.3 Training Requirements

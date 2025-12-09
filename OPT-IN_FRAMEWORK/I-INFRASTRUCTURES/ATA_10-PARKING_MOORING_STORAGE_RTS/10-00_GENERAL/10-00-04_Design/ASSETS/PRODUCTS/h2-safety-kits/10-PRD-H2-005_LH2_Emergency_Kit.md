@@ -105,7 +105,7 @@ Refer to: **10-INST-H2-005 - LH2 Emergency Kit Setup and Operation**
 
 ### 10.2 Related Procedures
 - 10-INST-H2-005: Equipment setup and operation
-- 10-INST-H2-003: H2 Emergency Response Procedures
+- 10-INST-H2-900: H2 Emergency Response Procedures (common)
 
 ## 11. Safety Notes
 

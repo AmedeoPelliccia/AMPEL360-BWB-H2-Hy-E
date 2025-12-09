@@ -105,7 +105,7 @@ Refer to: **10-INST-H2-003 - H2 Detection System Setup and Operation**
 
 ### 10.2 Related Procedures
 - 10-INST-H2-003: Equipment setup and operation
-- 10-INST-H2-900: H2 Emergency Response Procedures (common across all H2 products)
+- 10-INST-H2-900: H2 Emergency Response Procedures (common)
 
 ## 11. Safety Notes
 
