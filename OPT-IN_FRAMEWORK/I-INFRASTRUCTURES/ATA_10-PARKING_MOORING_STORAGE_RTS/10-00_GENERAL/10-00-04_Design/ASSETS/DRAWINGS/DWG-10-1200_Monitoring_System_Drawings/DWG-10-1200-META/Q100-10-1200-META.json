@@ -1,7 +1,7 @@
 {
   "series": "DWG-10-1200",
   "title": "Monitoring System Drawings",
-  "description": "Monitoring system drawings for H\u2082 and battery monitoring",
+  "description": "Monitoring system drawings for H₂ and battery monitoring",
   "ata_chapter": "10",
   "h2_related": true,
   "hv_related": true,

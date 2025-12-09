@@ -1,7 +1,7 @@
 {
   "series": "DWG-10-700",
   "title": "Protective Covers Drawings",
-  "description": "Protective covers for H\u2082 vents, HV connectors, and aircraft protection",
+  "description": "Protective covers for H₂ vents, HV connectors, and aircraft protection",
   "ata_chapter": "10",
   "h2_related": true,
   "hv_related": true,
