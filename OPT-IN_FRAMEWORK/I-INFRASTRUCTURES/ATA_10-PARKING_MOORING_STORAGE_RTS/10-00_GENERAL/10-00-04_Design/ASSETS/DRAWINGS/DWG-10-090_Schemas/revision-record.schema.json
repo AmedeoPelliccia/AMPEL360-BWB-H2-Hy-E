@@ -4,7 +4,12 @@
   "title": "AMPEL360 Drawing Revision Record",
   "description": "Schema for tracking drawing revisions",
   "type": "object",
-  "required": ["revision", "date", "description", "author"],
+  "required": [
+    "revision",
+    "date",
+    "description",
+    "author"
+  ],
   "properties": {
     "revision": {
       "type": "string",

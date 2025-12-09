@@ -4,7 +4,12 @@
   "title": "AMPEL360 Drawing Index Schema",
   "description": "Schema for drawing index files",
   "type": "object",
-  "required": ["series", "title", "ata_chapter", "drawings"],
+  "required": [
+    "series",
+    "title",
+    "ata_chapter",
+    "drawings"
+  ],
   "properties": {
     "series": {
       "type": "string",

@@ -3,7 +3,13 @@
   "$id": "drawing-metadata.schema.json",
   "title": "AMPEL360 Drawing Metadata",
   "type": "object",
-  "required": ["drawing_number", "title", "type", "revision", "status"],
+  "required": [
+    "drawing_number",
+    "title",
+    "type",
+    "revision",
+    "status"
+  ],
   "properties": {
     "drawing_number": {
       "type": "string",
@@ -15,7 +21,20 @@
     },
     "type": {
       "type": "string",
-      "enum": ["GA", "DET", "ASY", "INS", "SCH", "ZON", "SAF", "LBL", "FLW", "CHK", "LOC", "OPR"]
+      "enum": [
+        "GA",
+        "DET",
+        "ASY",
+        "INS",
+        "SCH",
+        "ZON",
+        "SAF",
+        "LBL",
+        "FLW",
+        "CHK",
+        "LOC",
+        "OPR"
+      ]
     },
     "revision": {
       "type": "string",
@@ -23,18 +42,35 @@
     },
     "status": {
       "type": "string",
-      "enum": ["Draft", "Preliminary", "Released", "Superseded", "Obsolete"]
+      "enum": [
+        "Draft",
+        "Preliminary",
+        "Released",
+        "Superseded",
+        "Obsolete"
+      ]
     },
     "size": {
       "type": "string",
-      "enum": ["A0", "A1", "A2", "A3", "A4"]
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
     },
     "scale": {
       "type": "string"
     },
     "classification": {
       "type": "string",
-      "enum": ["Unclassified", "Internal", "Confidential", "Restricted"]
+      "enum": [
+        "Unclassified",
+        "Internal",
+        "Confidential",
+        "Restricted"
+      ]
     },
     "h2_related": {
       "type": "boolean"
@@ -67,11 +103,15 @@
     },
     "related_assemblies": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "related_requirements": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

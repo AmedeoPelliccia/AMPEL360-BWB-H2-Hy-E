@@ -4,7 +4,12 @@
   "title": "AMPEL360 Drawing Schema",
   "description": "Schema for Q100 aircraft drawings",
   "type": "object",
-  "required": ["drawing_number", "title", "series", "type"],
+  "required": [
+    "drawing_number",
+    "title",
+    "series",
+    "type"
+  ],
   "properties": {
     "drawing_number": {
       "type": "string",
@@ -24,14 +29,32 @@
     "type": {
       "type": "string",
       "description": "Drawing type code",
-      "enum": ["GA", "DET", "ASY", "INS", "SCH", "ZON", "SAF", "LBL", "FLW", "CHK", "LOC", "OPR"]
+      "enum": [
+        "GA",
+        "DET",
+        "ASY",
+        "INS",
+        "SCH",
+        "ZON",
+        "SAF",
+        "LBL",
+        "FLW",
+        "CHK",
+        "LOC",
+        "OPR"
+      ]
     },
     "file_formats": {
       "type": "array",
       "description": "Available file formats",
       "items": {
         "type": "string",
-        "enum": ["svg", "pdf", "dwg", "dxf"]
+        "enum": [
+          "svg",
+          "pdf",
+          "dwg",
+          "dxf"
+        ]
       }
     }
   }
