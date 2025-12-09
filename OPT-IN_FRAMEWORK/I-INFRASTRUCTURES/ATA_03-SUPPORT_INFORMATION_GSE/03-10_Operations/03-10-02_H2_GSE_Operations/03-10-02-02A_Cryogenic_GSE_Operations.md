@@ -63,7 +63,7 @@ Cryogenic GSE for LH₂ operations must maintain hydrogen at -253°C throughout 
 | 1 | Inspect vacuum insulation integrity | Cryogenic Technician | Check for frost patterns indicating vacuum loss |
 | 2 | Verify pressure relief devices functional | Cryogenic Technician | Test PRV operation, check set pressures |
 | 3 | Check boil-off vent system clear | Cryogenic Technician | Ensure no blockages in vent lines |
-| 4 | Monitor vacuum jacket pressure | Cryogenic Technician | Should be <10⁻⁴ mbar for effective insulation |
+| 4 | Monitor vacuum jacket pressure | Cryogenic Technician | Should be <1×10^-4 mbar for effective insulation |
 | 5 | Begin equipment pre-cooling (if warm) | Cryogenic Operator | Introduce LH₂ slowly, vent boil-off |
 | 6 | Monitor cooldown temperatures | Cryogenic Operator | Allow gradual thermal equilibration |
 | 7 | Verify all valves and controls operational | Cryogenic Operator | Test before committing to operations |

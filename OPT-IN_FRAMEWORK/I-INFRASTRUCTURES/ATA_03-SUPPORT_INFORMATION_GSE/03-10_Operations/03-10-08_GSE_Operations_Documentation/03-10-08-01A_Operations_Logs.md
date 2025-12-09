@@ -48,7 +48,7 @@ This document covers the operational procedures, safety requirements, and perfor
 
 ### 4.1 Overview
 
-[Brief description of this GSE operations aspect]
+Operations logs are essential records maintained during ground support equipment (GSE) activities to document operational events, maintenance actions, safety checks, and any incidents or anomalies. For the AMPEL360 BWB Q100 INTEGRA program, these logs ensure traceability, regulatory compliance, and support continuous improvement in operational safety and efficiency. This section outlines the requirements and best practices for creating, maintaining, and reviewing operations logs in the context of hydrogen-powered aircraft ground support.
 
 ### 4.2 Operating Procedures
 

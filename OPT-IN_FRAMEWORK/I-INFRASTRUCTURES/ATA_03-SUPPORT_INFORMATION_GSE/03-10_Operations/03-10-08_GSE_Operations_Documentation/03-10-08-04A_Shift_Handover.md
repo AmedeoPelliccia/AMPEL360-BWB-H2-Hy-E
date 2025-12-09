@@ -11,7 +11,7 @@ CreatedAt: "2025-12-07"
 ModifiedAt: "2025-12-07"
 ReviewDue: "2026-06-07"
 Effectivity: "Q100 INTEGRA GSE Operations"
-Abstract: "Shift Handover procedures and operational specifications for AMPEL360 BWB ground support operations."
+Abstract: "Shift handover protocols and documentation requirements for GSE operations continuity."
 Keywords: ["Documentation","Logs","Reporting","GSE","Operations","ATA 03"]
 Compliance:
   - "ATA iSpec 2200"
