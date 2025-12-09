@@ -197,12 +197,14 @@ Where:
 
 | ATA | Chapter | Interface | Assembly Link |
 |-----|---------|-----------|---------------|
-| [ATA 07](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/) | Lifting & Shoring | Jacking point load paths | ASM-10-003 |
-| [ATA 09](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/) | Towing & Taxiing | Towing lug interfaces | ASM-10-002 |
-| [ATA 24](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/) | Electrical Power | Ground power, HV isolation | ASM-10-008, ASM-10-009 |
-| [ATA 28](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/) | Fuel Systems | H₂ storage interface | ASM-10-007 |
-| [ATA 32](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/) | Landing Gear | Ground lock interfaces, jacking | ASM-10-003, ASM-10-005 |
-| [ATA 73](../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/) | Engine Fuel Systems | H₂ tank isolation valves | ASM-10-007 |
+| ATA 07 | Lifting & Shoring | Jacking point load paths | ASM-10-003 |
+| ATA 09 | Towing & Taxiing | Towing lug interfaces | ASM-10-002 |
+| ATA 24 | Electrical Power | Ground power, HV isolation | ASM-10-008, ASM-10-009 |
+| ATA 28 | Fuel Systems | H₂ storage interface | ASM-10-007 |
+| ATA 32 | Landing Gear | Ground lock interfaces, jacking | ASM-10-003, ASM-10-005 |
+| ATA 73 | Engine Fuel Systems | H₂ tank isolation valves | ASM-10-007 |
+
+<!-- Note: Full paths to related ATA chapters in T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ to be linked when structure is finalized -->
 
 ### 7.2 Related ATA 10 Folders
 
