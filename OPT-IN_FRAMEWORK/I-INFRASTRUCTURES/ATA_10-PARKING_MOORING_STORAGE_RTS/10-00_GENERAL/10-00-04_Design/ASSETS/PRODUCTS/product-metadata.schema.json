@@ -1,0 +1,402 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/product-metadata.schema.json",
+  "title": "AMPEL360 Product Metadata Schema",
+  "description": "Schema for product and kit metadata in ATA 10 PRODUCTS directory",
+  "type": "object",
+  "required": [
+    "product_id",
+    "product_number",
+    "title",
+    "description",
+    "category",
+    "kit_type",
+    "status"
+  ],
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique product identifier (UUID)"
+    },
+    "product_number": {
+      "type": "string",
+      "pattern": "^10-PRD-[A-Z0-9]{2,3}-[0-9]{3}$",
+      "description": "Product number following AMPEL360 convention (e.g., 10-PRD-TD-001)",
+      "examples": [
+        "10-PRD-TD-001",
+        "10-PRD-H2-005",
+        "10-PRD-INT-002"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "Full product title",
+      "minLength": 5,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed product description",
+      "minLength": 20,
+      "maxLength": 2000
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "tiedown-kit",
+        "mooring-kit",
+        "parking-equipment",
+        "h2-safety-kit",
+        "storage-kit",
+        "ground-support",
+        "integrated-solution"
+      ],
+      "description": "Product category"
+    },
+    "kit_type": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "heavy-duty",
+        "emergency",
+        "bwb-specific",
+        "h2-specific",
+        "cryo-rated",
+        "integrated",
+        "temporary"
+      ],
+      "description": "Type of kit or product"
+    },
+    "included_parts": {
+      "type": "array",
+      "description": "Array of parts included in the product/kit",
+      "items": {
+        "type": "object",
+        "required": ["part_number", "description", "quantity"],
+        "properties": {
+          "part_number": {
+            "type": "string",
+            "description": "Part number reference"
+          },
+          "description": {
+            "type": "string",
+            "description": "Part description"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Quantity included"
+          },
+          "unit_of_measure": {
+            "type": "string",
+            "enum": ["EA", "SET", "KG", "M", "L", "PAIR"],
+            "description": "Unit of measure"
+          }
+        }
+      }
+    },
+    "included_consumables": {
+      "type": "array",
+      "description": "Consumable items included in the kit",
+      "items": {
+        "type": "object",
+        "required": ["item_name", "quantity"],
+        "properties": {
+          "item_name": {
+            "type": "string",
+            "description": "Consumable item name"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "unit_of_measure": {
+            "type": "string"
+          },
+          "shelf_life_months": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Shelf life in months"
+          }
+        }
+      }
+    },
+    "weight_total": {
+      "type": "object",
+      "description": "Total weight of the product/kit",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["kg", "lbs"],
+          "default": "kg"
+        }
+      }
+    },
+    "dimensions_packed": {
+      "type": "object",
+      "description": "Packed dimensions of the product",
+      "required": ["length", "width", "height", "unit"],
+      "properties": {
+        "length": {
+          "type": "number",
+          "minimum": 0
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["mm", "cm", "m", "in", "ft"],
+          "default": "mm"
+        }
+      }
+    },
+    "h2_compatible": {
+      "type": "boolean",
+      "description": "Whether the product is compatible with hydrogen aircraft operations"
+    },
+    "cryo_rated": {
+      "type": "boolean",
+      "description": "Whether the product is rated for cryogenic temperatures (-253°C)"
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Whether the product is specifically designed for BWB aircraft configuration"
+    },
+    "certifications": {
+      "type": "array",
+      "description": "Applicable certifications and standards",
+      "items": {
+        "type": "object",
+        "required": ["standard", "compliance_status"],
+        "properties": {
+          "standard": {
+            "type": "string",
+            "description": "Standard or regulation name",
+            "examples": [
+              "SAE AS6968",
+              "NFPA 2",
+              "ISO 13984",
+              "CS-25",
+              "FAR 25"
+            ]
+          },
+          "compliance_status": {
+            "type": "string",
+            "enum": ["compliant", "in-progress", "not-applicable"],
+            "description": "Compliance status"
+          },
+          "certificate_number": {
+            "type": "string",
+            "description": "Certificate number if applicable"
+          },
+          "expiry_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Certificate expiry date"
+          }
+        }
+      }
+    },
+    "suppliers": {
+      "type": "array",
+      "description": "Approved suppliers for this product",
+      "items": {
+        "type": "object",
+        "required": ["supplier_name", "supplier_code"],
+        "properties": {
+          "supplier_name": {
+            "type": "string",
+            "description": "Supplier company name"
+          },
+          "supplier_code": {
+            "type": "string",
+            "description": "Supplier identification code"
+          },
+          "primary_supplier": {
+            "type": "boolean",
+            "description": "Whether this is the primary supplier"
+          },
+          "lead_time_days": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Lead time in days"
+          }
+        }
+      }
+    },
+    "lead_time": {
+      "type": "object",
+      "description": "Standard lead time for product procurement",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["days", "weeks", "months"]
+        }
+      }
+    },
+    "shelf_life": {
+      "type": "object",
+      "description": "Product shelf life (if applicable)",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["months", "years", "unlimited"]
+        }
+      }
+    },
+    "storage_conditions": {
+      "type": "object",
+      "description": "Storage requirements for the product",
+      "properties": {
+        "temperature_min": {
+          "type": "number",
+          "description": "Minimum storage temperature (°C)"
+        },
+        "temperature_max": {
+          "type": "number",
+          "description": "Maximum storage temperature (°C)"
+        },
+        "humidity_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Maximum relative humidity (%)"
+        },
+        "special_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special storage requirements",
+          "examples": [
+            "Keep dry",
+            "Store in ventilated area",
+            "Away from ignition sources",
+            "Protect from direct sunlight"
+          ]
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "obsolete", "superseded", "development"],
+      "description": "Current product status"
+    },
+    "superseded_by": {
+      "type": "string",
+      "description": "Product number that supersedes this product (if status is superseded)"
+    },
+    "supersedes": {
+      "type": "string",
+      "description": "Product number that this product supersedes"
+    },
+    "related_drawings": {
+      "type": "array",
+      "description": "Related engineering drawings",
+      "items": {
+        "type": "string",
+        "description": "Drawing number reference"
+      }
+    },
+    "related_installations": {
+      "type": "array",
+      "description": "Related installation documents",
+      "items": {
+        "type": "string",
+        "description": "Installation document reference"
+      }
+    },
+    "related_products": {
+      "type": "array",
+      "description": "Related or complementary products",
+      "items": {
+        "type": "string",
+        "description": "Product number reference"
+      }
+    },
+    "revision_history": {
+      "type": "array",
+      "description": "Revision history",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "author", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "description": "Revision identifier (A, B, C, etc.)"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Revision date"
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of the revision"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of changes"
+          }
+        }
+      }
+    },
+    "operating_temperature": {
+      "type": "object",
+      "description": "Operating temperature range",
+      "properties": {
+        "min": {
+          "type": "number",
+          "description": "Minimum operating temperature (°C)"
+        },
+        "max": {
+          "type": "number",
+          "description": "Maximum operating temperature (°C)"
+        }
+      }
+    },
+    "safety_notes": {
+      "type": "array",
+      "description": "Critical safety notes for product handling and use",
+      "items": {
+        "type": "string"
+      }
+    },
+    "maintenance_interval": {
+      "type": "object",
+      "description": "Maintenance or inspection interval",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["hours", "days", "months", "years", "cycles"]
+        }
+      }
+    }
+  }
+}
