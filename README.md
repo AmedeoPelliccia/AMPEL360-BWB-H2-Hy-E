@@ -397,9 +397,10 @@ flowchart TB
 |----------|-------|-------------|
 | 📄 Top-level documents | 4 | Overview, hazards, risk, mitigations |
 | 📁 Subdirectories | 12 | Detailed safety topic areas |
-| 📋 Total documents | 65+ | Comprehensive safety documentation |
+| 📋 Subdirectory documents | 66 | Specialized safety documentation |
 | 🗂️ Schemas | 5 | JSON validation schemas |
 | 📇 Index files | 4 | Cross-reference and registers |
+| **Total files** | **79** | **Complete safety framework** |
 
 ### Category Breakdown
 

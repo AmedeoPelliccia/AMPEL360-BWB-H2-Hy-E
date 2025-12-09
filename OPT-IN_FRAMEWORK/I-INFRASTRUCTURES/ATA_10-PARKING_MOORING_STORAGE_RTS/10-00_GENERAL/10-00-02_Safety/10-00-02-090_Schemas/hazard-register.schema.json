@@ -15,8 +15,8 @@
   "properties": {
     "hazard_id": {
       "type": "string",
-      "pattern": "^[A-Z0-9]+-[0-9]{3}$",
-      "description": "Unique hazard identifier (e.g., H2-001, HV-002, CRY-003)"
+      "pattern": "^[A-Z][A-Z0-9]*-[0-9]{3}$",
+      "description": "Unique hazard identifier (e.g., H2-001, HV-002, CRY-003, FIRE-001, MECH-001)"
     },
     "description": {
       "type": "string",
