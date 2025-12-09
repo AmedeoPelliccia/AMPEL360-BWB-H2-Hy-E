@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "compliance-statement.schema.json",
+  "title": "AMPEL360 Compliance Statement",
+  "type": "object",
+  "description": "Schema for compliance statement in ATA Chapter 10 Requirements",
+  "required": ["id", "version"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Creation/modification date"
+    }
+  },
+  "additionalProperties": true
+}

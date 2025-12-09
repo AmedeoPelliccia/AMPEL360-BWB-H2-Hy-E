@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "traceability-link.schema.json",
+  "title": "AMPEL360 Traceability Link",
+  "type": "object",
+  "description": "Schema for traceability link in ATA Chapter 10 Requirements",
+  "required": ["id", "version"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Creation/modification date"
+    }
+  },
+  "additionalProperties": true
+}
