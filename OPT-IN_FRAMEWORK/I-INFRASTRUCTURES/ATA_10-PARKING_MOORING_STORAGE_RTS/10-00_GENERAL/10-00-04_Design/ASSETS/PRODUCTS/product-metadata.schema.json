@@ -21,7 +21,7 @@
     },
     "product_number": {
       "type": "string",
-      "pattern": "^10-PRD-[A-Z0-9]{2,3}-[0-9]{3}$",
+      "pattern": "^10-PRD-[A-Z0-9]{2}-[0-9]{3}$",
       "description": "Product number following AMPEL360 convention (e.g., 10-PRD-TD-001)",
       "examples": [
         "10-PRD-TD-001",

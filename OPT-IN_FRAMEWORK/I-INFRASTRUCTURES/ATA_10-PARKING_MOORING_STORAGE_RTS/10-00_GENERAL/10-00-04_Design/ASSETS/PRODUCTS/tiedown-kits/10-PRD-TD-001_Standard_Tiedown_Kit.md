@@ -231,6 +231,5 @@ Training reference: **10-TRN-TD-001 - Tiedown Equipment Training**
 - **Generated with assistance from**: AI (GitHub Copilot), prompted by Amedeo Pelliccia
 - **Approver**: [To be completed by Product Engineering]
 - **Repository**: `AMPEL360-BWB-H2-Hy-E`
-- **Path**: `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS/10-00_GENERAL/10-00-04_Design/ASSETS/PRODUCTS/tiedown-kits/`
 
 ---
