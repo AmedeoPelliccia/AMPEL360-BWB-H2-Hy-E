@@ -34,7 +34,7 @@ Hydrogen-powered aircraft introduce unique safety and operational considerations
 - Ground support equipment design
 - Personnel safety and training
 
-### 4.2 H2/LH2Considerations
+### 4.2 H2/LH2 Considerations
 
 Hydrogen safety standards are critical for AMPEL360-BWB-H2 operations due to:
 
