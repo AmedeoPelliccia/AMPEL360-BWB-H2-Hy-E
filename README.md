@@ -572,21 +572,21 @@ python tools/validators/run_all.py --verbose
 ```mermaid
 flowchart TB
     subgraph Primary["✈️ Airworthiness"]
-        EASA["<a href='https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes'>EASA CS-25</a>"]
-        FAA["<a href='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25'>FAA 14 CFR Part 25</a>"]
+        EASA["EASA CS-25"]
+        FAA["FAA 14 CFR Part 25"]
         SC["Special Conditions<br/>BWB, H₂, DEP"]
     end
 
     subgraph SW["💻 Software & Hardware"]
-        DO178["<a href='https://www.rtca.org/content/standards-guidance-documents'>DO-178C</a><br/>DAL A–E"]
-        DO254["<a href='https://www.rtca.org/content/standards-guidance-documents'>DO-254</a><br/>Hardware"]
-        DO160["<a href='https://www.rtca.org/content/standards-guidance-documents'>DO-160G</a><br/>Environmental"]
+        DO178["DO-178C<br/>DAL A–E"]
+        DO254["DO-254<br/>Hardware"]
+        DO160["DO-160G<br/>Environmental"]
     end
 
     subgraph Safety["🛡️ Safety Process"]
-        ARP4754["<a href='https://www.sae.org/standards/content/arp4754a/'>ARP4754A</a><br/>System Development"]
-        ARP4761["<a href='https://www.sae.org/standards/content/arp4761/'>ARP4761</a><br/>Safety Assessment"]
-        DO326["<a href='https://www.rtca.org/content/standards-guidance-documents'>DO-326A</a><br/>Cybersecurity"]
+        ARP4754["ARP4754A<br/>System Development"]
+        ARP4761["ARP4761<br/>Safety Assessment"]
+        DO326["DO-326A<br/>Cybersecurity"]
     end
 
     Primary --> SW --> Safety
@@ -601,6 +601,19 @@ flowchart TB
     style ARP4761 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
     style DO326 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
 ```
+
+### Referenced Standards (with links)
+
+| Category | Standard | Link |
+|----------|----------|------|
+| **Airworthiness** | EASA CS-25 | [EASA Certification Specifications](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) |
+| **Airworthiness** | FAA 14 CFR Part 25 | [Federal Aviation Regulations](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) |
+| **Software** | DO-178C | [RTCA Standards](https://www.rtca.org/content/standards-guidance-documents) |
+| **Hardware** | DO-254 | [RTCA Standards](https://www.rtca.org/content/standards-guidance-documents) |
+| **Environmental** | DO-160G | [RTCA Standards](https://www.rtca.org/content/standards-guidance-documents) |
+| **System Development** | ARP4754A | [SAE Standards](https://www.sae.org/standards/content/arp4754a/) |
+| **Safety Assessment** | ARP4761 | [SAE Standards](https://www.sae.org/standards/content/arp4761/) |
+| **Cybersecurity** | DO-326A | [RTCA Standards](https://www.rtca.org/content/standards-guidance-documents) |
 
 ### Documentation Standards
 
