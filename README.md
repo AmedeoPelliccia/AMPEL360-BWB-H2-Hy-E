@@ -15,18 +15,18 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License" /></a>
-  <a href="OPT-IN_FRAMEWORK_STANDARD.md"><img src="https://img.shields.io/badge/Framework-OPT--IN%20v1.1-green.svg" alt="Framework" /></a>
+  <a href="OPT-IN_FRAMEWORK_STANDARD.md"><img src="https://img. shields.io/badge/Framework-OPT--IN%20v1.1-green.svg" alt="Framework" /></a>
   <img src="https://img.shields.io/badge/Aircraft-Q100-orange.svg" alt="Aircraft" />
   <img src="https://img.shields.io/badge/Target-EASA%20CS--25%20%7C%20FAA%20Part%2025-red.svg" alt="Certification" />
-  <img src="https://img.shields.io/badge/EIS-2030--Q4-purple.svg" alt="EIS" />
+  <img src="https://img.shields. io/badge/EIS-2030--Q4-purple.svg" alt="EIS" />
   <img src="https://img.shields.io/badge/Propulsion-H₂%20Fuel%20Cell-00b894.svg" alt="Propulsion" />
-  <img src="https://img.shields.io/badge/Emissions-Zero%20CO₂-00cec9.svg" alt="Emissions" />
+  <img src="https://img. shields.io/badge/Emissions-Zero%20CO₂-00cec9.svg" alt="Emissions" />
   <img src="https://img.shields.io/badge/Phase-Preliminary%20Design-ff9f43.svg" alt="Phase" />
 </p>
 
 <p align="center">
   <a href="https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki">📖 Wiki</a> •
-  <a href="https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues">🐛 Issues</a> •
+  <a href="https://github. com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues">🐛 Issues</a> •
   <a href="https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/discussions">💬 Discussions</a> •
   <a href="https://v0-ampel-360-aircraft-specification.vercel.app">🌐 Live Docs</a>
 </p>
@@ -46,7 +46,7 @@
 | 🏢 Hub congestion | Point-to-point routes between secondary airports (pop.  100k–500k) |
 | 🌍 Overtourism | Distribute connectivity beyond saturated destinations |
 | 🌱 Carbon emissions | Zero in-flight CO₂ via hydrogen fuel cells (H₂ → H₂O) |
-| 🔊 Noise pollution | −40% community noise through [BWB](https://en.wikipedia.org/wiki/Blended_wing_body) acoustic shielding |
+| 🔊 Noise pollution | −40% community noise through BWB acoustic shielding |
 
 **Example routes:** Bilbao ↔ Lyon · Porto ↔ Bologna · Gdańsk ↔ Toulouse · Gothenburg ↔ Naples
 
@@ -269,241 +269,6 @@ flowchart TB
 
 ---
 
-## 🛡️ Safety Framework — ATA 10-00-02
-
-### 10-00-02 Safety — Directory Structure
-
-**Path:** `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS/10-00_GENERAL/10-00-02_Safety/`
-
-```
-10-00-02_Safety/
-│
-├── 10-00-02-001_Safety_Overview.md
-├── 10-00-02-002_Hazard_Identification.md
-├── 10-00-02-003_Risk_Assessment.md
-├── 10-00-02-004_Mitigation_Measures.md
-│
-├── 10-00-02-005_H2_Specific_Safety/
-│   ├── 10-00-02-005-A_LH2_Properties_Hazards.md
-│   ├── 10-00-02-005-B_Leak_Detection_Response.md
-│   ├── 10-00-02-005-C_Venting_Procedures.md
-│   ├── 10-00-02-005-D_Exclusion_Zones.md
-│   └── 10-00-02-005-E_H2_Emergency_Protocols.md
-│
-├── 10-00-02-006_High_Voltage_Safety/
-│   ├── 10-00-02-006-A_HV_System_Overview.md
-│   ├── 10-00-02-006-B_Isolation_Procedures.md
-│   ├── 10-00-02-006-C_Lockout_Tagout_LOTO.md
-│   ├── 10-00-02-006-D_Arc_Flash_Protection.md
-│   └── 10-00-02-006-E_HV_PPE_Requirements.md
-│
-├── 10-00-02-007_Cryogenic_Safety/
-│   ├── 10-00-02-007-A_Cryogenic_Hazards.md
-│   ├── 10-00-02-007-B_Cold_Burn_Prevention.md
-│   ├── 10-00-02-007-C_Material_Embrittlement.md
-│   ├── 10-00-02-007-D_Oxygen_Displacement.md
-│   └── 10-00-02-007-E_Cryogenic_PPE.md
-│
-├── 10-00-02-008_Fire_Protection/
-│   ├── 10-00-02-008-A_Fire_Risk_Assessment.md
-│   ├── 10-00-02-008-B_Detection_Systems.md
-│   ├── 10-00-02-008-C_Suppression_Systems.md
-│   ├── 10-00-02-008-D_H2_Fire_Response.md
-│   └── 10-00-02-008-E_Electrical_Fire_Response.md
-│
-├── 10-00-02-009_Emergency_Procedures/
-│   ├── 10-00-02-009-A_Emergency_Overview.md
-│   ├── 10-00-02-009-B_Evacuation_Procedures.md
-│   ├── 10-00-02-009-C_H2_Leak_Emergency.md
-│   ├── 10-00-02-009-D_HV_Emergency.md
-│   ├── 10-00-02-009-E_Fire_Emergency.md
-│   ├── 10-00-02-009-F_Medical_Emergency.md
-│   ├── 10-00-02-009-G_Spill_Response.md
-│   └── 10-00-02-009-H_Emergency_Contacts.md
-│
-├── 10-00-02-010_PPE_Requirements/
-│   ├── 10-00-02-010-A_PPE_Matrix.md
-│   ├── 10-00-02-010-B_Standard_PPE.md
-│   ├── 10-00-02-010-C_H2_Operations_PPE.md
-│   ├── 10-00-02-010-D_HV_Operations_PPE.md
-│   ├── 10-00-02-010-E_Cryogenic_PPE.md
-│   └── 10-00-02-010-F_PPE_Inspection_Maintenance.md
-│
-├── 10-00-02-011_Safety_Zones/
-│   ├── 10-00-02-011-A_Zone_Definitions.md
-│   ├── 10-00-02-011-B_Zone_Diagrams.md
-│   ├── 10-00-02-011-C_Access_Control.md
-│   ├── 10-00-02-011-D_H2_Exclusion_Zones.md
-│   └── 10-00-02-011-E_HV_Restricted_Areas.md
-│
-├── 10-00-02-012_Safety_Signage/
-│   ├── 10-00-02-012-A_Signage_Standards.md
-│   ├── 10-00-02-012-B_Warning_Signs.md
-│   ├── 10-00-02-012-C_Mandatory_Signs.md
-│   ├── 10-00-02-012-D_Prohibition_Signs.md
-│   ├── 10-00-02-012-E_Emergency_Signs.md
-│   └── 10-00-02-012-F_Signage_Placement_Diagrams.md
-│
-├── 10-00-02-013_Incident_Reporting/
-│   ├── 10-00-02-013-A_Reporting_Requirements.md
-│   ├── 10-00-02-013-B_Incident_Classification.md
-│   ├── 10-00-02-013-C_Report_Templates.md
-│   ├── 10-00-02-013-D_Investigation_Process.md
-│   ├── 10-00-02-013-E_Corrective_Actions.md
-│   └── 10-00-02-013-F_Lessons_Learned.md
-│
-├── 10-00-02-014_Safety_Training/
-│   ├── 10-00-02-014-A_Training_Requirements.md
-│   ├── 10-00-02-014-B_Competency_Matrix.md
-│   ├── 10-00-02-014-C_H2_Safety_Training.md
-│   ├── 10-00-02-014-D_HV_Safety_Training.md
-│   ├── 10-00-02-014-E_Cryogenic_Training.md
-│   ├── 10-00-02-014-F_Emergency_Response_Training.md
-│   └── 10-00-02-014-G_Recurrency_Requirements.md
-│
-├── 10-00-02-015_Safety_Checklists/
-│   ├── 10-00-02-015-A_Pre_Parking_Checklist.md
-│   ├── 10-00-02-015-B_Mooring_Safety_Checklist.md
-│   ├── 10-00-02-015-C_Storage_Entry_Checklist.md
-│   ├── 10-00-02-015-D_RTS_Safety_Checklist.md
-│   ├── 10-00-02-015-E_H2_Operations_Checklist.md
-│   └── 10-00-02-015-F_Daily_Safety_Inspection.md
-│
-├── 10-00-02-016_Safety_Equipment/
-│   ├── 10-00-02-016-A_Equipment_Inventory.md
-│   ├── 10-00-02-016-B_H2_Detection_Equipment.md
-│   ├── 10-00-02-016-C_Fire_Fighting_Equipment.md
-│   ├── 10-00-02-016-D_First_Aid_Equipment.md
-│   ├── 10-00-02-016-E_Rescue_Equipment.md
-│   └── 10-00-02-016-F_Equipment_Inspection_Schedule.md
-│
-├── 10-00-02-090_Schemas/
-│   ├── hazard-register.schema.json
-│   ├── risk-assessment.schema.json
-│   ├── incident-report.schema.json
-│   ├── safety-checklist.schema.json
-│   └── training-record.schema.json
-│
-└── 10-00-02-099_Index/
-    ├── 10-00-02-099-A_Document_Index.md
-    ├── 10-00-02-099-B_Hazard_Register.md
-    ├── 10-00-02-099-C_Risk_Register.md
-    └── 10-00-02-099-D_Cross_References.md
-```
-
-### Document Summary
-
-| Category | Count | Description |
-|----------|-------|-------------|
-| 📄 Top-level documents | 4 | Overview, hazards, risk, mitigations |
-| 📁 Subdirectories | 12 | Detailed safety topic areas |
-| 📋 Subdirectory documents | 66 | Specialized safety documentation |
-| 🗂️ Schemas | 5 | JSON validation schemas |
-| 📇 Index files | 4 | Cross-reference and registers |
-| **Total files** | **79** | **Complete safety framework** |
-
-### Category Breakdown
-
-#### Core Safety Documents
-
-| Document ID | Title | Purpose |
-|-------------|-------|---------|
-| 10-00-02-001 | Safety Overview | Introduction to chapter safety philosophy |
-| 10-00-02-002 | Hazard Identification | Systematic hazard identification (FHA/PHA) |
-| 10-00-02-003 | Risk Assessment | Risk evaluation and classification |
-| 10-00-02-004 | Mitigation Measures | Controls and safeguards |
-
-#### H₂-Specific Safety (005)
-
-| Document ID | Title | Q100 Relevance |
-|-------------|-------|----------------|
-| 005-A | LH₂ Properties & Hazards | Cryogenic hydrogen characteristics |
-| 005-B | Leak Detection & Response | Sensor systems, alarm protocols |
-| 005-C | Venting Procedures | Controlled release during storage |
-| 005-D | Exclusion Zones | Safety perimeters for H₂ operations |
-| 005-E | H₂ Emergency Protocols | Hydrogen-specific emergencies |
-
-#### High Voltage Safety (006)
-
-| Document ID | Title | Q100 Relevance |
-|-------------|-------|----------------|
-| 006-A | HV System Overview | 800V+ architecture hazards |
-| 006-B | Isolation Procedures | Safe de-energization |
-| 006-C | Lockout/Tagout (LOTO) | Maintenance isolation |
-| 006-D | Arc Flash Protection | Electrical arc hazards |
-| 006-E | HV PPE Requirements | Specialized protective equipment |
-
-#### Cryogenic Safety (007)
-
-| Document ID | Title | Q100 Relevance |
-|-------------|-------|----------------|
-| 007-A | Cryogenic Hazards | −253°C exposure risks |
-| 007-B | Cold Burn Prevention | Personnel protection |
-| 007-C | Material Embrittlement | Equipment/structure risks |
-| 007-D | Oxygen Displacement | Asphyxiation hazards |
-| 007-E | Cryogenic PPE | Specialized protective gear |
-
-#### Fire Protection (008)
-
-| Document ID | Title | Q100 Relevance |
-|-------------|-------|----------------|
-| 008-A | Fire Risk Assessment | H₂ + HV fire risks |
-| 008-B | Detection Systems | Flame, heat, gas detection |
-| 008-C | Suppression Systems | H₂-compatible suppression |
-| 008-D | H₂ Fire Response | Invisible flame protocols |
-| 008-E | Electrical Fire Response | Battery/HV fire protocols |
-
-#### Emergency Procedures (009)
-
-| Document ID | Title | Purpose |
-|-------------|-------|---------|
-| 009-A | Emergency Overview | Emergency response philosophy |
-| 009-B | Evacuation Procedures | Personnel evacuation |
-| 009-C | H₂ Leak Emergency | Hydrogen release response |
-| 009-D | HV Emergency | Electrical emergency response |
-| 009-E | Fire Emergency | Fire response procedures |
-| 009-F | Medical Emergency | Injury/illness response |
-| 009-G | Spill Response | Fluid/material spills |
-| 009-H | Emergency Contacts | Contact directory |
-
-### Cross-References
-
-#### Related ATA Chapters
-
-| ATA | Chapter | Relationship |
-|-----|---------|--------------|
-| [12](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_12-SERVICING/) | Servicing | Fuel/fluid handling safety |
-| [24](OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_24-ELECTRICAL_POWER/) | Electrical Power | HV system safety integration |
-| [28](OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_28-FUEL/) | Fuel | LH₂ storage and handling |
-| [73](OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_73-ENGINE_FUEL_AND_CONTROL/) | Fuel System | Fuel cell system safety |
-| [80](OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_80-STARTING/) | Starting | System activation safety |
-
-#### Related IDLE Channels
-
-- **IDLE02_Testing_Certification_and_Authorities** — Safety certification evidence
-- **IDLE03_Operations_Maintenance_and_Customer_Care** — Operational safety procedures
-- **IDLE08_Qualified_Workforce_Health_and_Wellbeing** — Safety training, health & wellbeing
-
-#### Related LC Channels
-
-- **LC-02_Certification_Home** — Safety certification requirements
-- **LC-03_Operations_MRO_Home** — Operational safety integration
-- **LC-08_Crew_Medical_Home** — Personnel safety and medical
-
-### Regulatory Alignment
-
-| Regulation | Applicability |
-|------------|---------------|
-| **[EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)** | Airworthiness safety requirements |
-| **[FAA 14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)** | US certification safety |
-| **[ISO 19880](https://www.iso.org/standard/71940.html)** | Hydrogen fueling safety |
-| **[IEC 60079](https://webstore.iec.ch/publication/421)** | Explosive atmospheres |
-| **[NFPA 2](https://www.nfpa.org/codes-and-standards/2/hydrogen-technologies-code)** | Hydrogen technologies code |
-| **[OSHA 29 CFR 1910](https://www.osha.gov/laws-regs/regulations/standardnumber/1910)** | Occupational safety |
-| **[EN 60204](https://www.en-standard.eu/csn-en-60204-1-safety-of-machinery-electrical-equipment-of-machines-part-1-general-requirements/)** | Electrical equipment safety |
-
----
-
 ## 🏁 Getting Started
 
 ### Prerequisites
@@ -516,7 +281,7 @@ python --version
 pip install -r requirements.txt
 
 # Optional: Setup pre-commit hooks
-bash .github/hooks/setup-hooks.sh
+bash . github/hooks/setup-hooks.sh
 ```
 
 ### Repository Navigation
@@ -535,20 +300,20 @@ flowchart LR
 
 ```bash
 # Navigate to fuel system design
-cd OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_28-FUEL/28-00_GENERAL/04_Design/
+cd ATA_28-FUEL/28-00_GENERAL/04_Design/
 
 # Navigate to propulsion subsystems
-cd OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_70-PROPULSION/70-20_Subsystems/
+cd ATA_70-PROPULSION/70-20_Subsystems/
 
 # Navigate to sustainability anchors
-cd OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_28-FUEL/28-30_ANCHORS/
+cd ATA_28-FUEL/28-30_ANCHORS/
 ```
 
 ### Validation Commands
 
 ```bash
 # Structure compliance (OPT-IN and ATA topology)
-python tools/validators/structure_validator.py .
+python tools/validators/structure_validator.py . 
 
 # Drawing naming (Q100 conventions)
 python tools/validators/drawing_validator.py <file.svg>
@@ -560,7 +325,7 @@ python tools/validators/ci_validator.py <CI-XX-XXX-XXX-XXX>
 python tools/validate_documentation_structure.py
 
 # Full validation suite
-python tools/validators/run_all.py --verbose
+python tools/validators/run_all. py --verbose
 ```
 
 ---
@@ -602,28 +367,15 @@ flowchart TB
     style DO326 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
 ```
 
-### Referenced Standards (with links)
-
-| Category | Standard | Link |
-|----------|----------|------|
-| **Airworthiness** | EASA CS-25 | [EASA Certification Specifications](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) |
-| **Airworthiness** | FAA 14 CFR Part 25 | [Federal Aviation Regulations](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) |
-| **Software** | DO-178C | [RTCA Standards](https://www.rtca.org/content/standards-guidance-documents) |
-| **Hardware** | DO-254 | [RTCA Standards](https://www.rtca.org/content/standards-guidance-documents) |
-| **Environmental** | DO-160G | [RTCA Standards](https://www.rtca.org/content/standards-guidance-documents) |
-| **System Development** | ARP4754A | [SAE Standards](https://www.sae.org/standards/content/arp4754a/) |
-| **Safety Assessment** | ARP4761 | [SAE Standards](https://www.sae.org/standards/content/arp4761/) |
-| **Cybersecurity** | DO-326A | [RTCA Standards](https://www.rtca.org/content/standards-guidance-documents) |
-
 ### Documentation Standards
 
 | Standard | Application |
 |----------|-------------|
-| **[ATA iSpec 2200](https://www.ataebiz.org/)** | Chapter structure and numbering |
-| **[S1000D](http://www.s1000d.org/)** | Technical publications |
-| **[ISO 15926](https://www.iso.org/standard/29557.html)** | Industrial data exchange |
-| **[DO-178C](https://www.rtca.org/content/standards-guidance-documents)** | Software development assurance |
-| **[ARP4754A](https://www.sae.org/standards/content/arp4754a/)** | System development process |
+| **ATA iSpec 2200** | Chapter structure and numbering |
+| **S1000D** | Technical publications |
+| **ISO 15926** | Industrial data exchange |
+| **DO-178C** | Software development assurance |
+| **ARP4754A** | System development process |
 
 ### Certification Timeline
 
@@ -742,19 +494,19 @@ pie showData
 | Document | Description |
 |----------|-------------|
 | [`OPT-IN_FRAMEWORK_STANDARD.md`](OPT-IN_FRAMEWORK_STANDARD.md) | Mandatory structure & validation rules |
-| [`AMPEL360_DOCUMENTATION_STANDARD.md`](AMPEL360_DOCUMENTATION_STANDARD.md) | Writing conventions |
-| [`AI-ASI-TP.md`](AI-ASI-TP.md) | AI integration strategy |
+| [`AMPEL360_DOCUMENTATION_STANDARD.md`](AMPEL360_DOCUMENTATION_STANDARD. md) | Writing conventions |
+| [`AI-ASI-TP. md`](AI-ASI-TP.md) | AI integration strategy |
 | [`DIGITAL_TWIN_CONTROL_LOOP.md`](DIGITAL_TWIN_CONTROL_LOOP.md) | Digital twin architecture |
 | [`CAOS/CAOS_OPERATIONS_FRAMEWORK.md`](CAOS/CAOS_OPERATIONS_FRAMEWORK.md) | CAOS cognitive operations system |
-| [`.github/copilot.md`](.github/copilot.md) | GitHub Copilot / Agent integration |
+| [`. github/copilot. md`](.github/copilot.md) | GitHub Copilot / Agent integration |
 
 ### Wiki Resources
 
 | Page | Description |
 |------|-------------|
-| [Wiki Home](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) | Main wiki landing page |
-| [IDLE_Standard_Channels](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki/IDLE_Standard_Channels) | Integrated Digital Living Ecosystems framework |
-| [LC-01 to LC-09](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) | Life-Cycle channel documentation |
+| [Wiki Home](https://github. com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) | Main wiki landing page |
+| [IDLE_Standard_Channels](https://github. com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki/IDLE_Standard_Channels) | Integrated Digital Living Ecosystems framework |
+| [LC-01 to LC-09](https://github. com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) | Life-Cycle channel documentation |
 
 ---
 
@@ -804,8 +556,7 @@ We welcome contributions from aerospace engineers, software developers, and docu
 
 ### Code of Conduct
 
-Please read our Code of Conduct before contributing.
-<!-- TODO: Create CODE_OF_CONDUCT.md and update this link -->
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
 
 ---
 
@@ -831,8 +582,8 @@ See [LICENSE](LICENSE) for full terms.
 | 🐛 Issues | [github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues) |
 | 💬 Discussions | [github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/discussions](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/discussions) |
 | 🌐 Live Documentation | [v0-ampel-360-aircraft-specification.vercel.app](https://v0-ampel-360-aircraft-specification.vercel.app) |
-| 🏛️ EASA CS-25 | [www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) |
-| 📋 DO-178C | [www.rtca.org/content/standards-guidance-documents](https://www.rtca.org/content/standards-guidance-documents) |
+| 🏛️ EASA CS-25 | [easa.europa. eu/cs-25-amendment-27](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) |
+| 📋 DO-178C | [rtca.org/standards-guidance-documents](https://www. rtca.org/content/standards-guidance-documents) |
 
 ---
 
@@ -854,12 +605,20 @@ See [LICENSE](LICENSE) for full terms.
 
 [![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/AmedeoPelliccia)
 [![Powered by H₂](https://img.shields.io/badge/Powered%20by-H₂-00b894.svg)](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
-[![Zero Emissions](https://img.shields.io/badge/Emissions-Zero%20CO₂-00cec9.svg)](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
+[![Zero Emissions](https://img. shields.io/badge/Emissions-Zero%20CO₂-00cec9.svg)](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
 [![Phase](https://img.shields.io/badge/Phase-Preliminary%20Design-ff9f43.svg)](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
 
 </div>
 
 ---
+
+<p align="center">
+  <i>Document control: Version 2.1 · Status: ACTIVE · Last update: 2025-12-04</i><br/>
+  <i>Current Phase: Preliminary Design / Detail Concept</i><br/>
+  <i>Generated with AI assistance, prompted by Amedeo Pelliccia. </i>
+</p>
+
+
 
 <p align="center">
   <i>Document control: Version 2.2 · Status: ACTIVE · Last update: 2025-12-10</i><br/>
