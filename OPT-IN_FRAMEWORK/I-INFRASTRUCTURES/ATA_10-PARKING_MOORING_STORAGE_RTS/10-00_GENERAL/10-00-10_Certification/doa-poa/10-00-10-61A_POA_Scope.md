@@ -1,0 +1,32 @@
+# 10-00-10-61A POA Scope
+
+## Document Information
+
+- **Document ID**: 10-00-10-61A
+- **Title**: POA Scope
+- **Revision**: A
+- **Version**: 1.0
+- **Status**: Draft
+- **Date**: 2025-12-10
+- **Owner**: AMPEL360 Quality Team
+
+## Purpose
+
+[Document purpose for POA Scope]
+
+## Scope
+
+[DOA/POA scope for ATA 10 activities]
+
+## Related Documents
+
+- Master Certification Plan: [../certification-plans/10-00-10-01A_Master_Certification_Plan.md](../certification-plans/10-00-10-01A_Master_Certification_Plan.md)
+
+## Document Control
+
+- **Generated with the assistance of AI (GitHub Copilot)**, prompted by **Amedeo Pelliccia**
+- **Status**: DRAFT – Subject to human review and approval
+- **Repository**: `AMPEL360-BWB-H2-Hy-E`
+- **Last AI update**: 2025-12-10
+
+---
