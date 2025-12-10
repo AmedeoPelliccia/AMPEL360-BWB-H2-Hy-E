@@ -29,7 +29,7 @@ This cross-reference document serves as a central navigation hub for ATA Chapter
 - H2-specific procedures and general aviation standards
 - BWB configuration requirements and conventional aircraft practices
 
-### 4.2 H2/LH2Considerations
+### 4.2 H2/LH2 Considerations
 
 H2-specific cross-references link:
 
