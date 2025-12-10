@@ -15,18 +15,18 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License" /></a>
-  <a href="OPT-IN_FRAMEWORK_STANDARD.md"><img src="https://img. shields.io/badge/Framework-OPT--IN%20v1.1-green.svg" alt="Framework" /></a>
+  <a href="OPT-IN_FRAMEWORK_STANDARD.md"><img src="https://img.shields.io/badge/Framework-OPT--IN%20v1.1-green.svg" alt="Framework" /></a>
   <img src="https://img.shields.io/badge/Aircraft-Q100-orange.svg" alt="Aircraft" />
   <img src="https://img.shields.io/badge/Target-EASA%20CS--25%20%7C%20FAA%20Part%2025-red.svg" alt="Certification" />
-  <img src="https://img.shields. io/badge/EIS-2030--Q4-purple.svg" alt="EIS" />
+  <img src="https://img.shields.io/badge/EIS-2030--Q4-purple.svg" alt="EIS" />
   <img src="https://img.shields.io/badge/Propulsion-H₂%20Fuel%20Cell-00b894.svg" alt="Propulsion" />
-  <img src="https://img. shields.io/badge/Emissions-Zero%20CO₂-00cec9.svg" alt="Emissions" />
+  <img src="https://img.shields.io/badge/Emissions-Zero%20CO₂-00cec9.svg" alt="Emissions" />
   <img src="https://img.shields.io/badge/Phase-Preliminary%20Design-ff9f43.svg" alt="Phase" />
 </p>
 
 <p align="center">
   <a href="https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki">📖 Wiki</a> •
-  <a href="https://github. com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues">🐛 Issues</a> •
+  <a href="https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues">🐛 Issues</a> •
   <a href="https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/discussions">💬 Discussions</a> •
   <a href="https://v0-ampel-360-aircraft-specification.vercel.app">🌐 Live Docs</a>
 </p>
@@ -46,7 +46,7 @@
 | 🏢 Hub congestion | Point-to-point routes between secondary airports (pop.  100k–500k) |
 | 🌍 Overtourism | Distribute connectivity beyond saturated destinations |
 | 🌱 Carbon emissions | Zero in-flight CO₂ via hydrogen fuel cells (H₂ → H₂O) |
-| 🔊 Noise pollution | −40% community noise through BWB acoustic shielding |
+| 🔊 Noise pollution | −40% community noise through [BWB](https://en.wikipedia.org/wiki/Blended_wing_body) acoustic shielding |
 
 **Example routes:** Bilbao ↔ Lyon · Porto ↔ Bologna · Gdańsk ↔ Toulouse · Gothenburg ↔ Naples
 
@@ -472,11 +472,11 @@ flowchart TB
 
 | ATA | Chapter | Relationship |
 |-----|---------|--------------|
-| 12 | Servicing | Fuel/fluid handling safety |
-| 24 | Electrical Power | HV system safety integration |
-| 28 | Fuel | LH₂ storage and handling |
-| 73 | Fuel System | Fuel cell system safety |
-| 80 | Starting | System activation safety |
+| [12](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_12-SERVICING/) | Servicing | Fuel/fluid handling safety |
+| [24](OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_24-ELECTRICAL_POWER/) | Electrical Power | HV system safety integration |
+| [28](OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_28-FUEL/) | Fuel | LH₂ storage and handling |
+| [73](OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_73-ENGINE_FUEL_AND_CONTROL/) | Fuel System | Fuel cell system safety |
+| [80](OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_80-STARTING/) | Starting | System activation safety |
 
 #### Related IDLE Channels
 
@@ -494,13 +494,13 @@ flowchart TB
 
 | Regulation | Applicability |
 |------------|---------------|
-| **EASA CS-25** | Airworthiness safety requirements |
-| **FAA 14 CFR Part 25** | US certification safety |
-| **ISO 19880** | Hydrogen fueling safety |
-| **IEC 60079** | Explosive atmospheres |
-| **NFPA 2** | Hydrogen technologies code |
-| **OSHA 29 CFR 1910** | Occupational safety |
-| **EN 60204** | Electrical equipment safety |
+| **[EASA CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes)** | Airworthiness safety requirements |
+| **[FAA 14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25)** | US certification safety |
+| **[ISO 19880](https://www.iso.org/standard/71940.html)** | Hydrogen fueling safety |
+| **[IEC 60079](https://webstore.iec.ch/publication/421)** | Explosive atmospheres |
+| **[NFPA 2](https://www.nfpa.org/codes-and-standards/2/hydrogen-technologies-code)** | Hydrogen technologies code |
+| **[OSHA 29 CFR 1910](https://www.osha.gov/laws-regs/regulations/standardnumber/1910)** | Occupational safety |
+| **[EN 60204](https://www.en-standard.eu/csn-en-60204-1-safety-of-machinery-electrical-equipment-of-machines-part-1-general-requirements/)** | Electrical equipment safety |
 
 ---
 
@@ -516,7 +516,7 @@ python --version
 pip install -r requirements.txt
 
 # Optional: Setup pre-commit hooks
-bash . github/hooks/setup-hooks.sh
+bash .github/hooks/setup-hooks.sh
 ```
 
 ### Repository Navigation
@@ -535,20 +535,20 @@ flowchart LR
 
 ```bash
 # Navigate to fuel system design
-cd ATA_28-FUEL/28-00_GENERAL/04_Design/
+cd OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_28-FUEL/28-00_GENERAL/04_Design/
 
 # Navigate to propulsion subsystems
-cd ATA_70-PROPULSION/70-20_Subsystems/
+cd OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_70-PROPULSION/70-20_Subsystems/
 
 # Navigate to sustainability anchors
-cd ATA_28-FUEL/28-30_ANCHORS/
+cd OPT-IN_FRAMEWORK/T-TECHNOLOGIES/ATA_28-FUEL/28-30_ANCHORS/
 ```
 
 ### Validation Commands
 
 ```bash
 # Structure compliance (OPT-IN and ATA topology)
-python tools/validators/structure_validator.py . 
+python tools/validators/structure_validator.py .
 
 # Drawing naming (Q100 conventions)
 python tools/validators/drawing_validator.py <file.svg>
@@ -560,7 +560,7 @@ python tools/validators/ci_validator.py <CI-XX-XXX-XXX-XXX>
 python tools/validate_documentation_structure.py
 
 # Full validation suite
-python tools/validators/run_all. py --verbose
+python tools/validators/run_all.py --verbose
 ```
 
 ---
@@ -572,21 +572,21 @@ python tools/validators/run_all. py --verbose
 ```mermaid
 flowchart TB
     subgraph Primary["✈️ Airworthiness"]
-        EASA["EASA CS-25"]
-        FAA["FAA 14 CFR Part 25"]
+        EASA["<a href='https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes'>EASA CS-25</a>"]
+        FAA["<a href='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25'>FAA 14 CFR Part 25</a>"]
         SC["Special Conditions<br/>BWB, H₂, DEP"]
     end
 
     subgraph SW["💻 Software & Hardware"]
-        DO178["DO-178C<br/>DAL A–E"]
-        DO254["DO-254<br/>Hardware"]
-        DO160["DO-160G<br/>Environmental"]
+        DO178["<a href='https://www.rtca.org/content/standards-guidance-documents'>DO-178C</a><br/>DAL A–E"]
+        DO254["<a href='https://www.rtca.org/content/standards-guidance-documents'>DO-254</a><br/>Hardware"]
+        DO160["<a href='https://www.rtca.org/content/standards-guidance-documents'>DO-160G</a><br/>Environmental"]
     end
 
     subgraph Safety["🛡️ Safety Process"]
-        ARP4754["ARP4754A<br/>System Development"]
-        ARP4761["ARP4761<br/>Safety Assessment"]
-        DO326["DO-326A<br/>Cybersecurity"]
+        ARP4754["<a href='https://www.sae.org/standards/content/arp4754a/'>ARP4754A</a><br/>System Development"]
+        ARP4761["<a href='https://www.sae.org/standards/content/arp4761/'>ARP4761</a><br/>Safety Assessment"]
+        DO326["<a href='https://www.rtca.org/content/standards-guidance-documents'>DO-326A</a><br/>Cybersecurity"]
     end
 
     Primary --> SW --> Safety
@@ -606,11 +606,11 @@ flowchart TB
 
 | Standard | Application |
 |----------|-------------|
-| **ATA iSpec 2200** | Chapter structure and numbering |
-| **S1000D** | Technical publications |
-| **ISO 15926** | Industrial data exchange |
-| **DO-178C** | Software development assurance |
-| **ARP4754A** | System development process |
+| **[ATA iSpec 2200](https://www.ataebiz.org/)** | Chapter structure and numbering |
+| **[S1000D](http://www.s1000d.org/)** | Technical publications |
+| **[ISO 15926](https://www.iso.org/standard/29557.html)** | Industrial data exchange |
+| **[DO-178C](https://www.rtca.org/content/standards-guidance-documents)** | Software development assurance |
+| **[ARP4754A](https://www.sae.org/standards/content/arp4754a/)** | System development process |
 
 ### Certification Timeline
 
@@ -729,19 +729,19 @@ pie showData
 | Document | Description |
 |----------|-------------|
 | [`OPT-IN_FRAMEWORK_STANDARD.md`](OPT-IN_FRAMEWORK_STANDARD.md) | Mandatory structure & validation rules |
-| [`AMPEL360_DOCUMENTATION_STANDARD.md`](AMPEL360_DOCUMENTATION_STANDARD. md) | Writing conventions |
-| [`AI-ASI-TP. md`](AI-ASI-TP.md) | AI integration strategy |
+| [`AMPEL360_DOCUMENTATION_STANDARD.md`](AMPEL360_DOCUMENTATION_STANDARD.md) | Writing conventions |
+| [`AI-ASI-TP.md`](AI-ASI-TP.md) | AI integration strategy |
 | [`DIGITAL_TWIN_CONTROL_LOOP.md`](DIGITAL_TWIN_CONTROL_LOOP.md) | Digital twin architecture |
 | [`CAOS/CAOS_OPERATIONS_FRAMEWORK.md`](CAOS/CAOS_OPERATIONS_FRAMEWORK.md) | CAOS cognitive operations system |
-| [`. github/copilot. md`](.github/copilot.md) | GitHub Copilot / Agent integration |
+| [`.github/copilot.md`](.github/copilot.md) | GitHub Copilot / Agent integration |
 
 ### Wiki Resources
 
 | Page | Description |
 |------|-------------|
-| [Wiki Home](https://github. com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) | Main wiki landing page |
-| [IDLE_Standard_Channels](https://github. com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki/IDLE_Standard_Channels) | Integrated Digital Living Ecosystems framework |
-| [LC-01 to LC-09](https://github. com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) | Life-Cycle channel documentation |
+| [Wiki Home](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) | Main wiki landing page |
+| [IDLE_Standard_Channels](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki/IDLE_Standard_Channels) | Integrated Digital Living Ecosystems framework |
+| [LC-01 to LC-09](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/wiki) | Life-Cycle channel documentation |
 
 ---
 
@@ -791,7 +791,8 @@ We welcome contributions from aerospace engineers, software developers, and docu
 
 ### Code of Conduct
 
-Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+Please read our Code of Conduct before contributing.
+<!-- TODO: Create CODE_OF_CONDUCT.md and update this link -->
 
 ---
 
@@ -817,8 +818,8 @@ See [LICENSE](LICENSE) for full terms.
 | 🐛 Issues | [github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/issues) |
 | 💬 Discussions | [github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/discussions](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E/discussions) |
 | 🌐 Live Documentation | [v0-ampel-360-aircraft-specification.vercel.app](https://v0-ampel-360-aircraft-specification.vercel.app) |
-| 🏛️ EASA CS-25 | [easa.europa. eu/cs-25-amendment-27](https://www.easa.europa.eu/document-library/certification-specifications/cs-25-amendment-27) |
-| 📋 DO-178C | [rtca.org/standards-guidance-documents](https://www. rtca.org/content/standards-guidance-documents) |
+| 🏛️ EASA CS-25 | [www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-large-aeroplanes) |
+| 📋 DO-178C | [www.rtca.org/content/standards-guidance-documents](https://www.rtca.org/content/standards-guidance-documents) |
 
 ---
 
@@ -840,7 +841,7 @@ See [LICENSE](LICENSE) for full terms.
 
 [![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/AmedeoPelliccia)
 [![Powered by H₂](https://img.shields.io/badge/Powered%20by-H₂-00b894.svg)](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
-[![Zero Emissions](https://img. shields.io/badge/Emissions-Zero%20CO₂-00cec9.svg)](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
+[![Zero Emissions](https://img.shields.io/badge/Emissions-Zero%20CO₂-00cec9.svg)](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
 [![Phase](https://img.shields.io/badge/Phase-Preliminary%20Design-ff9f43.svg)](https://github.com/AmedeoPelliccia/AMPEL360-BWB-H2-Hy-E)
 
 </div>
@@ -848,9 +849,10 @@ See [LICENSE](LICENSE) for full terms.
 ---
 
 <p align="center">
-  <i>Document control: Version 2.1 · Status: ACTIVE · Last update: 2025-12-04</i><br/>
+  <i>Document control: Version 2.2 · Status: ACTIVE · Last update: 2025-12-10</i><br/>
   <i>Current Phase: Preliminary Design / Detail Concept</i><br/>
-  <i>Generated with AI assistance, prompted by Amedeo Pelliccia. </i>
+  <i>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</i><br/>
+  <i>Last AI update: Hyperlink additions - 2025-12-10</i>
 </p>
 
 
