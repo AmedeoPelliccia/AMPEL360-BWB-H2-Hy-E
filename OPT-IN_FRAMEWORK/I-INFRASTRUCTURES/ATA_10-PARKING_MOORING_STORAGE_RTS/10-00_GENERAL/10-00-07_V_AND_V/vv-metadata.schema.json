@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.amedeopelliccia.it/schemas/vv-metadata.schema.json",
+  "title": "V&V Metadata Schema",
+  "description": "Metadata schema for Verification and Validation documents in ATA 10 - Parking, Mooring, Storage & RTS",
+  "type": "object",
+  "required": [
+    "document_id",
+    "document_number",
+    "title",
+    "description",
+    "document_type",
+    "verification_method"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the document (UUID format)"
+    },
+    "document_number": {
+      "type": "string",
+      "pattern": "^10-VV-[A-Z]{3}-[0-9]{3}$",
+      "description": "Document number following pattern: 10-VV-XXX-NNN (e.g., 10-VV-TST-001)",
+      "examples": ["10-VV-TST-001", "10-VV-VPL-001", "10-VV-RPT-001"]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Document title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the V&V document purpose and scope"
+    },
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "verification-plan",
+        "test-procedure",
+        "test-report",
+        "validation",
+        "inspection",
+        "analysis-verification",
+        "compliance",
+        "traceability",
+        "template"
+      ],
+      "description": "Type of V&V document"
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": [
+        "Test",
+        "Analysis",
+        "Inspection",
+        "Demonstration",
+        "Review",
+        "Simulation",
+        "Mixed"
+      ],
+      "description": "Primary verification method used"
+    },
+    "requirements_verified": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^REQ-10-[0-9]{2,4}$"
+      },
+      "description": "Array of requirement IDs verified by this document",
+      "examples": [["REQ-10-001", "REQ-10-002"]]
+    },
+    "test_facility": {
+      "type": "string",
+      "description": "Test facility or lab where verification is performed"
+    },
+    "test_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of test execution (ISO 8601 format: YYYY-MM-DD)"
+    },
+    "test_status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "in-progress",
+        "completed",
+        "passed",
+        "failed",
+        "conditional-pass",
+        "deferred",
+        "cancelled"
+      ],
+      "description": "Current status of the test or verification activity"
+    },
+    "h2_related": {
+      "type": "boolean",
+      "description": "Indicates if document relates to hydrogen safety/systems"
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "description": "Indicates if document relates to cryogenic systems"
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Indicates if document is specific to Blended Wing Body configuration"
+    },
+    "approval_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "in-review",
+        "approved",
+        "rejected",
+        "obsolete"
+      ],
+      "description": "Approval status of the document"
+    },
+    "approver": {
+      "type": "string",
+      "description": "Name or role of the document approver"
+    },
+    "approval_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of document approval (ISO 8601 format)"
+    },
+    "related_engineering": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Related engineering documents or design references",
+      "examples": [["10-00-04-DES-001", "10-00-06-ENG-002"]]
+    },
+    "related_standards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Applicable standards and regulations",
+      "examples": [["CS-25.1309", "SAE AS6968", "NFPA 2", "ISO 13984"]]
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "author", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "description": "Revision identifier (e.g., A, B, 1.0, 2.0)"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of revision"
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of the revision"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of changes in this revision"
+          }
+        }
+      },
+      "description": "Document revision history"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Additional tags for categorization",
+      "examples": [["safety-critical", "h2-safety", "ground-ops", "structural"]]
+    },
+    "author": {
+      "type": "string",
+      "description": "Primary author of the document"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last update"
+    }
+  }
+}
