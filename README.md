@@ -269,6 +269,241 @@ flowchart TB
 
 ---
 
+## 🛡️ Safety Framework — ATA 10-00-02
+
+### 10-00-02 Safety — Directory Structure
+
+**Path:** `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS/10-00_GENERAL/10-00-02_Safety/`
+
+```
+10-00-02_Safety/
+│
+├── 10-00-02-001_Safety_Overview.md
+├── 10-00-02-002_Hazard_Identification.md
+├── 10-00-02-003_Risk_Assessment.md
+├── 10-00-02-004_Mitigation_Measures.md
+│
+├── 10-00-02-005_H2_Specific_Safety/
+│   ├── 10-00-02-005-A_LH2_Properties_Hazards.md
+│   ├── 10-00-02-005-B_Leak_Detection_Response.md
+│   ├── 10-00-02-005-C_Venting_Procedures.md
+│   ├── 10-00-02-005-D_Exclusion_Zones.md
+│   └── 10-00-02-005-E_H2_Emergency_Protocols.md
+│
+├── 10-00-02-006_High_Voltage_Safety/
+│   ├── 10-00-02-006-A_HV_System_Overview.md
+│   ├── 10-00-02-006-B_Isolation_Procedures.md
+│   ├── 10-00-02-006-C_Lockout_Tagout_LOTO.md
+│   ├── 10-00-02-006-D_Arc_Flash_Protection.md
+│   └── 10-00-02-006-E_HV_PPE_Requirements.md
+│
+├── 10-00-02-007_Cryogenic_Safety/
+│   ├── 10-00-02-007-A_Cryogenic_Hazards.md
+│   ├── 10-00-02-007-B_Cold_Burn_Prevention.md
+│   ├── 10-00-02-007-C_Material_Embrittlement.md
+│   ├── 10-00-02-007-D_Oxygen_Displacement.md
+│   └── 10-00-02-007-E_Cryogenic_PPE.md
+│
+├── 10-00-02-008_Fire_Protection/
+│   ├── 10-00-02-008-A_Fire_Risk_Assessment.md
+│   ├── 10-00-02-008-B_Detection_Systems.md
+│   ├── 10-00-02-008-C_Suppression_Systems.md
+│   ├── 10-00-02-008-D_H2_Fire_Response.md
+│   └── 10-00-02-008-E_Electrical_Fire_Response.md
+│
+├── 10-00-02-009_Emergency_Procedures/
+│   ├── 10-00-02-009-A_Emergency_Overview.md
+│   ├── 10-00-02-009-B_Evacuation_Procedures.md
+│   ├── 10-00-02-009-C_H2_Leak_Emergency.md
+│   ├── 10-00-02-009-D_HV_Emergency.md
+│   ├── 10-00-02-009-E_Fire_Emergency.md
+│   ├── 10-00-02-009-F_Medical_Emergency.md
+│   ├── 10-00-02-009-G_Spill_Response.md
+│   └── 10-00-02-009-H_Emergency_Contacts.md
+│
+├── 10-00-02-010_PPE_Requirements/
+│   ├── 10-00-02-010-A_PPE_Matrix.md
+│   ├── 10-00-02-010-B_Standard_PPE.md
+│   ├── 10-00-02-010-C_H2_Operations_PPE.md
+│   ├── 10-00-02-010-D_HV_Operations_PPE.md
+│   ├── 10-00-02-010-E_Cryogenic_PPE.md
+│   └── 10-00-02-010-F_PPE_Inspection_Maintenance.md
+│
+├── 10-00-02-011_Safety_Zones/
+│   ├── 10-00-02-011-A_Zone_Definitions.md
+│   ├── 10-00-02-011-B_Zone_Diagrams.md
+│   ├── 10-00-02-011-C_Access_Control.md
+│   ├── 10-00-02-011-D_H2_Exclusion_Zones.md
+│   └── 10-00-02-011-E_HV_Restricted_Areas.md
+│
+├── 10-00-02-012_Safety_Signage/
+│   ├── 10-00-02-012-A_Signage_Standards.md
+│   ├── 10-00-02-012-B_Warning_Signs.md
+│   ├── 10-00-02-012-C_Mandatory_Signs.md
+│   ├── 10-00-02-012-D_Prohibition_Signs.md
+│   ├── 10-00-02-012-E_Emergency_Signs.md
+│   └── 10-00-02-012-F_Signage_Placement_Diagrams.md
+│
+├── 10-00-02-013_Incident_Reporting/
+│   ├── 10-00-02-013-A_Reporting_Requirements.md
+│   ├── 10-00-02-013-B_Incident_Classification.md
+│   ├── 10-00-02-013-C_Report_Templates.md
+│   ├── 10-00-02-013-D_Investigation_Process.md
+│   ├── 10-00-02-013-E_Corrective_Actions.md
+│   └── 10-00-02-013-F_Lessons_Learned.md
+│
+├── 10-00-02-014_Safety_Training/
+│   ├── 10-00-02-014-A_Training_Requirements.md
+│   ├── 10-00-02-014-B_Competency_Matrix.md
+│   ├── 10-00-02-014-C_H2_Safety_Training.md
+│   ├── 10-00-02-014-D_HV_Safety_Training.md
+│   ├── 10-00-02-014-E_Cryogenic_Training.md
+│   ├── 10-00-02-014-F_Emergency_Response_Training.md
+│   └── 10-00-02-014-G_Recurrency_Requirements.md
+│
+├── 10-00-02-015_Safety_Checklists/
+│   ├── 10-00-02-015-A_Pre_Parking_Checklist.md
+│   ├── 10-00-02-015-B_Mooring_Safety_Checklist.md
+│   ├── 10-00-02-015-C_Storage_Entry_Checklist.md
+│   ├── 10-00-02-015-D_RTS_Safety_Checklist.md
+│   ├── 10-00-02-015-E_H2_Operations_Checklist.md
+│   └── 10-00-02-015-F_Daily_Safety_Inspection.md
+│
+├── 10-00-02-016_Safety_Equipment/
+│   ├── 10-00-02-016-A_Equipment_Inventory.md
+│   ├── 10-00-02-016-B_H2_Detection_Equipment.md
+│   ├── 10-00-02-016-C_Fire_Fighting_Equipment.md
+│   ├── 10-00-02-016-D_First_Aid_Equipment.md
+│   ├── 10-00-02-016-E_Rescue_Equipment.md
+│   └── 10-00-02-016-F_Equipment_Inspection_Schedule.md
+│
+├── 10-00-02-090_Schemas/
+│   ├── hazard-register.schema.json
+│   ├── risk-assessment.schema.json
+│   ├── incident-report.schema.json
+│   ├── safety-checklist.schema.json
+│   └── training-record.schema.json
+│
+└── 10-00-02-099_Index/
+    ├── 10-00-02-099-A_Document_Index.md
+    ├── 10-00-02-099-B_Hazard_Register.md
+    ├── 10-00-02-099-C_Risk_Register.md
+    └── 10-00-02-099-D_Cross_References.md
+```
+
+### Document Summary
+
+| Category | Count | Description |
+|----------|-------|-------------|
+| 📄 Top-level documents | 4 | Overview, hazards, risk, mitigations |
+| 📁 Subdirectories | 12 | Detailed safety topic areas |
+| 📋 Subdirectory documents | 66 | Specialized safety documentation |
+| 🗂️ Schemas | 5 | JSON validation schemas |
+| 📇 Index files | 4 | Cross-reference and registers |
+| **Total files** | **79** | **Complete safety framework** |
+
+### Category Breakdown
+
+#### Core Safety Documents
+
+| Document ID | Title | Purpose |
+|-------------|-------|---------|
+| 10-00-02-001 | Safety Overview | Introduction to chapter safety philosophy |
+| 10-00-02-002 | Hazard Identification | Systematic hazard identification (FHA/PHA) |
+| 10-00-02-003 | Risk Assessment | Risk evaluation and classification |
+| 10-00-02-004 | Mitigation Measures | Controls and safeguards |
+
+#### H₂-Specific Safety (005)
+
+| Document ID | Title | Q100 Relevance |
+|-------------|-------|----------------|
+| 005-A | LH₂ Properties & Hazards | Cryogenic hydrogen characteristics |
+| 005-B | Leak Detection & Response | Sensor systems, alarm protocols |
+| 005-C | Venting Procedures | Controlled release during storage |
+| 005-D | Exclusion Zones | Safety perimeters for H₂ operations |
+| 005-E | H₂ Emergency Protocols | Hydrogen-specific emergencies |
+
+#### High Voltage Safety (006)
+
+| Document ID | Title | Q100 Relevance |
+|-------------|-------|----------------|
+| 006-A | HV System Overview | 800V+ architecture hazards |
+| 006-B | Isolation Procedures | Safe de-energization |
+| 006-C | Lockout/Tagout (LOTO) | Maintenance isolation |
+| 006-D | Arc Flash Protection | Electrical arc hazards |
+| 006-E | HV PPE Requirements | Specialized protective equipment |
+
+#### Cryogenic Safety (007)
+
+| Document ID | Title | Q100 Relevance |
+|-------------|-------|----------------|
+| 007-A | Cryogenic Hazards | −253°C exposure risks |
+| 007-B | Cold Burn Prevention | Personnel protection |
+| 007-C | Material Embrittlement | Equipment/structure risks |
+| 007-D | Oxygen Displacement | Asphyxiation hazards |
+| 007-E | Cryogenic PPE | Specialized protective gear |
+
+#### Fire Protection (008)
+
+| Document ID | Title | Q100 Relevance |
+|-------------|-------|----------------|
+| 008-A | Fire Risk Assessment | H₂ + HV fire risks |
+| 008-B | Detection Systems | Flame, heat, gas detection |
+| 008-C | Suppression Systems | H₂-compatible suppression |
+| 008-D | H₂ Fire Response | Invisible flame protocols |
+| 008-E | Electrical Fire Response | Battery/HV fire protocols |
+
+#### Emergency Procedures (009)
+
+| Document ID | Title | Purpose |
+|-------------|-------|---------|
+| 009-A | Emergency Overview | Emergency response philosophy |
+| 009-B | Evacuation Procedures | Personnel evacuation |
+| 009-C | H₂ Leak Emergency | Hydrogen release response |
+| 009-D | HV Emergency | Electrical emergency response |
+| 009-E | Fire Emergency | Fire response procedures |
+| 009-F | Medical Emergency | Injury/illness response |
+| 009-G | Spill Response | Fluid/material spills |
+| 009-H | Emergency Contacts | Contact directory |
+
+### Cross-References
+
+#### Related ATA Chapters
+
+| ATA | Chapter | Relationship |
+|-----|---------|--------------|
+| 12 | Servicing | Fuel/fluid handling safety |
+| 24 | Electrical Power | HV system safety integration |
+| 28 | Fuel | LH₂ storage and handling |
+| 73 | Fuel System | Fuel cell system safety |
+| 80 | Starting | System activation safety |
+
+#### Related IDLE Channels
+
+- **IDLE02_Testing_Certification_and_Authorities** — Safety certification evidence
+- **IDLE03_Operations_Maintenance_and_Customer_Care** — Operational safety procedures
+- **IDLE08_Qualified_Workforce_Health_and_Wellbeing** — Safety training, health & wellbeing
+
+#### Related LC Channels
+
+- **LC-02_Certification_Home** — Safety certification requirements
+- **LC-03_Operations_MRO_Home** — Operational safety integration
+- **LC-08_Crew_Medical_Home** — Personnel safety and medical
+
+### Regulatory Alignment
+
+| Regulation | Applicability |
+|------------|---------------|
+| **EASA CS-25** | Airworthiness safety requirements |
+| **FAA 14 CFR Part 25** | US certification safety |
+| **ISO 19880** | Hydrogen fueling safety |
+| **IEC 60079** | Explosive atmospheres |
+| **NFPA 2** | Hydrogen technologies code |
+| **OSHA 29 CFR 1910** | Occupational safety |
+| **EN 60204** | Electrical equipment safety |
+
+---
+
 ## 🏁 Getting Started
 
 ### Prerequisites
