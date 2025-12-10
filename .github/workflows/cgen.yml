@@ -206,7 +206,7 @@ jobs:
           MAX_DELETIONS=10000
 
           # Sumamos adiciones y borrados solo para ficheros texto (numstat ignora bien binarios)
-          read -r ADD DEL <<< "$(git diff --numstat | awk '{adds+=$1; dels+=$2} END {print (adds ? adds : 0), (dels ? dels : 0)}')"
+          read -r ADD DEL <<< "$(git diff --numstat | awk 'BEGIN {adds=0; dels=0} {adds+=$1; dels+=$2} END {print adds, dels}')"
 
           # Normalización por si no hay cambios en texto o valores no numéricos
           [[ ! "$ADD" =~ ^[0-9]+$ ]] && ADD=0
@@ -215,7 +215,7 @@ jobs:
           echo "Total additions: $ADD"
           echo "Total deletions: $DEL"
 
-          if [ "$DEL" -gt "$MAX_DELETIONS" ] && [ "$DEL" -gt "$ADD" ]; then
+          if (( DEL > MAX_DELETIONS && DEL > ADD )); then
             echo "::error::Too many deletions ($DEL) compared to additions ($ADD). Aborting PR to avoid destructive changes."
             exit 1
           fi
