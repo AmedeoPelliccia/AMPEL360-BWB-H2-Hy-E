@@ -206,11 +206,11 @@ jobs:
           MAX_DELETIONS=10000
 
           # Sumamos adiciones y borrados solo para ficheros texto (numstat ignora bien binarios)
-          read -r ADD DEL <<< "$(git diff --numstat | awk '{adds+=$1; dels+=$2} END {print adds, dels}')"
+          read -r ADD DEL <<< "$(git diff --numstat | awk '{adds+=$1; dels+=$2} END {print (adds == "" ? 0 : adds), (dels == "" ? 0 : dels)}')"
 
-          # Normalización por si no hay cambios en texto
-          [ -z "$ADD" ] && ADD=0
-          [ -z "$DEL" ] && DEL=0
+          # Normalización por si no hay cambios en texto o valores no numéricos
+          [ -z "$ADD" ] || [[ ! "$ADD" =~ ^[0-9]+$ ]] && ADD=0
+          [ -z "$DEL" ] || [[ ! "$DEL" =~ ^[0-9]+$ ]] && DEL=0
 
           echo "Total additions: $ADD"
           echo "Total deletions: $DEL"
