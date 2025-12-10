@@ -27,7 +27,7 @@ This document covers:
 
 ICAO establishes international standards and recommended practices (SARPs) for civil aviation, including airport design, aircraft operations, and safety management. These standards ensure global harmonization and safety for international flight operations.
 
-### 4.2 H2/LH2Considerations
+### 4.2 H2/LH2 Considerations
 
 ICAO is developing guidance for hydrogen-powered aircraft operations:
 
