@@ -98,6 +98,32 @@ jobs:
             $DRY
 
       # ---------------------------------------------------------
+      # Fill CGen placeholders
+      # ---------------------------------------------------------
+      - name: Fill CGen placeholders in documentation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "=== Filling CGen placeholders in documentation ==="
+          if [ -f tools/genccc/fill_placeholders.py ]; then
+            # Process ATA_03 (Support Information & GSE) documents
+            if [ -d "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE" ]; then
+              python tools/genccc/fill_placeholders.py \
+                --target OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE \
+                --verbose || echo "Placeholder filling completed with warnings"
+            fi
+            
+            # Process ATA_10 (Parking, Mooring, Storage) documents
+            if [ -d "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS" ]; then
+              python tools/genccc/fill_placeholders.py \
+                --target OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS \
+                --verbose || echo "Placeholder filling completed with warnings"
+            fi
+          else
+            echo "tools/genccc/fill_placeholders.py not found - skipping"
+          fi
+
+      # ---------------------------------------------------------
       # Check for changes
       # ---------------------------------------------------------
       - name: Check for changes

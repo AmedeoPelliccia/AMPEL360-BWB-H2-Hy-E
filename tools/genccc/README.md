@@ -4,7 +4,7 @@ GenCCC is an automated tool for maintaining cross-reference integrity and genera
 
 ## Overview
 
-This tool provides three main functions:
+This tool provides four main functions:
 
 1. **Report Mode** (`report.py`): Generates audit reports identifying:
    - Broken internal links
@@ -24,6 +24,13 @@ This tool provides three main functions:
    - Creates cross-references between related documents
    - Maintains consistency across CAOS/FAirCCC architecture
    - Template-based or AI-powered content generation
+
+4. **Placeholder Filling** (`fill_placeholders.py`): Automated placeholder completion:
+   - Detects `[To be completed]` and `[CGEN:...]` placeholders
+   - Generates contextually appropriate content using AI
+   - Maintains document structure and metadata
+   - Preserves section headings and formatting
+   - Integrates with CGen documentation workflow
 
 ## Usage
 
@@ -56,6 +63,19 @@ python tools/genccc/generate.py --mode crossref
 python tools/genccc/generate.py --dry-run --verbose
 ```
 Note: Set `OPENAI_API_KEY` environment variable for AI-powered content generation (optional).
+
+#### Fill Placeholders
+```bash
+# Fill placeholders in ATA_03 documents (default)
+python tools/genccc/fill_placeholders.py
+
+# Fill placeholders in specific directory
+python tools/genccc/fill_placeholders.py --target OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS
+
+# Dry run to preview what would be filled
+python tools/genccc/fill_placeholders.py --dry-run --verbose
+```
+Note: Requires `OPENAI_API_KEY` environment variable for AI content generation.
 
 ### CI/CD Integration
 
@@ -175,6 +195,11 @@ For PRs from forked repositories:
    - Expands stub documents
    - Generates channel specifications
    - Maintains cross-references
+
+5. **`fill_placeholders.py`**: Automated placeholder completion
+   - Detects placeholder patterns in documentation
+   - Generates section content using AI
+   - Maintains document structure and formatting
 
 ## Architecture Integration
 
