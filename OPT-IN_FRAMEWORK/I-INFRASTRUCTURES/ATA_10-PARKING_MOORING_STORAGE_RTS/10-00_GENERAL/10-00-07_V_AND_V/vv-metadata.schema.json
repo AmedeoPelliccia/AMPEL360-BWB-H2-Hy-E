@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/ata10/vv-metadata.schema.json",
+  "title": "Verification & Validation Metadata",
+  "description": "Metadata schema for V&V documents in ATA 10 Parking, Mooring, Storage & RTS",
+  "type": "object",
+  "required": [
+    "vv_id",
+    "document_number",
+    "title",
+    "description",
+    "vv_type",
+    "verification_method",
+    "test_status",
+    "approval_status"
+  ],
+  "properties": {
+    "vv_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the V&V document"
+    },
+    "document_number": {
+      "type": "string",
+      "pattern": "^10-VV-(VPL|TST|RPT|VAL|INS|ANL|CMP|RTM)-[0-9]{3}$",
+      "description": "Document number following ATA 10 V&V naming convention"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Document title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the V&V document"
+    },
+    "vv_type": {
+      "type": "string",
+      "enum": [
+        "verification-plan",
+        "test-procedure",
+        "test-report",
+        "validation",
+        "inspection",
+        "analysis-verification",
+        "compliance",
+        "traceability"
+      ],
+      "description": "Type of V&V document"
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": [
+        "Test",
+        "Analysis",
+        "Inspection",
+        "Demonstration",
+        "Similarity",
+        "Review"
+      ],
+      "description": "Primary verification method per SAE ARP4754A"
+    },
+    "requirements_verified": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^RQ-10-[0-9]{2}-[A-Z]{3}-[0-9]{3}$"
+      },
+      "description": "Array of requirement IDs verified by this document"
+    },
+    "h2_related": {
+      "type": "boolean",
+      "description": "Flag indicating if document relates to hydrogen systems"
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "description": "Flag indicating if document relates to cryogenic systems"
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Flag indicating if document is specific to BWB configuration"
+    },
+    "test_status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "in-progress",
+        "completed",
+        "passed",
+        "failed",
+        "conditional",
+        "not-applicable"
+      ],
+      "description": "Current status of test/verification activity"
+    },
+    "approval_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "in-review",
+        "approved",
+        "rejected",
+        "obsolete"
+      ],
+      "description": "Document approval status"
+    },
+    "related_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Related requirement identifiers"
+    },
+    "related_analyses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Related analysis document identifiers"
+    },
+    "related_designs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Related design document identifiers"
+    },
+    "test_equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "equipment_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "calibration_status": {
+            "type": "string",
+            "enum": ["current", "expired", "not-required"]
+          },
+          "calibration_due_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "description": "Test equipment used for verification"
+    },
+    "safety_critical": {
+      "type": "boolean",
+      "description": "Flag indicating if this is a safety-critical verification"
+    },
+    "certification_impact": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "none"],
+      "description": "Impact level on certification activities"
+    },
+    "applicable_standards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Applicable standards and regulations (e.g., CS-25, SAE AS6968, NFPA 2)"
+    },
+    "test_location": {
+      "type": "string",
+      "description": "Physical location where test/verification is performed"
+    },
+    "test_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of test execution"
+    },
+    "test_engineer": {
+      "type": "string",
+      "description": "Engineer responsible for test execution"
+    },
+    "reviewer": {
+      "type": "string",
+      "description": "Person responsible for reviewing results"
+    },
+    "approver": {
+      "type": "string",
+      "description": "Person authorized to approve the document"
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "author", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "pattern": "^[A-Z]$|^[0-9]+\\.[0-9]+$"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "author": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Document revision history"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["photo", "data-file", "report", "drawing", "other"]
+          }
+        }
+      },
+      "description": "Attachments and supporting documents"
+    }
+  }
+}
