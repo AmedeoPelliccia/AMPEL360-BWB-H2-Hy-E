@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "verification-method.schema.json",
+  "title": "AMPEL360 Verification Method",
+  "type": "object",
+  "description": "Schema for verification method in ATA Chapter 10 Requirements",
+  "required": ["id", "version"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier"
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Creation/modification date"
+    }
+  },
+  "additionalProperties": true
+}
