@@ -26,7 +26,7 @@ This document covers:
 
 The Air Transport Association (ATA) has established comprehensive standards for aviation technical documentation and maintenance information. These standards ensure consistency, interoperability, and safety across the global aviation industry.
 
-### 4.2 H2/LH2Considerations
+### 4.2 H2/LH2 Considerations
 
 ATA standards are being extended and adapted to address hydrogen-powered aircraft:
 
