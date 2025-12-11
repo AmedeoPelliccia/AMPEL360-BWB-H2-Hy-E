@@ -18,7 +18,7 @@ This document defines the integration hooks between the Computer Aided Operation
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    CAOS Core System                         │
-│  (ATA 92 - Model-Based Maintenance & Digital Twin)         │
+│  (ATA 92 - Electrical Installation & Digital Twin)         │
 └────────────────────────┬────────────────────────────────────┘
                          │
          ┌───────────────┴───────────────┐
@@ -313,7 +313,7 @@ Incident Closed → Hook KM-001 → RCA Documented →
 - [ATA 31: Indicating/Recording Systems](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/)
 - [ATA 40: AI Integration](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-ID/ATA_40-AI_INTEGRATION/)
 - [ATA 45: Onboard Maintenance Systems](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
-- [ATA 92: Model-Based Maintenance](../../../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/)
+- [ATA 92: Electrical Installation](../../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_92-ELECTRICAL_INSTALLATION/)
 
 ### External Standards
 - [MCP (Model Context Protocol)](https://modelcontextprotocol.io)

@@ -120,7 +120,7 @@ The following are **NOT** covered in this module (covered elsewhere):
 
 **Workflow**: ATA 45 executes maintenance functions → 95-00-14 governs, learns, and optimizes.
 
-### ATA 92: Model-Based Maintenance (CAOS)
+### ATA 92: Electrical Installation (CAOS)
 
 **Relationship**: Operational Governance  
 **Integration Points**:
@@ -286,7 +286,7 @@ All changes tracked via:
 - [ATA 02: Operations Information (all sub-sections)](../../../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/)
 - [ATA 31: Indicating/Recording Systems](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/)
 - [ATA 45: Onboard Maintenance Systems](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
-- [ATA 92: Model-Based Maintenance](../../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/)
+- [ATA 92: Electrical Installation](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_92-ELECTRICAL_INSTALLATION/)
 - [ATA 95-00-07: V&V](../../95-00-07_V_and_V/)
 - [ATA 95-00-10: Certification](../../95-00-10_Certification/)
 
