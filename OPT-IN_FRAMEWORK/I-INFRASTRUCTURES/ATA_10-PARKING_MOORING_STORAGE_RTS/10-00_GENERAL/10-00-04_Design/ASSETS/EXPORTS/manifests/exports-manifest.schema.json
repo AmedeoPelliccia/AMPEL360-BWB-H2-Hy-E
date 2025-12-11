@@ -1,0 +1,272 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/exports-manifest.schema.json",
+  "title": "AMPEL360 Design Export Manifest",
+  "description": "Schema for ATA Chapter 10 design export manifests",
+  "type": "object",
+  "required": [
+    "manifest_id",
+    "created_at",
+    "created_by",
+    "model",
+    "ata_chapter",
+    "version",
+    "packages"
+  ],
+  "properties": {
+    "manifest_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for this manifest (UUID v4)"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO8601 timestamp when manifest was created"
+    },
+    "created_by": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address of creator or system identifier"
+    },
+    "model": {
+      "type": "string",
+      "pattern": "^Q[0-9]{3}$",
+      "description": "Aircraft model identifier (e.g., Q100)",
+      "examples": ["Q100", "Q200", "Q300"]
+    },
+    "ata_chapter": {
+      "type": "string",
+      "pattern": "^[0-9]{2}$",
+      "description": "ATA chapter number (two digits)",
+      "examples": ["10", "21", "53"]
+    },
+    "release_tag": {
+      "type": "string",
+      "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(-[a-zA-Z0-9.-]+)?$",
+      "description": "Optional semantic version tag",
+      "examples": ["v1.0.0", "v2.1.0-beta", "v1.0.0-ATA10"]
+    },
+    "version": {
+      "type": "string",
+      "description": "Version string (semantic or date-based)",
+      "examples": ["1.0.0", "2024.12.01", "v1.2"]
+    },
+    "packages": {
+      "type": "array",
+      "description": "Array of export package objects",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "filename",
+          "package_type",
+          "size_bytes",
+          "sha256",
+          "signed"
+        ],
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "Package filename",
+            "pattern": "^[A-Za-z0-9._-]+\\.(tar\\.gz|zip|tar|7z)$"
+          },
+          "package_type": {
+            "type": "string",
+            "enum": [
+              "drawings",
+              "assemblies",
+              "3d-models",
+              "boms",
+              "specs",
+              "full-release"
+            ],
+            "description": "Type of package content"
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "File size in bytes"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$",
+            "description": "SHA256 checksum hash"
+          },
+          "signed": {
+            "type": "boolean",
+            "description": "Whether package is cryptographically signed"
+          },
+          "signature_file": {
+            "type": "string",
+            "description": "Path to detached signature file (.sig)",
+            "pattern": "^[A-Za-z0-9._/-]+\\.sig$"
+          },
+          "included_files_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number of files contained in package"
+          },
+          "related_requirements": {
+            "type": "array",
+            "description": "Array of requirement IDs covered by this package",
+            "items": {
+              "type": "string",
+              "pattern": "^REQ-[0-9]{2}-[0-9]{3}-[0-9]{3}$"
+            }
+          },
+          "related_assemblies": {
+            "type": "array",
+            "description": "Array of assembly IDs included in this package",
+            "items": {
+              "type": "string",
+              "pattern": "^ASM-[0-9]{2}-[0-9]{3}-[0-9]{3}$"
+            }
+          },
+          "effectivity": {
+            "type": "string",
+            "description": "Effectivity string (e.g., aircraft serial numbers, production lots)"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Free-text notes about this package"
+          }
+        }
+      }
+    },
+    "validators": {
+      "type": "array",
+      "description": "List of validators run with results",
+      "items": {
+        "type": "object",
+        "required": [
+          "validator",
+          "version",
+          "result",
+          "timestamp"
+        ],
+        "properties": {
+          "validator": {
+            "type": "string",
+            "description": "Name of the validator tool"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version of the validator"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["PASS", "FAIL", "WARNING", "SKIP"],
+            "description": "Validation result"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When validation was performed"
+          },
+          "message": {
+            "type": "string",
+            "description": "Optional validation message or error details"
+          },
+          "details_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to detailed validation report"
+          }
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "description": "List of approver records",
+      "items": {
+        "type": "object",
+        "required": [
+          "approver",
+          "role",
+          "timestamp"
+        ],
+        "properties": {
+          "approver": {
+            "type": "string",
+            "format": "email",
+            "description": "Email address of approver"
+          },
+          "role": {
+            "type": "string",
+            "description": "Role of approver",
+            "examples": [
+              "Lead Design Engineer",
+              "Configuration Manager",
+              "Chief Engineer",
+              "QA Lead"
+            ]
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When approval was granted"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Digital signature or GPG key fingerprint"
+          },
+          "comments": {
+            "type": "string",
+            "description": "Approver comments"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text notes about this export"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata",
+      "properties": {
+        "export_reason": {
+          "type": "string",
+          "enum": [
+            "release",
+            "certification-submission",
+            "partner-handover",
+            "supplier-release",
+            "archive",
+            "other"
+          ]
+        },
+        "destination": {
+          "type": "string",
+          "description": "Intended recipient or destination"
+        },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "INTERNAL",
+            "CONFIDENTIAL",
+            "RESTRICTED",
+            "CERTIFICATION"
+          ],
+          "default": "CONFIDENTIAL"
+        },
+        "retention_years": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of years to retain this export"
+        },
+        "git_commit": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{40}$",
+          "description": "Git commit hash of source files"
+        },
+        "ci_build_id": {
+          "type": "string",
+          "description": "CI/CD build identifier"
+        }
+      }
+    }
+  }
+}
