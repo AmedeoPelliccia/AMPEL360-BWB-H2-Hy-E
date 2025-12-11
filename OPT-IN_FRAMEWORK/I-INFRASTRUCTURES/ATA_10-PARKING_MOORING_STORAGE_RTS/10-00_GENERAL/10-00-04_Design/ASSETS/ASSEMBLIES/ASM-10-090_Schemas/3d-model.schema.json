@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.com/schemas/3d-model.schema.json",
+  "title": "AMPEL360 3D Model Metadata",
+  "description": "Schema for 3D model metadata and properties",
+  "type": "object",
+  "required": ["model_id", "title", "assembly_id", "format", "status"],
+  "properties": {
+    "model_id": {
+      "type": "string",
+      "pattern": "^Q100-10-[0-9]{3}-[0-9]{3}-3D-[0-9]{3}$",
+      "description": "3D model identifier"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "Model title"
+    },
+    "assembly_id": {
+      "type": "string",
+      "pattern": "^ASM-10-[0-9]{3}$",
+      "description": "Parent assembly identifier"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed model description"
+    },
+    "format": {
+      "type": "string",
+      "enum": ["STEP", "GLB", "GLTF", "STL", "IGES", "Parasolid"],
+      "description": "3D model file format"
+    },
+    "model_type": {
+      "type": "string",
+      "enum": ["Assembly", "Part", "Concept", "Layout"],
+      "description": "Type of 3D model"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "For Review", "Released", "Superseded", "Obsolete"],
+      "description": "Model status"
+    },
+    "revision": {
+      "type": "string",
+      "description": "Model revision"
+    },
+    "level_of_detail": {
+      "type": "string",
+      "enum": ["Conceptual", "Preliminary", "Detailed", "As-Built"],
+      "description": "Level of geometric detail"
+    },
+    "units": {
+      "type": "string",
+      "enum": ["mm", "cm", "m", "in", "ft"],
+      "description": "Model units"
+    },
+    "coordinate_system": {
+      "type": "object",
+      "description": "Coordinate system definition",
+      "properties": {
+        "origin": {
+          "type": "string",
+          "description": "Origin definition (e.g., 'Aircraft nose reference')"
+        },
+        "x_axis": {
+          "type": "string",
+          "description": "X-axis direction (e.g., 'Forward')"
+        },
+        "y_axis": {
+          "type": "string",
+          "description": "Y-axis direction (e.g., 'Right')"
+        },
+        "z_axis": {
+          "type": "string",
+          "description": "Z-axis direction (e.g., 'Up')"
+        }
+      }
+    },
+    "bounding_box": {
+      "type": "object",
+      "description": "Model bounding box",
+      "properties": {
+        "x_min": {
+          "type": "number",
+          "description": "Minimum X coordinate"
+        },
+        "x_max": {
+          "type": "number",
+          "description": "Maximum X coordinate"
+        },
+        "y_min": {
+          "type": "number",
+          "description": "Minimum Y coordinate"
+        },
+        "y_max": {
+          "type": "number",
+          "description": "Maximum Y coordinate"
+        },
+        "z_min": {
+          "type": "number",
+          "description": "Minimum Z coordinate"
+        },
+        "z_max": {
+          "type": "number",
+          "description": "Maximum Z coordinate"
+        }
+      }
+    },
+    "mass_properties": {
+      "type": "object",
+      "description": "Mass properties (if available)",
+      "properties": {
+        "mass_kg": {
+          "type": "number",
+          "description": "Total mass in kilograms"
+        },
+        "volume_m3": {
+          "type": "number",
+          "description": "Total volume in cubic meters"
+        },
+        "center_of_gravity": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            }
+          },
+          "description": "Center of gravity coordinates"
+        }
+      }
+    },
+    "parts": {
+      "type": "array",
+      "description": "List of parts in the model (for assemblies)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "part_id": {
+            "type": "string",
+            "description": "Part identifier"
+          },
+          "part_name": {
+            "type": "string",
+            "description": "Part name"
+          },
+          "instance_count": {
+            "type": "integer",
+            "description": "Number of instances of this part"
+          },
+          "material": {
+            "type": "string",
+            "description": "Material specification"
+          }
+        }
+      }
+    },
+    "materials": {
+      "type": "array",
+      "description": "Materials used in the model",
+      "items": {
+        "type": "object",
+        "properties": {
+          "material_id": {
+            "type": "string",
+            "description": "Material identifier"
+          },
+          "material_name": {
+            "type": "string",
+            "description": "Material name"
+          },
+          "specification": {
+            "type": "string",
+            "description": "Material specification reference"
+          },
+          "color": {
+            "type": "string",
+            "description": "Material color (for visualization)"
+          }
+        }
+      }
+    },
+    "related_files": {
+      "type": "array",
+      "description": "Related files (alternate formats, exploded views, etc.)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file_name": {
+            "type": "string",
+            "description": "File name"
+          },
+          "format": {
+            "type": "string",
+            "description": "File format"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "Purpose of this file (e.g., 'Visualization', 'Analysis', 'Manufacturing')"
+          }
+        }
+      }
+    },
+    "cad_system": {
+      "type": "object",
+      "description": "CAD system used to create the model",
+      "properties": {
+        "software": {
+          "type": "string",
+          "description": "CAD software name (e.g., 'CATIA V5', 'NX', 'SolidWorks')"
+        },
+        "version": {
+          "type": "string",
+          "description": "Software version"
+        }
+      }
+    },
+    "interoperability": {
+      "type": "object",
+      "description": "Interoperability information",
+      "properties": {
+        "validated_in": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Software packages where this model has been validated"
+        },
+        "known_issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Known interoperability issues"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Document metadata",
+      "properties": {
+        "created_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation date and time (ISO 8601)"
+        },
+        "modified_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last modification date and time (ISO 8601)"
+        },
+        "modeler": {
+          "type": "string",
+          "description": "Person who created the model"
+        },
+        "checker": {
+          "type": "string",
+          "description": "Person who checked the model"
+        },
+        "file_size_mb": {
+          "type": "number",
+          "description": "File size in megabytes"
+        }
+      }
+    }
+  }
+}

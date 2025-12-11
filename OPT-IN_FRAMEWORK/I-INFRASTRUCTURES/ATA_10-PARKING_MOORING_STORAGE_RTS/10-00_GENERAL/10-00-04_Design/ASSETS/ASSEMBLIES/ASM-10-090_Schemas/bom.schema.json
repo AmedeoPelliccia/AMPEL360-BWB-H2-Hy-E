@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.com/schemas/bom.schema.json",
+  "title": "AMPEL360 Bill of Materials",
+  "description": "Schema for bill of materials (BOM) data",
+  "type": "object",
+  "required": ["bom_id", "assembly_id", "items"],
+  "properties": {
+    "bom_id": {
+      "type": "string",
+      "pattern": "^Q100-10-[0-9]{3}-BOM-[0-9]{3}$",
+      "description": "BOM identifier"
+    },
+    "assembly_id": {
+      "type": "string",
+      "pattern": "^ASM-10-[0-9]{3}$",
+      "description": "Parent assembly identifier"
+    },
+    "assembly_title": {
+      "type": "string",
+      "description": "Assembly title"
+    },
+    "revision": {
+      "type": "string",
+      "description": "BOM revision (e.g., 'A', 'B', '01')"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "Released", "Superseded", "Obsolete"],
+      "description": "BOM status"
+    },
+    "items": {
+      "type": "array",
+      "description": "List of BOM items",
+      "items": {
+        "type": "object",
+        "required": ["item_number", "part_number", "description", "quantity"],
+        "properties": {
+          "item_number": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Sequential item number in BOM"
+          },
+          "part_number": {
+            "type": "string",
+            "description": "Part number or component identifier"
+          },
+          "description": {
+            "type": "string",
+            "description": "Part description"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Quantity required"
+          },
+          "unit": {
+            "type": "string",
+            "enum": ["EA", "PC", "M", "KG", "L", "SET"],
+            "description": "Unit of measure (EA=each, PC=piece, M=meter, etc.)"
+          },
+          "material": {
+            "type": "string",
+            "description": "Material specification"
+          },
+          "finish": {
+            "type": "string",
+            "description": "Surface finish or coating"
+          },
+          "supplier": {
+            "type": "string",
+            "description": "Supplier or manufacturer name"
+          },
+          "supplier_part_number": {
+            "type": "string",
+            "description": "Supplier's part number"
+          },
+          "make_or_buy": {
+            "type": "string",
+            "enum": ["Make", "Buy", "COTS"],
+            "description": "Make (fabricate), Buy (custom), or COTS (commercial off-the-shelf)"
+          },
+          "weight_kg": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Unit weight in kilograms"
+          },
+          "cost_usd": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Unit cost in USD (optional, may be restricted)"
+          },
+          "lead_time_weeks": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Procurement lead time in weeks"
+          },
+          "critical_item": {
+            "type": "boolean",
+            "description": "True if this is a critical or long-lead item",
+            "default": false
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes or remarks"
+          },
+          "drawing_reference": {
+            "type": "string",
+            "description": "Related drawing number"
+          },
+          "specification_reference": {
+            "type": "string",
+            "description": "Related specification document"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "description": "BOM summary information",
+      "properties": {
+        "total_items": {
+          "type": "integer",
+          "description": "Total number of unique items"
+        },
+        "total_weight_kg": {
+          "type": "number",
+          "description": "Total assembly weight in kilograms"
+        },
+        "total_cost_usd": {
+          "type": "number",
+          "description": "Total assembly cost in USD (if available)"
+        },
+        "max_lead_time_weeks": {
+          "type": "integer",
+          "description": "Maximum lead time among all items"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Document metadata",
+      "properties": {
+        "created_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date (ISO 8601)"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date (ISO 8601)"
+        },
+        "author": {
+          "type": "string",
+          "description": "BOM author"
+        },
+        "approver": {
+          "type": "string",
+          "description": "BOM approver"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.com/schemas/assembly.schema.json",
+  "title": "AMPEL360 Assembly Definition",
+  "description": "Schema for defining assembly-level structures in ATA Chapter 10",
+  "type": "object",
+  "required": ["id", "title", "ata", "components", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ASM-10-[0-9]{3}$",
+      "description": "Assembly identifier following ASM-10-XXX pattern"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "Human-readable assembly title"
+    },
+    "ata": {
+      "type": "string",
+      "const": "10",
+      "description": "ATA chapter number (always 10 for this schema)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the assembly's purpose and function"
+    },
+    "components": {
+      "type": "array",
+      "description": "List of components that make up this assembly",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "quantity"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Component identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "Component name"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Number of this component in the assembly"
+          },
+          "part_number": {
+            "type": "string",
+            "description": "Manufacturer part number (if applicable)"
+          },
+          "supplier": {
+            "type": "string",
+            "description": "Component supplier name"
+          }
+        }
+      }
+    },
+    "drawings": {
+      "type": "array",
+      "description": "List of associated drawing files",
+      "items": {
+        "type": "string",
+        "pattern": "^Q100-10-[0-9]{3}-[0-9]{3}-DWG-[0-9]{3}_.*\\.(svg|pdf)$"
+      }
+    },
+    "models_3d": {
+      "type": "array",
+      "description": "List of associated 3D model files",
+      "items": {
+        "type": "string",
+        "pattern": "^Q100-10-[0-9]{3}-[0-9]{3}-3D-[0-9]{3}_.*\\.(step|glb|gltf)$"
+      }
+    },
+    "specifications": {
+      "type": "array",
+      "description": "List of associated specification documents",
+      "items": {
+        "type": "string",
+        "pattern": "^Q100-10-[0-9]{3}-SPEC-[0-9]{3}_.*\\.md$"
+      }
+    },
+    "bom": {
+      "type": "string",
+      "description": "Bill of materials file reference",
+      "pattern": "^Q100-10-[0-9]{3}-BOM-[0-9]{3}_.*\\.(xlsx|csv|json)$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Concept", "Preliminary", "Detailed", "Released", "Obsolete"],
+      "description": "Current design status of the assembly"
+    },
+    "safety_criticality": {
+      "type": "string",
+      "enum": ["Critical", "High", "Medium", "Low"],
+      "description": "Safety criticality classification"
+    },
+    "weight_kg": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Total assembly weight in kilograms"
+    },
+    "h2_specific": {
+      "type": "boolean",
+      "description": "True if this assembly is specific to hydrogen systems",
+      "default": false
+    },
+    "hv_specific": {
+      "type": "boolean",
+      "description": "True if this assembly is specific to high-voltage systems",
+      "default": false
+    },
+    "interfaces": {
+      "type": "array",
+      "description": "List of interfaces with other ATA chapters or assemblies",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ata_chapter": {
+            "type": "string",
+            "description": "Related ATA chapter (e.g., '24', '28', '32')"
+          },
+          "assembly_id": {
+            "type": "string",
+            "description": "Related assembly identifier"
+          },
+          "interface_type": {
+            "type": "string",
+            "enum": ["Mechanical", "Electrical", "Fluid", "Data", "Thermal"],
+            "description": "Type of interface"
+          },
+          "description": {
+            "type": "string",
+            "description": "Interface description"
+          }
+        }
+      }
+    },
+    "maintenance": {
+      "type": "object",
+      "description": "Maintenance-related information",
+      "properties": {
+        "inspection_interval_fh": {
+          "type": "integer",
+          "description": "Inspection interval in flight hours"
+        },
+        "inspection_interval_months": {
+          "type": "integer",
+          "description": "Inspection interval in calendar months"
+        },
+        "service_life_years": {
+          "type": "integer",
+          "description": "Expected service life in years"
+        },
+        "replaceable": {
+          "type": "boolean",
+          "description": "Whether the assembly is field-replaceable"
+        }
+      }
+    },
+    "certification": {
+      "type": "object",
+      "description": "Certification-related information",
+      "properties": {
+        "basis": {
+          "type": "string",
+          "enum": ["CS-25", "Part 25", "Special Condition"],
+          "description": "Certification basis"
+        },
+        "compliance_references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specific regulation references (e.g., 'CS-25.561', 'CS-25.1309')"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Document metadata",
+      "properties": {
+        "created_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date (ISO 8601)"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date (ISO 8601)"
+        },
+        "author": {
+          "type": "string",
+          "description": "Document author"
+        },
+        "version": {
+          "type": "string",
+          "description": "Document version"
+        }
+      }
+    }
+  }
+}
