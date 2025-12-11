@@ -42,7 +42,7 @@ The **infrastructure digital twin** is a virtual representation of physical airp
 
 **Purpose**:
 - Real-time monitoring of infrastructure state
-- Predictive maintenance via [ATA 92 Electrical Installation](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md)
+- Electrical installation practices, wiring and grounding via [ATA 92 Electrical Installation](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md)
 - Configuration management and version tracking
 - Compliance verification and auditing
 

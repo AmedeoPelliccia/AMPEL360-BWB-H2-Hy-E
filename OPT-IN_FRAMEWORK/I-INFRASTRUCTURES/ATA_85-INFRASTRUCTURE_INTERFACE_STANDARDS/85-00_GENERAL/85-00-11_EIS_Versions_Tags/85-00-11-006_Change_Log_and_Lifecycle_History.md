@@ -179,7 +179,7 @@ Each change log entry includes:
 - Introduced advanced GSE automation package (PKG-85-GSE-002)
 - Robotic connector alignment and mating
 - 10GBASE-T Ethernet (Archetype A)
-- Predictive maintenance integration via [ATA 92](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md)
+- Electrical installation and wiring integration via [ATA 92](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md)
 
 **Impact**:
 - **Airport Archetypes**: A (full automation), B (partial automation)

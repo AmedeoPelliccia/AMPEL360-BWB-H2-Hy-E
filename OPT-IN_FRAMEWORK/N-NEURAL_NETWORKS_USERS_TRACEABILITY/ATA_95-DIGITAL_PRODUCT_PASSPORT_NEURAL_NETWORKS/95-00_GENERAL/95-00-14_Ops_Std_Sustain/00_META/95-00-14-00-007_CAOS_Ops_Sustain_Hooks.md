@@ -18,7 +18,7 @@ This document defines the integration hooks between the Computer Aided Operation
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    CAOS Core System                         │
-│  (ATA 92 - Electrical Installation & Digital Twin)         │
+│  (ATA 92 - Electrical Installation [wiring practices])     │
 └────────────────────────┬────────────────────────────────────┘
                          │
          ┌───────────────┴───────────────┐
