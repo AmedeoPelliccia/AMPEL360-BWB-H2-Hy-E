@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "drawing-index.schema.json",
+  "title": "AMPEL360 Drawing Index Schema",
+  "description": "Schema for drawing index files",
+  "type": "object",
+  "required": [
+    "series",
+    "title",
+    "ata_chapter",
+    "drawings"
+  ],
+  "properties": {
+    "series": {
+      "type": "string",
+      "description": "Drawing series identifier",
+      "pattern": "^DWG-10-[0-9]{3,4}$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Series title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Series description"
+    },
+    "ata_chapter": {
+      "type": "string",
+      "description": "ATA chapter number",
+      "pattern": "^[0-9]{2}$"
+    },
+    "h2_related": {
+      "type": "boolean",
+      "description": "Indicates if series contains H2-related drawings"
+    },
+    "hv_related": {
+      "type": "boolean",
+      "description": "Indicates if series contains high-voltage related drawings"
+    },
+    "safety_critical": {
+      "type": "boolean",
+      "description": "Indicates if series contains safety-critical drawings"
+    },
+    "drawings": {
+      "type": "array",
+      "description": "List of drawings in the series",
+      "items": {
+        "$ref": "drawing-metadata.schema.json"
+      }
+    },
+    "revision_history": {
+      "type": "array",
+      "description": "Revision history for the series",
+      "items": {
+        "$ref": "revision-record.schema.json"
+      }
+    }
+  }
+}

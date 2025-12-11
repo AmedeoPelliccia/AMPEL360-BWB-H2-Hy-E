@@ -1,0 +1,18 @@
+{
+  "series": "DWG-10-500",
+  "title": "Tie Down Drawings",
+  "description": "Tie-down drawings for quick-release tie-down systems",
+  "ata_chapter": "10",
+  "h2_related": false,
+  "hv_related": false,
+  "safety_critical": false,
+  "drawings": [],
+  "revision_history": [
+    {
+      "revision": "0",
+      "date": "2025-12-09",
+      "description": "Initial directory structure creation",
+      "author": "AI Assistant (GitHub Copilot)"
+    }
+  ]
+}

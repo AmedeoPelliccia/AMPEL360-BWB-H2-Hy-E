@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "drawing.schema.json",
+  "title": "AMPEL360 Drawing Schema",
+  "description": "Schema for Q100 aircraft drawings",
+  "type": "object",
+  "required": [
+    "drawing_number",
+    "title",
+    "series",
+    "type"
+  ],
+  "properties": {
+    "drawing_number": {
+      "type": "string",
+      "description": "Drawing number in format Q100-10-[SERIES]-[SEQ]-[TYPE]",
+      "pattern": "^Q100-10-[0-9]{3,4}-[0-9]{3}-[A-Z]{2,3}$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Drawing title",
+      "maxLength": 100
+    },
+    "series": {
+      "type": "string",
+      "description": "Drawing series number",
+      "pattern": "^[0-9]{3,4}$"
+    },
+    "type": {
+      "type": "string",
+      "description": "Drawing type code",
+      "enum": [
+        "GA",
+        "DET",
+        "ASY",
+        "INS",
+        "SCH",
+        "ZON",
+        "SAF",
+        "LBL",
+        "FLW",
+        "CHK",
+        "LOC",
+        "OPR"
+      ]
+    },
+    "file_formats": {
+      "type": "array",
+      "description": "Available file formats",
+      "items": {
+        "type": "string",
+        "enum": [
+          "svg",
+          "pdf",
+          "dwg",
+          "dxf"
+        ]
+      }
+    }
+  }
+}
