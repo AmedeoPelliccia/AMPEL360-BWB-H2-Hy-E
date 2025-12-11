@@ -1,0 +1,301 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/prototyping-metadata.schema.json",
+  "title": "AMPEL360 Prototyping Metadata Schema",
+  "description": "JSON Schema for prototype metadata in ATA 10 Parking, Mooring, Storage & RTS",
+  "type": "object",
+  "required": [
+    "prototype_id",
+    "document_number",
+    "title",
+    "description",
+    "prototype_type",
+    "trl_level",
+    "status"
+  ],
+  "properties": {
+    "prototype_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the prototype (UUID format)"
+    },
+    "document_number": {
+      "type": "string",
+      "pattern": "^10-PRT-(PLN|PHY|MCK|POC|3DP|TST|RPT|DT)-[0-9]{3}$",
+      "description": "Document number following ATA 10 prototyping convention"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 200,
+      "description": "Prototype title"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Detailed description of the prototype"
+    },
+    "prototype_type": {
+      "type": "string",
+      "enum": [
+        "physical",
+        "mockup",
+        "poc",
+        "3d-printed",
+        "digital-twin",
+        "plan",
+        "test",
+        "report"
+      ],
+      "description": "Type of prototype artifact"
+    },
+    "trl_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9,
+      "description": "Technology Readiness Level (1-9 per NASA TRL definitions)"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Purpose and objectives of the prototype"
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "type"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Material name"
+          },
+          "type": {
+            "type": "string",
+            "description": "Material type (metal, composite, polymer, etc.)"
+          },
+          "specification": {
+            "type": "string",
+            "description": "Material specification or standard"
+          },
+          "h2_compatible": {
+            "type": "boolean",
+            "description": "Whether material is hydrogen compatible"
+          },
+          "cryo_compatible": {
+            "type": "boolean",
+            "description": "Whether material is cryogenic compatible"
+          }
+        }
+      },
+      "description": "List of materials used in prototype"
+    },
+    "manufacturing_method": {
+      "type": "string",
+      "enum": [
+        "3D Printing",
+        "CNC Machining",
+        "Casting",
+        "Forging",
+        "Sheet Metal Fabrication",
+        "Composite Layup",
+        "Additive Manufacturing",
+        "Welding",
+        "Assembly",
+        "Hybrid",
+        "Other"
+      ],
+      "description": "Primary manufacturing method"
+    },
+    "scale": {
+      "type": "string",
+      "enum": [
+        "full-scale",
+        "1:1",
+        "1:2",
+        "1:5",
+        "1:10",
+        "1:20",
+        "1:50",
+        "1:100",
+        "reduced-scale",
+        "sub-scale",
+        "component-level"
+      ],
+      "description": "Scale of the prototype relative to final design"
+    },
+    "h2_related": {
+      "type": "boolean",
+      "description": "Whether prototype is related to hydrogen systems"
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "description": "Whether prototype involves cryogenic conditions"
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Whether prototype is specific to BWB configuration"
+    },
+    "cost_estimate": {
+      "type": "object",
+      "properties": {
+        "currency": {
+          "type": "string",
+          "default": "USD"
+        },
+        "materials": {
+          "type": "number",
+          "minimum": 0
+        },
+        "manufacturing": {
+          "type": "number",
+          "minimum": 0
+        },
+        "testing": {
+          "type": "number",
+          "minimum": 0
+        },
+        "labor": {
+          "type": "number",
+          "minimum": 0
+        },
+        "total": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "description": "Cost estimate breakdown"
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "design_freeze": {
+          "type": "string",
+          "format": "date"
+        },
+        "fabrication_start": {
+          "type": "string",
+          "format": "date"
+        },
+        "fabrication_complete": {
+          "type": "string",
+          "format": "date"
+        },
+        "testing_start": {
+          "type": "string",
+          "format": "date"
+        },
+        "testing_complete": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "description": "Prototype schedule milestones"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "design",
+        "in-fabrication",
+        "fabrication-complete",
+        "in-testing",
+        "tested",
+        "completed",
+        "cancelled",
+        "on-hold"
+      ],
+      "description": "Current status of prototype"
+    },
+    "test_results_summary": {
+      "type": "string",
+      "description": "Summary of test results (to be completed after testing)"
+    },
+    "lessons_learned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of lessons learned from prototype development and testing"
+    },
+    "related_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^REQ-10-[0-9]{2}-[A-Z0-9]+-[0-9]{3}$"
+      },
+      "description": "List of requirement IDs addressed by this prototype"
+    },
+    "related_designs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of related design document IDs"
+    },
+    "safety_considerations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hazard": {
+            "type": "string"
+          },
+          "mitigation": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["catastrophic", "hazardous", "major", "minor", "no-safety-effect"]
+          }
+        }
+      },
+      "description": "Safety considerations and mitigations"
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "author", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "pattern": "^[A-Z]$"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "author": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Revision history of the prototype document"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["CAD", "drawing", "photo", "test-data", "report", "other"]
+          },
+          "path": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "List of attachments and related files"
+    }
+  }
+}
