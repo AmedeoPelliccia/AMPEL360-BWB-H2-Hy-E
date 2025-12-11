@@ -1,0 +1,530 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/parts/part-metadata.schema.json",
+  "title": "Part Metadata Schema",
+  "description": "JSON Schema for ATA 10 Parking, Mooring, Storage & RTS part metadata with H2/cryo compatibility",
+  "type": "object",
+  "required": [
+    "part_id",
+    "part_number",
+    "title",
+    "description",
+    "category",
+    "status"
+  ],
+  "properties": {
+    "part_id": {
+      "type": "string",
+      "description": "Unique part identifier following format: 10-PRT-[CATEGORY]-[NNN]",
+      "pattern": "^10-PRT-(TD|MR|PK|H2|ST|HW|CON)-[0-9]{3}$",
+      "examples": ["10-PRT-TD-001", "10-PRT-H2-001", "10-PRT-PK-003"]
+    },
+    "part_number": {
+      "type": "string",
+      "description": "Official part number (P/N) for procurement",
+      "examples": ["AMPEL-10-TD-001-A", "MS9000-123", "NAS1234-5"]
+    },
+    "cage_code": {
+      "type": "string",
+      "description": "Commercial and Government Entity (CAGE) code",
+      "pattern": "^[A-Z0-9]{5}$",
+      "examples": ["1A2B3", "K0123"]
+    },
+    "title": {
+      "type": "string",
+      "description": "Short descriptive title of the part",
+      "minLength": 3,
+      "maxLength": 100,
+      "examples": ["Tiedown Ring Assembly", "H2 Vent Valve Assembly"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the part function and usage",
+      "minLength": 10,
+      "maxLength": 1000
+    },
+    "category": {
+      "type": "string",
+      "description": "Part category classification",
+      "enum": [
+        "tiedown",
+        "mooring",
+        "parking",
+        "h2-system",
+        "storage",
+        "hardware",
+        "consumable"
+      ]
+    },
+    "uom": {
+      "type": "string",
+      "description": "Unit of measure for procurement",
+      "enum": ["EA", "SET", "KIT", "LB", "KG", "FT", "M", "GAL", "L"],
+      "default": "EA"
+    },
+    "weight": {
+      "type": "object",
+      "description": "Weight/mass of the part",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["kg", "g", "lb", "oz"]
+        }
+      },
+      "required": ["value", "unit"]
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Physical dimensions of the part",
+      "properties": {
+        "length": {
+          "type": "number",
+          "minimum": 0
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["mm", "cm", "m", "in", "ft"]
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": ["unit"]
+    },
+    "material": {
+      "type": "object",
+      "description": "Material composition and specifications",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "description": "Primary material specification",
+          "examples": ["316L Stainless Steel", "6061-T6 Aluminum", "PTFE"]
+        },
+        "secondary": {
+          "type": "array",
+          "description": "Secondary or component materials",
+          "items": {
+            "type": "string"
+          }
+        },
+        "finish": {
+          "type": "string",
+          "description": "Surface finish or coating",
+          "examples": ["Anodized", "Passivated", "Powder coated RAL 7035"]
+        },
+        "standard": {
+          "type": "string",
+          "description": "Material standard reference",
+          "examples": ["ASTM A240", "ISO 6892", "AMS 5511"]
+        }
+      },
+      "required": ["primary"]
+    },
+    "specifications": {
+      "type": "array",
+      "description": "Technical specifications and requirements",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parameter": {
+            "type": "string",
+            "description": "Specification parameter name"
+          },
+          "value": {
+            "type": "string",
+            "description": "Specification value or range"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measure for the specification"
+          },
+          "tolerance": {
+            "type": "string",
+            "description": "Tolerance range if applicable"
+          }
+        },
+        "required": ["parameter", "value"]
+      }
+    },
+    "suppliers": {
+      "type": "array",
+      "description": "Approved suppliers and procurement information",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Supplier company name"
+          },
+          "cage_code": {
+            "type": "string",
+            "description": "Supplier CAGE code"
+          },
+          "part_number": {
+            "type": "string",
+            "description": "Supplier's part number"
+          },
+          "lead_time_days": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Typical lead time in days"
+          },
+          "moq": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Minimum order quantity"
+          },
+          "cost_category": {
+            "type": "string",
+            "enum": ["Low", "Medium", "High", "Custom"],
+            "description": "Relative cost category"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "interchangeability": {
+      "type": "array",
+      "description": "Alternate or interchangeable parts",
+      "items": {
+        "type": "object",
+        "properties": {
+          "alternate_pn": {
+            "type": "string",
+            "description": "Alternate part number"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source or manufacturer of alternate"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Usage notes or restrictions"
+          }
+        },
+        "required": ["alternate_pn", "source"]
+      }
+    },
+    "shelf_life": {
+      "type": "object",
+      "description": "Shelf life information if applicable",
+      "properties": {
+        "duration": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Shelf life duration"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["days", "months", "years"],
+          "description": "Unit for shelf life duration"
+        },
+        "conditions": {
+          "type": "string",
+          "description": "Storage conditions for shelf life validity"
+        },
+        "extendable": {
+          "type": "boolean",
+          "description": "Whether shelf life can be extended with re-qualification"
+        }
+      },
+      "required": ["duration", "unit"]
+    },
+    "storage_conditions": {
+      "type": "object",
+      "description": "Required storage conditions",
+      "properties": {
+        "temperature_min": {
+          "type": "number",
+          "description": "Minimum storage temperature in Celsius"
+        },
+        "temperature_max": {
+          "type": "number",
+          "description": "Maximum storage temperature in Celsius"
+        },
+        "humidity_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Maximum relative humidity percentage"
+        },
+        "special_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special storage requirements",
+          "examples": ["ESD protection", "Clean room", "Desiccant required"]
+        }
+      }
+    },
+    "hazmat_classification": {
+      "type": "object",
+      "description": "Hazardous materials classification if applicable",
+      "properties": {
+        "is_hazmat": {
+          "type": "boolean",
+          "description": "Whether part is classified as hazardous material"
+        },
+        "un_number": {
+          "type": "string",
+          "pattern": "^UN[0-9]{4}$",
+          "description": "UN number for hazmat classification",
+          "examples": ["UN1950", "UN1977"]
+        },
+        "hazard_class": {
+          "type": "string",
+          "description": "Hazard class per IATA DGR",
+          "examples": ["2.1", "3", "8"]
+        },
+        "packing_group": {
+          "type": "string",
+          "enum": ["I", "II", "III"],
+          "description": "Packing group if applicable"
+        },
+        "special_provisions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special provisions or handling requirements"
+        }
+      },
+      "required": ["is_hazmat"]
+    },
+    "h2_compatibility": {
+      "type": "object",
+      "description": "Hydrogen compatibility information (critical for H2 system parts)",
+      "properties": {
+        "is_h2_compatible": {
+          "type": "boolean",
+          "description": "Whether part is compatible with hydrogen service"
+        },
+        "h2_service_type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Gaseous H2", "Liquid H2 (LH2)", "Both"]
+          },
+          "description": "Type of hydrogen service"
+        },
+        "h2_pressure_rating": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "enum": ["bar", "psi", "MPa"]
+            }
+          },
+          "description": "Maximum H2 pressure rating"
+        },
+        "material_qualification": {
+          "type": "string",
+          "description": "Material qualification standard for H2 service",
+          "examples": ["ISO 11114-4 qualified", "SAE AS6968 compliant"]
+        },
+        "permeation_rate": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string"
+            }
+          },
+          "description": "H2 permeation rate if measured"
+        }
+      },
+      "required": ["is_h2_compatible"]
+    },
+    "cryo_rated": {
+      "type": "object",
+      "description": "Cryogenic temperature rating (critical for LH2 parts)",
+      "properties": {
+        "is_cryo_rated": {
+          "type": "boolean",
+          "description": "Whether part is rated for cryogenic service"
+        },
+        "min_operating_temp": {
+          "type": "number",
+          "description": "Minimum operating temperature in Celsius",
+          "examples": [-253, -269]
+        },
+        "max_operating_temp": {
+          "type": "number",
+          "description": "Maximum operating temperature in Celsius"
+        },
+        "thermal_cycling_qualified": {
+          "type": "boolean",
+          "description": "Whether part is qualified for thermal cycling"
+        },
+        "insulation_type": {
+          "type": "string",
+          "description": "Type of insulation if applicable",
+          "examples": ["MLI", "Aerogel", "Vacuum", "Foam"]
+        },
+        "cryo_standard": {
+          "type": "string",
+          "description": "Cryogenic qualification standard",
+          "examples": ["ASTM E1450", "ISO 20421", "ASME Section VIII"]
+        }
+      },
+      "required": ["is_cryo_rated"]
+    },
+    "atex_iecex": {
+      "type": "object",
+      "description": "ATEX/IECEx classification for explosive atmosphere zones",
+      "properties": {
+        "is_certified": {
+          "type": "boolean",
+          "description": "Whether part has ATEX/IECEx certification"
+        },
+        "zone_rating": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Zone 0", "Zone 1", "Zone 2", "Zone 20", "Zone 21", "Zone 22"]
+          },
+          "description": "Approved zones for use"
+        },
+        "certificate_number": {
+          "type": "string",
+          "description": "ATEX/IECEx certificate number"
+        },
+        "explosion_group": {
+          "type": "string",
+          "description": "Explosion group classification",
+          "examples": ["IIC", "IIB", "IIA"]
+        },
+        "temperature_class": {
+          "type": "string",
+          "description": "Temperature class",
+          "examples": ["T1", "T2", "T3", "T4", "T5", "T6"]
+        }
+      },
+      "required": ["is_certified"]
+    },
+    "status": {
+      "type": "string",
+      "description": "Current lifecycle status of the part",
+      "enum": [
+        "ACTIVE",
+        "OBSOLETE",
+        "SUPERSEDED",
+        "IN_DEVELOPMENT",
+        "FOR_REVIEW"
+      ]
+    },
+    "superseded_by": {
+      "type": "string",
+      "description": "Part ID that supersedes this part (if status is SUPERSEDED)",
+      "pattern": "^10-PRT-(TD|MR|PK|H2|ST|HW|CON)-[0-9]{3}$"
+    },
+    "related_drawings": {
+      "type": "array",
+      "description": "Related engineering drawings",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["10-00-04-DWG-001", "10-00-04-DWG-TD-001"]]
+    },
+    "related_models": {
+      "type": "array",
+      "description": "Related 3D models or CAD files",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["10-00-04-MODL-TD-001.step", "10-00-04-MODL-TD-001.stp"]]
+    },
+    "related_requirements": {
+      "type": "array",
+      "description": "Related requirements traceability",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["REQ-10-001", "REQ-10-002"]]
+    },
+    "related_hazards": {
+      "type": "array",
+      "description": "Related safety hazards",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["HAZ-10-001", "HAZ-10-H2-001"]]
+    },
+    "revision_history": {
+      "type": "array",
+      "description": "Revision history tracking",
+      "items": {
+        "type": "object",
+        "properties": {
+          "revision": {
+            "type": "string",
+            "description": "Revision identifier",
+            "examples": ["A", "B", "R01", "R02"]
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of revision"
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of revision"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of changes"
+          }
+        },
+        "required": ["revision", "date", "author", "description"]
+      }
+    },
+    "document_control": {
+      "type": "object",
+      "description": "Document control metadata",
+      "properties": {
+        "originator": {
+          "type": "string"
+        },
+        "checker": {
+          "type": "string"
+        },
+        "approver": {
+          "type": "string"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date"
+        },
+        "ai_generated": {
+          "type": "boolean",
+          "description": "Whether document was AI-generated"
+        },
+        "ai_prompt_by": {
+          "type": "string",
+          "description": "Person who prompted AI generation"
+        }
+      }
+    }
+  }
+}
