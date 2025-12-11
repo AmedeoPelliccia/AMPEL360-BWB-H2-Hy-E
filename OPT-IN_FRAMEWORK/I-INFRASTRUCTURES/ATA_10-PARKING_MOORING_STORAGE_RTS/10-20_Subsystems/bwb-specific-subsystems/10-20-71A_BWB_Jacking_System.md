@@ -147,7 +147,7 @@ Multi-phase verification program including component testing, subsystem integrat
 | Demonstration | Operational demonstrations | Operational procedures |
 
 ### 9.3 Verification Matrix
-Reference: VM-{doc_data['doc_num']} (Detailed Verification Matrix)
+Reference: VM-10-20-71A (Detailed Verification Matrix)
 
 ## 10. Maintenance and Support
 
