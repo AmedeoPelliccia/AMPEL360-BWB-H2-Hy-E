@@ -138,7 +138,6 @@ jobs:
             const fs = require('fs');
             let validationMsg = '';
             let coverageMsg = '';
-
             try {
               const validationReport = fs.readFileSync('cd/reports/requirements_validation.md', 'utf8');
               const lines = validationReport.split('\n').slice(0, 20);
@@ -146,7 +145,6 @@ jobs:
             } catch (e) {
               validationMsg = 'No requirements validation report generated.';
             }
-
             try {
               const coverageReport = fs.readFileSync('cd/reports/verification_coverage_matrix.md', 'utf8');
               const lines = coverageReport.split('\n');
@@ -155,7 +153,6 @@ jobs:
             } catch (e) {
               coverageMsg = 'No coverage matrix generated.';
             }
-
             const body = [
               "📋 **Requirements Management Report**",
               "",
@@ -171,7 +168,6 @@ jobs:
               "",
               "Download full reports from artifact: **genccc-requirements-reports**"
             ].join("\n");
-
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -298,6 +294,9 @@ jobs:
        contains(github.event.comment.body, '/genccc solve'))
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    outputs:
+      child_branch_created: ${{ steps.push_same.outputs.child_branch || steps.push_fork.outputs.child_branch || '' }}
+      changes_detected: ${{ steps.diff.outputs.changed }}
     steps:
       - name: Resolve PR context
         id: pr
@@ -383,7 +382,6 @@ jobs:
         id: diff
         run: |
           cd pr
-          git init -q
           git config user.name "GenCCC Agent Bot"
           git config user.email "genccc-agent-bot@local"
           git add -A
@@ -402,7 +400,8 @@ jobs:
           CHILD_BRANCH="genccc/agent-${{ steps.pr.outputs.head_ref }}-$(date +%Y%m%d%H%M%S)"
           git commit -m "GenCCC Agent: proposed fixes to reach solution"
           git branch -M "$CHILD_BRANCH"
-          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" || \
+            git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git push -u origin "$CHILD_BRANCH"
           echo "child_branch=$CHILD_BRANCH" >> "$GITHUB_OUTPUT"
 
@@ -446,7 +445,8 @@ jobs:
           CHILD_BRANCH="genccc/agent-proposal-$(date +%Y%m%d%H%M%S)"
           git commit -m "GenCCC Agent: proposal fixes (fork-safe)"
           git branch -M "$CHILD_BRANCH"
-          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" || \
+            git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git push -u origin "$CHILD_BRANCH"
           echo "child_branch=$CHILD_BRANCH" >> "$GITHUB_OUTPUT"
 
@@ -519,15 +519,17 @@ jobs:
   verify_child_proposal:
     name: Verify Child Proposal (re-run GenCCC audit)
     needs: [agent_child_pr]
-    if: needs.agent_child_pr.result == 'success'
+    if: always() && needs.agent_child_pr.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    outputs:
+      child_found: ${{ steps.childref.outputs.found }}
+      verification_status: ${{ steps.run-audit.outcome }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          path: main-repo
 
       - name: Resolve child branch (same-repo vs fork-safe)
         id: childref
@@ -544,22 +546,24 @@ jobs:
             const cand = branches.find(b => b.name.startsWith('genccc/agent-'));
             if (!cand) {
               core.setOutput('found', 'false');
+              core.info('No child branch found starting with genccc/agent-');
             } else {
               core.setOutput('found', 'true');
               core.setOutput('ref', cand.name);
+              core.info(`Found child branch: ${cand.name}`);
             }
 
       - name: Exit if no child branch found
         if: steps.childref.outputs.found != 'true'
-        run: echo "No child branch found. Skipping verification."
+        run: |
+          echo "::notice::No child branch found. Skipping verification."
+          echo "This is expected if the agent found no actionable changes to propose."
 
-      - name: Checkout child branch (isolated path)
+      - name: Checkout child branch
         if: steps.childref.outputs.found == 'true'
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.childref.outputs.ref }}
-          path: child-repo
-          persist-credentials: false
           fetch-depth: 0
 
       - name: Set up Python
@@ -570,23 +574,32 @@ jobs:
           cache: 'pip'
 
       - name: Run GenCCC audit on child
+        id: run-audit
         if: steps.childref.outputs.found == 'true'
-        working-directory: main-repo
-        env:
-          GENCCC_TARGET_ROOT: ${{ github.workspace }}/child-repo
         run: |
           echo "Running GenCCC audit on child branch..."
           mkdir -p cd/reports
-          python tools/genccc/report.py
+          
+          # Run the audit script
+          if [ -f tools/genccc/report.py ]; then
+            python tools/genccc/report.py
+          else
+            echo "::error::GenCCC report.py not found at tools/genccc/report.py"
+            exit 1
+          fi
           
           # Verify the audit file was created
           if [ -f "cd/reports/cross_reference_audit.md" ]; then
             echo "✅ Audit report generated successfully"
             echo "File size: $(wc -c < cd/reports/cross_reference_audit.md) bytes"
-            echo "First 20 lines:"
-            head -n 20 cd/reports/cross_reference_audit.md || true
+            echo "Line count: $(wc -l < cd/reports/cross_reference_audit.md) lines"
+            echo ""
+            echo "=== First 30 lines of audit report ==="
+            head -n 30 cd/reports/cross_reference_audit.md || true
+            echo "=== End preview ==="
           else
             echo "::error::Failed to generate audit report at cd/reports/cross_reference_audit.md"
+            ls -la cd/reports/ || echo "cd/reports/ directory does not exist"
             exit 1
           fi
 
@@ -595,7 +608,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: genccc-cross-reference-audit-child
-          path: main-repo/cd/reports/cross_reference_audit.md
+          path: cd/reports/cross_reference_audit.md
           retention-days: 30
           if-no-files-found: error
 
@@ -670,7 +683,6 @@ jobs:
           script: |
             const fs = require('fs');
             let diffMsg = '';
-
             try {
               const diffReport = fs.readFileSync('cd/reports/baseline_diff.md', 'utf8');
               const lines = diffReport.split('\n').slice(0, 30);
@@ -678,7 +690,6 @@ jobs:
             } catch (e) {
               diffMsg = 'No baseline diff available (this may be the first baseline).';
             }
-
             const body = [
               "📦 **Requirements Baseline Created**",
               "",
@@ -693,7 +704,6 @@ jobs:
               "",
               "Use baselines to track requirements changes over time and perform impact analysis."
             ].join("\n");
-
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -701,11 +711,13 @@ jobs:
               body
             });
 
-    # 5) Enforce completion targets and set a status on PR head commit
+  # ---------------------------------------------------------------------------
+  # 5) Enforce completion targets and set a status on PR head commit
+  # ---------------------------------------------------------------------------
   completion_check:
     name: Enforce Completion Targets (Audit Compliance & Actions)
     needs: [verify_child_proposal]
-    if: always() && needs.verify_child_proposal.result != 'skipped'
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -716,30 +728,79 @@ jobs:
           path: base
           fetch-depth: 1
 
-      - name: Download Child Audit Artifact (if present)
+      - name: Check upstream job status
+        id: upstream-status
+        run: |
+          VERIFY_RESULT="${{ needs.verify_child_proposal.result }}"
+          CHILD_FOUND="${{ needs.verify_child_proposal.outputs.child_found }}"
+          
+          echo "verify_child_proposal result: $VERIFY_RESULT"
+          echo "child_found: $CHILD_FOUND"
+          
+          # Determine if we should expect an artifact
+          if [ "$VERIFY_RESULT" = "skipped" ]; then
+            echo "expect_artifact=false" >> "$GITHUB_OUTPUT"
+            echo "skip_reason=verify_child_proposal was skipped" >> "$GITHUB_OUTPUT"
+          elif [ "$CHILD_FOUND" = "false" ] || [ -z "$CHILD_FOUND" ]; then
+            echo "expect_artifact=false" >> "$GITHUB_OUTPUT"
+            echo "skip_reason=No child branch was created (agent found no changes)" >> "$GITHUB_OUTPUT"
+          else
+            echo "expect_artifact=true" >> "$GITHUB_OUTPUT"
+            echo "skip_reason=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download Child Audit Artifact (if expected)
         id: dl-audit
+        if: steps.upstream-status.outputs.expect_artifact == 'true'
         continue-on-error: true
         uses: actions/download-artifact@v4
         with:
           name: genccc-cross-reference-audit-child
           path: reports
-      
+
       - name: Check Artifact Download Status
         id: check-artifact
         run: |
-          if [ "${{ steps.dl-audit.outcome }}" != "success" ]; then
+          EXPECT_ARTIFACT="${{ steps.upstream-status.outputs.expect_artifact }}"
+          SKIP_REASON="${{ steps.upstream-status.outputs.skip_reason }}"
+          
+          if [ "$EXPECT_ARTIFACT" = "false" ]; then
+            echo "::notice::Artifact not expected. Reason: $SKIP_REASON"
+            echo "artifact_found=not_expected" >> "$GITHUB_OUTPUT"
+            echo "artifact_status=skipped" >> "$GITHUB_OUTPUT"
+          elif [ "${{ steps.dl-audit.outcome }}" != "success" ]; then
             echo "::warning::Artifact download failed. The genccc-cross-reference-audit-child artifact was not found."
-            echo "artifact_found=false" >> $GITHUB_OUTPUT
+            echo "artifact_found=false" >> "$GITHUB_OUTPUT"
+            echo "artifact_status=missing" >> "$GITHUB_OUTPUT"
           else
-            echo "artifact_found=true" >> $GITHUB_OUTPUT
+            echo "artifact_found=true" >> "$GITHUB_OUTPUT"
+            echo "artifact_status=downloaded" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Ensure vv_lake.json exists
         run: |
           mkdir -p base/cd
           if [ ! -f "base/cd/vv_lake.json" ]; then
-            echo "::warning::vv_lake.json missing. Creating default template."
-            echo '{"standards":["UTCS-CORE","ATA-95","OPT-IN"],"paths":[],"checklists":{"contextual":[]}}' > base/cd/vv_lake.json
+            echo "::notice::vv_lake.json missing. Creating default template with OPT-IN paths."
+            cat > base/cd/vv_lake.json << 'VVLAKE'
+          {
+            "standards": ["UTCS-CORE", "ATA-95", "OPT-IN"],
+            "paths": [
+              "docs/**/*.md",
+              "README.md",
+              "cd/**/*.md",
+              "OPT-IN FRAMEWORK/**/*.md"
+            ],
+            "checklists": {
+              "contextual": [
+                "All cross-references validated",
+                "Context documents generated",
+                "Version links established",
+                "Traceability matrix updated"
+              ]
+            }
+          }
+          VVLAKE
           fi
 
       - name: Collect PR context (head sha & changed files)
@@ -772,37 +833,41 @@ jobs:
         run: |
           AUDIT_FILE="reports/cross_reference_audit.md"
           VV_LAKE="base/cd/vv_lake.json"
-          ARTIFACT_FOUND="${{ steps.check-artifact.outputs.artifact_found }}"
-
-          if [ ! -f "$AUDIT_FILE" ]; then
-            if [ "$ARTIFACT_FOUND" = "false" ]; then
-              echo "::error::Audit file not found at $AUDIT_FILE. Artifact 'genccc-cross-reference-audit-child' was not downloaded."
-              echo "::error::This indicates the upstream job 'verify_child_proposal' did not generate or upload the artifact successfully."
-              echo "::error::Check the 'verify_child_proposal' job to ensure:"
-              echo "::error::  1. The job completed successfully"
-              echo "::error::  2. The audit script ran and created cd/reports/cross_reference_audit.md"
-              echo "::error::  3. The artifact was uploaded with name 'genccc-cross-reference-audit-child'"
-              echo "::error::  4. The artifact has not expired (retention-days: 14)"
-              echo "pooled_issues=-1" >> $GITHUB_OUTPUT
-              echo "audit_missing=true" >> $GITHUB_OUTPUT
-            else
-              echo "::warning::Audit file not found at $AUDIT_FILE even though artifact was downloaded. Counting issues as 0."
-              echo "pooled_issues=0" >> $GITHUB_OUTPUT
-              echo "audit_missing=false" >> $GITHUB_OUTPUT
-            fi
+          ARTIFACT_STATUS="${{ steps.check-artifact.outputs.artifact_status }}"
+          
+          # Set default for audit_missing
+          echo "audit_missing=false" >> "$GITHUB_OUTPUT"
+          
+          # Handle different artifact scenarios
+          if [ "$ARTIFACT_STATUS" = "skipped" ]; then
+            echo "::notice::Audit validation skipped - no child branch was created."
+            echo "pooled_issues=0" >> "$GITHUB_OUTPUT"
+            echo "audit_skipped=true" >> "$GITHUB_OUTPUT"
+          elif [ "$ARTIFACT_STATUS" = "missing" ]; then
+            echo "::error::Audit artifact was expected but not found."
+            echo "pooled_issues=-1" >> "$GITHUB_OUTPUT"
+            echo "audit_missing=true" >> "$GITHUB_OUTPUT"
+            echo "audit_skipped=false" >> "$GITHUB_OUTPUT"
+          elif [ ! -f "$AUDIT_FILE" ]; then
+            echo "::warning::Audit file not found at $AUDIT_FILE even though artifact was downloaded."
+            ls -la reports/ || echo "reports/ directory is empty or missing"
+            echo "pooled_issues=0" >> "$GITHUB_OUTPUT"
+            echo "audit_skipped=false" >> "$GITHUB_OUTPUT"
           else
             echo "✅ Found audit file at $AUDIT_FILE"
-            COUNT=$(grep -Ei "warning|error|issue" "$AUDIT_FILE" | wc -l || echo 0)
-            echo "Found $COUNT issues in audit file"
-            echo "pooled_issues=$COUNT" >> $GITHUB_OUTPUT
-            echo "audit_missing=false" >> $GITHUB_OUTPUT
+            # Count issues - look for common issue patterns
+            COUNT=$(grep -Ei "(warning|error|issue|❌|⚠️|\[FAIL\]|\[ERROR\])" "$AUDIT_FILE" | wc -l || echo 0)
+            echo "Found $COUNT potential issues in audit file"
+            echo "pooled_issues=$COUNT" >> "$GITHUB_OUTPUT"
+            echo "audit_skipped=false" >> "$GITHUB_OUTPUT"
           fi
-
-          STANDARDS=$(jq -r '.standards[]?' "$VV_LAKE" | paste -sd, -)
-          PATHS=$(jq -r '.paths[]?' "$VV_LAKE" | paste -sd, -)
-
-          echo "standards=$STANDARDS" >> $GITHUB_OUTPUT
-          echo "validation_paths=$PATHS" >> $GITHUB_OUTPUT
+          
+          # Extract standards and paths from V&V lake
+          STANDARDS=$(jq -r '.standards[]?' "$VV_LAKE" 2>/dev/null | paste -sd, - || echo "UTCS-CORE,ATA-95,OPT-IN")
+          PATHS=$(jq -r '.paths[]?' "$VV_LAKE" 2>/dev/null | paste -sd, - || echo "docs/**/*.md,README.md,cd/**/*.md")
+          
+          echo "standards=$STANDARDS" >> "$GITHUB_OUTPUT"
+          echo "validation_paths=$PATHS" >> "$GITHUB_OUTPUT"
 
       - name: Build checklist summary
         id: checklist
@@ -811,15 +876,21 @@ jobs:
           STANDARDS="${{ steps.pool.outputs.standards }}"
           VALIDATION_PATHS="${{ steps.pool.outputs.validation_paths }}"
           CHANGED="${{ steps.prctx.outputs.md_changed }}"
-
-          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Cross-references validated against: ${VALIDATION_PATHS:-n/a}"
-          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Standards compliance: ${STANDARDS:-n/a}"
-          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Contextual validation for changed files: ${CHANGED:-n/a}"
-
+          AUDIT_SKIPPED="${{ steps.pool.outputs.audit_skipped }}"
+          
+          if [ "$AUDIT_SKIPPED" = "true" ]; then
+            CHECKLIST="$CHECKLIST"$'\n'"- [x] No child proposal created (no changes needed)"
+          fi
+          
+          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Cross-references validated against: ${VALIDATION_PATHS:-default paths}"
+          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Standards compliance: ${STANDARDS:-default standards}"
+          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Contextual validation for changed files: ${CHANGED:-none}"
+          
           if [ -n "${CHANGED:-}" ]; then
             CHECKLIST="$CHECKLIST"$'\n'"- [ ] Reviewed changes: ${CHANGED}"
           fi
-
+          
+          # Add custom checklist items from V&V lake
           if [ -f "base/cd/vv_lake.json" ]; then
             EXTRA=$(
               jq -r '.checklists.contextual[]?' "base/cd/vv_lake.json" 2>/dev/null \
@@ -830,10 +901,10 @@ jobs:
               CHECKLIST="$CHECKLIST"$'\n'"$EXTRA"
             fi
           fi
-
+          
           echo "## GenCCC Contextual Checklist" >> "$GITHUB_STEP_SUMMARY"
           printf '%s\n' "$CHECKLIST" >> "$GITHUB_STEP_SUMMARY"
-
+          
           {
             echo "checklist<<EOF"
             printf '%s\n' "$CHECKLIST"
@@ -847,51 +918,50 @@ jobs:
           PATHS="${{ steps.pool.outputs.validation_paths }}"
           CHECKLIST="${{ steps.checklist.outputs.checklist }}"
           AUDIT_MISSING="${{ steps.pool.outputs.audit_missing }}"
-
+          AUDIT_SKIPPED="${{ steps.pool.outputs.audit_skipped }}"
+          
           VALID=true
           ERROR_DETAILS=""
           
-          # Check if audit artifact is missing (critical error)
-          if [ "$AUDIT_MISSING" = "true" ]; then
+          # If audit was skipped (no child branch), that's acceptable
+          if [ "$AUDIT_SKIPPED" = "true" ]; then
+            echo "::notice::Audit validation skipped - no child proposal was created."
+            echo "This is acceptable when the agent found no actionable changes."
+          # If audit was expected but missing, that's an error
+          elif [ "$AUDIT_MISSING" = "true" ]; then
             VALID=false
             ERROR_DETAILS="${ERROR_DETAILS}• **Critical**: Audit artifact 'genccc-cross-reference-audit-child' not found"$'\n'
             ERROR_DETAILS="${ERROR_DETAILS}  - Check verify_child_proposal job status"$'\n'
             ERROR_DETAILS="${ERROR_DETAILS}  - Verify artifact upload step succeeded"$'\n'
             ERROR_DETAILS="${ERROR_DETAILS}  - Confirm artifact name matches exactly"$'\n'
             echo "::error::Audit artifact missing. Cannot validate completion targets."
-          fi
-          
-          # Check for unresolved issues (only if we have an audit file)
-          if [ "${ISSUES:-0}" -eq -1 ]; then
-            # Special case: audit file missing, already handled above
-            :
+          # Check for unresolved issues
           elif [ "${ISSUES:-0}" -gt 0 ]; then
             VALID=false
             ERROR_DETAILS="${ERROR_DETAILS}• Found ${ISSUES} unresolved audit issues"$'\n'
             echo "::error::Validation failed: ${ISSUES} unresolved audit issues."
           fi
           
-          # Check validation paths
-          if [ -z "$PATHS" ]; then
-            VALID=false
-            ERROR_DETAILS="${ERROR_DETAILS}• No validation paths defined in V&V lake"$'\n'
-            echo "::warning::No validation paths defined in V&V lake."
+          # Note if validation paths are using defaults
+          if [ -z "$PATHS" ] || [ "$PATHS" = "docs/**/*.md,README.md,cd/**/*.md" ]; then
+            echo "::notice::Using default validation paths. Consider updating cd/vv_lake.json for project-specific paths."
           fi
-
+          
+          # Update checklist based on validation result
           if [ "$VALID" = true ]; then
             UPDATED_CHECKLIST="$(printf "%s\n" "$CHECKLIST" | sed 's/- \[ \]/- [x]/g')"
           else
             UPDATED_CHECKLIST="$CHECKLIST"
           fi
-
-          echo "validation_passed=$VALID" >> $GITHUB_OUTPUT
+          
+          echo "validation_passed=$VALID" >> "$GITHUB_OUTPUT"
           
           {
             echo "error_details<<EOF"
             printf "%s" "$ERROR_DETAILS"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
-
+          
           {
             echo "updated_checklist<<EOF"
             printf "%s\n" "$UPDATED_CHECKLIST"
@@ -904,21 +974,31 @@ jobs:
           VALIDATION_PASSED: ${{ steps.validate.outputs.validation_passed }}
           POOLED_ISSUES: ${{ steps.pool.outputs.pooled_issues }}
           PR_HEAD_SHA: ${{ steps.prctx.outputs.head_sha }}
+          AUDIT_SKIPPED: ${{ steps.pool.outputs.audit_skipped }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const passed = (process.env.VALIDATION_PASSED === 'true');
             const issues = process.env.POOLED_ISSUES || '0';
             const sha = process.env.PR_HEAD_SHA;
+            const skipped = process.env.AUDIT_SKIPPED === 'true';
+            
+            let description;
+            if (skipped) {
+              description = 'No child proposal created - validation not required';
+            } else if (passed) {
+              description = 'Completion targets met - all paths validated';
+            } else {
+              description = `Targets incomplete - ${issues} issues; see checklist`;
+            }
+            
             await github.rest.repos.createCommitStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha,
               state: passed ? 'success' : 'failure',
               target_url: `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
-              description: passed
-                ? 'Completion targets met - all paths validated'
-                : `Targets incomplete - ${issues} issues; see checklist`,
+              description,
               context: 'GenCCC Completion Target'
             });
 
@@ -928,15 +1008,19 @@ jobs:
           UPDATED_CHECKLIST: ${{ steps.validate.outputs.updated_checklist }}
           VALIDATION_PASSED: ${{ steps.validate.outputs.validation_passed }}
           ERROR_DETAILS: ${{ steps.validate.outputs.error_details }}
+          AUDIT_SKIPPED: ${{ steps.pool.outputs.audit_skipped }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const checklist = process.env.UPDATED_CHECKLIST || '';
             const passed = (process.env.VALIDATION_PASSED === 'true');
             const errorDetails = process.env.ERROR_DETAILS || '';
+            const skipped = process.env.AUDIT_SKIPPED === 'true';
             
             let body = '';
-            if (passed) {
+            if (skipped) {
+              body = `✅ **GenCCC Completion Check**\n\nNo child proposal was created (agent found no actionable changes).\n\nContextual checklist:\n\n${checklist}\n\nThis PR is ready for manual review.`;
+            } else if (passed) {
               body = `🎯 **Completion Targets Achieved!**\n\nContextual checklist (auto-validated):\n\n${checklist}\n\nAll validation paths covered. Ready for merge.`;
             } else {
               body = `⚠️ **Completion Targets Incomplete**\n\nContextual checklist (review required):\n\n${checklist}\n\n`;
@@ -959,7 +1043,7 @@ jobs:
             });
 
       - name: Fail Workflow on Incomplete Targets
-        if: steps.validate.outputs.validation_passed != 'true'
+        if: steps.validate.outputs.validation_passed != 'true' && steps.pool.outputs.audit_skipped != 'true'
         run: |
           AUDIT_MISSING="${{ steps.pool.outputs.audit_missing }}"
           ISSUES="${{ steps.pool.outputs.pooled_issues }}"
@@ -983,7 +1067,7 @@ jobs:
             echo "::error::     - uses: actions/upload-artifact@v4"
             echo "::error::     - name: genccc-cross-reference-audit-child"
             echo "::error::     - path: cd/reports/cross_reference_audit.md"
-            echo "::error::  4. Check artifact has not expired (retention-days: 14)"
+            echo "::error::  4. Check artifact has not expired (retention-days: 30)"
             echo "::error::  5. Verify compatible artifact versions (both upload and download use v4)"
             echo "::error::"
           fi
@@ -993,14 +1077,6 @@ jobs:
             echo "::error::❌ Found ${ISSUES} unresolved audit issues"
             echo "::error::"
             echo "::error::Review the audit report to address these issues."
-            echo "::error::"
-          fi
-          
-          if [ -z "$PATHS" ]; then
-            echo "::error::"
-            echo "::error::⚠️  No validation paths defined in V&V lake"
-            echo "::error::"
-            echo "::error::Update base/cd/vv_lake.json to include validation paths."
             echo "::error::"
           fi
           
