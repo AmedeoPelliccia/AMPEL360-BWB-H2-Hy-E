@@ -41,6 +41,12 @@ def validate_json_against_schema(
     """
     Validate JSON data against a schema.
     
+    Args:
+        data: The JSON data to validate
+        schema: The JSON Schema to validate against
+        data_name: Human-readable name of the data file (for error messages)
+        schema_name: Human-readable name of the schema file (for error messages)
+    
     Returns:
         Tuple of (is_valid, errors_list)
     """

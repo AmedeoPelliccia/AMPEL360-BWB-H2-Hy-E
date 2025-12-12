@@ -134,7 +134,7 @@ examples/dpp_export/v0.1/
 Install required Python dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 This will install `jsonschema>=4.20.0` for JSON Schema validation.
