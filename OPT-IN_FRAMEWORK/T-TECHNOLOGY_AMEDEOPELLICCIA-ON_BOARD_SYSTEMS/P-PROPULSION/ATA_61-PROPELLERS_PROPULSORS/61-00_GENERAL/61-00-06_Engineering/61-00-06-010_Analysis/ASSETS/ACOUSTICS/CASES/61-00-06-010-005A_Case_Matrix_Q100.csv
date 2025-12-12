@@ -1,0 +1,8 @@
+case_id,category,flight_phase,analysis_level,altitude_ft,mach,isa_deviation_c,weight_kg,power_setting_pct,rpm,propulsor_pattern,observer_set_id,toolchain,target_metrics,notes
+AC-TKO-SL-01,"Takeoff/Climb","Takeoff","L1",0,0.20,15,TBD,100,TBD,"ALL","OBS-SIDELINE-01","L1_semi_empirical","SPL_1_3_OCT;OASPL;TONAL_BPF","Baseline takeoff noise, sideline observers"
+AC-TKO-SL-02,"Takeoff/Climb","Initial Climb","L2",1500,0.30,0,TBD,95,TBD,"ALL","OBS-SIDELINE-01","L2_CFD_FWH","SPL_1_3_OCT;OASPL;TONAL_BPF;TONAL_HARM","CFD-informed aeroacoustic check at initial climb"
+AC-APP-APP-01,"Approach/Landing","Approach","L1",1500,0.18,0,TBD,60,TBD,"ALL","OBS-APPROACH-01","L1_semi_empirical","SPL_1_3_OCT;OASPL;TONAL_BPF","Approach condition for external/community noise"
+AC-SID-450-01,"Sideline","Takeoff","L1",0,0.25,15,TBD,100,TBD,"ALL","OBS-SIDELINE-02","L1_semi_empirical","SPL_1_3_OCT;OASPL;TONAL_BPF","Sideline observer at ~450 m"
+AC-CRZ-CAB-01,"Cruise Cabin","Cruise","L3",35000,0.76,0,TBD,75,TBD,"ALL","OBS-CABIN-ROW10","L3_vibro_acoustic","CABIN_1_3_OCT;CABIN_OASPL;VIB_MOUNT_RMS","Cabin comfort baseline at design cruise"
+AC-GND-IDLE-01,"Ground Idle/Ramp","Ground Idle","L1",0,0.02,0,TBD,20,TBD,"ALL","OBS-RAMP-01","L1_semi_empirical","SPL_1_3_OCT;OASPL","Ramp/ground idle levels for operations"
+AC-OEI-EXT-01,"OEI Asymmetric","Climb OEI","L2",10000,0.35,0,TBD,100,TBD,"OEI_P3_FAIL","OBS-SIDELINE-03","L2_CFD_FWH","SPL_1_3_OCT;OASPL;TONAL_BPF","One Engine Inoperative climb noise scenario"
