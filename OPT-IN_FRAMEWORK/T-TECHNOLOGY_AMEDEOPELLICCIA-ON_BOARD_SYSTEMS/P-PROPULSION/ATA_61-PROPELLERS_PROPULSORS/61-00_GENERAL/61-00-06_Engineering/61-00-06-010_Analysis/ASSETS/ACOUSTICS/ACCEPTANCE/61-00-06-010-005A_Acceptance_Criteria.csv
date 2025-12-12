@@ -1,0 +1,7 @@
+criterion_id,metric_id,case_category,limit_type,limit_value,unit,reference,notes
+ACC-001,OASPL,Takeoff/Climb,max,TBD,dB(A),CS-36 / Part 36,Takeoff lateral noise limit (TBD pending cert basis)
+ACC-002,OASPL,Approach/Landing,max,TBD,dB(A),CS-36 / Part 36,Approach noise limit (TBD pending cert basis)
+ACC-003,EPNL,Sideline,max,TBD,EPNdB,CS-36 / Part 36,Sideline certification limit
+ACC-004,CABIN_OASPL,Cruise Cabin,max,65,dB(A),Internal target,Cabin comfort target at design cruise
+ACC-005,TONAL_BPF,Takeoff/Climb,advisory,TBD,dB,Internal,BPF tone prominence limit (advisory)
+ACC-006,VIB_MOUNT_RMS,Cruise Cabin,max,TBD,m/s²,Internal,Mount vibration isolation target
