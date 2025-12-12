@@ -42,7 +42,7 @@ The **infrastructure digital twin** is a virtual representation of physical airp
 
 **Purpose**:
 - Real-time monitoring of infrastructure state
-- Predictive maintenance via [ATA 92 Model-Based Maintenance](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-MODEL_BASED_MAINTENANCE/README.md)
+- Electrical installation practices, wiring and grounding via [ATA 92 Electrical Installation](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md)
 - Configuration management and version tracking
 - Compliance verification and auditing
 
@@ -272,7 +272,7 @@ graph TD
 - [IPFS – InterPlanetary File System](https://ipfs.io/)
 - [85-00-11-002_Versioning_and_Tagging_Model.md](./85-00-11-002_Versioning_and_Tagging_Model.md)
 - [85-00-11-003_Interface_Configuration_Baselines.md](./85-00-11-003_Interface_Configuration_Baselines.md)
-- [ATA 92 – Model-Based Maintenance](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-MODEL_BASED_MAINTENANCE/README.md)
+- [ATA 92 – Electrical Installation](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md)
 - [ATA 95 – Digital Product Passport](../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/README.md)
 - [ATA 98 – Neural Network Runtime Monitoring](../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_98-NEURAL_NETWORK_RUNTIME_MONITORING/README.md)
 

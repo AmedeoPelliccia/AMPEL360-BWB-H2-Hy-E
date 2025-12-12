@@ -102,7 +102,7 @@ This document defines the high-level **Entry Into Service (EIS) strategy** for *
 **Timeline**: 36+ months post-delivery
 
 **Activities**:
-- Continuous monitoring and optimization via [ATA 92 Model-Based Maintenance](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-MODEL_BASED_MAINTENANCE/README.md) and digital twin
+- Continuous monitoring and optimization via [ATA 92 Electrical Installation](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md) and digital twin
 - Periodic updates to infrastructure interface baselines (managed via [85-00-11-003_Interface_Configuration_Baselines.md](./85-00-11-003_Interface_Configuration_Baselines.md))
 - Incorporation of lessons learned into future aircraft/infrastructure designs
 - Support for emerging infrastructure technologies (e.g., next-gen H₂ standards)

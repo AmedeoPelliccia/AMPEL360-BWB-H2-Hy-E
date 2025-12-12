@@ -199,7 +199,7 @@ These packages can be deployed independently or combined based on airport archet
 - **Automation**:
   - Robotic connector alignment and mating
   - Automated power sequencing and health checks
-  - Predictive maintenance via [ATA 92 Model-Based Maintenance](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-MODEL_BASED_MAINTENANCE/README.md)
+  - Electrical installation standards and practices per [ATA 92 Electrical Installation](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md)
 - **Advanced Data**:
   - 10GBASE-T Ethernet (Archetype A)
   - ARINC 429 backward compatibility
@@ -280,7 +280,7 @@ These packages can be deployed independently or combined based on airport archet
 - [85-00-10_Certification](../85-00-10_Certification/README.md)
 - [85-00-11-004_Airport_Archetype_EIS_Packages.md](./85-00-11-004_Airport_Archetype_EIS_Packages.md)
 - [85-00-12_Services](../85-00-12_Services/README.md)
-- [ATA 92 – Model-Based Maintenance](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-MODEL_BASED_MAINTENANCE/README.md)
+- [ATA 92 – Electrical Installation](../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/ATA_92-ELECTRICAL_INSTALLATION/README.md)
 
 ---
 

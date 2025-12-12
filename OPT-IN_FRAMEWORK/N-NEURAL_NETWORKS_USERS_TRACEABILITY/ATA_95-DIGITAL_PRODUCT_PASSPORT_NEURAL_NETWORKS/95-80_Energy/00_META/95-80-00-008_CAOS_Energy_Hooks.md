@@ -389,7 +389,7 @@ Each energy asset provides a descriptor:
 | [95-80-80](../95-80-80_Energy_Management_and_Optimization/) | Energy management system |
 | [95-80-46](../95-80-46_Energy_Data_and_Digital_Twins/) | Digital twin implementation |
 | [ATA 40](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-R_AND_D/ATA_40-AI_INTEGRATION/) | CAOS AI integration |
-| [ATA 92](../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/) | Predictive maintenance |
+| [ATA 92](../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_92-ELECTRICAL_INSTALLATION/) | Electrical Installation |
 
 ---
 
