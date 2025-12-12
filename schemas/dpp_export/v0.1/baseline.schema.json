@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/dpp_export/v0.1/baseline.json",
+  "title": "Aircraft Baseline Configuration",
+  "description": "Defines the baseline configuration for an aircraft model, including all major components, assemblies, and part numbers",
+  "type": "object",
+  "required": [
+    "baseline_id",
+    "baseline_version",
+    "aircraft_model",
+    "effective_date",
+    "components"
+  ],
+  "properties": {
+    "baseline_id": {
+      "type": "string",
+      "description": "Unique identifier for this baseline configuration",
+      "minLength": 1,
+      "examples": ["Q100-BASELINE-001", "BWB-CONFIG-A"]
+    },
+    "baseline_version": {
+      "type": "string",
+      "description": "Version of this baseline (semantic versioning)",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+      "examples": ["1.0", "1.0.0"]
+    },
+    "aircraft_model": {
+      "type": "string",
+      "description": "Aircraft model designation",
+      "minLength": 1,
+      "examples": ["AMPEL360-Q100"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of this baseline configuration"
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when this baseline becomes effective (ISO 8601 date)"
+    },
+    "revision_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last revision to this baseline"
+    },
+    "status": {
+      "type": "string",
+      "description": "Status of this baseline configuration",
+      "enum": ["draft", "released", "active", "superseded", "obsolete"]
+    },
+    "components": {
+      "type": "array",
+      "description": "List of major components and assemblies in this baseline",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["component_id", "part_number", "description", "ata_chapter"],
+        "properties": {
+          "component_id": {
+            "type": "string",
+            "description": "Unique identifier for this component",
+            "minLength": 1
+          },
+          "part_number": {
+            "type": "string",
+            "description": "Manufacturer part number",
+            "pattern": "^[A-Z0-9\\-_.]+$"
+          },
+          "description": {
+            "type": "string",
+            "description": "Component description",
+            "minLength": 3
+          },
+          "ata_chapter": {
+            "type": "string",
+            "description": "ATA iSpec 2200 chapter/section (e.g., '53-00', '21-10')",
+            "pattern": "^\\d{2}(-\\d{2})?(-\\d{2})?$"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "Quantity required per aircraft",
+            "exclusiveMinimum": 0
+          },
+          "unit_of_measure": {
+            "type": "string",
+            "description": "Unit of measure for quantity",
+            "enum": ["ea", "kg", "m", "m2", "m3", "L", "set", "kit"]
+          },
+          "manufacturer": {
+            "type": "string",
+            "description": "Manufacturer name"
+          },
+          "supplier": {
+            "type": "string",
+            "description": "Supplier name"
+          },
+          "weight_kg": {
+            "type": "number",
+            "description": "Component weight in kilograms (per unit)",
+            "minimum": 0
+          },
+          "criticality": {
+            "type": "string",
+            "description": "Safety criticality level",
+            "enum": ["critical", "essential", "non-essential"]
+          },
+          "certification_basis": {
+            "type": "array",
+            "description": "Certification standards applicable to this component",
+            "items": {
+              "type": "string",
+              "examples": ["CS-25.1309", "DO-178C DAL-A", "DO-254"]
+            }
+          },
+          "children": {
+            "type": "array",
+            "description": "Sub-components or assemblies",
+            "items": {
+              "type": "string",
+              "description": "Reference to child component_id"
+            }
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes or comments"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "change_history": {
+      "type": "array",
+      "description": "History of changes to this baseline",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "description": "Revision identifier"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of change"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of change"
+          },
+          "author": {
+            "type": "string",
+            "description": "Person or team who made the change"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

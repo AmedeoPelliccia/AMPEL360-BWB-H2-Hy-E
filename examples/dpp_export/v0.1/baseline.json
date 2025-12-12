@@ -1,0 +1,138 @@
+{
+  "baseline_id": "Q100-BASELINE-001",
+  "baseline_version": "1.0",
+  "aircraft_model": "AMPEL360-Q100",
+  "description": "Production baseline for AMPEL360 Q100 100-passenger BWB hydrogen-electric aircraft",
+  "effective_date": "2025-01-15",
+  "revision_date": "2025-12-10",
+  "status": "active",
+  "components": [
+    {
+      "component_id": "FUSE-53-001",
+      "part_number": "Q100-53-0001-A",
+      "description": "Main fuselage structure - blended wing body configuration",
+      "ata_chapter": "53-00",
+      "quantity": 1,
+      "unit_of_measure": "ea",
+      "manufacturer": "AMPEL360 Structures",
+      "supplier": "AMPEL360 Manufacturing",
+      "weight_kg": 12000,
+      "criticality": "critical",
+      "certification_basis": [
+        "CS-25.305",
+        "CS-25.307",
+        "CS-25.603"
+      ],
+      "children": [
+        "FUSE-53-100",
+        "FUSE-53-200",
+        "FUSE-53-300"
+      ]
+    },
+    {
+      "component_id": "FUSE-53-100",
+      "part_number": "Q100-53-0100-A",
+      "description": "Forward fuselage section - Zone 100",
+      "ata_chapter": "53-10",
+      "quantity": 1,
+      "unit_of_measure": "ea",
+      "manufacturer": "AMPEL360 Structures",
+      "weight_kg": 3500,
+      "criticality": "critical"
+    },
+    {
+      "component_id": "PROP-61-001",
+      "part_number": "Q100-61-0001-B",
+      "description": "Hydrogen fuel cell propulsion system - 20 MW total",
+      "ata_chapter": "61-00",
+      "quantity": 1,
+      "unit_of_measure": "set",
+      "manufacturer": "AMPEL360 Propulsion",
+      "supplier": "H2 PowerTech GmbH",
+      "weight_kg": 2500,
+      "criticality": "critical",
+      "certification_basis": [
+        "CS-25.901",
+        "CS-25.903",
+        "CS-25.1309"
+      ],
+      "children": [
+        "PROP-61-FC-001",
+        "PROP-61-BAT-001"
+      ]
+    },
+    {
+      "component_id": "PROP-61-FC-001",
+      "part_number": "Q100-61-FC-0001",
+      "description": "PEM Fuel Cell Stack - 20 MW",
+      "ata_chapter": "61-10",
+      "quantity": 4,
+      "unit_of_measure": "ea",
+      "manufacturer": "H2 PowerTech GmbH",
+      "weight_kg": 500,
+      "criticality": "critical",
+      "notes": "Proton Exchange Membrane fuel cell, -40°C to +85°C operating range"
+    },
+    {
+      "component_id": "PROP-61-BAT-001",
+      "part_number": "Q100-61-BAT-0001",
+      "description": "Lithium-ion battery pack - 5 MWh",
+      "ata_chapter": "61-20",
+      "quantity": 1,
+      "unit_of_measure": "ea",
+      "manufacturer": "Advanced Battery Systems",
+      "weight_kg": 1500,
+      "criticality": "critical",
+      "certification_basis": [
+        "DO-311A"
+      ]
+    },
+    {
+      "component_id": "AVIONIC-31-001",
+      "part_number": "Q100-31-0001-C",
+      "description": "Integrated Flight Control Computer",
+      "ata_chapter": "31-00",
+      "quantity": 3,
+      "unit_of_measure": "ea",
+      "manufacturer": "Avionics Systems Inc",
+      "weight_kg": 12.5,
+      "criticality": "critical",
+      "certification_basis": [
+        "CS-25.1309",
+        "DO-178C DAL-A",
+        "DO-254 DAL-A"
+      ],
+      "notes": "Triple redundant configuration with dissimilar processors"
+    },
+    {
+      "component_id": "H2-TANK-28-001",
+      "part_number": "Q100-28-LH2-0001",
+      "description": "Liquid Hydrogen Storage Tank - 3000 kg capacity",
+      "ata_chapter": "28-10",
+      "quantity": 1,
+      "unit_of_measure": "ea",
+      "manufacturer": "Cryogenic Systems Ltd",
+      "weight_kg": 800,
+      "criticality": "critical",
+      "certification_basis": [
+        "CS-25.965",
+        "CS-25.967"
+      ],
+      "notes": "Cryogenic storage at -253°C with multi-layer insulation"
+    }
+  ],
+  "change_history": [
+    {
+      "revision": "1.0",
+      "date": "2025-01-15",
+      "description": "Initial baseline release for production aircraft",
+      "author": "AMPEL360 Configuration Management"
+    },
+    {
+      "revision": "1.0.1",
+      "date": "2025-12-10",
+      "description": "Updated fuel cell part number from -A to -B revision, improved thermal management",
+      "author": "Propulsion Engineering Team"
+    }
+  ]
+}

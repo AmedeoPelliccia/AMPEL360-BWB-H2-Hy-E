@@ -1,0 +1,55 @@
+{
+  "export_id": "DPP-AMPEL360-Q100-2025-001",
+  "export_version": "0.1",
+  "created_at": "2025-12-12T10:30:00Z",
+  "created_by": "AMPEL360 DPP Export Tool v1.0",
+  "aircraft_model": "AMPEL360-Q100",
+  "baseline_id": "Q100-BASELINE-001",
+  "description": "Complete Digital Product Passport export for AMPEL360 Q100 baseline configuration, including baseline definition, effectivity matrix, and software BOM",
+  "files": [
+    {
+      "path": "baseline.json",
+      "type": "baseline",
+      "checksum": "a1b2c3d4e5f67890123456789012345678901234abcdef1234567890abcdef12",
+      "size_bytes": 45678,
+      "description": "Baseline configuration with all major components"
+    },
+    {
+      "path": "effectivity.json",
+      "type": "effectivity",
+      "checksum": "b2c3d4e5f67890123456789012345678901234abcdef1234567890abcdef1234",
+      "size_bytes": 12890,
+      "description": "Effectivity matrix for component applicability"
+    },
+    {
+      "path": "software_bom.json",
+      "type": "software_bom",
+      "checksum": "c3d4e5f67890123456789012345678901234abcdef1234567890abcdef123456",
+      "size_bytes": 34567,
+      "description": "Software Bill of Materials for avionics and embedded systems"
+    },
+    {
+      "path": "sbom_aircraft.spdx.json",
+      "type": "sbom_aircraft",
+      "checksum": "d4e5f67890123456789012345678901234abcdef1234567890abcdef12345678",
+      "size_bytes": 156789,
+      "description": "SPDX 2.3 JSON format SBOM for entire aircraft (see SPDX 2.3 JSON standard)"
+    },
+    {
+      "path": "documentation/technical_manual.pdf",
+      "type": "documentation",
+      "checksum": "e5f67890123456789012345678901234abcdef1234567890abcdef123456789a",
+      "size_bytes": 2345678,
+      "description": "Aircraft Maintenance Manual"
+    }
+  ],
+  "metadata": {
+    "regulatory_basis": [
+      "EASA CS-25",
+      "EASA Part 21",
+      "EU AI Act"
+    ],
+    "export_scope": "complete_aircraft",
+    "validation_status": "validated"
+  }
+}

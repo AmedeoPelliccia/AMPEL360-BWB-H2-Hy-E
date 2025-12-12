@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/dpp_export/v0.1/effectivity.json",
+  "title": "Aircraft Effectivity Matrix",
+  "description": "Defines which components and configurations are effective for specific aircraft serial numbers, tail numbers, or production runs",
+  "type": "object",
+  "required": ["effectivity_id", "baseline_id", "rules"],
+  "properties": {
+    "effectivity_id": {
+      "type": "string",
+      "description": "Unique identifier for this effectivity matrix",
+      "minLength": 1,
+      "examples": ["EFF-Q100-2025-001"]
+    },
+    "baseline_id": {
+      "type": "string",
+      "description": "Reference to the baseline configuration this effectivity applies to",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of this effectivity matrix"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when this effectivity was created (ISO 8601)"
+    },
+    "rules": {
+      "type": "array",
+      "description": "List of effectivity rules",
+      "items": {
+        "type": "object",
+        "required": ["rule_id", "component_id", "applicability"],
+        "properties": {
+          "rule_id": {
+            "type": "string",
+            "description": "Unique identifier for this rule",
+            "minLength": 1
+          },
+          "component_id": {
+            "type": "string",
+            "description": "Component or part number this rule applies to",
+            "minLength": 1
+          },
+          "applicability": {
+            "type": "object",
+            "description": "Defines when/where this component is applicable",
+            "properties": {
+              "msn_range": {
+                "type": "object",
+                "description": "Manufacturer Serial Number range (inclusive)",
+                "properties": {
+                  "from": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "Starting MSN"
+                  },
+                  "to": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "Ending MSN (inclusive)"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "tail_numbers": {
+                "type": "array",
+                "description": "Specific tail numbers (registration marks) this applies to",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Z0-9-]+$",
+                  "examples": ["D-AMPEL", "F-HQTX", "G-BWBA"]
+                }
+              },
+              "production_batch": {
+                "type": "string",
+                "description": "Production batch identifier",
+                "examples": ["BATCH-2025-Q1", "PRE-PRODUCTION"]
+              },
+              "configurations": {
+                "type": "array",
+                "description": "Specific aircraft configurations this applies to",
+                "items": {
+                  "type": "string",
+                  "examples": ["STANDARD", "EXTENDED_RANGE", "VIP"]
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "exclusions": {
+            "type": "object",
+            "description": "Specific aircraft to exclude from this rule (must have at least one of msn or tail_number)",
+            "anyOf": [
+              {
+                "required": ["msn"]
+              },
+              {
+                "required": ["tail_number"]
+              }
+            ],
+            "properties": {
+              "msn": {
+                "type": "array",
+                "description": "Manufacturer Serial Numbers to exclude",
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "tail_number": {
+                "type": "array",
+                "description": "Tail numbers to exclude",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Z0-9-]+$"
+                }
+              },
+              "reason": {
+                "type": "string",
+                "description": "Reason for exclusion"
+              }
+            },
+            "additionalProperties": false
+          },
+          "effective_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date when this rule becomes effective"
+          },
+          "termination_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date when this rule is no longer effective"
+          },
+          "modification_reference": {
+            "type": "string",
+            "description": "Reference to modification order, service bulletin, or engineering change",
+            "examples": ["MOD-Q100-2025-042", "SB-53-001"]
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes or comments"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

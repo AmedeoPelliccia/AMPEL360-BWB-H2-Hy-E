@@ -1,0 +1,174 @@
+{
+  "sbom_id": "SBOM-Q100-SW-2025-001",
+  "sbom_version": "1.0",
+  "aircraft_model": "AMPEL360-Q100",
+  "baseline_id": "Q100-BASELINE-001",
+  "created_at": "2025-12-12T10:30:00Z",
+  "description": "Software Bill of Materials for AMPEL360 Q100 avionics and embedded control systems",
+  "software_components": [
+    {
+      "component_id": "SW-FCC-31-001",
+      "name": "Flight Control Computer Software",
+      "version": "2.5.1",
+      "part_number": "Q100-SW-31-0001-B",
+      "description": "Primary flight control laws and envelope protection",
+      "supplier": "Avionics Systems Inc",
+      "ata_chapter": "31-00",
+      "certification_level": "DAL-A",
+      "binary_files": [
+        {
+          "filename": "fcc_primary.elf",
+          "checksum": "1a2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef1234567890",
+          "size_bytes": 1048576,
+          "load_address": "0x08000000"
+        },
+        {
+          "filename": "fcc_monitor.elf",
+          "checksum": "2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef12345678901a",
+          "size_bytes": 524288,
+          "load_address": "0x08100000"
+        }
+      ],
+      "configuration_files": [
+        {
+          "filename": "flight_envelope.cfg",
+          "checksum": "3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef12345678901a2b",
+          "size_bytes": 8192
+        }
+      ],
+      "target_hardware": "ARM Cortex-M7 @ 400 MHz",
+      "license": "Proprietary",
+      "safety_critical": true,
+      "verification_status": "certified"
+    },
+    {
+      "component_id": "SW-EMS-31-002",
+      "name": "Energy Management System",
+      "version": "1.8.3",
+      "part_number": "Q100-SW-31-0002-A",
+      "description": "Hydrogen fuel cell and battery management system",
+      "supplier": "AMPEL360 Software",
+      "ata_chapter": "31-20",
+      "certification_level": "DAL-B",
+      "binary_files": [
+        {
+          "filename": "ems_controller.bin",
+          "checksum": "4d5e6f7890abcdef1234567890abcdef1234567890abcdef12345678901a2b3c",
+          "size_bytes": 786432,
+          "load_address": "0x20000000"
+        }
+      ],
+      "configuration_files": [
+        {
+          "filename": "power_profile.json",
+          "checksum": "5e6f7890abcdef1234567890abcdef1234567890abcdef12345678901a2b3c4d",
+          "size_bytes": 4096
+        },
+        {
+          "filename": "battery_params.dat",
+          "checksum": "6f7890abcdef1234567890abcdef1234567890abcdef12345678901a2b3c4d5e",
+          "size_bytes": 2048
+        }
+      ],
+      "dependencies": [
+        "SW-FCC-31-001"
+      ],
+      "target_hardware": "PowerPC MPC5777M",
+      "license": "Proprietary",
+      "safety_critical": true,
+      "verification_status": "certified"
+    },
+    {
+      "component_id": "SW-FMS-34-001",
+      "name": "Flight Management System",
+      "version": "3.2.0",
+      "part_number": "Q100-SW-34-0001-C",
+      "description": "Navigation, route planning, and performance optimization",
+      "supplier": "NavTech Solutions",
+      "ata_chapter": "34-00",
+      "certification_level": "DAL-C",
+      "binary_files": [
+        {
+          "filename": "fms_core.elf",
+          "checksum": "7890abcdef1234567890abcdef1234567890abcdef12345678901a2b3c4d5e6f",
+          "size_bytes": 2097152,
+          "load_address": "0x40000000"
+        }
+      ],
+      "configuration_files": [
+        {
+          "filename": "nav_database.db",
+          "checksum": "890abcdef1234567890abcdef1234567890abcdef12345678901a2b3c4d5e6f7",
+          "size_bytes": 10485760
+        }
+      ],
+      "target_hardware": "Intel x86-64",
+      "license": "Commercial",
+      "safety_critical": false,
+      "verification_status": "verified"
+    },
+    {
+      "component_id": "SW-IFE-44-001",
+      "name": "In-Flight Entertainment System",
+      "version": "4.1.2",
+      "part_number": "Q100-SW-44-0001-A",
+      "description": "Passenger entertainment and connectivity",
+      "supplier": "SkyConnect Systems",
+      "ata_chapter": "44-00",
+      "certification_level": "N/A",
+      "binary_files": [
+        {
+          "filename": "ife_server.bin",
+          "checksum": "90abcdef1234567890abcdef1234567890abcdef12345678901a2b3c4d5e6f78",
+          "size_bytes": 52428800
+        }
+      ],
+      "target_hardware": "ARM Cortex-A72 @ 1.5 GHz",
+      "license": "Apache-2.0",
+      "safety_critical": false,
+      "verification_status": "in_progress",
+      "notes": "Open source components with proprietary UI layer"
+    },
+    {
+      "component_id": "SW-H2-28-001",
+      "name": "Cryogenic Tank Monitor",
+      "version": "1.3.0",
+      "part_number": "Q100-SW-28-0001-A",
+      "description": "Liquid hydrogen tank pressure, temperature, and level monitoring",
+      "supplier": "Cryogenic Systems Ltd",
+      "ata_chapter": "28-10",
+      "certification_level": "DAL-A",
+      "binary_files": [
+        {
+          "filename": "h2_monitor.hex",
+          "checksum": "0abcdef1234567890abcdef1234567890abcdef12345678901a2b3c4d5e6f789",
+          "size_bytes": 262144,
+          "load_address": "0x10000000"
+        }
+      ],
+      "configuration_files": [
+        {
+          "filename": "tank_calibration.xml",
+          "checksum": "abcdef1234567890abcdef1234567890abcdef12345678901a2b3c4d5e6f7890",
+          "size_bytes": 16384
+        }
+      ],
+      "dependencies": [
+        "SW-EMS-31-002"
+      ],
+      "target_hardware": "ARM Cortex-R5",
+      "license": "Proprietary",
+      "safety_critical": true,
+      "verification_status": "certified"
+    }
+  ],
+  "metadata": {
+    "total_components": 5,
+    "total_size_mb": 65.8,
+    "certification_basis": [
+      "DO-178C",
+      "DO-254",
+      "DO-326A"
+    ]
+  }
+}
