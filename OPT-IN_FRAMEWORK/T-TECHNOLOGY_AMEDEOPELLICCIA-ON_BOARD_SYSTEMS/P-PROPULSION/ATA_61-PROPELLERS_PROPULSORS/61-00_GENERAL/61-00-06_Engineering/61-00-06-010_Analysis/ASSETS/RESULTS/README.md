@@ -1,12 +1,12 @@
-# CAOS Templates
+# RESULTS
 
-This directory contains CAOS document and configuration templates.
+Analysis and simulation results for ATA 61 Propellers/Propulsors.
 
 ## Contents
 
-- Document templates
-- Configuration templates
-- Workflow templates
+- Solution files
+- Post-processed data
+- Plots and visualizations
 
 ---
 

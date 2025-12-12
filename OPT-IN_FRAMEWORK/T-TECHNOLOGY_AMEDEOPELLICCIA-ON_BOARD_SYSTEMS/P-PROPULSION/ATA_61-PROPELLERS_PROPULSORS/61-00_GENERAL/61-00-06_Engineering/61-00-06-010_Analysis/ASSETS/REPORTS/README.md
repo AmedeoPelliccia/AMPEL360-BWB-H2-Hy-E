@@ -1,12 +1,12 @@
-# CAOS Cases
+# REPORTS
 
-This directory contains CAOS analysis cases and use case implementations.
+Analysis and validation reports for ATA 61 Propellers/Propulsors.
 
 ## Contents
 
-- Case definitions and specifications
-- Validation scenarios
-- Implementation examples
+- Validation reports
+- Analysis summaries
+- Technical reports
 
 ---
 

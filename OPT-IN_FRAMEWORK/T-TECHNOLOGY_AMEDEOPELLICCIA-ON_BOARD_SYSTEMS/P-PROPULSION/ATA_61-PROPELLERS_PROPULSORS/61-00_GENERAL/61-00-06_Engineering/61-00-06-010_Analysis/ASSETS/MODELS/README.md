@@ -1,12 +1,12 @@
-# CAOS Results
+# MODELS
 
-This directory contains CAOS analysis and simulation results.
+Analysis and simulation models for ATA 61 Propellers/Propulsors.
 
 ## Contents
 
-- Analysis outputs
-- Simulation results
-- Validation findings
+- CFD mesh files
+- FEA models
+- Simulation model definitions
 
 ---
 

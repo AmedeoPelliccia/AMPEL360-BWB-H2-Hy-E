@@ -531,20 +531,6 @@ tools/
 
 ---
 
-## 🧠 CAOS Directory Structure
-
-```
-CAOS/
-├── CASES/                   # Analysis cases and use case implementations
-├── MODELS/                  # Analytical and AI/ML models
-├── RESULTS/                 # Analysis and simulation results
-├── REPORTS/                 # Operational and analytical reports
-├── SCRIPTS/                 # Automation and utility scripts
-└── TEMPLATES/               # Document and configuration templates
-```
-
----
-
 ## 🤝 Contributing
 
 We welcome contributions from aerospace engineers, software developers, and documentation specialists. 

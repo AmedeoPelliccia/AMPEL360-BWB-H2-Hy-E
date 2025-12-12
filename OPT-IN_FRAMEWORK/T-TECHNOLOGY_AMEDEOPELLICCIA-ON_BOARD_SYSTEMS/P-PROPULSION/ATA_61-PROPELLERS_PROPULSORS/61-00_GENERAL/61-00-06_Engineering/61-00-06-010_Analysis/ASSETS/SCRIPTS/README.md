@@ -1,11 +1,11 @@
-# CAOS Scripts
+# SCRIPTS
 
-This directory contains CAOS automation and utility scripts.
+Automation and utility scripts for ATA 61 Propellers/Propulsors analysis.
 
 ## Contents
 
-- Automation scripts
-- Data processing utilities
+- Data processing scripts
+- Automation utilities
 - Helper scripts
 
 ---

@@ -1,12 +1,12 @@
-# CAOS Models
+# TEMPLATES
 
-This directory contains CAOS analytical and AI/ML models.
+Document and configuration templates for ATA 61 Propellers/Propulsors analysis.
 
 ## Contents
 
-- Model definitions and architectures
-- Model configurations
-- Model artifacts and weights
+- Case definition templates
+- Report templates
+- Configuration templates
 
 ---
 
