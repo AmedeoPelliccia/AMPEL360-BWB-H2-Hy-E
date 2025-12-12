@@ -1,0 +1,10 @@
+metric_id,metric_name,description,domain,unit,reference_level,weighting,aggregation,notes
+SPL_1_3_OCT,"1/3-Octave Band SPL","Sound pressure level in 1/3-octave bands at specified observer","external/cabin","dB","20 µPa","A or Z","per band","Primary spectral representation"
+OASPL,"Overall Sound Pressure Level","Single-number SPL integrated over frequency range of interest","external/cabin","dB","20 µPa","A or Z","overall","Derived from 1/3-octave bands"
+TONAL_BPF,"BPF Tonal Level","Level of the fundamental blade passing frequency tone","external","dB","20 µPa","A or Z","discrete tone","Frequency derived from RPM × blade count"
+TONAL_HARM,"BPF Harmonic Levels","Levels of selected BPF harmonics","external","dB","20 µPa","A or Z","per harmonic","Harmonic indices to be documented in case file"
+CABIN_OASPL,"Cabin Overall SPL","Overall SPL at cabin observer locations","cabin","dB","20 µPa","A","overall","Used for cabin comfort evaluation"
+CABIN_1_3_OCT,"Cabin 1/3-Octave SPL","1/3-octave band SPL in cabin","cabin","dB","20 µPa","A or Z","per band","Supports tonal/broadband comfort analysis"
+SEL,"Sound Exposure Level","Time-integrated sound exposure level over an event","external","dB","20 µPa·s","A","event","Used for event-type noise metrics (e.g. flyover)"
+EPNL,"Effective Perceived Noise Level","Perceived-noise based certification-style metric (if applicable)","external","dB","N/A","N/A","event","Program-specific; placeholder for future use"
+VIB_MOUNT_RMS,"Mount Vibration RMS","RMS vibration level at structural mount interface","structural","m/s²","N/A","N/A","RMS over band","Interface from 004A to vibro-acoustic analysis"

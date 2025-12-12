@@ -1,0 +1,8 @@
+criterion_id,case_category,observer_type,metric_id,limit_type,limit_value,unit,reference_standard,comment
+ACR-EXT-TKO-01,"Takeoff/Climb","sideline","OASPL","target","TBD","dB(A)","Program_Internal","Target sideline OASPL at reference sideline distance"
+ACR-EXT-APP-01,"Approach/Landing","approach","OASPL","target","TBD","dB(A)","Program_Internal","Target approach OASPL for community noise"
+ACR-CAB-CRZ-01,"Cruise Cabin","cabin","CABIN_OASPL","target","TBD","dB(A)","Program_Internal","Cabin overall SPL comfort target at design cruise"
+ACR-CAB-CRZ-02,"Cruise Cabin","cabin","CABIN_1_3_OCT","guidance","TBD","dB(Z)","Program_Internal","Band-limited guidance limits for tonal comfort"
+ACR-GND-IDLE-01,"Ground Idle/Ramp","ground","OASPL","guidance","TBD","dB(A)","Operational","Worker exposure / ramp operations guidance"
+ACR-VERIF-SCALE-01,"All","any","SPL_1_3_OCT","verification","N/A","N/A","Internal","Check: 6 dB/distance doubling behaviour within ±1 dB"
+ACR-VERIF-BPF-01,"All","any","TONAL_BPF","verification","N/A","N/A","Internal","Check: BPF frequency from RPM×blade count matches spectral peak within ±1%"

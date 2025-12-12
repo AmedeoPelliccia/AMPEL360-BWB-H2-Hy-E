@@ -49,6 +49,25 @@ Analytical methods include:
 
 ---
 
+## Analysis Documents
+
+- **[61-00-06-010-001A — Methodology Overview](./61-00-06-010-001A_Methodology.md)**  
+  Global analysis framework, workflows, toolchain, and QA for ATA 61-00-06-010.
+
+- **[61-00-06-010-002A — Thrust & Altitude Performance Models](./61-00-06-010-002A_Thrust_Altitude_Performance_Models.md)**  
+  Thrust/power vs. altitude & Mach, thrust decks, and envelope definition.
+
+- **[61-00-06-010-003A — CFD & BLI Envelope Analysis](./61-00-06-010-003A_CFD_BLI_Envelope_Analysis.md)**  
+  CFD methodology for BLI, mesh standards, and airframe–propulsor interaction.
+
+- **61-00-06-010-004A — Structural Mounts FEM Methodology (Q100)**  
+  FEM strategy for mounts and integration structure, loads, and margins.
+
+- **[61-00-06-010-005A — Acoustic Signature Analysis (Q100)](./61-00-06-010-005A_Acoustic_Signature_Analysis_Q100.md)**  
+  Acoustic methodology (external & cabin), source decomposition, metrics registry, case matrix, and acceptance criteria for the Q100 distributed BLI propulsion system.
+
+---
+
 ## Typical Contents
 
 - **Analytical reports** (Markdown documents with equations and results)
@@ -149,7 +168,7 @@ Estimate maximum blade stress under cruise conditions.
 - **Lifecycle Stage**: 06 — Engineering
 - **Subfolder**: 010 — Analysis
 - **Content Status**: Scaffolded (ready for analytical work)
-- **Last Updated**: 2025-12-11
+- **Last Updated**: 2025-12-12
 
 ---
 
