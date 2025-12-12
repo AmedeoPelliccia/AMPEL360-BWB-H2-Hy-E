@@ -106,7 +106,7 @@
               "properties": {
                 "filename": {
                   "type": "string",
-                  "description": "Filename (basename only, no path separators - enforced when validate_basename is true)",
+                  "description": "Filename (basename only, no path separators)",
                   "minLength": 1,
                   "pattern": "^[^/\\\\]+$"
                 },
@@ -138,7 +138,7 @@
               "properties": {
                 "filename": {
                   "type": "string",
-                  "description": "Filename (basename only, no path separators - enforced when validate_basename is true)",
+                  "description": "Filename (basename only, no path separators)",
                   "minLength": 1,
                   "pattern": "^[^/\\\\]+$"
                 },
