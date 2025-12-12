@@ -7,6 +7,7 @@ definitions for the Aircraft Baseline DPP Export v0.1 package.
 """
 
 import json
+import logging
 import sys
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -15,8 +16,14 @@ try:
     import jsonschema
     from jsonschema import Draft7Validator
 except ImportError:
-    print("ERROR: jsonschema module not found. Install with: pip install jsonschema>=4.20.0")
+    logging.error("jsonschema module not found. Install with: pip install jsonschema>=4.20.0")
     sys.exit(1)
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(message)s'
+)
 
 
 def load_json_file(filepath: Path) -> Dict:
@@ -25,10 +32,10 @@ def load_json_file(filepath: Path) -> Dict:
         with open(filepath, 'r', encoding='utf-8') as f:
             return json.load(f)
     except json.JSONDecodeError as e:
-        print(f"ERROR: Invalid JSON in {filepath}: {e}")
+        logging.error(f"Invalid JSON in {filepath}: {e}")
         sys.exit(1)
     except FileNotFoundError:
-        print(f"ERROR: File not found: {filepath}")
+        logging.error(f"File not found: {filepath}")
         sys.exit(1)
 
 
@@ -60,7 +67,12 @@ def validate_json_against_schema(
         return False, errors
     
     # Validate
-    validation_errors = list(validator.iter_errors(data))
+    try:
+        validation_errors = list(validator.iter_errors(data))
+    except (AttributeError, TypeError) as e:
+        # Catch errors that occur during validation due to malformed schema
+        errors.append(f"Error validating against schema {schema_name}: {str(e)}")
+        return False, errors
     
     if validation_errors:
         for error in validation_errors:
@@ -86,18 +98,18 @@ def main():
         ("software_bom.schema.json", "software_bom.json"),
     ]
     
-    print("=" * 70)
-    print("DPP Export v0.1 Validation")
-    print("=" * 70)
-    print()
+    logging.info("=" * 70)
+    logging.info("DPP Export v0.1 Validation")
+    logging.info("=" * 70)
+    logging.info("")
     
     # Check directories exist
     if not schemas_dir.exists():
-        print(f"ERROR: Schemas directory not found: {schemas_dir}")
+        logging.error(f"Schemas directory not found: {schemas_dir}")
         sys.exit(1)
     
     if not examples_dir.exists():
-        print(f"ERROR: Examples directory not found: {examples_dir}")
+        logging.error(f"Examples directory not found: {examples_dir}")
         sys.exit(1)
     
     all_valid = True
@@ -108,8 +120,8 @@ def main():
         schema_path = schemas_dir / schema_file
         example_path = examples_dir / example_file
         
-        print(f"Validating: {example_file}")
-        print(f"Against:    {schema_file}")
+        logging.info(f"Validating: {example_file}")
+        logging.info(f"Against:    {schema_file}")
         
         # Load files
         schema = load_json_file(schema_path)
@@ -121,40 +133,40 @@ def main():
         )
         
         if is_valid:
-            print("✓ VALID")
+            logging.info("✓ VALID")
             results.append((example_file, True, []))
         else:
-            print("✗ INVALID")
+            logging.warning("✗ INVALID")
             for error in errors:
-                print(error)
+                logging.warning(error)
             results.append((example_file, False, errors))
             all_valid = False
         
-        print()
+        logging.info("")
     
     # Print summary
-    print("=" * 70)
-    print("Validation Summary")
-    print("=" * 70)
+    logging.info("=" * 70)
+    logging.info("Validation Summary")
+    logging.info("=" * 70)
     
     valid_count = sum(1 for _, is_valid, _ in results if is_valid)
     total_count = len(results)
     
-    print(f"Total files validated: {total_count}")
-    print(f"Valid: {valid_count}")
-    print(f"Invalid: {total_count - valid_count}")
-    print()
+    logging.info(f"Total files validated: {total_count}")
+    logging.info(f"Valid: {valid_count}")
+    logging.info(f"Invalid: {total_count - valid_count}")
+    logging.info("")
     
     if all_valid:
-        print("✓ All DPP Export v0.1 examples are valid!")
+        logging.info("✓ All DPP Export v0.1 examples are valid!")
         return 0
     else:
-        print("✗ Some DPP Export v0.1 examples have validation errors.")
-        print()
-        print("Failed validations:")
+        logging.warning("✗ Some DPP Export v0.1 examples have validation errors.")
+        logging.warning("")
+        logging.warning("Failed validations:")
         for name, is_valid, errors in results:
             if not is_valid:
-                print(f"  - {name}")
+                logging.warning(f"  - {name}")
         return 1
 
 
