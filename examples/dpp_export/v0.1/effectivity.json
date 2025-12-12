@@ -1,0 +1,96 @@
+{
+  "effectivity_id": "EFF-Q100-2025-001",
+  "baseline_id": "Q100-BASELINE-001",
+  "description": "Effectivity matrix for Q100 production aircraft and variants",
+  "created_at": "2025-12-12T10:30:00Z",
+  "rules": [
+    {
+      "rule_id": "RULE-001",
+      "component_id": "PROP-61-FC-001",
+      "applicability": {
+        "msn_range": {
+          "from": 1,
+          "to": 50
+        },
+        "configurations": [
+          "STANDARD"
+        ]
+      },
+      "effective_date": "2025-01-15",
+      "modification_reference": "Initial production configuration",
+      "notes": "Standard fuel cell configuration for first 50 aircraft"
+    },
+    {
+      "rule_id": "RULE-002",
+      "component_id": "PROP-61-FC-002",
+      "applicability": {
+        "msn_range": {
+          "from": 51,
+          "to": 9999
+        },
+        "configurations": [
+          "STANDARD",
+          "EXTENDED_RANGE"
+        ]
+      },
+      "exclusions": {
+        "msn": [
+          55,
+          72
+        ],
+        "reason": "Test aircraft with experimental fuel cell variant"
+      },
+      "effective_date": "2026-06-01",
+      "modification_reference": "MOD-Q100-2026-015",
+      "notes": "Improved fuel cell with higher efficiency for later production aircraft"
+    },
+    {
+      "rule_id": "RULE-003",
+      "component_id": "AVIONIC-31-VIP-001",
+      "applicability": {
+        "tail_numbers": [
+          "D-AMPEL",
+          "F-HQTX"
+        ],
+        "configurations": [
+          "VIP"
+        ]
+      },
+      "effective_date": "2025-09-01",
+      "modification_reference": "MOD-Q100-2025-042",
+      "notes": "Enhanced avionics suite for VIP configurations only"
+    },
+    {
+      "rule_id": "RULE-004",
+      "component_id": "H2-TANK-28-EXTENDED",
+      "applicability": {
+        "production_batch": "EXTENDED-RANGE-2026",
+        "configurations": [
+          "EXTENDED_RANGE"
+        ]
+      },
+      "effective_date": "2026-03-01",
+      "modification_reference": "SB-28-005",
+      "notes": "Larger hydrogen tank for extended range variant (+500 km)"
+    },
+    {
+      "rule_id": "RULE-005",
+      "component_id": "FUSE-53-REINFORCED",
+      "applicability": {
+        "msn_range": {
+          "from": 100,
+          "to": 200
+        }
+      },
+      "exclusions": {
+        "tail_number": [
+          "G-BWBX"
+        ],
+        "reason": "Prototype aircraft with different structural design"
+      },
+      "effective_date": "2027-01-01",
+      "modification_reference": "MOD-Q100-2027-003",
+      "notes": "Reinforced fuselage structure for high-cycle operations"
+    }
+  ]
+}
