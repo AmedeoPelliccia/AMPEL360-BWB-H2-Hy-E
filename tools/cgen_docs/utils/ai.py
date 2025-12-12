@@ -70,7 +70,7 @@ def get_api_client():
     """
     openai_key = os.environ.get(OPENAI_API_KEY_VAR)
     if not openai_key:
-        logger.info("AI integration disabled (missing %s)", OPENAI_API_KEY_VAR)
+        logger.warning("AI integration disabled (missing %s)", OPENAI_API_KEY_VAR)
         return None
 
     try:
