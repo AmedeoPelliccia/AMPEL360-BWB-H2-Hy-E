@@ -52,6 +52,89 @@ logging.basicConfig(
 )
 logger = logging.getLogger("cgen_docs")
 
+# Minimum content length threshold for comprehensive documents (characters)
+MIN_COMPREHENSIVE_LENGTH = 800
+
+# Status values that indicate validated/approved documentation
+PROTECTED_STATUS_VALUES = [
+    "APPROVED",
+    "VALIDATED",
+    "RELEASED",
+    "FINAL",
+    "ACCEPTED"
+]
+
+
+def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, str]:
+    """
+    Check if a document should be protected from AI overwriting.
+    
+    A document is protected if:
+    1. It has a protected status in Document Control (highest priority)
+    2. It has substantial content (>800 chars and multiple sections)
+    3. It has minimal or no placeholders
+    
+    Args:
+        doc_text: Full text of the document
+        doc_path: Path to the document
+    
+    Returns:
+        Tuple of (is_protected, reason)
+    """
+    lines = doc_text.splitlines()
+    
+    # Check 1: Protected status in Document Control (HIGHEST PRIORITY)
+    # Documents with approved/validated status should ALWAYS be protected
+    doc_lower = doc_text.lower()
+    if "## document control" in doc_lower or "## document control" in doc_text:
+        # Check for status field
+        for line in lines:
+            line_lower = line.lower()
+            if "status" in line_lower or "**status:**" in line_lower:
+                # Check if status indicates protected/validated content
+                for status in PROTECTED_STATUS_VALUES:
+                    if status.lower() in line_lower:
+                        return True, f"document has protected status: {status}"
+    
+    # Check 2: Substantial content length
+    if len(doc_text) < MIN_COMPREHENSIVE_LENGTH:
+        return False, "document is short (not comprehensive yet)"
+    
+    # Check 3: Count sections with real content vs placeholders
+    section_count = 0
+    placeholder_count = 0
+    content_lines = 0
+    
+    for line in lines:
+        stripped = line.strip()
+        
+        # Count sections (## headers)
+        if stripped.startswith("##") and not stripped.startswith("###"):
+            section_count += 1
+        
+        # Count placeholders
+        if any(p in stripped.lower() for p in ["[to be completed]", "[cgen:", "[tbd]", "[tbr]"]):
+            placeholder_count += 1
+        
+        # Count substantive content lines (longer lines with actual content)
+        # Include bullet points as they are real content
+        if len(stripped) > 40 and not stripped.startswith("#"):
+            content_lines += 1
+    
+    # If document has many placeholders relative to sections, it's not comprehensive
+    if section_count > 0 and placeholder_count >= section_count * 0.3:
+        return False, f"document has {placeholder_count} placeholders in {section_count} sections"
+    
+    # If document lacks substantive content, it's not comprehensive
+    if content_lines < 8:
+        return False, "document lacks substantive content"
+    
+    # Check 4: If document is comprehensive (long with good content), protect it
+    if len(doc_text) > 1500 and content_lines > 15 and placeholder_count < 3:
+        return True, "document is comprehensive with minimal placeholders"
+    
+    return False, "document can be improved by CGen"
+
 
 def load_batch(batch_id: str, batches_dir: pathlib.Path) -> Dict[str, Any]:
     """Load batch configuration from YAML file.
@@ -151,6 +234,20 @@ def process_document(
         logger.error("Failed to read %s: %s", doc_path, e)
         return None
 
+    # Check if document is protected from overwriting
+    is_protected, reason = is_document_protected(original_text, doc_path)
+    if is_protected:
+        logger.info("⚠️  SKIPPING protected document: %s", doc_path.relative_to(repo_root))
+        logger.info("    Reason: %s", reason)
+        return {
+            "doc_path": str(doc_path.relative_to(repo_root)),
+            "batch_id": batch["batch_id"],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "skipped": True,
+            "skip_reason": reason,
+            "changed": False,
+        }
+
     # Load document-specific context
     doc_context = load_context_snippets(doc_path, repo_root)
 
@@ -191,6 +288,21 @@ def process_document(
     # Check for changes
     if new_text != original_text:
         result["changed"] = True
+        
+        # Quality check: prevent massive content reduction
+        orig_len = len(original_text)
+        new_len = len(new_text)
+        reduction_ratio = (orig_len - new_len) / orig_len if orig_len > 0 else 0
+        
+        # If AI output is significantly shorter, it might be replacing good content with placeholders
+        if reduction_ratio > 0.3:  # More than 30% reduction
+            logger.warning("⚠️  AI output is significantly shorter than original")
+            logger.warning("    Original: %d chars, New: %d chars (%.1f%% reduction)", 
+                          orig_len, new_len, reduction_ratio * 100)
+            logger.warning("    Forcing draft_sidecar mode to preserve original")
+            write_mode = "draft_sidecar"
+        else:
+            write_mode = batch["ai_policy"].get("write_mode", "inplace")
 
         # Write sidecar metadata
         output_config = batch.get("output", {})
@@ -198,12 +310,12 @@ def process_document(
             write_sidecar(doc_path, batch, ai_response.metadata)
 
         # Apply changes based on write mode
-        write_mode = batch["ai_policy"].get("write_mode", "inplace")
         if write_mode == "draft_sidecar":
             draft_suffix = batch["ai_policy"].get("draft_suffix", "_CGEN_DRAFT")
             draft_path = doc_path.with_suffix(f"{draft_suffix}.md")
             apply_changes(draft_path, new_text)
             result["output_path"] = str(draft_path.relative_to(repo_root))
+            logger.info("Draft saved to: %s (original preserved)", draft_path.relative_to(repo_root))
         else:
             apply_changes(doc_path, new_text)
             result["output_path"] = str(doc_path.relative_to(repo_root))
@@ -320,11 +432,17 @@ def main() -> int:
 
         # Summary
         changed = sum(1 for r in results if r.get("changed", False))
-        logger.info(
-            "Wave complete: %d documents processed, %d changed",
-            len(results),
-            changed,
-        )
+        skipped = sum(1 for r in results if r.get("skipped", False))
+        processed = len(results) - skipped
+        
+        logger.info("")
+        logger.info("="*60)
+        logger.info("Wave complete:")
+        logger.info("  Total documents: %d", len(results))
+        logger.info("  Protected/skipped: %d", skipped)
+        logger.info("  Processed: %d", processed)
+        logger.info("  Changed: %d", changed)
+        logger.info("="*60)
 
         return 0
 

@@ -81,6 +81,10 @@ jobs:
 
       # ---------------------------------------------------------
       # Run batch
+      # SAFEGUARDS:
+      # - Protected documents (comprehensive, validated) are skipped
+      # - AI output is compared to original (30%+ reduction triggers draft mode)
+      # - Batch configs use draft_sidecar mode to preserve originals
       # ---------------------------------------------------------
       - name: Run CGen Docs batch
         id: run_batch
@@ -99,6 +103,8 @@ jobs:
 
       # ---------------------------------------------------------
       # Fill CGen placeholders
+      # NOTE: Only fills actual placeholders ([To be completed], [CGEN:...])
+      # Does NOT overwrite comprehensive content
       # ---------------------------------------------------------
       - name: Fill CGen placeholders in documentation
         env:
