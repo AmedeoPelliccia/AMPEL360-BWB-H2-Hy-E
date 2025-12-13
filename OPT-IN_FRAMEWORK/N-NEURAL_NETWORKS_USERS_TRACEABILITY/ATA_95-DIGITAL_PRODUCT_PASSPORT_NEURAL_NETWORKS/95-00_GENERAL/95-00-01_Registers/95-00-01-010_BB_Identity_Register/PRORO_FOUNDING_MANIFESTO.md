@@ -83,6 +83,64 @@ Every proto-robot (BB artifact) has **seven epistemological dimensions**:
 | 7 | **Sabiduría** (Wisdom) | Learned knowledge | DT (append-only truth ledger) | DT |
 | 8 | **Evolución** (Evolution) | Controlled adaptation | AM → AM′ (governed change) | LOOP (Change Control) |
 
+```mermaid
+flowchart TD
+    %% PURPOSE & SCOPE
+    Purpose[/"PR-O-RO™: Certifiable Hybrid Artifact Epistemology"/]
+
+    %% 8 DIMENSIONS
+    subgraph "PROTO-ROBOT 8 DIMENSIONS (LIFECYCLE)"
+      direction LR
+      BODY["1. Body\n(Physical structure\nBOM, HW, etc)"] 
+      BRAIN["2. Brain\n(Embedded logic, ML\nSW, NN, etc)"]
+      DNA["3. DNA\n(Immutable baseline)"]
+      PASSPORT["4. Passport\n(Legal Identity & Claims)"]
+      EXPERIENCE["5. Experience\n(Operational Events)"]
+      MEDICAL["6. Medical Checkup\n(On-Asset Validation, OAV)"]
+      WISDOM["7. Wisdom\n(Digital Twin, Append-only Truth)"]
+      EVOLUTION["8. Evolution\n(Governed change: AM → AM′)"]
+    end
+
+    %% LIFECYCLE CIRCUIT
+    BODY --> BRAIN --> DNA --> PASSPORT --> EXPERIENCE --> MEDICAL --> WISDOM --> EVOLUTION --> BODY
+
+    %% PROPERTIES
+    IDENTITY[/"Sovereign Identity\n(BB-ID, DPP-ID)"/]
+    FALSIFIABILITY[/"Falsifiable Claims"/]
+    EMPIRICAL[/"Empirical Validation \n(OAV=truth gate)"/]
+    APPENDONLY[/"Immutable Memory\n(DT: append-only, hash-locked)"/]
+    GOVERNED[/"Governed Evolution\n(NO silent mutation)"/]
+
+    IDENTITY -- "traces to" --> DNA
+    FALSIFIABILITY -- "applies to" --> PASSPORT
+    EMPIRICAL -- "gates" --> MEDICAL
+    APPENDONLY -- "records" --> WISDOM
+    GOVERNED -- "controls" --> EVOLUTION
+
+    %% FLEET & POPULATION (right side)
+    subgraph "Fleet = Population"
+      Family["Family Baseline"]
+      Variant["Certified Variant"]
+      Instance["Unique Instance"]
+      BBart["BB Artifact"]
+      Loop["Loop Packet\n(Medical Record)"]
+    end
+    Purpose --> BODY
+    Purpose --> DNA
+    Purpose -.-> Family
+    Family --> Variant --> Instance --> BBart --> Loop
+
+    %% MANIFESTO PRINCIPLES (annotated/comment style)
+    %% Truth > Compliance, Evidence > Argument
+    %% (Not visually attached for simplicity but here to reflect doctrine)
+
+    %% STYLING (optional for clarity)
+    classDef lifecycle fill:#e5f5fd,stroke:#08306b,stroke-width:2px;
+    classDef meta fill:#fffbe5,stroke:#665c00,stroke-width:1.5px,stroke-dasharray:3 3;
+    class BODY,BRAIN,DNA,PASSPORT,EXPERIENCE,MEDICAL,WISDOM,EVOLUTION lifecycle;
+    class IDENTITY,FALSIFIABILITY,EMPIRICAL,APPENDONLY,GOVERNED meta
+```
+
 ### 2.1 Dimension 1: Cuerpo (Body)
 
 **Definition**: The physical instantiation of the artifact.
