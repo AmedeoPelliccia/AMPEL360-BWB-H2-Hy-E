@@ -165,7 +165,12 @@ def process_document(
     )
 
     # Run AI processing
-    ai_response = run_deepen_evolve_prompt(prompt, batch["ai_policy"], dry_run=dry_run)
+    ai_response = run_deepen_evolve_prompt(
+        prompt, 
+        batch["ai_policy"], 
+        dry_run=dry_run,
+        original_content=original_text
+    )
 
     if ai_response is None:
         logger.warning("AI processing returned no response for %s", doc_path)
