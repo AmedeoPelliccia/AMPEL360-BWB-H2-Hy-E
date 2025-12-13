@@ -154,36 +154,72 @@ El circuito CCert/CVal es literalmente el **ciclo de vida biológico** del proto
 
 ### 5.1 Circuito Completo
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                  CICLO DE VIDA DEL PROTO-ROBOT               │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    %% Fleet Hierarchy
+    Fleet["Fleet (Family Baseline)"]
+    Variant["Variant (Certified Adaptation)"]
+    Instance["Instance (Unique Individual)"]
+    BB["BB Artifact (Organ/system)"]
+    Loop["Loop Packets (Orgaan record)"]
 
-  NACIMIENTO              MADURACIÓN           IDENTIDAD
-     (AM)       ──────►      (DV)      ──────►   (DPP)
-      │                       │                    │
-      │ ADN definido          │ ADN validado       │ Pasaporte
-      │ Claims iniciales      │ Gate: DV PASS      │ Claims locked
-      │                       │                    │
-      ▼                       ▼                    ▼
-  
-  VIDA OPERACIONAL    VALIDACIÓN SALUD    APRENDIZAJE
-      (OM)          ◄────   (OAV)    ────►    (DT)
-      │                      │                  │
-      │ Experiencia          │ Examen médico    │ Sabiduría
-      │ Eventos reales       │ Gate: OAV PASS   │ Verdad append-only
-      │                      │                  │
-      └──────────────────────┴──────────────────┘
-                             │
-                        EVOLUCIÓN
-                          (AM′)
-                             │
-                     ┌───────┴────────┐
-                     │  CCB Approval   │
-                     │  Re-validation  │
-                     └────────┬────────┘
-                              │
-                     (Circuito completo de nuevo)
+    Fleet --> Variant
+    Variant --> Instance
+    Instance --> BB
+    BB --> Loop
+
+    %% Proto-Robot Lifecycle Circuit
+    subgraph "Cert/Circuit (Biological Lifecycle)"
+      direction LR
+      AM["AM (At-Rest Model/Birth/DNA)"]
+      DV["DV (Design Validation/Maturation)"]
+      DPP["DPP (Digital Passport/Identity)"]
+      OM["OM (Operational Mission/Experience)"]
+      OAV["OAV (On-Asset Validation/Medical)"]
+      DT["DT (Digital Twin/Wisdom)"]
+      AMp["AM′ (Evolved Model/Evolution)"]
+
+      AM --> DV
+      DV --> DPP
+      DPP --> OM
+      OM --> OAV
+      OAV --> DT
+      DT --> AMp
+      AMp -- "Full revalidation required" --> AM
+    end
+
+    %% Main Artifacts to Lifecyle
+    BB -.-> AM
+    Loop -.-> OM
+    Loop -.-> OAV
+    Loop -.-> DT
+    Loop -.-> AMp
+    DPP --- BB
+    DPP --- Loop
+
+    %% Core Properties/Principles
+    Identity["Identity: bb_id unique & immutable\n(ATAxx-BB-###, DPP ID)"]
+    Claims["Claims: DPP predictive, falsifiable"]
+    Empirical["Empirical: OAV on real asset"]
+    AppendOnly["Append-only: DT hash-locked"]
+    Governance["Governance: CCB for all evolution"]
+
+    Identity -- "Traceability" --- AM
+    Claims -- "Falsifiability" --- DPP
+    Empirical -- "Real Validation" --- OAV
+    AppendOnly -- "History" --- DT
+    Governance -- "No silent mutation" --- AMp
+
+    %% Examples
+    subgraph "Example Proto-Robots"
+      FADEC["FADEC (73-BB-001)\nEngine control organ"]
+      TANK["LH₂ Tank (28-BB-007)\nCryogenic circulatory"]
+      AI["AI Engine (95-BB-001)\nMeta-brain"]
+    end
+
+    FADEC -- "Fleet/Instance artifact" --> BB
+    TANK -- "Fleet/Instance artifact" --> BB
+    AI -- "Fleet/Instance artifact" --> BB
 ```
 
 ---
