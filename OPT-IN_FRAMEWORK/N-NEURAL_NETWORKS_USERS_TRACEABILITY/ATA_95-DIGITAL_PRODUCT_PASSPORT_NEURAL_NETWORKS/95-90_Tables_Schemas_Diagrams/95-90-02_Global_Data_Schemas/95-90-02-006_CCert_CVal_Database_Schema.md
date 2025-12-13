@@ -1,98 +1,101 @@
-# 95-90-02-006 — CCert/CVal Database Schema
+# 95-90-02-006 — CCert / CVal Database Schema
+
+**Detailed PostgreSQL & Neo4j Implementation**
+
+**Document ID**: 95-90-02-006  
+**Version**: 1.0  
+**Date**: 2025-12-13  
+**Status**: WORKING  
+**Owner**: AMPEL360 – ATA 95 Data & Certification Architecture  
+**Scope**: Global (All ATA via references)
+
+---
 
 ## 1. Purpose
 
-This document defines the **central database schema** for the AMPEL360 CCert/CVal framework. It formalizes the ontological lifecycle concepts (AM, DV, DPP, OM, OAV, DT) into concrete data models supporting both **relational (PostgreSQL)** and **graph (Neo4j)** implementations.
+This document specifies the **physical database schema** supporting the **Continuous Certification (CCert)** and **Continuous Validation (CVal)** loop:
 
-The schema serves as the backbone for tracking the continuous certification loop: AM → DV → DPP → OM → OAV → DT → AM'.
+> **AM → DV → DPP → OM → OAV → DT → AM′**
 
-## 2. Conceptual Model
+It translates the **ontological and conceptual model** defined in:
 
-### 2.1 Core Entities
+* [95-90-02-007_CCert_CVal_Core_Data_Model.md](./95-90-02-007_CCert_CVal_Core_Data_Model.md)
 
-From the [CCert/CVal Glossary](../95-90-01_Global_Reference_Taxonomies/95-90-01-005_CCert_CVal_Glossary.md), we derive these master entities:
+into:
 
-| Entity | Purpose | Key Attributes |
-|--------|---------|----------------|
-| **SYSTEM_PRODUCT** | Generic "what I am" (Q100, WTCU, FCC, NN model, dataset) | id, code, name, type, primary_ata |
-| **AM_BASELINE** | At-rest model/manual version | id, system_id, version, status, document_ref |
-| **DESIGN_VALIDATION** | Design validation evidence for AM version | id, am_id, status, report_ref, metrics |
-| **DPP_RECORD** | Sovereign identity + predictive ontology | id, dpp_id, system_id, am_id, dv_id, dpp_json |
-| **OM_EVENT** | Real operational mission instances | id, system_id, dpp_id, flight_id, om_data |
-| **OAV_CAMPAIGN** | On-aircraft validation campaign grouping | id, dpp_id, name, status, objectives, result |
-| **DT_SNAPSHOT** | Digital twin state at a point in time | id, system_id, dpp_id, oav_id, dt_state |
-| **GLOSSARY_ENTRY** | Terms, acronyms, taxonomies | id, term, full_name, category, description |
-| **ENTITY_LINK** | Explicit relationships between entities | id, from_type, from_id, to_type, to_id, relation_type |
+* **PostgreSQL** (authoritative, auditable, transactional store)
+* **Neo4j** (traceability, dependency, impact-analysis graph)
 
-### 2.2 Ontological Loop Encoding
-
-The schema encodes the complete CCert/CVal loop:
-
-```
-system_product → am_baseline → design_validation → dpp_record → 
-om_event → oav_campaign → dt_snapshot → (feedback to next am_baseline')
-```
+This schema is **certification-grade**, traceable, and designed to sustain long-lived aerospace programs.
 
 ---
 
-## 3. Relational Model (PostgreSQL)
+## 2. Architectural Principles
 
-### 3.1 Core Tables
+### 2.1 Separation of Concerns
 
-#### 3.1.1 system_product
+| Layer            | Technology | Role                               |
+| ---------------- | ---------- | ---------------------------------- |
+| Truth & Evidence | PostgreSQL | Immutable, auditable records       |
+| Traceability     | Neo4j      | Semantic and cross-ATA reasoning   |
+| Payloads         | JSONB      | Extensibility without schema churn |
+| Identity         | UUID       | Global, sovereign identifiers      |
 
-The foundational entity representing any system, component, model, or dataset.
+---
+
+### 2.2 Certification-Driven Design Rules
+
+1. **No destructive updates** on certified data
+2. **Versioned entities only** (AM, DPP, DT)
+3. **Operational truth (OM/OAV) is append-only**
+4. **Prediction ≠ Validation** (explicitly separated)
+
+---
+
+## 3. PostgreSQL Schema (Authoritative Store)
+
+### 3.1 SYSTEM_PRODUCT
 
 ```sql
 CREATE TABLE system_product (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  code VARCHAR(64) UNIQUE NOT NULL,   -- Q100, WTCU01, FCC01, FC_PitchStab_NN
+  id UUID PRIMARY KEY,
+  code VARCHAR(64) UNIQUE NOT NULL,
   name VARCHAR(256) NOT NULL,
-  type VARCHAR(64) NOT NULL,          -- aircraft, lru, nn_model, dataset, subsystem
-  primary_ata VARCHAR(16),            -- 95-20-27, 27, etc.
-  description TEXT,
-  parent_system_id UUID REFERENCES system_product(id),
-  metadata JSONB,                     -- flexible additional data
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  created_by VARCHAR(128),
-  
-  CONSTRAINT valid_type CHECK (type IN (
-    'aircraft', 'lru', 'nn_model', 'dataset', 'subsystem', 
-    'component', 'software', 'hardware', 'document'
-  ))
+  system_type VARCHAR(64) NOT NULL,
+  primary_ata VARCHAR(16),
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL
 );
 
 CREATE INDEX idx_system_product_code ON system_product(code);
-CREATE INDEX idx_system_product_type ON system_product(type);
+CREATE INDEX idx_system_product_type ON system_product(system_type);
 CREATE INDEX idx_system_product_ata ON system_product(primary_ata);
 ```
 
-**Purpose**: Central registry of all identifiable products and systems in AMPEL360.
+**Meaning**  
+Defines the *ontological subject*: aircraft, LRU, NN, dataset, platform.
+
+**Certification Rule**  
+Every system must have a unique, immutable `code` that serves as its sovereign identifier across all lifecycle stages.
 
 ---
 
-#### 3.1.2 am_baseline
-
-Static design baseline / Aircraft Manual version.
+### 3.2 AM_BASELINE (At-Rest Definition)
 
 ```sql
 CREATE TABLE am_baseline (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  system_id UUID NOT NULL REFERENCES system_product(id) ON DELETE CASCADE,
-  version VARCHAR(32) NOT NULL,       -- v1.0, v2.1-alpha, etc.
-  status VARCHAR(32) NOT NULL,        -- Draft, Approved, InReview, Retired
-  document_ref TEXT,                  -- repo path, URL, S1000D DMRef
-  document_hash VARCHAR(64),          -- SHA256 or similar for integrity
-  baseline_date DATE,
-  metadata JSONB,                     -- architecture, interfaces, limits
-  notes TEXT,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  created_by VARCHAR(128),
+  id UUID PRIMARY KEY,
+  system_id UUID NOT NULL REFERENCES system_product(id),
+  am_version VARCHAR(32) NOT NULL,
+  status VARCHAR(32) NOT NULL,
+  document_ref TEXT NOT NULL,
+  document_hash VARCHAR(64),
+  metadata JSONB,
+  created_at TIMESTAMP NOT NULL,
   
-  CONSTRAINT unique_system_version UNIQUE (system_id, version),
+  CONSTRAINT unique_system_am_version UNIQUE (system_id, am_version),
   CONSTRAINT valid_am_status CHECK (status IN (
-    'Draft', 'InReview', 'Approved', 'Retired', 'Deprecated'
+    'Draft', 'InReview', 'Approved', 'Retired', 'Superseded'
   ))
 );
 
@@ -100,24 +103,26 @@ CREATE INDEX idx_am_baseline_system ON am_baseline(system_id);
 CREATE INDEX idx_am_baseline_status ON am_baseline(status);
 ```
 
-**Purpose**: Version control for static design definitions (the "at-rest" state).
+**Certification Rule**  
+Approved AM baselines are **immutable**. Changes require a new version with complete traceability to the previous baseline.
+
+**Meaning**  
+The AM represents the static ontology: "what the system is" before it operates. It is the authoritative design definition.
 
 ---
 
-#### 3.1.3 design_validation
-
-Evidence that AM baseline has passed design validation.
+### 3.3 DESIGN_VALIDATION (DV)
 
 ```sql
 CREATE TABLE design_validation (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  am_id UUID NOT NULL REFERENCES am_baseline(id) ON DELETE CASCADE,
-  dv_status VARCHAR(32) NOT NULL,     -- Passed, ConditionallyPassed, Failed, InProgress
-  dv_report_ref TEXT,                 -- path to DV report/evidence
-  dv_metrics JSONB,                   -- {coverage: 98, completeness: 100, checks_passed: 245}
-  findings TEXT,                      -- open issues, observations
-  performed_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  performed_by VARCHAR(128),
+  id UUID PRIMARY KEY,
+  am_id UUID NOT NULL REFERENCES am_baseline(id),
+  dv_status VARCHAR(32) NOT NULL,
+  dv_report_ref TEXT,
+  dv_metrics JSONB,
+  findings TEXT,
+  validated_at TIMESTAMP NOT NULL,
+  validated_by VARCHAR(128),
   approved_by VARCHAR(128),
   approval_date DATE,
   
@@ -128,74 +133,83 @@ CREATE TABLE design_validation (
 
 CREATE INDEX idx_dv_am ON design_validation(am_id);
 CREATE INDEX idx_dv_status ON design_validation(dv_status);
+CREATE INDEX idx_dv_validated_at ON design_validation(validated_at DESC);
 ```
 
-**Purpose**: Track validation of design coherence, completeness, and certifiability.
+**Role**  
+Formal gate between *definition* (AM) and *prediction* (DPP).
+
+**Certification Rule**  
+No DPP may be generated without a passed DV. Failed or conditional DV must be resolved or waived with documented justification.
+
+**Meaning**  
+DV is the "ontological compiler" that validates design coherence, completeness, and certifiability before prediction.
 
 ---
 
-#### 3.1.4 dpp_record
-
-The Digital Product Passport - sovereign identity and predictive ontology.
+### 3.4 DPP_RECORD (Predictive Identity)
 
 ```sql
 CREATE TABLE dpp_record (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  dpp_id VARCHAR(128) UNIQUE NOT NULL, -- DPP_95-20_FC_PitchStability_v1.2
+  id UUID PRIMARY KEY,
+  dpp_uid VARCHAR(128) UNIQUE NOT NULL,
   system_id UUID NOT NULL REFERENCES system_product(id),
   am_id UUID REFERENCES am_baseline(id),
   dv_id UUID REFERENCES design_validation(id),
+  status VARCHAR(32) NOT NULL,
+  lifecycle_stage VARCHAR(32),
   primary_ata VARCHAR(16),
-  related_ata_chapters TEXT[],        -- ARRAY['27', '31', '70']
-  status VARCHAR(32) NOT NULL,        -- Draft, Certified, InService, Retired
-  lifecycle_stage VARCHAR(32),        -- Design, Testing, InService, Deprecated
-  dpp_json JSONB NOT NULL,            -- complete DPP envelope + payload
-  odd_conditions JSONB,               -- Operational Design Domain constraints
-  sbom JSONB,                         -- Software Bill of Materials
-  capabilities TEXT[],                -- declared capabilities
-  limitations TEXT[],                 -- known limitations
-  certification_basis TEXT,           -- CS-25, DO-178C DAL B, etc.
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  created_by VARCHAR(128),
-  approved_by VARCHAR(128),
-  approval_date DATE,
+  related_ata_chapters TEXT[],
+  dpp_payload JSONB NOT NULL,
+  odd_conditions JSONB,
+  certification_basis TEXT,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL,
+  certified_at TIMESTAMP,
+  certified_by VARCHAR(128),
   
   CONSTRAINT valid_dpp_status CHECK (status IN (
     'Draft', 'UnderReview', 'Certified', 'InService', 'Suspended', 'Retired'
-  ))
+  )),
+  CONSTRAINT dpp_must_have_dv CHECK (
+    status IN ('Draft', 'UnderReview') OR dv_id IS NOT NULL
+  )
 );
 
 CREATE INDEX idx_dpp_system ON dpp_record(system_id);
 CREATE INDEX idx_dpp_status ON dpp_record(status);
 CREATE INDEX idx_dpp_ata ON dpp_record(primary_ata);
-CREATE INDEX idx_dpp_json ON dpp_record USING gin(dpp_json);
+CREATE INDEX idx_dpp_payload ON dpp_record USING gin(dpp_payload);
+CREATE INDEX idx_dpp_lifecycle ON dpp_record(lifecycle_stage);
 ```
 
-**Purpose**: Authoritative digital identity declaring expected behavior and operational limits.
+**Key Concept**  
+The **DPP predicts OM**, it does not validate itself. The DPP is a promise about future behavior.
+
+**Certification Rule**  
+Certified DPPs are **immutable**. Updates require retirement and creation of a new DPP version with full traceability.
+
+**Meaning**  
+The DPP is the predictive ontology: it declares what the system *will be* when operating, establishing the expected behavior envelope.
 
 ---
 
-#### 3.1.5 om_event
-
-Operational Mission events - real-world system behavior.
+### 3.5 OM_EVENT (Ontological Mission Instance)
 
 ```sql
 CREATE TABLE om_event (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id UUID PRIMARY KEY,
   system_id UUID NOT NULL REFERENCES system_product(id),
   dpp_id UUID REFERENCES dpp_record(id),
-  context_id UUID,                    -- FK to operational_context if needed
-  flight_id VARCHAR(64),              -- tail number + flight, or campaign ID
-  mission_type VARCHAR(64),           -- test_flight, revenue_service, validation
-  timestamp_start TIMESTAMP NOT NULL,
-  timestamp_end TIMESTAMP,
+  mission_id VARCHAR(64),
+  mission_type VARCHAR(64),
+  context JSONB,
+  metrics JSONB,
+  anomalies JSONB,
+  started_at TIMESTAMP NOT NULL,
+  ended_at TIMESTAMP,
   duration_seconds INTEGER,
-  om_data JSONB,                      -- metrics, logs summary, KPIs
-  anomalies JSONB,                    -- detected deviations
-  environment JSONB,                  -- weather, altitude, config
-  notes TEXT,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  created_at TIMESTAMP NOT NULL,
   
   CONSTRAINT valid_duration CHECK (
     duration_seconds IS NULL OR duration_seconds >= 0
@@ -204,36 +218,41 @@ CREATE TABLE om_event (
 
 CREATE INDEX idx_om_system ON om_event(system_id);
 CREATE INDEX idx_om_dpp ON om_event(dpp_id);
-CREATE INDEX idx_om_flight ON om_event(flight_id);
-CREATE INDEX idx_om_timestamps ON om_event(timestamp_start, timestamp_end);
-CREATE INDEX idx_om_data ON om_event USING gin(om_data);
+CREATE INDEX idx_om_mission ON om_event(mission_id);
+CREATE INDEX idx_om_started_at ON om_event(started_at DESC);
+CREATE INDEX idx_om_metrics ON om_event USING gin(metrics);
 ```
 
-**Purpose**: Capture enacted ontology - what the system actually does in operation.
+**Rule**  
+OM is **truth manifestation**, never overwritten. Each OM_EVENT is an immutable record of reality.
+
+**Meaning**  
+OM is the enacted ontology: "what the system actually was" during a specific operational context. It is empirical truth.
+
+**Certification Significance**  
+OM events are the primary evidence for validation. They cannot be deleted or modified once recorded (append-only).
 
 ---
 
-#### 3.1.6 oav_campaign
-
-On-Aircraft Validation campaigns comparing OM reality to DPP predictions.
+### 3.6 OAV_CAMPAIGN (On-Aircraft Validation)
 
 ```sql
 CREATE TABLE oav_campaign (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id UUID PRIMARY KEY,
   dpp_id UUID NOT NULL REFERENCES dpp_record(id),
   name VARCHAR(256) NOT NULL,
-  status VARCHAR(32) NOT NULL,        -- Planned, Running, Completed, Closed
+  validation_scope TEXT,
   objectives TEXT,
-  criteria JSONB,                     -- what constitutes "validated"
-  result JSONB,                       -- {passed: true, findings: [...], metrics: {...}}
-  findings TEXT,                      -- detailed observations
-  recommendation TEXT,                -- actions, updates needed
+  acceptance_criteria JSONB,
+  result JSONB,
+  findings TEXT,
+  recommendation TEXT,
+  status VARCHAR(32) NOT NULL,
   planned_start_date DATE,
   actual_start_date DATE,
   planned_end_date DATE,
-  completed_at TIMESTAMP,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  created_by VARCHAR(128),
+  closed_at TIMESTAMP,
+  created_at TIMESTAMP NOT NULL,
   lead_engineer VARCHAR(128),
   
   CONSTRAINT valid_oav_status CHECK (status IN (
@@ -243,488 +262,218 @@ CREATE TABLE oav_campaign (
 
 CREATE INDEX idx_oav_dpp ON oav_campaign(dpp_id);
 CREATE INDEX idx_oav_status ON oav_campaign(status);
+CREATE INDEX idx_oav_created_at ON oav_campaign(created_at DESC);
 ```
 
-**Purpose**: Organize validation activities that verify DPP predictions against operational reality.
-
----
-
-#### 3.1.7 oav_event_link
-
-Links OM events to OAV campaigns (many-to-many).
+#### OM ↔ OAV Link
 
 ```sql
 CREATE TABLE oav_event_link (
   oav_id UUID NOT NULL REFERENCES oav_campaign(id) ON DELETE CASCADE,
   om_event_id UUID NOT NULL REFERENCES om_event(id) ON DELETE CASCADE,
-  relevance_score NUMERIC(3, 2),      -- 0.00 to 1.00
+  relevance_score NUMERIC(3, 2),
   notes TEXT,
-  added_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  added_at TIMESTAMP NOT NULL,
   
-  PRIMARY KEY (oav_id, om_event_id)
+  PRIMARY KEY (oav_id, om_event_id),
+  
+  CONSTRAINT valid_relevance CHECK (
+    relevance_score IS NULL OR (relevance_score >= 0.00 AND relevance_score <= 1.00)
+  )
 );
 
 CREATE INDEX idx_oav_link_oav ON oav_event_link(oav_id);
 CREATE INDEX idx_oav_link_event ON oav_event_link(om_event_id);
 ```
 
-**Purpose**: Associate operational events with validation campaigns.
+**Meaning**  
+OAV is the validation layer that compares DPP predictions against OM reality. It answers: "Did the system behave as predicted?"
+
+**Certification Rule**  
+OAV campaigns must document acceptance criteria *before* data collection begins. Post-hoc criteria changes invalidate the campaign.
 
 ---
 
-#### 3.1.8 dt_snapshot
-
-Digital Twin state snapshots accumulated from OM + OAV.
+### 3.7 DT_SNAPSHOT (Ontogenetic Digital Twin)
 
 ```sql
 CREATE TABLE dt_snapshot (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id UUID PRIMARY KEY,
   system_id UUID NOT NULL REFERENCES system_product(id),
   dpp_id UUID REFERENCES dpp_record(id),
   source_oav_id UUID REFERENCES oav_campaign(id),
-  version_tag VARCHAR(64),            -- DT_v1.3, snapshot_20250115
-  dt_state JSONB NOT NULL,            -- condensed twin state
-  performance_metrics JSONB,          -- aggregated performance data
-  health_indicators JSONB,            -- system health state
-  predictive_models JSONB,            -- trained models, coefficients
-  accumulated_hours NUMERIC(10, 2),   -- operational time
-  accumulated_cycles INTEGER,         -- operational cycles
-  confidence_level NUMERIC(3, 2),     -- 0.00 to 1.00
+  dt_version VARCHAR(64),
+  dt_state JSONB NOT NULL,
+  performance_metrics JSONB,
+  health_indicators JSONB,
+  accumulated_hours NUMERIC(10, 2),
+  accumulated_cycles INTEGER,
+  confidence_level NUMERIC(3, 2),
   notes TEXT,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  created_by VARCHAR(128)
+  created_at TIMESTAMP NOT NULL,
+  created_by VARCHAR(128),
+  
+  CONSTRAINT valid_confidence CHECK (
+    confidence_level IS NULL OR (confidence_level >= 0.00 AND confidence_level <= 1.00)
+  )
 );
 
 CREATE INDEX idx_dt_system ON dt_snapshot(system_id);
 CREATE INDEX idx_dt_dpp ON dt_snapshot(dpp_id);
 CREATE INDEX idx_dt_oav ON dt_snapshot(source_oav_id);
-CREATE INDEX idx_dt_created ON dt_snapshot(created_at DESC);
+CREATE INDEX idx_dt_created_at ON dt_snapshot(created_at DESC);
+CREATE INDEX idx_dt_confidence ON dt_snapshot(confidence_level DESC);
 ```
 
-**Purpose**: Ontogenetic accumulation - living synthesis of design + validated operation.
+**Meaning**  
+DT is **accumulated verified truth**, not simulation. It is the synthesis of design (AM/DPP) and validated operation (OM/OAV).
+
+**Certification Rule**  
+DT snapshots must reference their source OAV campaign. Unsourced or speculative twin states are not certification evidence.
+
+**Key Insight**  
+The DT is ontogenetic: it accumulates the system's operational history, learning what the system *has been*, not just what it was designed to be.
 
 ---
 
-#### 3.1.9 glossary_entry
+## 4. Neo4j Graph Model (Traceability Layer)
 
-Terms, acronyms, and taxonomy definitions.
+### 4.1 Node Types
 
-```sql
-CREATE TABLE glossary_entry (
-  id SERIAL PRIMARY KEY,
-  term VARCHAR(64) UNIQUE NOT NULL,
-  full_name VARCHAR(256),
-  category VARCHAR(64),               -- acronym, concept, process, standard, ata_chapter
-  description TEXT,
-  layer_domain VARCHAR(64),           -- Design, Operation, Validation, etc.
-  language VARCHAR(8) DEFAULT 'en',
-  related_terms TEXT[],               -- cross-references
-  source_document TEXT,               -- reference to defining document
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE INDEX idx_glossary_term ON glossary_entry(term);
-CREATE INDEX idx_glossary_category ON glossary_entry(category);
-```
-
-**Purpose**: Central glossary aligned with [95-90-01-005_CCert_CVal_Glossary.md](../95-90-01_Global_Reference_Taxonomies/95-90-01-005_CCert_CVal_Glossary.md).
+| Node     | Meaning                 | Properties                    |
+| -------- | ----------------------- | ----------------------------- |
+| `System` | Ontological subject     | code, name, type, primary_ata |
+| `AM`     | Design definition       | version, status, document_ref |
+| `DV`     | Design validation       | dv_status, validated_at       |
+| `DPP`    | Predictive passport     | dpp_uid, status, lifecycle    |
+| `OM`     | Mission realization     | mission_id, started_at        |
+| `OAV`    | Validation evidence     | name, status, result          |
+| `DT`     | Verified digital twin   | dt_version, confidence_level  |
 
 ---
 
-#### 3.1.10 entity_link
-
-Generic relationship tracking between any entities.
-
-```sql
-CREATE TABLE entity_link (
-  id SERIAL PRIMARY KEY,
-  from_type VARCHAR(32) NOT NULL,     -- am_baseline, dpp_record, om_event, etc.
-  from_id UUID NOT NULL,
-  to_type VARCHAR(32) NOT NULL,
-  to_id UUID NOT NULL,
-  relation_type VARCHAR(64) NOT NULL, -- predicts, validated_by, derived_to, updates, etc.
-  metadata JSONB,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  created_by VARCHAR(128),
-  
-  CONSTRAINT valid_entity_types CHECK (
-    from_type IN ('system_product', 'am_baseline', 'design_validation', 'dpp_record', 
-                  'om_event', 'oav_campaign', 'dt_snapshot') AND
-    to_type IN ('system_product', 'am_baseline', 'design_validation', 'dpp_record', 
-                'om_event', 'oav_campaign', 'dt_snapshot')
-  )
-);
-
-CREATE INDEX idx_entity_link_from ON entity_link(from_type, from_id);
-CREATE INDEX idx_entity_link_to ON entity_link(to_type, to_id);
-CREATE INDEX idx_entity_link_relation ON entity_link(relation_type);
-```
-
-**Purpose**: Flexible graph-like relationships within the relational model.
-
----
-
-### 3.2 Initialization Script
-
-```sql
--- Initialize glossary from CCert/CVal glossary document
-INSERT INTO glossary_entry (term, full_name, category, description, layer_domain) VALUES
-  ('AM', 'Aircraft Manual / At-Rest Model', 'acronym', 'Static ontology describing system at rest', 'Design'),
-  ('DV', 'Design Validation', 'acronym', 'Validates AM and enables DPP creation', 'Design Validation'),
-  ('DPP', 'Digital Product Passport', 'acronym', 'Predictive ontology with sovereign identity', 'Identity + Prediction'),
-  ('OM', 'Ontological Mission', 'acronym', 'Enacted ontology - real operational behavior', 'Operation'),
-  ('OAV', 'On-Aircraft Validation', 'acronym', 'Empirical truth validation against DPP', 'On-Aircraft Validation'),
-  ('DT', 'Digital Twin (Ontogenetic)', 'acronym', 'Living synthesis of design + operation', 'Digital Twin'),
-  ('CCert', 'Continuous Certification', 'acronym', 'Continuous loop keeping system certifiable', 'Certification Loop'),
-  ('CVal', 'Continuous Validation', 'acronym', 'Continuous validation from operational evidence', 'Validation Loop'),
-  ('ATA 95', 'Digital Product Passport & Neural Networks', 'ata_chapter', 'ATA chapter for DPP, NN, and AI systems', 'ATA Chapter'),
-  ('UTCS', 'Universal Traceability & Circularity Standard', 'acronym', 'Backbone for traceability and circularity', 'Traceability');
-```
-
----
-
-## 4. Graph Model (Neo4j)
-
-### 4.1 Node Labels
+### 4.2 Relationships (The Ontological Loop)
 
 ```cypher
-// Core entity nodes
-(:System {id, code, name, type, primary_ata})
-(:AM {id, version, status, document_ref})
-(:DV {id, dv_status, performed_at})
-(:DPP {id, dpp_id, status, lifecycle_stage})
-(:OMEvent {id, flight_id, timestamp_start, mission_type})
-(:OAV {id, name, status, objectives})
-(:DTSnapshot {id, version_tag, confidence_level})
-(:GlossaryTerm {term, full_name, category})
-```
-
-### 4.2 Relationship Types
-
-The ontological loop is encoded in relationships:
-
-```cypher
-// Primary CCert/CVal loop relationships
+// Primary CCert/CVal loop
 (System)-[:HAS_AM]->(AM)
 (AM)-[:VALIDATED_BY]->(DV)
 (DV)-[:GENERATES]->(DPP)
-(DPP)-[:PREDICTS]->(OMEvent)              // type-level prediction
-(OMEvent)-[:INCLUDED_IN]->(OAV)
-(OAV)-[:VALIDATES]->(DPP)
-(OAV)-[:FEEDS]->(DTSnapshot)
-(DTSnapshot)-[:UPDATES]->(AM)              // feedback loop to next AM version
+(DPP)-[:PREDICTS]->(OM)
+(OM)-[:VALIDATED_IN]->(OAV)
+(OAV)-[:FEEDS]->(DT)
+(DT)-[:UPDATES]->(AM)
 
 // Supporting relationships
 (System)-[:HAS_DPP]->(DPP)
-(System)-[:HAS_DT]->(DTSnapshot)
+(System)-[:HAS_DT]->(DT)
 (DPP)-[:BASED_ON]->(AM)
-(DPP)-[:VALIDATED_BY]->(DV)
-(OMEvent)-[:OPERATES]->(System)
-(DTSnapshot)-[:SYNTHESIZES]->(OMEvent)     // many events contribute
+(OM)-[:OPERATES]->(System)
+(DT)-[:SYNTHESIZES]->(OM)
 ```
+
+**Semantic Meaning**
+
+* `PREDICTS`: Forward-looking relationship (design to operation)
+* `VALIDATED_IN`: Backward-looking relationship (operation to validation)
+* `FEEDS`: Knowledge transfer (validation to twin)
+* `UPDATES`: Loop closure (twin to next design)
+
+---
 
 ### 4.3 Example Queries
 
-#### 4.3.1 Trace complete lifecycle for a system
+#### Query 1: Impact Analysis
+
+> *Which certified systems are invalidated if a DV rule changes?*
 
 ```cypher
-MATCH path = (s:System {code: 'FC_PitchStab_NN'})-[:HAS_AM]->(am:AM)
+MATCH (dv:DV)<-[:VALIDATED_BY]-(am:AM)<-[:HAS_AM]-(s:System)
+WHERE dv.dv_status <> 'Passed'
+RETURN s.code AS system_code, 
+       am.version AS am_version,
+       dv.dv_status AS validation_status
+ORDER BY s.code
+```
+
+#### Query 2: Traceability Path
+
+> *Show complete lifecycle for a specific DPP*
+
+```cypher
+MATCH path = (s:System)-[:HAS_AM]->(am:AM)
              -[:VALIDATED_BY]->(dv:DV)
              -[:GENERATES]->(dpp:DPP)
-             -[:PREDICTS]->(om:OMEvent)
-             -[:INCLUDED_IN]->(oav:OAV)
-             -[:FEEDS]->(dt:DTSnapshot)
+             -[:PREDICTS]->(om:OM)
+             -[:VALIDATED_IN]->(oav:OAV)
+             -[:FEEDS]->(dt:DT)
+WHERE dpp.dpp_uid = 'DPP_95-20-27_FC_PitchStability_v1.2'
 RETURN path
 ```
 
-#### 4.3.2 Find all DPPs validated by recent OAV campaigns
+#### Query 3: Dependency Analysis
+
+> *Find all systems dependent on a specific AM baseline*
 
 ```cypher
-MATCH (oav:OAV)-[:VALIDATES]->(dpp:DPP)
-WHERE oav.status = 'Completed' 
-  AND oav.completed_at > datetime() - duration({days: 90})
-RETURN dpp.dpp_id, oav.name, oav.result
-```
-
-#### 4.3.3 Identify systems needing AM updates from DT feedback
-
-```cypher
-MATCH (dt:DTSnapshot)-[:UPDATES]->(am:AM)<-[:HAS_AM]-(s:System)
-WHERE dt.confidence_level > 0.90
-  AND am.status = 'Approved'
-  AND NOT EXISTS((am)-[:SUPERSEDED_BY]->(:AM))
-RETURN s.code, am.version, dt.version_tag, dt.created_at
-ORDER BY dt.created_at DESC
+MATCH (am:AM {version: 'v2.1'})<-[:HAS_AM]-(s:System)
+OPTIONAL MATCH (s)-[:HAS_DPP]->(dpp:DPP)
+WHERE dpp.status IN ['Certified', 'InService']
+RETURN s.code, 
+       count(dpp) AS active_dpps,
+       collect(dpp.dpp_uid) AS dpp_list
 ```
 
 ---
 
-## 5. Entity-Relationship Diagram
+## 5. Data Governance Rules
 
-```
-┌──────────────────┐
-│ SYSTEM_PRODUCT   │
-│ (Q100, FCC, NN)  │
-└────────┬─────────┘
-         │
-         │ 1:N
-         ↓
-┌──────────────────┐      ┌──────────────────┐
-│  AM_BASELINE     │──1:N→│ DESIGN_VALIDATION│
-│  (static design) │←─────│  (DV evidence)   │
-└────────┬─────────┘      └──────────────────┘
-         │                          │
-         │ 1:N                      │ 1:N
-         ↓                          ↓
-┌──────────────────────────────────────────┐
-│           DPP_RECORD                      │
-│  (sovereign identity + prediction)        │
-└────────┬─────────────────────────────────┘
-         │
-         │ 1:N
-         ↓
-┌──────────────────┐      ┌──────────────────┐
-│    OM_EVENT      │──N:M→│  OAV_CAMPAIGN    │
-│ (real operation) │←─────│   (validation)   │
-└──────────────────┘      └────────┬─────────┘
-         │                         │
-         │ N:1                     │ 1:N
-         ↓                         ↓
-┌──────────────────────────────────────────┐
-│         DT_SNAPSHOT                       │
-│  (ontogenetic accumulation)               │
-│  ───────────────────────────────────────→ │
-│  (feeds back to next AM_BASELINE')        │
-└───────────────────────────────────────────┘
-
-Supporting entities:
-- GLOSSARY_ENTRY (terms/acronyms)
-- ENTITY_LINK (flexible relationships)
-```
+| Area          | Rule                                                 | Rationale                             |
+| ------------- | ---------------------------------------------------- | ------------------------------------- |
+| Certification | No UPDATE on certified DPP                           | Immutability ensures audit trail      |
+| Validation    | OM/OAV append-only                                   | Operational truth cannot be rewritten |
+| Traceability  | Every DPP must link to AM + DV                       | Prediction must be grounded in design |
+| Audit         | All timestamps mandatory                             | Complete temporal traceability        |
+| Security      | JSON payload signed externally                       | Non-repudiation of data               |
+| Versioning    | AM/DPP/DT use semantic versioning                    | Clear evolution tracking              |
+| Retention     | Retired entities never deleted, marked as Superseded | Historical record preservation        |
 
 ---
 
-## 6. Concrete Example: Flight Control Pitch Stability NN
+## 6. Alignment with ATA 95 Buckets
 
-### 6.1 System Product
-
-```sql
-INSERT INTO system_product (code, name, type, primary_ata) VALUES
-  ('FC_PitchStab_NN', 'Flight Control Pitch Stability Neural Network', 'nn_model', '95-20-27');
-```
-
-### 6.2 AM Baseline
-
-```sql
-INSERT INTO am_baseline (system_id, version, status, document_ref) VALUES
-  (
-    (SELECT id FROM system_product WHERE code = 'FC_PitchStab_NN'),
-    'v1.0',
-    'Approved',
-    'OPT-IN_FRAMEWORK/.../95-20-27-...AM_v1.0.md'
-  );
-```
-
-### 6.3 Design Validation
-
-```sql
-INSERT INTO design_validation (am_id, dv_status, dv_metrics, performed_by) VALUES
-  (
-    (SELECT id FROM am_baseline WHERE version = 'v1.0' LIMIT 1),
-    'Passed',
-    '{"coverage": 98, "completeness": 100, "checks_passed": 245}'::jsonb,
-    'DV Team Lead'
-  );
-```
-
-### 6.4 DPP Record
-
-```sql
-INSERT INTO dpp_record (dpp_id, system_id, am_id, dv_id, primary_ata, status, dpp_json) VALUES
-  (
-    'DPP_95-20-27_FC_PitchStab_v1.0',
-    (SELECT id FROM system_product WHERE code = 'FC_PitchStab_NN'),
-    (SELECT id FROM am_baseline WHERE version = 'v1.0' LIMIT 1),
-    (SELECT id FROM design_validation WHERE dv_status = 'Passed' LIMIT 1),
-    '95-20-27',
-    'Certified',
-    '{
-      "capabilities": ["pitch_rate_prediction", "stability_augmentation"],
-      "odd": {"altitude_min_m": 0, "altitude_max_m": 15000, "speed_max_mach": 0.85},
-      "model_type": "LSTM",
-      "input_dim": 12,
-      "output_dim": 3
-    }'::jsonb
-  );
-```
-
-### 6.5 OM Event (Test Flight)
-
-```sql
-INSERT INTO om_event (system_id, dpp_id, flight_id, mission_type, timestamp_start, timestamp_end, om_data) VALUES
-  (
-    (SELECT id FROM system_product WHERE code = 'FC_PitchStab_NN'),
-    (SELECT id FROM dpp_record WHERE dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0'),
-    'Q100-001-FLT-042',
-    'test_flight',
-    '2025-01-15 10:30:00',
-    '2025-01-15 12:45:00',
-    '{
-      "avg_pitch_error_deg": 0.12,
-      "max_pitch_error_deg": 0.45,
-      "stability_margin": 0.92,
-      "anomalies": []
-    }'::jsonb
-  );
-```
-
-### 6.6 OAV Campaign
-
-```sql
-INSERT INTO oav_campaign (dpp_id, name, status, objectives, result) VALUES
-  (
-    (SELECT id FROM dpp_record WHERE dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0'),
-    'FC_PitchStab_Initial_Validation_Q1_2025',
-    'Completed',
-    'Validate pitch stability NN predictions against flight test data',
-    '{
-      "passed": true,
-      "metrics": {"prediction_accuracy": 0.96, "false_positive_rate": 0.02},
-      "findings": ["Excellent performance within ODD", "Minor degradation above 12000m"]
-    }'::jsonb
-  );
-
--- Link OM event to OAV campaign
-INSERT INTO oav_event_link (oav_id, om_event_id, relevance_score) VALUES
-  (
-    (SELECT id FROM oav_campaign WHERE name = 'FC_PitchStab_Initial_Validation_Q1_2025'),
-    (SELECT id FROM om_event WHERE flight_id = 'Q100-001-FLT-042'),
-    0.95
-  );
-```
-
-### 6.7 DT Snapshot
-
-```sql
-INSERT INTO dt_snapshot (system_id, dpp_id, source_oav_id, version_tag, dt_state, confidence_level) VALUES
-  (
-    (SELECT id FROM system_product WHERE code = 'FC_PitchStab_NN'),
-    (SELECT id FROM dpp_record WHERE dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0'),
-    (SELECT id FROM oav_campaign WHERE name = 'FC_PitchStab_Initial_Validation_Q1_2025'),
-    'DT_v1.0_post_Q1_validation',
-    '{
-      "operational_envelope": {"altitude_validated_max_m": 14500},
-      "performance_drift": 0.02,
-      "recommended_recalibration_hours": 5000,
-      "health_status": "nominal"
-    }'::jsonb,
-    0.94
-  );
-```
+| Bucket           | DB Role                          | Example                         |
+| ---------------- | -------------------------------- | ------------------------------- |
+| 95-20 Subsystems | `system_product` type=subsystem  | FC_PitchStab_NN, ECS_TempCtrl   |
+| 95-30 Anchors    | Graph relationships              | Cross-ATA dependencies          |
+| 95-40 Software   | `dpp_payload.sbom`               | Software bill of materials      |
+| 95-50 Structures | Hardware references in metadata  | Structural component IDs        |
+| 95-60 Storages   | OM data stores (time-series)     | Telemetry, logs                 |
+| 95-90 Tables     | This schema definition           | The meta-schema                 |
 
 ---
 
-## 7. Query Examples
+## 7. Key Epistemological Insight
 
-### 7.1 Find all DPPs for a system with their validation status
+> **This database does not store data.  
+> It stores epistemological states of truth.**
 
-```sql
-SELECT 
-  sp.code AS system_code,
-  dpp.dpp_id,
-  dpp.status AS dpp_status,
-  dv.dv_status,
-  COUNT(DISTINCT om.id) AS om_events_count,
-  COUNT(DISTINCT oav.id) AS oav_campaigns_count
-FROM system_product sp
-JOIN dpp_record dpp ON dpp.system_id = sp.id
-LEFT JOIN design_validation dv ON dv.id = dpp.dv_id
-LEFT JOIN om_event om ON om.dpp_id = dpp.id
-LEFT JOIN oav_campaign oav ON oav.dpp_id = dpp.id
-WHERE sp.code = 'FC_PitchStab_NN'
-GROUP BY sp.code, dpp.dpp_id, dpp.status, dv.dv_status;
-```
+The schema captures:
 
-### 7.2 Trace the complete lifecycle for a DPP
+1. **Design** (AM) → What we *define* the system to be
+2. **Prediction** (DPP) → What we *expect* it will be
+3. **Reality** (OM) → What it *actually was*
+4. **Verification** (OAV) → Whether reality matched expectation
+5. **Knowledge** (DT) → What we *know* from accumulated truth
+6. **Redesign** (AM′) → Updated definition informed by knowledge
 
-```sql
-WITH lifecycle AS (
-  SELECT 
-    'AM' AS stage, am.version AS identifier, am.status, am.created_at AS timestamp
-  FROM am_baseline am
-  WHERE am.id = (SELECT am_id FROM dpp_record WHERE dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0')
-  
-  UNION ALL
-  
-  SELECT 
-    'DV' AS stage, dv.id::text AS identifier, dv.dv_status AS status, dv.performed_at AS timestamp
-  FROM design_validation dv
-  WHERE dv.id = (SELECT dv_id FROM dpp_record WHERE dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0')
-  
-  UNION ALL
-  
-  SELECT 
-    'DPP' AS stage, dpp.dpp_id AS identifier, dpp.status, dpp.created_at AS timestamp
-  FROM dpp_record dpp
-  WHERE dpp.dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0'
-  
-  UNION ALL
-  
-  SELECT 
-    'OM' AS stage, om.flight_id AS identifier, om.mission_type AS status, om.timestamp_start AS timestamp
-  FROM om_event om
-  WHERE om.dpp_id = (SELECT id FROM dpp_record WHERE dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0')
-  
-  UNION ALL
-  
-  SELECT 
-    'OAV' AS stage, oav.name AS identifier, oav.status, oav.created_at AS timestamp
-  FROM oav_campaign oav
-  WHERE oav.dpp_id = (SELECT id FROM dpp_record WHERE dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0')
-  
-  UNION ALL
-  
-  SELECT 
-    'DT' AS stage, dt.version_tag AS identifier, dt.confidence_level::text AS status, dt.created_at AS timestamp
-  FROM dt_snapshot dt
-  WHERE dt.dpp_id = (SELECT id FROM dpp_record WHERE dpp_id = 'DPP_95-20-27_FC_PitchStab_v1.0')
-)
-SELECT * FROM lifecycle ORDER BY timestamp;
-```
-
-### 7.3 Identify systems requiring AM updates based on DT feedback
-
-```sql
-SELECT 
-  sp.code,
-  am.version AS current_am_version,
-  dt.version_tag AS dt_version,
-  dt.confidence_level,
-  dt.dt_state->>'recommended_recalibration_hours' AS recalibration_hours,
-  dt.created_at AS dt_snapshot_date
-FROM dt_snapshot dt
-JOIN system_product sp ON dt.system_id = sp.id
-JOIN am_baseline am ON am.system_id = sp.id
-WHERE dt.confidence_level > 0.90
-  AND am.status = 'Approved'
-  AND dt.created_at > am.created_at
-  AND dt.dt_state ? 'recommended_recalibration_hours'
-ORDER BY dt.created_at DESC;
-```
+That is **CCert / CVal implemented as data**.
 
 ---
 
-## 8. Implementation Guidelines
+## 8. Implementation Triggers and Automation
 
-### 8.1 PostgreSQL Setup
-
-1. **Install PostgreSQL 14+** with UUID and JSONB support
-2. **Run schema creation scripts** in order:
-   - Core tables (system_product → am_baseline → ... → entity_link)
-   - Indexes
-   - Glossary initialization
-3. **Set up triggers** for `updated_at` timestamps:
+### 8.1 Timestamp Triggers
 
 ```sql
 CREATE OR REPLACE FUNCTION update_updated_at_column()
@@ -744,112 +493,80 @@ CREATE TRIGGER update_dpp_record_updated_at
   FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 ```
 
-4. **Configure backup and archival** for audit trail
+### 8.2 Certification State Enforcement
 
-### 8.2 Neo4j Setup
+```sql
+CREATE OR REPLACE FUNCTION enforce_dpp_immutability()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF OLD.status = 'Certified' AND NEW.status <> OLD.status THEN
+    RAISE EXCEPTION 'Cannot modify status of certified DPP. Create new version instead.';
+  END IF;
+  IF OLD.status = 'Certified' AND NEW.dpp_payload <> OLD.dpp_payload THEN
+    RAISE EXCEPTION 'Cannot modify payload of certified DPP. Create new version instead.';
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
 
-1. **Install Neo4j 5.x** with APOC and GDS plugins
-2. **Create constraints** for uniqueness:
-
-```cypher
-CREATE CONSTRAINT system_code_unique IF NOT EXISTS
-FOR (s:System) REQUIRE s.code IS UNIQUE;
-
-CREATE CONSTRAINT dpp_id_unique IF NOT EXISTS
-FOR (d:DPP) REQUIRE d.dpp_id IS UNIQUE;
+CREATE TRIGGER enforce_dpp_immutability_trigger
+  BEFORE UPDATE ON dpp_record
+  FOR EACH ROW EXECUTE FUNCTION enforce_dpp_immutability();
 ```
 
-3. **Import data from PostgreSQL** using Neo4j ETL or custom scripts
-4. **Create indexes** for performance:
+---
 
-```cypher
-CREATE INDEX system_type IF NOT EXISTS FOR (s:System) ON (s.type);
-CREATE INDEX dpp_status IF NOT EXISTS FOR (d:DPP) ON (d.status);
-CREATE INDEX om_flight IF NOT EXISTS FOR (o:OMEvent) ON (o.flight_id);
-```
+## 9. Cross-References
 
-### 8.3 Synchronization Strategy
+### 9.1 Related Documents
 
-- **PostgreSQL as source of truth** for transactional data
-- **Neo4j for analytics and graph queries** (read-optimized)
-- **CDC (Change Data Capture)** or scheduled ETL to sync PostgreSQL → Neo4j
-- **Event-driven updates** using message queue (e.g., Kafka, RabbitMQ)
+* [95-90-01-005 — CCert/CVal Glossary](../95-90-01_Global_Reference_Taxonomies/95-90-01-005_CCert_CVal_Glossary.md) — Terminology definitions
+* [95-90-02-007 — CCert/CVal Core Data Model](./95-90-02-007_CCert_CVal_Core_Data_Model.md) — Logical entity definitions
+* [95-00-03 — Requirements](../../95-00_GENERAL/95-00-03_Requirements/) — Traceability to requirements
+* [95-00-07 — V&V](../../95-00_GENERAL/95-00-07_V_AND_V/) — Verification and validation framework
+
+### 9.2 Standards References
+
+* **DO-178C** (Software Considerations): [RTCA DO-178C](https://www.rtca.org/)
+* **DO-254** (Hardware Design Assurance): [RTCA DO-254](https://www.rtca.org/)
+* **CS-25** (Large Aeroplanes): [EASA CS-25](https://www.easa.europa.eu/)
+* **ED-324** (AI Learning Assurance): EUROCAE ED-324
 
 ---
 
-## 9. Integration with ATA 95 Framework
+## 10. Next Logical Documents
 
-This database schema directly supports:
+Future extensions to this schema foundation:
 
-- **[95-20 Subsystems](../../95-20_Subsystems/)** - Each subsystem NN has entries in system_product, DPP, etc.
-- **[95-40 Software](../../95-40_Software/)** - Software lifecycle tracking via AM/DPP/DT
-- **[95-90-01 Taxonomies](../95-90-01_Global_Reference_Taxonomies/)** - glossary_entry table
-- **[95-90-04 Traceability](../95-90-04_Global_Traceability_Tables/)** - entity_link for UTCS compliance
+* **95-90-02-008_CCert_CVal_Query_Patterns.md**
+  * Standard query patterns for certification evidence
+  * Performance optimization strategies
+  * Example reports and dashboards
 
----
+* **95-90-02-009_CCert_CVal_Data_Governance_and_Retention.md**
+  * Data retention policies
+  * Archival strategies
+  * Compliance with regulations (GDPR, etc.)
 
-## 10. Security and Compliance
-
-### 10.1 Access Control
-
-- **Row-Level Security (RLS)** in PostgreSQL for multi-tenant or role-based access
-- **Audit logging** for all mutations (INSERT/UPDATE/DELETE)
-- **Encryption at rest** for sensitive DPP payload data
-
-### 10.2 Data Retention
-
-- **Soft deletes** preferred over hard deletes (status = 'Retired')
-- **Archival policy** for old AM versions and OM events (>5 years)
-- **GDPR/Privacy compliance** for any personal data in om_event
-
-### 10.3 Backup Strategy
-
-- **Continuous archival** (PostgreSQL WAL archiving)
-- **Point-in-time recovery** capability
-- **Geo-redundant backups** for disaster recovery
+* **95-90-02-010_CCert_CVal_API_and_Event_Model.md**
+  * RESTful API specification
+  * Event sourcing patterns
+  * Real-time data streaming
 
 ---
 
-## 11. Future Extensions
+## 11. Version History
 
-1. **Time-series optimization** - Consider TimescaleDB extension for om_event
-2. **Vector search** - Add pgvector for NN embedding searches
-3. **Blockchain integration** - Immutable DPP versions via distributed ledger
-4. **ML model versioning** - Extend dt_snapshot with MLflow-style model registry
-5. **Real-time streaming** - Kafka Connect for live OM event ingestion
+| Version | Date       | Author                              | Changes                                         |
+| ------- | ---------- | ----------------------------------- | ----------------------------------------------- |
+| 1.0     | 2025-12-13 | AMPEL360 ATA 95 Data Architecture   | Initial formal baseline specification           |
 
 ---
 
-## 12. Cross-References
-
-### 12.1 Related Documents
-
-- [95-90-01-005 — CCert/CVal Glossary](../95-90-01_Global_Reference_Taxonomies/95-90-01-005_CCert_CVal_Glossary.md) (terminology source)
-- [95-90-04 — Global Traceability Tables](../95-90-04_Global_Traceability_Tables/) (UTCS implementation)
-- [95-40 — Software Lifecycle](../../95-40_Software/) (software DPP tracking)
-- [AM_Q100.json](../../../../../../examples/am_aircraft_model/AM_Q100.json) (example AM artifact)
-
-### 12.2 Standards References
-
-- **DO-178C** (Software): [RTCA DO-178C](https://www.rtca.org/content/standards-guidance-materials)
-- **ED-324** (AI Trustworthiness): EUROCAE ED-324 (Learning Assurance)
-- **ISO 19650** (BIM/Digital Twins): [ISO 19650 Series](https://www.iso.org/standard/68078.html)
-- **ATA iSpec 2200**: [ATA Specifications](https://www.ata.org/resources/specifications)
-
----
-
-## 13. Version History
-
-| Version | Date       | Author         | Changes                                  |
-|---------|------------|----------------|------------------------------------------|
-| 1.0     | 2025-12-13 | GitHub Copilot | Initial database schema definition       |
-
----
-
-## 14. Document Control
+## 12. Document Control
 
 - Generated by: AI (prompted by Amedeo Pelliccia); pending approval by [Approver]
-- **Status**: DRAFT – Subject to human review and DBA approval
+- **Status**: WORKING – Subject to formal review and DBA approval
 - **Repository**: `AMPEL360-BWB-H2-Hy-E`
 - **Standard**: OPT-IN Framework v1.2
 - **ATA Chapter**: 95 (Digital Product Passport and Neural Networks)
@@ -858,16 +575,24 @@ This database schema directly supports:
 - **Document ID**: 95-90-02-006
 - **Last AI update**: 2025-12-13
 - **Target DBMS**: PostgreSQL 14+, Neo4j 5.x
+- **Certification Grade**: Yes
+- **Baseline Candidate**: Yes
 
 ---
 
-## 15. Notes
+## 13. Final Note
 
-This schema is the **operational backbone** of the AMPEL360 CCert/CVal framework. It transforms the conceptual ontological loop (AM → DV → DPP → OM → OAV → DT → AM') into concrete, queryable data structures.
+This is not infrastructure.  
+**This is epistemological architecture.**
 
-**Key principle**: The database IS the living embodiment of continuous certification—every insert, update, and query reflects the system's ontogenesis from design through operation to validated twin.
+The difference:
 
-For implementation questions, contact the AMPEL360 Data Architecture Working Group or Database Administration team.
+* Infrastructure stores *what happened*.
+* Epistemology stores *how we know what happened*.
+
+The CCert/CVal database is the latter.
+
+It is the **canonical record of certification as a continuous process of knowing**, not a one-time event of approving.
 
 ---
 
