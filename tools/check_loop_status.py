@@ -14,6 +14,9 @@ import csv
 import sys
 from pathlib import Path
 
+# Import shared utilities
+from loop_packet_utils import get_repo_paths, compute_next_step
+
 
 def load_register(register_path):
     """Load the BB Identity Register CSV."""
@@ -67,24 +70,10 @@ def check_artifact_status(artifact, loops_base):
     om_status = artifact.get('om_status', 'NOT_DEFINED')
     oav_status = artifact.get('oav_status', 'NOT_STARTED')
     
-    if am_status == 'NOT_STARTED':
-        status['next_action'] = "Write AM (At-Rest Model) first"
-        status['next_gate'] = "DV"
-    elif dv_status not in ['PASSED', 'APPROVED']:
-        status['next_action'] = "Complete DV and mark DV gate"
-        status['next_gate'] = "DV"
-    elif dpp_status == 'NOT_ISSUED' and dv_status in ['PASSED', 'APPROVED']:
-        status['next_action'] = "Issue DPP (locked identity + claims)"
-        status['next_gate'] = "OAV"
-    elif om_status == 'NOT_DEFINED':
-        status['next_action'] = "Author OM (what DPP predicts operationally)"
-        status['next_gate'] = "OAV"
-    elif oav_status not in ['PASSED', 'APPROVED']:
-        status['next_action'] = "Define/Execute OAV (asset context truth validation)"
-        status['next_gate'] = "OAV"
-    else:
-        status['next_action'] = "Append DT snapshot and propose AM′ (change-controlled update)"
-        status['next_gate'] = "COMPLETE"
+    # Use shared deterministic rule
+    status['next_gate'], status['next_action'] = compute_next_step(
+        am_status, dv_status, dpp_status, om_status, oav_status
+    )
     
     # Validate next_gate consistency
     register_next_gate = artifact.get('next_gate', '')
@@ -183,18 +172,19 @@ Examples:
     parser.add_argument('--summary', action='store_true', help='Show summary of all artifacts')
     parser.add_argument('--validate', action='store_true', help='Validate consistency')
     parser.add_argument('--verbose', action='store_true', help='Show detailed file status')
+    parser.add_argument('--register-path', help='Path to register CSV (optional)')
     
     args = parser.parse_args()
     
-    # Determine paths
-    script_dir = Path(__file__).parent
-    repo_root = script_dir.parent
-    register_base = repo_root / "OPT-IN_FRAMEWORK" / "N-NEURAL_NETWORKS_USERS_TRACEABILITY" / \
-                    "ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS" / "95-00_GENERAL" / \
-                    "95-00-01_Registers" / "95-00-01-010_BB_Identity_Register"
+    # Get paths
+    paths = get_repo_paths(Path(__file__).parent)
     
-    register_path = register_base / "ASSETS" / "95-00-01-010-A-001_BodyBrain_Identity_Register.csv"
-    loops_base = register_base / "LOOPS"
+    if args.register_path:
+        register_path = Path(args.register_path)
+    else:
+        register_path = paths['register_path']
+    
+    loops_base = paths['loops_base']
     
     # Check if register exists
     if not register_path.exists():
