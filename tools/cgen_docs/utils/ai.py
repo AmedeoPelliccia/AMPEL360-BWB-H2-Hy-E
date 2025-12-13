@@ -215,7 +215,8 @@ def _mock_response(prompt: str, ai_policy: Dict[str, Any], original_content: Opt
     logger.info("[MOCK] Returning simulated AI response.")
     logger.debug("[MOCK] Prompt length: %d chars", len(prompt))
 
-    # If we have original content (non-empty), preserve it instead of using a placeholder
+    # Check if original content has non-whitespace characters; if so, preserve the original
+    # (including any leading/trailing whitespace) instead of using a placeholder
     stripped_content = original_content.strip() if original_content else ""
     if stripped_content:
         content = original_content
