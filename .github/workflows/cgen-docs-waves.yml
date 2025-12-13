@@ -96,12 +96,13 @@ jobs:
           mkdir -p .genccc/{issues,logs,out}
           
           # Initialize chain state JSON
-          cat > .genccc/chain_state.json <<'JSON'
+          TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          cat > .genccc/chain_state.json <<EOF
           {
             "version": "1.0",
             "run_id": "${{ github.run_number }}",
             "batch_id": "${{ steps.batch.outputs.batch_id }}",
-            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "timestamp": "${TIMESTAMP}",
             "artifacts": [],
             "summary": {
               "total": 0,
@@ -119,7 +120,7 @@ jobs:
             "proposals": [],
             "final_graph": null
           }
-          JSON
+          EOF
           
           echo "Chain state initialized at .genccc/chain_state.json"
 

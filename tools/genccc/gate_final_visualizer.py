@@ -223,11 +223,27 @@ def generate_svg_visualization(analysis: Dict[str, Any]) -> str:
     height = 600
     margin = 50
     
-    # Calculate percentages
+    # Calculate percentages with bounds checking
     total = analysis["total_artifacts"]
-    healthy_pct = len(analysis["healthy_artifacts"]) / max(total, 1) * 100
-    warning_pct = len(analysis["warning_artifacts"]) / max(total, 1) * 100
-    error_pct = len(analysis["error_artifacts"]) / max(total, 1) * 100
+    if total == 0:
+        healthy_pct = warning_pct = error_pct = 0
+    else:
+        healthy_pct = len(analysis["healthy_artifacts"]) / total * 100
+        warning_pct = len(analysis["warning_artifacts"]) / total * 100
+        error_pct = len(analysis["error_artifacts"]) / total * 100
+        
+        # Normalize to ensure total = 100% (handle rounding errors)
+        total_pct = healthy_pct + warning_pct + error_pct
+        if total_pct > 0:
+            healthy_pct = (healthy_pct / total_pct) * 100
+            warning_pct = (warning_pct / total_pct) * 100
+            error_pct = (error_pct / total_pct) * 100
+    
+    # Bar widths (max 600px total to fit within chart area)
+    max_bar_width = 600
+    healthy_width = (healthy_pct / 100) * max_bar_width
+    warning_width = (warning_pct / 100) * max_bar_width
+    error_width = (error_pct / 100) * max_bar_width
     
     svg_lines = [
         f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">',
@@ -265,16 +281,16 @@ def generate_svg_visualization(analysis: Dict[str, Any]) -> str:
         '    <text x="0" y="0" font-size="16" font-weight="bold" fill="#333">Artifact Health Distribution</text>',
         '',
         f'    <!-- Healthy bar -->',
-        f'    <rect x="0" y="20" width="{healthy_pct * 6}" height="40" fill="#28a745"/>',
+        f'    <rect x="0" y="20" width="{healthy_width}" height="40" fill="#28a745"/>',
         f'    <text x="5" y="45" font-size="14" fill="white" font-weight="bold">{healthy_pct:.1f}% Healthy</text>',
         '',
         f'    <!-- Warning bar -->',
-        f'    <rect x="{healthy_pct * 6}" y="20" width="{warning_pct * 6}" height="40" fill="#ffc107"/>',
-        f'    <text x="{healthy_pct * 6 + 5}" y="45" font-size="14" fill="#333" font-weight="bold">{warning_pct:.1f}% Warnings</text>',
+        f'    <rect x="{healthy_width}" y="20" width="{warning_width}" height="40" fill="#ffc107"/>',
+        f'    <text x="{healthy_width + 5}" y="45" font-size="14" fill="#333" font-weight="bold">{warning_pct:.1f}% Warnings</text>',
         '',
         f'    <!-- Error bar -->',
-        f'    <rect x="{(healthy_pct + warning_pct) * 6}" y="20" width="{error_pct * 6}" height="40" fill="#dc3545"/>',
-        f'    <text x="{(healthy_pct + warning_pct) * 6 + 5}" y="45" font-size="14" fill="white" font-weight="bold">{error_pct:.1f}% Errors</text>',
+        f'    <rect x="{healthy_width + warning_width}" y="20" width="{error_width}" height="40" fill="#dc3545"/>',
+        f'    <text x="{healthy_width + warning_width + 5}" y="45" font-size="14" fill="white" font-weight="bold">{error_pct:.1f}% Errors</text>',
         '',
         f'    <!-- Counts -->',
         f'    <text x="0" y="80" font-size="12" fill="#333">Healthy: {len(analysis["healthy_artifacts"])}</text>',

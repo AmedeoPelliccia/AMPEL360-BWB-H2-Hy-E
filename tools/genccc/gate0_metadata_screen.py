@@ -269,9 +269,10 @@ def extract_axis_from_path(file_path: pathlib.Path) -> Optional[str]:
     path_str = str(file_path)
     
     # Pattern: OPT-IN_FRAMEWORK/{AXIS}-{NAME}/...
+    # Match full axis names: O, P, T, I, N
     axis_patterns = [
-        r"OPT-IN_FRAMEWORK/([OPTIN])-",
-        r"/([OPTIN])-[A-Z_]+/",
+        r"OPT-IN_FRAMEWORK/(O|P|T|I|N)-",
+        r"/(O|P|T|I|N)-[A-Z_]+/",
     ]
     
     for pattern in axis_patterns:
