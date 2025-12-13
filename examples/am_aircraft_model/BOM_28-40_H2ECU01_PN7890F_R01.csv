@@ -31,7 +31,7 @@ PN7890F-029,Cable Assembly - Thermocouple Array,2,ea,AMPEL360 Harnesses,AMPEL360
 PN7890F-030,Cable Assembly - Pressure Transducers,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.380,critical,12,620,8-channel high-pressure rated
 PN7890F-031,Cable Assembly - Flow Meters,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.280,critical,12,540,4-channel Coriolis meter interface
 PN7890F-032,Cable Assembly - H2 Leak Sensors,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.650,critical,12,780,12-sensor array wiring
-PN7890F-033,Cable Assembly - Emergency Shutdown,1,ea,AMPEL360 Harnesses,AMPEL380 Manufacturing,0.220,critical,10,420,Triple-redundant safety circuit
+PN7890F-033,Cable Assembly - Emergency Shutdown,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.220,critical,10,420,Triple-redundant safety circuit
 PN7890F-034,Firmware Package v1.2.0,1,ea,AMPEL360 Software,Internal,0.000,critical,0,0,Embedded in IMAGE_28-40_H2ECU01_SWPN6789_v1.2
 PN7890F-035,Serialized Data Plate - Hydrogen Safe,1,ea,AMPEL360 Manufacturing,Internal,0.010,normal,3,15,Laser-engraved stainless steel
 PN7890F-036,Safety Critical Software Evidence Package,1,set,AMPEL360 Software,Internal,0.000,critical,0,0,DO-178C DAL-A documentation

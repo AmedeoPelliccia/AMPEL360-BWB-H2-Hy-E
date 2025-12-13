@@ -68,7 +68,7 @@
     "image_file": "IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.bin",
     "image_version": "2.0.1",
     "image_size_bytes": 16777216,
-    "image_checksum_sha256": "d4e5f67890123456789012345678901cdefg1234567890abcdef45678901",
+    "image_checksum_sha256": "d4e5f67890abcdef123456789012345678abcdef1234567890abcdef456789",
     "sbom_file": "SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.spdx.json",
     "software_characteristics": {
       "programming_languages": ["C", "C++", "VHDL"],

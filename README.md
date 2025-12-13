@@ -317,11 +317,11 @@ flowchart TD
 | **Aircraft Model** | `AM_{MODEL_ID}` | `AM_Q100`, `AM_Q80`, `AM_Q120` |
 | **Aircraft Maintenance Manual** | `AMM_AM_{MODEL}_{REV}_{LANG}` | `AMM_AM_Q100_R01_EN.pdf` |
 | **Software Config Index** | `SWCFG_AM_{MODEL}_Loadable_Software_Index_v{VER}` | `SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json` |
-| **Component Maintenance Manual** | `CMM_{ATA}_{LRU}_{PN}_{REV}` | `CMM_27-60_FCPC01_PN1234A_R03.pdf` |
-| **Bill of Materials** | `BOM_{ATA}_{LRU}_{PN}_{REV}.csv` | `BOM_27-60_FCPC01_PN1234A_R03.csv` |
-| **Software Image** | `IMAGE_{ATA}_{LRU}_{SWPN}_v{VER}` | `IMAGE_27-60_FCPC01_SWPN9876_v2.1.bin` |
-| **Software BOM** | `SBOM_IMAGE_{ATA}_{LRU}_{SWPN}_v{VER}.spdx.json` | `SBOM_IMAGE_27-60_FCPC01_SWPN9876_v2.1.spdx.json` |
-| **Digital Product Passport** | `DPP_{ATA}_{LRU}_{PN}_v{VER}` | `DPP_27-60_FCPC01_PN1234A_v1.0.json` |
+| **Component Maintenance Manual** | `CMM_{ATA}_{LRU}_{PN}_{REV}` | `CMM_34-20_CAMCTL01_PN4567D_R02.pdf` |
+| **Bill of Materials** | `BOM_{ATA}_{LRU}_{PN}_{REV}.csv` | `BOM_34-20_CAMCTL01_PN4567D_R02.csv` |
+| **Software Image** | `IMAGE_{ATA}_{LRU}_{SWPN}_v{VER}` | `IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.bin` |
+| **Software BOM** | `SBOM_IMAGE_{ATA}_{LRU}_{SWPN}_v{VER}.spdx.json` | `SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.spdx.json` |
+| **Digital Product Passport** | `DPP_{ATA}_{LRU}_{PN}_v{VER}` | `DPP_34-20_CAMCTL01_PN4567D_v1.0.json` |
 
 ### Aircraft Family Members
 

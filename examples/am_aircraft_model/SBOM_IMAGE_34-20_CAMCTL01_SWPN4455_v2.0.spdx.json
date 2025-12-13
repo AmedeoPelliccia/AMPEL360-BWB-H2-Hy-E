@@ -28,7 +28,7 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "d4e5f67890123456789012345678901cdefg1234567890abcdef45678901"
+          "checksumValue": "d4e5f67890abcdef123456789012345678abcdef1234567890abcdef456789"
         }
       ],
       "licenseConcluded": "NOASSERTION",

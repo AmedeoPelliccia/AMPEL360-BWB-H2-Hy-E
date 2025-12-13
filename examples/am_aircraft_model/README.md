@@ -4,7 +4,7 @@ This directory contains complete reference examples of the **AM (Aircraft Model 
 
 ## Overview
 
-**AM** is the canonical top-level technical identity for the aircraft. Everything else (AMM, SWCFG, CMM, DPP, etc.) references **AM_Q100** as the parent.
+**AM** (Aircraft Model / Aircraft Master) is the canonical top-level technical identity for the aircraft. Everything else (AMM, SWCFG, CMM, DPP, etc.) references **AM_Q100** as the parent.
 
 ```
 AM_Q100 (Aircraft Model Q100)

@@ -21,7 +21,7 @@
       "size_bytes": 8388608,
       "load_address": "0x80000000",
       "checksum_crc32": "0xABCD1234",
-      "checksum_sha256": "d4e5f67890123456789012345678901cdefg1234567890abcdef45678901"
+      "checksum_sha256": "d4e5f67890abcdef123456789012345678abcdef1234567890abcdef456789"
     },
     {
       "filename": "camctl_boot.bin",
