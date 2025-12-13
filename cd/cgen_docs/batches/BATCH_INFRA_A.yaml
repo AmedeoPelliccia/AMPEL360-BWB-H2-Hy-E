@@ -70,7 +70,7 @@ ai_policy:
   max_output_tokens: 8000
   temperature: 0.2
   require_human_review: true
-  write_mode: "inplace"
+  write_mode: "draft_sidecar"  # Changed from "inplace" to protect validated docs
   draft_suffix: "_CGEN_DRAFT"
 
 output:
