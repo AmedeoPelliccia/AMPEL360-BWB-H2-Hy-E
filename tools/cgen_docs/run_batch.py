@@ -53,7 +53,12 @@ logging.basicConfig(
 logger = logging.getLogger("cgen_docs")
 
 # Minimum content length threshold for comprehensive documents (characters)
+# Documents below this length are considered "short" and not comprehensive
 MIN_COMPREHENSIVE_LENGTH = 800
+
+# Threshold for automatic comprehensive protection (used in Check 4)
+# Documents above this length with good content are automatically protected
+COMPREHENSIVE_PROTECTION_LENGTH = 1500
 
 # Status values that indicate validated/approved documentation
 PROTECTED_STATUS_VALUES = [
@@ -70,9 +75,10 @@ def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, 
     Check if a document should be protected from AI overwriting.
     
     A document is protected if:
-    1. It has a protected status in Document Control (highest priority)
-    2. It has substantial content (>800 chars and multiple sections)
-    3. It has minimal or no placeholders
+    1. It has a protected status in Document Control (APPROVED, VALIDATED, etc.) - HIGHEST PRIORITY
+    2. It has substantial content (>800 chars minimum to be considered)
+    3. It is comprehensive (>1500 chars, >15 content lines, <3 placeholders)
+    4. It has minimal placeholders relative to sections (<30%)
     
     Args:
         doc_text: Full text of the document
@@ -86,7 +92,7 @@ def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, 
     # Check 1: Protected status in Document Control (HIGHEST PRIORITY)
     # Documents with approved/validated status should ALWAYS be protected
     doc_lower = doc_text.lower()
-    if "## document control" in doc_lower or "## document control" in doc_text:
+    if "## document control" in doc_lower:
         # Check for status field
         for line in lines:
             line_lower = line.lower()
@@ -130,7 +136,7 @@ def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, 
         return False, "document lacks substantive content"
     
     # Check 4: If document is comprehensive (long with good content), protect it
-    if len(doc_text) > 1500 and content_lines > 15 and placeholder_count < 3:
+    if len(doc_text) > COMPREHENSIVE_PROTECTION_LENGTH and content_lines > 15 and placeholder_count < 3:
         return True, "document is comprehensive with minimal placeholders"
     
     return False, "document can be improved by CGen"
