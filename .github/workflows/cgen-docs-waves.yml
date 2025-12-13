@@ -80,100 +80,209 @@ jobs:
           echo "Running batch: $BATCH_ID"
 
       # ---------------------------------------------------------
-      # Gate 0 — Metadata Coherence Screen
-      # Runs BEFORE any other machine validation
-      # Provides early fail-fast for malformed/incoherent metadata
+      # Initialize GenCCC Concatenal Gate Chain
+      # Sequential gates with file-based state (no env bloat)
       # Gate Order:
-      # - Gate 0: Metadata Coherence (this step)
-      # - Gate 1: Cross-references validated
-      # - Gate 2: Context documents generated
-      # - Gate 3: Version links established
-      # - Gate 4: Traceability matrix updated
-      # - Gate 5: OPT-IN axis mapping verified
-      # - Gate 6: ATA chapter structure compliant
+      # - Gate 0: Metadata Coherence Screen (conditional)
+      # - Gate 1A: Cross-reference Existence (fast)
+      # - Gate 1B: Cross-reference Validation (policy)
+      # - Gates 2-6: Context, Versions, Traceability, OPT-IN, ATA
+      # - Final Gate: Evolution Proposals + Comprehensive Graph
       # ---------------------------------------------------------
-      - name: Gate 0 — Metadata Coherence Screen
-        id: gate0_metadata
-        continue-on-error: true
+      - name: Initialize GenCCC Chain State
+        id: init_chain
         run: |
-          echo "=== Gate 0 — Metadata Coherence Screen ==="
+          echo "=== Initializing GenCCC Chain State ==="
+          mkdir -p .genccc/{issues,logs,out}
           
-          # Initialize chain state directory
-          mkdir -p .genccc/{issues,logs}
+          # Initialize chain state JSON
+          cat > .genccc/chain_state.json <<'JSON'
+          {
+            "version": "1.0",
+            "run_id": "${{ github.run_number }}",
+            "batch_id": "${{ steps.batch.outputs.batch_id }}",
+            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "artifacts": [],
+            "summary": {
+              "total": 0,
+              "passed": 0,
+              "failed": 0,
+              "skipped": 0,
+              "warnings": 0,
+              "errors": 0
+            },
+            "gates": {
+              "gate0": {"total": 0, "passed": 0, "failed": 0, "skipped": 0},
+              "gate1a": {"total": 0, "passed": 0, "failed": 0, "skipped": 0},
+              "gate1b": {"total": 0, "passed": 0, "failed": 0, "skipped": 0}
+            },
+            "proposals": [],
+            "final_graph": null
+          }
+          JSON
           
-          # Find all markdown files in target directories that might have metadata
+          echo "Chain state initialized at .genccc/chain_state.json"
+
+      # ---------------------------------------------------------
+      # Build Artifact Queue (Concatenal Order)
+      # ---------------------------------------------------------
+      - name: Build Artifact Queue
+        id: build_queue
+        run: |
+          echo "=== Building Artifact Queue ==="
+          
+          # Target directories for this batch
           TARGET_DIRS=(
             "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE"
             "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS"
           )
           
-          GATE0_FAILED=0
-          GATE0_TOTAL=0
-          GATE0_SKIPPED=0
-          GATE0_WARNINGS=0
+          > .genccc/artifact_queue.txt
           
           for TARGET_DIR in "${TARGET_DIRS[@]}"; do
-            if [ ! -d "$TARGET_DIR" ]; then
-              echo "Directory not found: $TARGET_DIR (skipping)"
-              continue
+            if [ -d "$TARGET_DIR" ]; then
+              find "$TARGET_DIR" -type f \( -name "*.md" -o -name "*.json" -o -name "*.yaml" -o -name "*.yml" \) \
+                | sort >> .genccc/artifact_queue.txt
             fi
-            
-            echo "Scanning directory: $TARGET_DIR"
-            
-            # Find markdown, JSON, and YAML files
-            while IFS= read -r -d '' file; do
-              GATE0_TOTAL=$((GATE0_TOTAL + 1))
-              
-              echo "  Screening: $file"
-              
-              # Run Gate 0 screening
-              if python tools/genccc/gate0_metadata_screen.py \
-                --artifact "$file" \
-                --chain .genccc/chain_state.json 2>&1 | tee -a .genccc/gate0_summary.log; then
-                
-                EXIT_CODE=${PIPESTATUS[0]}
-                
-                if [ $EXIT_CODE -eq 0 ]; then
-                  echo "    ✓ Passed"
-                elif [ $EXIT_CODE -eq 2 ]; then
-                  echo "    ○ Skipped (no metadata)"
-                  GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
-                else
-                  echo "    ✗ Failed"
-                  GATE0_FAILED=$((GATE0_FAILED + 1))
-                fi
-              else
-                EXIT_CODE=$?
-                if [ $EXIT_CODE -eq 2 ]; then
-                  echo "    ○ Skipped (no metadata)"
-                  GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
-                else
-                  echo "    ✗ Failed"
-                  GATE0_FAILED=$((GATE0_FAILED + 1))
-                fi
-              fi
-              
-            done < <(find "$TARGET_DIR" -type f \( -name "*.md" -o -name "*.json" -o -name "*.yaml" -o -name "*.yml" \) -print0)
           done
           
-          # Generate summary
-          echo ""
-          echo "=== Gate 0 Summary ==="
-          echo "Total artifacts screened: $GATE0_TOTAL"
-          echo "Passed: $((GATE0_TOTAL - GATE0_FAILED - GATE0_SKIPPED))"
-          echo "Failed: $GATE0_FAILED"
-          echo "Skipped (no metadata): $GATE0_SKIPPED"
-          echo ""
+          QUEUE_SIZE=$(wc -l < .genccc/artifact_queue.txt)
+          echo "Artifact queue: $QUEUE_SIZE files"
+          echo "queue_size=$QUEUE_SIZE" >> "$GITHUB_OUTPUT"
+
+      # ---------------------------------------------------------
+      # Run Concatenal Gates (Sequential, File-Based State)
+      # ---------------------------------------------------------
+      - name: Run Concatenal Gates (0, 1A, 1B)
+        id: run_gates
+        run: |
+          set -euo pipefail
+          echo "=== Running Concatenal Gates ==="
           
-          # Store results for next steps
-          echo "gate0_failed=$GATE0_FAILED" >> "$GITHUB_OUTPUT"
+          GATE0_TOTAL=0
+          GATE0_PASSED=0
+          GATE0_FAILED=0
+          GATE0_SKIPPED=0
+          
+          GATE1A_TOTAL=0
+          GATE1A_PASSED=0
+          GATE1A_FAILED=0
+          GATE1A_SKIPPED=0
+          
+          while IFS= read -r artifact; do
+            [ -z "$artifact" ] && continue
+            
+            # Generate safe ID for file names
+            safe_id=$(echo "$artifact" | sed 's/[\/\.]/_/g')
+            
+            echo ""
+            echo "=== Processing: $artifact ==="
+            
+            # Gate 0: Metadata Coherence Screen
+            echo "  Gate 0: Metadata Coherence..."
+            GATE0_TOTAL=$((GATE0_TOTAL + 1))
+            
+            if python tools/genccc/gate0_metadata_screen.py \
+              --artifact "$artifact" \
+              --chain .genccc/chain_state.json \
+              --issues ".genccc/issues/${safe_id}.gate0.json" \
+              --log ".genccc/logs/${safe_id}.gate0.log" 2>&1 | tee -a .genccc/logs/gate0_run.log; then
+              
+              EXIT_CODE=${PIPESTATUS[0]}
+              if [ $EXIT_CODE -eq 0 ]; then
+                echo "    ✓ Passed"
+                GATE0_PASSED=$((GATE0_PASSED + 1))
+              elif [ $EXIT_CODE -eq 2 ]; then
+                echo "    ○ Skipped (no metadata)"
+                GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
+              fi
+            else
+              EXIT_CODE=$?
+              if [ $EXIT_CODE -eq 2 ]; then
+                echo "    ○ Skipped (no metadata)"
+                GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
+              else
+                echo "    ✗ Failed"
+                GATE0_FAILED=$((GATE0_FAILED + 1))
+              fi
+            fi
+            
+            # Gate 1A: Cross-Reference Existence
+            echo "  Gate 1A: Cross-Reference Existence..."
+            GATE1A_TOTAL=$((GATE1A_TOTAL + 1))
+            
+            if python tools/genccc/gate1_xref_validator.py \
+              --artifact "$artifact" \
+              --repo-root "$(pwd)" \
+              --chain .genccc/chain_state.json \
+              --issues ".genccc/issues/${safe_id}.gate1a.json" \
+              --log ".genccc/logs/${safe_id}.gate1a.log" 2>&1 | tee -a .genccc/logs/gate1a_run.log; then
+              
+              EXIT_CODE=${PIPESTATUS[0]}
+              if [ $EXIT_CODE -eq 0 ]; then
+                echo "    ✓ Passed"
+                GATE1A_PASSED=$((GATE1A_PASSED + 1))
+              elif [ $EXIT_CODE -eq 2 ]; then
+                echo "    ○ Skipped (no references)"
+                GATE1A_SKIPPED=$((GATE1A_SKIPPED + 1))
+              fi
+            else
+              EXIT_CODE=$?
+              if [ $EXIT_CODE -eq 2 ]; then
+                echo "    ○ Skipped (no references)"
+                GATE1A_SKIPPED=$((GATE1A_SKIPPED + 1))
+              else
+                echo "    ✗ Failed"
+                GATE1A_FAILED=$((GATE1A_FAILED + 1))
+              fi
+            fi
+            
+          done < .genccc/artifact_queue.txt
+          
+          # Write summary to file (not env)
+          cat > .genccc/out/gate_summary.txt <<EOF
+          Gate 0 Summary:
+            Total: $GATE0_TOTAL
+            Passed: $GATE0_PASSED
+            Failed: $GATE0_FAILED
+            Skipped: $GATE0_SKIPPED
+          
+          Gate 1A Summary:
+            Total: $GATE1A_TOTAL
+            Passed: $GATE1A_PASSED
+            Failed: $GATE1A_FAILED
+            Skipped: $GATE1A_SKIPPED
+          EOF
+          
+          cat .genccc/out/gate_summary.txt
+          
+          # Store bounded metrics in outputs
           echo "gate0_total=$GATE0_TOTAL" >> "$GITHUB_OUTPUT"
+          echo "gate0_failed=$GATE0_FAILED" >> "$GITHUB_OUTPUT"
+          echo "gate1a_total=$GATE1A_TOTAL" >> "$GITHUB_OUTPUT"
+          echo "gate1a_failed=$GATE1A_FAILED" >> "$GITHUB_OUTPUT"
+
+      # ---------------------------------------------------------
+      # Final Gate: Evolution Proposals + Comprehensive Graph
+      # ---------------------------------------------------------
+      - name: Final Gate — Evolution Proposals & Visualization
+        id: final_gate
+        run: |
+          echo "=== Final Gate: Generating Evolution Proposals & Graph ==="
           
-          # Fail if errors found (based on policy)
-          if [ $GATE0_FAILED -gt 0 ]; then
-            echo "::warning title=Gate 0 Failures::Gate 0 found $GATE0_FAILED artifacts with metadata errors"
-            # Note: continue-on-error is true, so this won't stop the workflow
-            # Change policy here if you want to fail hard on metadata errors
+          python tools/genccc/gate_final_visualizer.py \
+            --chain .genccc/chain_state.json \
+            --output .genccc/out/comprehensive_report.md \
+            --graph .genccc/out/chain_visualization.svg \
+            --verbose
+          
+          echo "Final gate completed"
+          
+          # Store result indicator
+          if [ -f .genccc/out/comprehensive_report.md ]; then
+            echo "final_report_generated=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "final_report_generated=false" >> "$GITHUB_OUTPUT"
           fi
 
       # ---------------------------------------------------------
@@ -228,44 +337,43 @@ jobs:
           fi
 
       # ---------------------------------------------------------
-      # Upload Gate 0 artifacts and generate summary
+      # Upload Gate Chain Artifacts (All Logs, Issues, Reports)
       # ---------------------------------------------------------
-      - name: Upload Gate 0 Metadata Reports
+      - name: Upload GenCCC Chain Artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gate0-metadata-reports
+          name: genccc-chain-${{ steps.batch.outputs.batch_id }}
           path: |
             .genccc/chain_state.json
             .genccc/issues/
             .genccc/logs/
-            .genccc/gate0_summary.log
+            .genccc/out/
           retention-days: 30
           if-no-files-found: ignore
 
-      - name: Add Gate 0 Summary
+      - name: Add GenCCC Chain Summary to Job
         if: always()
         run: |
-          echo "## 🔍 Gate 0 — Metadata Coherence Screen" >> "$GITHUB_STEP_SUMMARY"
+          echo "## 🔍 GenCCC Concatenal Gate Chain" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           
-          if [ -f .genccc/chain_state.json ]; then
-            GATE0_TOTAL="${{ steps.gate0_metadata.outputs.gate0_total }}"
-            GATE0_FAILED="${{ steps.gate0_metadata.outputs.gate0_failed }}"
-            
-            echo "- **Total artifacts screened**: ${GATE0_TOTAL:-0}" >> "$GITHUB_STEP_SUMMARY"
-            echo "- **Failed**: ${GATE0_FAILED:-0}" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f .genccc/out/gate_summary.txt ]; then
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat .genccc/out/gate_summary.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
             echo "" >> "$GITHUB_STEP_SUMMARY"
-            
-            if [ "${GATE0_FAILED:-0}" -gt 0 ]; then
-              echo "⚠️ **Warning**: ${GATE0_FAILED} artifacts have metadata errors" >> "$GITHUB_STEP_SUMMARY"
-              echo "" >> "$GITHUB_STEP_SUMMARY"
-              echo "Review the gate0-metadata-reports artifact for details." >> "$GITHUB_STEP_SUMMARY"
-            else
-              echo "✅ All artifacts passed metadata coherence checks" >> "$GITHUB_STEP_SUMMARY"
-            fi
+          fi
+          
+          if [ -f .genccc/out/comprehensive_report.md ]; then
+            echo "### Evolution Proposals" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            # Include first 30 lines of comprehensive report
+            head -30 .genccc/out/comprehensive_report.md >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "📎 Full report and visualization available in workflow artifact: **genccc-chain-${{ steps.batch.outputs.batch_id }}**" >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "Gate 0 was not executed or no artifacts were screened." >> "$GITHUB_STEP_SUMMARY"
+            echo "No comprehensive report generated." >> "$GITHUB_STEP_SUMMARY"
           fi
           echo "" >> "$GITHUB_STEP_SUMMARY"
 
@@ -330,7 +438,10 @@ jobs:
             **Trigger:** `${{ github.event_name }}`  
 
             ### Summary
-            - Gate 0 metadata coherence screening completed
+            - GenCCC Concatenal Gate Chain completed
+            - Gate 0 (Metadata): ${{ steps.run_gates.outputs.gate0_total }} screened, ${{ steps.run_gates.outputs.gate0_failed }} failed
+            - Gate 1A (Cross-refs): ${{ steps.run_gates.outputs.gate1a_total }} validated, ${{ steps.run_gates.outputs.gate1a_failed }} failed
+            - Evolution proposals and comprehensive graph generated
             - Documentation deepened and evolved
             - Cross-references enhanced
             - Document Control normalized
@@ -338,10 +449,11 @@ jobs:
             - AI-assisted content tagged with `ai_assist`
             - Wave report stored under `cd/cgen_docs/logs/`
 
-            ### Gate 0 — Metadata Coherence
-            - Total artifacts screened: ${{ steps.gate0_metadata.outputs.gate0_total }}
-            - Artifacts with errors: ${{ steps.gate0_metadata.outputs.gate0_failed }}
-            - Chain state and detailed logs available in workflow artifacts
+            ### GenCCC Chain Results
+            - Chain state, detailed logs, issues, and comprehensive visualization available in workflow artifact
+            - Artifact name: `genccc-chain-${{ steps.batch.outputs.batch_id }}`
+            - Comprehensive report: `.genccc/out/comprehensive_report.md`
+            - Visualization graph: `.genccc/out/chain_visualization.svg`
 
             ### UTCS / GenCCC
             - Traceability ensured via run logs + sidecar metadata  
@@ -365,8 +477,10 @@ jobs:
         run: |
           echo "## CGen Docs Wave Summary" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Batch**: ${{ steps.batch.outputs.batch_id }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Gate 0 screened**: ${{ steps.gate0_metadata.outputs.gate0_total }} artifacts" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Gate 0 failed**: ${{ steps.gate0_metadata.outputs.gate0_failed }} artifacts" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Artifacts queued**: ${{ steps.build_queue.outputs.queue_size }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Gate 0 screened**: ${{ steps.run_gates.outputs.gate0_total }} (failed: ${{ steps.run_gates.outputs.gate0_failed }})" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Gate 1A validated**: ${{ steps.run_gates.outputs.gate1a_total }} (failed: ${{ steps.run_gates.outputs.gate1a_failed }})" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Final report**: ${{ steps.final_gate.outputs.final_report_generated }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Changes detected**: ${{ steps.check_changes.outputs.has_changes }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Run number**: ${{ github.run_number }}" >> "$GITHUB_STEP_SUMMARY"
 

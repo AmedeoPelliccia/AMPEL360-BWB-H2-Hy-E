@@ -317,14 +317,32 @@ def validate_version_format(version: str) -> bool:
 
 
 def validate_date_format(date_str: str) -> bool:
-    """Validate date format (ISO-8601)."""
+    """Validate date format (ISO-8601) with semantic validation."""
     patterns = [
-        r"^\d{4}-\d{2}-\d{2}$",  # YYYY-MM-DD
-        r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}",  # ISO-8601 with time
+        (r"^(\d{4})-(\d{2})-(\d{2})$", True),  # YYYY-MM-DD with validation
+        (r"^(\d{4})-(\d{2})-(\d{2})T\d{2}:\d{2}:\d{2}", False),  # ISO-8601 with time (basic check)
     ]
     
-    for pattern in patterns:
-        if re.match(pattern, date_str):
+    for pattern, validate_semantic in patterns:
+        match = re.match(pattern, date_str)
+        if match:
+            if validate_semantic:
+                # Validate month and day ranges
+                year, month, day = match.groups()
+                year_int, month_int, day_int = int(year), int(month), int(day)
+                
+                # Basic range checks
+                if month_int < 1 or month_int > 12:
+                    return False
+                if day_int < 1 or day_int > 31:
+                    return False
+                
+                # Month-specific day validation
+                if month_int in [4, 6, 9, 11] and day_int > 30:
+                    return False
+                if month_int == 2 and day_int > 29:
+                    return False
+            
             return True
     
     return False
