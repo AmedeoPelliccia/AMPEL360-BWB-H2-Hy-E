@@ -70,7 +70,7 @@ MAX_PLACEHOLDER_RATIO = 0.3  # Maximum ratio of placeholders to sections (30%)
 # Quality check threshold for content reduction
 MAX_CONTENT_REDUCTION_RATIO = 0.3  # Maximum content reduction allowed before forcing draft mode (30%)
 
-# Placeholder patterns to detect
+# Placeholder patterns to detect (lowercase for case-insensitive matching)
 PLACEHOLDER_PATTERNS = [
     "[to be completed]",
     "[cgen:",
@@ -149,7 +149,8 @@ def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, 
     
     # If document has many placeholders relative to sections, it's not comprehensive
     # Note: If section_count is 0, we skip this check and rely on other criteria
-    if section_count > 0 and placeholder_count >= section_count * MAX_PLACEHOLDER_RATIO:
+    # Using > (not >=) so exactly 30% is still allowed
+    if section_count > 0 and placeholder_count > section_count * MAX_PLACEHOLDER_RATIO:
         return False, f"document has {placeholder_count} placeholders in {section_count} sections"
     
     # If document lacks substantive content, it's not comprehensive
