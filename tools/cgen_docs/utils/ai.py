@@ -100,7 +100,9 @@ def run_deepen_evolve_prompt(
         ai_policy: The AI policy controlling model selection and limits.
         dry_run: If True, bypasses the actual API and returns a mock response.
         max_retries: Maximum number of retry attempts.
-        original_content: Original document content to preserve in mock/fallback mode.
+        original_content: Original document content to preserve when AI is unavailable
+            or in dry-run mode. If provided, this content will be returned unchanged
+            instead of a placeholder, maintaining document integrity.
 
     Returns:
         AIResponse or None if all attempts fail.
@@ -213,8 +215,8 @@ def _mock_response(prompt: str, ai_policy: Dict[str, Any], original_content: Opt
     logger.info("[MOCK] Returning simulated AI response.")
     logger.debug("[MOCK] Prompt length: %d chars", len(prompt))
 
-    # If we have original content, preserve it instead of using a placeholder
-    if original_content:
+    # If we have original content (non-empty), preserve it instead of using a placeholder
+    if original_content and original_content.strip():
         content = original_content
         summary = "Dry-run/fallback mode: original content preserved without AI processing."
     else:
