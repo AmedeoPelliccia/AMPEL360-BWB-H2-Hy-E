@@ -60,6 +60,24 @@ MIN_COMPREHENSIVE_LENGTH = 800
 # Documents above this length with good content are automatically protected
 COMPREHENSIVE_PROTECTION_LENGTH = 1500
 
+# Content analysis thresholds
+MIN_SUBSTANTIVE_LINE_LENGTH = 40  # Minimum chars for a line to be considered substantive
+MIN_CONTENT_LINES = 8  # Minimum number of content lines for comprehensive doc
+MIN_CONTENT_LINES_FOR_PROTECTION = 15  # Content lines needed for automatic protection
+MAX_PLACEHOLDERS_FOR_PROTECTION = 3  # Maximum placeholders allowed for automatic protection
+MAX_PLACEHOLDER_RATIO = 0.3  # Maximum ratio of placeholders to sections (30%)
+
+# Quality check threshold for content reduction
+MAX_CONTENT_REDUCTION_RATIO = 0.3  # Maximum content reduction allowed before forcing draft mode (30%)
+
+# Placeholder patterns to detect
+PLACEHOLDER_PATTERNS = [
+    "[to be completed]",
+    "[cgen:",
+    "[tbd]",
+    "[tbr]"
+]
+
 # Status values that indicate validated/approved documentation
 PROTECTED_STATUS_VALUES = [
     "APPROVED",
@@ -119,24 +137,26 @@ def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, 
             section_count += 1
         
         # Count placeholders
-        if any(p in stripped.lower() for p in ["[to be completed]", "[cgen:", "[tbd]", "[tbr]"]):
+        if any(p in stripped.lower() for p in PLACEHOLDER_PATTERNS):
             placeholder_count += 1
         
         # Count substantive content lines (longer lines with actual content)
         # Include bullet points as they are real content
-        if len(stripped) > 40 and not stripped.startswith("#"):
+        if len(stripped) > MIN_SUBSTANTIVE_LINE_LENGTH and not stripped.startswith("#"):
             content_lines += 1
     
     # If document has many placeholders relative to sections, it's not comprehensive
-    if section_count > 0 and placeholder_count >= section_count * 0.3:
+    if section_count > 0 and placeholder_count >= section_count * MAX_PLACEHOLDER_RATIO:
         return False, f"document has {placeholder_count} placeholders in {section_count} sections"
     
     # If document lacks substantive content, it's not comprehensive
-    if content_lines < 8:
+    if content_lines < MIN_CONTENT_LINES:
         return False, "document lacks substantive content"
     
     # Check 4: If document is comprehensive (long with good content), protect it
-    if len(doc_text) > COMPREHENSIVE_PROTECTION_LENGTH and content_lines > 15 and placeholder_count < 3:
+    if (len(doc_text) > COMPREHENSIVE_PROTECTION_LENGTH and 
+        content_lines > MIN_CONTENT_LINES_FOR_PROTECTION and 
+        placeholder_count < MAX_PLACEHOLDERS_FOR_PROTECTION):
         return True, "document is comprehensive with minimal placeholders"
     
     return False, "document can be improved by CGen"
@@ -301,7 +321,7 @@ def process_document(
         reduction_ratio = (orig_len - new_len) / orig_len if orig_len > 0 else 0
         
         # If AI output is significantly shorter, it might be replacing good content with placeholders
-        if reduction_ratio > 0.3:  # More than 30% reduction
+        if reduction_ratio > MAX_CONTENT_REDUCTION_RATIO:
             logger.warning("⚠️  AI output is significantly shorter than original")
             logger.warning("    Original: %d chars, New: %d chars (%.1f%% reduction)", 
                           orig_len, new_len, reduction_ratio * 100)
