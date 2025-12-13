@@ -1,0 +1,310 @@
+{
+  "id": "DPP_28-40_H2ECU01_PN7890F_v1.0",
+  "dpp_type": "lru_digital_product_passport",
+  "version": "1.0",
+  "created_date": "2025-12-13",
+  "last_updated": "2025-12-13",
+  "status": "active",
+  
+  "aircraft_context": {
+    "am_id": "AM_Q100",
+    "am_name": "AMPEL360 Q100",
+    "ata_chapter": "28-40",
+    "system_name": "Fuel (Hydrogen) - Energy Control"
+  },
+  
+  "component_identity": {
+    "lru_id": "H2ECU01",
+    "lru_name": "Hydrogen Energy Control Unit",
+    "part_number": "PN7890F",
+    "revision": "01",
+    "serial_number": "EXAMPLE-H2-SN-67890",
+    "manufacturer": "AMPEL360 Propulsion Systems",
+    "manufacturing_date": "2025-11-15",
+    "manufacturing_site": "AMPEL360 Propulsion Facility - Toulouse, France"
+  },
+  
+  "physical_product_data": {
+    "cmm_id": "CMM_28-40_H2ECU01_PN7890F_R01",
+    "cmm_file": "CMM_28-40_H2ECU01_PN7890F_R01.pdf",
+    "bom_file": "BOM_28-40_H2ECU01_PN7890F_R01.csv",
+    "bom_summary": {
+      "total_parts": 36,
+      "total_weight_kg": 8.5,
+      "critical_parts": 28,
+      "normal_parts": 8
+    },
+    "physical_characteristics": {
+      "dimensions_mm": {
+        "length": 420,
+        "width": 320,
+        "height": 180
+      },
+      "weight_kg": 8.5,
+      "mounting": "Custom vibration-isolated rack",
+      "power_consumption_watts": 420,
+      "cooling": "Liquid cooling + forced air",
+      "protection_rating": "IP65"
+    },
+    "materials": {
+      "primary_materials": [
+        "Aerospace aluminum alloy (chassis)",
+        "FR-4 PCB laminate (multilayer)",
+        "Electronic components (mixed semiconductors)",
+        "Copper liquid cooling plate"
+      ],
+      "hazardous_substances": [
+        {
+          "substance": "Lead (Pb)",
+          "location": "Solder joints",
+          "compliance": "RoHS exemption 7(c)-I for aerospace",
+          "quantity_grams": 8.2
+        }
+      ],
+      "recyclability_percent": 82,
+      "hydrogen_compatible_materials": true
+    }
+  },
+  
+  "digital_product_data": {
+    "image_id": "IMAGE_28-40_H2ECU01_SWPN6789_v1.2",
+    "image_file": "IMAGE_28-40_H2ECU01_SWPN6789_v1.2.bin",
+    "image_version": "1.2.0",
+    "image_size_bytes": 67108864,
+    "image_checksum_sha256": "1a2b3c4d5e6f7890123456789012345678901234567890abcdef1234567890",
+    "sbom_file": "SBOM_IMAGE_28-40_H2ECU01_SWPN6789_v1.2.spdx.json",
+    "software_characteristics": {
+      "programming_languages": ["C", "Ada", "Assembly"],
+      "dal_level": "DO-178C Level A",
+      "source_lines_of_code": 487000,
+      "dependencies_count": 9,
+      "open_source_components": 3,
+      "proprietary_components": 6,
+      "safety_certified_components": 5,
+      "code_coverage_percent": 100.0,
+      "mc_dc_coverage_percent": 100.0
+    }
+  },
+  
+  "aircraft_documentation": {
+    "amm": "AMM_AM_Q100_R01_EN.pdf",
+    "amm_chapter": "28-40 - Fuel (Hydrogen) - Energy Control Unit",
+    "sw_config_index": "SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json",
+    "applicable_service_bulletins": [
+      "SB-28-40-001 - Enhanced Leak Detection Algorithm Update",
+      "SB-28-40-002 - Cryogenic Sensor Calibration Procedure Revision"
+    ],
+    "safety_assessment": "SSA_28-40_H2ECU_Fuel_Cell_Control.pdf",
+    "fmea": "FMEA_28-40_H2ECU01_PN7890F.xlsx"
+  },
+  
+  "lifecycle_data": {
+    "installation": {
+      "aircraft_msn": "Q100-1001",
+      "aircraft_registration": "D-AQXX",
+      "installation_date": "2026-02-10",
+      "installation_location": "Forward Equipment Bay - Rack 1, Slot 1-2 (Double-wide)",
+      "installed_by": "AMPEL360 Assembly Team - Munich FAL",
+      "special_procedures_followed": [
+        "Hydrogen system isolation verification",
+        "Liquid cooling system purge and fill",
+        "Triple-redundant processor synchronization test",
+        "Emergency shutdown interlock verification"
+      ]
+    },
+    "operational_history": {
+      "total_flight_hours": 0,
+      "total_flight_cycles": 0,
+      "total_hydrogen_processed_kg": 0,
+      "total_energy_delivered_mwh": 0,
+      "emergency_shutdowns_triggered": 0,
+      "last_functional_test_date": "2026-02-10",
+      "last_functional_test_result": "PASS",
+      "last_calibration_date": "2026-02-10",
+      "last_calibration_result": "PASS - All sensors within spec",
+      "software_loads": [
+        {
+          "date": "2026-02-10",
+          "version": "1.2.0",
+          "loaded_by": "Tech ID: TEC-8901",
+          "verification": "PASS",
+          "dual_signature": "ENG-4523 + QA-7890",
+          "notes": "Initial installation load with calibration data"
+        }
+      ]
+    },
+    "maintenance_history": [],
+    "failures_history": [],
+    "modifications_history": []
+  },
+  
+  "certification_and_compliance": {
+    "type_certificate": "EASA.A.XXX (pending)",
+    "certification_basis": [
+      "EASA CS-25",
+      "Special Conditions: Hydrogen Fuel System",
+      "DO-178C Level A (Software)",
+      "DO-254 Level A (Hardware)",
+      "DO-160G (Environmental)",
+      "ISO 19880-8 (Hydrogen Safety)",
+      "SAE J2579 (Fuel Cell Safety)",
+      "IEC 61508 SIL 4 equivalent (Functional Safety)"
+    ],
+    "environmental_compliance": {
+      "rohs": "Compliant with aerospace exemptions",
+      "reach": "Compliant - no SVHC above threshold",
+      "weee": "Recyclability: 82%"
+    },
+    "safety_analysis": {
+      "failure_condition_classification": "Catastrophic",
+      "quantitative_safety_objective": "1E-9 per flight hour",
+      "fha_performed": true,
+      "pssa_performed": true,
+      "ssa_performed": true,
+      "common_mode_analysis_performed": true,
+      "particular_risks_addressed": [
+        "Hydrogen leak leading to fire/explosion",
+        "Cryogenic system failure",
+        "Loss of energy to propulsion",
+        "Thermal runaway in fuel cell",
+        "Software common mode failures"
+      ]
+    }
+  },
+  
+  "sustainability_metrics": {
+    "carbon_footprint": {
+      "manufacturing_kg_co2": 125.8,
+      "transportation_kg_co2": 8.5,
+      "total_embodied_kg_co2": 134.3
+    },
+    "lifecycle_assessment": {
+      "expected_service_life_years": 15,
+      "expected_flight_hours": 30000,
+      "hydrogen_processed_lifetime_tonnes": 90,
+      "emissions_saved_vs_conventional_kg_co2": 450000,
+      "end_of_life_strategy": "Refurbish safety-critical components, recycle chassis and electronics",
+      "circular_economy_score": 8.1
+    },
+    "repairability": {
+      "repair_level": "Line Replaceable Unit (LRU) - Specialized facility required",
+      "common_failure_modes": [
+        "Sensor interface failure - replace analog input module",
+        "Processor failure - replace processor module (requires recalibration)",
+        "Power supply failure - replace power module",
+        "Cooling system failure - replace cooling plate or fans"
+      ],
+      "repair_documentation": "CMM_28-40_H2ECU01_PN7890F_R01.pdf Section 3-4",
+      "special_requirements": "Hydrogen-certified technicians only, clean room for critical repairs"
+    }
+  },
+  
+  "supply_chain_traceability": {
+    "tier1_suppliers": [
+      {
+        "component": "Main Control PCB Assembly",
+        "supplier": "AMPEL360 Manufacturing",
+        "location": "Toulouse, France",
+        "certification": "AS9100D, NADCAP"
+      },
+      {
+        "component": "Processor Modules",
+        "supplier": "Infineon Technologies via Authorized Distributor",
+        "location": "Germany/Global",
+        "certification": "ISO 9001, ISO 26262"
+      },
+      {
+        "component": "Safety Coprocessors",
+        "supplier": "Texas Instruments via Authorized Distributor",
+        "location": "USA/Global",
+        "certification": "ISO 9001"
+      },
+      {
+        "component": "Liquid Cooling Plate",
+        "supplier": "Boyd Corporation",
+        "location": "USA",
+        "certification": "AS9100D"
+      },
+      {
+        "component": "Cryogenic Physics Library",
+        "supplier": "AMPEL360 Advanced Physics",
+        "location": "Internal",
+        "certification": "Internal QA"
+      },
+      {
+        "component": "Fuel Cell Control Library",
+        "supplier": "H2 PowerTech GmbH",
+        "location": "Germany",
+        "certification": "ISO 9001"
+      }
+    ],
+    "conflict_minerals": {
+      "status": "Compliant",
+      "cmrt_file": "CMRT_28-40_H2ECU01_PN7890F.xlsx",
+      "last_audit_date": "2025-09-30"
+    }
+  },
+  
+  "hydrogen_safety_data": {
+    "hydrogen_compatibility_certified": true,
+    "leak_detection_capability": {
+      "sensor_count": 12,
+      "detection_threshold_ppm": 100,
+      "response_time_ms": 50,
+      "automatic_shutdown": true
+    },
+    "pressure_ratings": {
+      "maximum_operating_pressure_bar": 350,
+      "proof_pressure_bar": 525,
+      "burst_pressure_bar": 700
+    },
+    "cryogenic_ratings": {
+      "minimum_operating_temperature_celsius": -253,
+      "materials_qualified_for_cryogenic": true,
+      "thermal_shock_tested": true
+    },
+    "emergency_procedures": {
+      "emergency_shutdown_time_ms": 100,
+      "safe_state_guaranteed": true,
+      "fail_safe_design": "Triple-redundant with voting"
+    }
+  },
+  
+  "data_governance": {
+    "data_owner": "AMPEL360 Configuration Management",
+    "data_custodian": "AMPEL360 IT - Product Data Management",
+    "access_control": "Highly Restricted - Safety-Critical System Personnel Only",
+    "retention_policy": "Retain for aircraft lifetime + 25 years (safety-critical)",
+    "privacy_compliance": "GDPR Compliant - No personal data stored",
+    "export_control": "ITAR/EAR review required for international transfers"
+  },
+  
+  "blockchain_integration": {
+    "enabled": false,
+    "blockchain_network": "TBD - Future implementation for safety-critical traceability",
+    "smart_contract_address": "TBD",
+    "transaction_hashes": []
+  },
+  
+  "references": {
+    "aircraft_master": "AM_Q100.json",
+    "amm_manifest": "AMM_AM_Q100_R01_manifest.json",
+    "swcfg": "SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json",
+    "cmm_manifest": "CMM_28-40_H2ECU01_PN7890F_R01_manifest.json",
+    "image_manifest": "IMAGE_28-40_H2ECU01_SWPN6789_v1.2_manifest.json",
+    "bom": "BOM_28-40_H2ECU01_PN7890F_R01.csv",
+    "sbom": "SBOM_IMAGE_28-40_H2ECU01_SWPN6789_v1.2.spdx.json",
+    "safety_assessment": "SSA_28-40_H2ECU_Fuel_Cell_Control.pdf",
+    "software_accomplishment_summary": "SAS_28-40_H2ECU01_v1.2.0_DAL-A.pdf"
+  },
+  
+  "metadata": {
+    "schema_version": "1.0",
+    "dpp_standard": "AMPEL360-DPP-v1.0",
+    "created_by": "AMPEL360 DPP System",
+    "last_modified_by": "AMPEL360 Configuration Management",
+    "export_format": "JSON",
+    "validation_status": "valid",
+    "safety_critical_flag": true
+  }
+}

@@ -269,6 +269,85 @@ flowchart TB
 
 ---
 
+## 🏷️ AM (Aircraft Model) - Top-Level Identity System
+
+**AM** (Aircraft Model / Aircraft Master) is the canonical top-level technical identity for AMPEL360 aircraft. All documentation, software configuration, maintenance manuals, and Digital Product Passports reference **AM** as the root parent.
+
+### Aircraft Model Hierarchy
+
+```mermaid
+flowchart TD
+    AM["AM_Q100<br/>(Aircraft Model Master)"]
+    
+    AMM["AMM_AM_Q100<br/>(Maintenance Manual)"]
+    SWCFG["SWCFG_AM_Q100<br/>(Loadable SW Index)"]
+    
+    HW["Hardware LRUs"]
+    CMM["CMMs<br/>(Component Manuals)"]
+    BOM["BOMs<br/>(Parts Lists)"]
+    
+    IMAGES["SOFTWARE IMAGES<br/>(Loadable Binaries)"]
+    SBOM["SBOMs<br/>(SW Dependencies)"]
+    
+    DPP["DPPs per LRU<br/>(Digital Product Passports)"]
+    
+    AM --> AMM
+    AM --> SWCFG
+    
+    AMM --> HW
+    HW --> CMM
+    CMM --> BOM
+    
+    SWCFG --> IMAGES
+    IMAGES --> SBOM
+    
+    CMM --> DPP
+    IMAGES --> DPP
+    BOM --> DPP
+    SBOM --> DPP
+    
+    style AM fill:#e3f2fd,stroke:#1565c0,stroke-width:3px,color:#000
+    style DPP fill:#fff9c4,stroke:#f9a825,stroke-width:3px,color:#000
+```
+
+### Naming Conventions
+
+| Artifact Type | Pattern | Example |
+|---------------|---------|---------|
+| **Aircraft Model** | `AM_{MODEL_ID}` | `AM_Q100`, `AM_Q80`, `AM_Q120` |
+| **Aircraft Maintenance Manual** | `AMM_AM_{MODEL}_{REV}_{LANG}` | `AMM_AM_Q100_R01_EN.pdf` |
+| **Software Config Index** | `SWCFG_AM_{MODEL}_Loadable_Software_Index_v{VER}` | `SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json` |
+| **Component Maintenance Manual** | `CMM_{ATA}_{LRU}_{PN}_{REV}` | `CMM_34-20_CAMCTL01_PN4567D_R02.pdf` |
+| **Bill of Materials** | `BOM_{ATA}_{LRU}_{PN}_{REV}.csv` | `BOM_34-20_CAMCTL01_PN4567D_R02.csv` |
+| **Software Image** | `IMAGE_{ATA}_{LRU}_{SWPN}_v{VER}` | `IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.bin` |
+| **Software BOM** | `SBOM_IMAGE_{ATA}_{LRU}_{SWPN}_v{VER}.spdx.json` | `SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.spdx.json` |
+| **Digital Product Passport** | `DPP_{ATA}_{LRU}_{PN}_v{VER}` | `DPP_34-20_CAMCTL01_PN4567D_v1.0.json` |
+
+### Aircraft Family Members
+
+| AM ID | Description | Capacity | Range (km) | Status |
+|-------|-------------|----------|-----------|---------|
+| **AM_Q100** | Standard configuration | 100 pax | 3,500 | **Active development** |
+| **AM_Q80** | Compact variant | 80 pax | 3,200 | Concept |
+| **AM_Q120** | Extended capacity | 120 pax | 3,000 | Concept |
+
+### Complete Example: Wingtip Camera Unit
+
+A fully instantiated reference example is available in [`examples/am_aircraft_model/`](examples/am_aircraft_model/):
+
+- **AM_Q100.json** - Aircraft master definition
+- **AMM_AM_Q100_R01_manifest.json** - Maintenance manual manifest
+- **SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json** - Complete software index
+- **CMM_34-20_CAMCTL01_PN4567D_R02_manifest.json** - Component manual
+- **BOM_34-20_CAMCTL01_PN4567D_R02.csv** - Bill of materials (25 parts)
+- **IMAGE_34-20_CAMCTL01_SWPN4455_v2.0_manifest.json** - Software image
+- **SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.spdx.json** - SPDX 2.3 SBOM
+- **DPP_34-20_CAMCTL01_PN4567D_v1.0.json** - Complete digital product passport
+
+See the [AM Aircraft Model Examples README](examples/am_aircraft_model/README.md) for detailed documentation.
+
+---
+
 ## 🏁 Getting Started
 
 ### Prerequisites

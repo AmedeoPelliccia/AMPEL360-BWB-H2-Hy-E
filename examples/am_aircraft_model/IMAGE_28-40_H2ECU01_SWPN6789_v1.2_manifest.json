@@ -1,0 +1,247 @@
+{
+  "image_id": "IMAGE_28-40_H2ECU01_SWPN6789_v1.2",
+  "image_type": "loadable_software_image",
+  "ata_chapter": "28-40",
+  "lru_id": "H2ECU01",
+  "lru_name": "Hydrogen Energy Control Unit",
+  "software_part_number": "SWPN6789",
+  "version": "1.2.0",
+  "build_date": "2025-12-08",
+  "release_date": "2025-12-13",
+  "status": "released",
+  
+  "am_applicability": ["AM_Q100"],
+  
+  "description": "Hydrogen Fuel Cell Control and Energy Management System - Safety Critical DAL-A Software",
+  
+  "image_files": [
+    {
+      "filename": "h2ecu_main_cpu1.bin",
+      "description": "Main application binary - CPU 1",
+      "size_bytes": 16777216,
+      "load_address": "0x80000000",
+      "checksum_crc32": "0x12AB34CD",
+      "checksum_sha256": "1a2b3c4d5e6f7890123456789012345678901234567890abcdef1234567890"
+    },
+    {
+      "filename": "h2ecu_main_cpu2.bin",
+      "description": "Main application binary - CPU 2 (redundant)",
+      "size_bytes": 16777216,
+      "load_address": "0x80000000",
+      "checksum_crc32": "0x12AB34CD",
+      "checksum_sha256": "1a2b3c4d5e6f7890123456789012345678901234567890abcdef1234567890"
+    },
+    {
+      "filename": "h2ecu_main_cpu3.bin",
+      "description": "Main application binary - CPU 3 (redundant)",
+      "size_bytes": 16777216,
+      "load_address": "0x80000000",
+      "checksum_crc32": "0x12AB34CD",
+      "checksum_sha256": "1a2b3c4d5e6f7890123456789012345678901234567890abcdef1234567890"
+    },
+    {
+      "filename": "h2ecu_safety_mon1.bin",
+      "description": "Safety monitor - Independent processor 1",
+      "size_bytes": 2097152,
+      "load_address": "0x00000000",
+      "checksum_crc32": "0x56EF78AB",
+      "checksum_sha256": "2b3c4d5e6f78901234567890123456789012345678901abcdef23456789012"
+    },
+    {
+      "filename": "h2ecu_safety_mon2.bin",
+      "description": "Safety monitor - Independent processor 2",
+      "size_bytes": 2097152,
+      "load_address": "0x00000000",
+      "checksum_crc32": "0x56EF78AB",
+      "checksum_sha256": "2b3c4d5e6f78901234567890123456789012345678901abcdef23456789012"
+    },
+    {
+      "filename": "h2ecu_safety_mon3.bin",
+      "description": "Safety monitor - Independent processor 3",
+      "size_bytes": 2097152,
+      "load_address": "0x00000000",
+      "checksum_crc32": "0x56EF78AB",
+      "checksum_sha256": "2b3c4d5e6f78901234567890123456789012345678901abcdef23456789012"
+    },
+    {
+      "filename": "h2ecu_boot.bin",
+      "description": "Secure bootloader with signature verification",
+      "size_bytes": 1048576,
+      "load_address": "0x00000000",
+      "checksum_crc32": "0x9ABC1234",
+      "checksum_sha256": "3c4d5e6f789012345678901234567890123456789012abcdef345678901234"
+    },
+    {
+      "filename": "h2ecu_config.enc",
+      "description": "Encrypted configuration parameters",
+      "size_bytes": 131072,
+      "load_address": "N/A",
+      "checksum_crc32": "0xDEF56789",
+      "checksum_sha256": "4d5e6f78901234567890123456789012345678901234abcdef4567890123456"
+    },
+    {
+      "filename": "h2ecu_calibration.dat",
+      "description": "Sensor calibration data and control loop parameters",
+      "size_bytes": 524288,
+      "load_address": "N/A",
+      "checksum_crc32": "0x13579BDF",
+      "checksum_sha256": "5e6f789012345678901234567890123456789012345abcdef56789012345678"
+    }
+  ],
+  
+  "total_image_size_bytes": 67108864,
+  "image_format": "compound_binary_package_triple_redundant",
+  "compression": "lzma",
+  "encryption": "AES-256-GCM",
+  "signature": "RSA-4096_triple_signed",
+  
+  "software_characteristics": {
+    "programming_languages": ["C", "Ada", "Assembly"],
+    "compiler": "GCC ARM 11.3.1 + GNAT Pro 23.2",
+    "development_environment": "Eclipse + AURIX Development Studio",
+    "rtos": "VxWorks 7 Safety Profile + SafeRTOS",
+    "dal_level": "DO-178C Level A",
+    "source_lines_of_code": 487000,
+    "cyclomatic_complexity_avg": 6.2,
+    "misra_compliance": "MISRA C 2012 - Mandatory and Required",
+    "code_coverage_percent": 100.0,
+    "mc_dc_coverage_percent": 100.0
+  },
+  
+  "functionality": {
+    "primary_functions": [
+      "Hydrogen fuel cell stack control and monitoring",
+      "Cryogenic tank pressure, temperature, and level management",
+      "Hydrogen flow control and mass flow measurement",
+      "Energy distribution to propulsion motors",
+      "Battery charge/discharge management integration",
+      "Emergency shutdown and safety interlock management",
+      "Hydrogen leak detection and response",
+      "Fuel cell thermal management",
+      "Power quality monitoring and conditioning",
+      "Predictive maintenance and diagnostics"
+    ],
+    "safety_functions": [
+      "Triple-redundant voting for all critical parameters",
+      "Automatic emergency shutdown on leak detection",
+      "Pressure relief valve control",
+      "Thermal runaway prevention",
+      "Overpressure protection",
+      "Ground fault detection and isolation",
+      "Safe state reversion on fault detection"
+    ],
+    "interfaces_supported": [
+      "ARINC 429 command/status (quad redundant)",
+      "CAN Bus fuel cell stack interface",
+      "ARINC 664 Ethernet diagnostics and data logging",
+      "Analog sensor inputs (temperature, pressure, flow)",
+      "Digital safety interlocks",
+      "Built-in test (BIT) continuous monitoring"
+    ]
+  },
+  
+  "dependencies": [
+    {
+      "library_name": "VxWorks 7 Safety Profile",
+      "version": "7.0.1",
+      "license": "Commercial",
+      "supplier": "Wind River Systems",
+      "certification": "IEC 61508 SIL 3 certified"
+    },
+    {
+      "library_name": "SafeRTOS",
+      "version": "11.1.1",
+      "license": "Commercial",
+      "supplier": "WITTENSTEIN high integrity systems",
+      "certification": "IEC 61508 SIL 3, DO-178C DAL-A"
+    },
+    {
+      "library_name": "GNAT Pro Safety-Critical Runtime",
+      "version": "23.2",
+      "license": "Commercial",
+      "supplier": "AdaCore",
+      "certification": "DO-178C DAL-A certified"
+    },
+    {
+      "library_name": "AURIX TriCore Safety Libraries",
+      "version": "2.8.0",
+      "license": "Commercial",
+      "supplier": "Infineon Technologies",
+      "certification": "ISO 26262 ASIL-D"
+    },
+    {
+      "library_name": "Cryogenic Physics Model Library",
+      "version": "1.0.3",
+      "license": "Proprietary",
+      "supplier": "AMPEL360 Advanced Physics",
+      "purpose": "LH2 thermodynamic calculations"
+    },
+    {
+      "library_name": "Fuel Cell Control Library",
+      "version": "2.1.0",
+      "license": "Proprietary",
+      "supplier": "H2 PowerTech GmbH",
+      "purpose": "PEM fuel cell stack management"
+    }
+  ],
+  
+  "verification": {
+    "requirements_total": 2847,
+    "requirements_verified": 2847,
+    "unit_tests_passed": 5420,
+    "integration_tests_passed": 892,
+    "system_tests_passed": 234,
+    "hardware_in_loop_tests_passed": 156,
+    "code_coverage_percent": 100.0,
+    "mc_dc_coverage_percent": 100.0,
+    "branch_coverage_percent": 100.0,
+    "requirements_coverage_percent": 100.0,
+    "verification_report": "VR_28-40_H2ECU01_v1.2.0_DAL-A.pdf",
+    "safety_assessment": "SSA_28-40_H2ECU_Fuel_Cell_Control.pdf"
+  },
+  
+  "installation": {
+    "loading_method": "ARINC 615A_secure",
+    "loading_time_minutes": 45,
+    "requires_aircraft_power": true,
+    "requires_aircraft_on_ground": true,
+    "requires_hydrogen_system_isolated": true,
+    "post_load_test_required": true,
+    "post_load_calibration_required": true,
+    "loading_procedure": "CMM_28-40_H2ECU01_PN7890F_R01.pdf Section 5.4",
+    "dual_signature_required": true,
+    "safety_officer_approval_required": true
+  },
+  
+  "compatibility": {
+    "hardware_part_numbers": ["PN7890F"],
+    "replaces_versions": ["1.1.3", "1.1.4"],
+    "backward_compatible": false,
+    "minimum_hardware_revision": "F",
+    "requires_calibration_update": true
+  },
+  
+  "known_issues": [],
+  
+  "references": {
+    "aircraft_master": "AM_Q100.json",
+    "swcfg": "SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json",
+    "cmm": "CMM_28-40_H2ECU01_PN7890F_R01.pdf",
+    "sbom": "SBOM_IMAGE_28-40_H2ECU01_SWPN6789_v1.2.spdx.json",
+    "source_repository": "git://ampel360.com/h2ecu.git",
+    "source_commit": "f1e2d3c4b5a69780123456789012345678901234",
+    "software_accomplishment_summary": "SAS_28-40_H2ECU01_v1.2.0_DAL-A.pdf",
+    "software_configuration_index": "SCI_28-40_H2ECU01_v1.2.0.pdf",
+    "plan_for_software_aspects": "PSAC_28-40_H2ECU01.pdf"
+  },
+  
+  "metadata": {
+    "created_date": "2025-12-08",
+    "released_date": "2025-12-13",
+    "developer": "AMPEL360 Software Engineering - Propulsion Control Team",
+    "approver": "AMPEL360 Software Quality Assurance - DAL-A Authority",
+    "certification_authority_review": "Pending EASA review",
+    "document_status": "released",
+    "schema_version": "1.0"
+  }
+}

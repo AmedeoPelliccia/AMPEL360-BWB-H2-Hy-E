@@ -1,0 +1,212 @@
+{
+  "cmm_id": "CMM_28-40_H2ECU01_PN7890F_R01",
+  "document_type": "component_maintenance_manual",
+  "ata_chapter": "28-40",
+  "lru_id": "H2ECU01",
+  "lru_name": "Hydrogen Energy Control Unit",
+  "part_number": "PN7890F",
+  "revision": "01",
+  "issue_date": "2025-12-13",
+  "status": "draft",
+  
+  "am_applicability": ["AM_Q100"],
+  
+  "component_description": {
+    "title": "Hydrogen Energy Control Unit - Component Maintenance Manual",
+    "function": "Manages hydrogen fuel cell operation, cryogenic tank monitoring, and energy distribution to propulsion motors",
+    "criticality": "Essential - Safety Critical",
+    "dal_level": "DAL-A"
+  },
+  
+  "physical_characteristics": {
+    "dimensions": {
+      "length_mm": 420,
+      "width_mm": 320,
+      "height_mm": 180
+    },
+    "weight_kg": 8.5,
+    "mounting_type": "custom_vibration_isolated_rack",
+    "cooling": "liquid_cooled_plus_forced_air",
+    "operating_temperature_celsius": {
+      "min": -40,
+      "max": 85
+    },
+    "protection_rating": "IP65"
+  },
+  
+  "interfaces": {
+    "power": {
+      "type": "28VDC_redundant",
+      "current_max_amps": 15.0,
+      "power_consumption_watts": 420,
+      "backup_power": "integrated_ultracapacitor_10s"
+    },
+    "data": [
+      {
+        "type": "ARINC_429",
+        "speed": "100kbps",
+        "channels": 4,
+        "purpose": "Command, status, and telemetry"
+      },
+      {
+        "type": "CAN_Bus",
+        "speed": "1Mbps",
+        "channels": 2,
+        "purpose": "Fuel cell stack control"
+      },
+      {
+        "type": "Ethernet",
+        "speed": "1Gbps",
+        "standard": "ARINC_664",
+        "purpose": "High-bandwidth diagnostics and data logging"
+      }
+    ],
+    "analog_sensors": [
+      {
+        "type": "thermocouple_k_type",
+        "channels": 16,
+        "purpose": "Cryogenic and fuel cell temperature monitoring"
+      },
+      {
+        "type": "pressure_transducer",
+        "channels": 8,
+        "range": "0-350 bar",
+        "purpose": "Hydrogen tank and fuel cell pressure"
+      },
+      {
+        "type": "flow_meter",
+        "channels": 4,
+        "range": "0-500 kg/h",
+        "purpose": "Hydrogen mass flow measurement"
+      }
+    ],
+    "safety_interfaces": [
+      {
+        "type": "emergency_shutdown",
+        "redundancy": "triple_voted",
+        "purpose": "Immediate H2 system isolation"
+      },
+      {
+        "type": "hydrogen_leak_detection",
+        "sensor_count": 12,
+        "purpose": "Area hydrogen concentration monitoring"
+      }
+    ]
+  },
+  
+  "maintenance_data": {
+    "removal_installation_time_hrs": 4.0,
+    "functional_test_time_hrs": 6.0,
+    "calibration_required": true,
+    "calibration_interval_fh": 1000,
+    "shelf_life_months": 60,
+    "special_tools_required": [
+      "TOOL-28-101 - Hydrogen System Pressure Test Rig",
+      "TOOL-28-102 - Cryogenic Calibration Fixture",
+      "TOOL-28-103 - Fuel Cell Load Simulator"
+    ],
+    "safety_equipment_required": [
+      "H2-certified technician training",
+      "Hydrogen leak detector (portable)",
+      "Cryogenic-rated gloves and face shield",
+      "Fire suppression equipment nearby"
+    ]
+  },
+  
+  "bom_reference": "BOM_28-40_H2ECU01_PN7890F_R01.csv",
+  
+  "software": {
+    "image_id": "IMAGE_28-40_H2ECU01_SWPN6789_v1.2",
+    "image_version": "1.2.0",
+    "sbom_file": "SBOM_IMAGE_28-40_H2ECU01_SWPN6789_v1.2.spdx.json",
+    "loading_procedure": "CMM Section 5.4 - Software Loading Procedure (Safety Critical)",
+    "certification_evidence": "Software Accomplishment Summary available in certification package"
+  },
+  
+  "manual_sections": [
+    {
+      "section": "1.0",
+      "title": "Description and Operation",
+      "pages": "1-1 to 1-50",
+      "subsections": [
+        "1.1 Hydrogen Fuel Cell Control",
+        "1.2 Cryogenic Tank Management",
+        "1.3 Energy Distribution Logic",
+        "1.4 Safety Systems"
+      ]
+    },
+    {
+      "section": "2.0",
+      "title": "Testing and Fault Isolation",
+      "pages": "2-1 to 2-80",
+      "subsections": [
+        "2.1 Built-In Test (BIT) Procedures",
+        "2.2 Fault Tree Analysis",
+        "2.3 Safety-Critical Test Cases"
+      ]
+    },
+    {
+      "section": "3.0",
+      "title": "Removal and Installation",
+      "pages": "3-1 to 3-30",
+      "subsections": [
+        "3.1 Pre-Removal Safety Procedures",
+        "3.2 Hydrogen System Isolation",
+        "3.3 Installation and Leak Testing"
+      ]
+    },
+    {
+      "section": "4.0",
+      "title": "Adjustment and Calibration",
+      "pages": "4-1 to 4-45",
+      "subsections": [
+        "4.1 Sensor Calibration",
+        "4.2 Control Loop Tuning",
+        "4.3 Safety System Verification"
+      ]
+    },
+    {
+      "section": "5.0",
+      "title": "Practices and Procedures",
+      "pages": "5-1 to 5-60",
+      "subsections": [
+        "5.1 Hydrogen Safety Practices",
+        "5.2 Cryogenic Handling",
+        "5.3 Software Management",
+        "5.4 Emergency Procedures"
+      ]
+    },
+    {
+      "section": "6.0",
+      "title": "Illustrated Parts Breakdown",
+      "pages": "6-1 to 6-75"
+    }
+  ],
+  
+  "certification": {
+    "environmental_qualification": "DO-160G",
+    "software_level": "DO-178C DAL-A",
+    "hardware_level": "DO-254 DAL-A",
+    "emc_compliance": "DO-160G Category Z (Severe)",
+    "safety_assessment": "ARP4754A, ARP4761 - Safety-Critical",
+    "hydrogen_safety": "ISO 19880-8, SAE J2579",
+    "functional_safety": "IEC 61508 SIL 4 equivalent"
+  },
+  
+  "references": {
+    "aircraft_master": "AM_Q100.json",
+    "amm_reference": "AMM_AM_Q100_R01_EN.pdf Chapter 28-40",
+    "swcfg_reference": "SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json",
+    "dpp_reference": "DPP_28-40_H2ECU01_PN7890F_v1.0.json",
+    "safety_assessment": "SSA_28-40_H2ECU_Fuel_Cell_Control.pdf",
+    "fmea": "FMEA_28-40_H2ECU01_PN7890F.xlsx"
+  },
+  
+  "metadata": {
+    "created_date": "2025-12-13",
+    "last_modified_date": "2025-12-13",
+    "document_owner": "AMPEL360 Propulsion Systems Engineering",
+    "document_status": "draft",
+    "schema_version": "1.0"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "am_id": "AM_Q100",
+  "am_name": "AMPEL360 Q100",
+  "am_full_designation": "Aircraft Model Q100 - Blended-Wing-Body Hydrogen-Hybrid Electric",
+  "version": "1.0",
+  "status": "preliminary_design",
+  "description": "100-passenger blended-wing-body aircraft powered by hydrogen-electric propulsion",
+  
+  "aircraft_family": {
+    "family_name": "AMPEL360 Q-Series",
+    "family_members": [
+      "AM_Q80",
+      "AM_Q100",
+      "AM_Q120"
+    ],
+    "base_model": "AM_Q100"
+  },
+  
+  "specifications": {
+    "capacity": {
+      "passengers_single_class": 100,
+      "passengers_dual_class": 90,
+      "cargo_volume_m3": 25
+    },
+    "performance": {
+      "range_km": 3500,
+      "range_nm": 1890,
+      "cruise_speed_mach": 0.78,
+      "mtow_kg": 65000,
+      "oew_kg": 35000,
+      "max_payload_kg": 17000
+    },
+    "propulsion": {
+      "type": "hydrogen_hybrid_electric",
+      "lh2_capacity_kg": 3000,
+      "lh2_temperature_celsius": -253,
+      "fuel_cell_power_mw": 20,
+      "battery_capacity_mwh": 5,
+      "battery_type": "lithium_ion",
+      "saf_reserve_liters": 500
+    },
+    "dimensions": {
+      "wingspan_m": 55.0,
+      "length_m": 42.0,
+      "height_m": 12.5,
+      "cabin_width_max_m": 22.0
+    },
+    "structure": {
+      "configuration": "blended_wing_body",
+      "primary_material": "CFRP",
+      "cfrp_percentage_by_weight": 65,
+      "aerodynamic_efficiency_improvement_percent": 30,
+      "noise_reduction_percent": 40
+    }
+  },
+  
+  "certification": {
+    "target_authorities": [
+      "EASA",
+      "FAA"
+    ],
+    "certification_basis": [
+      "EASA CS-25",
+      "FAA 14 CFR Part 25",
+      "Special Conditions: BWB Configuration",
+      "Special Conditions: Hydrogen Fuel System",
+      "Special Conditions: Distributed Electric Propulsion"
+    ],
+    "type_certificate_application_date": "2026-01-15",
+    "target_type_certificate_date": "2030-06-30",
+    "target_eis_date": "2030-12-31"
+  },
+  
+  "program_milestones": {
+    "current_phase": "preliminary_design_detail_concept",
+    "current_phase_dates": "2024-06 to 2025-12",
+    "design_freeze_target": "2027-06",
+    "first_flight_target": "2028-12",
+    "certification_target": "2030-06",
+    "entry_into_service_target": "2030-12"
+  },
+  
+  "documentation_references": {
+    "amm_prefix": "AMM_AM_Q100",
+    "swcfg_prefix": "SWCFG_AM_Q100",
+    "opt_in_framework_path": "OPT-IN_FRAMEWORK",
+    "repository": "AMPEL360-BWB-H2-Hy-E"
+  },
+  
+  "variants": [
+    {
+      "variant_id": "AM_Q100_STD",
+      "variant_name": "Standard Configuration",
+      "description": "Single-class 100-passenger standard range configuration"
+    },
+    {
+      "variant_id": "AM_Q100_COMBI",
+      "variant_name": "Combi Configuration",
+      "description": "Dual-class 90-passenger with enhanced cargo capability"
+    },
+    {
+      "variant_id": "AM_Q100_ER",
+      "variant_name": "Extended Range Configuration",
+      "description": "Reduced passenger capacity (80) with increased LH2 storage for 4,200 km range"
+    }
+  ],
+  
+  "applicability": {
+    "msn_range_start": 1001,
+    "msn_range_end": 9999,
+    "production_sites": [
+      "AMPEL360 Manufacturing Facility - Primary",
+      "TBD - Secondary FAL"
+    ]
+  },
+  
+  "metadata": {
+    "created_date": "2025-12-13",
+    "created_by": "AMPEL360 Configuration Management",
+    "last_modified_date": "2025-12-13",
+    "last_modified_by": "AMPEL360 Configuration Management",
+    "schema_version": "1.0",
+    "document_status": "draft"
+  }
+}
