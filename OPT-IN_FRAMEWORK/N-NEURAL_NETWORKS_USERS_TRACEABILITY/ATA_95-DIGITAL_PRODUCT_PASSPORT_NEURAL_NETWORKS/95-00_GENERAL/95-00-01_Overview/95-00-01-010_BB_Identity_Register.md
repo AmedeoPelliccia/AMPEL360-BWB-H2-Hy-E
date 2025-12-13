@@ -2,7 +2,7 @@
 document_id: 95-00-01-010
 title: Body+Brain Identity Register
 subtitle: Scalable CCert/CVal Circuit + Fleet Register for Embedded-Intelligence Artifacts
-version: 1.2
+version: 1.3
 date: 2025-12-13
 status: WORKING DRAFT
 owner: AMPEL360 / ATA 95 Governance
@@ -124,8 +124,100 @@ Each entry SHALL eventually carry pointers (even if placeholder during early dra
   `ASSETS/95-00-01-010-A-001_BodyBrain_Identity_Register.csv`
 - This document is the normative narrative + curated views.
 
-Recommended CSV columns:
-`bb_id,artifact_name,body_summary,brain_summary,body_ata,brain_ata,dal,brain_type,dpp_id,image_id,sbom_ref,bom_ref,am_ref,dv_ref,om_class,oav_ref,dt_ref,notes`
+Recommended CSV columns (expanded with Loop Packet tracking):
+`bb_id,artifact_name,body_summary,brain_summary,body_ata,brain_ata,dal,brain_type,dpp_id,image_id,sbom_ref,bom_ref,am_ref,dv_ref,om_class,oav_ref,dt_ref,loop_packet_path,am_status,dv_status,dpp_status,om_status,oav_status,dt_status,next_gate,last_truth_snapshot_id,notes`
+
+---
+
+## 4.4 Loop Packet Infrastructure
+
+### 4.4.1 Concept: Register as Index, Loop Packet as Dossier
+
+The BB Identity Register is the **index** (one-line summary per artifact).
+
+The **Loop Packet** is the **per-ID lifecycle dossier** containing all CCert/CVal circuit artifacts.
+
+**Architecture**:
+```
+95-00-01_Registers/
+└── 95-00-01-010_BB_Identity_Register/
+    ├── LOOPS/
+    │   ├── TEMPLATES/           # Reusable templates for all artifacts
+    │   └── <bb_id>/             # One Loop Packet per artifact
+    │       ├── LOOP_<bb_id>.md  # Circuit control record (state machine)
+    │       ├── AM_<bb_id>.md    # At-Rest Model
+    │       ├── DV_<bb_id>.md    # Design Validation
+    │       ├── DPP_<bb_id>.md   # Digital Product Passport
+    │       ├── OM_<bb_id>.md    # Operational Mission
+    │       ├── OAV_<bb_id>.md   # On-Asset Validation
+    │       └── DT_<bb_id>.md    # Digital Twin
+    │
+    └── ASSETS/
+        └── 95-00-01-010-A-001_BodyBrain_Identity_Register.csv
+```
+
+### 4.4.2 Minimum Artifacts per BB ID
+
+Every `<bb_id>` SHALL eventually have these **7 artifacts**:
+
+1. **LOOP_<bb_id>.md** — Circuit control record with current state, gates, and next actions
+2. **AM_<bb_id>.md** — At-Rest Model (baseline definition)
+3. **DV_<bb_id>.md** — Design Validation (pre-operational proof)
+4. **DPP_<bb_id>.md** — Digital Product Passport (authoritative identity + JSON payload)
+5. **OM_<bb_id>.md** — Operational Mission (predicted behavior)
+6. **OAV_<bb_id>.md** — On-Asset Validation (operational truth)
+7. **DT_<bb_id>.md** — Digital Twin (accumulated evidence + snapshot index)
+
+### 4.4.3 Loop Status Tracking (CSV Columns)
+
+The CSV register tracks loop state for each artifact:
+
+- **`loop_packet_path`**: Relative path to Loop Packet folder (e.g., `LOOPS/27-BB-008`)
+- **Circuit State Columns**:
+  - `am_status`: `[NOT_STARTED | IN_PROGRESS | COMPLETED | APPROVED]`
+  - `dv_status`: `[NOT_STARTED | IN_PROGRESS | PASSED | FAILED | APPROVED]`
+  - `dpp_status`: `[NOT_ISSUED | ISSUED | UPDATED | FROZEN]`
+  - `om_status`: `[NOT_DEFINED | DEFINED | VALIDATED]`
+  - `oav_status`: `[NOT_STARTED | PLANNED | IN_PROGRESS | PASSED | FAILED]`
+  - `dt_status`: Snapshot count (integer)
+- **Control Columns**:
+  - `next_gate`: `[DV | OAV | COMPLETE]` (computed deterministically)
+  - `last_truth_snapshot_id`: Most recent DT snapshot identifier
+
+### 4.4.4 Deterministic Next Step Rule
+
+For any `bb_id`, the system computes the next required action:
+
+```
+IF am_status = NOT_STARTED THEN
+  → Write AM (At-Rest Model) first
+ELSE IF dv_status ≠ PASSED THEN
+  → Write/Complete DV and mark DV gate
+ELSE IF dpp_status = NOT_ISSUED AND dv_status = PASSED THEN
+  → Issue DPP (locked identity + claims)
+ELSE IF om_status ≠ DEFINED THEN
+  → Author OM (what DPP predicts operationally)
+ELSE IF oav_status ≠ PASSED THEN
+  → Define/Execute OAV (asset context truth validation)
+ELSE
+  → Append DT snapshot and propose AM′ (change-controlled update)
+```
+
+### 4.4.5 Example: 27-BB-008 Loop Packet
+
+The Active Gust Alleviation System (27-BB-008) has a complete Loop Packet at:
+`95-00-01_Registers/95-00-01-010_BB_Identity_Register/LOOPS/27-BB-008/`
+
+This serves as the reference implementation for all other artifacts.
+
+### 4.4.6 Automation Tools
+
+Two Python scripts support Loop Packet management:
+
+1. **`tools/generate_loop_packet.py`**: Generate a complete skeleton from templates
+2. **`tools/check_loop_status.py`**: Validate consistency and check circuit state
+
+See `95-00-01_Registers/95-00-01-010_BB_Identity_Register/README.md` for complete Loop Packet system documentation.
 
 ---
 
@@ -882,5 +974,6 @@ This register is conceptually backed by ATA 95-90 schemas:
 | 1.0 | 2025-12-13 | AMPEL360/ATA 95 WG | Initial comprehensive catalog (content population) |
 | 1.1 | 2025-12-13 | AMPEL360/ATA 95 WG | Sovereignty + interfacing semantics; DV/OAV separation |
 | 1.2 | 2025-12-13 | AMPEL360/ATA 95 WG | Complete master doc: circuit + glossary + register + ATA placement rules |
+| 1.3 | 2025-12-13 | AMPEL360/ATA 95 WG | Added Loop Packet infrastructure: per-ID lifecycle dossiers with 7 artifacts, deterministic next-step rules, automation tools |
 
 ---
