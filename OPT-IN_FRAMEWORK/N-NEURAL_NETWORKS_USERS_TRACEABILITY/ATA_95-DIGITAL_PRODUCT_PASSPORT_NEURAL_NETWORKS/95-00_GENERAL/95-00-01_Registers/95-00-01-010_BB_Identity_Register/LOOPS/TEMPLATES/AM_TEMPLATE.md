@@ -1,0 +1,213 @@
+---
+document_id: AM_<bb_id>
+title: At-Rest Model for <bb_id>
+subtitle: Baseline Definition and Descriptive Knowledge
+version: 1.0
+date: YYYY-MM-DD
+status: TEMPLATE
+owner: AMPEL360 / ATA 95 Governance
+classification: INTERNAL
+primary_ata: "<Body_ATA>"
+related_ata: ["<Brain_ATA>", "95"]
+---
+
+# AM_<bb_id> — At-Rest Model (Baseline Definition)
+
+## 1. Purpose
+
+This document defines the **At-Rest Model (AM)** for `<bb_id>` — `<Artifact_Name>`.
+
+The AM is the **descriptive + maintainability** model that forms the baseline definition of:
+- What the artifact **is** (identity, structure, composition)
+- What it **claims** (functional capabilities, performance, interfaces)
+- How it is **maintained** (maintainability procedures, spares, support equipment)
+
+---
+
+## 2. Artifact Identity
+
+| Field | Value |
+|---|---|
+| **BB ID** | `<bb_id>` |
+| **Artifact Name** | `<Artifact_Name>` |
+| **Body ATA** | `<Body_ATA>` |
+| **Brain ATA** | `<Brain_ATA>` |
+| **DAL** | `<DAL>` |
+| **Brain Type** | `<BrainType>` |
+
+---
+
+## 3. Body Definition (Physical Instantiation)
+
+### 3.1 Physical Description
+```
+<Describe the physical hardware/structure: components, assemblies, materials, 
+form factors, mounting, physical interfaces>
+```
+
+### 3.2 Body Components (BOM-level)
+| Component ID | Description | Quantity | Material/Type | Part Number | Source |
+|---|---|---|---|---|---|
+| `<comp_id>` | `<description>` | `<qty>` | `<material>` | `<pn>` | `<supplier>` |
+
+### 3.3 Physical Interfaces
+| Interface ID | Type | Standard | Mate | Description |
+|---|---|---|---|---|
+| `<if_id>` | `<type>` | `<standard>` | `<mate>` | `<description>` |
+
+### 3.4 Installation Requirements
+```
+<Describe installation procedures, mounting requirements, 
+environmental constraints, accessibility>
+```
+
+---
+
+## 4. Brain Definition (Embedded Logic)
+
+### 4.1 Functional Description
+```
+<Describe what the embedded logic does: algorithms, control laws, 
+data processing, decision-making capabilities>
+```
+
+### 4.2 Brain Components (SBOM-level)
+| Component ID | Description | Type | Version | License | Source |
+|---|---|---|---|---|---|
+| `<comp_id>` | `<description>` | `<SW/ML/NN>` | `<version>` | `<license>` | `<repo/vendor>` |
+
+### 4.3 Brain Architecture
+```
+<High-level architecture: modules, components, data flows, 
+processing stages, runtime environment>
+```
+
+### 4.4 Logical Interfaces
+| Interface ID | Type | Protocol | Direction | Description |
+|---|---|---|---|---|
+| `<if_id>` | `<data/signal>` | `<protocol>` | `<in/out/bi>` | `<description>` |
+
+---
+
+## 5. Functional Claims
+
+### 5.1 Primary Functions
+| Function ID | Description | Performance Target | Operational Mode |
+|---|---|---|---|
+| `<func_id>` | `<description>` | `<target>` | `<mode>` |
+
+### 5.2 Safety Functions (if applicable)
+| Safety Function ID | Description | Hazard Mitigated | DAL | Failure Condition |
+|---|---|---|---|---|
+| `<sf_id>` | `<description>` | `<hazard>` | `<dal>` | `<failure_condition>` |
+
+### 5.3 Performance Specifications
+```
+<Define quantitative performance specifications: accuracy, latency, 
+throughput, reliability, availability>
+```
+
+---
+
+## 6. Design Constraints and Assumptions
+
+### 6.1 Design Constraints
+- **Environmental**: `<temperature, humidity, vibration, EMI/EMC, altitude>`
+- **Operational**: `<duty cycle, mission profiles, operational envelope>`
+- **Regulatory**: `<certification basis, standards compliance>`
+- **Interface**: `<physical and logical interface constraints>`
+
+### 6.2 Assumptions
+```
+<List key assumptions made in the design: operational context, 
+support infrastructure, crew training, etc.>
+```
+
+---
+
+## 7. Maintainability Definition
+
+### 7.1 Maintenance Strategy
+- **Preventive Maintenance**: `<describe PM tasks, intervals, criteria>`
+- **Corrective Maintenance**: `<describe fault isolation, repair procedures>`
+- **Predictive Maintenance**: `<describe condition monitoring, health indicators>`
+
+### 7.2 Maintenance Procedures
+| Procedure ID | Description | Interval | Tools Required | Skill Level |
+|---|---|---|---|---|
+| `<proc_id>` | `<description>` | `<interval>` | `<tools>` | `<skill>` |
+
+### 7.3 Spares and Support Equipment
+| Item ID | Description | Quantity | Criticality | Storage Requirements |
+|---|---|---|---|---|
+| `<item_id>` | `<description>` | `<qty>` | `<critical/standard>` | `<storage>` |
+
+---
+
+## 8. Configuration Baseline
+
+### 8.1 Body Configuration
+- **Body Baseline ID**: `<baseline_id>`
+- **Drawing Package**: `<drawing_refs>`
+- **BOM Reference**: `<bom_ref>`
+- **Configuration Control**: `<ccb_authority>`
+
+### 8.2 Brain Configuration
+- **Brain Baseline ID**: `<baseline_id>`
+- **Image ID**: `<image_id>` (if software loadable)
+- **SBOM Reference**: `<sbom_ref>`
+- **Model Files**: `<model_refs>` (if ML/NN)
+- **Configuration Control**: `<ccb_authority>`
+
+---
+
+## 9. Traceability
+
+### 9.1 Requirements Traceability
+| Requirement ID | Source | Description | Verification Method |
+|---|---|---|---|
+| `<req_id>` | `<source_doc>` | `<description>` | `<test/analysis/inspection>` |
+
+### 9.2 Standards Compliance
+| Standard | Version | Applicability | Compliance Status |
+|---|---|---|---|
+| `<standard>` | `<version>` | `<applicability>` | `<status>` |
+
+---
+
+## 10. Open Items and Assumptions to be Resolved
+
+| Item ID | Description | Impact | Resolution Target | Owner |
+|---|---|---|---|---|
+| `<item_id>` | `<description>` | `<impact>` | `<target_date>` | `<owner>` |
+
+---
+
+## 11. Change Control
+
+### 11.1 Immutable Elements
+```
+<Define which aspects of this AM cannot change without creating a new BB ID>
+```
+
+### 11.2 Controlled Change Elements
+```
+<Define which aspects can be updated via AM → AM′ under CCB control>
+```
+
+### 11.3 Change History
+| Version | Date | Change Description | Authority | Rationale |
+|---|---|---|---|---|
+| 1.0 | YYYY-MM-DD | Initial baseline | `<authority>` | Initial release |
+
+---
+
+## 12. Document Control
+
+| Version | Date | Author | Changes |
+|---|---|---|---|
+| 1.0 | YYYY-MM-DD | AMPEL360/ATA 95 Governance | Template creation |
+
+---
+
+**End of AM_<bb_id>**
