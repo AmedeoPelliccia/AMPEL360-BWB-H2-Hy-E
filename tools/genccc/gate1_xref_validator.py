@@ -189,6 +189,12 @@ def check_file_references(
     """Check file reference links."""
     issues = []
     
+    # Cache for parsed target file anchors to avoid re-reading
+    anchor_cache: Dict[str, Set[str]] = {}
+    
+    # Size limit for target files (prevent reading huge files)
+    MAX_TARGET_SIZE = 10 * 1024 * 1024  # 10MB
+    
     for text, url in file_links:
         if is_external_url(url) or is_internal_anchor(url):
             continue
@@ -225,10 +231,27 @@ def check_file_references(
                     link_url=url
                 ))
             elif anchor:
-                # If anchor specified, try to validate it exists in target
+                # If anchor specified, validate it exists in target (with caching and size limits)
                 try:
-                    target_content = resolved_path.read_text(encoding="utf-8")
-                    target_anchors = extract_internal_anchors(target_content)
+                    # Check file size first
+                    file_size = resolved_path.stat().st_size
+                    if file_size > MAX_TARGET_SIZE:
+                        issues.append(XRefIssue(
+                            XRefIssue.SEVERITY_WARN,
+                            "TARGET_FILE_TOO_LARGE",
+                            f"Target file too large to validate anchor: {file_url} ({file_size} bytes)",
+                            link_text=text,
+                            link_url=url
+                        ))
+                        continue
+                    
+                    # Check cache first
+                    target_path_str = str(resolved_path)
+                    if target_path_str not in anchor_cache:
+                        target_content = resolved_path.read_text(encoding="utf-8")
+                        anchor_cache[target_path_str] = extract_internal_anchors(target_content)
+                    
+                    target_anchors = anchor_cache[target_path_str]
                     if anchor not in target_anchors:
                         issues.append(XRefIssue(
                             XRefIssue.SEVERITY_WARN,

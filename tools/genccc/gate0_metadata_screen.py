@@ -44,7 +44,11 @@ import sys
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
 
-import yaml
+try:
+    import yaml
+except ImportError:
+    print("ERROR: PyYAML is required. Install with: pip install pyyaml", file=sys.stderr)
+    sys.exit(1)
 
 # Logging configuration
 logging.basicConfig(

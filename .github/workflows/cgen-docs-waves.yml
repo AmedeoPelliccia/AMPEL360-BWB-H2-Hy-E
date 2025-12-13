@@ -183,59 +183,51 @@ jobs:
             echo "  Gate 0: Metadata Coherence..."
             GATE0_TOTAL=$((GATE0_TOTAL + 1))
             
-            if python tools/genccc/gate0_metadata_screen.py \
+            set +e  # Don't exit on error, we need to capture exit code
+            python tools/genccc/gate0_metadata_screen.py \
               --artifact "$artifact" \
               --chain .genccc/chain_state.json \
               --issues ".genccc/issues/${safe_id}.gate0.json" \
-              --log ".genccc/logs/${safe_id}.gate0.log" 2>&1 | tee -a .genccc/logs/gate0_run.log; then
-              
-              EXIT_CODE=${PIPESTATUS[0]}
-              if [ $EXIT_CODE -eq 0 ]; then
-                echo "    ✓ Passed"
-                GATE0_PASSED=$((GATE0_PASSED + 1))
-              elif [ $EXIT_CODE -eq 2 ]; then
-                echo "    ○ Skipped (no metadata)"
-                GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
-              fi
+              --log ".genccc/logs/${safe_id}.gate0.log" 2>&1 | tee -a .genccc/logs/gate0_run.log
+            
+            EXIT_CODE=$?
+            set -e  # Re-enable exit on error
+            
+            if [ $EXIT_CODE -eq 0 ]; then
+              echo "    ✓ Passed"
+              GATE0_PASSED=$((GATE0_PASSED + 1))
+            elif [ $EXIT_CODE -eq 2 ]; then
+              echo "    ○ Skipped (no metadata)"
+              GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
             else
-              EXIT_CODE=$?
-              if [ $EXIT_CODE -eq 2 ]; then
-                echo "    ○ Skipped (no metadata)"
-                GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
-              else
-                echo "    ✗ Failed"
-                GATE0_FAILED=$((GATE0_FAILED + 1))
-              fi
+              echo "    ✗ Failed"
+              GATE0_FAILED=$((GATE0_FAILED + 1))
             fi
             
             # Gate 1A: Cross-Reference Existence
             echo "  Gate 1A: Cross-Reference Existence..."
             GATE1A_TOTAL=$((GATE1A_TOTAL + 1))
             
-            if python tools/genccc/gate1_xref_validator.py \
+            set +e  # Don't exit on error
+            python tools/genccc/gate1_xref_validator.py \
               --artifact "$artifact" \
               --repo-root "$(pwd)" \
               --chain .genccc/chain_state.json \
               --issues ".genccc/issues/${safe_id}.gate1a.json" \
-              --log ".genccc/logs/${safe_id}.gate1a.log" 2>&1 | tee -a .genccc/logs/gate1a_run.log; then
-              
-              EXIT_CODE=${PIPESTATUS[0]}
-              if [ $EXIT_CODE -eq 0 ]; then
-                echo "    ✓ Passed"
-                GATE1A_PASSED=$((GATE1A_PASSED + 1))
-              elif [ $EXIT_CODE -eq 2 ]; then
-                echo "    ○ Skipped (no references)"
-                GATE1A_SKIPPED=$((GATE1A_SKIPPED + 1))
-              fi
+              --log ".genccc/logs/${safe_id}.gate1a.log" 2>&1 | tee -a .genccc/logs/gate1a_run.log
+            
+            EXIT_CODE=$?
+            set -e  # Re-enable exit on error
+            
+            if [ $EXIT_CODE -eq 0 ]; then
+              echo "    ✓ Passed"
+              GATE1A_PASSED=$((GATE1A_PASSED + 1))
+            elif [ $EXIT_CODE -eq 2 ]; then
+              echo "    ○ Skipped (no references)"
+              GATE1A_SKIPPED=$((GATE1A_SKIPPED + 1))
             else
-              EXIT_CODE=$?
-              if [ $EXIT_CODE -eq 2 ]; then
-                echo "    ○ Skipped (no references)"
-                GATE1A_SKIPPED=$((GATE1A_SKIPPED + 1))
-              else
-                echo "    ✗ Failed"
-                GATE1A_FAILED=$((GATE1A_FAILED + 1))
-              fi
+              echo "    ✗ Failed"
+              GATE1A_FAILED=$((GATE1A_FAILED + 1))
             fi
             
           done < .genccc/artifact_queue.txt

@@ -228,16 +228,9 @@ def generate_svg_visualization(analysis: Dict[str, Any]) -> str:
     if total == 0:
         healthy_pct = warning_pct = error_pct = 0
     else:
-        healthy_pct = len(analysis["healthy_artifacts"]) / total * 100
-        warning_pct = len(analysis["warning_artifacts"]) / total * 100
-        error_pct = len(analysis["error_artifacts"]) / total * 100
-        
-        # Normalize to ensure total = 100% (handle rounding errors)
-        total_pct = healthy_pct + warning_pct + error_pct
-        if total_pct > 0:
-            healthy_pct = (healthy_pct / total_pct) * 100
-            warning_pct = (warning_pct / total_pct) * 100
-            error_pct = (error_pct / total_pct) * 100
+        healthy_pct = (len(analysis["healthy_artifacts"]) / total) * 100
+        warning_pct = (len(analysis["warning_artifacts"]) / total) * 100
+        error_pct = (len(analysis["error_artifacts"]) / total) * 100
     
     # Bar widths (max 600px total to fit within chart area)
     max_bar_width = 600
