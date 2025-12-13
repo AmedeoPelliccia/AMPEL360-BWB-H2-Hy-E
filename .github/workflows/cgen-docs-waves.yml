@@ -80,11 +80,109 @@ jobs:
           echo "Running batch: $BATCH_ID"
 
       # ---------------------------------------------------------
+      # Gate 0 — Metadata Coherence Screen
+      # Runs BEFORE any other machine validation
+      # Provides early fail-fast for malformed/incoherent metadata
+      # Gate Order:
+      # - Gate 0: Metadata Coherence (this step)
+      # - Gate 1: Cross-references validated
+      # - Gate 2: Context documents generated
+      # - Gate 3: Version links established
+      # - Gate 4: Traceability matrix updated
+      # - Gate 5: OPT-IN axis mapping verified
+      # - Gate 6: ATA chapter structure compliant
+      # ---------------------------------------------------------
+      - name: Gate 0 — Metadata Coherence Screen
+        id: gate0_metadata
+        continue-on-error: true
+        run: |
+          echo "=== Gate 0 — Metadata Coherence Screen ==="
+          
+          # Initialize chain state directory
+          mkdir -p .genccc/{issues,logs}
+          
+          # Find all markdown files in target directories that might have metadata
+          TARGET_DIRS=(
+            "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE"
+            "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS"
+          )
+          
+          GATE0_FAILED=0
+          GATE0_TOTAL=0
+          GATE0_SKIPPED=0
+          GATE0_WARNINGS=0
+          
+          for TARGET_DIR in "${TARGET_DIRS[@]}"; do
+            if [ ! -d "$TARGET_DIR" ]; then
+              echo "Directory not found: $TARGET_DIR (skipping)"
+              continue
+            fi
+            
+            echo "Scanning directory: $TARGET_DIR"
+            
+            # Find markdown, JSON, and YAML files
+            while IFS= read -r -d '' file; do
+              GATE0_TOTAL=$((GATE0_TOTAL + 1))
+              
+              echo "  Screening: $file"
+              
+              # Run Gate 0 screening
+              if python tools/genccc/gate0_metadata_screen.py \
+                --artifact "$file" \
+                --chain .genccc/chain_state.json 2>&1 | tee -a .genccc/gate0_summary.log; then
+                
+                EXIT_CODE=${PIPESTATUS[0]}
+                
+                if [ $EXIT_CODE -eq 0 ]; then
+                  echo "    ✓ Passed"
+                elif [ $EXIT_CODE -eq 2 ]; then
+                  echo "    ○ Skipped (no metadata)"
+                  GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
+                else
+                  echo "    ✗ Failed"
+                  GATE0_FAILED=$((GATE0_FAILED + 1))
+                fi
+              else
+                EXIT_CODE=$?
+                if [ $EXIT_CODE -eq 2 ]; then
+                  echo "    ○ Skipped (no metadata)"
+                  GATE0_SKIPPED=$((GATE0_SKIPPED + 1))
+                else
+                  echo "    ✗ Failed"
+                  GATE0_FAILED=$((GATE0_FAILED + 1))
+                fi
+              fi
+              
+            done < <(find "$TARGET_DIR" -type f \( -name "*.md" -o -name "*.json" -o -name "*.yaml" -o -name "*.yml" \) -print0)
+          done
+          
+          # Generate summary
+          echo ""
+          echo "=== Gate 0 Summary ==="
+          echo "Total artifacts screened: $GATE0_TOTAL"
+          echo "Passed: $((GATE0_TOTAL - GATE0_FAILED - GATE0_SKIPPED))"
+          echo "Failed: $GATE0_FAILED"
+          echo "Skipped (no metadata): $GATE0_SKIPPED"
+          echo ""
+          
+          # Store results for next steps
+          echo "gate0_failed=$GATE0_FAILED" >> "$GITHUB_OUTPUT"
+          echo "gate0_total=$GATE0_TOTAL" >> "$GITHUB_OUTPUT"
+          
+          # Fail if errors found (based on policy)
+          if [ $GATE0_FAILED -gt 0 ]; then
+            echo "::warning title=Gate 0 Failures::Gate 0 found $GATE0_FAILED artifacts with metadata errors"
+            # Note: continue-on-error is true, so this won't stop the workflow
+            # Change policy here if you want to fail hard on metadata errors
+          fi
+
+      # ---------------------------------------------------------
       # Run batch
       # SAFEGUARDS:
       # - Protected documents (comprehensive, validated) are skipped
       # - AI output is compared to original (30%+ reduction triggers draft mode)
       # - Batch configs use draft_sidecar mode to preserve originals
+      # - Gate 0 metadata screen runs before this step
       # ---------------------------------------------------------
       - name: Run CGen Docs batch
         id: run_batch
@@ -128,6 +226,48 @@ jobs:
           else
             echo "tools/genccc/fill_placeholders.py not found - skipping"
           fi
+
+      # ---------------------------------------------------------
+      # Upload Gate 0 artifacts and generate summary
+      # ---------------------------------------------------------
+      - name: Upload Gate 0 Metadata Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate0-metadata-reports
+          path: |
+            .genccc/chain_state.json
+            .genccc/issues/
+            .genccc/logs/
+            .genccc/gate0_summary.log
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Add Gate 0 Summary
+        if: always()
+        run: |
+          echo "## 🔍 Gate 0 — Metadata Coherence Screen" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          
+          if [ -f .genccc/chain_state.json ]; then
+            GATE0_TOTAL="${{ steps.gate0_metadata.outputs.gate0_total }}"
+            GATE0_FAILED="${{ steps.gate0_metadata.outputs.gate0_failed }}"
+            
+            echo "- **Total artifacts screened**: ${GATE0_TOTAL:-0}" >> "$GITHUB_STEP_SUMMARY"
+            echo "- **Failed**: ${GATE0_FAILED:-0}" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            
+            if [ "${GATE0_FAILED:-0}" -gt 0 ]; then
+              echo "⚠️ **Warning**: ${GATE0_FAILED} artifacts have metadata errors" >> "$GITHUB_STEP_SUMMARY"
+              echo "" >> "$GITHUB_STEP_SUMMARY"
+              echo "Review the gate0-metadata-reports artifact for details." >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "✅ All artifacts passed metadata coherence checks" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          else
+            echo "Gate 0 was not executed or no artifacts were screened." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "" >> "$GITHUB_STEP_SUMMARY"
 
       # ---------------------------------------------------------
       # Check for changes
@@ -190,12 +330,18 @@ jobs:
             **Trigger:** `${{ github.event_name }}`  
 
             ### Summary
+            - Gate 0 metadata coherence screening completed
             - Documentation deepened and evolved
             - Cross-references enhanced
             - Document Control normalized
             - TBD/TBR processed where possible
             - AI-assisted content tagged with `ai_assist`
             - Wave report stored under `cd/cgen_docs/logs/`
+
+            ### Gate 0 — Metadata Coherence
+            - Total artifacts screened: ${{ steps.gate0_metadata.outputs.gate0_total }}
+            - Artifacts with errors: ${{ steps.gate0_metadata.outputs.gate0_failed }}
+            - Chain state and detailed logs available in workflow artifacts
 
             ### UTCS / GenCCC
             - Traceability ensured via run logs + sidecar metadata  
@@ -219,6 +365,8 @@ jobs:
         run: |
           echo "## CGen Docs Wave Summary" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Batch**: ${{ steps.batch.outputs.batch_id }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Gate 0 screened**: ${{ steps.gate0_metadata.outputs.gate0_total }} artifacts" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Gate 0 failed**: ${{ steps.gate0_metadata.outputs.gate0_failed }} artifacts" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Changes detected**: ${{ steps.check_changes.outputs.has_changes }}" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Run number**: ${{ github.run_number }}" >> "$GITHUB_STEP_SUMMARY"
 

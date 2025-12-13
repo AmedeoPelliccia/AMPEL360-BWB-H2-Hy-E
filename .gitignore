@@ -40,6 +40,9 @@ Thumbs.db
 !/cd/costs/
 !/cd/cgen_docs/
 
+# Gate 0 metadata screening artifacts
+.genccc/
+
 # Binary document formats
 # These should not be committed to the repository
 *.pdf
