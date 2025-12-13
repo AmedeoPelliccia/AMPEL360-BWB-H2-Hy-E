@@ -2,7 +2,7 @@
 Title: "Hardware Procurement Guidelines"
 Identifier: "AMPEL360-02-30-02-005"
 Version: "1.0.0"
-Status: "Draft"
+Status: "Accepted"
 AccessLevel: "Internal"
 Author: "Sustainability Team"
 CreatedAt: "2025-11-21"
