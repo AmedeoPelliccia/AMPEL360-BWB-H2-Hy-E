@@ -13,11 +13,11 @@ This directory contains documentation and assets related to Global Reference Tax
 ```
 95-90-01_Global_Reference_Taxonomies/
 ├── README.md                                    # This file
-├── 95-90-01_Global_Reference_Taxonomies-001_*.md  # Overview
-├── 95-90-01_Global_Reference_Taxonomies-002_*.md  # Detailed documentation
-├── 95-90-01_Global_Reference_Taxonomies-003_*.md  # Additional specifications
-├── 95-90-01_Global_Reference_Taxonomies-004_*.md  # Additional content
-├── 95-90-01_Global_Reference_Taxonomies-005_*.md  # Cross-references
+├── 95-90-01-001_Global_Taxonomies_Overview.md   # Overview
+├── 95-90-01-002_Functional_Taxonomy_for_NN_and_DPP.md  # Functional taxonomy
+├── 95-90-01-003_ATA_and_OPTIN_Mapping_Tables.md # ATA/OPT-IN mappings
+├── 95-90-01-004_Labels_and_Classification_Schemes.md  # Classification schemes
+├── 95-90-01-005_CCert_CVal_Glossary.md          # CCert/CVal glossary & acronyms
 └── ASSETS/                                      # Data files, schemas, diagrams
     ├── *-A-001_*.{csv,json,yaml,drawio}
     ├── *-A-002_*.{csv,json,yaml,drawio}
