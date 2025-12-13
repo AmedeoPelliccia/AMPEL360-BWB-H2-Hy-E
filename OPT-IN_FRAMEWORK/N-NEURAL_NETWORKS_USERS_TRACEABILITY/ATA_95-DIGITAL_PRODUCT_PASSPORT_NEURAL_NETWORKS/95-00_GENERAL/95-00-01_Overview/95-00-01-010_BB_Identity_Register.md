@@ -139,8 +139,8 @@ The **Loop Packet** is the **per-ID lifecycle dossier** containing all CCert/CVa
 
 **Architecture**:
 ```
-95-00-01_Registers/
-└── 95-00-01-010_BB_Identity_Register/
+95-00-01_Overview/
+└── 95-00-01-010_Identity_Registers/
     ├── LOOPS/
     │   ├── TEMPLATES/           # Reusable templates for all artifacts
     │   └── <bb_id>/             # One Loop Packet per artifact
@@ -206,7 +206,7 @@ ELSE
 ### 4.4.5 Example: 27-BB-008 Loop Packet
 
 The Active Gust Alleviation System (27-BB-008) has a complete Loop Packet at:
-`95-00-01_Registers/95-00-01-010_BB_Identity_Register/LOOPS/27-BB-008/`
+`95-00-01_Overview/95-00-01-010_Identity_Registers/LOOPS/27-BB-008/`
 
 This serves as the reference implementation for all other artifacts.
 
@@ -217,7 +217,7 @@ Two Python scripts support Loop Packet management:
 1. **`tools/generate_loop_packet.py`**: Generate a complete skeleton from templates
 2. **`tools/check_loop_status.py`**: Validate consistency and check circuit state
 
-See `95-00-01_Registers/95-00-01-010_BB_Identity_Register/README.md` for complete Loop Packet system documentation.
+See `95-00-01_Overview/95-00-01-010_Identity_Registers/README.md` for complete Loop Packet system documentation.
 
 ---
 

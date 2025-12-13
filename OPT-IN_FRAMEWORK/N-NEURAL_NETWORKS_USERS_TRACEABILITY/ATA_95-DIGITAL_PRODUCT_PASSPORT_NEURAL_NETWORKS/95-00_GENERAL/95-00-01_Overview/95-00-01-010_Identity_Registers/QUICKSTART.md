@@ -281,8 +281,8 @@ OPT-IN_FRAMEWORK/
 └── N-NEURAL_NETWORKS_USERS_TRACEABILITY/
     └── ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/
         └── 95-00_GENERAL/
-            └── 95-00-01_Registers/
-                └── 95-00-01-010_BB_Identity_Register/
+            └── 95-00-01_Overview/
+                └── 95-00-01-010_Identity_Registers/
                     ├── README.md           # Full documentation
                     ├── LOOPS/
                     │   ├── TEMPLATES/      # 7 template files
@@ -312,7 +312,7 @@ tools/
 
 ## Getting Help
 
-- **Full documentation**: `95-00-01_Registers/95-00-01-010_BB_Identity_Register/README.md`
+- **Full documentation**: `95-00-01_Overview/95-00-01-010_Identity_Registers/README.md`
 - **Main register**: `95-00-01-010_BB_Identity_Register.md` (section 4.4)
 - **Example**: `LOOPS/27-BB-008/` (Active Gust Alleviation System)
 - **Templates**: `LOOPS/TEMPLATES/` (reference structures)

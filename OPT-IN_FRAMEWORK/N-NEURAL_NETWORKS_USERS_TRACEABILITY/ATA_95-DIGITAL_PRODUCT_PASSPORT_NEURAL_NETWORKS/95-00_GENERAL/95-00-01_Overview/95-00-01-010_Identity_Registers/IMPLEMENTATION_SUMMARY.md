@@ -38,7 +38,7 @@ Each artifact progresses through this circuit with deterministic gate rules.
 
 ### 1. Loop Packet Structure
 
-**Location**: `95-00-01_Registers/95-00-01-010_BB_Identity_Register/LOOPS/`
+**Location**: `95-00-01_Overview/95-00-01-010_Identity_Registers/LOOPS/`
 
 **Per-Artifact Files** (7 required):
 - `LOOP_<bb_id>.md` — Circuit control record (state machine)
