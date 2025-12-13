@@ -1,0 +1,37 @@
+Part_Number,Description,Quantity,Unit,Manufacturer,Supplier,Weight_kg,Criticality,Lead_Time_Weeks,Cost_USD,Notes
+PN7890F-001,Main Control PCB Assembly,1,ea,AMPEL360 Electronics,AMPEL360 Manufacturing,1.200,critical,16,8500,Triple-redundant processor architecture
+PN7890F-002,Processor Module - Infineon AURIX TC397,3,ea,Infineon Technologies,Authorized Distributor,0.045,critical,12,680,Automotive-grade lockstep CPUs
+PN7890F-003,Safety Coprocessor - TI Hercules TMS570,3,ea,Texas Instruments,Authorized Distributor,0.035,critical,10,420,Independent safety monitoring
+PN7890F-004,DDR4 ECC RAM - 16GB,6,ea,Micron Technology,Authorized Distributor,0.025,critical,8,185,Error-correcting memory
+PN7890F-005,Industrial SSD - 256GB,2,ea,Swissbit AG,Authorized Distributor,0.080,critical,10,450,Dual redundant storage
+PN7890F-006,Power Supply Module - Redundant,2,ea,Vicor Corporation,Authorized Distributor,0.650,critical,14,1350,Dual 28VDC inputs with ultracapacitor backup
+PN7890F-007,Ultracapacitor Bank - 10s backup,1,ea,Maxwell Technologies,Authorized Distributor,0.850,critical,12,980,Emergency power for safe shutdown
+PN7890F-008,ARINC 429 Interface Card - Quad Channel,2,ea,DDC-I Inc,Authorized Distributor,0.065,critical,10,890,Redundant avionics bus interfaces
+PN7890F-009,CAN Bus Controller - Dual Channel,2,ea,Kvaser AB,Authorized Distributor,0.045,critical,8,340,Fuel cell stack communication
+PN7890F-010,Ethernet Switch - ARINC 664 Managed,1,ea,Astronics Corporation,Authorized Distributor,0.120,critical,14,1680,Time-sensitive networking (TSN)
+PN7890F-011,Analog Input Module - 16 Channel Thermocouple,2,ea,National Instruments,Authorized Distributor,0.180,critical,10,1250,Cryogenic temperature measurement
+PN7890F-012,Analog Input Module - 8 Channel Pressure,1,ea,National Instruments,Authorized Distributor,0.150,critical,10,980,0-350 bar hydrogen pressure
+PN7890F-013,Analog Input Module - 4 Channel Flow,1,ea,National Instruments,Authorized Distributor,0.120,critical,10,850,Coriolis mass flow meters
+PN7890F-014,Digital Output Module - Safety Rated,2,ea,Phoenix Contact,Authorized Distributor,0.095,critical,8,560,Emergency shutdown relays
+PN7890F-015,Hydrogen Leak Sensor Interface,1,ea,Dräger Safety,Authorized Distributor,0.110,critical,12,1120,12-channel H2 sensor array
+PN7890F-016,Chassis - Vibration Isolated Custom,1,ea,AMPEL360 Structures,AMPEL360 Manufacturing,2.800,critical,12,2200,Aerospace-grade aluminum with shock mounts
+PN7890F-017,Liquid Cooling Plate - Cold Plate,1,ea,Boyd Corporation,Authorized Distributor,1.400,critical,14,1650,Integrated liquid cooling for processors
+PN7890F-018,Cooling Fan Assembly - Redundant,3,ea,ebm-papst Inc,Authorized Distributor,0.135,critical,8,175,High-reliability with tachometer feedback
+PN7890F-019,Front Panel Assembly with Display,1,ea,AMPEL360 Electronics,AMPEL360 Manufacturing,0.280,normal,8,580,Touch display for ground maintenance
+PN7890F-020,Rear Panel - Connector Assembly,1,ea,AMPEL360 Electronics,AMPEL360 Manufacturing,0.320,critical,8,640,Hermetic connectors for harsh environment
+PN7890F-021,EMI/RFI Shielding Kit,1,set,Chomerics Parker,Authorized Distributor,0.185,critical,6,280,Conductive gaskets and shielding
+PN7890F-022,Conformal Coating - Type UR,1,lot,HumiSeal,Authorized Distributor,0.025,normal,5,65,Moisture and chemical protection
+PN7890F-023,Thermal Interface Material - High Performance,1,lot,Bergquist Company,Authorized Distributor,0.020,normal,5,95,Gap filler for thermal management
+PN7890F-024,Mounting Hardware Kit - Vibration Isolated,1,kit,Various,AMPEL360 Supply,0.350,critical,4,180,Aerospace fasteners with lock washers
+PN7890F-025,Cable Assembly - Power Redundant,2,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.420,critical,10,380,Dual 28VDC power inputs
+PN7890F-026,Cable Assembly - ARINC 429 Quad,4,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.145,critical,10,210,Shielded twisted pairs
+PN7890F-027,Cable Assembly - CAN Bus,2,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.110,critical,10,165,Twisted shielded pair for fuel cell
+PN7890F-028,Cable Assembly - Ethernet TSN,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.135,critical,10,195,Cat6A shielded for time-sensitive network
+PN7890F-029,Cable Assembly - Thermocouple Array,2,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.580,critical,12,890,16-channel K-type thermocouples
+PN7890F-030,Cable Assembly - Pressure Transducers,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.380,critical,12,620,8-channel high-pressure rated
+PN7890F-031,Cable Assembly - Flow Meters,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.280,critical,12,540,4-channel Coriolis meter interface
+PN7890F-032,Cable Assembly - H2 Leak Sensors,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.650,critical,12,780,12-sensor array wiring
+PN7890F-033,Cable Assembly - Emergency Shutdown,1,ea,AMPEL360 Harnesses,AMPEL380 Manufacturing,0.220,critical,10,420,Triple-redundant safety circuit
+PN7890F-034,Firmware Package v1.2.0,1,ea,AMPEL360 Software,Internal,0.000,critical,0,0,Embedded in IMAGE_28-40_H2ECU01_SWPN6789_v1.2
+PN7890F-035,Serialized Data Plate - Hydrogen Safe,1,ea,AMPEL360 Manufacturing,Internal,0.010,normal,3,15,Laser-engraved stainless steel
+PN7890F-036,Safety Critical Software Evidence Package,1,set,AMPEL360 Software,Internal,0.000,critical,0,0,DO-178C DAL-A documentation

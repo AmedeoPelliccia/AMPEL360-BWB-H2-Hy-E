@@ -76,9 +76,13 @@ AM_Q100 (Aircraft Model Q100)
 - References back to AM_Q100 and all related documentation
 - Naming pattern: `DPP_{ATA-CHAPTER}_{LRU_ID}_{PART_NUMBER}_v{VERSION}`
 
-## Complete Example: Wingtip Camera Unit
+## Complete Examples
 
-This directory provides a **fully instantiated example** for the **Wingtip Camera Control Unit (CAMCTL01)**:
+This directory provides **two fully instantiated examples** demonstrating the AM nomenclature system:
+
+### Example 1: Wingtip Camera Control Unit (CAMCTL01) - ATA 34-20
+
+Non-safety-critical visual navigation system (DAL-D).
 
 | Artifact Type | File | Description |
 |---------------|------|-------------|
@@ -88,8 +92,37 @@ This directory provides a **fully instantiated example** for the **Wingtip Camer
 | CMM | `CMM_34-20_CAMCTL01_PN4567D_R02_manifest.json` | Component maintenance manual |
 | BOM | `BOM_34-20_CAMCTL01_PN4567D_R02.csv` | Bill of materials (25 parts) |
 | IMAGE | `IMAGE_34-20_CAMCTL01_SWPN4455_v2.0_manifest.json` | Software image manifest |
-| SBOM | `SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.spdx.json` | Software dependencies |
+| SBOM | `SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.spdx.json` | Software dependencies (7 components) |
 | DPP | `DPP_34-20_CAMCTL01_PN4567D_v1.0.json` | Complete digital product passport |
+
+### Example 2: Hydrogen Energy Control Unit (H2ECU01) - ATA 28-40
+
+Safety-critical hydrogen fuel cell control system (DAL-A).
+
+| Artifact Type | File | Description |
+|---------------|------|-------------|
+| Aircraft Master | `AM_Q100.json` | Root aircraft definition (shared) |
+| AMM | `AMM_AM_Q100_R01_manifest.json` | Aircraft maintenance manual manifest (shared) |
+| SWCFG | `SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json` | Software configuration index (shared) |
+| CMM | `CMM_28-40_H2ECU01_PN7890F_R01_manifest.json` | Component maintenance manual |
+| BOM | `BOM_28-40_H2ECU01_PN7890F_R01.csv` | Bill of materials (36 parts) |
+| IMAGE | `IMAGE_28-40_H2ECU01_SWPN6789_v1.2_manifest.json` | Software image manifest |
+| SBOM | `SBOM_IMAGE_28-40_H2ECU01_SWPN6789_v1.2.spdx.json` | Software dependencies (9 components) |
+| DPP | `DPP_28-40_H2ECU01_PN7890F_v1.0.json` | Complete digital product passport |
+
+### Key Differences Between Examples
+
+| Aspect | Wingtip Camera (CAMCTL01) | Hydrogen ECU (H2ECU01) |
+|--------|---------------------------|------------------------|
+| **ATA Chapter** | 34-20 (Navigation) | 28-40 (Fuel) |
+| **Safety Level** | DAL-D (Non-essential) | DAL-A (Safety-critical) |
+| **Complexity** | Moderate | High |
+| **BOM Parts** | 25 parts, 3.2 kg | 36 parts, 8.5 kg |
+| **Software Size** | 16 MB | 67 MB (triple-redundant) |
+| **Dependencies** | 7 SW components | 9 SW components (5 safety-certified) |
+| **Certification** | DO-178C Level D | DO-178C Level A, IEC 61508 SIL 4 |
+| **Special Requirements** | Basic avionics | Hydrogen safety, cryogenic handling |
+| **Code Coverage** | 92.5% | 100% (MC/DC required) |
 
 ## Naming Convention Summary
 
