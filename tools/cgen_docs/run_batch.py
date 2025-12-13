@@ -111,10 +111,11 @@ def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, 
     # Documents with approved/validated status should ALWAYS be protected
     doc_lower = doc_text.lower()
     if "## document control" in doc_lower:
-        # Check for status field
+        # Look for status field patterns: "Status:", "- Status:", "**Status:**"
         for line in lines:
             line_lower = line.lower()
-            if "status" in line_lower or "**status:**" in line_lower:
+            # More precise matching for status field declarations
+            if "status:" in line_lower or "**status:**" in line_lower or "- status:" in line_lower:
                 # Check if status indicates protected/validated content
                 for status in PROTECTED_STATUS_VALUES:
                     if status.lower() in line_lower:
@@ -132,7 +133,8 @@ def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, 
     for line in lines:
         stripped = line.strip()
         
-        # Count sections (## headers)
+        # Count sections (## headers only - level 2 main sections)
+        # We don't count ### subsections as they're part of main sections
         if stripped.startswith("##") and not stripped.startswith("###"):
             section_count += 1
         
@@ -146,6 +148,7 @@ def is_document_protected(doc_text: str, doc_path: pathlib.Path) -> tuple[bool, 
             content_lines += 1
     
     # If document has many placeholders relative to sections, it's not comprehensive
+    # Note: If section_count is 0, we skip this check and rely on other criteria
     if section_count > 0 and placeholder_count >= section_count * MAX_PLACEHOLDER_RATIO:
         return False, f"document has {placeholder_count} placeholders in {section_count} sections"
     
