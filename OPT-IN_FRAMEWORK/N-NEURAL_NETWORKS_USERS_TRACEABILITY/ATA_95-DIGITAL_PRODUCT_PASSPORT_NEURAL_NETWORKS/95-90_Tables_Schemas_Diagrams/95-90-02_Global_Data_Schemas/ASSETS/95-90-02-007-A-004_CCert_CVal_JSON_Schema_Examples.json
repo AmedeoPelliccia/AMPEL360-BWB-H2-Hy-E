@@ -1,0 +1,390 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CCert/CVal Core Data Model - JSON Examples",
+  "description": "Example payloads for JSONB fields in the CCert/CVal database schema",
+  "version": "1.0",
+  "examples": {
+    "dpp_json": {
+      "description": "Complete DPP envelope + payload for a Flight Control Neural Network",
+      "example": {
+        "dpp_id": "DPP_95-20-27_FC_PitchStability_v1.2",
+        "version": "1.2",
+        "created_at": "2025-01-15T10:00:00Z",
+        "created_by": "DPP_Generator_v2.0",
+        "system": {
+          "code": "FC_PitchStab_NN",
+          "name": "Flight Control Pitch Stability Neural Network",
+          "type": "nn_model",
+          "primary_ata": "95-20-27"
+        },
+        "capabilities": [
+          "pitch_rate_prediction",
+          "stability_augmentation",
+          "envelope_protection"
+        ],
+        "limitations": [
+          "Requires valid airspeed input",
+          "Degraded performance above 14500m altitude",
+          "Not certified for icing conditions"
+        ],
+        "odd": {
+          "operational_design_domain": {
+            "altitude_min_m": 0,
+            "altitude_max_m": 15000,
+            "speed_min_mach": 0.2,
+            "speed_max_mach": 0.85,
+            "temperature_min_c": -40,
+            "temperature_max_c": 50,
+            "conditions": ["VFR", "IFR"],
+            "excluded_conditions": ["icing", "severe_turbulence"]
+          }
+        },
+        "model": {
+          "type": "LSTM",
+          "architecture": "bidirectional",
+          "input_dim": 12,
+          "hidden_dim": 64,
+          "output_dim": 3,
+          "framework": "PyTorch",
+          "framework_version": "2.0.1"
+        },
+        "training": {
+          "dataset_id": "DS_FC_Pitch_Train_v3.1",
+          "training_date": "2024-12-01",
+          "epochs": 500,
+          "validation_accuracy": 0.987,
+          "test_mae": 0.035
+        },
+        "interfaces": {
+          "inputs": [
+            {"name": "pitch_angle", "unit": "degrees", "range": [-30, 30]},
+            {"name": "pitch_rate", "unit": "deg/s", "range": [-15, 15]},
+            {"name": "airspeed", "unit": "m/s", "range": [50, 300]},
+            {"name": "altitude", "unit": "m", "range": [0, 15000]}
+          ],
+          "outputs": [
+            {"name": "predicted_pitch_rate", "unit": "deg/s", "range": [-15, 15]},
+            {"name": "control_command", "unit": "normalized", "range": [-1, 1]},
+            {"name": "confidence", "unit": "probability", "range": [0, 1]}
+          ]
+        },
+        "certification": {
+          "basis": "CS-25.1309, DO-178C DAL B",
+          "status": "Certified",
+          "cert_date": "2025-01-10",
+          "authority": "EASA"
+        },
+        "sbom": {
+          "software_components": [
+            {"name": "PyTorch", "version": "2.0.1", "license": "BSD-3"},
+            {"name": "NumPy", "version": "1.24.0", "license": "BSD"},
+            {"name": "ONNX Runtime", "version": "1.15.0", "license": "MIT"}
+          ]
+        }
+      }
+    },
+    "om_data": {
+      "description": "Operational Mission event data from a test flight",
+      "example": {
+        "flight_id": "Q100-001-FLT-042",
+        "phase": "cruise",
+        "duration_seconds": 8100,
+        "metrics": {
+          "avg_pitch_error_deg": 0.12,
+          "max_pitch_error_deg": 0.45,
+          "min_pitch_error_deg": -0.38,
+          "rms_pitch_error_deg": 0.18,
+          "stability_margin": 0.92,
+          "control_activity": 0.65,
+          "prediction_latency_ms": 12.3,
+          "model_inference_time_ms": 8.7
+        },
+        "anomalies": [],
+        "envelope_violations": 0,
+        "system_health": "nominal",
+        "data_quality": 0.98,
+        "samples_collected": 48600,
+        "environment": {
+          "avg_altitude_m": 11000,
+          "avg_airspeed_mach": 0.78,
+          "avg_temperature_c": -45,
+          "weather": "clear",
+          "turbulence": "light"
+        }
+      }
+    },
+    "dv_metrics": {
+      "description": "Design Validation metrics for an AM baseline",
+      "example": {
+        "coverage": {
+          "requirements_coverage": 98.5,
+          "interface_coverage": 100.0,
+          "test_coverage": 96.2
+        },
+        "completeness": {
+          "documentation": 100.0,
+          "traceability": 95.8,
+          "verification_evidence": 98.0
+        },
+        "checks": {
+          "total_checks": 245,
+          "passed": 242,
+          "failed": 0,
+          "waived": 3
+        },
+        "quality_gates": {
+          "architecture_review": "passed",
+          "safety_assessment": "passed",
+          "security_review": "passed",
+          "performance_analysis": "passed"
+        },
+        "findings": [
+          {
+            "id": "DV-042",
+            "severity": "minor",
+            "category": "documentation",
+            "description": "Cross-reference to ATA 31 needs update",
+            "status": "waived",
+            "justification": "Will be updated in next revision"
+          }
+        ]
+      }
+    },
+    "oav_criteria": {
+      "description": "On-Aircraft Validation campaign criteria",
+      "example": {
+        "success_criteria": {
+          "prediction_accuracy": {
+            "threshold": 0.95,
+            "operator": ">=",
+            "unit": "ratio"
+          },
+          "max_error": {
+            "threshold": 0.5,
+            "operator": "<=",
+            "unit": "degrees"
+          },
+          "latency": {
+            "threshold": 20,
+            "operator": "<=",
+            "unit": "milliseconds"
+          },
+          "false_positive_rate": {
+            "threshold": 0.05,
+            "operator": "<=",
+            "unit": "ratio"
+          }
+        },
+        "test_scenarios": [
+          {
+            "id": "OAV-SC-001",
+            "name": "Normal cruise conditions",
+            "conditions": {
+              "altitude_range_m": [10000, 12000],
+              "speed_range_mach": [0.75, 0.80],
+              "duration_min": 30
+            },
+            "required_samples": 1000
+          },
+          {
+            "id": "OAV-SC-002",
+            "name": "Climb phase validation",
+            "conditions": {
+              "altitude_range_m": [5000, 10000],
+              "vertical_speed_fpm": [1500, 2500],
+              "duration_min": 15
+            },
+            "required_samples": 500
+          }
+        ],
+        "minimum_flights": 10,
+        "minimum_flight_hours": 25,
+        "environmental_coverage": {
+          "temperature_range_c": [-40, 30],
+          "weather_conditions": ["clear", "cloudy", "light_rain"],
+          "turbulence_levels": ["none", "light", "moderate"]
+        }
+      }
+    },
+    "oav_result": {
+      "description": "On-Aircraft Validation campaign results",
+      "example": {
+        "overall_status": "passed",
+        "completion_date": "2025-02-15",
+        "flights_completed": 12,
+        "total_flight_hours": 28.5,
+        "total_samples": 171000,
+        "metrics": {
+          "prediction_accuracy": 0.963,
+          "max_error_deg": 0.48,
+          "avg_latency_ms": 12.8,
+          "false_positive_rate": 0.018
+        },
+        "criteria_results": [
+          {
+            "criterion": "prediction_accuracy",
+            "required": 0.95,
+            "achieved": 0.963,
+            "status": "passed",
+            "margin": 0.013
+          },
+          {
+            "criterion": "max_error",
+            "required": 0.5,
+            "achieved": 0.48,
+            "status": "passed",
+            "margin": 0.02
+          },
+          {
+            "criterion": "latency",
+            "required": 20,
+            "achieved": 12.8,
+            "status": "passed",
+            "margin": 7.2
+          }
+        ],
+        "findings": [
+          {
+            "id": "OAV-F-001",
+            "severity": "observation",
+            "description": "Minor performance degradation observed above 12000m",
+            "impact": "low",
+            "recommendation": "Document in operational limitations"
+          }
+        ],
+        "recommendation": "System meets all validation criteria and is recommended for operational release with documented altitude limitation."
+      }
+    },
+    "dt_state": {
+      "description": "Digital Twin snapshot state",
+      "example": {
+        "snapshot_id": "DT_v1.3_post_OAV_Q1",
+        "snapshot_date": "2025-02-16T14:30:00Z",
+        "operational_envelope": {
+          "altitude_validated_max_m": 14500,
+          "altitude_optimal_max_m": 12000,
+          "speed_validated_max_mach": 0.85,
+          "temperature_validated_min_c": -45,
+          "temperature_validated_max_c": 45
+        },
+        "performance_model": {
+          "prediction_accuracy_function": "0.987 - 0.002 * (alt_km - 10)^2",
+          "latency_model": "8.5 + 0.3 * log(sample_rate)",
+          "degradation_factors": {
+            "altitude_above_12km": 0.015,
+            "temperature_below_minus40": 0.008
+          }
+        },
+        "health_status": {
+          "overall": "nominal",
+          "subsystems": {
+            "inference_engine": "nominal",
+            "input_validation": "nominal",
+            "output_filtering": "nominal"
+          }
+        },
+        "accumulated_metrics": {
+          "total_flight_hours": 156.7,
+          "total_predictions": 9420000,
+          "total_anomalies": 42,
+          "false_positives": 18,
+          "false_negatives": 2
+        },
+        "maintenance_indicators": {
+          "recommended_recalibration_hours": 5000,
+          "recommended_retraining_cycles": 10000,
+          "next_validation_due": "2025-08-15"
+        },
+        "drift_analysis": {
+          "performance_drift": 0.02,
+          "bias_drift": -0.005,
+          "variance_drift": 0.012,
+          "drift_trend": "stable"
+        },
+        "confidence_assessment": {
+          "model_confidence": 0.94,
+          "data_confidence": 0.96,
+          "operational_confidence": 0.92,
+          "overall_confidence": 0.94
+        }
+      }
+    },
+    "system_metadata": {
+      "description": "System product metadata (JSONB field)",
+      "example": {
+        "manufacturer": "AMPEL360 AI Systems",
+        "development_phase": "production",
+        "technology_readiness_level": 9,
+        "safety_classification": "DAL_B",
+        "cybersecurity_classification": "RTCA_DO-326A_Level_3",
+        "interfaces": ["ARINC_429", "ARINC_664", "MIL-STD-1553"],
+        "power_requirements": {
+          "voltage_v": 28,
+          "current_max_a": 5.2,
+          "power_max_w": 145
+        },
+        "environmental_specs": {
+          "operating_temp_c": [-40, 70],
+          "storage_temp_c": [-55, 85],
+          "humidity_percent": [5, 95],
+          "vibration_g": 7.5,
+          "shock_g": 40
+        },
+        "lifecycle": {
+          "design_start": "2023-06-15",
+          "first_flight": "2024-09-20",
+          "certification_target": "2025-06-30",
+          "expected_service_life_years": 20
+        }
+      }
+    },
+    "am_metadata": {
+      "description": "AM baseline metadata (JSONB field)",
+      "example": {
+        "author": "John Smith",
+        "review_board": ["Jane Doe", "Bob Wilson", "Alice Chen"],
+        "approval_authority": "Chief Engineer - Flight Controls",
+        "change_summary": "Updated ODD for high-altitude operations",
+        "affected_components": ["FC_PitchStab_NN", "FC_Controller"],
+        "related_changes": ["ECO-2024-156", "SCR-2024-892"],
+        "baseline_rationale": "Incorporating validation data from Phase 2 OAV campaign",
+        "lifecycle_context": "pre_certification",
+        "configuration_items": [
+          "AM_Q100_v2.1",
+          "FC_PitchStab_NN_v1.2",
+          "SW_Config_FC_v3.4"
+        ]
+      }
+    }
+  },
+  "schemas": {
+    "dpp_json_schema": {
+      "type": "object",
+      "required": ["dpp_id", "version", "system", "capabilities", "odd", "certification"],
+      "properties": {
+        "dpp_id": {"type": "string"},
+        "version": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "system": {
+          "type": "object",
+          "properties": {
+            "code": {"type": "string"},
+            "name": {"type": "string"},
+            "type": {"type": "string"},
+            "primary_ata": {"type": "string"}
+          }
+        },
+        "capabilities": {"type": "array", "items": {"type": "string"}},
+        "limitations": {"type": "array", "items": {"type": "string"}},
+        "odd": {"type": "object"},
+        "certification": {"type": "object"}
+      }
+    }
+  },
+  "notes": {
+    "purpose": "These examples demonstrate the structure and content of JSONB fields in the CCert/CVal database schema",
+    "usage": "Use these as templates when inserting data into the database or when validating data from external sources",
+    "validation": "All examples should be validated against their respective JSON schemas before insertion",
+    "versioning": "JSONB schemas may evolve; always check the current version in the documentation"
+  }
+}
