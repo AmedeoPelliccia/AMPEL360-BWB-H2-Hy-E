@@ -6,7 +6,7 @@ The CGen Placeholder Filling feature automatically completes documentation secti
 
 ## Supported Placeholder Patterns
 
-The tool recognizes two types of placeholders:
+The tool recognizes three types of placeholders:
 
 ### 1. Legacy Pattern
 ```markdown
@@ -29,7 +29,16 @@ Or with specific hints:
 [CGEN:Requirements]
 ```
 
-Both patterns will be detected and filled automatically.
+### 3. Dry-Run Pattern (Automatically Generated)
+```markdown
+## 5. Design
+
+[DRY-RUN: No changes made]
+```
+
+This pattern is automatically inserted by CGen when running in dry-run mode or when the AI client is unavailable.
+
+All patterns will be detected and filled automatically.
 
 ## How It Works
 

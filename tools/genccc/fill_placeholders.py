@@ -23,6 +23,7 @@ This tool automatically detects and fills placeholder content in documentation
 files using AI-assisted generation. It supports:
 - Legacy placeholders: "[To be completed]"
 - New convention: "[CGEN:TODO]", "[CGEN:Scope]", etc.
+- Dry-run placeholders: "[DRY-RUN: No changes made]"
 
 The tool extracts document context, identifies sections, and generates
 appropriate content using OpenAI's API.
@@ -59,6 +60,7 @@ DEFAULT_TARGET = REPO_ROOT / "OPT-IN_FRAMEWORK" / "I-INFRASTRUCTURES" / "ATA_03-
 PLACEHOLDER_PATTERNS = [
     re.compile(r"^\[To be completed\]\s*$"),
     re.compile(r"^\[CGEN:.*\]\s*$"),
+    re.compile(r"^\[DRY-RUN:.*\]\s*$"),  # CGen dry-run placeholders
 ]
 
 # Section title pattern (e.g., "2. Scope", "3. Overview")

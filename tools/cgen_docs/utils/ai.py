@@ -90,6 +90,7 @@ def run_deepen_evolve_prompt(
     ai_policy: Dict[str, Any],
     dry_run: bool = False,
     max_retries: int = 3,
+    original_content: Optional[str] = None,
 ) -> Optional[AIResponse]:
     """
     Execute the deepen/evolve prompt against an AI model with retry handling.
@@ -99,18 +100,21 @@ def run_deepen_evolve_prompt(
         ai_policy: The AI policy controlling model selection and limits.
         dry_run: If True, bypasses the actual API and returns a mock response.
         max_retries: Maximum number of retry attempts.
+        original_content: Original document content to preserve when AI is unavailable
+            or in dry-run mode. If provided, this content will be returned unchanged
+            instead of a placeholder, maintaining document integrity.
 
     Returns:
         AIResponse or None if all attempts fail.
     """
 
     if dry_run:
-        return _mock_response(prompt, ai_policy)
+        return _mock_response(prompt, ai_policy, original_content)
 
     client = get_api_client()
     if client is None:
         logger.warning("No API client available; falling back to mock response.")
-        return _mock_response(prompt, ai_policy)
+        return _mock_response(prompt, ai_policy, original_content)
 
     model = ai_policy.get("model", "gpt-4o")
     fallback_model = ai_policy.get("fallback_model", "gpt-4o-mini")
@@ -206,14 +210,24 @@ def _extract_summary(content: str) -> str:
 # Mock Responses
 # ---------------------------------------------------------------------------
 
-def _mock_response(prompt: str, ai_policy: Dict[str, Any]) -> AIResponse:
+def _mock_response(prompt: str, ai_policy: Dict[str, Any], original_content: Optional[str] = None) -> AIResponse:
     """Return a deterministic mock response for dry-run and fallback modes."""
     logger.info("[MOCK] Returning simulated AI response.")
     logger.debug("[MOCK] Prompt length: %d chars", len(prompt))
 
+    # Check if original content has non-whitespace characters; if so, preserve the original
+    # (including any leading/trailing whitespace) instead of using a placeholder
+    stripped_content = original_content.strip() if original_content else ""
+    if stripped_content:
+        content = original_content
+        summary = "Dry-run/fallback mode: original content preserved without AI processing."
+    else:
+        content = "[DRY-RUN: No changes made]"
+        summary = "Dry-run mode: no AI processing performed."
+
     return AIResponse(
-        content="[DRY-RUN: No changes made]",
-        summary="Dry-run mode: no AI processing performed.",
+        content=content,
+        summary=summary,
         model=(ai_policy.get("model") or "mock-model") + " (mock)",
         tokens_used=0,
         finish_reason="mock",
