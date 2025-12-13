@@ -1,0 +1,147 @@
+{
+  "amm_id": "AMM_AM_Q100_R01_EN",
+  "document_type": "aircraft_maintenance_manual",
+  "am_id": "AM_Q100",
+  "am_name": "AMPEL360 Q100",
+  "revision": "01",
+  "language": "EN",
+  "issue_date": "2025-12-13",
+  "effective_date": "2026-01-15",
+  "status": "draft",
+  
+  "description": "Aircraft Maintenance Manual for AMPEL360 Q100 - Blended-Wing-Body Hydrogen-Electric Aircraft",
+  
+  "applicability": {
+    "am_models": ["AM_Q100"],
+    "variants": ["AM_Q100_STD", "AM_Q100_COMBI", "AM_Q100_ER"],
+    "msn_range": {
+      "from": 1001,
+      "to": 9999
+    }
+  },
+  
+  "manual_structure": {
+    "format": "ATA_iSpec_2200",
+    "chapters": [
+      {
+        "chapter": "00",
+        "title": "General",
+        "sections": ["00-00", "00-10", "00-20"]
+      },
+      {
+        "chapter": "05",
+        "title": "Time Limits/Maintenance Checks",
+        "sections": ["05-00", "05-10", "05-20", "05-30", "05-40", "05-50"]
+      },
+      {
+        "chapter": "06",
+        "title": "Dimensions and Areas",
+        "sections": ["06-00", "06-10"]
+      },
+      {
+        "chapter": "07",
+        "title": "Lifting and Shoring",
+        "sections": ["07-00", "07-10", "07-20"]
+      },
+      {
+        "chapter": "08",
+        "title": "Leveling and Weighing",
+        "sections": ["08-00", "08-10"]
+      },
+      {
+        "chapter": "09",
+        "title": "Towing and Taxiing",
+        "sections": ["09-00", "09-10", "09-20"]
+      },
+      {
+        "chapter": "10",
+        "title": "Parking, Mooring, Storage and Return to Service",
+        "sections": ["10-00", "10-10", "10-20", "10-30"]
+      },
+      {
+        "chapter": "12",
+        "title": "Servicing",
+        "sections": ["12-00", "12-10", "12-20", "12-30"]
+      },
+      {
+        "chapter": "20",
+        "title": "Standard Practices - Airframe",
+        "sections": ["20-00", "20-10"]
+      },
+      {
+        "chapter": "24",
+        "title": "Electrical Power",
+        "sections": ["24-00", "24-10", "24-20", "24-30"]
+      },
+      {
+        "chapter": "27",
+        "title": "Flight Controls",
+        "sections": ["27-00", "27-10", "27-20", "27-30", "27-40", "27-50", "27-60"]
+      },
+      {
+        "chapter": "28",
+        "title": "Fuel (Hydrogen)",
+        "sections": ["28-00", "28-10", "28-20", "28-30", "28-40"]
+      },
+      {
+        "chapter": "31",
+        "title": "Instruments",
+        "sections": ["31-00", "31-10", "31-20", "31-30"]
+      },
+      {
+        "chapter": "53",
+        "title": "Fuselage (BWB Structure)",
+        "sections": ["53-00", "53-10", "53-20", "53-30", "53-40", "53-50", "53-60"]
+      },
+      {
+        "chapter": "61",
+        "title": "Propulsion (Fuel Cell System)",
+        "sections": ["61-00", "61-10", "61-20", "61-30"]
+      },
+      {
+        "chapter": "80",
+        "title": "Starting",
+        "sections": ["80-00", "80-10"]
+      }
+    ],
+    "total_pages_estimated": 2500
+  },
+  
+  "document_files": {
+    "primary_pdf": "AMM_AM_Q100_R01_EN.pdf",
+    "size_mb": 125,
+    "checksum_sha256": "TBD - to be computed upon final release"
+  },
+  
+  "references": {
+    "aircraft_master": "AM_Q100.json",
+    "sw_config_index": "SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json",
+    "illustrated_parts_catalog": "IPC_AM_Q100_R01_EN.pdf",
+    "wiring_diagram_manual": "WDM_AM_Q100_R01_EN.pdf"
+  },
+  
+  "regulatory_compliance": {
+    "easa_part_21": "Subpart J - Design Organisation Approval",
+    "easa_part_m": "Continuing Airworthiness Requirements",
+    "faa_part_25": "Transport Category Airplanes",
+    "ata_spec_2200": "Information Standards for Aviation Maintenance"
+  },
+  
+  "revision_history": [
+    {
+      "revision": "01",
+      "date": "2025-12-13",
+      "description": "Initial draft release for AM_Q100",
+      "author": "AMPEL360 Technical Publications",
+      "pages_affected": "All"
+    }
+  ],
+  
+  "metadata": {
+    "created_date": "2025-12-13",
+    "last_modified_date": "2025-12-13",
+    "document_owner": "AMPEL360 Technical Publications Department",
+    "document_status": "draft",
+    "schema_version": "1.0"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "image_id": "IMAGE_34-20_CAMCTL01_SWPN4455_v2.0",
+  "image_type": "loadable_software_image",
+  "ata_chapter": "34-20",
+  "lru_id": "CAMCTL01",
+  "lru_name": "Wingtip Camera Control Unit",
+  "software_part_number": "SWPN4455",
+  "version": "2.0.1",
+  "build_date": "2025-12-10",
+  "release_date": "2025-12-13",
+  "status": "released",
+  
+  "am_applicability": ["AM_Q100", "AM_Q80"],
+  
+  "description": "Visual Navigation and Ground Awareness Camera System - Main executable and configuration files",
+  
+  "image_files": [
+    {
+      "filename": "camctl_main.bin",
+      "description": "Main application binary",
+      "size_bytes": 8388608,
+      "load_address": "0x80000000",
+      "checksum_crc32": "0xABCD1234",
+      "checksum_sha256": "d4e5f67890123456789012345678901cdefg1234567890abcdef45678901"
+    },
+    {
+      "filename": "camctl_boot.bin",
+      "description": "Bootloader binary",
+      "size_bytes": 524288,
+      "load_address": "0x00000000",
+      "checksum_crc32": "0x1234ABCD",
+      "checksum_sha256": "e5f67890123456789012345678901defgh1234567890abcdef5678901234"
+    },
+    {
+      "filename": "camctl_fpga.bit",
+      "description": "FPGA bitstream for image processing",
+      "size_bytes": 4194304,
+      "load_address": "FPGA",
+      "checksum_crc32": "0x5678CDEF",
+      "checksum_sha256": "f6789012345678901234567890efghi1234567890abcdef67890123456"
+    },
+    {
+      "filename": "camctl_config.json",
+      "description": "Default configuration parameters",
+      "size_bytes": 65536,
+      "load_address": "N/A",
+      "checksum_crc32": "0x9ABC3456",
+      "checksum_sha256": "0123456789012345678901fghij1234567890abcdef7890123456789"
+    }
+  ],
+  
+  "total_image_size_bytes": 16777216,
+  "image_format": "compound_binary_package",
+  "compression": "none",
+  "encryption": "AES-256-CBC",
+  "signature": "RSA-4096",
+  
+  "software_characteristics": {
+    "programming_languages": ["C", "C++", "VHDL"],
+    "compiler": "GCC ARM 11.2.1",
+    "development_environment": "Eclipse + Xilinx Vivado",
+    "rtos": "VxWorks 7.0",
+    "dal_level": "DO-178C Level D",
+    "source_lines_of_code": 145000,
+    "cyclomatic_complexity_avg": 8.3
+  },
+  
+  "functionality": {
+    "primary_functions": [
+      "Camera image acquisition from dual wingtip cameras",
+      "Real-time image processing and enhancement",
+      "Object detection for ground obstacles",
+      "Video compression and streaming",
+      "Camera health monitoring and diagnostics"
+    ],
+    "interfaces_supported": [
+      "ARINC 429 command/status",
+      "ARINC 664 Ethernet video streaming",
+      "CoaXPress camera data",
+      "Built-in test (BIT)"
+    ]
+  },
+  
+  "dependencies": [
+    {
+      "library_name": "VxWorks RTOS Kernel",
+      "version": "7.0.1",
+      "license": "Commercial",
+      "supplier": "Wind River Systems"
+    },
+    {
+      "library_name": "OpenCV Embedded",
+      "version": "4.5.3",
+      "license": "Apache-2.0",
+      "supplier": "OpenCV Community",
+      "purpose": "Image processing algorithms"
+    },
+    {
+      "library_name": "H.264 Video Codec",
+      "version": "1.2.0",
+      "license": "Proprietary",
+      "supplier": "VideoCore Ltd",
+      "purpose": "Video compression"
+    },
+    {
+      "library_name": "ARINC 429 Driver",
+      "version": "3.1.5",
+      "license": "Proprietary",
+      "supplier": "DDC-I Inc",
+      "purpose": "ARINC 429 communication"
+    }
+  ],
+  
+  "verification": {
+    "unit_tests_passed": 1247,
+    "integration_tests_passed": 89,
+    "system_tests_passed": 34,
+    "code_coverage_percent": 92.5,
+    "requirements_coverage_percent": 100.0,
+    "verification_report": "VR_34-20_CAMCTL01_v2.0.1.pdf"
+  },
+  
+  "installation": {
+    "loading_method": "ARINC 615A",
+    "loading_time_minutes": 15,
+    "requires_aircraft_power": true,
+    "requires_aircraft_on_ground": true,
+    "post_load_test_required": true,
+    "loading_procedure": "CMM_34-20_CAMCTL01_PN4567D_R02.pdf Section 5.3"
+  },
+  
+  "compatibility": {
+    "hardware_part_numbers": ["PN4567D", "PN4567C"],
+    "replaces_versions": ["1.9.5", "2.0.0"],
+    "backward_compatible": true,
+    "minimum_hardware_revision": "C"
+  },
+  
+  "known_issues": [
+    {
+      "issue_id": "SW-1234",
+      "severity": "minor",
+      "description": "Occasional timestamp drift in logged video frames",
+      "workaround": "System automatically resyncs within 5 seconds",
+      "resolution_target": "v2.1.0"
+    }
+  ],
+  
+  "references": {
+    "aircraft_master": "AM_Q100.json",
+    "swcfg": "SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json",
+    "cmm": "CMM_34-20_CAMCTL01_PN4567D_R02.pdf",
+    "sbom": "SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.spdx.json",
+    "source_repository": "git://ampel360.com/camctl.git",
+    "source_commit": "a1b2c3d4e5f6789012345678901234567890abcd"
+  },
+  
+  "metadata": {
+    "created_date": "2025-12-10",
+    "released_date": "2025-12-13",
+    "developer": "AMPEL360 Software Engineering - Camera Systems Team",
+    "approver": "AMPEL360 Software Quality Assurance",
+    "document_status": "released",
+    "schema_version": "1.0"
+  }
+}
