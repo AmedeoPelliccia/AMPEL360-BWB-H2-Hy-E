@@ -74,8 +74,9 @@ def _mock_response(
 ) -> AIResponse:
     """Return a deterministic mock response for dry-run and fallback modes."""
     
-    # If we have original content, preserve it instead of using a placeholder
-    if original_content:
+    # If we have original content (non-empty), preserve it instead of using a placeholder
+    stripped_content = original_content.strip() if original_content else ""
+    if stripped_content:
         content = original_content
         summary = "Dry-run/fallback mode: original content preserved without AI processing."
     else:

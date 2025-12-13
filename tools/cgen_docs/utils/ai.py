@@ -216,7 +216,8 @@ def _mock_response(prompt: str, ai_policy: Dict[str, Any], original_content: Opt
     logger.debug("[MOCK] Prompt length: %d chars", len(prompt))
 
     # If we have original content (non-empty), preserve it instead of using a placeholder
-    if original_content and original_content.strip():
+    stripped_content = original_content.strip() if original_content else ""
+    if stripped_content:
         content = original_content
         summary = "Dry-run/fallback mode: original content preserved without AI processing."
     else:
