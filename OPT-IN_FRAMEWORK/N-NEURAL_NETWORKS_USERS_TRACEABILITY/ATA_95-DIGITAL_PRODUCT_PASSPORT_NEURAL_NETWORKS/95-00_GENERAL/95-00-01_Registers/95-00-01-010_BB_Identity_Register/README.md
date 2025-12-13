@@ -19,7 +19,11 @@ This document describes the **Loop Packet** infrastructure for managing the **CC
 
 **Key Concept**: The BB Identity Register (95-00-01-010_BB_Identity_Register.md) is the *index*. The **Loop Packet** is the *per-ID lifecycle dossier* that contains all circuit artifacts for deterministic evidence management.
 
-**Proto-Robot Paradigm**: Each BB artifact is a **proto-robot híbrido** (cyber-physical entity) with a biological lifecycle. See [PROTO_ROBOT_PARADIGM.md](PROTO_ROBOT_PARADIGM.md) for the conceptual foundation.
+**Epistemological Foundation**: This infrastructure implements **PR-O-RO™ (Protorobotics)** — a certification-grade epistemology for hybrid cyber-physical artifacts. See:
+- [PRORO_FOUNDING_MANIFESTO.md](PRORO_FOUNDING_MANIFESTO.md) — Complete PR-O-RO™ framework
+- [PROTO_ROBOT_PARADIGM.md](PROTO_ROBOT_PARADIGM.md) — Biological lifecycle analogies
+
+**Proto-Robot Paradigm**: Each BB artifact is a **proto-robot híbrido** (cyber-physical entity) with a biological lifecycle, governed by PR-O-RO principles.
 
 ---
 
