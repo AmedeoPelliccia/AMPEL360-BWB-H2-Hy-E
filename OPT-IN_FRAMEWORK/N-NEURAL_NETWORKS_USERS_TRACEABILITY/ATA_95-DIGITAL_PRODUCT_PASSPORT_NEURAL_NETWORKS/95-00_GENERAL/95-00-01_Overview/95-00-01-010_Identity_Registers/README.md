@@ -60,8 +60,8 @@ Each **BB-xxx** is a proto-robot with:
 ### 3.1 Folder Organization
 
 ```
-95-00-01_Registers/
-└── 95-00-01-010_BB_Identity_Register/
+95-00-01_Overview/
+└── 95-00-01-010_Identity_Registers/
     ├── LOOPS/
     │   ├── TEMPLATES/           # Reusable templates
     │   │   ├── LOOP_TEMPLATE.md
