@@ -51,3 +51,72 @@ This directory contains the **safety engineering baseline** for **ATA 54 (Nacell
 - FHA/SSA/FTA and interface impact notes SHALL reference **hazard IDs** (not free text) to enable traceability graphs.
 - Safety-derived requirements SHALL be registered and linked in `54-00-02-80_REQUIREMENTS_LINKS/`.
 - Interface impact notes SHALL link to authoritative ICDs when those exist under the Interfaces nodes.
+
+```
+  54-00-02_Safety/
+├── 00_INDEX.md
+├── README.md
+├── 54-00-02-00_SAFETY_OVERVIEW/
+│   ├── 00_INDEX.md
+│   ├── 54-00-02-00-001_Safety_Framework.md
+│   ├── 54-00-02-00-002_Safety_Objectives.md
+│   └── 54-00-02-00-003_Safety_Taxonomy.md
+├── 54-00-02-10_HAZARD_ANALYSIS/
+│   ├── 00_INDEX.md
+│   ├── HAZARD_LOGS/
+│   │   ├── 00_INDEX.md
+│   │   ├── 54-00-02-10-001_Hazard_Log_Master.csv
+│   │   └── 54-00-02-10-002_Hazard_Log_Template.csv
+│   ├── 54-00-02-10-003_Functional_Hazards.md
+│   ├── 54-00-02-10-004_Hazard_Classification.md
+│   └── 54-00-02-10-005_Hazard_Log_Index.md
+├── 54-00-02-20_FHA/
+│   ├── 00_INDEX.md
+│   ├── FHA_CASES/
+│   │   ├── 00_INDEX.md
+│   │   └── 54-00-02-20-001_FHA_Case_List.md
+│   ├── 54-00-02-20-002_FHA_ATA54_Summary.md
+│   └── 54-00-02-20-003_FHA_Methodology.md
+├── 54-00-02-30_SSA/
+│   ├── 00_INDEX.md
+│   ├── SSA_MODELS/
+│   │   ├── 00_INDEX.md
+│   │   └── 54-00-02-30-001_SSA_Tools_Notes.md
+│   ├── 54-00-02-30-002_SSA_ATA54_Summary.md
+│   └── 54-00-02-30-003_SSA_Strategy.md
+├── 54-00-02-40_FTA/
+│   ├── 00_INDEX.md
+│   ├── DIAGRAMS/
+│   │   ├── 00_INDEX.md
+│   │   ├── 54-00-02-40-001_FTA_Notes.md
+│   │   └── 54-00-02-40-002_FTA_Nacelle_Pylon_TopEvent.mermaid
+│   └── 54-00-02-40-003_FTA_Overview.md
+├── 54-00-02-50_ZSA/
+│   ├── 00_INDEX.md
+│   ├── ZONE_ANALYSIS/
+│   │   └── 00_INDEX.md
+│   ├── 54-00-02-50-001_ZSA_Overview.md
+│   └── 54-00-02-50-002_Zone_Definitions.md
+├── 54-00-02-60_COMMON_CAUSES/
+│   ├── 00_INDEX.md
+│   ├── 54-00-02-60-001_Common_Cause_Analysis.md
+│   └── 54-00-02-60-002_Shared_Resources_Map.md
+├── 54-00-02-70_INTERFACES_SAFETY/
+│   ├── 00_INDEX.md
+│   ├── 54-00-02-70-001_Safety_Interfaces_Overview.md
+│   ├── 54-00-02-70-002_ATA24_Impact.md
+│   ├── 54-00-02-70-003_ATA26_Impact.md
+│   ├── 54-00-02-70-004_ATA28_Impact.md
+│   ├── 54-00-02-70-005_ATA30_Impact.md
+│   ├── 54-00-02-70-006_ATA51_Impact.md
+│   └── 54-00-02-70-007_ATA71_72_Impact.md
+├── 54-00-02-80_REQUIREMENTS_LINKS/
+│   ├── 00_INDEX.md
+│   ├── 54-00-02-80-001_Cert_Basis_References.md
+│   ├── 54-00-02-80-002_Safety_Requirements_Index.md
+│   └── 54-00-02-80-003_Traceability_Matrix.md
+└── 54-00-02-90_SRMS_AND_MRO_LINKS/
+    ├── 00_INDEX.md
+    ├── 54-00-02-90-001_MRO_Safety_Policies.md
+    └── 54-00-02-90-002_SRM_Reference_Map.md
+
