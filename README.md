@@ -1,4 +1,4 @@
-# AMPEL360 BWB-H₂-Hy-E Q100
+# AMPEL360 BWB-H₂-Hy-E Q100 (AIR-T)
 
 ### Revolutionary Blended-Wing-Body Hydrogen-Hybrid Electric Aircraft
 
