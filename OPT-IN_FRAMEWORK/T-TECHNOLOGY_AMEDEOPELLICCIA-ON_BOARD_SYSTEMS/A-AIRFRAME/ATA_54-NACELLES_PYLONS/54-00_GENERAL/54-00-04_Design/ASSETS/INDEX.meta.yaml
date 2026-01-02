@@ -174,3 +174,162 @@ assets:
     status: "Planned"
     version: "0.1.0"
     checksum: "<filled-by-CI>"
+
+  # Installation Template
+  - id: "54-00-04-I000"
+    category: "TMPL"
+    title: "Installation Title Template"
+    source: "ASSETS/INSTALLATIONS/TEMPLATES/54-00-04-I000_INST_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Installation Layouts
+  - id: "54-00-04-I001"
+    category: "INST"
+    title: "Nacelle Installation on Pylon"
+    source: "ASSETS/INSTALLATIONS/LAYOUTS/54-00-04-I001_INST_Nacelle_Installation_On_Pylon.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-003"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-I004"
+    category: "INST"
+    title: "Thrust Reverser Installation Layout"
+    source: "ASSETS/INSTALLATIONS/LAYOUTS/54-00-04-I004_INST_Thrust_Reverser_Installation_Layout.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-004"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-I010"
+    category: "INST"
+    title: "Ground Clearance Verification Layout"
+    source: "ASSETS/INSTALLATIONS/LAYOUTS/54-00-04-I010_INST_Ground_Clearance_Verification_Layout.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Installation Mounting
+  - id: "54-00-04-I002"
+    category: "INST"
+    title: "Pylon-to-Wing Attachment Installation"
+    source: "ASSETS/INSTALLATIONS/MOUNTING/54-00-04-I002_INST_Pylon_Wing_Attachment_Installation.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-002"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-I003"
+    category: "INST"
+    title: "Engine Mount Installation Procedure"
+    source: "ASSETS/INSTALLATIONS/MOUNTING/54-00-04-I003_INST_Engine_Mount_Installation_Procedure.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-005"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Installation Routing
+  - id: "54-00-04-I006"
+    category: "INST"
+    title: "Electrical Harness Routing - Nacelle"
+    source: "ASSETS/INSTALLATIONS/ROUTING/54-00-04-I006_INST_Electrical_Harness_Routing_Nacelle.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-I007"
+    category: "INST"
+    title: "Hydraulic Line Routing - Thrust Reverser"
+    source: "ASSETS/INSTALLATIONS/ROUTING/54-00-04-I007_INST_Hydraulic_Line_Routing_Thrust_Reverser.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Installation Systems
+  - id: "54-00-04-I005"
+    category: "INST"
+    title: "SHM Sensor Installation Map"
+    source: "ASSETS/INSTALLATIONS/SYSTEMS/54-00-04-I005_INST_SHM_Sensor_Installation_Map.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-07-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-I008"
+    category: "INST"
+    title: "Fire Detection System Installation"
+    source: "ASSETS/INSTALLATIONS/SYSTEMS/54-00-04-I008_INST_Fire_Detection_System_Installation.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-06-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Installation Access
+  - id: "54-00-04-I009"
+    category: "INST"
+    title: "Access Panel and Fastener Locations"
+    source: "ASSETS/INSTALLATIONS/ACCESS/54-00-04-I009_INST_Access_Panel_And_Fastener_Locations.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-06-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"

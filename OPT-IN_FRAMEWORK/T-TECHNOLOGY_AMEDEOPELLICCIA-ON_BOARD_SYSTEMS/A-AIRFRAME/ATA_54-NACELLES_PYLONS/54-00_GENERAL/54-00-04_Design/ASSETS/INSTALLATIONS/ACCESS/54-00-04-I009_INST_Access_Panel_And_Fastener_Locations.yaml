@@ -1,0 +1,189 @@
+id: "54-00-04-I009"
+title: "Access Panel and Fastener Locations"
+category: "INST"
+installation_type: "Access"
+ata_chapter: "54"
+description: |
+  Access panel locations and fastener specifications for nacelle maintenance
+  access including quick-access panels, inspection doors, and removable
+  cowling sections. Defines panel sizes, fastener types, and access provisions
+  to support line and heavy maintenance activities per ATA 05 requirements.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+    - id: "ASM-54-COW-001"
+      title: "Fan Cowl Door Assembly"
+    - id: "ASM-54-REV-001"
+      title: "Cascade Assembly"
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+  requirements:
+    - id: "54-00-03-06-001"
+      title: "Maintenance Access Requirements"
+  drawings:
+    - id: "54-00-04-D001"
+      title: "Nacelle Primary Structure - General Arrangement"
+
+installation_parameters:
+  mounting_points: 156
+  primary_structure: "All nacelle cowl panels and doors"
+  installation_sequence: |
+    1. Install fan cowl door hinge fittings (4x per door)
+    2. Install fan cowl doors (left and right) on hinges
+    3. Adjust door alignment for proper fit and sealing
+    4. Install door quick-release fasteners (18x per door)
+    5. Install translating cowl fasteners (24x per side)
+    6. Install thrust reverser access panels (8x panels, 6 fasteners each)
+    7. Install core cowl inspection doors (6x panels, 8 fasteners each)
+    8. Install pylon access panels (4x panels, 10 fasteners each)
+    9. Install drain panel access covers (6x panels, 4 fasteners each)
+    10. Verify all panel fit and gap tolerances
+    11. Install panel edge seals and weather stripping
+    12. Perform functional check of quick-release fasteners
+    13. Apply corrosion protection to fastener interfaces
+    14. Label all panels per maintenance manual numbering
+  torque_requirements:
+    - location: "Hinge bolts (M8)"
+      value: "18 Nm"
+      tolerance: "±2 Nm"
+    - location: "Panel retaining screws (M5)"
+      value: "2.5 Nm"
+      tolerance: "±0.3 Nm"
+    - location: "Quick-release fasteners (DZUS)"
+      value: "1/4 turn past engagement"
+      tolerance: "N/A"
+
+clearances:
+  - description: "Panel edge gap (closed position)"
+    value: "2.0 mm ±1.0 mm"
+    condition: "All cowl panels"
+  - description: "Door hinge clearance"
+    value: "1.0 mm min"
+    condition: "Open/close operation"
+  - description: "Fastener head to adjacent surface"
+    value: "3 mm min"
+    condition: "To prevent interference"
+
+tooling:
+  - tool_id: "DZUS-TOOL-SET"
+    description: "DZUS fastener installation and removal tool set"
+    capacity: "Standard DZUS sizes"
+  - tool_id: "TORQUE-DRIVER-25NM"
+    description: "Torque driver 0-25 Nm"
+    capacity: "0-25 Nm"
+  - tool_id: "HINGE-PIN-TOOL"
+    description: "Hinge pin installation and removal tool"
+    capacity: "N/A"
+  - tool_id: "GAP-GAUGE-SET"
+    description: "Panel gap and flush measurement gauges"
+    capacity: "0-5 mm range"
+  - tool_id: "SEAL-INSTALL-KIT"
+    description: "Seal installation tool kit"
+    capacity: "N/A"
+
+safety_notes:
+  - "Support fan cowl doors during installation (approx 45 kg each)"
+  - "Verify hinge engagement before releasing door support"
+  - "Use proper lifting equipment for translating cowl sections (approx 85 kg)"
+  - "Ensure all quick-release fasteners properly engaged"
+  - "Verify no tools or hardware left in panels before closing"
+  - "Check for pinch points before closing large panels"
+  - "FOD prevention critical - account for all fasteners"
+
+cross_references:
+  ata_chapters:
+    - chapter: "05"
+      description: "Time limits and maintenance practices"
+    - chapter: "51"
+      description: "Standard practices for access panels"
+    - chapter: "12"
+      description: "Servicing access requirements"
+
+verification:
+  - method: "Panel fit and gap verification per drawing"
+    status: "Planned"
+  - method: "Fastener installation and release functional test"
+    status: "Planned"
+  - method: "Door hinge operation and load test"
+    status: "Planned"
+  - method: "Seal integrity verification"
+    status: "Planned"
+  - method: "Panel identification label verification"
+    status: "Planned"
+  - method: "Visual inspection of workmanship"
+    status: "Planned"
+
+notes: |
+  Access panel and fastener installation provides essential maintenance access
+  to nacelle systems and components. Proper installation ensures panels remain
+  secure during flight while allowing quick removal for maintenance.
+  
+  Panel types and quantities:
+  - Fan cowl doors: 2x (left and right), hinged, ~45 kg each
+  - Translating cowl sections: 2x (left and right), ~85 kg each
+  - Thrust reverser access panels: 8x, quick-access
+  - Core cowl inspection doors: 6x, removable
+  - Pylon access panels: 4x, removable
+  - Drain access covers: 6x, small inspection panels
+  
+  Fastener types and applications:
+  - DZUS fasteners: Quick-access panels (18-24 per panel)
+  - Machine screws (M5): Small inspection doors (4-8 per panel)
+  - Machine screws (M8): Structural panel attachments
+  - Hinge pins: Fan cowl door hinges (4 per door)
+  - Camloc fasteners: Alternative quick-release system
+  
+  Panel access requirements:
+  - Fan cowl doors: Daily inspection access to engine
+  - Core cowl panels: Hot section inspection access
+  - Thrust reverser panels: Actuator and cascade access
+  - Pylon panels: Systems access (hydraulic, electrical)
+  - Drain panels: Drainage system inspection and cleaning
+  
+  Installation best practices:
+  - Verify panel orientation and correct installation location
+  - Ensure proper fastener engagement (visual and tactile check)
+  - Maintain panel gap tolerances for aerodynamic performance
+  - Install seals properly to prevent moisture ingress
+  - Apply corrosion protection at fastener interfaces
+  - Label panels clearly per maintenance manual
+  - Document panel serial numbers and locations
+  
+  Fastener maintenance:
+  - Inspect fasteners for wear and damage during each access
+  - Replace worn DZUS fasteners per wear limits
+  - Lubricate hinges per scheduled maintenance
+  - Torque check structural fasteners periodically
+  - Maintain adequate spare fastener stock
+  
+  Access panel categories by frequency:
+  - Daily access: Fan cowl doors (engine inspection)
+  - Weekly access: Drain panels (moisture removal)
+  - Phase check access: Core cowl panels (hot section)
+  - Heavy maintenance: Translating cowl (major inspection)
+  
+  Coordination required with:
+  - ATA 05: Maintenance procedures and time limits
+  - ATA 51: Standard practices and structures
+  - ATA 12: Servicing and ground handling
+  - ATA 71: Engine access requirements
+  
+  Design considerations:
+  - Panel weight: Minimize for ease of handling
+  - Fastener count: Balance security vs. maintenance time
+  - Hinge design: Reliable operation, long service life
+  - Seal design: Prevent moisture, maintain aerodynamics
+  - Access size: Sufficient for component removal/installation
+  
+  Future enhancements:
+  - Lightweight composite access panels
+  - Improved quick-release fastener design
+  - Power-assisted opening for large panels
+  - Integrated access panel position sensors
+  - Enhanced corrosion-resistant fasteners
