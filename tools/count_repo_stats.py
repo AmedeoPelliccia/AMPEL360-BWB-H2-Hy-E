@@ -1,3 +1,17 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 #!/usr/bin/env python3
 """
 Repository Statistics Counter
@@ -13,13 +27,12 @@ import sys
 from pathlib import Path
 
 
-def count_files_and_folders(root_path, verbose=False):
+def count_files_and_folders(root_path):
     """
     Count all files and folders in the given directory.
     
     Args:
         root_path: Path object pointing to the repository root
-        verbose: If True, print detailed statistics
         
     Returns:
         tuple: (file_count, folder_count)
@@ -73,7 +86,7 @@ def main():
         print()
     
     # Count files and folders
-    file_count, folder_count = count_files_and_folders(repo_root, args.verbose)
+    file_count, folder_count = count_files_and_folders(repo_root)
     
     # Print results
     print("=" * 60)
@@ -88,4 +101,4 @@ def main():
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    raise SystemExit(main())
