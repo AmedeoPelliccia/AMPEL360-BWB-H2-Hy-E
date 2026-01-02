@@ -3,8 +3,83 @@ version: 1
 owner: "AMPEL360 Documentation Team"
 folder: "54-00-04_Design"
 
-assets: []
-# Add asset entries here following the pattern:
+assets:
+  # Diagrams
+  - id: "54-00-04-A101"
+    category: "DIAG"
+    title: "ATA 54 Architecture Overview Diagram"
+    source: "ASSETS/DIAGRAMS/54-00-04-A101_DIAG_ATA54_Architecture.mmd"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Active"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  # Templates
+  - id: "54-00-04-T801"
+    category: "TMPL"
+    title: "Assembly Definition Template"
+    source: "ASSETS/TEMPLATES/54-00-04-T801_Assembly_Template.md"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Active"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  # Assembly Definitions
+  - id: "54-00-04-A401"
+    category: "ASSY"
+    title: "Primary Nacelle Structure Assembly"
+    source: "ASSETS/ASSEMBLIES/NACELLE_ASSEMBLIES/ASM-54-NAC-001_Primary_Nacelle_Structure.yaml"
+    exports: []
+    links:
+      reqs: ["../../54-00-03_Requirements/54-00-03-NAC-001_Nacelle_Requirements.csv"]
+      safety: ["../../54-00-02_Safety/"]
+    status: "Preliminary"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-A402"
+    category: "ASSY"
+    title: "Forward Pylon Structure Assembly"
+    source: "ASSETS/ASSEMBLIES/PYLON_ASSEMBLIES/ASM-54-PYL-001_Forward_Pylon_Structure.yaml"
+    exports: []
+    links:
+      reqs: ["../../54-00-03_Requirements/54-00-03-PYL-001_Pylon_Requirements.csv"]
+      safety: ["../../54-00-02_Safety/"]
+    status: "Preliminary"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-A403"
+    category: "ASSY"
+    title: "Thrust Reverser Cascade Assembly"
+    source: "ASSETS/ASSEMBLIES/THRUST_REVERSER_ASSEMBLIES/ASM-54-REV-001_Cascade_Assembly.yaml"
+    exports: []
+    links:
+      reqs: ["../../54-00-03_Requirements/54-00-03-REV-001_Thrust_Reverser_Requirements.csv"]
+      safety: ["../../54-00-02_Safety/54-00-02-20_FHA/54-00-02-20-REV-001_Thrust_Reverser_FHA.md"]
+    status: "Preliminary"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-A404"
+    category: "ASSY"
+    title: "Fan Cowl Door Assembly"
+    source: "ASSETS/ASSEMBLIES/COWLING_ASSEMBLIES/ASM-54-COW-001_Fan_Cowl_Door_Assembly.yaml"
+    exports: []
+    links:
+      reqs: ["../../54-00-03_Requirements/54-00-03-COW-001_Cowling_Requirements.csv"]
+      safety: ["../../54-00-02_Safety/"]
+    status: "Preliminary"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+# Add additional asset entries here following the pattern:
 #  - id: "54-00-04-Annn"
 #    category: "DIAG|DRWG|PROD|ASSY|PART|INST|MODL|DATA|TMPL|EXPT"
 #    title: "Asset Title"

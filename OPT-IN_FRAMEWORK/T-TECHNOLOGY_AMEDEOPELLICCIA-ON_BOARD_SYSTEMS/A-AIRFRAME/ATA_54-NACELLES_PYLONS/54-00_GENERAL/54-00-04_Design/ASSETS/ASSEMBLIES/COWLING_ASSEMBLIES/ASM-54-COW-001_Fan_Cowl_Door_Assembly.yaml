@@ -1,0 +1,259 @@
+assembly_metadata:
+  assembly_id: "ASM-54-COW-001"
+  assembly_name: "Fan Cowl Door Assembly"
+  ata_chapter: "54"
+  zone: "545-555"
+  parent_ci: "CI-54-COW-FAN"
+  related_cis:
+    - "CI-54-COW-HINGE"
+    - "CI-54-COW-LATCH"
+    - "CI-54-NAC-FAN-COWL"
+  structure_classification: "Secondary"
+  plm_item_id: "TC-ASM-54-COW-001"
+  cad_master_drawing: "54-40-1000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2026-01-02"
+    author: "Cowling Design Team"
+
+components:
+  - part_number: "54-COW-4001-01"
+    ci_number: "CI-54-COW-FAN"
+    description: "Fan Cowl Door Outer Skin Left"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: false
+    notes: "Aerodynamic outer surface"
+
+  - part_number: "54-COW-4001-02"
+    ci_number: "CI-54-COW-FAN"
+    description: "Fan Cowl Door Outer Skin Right"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: false
+    notes: "Aerodynamic outer surface"
+
+  - part_number: "54-COW-4002-01"
+    ci_number: "CI-54-COW-FAN"
+    description: "Fan Cowl Door Inner Skin Left"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: false
+    notes: "Inner surface, acoustic treatment"
+
+  - part_number: "54-COW-4002-02"
+    ci_number: "CI-54-COW-FAN"
+    description: "Fan Cowl Door Inner Skin Right"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: false
+    notes: "Inner surface, acoustic treatment"
+
+  - part_number: "54-COW-4003-01"
+    ci_number: "CI-54-COW-FAN"
+    description: "Honeycomb Core Structure"
+    quantity: 2
+    material: "Nomex-Honeycomb"
+    primary_load_path: false
+    notes: "Sandwich core for stiffness"
+
+  - part_number: "54-COW-4004-01"
+    ci_number: "CI-54-COW-FAN"
+    description: "Internal Stiffener Frames"
+    quantity: 16
+    material: "Al-2024-T3"
+    primary_load_path: false
+    notes: "8 per door, internal structure"
+
+  - part_number: "54-COW-4005-01"
+    ci_number: "CI-54-COW-HINGE"
+    description: "Upper Hinge Assembly Left"
+    quantity: 1
+    material: "Al-7075-T73"
+    primary_load_path: true
+    notes: "Primary attachment hinge"
+
+  - part_number: "54-COW-4005-02"
+    ci_number: "CI-54-COW-HINGE"
+    description: "Upper Hinge Assembly Right"
+    quantity: 1
+    material: "Al-7075-T73"
+    primary_load_path: true
+    notes: "Primary attachment hinge"
+
+  - part_number: "54-COW-4006-01"
+    ci_number: "CI-54-COW-LATCH"
+    description: "Lower Latch Assembly Left"
+    quantity: 3
+    material: "Steel-15-5PH"
+    primary_load_path: true
+    notes: "Three-point latch system per side"
+
+  - part_number: "54-COW-4006-02"
+    ci_number: "CI-54-COW-LATCH"
+    description: "Lower Latch Assembly Right"
+    quantity: 3
+    material: "Steel-15-5PH"
+    primary_load_path: true
+    notes: "Three-point latch system per side"
+
+  - part_number: "54-COW-4007-01"
+    ci_number: "CI-54-COW-SEAL"
+    description: "Perimeter Seal"
+    quantity: 2
+    material: "Silicone-Rubber"
+    primary_load_path: false
+    notes: "Environmental sealing"
+
+  - part_number: "54-COW-4008-01"
+    ci_number: "CI-54-COW-HINGE"
+    description: "Hinge Pin Assembly"
+    quantity: 8
+    material: "Steel-4340"
+    primary_load_path: true
+    notes: "Quick-release pins, 4 per door"
+
+  - part_number: "54-COW-4009-01"
+    ci_number: "CI-54-COW-ACTUATOR"
+    description: "Gas Spring Actuator"
+    quantity: 4
+    material: "Steel-Alloy"
+    primary_load_path: false
+    notes: "Assists door opening, 2 per door"
+
+  - part_number: "FAST-AL-M8-COW"
+    ci_number: null
+    description: "Aluminum Fasteners M8x20"
+    quantity: 256
+    material: "Al-2024-T4"
+    primary_load_path: false
+    notes: "General assembly fasteners"
+
+  - part_number: "54-COW-4010-01"
+    ci_number: "CI-54-COW-SENSOR"
+    description: "Latch Position Sensor"
+    quantity: 6
+    material: "Electronic-Assembly"
+    primary_load_path: false
+    notes: "Door closed indication, proximity sensors"
+
+assembly_sequence:
+  step_001: "Assemble honeycomb core between inner and outer skins (left door)"
+  step_002: "Bond and cure sandwich panel in autoclave per specification"
+  step_003: "Machine panel edges and install edge closeouts"
+  step_004: "Install internal stiffener frames (8 locations per door)"
+  step_005: "Repeat steps 001-004 for right door"
+  step_006: "Install upper hinge assemblies on both doors"
+  step_007: "Install lower latch assemblies (3 per door)"
+  step_008: "Mount doors on assembly fixture with hinge pins"
+  step_009: "Verify door alignment and gap tolerances"
+  step_010: "Install gas spring actuators (2 per door)"
+  step_011: "Install perimeter seals on door edges"
+  step_012: "Install latch position sensors (3 per door)"
+  step_013: "Connect electrical harnesses to sensors"
+  step_014: "Perform door opening/closing cycle test (10x)"
+  step_015: "Verify latch engagement and sensor operation"
+  step_016: "Apply protective coatings and paint"
+  step_017: "Final inspection and documentation"
+
+tooling_required:
+  - tooling_id: "AUTO-CURE-01"
+    description: "Autoclave for composite panel curing"
+  - tooling_id: "FAF-54-COW-001"
+    description: "Fan Cowl Door Assembly Fixture"
+  - tooling_id: "ALIGN-COWL-01"
+    description: "Door alignment measurement system"
+  - tooling_id: "TW-0-100NM"
+    description: "Torque wrench 0–100 Nm, calibrated"
+  - tooling_id: "PAINT-BOOTH"
+    description: "Spray booth for protective coatings"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 2.0
+    reference_drawing: "54-40-1000"
+    critical_dimensions:
+      - "Door gap: 3.0mm ±2.0mm"
+      - "Hinge alignment: ±0.5mm"
+      - "Latch engagement: minimum 8mm"
+  composite_inspection:
+    method: "Ultrasonic C-scan and tap test"
+    coverage: "100% of sandwich panels"
+    acceptance: "No delaminations >25mm diameter"
+    report_ref: "54-00-07-COW-001_Composite_Inspection_Report.md"
+  functional_testing:
+    method: "Door operation cycle test"
+    cycles: 50
+    acceptance: "All cycles completed smoothly, no binding"
+    report_ref: "54-00-07-COW-001_Functional_Test_Report.md"
+  latch_testing:
+    method: "Latch pull test"
+    test_load_n: 5000
+    acceptance: "No slippage at test load"
+  seal_testing:
+    method: "Pressure differential test"
+    test_pressure_psi: 2.0
+    acceptance: "Leak rate <0.1 SCFM"
+  electrical_testing:
+    method: "Sensor functionality and continuity test"
+    acceptance: "All sensors functioning correctly"
+  acceptance_criteria:
+    - "All dimensions within tolerance per drawing 54-40-1000"
+    - "Door gaps uniform and within spec"
+    - "No delaminations in composite panels"
+    - "50 operation cycles completed without issues"
+    - "Latches engage properly with >8mm engagement"
+    - "Seals effective at test pressure"
+    - "All sensors functioning correctly"
+    - "Surface finish and paint quality acceptable"
+    - "Gas springs provide smooth opening assistance"
+
+links:
+  requirements_traceability_file: "../../54-00-03_Requirements/54-00-03-COW-001_Cowling_Requirements.csv"
+  stress_report: "../MODELS/54-00-04-M709_Cowl_Door_Stress_Analysis.md"
+  manufacturing_plan: "../../54-00-09_Production_Planning/54-00-09-COW-001_Manufacturing_Plan.md"
+  qc_plan: "../DATA/54-00-04-D805_QC_Inspection_Points_Cowling.csv"
+  composite_spec: "../DATA/54-00-04-D806_Composite_Materials_Spec.csv"
+  functional_test_plan: "../../54-00-07_V_AND_V/54-00-07-COW-001_Functional_Test_Plan.md"
+  nacelle_interface: "../../54-00-05_Interfaces/54-00-05-ICD-005_Nacelle_Cowl_Interface.md"
+  material_specs: "../DATA/54-00-04-D802_Material_Specifications.csv"
+  maintenance_manual: "../../54-00-12_Services/54-00-12-COW-001_Cowl_Door_Maintenance.md"
+
+notes: |
+  Fan cowl doors provide access to the engine fan and accessories for maintenance
+  and inspection. They must be easily opened and closed by maintenance personnel,
+  provide aerodynamic performance in flight, and maintain environmental sealing.
+  
+  Key design considerations:
+  - Quick access for line maintenance (30-minute access goal)
+  - Lightweight composite construction
+  - Aerodynamic contour continuity
+  - Environmental sealing (water, dust, noise)
+  - Lightning strike protection
+  - Acoustic treatment on inner surface
+  - Fatigue life >50,000 cycles
+  - Hinge and latch reliability
+  - Gas spring assistance for ergonomic opening
+  - Sensor integration for door position indication
+  
+  Maintenance access provisions:
+  - Doors open >90° for full access
+  - Stay mechanism prevents door slamming
+  - Ground locks available for safety
+  - Latch override capability for emergency
+  - Inspection panels for internal components
+  
+  Safety features:
+  - Position sensors prevent flight with unlatched doors
+  - Multiple latches provide redundancy
+  - Hinge design prevents door separation
+  - Warning lights in cockpit for door status
+  - Ground lock pins prevent inadvertent closure
+  
+  Future enhancements:
+  - Advanced composite materials for weight reduction
+  - Improved seal design for better environmental protection
+  - Enhanced acoustic treatment
+  - Smart sensors for health monitoring
+  - Ergonomic improvements for maintenance personnel
