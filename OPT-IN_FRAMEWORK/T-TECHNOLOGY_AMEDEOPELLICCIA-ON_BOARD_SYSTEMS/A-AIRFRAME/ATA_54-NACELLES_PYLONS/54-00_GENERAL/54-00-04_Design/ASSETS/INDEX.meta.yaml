@@ -26,6 +26,7 @@ assets:
     exports: []
     links:
       reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
         - "54-00-03-01-001"
       odd: []
       safety: []
@@ -40,6 +41,7 @@ assets:
     exports: []
     links:
       reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
         - "54-00-03-01-001"
       odd: []
       safety: []
@@ -55,6 +57,7 @@ assets:
     exports: []
     links:
       reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
         - "54-00-03-01-001"
       odd: []
       safety: []
@@ -69,6 +72,7 @@ assets:
     exports: []
     links:
       reqs:
+        # TODO: Add traceability to requirements once they are created in 54-00-03_Requirements
         - "54-00-03-01-001"
         - "54-00-03-05-001"
       odd: []
@@ -84,6 +88,7 @@ assets:
     source: "ASSETS/DRAWINGS/INTERFACE/54-00-04-D005_DRWG_Nacelle_Pylon_Interface.yaml"
     exports: []
     links:
+      # TODO: Link to requirement "54-00-03-05-002" once it is created in 54-00-03_Requirements
       reqs:
         - "54-00-03-05-002"
       odd: []
@@ -98,6 +103,7 @@ assets:
     source: "ASSETS/DRAWINGS/INTERFACE/54-00-04-D007_DRWG_Engine_Mount_Interface.yaml"
     exports: []
     links:
+      # TODO: Link to requirement "54-00-03-05-003" once it is created in 54-00-03_Requirements
       reqs:
         - "54-00-03-05-003"
         - "71-00-03-01-001"
@@ -115,6 +121,7 @@ assets:
     exports: []
     links:
       reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
         - "54-00-03-01-001"
         - "78-00-03-01-001"
       odd: []
@@ -145,6 +152,7 @@ assets:
     exports: []
     links:
       reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
         - "54-00-03-01-001"
       odd: []
       safety: []
@@ -159,6 +167,7 @@ assets:
     exports: []
     links:
       reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
         - "54-00-03-01-001"
       odd: []
       safety: []

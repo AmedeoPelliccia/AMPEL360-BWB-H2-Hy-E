@@ -59,7 +59,7 @@ All drawings are stored as **YAML metadata files** with placeholder status pendi
 | 54-00-04-D007 | Engine Mount Interface Drawing | Interface | 54-00-04-A005 | Planned | 0.1.0 |
 | 54-00-04-D008 | Nacelle Cross-Sections | Section | 54-00-04-A001 | Planned | 0.1.0 |
 | 54-00-04-D009 | Pylon Load Path Diagram | Section | 54-00-04-A002 | Planned | 0.1.0 |
-| 54-00-04-D010 | SHM Sensor Locations | Installation | 54-00-03-07-001 | Planned | 0.1.0 |
+| 54-00-04-D010 | SHM Sensor Locations | Installation | 54-00-04-A001, 54-00-04-A002 | Planned | 0.1.0 |
 
 ---
 
@@ -80,12 +80,11 @@ All drawings are stored as **YAML metadata files** with placeholder status pendi
 
 | Assembly ID | Assembly Title | Drawing Count | Drawing IDs |
 |-------------|----------------|---------------|-------------|
-| 54-00-04-A001 | Nacelle Primary Structure Assembly | 3 | D001, D002, D008 |
-| 54-00-04-A002 | Pylon Structure Assembly | 3 | D003, D004, D009 |
+| 54-00-04-A001 | Nacelle Primary Structure Assembly | 4 | D001, D002, D008, D010 |
+| 54-00-04-A002 | Pylon Structure Assembly | 4 | D003, D004, D009, D010 |
 | 54-00-04-A003 | Nacelle-Pylon Interface Assembly | 1 | D005 |
 | 54-00-04-A004 | Thrust Reverser Structure Assembly | 1 | D006 |
 | 54-00-04-A005 | Engine Mount Structure Assembly | 1 | D007 |
-| 54-00-03-07-001 | Nacelle Structure SHM (Requirement) | 1 | D010 |
 
 ---
 
