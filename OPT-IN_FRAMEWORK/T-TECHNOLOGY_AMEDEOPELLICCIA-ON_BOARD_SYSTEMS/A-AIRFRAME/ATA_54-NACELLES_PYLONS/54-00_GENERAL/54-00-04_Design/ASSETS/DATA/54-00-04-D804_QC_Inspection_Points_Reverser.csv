@@ -1,0 +1,11 @@
+Inspection_ID,Assembly_ID,Inspection_Point,Inspection_Type,Method,Frequency,Acceptance_Criteria,Reference_Drawing,Inspector_Level,Documentation_Required,Critical_Point
+QC-REV-001-01,ASM-54-REV-001,Cascade Vane Angle,Dimensional,Angle Measurement,100%,±1.0° from specification,54-30-1000,Level II,Yes,Yes
+QC-REV-001-02,ASM-54-REV-001,Blocker Door Travel,Functional,Deployment Cycle Test,100%,±2.0mm travel limits,54-30-1000,Level II,Yes,Yes
+QC-REV-001-03,ASM-54-REV-001,Synchronization Shaft Alignment,Dimensional,Laser Alignment,100%,±0.5mm alignment,54-30-1000,Level II,Yes,Yes
+QC-REV-001-04,ASM-54-REV-001,Primary Lock Engagement,Functional,Lock Test,100%,Min 8mm engagement,54-30-1000,Level II,Yes,Yes
+QC-REV-001-05,ASM-54-REV-001,Secondary Lock Engagement,Functional,Lock Test,100%,Min 8mm engagement,54-30-1000,Level II,Yes,Yes
+QC-REV-001-06,ASM-54-REV-001,Hydraulic System Leak Test,Functional,Pressure Test,100%,No leaks at 3500 psi for 30 min,54-30-1000,Level II,Yes,Yes
+QC-REV-001-07,ASM-54-REV-001,Position Sensor Calibration,Electrical,Sensor Calibration,100%,±1% of calibration,54-30-1000,Level I,Yes,Yes
+QC-REV-001-08,ASM-54-REV-001,Deployment Synchronization,Functional,Functional Test,100%,±5mm door sync,54-30-1000,Level II,Yes,Yes
+QC-REV-001-09,ASM-54-REV-001,Structural Welds,Structural,Dye Penetrant,100%,No cracks or defects,54-30-1000,Level III,Yes,Yes
+QC-REV-001-10,ASM-54-REV-001,Deployment Cycle Endurance,Functional,Cycle Test,First Article,10 cycles without failure,Test Plan,Level II,Yes,Yes

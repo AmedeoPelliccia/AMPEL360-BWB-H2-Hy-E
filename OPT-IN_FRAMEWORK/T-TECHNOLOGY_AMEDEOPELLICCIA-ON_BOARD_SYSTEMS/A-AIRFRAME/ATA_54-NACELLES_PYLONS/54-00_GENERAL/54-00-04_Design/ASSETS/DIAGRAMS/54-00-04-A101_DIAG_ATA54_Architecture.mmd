@@ -1,0 +1,177 @@
+```mermaid
+graph TB
+    subgraph "ATA 54 - NACELLES PYLONS"
+        direction TB
+        
+        subgraph "NACELLE SYSTEM"
+            NAC[Primary Nacelle Structure<br/>ASM-54-NAC-001]
+            INL[Inlet Assembly]
+            FAN[Fan Cowl Assembly]
+            CORE[Core Cowl Assembly]
+            EXH[Exhaust Assembly]
+            ACOUS[Acoustic Panels]
+        end
+        
+        subgraph "PYLON SYSTEM"
+            PYL[Forward Pylon Structure<br/>ASM-54-PYL-001]
+            PYLAFT[Aft Pylon Structure]
+            ENGMT[Engine Mount Assembly]
+            WINGATT[Wing Attachment Assembly]
+            PYLFAIR[Pylon Fairing]
+        end
+        
+        subgraph "COWLING SYSTEM"
+            COWL[Fan Cowl Doors<br/>ASM-54-COW-001]
+            COWLHNG[Hinge Assemblies]
+            COWLLAT[Latch Assemblies]
+            COWLSEAL[Seal Systems]
+        end
+        
+        subgraph "THRUST REVERSER SYSTEM"
+            REV[Cascade Assembly<br/>ASM-54-REV-001]
+            BLOCK[Blocker Door Assembly]
+            ACT[Actuation System]
+            LOCK[Lock Mechanism]
+            SYNC[Synchronization System]
+        end
+        
+        subgraph "INTERFACES"
+            ATA71[ATA 71/72<br/>Powerplant]
+            ATA57[ATA 57<br/>Wings]
+            ATA24[ATA 24<br/>Electrical]
+            ATA29[ATA 29<br/>Hydraulic]
+            ATA21[ATA 21<br/>Air Conditioning]
+        end
+    end
+    
+    %% Nacelle internal connections
+    NAC --> INL
+    NAC --> FAN
+    NAC --> CORE
+    NAC --> EXH
+    NAC --> ACOUS
+    
+    %% Pylon internal connections
+    PYL --> ENGMT
+    PYL --> WINGATT
+    PYL --> PYLAFT
+    PYL --> PYLFAIR
+    
+    %% Cowling internal connections
+    COWL --> COWLHNG
+    COWL --> COWLLAT
+    COWL --> COWLSEAL
+    
+    %% Thrust reverser internal connections
+    REV --> BLOCK
+    REV --> ACT
+    REV --> LOCK
+    REV --> SYNC
+    
+    %% Cross-system connections
+    NAC <--> COWL
+    NAC <--> REV
+    PYL <--> NAC
+    
+    %% Interface connections
+    PYL <--> ATA57
+    ENGMT <--> ATA71
+    NAC <--> ATA71
+    ACT <--> ATA29
+    COWL <--> ATA24
+    NAC <--> ATA21
+    
+    %% Styling
+    classDef nacelle fill:#e1f5ff,stroke:#0288d1,stroke-width:2px
+    classDef pylon fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef cowling fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef reverser fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef interface fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    
+    class NAC,INL,FAN,CORE,EXH,ACOUS nacelle
+    class PYL,PYLAFT,ENGMT,WINGATT,PYLFAIR pylon
+    class COWL,COWLHNG,COWLLAT,COWLSEAL cowling
+    class REV,BLOCK,ACT,LOCK,SYNC reverser
+    class ATA71,ATA57,ATA24,ATA29,ATA21 interface
+```
+
+# ATA 54 Architecture Diagram
+
+## Overview
+
+This diagram represents the high-level architecture of ATA Chapter 54 (Nacelles & Pylons) showing the main assemblies and their relationships.
+
+## Key Systems
+
+### 1. Nacelle System (Blue)
+The nacelle is the housing around the engine that provides:
+- Aerodynamic shaping
+- Noise reduction (acoustic panels)
+- Engine protection
+- Inlet for engine air
+- Exhaust nozzle
+- Access for maintenance
+
+**Primary Assembly**: ASM-54-NAC-001 - Primary Nacelle Structure
+
+### 2. Pylon System (Orange)
+The pylon connects the engine to the wing and provides:
+- Primary load transfer (thrust, weight, gyroscopic)
+- Engine mounting points
+- Wing attachment interface
+- Systems routing (fuel, hydraulic, electrical)
+- Aerodynamic fairing
+
+**Primary Assembly**: ASM-54-PYL-001 - Forward Pylon Structure
+
+### 3. Cowling System (Purple)
+Cowlings provide:
+- Maintenance access to engine and accessories
+- Aerodynamic continuity
+- Environmental protection
+- Noise attenuation
+
+**Primary Assembly**: ASM-54-COW-001 - Fan Cowl Door Assembly
+
+### 4. Thrust Reverser System (Pink)
+The thrust reverser provides:
+- Landing deceleration capability
+- Reverse thrust for ground maneuvering
+- Safety-critical operation with redundancy
+- Rapid deployment (<2 seconds)
+
+**Primary Assembly**: ASM-54-REV-001 - Cascade Assembly
+
+## Interface Systems (Green)
+
+The ATA 54 system interfaces with multiple other ATA chapters:
+
+- **ATA 71/72 (Powerplant)**: Engine mounting and operational interfaces
+- **ATA 57 (Wings)**: Structural attachment and load transfer
+- **ATA 24 (Electrical)**: Power and sensor systems
+- **ATA 29 (Hydraulic)**: Thrust reverser actuation
+- **ATA 21 (Air Conditioning)**: Bleed air and environmental control
+
+## Design Philosophy
+
+1. **Safety First**: All primary load paths have redundancy
+2. **Maintainability**: Easy access for inspection and repair
+3. **Performance**: Optimized aerodynamics and weight
+4. **Reliability**: High cycle life and durability
+5. **Certification**: Full compliance with CS-25 regulations
+
+## Related Documentation
+
+- [Primary Nacelle Structure](../ASSEMBLIES/NACELLE_ASSEMBLIES/ASM-54-NAC-001_Primary_Nacelle_Structure.yaml)
+- [Forward Pylon Structure](../ASSEMBLIES/PYLON_ASSEMBLIES/ASM-54-PYL-001_Forward_Pylon_Structure.yaml)
+- [Fan Cowl Door Assembly](../ASSEMBLIES/COWLING_ASSEMBLIES/ASM-54-COW-001_Fan_Cowl_Door_Assembly.yaml)
+- [Thrust Reverser Cascade](../ASSEMBLIES/THRUST_REVERSER_ASSEMBLIES/ASM-54-REV-001_Cascade_Assembly.yaml)
+
+## Document Control
+
+- **Document ID**: 54-00-04-A101
+- **Version**: 1.0
+- **Status**: Active
+- **Last Updated**: 2026-01-02
+- **Owner**: AMPEL360 ATA 54 Design Team
+- **Format**: Mermaid Diagram (Markdown)

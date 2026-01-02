@@ -1,0 +1,14 @@
+Requirement_ID,Requirement_Title,Category,Parent_Regulatory_Ref,Related_Design_Doc,Related_Test_Doc,Related_Analysis_Doc,Verification_Status,Notes
+54-00-03-01-001,Nacelle Ultimate Load Capability,01_Structural_Integrity,"CS-25.303, CS-25.305",54-00-04-STR-001,54-00-07-TEST-001,54-00-06-FEA-001,PLANNED,Full-scale static test required
+54-00-03-01-002,Pylon Structural Integrity,01_Structural_Integrity,"CS-25.305, CS-25.571",54-00-04-STR-002,54-00-07-TEST-002,54-00-06-FEA-002,PLANNED,Pylon fatigue critical areas
+54-00-03-02-001,Thermal Environment Resistance,02_Environmental,"CS-25.603, CS-25.609",54-00-04-ENV-001,54-00-07-TEST-010,54-00-06-THERM-001,PLANNED,Engine heat zone analysis
+54-00-03-02-002,Acoustic Environment Compliance,02_Environmental,"CS-25.853, CS-36",54-00-04-ENV-002,54-00-07-TEST-011,54-00-06-ACOU-001,PLANNED,Noise certification testing
+54-00-03-03-001,Aerodynamic Performance,03_Performance,"CS-25.253, CS-25.1001",54-00-04-PERF-001,54-00-07-TEST-020,54-00-06-AERO-001,PLANNED,CFD validation
+54-00-03-03-002,Thrust Reverser Deployment Performance,03_Performance,"CS-25.933, CS-25.1193",54-00-04-PERF-002,54-00-07-TEST-021,54-00-06-TR-001,PLANNED,Deployment time requirements
+54-00-03-04-001,Nacelle Composite Materials Qualification,04_Materials,"CS-25.603, AC 20-107B",54-00-04-MAT-001,54-00-07-TEST-030,54-00-06-COMP-001,PLANNED,CFRP material allowables
+54-00-03-04-002,Metallic Components Material Properties,04_Materials,"CS-25.603, CS-25.605",54-00-04-MAT-002,54-00-07-TEST-031,54-00-06-MET-001,PLANNED,Titanium and aluminum alloys
+54-00-03-05-001,Manufacturing Process Qualification,05_Manufacturing,"CS-25.605, Part 21",54-00-04-MFG-001,54-00-07-TEST-040,54-00-06-PROC-001,PLANNED,Process control requirements
+54-00-03-05-002,Assembly Tolerance Verification,05_Manufacturing,"CS-25.605, CS-25.1001",54-00-04-MFG-002,54-00-07-TEST-041,54-00-06-TOL-001,PLANNED,Interface fit verification
+54-00-03-06-001,Nacelle Accessibility Requirements,06_Maintainability,"CS-25.1529, ATA iSpec 2200",54-00-04-MAINT-001,54-00-07-TEST-050,54-00-06-ACCESS-001,PLANNED,Zone access for inspections
+54-00-03-06-002,Component Replacement Time,06_Maintainability,"CS-25.1529, MSG-3",54-00-04-MAINT-002,54-00-07-TEST-051,54-00-06-MTTR-001,PLANNED,LRU replacement procedures
+54-00-03-07-001,Nacelle Structure SHM Compatibility,07_SHM_and_Monitoring,"CS-25.571, CM-S-012",54-00-04-SHM-001,54-00-07-TEST-060,54-00-06-SHM-001,PLANNED,SHM sensor integration

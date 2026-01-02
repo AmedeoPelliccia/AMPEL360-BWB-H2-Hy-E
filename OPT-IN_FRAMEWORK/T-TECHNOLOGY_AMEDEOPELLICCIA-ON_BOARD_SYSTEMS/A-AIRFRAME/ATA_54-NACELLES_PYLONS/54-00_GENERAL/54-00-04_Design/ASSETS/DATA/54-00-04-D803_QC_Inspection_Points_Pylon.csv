@@ -1,0 +1,11 @@
+Inspection_ID,Assembly_ID,Inspection_Point,Inspection_Type,Method,Frequency,Acceptance_Criteria,Reference_Drawing,Inspector_Level,Documentation_Required,Critical_Point
+QC-PYL-001-01,ASM-54-PYL-001,Engine Mount Fitting Alignment,Dimensional,Laser Alignment,100%,±0.2mm centerline,54-20-1000,Level II,Yes,Yes
+QC-PYL-001-02,ASM-54-PYL-001,Wing Attachment Holes,Dimensional,CMM Inspection,100%,±0.15mm position,54-20-1000,Level II,Yes,Yes
+QC-PYL-001-03,ASM-54-PYL-001,Primary Structure Bond,Structural,Ultrasonic + X-ray,100%,No voids >15mm,54-20-1000,Level III,Yes,Yes
+QC-PYL-001-04,ASM-54-PYL-001,Wing Attachment Torque,Mechanical,Calibrated Torque Wrench,100%,280 Nm ±3%,54-20-1000,Level II,Yes,Yes
+QC-PYL-001-05,ASM-54-PYL-001,Engine Mount Torque,Mechanical,Calibrated Torque Wrench,100%,350 Nm ±3%,54-20-1000,Level II,Yes,Yes
+QC-PYL-001-06,ASM-54-PYL-001,Critical Fitting NDT,Structural,Eddy Current + Dye Penetrant,100%,No cracks or defects,54-20-1000,Level III,Yes,Yes
+QC-PYL-001-07,ASM-54-PYL-001,Pylon Box Alignment,Dimensional,Theodolite Measurement,First Article + 10%,±0.3mm alignment,54-20-1000,Level II,Yes,Yes
+QC-PYL-001-08,ASM-54-PYL-001,Load Path Verification,Functional,Static Load Test,First Article,Pass limit load test,Test Plan,Level III,Yes,Yes
+QC-PYL-001-09,ASM-54-PYL-001,Fairing Fit-Up,Dimensional,Gap Measurement,100%,<2mm gaps,54-20-1000,Level I,Yes,No
+QC-PYL-001-10,ASM-54-PYL-001,Systems Routing Clearance,Visual,Visual + Measurement,100%,Min 6mm clearance,54-20-1000,Level I,Yes,No

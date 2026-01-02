@@ -1,0 +1,11 @@
+Inspection_ID,Assembly_ID,Inspection_Point,Inspection_Type,Method,Frequency,Acceptance_Criteria,Reference_Drawing,Inspector_Level,Documentation_Required,Critical_Point
+QC-COW-001-01,ASM-54-COW-001,Composite Panel Bond,Structural,Ultrasonic C-Scan,100%,No delaminations >25mm dia,54-40-1000,Level II,Yes,Yes
+QC-COW-001-02,ASM-54-COW-001,Door Gap Uniformity,Dimensional,Gap Gauge,100%,3.0mm ±2.0mm,54-40-1000,Level I,Yes,No
+QC-COW-001-03,ASM-54-COW-001,Hinge Alignment,Dimensional,Visual + Measurement,100%,±0.5mm alignment,54-40-1000,Level II,Yes,Yes
+QC-COW-001-04,ASM-54-COW-001,Latch Engagement,Functional,Pull Test,100%,Min 8mm engagement,54-40-1000,Level II,Yes,Yes
+QC-COW-001-05,ASM-54-COW-001,Latch Pull Strength,Functional,Load Test,First Article + 10%,5000 N no slippage,Test Plan,Level II,Yes,Yes
+QC-COW-001-06,ASM-54-COW-001,Seal Effectiveness,Functional,Pressure Test,First Article + 10%,Leak rate <0.1 SCFM at 2 psi,54-40-1000,Level I,Yes,No
+QC-COW-001-07,ASM-54-COW-001,Position Sensor Function,Electrical,Continuity + Function Test,100%,All sensors functional,54-40-1000,Level I,Yes,Yes
+QC-COW-001-08,ASM-54-COW-001,Door Operation Cycle,Functional,Cycle Test,First Article,50 cycles smooth operation,Test Plan,Level I,Yes,No
+QC-COW-001-09,ASM-54-COW-001,Gas Spring Function,Functional,Force Measurement,First Article + 10%,Within spec force range,54-40-1000,Level I,Yes,No
+QC-COW-001-10,ASM-54-COW-001,Surface Finish Quality,Visual,Visual Inspection,100%,No defects per paint spec,54-40-1000,Level I,Yes,No

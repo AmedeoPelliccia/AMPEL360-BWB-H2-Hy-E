@@ -1,0 +1,11 @@
+Specification_ID,Material_Type,Fiber_Type,Matrix_Type,Layup_Sequence,Fiber_Volume_Percent,Cure_Cycle,Post_Cure,Thickness_mm,Areal_Weight_g_m2,Primary_Application,Standard_Reference,Quality_Control_Method
+COMP-001,CFRP Unidirectional Tape,High Modulus Carbon,Epoxy 8552,"[0/45/-45/90]s",60,"177°C 120min @ 0.7MPa",N/A,2.0,300,Primary Structure Skins,AMS 3895,Ultrasonic C-Scan
+COMP-002,CFRP Fabric,Intermediate Modulus Carbon,Epoxy 8552,Plain Weave,55,"177°C 120min @ 0.7MPa",N/A,1.0,285,Secondary Structure,AMS 3895,Ultrasonic C-Scan
+COMP-003,CFRP Unidirectional Tape,High Strength Carbon,Epoxy 977-3,"[0/90]4s",62,"180°C 180min @ 0.7MPa","200°C 120min",4.0,600,Highly Loaded Components,AMS 3902,Ultrasonic + X-ray
+COMP-004,GFRP Fabric,E-Glass,Epoxy 828,Plain Weave,50,"120°C 90min @ 0.4MPa",N/A,0.8,200,Non-Structural Fairings,MIL-C-9084,Visual + Tap Test
+COMP-005,Prepreg Carbon-Nomex Sandwich,Carbon Fiber,Epoxy 8552,Varies with design,N/A,"177°C 120min @ 0.7MPa",N/A,12.0,N/A,Cowl Doors,AMS 3711,Ultrasonic C-Scan
+COMP-006,Carbon-Kevlar Hybrid,Carbon + Kevlar,Epoxy 828,Plain Weave,52,"120°C 90min @ 0.4MPa",N/A,1.2,250,Acoustic Panels,Custom Spec,Ultrasonic + Acoustic Test
+COMP-007,CFRP Pultruded Rod,High Strength Carbon,Epoxy Vinyl Ester,Unidirectional,65,Continuous Pultrusion,N/A,6.0 dia,N/A,Stiffeners,ASTM D4475,Mechanical Testing
+COMP-008,Honeycomb Core - Nomex,Aramid Paper,Phenolic Resin,N/A,N/A,N/A,N/A,25.0,48 kg/m³,Sandwich Cores,AMS 3711,Density + Compression Test
+COMP-009,Honeycomb Core - Aluminum,5052 Aluminum,N/A,N/A,N/A,N/A,N/A,12.7,80 kg/m³,High Strength Cores,AMS 4347,Crush Test
+COMP-010,Film Adhesive,N/A,Modified Epoxy,N/A,N/A,"177°C 60min @ 0.3MPa",N/A,0.2,N/A,Bonding,AMS 3692,Peel Strength Test
