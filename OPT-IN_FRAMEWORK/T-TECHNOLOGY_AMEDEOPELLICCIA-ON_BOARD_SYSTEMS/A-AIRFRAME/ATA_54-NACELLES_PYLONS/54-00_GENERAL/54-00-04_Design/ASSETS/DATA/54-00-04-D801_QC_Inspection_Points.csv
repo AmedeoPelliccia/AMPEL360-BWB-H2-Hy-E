@@ -1,0 +1,9 @@
+Inspection_ID,Assembly_ID,Inspection_Point,Inspection_Type,Method,Frequency,Acceptance_Criteria,Reference_Drawing,Inspector_Level,Documentation_Required,Critical_Point
+QC-NAC-001-01,ASM-54-NAC-001,Inlet Lip Alignment,Dimensional,Laser Measurement,100%,±0.5mm from datum,54-10-1000,Level II,Yes,Yes
+QC-NAC-001-02,ASM-54-NAC-001,Fan Cowl Bond Quality,Structural,Ultrasonic C-Scan,100%,No delaminations >25mm,54-10-1000,Level II,Yes,Yes
+QC-NAC-001-03,ASM-54-NAC-001,Acoustic Panel Installation,Visual,Visual Inspection,100%,Proper seating and alignment,54-10-1000,Level I,Yes,No
+QC-NAC-001-04,ASM-54-NAC-001,Fastener Torque Verification,Mechanical,Torque Wrench,100% critical,65 Nm ±5%,54-10-1000,Level I,Yes,Yes
+QC-NAC-001-05,ASM-54-NAC-001,Cowl Interface Seal Test,Functional,Pressure Test,100%,No leaks at 5 psi,54-10-1000,Level II,Yes,Yes
+QC-NAC-001-06,ASM-54-NAC-001,Core Cowl Thermal Protection,Visual,Visual Inspection,100%,Coating uniform and intact,54-10-1000,Level II,Yes,Yes
+QC-NAC-001-07,ASM-54-NAC-001,Structural Frame Positioning,Dimensional,Coordinate Measurement,First Article + 10%,±0.3mm station location,54-10-1000,Level II,Yes,Yes
+QC-NAC-001-08,ASM-54-NAC-001,Acoustic Performance Test,Functional,Noise Measurement,First Article,≥15 dB reduction,Test Plan,Level II,Yes,No

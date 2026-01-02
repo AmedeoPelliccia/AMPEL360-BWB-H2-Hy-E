@@ -1,0 +1,13 @@
+Material_Code,Material_Name,Material_Type,Specification,Density_kg_m3,Tensile_Strength_MPa,Yield_Strength_MPa,Elongation_Percent,Temperature_Range_C,Primary_Use,Cost_Category,Availability,Notes
+CFRP-Epoxy,Carbon Fiber Reinforced Polymer - Epoxy Matrix,Composite,AMS 3895,1600,1500,1200,1.5,-55 to 120,Primary Structure,High,Standard,"High strength-to-weight ratio, excellent fatigue properties"
+Al-7075-T73,Aluminum Alloy 7075-T73,Aluminum,AMS 4045,2810,505,435,11,-55 to 175,Structural Components,Medium,Standard,"High strength, good stress corrosion resistance"
+Al-2024-T3,Aluminum Alloy 2024-T3,Aluminum,AMS 4037,2780,470,325,18,-55 to 175,Secondary Structure,Low,Standard,"Good formability, widely used in aerospace"
+Ti-6Al-4V,Titanium Alloy 6-4,Titanium,AMS 4911,4430,950,880,14,-55 to 315,High Temperature Areas,Very High,Standard,"Excellent corrosion resistance, high temperature capability"
+Ti-10V-2Fe-3Al,Titanium Alloy 10-2-3,Titanium,AMS 4984,4650,1170,1100,8,-55 to 315,Critical Fittings,Very High,Limited,"Highest strength titanium alloy, used for engine mounts"
+Steel-15-5PH,15-5 Precipitation Hardening Stainless Steel,Steel,AMS 5659,7800,1310,1170,10,-55 to 316,Latches and Fittings,High,Standard,"High strength with good corrosion resistance"
+Steel-4340,AISI 4340 Alloy Steel,Steel,AMS 6415,7850,1620,1460,12,-40 to 425,High Strength Components,Medium,Standard,"High strength and toughness, heat treatable"
+Nomex-Honeycomb,Aramid Fiber Honeycomb Core,Composite Core,AMS 3711,48,N/A,N/A,N/A,-55 to 177,Sandwich Panel Cores,Medium,Standard,"Lightweight core material, excellent energy absorption"
+Kevlar-Honeycomb,Kevlar Honeycomb Core,Composite Core,AMS 3711,64,N/A,N/A,N/A,-55 to 177,Acoustic Panels,Medium,Standard,"Good acoustic damping properties"
+Silicone-Rubber,Silicone Rubber Seal Material,Elastomer,AMS 3302,1200,7,N/A,400,-55 to 200,Seals and Gaskets,Low,Standard,"Excellent temperature range, good environmental resistance"
+Alloy-Steel,Alloy Steel Fasteners,Steel,AMS 6304,7850,1240,1070,12,-40 to 425,Fasteners,Low,Standard,"General purpose high strength fasteners"
+Electronic-Assembly,Electronic Component Assembly,Mixed,Various,N/A,N/A,N/A,N/A,-40 to 85,Sensors and Electronics,High,Standard,"Various electronic components and assemblies"

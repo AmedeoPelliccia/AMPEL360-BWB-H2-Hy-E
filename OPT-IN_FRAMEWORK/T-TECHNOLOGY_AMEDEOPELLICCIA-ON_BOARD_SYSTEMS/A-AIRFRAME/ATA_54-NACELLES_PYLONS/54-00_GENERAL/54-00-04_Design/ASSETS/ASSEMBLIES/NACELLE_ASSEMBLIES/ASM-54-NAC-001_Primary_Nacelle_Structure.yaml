@@ -1,0 +1,178 @@
+assembly_metadata:
+  assembly_id: "ASM-54-NAC-001"
+  assembly_name: "Primary Nacelle Structure"
+  ata_chapter: "54"
+  zone: "540-560"
+  parent_ci: "CI-54-NAC-PRIMARY"
+  related_cis:
+    - "CI-54-NAC-INLET"
+    - "CI-54-NAC-FAN-COWL"
+    - "CI-54-NAC-CORE-COWL"
+    - "CI-54-NAC-EXHAUST"
+  structure_classification: "Primary"
+  plm_item_id: "TC-ASM-54-NAC-001"
+  cad_master_drawing: "54-10-1000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2026-01-02"
+    author: "Nacelle Structures Team"
+
+components:
+  - part_number: "54-NAC-1001-01"
+    ci_number: "CI-54-NAC-INLET"
+    description: "Inlet Lip Structure"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: true
+    notes: "Anti-icing provisions included"
+
+  - part_number: "54-NAC-1002-01"
+    ci_number: "CI-54-NAC-FAN-COWL"
+    description: "Fan Cowl Structure Forward"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: true
+    notes: "Acoustic panels integrated"
+
+  - part_number: "54-NAC-1003-01"
+    ci_number: "CI-54-NAC-FAN-COWL"
+    description: "Fan Cowl Structure Aft"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: true
+    notes: "Thrust reverser interface"
+
+  - part_number: "54-NAC-1004-01"
+    ci_number: "CI-54-NAC-CORE-COWL"
+    description: "Core Cowl Structure"
+    quantity: 1
+    material: "Titanium-Alloy-Ti-6Al-4V"
+    primary_load_path: true
+    notes: "High temperature capability"
+
+  - part_number: "54-NAC-1005-01"
+    ci_number: "CI-54-NAC-EXHAUST"
+    description: "Exhaust Nozzle Structure"
+    quantity: 1
+    material: "Titanium-Alloy-Ti-6Al-4V"
+    primary_load_path: true
+    notes: "Thermal protection coating"
+
+  - part_number: "54-NAC-1006-01"
+    ci_number: "CI-54-NAC-FRAME"
+    description: "Forward Structural Frame"
+    quantity: 6
+    material: "Al-7075-T73"
+    primary_load_path: true
+    notes: "Engine mount interface"
+
+  - part_number: "54-NAC-1007-01"
+    ci_number: "CI-54-NAC-FRAME"
+    description: "Aft Structural Frame"
+    quantity: 4
+    material: "Al-7075-T73"
+    primary_load_path: true
+
+  - part_number: "FAST-TI-M10-NAC"
+    ci_number: null
+    description: "Titanium Fasteners M10x40"
+    quantity: 480
+    material: "Ti-6Al-4V"
+    primary_load_path: false
+    notes: "High strength aerospace grade"
+
+  - part_number: "54-NAC-1008-01"
+    ci_number: "CI-54-NAC-ACOUSTIC"
+    description: "Acoustic Panel Assemblies"
+    quantity: 12
+    material: "Honeycomb-Kevlar"
+    primary_load_path: false
+    notes: "Noise suppression"
+
+assembly_sequence:
+  step_001: "Position forward structural frames on assembly fixture FAF-54-NAC-001"
+  step_002: "Install inlet lip structure and verify alignment to datum"
+  step_003: "Attach fan cowl forward section with temporary fasteners"
+  step_004: "Install acoustic panel assemblies in designated zones"
+  step_005: "Position fan cowl aft section and verify thrust reverser interface"
+  step_006: "Install aft structural frames at specified stations"
+  step_007: "Mount core cowl structure with thermal protection verification"
+  step_008: "Install exhaust nozzle structure"
+  step_009: "Replace temporary fasteners with permanent titanium fasteners"
+  step_010: "Torque all primary fasteners to 65 Nm ±5%"
+  step_011: "Perform dimensional inspection per drawing 54-10-1000"
+  step_012: "Conduct pressure seal test on cowl interfaces"
+  step_013: "Perform acoustic test verification"
+
+tooling_required:
+  - tooling_id: "FAF-54-NAC-001"
+    description: "Nacelle Assembly Fixture with datum references"
+  - tooling_id: "TW-0-150NM"
+    description: "Torque wrench 0–150 Nm, calibrated"
+  - tooling_id: "ALIGN-NAC-01"
+    description: "Laser alignment system for inlet positioning"
+  - tooling_id: "PRESS-TEST-NAC"
+    description: "Pressure test rig for seal verification"
+  - tooling_id: "ACOUSTIC-CAL"
+    description: "Acoustic calibration equipment"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.8
+    reference_drawing: "54-10-1000"
+    critical_dimensions:
+      - "Inlet diameter: ±0.5mm"
+      - "Cowl alignment: ±0.8mm"
+      - "Frame station locations: ±0.3mm"
+  ndt:
+    method: "Ultrasonic and visual inspection"
+    coverage: "100% of primary load path joints"
+    report_ref: "54-00-07-NAC-001_NDT_Report.md"
+  fasteners:
+    torque_spec_nm: 65
+    torque_tolerance_percent: 5
+    inspection_coverage: "100% primary fasteners"
+  thermal:
+    method: "Thermal imaging inspection"
+    coverage: "Core cowl and exhaust sections"
+  acoustic:
+    method: "Noise reduction measurement"
+    acceptance_criteria: "≥15 dB reduction vs. baseline"
+  acceptance_criteria:
+    - "All dimensions within tolerance per drawing 54-10-1000"
+    - "Pressure seal test: No leaks at 5 psi differential"
+    - "Acoustic performance meets or exceeds target"
+    - "All primary fasteners properly torqued and verified"
+    - "No defects detected in NDT inspection"
+    - "Thermal protection coating uniform and intact"
+
+links:
+  requirements_traceability_file: "../../54-00-03_Requirements/54-00-03-NAC-001_Nacelle_Requirements.csv"
+  stress_report: "../MODELS/54-00-04-M701_Nacelle_Stress_Analysis.md"
+  fea_model_description: "../MODELS/54-00-04-M702_Nacelle_FEA_Model.md"
+  manufacturing_plan: "../../54-00-09_Production_Planning/54-00-09-NAC-001_Manufacturing_Plan.md"
+  qc_plan: "../DATA/54-00-04-D801_QC_Inspection_Points.csv"
+  thermal_analysis: "../MODELS/54-00-04-M703_Thermal_Analysis.md"
+  acoustic_analysis: "../MODELS/54-00-04-M704_Acoustic_Analysis.md"
+  material_specs: "../DATA/54-00-04-D802_Material_Specifications.csv"
+
+notes: |
+  This primary nacelle structure assembly represents the main structural elements
+  of the nacelle system. It integrates with the engine via pylon mounting points
+  and provides aerodynamic shaping, acoustic treatment, and thermal protection.
+  
+  Key design considerations:
+  - High-temperature capability in core and exhaust regions
+  - Acoustic treatment for noise reduction
+  - Aerodynamic performance optimization
+  - Access provisions for maintenance
+  - Lightning strike protection
+  - Bird strike capability
+  - Integration with thrust reverser system
+  
+  Future enhancements:
+  - Advanced composite materials evaluation
+  - Weight reduction opportunities
+  - Enhanced acoustic performance
+  - Improved maintainability features

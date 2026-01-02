@@ -1,0 +1,233 @@
+assembly_metadata:
+  assembly_id: "ASM-54-REV-001"
+  assembly_name: "Thrust Reverser Cascade Assembly"
+  ata_chapter: "54"
+  zone: "560-580"
+  parent_ci: "CI-54-REV-CASCADE"
+  related_cis:
+    - "CI-54-REV-BLOCKER"
+    - "CI-54-REV-ACTUATION"
+    - "CI-54-REV-LOCK"
+  structure_classification: "Secondary"
+  plm_item_id: "TC-ASM-54-REV-001"
+  cad_master_drawing: "54-30-1000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2026-01-02"
+    author: "Thrust Reverser Team"
+
+components:
+  - part_number: "54-REV-3001-01"
+    ci_number: "CI-54-REV-CASCADE"
+    description: "Cascade Vane Structure"
+    quantity: 2
+    material: "Al-2024-T3"
+    primary_load_path: false
+    notes: "Left and right cascade assemblies"
+
+  - part_number: "54-REV-3002-01"
+    ci_number: "CI-54-REV-CASCADE"
+    description: "Cascade Support Structure"
+    quantity: 2
+    material: "Al-7075-T73"
+    primary_load_path: true
+    notes: "Primary structural support for cascades"
+
+  - part_number: "54-REV-3003-01"
+    ci_number: "CI-54-REV-BLOCKER"
+    description: "Blocker Door Assembly Left"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: false
+    notes: "Actuated door for airflow blockage"
+
+  - part_number: "54-REV-3003-02"
+    ci_number: "CI-54-REV-BLOCKER"
+    description: "Blocker Door Assembly Right"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: false
+    notes: "Actuated door for airflow blockage"
+
+  - part_number: "54-REV-3004-01"
+    ci_number: "CI-54-REV-ACTUATION"
+    description: "Hydraulic Actuator Assembly"
+    quantity: 2
+    material: "Steel-Alloy"
+    primary_load_path: true
+    notes: "Primary deployment actuators"
+
+  - part_number: "54-REV-3005-01"
+    ci_number: "CI-54-REV-ACTUATION"
+    description: "Synchronization Shaft"
+    quantity: 1
+    material: "Steel-4340"
+    primary_load_path: true
+    notes: "Ensures synchronized deployment"
+
+  - part_number: "54-REV-3006-01"
+    ci_number: "CI-54-REV-LOCK"
+    description: "Primary Lock Assembly"
+    quantity: 4
+    material: "Steel-15-5PH"
+    primary_load_path: true
+    notes: "Locks in stowed position"
+
+  - part_number: "54-REV-3007-01"
+    ci_number: "CI-54-REV-LOCK"
+    description: "Secondary Lock Assembly"
+    quantity: 4
+    material: "Steel-15-5PH"
+    primary_load_path: true
+    notes: "Backup locking mechanism"
+
+  - part_number: "54-REV-3008-01"
+    ci_number: "CI-54-REV-TRACK"
+    description: "Deployment Track Assembly"
+    quantity: 4
+    material: "Al-7075-T73"
+    primary_load_path: true
+    notes: "Guides blocker door deployment"
+
+  - part_number: "FAST-HUCK-REV"
+    ci_number: null
+    description: "Huck Lockbolts for Structure"
+    quantity: 180
+    material: "Alloy-Steel"
+    primary_load_path: false
+    notes: "Cascade attachment"
+
+  - part_number: "54-REV-3009-01"
+    ci_number: "CI-54-REV-SEAL"
+    description: "Inflatable Seal Assembly"
+    quantity: 2
+    material: "Silicone-Rubber"
+    primary_load_path: false
+    notes: "Sealing in stowed position"
+
+  - part_number: "54-REV-3010-01"
+    ci_number: "CI-54-REV-SENSOR"
+    description: "Position Sensor Assembly"
+    quantity: 4
+    material: "Electronic-Assembly"
+    primary_load_path: false
+    notes: "LVDT position feedback"
+
+assembly_sequence:
+  step_001: "Position cascade support structure on assembly fixture FAF-54-REV-001"
+  step_002: "Install cascade vane structures (left and right)"
+  step_003: "Verify cascade angle and spacing per drawing"
+  step_004: "Install deployment track assemblies"
+  step_005: "Mount blocker door assemblies on tracks"
+  step_006: "Verify blocker door travel and alignment"
+  step_007: "Install synchronization shaft with bearings"
+  step_008: "Mount hydraulic actuator assemblies"
+  step_009: "Connect actuators to blocker doors via linkage"
+  step_010: "Install primary lock assemblies (4 locations)"
+  step_011: "Install secondary lock assemblies (4 locations)"
+  step_012: "Verify lock engagement in stowed position"
+  step_013: "Install inflatable seal assemblies"
+  step_014: "Install position sensor assemblies"
+  step_015: "Connect hydraulic lines and electrical harnesses"
+  step_016: "Perform functional test - deployment cycle (3x)"
+  step_017: "Verify lock/unlock sequence"
+  step_018: "Perform leak test on hydraulic system"
+  step_019: "Conduct position sensor calibration"
+  step_020: "Final inspection and documentation"
+
+tooling_required:
+  - tooling_id: "FAF-54-REV-001"
+    description: "Thrust Reverser Assembly Fixture"
+  - tooling_id: "DEPLOY-TEST-RIG"
+    description: "Hydraulic test rig for deployment testing"
+  - tooling_id: "CASCADE-ALIGN"
+    description: "Cascade vane alignment fixture"
+  - tooling_id: "TW-0-200NM"
+    description: "Torque wrench 0–200 Nm, calibrated"
+  - tooling_id: "LEAK-TEST-KIT"
+    description: "Hydraulic leak test equipment"
+  - tooling_id: "SENSOR-CAL"
+    description: "LVDT sensor calibration equipment"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 1.0
+    reference_drawing: "54-30-1000"
+    critical_dimensions:
+      - "Cascade vane angle: ±1.0°"
+      - "Blocker door travel: ±2.0mm"
+      - "Synchronization shaft alignment: ±0.5mm"
+  functional_testing:
+    method: "Hydraulic deployment cycle test"
+    cycles: 10
+    acceptance: "All cycles completed without anomalies"
+    report_ref: "54-00-07-REV-001_Functional_Test_Report.md"
+  ndt:
+    method: "Visual and dye penetrant inspection"
+    coverage: "100% of structural welds and high-stress areas"
+    report_ref: "54-00-07-REV-001_NDT_Report.md"
+  hydraulic_testing:
+    method: "Pressure and leak test"
+    test_pressure_psi: 3500
+    leak_acceptance: "No leaks at 3500 psi for 30 minutes"
+  electrical_testing:
+    method: "Continuity and sensor calibration"
+    acceptance: "All sensors within ±1% of calibration"
+  acceptance_criteria:
+    - "All dimensions within tolerance per drawing 54-30-1000"
+    - "10 deployment cycles completed without failures"
+    - "Locks engage properly in stowed and deployed positions"
+    - "Hydraulic system leak-free at test pressure"
+    - "Position sensors calibrated and functioning"
+    - "Blocker doors synchronized within ±5mm during deployment"
+    - "Cascade vanes aligned within ±1.0°"
+    - "Inflatable seals function properly"
+
+links:
+  requirements_traceability_file: "../../54-00-03_Requirements/54-00-03-REV-001_Thrust_Reverser_Requirements.csv"
+  stress_report: "../MODELS/54-00-04-M707_Thrust_Reverser_Stress_Analysis.md"
+  fea_model_description: "../MODELS/54-00-04-M708_Thrust_Reverser_FEA_Model.md"
+  manufacturing_plan: "../../54-00-09_Production_Planning/54-00-09-REV-001_Manufacturing_Plan.md"
+  qc_plan: "../DATA/54-00-04-D804_QC_Inspection_Points_Reverser.csv"
+  functional_test_plan: "../../54-00-07_V_AND_V/54-00-07-REV-001_Functional_Test_Plan.md"
+  hydraulic_system_spec: "../../54-00-05_Interfaces/54-00-05-ICD-003_Hydraulic_System_Interface.md"
+  control_system_spec: "../../54-00-05_Interfaces/54-00-05-ICD-004_Control_System_Interface.md"
+  material_specs: "../DATA/54-00-04-D802_Material_Specifications.csv"
+  safety_analysis: "../../54-00-02_Safety/54-00-02-20_FHA/54-00-02-20-REV-001_Thrust_Reverser_FHA.md"
+
+notes: |
+  The thrust reverser cascade assembly is a critical system for landing deceleration.
+  It redirects engine thrust forward to provide braking force on the runway. The
+  system must be extremely reliable as inadvertent deployment in flight would be
+  catastrophic.
+  
+  Key design considerations:
+  - Fail-safe design with primary and secondary locks
+  - Position monitoring with multiple redundant sensors
+  - Synchronized deployment to prevent asymmetric thrust
+  - High cycle fatigue life (>25,000 cycles)
+  - Environmental protection (moisture, FOD, ice)
+  - Rapid deployment (<2 seconds to full deployment)
+  - Lightning strike protection
+  - Compliance with CS-25.933 (Reversing systems)
+  
+  Safety features:
+  - Dual hydraulic actuation for redundancy
+  - Primary and secondary mechanical locks
+  - Position sensors with FADEC integration
+  - Auto-stow on takeoff thrust setting
+  - Inadvertent deployment prevention logic
+  - Warning system for uncommanded movement
+  
+  Maintenance considerations:
+  - Accessible for inspection and lubrication
+  - Modular design for component replacement
+  - Built-in test capability
+  - Scheduled inspection intervals per MPD
+  
+  Future enhancements:
+  - Electric actuation evaluation (weight reduction)
+  - Advanced materials for weight savings
+  - Improved acoustic performance
+  - Enhanced ice protection
