@@ -1,0 +1,102 @@
+# Model Template for ATA 54 Nacelles & Pylons
+# This template provides the standard structure for model metadata files
+
+id: "54-00-04-M000"
+title: "Model Title (Replace with descriptive name)"
+category: "MODL"
+model_type: "Analysis Type (Structural|Thermal|Aero|Dynamics|System|Data)"
+analysis_domain: "Specific domain or discipline"
+ata_chapter: "54"
+description: |
+  Provide a clear description of:
+  - What the model represents
+  - Purpose and intended use
+  - Key capabilities and limitations
+  - Context within the nacelle/pylon design
+status: "Planned"
+version: "0.1.0"
+owner: "Engineering discipline (e.g., Structures, Thermal, Aero)"
+last_updated: "YYYY-MM-DD"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A00X"
+      title: "Assembly Title"
+  requirements:
+    - id: "54-00-03-01-00X"
+      title: "Requirement Title"
+  parent_models: []
+  related_models: []
+
+analysis_parameters:
+  method: "Analysis method or modeling approach"
+  solver: "TBD"
+  key_parameters: |
+    - Parameter 1: Description
+    - Parameter 2: Description
+  boundary_conditions: "TBD"
+  assumptions: |
+    - List key assumptions
+    - That affect model validity
+
+software_tools:
+  primary: "TBD (e.g., NASTRAN, ANSYS, STAR-CCM+)"
+  preprocessing: "TBD (e.g., Hypermesh, ANSA)"
+  postprocessing: "TBD (e.g., Tecplot, ParaView)"
+  version: "TBD"
+
+input_requirements:
+  geometry: "TBD - source of geometry data"
+  loads: "TBD - load cases and sources"
+  material_properties: "TBD - material data sources"
+  environmental_conditions: "TBD"
+
+results_summary:
+  status: "Pending analysis"
+  key_outputs: []
+  validation_status: "Not validated"
+  notes: |
+    Add notes about results, convergence, or findings
+
+verification:
+  - method: "Mesh convergence study"
+    status: "Planned"
+  - method: "Comparison with analytical solutions"
+    status: "Planned"
+  - method: "Comparison with test data"
+    status: "Planned"
+
+validation:
+  test_correlation: "TBD"
+  uncertainty_quantification: "TBD"
+  confidence_level: "TBD"
+
+outputs:
+  - "Output type 1 (e.g., stress distribution)"
+  - "Output type 2 (e.g., deflections)"
+  - "Output type 3 (e.g., safety margins)"
+  - "Reports and visualizations"
+
+documentation:
+  technical_report: "TBD - path to detailed report"
+  presentation: "TBD - path to summary presentation"
+  raw_data: "TBD - path to analysis files"
+
+quality_assurance:
+  peer_review: "Required"
+  checker: "TBD"
+  approver: "TBD"
+  review_date: "TBD"
+
+notes: |
+  Additional notes:
+  - Model scope and boundaries
+  - Known limitations
+  - Future improvements planned
+  - Special considerations
+
+document_control:
+  created_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  repository: "AMPEL360-AIR-T"
+  status: "DRAFT - Template"
+  last_ai_update: "2026-01-02"

@@ -1,0 +1,261 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "54-00-04-M902_Installation_Data_Schema",
+  "title": "ATA 54 Installation Data Schema",
+  "description": "JSON schema for nacelle and pylon installation procedures, configurations, and verification data",
+  "version": "0.1.0",
+  "type": "object",
+  "required": [
+    "installation_metadata",
+    "installation_steps"
+  ],
+  "properties": {
+    "installation_metadata": {
+      "type": "object",
+      "required": [
+        "installation_id",
+        "title",
+        "ata_chapter",
+        "aircraft_type"
+      ],
+      "properties": {
+        "installation_id": {
+          "type": "string",
+          "pattern": "^INST-54-[A-Z0-9]{3,6}$",
+          "description": "Unique installation procedure identifier"
+        },
+        "title": {
+          "type": "string",
+          "description": "Installation procedure title"
+        },
+        "ata_chapter": {
+          "type": "string",
+          "enum": ["54"],
+          "description": "ATA chapter"
+        },
+        "aircraft_type": {
+          "type": "string",
+          "description": "Aircraft type/model"
+        },
+        "effectivity": {
+          "type": "string",
+          "description": "Effectivity (applicable aircraft serial numbers)"
+        },
+        "version": {
+          "type": "string",
+          "description": "Installation procedure version"
+        },
+        "issue_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Issue date (YYYY-MM-DD)"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Draft", "Preliminary", "Released", "Revised"],
+          "description": "Procedure status"
+        }
+      }
+    },
+    "installation_steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "step_number",
+          "description",
+          "action"
+        ],
+        "properties": {
+          "step_number": {
+            "type": "string",
+            "description": "Step number (e.g., 1, 1.1, 1.2)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Step description"
+          },
+          "action": {
+            "type": "string",
+            "description": "Action to be performed"
+          },
+          "required_tools": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Required tools and equipment"
+          },
+          "required_personnel": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Number of personnel required"
+          },
+          "duration_minutes": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Estimated duration in minutes"
+          },
+          "torque_values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "fastener": {
+                  "type": "string",
+                  "description": "Fastener identifier"
+                },
+                "torque_nm": {
+                  "type": "number",
+                  "description": "Torque value in Newton-meters"
+                },
+                "tolerance": {
+                  "type": "string",
+                  "description": "Torque tolerance (e.g., ±5%)"
+                }
+              }
+            },
+            "description": "Torque values for fasteners"
+          },
+          "caution": {
+            "type": "string",
+            "description": "Caution or special note"
+          },
+          "warning": {
+            "type": "string",
+            "description": "Warning for safety-critical step"
+          },
+          "inspection_point": {
+            "type": "boolean",
+            "description": "Whether this step requires inspection"
+          }
+        }
+      }
+    },
+    "interface_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "interface_id": {
+            "type": "string",
+            "description": "Interface identifier (from M803)"
+          },
+          "interface_type": {
+            "type": "string",
+            "enum": ["Mechanical", "Electrical", "Fluid", "Thermal", "Data"],
+            "description": "Type of interface"
+          },
+          "clearance_requirements": {
+            "type": "string",
+            "description": "Minimum clearance requirements"
+          },
+          "alignment_tolerance": {
+            "type": "string",
+            "description": "Alignment tolerance (e.g., ±0.5mm)"
+          },
+          "verification_method": {
+            "type": "string",
+            "enum": ["Visual", "Measurement", "Functional Test", "NDT"],
+            "description": "Verification method"
+          }
+        }
+      }
+    },
+    "quality_control": {
+      "type": "object",
+      "properties": {
+        "inspection_points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "point_id": {
+                "type": "string",
+                "description": "Inspection point identifier"
+              },
+              "description": {
+                "type": "string",
+                "description": "What to inspect"
+              },
+              "acceptance_criteria": {
+                "type": "string",
+                "description": "Acceptance criteria"
+              },
+              "inspection_method": {
+                "type": "string",
+                "description": "Inspection method or tool"
+              }
+            }
+          }
+        },
+        "sign_offs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "role": {
+                "type": "string",
+                "description": "Role (e.g., Mechanic, QA Inspector)"
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether sign-off is required"
+              }
+            }
+          }
+        }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "properties": {
+        "hazards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Identified hazards during installation"
+        },
+        "ppe_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Personal protective equipment required"
+        },
+        "safety_notes": {
+          "type": "string",
+          "description": "General safety notes"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "assemblies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Assemblies being installed (from M901)"
+        },
+        "drawings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related installation drawings"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Requirements verified by installation"
+        }
+      }
+    }
+  }
+}

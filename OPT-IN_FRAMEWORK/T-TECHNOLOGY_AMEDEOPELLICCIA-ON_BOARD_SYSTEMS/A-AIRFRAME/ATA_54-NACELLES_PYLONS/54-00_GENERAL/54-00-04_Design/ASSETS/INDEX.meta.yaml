@@ -174,3 +174,276 @@ assets:
     status: "Planned"
     version: "0.1.0"
     checksum: "<filled-by-CI>"
+
+  # Model Template
+  - id: "54-00-04-M000"
+    category: "TMPL"
+    title: "Model Template"
+    source: "ASSETS/MODELS/TEMPLATES/54-00-04-M000_Model_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Structural Analysis Models
+  - id: "54-00-04-M701"
+    category: "MODL"
+    title: "Nacelle Stress Analysis"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M701_Nacelle_Stress_Analysis.md"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-01-004"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M702"
+    category: "MODL"
+    title: "Nacelle Fatigue Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M702_Nacelle_Fatigue_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-01-004"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M703"
+    category: "MODL"
+    title: "Thrust Reverser Loads Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M703_Thrust_Reverser_Loads_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-005"
+        - "78-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M705"
+    category: "MODL"
+    title: "Pylon Stress Analysis"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M705_Pylon_Stress_Analysis.md"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M706"
+    category: "MODL"
+    title: "Pylon Attachment Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M706_Pylon_Attachment_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Thermal Analysis Models
+  - id: "54-00-04-M710"
+    category: "MODL"
+    title: "Nacelle Thermal Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/THERMAL/54-00-04-M710_Nacelle_Thermal_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-02-001"
+        - "54-00-03-02-002"
+        - "30-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M711"
+    category: "MODL"
+    title: "Engine Heat Transfer Model"
+    source: "ASSETS/MODELS/ANALYSIS/THERMAL/54-00-04-M711_Engine_Heat_Transfer_Model.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-02-001"
+        - "71-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Aerodynamic Analysis Models
+  - id: "54-00-04-M720"
+    category: "MODL"
+    title: "Nacelle Drag Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/AERO/54-00-04-M720_Nacelle_Drag_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-03-001"
+        - "54-00-03-03-002"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M721"
+    category: "MODL"
+    title: "Inlet Flow Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/AERO/54-00-04-M721_Inlet_Flow_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-03-003"
+        - "71-00-03-02-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Dynamics Analysis Models
+  - id: "54-00-04-M730"
+    category: "MODL"
+    title: "Flutter Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/DYNAMICS/54-00-04-M730_Flutter_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-006"
+        - "54-00-03-03-004"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M731"
+    category: "MODL"
+    title: "Vibration Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/DYNAMICS/54-00-04-M731_Vibration_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-007"
+        - "71-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # System Models
+  - id: "54-00-04-M801"
+    category: "MODL"
+    title: "Nacelle System Architecture Model"
+    source: "ASSETS/MODELS/SYSTEM/54-00-04-M801_Nacelle_System_Architecture.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M802"
+    category: "MODL"
+    title: "Requirements Model"
+    source: "ASSETS/MODELS/SYSTEM/54-00-04-M802_Requirements_Model.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-02-001"
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M803"
+    category: "MODL"
+    title: "Interface Definition Model"
+    source: "ASSETS/MODELS/SYSTEM/54-00-04-M803_Interface_Definition_Model.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+        - "54-00-03-05-003"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Data Schemas
+  - id: "54-00-04-M901"
+    category: "MODL"
+    title: "Assembly Data Schema"
+    source: "ASSETS/MODELS/DATA/54-00-04-M901_Assembly_Data_Schema.json"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M902"
+    category: "MODL"
+    title: "Installation Data Schema"
+    source: "ASSETS/MODELS/DATA/54-00-04-M902_Installation_Data_Schema.json"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M903"
+    category: "MODL"
+    title: "Material Properties Schema"
+    source: "ASSETS/MODELS/DATA/54-00-04-M903_Material_Properties_Schema.json"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
