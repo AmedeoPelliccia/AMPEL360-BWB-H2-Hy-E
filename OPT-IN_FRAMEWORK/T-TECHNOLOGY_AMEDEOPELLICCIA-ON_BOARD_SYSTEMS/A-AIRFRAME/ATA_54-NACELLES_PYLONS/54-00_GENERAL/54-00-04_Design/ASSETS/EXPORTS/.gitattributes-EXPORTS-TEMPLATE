@@ -32,7 +32,15 @@
 #
 # PATTERNS:
 # ---------
+# This template shows two approaches:
+# 1. General patterns (lines 37-40): Apply LFS tracking to ALL EXPORTS folders
+# 2. Specific patterns (lines 62-74): Apply LFS tracking only to specific ATA chapters
+#
+# RECOMMENDATION: Use EITHER general patterns OR specific patterns, not both.
+# - For most repositories: Use general patterns (simpler, covers all ATA chapters)
+# - For granular control: Comment out general patterns and use specific patterns only
 
+# OPTION 1: General patterns (RECOMMENDED for simplicity)
 # Track all PDF files in any EXPORTS folder (across all ATA chapters)
 OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.pdf filter=lfs diff=lfs merge=lfs -text
 
@@ -52,31 +60,34 @@ OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.png filter=lfs diff=lfs merge=lfs -text
 # OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.bmp filter=lfs diff=lfs merge=lfs -text
 
 #
-# SPECIFIC ATA 54 PATTERNS (if you want granular control):
+# OPTION 2: Specific ATA 54 patterns (for granular control)
 # ---------------------------------------------------------
-# These are more specific patterns for ATA 54 EXPORTS only.
-# Use these if you want different LFS policies per ATA chapter.
+# If you need different LFS policies per ATA chapter, comment out the general
+# patterns above and uncomment these specific patterns.
+# NOTE: These are redundant if general patterns are active.
 #
 
 # ATA 54 Assembly Exports
-OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/ASSEMBLIES/*.pdf filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/ASSEMBLIES/*.pdf filter=lfs diff=lfs merge=lfs -text
 
 # ATA 54 Drawing Exports
-OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DRAWINGS/**/*.pdf filter=lfs diff=lfs merge=lfs -text
-OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DRAWINGS/**/*.png filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DRAWINGS/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DRAWINGS/**/*.png filter=lfs diff=lfs merge=lfs -text
 
 # ATA 54 Model Exports
-OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/MODELS/*.pdf filter=lfs diff=lfs merge=lfs -text
-OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/MODELS/*.png filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/MODELS/*.pdf filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/MODELS/*.png filter=lfs diff=lfs merge=lfs -text
 
 # ATA 54 Diagram Exports
-OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DIAGRAMS/*.pdf filter=lfs diff=lfs merge=lfs -text
-OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DIAGRAMS/*.png filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DIAGRAMS/*.pdf filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DIAGRAMS/*.png filter=lfs diff=lfs merge=lfs -text
 
 #
 # NOTES:
 # ------
-# - Patterns are applied in order; more specific patterns should come first
+# - Git applies .gitattributes patterns in order from top to bottom
+# - Later patterns can override earlier patterns for the same file
+# - More specific patterns take precedence when they match the same file
 # - Use /** for recursive matching across all subdirectories
 # - The -text flag tells Git to treat these as binary (no line ending conversion)
 # - filter=lfs: Use LFS to store the file content

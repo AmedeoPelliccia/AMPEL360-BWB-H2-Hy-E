@@ -87,8 +87,10 @@ Export filenames **must match** the source filename exactly, differing only in:
 | Source File | Valid Export Name | Invalid Export Name |
 |-------------|-------------------|---------------------|
 | `54-00-04-D001_DRWG_Nacelle_GA.yaml` | `54-00-04-D001_DRWG_Nacelle_GA.pdf` | `Nacelle_GA.pdf` ❌ |
-| `ASM-54-NAC-001_Primary_Nacelle_Structure.yaml` | `54-00-04-A001_ASSY_Nacelle_Primary_Structure.pdf` | `Primary_Nacelle.pdf` ❌ |
 | `54-00-04-DG001_System_Context.drawio` | `54-00-04-DG001_System_Context.png` | `context_diagram.png` ❌ |
+| `54-00-04-M001_Stress_Analysis.yaml` | `54-00-04-M001_Stress_Analysis.pdf` | `stress_report.pdf` ❌ |
+
+**Note on Assembly Naming**: Assembly source files may use internal naming like `ASM-54-NAC-001_Primary_Nacelle_Structure.yaml`, but exports follow the standard ASSETS pattern `54-00-04-A###_ASSY_<Description>.pdf` as defined in the export register (see 00_INDEX.md). The export register provides the authoritative mapping between source assemblies and their export filenames.
 
 ### Assembly Export Naming
 
@@ -96,7 +98,8 @@ Assemblies use the pattern `54-00-04-A###_ASSY_<Description>.pdf` where:
 - `54-00-04` = ATA chapter and lifecycle folder
 - `A###` = Assembly sequence number
 - `ASSY` = Category identifier
-- `<Description>` = Short descriptive name matching source
+- `<Description>` = Short descriptive name
+- **Source mapping**: See 00_INDEX.md Assembly Exports Register for source-to-export mapping
 
 ### Drawing Export Naming
 
