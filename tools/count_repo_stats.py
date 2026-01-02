@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Copyright 2025 AMPEL360 Project Contributors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#!/usr/bin/env python3
 """
 Repository Statistics Counter
 
@@ -101,4 +101,4 @@ def main():
 
 
 if __name__ == '__main__':
-    raise SystemExit(main())
+    sys.exit(main())
