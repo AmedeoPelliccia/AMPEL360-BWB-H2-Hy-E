@@ -1,0 +1,36 @@
+id: "54-00-04-D008"
+title: "Nacelle Cross-Sections"
+category: "DRWG"
+drawing_type: "Section"
+ata_chapter: "54"
+description: "Structural section drawings showing nacelle cross-sections at key stations, including skin thickness, stringer arrangement, and internal structure configuration."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:10"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A001"
+      title: "Nacelle Primary Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Integrity"
+  parent_drawings:
+    - "54-00-04-D001"
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  Shows typical and critical cross-sections through nacelle structure,
+  including composite layup schedules and material callouts.

@@ -3,17 +3,165 @@ version: 1
 owner: "AMPEL360 Documentation Team"
 folder: "54-00-04_Design"
 
-assets: []
-# Add asset entries here following the pattern:
-#  - id: "54-00-04-Annn"
-#    category: "DIAG|DRWG|PROD|ASSY|PART|INST|MODL|DATA|TMPL|EXPT"
-#    title: "Asset Title"
-#    source: "ASSETS/CATEGORY/filename.ext"
-#    exports: []
-#    links:
-#      reqs: []
-#      odd: []
-#      safety: []
-#    status: "Draft|Review|Approved|Obsolete"
-#    version: "1.0.0"
-#    checksum: "<filled-by-CI>"
+assets:
+  # Drawing Template
+  - id: "54-00-04-D000"
+    category: "TMPL"
+    title: "Drawing Metadata Template"
+    source: "ASSETS/DRAWINGS/TEMPLATES/54-00-04-D000_DRWG_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # GA Drawings
+  - id: "54-00-04-D001"
+    category: "DRWG"
+    title: "Nacelle Primary Structure - General Arrangement"
+    source: "ASSETS/DRAWINGS/GA/54-00-04-D001_DRWG_Nacelle_Primary_Structure_GA.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D003"
+    category: "DRWG"
+    title: "Pylon General Arrangement"
+    source: "ASSETS/DRAWINGS/GA/54-00-04-D003_DRWG_Pylon_General_Arrangement.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Detail Drawings
+  - id: "54-00-04-D002"
+    category: "DRWG"
+    title: "Nacelle Primary Structure - Dimensions"
+    source: "ASSETS/DRAWINGS/DETAIL/54-00-04-D002_DRWG_Nacelle_Primary_Structure_Dimensions.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D004"
+    category: "DRWG"
+    title: "Pylon-Wing Attachment Details"
+    source: "ASSETS/DRAWINGS/DETAIL/54-00-04-D004_DRWG_Pylon_Wing_Attachment_Details.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Interface Drawings
+  - id: "54-00-04-D005"
+    category: "DRWG"
+    title: "Nacelle-Pylon Interface Drawing"
+    source: "ASSETS/DRAWINGS/INTERFACE/54-00-04-D005_DRWG_Nacelle_Pylon_Interface.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D007"
+    category: "DRWG"
+    title: "Engine Mount Interface Drawing"
+    source: "ASSETS/DRAWINGS/INTERFACE/54-00-04-D007_DRWG_Engine_Mount_Interface.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-003"
+        - "71-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Installation Drawings
+  - id: "54-00-04-D006"
+    category: "DRWG"
+    title: "Thrust Reverser Installation"
+    source: "ASSETS/DRAWINGS/INSTALLATION/54-00-04-D006_DRWG_Thrust_Reverser_Installation.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "78-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D010"
+    category: "DRWG"
+    title: "SHM Sensor Locations"
+    source: "ASSETS/DRAWINGS/INSTALLATION/54-00-04-D010_DRWG_SHM_Sensor_Locations.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-07-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Section Drawings
+  - id: "54-00-04-D008"
+    category: "DRWG"
+    title: "Nacelle Cross-Sections"
+    source: "ASSETS/DRAWINGS/SECTION/54-00-04-D008_DRWG_Nacelle_Cross_Sections.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D009"
+    category: "DRWG"
+    title: "Pylon Load Path Diagram"
+    source: "ASSETS/DRAWINGS/SECTION/54-00-04-D009_DRWG_Pylon_Load_Path_Diagram.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"

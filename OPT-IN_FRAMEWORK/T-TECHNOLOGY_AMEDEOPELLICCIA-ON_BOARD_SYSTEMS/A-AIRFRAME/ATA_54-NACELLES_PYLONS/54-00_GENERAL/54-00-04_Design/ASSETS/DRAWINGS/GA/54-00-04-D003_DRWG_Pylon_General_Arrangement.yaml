@@ -1,0 +1,37 @@
+id: "54-00-04-D003"
+title: "Pylon General Arrangement"
+category: "DRWG"
+drawing_type: "GA"
+ata_chapter: "54"
+description: "General arrangement drawing showing the overall pylon structure layout, load paths, and integration with wing and nacelle for the AMPEL360 BWB configuration."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:15"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A002"
+      title: "Pylon Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Integrity"
+  parent_drawings: []
+  child_drawings:
+    - "54-00-04-D004"
+    - "54-00-04-D009"
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  This GA drawing shows the pylon structure including forward and aft pylon spars,
+  lateral bracing, and major attachment points to wing and nacelle.

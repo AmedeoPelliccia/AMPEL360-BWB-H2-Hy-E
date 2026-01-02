@@ -1,0 +1,37 @@
+id: "54-00-04-D001"
+title: "Nacelle Primary Structure - General Arrangement"
+category: "DRWG"
+drawing_type: "GA"
+ata_chapter: "54"
+description: "General arrangement drawing showing the overall nacelle primary structure layout, major components, and key dimensions for the AMPEL360 BWB hydrogen-electric propulsion nacelle."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:20"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A001"
+      title: "Nacelle Primary Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Integrity"
+  parent_drawings: []
+  child_drawings:
+    - "54-00-04-D002"
+    - "54-00-04-D008"
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  This GA drawing will serve as the master reference for the nacelle primary structure,
+  showing the integration of inlet, fan cowl, core cowl, and aft structure.
