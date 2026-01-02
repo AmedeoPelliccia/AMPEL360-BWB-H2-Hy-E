@@ -2,7 +2,7 @@ Requirement_ID,Requirement_Title,Category,Parent_Regulatory_Ref,Related_Design_D
 54-00-03-01-001,Nacelle Ultimate Load Capability,01_Structural_Integrity,"CS-25.303, CS-25.305",54-00-04-STR-001,54-00-07-TEST-001,54-00-06-FEA-001,PLANNED,Full-scale static test required
 54-00-03-01-002,Pylon Structural Integrity,01_Structural_Integrity,"CS-25.305, CS-25.571",54-00-04-STR-002,54-00-07-TEST-002,54-00-06-FEA-002,PLANNED,Pylon fatigue critical areas
 54-00-03-02-001,Thermal Environment Resistance,02_Environmental,"CS-25.603, CS-25.609",54-00-04-ENV-001,54-00-07-TEST-010,54-00-06-THERM-001,PLANNED,Engine heat zone analysis
-54-00-03-02-002,Acoustic Environment Compliance,02_Environmental,"CS-25.853, CS 36",54-00-04-ENV-002,54-00-07-TEST-011,54-00-06-ACOU-001,PLANNED,Noise certification testing
+54-00-03-02-002,Acoustic Environment Compliance,02_Environmental,"CS-25.853, CS-36",54-00-04-ENV-002,54-00-07-TEST-011,54-00-06-ACOU-001,PLANNED,Noise certification testing
 54-00-03-03-001,Aerodynamic Performance,03_Performance,"CS-25.253, CS-25.1001",54-00-04-PERF-001,54-00-07-TEST-020,54-00-06-AERO-001,PLANNED,CFD validation
 54-00-03-03-002,Thrust Reverser Deployment Performance,03_Performance,"CS-25.933, CS-25.1193",54-00-04-PERF-002,54-00-07-TEST-021,54-00-06-TR-001,PLANNED,Deployment time requirements
 54-00-03-04-001,Nacelle Composite Materials Qualification,04_Materials,"CS-25.603, AC 20-107B",54-00-04-MAT-001,54-00-07-TEST-030,54-00-06-COMP-001,PLANNED,CFRP material allowables
