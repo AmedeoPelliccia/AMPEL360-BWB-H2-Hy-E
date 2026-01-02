@@ -1,0 +1,35 @@
+id: "54-00-04-D002"
+title: "Nacelle Primary Structure - Dimensions"
+category: "DRWG"
+drawing_type: "Detail"
+ata_chapter: "54"
+description: "Detailed dimensional drawing showing critical dimensions, tolerances, and geometric constraints for the nacelle primary structure components."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:10"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A001"
+      title: "Nacelle Primary Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Integrity"
+  parent_drawings:
+    - "54-00-04-D001"
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  Detail drawing providing manufacturing and inspection dimensions for nacelle structure.

@@ -1,0 +1,38 @@
+id: "54-00-04-D004"
+title: "Pylon-Wing Attachment Details"
+category: "DRWG"
+drawing_type: "Detail"
+ata_chapter: "54"
+description: "Detailed drawing showing pylon-to-wing attachment fittings, fastener patterns, load transfer details, and interface specifications between ATA 54 and ATA 57."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:5"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A002"
+      title: "Pylon Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Integrity"
+    - id: "54-00-03-05-001"
+      title: "Pylon-Wing Interface Requirements"
+  parent_drawings:
+    - "54-00-04-D003"
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  Critical interface drawing requiring coordination with ATA 57 Wing structures.
+  Shows attachment fittings, bolt patterns, and load transfer mechanisms.

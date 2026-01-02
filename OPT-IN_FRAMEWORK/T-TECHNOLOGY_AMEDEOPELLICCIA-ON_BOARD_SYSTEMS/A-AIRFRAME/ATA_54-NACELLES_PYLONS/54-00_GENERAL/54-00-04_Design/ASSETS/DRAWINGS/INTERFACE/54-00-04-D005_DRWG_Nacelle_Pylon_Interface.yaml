@@ -1,0 +1,35 @@
+id: "54-00-04-D005"
+title: "Nacelle-Pylon Interface Drawing"
+category: "DRWG"
+drawing_type: "Interface"
+ata_chapter: "54"
+description: "Interface control drawing defining the nacelle-to-pylon interface boundaries, mounting provisions, load transfer interfaces, and system routing through the interface."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:10"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A003"
+      title: "Nacelle-Pylon Interface Assembly"
+  requirements:
+    - id: "54-00-03-05-002"
+      title: "Nacelle-Pylon Interface Requirements"
+  parent_drawings: []
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  Interface control drawing showing mating surfaces, bolt patterns, seal locations,
+  and system pass-throughs between nacelle and pylon structures.

@@ -1,0 +1,36 @@
+id: "54-00-04-D009"
+title: "Pylon Load Path Diagram"
+category: "DRWG"
+drawing_type: "Section"
+ata_chapter: "54"
+description: "Structural diagram showing primary and secondary load paths through the pylon structure, including tension/compression members, shear transfer, and ultimate load conditions."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:15"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A002"
+      title: "Pylon Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Integrity"
+  parent_drawings:
+    - "54-00-04-D003"
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  Structural load path diagram showing force flows from engine through pylon to wing.
+  Essential for stress analysis and certification substantiation.

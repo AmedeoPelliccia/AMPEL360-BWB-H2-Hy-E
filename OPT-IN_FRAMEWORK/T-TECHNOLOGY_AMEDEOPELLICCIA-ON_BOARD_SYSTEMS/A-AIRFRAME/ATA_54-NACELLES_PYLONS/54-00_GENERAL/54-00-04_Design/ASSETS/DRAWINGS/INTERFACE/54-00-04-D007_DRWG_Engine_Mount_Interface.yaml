@@ -1,0 +1,37 @@
+id: "54-00-04-D007"
+title: "Engine Mount Interface Drawing"
+category: "DRWG"
+drawing_type: "Interface"
+ata_chapter: "54"
+description: "Interface control drawing defining the engine mount attachment points, load transfer interfaces, and structural provisions for the propulsion system mounting within the nacelle."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:10"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A005"
+      title: "Engine Mount Structure Assembly"
+  requirements:
+    - id: "54-00-03-05-003"
+      title: "Engine Mount Interface Requirements"
+    - id: "71-00-03-01-001"
+      title: "Engine Mount Requirements"
+  parent_drawings: []
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  Critical interface drawing showing engine mounting points and load paths.
+  Coordinates with ATA 71 Powerplant and propulsion system integration requirements.
