@@ -1,0 +1,14 @@
+Requirement_ID,Requirement_Title,Category,MoC_Code,Verification_Method,Test_ID,Analysis_ID,Inspection_ID,Review_ID,Planned_Date,Responsible_Team,Status,Notes
+54-00-03-01-001,Nacelle Ultimate Load Capability,01_Structural_Integrity,MC1+MC2,Test + Analysis,V&V-54-001,V&V-54-002,,,2026-Q2,Nacelle Structures,PLANNED,Full-scale static test required
+54-00-03-01-002,Pylon Structural Integrity,01_Structural_Integrity,MC1+MC2,Test + Analysis,V&V-54-003,V&V-54-004,,,2026-Q2,Pylon Structures,PLANNED,Pylon fatigue testing
+54-00-03-02-001,Thermal Environment Resistance,02_Environmental,MC2+MC4,Analysis + Inspection,,V&V-54-010,,V&V-54-011,2026-Q1,Materials Engineering,PLANNED,Engine heat exposure analysis
+54-00-03-02-002,Acoustic Environment Compliance,02_Environmental,MC1+MC2,Test + Analysis,V&V-54-012,V&V-54-013,,,2026-Q2,Acoustics Team,PLANNED,Noise attenuation testing
+54-00-03-03-001,Aerodynamic Performance,03_Performance,MC2,Analysis,,V&V-54-020,,,2026-Q1,Aerodynamics,PLANNED,CFD and wind tunnel correlation
+54-00-03-03-002,Thrust Reverser Deployment Performance,03_Performance,MC1+MC2,Test + Analysis,V&V-54-021,V&V-54-022,,,2026-Q3,Propulsion Integration,PLANNED,Functional demonstration
+54-00-03-04-001,Nacelle Composite Materials Qualification,04_Materials,MC1+MC3,Test + Inspection,V&V-54-030,,V&V-54-031,,2026-Q1,Materials Lab,PLANNED,Material coupon testing
+54-00-03-04-002,Metallic Components Material Properties,04_Materials,MC1+MC2,Test + Analysis,V&V-54-032,V&V-54-033,,,2026-Q1,Materials Lab,PLANNED,Titanium alloy qualification
+54-00-03-05-001,Manufacturing Process Qualification,05_Manufacturing,MC1+MC3,Test + Inspection,V&V-54-040,,V&V-54-041,,2026-Q1,Manufacturing Engineering,PLANNED,First article inspection
+54-00-03-05-002,Assembly Tolerance Verification,05_Manufacturing,MC3+MC4,Inspection + Review,,,V&V-54-042,V&V-54-043,2026-Q2,Manufacturing Engineering,PLANNED,Dimensional control
+54-00-03-06-001,Nacelle Accessibility Requirements,06_Maintainability,MC3+MC4,Inspection + Review,,,V&V-54-050,V&V-54-051,2026-Q2,Maintainability Team,PLANNED,Maintenance access demonstration
+54-00-03-06-002,Component Replacement Time,06_Maintainability,MC1+MC4,Test + Review,V&V-54-052,,,V&V-54-053,2026-Q3,Maintainability Team,PLANNED,Time and motion study
+54-00-03-07-001,Nacelle Structure SHM Compatibility,07_SHM_and_Monitoring,MC1+MC2,Test + Analysis,V&V-54-060,V&V-54-061,,,2026-Q2,SHM Team,PLANNED,Wave propagation validation
