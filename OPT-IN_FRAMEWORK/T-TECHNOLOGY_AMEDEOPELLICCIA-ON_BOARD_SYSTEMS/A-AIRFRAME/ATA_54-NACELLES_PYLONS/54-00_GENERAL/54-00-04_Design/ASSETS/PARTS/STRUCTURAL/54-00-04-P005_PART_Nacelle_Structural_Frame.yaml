@@ -1,0 +1,143 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# 54-00-04-P005 — Nacelle Structural Frame
+
+# Part Identification
+id: "54-00-04-P005"
+title: "Nacelle Structural Frame"
+category: "PART"
+part_type: "Structural"
+ata_chapter: "54"
+description: "Primary structural frame providing load path and cowl attachment points"
+status: "Draft"
+version: "0.1.0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+# Traceability Links
+traceability:
+  parent_assembly:
+    id: "54-00-04-A001"
+    title: "Primary Nacelle Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Requirements"
+    - id: "54-00-03-04-001"
+      title: "Load Path Requirements"
+  drawings:
+    - id: "54-00-04-D002"
+      title: "Nacelle Primary Structure - Dimensions"
+
+# Material Specifications
+material:
+  primary: "Ti-6Al-4V"
+  specification: "AMS 4911, Titanium alloy sheet"
+  alternative_materials:
+    - "Al 7075-T73 for non-critical frames"
+
+# Physical Dimensions
+dimensions:
+  length_mm: 680
+  width_mm: 540
+  thickness_mm: 8.0
+  weight_kg: 9.5
+  tolerance: "±0.3mm dimensional, ±0.2kg mass"
+
+# Manufacturing Information
+manufacturing:
+  process: "CNC machining from billet, stress relief heat treatment"
+  tooling: "5-axis CNC mill, heat treatment furnace"
+  cycle_time_hours: 12
+  inspection_requirements:
+    - "Dimensional inspection per drawing 54-00-04-D002"
+    - "NDT - Eddy current inspection 100% coverage"
+    - "Surface roughness verification (Ra < 3.2 μm)"
+    - "Load test on representative samples"
+
+# Mechanical Properties
+mechanical_properties:
+  tensile_strength_mpa: 895
+  compressive_strength_mpa: 850
+  elastic_modulus_gpa: 114
+  yield_strength_mpa: 828
+  ultimate_strength_mpa: 895
+
+# Environmental Limits
+environmental_limits:
+  operating_temp_min_c: -55
+  operating_temp_max_c: 200
+  humidity_max_percent: 100
+  salt_fog_resistance: "Per ASTM B117, 3000 hours minimum"
+
+# Design Features
+design_features:
+  - "Circumferential ring structure for radial stiffness"
+  - "Integral attachment lugs for cowl panels"
+  - "Engine mount interface provisions"
+  - "Lightning strike path provisions"
+  - "Inspection access holes with bushings"
+
+# Interfaces
+interfaces:
+  - interface_id: "IF-P005-COWL"
+    description: "Cowl panel attachment points"
+    fastener_type: "Hi-Lok HL11"
+    quantity: 12
+  - interface_id: "IF-P005-ENGINE"
+    description: "Engine mount interface (forward frames)"
+    fastener_type: "Hi-Lok HL14"
+    quantity: 6
+  - interface_id: "IF-P005-PYLON"
+    description: "Pylon interface bracket attachment"
+    fastener_type: "Hi-Lok HL11"
+    quantity: 4
+
+# Maintenance Information
+maintenance:
+  inspection_interval_fh: 2000
+  inspection_method: "Visual inspection, eddy current for crack detection"
+  special_maintenance_requirements:
+    - "Crack inspection at critical holes every 4000 FH"
+    - "Corrosion inspection every 2000 FH"
+
+# Supply Chain
+supply_chain:
+  manufacturer: "TBD - Precision machining supplier"
+  supplier_part_number: "TBD"
+  lead_time_weeks: 10
+  minimum_order_quantity: 6
+
+# Certification
+certification:
+  critical_part: true
+  cert_basis: "CS-25.571, CS-25.613"
+  special_conditions:
+    - "Fatigue testing per AC 25.571-1D"
+    - "Ultimate load test verification"
+
+# Additional Notes
+notes: |
+  The nacelle structural frame is a critical load-carrying member that provides
+  the primary load path between the engine, pylon, and cowl panels. Multiple
+  frames are used at key stations along the nacelle length.
+  
+  Design considerations:
+  - Optimized cross-section for weight efficiency
+  - Fatigue-critical design with generous fillet radii
+  - Corrosion-resistant titanium alloy for long-term durability
+  - Precision machining ensures tight tolerances for proper cowl fit
+  - Multiple frames required per nacelle (typically 6-10 units)

@@ -174,3 +174,231 @@ assets:
     status: "Planned"
     version: "0.1.0"
     checksum: "<filled-by-CI>"
+
+  # Parts - Structural
+  - id: "54-00-04-P001"
+    category: "PART"
+    title: "Nacelle Inlet Lip"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P001_PART_Nacelle_Inlet_Lip.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-02-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P002"
+    category: "PART"
+    title: "Fan Cowl Forward Panel"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P002_PART_Fan_Cowl_Forward_Panel.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-08-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P003"
+    category: "PART"
+    title: "Fan Cowl Aft Panel"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P003_PART_Fan_Cowl_Aft_Panel.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "78-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P004"
+    category: "PART"
+    title: "Core Cowl Panel"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P004_PART_Core_Cowl_Panel.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P005"
+    category: "PART"
+    title: "Nacelle Structural Frame"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P005_PART_Nacelle_Structural_Frame.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-04-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P006"
+    category: "PART"
+    title: "Pylon Forward Spar"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P006_PART_Pylon_Forward_Spar.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-04-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P007"
+    category: "PART"
+    title: "Pylon Aft Spar"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P007_PART_Pylon_Aft_Spar.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-04-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Fittings
+  - id: "54-00-04-P008"
+    category: "PART"
+    title: "Pylon Wing Attachment Fitting"
+    source: "ASSETS/PARTS/FITTINGS/54-00-04-P008_PART_Pylon_Wing_Attachment_Fitting.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-001"
+        - "54-00-03-04-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P009"
+    category: "PART"
+    title: "Engine Mount Forward Fitting"
+    source: "ASSETS/PARTS/FITTINGS/54-00-04-P009_PART_Engine_Mount_Forward_Fitting.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-003"
+        - "71-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P010"
+    category: "PART"
+    title: "Engine Mount Aft Fitting"
+    source: "ASSETS/PARTS/FITTINGS/54-00-04-P010_PART_Engine_Mount_Aft_Fitting.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-003"
+        - "71-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P011"
+    category: "PART"
+    title: "Nacelle-Pylon Interface Bracket"
+    source: "ASSETS/PARTS/FITTINGS/54-00-04-P011_PART_Nacelle_Pylon_Interface_Bracket.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Movable
+  - id: "54-00-04-P012"
+    category: "PART"
+    title: "Thrust Reverser Blocker Door"
+    source: "ASSETS/PARTS/MOVABLE/54-00-04-P012_PART_Thrust_Reverser_Blocker_Door.yaml"
+    exports: []
+    links:
+      reqs:
+        - "78-00-03-01-001"
+        - "54-00-03-06-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P013"
+    category: "PART"
+    title: "TR Actuation Link"
+    source: "ASSETS/PARTS/MOVABLE/54-00-04-P013_PART_TR_Actuation_Link.yaml"
+    exports: []
+    links:
+      reqs:
+        - "78-00-03-01-001"
+        - "54-00-03-06-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Secondary
+  - id: "54-00-04-P014"
+    category: "PART"
+    title: "Access Panel - Fan Cowl"
+    source: "ASSETS/PARTS/SECONDARY/54-00-04-P014_PART_Access_Panel_Fan_Cowl.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-06-001"
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Hardware
+  - id: "54-00-04-P015"
+    category: "PART"
+    title: "Fastener - Hi-Lok HL11"
+    source: "ASSETS/PARTS/HARDWARE/54-00-04-P015_PART_Fastener_HiLok_HL11.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-04-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
