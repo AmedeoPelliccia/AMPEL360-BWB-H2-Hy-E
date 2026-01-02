@@ -3,6 +3,11 @@ version: 1
 owner: "AMPEL360 Documentation Team"
 folder: "54-00-04_Design"
 
+# NOTE: This index tracks SOURCE files only. Rendered outputs (PDF/PNG) are stored in
+# ASSETS/EXPORTS/ and tracked in ASSETS/EXPORTS/00_INDEX.md. Individual export files
+# are NOT listed here as they are derived outputs. See EXPORTS/README.md for export
+# generation guidelines and quality standards.
+
 assets:
   # Drawing Template
   - id: "54-00-04-D000"
