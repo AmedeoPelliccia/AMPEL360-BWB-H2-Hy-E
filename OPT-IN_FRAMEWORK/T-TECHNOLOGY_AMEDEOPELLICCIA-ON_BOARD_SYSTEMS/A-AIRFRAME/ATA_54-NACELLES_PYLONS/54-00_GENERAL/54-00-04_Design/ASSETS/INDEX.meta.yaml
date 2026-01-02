@@ -30,6 +30,79 @@ assets:
     version: "1.0.0"
     checksum: "<to-be-filled-by-CI>"
 
+  # Data Files
+  - id: "54-00-04-D801"
+    category: "DATA"
+    title: "QC Inspection Points - Nacelle"
+    source: "ASSETS/DATA/54-00-04-D801_QC_Inspection_Points.csv"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Active"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-D802"
+    category: "DATA"
+    title: "Material Specifications"
+    source: "ASSETS/DATA/54-00-04-D802_Material_Specifications.csv"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Active"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-D803"
+    category: "DATA"
+    title: "QC Inspection Points - Pylon"
+    source: "ASSETS/DATA/54-00-04-D803_QC_Inspection_Points_Pylon.csv"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Active"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-D804"
+    category: "DATA"
+    title: "QC Inspection Points - Thrust Reverser"
+    source: "ASSETS/DATA/54-00-04-D804_QC_Inspection_Points_Reverser.csv"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Active"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-D805"
+    category: "DATA"
+    title: "QC Inspection Points - Cowling"
+    source: "ASSETS/DATA/54-00-04-D805_QC_Inspection_Points_Cowling.csv"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Active"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-D806"
+    category: "DATA"
+    title: "Composite Materials Specifications"
+    source: "ASSETS/DATA/54-00-04-D806_Composite_Materials_Spec.csv"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Active"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
   # Assembly Definitions
   - id: "54-00-04-A401"
     category: "ASSY"
