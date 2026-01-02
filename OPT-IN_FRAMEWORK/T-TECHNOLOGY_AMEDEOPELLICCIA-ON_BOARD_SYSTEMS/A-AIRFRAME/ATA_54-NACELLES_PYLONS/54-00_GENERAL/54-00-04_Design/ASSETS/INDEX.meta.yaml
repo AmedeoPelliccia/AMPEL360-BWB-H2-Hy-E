@@ -103,6 +103,31 @@ assets:
     version: "1.0.0"
     checksum: "<to-be-filled-by-CI>"
 
+  # Model and Analysis Files
+  - id: "54-00-04-M701"
+    category: "MODL"
+    title: "Nacelle Stress Analysis Report"
+    source: "ASSETS/MODELS/54-00-04-M701_Nacelle_Stress_Analysis.md"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
+  - id: "54-00-04-M705"
+    category: "MODL"
+    title: "Pylon Stress Analysis Report"
+    source: "ASSETS/MODELS/54-00-04-M705_Pylon_Stress_Analysis.md"
+    exports: []
+    links:
+      reqs: []
+      safety: []
+    status: "Draft"
+    version: "1.0.0"
+    checksum: "<to-be-filled-by-CI>"
+
   # Assembly Definitions
   - id: "54-00-04-A401"
     category: "ASSY"
