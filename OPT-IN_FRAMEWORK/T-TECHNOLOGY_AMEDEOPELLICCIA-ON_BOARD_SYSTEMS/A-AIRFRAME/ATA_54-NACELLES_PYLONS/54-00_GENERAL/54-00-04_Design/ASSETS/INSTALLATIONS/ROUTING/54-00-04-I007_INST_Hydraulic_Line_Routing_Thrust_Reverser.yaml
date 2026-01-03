@@ -1,0 +1,188 @@
+id: "54-00-04-I007"
+title: "Hydraulic Line Routing - Thrust Reverser"
+category: "INST"
+installation_type: "Fluid Routing"
+ata_chapter: "54"
+description: |
+  Hydraulic line routing layout for thrust reverser actuation system including
+  supply and return lines, pressure sensing lines, and associated fittings.
+  Defines routing paths, support locations, separation requirements, and
+  leak containment provisions per ATA 29 hydraulic system requirements.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-REV-001"
+      title: "Cascade Assembly"
+  requirements:
+    - id: "54-00-03-05-002"
+      title: "Hydraulic System Interface Requirements"
+  drawings:
+    - id: "54-00-04-D006"
+      title: "Thrust Reverser Installation"
+
+installation_parameters:
+  mounting_points: 24
+  primary_structure: "Pylon and nacelle aft structure"
+  installation_sequence: |
+    1. Review hydraulic schematic and routing diagram
+    2. Install line support clamps at specified locations (24x points)
+    3. Install drain grommets at low points for leak drainage
+    4. Route primary hydraulic supply line from pylon to reverser manifold
+    5. Install pressure line to left actuator
+    6. Install pressure line to right actuator
+    7. Install return line from manifold to pylon hydraulic system
+    8. Install pressure sensing lines to cockpit indication system
+    9. Secure all lines with cushioned clamps (spacing per spec)
+    10. Install fire-resistant protective sleeving in engine zone
+    11. Verify clearances to structure, electrical, and hot areas
+    12. Install leak containment drain tubes
+    13. Torque all fittings per specification
+    14. Perform pressure test (1.5x system pressure for 5 minutes)
+    15. Perform leak test (system pressure for 30 minutes)
+    16. Apply identification labels per ATA 29 standard
+  torque_requirements:
+    - location: "AN fittings (-6 size)"
+      value: "20 Nm"
+      tolerance: "±2 Nm"
+    - location: "AN fittings (-8 size)"
+      value: "35 Nm"
+      tolerance: "±3 Nm"
+    - location: "AN fittings (-10 size)"
+      value: "50 Nm"
+      tolerance: "±4 Nm"
+    - location: "Line clamp screws (M6)"
+      value: "4.0 Nm"
+      tolerance: "±0.4 Nm"
+
+clearances:
+  - description: "Hydraulic line to electrical harness"
+    value: "25 mm min"
+    condition: "General routing"
+  - description: "Hydraulic line to hot surfaces (>150°C)"
+    value: "75 mm min"
+    condition: "Core cowl and exhaust area"
+  - description: "Hydraulic line to structure (chafing prevention)"
+    value: "6 mm min"
+    condition: "All locations"
+  - description: "Line support spacing (horizontal runs)"
+    value: "600 mm max"
+    condition: "Rigid lines"
+  - description: "Line support spacing (flexible hoses)"
+    value: "300 mm max"
+    condition: "Flexible hose sections"
+
+tooling:
+  - tool_id: "TORQUE-WRENCH-100NM"
+    description: "Torque wrench 0-100 Nm with crowfoot adapters"
+    capacity: "0-100 Nm"
+  - tool_id: "FLARE-TOOL-SET"
+    description: "Tube flaring and swaging tool set"
+    capacity: "1/4" to 1" tube"
+  - tool_id: "TUBE-BENDER-HYD"
+    description: "Hydraulic tube bending tool"
+    capacity: "1/4" to 1" tube, 3" min radius"
+  - tool_id: "PRESS-TEST-5000PSI"
+    description: "Hydraulic pressure test equipment"
+    capacity: "5000 psi"
+  - tool_id: "LEAK-TEST-KIT"
+    description: "Leak detection equipment (ultrasonic)"
+    capacity: "N/A"
+
+safety_notes:
+  - "Hydraulic system must be depressurized before line installation"
+  - "Use proper PPE including safety glasses and gloves (hydraulic fluid hazard)"
+  - "Ensure proper ventilation when working with hydraulic fluid"
+  - "Cap all open fittings to prevent contamination"
+  - "Pressure test requires minimum 5m exclusion zone"
+  - "Use only approved hydraulic fluid (MIL-PRF-83282 or equivalent)"
+  - "Torque wrenches must have current calibration"
+  - "Lock-out/tag-out procedures for hydraulic system during installation"
+  - "Leak containment required during pressure testing"
+
+cross_references:
+  ata_chapters:
+    - chapter: "29"
+      description: "Hydraulic power system requirements and standards"
+    - chapter: "78"
+      description: "Thrust reverser system operation"
+    - chapter: "05"
+      description: "Time limits and maintenance practices"
+    - chapter: "12"
+      description: "Servicing procedures for hydraulic fluid"
+
+verification:
+  - method: "Pressure test at 1.5x system pressure (4500 psi for 5 min)"
+    status: "Planned"
+  - method: "Leak test at system pressure (3000 psi for 30 min)"
+    status: "Planned"
+  - method: "Torque verification on all fittings (100% coverage)"
+    status: "Planned"
+  - method: "Clearance verification per routing requirements"
+    status: "Planned"
+  - method: "Support spacing verification"
+    status: "Planned"
+  - method: "Identification label verification"
+    status: "Planned"
+  - method: "Visual inspection for workmanship and routing quality"
+    status: "Planned"
+
+notes: |
+  Hydraulic line installation for thrust reverser system requires meticulous
+  attention to cleanliness, proper fitting torque, and routing clearances
+  to ensure leak-free, reliable operation throughout service life.
+  
+  Hydraulic system specifications:
+  - Operating pressure: 3000 psi
+  - Proof pressure: 4500 psi (1.5x operating)
+  - Burst pressure: 12000 psi (4x operating)
+  - Fluid: MIL-PRF-83282 (fire-resistant synthetic)
+  - Temperature range: -55°C to +135°C
+  
+  Line routing strategy:
+  - Supply: Pylon to nacelle, protected path along frames
+  - Pressure to actuators: Shortest practical route, minimize bends
+  - Return: Gravity assist where possible, drain at low points
+  - Sensing: Separate from power lines, protected routing
+  
+  Fitting installation best practices:
+  - Clean all fittings with approved solvent before assembly
+  - Inspect threads for damage or contamination
+  - Apply torque in single smooth motion (no retorquing)
+  - Use backup wrench to prevent tube rotation
+  - Verify flare seat contact (no gaps)
+  - Cap all open fittings immediately
+  
+  Line support requirements:
+  - Cushioned clamps to prevent vibration damage
+  - Support spacing per line type and diameter
+  - Avoid cantilever loads on fittings
+  - Allow thermal expansion movement
+  - Prevent chafing against structure
+  
+  Leak containment:
+  - Drain tubes at low points route to overboard drain
+  - Fire zone leaks must be contained and drained
+  - Leak detection provisions in critical areas
+  - Regular inspection intervals per ATA 29
+  
+  Testing and acceptance:
+  - Pressure test witnessed by quality inspector
+  - Zero leaks acceptable at test pressure
+  - Weeping at fittings requires retorque or replacement
+  - Document all test results and any corrective actions
+  
+  Coordination required with:
+  - ATA 29: Hydraulic system integration
+  - ATA 78: Thrust reverser actuation timing
+  - ATA 26: Fire zone leak containment
+  - ATA 45: Leak warning system integration
+  
+  Future enhancements:
+  - Advanced leak detection sensors (continuous monitoring)
+  - Lightweight composite hydraulic lines
+  - Improved fire-resistant coatings
+  - Quick-disconnect fittings for improved maintainability

@@ -1,0 +1,130 @@
+id: "54-00-04-I001"
+title: "Nacelle Installation on Pylon"
+category: "INST"
+installation_type: "Layout"
+ata_chapter: "54"
+description: |
+  Complete nacelle installation layout on pylon structure including
+  positioning, alignment, interface points, and structural attachment details.
+  Defines spatial arrangement and mounting configuration for primary nacelle
+  assembly integration with forward and aft pylon structures.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+  requirements:
+    - id: "54-00-03-01-003"
+      title: "Nacelle Pylon Interface Requirements"
+  drawings:
+    - id: "54-00-04-D001"
+      title: "Nacelle Primary Structure - General Arrangement"
+    - id: "54-00-04-D003"
+      title: "Pylon General Arrangement"
+    - id: "54-00-04-D005"
+      title: "Nacelle-Pylon Interface Drawing"
+
+installation_parameters:
+  mounting_points: 6
+  primary_structure: "Forward and aft pylon frames with engine mount integration"
+  installation_sequence: |
+    1. Position nacelle assembly on installation cradle fixture
+    2. Align pylon forward mount interface to datum A
+    3. Install forward mount bolts (finger tight)
+    4. Align aft pylon mount interface to datum B
+    5. Install aft mount bolts (finger tight)
+    6. Verify alignment and clearances per drawing 54-00-04-D005
+    7. Torque forward mount bolts to specification
+    8. Torque aft mount bolts to specification
+    9. Install secondary attachment hardware
+    10. Perform final dimensional verification
+  torque_requirements:
+    - location: "Forward pylon mount bolts (6x M24)"
+      value: "450 Nm"
+      tolerance: "±15 Nm"
+    - location: "Aft pylon mount bolts (4x M20)"
+      value: "320 Nm"
+      tolerance: "±10 Nm"
+    - location: "Secondary attachment bolts (8x M12)"
+      value: "95 Nm"
+      tolerance: "±5 Nm"
+
+clearances:
+  - description: "Nacelle-to-pylon interface gap"
+    value: "2.5 mm"
+    condition: "Unloaded, ambient temperature"
+  - description: "Minimum ground clearance (forward)"
+    value: "650 mm"
+    condition: "Static, on landing gear"
+  - description: "Minimum ground clearance (aft)"
+    value: "580 mm"
+    condition: "Static, on landing gear"
+  - description: "Wing-to-nacelle clearance"
+    value: "350 mm"
+    condition: "Static, undeflected"
+
+tooling:
+  - tool_id: "FAF-54-INST-001"
+    description: "Nacelle installation cradle with alignment fixtures"
+    capacity: "8000 kg"
+  - tool_id: "TW-0-600NM"
+    description: "Torque wrench 0-600 Nm, calibrated"
+    capacity: "0-600 Nm"
+  - tool_id: "ALIGN-NAC-PYLON"
+    description: "Laser alignment system for nacelle-pylon interface"
+    capacity: "±0.1 mm accuracy"
+  - tool_id: "LIFT-NAC-8T"
+    description: "Overhead crane with nacelle lifting slings"
+    capacity: "8000 kg"
+
+safety_notes:
+  - "Ensure crane capacity sufficient for nacelle assembly weight (approx 6500 kg)"
+  - "Verify all personnel clear of suspended load zone during installation"
+  - "Use calibrated torque wrench; verify calibration before use"
+  - "Implement FOD control procedures for all fastener operations"
+  - "Ground bonding required before and during installation"
+  - "Secondary safety supports required until torquing complete"
+
+cross_references:
+  ata_chapters:
+    - chapter: "71"
+      description: "Engine mount interface with power plant"
+    - chapter: "57"
+      description: "Wing-pylon attachment interface"
+    - chapter: "05"
+      description: "Maintenance access and inspection procedures"
+
+verification:
+  - method: "Dimensional inspection per drawing 54-00-04-D005"
+    status: "Planned"
+  - method: "Torque verification on 100% of primary fasteners"
+    status: "Planned"
+  - method: "Ground clearance verification (static condition)"
+    status: "Planned"
+  - method: "Alignment verification (laser measurement)"
+    status: "Planned"
+  - method: "Visual inspection of interface fit"
+    status: "Planned"
+
+notes: |
+  This installation layout document defines the complete procedure for installing
+  the nacelle assembly onto the pylon structure. Critical alignment requirements
+  must be maintained to ensure proper load transfer and aerodynamic performance.
+  
+  Key considerations:
+  - Maintain datum references throughout installation process
+  - Alignment must be verified before final torquing
+  - Ground clearance must be confirmed with aircraft on gear
+  - Interface gaps must be within tolerance for thermal expansion
+  - FOD prevention critical in fastener operations
+  
+  Future enhancements:
+  - Automated alignment system evaluation
+  - Installation time optimization study
+  - Enhanced tooling for reduced installation duration
