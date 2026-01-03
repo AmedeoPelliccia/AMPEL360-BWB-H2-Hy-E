@@ -177,7 +177,7 @@ assets:
 
   # Installation Template
   - id: "54-00-04-I000"
-    category: "TMPL"
+    category: "INST"
     title: "Installation Title Template"
     source: "ASSETS/INSTALLATIONS/TEMPLATES/54-00-04-I000_INST_Template.yaml"
     exports: []

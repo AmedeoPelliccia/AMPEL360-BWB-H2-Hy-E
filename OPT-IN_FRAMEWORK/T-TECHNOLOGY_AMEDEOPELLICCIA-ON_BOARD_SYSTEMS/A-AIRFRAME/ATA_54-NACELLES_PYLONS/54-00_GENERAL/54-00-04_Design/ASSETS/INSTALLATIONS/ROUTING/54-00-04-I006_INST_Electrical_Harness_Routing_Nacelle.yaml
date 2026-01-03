@@ -78,7 +78,7 @@ tooling:
   - tool_id: "CABLE-INSTALL-KIT"
     description: "Cable installation tool kit with pulling equipment"
     capacity: "N/A"
-  - tool_id:="CRIMP-TOOL-24AWG"
+  - tool_id: "CRIMP-TOOL-24AWG"
     description: "Crimping tool for 24-12 AWG wire terminations"
     capacity: "12-24 AWG"
   - tool_id: "MEGGER-1000V"
