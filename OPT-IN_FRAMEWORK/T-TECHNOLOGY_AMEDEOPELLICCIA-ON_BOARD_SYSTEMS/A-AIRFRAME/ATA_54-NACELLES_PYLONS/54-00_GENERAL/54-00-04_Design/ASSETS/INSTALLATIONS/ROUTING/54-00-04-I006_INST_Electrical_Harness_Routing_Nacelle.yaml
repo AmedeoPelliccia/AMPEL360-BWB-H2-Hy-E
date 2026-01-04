@@ -1,0 +1,176 @@
+id: "54-00-04-I006"
+title: "Electrical Harness Routing - Nacelle"
+category: "INST"
+installation_type: "Cable Routing"
+ata_chapter: "54"
+description: |
+  Electrical harness routing layout for nacelle installation including power,
+  signal, and data cables for lighting, sensors, actuators, and monitoring
+  systems. Defines routing paths, support locations, separation requirements,
+  and electromagnetic compatibility provisions per ATA 24 requirements.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+  requirements:
+    - id: "54-00-03-05-001"
+      title: "Electrical System Interface Requirements"
+  drawings:
+    - id: "54-00-04-D001"
+      title: "Nacelle Primary Structure - General Arrangement"
+
+installation_parameters:
+  mounting_points: 48
+  primary_structure: "Nacelle frames and cowl internal surfaces"
+  installation_sequence: |
+    1. Plan harness routing per electrical schematic and routing diagram
+    2. Install cable support brackets at specified locations (48x points)
+    3. Install cable entry/exit grommets at nacelle interfaces
+    4. Route primary power harness (28VDC bus) along forward frames
+    5. Route SHM sensor harness bundle along centerline
+    6. Route lighting harness to position light locations
+    7. Route thrust reverser actuation harness to actuators
+    8. Route fire detection harness through core cowl region
+    9. Route engine instrumentation harness to engine interface
+    10. Secure all harnesses with appropriate clamps (spacing per spec)
+    11. Install protective sleeving in abrasion-prone areas
+    12. Verify clearances to moving parts and hot sections
+    13. Apply identification labels per ATA 24 standard
+    14. Perform continuity, insulation resistance, and bonding tests
+    15. Document harness serial numbers and routing paths
+  torque_requirements:
+    - location: "Cable clamp screws (M5)"
+      value: "2.5 Nm"
+      tolerance: "±0.3 Nm"
+    - location: "Bracket mounting screws (M6)"
+      value: "4.0 Nm"
+      tolerance: "±0.4 Nm"
+    - location: "Connector backshells"
+      value: "Hand tight + 1/4 turn"
+      tolerance: "N/A"
+
+clearances:
+  - description: "Harness to moving components (reverser, cowls)"
+    value: "25 mm min"
+    condition: "All operating positions"
+  - description: "Harness to hot surfaces (core cowl, exhaust)"
+    value: "50 mm min"
+    condition: "Operating temperature >150°C"
+  - description: "Harness to hydraulic lines"
+    value: "15 mm min"
+    condition: "To prevent chafing"
+  - description: "Harness support spacing"
+    value: "300 mm max"
+    condition: "General routing"
+  - description: "Harness support spacing (near vibration sources)"
+    value: "150 mm max"
+    condition: "Engine mount area"
+
+tooling:
+  - tool_id: "TORQUE-DRIVER-5NM"
+    description: "Precision torque driver 0-5 Nm"
+    capacity: "0-5 Nm"
+  - tool_id: "CABLE-INSTALL-KIT"
+    description: "Cable installation tool kit with pulling equipment"
+    capacity: "N/A"
+  - tool_id: "CRIMP-TOOL-24AWG"
+    description: "Crimping tool for 24-12 AWG wire terminations"
+    capacity: "12-24 AWG"
+  - tool_id: "MEGGER-1000V"
+    description: "Insulation resistance tester 1000VDC"
+    capacity: "1000 VDC test"
+  - tool_id: "CONTINUITY-TESTER"
+    description: "Multimeter with continuity testing capability"
+    capacity: "N/A"
+  - tool_id: "LABEL-PRINTER"
+    description: "Industrial label printer for wire identification"
+    capacity: "N/A"
+
+safety_notes:
+  - "Verify electrical system de-energized before harness installation"
+  - "Use proper grounding and bonding during installation"
+  - "Do not exceed bend radius limits for cables (10x cable diameter min)"
+  - "Keep fire detection harness separate from power harness (min 50mm)"
+  - "Verify proper connector engagement and safety latches"
+  - "ESD precautions required for signal and data cables"
+  - "Insulation resistance test voltage must not exceed cable rating"
+  - "Follow lock-out/tag-out procedures for electrical systems"
+
+cross_references:
+  ata_chapters:
+    - chapter: "24"
+      description: "Electrical power system requirements and standards"
+    - chapter: "26"
+      description: "Fire protection system electrical interface"
+    - chapter: "31"
+      description: "Indicating and warning system connections"
+    - chapter: "78"
+      description: "Thrust reverser electrical system"
+    - chapter: "95"
+      description: "SHM sensor electrical interface"
+
+verification:
+  - method: "Continuity test on all circuits (100% coverage)"
+    status: "Planned"
+  - method: "Insulation resistance test (≥10 MΩ at 500VDC)"
+    status: "Planned"
+  - method: "Bonding resistance test (≤0.003 Ω)"
+    status: "Planned"
+  - method: "Clearance verification to moving parts and hot surfaces"
+    status: "Planned"
+  - method: "Support spacing verification per specification"
+    status: "Planned"
+  - method: "Identification label verification (100% of labels)"
+    status: "Planned"
+  - method: "Visual inspection for workmanship and routing quality"
+    status: "Planned"
+
+notes: |
+  Electrical harness routing in nacelle environment requires careful planning
+  to ensure reliability in demanding operating conditions including vibration,
+  temperature extremes, and electromagnetic interference.
+  
+  Harness types and routing:
+  - Primary power (28VDC): Forward frames route, protected routing
+  - SHM sensors: Centerline route, shielded cables
+  - Lighting: Cowl internal route to position light locations
+  - Thrust reverser: Aft frames route, environmentally sealed
+  - Fire detection: Core cowl route, high-temperature capable
+  - Engine instrumentation: Pylon route to engine interface
+  
+  Separation requirements:
+  - Power and signal: 50 mm minimum
+  - Fire detection from other systems: 50 mm minimum
+  - Electromagnetic compatibility per DO-160 requirements
+  
+  Environmental considerations:
+  - Temperature rating: -55°C to +200°C (selected zones)
+  - Vibration: Per DO-160 category U (engine vicinity)
+  - Moisture: Protected against water ingress (IP67 connectors)
+  - Fluid resistance: Fuel, oil, hydraulic fluid compatible
+  - Abrasion: Protective sleeving in high-wear areas
+  
+  Installation best practices:
+  - Maintain cable bend radius (10x diameter minimum)
+  - Strain relief at all connector interfaces
+  - Support spacing per vibration environment
+  - Avoid sharp edges and pinch points
+  - Label at 600mm intervals and at all connectors
+  - Document as-installed routing in maintenance records
+  
+  Testing requirements:
+  - Continuity: <1 Ω per circuit
+  - Insulation: ≥10 MΩ at 500VDC
+  - Bonding: ≤0.003 Ω structure to connector shells
+  - High-potential: 1000VDC for 60 seconds (optional)
+  
+  Future enhancements:
+  - Fiber optic data bus evaluation
+  - Wireless sensor technology (reduce harness weight)
+  - Advanced electromagnetic shielding materials
+  - Modular harness design for improved maintainability

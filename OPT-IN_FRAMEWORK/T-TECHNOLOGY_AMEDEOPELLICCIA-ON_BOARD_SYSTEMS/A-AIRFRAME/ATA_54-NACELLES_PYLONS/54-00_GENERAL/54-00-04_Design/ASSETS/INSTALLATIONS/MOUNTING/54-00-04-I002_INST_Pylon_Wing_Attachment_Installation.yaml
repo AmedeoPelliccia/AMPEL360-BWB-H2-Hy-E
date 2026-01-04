@@ -1,0 +1,136 @@
+id: "54-00-04-I002"
+title: "Pylon-to-Wing Attachment Installation"
+category: "INST"
+installation_type: "Mounting"
+ata_chapter: "54"
+description: |
+  Mounting procedure for pylon attachment to wing structure including
+  forward and aft attachment fittings, bolt installation sequence,
+  load transfer verification, and structural interface preparation.
+  Covers primary load path connections between pylon and wing box.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+  requirements:
+    - id: "54-00-03-01-002"
+      title: "Pylon-Wing Structural Interface Requirements"
+  drawings:
+    - id: "54-00-04-D003"
+      title: "Pylon General Arrangement"
+    - id: "54-00-04-D004"
+      title: "Pylon-Wing Attachment Details"
+
+installation_parameters:
+  mounting_points: 8
+  primary_structure: "Wing rear spar and pylon forward/aft bulkheads"
+  installation_sequence: |
+    1. Prepare wing attachment fittings (clean, inspect, apply sealant)
+    2. Position pylon assembly using overhead crane and alignment fixture
+    3. Align forward attachment fitting to wing rear spar (verify datum)
+    4. Install forward attachment bolts (4x M30) finger tight
+    5. Align aft attachment fitting to wing rear spar lower flange
+    6. Install aft attachment bolts (4x M30) finger tight
+    7. Verify all hole alignments and interface gaps
+    8. Apply calibrated torque to forward bolts in specified sequence
+    9. Apply calibrated torque to aft bolts in specified sequence
+    10. Install and torque secondary retention hardware
+    11. Install shimstock as required per gap measurement
+    12. Perform load transfer verification test
+    13. Final dimensional inspection and documentation
+  torque_requirements:
+    - location: "Forward attachment bolts (4x M30)"
+      value: "850 Nm"
+      tolerance: "±25 Nm"
+    - location: "Aft attachment bolts (4x M30)"
+      value: "850 Nm"
+      tolerance: "±25 Nm"
+    - location: "Secondary lock nuts (8x M10)"
+      value: "65 Nm"
+      tolerance: "±5 Nm"
+
+clearances:
+  - description: "Forward fitting interface gap"
+    value: "0.5 mm max"
+    condition: "Before shimstock installation"
+  - description: "Aft fitting interface gap"
+    value: "0.5 mm max"
+    condition: "Before shimstock installation"
+  - description: "Bolt hole alignment tolerance"
+    value: "±0.3 mm"
+    condition: "At installation"
+
+tooling:
+  - tool_id: "CRANE-OHD-20T"
+    description: "Overhead crane with precision positioning capability"
+    capacity: "20000 kg"
+  - tool_id: "FAF-54-PYLON-WING"
+    description: "Pylon-to-wing alignment fixture with datum references"
+    capacity: "12000 kg"
+  - tool_id: "TW-0-1000NM"
+    description: "Hydraulic torque wrench 0-1000 Nm, calibrated"
+    capacity: "0-1000 Nm"
+  - tool_id: "SHIM-GAUGE-SET"
+    description: "Precision shim stock and feeler gauge set"
+    capacity: "0.05-2.0 mm range"
+  - tool_id: "LOAD-TEST-PYLON"
+    description: "Load transfer verification test equipment"
+    capacity: "50000 kg verification load"
+
+safety_notes:
+  - "Critical lift operation - dual crane safety protocol required"
+  - "Minimum 3 personnel required for alignment and bolt installation"
+  - "Use calibrated torque equipment only; verify calibration certificates"
+  - "Secondary safety support required until final torque complete"
+  - "Load test personnel must maintain safe distance during verification"
+  - "Ensure proper grounding and bonding before and during installation"
+  - "FOD prevention critical - account for all hardware"
+
+cross_references:
+  ata_chapters:
+    - chapter: "57"
+      description: "Wing structure interface requirements"
+    - chapter: "05"
+      description: "Installation time limits and inspection requirements"
+    - chapter: "20"
+      description: "Standard practices for structural joints"
+
+verification:
+  - method: "Dimensional inspection per drawing 54-00-04-D004"
+    status: "Planned"
+  - method: "Torque verification on 100% of fasteners"
+    status: "Planned"
+  - method: "Load transfer verification test (50kN applied load)"
+    status: "Planned"
+  - method: "Interface gap measurement and documentation"
+    status: "Planned"
+  - method: "NDT inspection of attachment fittings post-installation"
+    status: "Planned"
+
+notes: |
+  Critical structural attachment requiring stringent quality control and
+  verification. This primary load path interface transfers all propulsion
+  loads from engine through pylon to wing structure.
+  
+  Key considerations:
+  - Interface preparation critical for load transfer
+  - Shimstock selection based on actual gap measurements
+  - Torque sequence critical for uniform load distribution
+  - Load test verifies structural integrity before flight
+  - NDT inspection required post-installation per CS-25
+  
+  Special notes:
+  - Sealant application per ATA 20 standard practices
+  - All fasteners must be aerospace grade with traceability
+  - Load test to be witnessed by structures engineer
+  - Installation record must include shim thickness documentation
+  
+  Future enhancements:
+  - Automated alignment system to reduce installation time
+  - Real-time load monitoring during installation
+  - Enhanced fitting design for improved tolerance capability

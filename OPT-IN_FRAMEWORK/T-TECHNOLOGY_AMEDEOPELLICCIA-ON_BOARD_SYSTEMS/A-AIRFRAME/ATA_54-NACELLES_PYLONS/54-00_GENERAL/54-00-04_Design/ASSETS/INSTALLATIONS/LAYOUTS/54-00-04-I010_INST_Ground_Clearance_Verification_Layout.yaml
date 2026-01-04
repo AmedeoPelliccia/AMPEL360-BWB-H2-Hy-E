@@ -1,0 +1,203 @@
+id: "54-00-04-I010"
+title: "Ground Clearance Verification Layout"
+category: "INST"
+installation_type: "Clearance Study"
+ata_chapter: "54"
+description: |
+  Ground clearance verification layout for nacelle and pylon installation
+  including static clearances, dynamic clearances during rotation, and
+  clearances during maintenance operations. Ensures adequate clearance to
+  prevent ground strikes during normal and emergency operations.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+  requirements:
+    - id: "54-00-03-03-001"
+      title: "Ground Clearance Requirements"
+  drawings:
+    - id: "54-00-04-D001"
+      title: "Nacelle Primary Structure - General Arrangement"
+    - id: "54-00-04-D003"
+      title: "Pylon General Arrangement"
+
+installation_parameters:
+  mounting_points: 12
+  primary_structure: "Nacelle lower surface and pylon lower fairing"
+  installation_sequence: |
+    1. Position aircraft on level surface with landing gear extended
+    2. Verify aircraft attitude (pitch and roll angles at zero)
+    3. Measure ground clearance at nacelle forward low point
+    4. Measure ground clearance at nacelle aft low point
+    5. Measure ground clearance at pylon lower fairing
+    6. Measure ground clearance at thrust reverser lower edge
+    7. Verify clearances meet minimum requirements
+    8. Simulate rotation attitude (nose gear extended +8 degrees)
+    9. Verify clearances during rotation scenario
+    10. Simulate landing gear compression (2g landing load)
+    11. Verify clearances with gear compressed
+    12. Document all measurements with photographs
+    13. Prepare ground clearance verification report
+  torque_requirements:
+    - location: "N/A - Measurement activity only"
+      value: "N/A"
+      tolerance: "N/A"
+
+clearances:
+  - description: "Nacelle forward low point to ground (static)"
+    value: "650 mm min"
+    condition: "Aircraft on gear, level, empty weight"
+  - description: "Nacelle aft low point to ground (static)"
+    value: "580 mm min"
+    condition: "Aircraft on gear, level, empty weight"
+  - description: "Pylon lower fairing to ground (static)"
+    value: "750 mm min"
+    condition: "Aircraft on gear, level, empty weight"
+  - description: "Thrust reverser lower edge to ground (static)"
+    value: "600 mm min"
+    condition: "Aircraft on gear, level, empty weight"
+  - description: "Nacelle forward low point to ground (rotation)"
+    value: "250 mm min"
+    condition: "Rotation attitude, +8 deg pitch, MTOW"
+  - description: "Nacelle aft low point to ground (rotation)"
+    value: "320 mm min"
+    condition: "Rotation attitude, +8 deg pitch, MTOW"
+  - description: "Nacelle to ground (2g landing)"
+    value: "450 mm min"
+    condition: "Landing gear compression, 2g load"
+  - description: "Maintenance clearance (jacking)"
+    value: "400 mm min"
+    condition: "Aircraft on jacks, minimum height"
+
+tooling:
+  - tool_id: "LASER-MEASURE-30M"
+    description: "Laser distance measurement tool"
+    capacity: "0-30 m, ±1 mm accuracy"
+  - tool_id: "LEVEL-DIGITAL"
+    description: "Digital level/inclinometer"
+    capacity: "±0.1 degree accuracy"
+  - tool_id: "PLUMB-BOB-HEAVY"
+    description: "Precision plumb bob for vertical reference"
+    capacity: "5 kg"
+  - tool_id: "TAPE-MEASURE-10M"
+    description: "Precision measuring tape"
+    capacity: "10 m, 1 mm graduations"
+  - tool_id: "PHOTO-DOC-KIT"
+    description: "Digital camera with measurement reference targets"
+    capacity: "High resolution"
+
+safety_notes:
+  - "Ensure aircraft properly supported and stabilized during measurements"
+  - "Use wheel chocks and gear pins during clearance verification"
+  - "Maintain safe working distance when simulating landing gear compression"
+  - "Verify no personnel under aircraft during rotation simulation"
+  - "Use proper PPE including hard hats when working under aircraft"
+  - "Coordinate with ground crew for aircraft positioning"
+
+cross_references:
+  ata_chapters:
+    - chapter: "05"
+      description: "Ground handling and servicing limitations"
+    - chapter: "32"
+      description: "Landing gear operation and geometry"
+    - chapter: "08"
+      description: "Aircraft general dimensions and clearances"
+
+verification:
+  - method: "Static clearance measurement (12 points)"
+    status: "Planned"
+  - method: "Rotation clearance verification (+8 deg pitch)"
+    status: "Planned"
+  - method: "Landing gear compression simulation (2g load)"
+    status: "Planned"
+  - method: "Photographic documentation of all measurement points"
+    status: "Planned"
+  - method: "Comparison to design clearances per drawing"
+    status: "Planned"
+  - method: "Clearance verification report preparation"
+    status: "Planned"
+
+notes: |
+  Ground clearance verification ensures safe operation of aircraft during
+  takeoff, landing, taxiing, and ground handling. Adequate clearances prevent
+  nacelle damage from ground contact and ensure safe servicing operations.
+  
+  Measurement conditions:
+  - Aircraft weight: Empty weight for static, MTOW for dynamic
+  - Tire pressure: Normal inflation pressure
+  - Landing gear: Fully extended, no compression for static
+  - Surface: Level, hard surface (concrete or asphalt)
+  - Temperature: Ambient, no thermal effects
+  - Fuel load: Empty tanks for static measurements
+  
+  Critical clearance points:
+  - Nacelle inlet forward low point (most critical during rotation)
+  - Nacelle exhaust aft low point (critical during tail-down attitude)
+  - Pylon lower fairing (critical during rotation)
+  - Thrust reverser lower edge (critical during deployment)
+  - Fan cowl door lower edge (critical when door open)
+  
+  Static clearance requirements:
+  - Minimum 650 mm at nacelle forward low point
+  - Margin for tire deflation: 50 mm
+  - Margin for uneven surfaces: 100 mm
+  - Total design target: 800 mm static clearance
+  
+  Dynamic clearance scenarios:
+  - Rotation: +8 deg pitch angle at VR (rotation speed)
+  - Landing: 2g vertical load with gear compression
+  - Rough field: Uneven surface, +/-5 deg roll angle
+  - Servicing: Aircraft on jacks at minimum height
+  - Tire flat: One main gear tire deflated
+  
+  Measurement procedure:
+  - Establish datum reference (aircraft centerline and waterline)
+  - Use laser measurement for primary measurements
+  - Verify with mechanical tape measure
+  - Take photographs with measurement scales visible
+  - Record aircraft configuration (weight, CG, attitude)
+  - Document any deviations from requirements
+  
+  Design considerations:
+  - Low-wing configuration requires careful clearance management
+  - Engine diameter and nacelle size directly impact clearance
+  - Wing dihedral and pylon length affect ground clearance
+  - Landing gear geometry critical for clearance
+  - Thrust reverser deployment increases nacelle diameter
+  
+  Certification compliance:
+  - CS-25.733: Tires and tire pressure
+  - CS-25.231: Ground load conditions
+  - Advisory material for ground clearance demonstrations
+  
+  Operational impact:
+  - Adequate clearance allows operation from unpaved runways
+  - Clearance affects allowable surface roughness
+  - Limits on crosswind landing technique (wing-low approach)
+  - Affects ground servicing equipment requirements
+  
+  Coordination required with:
+  - ATA 32: Landing gear geometry and loads
+  - ATA 08: Aircraft general dimensions
+  - ATA 05: Ground handling procedures
+  - ATA 57: Wing and pylon attachment geometry
+  
+  Documentation requirements:
+  - Clearance verification report with measurements
+  - Photographic documentation of all points
+  - Comparison to design requirements
+  - Sign-off by structures engineer
+  - Retention in aircraft certification file
+  
+  Future enhancements:
+  - 3D laser scanning for complete clearance map
+  - Real-time clearance monitoring system
+  - Automated measurement and documentation
+  - Integration with digital aircraft model
