@@ -1,0 +1,80 @@
+id: "54-00-04-I000"
+title: "Installation Title Template"
+category: "INST"
+installation_type: "Layout|Mounting|Routing|System|Access|Clearance"
+ata_chapter: "54"
+description: |
+  Detailed description of the installation document.
+  Include purpose, scope, and key aspects of the installation.
+status: "Template"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A00X"
+      title: "Related Assembly Title"
+  requirements:
+    - id: "54-00-03-0X-00X"
+      title: "Related Requirement Title"
+  drawings:
+    - id: "54-00-04-D00X"
+      title: "Related Drawing Title"
+
+installation_parameters:
+  mounting_points: X
+  primary_structure: "Description of primary structure involved"
+  installation_sequence: |
+    Step-by-step sequence description:
+    1. First step
+    2. Second step
+    3. Final step
+  torque_requirements:
+    - location: "Location description"
+      value: "XXX Nm"
+      tolerance: "±XX Nm"
+    - location: "Another location"
+      value: "YYY Nm"
+      tolerance: "±YY Nm"
+
+clearances:
+  - description: "Clearance description"
+    value: "XX mm"
+    condition: "Operating condition"
+  - description: "Another clearance"
+    value: "YY mm"
+    condition: "Maintenance condition"
+
+tooling:
+  - tool_id: "TL-54-XXX"
+    description: "Tool description and purpose"
+    capacity: "XXXX kg or specifications"
+  - tool_id: "TW-XX-YYY"
+    description: "Torque wrench specification"
+    capacity: "0-XXX Nm"
+
+safety_notes:
+  - "Safety note 1 - critical safety consideration"
+  - "Safety note 2 - personnel protection requirements"
+  - "Safety note 3 - equipment protection requirements"
+
+cross_references:
+  ata_chapters:
+    - chapter: "XX"
+      description: "Cross-reference to related ATA chapter"
+    - chapter: "YY"
+      description: "Another related ATA chapter"
+
+verification:
+  - method: "Visual inspection"
+    status: "Planned|In-Progress|Complete"
+  - method: "Dimensional verification"
+    status: "Planned|In-Progress|Complete"
+  - method: "Functional test"
+    status: "Planned|In-Progress|Complete"
+
+notes: |
+  Additional notes, considerations, or future enhancements.
+  Include any special conditions, limitations, or dependencies.
+  Document lessons learned or best practices.

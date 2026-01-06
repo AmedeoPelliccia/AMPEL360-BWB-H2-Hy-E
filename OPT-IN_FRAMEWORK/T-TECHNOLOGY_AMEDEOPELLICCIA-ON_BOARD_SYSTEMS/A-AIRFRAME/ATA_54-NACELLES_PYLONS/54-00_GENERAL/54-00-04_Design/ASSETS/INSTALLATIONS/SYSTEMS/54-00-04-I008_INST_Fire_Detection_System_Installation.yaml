@@ -1,0 +1,185 @@
+id: "54-00-04-I008"
+title: "Fire Detection System Installation"
+category: "INST"
+installation_type: "System"
+ata_chapter: "54"
+description: |
+  Fire detection system installation for nacelle including sensing elements,
+  control units, wiring, and test provisions. Defines sensor placement to
+  ensure complete coverage of fire zones per ATA 26 fire protection
+  requirements and applicable certification standards.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+  requirements:
+    - id: "54-00-03-06-001"
+      title: "Fire Detection Coverage Requirements"
+  drawings:
+    - id: "54-00-04-D001"
+      title: "Nacelle Primary Structure - General Arrangement"
+
+installation_parameters:
+  mounting_points: 16
+  primary_structure: "Core cowl and pylon fire zones"
+  installation_sequence: |
+    1. Identify fire zone boundaries per certification requirements
+    2. Install sensing element support brackets (16x locations)
+    3. Route primary sensing loop through forward fire zone
+    4. Secure sensing loop with cushioned clamps (50mm spacing)
+    5. Route redundant sensing loop through forward fire zone
+    6. Route sensing loops through aft fire zone (pylon area)
+    7. Verify sensing element coverage per test requirements
+    8. Install fire detection control unit in non-fire zone
+    9. Route control wiring from sensors to control unit
+    10. Connect control unit to cockpit warning system (ATA 31)
+    11. Perform sensing element continuity test
+    12. Perform isolation resistance test
+    13. Perform fire detection functional test (heat gun method)
+    14. Verify coverage with thermal mapping test
+    15. Document sensor serial numbers and installation configuration
+  torque_requirements:
+    - location: "Sensing element bracket screws (M5)"
+      value: "2.5 Nm"
+      tolerance: "±0.3 Nm"
+    - location: "Clamp screws (M4)"
+      value: "1.5 Nm"
+      tolerance: "±0.2 Nm"
+    - location: "Control unit mounting bolts (M6)"
+      value: "4.0 Nm"
+      tolerance: "±0.4 Nm"
+
+clearances:
+  - description: "Sensing element to hot surface"
+    value: "25 mm typical"
+    condition: "For optimal heat detection"
+  - description: "Sensing element to structure"
+    value: "10 mm min"
+    condition: "Prevent false alarms from conduction"
+  - description: "Sensing element clamp spacing"
+    value: "50 mm max"
+    condition: "Prevent sagging and chafing"
+  - description: "Control unit to fire zone boundary"
+    value: "300 mm min"
+    condition: "Outside fire zone"
+
+tooling:
+  - tool_id: "TORQUE-DRIVER-5NM"
+    description: "Precision torque driver 0-5 Nm"
+    capacity: "0-5 Nm"
+  - tool_id: "CONTINUITY-TESTER"
+    description: "Multimeter for continuity testing"
+    capacity: "N/A"
+  - tool_id: "MEGGER-500V"
+    description: "Insulation resistance tester 500VDC"
+    capacity: "500 VDC"
+  - tool_id: "HEAT-GUN-TEST"
+    description: "Calibrated heat gun for functional testing"
+    capacity: "500°C"
+  - tool_id: "THERMAL-CAMERA"
+    description: "Thermal imaging camera for coverage verification"
+    capacity: "-20°C to +500°C"
+
+safety_notes:
+  - "Verify electrical system de-energized before sensor installation"
+  - "Handle sensing elements carefully to prevent damage to detection surface"
+  - "Use proper grounding during installation and testing"
+  - "Heat gun testing requires fire watch personnel"
+  - "Do not apply excessive heat during functional testing"
+  - "Verify no flammable materials present during heat testing"
+  - "Control unit must be installed outside fire zone"
+  - "Follow lock-out/tag-out procedures during installation"
+
+cross_references:
+  ata_chapters:
+    - chapter: "26"
+      description: "Fire protection system requirements and standards"
+    - chapter: "31"
+      description: "Cockpit fire warning indication"
+    - chapter: "24"
+      description: "Electrical power supply for detection system"
+    - chapter: "45"
+      description: "Central maintenance system integration"
+
+verification:
+  - method: "Continuity test on both sensing loops (Loop A and B)"
+    status: "Planned"
+  - method: "Isolation resistance test (≥10 MΩ at 500VDC)"
+    status: "Planned"
+  - method: "Functional test with calibrated heat source"
+    status: "Planned"
+  - method: "Coverage verification with thermal mapping"
+    status: "Planned"
+  - method: "Response time verification (≤5 seconds)"
+    status: "Planned"
+  - method: "False alarm test (vibration, moisture, EMI)"
+    status: "Planned"
+  - method: "Visual inspection of installation workmanship"
+    status: "Planned"
+
+notes: |
+  Fire detection system installation is critical for crew and passenger safety.
+  The system must provide rapid and reliable fire detection in all fire zones
+  while minimizing false alarms. Installation must comply with CS-25.1203
+  and related certification requirements.
+  
+  Fire zone definition:
+  - Forward fire zone: Core cowl area surrounding engine core
+  - Aft fire zone: Pylon area with hydraulic and fuel lines
+  - Coverage requirement: 100% of designated fire zones
+  
+  Sensing element technology:
+  - Type: Continuous loop pneumatic sensing elements
+  - Configuration: Dual redundant loops (Loop A and Loop B)
+  - Detection method: Average temperature rise detection
+  - Response time: ≤5 seconds at 200°C above ambient
+  - False alarm immunity: High resistance to vibration and moisture
+  
+  Installation best practices:
+  - Route sensing elements through hottest areas of fire zone
+  - Maintain proper clearance to hot surfaces (25mm typical)
+  - Support spacing 50mm to prevent sagging
+  - Avoid sharp bends (minimum radius 25mm)
+  - Protect sensing elements from mechanical damage
+  - Use cushioned clamps to prevent chafing
+  - Keep sensing elements away from drain holes (moisture)
+  
+  Testing requirements:
+  - Continuity: <10 Ω for each loop
+  - Isolation: ≥10 MΩ at 500VDC between loops
+  - Response time: <5 seconds to 200°C heat source
+  - Coverage: Thermal mapping confirms 100% zone coverage
+  - False alarm: No nuisance alarms during environmental tests
+  
+  System architecture:
+  - Dual independent sensing loops for redundancy
+  - Loop A and Loop B monitored independently
+  - Either loop activation triggers cockpit warning
+  - Control unit performs continuous self-test
+  - Built-in test capability for ground verification
+  
+  Coordination required with:
+  - ATA 26: Fire extinguishing system integration
+  - ATA 31: Cockpit warning system interface
+  - ATA 24: Power supply and circuit protection
+  - ATA 45: Fault reporting to maintenance system
+  - ATA 71: Engine fire zone boundaries
+  
+  Maintenance considerations:
+  - Inspection intervals per ATA 26 requirements
+  - Periodic functional testing (monthly ground test)
+  - Sensing element replacement interval: 8000 flight hours
+  - Control unit self-test on every flight
+  - Documentation of all tests and anomalies
+  
+  Future enhancements:
+  - Optical fire detection for improved response time
+  - Multi-spectral detection for enhanced discrimination
+  - Wireless sensing elements to reduce wiring
+  - Integration with automatic fire suppression system
+  - Artificial intelligence for false alarm reduction

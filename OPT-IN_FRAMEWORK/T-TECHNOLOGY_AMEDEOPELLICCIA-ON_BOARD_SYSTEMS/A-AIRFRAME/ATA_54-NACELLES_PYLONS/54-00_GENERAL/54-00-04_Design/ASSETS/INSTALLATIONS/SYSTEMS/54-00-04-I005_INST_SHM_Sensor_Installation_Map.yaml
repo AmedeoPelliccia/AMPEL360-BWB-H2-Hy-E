@@ -1,0 +1,159 @@
+id: "54-00-04-I005"
+title: "SHM Sensor Installation Map"
+category: "INST"
+installation_type: "Sensor Placement"
+ata_chapter: "54"
+description: |
+  Structural Health Monitoring (SHM) sensor installation locations and
+  procedures for nacelle and pylon structures. Defines sensor placement,
+  attachment methods, signal routing, and coverage requirements to support
+  continuous structural monitoring per ATA 95 SHM requirements.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+    - id: "ASM-54-REV-001"
+      title: "Cascade Assembly"
+    - id: "ASM-54-COW-001"
+      title: "Fan Cowl Door Assembly"
+  requirements:
+    - id: "54-00-03-07-001"
+      title: "Nacelle Structure SHM Compatibility"
+  drawings:
+    - id: "54-00-04-D010"
+      title: "SHM Sensor Locations"
+
+installation_parameters:
+  mounting_points: 32
+  primary_structure: "All primary load path structures in nacelle and pylon"
+  installation_sequence: |
+    1. Prepare sensor installation locations (surface preparation)
+    2. Install engine mount sensors (8x locations - forward and aft mounts)
+    3. Install pylon-wing attachment sensors (6x locations - primary fittings)
+    4. Install thrust reverser frame sensors (4x locations - critical frames)
+    5. Install nacelle structural frame sensors (8x locations - frames)
+    6. Install cowl attachment sensors (4x locations - hinge points)
+    7. Install fan blade-out path sensors (2x locations - containment zone)
+    8. Route sensor cables through designated pathways
+    9. Connect sensors to data acquisition system
+    10. Apply protective coatings over sensors
+    11. Perform sensor response verification test
+    12. Document sensor serial numbers and locations
+    13. Upload sensor calibration data to monitoring system
+  torque_requirements:
+    - location: "Sensor mounting screws (M4)"
+      value: "1.5 Nm"
+      tolerance: "±0.2 Nm"
+    - location: "Cable clamp screws (M5)"
+      value: "2.5 Nm"
+      tolerance: "±0.3 Nm"
+
+clearances:
+  - description: "Sensor to adjacent structure"
+    value: "10 mm min"
+    condition: "To avoid interference"
+  - description: "Cable routing clearance"
+    value: "15 mm min"
+    condition: "To moving components"
+  - description: "Sensor protective cover clearance"
+    value: "5 mm min"
+    condition: "To allow thermal expansion"
+
+tooling:
+  - tool_id: "SURF-PREP-KIT"
+    description: "Surface preparation tools for sensor bonding"
+    capacity: "N/A"
+  - tool_id: "TORQUE-DRIVER-5NM"
+    description: "Precision torque driver 0-5 Nm"
+    capacity: "0-5 Nm"
+  - tool_id: "SHM-CALIB-KIT"
+    description: "SHM sensor calibration and verification equipment"
+    capacity: "Per sensor type"
+  - tool_id: "CABLE-ROUTING-TOOLS"
+    description: "Cable routing and securing tool set"
+    capacity: "N/A"
+  - tool_id: "DAQ-TEST-UNIT"
+    description: "Data acquisition test unit for sensor verification"
+    capacity: "32 channel"
+
+safety_notes:
+  - "ESD precautions required for all sensor handling"
+  - "Surface preparation chemicals require proper ventilation and PPE"
+  - "Verify electrical isolation before sensor installation"
+  - "Do not exceed torque limits on sensor mounting hardware"
+  - "Cable routing must avoid pinch points and sharp edges"
+  - "Protective coatings must be compatible with sensor materials"
+
+cross_references:
+  ata_chapters:
+    - chapter: "95"
+      description: "Neural networks and SHM system integration"
+    - chapter: "45"
+      description: "Central maintenance system data interface"
+    - chapter: "24"
+      description: "Electrical power supply for sensors"
+    - chapter: "53"
+      description: "Fuselage SHM system coordination"
+
+verification:
+  - method: "Sensor response verification (impulse test)"
+    status: "Planned"
+  - method: "Coverage analysis per requirement 54-00-03-07-001"
+    status: "Planned"
+  - method: "Signal quality verification at data acquisition unit"
+    status: "Planned"
+  - method: "Cable continuity and insulation resistance test"
+    status: "Planned"
+  - method: "Documentation review (sensor IDs, locations, calibration)"
+    status: "Planned"
+  - method: "Protective coating integrity inspection"
+    status: "Planned"
+
+notes: |
+  SHM sensor installation provides continuous monitoring capability for critical
+  nacelle and pylon structures. Proper installation ensures reliable detection
+  of structural anomalies throughout aircraft service life.
+  
+  Sensor coverage requirements per 54-00-03-07-001:
+  - Engine mount coverage: 100%
+  - Pylon attachment coverage: ≥95%
+  - Signal attenuation: ≤12 dB over 1.2 m (Ti alloy)
+  - All sensors must be maintenance accessible
+  
+  Sensor types and quantities:
+  - Piezoelectric sensors: 24x (primary structures)
+  - Fiber optic strain sensors: 6x (high-temperature zones)
+  - Acoustic emission sensors: 2x (fan blade-out monitoring)
+  
+  Installation best practices:
+  - Surface preparation critical for sensor coupling
+  - Sensor orientation per manufacturer specifications
+  - Cable routing to avoid electromagnetic interference
+  - Protective coatings maintain sensor performance
+  - Calibration data archived in maintenance system
+  
+  Signal routing strategy:
+  - Primary sensors to redundant data acquisition channels
+  - Cable shielding for electromagnetic compatibility
+  - Strain relief at all connection points
+  - Labeled per ATA 95 identification standard
+  
+  Coordination required with:
+  - ATA 95: SHM system architecture and data processing
+  - ATA 45: Integration with central maintenance computer
+  - ATA 24: Power supply and circuit protection
+  - ATA 53: Cross-reference with fuselage SHM system
+  
+  Future enhancements:
+  - Wireless sensor technology evaluation
+  - Increased sensor density in critical areas
+  - Advanced signal processing algorithms
+  - Predictive maintenance capability expansion
+  - Integration with digital twin model

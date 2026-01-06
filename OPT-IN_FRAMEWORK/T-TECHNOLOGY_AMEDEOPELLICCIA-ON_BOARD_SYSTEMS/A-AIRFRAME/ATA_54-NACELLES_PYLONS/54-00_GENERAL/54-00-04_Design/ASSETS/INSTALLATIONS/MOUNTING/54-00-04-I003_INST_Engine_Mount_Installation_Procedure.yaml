@@ -1,0 +1,157 @@
+id: "54-00-04-I003"
+title: "Engine Mount Installation Procedure"
+category: "INST"
+installation_type: "Mounting"
+ata_chapter: "54"
+description: |
+  Detailed procedure for engine mount installation including forward and aft
+  mount points, thrust link attachment, alignment verification, and load path
+  confirmation. Covers interface between engine and nacelle/pylon structure
+  per ATA 71 engine mounting requirements.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+  requirements:
+    - id: "54-00-03-01-005"
+      title: "Engine Mount Interface Requirements"
+  drawings:
+    - id: "54-00-04-D007"
+      title: "Engine Mount Interface Drawing"
+
+installation_parameters:
+  mounting_points: 4
+  primary_structure: "Engine mount frames integrated in nacelle structure"
+  installation_sequence: |
+    1. Prepare engine mount interfaces (clean, inspect, corrosion protection)
+    2. Position engine on installation dolly aligned to nacelle centerline
+    3. Raise engine into approximate position using hoisting equipment
+    4. Align forward mount lugs to nacelle forward mount points
+    5. Install forward mount pins and verify free fit
+    6. Align aft mount lugs to nacelle aft mount points
+    7. Install aft mount pins and verify free fit
+    8. Align thrust link to pylon thrust link attachment
+    9. Install thrust link hardware (finger tight)
+    10. Verify engine alignment (vertical, lateral, longitudinal)
+    11. Install forward mount retention hardware and torque
+    12. Install aft mount retention hardware and torque
+    13. Torque thrust link hardware to specification
+    14. Perform final alignment verification
+    15. Install safety devices and lock wire
+    16. Document installation with photographs and measurements
+  torque_requirements:
+    - location: "Forward mount bolts (4x M36)"
+      value: "1200 Nm"
+      tolerance: "±40 Nm"
+    - location: "Aft mount bolts (4x M36)"
+      value: "1200 Nm"
+      tolerance: "±40 Nm"
+    - location: "Thrust link bolts (2x M30)"
+      value: "850 Nm"
+      tolerance: "±25 Nm"
+    - location: "Retention nuts (12x M12)"
+      value: "95 Nm"
+      tolerance: "±5 Nm"
+
+clearances:
+  - description: "Engine-to-nacelle radial clearance"
+    value: "25 mm min"
+    condition: "All operating conditions"
+  - description: "Fan blade tip to nacelle inner wall"
+    value: "15 mm min"
+    condition: "Static, cold build"
+  - description: "Engine centerline to nacelle centerline offset"
+    value: "±1.0 mm"
+    condition: "At installation"
+  - description: "Thrust line alignment"
+    value: "±0.5 deg"
+    condition: "Longitudinal axis"
+
+tooling:
+  - tool_id: "ENGINE-HOIST-12T"
+    description: "Engine hoisting sling and overhead crane system"
+    capacity: "12000 kg"
+  - tool_id: "DOLLY-ENGINE-INST"
+    description: "Engine installation dolly with height adjustment"
+    capacity: "10000 kg"
+  - tool_id: "TW-HYD-1500NM"
+    description: "Hydraulic torque wrench 0-1500 Nm"
+    capacity: "0-1500 Nm"
+  - tool_id: "ALIGN-ENGINE-LASER"
+    description: "Laser alignment system for engine installation"
+    capacity: "±0.1 mm, ±0.1 deg accuracy"
+  - tool_id: "GAUGE-CLEAR-ENG"
+    description: "Engine clearance measurement gauge set"
+    capacity: "0-50 mm range"
+
+safety_notes:
+  - "Critical lift - engine hoisting requires certified lift equipment and slings"
+  - "Minimum 4 qualified personnel required for engine installation"
+  - "Secondary safety supports mandatory until all mount hardware installed"
+  - "Verify engine center of gravity position before lift"
+  - "Maintain exclusion zone around suspended engine (5m radius)"
+  - "Use proper PPE including safety shoes, hard hats, and gloves"
+  - "Hydraulic torque equipment operators must be certified"
+  - "FOD prevention critical - account for all tools and hardware"
+  - "Ground bonding required throughout installation process"
+
+cross_references:
+  ata_chapters:
+    - chapter: "71"
+      description: "Power plant mounting and installation"
+    - chapter: "05"
+      description: "Time limits and maintenance practices"
+    - chapter: "78"
+      description: "Engine exhaust system interface"
+    - chapter: "80"
+      description: "Engine starting system connections"
+
+verification:
+  - method: "Engine alignment verification (laser measurement)"
+    status: "Planned"
+  - method: "Clearance verification at all critical points"
+    status: "Planned"
+  - method: "Torque verification on 100% of mount fasteners"
+    status: "Planned"
+  - method: "Visual inspection of mount interfaces and safety devices"
+    status: "Planned"
+  - method: "Functional check of engine installation (rotation test)"
+    status: "Planned"
+  - method: "Documentation review and sign-off"
+    status: "Planned"
+
+notes: |
+  Engine mount installation is a critical operation requiring precision alignment
+  and strict adherence to torque specifications. Proper installation ensures
+  safe load transfer and engine operation throughout flight envelope.
+  
+  Key considerations:
+  - Engine alignment critical for thrust line and clearances
+  - Mount hardware must be aerospace grade with full traceability
+  - Torque sequence specified to ensure uniform load distribution
+  - Clearance verification required before engine rotation test
+  - Safety devices and lock wire per ATA 71 requirements
+  
+  Special procedures:
+  - Engine weight and CG must be verified before lift
+  - Hoisting equipment must have current certification
+  - Installation must be witnessed by qualified inspector
+  - All mount interfaces require post-installation NDT
+  - Clearance measurements must be documented with photos
+  
+  Coordination required with:
+  - ATA 71: Engine systems connections
+  - ATA 78: Exhaust system installation
+  - ATA 80: Starting system interface
+  - ATA 49: APU bleed air connections (if applicable)
+  
+  Future enhancements:
+  - Automated alignment system for improved accuracy
+  - Real-time torque monitoring system
+  - Enhanced mount design for improved maintainability
+  - Weight reduction opportunities in mount structure
