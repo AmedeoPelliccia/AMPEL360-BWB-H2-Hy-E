@@ -1,0 +1,147 @@
+id: "54-00-04-M801"
+title: "Nacelle System Architecture Model"
+category: "MODL"
+model_type: "System"
+analysis_domain: "System Architecture - MBSE"
+ata_chapter: "54"
+description: |
+  Model-Based Systems Engineering (MBSE) representation of the nacelle and pylon
+  system architecture:
+  - System decomposition and hierarchy
+  - Functional architecture
+  - Physical architecture
+  - Interface definitions
+  - Allocation of requirements to subsystems
+  - System integration view
+  Uses SysML/UML modeling languages.
+status: "Planned"
+version: "0.1.0"
+owner: "Systems Engineering - Nacelles & Pylons"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+    - id: "ASM-54-COW-001"
+      title: "Fan Cowl Door Assembly"
+    - id: "ASM-54-REV-001"
+      title: "Cascade Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Structural Integrity Requirements"
+    - id: "54-00-03-05-001"
+      title: "Pylon-Wing Interface Requirements"
+    - id: "54-00-03-05-002"
+      title: "Nacelle-Pylon Interface Requirements"
+  parent_models: []
+  related_models:
+    - id: "54-00-04-M802"
+      title: "Requirements Model"
+    - id: "54-00-04-M803"
+      title: "Interface Definition Model"
+
+analysis_parameters:
+  method: "SysML modeling with block definition diagrams, internal block diagrams"
+  solver: "N/A - MBSE modeling tool"
+  key_parameters: |
+    - System decomposition: 3-4 levels
+    - Interface definition: physical, electrical, data, fluid
+    - Functional allocation: functions to physical components
+    - Requirements allocation: system to subsystem traceability
+  boundary_conditions: "Aircraft-level interfaces, engine interfaces"
+  assumptions: |
+    - System boundaries defined at wing interface and engine interface
+    - All interfaces explicitly modeled
+    - Requirements flow-down from aircraft to ATA 54 subsystems
+
+software_tools:
+  primary: "TBD (Cameo Systems Modeler, Enterprise Architect, Rhapsody)"
+  preprocessing: "N/A"
+  postprocessing: "Model exports to XMI, MDXML for traceability and review"
+  version: "TBD"
+
+input_requirements:
+  geometry: "System boundaries, subsystem decomposition from engineering teams"
+  loads: "N/A"
+  material_properties: "N/A"
+  environmental_conditions: "Operational context (flight envelope, environments)"
+
+results_summary:
+  status: "Pending model development"
+  key_outputs: []
+  validation_status: "Not validated"
+  notes: |
+    Key system views to develop:
+    - Context diagram (ATA 54 within aircraft)
+    - System decomposition (primary structure, cowlings, doors, etc.)
+    - Functional architecture (containment, mounting, aerodynamic, thermal)
+    - Physical architecture (assemblies, parts, materials)
+    - Interface architecture (all internal and external interfaces)
+
+verification:
+  - method: "Model consistency checks"
+    status: "Planned"
+  - method: "Stakeholder review and validation"
+    status: "Planned"
+  - method: "Traceability analysis"
+    status: "Planned"
+
+validation:
+  test_correlation: "N/A - logical model"
+  uncertainty_quantification: "N/A"
+  confidence_level: "Model completeness and consistency"
+
+outputs:
+  - "Block Definition Diagrams (BDD)"
+  - "Internal Block Diagrams (IBD)"
+  - "Activity Diagrams (functional flows)"
+  - "Requirement Diagrams (traceability)"
+  - "Parametric Diagrams (constraints)"
+  - "XMI/MDXML export for integration with other tools"
+
+documentation:
+  technical_report: "TBD - System Architecture Description"
+  presentation: "TBD - System design review package"
+  raw_data: "TBD - SysML model repository"
+
+quality_assurance:
+  peer_review: "Required"
+  checker: "TBD - Lead Systems Engineer"
+  approver: "TBD - Chief Systems Engineer"
+  review_date: "TBD"
+
+notes: |
+  MBSE provides:
+  - Single source of truth for system definition
+  - Requirements traceability (M802)
+  - Interface control (M803)
+  - Change impact analysis
+  - Design consistency and completeness
+  
+  Model structure:
+  - Package: ATA_54_Nacelles_Pylons
+    - Package: Primary_Structure
+    - Package: Secondary_Structure
+    - Package: Cowlings_Doors
+    - Package: Thrust_Reverser
+    - Package: Interfaces
+  
+  Coordinate with:
+  - Systems engineering for aircraft-level model integration
+  - All ATA 54 discipline leads for subsystem definition
+  - Configuration management for model version control
+  
+  Uses:
+  - Requirements verification planning
+  - Trade studies and design decisions
+  - Integration planning
+  - Certification documentation
+
+document_control:
+  created_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  repository: "AMPEL360-AIR-T"
+  status: "DRAFT - Planned"
+  last_ai_update: "2026-01-02"

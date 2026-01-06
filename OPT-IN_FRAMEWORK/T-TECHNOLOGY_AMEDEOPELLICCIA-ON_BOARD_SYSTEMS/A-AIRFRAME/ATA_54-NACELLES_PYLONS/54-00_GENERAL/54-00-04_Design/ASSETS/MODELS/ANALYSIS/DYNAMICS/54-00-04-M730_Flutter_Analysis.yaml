@@ -1,0 +1,140 @@
+id: "54-00-04-M730"
+title: "Flutter Analysis Model"
+category: "MODL"
+model_type: "Dynamics"
+analysis_domain: "Aeroelasticity - Flutter and Dynamic Stability"
+ata_chapter: "54"
+description: |
+  Comprehensive flutter analysis of nacelle-pylon-wing system to demonstrate
+  freedom from flutter per CS-25.629:
+  - Nacelle and pylon structural modes
+  - Aerodynamic forces on flexible structure
+  - Flutter speed analysis (V-g method, p-k method)
+  - Engine gyroscopic effects
+  - Mass and stiffness sensitivity studies
+  - Certification compliance demonstration
+status: "Planned"
+version: "0.1.0"
+owner: "Aeroelasticity & Structural Dynamics"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+  requirements:
+    - id: "54-00-03-01-006"
+      title: "Flutter and Dynamic Stability Requirements"
+    - id: "54-00-03-03-004"
+      title: "Aeroelastic Requirements"
+  parent_models:
+    - id: "54-00-04-M705"
+      title: "Pylon Stress Analysis"
+    - id: "54-00-04-M720"
+      title: "Nacelle Drag Analysis"
+  related_models:
+    - id: "54-00-04-M731"
+      title: "Vibration Analysis"
+
+analysis_parameters:
+  method: "Finite element structural dynamics coupled with unsteady aerodynamics"
+  solver: "TBD (NASTRAN SOL 145/146 for flutter, or ZAERO)"
+  key_parameters: |
+    - Structural modes: up to 30 Hz (10-15 modes)
+    - Aerodynamic method: Doublet-Lattice Method (subsonic), ZONA7 (transonic)
+    - Flight envelope: M0 to M0.85, sea level to 41,000 ft
+    - Damping: 2-4% structural damping assumed
+    - Flutter margin: 15% above dive speed VD per CS-25.629
+  boundary_conditions: "Wing root constraint, engine mass and gyroscopics"
+  assumptions: |
+    - Linear structural dynamics (small deformations)
+    - Linear aerodynamics (acceptable for subsonic/transonic)
+    - Engine modeled as rigid mass with gyroscopic effects
+    - Fuel in wing affects coupled modes (swept in sensitivity)
+
+software_tools:
+  primary: "TBD (NASTRAN with ZAERO, or MSC.Nastran SOL 145/146)"
+  preprocessing: "TBD - modal analysis and aerodynamic panel meshing"
+  postprocessing: "TBD - V-g plots, damping trends, mode tracking"
+  version: "TBD"
+
+input_requirements:
+  geometry: "Structural FEM from M705 (mass, stiffness), aero panels for nacelle/pylon"
+  loads: "Aerodynamic pressure distributions (unsteady)"
+  material_properties: "Mass distribution, stiffness, damping"
+  environmental_conditions: "Altitude, Mach, air density for flutter boundary"
+
+results_summary:
+  status: "Pending analysis"
+  key_outputs: []
+  validation_status: "Not validated"
+  notes: |
+    Critical flutter modes to investigate:
+    - Pylon bending (vertical, lateral)
+    - Pylon torsion
+    - Nacelle pitch and yaw
+    - Coupled wing-pylon-nacelle modes
+    
+    Flutter clearance required:
+    - No flutter up to 1.15 × VD (dive speed)
+    - Positive damping at all speeds below clearance speed
+    - Sensitivity to mass and stiffness variations
+
+verification:
+  - method: "Ground Vibration Test (GVT) for mode correlation"
+    status: "Planned"
+  - method: "Sensitivity studies on mass, stiffness, damping"
+    status: "Planned"
+  - method: "Comparison with similar aircraft flutter data"
+    status: "Planned"
+
+validation:
+  test_correlation: "Flight Flutter Test (FFT) required for certification"
+  uncertainty_quantification: "Monte Carlo on structural and aero uncertainties"
+  confidence_level: "High confidence required per CS-25.629"
+
+outputs:
+  - "V-g plots (velocity-damping) for all critical modes"
+  - "Flutter speed vs. Mach number"
+  - "Mode shapes and frequencies"
+  - "Sensitivity to mass and stiffness"
+  - "Flutter clearance report for certification"
+
+documentation:
+  technical_report: "TBD - Flutter Analysis Report per CS-25.629"
+  presentation: "TBD - Certification authority review"
+  raw_data: "TBD - NASTRAN flutter deck and results"
+
+quality_assurance:
+  peer_review: "Required - Independent flutter analysis"
+  checker: "TBD - Senior Aeroelasticity Engineer"
+  approver: "TBD - DER Aeroelasticity and Certification Authority"
+  review_date: "TBD"
+
+notes: |
+  Flutter is a flight-safety critical concern. Failure to clear flutter can result
+  in catastrophic structural failure.
+  
+  CS-25.629 requirements:
+  - No flutter or divergence up to 1.15 × VD
+  - Positive damping demonstrated by analysis and test
+  - Consideration of mass/stiffness variations in service
+  
+  Coordinate with:
+  - Structures for mass and stiffness data
+  - Flight test for GVT and FFT planning
+  - Certification authority for compliance approach
+  
+  Special considerations:
+  - Engine mounting stiffness (critical for pylon modes)
+  - Control surface coupling (if applicable)
+  - External stores or modifications (future growth)
+  - Manufacturing tolerances on stiffness
+
+document_control:
+  created_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  repository: "AMPEL360-AIR-T"
+  status: "DRAFT - Planned"
+  last_ai_update: "2026-01-02"

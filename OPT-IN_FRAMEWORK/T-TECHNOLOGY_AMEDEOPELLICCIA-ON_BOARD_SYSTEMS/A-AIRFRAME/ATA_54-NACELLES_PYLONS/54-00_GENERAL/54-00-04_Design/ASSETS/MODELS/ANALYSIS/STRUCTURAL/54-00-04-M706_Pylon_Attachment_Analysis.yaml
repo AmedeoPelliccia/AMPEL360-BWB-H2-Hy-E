@@ -1,0 +1,125 @@
+id: "54-00-04-M706"
+title: "Pylon Attachment Analysis Model"
+category: "MODL"
+model_type: "Structural"
+analysis_domain: "Structural Analysis - Critical Joints"
+ata_chapter: "54"
+description: |
+  Detailed structural analysis of pylon attachment fittings and interfaces:
+  - Wing-to-pylon upper and lower attachment fittings
+  - Pylon-to-nacelle attachment interface
+  - Load transfer mechanisms and bearing analysis
+  - Bolt hole stress concentrations
+  - Bushing and lug analysis per CS-25.619
+status: "Planned"
+version: "0.1.0"
+owner: "Structures - Detailed Design"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Structural Integrity Requirements"
+    - id: "54-00-03-05-001"
+      title: "Pylon-Wing Interface Requirements"
+    - id: "54-00-03-05-002"
+      title: "Nacelle-Pylon Interface Requirements"
+  parent_models:
+    - id: "54-00-04-M705"
+      title: "Pylon Stress Analysis"
+  related_models:
+    - id: "54-00-04-M701"
+      title: "Nacelle Stress Analysis"
+
+analysis_parameters:
+  method: "3D solid FEA with detailed contact modeling"
+  solver: "TBD (ANSYS, ABAQUS - nonlinear contact capability)"
+  key_parameters: |
+    - Bolt preload: TBD kN per bolt
+    - Bearing allowables per CS-25.619
+    - Contact friction coefficient: 0.15 (conservative)
+    - Special fitting factors: 1.15 (tension), 1.0 (compression)
+  boundary_conditions: "Loads from M705 pylon analysis applied at attachment centroids"
+  assumptions: |
+    - Perfect fit condition (no gaps or shims assumed)
+    - Conservative bolt hole tolerances (+0.1mm)
+    - No beneficial preload effects in ultimate load analysis
+    - Symmetric loading assumed for baseline
+
+software_tools:
+  primary: "TBD (ANSYS for nonlinear contact, ABAQUS for explicit dynamics)"
+  preprocessing: "TBD - solid meshing with hex elements at critical regions"
+  postprocessing: "TBD - stress linearization and bearing stress extraction"
+  version: "TBD"
+
+input_requirements:
+  geometry: "Detailed CAD of fittings, lugs, bushings, and bolts"
+  loads: "Ultimate load cases from M705 (limit × 1.5)"
+  material_properties: "Ti-10V-2Fe-3Al, Steel 15-5PH allowables per MMPDS-01"
+  environmental_conditions: "Temperature effects at upper wing surface and engine bay"
+
+results_summary:
+  status: "Pending analysis"
+  key_outputs: []
+  validation_status: "Not validated"
+  notes: |
+    Critical checks required per CS-25.619:
+    - Tension fitting factor: 1.15 applied to limit load
+    - Bearing stress < bearing allowable × 2.0 for ultimate
+    - Shear-out margins at edge distances
+    - Lug efficiency factors validated
+
+verification:
+  - method: "Comparison with handbook methods (Bruhn, Niu)"
+    status: "Planned"
+  - method: "Convergence study on contact mesh"
+    status: "Planned"
+  - method: "Physical testing of representative fittings"
+    status: "Planned"
+
+validation:
+  test_correlation: "Static test to ultimate load required for critical fittings"
+  uncertainty_quantification: "Bolt preload variation and fit-up tolerance effects"
+  confidence_level: "High confidence required for flight safety critical joints"
+
+outputs:
+  - "Bearing stress distributions"
+  - "Lug and fitting stress contours"
+  - "Margin of safety summary for each critical location"
+  - "Bolt load distribution (shear and tension)"
+  - "Detailed stress report per CS-25.619"
+
+documentation:
+  technical_report: "TBD - Fitting Analysis Report (CS-25.619 compliance)"
+  presentation: "TBD - Critical review with certification authority"
+  raw_data: "TBD - FEA database and results files"
+
+quality_assurance:
+  peer_review: "Required - Independent check mandatory"
+  checker: "TBD - DER Structures"
+  approver: "TBD - Chief Engineer and Certification Authority"
+  review_date: "TBD"
+
+notes: |
+  These are flight-safety critical joints. Failure could result in loss of aircraft.
+  CS-25.619 special factors and multiple load paths required.
+  Coordinate with:
+  - Manufacturing for tolerance control
+  - Quality for inspection requirements
+  - Maintenance for recurring inspection program
+  
+  Consider:
+  - Corrosion protection at dissimilar metal interfaces
+  - Fastener installation torque requirements
+  - Shim requirements and fit-up procedures
+
+document_control:
+  created_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  repository: "AMPEL360-AIR-T"
+  status: "DRAFT - Planned"
+  last_ai_update: "2026-01-02"
