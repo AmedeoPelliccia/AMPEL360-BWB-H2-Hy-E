@@ -355,7 +355,7 @@ assets:
     links:
       reqs:
         - "78-00-03-01-001"
-        - "54-00-03-06-001"
+        - "54-00-03-06-002"
       odd: []
       safety: []
     status: "Draft"
@@ -370,7 +370,7 @@ assets:
     links:
       reqs:
         - "78-00-03-01-001"
-        - "54-00-03-06-001"
+        - "54-00-03-06-002"
       odd: []
       safety: []
     status: "Draft"
@@ -397,7 +397,7 @@ assets:
   - id: "54-00-04-P015"
     category: "PART"
     title: "Fastener - Hi-Lok HL11"
-    source: "ASSETS/PARTS/HARDWARE/54-00-04-P015_PART_Fastener_HiLok_HL11.yaml"
+    source: "ASSETS/PARTS/HARDWARE/54-00-04-P015_PART_Fastener_Hi-Lok_HL11.yaml"
     exports: []
     links:
       reqs:

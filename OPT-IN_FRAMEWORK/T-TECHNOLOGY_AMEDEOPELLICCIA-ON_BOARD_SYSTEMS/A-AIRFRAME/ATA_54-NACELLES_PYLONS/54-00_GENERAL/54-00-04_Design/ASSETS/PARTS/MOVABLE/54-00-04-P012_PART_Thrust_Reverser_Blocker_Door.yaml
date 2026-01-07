@@ -36,7 +36,7 @@ traceability:
   requirements:
     - id: "78-00-03-01-001"
       title: "Thrust Reverser Functional Requirements"
-    - id: "54-00-03-06-001"
+    - id: "54-00-03-06-002"
       title: "Thrust Reverser Structural Requirements"
   drawings:
     - id: "54-00-04-D006"

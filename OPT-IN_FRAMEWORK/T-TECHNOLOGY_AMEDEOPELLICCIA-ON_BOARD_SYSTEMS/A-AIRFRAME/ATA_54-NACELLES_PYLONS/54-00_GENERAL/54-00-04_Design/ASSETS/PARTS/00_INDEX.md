@@ -29,7 +29,7 @@ PARTS/
 ├── SECONDARY/                     (Secondary structure and panels)
 │   └── 54-00-04-P014_PART_Access_Panel_Fan_Cowl.yaml
 ├── HARDWARE/                      (Standard hardware items)
-│   └── 54-00-04-P015_PART_Fastener_HiLok_HL11.yaml
+│   └── 54-00-04-P015_PART_Fastener_Hi-Lok_HL11.yaml
 └── TEMPLATES/                     (Part definition templates)
     └── 54-00-04-P000_PART_Template.yaml
 ```
@@ -38,16 +38,18 @@ PARTS/
 
 ### Summary Statistics
 
-| Category | Count | Total Mass (kg) | Percentage |
-|----------|-------|-----------------|------------|
+| Category | Count | Total Mass (kg)* | Percentage |
+|----------|-------|------------------|------------|
 | Structural | 7 | 161.5 | 71.2% |
 | Fittings | 4 | 23.0 | 10.1% |
 | Movable | 2 | 15.7 | 6.9% |
 | Secondary | 1 | 1.8 | 0.8% |
-| Hardware | 1 | 0.015 | <0.1% |
+| Hardware | 1 | 0.015† | <0.1% |
 | **Total** | **15** | **227.0** | **100%** |
 
-*Note: Hardware mass shown is per unit; actual quantities are in the hundreds to thousands per aircraft.*
+*Notes:*  
+\* Total Mass and Percentage columns **exclude** hardware fastener quantities; the 227.0 kg total is for major structural, fitting, movable, and secondary parts only.  
+† Hardware mass shown is **per unit** for reference and is **not included** in the 227.0 kg total; actual hardware quantities (hundreds to thousands per aircraft) are managed in dedicated hardware mass budgets.
 
 ### Complete Part List
 
@@ -117,15 +119,17 @@ PARTS/
 
 ### Material Usage by Mass
 
-| Material | Part Count | Total Mass (kg) | Percentage | Applications |
-|----------|-----------|-----------------|------------|--------------|
+| Material | Part Count | Total Mass (kg) | Percentage* | Applications |
+|----------|-----------|-----------------|-------------|--------------|
 | CFRP-Epoxy | 7 | 166.5 | 73.3% | Primary structures, cowls, doors |
 | Ti-6Al-4V | 3 | 12.5 | 5.5% | Structural frames, brackets |
 | Ti-10V-2Fe-3Al | 2 | 12.7 | 5.6% | Engine mount fittings |
 | Steel 15-5PH | 1 | 8.5 | 3.7% | Wing attachment fitting |
 | Al 7075-T73 | 1 | 1.8 | 0.8% | Access panels |
 | Steel (hardware) | 1 | 0.015 (per unit) | - | Fasteners |
-| **Total** | **15** | **227.0** | **100%** | - |
+| **Total** | **15** | **227.0** | **88.9%** | - |
+
+*Note: Percentages exclude hardware fasteners. The 227.0 kg total represents major structural parts only. Hardware (0.015 kg per unit, quantities in hundreds to thousands) is tracked separately.
 
 ### Material Properties Summary
 
@@ -144,7 +148,7 @@ Parts trace to the following requirements in `54-00-03_Requirements`:
 | Requirement ID | Requirement Title | Related Parts |
 |----------------|-------------------|---------------|
 | 54-00-03-01-001 | Nacelle Structural Requirements | P001, P002, P003, P004, P005, P014 |
-| 54-00-03-01-002 | Pylon Structural Requirements | P006, P007 |
+| 54-00-03-01-001 | Pylon Structural Requirements | P006, P007 |
 | 54-00-03-02-001 | Aerodynamic Performance Requirements | P001 |
 | 54-00-03-03-001 | Thermal Protection Requirements | P004 |
 | 54-00-03-04-001 | Load Path Requirements | P005 |
@@ -152,7 +156,8 @@ Parts trace to the following requirements in `54-00-03_Requirements`:
 | 54-00-03-05-001 | Pylon-Wing Interface Requirements | P008 |
 | 54-00-03-05-002 | Nacelle-Pylon Interface Requirements | P011 |
 | 54-00-03-05-003 | Engine Mount Interface Requirements | P009, P010 |
-| 54-00-03-06-001 | Thrust Reverser Structural Requirements | P012, P013 |
+| 54-00-03-06-001 | Maintainability Requirements | P014 |
+| 54-00-03-06-002 | Thrust Reverser Structural Requirements | P012, P013 |
 | 54-00-03-08-001 | Acoustic Requirements | P002 |
 | 78-00-03-01-001 | Thrust Reverser Functional Requirements | P012, P013 |
 | 71-00-03-01-001 | Powerplant Installation Requirements | P009, P010 |
@@ -243,8 +248,8 @@ Where:
 
 ## Document Control
 
-- **Version**: 1.0
-- **Status**: Active
+- **Version**: 0.1.0
+- **Status**: Draft
 - **Last Updated**: 2026-01-02
 - **Owner**: AMPEL360 ATA 54 Design Team
 - **Review Cycle**: Quarterly or upon significant changes
