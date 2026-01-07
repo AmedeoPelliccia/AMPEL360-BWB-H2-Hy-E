@@ -1,0 +1,244 @@
+# Left Pylon Assembly - Product Definition
+# Complete left pylon system connecting engine/nacelle to wing
+
+id: "54-00-04-PR003"
+title: "Left Pylon Assembly"
+category: "PROD"
+product_type: "Ship Set"
+ata_chapter: "54"
+description: "Complete left pylon assembly providing structural connection between wing and engine/nacelle. Includes primary load-carrying structure, wing attachment fittings, engine mount interfaces, systems routing provisions, and aerodynamic fairings."
+status: "Draft"
+version: "0.1.0"
+owner: "Product Engineering"
+last_updated: "2026-01-02"
+
+product_classification:
+  level: "Top Assembly"
+  delivery_state: "Fully Integrated"
+  customer_deliverable: true
+  certification_item: true
+
+traceability:
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Pylon Structural Requirements"
+      description: "Primary structural requirements for pylon assembly"
+    - id: "54-00-03-05-001"
+      title: "Wing Interface Requirements"
+      description: "Wing attachment and load transfer requirements"
+    - id: "54-00-03-05-002"
+      title: "Engine Mount Interface Requirements"
+      description: "Engine mounting interface requirements"
+  type_certificate: "EASA TC (pending)"
+  aircraft_applicability:
+    - "AMPEL360-AIR-T"
+  regulatory_basis:
+    - "CS-25.1309"
+    - "CS-25.561"
+    - "CS-25.571"
+
+product_structure:
+  child_assemblies:
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+      quantity: 1
+      description: "Primary load-carrying forward pylon box structure"
+    - id: "ASM-54-PYL-002"
+      title: "Aft Pylon Structure"
+      quantity: 1
+      description: "Aft pylon structure and fairing"
+    - id: "ASM-54-PYL-003"
+      title: "Systems Integration Assembly"
+      quantity: 1
+      description: "Fuel, hydraulic, and electrical routing assemblies"
+  interfaces:
+    - interface_id: "IF-PR003-WING"
+      description: "Interface with wing primary structure"
+      mating_product: "ATA 57 - Wings"
+      interface_control_document: "54-00-05-ICD-003"
+    - interface_id: "IF-PR003-ENG"
+      description: "Interface with engine mounting system"
+      mating_product: "ATA 71 - Powerplant"
+      interface_control_document: "54-00-05-ICD-002"
+    - interface_id: "IF-PR003-NAC"
+      description: "Interface with nacelle system"
+      mating_product: "54-00-04-PR001"
+      interface_control_document: "54-00-05-ICD-001"
+    - interface_id: "IF-PR003-SYS"
+      description: "Interface with aircraft systems (fuel, hydraulic, electrical)"
+      mating_product: "Multiple ATA chapters"
+      interface_control_document: "54-00-05-ICD-004"
+
+mass_properties:
+  target_mass_kg: 180
+  current_estimate_kg: 188
+  mass_margin_percent: 4.4
+  cg_location:
+    x_mm: 2650  # Forward of wing spar
+    y_mm: -4200  # Left side of aircraft centerline
+    z_mm: -2200  # Below wing reference line
+  moment_of_inertia:
+    ixx_kg_m2: 45.0
+    iyy_kg_m2: 95.0
+    izz_kg_m2: 105.0
+
+dimensions:
+  length_mm: 2800
+  max_diameter_mm: 800
+  max_width_mm: 850
+  max_height_mm: 2200
+  envelope_reference_drawing: "54-00-04-D003"
+
+performance_specs:
+  operating_temperature_range_c: "-55 to +85"
+  maximum_altitude_ft: 45000
+  design_life_fh: 90000
+  design_life_fc: 60000
+  key_parameters:
+    - parameter: "Thrust Load Capacity"
+      value: "145"
+      unit: "kN"
+      requirement: "54-00-03-05-002"
+    - parameter: "Vertical Load Capacity"
+      value: "95"
+      unit: "kN"
+      requirement: "54-00-03-01-001"
+    - parameter: "Stiffness (lateral)"
+      value: "≥50000"
+      unit: "N/mm"
+      requirement: "54-00-03-01-007"
+
+environmental_qualification:
+  temperature_range_c: "-55 to +85"
+  altitude_max_ft: 45000
+  humidity: "Up to 95% RH"
+  lightning_protection: "Yes - per CS-25.581"
+  bird_strike_capability: "Not applicable for pylon"
+  icing_conditions: "Per CS-25 Appendix C"
+
+manufacturing:
+  final_assembly_location: "TBD"
+  assembly_time_hours: 180
+  cycle_time_days: 12
+  production_rate_per_month: 2
+  tooling_required:
+    - "FAF-54-PYL-001 - Pylon Assembly Fixture"
+    - "ALIGN-PYL-01 - Laser alignment system"
+    - "LOAD-FRAME-PYL - Load test frame"
+  make_buy_decision: "Make"
+
+quality_requirements:
+  inspection_level: "100% dimensional and load test"
+  acceptance_test_procedure: "ATP-54-PR003"
+  quality_plan: "54-00-08-QP-003"
+  critical_characteristics:
+    - "Wing attachment hole positions (±0.15mm)"
+    - "Engine mount fitting alignment (±0.2mm)"
+    - "Primary load path integrity"
+    - "Systems routing clearances"
+  conformity_inspection: "As per 54-00-08-CI-003"
+
+delivery:
+  packaging: "Custom shipping fixture with load point protection"
+  lead_time_weeks: 24
+  storage_requirements: "Environmentally controlled storage, 15-25°C, <65% RH"
+  shelf_life_months: 36
+  documentation_package:
+    - "Certificate of Conformity"
+    - "Test records (dimensional, load test)"
+    - "Maintenance manual extract (AMM 54-20)"
+    - "Illustrated parts catalog extract"
+    - "Installation instructions"
+    - "Interface control documents"
+
+maintenance:
+  maintenance_level: "Base"
+  mtbf_hours: 40000
+  mttr_hours: 8.0
+  scheduled_inspection_intervals_fh: 2000
+  major_overhaul_interval_fh: 40000
+  maintenance_manual_reference: "AMM 54-20-00"
+
+certification:
+  applicable_regulations:
+    - "CS-25.561 - Emergency landing conditions"
+    - "CS-25.571 - Damage tolerance"
+    - "CS-25.581 - Lightning protection"
+    - "CS-25.605 - Fabrication methods"
+  compliance_method: "Test and Analysis"
+  compliance_status: "In Progress"
+  certification_basis: "CS-25 Amendment 27"
+  certification_plan: "54-00-10-CP-003"
+
+lifecycle:
+  design_service_goal_fh: 90000
+  design_service_goal_fc: 60000
+  design_service_goal_years: 30
+  retirement_strategy: "Remanufacture"
+  circularity_rating: "TBD"
+
+sustainability:
+  recyclable_content_percent: 70
+  end_of_life_disposal_method: "Remanufacture"
+  carbon_footprint_kg_co2: 980
+  environmental_impact_assessment: "54-00-EIA-003"
+
+supply_chain:
+  suppliers:
+    - supplier_name: "Composite Structures Inc."
+      part_number: "CSI-PYL-CFRP-001"
+      description: "CFRP pylon box structure"
+      criticality: "Critical"
+    - supplier_name: "Precision Forgings Ltd."
+      part_number: "PF-PYL-STEEL-001"
+      description: "Steel wing attachment fittings"
+      criticality: "Critical"
+    - supplier_name: "Titanium Aerospace"
+      part_number: "TA-PYL-TI-001"
+      description: "Titanium engine mount fittings"
+      criticality: "Critical"
+  long_lead_items:
+    - item: "Wing attachment steel fittings"
+      lead_time_weeks: 20
+    - item: "Engine mount titanium fittings"
+      lead_time_weeks: 18
+
+configuration_management:
+  baseline: "Baseline A"
+  configuration_control_board: "ATA 54 CCB"
+  change_control_procedure: "54-00-CM-001"
+  effectivity: "All AMPEL360-AIR-T aircraft"
+
+links:
+  design_documents:
+    - "54-00-04-D003_DRWG_Pylon_General_Arrangement"
+    - "54-00-04-D004_DRWG_Pylon_Wing_Attachment_Details"
+    - "54-00-04-D005_DRWG_Nacelle_Pylon_Interface"
+  analysis_reports:
+    - "54-00-04-M705_Pylon_Stress_Analysis"
+    - "54-00-04-M706_Pylon_Attachment_Analysis"
+  test_reports:
+    - "54-00-07-TR-003_Pylon_Load_Test"
+  procedures:
+    - "54-00-09-MP-003_Pylon_Assembly_Procedure"
+
+notes: |
+  Left pylon assembly is a critical structural component that transfers all
+  engine/nacelle loads to the wing primary structure. The pylon must maintain
+  precise engine alignment while accommodating thermal growth and operational loads.
+  
+  Key considerations:
+  - Primary load path for thrust, vertical, side, and gyroscopic loads
+  - High stiffness requirements for engine alignment (critical for performance)
+  - Fatigue critical structure with damage tolerance design
+  - Wing attachment interface is safety-critical
+  - Engine mount interface must accommodate thermal expansion
+  - Systems routing for fuel, hydraulic, electrical through pylon
+  - Lightning strike protection integrated
+  - Crashworthiness per CS-25.561
+  
+  The pylon interfaces with three major systems: wing structure, engine mounting,
+  and nacelle system. All interfaces are controlled by ICDs.
+  
+  Manufacturing note: Critical alignment requirements necessitate precision tooling
+  and laser measurement during assembly.

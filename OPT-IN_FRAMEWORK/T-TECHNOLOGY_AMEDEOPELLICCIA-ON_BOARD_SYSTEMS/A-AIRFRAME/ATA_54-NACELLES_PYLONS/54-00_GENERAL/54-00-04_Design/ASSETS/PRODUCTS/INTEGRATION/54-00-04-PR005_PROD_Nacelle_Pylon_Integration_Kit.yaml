@@ -1,0 +1,219 @@
+# Nacelle-Pylon Integration Kit - Product Definition
+# Interface hardware and installation components for nacelle-pylon integration
+
+id: "54-00-04-PR005"
+title: "Nacelle-Pylon Integration Kit"
+category: "PROD"
+product_type: "Ship Set"
+ata_chapter: "54"
+description: "Integration kit containing all interface hardware, fasteners, seals, and installation components required for integrating nacelle and pylon systems. Includes mounting brackets, interface plates, torque links, quick-disconnect fittings, and installation tooling."
+status: "Draft"
+version: "0.1.0"
+owner: "Product Engineering"
+last_updated: "2026-01-02"
+
+product_classification:
+  level: "Top Assembly"
+  delivery_state: "Kit Form"
+  customer_deliverable: true
+  certification_item: false
+
+traceability:
+  requirements:
+    - id: "54-00-03-05-002"
+      title: "Nacelle-Pylon Interface Requirements"
+      description: "Interface requirements between nacelle and pylon"
+    - id: "54-00-03-09-001"
+      title: "Installation Requirements"
+      description: "Installation and assembly requirements"
+  type_certificate: "EASA TC (pending)"
+  aircraft_applicability:
+    - "AMPEL360-AIR-T"
+  regulatory_basis:
+    - "CS-25.605"
+
+product_structure:
+  child_assemblies:
+    - id: "54-00-04-KIT-001"
+      title: "Mounting Hardware Kit"
+      quantity: 1
+      description: "Fasteners, bolts, and mounting hardware"
+    - id: "54-00-04-KIT-002"
+      title: "Interface Seals Kit"
+      quantity: 1
+      description: "Seals and gaskets for interfaces"
+    - id: "54-00-04-KIT-003"
+      title: "Systems Quick-Disconnect Kit"
+      quantity: 1
+      description: "Quick-disconnect fittings for fuel, hydraulic, electrical"
+  interfaces:
+    - interface_id: "IF-PR005-NAC"
+      description: "Enables interface between nacelle and pylon"
+      mating_product: "54-00-04-PR001/PR002"
+      interface_control_document: "54-00-05-ICD-001"
+    - interface_id: "IF-PR005-PYL"
+      description: "Enables interface between pylon and nacelle"
+      mating_product: "54-00-04-PR003/PR004"
+      interface_control_document: "54-00-05-ICD-001"
+
+mass_properties:
+  target_mass_kg: 25
+  current_estimate_kg: 26
+  mass_margin_percent: 4.0
+  cg_location:
+    x_mm: 0  # Kit components distributed
+    y_mm: 0
+    z_mm: 0
+  moment_of_inertia:
+    ixx_kg_m2: 0
+    iyy_kg_m2: 0
+    izz_kg_m2: 0
+
+dimensions:
+  length_mm: 600  # Shipping container dimensions
+  max_diameter_mm: 0
+  max_width_mm: 400
+  max_height_mm: 300
+  envelope_reference_drawing: "54-00-04-D011"
+
+performance_specs:
+  operating_temperature_range_c: "-55 to +85"
+  maximum_altitude_ft: 45000
+  design_life_fh: 90000
+  design_life_fc: 60000
+  key_parameters:
+    - parameter: "Installation Time"
+      value: "8"
+      unit: "hours"
+      requirement: "54-00-03-09-001"
+    - parameter: "Fastener Torque Range"
+      value: "50-350"
+      unit: "Nm"
+      requirement: "54-00-03-09-002"
+
+environmental_qualification:
+  temperature_range_c: "-55 to +85"
+  altitude_max_ft: 45000
+  humidity: "Up to 95% RH"
+  lightning_protection: "Not applicable (passive components)"
+  bird_strike_capability: "Not applicable"
+  icing_conditions: "Not applicable"
+
+manufacturing:
+  final_assembly_location: "TBD"
+  assembly_time_hours: 16
+  cycle_time_days: 3
+  production_rate_per_month: 10
+  tooling_required:
+    - "KIT-ASSY-01 - Kit assembly and packaging station"
+  make_buy_decision: "Make (assemble purchased components)"
+
+quality_requirements:
+  inspection_level: "100% visual inspection and count verification"
+  acceptance_test_procedure: "ATP-54-PR005"
+  quality_plan: "54-00-08-QP-005"
+  critical_characteristics:
+    - "Fastener grade and specification verification"
+    - "Seal material and dimension verification"
+    - "Kit completeness and count accuracy"
+  conformity_inspection: "As per 54-00-08-CI-005"
+
+delivery:
+  packaging: "Modular kit boxes with part segregation and identification"
+  lead_time_weeks: 8
+  storage_requirements: "Dry storage, 10-30°C, <70% RH"
+  shelf_life_months: 60
+  documentation_package:
+    - "Kit contents list and installation sequence"
+    - "Installation instructions"
+    - "Torque specifications"
+    - "Material certifications"
+    - "Traceability documentation"
+
+maintenance:
+  maintenance_level: "Line"
+  mtbf_hours: 90000
+  mttr_hours: 0.5
+  scheduled_inspection_intervals_fh: 10000
+  major_overhaul_interval_fh: 90000
+  maintenance_manual_reference: "AMM 54-00-05"
+
+certification:
+  applicable_regulations:
+    - "CS-25.605 - Fabrication methods"
+  compliance_method: "Analysis and Inspection"
+  compliance_status: "In Progress"
+  certification_basis: "CS-25 Amendment 27"
+  certification_plan: "54-00-10-CP-005"
+
+lifecycle:
+  design_service_goal_fh: 90000
+  design_service_goal_fc: 60000
+  design_service_goal_years: 30
+  retirement_strategy: "Recycle"
+  circularity_rating: "TBD"
+
+sustainability:
+  recyclable_content_percent: 85
+  end_of_life_disposal_method: "Recycle"
+  carbon_footprint_kg_co2: 95
+  environmental_impact_assessment: "54-00-EIA-005"
+
+supply_chain:
+  suppliers:
+    - supplier_name: "Aerospace Fasteners Inc."
+      part_number: "AFI-KIT-54-001"
+      description: "High-strength aerospace fasteners"
+      criticality: "Critical"
+    - supplier_name: "Seal Systems Ltd."
+      part_number: "SSL-SEAL-54-001"
+      description: "High-temperature interface seals"
+      criticality: "Standard"
+    - supplier_name: "Quick-Connect Corp."
+      part_number: "QCC-DISC-54-001"
+      description: "Quick-disconnect couplings"
+      criticality: "Standard"
+  long_lead_items:
+    - item: "Titanium fasteners (specialty)"
+      lead_time_weeks: 10
+
+configuration_management:
+  baseline: "Baseline A"
+  configuration_control_board: "ATA 54 CCB"
+  change_control_procedure: "54-00-CM-001"
+  effectivity: "All AMPEL360-AIR-T aircraft"
+
+links:
+  design_documents:
+    - "54-00-04-D005_DRWG_Nacelle_Pylon_Interface"
+    - "54-00-04-D011_DRWG_Integration_Kit_Contents"
+  analysis_reports:
+    - "54-00-04-A001_Interface_Loads_Analysis"
+  test_reports:
+    - "54-00-07-TR-005_Integration_Verification_Test"
+  procedures:
+    - "54-00-09-IP-001_Installation_Procedure"
+
+notes: |
+  Nacelle-Pylon Integration Kit is a complete hardware package enabling the
+  installation and integration of nacelle and pylon systems. The kit is designed
+  to support both initial installation and field maintenance operations.
+  
+  Kit contents include:
+  - Titanium and steel fasteners (various sizes and grades)
+  - High-temperature seals and gaskets
+  - Quick-disconnect fittings for systems integration
+  - Torque link assemblies
+  - Interface plates and brackets
+  - Installation aids and alignment pins
+  
+  Key considerations:
+  - All fasteners are traceable with material certifications
+  - Seals are high-temperature capable for engine environment
+  - Quick-disconnects enable rapid engine/nacelle removal for maintenance
+  - Kit supports both left and right side installations
+  - Installation time target: 8 hours per nacelle-pylon integration
+  
+  The kit is delivered as a modular package with clearly identified sub-kits
+  for different installation phases. Complete installation instructions and
+  torque specifications are included.

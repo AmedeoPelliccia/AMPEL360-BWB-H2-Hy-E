@@ -1,0 +1,8 @@
+Product_ID,Title,Type,Child_Assemblies,Mass_kg,Lead_Time_Weeks,Status
+54-00-04-PR001,Left Nacelle System,Ship Set,"ASM-54-NAC-001,ASM-54-TR-001,ASM-54-COW-001",450,26,Draft
+54-00-04-PR002,Right Nacelle System,Ship Set,"ASM-54-NAC-001,ASM-54-TR-001,ASM-54-COW-001",450,26,Draft
+54-00-04-PR003,Left Pylon Assembly,Ship Set,"ASM-54-PYL-001,ASM-54-PYL-002,ASM-54-PYL-003",180,24,Draft
+54-00-04-PR004,Right Pylon Assembly,Ship Set,"ASM-54-PYL-001,ASM-54-PYL-002,ASM-54-PYL-003",180,24,Draft
+54-00-04-PR005,Nacelle-Pylon Integration Kit,Ship Set,"54-00-04-KIT-001,54-00-04-KIT-002,54-00-04-KIT-003",25,8,Draft
+54-00-04-PR006,Thrust Reverser System - Left,LRU,"ASM-54-TR-001,ASM-54-TR-ACT-001,ASM-54-TR-CTRL-001",120,22,Draft
+54-00-04-PR007,Thrust Reverser System - Right,LRU,"ASM-54-TR-001,ASM-54-TR-ACT-001,ASM-54-TR-CTRL-001",120,22,Draft

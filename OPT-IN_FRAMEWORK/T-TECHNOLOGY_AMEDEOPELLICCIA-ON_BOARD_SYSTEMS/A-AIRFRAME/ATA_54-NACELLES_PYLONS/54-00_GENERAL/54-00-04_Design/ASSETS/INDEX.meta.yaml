@@ -452,3 +452,132 @@ assets:
     status: "Draft"
     version: "0.1.0"
     checksum: "<filled-by-CI>"
+
+  # Product Template
+  - id: "54-00-04-PR000"
+    category: "TMPL"
+    title: "Product Definition Template"
+    source: "ASSETS/PRODUCTS/TEMPLATES/54-00-04-PR000_PROD_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Nacelle Products
+  - id: "54-00-04-PR001"
+    category: "PROD"
+    title: "Left Nacelle System"
+    source: "ASSETS/PRODUCTS/NACELLE/54-00-04-PR001_PROD_Left_Nacelle_System.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-02-001"
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-PR002"
+    category: "PROD"
+    title: "Right Nacelle System"
+    source: "ASSETS/PRODUCTS/NACELLE/54-00-04-PR002_PROD_Right_Nacelle_System.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-02-001"
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Pylon Products
+  - id: "54-00-04-PR003"
+    category: "PROD"
+    title: "Left Pylon Assembly"
+    source: "ASSETS/PRODUCTS/PYLON/54-00-04-PR003_PROD_Left_Pylon_Assembly.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-PR004"
+    category: "PROD"
+    title: "Right Pylon Assembly"
+    source: "ASSETS/PRODUCTS/PYLON/54-00-04-PR004_PROD_Right_Pylon_Assembly.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Integration Products
+  - id: "54-00-04-PR005"
+    category: "PROD"
+    title: "Nacelle-Pylon Integration Kit"
+    source: "ASSETS/PRODUCTS/INTEGRATION/54-00-04-PR005_PROD_Nacelle_Pylon_Integration_Kit.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-002"
+        - "54-00-03-09-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # LRU Products
+  - id: "54-00-04-PR006"
+    category: "PROD"
+    title: "Thrust Reverser System - Left"
+    source: "ASSETS/PRODUCTS/LRU/54-00-04-PR006_PROD_Thrust_Reverser_System_Left.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-005"
+        - "78-00-03-01-001"
+        - "54-00-03-08-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-PR007"
+    category: "PROD"
+    title: "Thrust Reverser System - Right"
+    source: "ASSETS/PRODUCTS/LRU/54-00-04-PR007_PROD_Thrust_Reverser_System_Right.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-005"
+        - "78-00-03-01-001"
+        - "54-00-03-08-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
