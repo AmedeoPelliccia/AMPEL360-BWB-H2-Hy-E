@@ -1,0 +1,145 @@
+# =============================================================================
+# ATA 54 PART TEMPLATE
+# =============================================================================
+# Instructions:
+# 1. Copy this template and rename: 54-00-04-P<NNN>_PART_<Name>.yaml
+# 2. Replace all <PLACEHOLDER> values with actual data
+# 3. Remove sections marked [OPTIONAL] if not applicable
+# 4. Ensure traceability links are correct
+# 5. Update ASSETS/INDEX.meta.yaml with the new part entry
+# =============================================================================
+
+id: "54-00-04-P<NNN>"
+title: "<Part Name>"
+category: "PART"
+ata_chapter: "54"
+
+# Part Identification
+part_metadata:
+  part_number: "54-<AREA>-<NNNN>-<NN>"  # e.g., 54-NAC-1001-01
+  ci_number: "CI-54-<CI>"  # Configuration Item reference
+  nomenclature: "<Official Part Name>"
+  zone: "<ZZZ-ZZZ>"  # e.g., 540-560
+  drawing_reference: "54-<XX>-<NNNN>"
+  revision: "<Rev>"
+  status: "<Preliminary|Released|Obsolete>"
+  plm_item_id: "TC-PART-54-<AREA>-<NNN>"
+
+# Design Properties
+design:
+  material:
+    primary: "<Material Specification>"  # e.g., CFRP-Epoxy, Al-7075-T73, Ti-6Al-4V
+    coating: "<Coating Type>"  # [OPTIONAL] e.g., Anodize, Paint, None
+    finish: "<Surface Finish>"  # e.g., Ra 3.2, As-machined
+  dimensions:
+    length_mm: <X.X>
+    width_mm: <X.X>
+    height_mm: <X.X>
+    mass_kg: <X.XXX>
+    volume_m3: <X.XXXXX>  # [OPTIONAL]
+  tolerances:
+    dimensional: "±<X.X> mm"
+    geometric: "<GD&T specification>"  # e.g., ±0.1mm flatness
+  structural_role: "<Primary|Secondary|Non-structural>"
+  load_bearing: <true|false>
+  
+# Manufacturing
+manufacturing:
+  process: "<Manufacturing Process>"  # e.g., CNC Machining, Composite Layup, Casting
+  vendor: "<Vendor Name or Internal>"
+  lead_time_days: <NN>
+  cost_category: "<Low|Medium|High>"
+  tooling_required:
+    - "<Tool ID or Description>"
+  inspection_requirements:
+    - method: "<Inspection Method>"  # e.g., CMM, Visual, NDT
+      coverage: "<Coverage %>"
+      standard: "<Applicable Standard>"
+    # Add more inspection requirements as needed
+
+# Installation
+installation:
+  parent_assembly: "ASM-54-<PARENT>"
+  mounting_method: "<Mounting Method>"  # e.g., Bolted, Bonded, Riveted
+  fasteners:
+    type: "<Fastener Type>"  # e.g., Bolt, Rivet, Adhesive
+    quantity: <N>
+    specification: "<Fastener Spec>"  # e.g., NAS1234, Huck Bolt
+    torque_nm: <NNN>  # [OPTIONAL] For bolted connections
+  installation_sequence: <N>  # Order in assembly sequence
+  special_tools:
+    - "<Tool ID or Description>"  # [OPTIONAL]
+
+# Maintenance & Lifecycle
+maintenance:
+  inspection_interval_fh: <NNNN>  # Flight hours
+  inspection_interval_fc: <NNN>  # Flight cycles
+  service_life_fh: <NNNNN>  # Flight hours [OPTIONAL]
+  service_life_fc: <NNNN>  # Flight cycles [OPTIONAL]
+  replacement_criteria:
+    - "<Criterion 1>"
+    - "<Criterion 2>"
+  maintenance_manual_ref: "AMM-54-<XX>-<XX>"
+  spares_recommendation: "<Spare Parts Policy>"
+
+# Traceability
+traceability:
+  requirements:
+    - "54-00-03-<XX>-<NNN>"  # Link to requirements
+  safety_items:
+    - "54-00-02-<XX>-<NNN>"  # Link to FHA/safety analyses [OPTIONAL]
+  test_procedures:
+    - "54-00-07-<XX>-<NNN>"  # Link to V&V procedures [OPTIONAL]
+  parent_assemblies:
+    - "ASM-54-<PARENT-1>"
+    - "ASM-54-<PARENT-2>"  # [OPTIONAL] Multiple parents
+  related_parts:
+    - "54-00-04-P<NNN>"  # [OPTIONAL] Related or similar parts
+  drawings:
+    - "54-00-04-D<NNN>"  # Link to engineering drawings
+
+# Compliance & Certification
+compliance:
+  certification_basis:
+    - "<CS-25.xxx>"  # e.g., CS-25.1309, CS-25.601
+  material_qualification: "<Qualified|In-Progress|Not-Required>"
+  flammability_rating: "<FST|Pass|N/A>"  # Fire, Smoke, Toxicity
+  environmental_qualification:
+    temperature_min_c: <-XX>
+    temperature_max_c: <+XX>
+    humidity_max_percent: <XX>
+    altitude_max_ft: <XXXXX>
+    vibration_qualified: <true|false>
+
+# Design Rationale & Notes
+notes: |
+  <Free-form notes about the part design>
+  
+  Key design considerations:
+  - <Consideration 1>
+  - <Consideration 2>
+  
+  Material selection rationale:
+  - <Rationale>
+  
+  Known issues or limitations:
+  - <Issue 1>
+  - <Issue 2>
+  
+  Future improvements:
+  - <Enhancement 1>
+
+# Document Control
+document_control:
+  version: "1.0"
+  status: "<Draft|Released|Obsolete>"
+  created_date: "<YYYY-MM-DD>"
+  last_updated: "<YYYY-MM-DD>"
+  author: "<Name or Team>"
+  approver: "<Name or Role>"  # [OPTIONAL]
+  change_history:
+    - version: "1.0"
+      date: "<YYYY-MM-DD>"
+      author: "<Name>"
+      changes: "<Initial release>"
+    # Add more change records as needed

@@ -1,0 +1,305 @@
+# =============================================================================
+# ATA 54 TEST PROCEDURE TEMPLATE
+# =============================================================================
+# Instructions:
+# 1. Copy this template and rename: 54-00-04-TP<NNN>_TEST_<Name>.yaml
+# 2. Replace all <PLACEHOLDER> values with actual data
+# 3. Remove sections marked [OPTIONAL] if not applicable
+# 4. Ensure traceability links are correct
+# 5. Update ASSETS/INDEX.meta.yaml with the new test procedure entry
+# =============================================================================
+
+id: "54-00-04-TP<NNN>"
+title: "<Test Procedure Title>"
+category: "TEST"
+ata_chapter: "54"
+
+# Test Procedure Identification
+test_metadata:
+  procedure_id: "TP-54-<AREA>-<NNN>"
+  procedure_name: "<Official Test Procedure Name>"
+  test_type: "<Development|Qualification|Acceptance|Production|Regression>"
+  test_level: "<Component|Assembly|System|Integration>"
+  test_method: "<Structural|Environmental|Functional|Performance|Endurance>"
+  revision: "<Rev>"
+  status: "<Draft|Released|Superseded|Obsolete>"
+  plm_item_id: "TC-TP-54-<AREA>-<NNN>"
+
+# Test Objective
+objective:
+  purpose: "<Why this test is being performed>"
+  test_goals:
+    - "<Goal 1>"
+    - "<Goal 2>"
+  success_criteria:
+    - "<Criterion 1>"
+    - "<Criterion 2>"
+  failure_criteria:
+    - "<Criterion 1>"
+    - "<Criterion 2>"
+
+# Test Article
+test_article:
+  article_type: "<Part|Assembly|Prototype|Production>"
+  article_id: "<Part or Assembly ID>"
+  article_name: "<Part or Assembly Name>"
+  serial_number: "<S/N>"  # [OPTIONAL] If applicable
+  configuration: "<Configuration description>"
+  quantity: <N>  # Number of articles to test
+  condition: "<New|Used|Refurbished>"
+  age_info:  # [OPTIONAL]
+    flight_hours: <XXXX>
+    flight_cycles: <XXX>
+
+# Requirements Verification
+requirements_verified:
+  - requirement_id: "54-00-03-<XX>-<NNN>"
+    requirement_title: "<Requirement title>"
+    verification_method: "<Analysis|Test|Inspection|Demo>"
+    success_criteria: "<Specific criteria for this requirement>"
+  # Add more requirements as needed
+
+# Test Setup
+setup:
+  test_facility: "<Facility name or location>"
+  test_area: "<Specific area or bay>"
+  environmental_conditions:
+    temperature_c:
+      nominal: <XX>
+      tolerance: "±<X>"
+    humidity_percent:
+      nominal: <XX>
+      tolerance: "±<X>"
+    pressure_mbar:
+      nominal: <XXXX>
+      tolerance: "±<XX>"
+    altitude_ft: <XXXX>  # [OPTIONAL] If altitude chamber
+  test_fixtures:
+    - fixture_id: "<Fixture ID>"
+      description: "<Fixture description>"
+      calibration_due: "<YYYY-MM-DD>"
+      calibration_cert: "<Cert number>"
+  test_equipment:
+    - equipment_id: "<Equipment ID>"
+      description: "<Equipment description>"
+      manufacturer: "<Manufacturer>"
+      model: "<Model number>"
+      serial_number: "<S/N>"
+      calibration_due: "<YYYY-MM-DD>"
+      calibration_cert: "<Cert number>"
+      measurement_range: "<Range>"
+      accuracy: "±<X.X%>"
+  instrumentation:
+    - instrument_id: "<Instrument ID>"
+      type: "<Load-Cell|Strain-Gauge|Thermocouple|Pressure-Transducer|LVDT|Accelerometer>"
+      location: "<Location on test article>"
+      measurement: "<What is being measured>"
+      units: "<Units>"
+      range: "<Min to Max>"
+      accuracy: "±<X.X%>"
+      sampling_rate_hz: <XXXX>  # [OPTIONAL]
+  data_acquisition:
+    system: "<DAQ system name>"
+    channels: <NN>
+    sampling_rate_hz: <XXXXX>
+    recording_duration_s: <XXXX>
+    data_format: "<Format>"
+
+# Safety Precautions
+safety:
+  hazards:
+    - hazard: "<Hazard description>"
+      severity: "<Minor|Major|Critical>"
+      mitigation: "<Mitigation measures>"
+      ppe_required: "<PPE type>"
+  personnel_required:
+    - role: "<Role>"
+      qualifications: "<Required qualifications>"
+      quantity: <N>
+  emergency_procedures:
+    - scenario: "<Emergency scenario>"
+      action: "<Emergency action>"
+      contact: "<Emergency contact>"
+  lockout_tagout: <true|false>
+  hot_work_permit: <true|false>
+  confined_space: <true|false>
+
+# Test Prerequisites
+prerequisites:
+  - step: "<Prerequisite 1>"
+    verification: "<How to verify>"
+    responsible: "<Role>"
+  - step: "<Prerequisite 2>"
+    verification: "<How to verify>"
+    responsible: "<Role>"
+
+# Test Procedure Steps
+procedure:
+  - step_number: 1
+    phase: "<Setup|Pre-Test|Test|Post-Test|Teardown>"
+    description: "<Detailed step description>"
+    expected_result: "<What should happen>"
+    acceptance_criteria: "<Pass/fail criteria>"
+    duration_minutes: <NN>
+    responsible: "<Role>"
+    hold_point: <true|false>
+    witness_required: <true|false>
+    data_to_record:
+      - parameter: "<Parameter name>"
+        units: "<Units>"
+        expected_value: <X.X>
+        tolerance: "±<X.X>"
+    special_notes: "<Any special notes for this step>"
+  
+  - step_number: 2
+    phase: "<Setup|Pre-Test|Test|Post-Test|Teardown>"
+    description: "<Detailed step description>"
+    expected_result: "<What should happen>"
+    acceptance_criteria: "<Pass/fail criteria>"
+    duration_minutes: <NN>
+    responsible: "<Role>"
+    hold_point: <true|false>
+    witness_required: <true|false>
+    data_to_record:
+      - parameter: "<Parameter name>"
+        units: "<Units>"
+        expected_value: <X.X>
+        tolerance: "±<X.X>"
+    special_notes: "<Any special notes for this step>"
+  
+  # Add more steps as needed
+
+# Load Cases / Test Conditions [OPTIONAL]
+test_conditions:
+  - condition_id: "<Condition ID>"
+    description: "<Condition description>"
+    load_type: "<Static|Cyclic|Ultimate|Fatigue>"  # [OPTIONAL] For structural
+    load_magnitude: <XXXXXX>
+    load_units: "<N|lbf|psi|kPa>"
+    duration_s: <XXX>
+    cycles: <NNNNN>  # [OPTIONAL] For cyclic/fatigue
+    temperature_c: <XX>  # [OPTIONAL]
+    pressure_psi: <XXX>  # [OPTIONAL]
+
+# Data Recording
+data_recording:
+  recording_method: "<Manual|Automated|Semi-Automated>"
+  data_sheets:
+    - sheet_id: "<Sheet ID>"
+      description: "<What is recorded>"
+      format: "<CSV|Excel|PDF>"
+  photos_required:
+    - description: "<What to photograph>"
+      timing: "<When to take photo>"
+  video_required: <true|false>
+  video_description: "<What to record>"  # [OPTIONAL]
+
+# Pass/Fail Criteria
+acceptance:
+  pass_criteria:
+    - parameter: "<Parameter name>"
+      requirement: "<Requirement>"
+      measured_value: "<To be filled during test>"
+      pass_fail: "<To be filled during test>"
+  overall_acceptance: "<To be determined after test>"
+
+# Post-Test Actions
+post_test:
+  inspection_required:
+    - inspection: "<Inspection description>"
+      method: "<Visual|NDT|Dimensional>"
+      acceptance: "<Acceptance criteria>"
+  data_analysis:
+    - analysis: "<Analysis description>"
+      responsible: "<Role>"
+      deliverable: "<Report or document>"
+  article_disposition:
+    retain: <true|false>
+    return_to: "<Location or owner>"
+    scrap: <true|false>
+    special_handling: "<Instructions>"
+
+# Deviations & Anomalies
+deviations:  # [OPTIONAL] To be filled during test
+  - deviation_id: "<DEV-XXXX>"
+    description: "<Deviation description>"
+    impact: "<High|Medium|Low>"
+    resolution: "<How resolved>"
+    approver: "<Name>"
+
+# Test Results [OPTIONAL - To be filled during/after test]
+results:
+  test_date: "<YYYY-MM-DD>"
+  test_duration_hours: <X.X>
+  test_status: "<Pass|Fail|Incomplete|Aborted>"
+  summary: "<Summary of results>"
+  data_location: "<Path to test data>"
+  report_reference: "<Test report document ID>"
+
+# Traceability
+traceability:
+  requirements:
+    - "54-00-03-<XX>-<NNN>"
+  safety_items:
+    - "54-00-02-<XX>-<NNN>"  # [OPTIONAL]
+  design_documentation:
+    - "54-00-04-D<NNN>"  # Drawings
+    - "54-00-04-M<NNN>"  # Models
+  certification_basis:
+    - "<CS-25.xxx>"
+  test_plan:
+    - "54-00-07-<XX>-<NNN>"  # [OPTIONAL]
+  test_report:
+    - "54-00-07-<XX>-<NNN>"  # [OPTIONAL] Filled after test
+
+# Approvals
+approvals:
+  prepared_by:
+    name: "<Name>"
+    role: "<Role>"
+    date: "<YYYY-MM-DD>"
+  reviewed_by:
+    name: "<Name>"
+    role: "<Role>"
+    date: "<YYYY-MM-DD>"
+  approved_by:
+    name: "<Name>"
+    role: "<Role>"
+    date: "<YYYY-MM-DD>"
+
+# Notes & Special Instructions
+notes: |
+  <Free-form notes about the test procedure>
+  
+  Critical test considerations:
+  - <Consideration 1>
+  - <Consideration 2>
+  
+  Common mistakes to avoid:
+  - <Mistake 1>
+  - <Mistake 2>
+  
+  Lessons learned from previous tests:
+  - <Lesson 1>
+  - <Lesson 2>
+  
+  Equipment setup tips:
+  - <Tip 1>
+  - <Tip 2>
+
+# Document Control
+document_control:
+  version: "1.0"
+  status: "<Draft|Released|Obsolete>"
+  created_date: "<YYYY-MM-DD>"
+  last_updated: "<YYYY-MM-DD>"
+  author: "<Name or Team>"
+  technical_reviewer: "<Name>"
+  quality_reviewer: "<Name>"
+  approver: "<Name or Role>"
+  change_history:
+    - version: "1.0"
+      date: "<YYYY-MM-DD>"
+      author: "<Name>"
+      changes: "<Initial release>"
+    # Add more change records as needed

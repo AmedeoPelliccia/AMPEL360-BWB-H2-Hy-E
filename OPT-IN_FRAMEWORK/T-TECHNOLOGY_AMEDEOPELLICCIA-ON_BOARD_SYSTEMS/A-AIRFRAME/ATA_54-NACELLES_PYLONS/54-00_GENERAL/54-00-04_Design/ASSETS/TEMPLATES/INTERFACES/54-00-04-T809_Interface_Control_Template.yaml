@@ -1,0 +1,324 @@
+# =============================================================================
+# ATA 54 INTERFACE CONTROL TEMPLATE
+# =============================================================================
+# Instructions:
+# 1. Copy this template and rename: 54-00-04-IC<NNN>_INTFC_<Name>.yaml
+# 2. Replace all <PLACEHOLDER> values with actual data
+# 3. Remove sections marked [OPTIONAL] if not applicable
+# 4. Ensure traceability links are correct
+# 5. Update ASSETS/INDEX.meta.yaml with the new interface entry
+# =============================================================================
+
+id: "54-00-04-IC<NNN>"
+title: "<Interface Name>"
+category: "INTFC"
+ata_chapter: "54"
+
+# Interface Identification
+interface_metadata:
+  interface_id: "ICD-54-<AREA>-<NNN>"
+  interface_name: "<Official Interface Name>"
+  interface_type: "<Structural|Electrical|Hydraulic|Pneumatic|Fuel|Data|Thermal|Mechanical>"
+  icd_number: "ICD-54-<XX>-<NNNN>"  # Interface Control Document number
+  revision: "<Rev>"
+  status: "<Preliminary|Baselined|Released|Superseded>"
+  plm_item_id: "TC-ICD-54-<AREA>-<NNN>"
+
+# Interface Parties
+parties:
+  side_a:
+    component_id: "<Component A ID>"
+    component_name: "<Component A Name>"
+    ata_chapter: "54"
+    owner: "<Organization or Team>"
+    contact: "<Contact person or email>"
+  side_b:
+    component_id: "<Component B ID>"
+    component_name: "<Component B Name>"
+    ata_chapter: "<XX>"
+    owner: "<Organization or Team>"
+    contact: "<Contact person or email>"
+  interface_location: "<Physical location description>"
+  zone: "<ZZZ-ZZZ>"
+
+# Interface Description
+description:
+  purpose: "<Why this interface exists>"
+  functional_description: "<What the interface does>"
+  operational_modes:
+    - mode: "<Mode name>"
+      description: "<Mode description>"
+      conditions: "<When this mode is active>"
+  criticality: "<Critical|Essential|Non-Essential>"
+  safety_classification: "<DAL-A|DAL-B|DAL-C|DAL-D|DAL-E|Non-Safety>"
+
+# Physical Interface [For structural/mechanical interfaces]
+physical:  # [OPTIONAL]
+  interface_geometry:
+    type: "<Flange|Bolt-Pattern|Mating-Surface|Pin-Socket>"
+    drawing_reference: "54-00-04-D<NNN>"
+    dimensions:
+      length_mm: <X.X>
+      width_mm: <X.X>
+      height_mm: <X.X>
+  mounting:
+    method: "<Bolted|Bonded|Welded|Pinned>"
+    fasteners:
+      type: "<Fastener type>"
+      specification: "<Fastener spec>"
+      quantity: <N>
+      torque_nm: <NNN>
+      torque_sequence: "<Sequence>"
+    alignment_requirements:
+      - parameter: "<Parameter>"
+        tolerance: "±<X.X> mm"
+        datum: "<Datum reference>"
+  load_transfer:
+    primary_loads:
+      - load_type: "<Axial|Shear|Moment|Torsion>"
+        magnitude_n: <XXXXXX>
+        direction: "<Direction>"
+        load_case: "<Load case reference>"
+    allowable_loads:
+      - load_type: "<Type>"
+        limit_load_n: <XXXXXX>
+        ultimate_load_n: <XXXXXX>
+  clearances:
+    - location: "<Location>"
+      clearance_mm: <X.X>
+      critical: <true|false>
+  materials:
+    side_a_material: "<Material spec>"
+    side_b_material: "<Material spec>"
+    compatibility: "<Compatible|Requires-Isolation>"
+    corrosion_prevention: "<Method>"
+
+# Electrical Interface [For electrical interfaces]
+electrical:  # [OPTIONAL]
+  power:  # [OPTIONAL]
+    voltage_v:
+      nominal: <XXX>
+      min: <XXX>
+      max: <XXX>
+    current_amp:
+      nominal: <XX.X>
+      max: <XX.X>
+      inrush_amp: <XX.X>  # [OPTIONAL]
+    frequency_hz: <XX>  # [OPTIONAL] For AC
+    power_w: <XXXX>
+  signals:  # [OPTIONAL]
+    - signal_name: "<Signal name>"
+      signal_type: "<Digital|Analog|Discrete>"
+      direction: "<A-to-B|B-to-A|Bidirectional>"
+      voltage_v: <X.X>
+      current_ma: <X.X>
+      frequency_hz: <XXXX>  # [OPTIONAL]
+      protocol: "<Protocol name>"  # [OPTIONAL]
+      update_rate_hz: <XX>  # [OPTIONAL]
+  connectors:
+    - connector_id: "<Connector P/N>"
+      location: "<Location>"
+      type: "<Connector type>"
+      pin_count: <NN>
+      mating_connector: "<Mating P/N>"
+      pin_assignments:
+        - pin_number: <N>
+          signal_name: "<Signal name>"
+          wire_gauge_awg: <NN>
+          wire_color: "<Color>"
+  grounding:
+    ground_reference: "<Ground point>"
+    ground_resistance_ohm: "<X.XXX"
+    bonding_required: <true|false>
+  shielding:
+    emi_shielding: "<Required|Not-Required>"
+    shield_termination: "<Both-Ends|One-End|None>"
+
+# Hydraulic Interface [For hydraulic interfaces]
+hydraulic:  # [OPTIONAL]
+  pressure:
+    nominal_psi: <XXXX>
+    min_psi: <XXX>
+    max_psi: <XXXX>
+    surge_psi: <XXXX>  # [OPTIONAL]
+  flow:
+    nominal_gpm: <XX.X>
+    max_gpm: <XX.X>
+    direction: "<A-to-B|B-to-A|Bidirectional>"
+  fluid:
+    fluid_type: "<Fluid specification>"
+    temperature_c:
+      nominal: <XX>
+      min: <-XX>
+      max: <+XX>
+    viscosity_cst: <XX.X>
+  connections:
+    - connection_id: "<Connection ID>"
+      location: "<Location>"
+      fitting_type: "<Fitting type>"
+      line_size_dash: <-NN>
+      seal_type: "<Seal type>"
+      torque_nm: <NNN>
+
+# Pneumatic Interface [For pneumatic interfaces]
+pneumatic:  # [OPTIONAL]
+  pressure:
+    nominal_psi: <XXX>
+    min_psi: <XX>
+    max_psi: <XXX>
+  flow:
+    nominal_scfm: <XX.X>
+    max_scfm: <XX.X>
+    direction: "<A-to-B|B-to-A|Bidirectional>"
+  gas:
+    gas_type: "<Gas specification>"
+    temperature_c:
+      nominal: <XX>
+      min: <-XX>
+      max: <+XX>
+  connections:
+    - connection_id: "<Connection ID>"
+      location: "<Location>"
+      fitting_type: "<Fitting type>"
+      line_size_dash: <-NN>
+
+# Data Interface [For data/communication interfaces]
+data:  # [OPTIONAL]
+  protocol: "<ARINC-429|AFDX|MIL-STD-1553|CAN|Ethernet|RS-422|RS-485>"
+  data_rate: "<Rate> <Mbps|Kbps>"
+  bus_configuration: "<Single|Dual|Triple>"
+  message_structure:
+    - message_id: "<Message ID or Label>"
+      message_name: "<Message name>"
+      direction: "<A-to-B|B-to-A|Bidirectional>"
+      rate_hz: <XX>
+      priority: "<High|Medium|Low>"
+      data_fields:
+        - field_name: "<Field name>"
+          data_type: "<Type>"
+          units: "<Units>"
+          range: "<Min to Max>"
+          resolution: "<Resolution>"
+  physical_layer:
+    connector_type: "<Connector type>"
+    cable_specification: "<Cable spec>"
+    cable_length_max_m: <XX>
+    termination: "<Required|Not-Required>"
+
+# Thermal Interface [For thermal interfaces]
+thermal:  # [OPTIONAL]
+  heat_transfer:
+    heat_flow_w: <XXXX>
+    direction: "<A-to-B|B-to-A>"
+    mechanism: "<Conduction|Convection|Radiation|Combined>"
+  temperatures:
+    side_a_nominal_c: <XX>
+    side_b_nominal_c: <XX>
+    interface_temp_max_c: <XX>
+  thermal_resistance:
+    resistance_k_w: <X.XX>
+  thermal_interface_material:  # [OPTIONAL]
+    material: "<TIM specification>"
+    thickness_mm: <X.X>
+    conductivity_w_mk: <X.X>
+
+# Performance Requirements
+performance:
+  operational_environment:
+    temperature_c:
+      min: <-XX>
+      max: <+XX>
+    humidity_percent:
+      max: <XX>
+    altitude_ft:
+      max: <XXXXX>
+    vibration:
+      frequency_hz: "<XX to YYY>"
+      acceleration_g: <XX.X>
+    shock:
+      acceleration_g: <XXX>
+      duration_ms: <XX>
+  reliability:
+    mtbf_hours: <XXXXX>  # [OPTIONAL]
+    failure_rate_per_fh: <X.XXe-X>  # [OPTIONAL]
+  maintainability:
+    access_required: "<Panel removal|No-access|Special-tooling>"
+    mttr_hours: <X.X>  # [OPTIONAL] Mean time to repair
+
+# Interface Control
+control:
+  baseline_date: "<YYYY-MM-DD>"
+  change_control_process: "<Process description>"
+  configuration_authority: "<Organization>"
+  change_approval:
+    side_a: "<Name or role>"
+    side_b: "<Name or role>"
+  interface_verification:
+    method: "<Test|Analysis|Inspection|Demo>"
+    procedure_ref: "54-00-07-<XX>-<NNN>"
+    status: "<Not-Started|In-Progress|Complete>"
+
+# Traceability
+traceability:
+  requirements:
+    - "54-00-03-<XX>-<NNN>"
+  safety_items:
+    - "54-00-02-<XX>-<NNN>"  # [OPTIONAL]
+  drawings:
+    - "54-00-04-D<NNN>"
+  test_procedures:
+    - "54-00-07-<XX>-<NNN>"
+  interface_agreements:
+    - "<Agreement reference>"  # [OPTIONAL]
+  certification_basis:
+    - "<CS-25.xxx>"
+
+# Open Issues & Actions
+issues:  # [OPTIONAL]
+  - issue_id: "<Issue-ID>"
+    description: "<Issue description>"
+    priority: "<High|Medium|Low>"
+    owner: "<Owner name>"
+    target_date: "<YYYY-MM-DD>"
+    status: "<Open|In-Progress|Resolved>"
+
+# Notes & Assumptions
+notes: |
+  <Free-form notes about the interface>
+  
+  Key assumptions:
+  - <Assumption 1>
+  - <Assumption 2>
+  
+  Design considerations:
+  - <Consideration 1>
+  - <Consideration 2>
+  
+  Verification approach:
+  - <Approach description>
+  
+  Known limitations:
+  - <Limitation 1>
+  
+  Future enhancements:
+  - <Enhancement 1>
+
+# Document Control
+document_control:
+  version: "1.0"
+  status: "<Draft|Released|Obsolete>"
+  created_date: "<YYYY-MM-DD>"
+  last_updated: "<YYYY-MM-DD>"
+  author: "<Name or Team>"
+  reviewed_by:
+    side_a: "<Name>"
+    side_b: "<Name>"
+  approver:
+    side_a: "<Name>"
+    side_b: "<Name>"
+  change_history:
+    - version: "1.0"
+      date: "<YYYY-MM-DD>"
+      author: "<Name>"
+      changes: "<Initial release>"
+    # Add more change records as needed
