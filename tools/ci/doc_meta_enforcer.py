@@ -82,10 +82,11 @@ def find_component_root(path: pathlib.Path, doc_root: pathlib.Path) -> pathlib.P
     Also handles other OPT-IN_FRAMEWORK structures like:
     .../ATA_XX-COMPONENT_NAME/...
     """
-    p = path
+    p = path.parent if path.is_file() else path
     while p != REPO_ROOT:
         # Match ATA chapter pattern: 02-11-00_NAME or ATA_XX-NAME
-        if re.match(r"(\d{2}-\d{2}-\d{2}_.+|ATA_\d{2}-.+)", p.name):
+        # Only match directories, not files
+        if p.is_dir() and re.match(r"(\d{2}-\d{2}-\d{2}_.+|ATA_\d{2}-.+)", p.name):
             return p
         p = p.parent
     return doc_root
@@ -152,9 +153,23 @@ def find_internal_paths(text: str) -> List[str]:
       07_V_AND_V/DIMENSION_VERIFICATION/VER-02-11-001_Wingspan_Measurement.md
 
     Very simple heuristic: something with slashes + known extension.
+    Excludes malformed paths where a file appears in the middle of a path.
     """
     pattern = r"(?P<path>\b[0-9]{2}_[A-Z0-9][A-Za-z0-9_/-]*/[^\s`\)]+?\.(?:md|csv|json))"
-    return sorted(set(m.group("path") for m in re.finditer(pattern, text)))
+    paths = []
+    for m in re.finditer(pattern, text):
+        path = m.group("path")
+        # Validate that this doesn't have a file extension in the middle of the path
+        parts = path.split('/')
+        # Check all parts except the last one (which should be the actual file)
+        valid = True
+        for part in parts[:-1]:
+            if any(part.endswith(ext) for ext in ['.md', '.csv', '.json']):
+                valid = False
+                break
+        if valid:
+            paths.append(path)
+    return sorted(set(paths))
 
 
 def link_internal_paths(
@@ -178,6 +193,13 @@ def link_internal_paths(
         if pre == "](":
             return path_str
 
+        # Validate that this doesn't have a file extension in the middle of the path
+        parts = path_str.split('/')
+        for part in parts[:-1]:
+            if any(part.endswith(ext) for ext in ['.md', '.csv', '.json']):
+                # Malformed path - don't link or mark as missing
+                return path_str
+
         target = component_root / path_str
         if not target.exists():
             missing.append(target)
@@ -194,6 +216,13 @@ def create_stub(path: pathlib.Path) -> None:
     """
     Create a minimal stub document for missing internal references.
     """
+    # Validate that path doesn't contain .md files in the parent chain
+    # This prevents errors when malformed paths like "file.md/subdir/file.md" are detected
+    for part in path.parts:
+        if part.endswith('.md') or part.endswith('.csv') or part.endswith('.json'):
+            # Skip creating stubs for malformed paths that include files as directories
+            return
+    
     path.parent.mkdir(parents=True, exist_ok=True)
     ext = path.suffix.lower()
 

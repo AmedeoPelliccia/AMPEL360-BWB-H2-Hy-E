@@ -217,7 +217,7 @@ Where:
 6. **Add diagrams/photos** where helpful
 7. **Review with SMEs** (Subject Matter Experts)
 8. **Update CHANGELOG.md** with revision entry
-9. **Update index** in `00_ADMIN/02-00-04-PRC_Index.csv`
+9. **Update index** in `[[00_ADMIN/02-00-04-PRC_Index.csv](00_ADMIN/02-00-04-PRC_Index.csv)](00_ADMIN/02-00-04-PRC_Index.csv)`
 
 ### Procedure Writing Standards
 
@@ -285,8 +285,8 @@ Document approvals in CHANGELOG.md
 ## Related Documentation
 
 - [INSTALLATIONS README](../README.md)
-- [BIM_CAD_MODELS README](../BIM_CAD_MODELS/00_ADMIN/README.md)
-- [DIAGRAMS README](../DIAGRAMS/00_ADMIN/README.md)
+- [BIM_CAD_MODELS README](../BIM_CAD_MODELS/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
+- [DIAGRAMS README](../DIAGRAMS/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 - [AMPEL360_ASSETS_STANDARD.md](/AMPEL360_ASSETS_STANDARD.md)
 - Safety Standards - see `02-00-02_Safety`
 - Operational Procedures - see `02-00-14_Ops_Std_Sustain`

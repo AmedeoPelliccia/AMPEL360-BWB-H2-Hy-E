@@ -821,10 +821,21 @@ jobs:
               pull_number: prNum,
               per_page: 100
             });
-            const mdChanged = files
+            const mdFiles = files
               .map(f => f.filename)
-              .filter(name => name.endsWith('.md'))
-              .join(', ');
+              .filter(name => name.endsWith('.md'));
+            
+            // Limit the display to avoid "Argument list too long" error
+            const MAX_FILES_TO_SHOW = 20;
+            let mdChanged;
+            if (mdFiles.length <= MAX_FILES_TO_SHOW) {
+              mdChanged = mdFiles.join(', ');
+            } else {
+              const shown = mdFiles.slice(0, MAX_FILES_TO_SHOW).join(', ');
+              const remaining = mdFiles.length - MAX_FILES_TO_SHOW;
+              mdChanged = `${shown} ... and ${remaining} more files`;
+            }
+            
             core.setOutput('head_sha', pr.head.sha);
             core.setOutput('md_changed', mdChanged);
 

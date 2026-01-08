@@ -78,7 +78,7 @@ Create `INDEX_Archive_YYYY-MM-DD.csv` documenting:
 
 ### 4. Update Active CHANGELOG
 
-Document the archiving action in the parent `05_TEMPLATES/README.md` changelog or separate CHANGELOG.md.
+Document the archiving action in the parent `[[05_TEMPLATES/README.md](05_TEMPLATES/README.md)](05_TEMPLATES/README.md)` changelog or separate CHANGELOG.md.
 
 ---
 
@@ -164,7 +164,7 @@ Avoid:
 ## Related Documentation
 
 - [05_TEMPLATES README](../README.md)
-- [BIM_CAD_MODELS 00_ADMIN README](../../00_ADMIN/README.md)
+- [BIM_CAD_MODELS 00_ADMIN README](../../[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 - [AMPEL360_ASSETS_STANDARD.md](/AMPEL360_ASSETS_STANDARD.md)
 
 ---

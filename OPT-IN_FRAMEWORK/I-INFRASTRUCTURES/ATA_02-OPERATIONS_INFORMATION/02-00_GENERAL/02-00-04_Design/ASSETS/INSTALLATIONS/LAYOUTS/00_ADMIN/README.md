@@ -155,7 +155,7 @@ Where:
 4. **Follow naming convention** strictly
 5. **Export to presentation format** (PDF or PNG for review)
 6. **Update CHANGELOG.md** with revision entry
-7. **Update index** in `00_ADMIN/02-00-04-LYT_Index.csv`
+7. **Update index** in `[[00_ADMIN/02-00-04-LYT_Index.csv](00_ADMIN/02-00-04-LYT_Index.csv)](00_ADMIN/02-00-04-LYT_Index.csv)`
 
 ### Layout Standards
 
@@ -216,8 +216,8 @@ When preparing layouts for stakeholder presentation:
 ## Related Documentation
 
 - [INSTALLATIONS README](../README.md)
-- [BIM_CAD_MODELS README](../BIM_CAD_MODELS/00_ADMIN/README.md)
-- [DIAGRAMS README](../DIAGRAMS/00_ADMIN/README.md)
+- [BIM_CAD_MODELS README](../BIM_CAD_MODELS/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
+- [DIAGRAMS README](../DIAGRAMS/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 - [AMPEL360_ASSETS_STANDARD.md](/AMPEL360_ASSETS_STANDARD.md)
 - Space Programming Standards - see project documentation
 - Design Standards Manual - see project documentation
