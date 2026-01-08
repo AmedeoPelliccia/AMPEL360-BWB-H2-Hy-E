@@ -1,0 +1,8 @@
+# S1000D CSDB Profile
+publication_id: ""
+issue_number: "001"
+in_work: "01"
+security_classification: "01"
+responsible_partner_company:
+  enterprise_name: "AMPEL360"
+  enterprise_code: "AMPEL"
