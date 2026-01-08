@@ -1,0 +1,41 @@
+# CSDB Profile Configuration for ATA 21-10-00 AMM
+
+profile:
+  ata_chapter: "21-10"
+  subject: "00"
+  publication_type: "AMM"
+  language: "en-US"
+  issue_date: "2026-01-08"
+  responsible_partner_company: "AMPEL360"
+  
+project:
+  code: "AMPEL360-AIR-T"
+  name: "AMPEL360 Air Transportation"
+  model: "BWB-H2-Hy-E"
+  
+validation:
+  s1000d_version: "5.0"
+  schema_location: "schemas/S1000D_5-0"
+  enforce_brex: true
+  
+processing:
+  output_formats:
+    - pdf
+    - html5
+    - xml
+  stylesheet: "default"
+  include_applicability: true
+  
+metadata:
+  security_classification: "PUBLIC"
+  distribution_statement: "Approved for public release"
+  copyright: "© 2026 AMPEL360. All rights reserved."
+  
+# Publication-specific settings
+amm_settings:
+  include_graphics: true
+  include_warnings: true
+  page_size: "A4"
+  language_support:
+    - en-US
+    - en-GB
