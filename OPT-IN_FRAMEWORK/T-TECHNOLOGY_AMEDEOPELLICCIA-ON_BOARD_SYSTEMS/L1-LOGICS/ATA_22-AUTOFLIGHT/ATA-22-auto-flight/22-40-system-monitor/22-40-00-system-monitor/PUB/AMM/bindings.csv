@@ -1,0 +1,4 @@
+publication_module,data_module,sequence,applicability
+# ATA 22-40-00 System Monitor AMM Bindings
+# PM-22-40-00-001,DM-22-40-00-001,1,ALL
+# Add additional bindings as data modules are created

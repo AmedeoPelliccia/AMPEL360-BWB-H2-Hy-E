@@ -1,0 +1,29 @@
+profile:
+  ata_chapter: "22-20"
+  subject: "00"
+  publication_type: "AMM"
+  language: "en-US"
+  issue_date: "2026-01-08"
+  model_identifier: "AMPEL360-BWB-H2"
+  
+validation:
+  s1000d_version: "5.0"
+  schema_location: "schemas/S1000D_5-0"
+  brex_data_module: "DMC-AMPEL360-22-20-00-00A-00A-D"
+  
+processing:
+  output_formats: 
+    - pdf
+    - html5
+    - xml
+  stylesheet: "default"
+  publication_stylesheet: "ampel360-amm"
+  
+metadata:
+  responsible_partner: "AMPEL360"
+  originator: "AMPEL360-BWB-H2"
+  security_classification: "01"
+  
+applicability:
+  product_variant: "ALL"
+  serial_range: "ALL"
