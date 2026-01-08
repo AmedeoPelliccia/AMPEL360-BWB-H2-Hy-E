@@ -19,7 +19,7 @@ Links:
   Parent: "./"
   Framework: "./02-30-00-001_Circularity_Framework_Overview.md"
   Dashboard: "./02-30-00-003_Circularity_Metrics_Dashboard.yaml"
-  CarbonDigitalOps: "./02-30-[01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md](01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md)"
+  CarbonDigitalOps: "./02-30-[[01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md](01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md)](01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md)"
   DataLifecycle: "./02-30-03_Data_Lifecycle/"
   SoftwareSustainability: "./02-30-04_Software_Sustainability/"
 ChangeLog:
@@ -379,9 +379,9 @@ Where:
 - [Circularity Metrics Dashboard](./02-30-00-003_Circularity_Metrics_Dashboard.yaml) — KPI definitions and dashboard configuration
 
 ### Detailed Carbon Accounting
-- [Carbon Accounting for Digital Ops](./02-30-[01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md](01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md)) — Operational details and examples
-- [Data Storage Energy Efficiency](./02-30-[03_Data_Lifecycle/02-30-03-002_Storage_Energy_Efficiency.md](03_Data_Lifecycle/02-30-03-002_Storage_Energy_Efficiency.md)) — Storage-specific energy and carbon
-- [ML Model Carbon Footprint](./02-30-[04_Software_Sustainability/02-30-04-003_ML_Model_Carbon_Footprint.md](04_Software_Sustainability/02-30-04-003_ML_Model_Carbon_Footprint.md)) — ML-specific methodology
+- [Carbon Accounting for Digital Ops](./02-30-[[01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md](01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md)](01_Sustainability_Overview/02-30-01-002_Carbon_Accounting_Digital_Ops.md)) — Operational details and examples
+- [Data Storage Energy Efficiency](./02-30-[[03_Data_Lifecycle/02-30-03-002_Storage_Energy_Efficiency.md](03_Data_Lifecycle/02-30-03-002_Storage_Energy_Efficiency.md)](03_Data_Lifecycle/02-30-03-002_Storage_Energy_Efficiency.md)) — Storage-specific energy and carbon
+- [ML Model Carbon Footprint](./02-30-[[04_Software_Sustainability/02-30-04-003_ML_Model_Carbon_Footprint.md](04_Software_Sustainability/02-30-04-003_ML_Model_Carbon_Footprint.md)](04_Software_Sustainability/02-30-04-003_ML_Model_Carbon_Footprint.md)) — ML-specific methodology
 
 ### External References
 - **[GHG Protocol](https://ghgprotocol.org/)** — Global standard for carbon accounting

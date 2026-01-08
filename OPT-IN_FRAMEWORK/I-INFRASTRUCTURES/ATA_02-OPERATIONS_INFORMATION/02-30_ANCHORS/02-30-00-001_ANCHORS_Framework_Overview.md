@@ -20,7 +20,7 @@ Links:
   CarbonAccounting: "./02-30-00-002_Carbon_Accounting_Methodology.md"
   Dashboard: "./02-30-00-003_Circularity_Metrics_Dashboard.yaml"
   Integration: "./02-30-00-004_Integration_with_ATA_99_100.md"
-  Strategy: "./02-30-[01_Sustainability_Overview/02-30-01-001_Circularity_Strategy_ATA02.md](01_Sustainability_Overview/02-30-01-001_Circularity_Strategy_ATA02.md)"
+  Strategy: "./02-30-[[01_Sustainability_Overview/02-30-01-001_Circularity_Strategy_ATA02.md](01_Sustainability_Overview/02-30-01-001_Circularity_Strategy_ATA02.md)](01_Sustainability_Overview/02-30-01-001_Circularity_Strategy_ATA02.md)"
   ATA99: "../../O-ORGANIZATION/"
   ATA100: "../../../"
 ChangeLog:

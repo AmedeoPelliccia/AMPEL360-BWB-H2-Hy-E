@@ -338,7 +338,7 @@ File_Name,Type,Description,Version,Date_Updated,Status
 ## Related Documentation
 
 - [05_TEMPLATES README](../README.md)
-- [BIM_CAD_MODELS 00_ADMIN README](../../[00_ADMIN/README.md](00_ADMIN/README.md))
+- [BIM_CAD_MODELS 00_ADMIN README](../../[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 - [AMPEL360_ASSETS_STANDARD.md](/AMPEL360_ASSETS_STANDARD.md)
 - BIM Execution Plan (BEP) - see project documentation
 - BIM Standards Manual - see project documentation

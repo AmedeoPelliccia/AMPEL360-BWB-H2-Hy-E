@@ -80,7 +80,7 @@ All data is **non-proprietary, synthetic, or public-domain** suitable for testin
 
 ### Loading into Databases
 
-Reference tables can be loaded into [database schemas](../02-90-[01_Database_Schemas/README.md](01_Database_Schemas/README.md)):
+Reference tables can be loaded into [database schemas](../02-90-[[01_Database_Schemas/README.md](01_Database_Schemas/README.md)](01_Database_Schemas/README.md)):
 
 ```sql
 COPY airports FROM 'Airports/02-90-05-A-001_Airport_Master_List.csv' CSV HEADER;
@@ -88,7 +88,7 @@ COPY airports FROM 'Airports/02-90-05-A-001_Airport_Master_List.csv' CSV HEADER;
 
 ### API Integration
 
-Reference data accessed via [APIs](../02-90-[02_API_Specifications/README.md](02_API_Specifications/README.md)):
+Reference data accessed via [APIs](../02-90-[[02_API_Specifications/README.md](02_API_Specifications/README.md)](02_API_Specifications/README.md)):
 
 ```
 GET /api/v1/reference/airports?icao=KJFK
@@ -97,7 +97,7 @@ GET /api/v1/reference/performance/takeoff?weight=70000&altitude=5000
 
 ### Application Usage
 
-Applications like [02-40-13 Performance Calculator](../../02-[40_Software/02-40-13_Performance_Calculator/README.md](40_Software/02-40-13_Performance_Calculator/README.md)) use these tables for calculations.
+Applications like [02-40-13 Performance Calculator](../../02-[[40_Software/02-40-13_Performance_Calculator/README.md](40_Software/02-40-13_Performance_Calculator/README.md)](40_Software/02-40-13_Performance_Calculator/README.md)) use these tables for calculations.
 
 ## Update Process
 
@@ -110,9 +110,9 @@ Applications like [02-40-13 Performance Calculator](../../02-[40_Software/02-40-
 ## Cross-References
 
 - [02-90-00-002 Data Dictionary](../02-90-00-002_Data_Dictionary_Master.md)
-- [02-90-01 Database Schemas](../02-90-[01_Database_Schemas/README.md](01_Database_Schemas/README.md))
-- [02-40-13 Performance Calculator](../../02-[40_Software/02-40-13_Performance_Calculator/README.md](40_Software/02-40-13_Performance_Calculator/README.md))
-- [02-40-15 Flight Planning](../../02-[40_Software/02-40-15_Flight_Planning_Software/README.md](40_Software/02-40-15_Flight_Planning_Software/README.md))
+- [02-90-01 Database Schemas](../02-90-[[01_Database_Schemas/README.md](01_Database_Schemas/README.md)](01_Database_Schemas/README.md))
+- [02-40-13 Performance Calculator](../../02-[[40_Software/02-40-13_Performance_Calculator/README.md](40_Software/02-40-13_Performance_Calculator/README.md)](40_Software/02-40-13_Performance_Calculator/README.md))
+- [02-40-15 Flight Planning](../../02-[[40_Software/02-40-15_Flight_Planning_Software/README.md](40_Software/02-40-15_Flight_Planning_Software/README.md)](40_Software/02-40-15_Flight_Planning_Software/README.md))
 - [ICAO Aerodrome Reference Code](https://www.icao.int/)
 - [ISA Standard Atmosphere](https://en.wikipedia.org/wiki/International_Standard_Atmosphere)
 

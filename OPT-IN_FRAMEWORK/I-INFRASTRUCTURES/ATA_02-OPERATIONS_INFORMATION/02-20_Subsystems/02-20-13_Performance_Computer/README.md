@@ -173,7 +173,7 @@ Detailed in: [02-20-13-005_NN_Performance_Predictor.md](./02-20-13-005_NN_Perfor
 
 * Takeoff / landing performance results for:
 
-  * [02-20-11-004_Performance_Calculations.md](../02-20-[11_Electronic_Flight_Bag/02-20-11-004_Performance_Calculations.md](11_Electronic_Flight_Bag/02-20-11-004_Performance_Calculations.md))
+  * [02-20-11-004_Performance_Calculations.md](../02-20-[[11_Electronic_Flight_Bag/02-20-11-004_Performance_Calculations.md](11_Electronic_Flight_Bag/02-20-11-004_Performance_Calculations.md)](11_Electronic_Flight_Bag/02-20-11-004_Performance_Calculations.md))
 * Validated speeds and margins
 * Advisory labels when NN enhancement is active
 

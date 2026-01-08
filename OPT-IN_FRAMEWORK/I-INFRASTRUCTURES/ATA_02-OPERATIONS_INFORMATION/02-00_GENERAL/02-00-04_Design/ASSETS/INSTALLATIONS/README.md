@@ -206,7 +206,7 @@ GenCCC (Generic Configuration and Control Center) can:
 ## Related Documentation
 
 ### Parent Documentation
-- **Parent Folder**: [02-00-[04_Design/README.md](04_Design/README.md)](../README.md)
+- **Parent Folder**: [02-00-[[04_Design/README.md](04_Design/README.md)](04_Design/README.md)](../README.md)
 - **ASSETS Overview**: [../README.md](../README.md)
 - **INDEX Catalog**: [../INDEX.meta.yaml](../INDEX.meta.yaml)
 

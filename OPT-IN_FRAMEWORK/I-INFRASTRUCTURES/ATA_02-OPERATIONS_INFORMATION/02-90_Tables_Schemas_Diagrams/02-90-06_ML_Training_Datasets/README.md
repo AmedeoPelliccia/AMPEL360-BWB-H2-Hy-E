@@ -157,7 +157,7 @@ Aligned with:
 ## Cross-References
 
 - [02-90-00-002 Data Dictionary](../02-90-00-002_Data_Dictionary_Master.md)
-- [02-90-01 Database Schemas](../02-90-[01_Database_Schemas/README.md](01_Database_Schemas/README.md))
+- [02-90-01 Database Schemas](../02-90-[[01_Database_Schemas/README.md](01_Database_Schemas/README.md)](01_Database_Schemas/README.md))
 - [ATA 95 Digital Product Passport](../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/README.md)
 - [EU AI Act](https://artificialintelligenceact.eu/)
 - [DO-178C](https://en.wikipedia.org/wiki/DO-178C)

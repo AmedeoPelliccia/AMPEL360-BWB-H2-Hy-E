@@ -233,8 +233,8 @@ class FlightStatus(Enum):
 ## Cross-References
 
 - [02-90-00-002 Data Dictionary](../02-90-00-002_Data_Dictionary_Master.md)
-- [02-90-01 Database Schemas](../02-90-[01_Database_Schemas/README.md](01_Database_Schemas/README.md))
-- [02-90-02 API Specifications](../02-90-[02_API_Specifications/README.md](02_API_Specifications/README.md))
+- [02-90-01 Database Schemas](../02-90-[[01_Database_Schemas/README.md](01_Database_Schemas/README.md)](01_Database_Schemas/README.md))
+- [02-90-02 API Specifications](../02-90-[[02_API_Specifications/README.md](02_API_Specifications/README.md)](02_API_Specifications/README.md))
 - [ICAO Standards](https://www.icao.int/)
 - [ISO Country Codes](https://www.iso.org/iso-3166-country-codes.html)
 

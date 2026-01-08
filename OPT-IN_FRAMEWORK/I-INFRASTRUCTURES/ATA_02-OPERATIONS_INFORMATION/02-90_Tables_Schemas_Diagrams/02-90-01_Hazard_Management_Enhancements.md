@@ -17,8 +17,8 @@ Compliance:
   - "Hazard Analysis Methodology — ATA 02"
 Links:
   ParentGeneral: "../"
-  HazardMethodology: "../02-[00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)"
-  HazardsCSV: "../02-[00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv](00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv)"
+  HazardMethodology: "../02-[[00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)"
+  HazardsCSV: "../02-[[00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv](00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv)](00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv)"
 ChangeLog:
   - {version: "1.0.0", date: "2025-11-14", author: "Safety", change: "Initial planning document"}
 ---
@@ -33,7 +33,7 @@ This document outlines **planned enhancements** to the hazard management process
 - Automate validation and quality checks.
 - Provide visualization and summary reports to support decision-making.
 
-The enhancements support the [Hazard Analysis Methodology — ATA 02](../02-[00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)) and are planned for implementation in future iterations.
+The enhancements support the [Hazard Analysis Methodology — ATA 02](../02-[[00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)) and are planned for implementation in future iterations.
 
 ---
 
@@ -224,10 +224,10 @@ Generate a visual summary of the hazard portfolio to support decision-making and
 
 ## 7. References
 
-- [Hazard Analysis Methodology — ATA 02](../02-[00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md))
-- [02-00-02-015A_Hazard_Log.csv](../02-[00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv](00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv))
-- [Safety Review Checklist — ATA 02](../02-[00_GENERAL/02-00-02_Safety/Safety_Review_Checklist.md](00_GENERAL/02-00-02_Safety/Safety_Review_Checklist.md))
-- [Program Tailoring Template](../02-[00_GENERAL/02-00-10_Certification/Program_Tailoring_Template.md](00_GENERAL/02-00-10_Certification/Program_Tailoring_Template.md))
+- [Hazard Analysis Methodology — ATA 02](../02-[[00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)](00_GENERAL/02-00-02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md))
+- [02-00-02-015A_Hazard_Log.csv](../02-[[00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv](00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv)](00_GENERAL/02-00-02_Safety/02-00-02-015A_Hazard_Log.csv))
+- [Safety Review Checklist — ATA 02](../02-[[00_GENERAL/02-00-02_Safety/Safety_Review_Checklist.md](00_GENERAL/02-00-02_Safety/Safety_Review_Checklist.md)](00_GENERAL/02-00-02_Safety/Safety_Review_Checklist.md))
+- [Program Tailoring Template](../02-[[00_GENERAL/02-00-10_Certification/Program_Tailoring_Template.md](00_GENERAL/02-00-10_Certification/Program_Tailoring_Template.md)](00_GENERAL/02-00-10_Certification/Program_Tailoring_Template.md))
 
 ---
 

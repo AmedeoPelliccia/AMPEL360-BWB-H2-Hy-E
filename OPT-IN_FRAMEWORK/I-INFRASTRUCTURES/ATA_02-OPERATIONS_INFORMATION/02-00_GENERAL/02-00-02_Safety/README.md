@@ -256,7 +256,7 @@ When working under `02-00-02_Safety`:
 
 1. **Create the folder & place this file**
    - Path:  
-     `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-[00_GENERAL/02-00-02_Safety/02-00-02_Safety.md](00_GENERAL/02-00-02_Safety/02-00-02_Safety.md)`.
+     `OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-[[00_GENERAL/02-00-02_Safety/02-00-02_Safety.md](00_GENERAL/02-00-02_Safety/02-00-02_Safety.md)](00_GENERAL/02-00-02_Safety/02-00-02_Safety.md)`.
 
 2. **Verify identifiers & links**
    - Ensure all referenced `02-00-02-00xA_*` files exist (or create stubs) and that paths match your repo structure.

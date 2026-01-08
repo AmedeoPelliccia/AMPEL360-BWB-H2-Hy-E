@@ -321,14 +321,14 @@ This portfolio document is expected to evolve as governance processes mature and
 - [02-40-00-001 Software Architecture Overview](../02-40-00-001_Software_Architecture_Overview.md)  
 - [02-40-00-004 Software Development Standards](../02-40-00-004_Software_Development_Standards.md)  
 - Related subsystems (non-exhaustive):
-  - `../02-40-[11_EFB_Software/README.md](11_EFB_Software/README.md)`
-  - `../02-40-[12_Backend_Services/README.md](12_Backend_Services/README.md)`
-  - `../02-40-[13_Performance_Calculator/README.md](13_Performance_Calculator/README.md)`
-  - `../02-40-[14_Weight_Balance_System/README.md](14_Weight_Balance_System/README.md)`
-  - `../02-40-[15_Flight_Planning_Software/README.md](15_Flight_Planning_Software/README.md)`
-  - `../02-40-[23_Predictive_Ops_Software/README.md](23_Predictive_Ops_Software/README.md)`
-  - `../../02-[60_Storages/README.md](60_Storages/README.md)`
-  - `../../02-[90_Tables_Schemas_Diagrams/README.md](90_Tables_Schemas_Diagrams/README.md)`
+  - `../02-40-[[11_EFB_Software/README.md](11_EFB_Software/README.md)](11_EFB_Software/README.md)`
+  - `../02-40-[[12_Backend_Services/README.md](12_Backend_Services/README.md)](12_Backend_Services/README.md)`
+  - `../02-40-[[13_Performance_Calculator/README.md](13_Performance_Calculator/README.md)](13_Performance_Calculator/README.md)`
+  - `../02-40-[[14_Weight_Balance_System/README.md](14_Weight_Balance_System/README.md)](14_Weight_Balance_System/README.md)`
+  - `../02-40-[[15_Flight_Planning_Software/README.md](15_Flight_Planning_Software/README.md)](15_Flight_Planning_Software/README.md)`
+  - `../02-40-[[23_Predictive_Ops_Software/README.md](23_Predictive_Ops_Software/README.md)](23_Predictive_Ops_Software/README.md)`
+  - `../../02-[[60_Storages/README.md](60_Storages/README.md)](60_Storages/README.md)`
+  - `../../02-[[90_Tables_Schemas_Diagrams/README.md](90_Tables_Schemas_Diagrams/README.md)](90_Tables_Schemas_Diagrams/README.md)`
 
 ---
 

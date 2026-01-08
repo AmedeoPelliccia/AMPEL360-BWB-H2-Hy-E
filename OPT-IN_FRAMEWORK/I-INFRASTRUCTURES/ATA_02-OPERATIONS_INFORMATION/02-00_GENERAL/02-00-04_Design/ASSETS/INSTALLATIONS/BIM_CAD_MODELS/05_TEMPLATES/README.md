@@ -266,7 +266,7 @@ Component blocks should include:
 
 ## Related Documentation
 
-- [BIM_CAD_MODELS 00_ADMIN README](../[00_ADMIN/README.md](00_ADMIN/README.md))
+- [BIM_CAD_MODELS 00_ADMIN README](../[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 - [INSTALLATIONS README](../../README.md)
 - [AMPEL360_ASSETS_STANDARD.md](/AMPEL360_ASSETS_STANDARD.md)
 - BIM Execution Plan (BEP) - see project documentation

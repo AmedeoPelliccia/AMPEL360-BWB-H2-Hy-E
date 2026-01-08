@@ -68,8 +68,8 @@ The goal is a coherent, auditable process for **“plan changed in FPL → what 
   - [02-20-15-003_Slots_and_ATFM_Integration.md](./02-20-15-003_Slots_and_ATFM_Integration.md)  
 
 - Ground Ops:  
-  - [../02-20-[14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md](14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md)](../02-20-[14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md](14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md))  
-  - [../02-20-[14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md](14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md)](../02-20-[14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md](14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md))  
+  - [../02-20-[[14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md](14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md)](14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md)](../02-20-[[14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md](14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md)](14_Ground_Ops_Management/02-20-14-002_Turnaround_Orchestration.md))  
+  - [../02-20-[[14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md](14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md)](14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md)](../02-20-[[14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md](14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md)](14_Ground_Ops_Management/02-20-14-A-003_GSE_Allocation_Model.md))  
 
 - Test Data (planned/partial):  
   - [TEST_DATA/02-20-15-T-001_FPL_Delay_Scenarios.json](./TEST_DATA/02-20-15-T-001_FPL_Delay_Scenarios.json)  

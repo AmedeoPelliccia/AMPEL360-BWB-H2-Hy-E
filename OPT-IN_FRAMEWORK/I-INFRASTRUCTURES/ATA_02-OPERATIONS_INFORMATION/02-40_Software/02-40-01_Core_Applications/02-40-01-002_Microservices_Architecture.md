@@ -371,14 +371,14 @@ Lifecycle practices (see `02-40-52_Lifecycle_Management`) include:
 
 Related:
 
-- `../02-40-[01_Core_Applications/02-40-01-001_Application_Portfolio.md](01_Core_Applications/02-40-01-001_Application_Portfolio.md)`  
-- `../02-40-[12_Backend_Services/README.md](12_Backend_Services/README.md)`  
-- `../02-40-[31_Integration_Middleware/README.md](31_Integration_Middleware/README.md)`  
-- `../02-40-[32_API_Management/README.md](32_API_Management/README.md)`  
-- `../02-40-[41_DevOps_Infrastructure/README.md](41_DevOps_Infrastructure/README.md)`  
-- `../02-40-[44_Monitoring_Observability/README.md](44_Monitoring_Observability/README.md)`  
-- `../../02-[60_Storages/README.md](60_Storages/README.md)`  
-- `../../02-[90_Tables_Schemas_Diagrams/README.md](90_Tables_Schemas_Diagrams/README.md)`  
+- `../02-40-[[01_Core_Applications/02-40-01-001_Application_Portfolio.md](01_Core_Applications/02-40-01-001_Application_Portfolio.md)](01_Core_Applications/02-40-01-001_Application_Portfolio.md)`  
+- `../02-40-[[12_Backend_Services/README.md](12_Backend_Services/README.md)](12_Backend_Services/README.md)`  
+- `../02-40-[[31_Integration_Middleware/README.md](31_Integration_Middleware/README.md)](31_Integration_Middleware/README.md)`  
+- `../02-40-[[32_API_Management/README.md](32_API_Management/README.md)](32_API_Management/README.md)`  
+- `../02-40-[[41_DevOps_Infrastructure/README.md](41_DevOps_Infrastructure/README.md)](41_DevOps_Infrastructure/README.md)`  
+- `../02-40-[[44_Monitoring_Observability/README.md](44_Monitoring_Observability/README.md)](44_Monitoring_Observability/README.md)`  
+- `../../02-[[60_Storages/README.md](60_Storages/README.md)](60_Storages/README.md)`  
+- `../../02-[[90_Tables_Schemas_Diagrams/README.md](90_Tables_Schemas_Diagrams/README.md)](90_Tables_Schemas_Diagrams/README.md)`  
 - ATA 95 NN & DPP artefacts as applicable.
 
 ---

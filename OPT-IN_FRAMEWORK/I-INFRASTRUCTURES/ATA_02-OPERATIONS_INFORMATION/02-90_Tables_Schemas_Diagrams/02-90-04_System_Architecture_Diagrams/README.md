@@ -191,9 +191,9 @@ Interaction flows for key scenarios:
 ## Cross-References
 
 - [02-90-00-003 Diagram Index](../02-90-00-003_Diagram_Index.md) – Complete diagram catalog
-- [02-90-01 Database Schemas](../02-90-[01_Database_Schemas/README.md](01_Database_Schemas/README.md)) – Data models
-- [02-90-02 API Specifications](../02-90-[02_API_Specifications/README.md](02_API_Specifications/README.md)) – Service contracts
-- [02-40 Software](../../02-[40_Software/README.md](40_Software/README.md)) – Application components
+- [02-90-01 Database Schemas](../02-90-[[01_Database_Schemas/README.md](01_Database_Schemas/README.md)](01_Database_Schemas/README.md)) – Data models
+- [02-90-02 API Specifications](../02-90-[[02_API_Specifications/README.md](02_API_Specifications/README.md)](02_API_Specifications/README.md)) – Service contracts
+- [02-40 Software](../../02-[[40_Software/README.md](40_Software/README.md)](40_Software/README.md)) – Application components
 - [C4 Model](https://c4model.com/) – Architecture visualization framework
 - [UML](https://www.uml.org/) – Unified Modeling Language
 

@@ -338,7 +338,7 @@ From the overview perspective:
 
 * Subsystem README:
 
-  * [02-20-[14_Ground_Ops_Management/README.md](14_Ground_Ops_Management/README.md)](./README.md)
+  * [02-20-[[14_Ground_Ops_Management/README.md](14_Ground_Ops_Management/README.md)](14_Ground_Ops_Management/README.md)](./README.md)
 
 * Detailed functional specs:
 

@@ -225,7 +225,7 @@ General principles:
 
 ### 8.3 Labeling
 
-All cables, trays, and conduits must be labeled per [02-50-06-004_Labeling_Standards.md](./02-50-[06_Cable_Management_Systems/02-50-06-004_Labeling_Standards.md](06_Cable_Management_Systems/02-50-06-004_Labeling_Standards.md)):
+All cables, trays, and conduits must be labeled per [02-50-06-004_Labeling_Standards.md](./02-50-[[06_Cable_Management_Systems/02-50-06-004_Labeling_Standards.md](06_Cable_Management_Systems/02-50-06-004_Labeling_Standards.md)](06_Cable_Management_Systems/02-50-06-004_Labeling_Standards.md)):
 
 - **Format**: System-Type-Number (e.g., OPS-ETH-0042)
 - **Label material**: Laminated vinyl or heat-shrink, UV-resistant

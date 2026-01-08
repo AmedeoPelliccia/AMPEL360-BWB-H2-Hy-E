@@ -200,7 +200,7 @@ Where:
 5. **Document usage** in template (embedded instructions or readme)
 6. **Review with team** - Ensure template meets standards
 7. **Test template** - Have someone else use it to verify clarity
-8. **Update index** in `[00_ADMIN/02-00-04-TPL_Index.csv](00_ADMIN/02-00-04-TPL_Index.csv)`
+8. **Update index** in `[[00_ADMIN/02-00-04-TPL_Index.csv](00_ADMIN/02-00-04-TPL_Index.csv)](00_ADMIN/02-00-04-TPL_Index.csv)`
 9. **Update CHANGELOG.md** with new template entry
 
 ### Template Standards
@@ -291,7 +291,7 @@ When a template is superseded:
 
 Templates are discoverable through:
 1. **This README** - Overview of available templates
-2. **Index file** - `[00_ADMIN/02-00-04-TPL_Index.csv](00_ADMIN/02-00-04-TPL_Index.csv)` with searchable metadata
+2. **Index file** - `[[00_ADMIN/02-00-04-TPL_Index.csv](00_ADMIN/02-00-04-TPL_Index.csv)](00_ADMIN/02-00-04-TPL_Index.csv)` with searchable metadata
 3. **Folder structure** - Organized by type for easy browsing
 4. **Naming convention** - Self-describing file names
 
@@ -313,10 +313,10 @@ Templates must meet these quality standards:
 ## Related Documentation
 
 - [INSTALLATIONS README](../README.md)
-- [BIM_CAD_MODELS README](../BIM_CAD_MODELS/[00_ADMIN/README.md](00_ADMIN/README.md))
-- [DIAGRAMS README](../DIAGRAMS/[00_ADMIN/README.md](00_ADMIN/README.md))
-- [LAYOUTS README](../LAYOUTS/[00_ADMIN/README.md](00_ADMIN/README.md))
-- [PROCEDURES README](../PROCEDURES/[00_ADMIN/README.md](00_ADMIN/README.md))
+- [BIM_CAD_MODELS README](../BIM_CAD_MODELS/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
+- [DIAGRAMS README](../DIAGRAMS/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
+- [LAYOUTS README](../LAYOUTS/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
+- [PROCEDURES README](../PROCEDURES/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 - [AMPEL360_ASSETS_STANDARD.md](/AMPEL360_ASSETS_STANDARD.md)
 - Company CAD Standards - see project documentation
 - Company BIM Standards - see project documentation

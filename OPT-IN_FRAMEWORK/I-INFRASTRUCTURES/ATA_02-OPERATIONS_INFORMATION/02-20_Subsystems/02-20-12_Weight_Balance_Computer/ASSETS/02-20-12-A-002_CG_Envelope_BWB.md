@@ -23,7 +23,7 @@ It focuses on how **mass–CG envelopes** for AMPEL360 BWB variants (Q80/Q100/Q1
 - Are represented and versioned for WBC use.  
 - Interface with:
   - [02-20-12-003_CG_Envelope_Monitoring.md](../02-20-12-003_CG_Envelope_Monitoring.md)  
-  - [02-20-13-006_BWB_Specific_Calculations.md](../02-20-[13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md))  
+  - [02-20-13-006_BWB_Specific_Calculations.md](../02-20-[[13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md)](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md))  
 - Reflect the **non-tube-wing characteristics** of the BWB configuration:
   - Wider usable CG range but more complex dependence on **mass distribution** and **tank usage**.  
   - Potential **different envelopes** for cruise vs low-speed phases.
@@ -280,7 +280,7 @@ Tests should cover:
 
 ### Other Subsystems / ATA
 
-* [../02-20-[13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md)](../02-20-[13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md))
+* [../02-20-[[13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md)](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md)](../02-20-[[13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md)](13_Performance_Computer/02-20-13-006_BWB_Specific_Calculations.md))
 * ATA 28 — H₂ fuel system (tank geometry & limits).
 * ATA 27 — Flight controls (stability & control-originating CG limits).
 * ATA 31 — Recording (mass/CG + envelope status logging).

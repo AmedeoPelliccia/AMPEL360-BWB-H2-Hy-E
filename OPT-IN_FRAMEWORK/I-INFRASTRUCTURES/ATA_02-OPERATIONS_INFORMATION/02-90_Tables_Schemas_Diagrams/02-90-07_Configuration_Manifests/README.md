@@ -66,14 +66,14 @@ Helm charts provide templated, versioned deployments:
 ### Operations Chart
 
 [Operations chart](./ASSETS/Helm/02-90-07-A-101_operations_chart/) deploys:
-- Backend services ([02-40-12](../../02-[40_Software/02-40-12_Backend_Services/README.md](40_Software/02-40-12_Backend_Services/README.md)))
+- Backend services ([02-40-12](../../02-[[40_Software/02-40-12_Backend_Services/README.md](40_Software/02-40-12_Backend_Services/README.md)](40_Software/02-40-12_Backend_Services/README.md)))
 - API gateways
 - Database connections
 
 ### Analytics Chart
 
 [Analytics chart](./ASSETS/Helm/02-90-07-A-102_analytics_chart/) deploys:
-- Analytics engine ([02-40-19](../../02-[40_Software/02-40-19_Analytics_Engine/README.md](40_Software/02-40-19_Analytics_Engine/README.md)))
+- Analytics engine ([02-40-19](../../02-[[40_Software/02-40-19_Analytics_Engine/README.md](40_Software/02-40-19_Analytics_Engine/README.md)](40_Software/02-40-19_Analytics_Engine/README.md)))
 - Data warehouse connections
 - BI tools
 
@@ -214,9 +214,9 @@ Tools:
 
 ## Cross-References
 
-- [02-90-01 Database Schemas](../02-90-[01_Database_Schemas/README.md](01_Database_Schemas/README.md))
-- [02-90-02 API Specifications](../02-90-[02_API_Specifications/README.md](02_API_Specifications/README.md))
-- [02-40 Software](../../02-[40_Software/README.md](40_Software/README.md))
+- [02-90-01 Database Schemas](../02-90-[[01_Database_Schemas/README.md](01_Database_Schemas/README.md)](01_Database_Schemas/README.md))
+- [02-90-02 API Specifications](../02-90-[[02_API_Specifications/README.md](02_API_Specifications/README.md)](02_API_Specifications/README.md))
+- [02-40 Software](../../02-[[40_Software/README.md](40_Software/README.md)](40_Software/README.md))
 - [Kubernetes Documentation](https://kubernetes.io/docs/)
 - [Helm Documentation](https://helm.sh/docs/)
 - [Docker Documentation](https://docs.docker.com/)

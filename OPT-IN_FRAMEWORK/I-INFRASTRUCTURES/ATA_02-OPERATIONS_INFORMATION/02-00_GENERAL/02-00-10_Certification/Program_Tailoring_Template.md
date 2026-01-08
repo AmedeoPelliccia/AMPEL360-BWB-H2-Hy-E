@@ -17,8 +17,8 @@ Compliance:
   - "Hazard Analysis Methodology — ATA 02"
 Links:
   ParentGeneral: "../"
-  HazardMethodology: "../02-00-[02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)"
-  SafetyObjectives: "../02-00-[02_Safety/AMPEL360-02-00-02-001A_Certification_Safety_Objectives.md](02_Safety/AMPEL360-02-00-02-001A_Certification_Safety_Objectives.md)"
+  HazardMethodology: "../02-00-[[02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)"
+  SafetyObjectives: "../02-00-[[02_Safety/AMPEL360-02-00-02-001A_Certification_Safety_Objectives.md](02_Safety/AMPEL360-02-00-02-001A_Certification_Safety_Objectives.md)](02_Safety/AMPEL360-02-00-02-001A_Certification_Safety_Objectives.md)"
 ChangeLog:
   - {version: "1.0.0", date: "2025-11-14", author: "Safety/CERT", change: "Initial template creation"}
 ---
@@ -27,7 +27,7 @@ ChangeLog:
 
 ## 1. Purpose
 
-This document provides a **template** for program-specific tailoring of the [Hazard Analysis Methodology — ATA 02](../02-00-[02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)). Each program should create an instance of this template to document:
+This document provides a **template** for program-specific tailoring of the [Hazard Analysis Methodology — ATA 02](../02-00-[[02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)). Each program should create an instance of this template to document:
 
 1. Confirmation of the severity/DAL mapping used for the program.
 2. Program-specific risk classification scales.
@@ -148,7 +148,7 @@ Identify any program-specific requirements that influence hazard analysis:
 
 All hazards recorded for this program in `02-00-02-015A_Hazard_Log.csv` must be traceable to:
 
-- The base [Hazard Analysis Methodology — ATA 02](../02-00-[02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)).
+- The base [Hazard Analysis Methodology — ATA 02](../02-00-[[02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)](02_Safety/AMPEL360-02-00-02-007A_Hazard_Analysis_Methodology.md)).
 - This program tailoring document.
 
 ### 7.2 Integration with Safety Artefacts

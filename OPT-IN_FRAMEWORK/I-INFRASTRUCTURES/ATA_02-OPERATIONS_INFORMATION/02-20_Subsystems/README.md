@@ -43,7 +43,7 @@ Es el *hub técnico* de ATA 02: todo lo que consumen `02-10_Operations`, `02-30_
 - [`02-20-01_Digital_Ops_Platform/`](./02-20-01_Digital_Ops_Platform/)  
   Plataforma núcleo de operaciones digitales (backbone de datos y servicios).
 
-  - [`README.md`](./02-20-[01_Digital_Ops_Platform/README.md](01_Digital_Ops_Platform/README.md))  
+  - [`README.md`](./02-20-[[01_Digital_Ops_Platform/README.md](01_Digital_Ops_Platform/README.md)](01_Digital_Ops_Platform/README.md))  
   - `02-20-01-001_Platform_Architecture.md`  
   - `02-20-01-002_Data_Management.md`  
   - `02-20-01-003_User_Interfaces.md`  

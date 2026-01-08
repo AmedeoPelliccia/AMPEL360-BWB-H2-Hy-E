@@ -46,16 +46,16 @@ All specifications are **non-proprietary examples** suitable for development and
 1. **[Flight Operations API](./ASSETS/OpenAPI/02-90-02-A-001_Flight_Operations_API_v1.yaml)**
    - CRUD operations for flights
    - Status updates and tracking
-   - Compatible with [02-40-12 Backend Services](../../02-[40_Software/02-40-12_Backend_Services/README.md](40_Software/02-40-12_Backend_Services/README.md))
+   - Compatible with [02-40-12 Backend Services](../../02-[[40_Software/02-40-12_Backend_Services/README.md](40_Software/02-40-12_Backend_Services/README.md)](40_Software/02-40-12_Backend_Services/README.md))
 
 2. **[Performance Calculator API](./ASSETS/OpenAPI/02-90-02-A-002_Performance_Calculator_API_v1.yaml)**
    - Takeoff and landing performance calculations
-   - Integrated with [02-40-13 Performance Calculator](../../02-[40_Software/02-40-13_Performance_Calculator/README.md](40_Software/02-40-13_Performance_Calculator/README.md))
+   - Integrated with [02-40-13 Performance Calculator](../../02-[[40_Software/02-40-13_Performance_Calculator/README.md](40_Software/02-40-13_Performance_Calculator/README.md)](40_Software/02-40-13_Performance_Calculator/README.md))
 
 3. **[Energy Monitoring API](./ASSETS/OpenAPI/02-90-02-A-003_Energy_Monitoring_API_v1.yaml)**
    - Real-time energy data streams
    - Historical energy analytics
-   - Connected to [02-80 Energy](../../02-[80_Energy/README.md](80_Energy/README.md))
+   - Connected to [02-80 Energy](../../02-[[80_Energy/README.md](80_Energy/README.md)](80_Energy/README.md))
 
 ### GraphQL
 
@@ -168,8 +168,8 @@ X-RateLimit-Reset: 2025-11-21T03:00:00Z
 ## Cross-References
 
 - [02-90-00-002 Data Dictionary](../02-90-00-002_Data_Dictionary_Master.md) – Field definitions
-- [02-90-01 Database Schemas](../02-90-[01_Database_Schemas/README.md](01_Database_Schemas/README.md)) – Underlying data models
-- [02-40 Software](../../02-[40_Software/README.md](40_Software/README.md)) – Applications consuming these APIs
+- [02-90-01 Database Schemas](../02-90-[[01_Database_Schemas/README.md](01_Database_Schemas/README.md)](01_Database_Schemas/README.md)) – Underlying data models
+- [02-40 Software](../../02-[[40_Software/README.md](40_Software/README.md)](40_Software/README.md)) – Applications consuming these APIs
 - [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
 - [GraphQL Specification](https://spec.graphql.org/)
 - [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)

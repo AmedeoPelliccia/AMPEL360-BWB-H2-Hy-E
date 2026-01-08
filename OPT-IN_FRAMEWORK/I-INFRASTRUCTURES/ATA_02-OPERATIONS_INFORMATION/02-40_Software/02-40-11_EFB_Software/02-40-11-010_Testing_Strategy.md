@@ -380,8 +380,8 @@ Related:
 
 - `../02-40-11-001_EFB_App_Architecture.md`  
 - `../02-40-11-009_DO_178C_Evidence.md`  
-- `../02-40-[42_Testing_QA/README.md](42_Testing_QA/README.md)`  
-- `../../02-90-[12_Certification_Documentation_Schemas/README.md](12_Certification_Documentation_Schemas/README.md)`  
+- `../02-40-[[42_Testing_QA/README.md](42_Testing_QA/README.md)](42_Testing_QA/README.md)`  
+- `../../02-90-[[12_Certification_Documentation_Schemas/README.md](12_Certification_Documentation_Schemas/README.md)](12_Certification_Documentation_Schemas/README.md)`  
 
 ---
 
