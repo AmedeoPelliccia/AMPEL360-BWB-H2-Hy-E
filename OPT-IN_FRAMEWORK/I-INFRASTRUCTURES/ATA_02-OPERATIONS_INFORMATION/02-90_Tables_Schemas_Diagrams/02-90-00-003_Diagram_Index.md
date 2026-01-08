@@ -28,9 +28,9 @@ This document provides a comprehensive index of all key diagrams referenced unde
 
 | ID | File Name | Description | Related Systems | Status |
 |----|-----------|-------------|-----------------|--------|
-| FLOW-001 | [02-90-04-A-101_Operations_Data_Flow.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Data_Flow/02-90-04-A-101_Operations_Data_Flow.svg) | Flight operations data ingestion to analytics | [02-20 Subsystems](../02-20_Subsystems/README.md), [02-40 Software](../02-40_Software/README.md) | Active |
-| FLOW-002 | [02-90-04-A-102_Energy_Data_Flow.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Data_Flow/02-90-04-A-102_Energy_Data_Flow.svg) | Energy sensors to storage to dashboards | [02-80 Energy](../02-80_Energy/README.md) | Active |
-| FLOW-003 | [02-90-04-A-103_Propulsion_Data_Flow.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Data_Flow/02-90-04-A-103_Propulsion_Data_Flow.svg) | Propulsion telemetry data flows | [02-70 Propulsion](../02-70_Propulsion/README.md) | Active |
+| FLOW-001 | [02-90-04-A-101_Operations_Data_Flow.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Data_Flow/02-90-04-A-101_Operations_Data_Flow.svg) | Flight operations data ingestion to analytics | [02-20 Subsystems](../02-[20_Subsystems/README.md](20_Subsystems/README.md)), [02-40 Software](../02-[40_Software/README.md](40_Software/README.md)) | Active |
+| FLOW-002 | [02-90-04-A-102_Energy_Data_Flow.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Data_Flow/02-90-04-A-102_Energy_Data_Flow.svg) | Energy sensors to storage to dashboards | [02-80 Energy](../02-[80_Energy/README.md](80_Energy/README.md)) | Active |
+| FLOW-003 | [02-90-04-A-103_Propulsion_Data_Flow.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Data_Flow/02-90-04-A-103_Propulsion_Data_Flow.svg) | Propulsion telemetry data flows | [02-70 Propulsion](../02-[70_Propulsion/README.md](70_Propulsion/README.md)) | Active |
 | FLOW-004 | [02-90-04-A-104_End_to_End_Flow.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Data_Flow/02-90-04-A-104_End_to_End_Flow.svg) | Aircraft/ground to decision-support | All systems | Active |
 
 ### 2.4 Integration Diagrams
@@ -45,8 +45,8 @@ This document provides a comprehensive index of all key diagrams referenced unde
 
 | ID | File Name | Description | Use Case | Status |
 |----|-----------|-------------|----------|--------|
-| SEQ-001 | [02-90-04-A-301_Flight_Planning_Sequence.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Sequence/02-90-04-A-301_Flight_Planning_Sequence.svg) | Flight planning workflow | [02-40-15](../02-40_Software/02-40-15_Flight_Planning_Software/README.md) | Active |
-| SEQ-002 | [02-90-04-A-302_Performance_Calc_Sequence.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Sequence/02-90-04-A-302_Performance_Calc_Sequence.svg) | Performance calculation cycle | [02-40-13](../02-40_Software/02-40-13_Performance_Calculator/README.md) | Active |
+| SEQ-001 | [02-90-04-A-301_Flight_Planning_Sequence.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Sequence/02-90-04-A-301_Flight_Planning_Sequence.svg) | Flight planning workflow | [02-40-15](../02-[40_Software/02-40-15_Flight_Planning_Software/README.md](40_Software/02-40-15_Flight_Planning_Software/README.md)) | Active |
+| SEQ-002 | [02-90-04-A-302_Performance_Calc_Sequence.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Sequence/02-90-04-A-302_Performance_Calc_Sequence.svg) | Performance calculation cycle | [02-40-13](../02-[40_Software/02-40-13_Performance_Calculator/README.md](40_Software/02-40-13_Performance_Calculator/README.md)) | Active |
 | SEQ-003 | [02-90-04-A-303_Emergency_Response_Sequence.svg](./02-90-04_System_Architecture_Diagrams/ASSETS/Sequence/02-90-04-A-303_Emergency_Response_Sequence.svg) | Emergency response data flows | Emergency systems | Active |
 
 ### 2.6 Network Topology Diagrams
@@ -54,7 +54,7 @@ This document provides a comprehensive index of all key diagrams referenced unde
 | ID | File Name | Description | Network Type | Status |
 |----|-----------|-------------|--------------|--------|
 | NET-001 | [02-90-03-A-003_Network_Topology.svg](./02-90-03_Data_Exchange_Formats/ASSETS/AFDX/02-90-03-A-003_Network_Topology.svg) | AFDX network topology | Avionics | Active |
-| NET-002 | [02-90-09 Network Diagrams](./02-90-09_Wiring_Data_Network_Diagrams/README.md) | Physical and logical network wiring | Infrastructure | Planned |
+| NET-002 | [02-90-09 Network Diagrams](./02-90-[09_Wiring_Data_Network_Diagrams/README.md](09_Wiring_Data_Network_Diagrams/README.md)) | Physical and logical network wiring | Infrastructure | Planned |
 
 ## 3. Diagram Format Standards
 
@@ -138,8 +138,8 @@ Diagrams must be updated when:
 
 - [02-90-00-001 Tables Schemas Overview](./02-90-00-001_Tables_Schemas_Overview.md)
 - [02-90-00-004 Schema Version Control](./02-90-00-004_Schema_Version_Control.md)
-- [02-90-01 Database Schemas](./02-90-01_Database_Schemas/README.md)
-- [02-90-04 System Architecture Diagrams](./02-90-04_System_Architecture_Diagrams/README.md)
+- [02-90-01 Database Schemas](./02-90-[01_Database_Schemas/README.md](01_Database_Schemas/README.md))
+- [02-90-04 System Architecture Diagrams](./02-90-[04_System_Architecture_Diagrams/README.md](04_System_Architecture_Diagrams/README.md))
 
 ### 5.2 External Standards
 
@@ -185,6 +185,7 @@ Diagrams must be updated when:
 ---
 
 ## Document Control
+- Generated by: AI (prompted by Amedeo Pelliccia); pending approval by [Approver]
 
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
 - Status: **DRAFT** – Subject to human review and approval.

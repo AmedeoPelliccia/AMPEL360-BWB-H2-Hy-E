@@ -13,8 +13,8 @@ Links:
   ParentDesign: "../.."
   Assemblies: "../ASSEMBLIES/README.md"
   BIM_CAD_Models: "../INSTALLATIONS/BIM_CAD_MODELS/README.md"
-  Requirements: "../../02-00-03_Requirements/02-00-03-002A_Master_Requirements.csv"
-  Safety: "../../02-00-02_Safety/02-00-02_Safety.md"
+  Requirements: "../../02-00-[03_Requirements/02-00-03-002A_Master_Requirements.csv](03_Requirements/02-00-03-002A_Master_Requirements.csv)"
+  Safety: "../../02-00-[02_Safety/02-00-02_Safety.md](02_Safety/02-00-02_Safety.md)"
 ChangeLog:
   - { version: "2.0.0", date: "2025-11-17", author: "AMPEL360 Design Team", change: "Added comprehensive 2D drawings structure with subdirectories and governance" }
   - { version: "1.0.0", date: "2025-11-14", author: "AMPEL360 Design Team", change: "Initial drawings/exports rules" }
@@ -34,7 +34,7 @@ This directory now contains two types of drawing content:
 2. **Assembly-derived exports** (loose files in root, legacy) — lightweight exports and views
    derived from assembly models
 
-**See `00_ADMIN/README.md` for complete documentation of the 2D drawings structure.**
+**See `[00_ADMIN/README.md](00_ADMIN/README.md)` for complete documentation of the 2D drawings structure.**
 
 Source assets live in:
 
@@ -58,7 +58,7 @@ DRAWINGS/
 └── 99_ARCHIVE/             # Superseded / archived drawings
 ```
 
-**→ See `00_ADMIN/README.md` for complete documentation**
+**→ See `[00_ADMIN/README.md](00_ADMIN/README.md)` for complete documentation**
 
 ---
 

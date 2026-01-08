@@ -12,8 +12,8 @@ Keywords: ["ATA 02","Design","Assemblies","BOM","STEP","DET"]
 Links:
   ParentDesign: "../"
   Exports: "../EXPORTS/"
-  Requirements: "../02-00-03_Requirements/02-00-03-002A_Master_Requirements.csv"
-  Safety: "../02-00-02_Safety/02-00-02_Safety.md"
+  Requirements: "../02-00-[03_Requirements/02-00-03-002A_Master_Requirements.csv](03_Requirements/02-00-03-002A_Master_Requirements.csv)"
+  Safety: "../02-00-[02_Safety/02-00-02_Safety.md](02_Safety/02-00-02_Safety.md)"
 ChangeLog:
   - { version: "1.0.0", date: "2025-11-14", author: "AMPEL360 Design Team", change: "Initial assembly rules and structure" }
 ---

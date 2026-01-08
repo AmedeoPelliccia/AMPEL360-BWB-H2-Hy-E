@@ -142,7 +142,7 @@ Where:
 4. **Save source file** in native format (`.dwg`, `.vsdx`, etc.)
 5. **Update CHANGELOG.md** with revision entry
 6. **Export to VIEW_ONLY** formats (PDF, PNG) in `70_EXPORTS/VIEW_ONLY/`
-7. **Update index** in `00_ADMIN/02-00-04-DGM_Index.csv`
+7. **Update index** in `[00_ADMIN/02-00-04-DGM_Index.csv](00_ADMIN/02-00-04-DGM_Index.csv)`
 
 ### Diagram Standards
 
@@ -193,7 +193,7 @@ Place all exports in `70_EXPORTS/VIEW_ONLY/`
 ## Related Documentation
 
 - [INSTALLATIONS README](../README.md)
-- [BIM_CAD_MODELS README](../BIM_CAD_MODELS/00_ADMIN/README.md)
+- [BIM_CAD_MODELS README](../BIM_CAD_MODELS/[00_ADMIN/README.md](00_ADMIN/README.md))
 - [AMPEL360_ASSETS_STANDARD.md](/AMPEL360_ASSETS_STANDARD.md)
 - CAD Standards Manual - see project documentation
 - Electrical Design Standards - see project documentation

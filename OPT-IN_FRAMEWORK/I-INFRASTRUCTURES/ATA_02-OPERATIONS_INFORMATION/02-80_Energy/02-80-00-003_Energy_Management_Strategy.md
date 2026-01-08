@@ -202,7 +202,7 @@ Energy loads are classified into four priority levels:
 
 ### Load Shedding Logic
 
-See [02-80-02-003_Load_Shedding_Logic.md](./02-80-[02_Energy_Budget_Management/02-80-02-003_Load_Shedding_Logic.md](02_Energy_Budget_Management/02-80-02-003_Load_Shedding_Logic.md)) for detailed algorithms.
+See [02-80-02-003_Load_Shedding_Logic.md](02_Energy_Budget_Management/02-80-02-003_Load_Shedding_Logic.md) for detailed algorithms.
 
 **Principles**:
 1. **Automatic Shedding**: Priority 3 and 4 loads shed automatically when power < threshold
