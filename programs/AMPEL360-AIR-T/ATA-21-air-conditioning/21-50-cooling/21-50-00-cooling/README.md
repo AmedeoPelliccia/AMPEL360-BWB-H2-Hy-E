@@ -6,7 +6,7 @@ This is the general subject for ATA 21-50, containing common information applica
 
 ## Directory Structure
 
-\`\`\`
+```
 21-50-00-cooling/
 ├── SSOT/                           # Single Source of Truth
 │   └── (Master content goes here)
@@ -25,7 +25,7 @@ This is the general subject for ATA 21-50, containing common information applica
     │   └── csdb.profile.yaml       # CSDB profile settings
     └── IPC/                        # Illustrated Parts Catalog
         └── (same structure as AMM)
-\`\`\`
+```
 
 ## SSOT (Single Source of Truth)
 
@@ -69,17 +69,17 @@ Each publication's CSDB follows the S1000D standard:
 Defines the relationship between data modules and publication structure.
 
 Example format:
-\`\`\`csv
+```csv
 publication_module,data_module,sequence,applicability
 PM-21-50-00-001,DM-21-50-00-001,1,ALL
 PM-21-50-00-001,DM-21-50-00-002,2,ALL
-\`\`\`
+```
 
 ### csdb.profile.yaml
 CSDB profile configuration for this subject.
 
 Example format:
-\`\`\`yaml
+```yaml
 profile:
   ata_chapter: "21-50"
   subject: "00"
@@ -94,7 +94,7 @@ validation:
 processing:
   output_formats: ["pdf", "html5", "xml"]
   stylesheet: "default"
-\`\`\`
+```
 
 ## Document Control
 
