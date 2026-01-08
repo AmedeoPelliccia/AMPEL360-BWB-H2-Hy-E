@@ -821,12 +821,23 @@ jobs:
               pull_number: prNum,
               per_page: 100
             });
-            const mdChanged = files
+            const mdFiles = files
               .map(f => f.filename)
-              .filter(name => name.endsWith('.md'))
-              .join(', ');
+              .filter(name => name.endsWith('.md'));
+            
+            // Limit the file list to prevent "Argument list too long" error
+            const MAX_FILES_TO_SHOW = 20;
+            let mdChanged;
+            if (mdFiles.length > MAX_FILES_TO_SHOW) {
+              mdChanged = mdFiles.slice(0, MAX_FILES_TO_SHOW).join(', ') + 
+                `, ... and ${mdFiles.length - MAX_FILES_TO_SHOW} more files`;
+            } else {
+              mdChanged = mdFiles.join(', ');
+            }
+            
             core.setOutput('head_sha', pr.head.sha);
             core.setOutput('md_changed', mdChanged);
+            core.setOutput('md_count', mdFiles.length.toString());
 
       - name: Pool Verification Points from Artifacts
         id: pool
@@ -876,6 +887,7 @@ jobs:
           STANDARDS="${{ steps.pool.outputs.standards }}"
           VALIDATION_PATHS="${{ steps.pool.outputs.validation_paths }}"
           CHANGED="${{ steps.prctx.outputs.md_changed }}"
+          MD_COUNT="${{ steps.prctx.outputs.md_count }}"
           AUDIT_SKIPPED="${{ steps.pool.outputs.audit_skipped }}"
           
           if [ "$AUDIT_SKIPPED" = "true" ]; then
@@ -884,10 +896,17 @@ jobs:
           
           CHECKLIST="$CHECKLIST"$'\n'"- [ ] Cross-references validated against: ${VALIDATION_PATHS:-default paths}"
           CHECKLIST="$CHECKLIST"$'\n'"- [ ] Standards compliance: ${STANDARDS:-default standards}"
-          CHECKLIST="$CHECKLIST"$'\n'"- [ ] Contextual validation for changed files: ${CHANGED:-none}"
           
-          if [ -n "${CHANGED:-}" ]; then
-            CHECKLIST="$CHECKLIST"$'\n'"- [ ] Reviewed changes: ${CHANGED}"
+          # Add file count information
+          if [ -n "${MD_COUNT:-}" ] && [ "${MD_COUNT}" != "0" ]; then
+            CHECKLIST="$CHECKLIST"$'\n'"- [ ] Contextual validation for ${MD_COUNT} changed markdown file(s)"
+          else
+            CHECKLIST="$CHECKLIST"$'\n'"- [ ] Contextual validation for changed files: none"
+          fi
+          
+          # Add first 20 files (or fewer) as a preview
+          if [ -n "${CHANGED:-}" ] && [ "${CHANGED}" != "none" ]; then
+            CHECKLIST="$CHECKLIST"$'\n'"- [ ] Changed files preview: ${CHANGED}"
           fi
           
           # Add custom checklist items from V&V lake
