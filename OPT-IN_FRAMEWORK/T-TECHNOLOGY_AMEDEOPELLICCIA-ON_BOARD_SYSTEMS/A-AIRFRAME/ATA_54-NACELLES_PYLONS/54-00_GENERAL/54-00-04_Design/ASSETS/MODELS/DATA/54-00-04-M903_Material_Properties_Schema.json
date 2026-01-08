@@ -1,0 +1,267 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "54-00-04-M903_Material_Properties_Schema",
+  "title": "ATA 54 Material Properties Schema",
+  "description": "JSON schema for material properties database used in nacelle and pylon structural analysis",
+  "version": "0.1.0",
+  "type": "object",
+  "required": [
+    "material_id",
+    "material_name",
+    "specification"
+  ],
+  "properties": {
+    "material_id": {
+      "type": "string",
+      "pattern": "^MAT-54-[A-Z0-9]{3,6}$",
+      "description": "Unique material identifier"
+    },
+    "material_name": {
+      "type": "string",
+      "description": "Material name or designation"
+    },
+    "specification": {
+      "type": "string",
+      "description": "Material specification (e.g., MMPDS-01, AMS, ASTM)"
+    },
+    "material_type": {
+      "type": "string",
+      "enum": ["Metal", "Composite", "Polymer", "Ceramic", "Hybrid"],
+      "description": "General material type"
+    },
+    "subtype": {
+      "type": "string",
+      "description": "Specific subtype (e.g., Aluminum Alloy, CFRP, Titanium Alloy)"
+    },
+    "form": {
+      "type": "string",
+      "enum": ["Sheet", "Plate", "Extrusion", "Forging", "Casting", "Laminate", "Prepreg", "Honeycomb"],
+      "description": "Material form"
+    },
+    "mechanical_properties": {
+      "type": "object",
+      "properties": {
+        "density_kg_m3": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Density in kg/m³"
+        },
+        "elastic_modulus_gpa": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Elastic modulus (Young's modulus) in GPa"
+        },
+        "shear_modulus_gpa": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Shear modulus in GPa"
+        },
+        "poissons_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.5,
+          "description": "Poisson's ratio"
+        },
+        "tensile_strength_mpa": {
+          "type": "object",
+          "properties": {
+            "ultimate": {
+              "type": "number",
+              "description": "Ultimate tensile strength in MPa"
+            },
+            "yield": {
+              "type": "number",
+              "description": "Yield strength in MPa"
+            },
+            "basis": {
+              "type": "string",
+              "enum": ["A-Basis", "B-Basis", "S-Basis", "Typical"],
+              "description": "Statistical basis for allowable"
+            }
+          }
+        },
+        "compressive_strength_mpa": {
+          "type": "object",
+          "properties": {
+            "ultimate": {
+              "type": "number",
+              "description": "Ultimate compressive strength in MPa"
+            },
+            "yield": {
+              "type": "number",
+              "description": "Compressive yield strength in MPa"
+            },
+            "basis": {
+              "type": "string",
+              "enum": ["A-Basis", "B-Basis", "S-Basis", "Typical"]
+            }
+          }
+        },
+        "shear_strength_mpa": {
+          "type": "number",
+          "description": "Shear strength in MPa"
+        },
+        "bearing_strength_mpa": {
+          "type": "number",
+          "description": "Bearing strength in MPa"
+        },
+        "elongation_percent": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Elongation at break (%)"
+        }
+      }
+    },
+    "thermal_properties": {
+      "type": "object",
+      "properties": {
+        "thermal_conductivity_w_mk": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Thermal conductivity in W/(m·K)"
+        },
+        "specific_heat_j_kgk": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Specific heat capacity in J/(kg·K)"
+        },
+        "coefficient_thermal_expansion_1k": {
+          "type": "number",
+          "description": "Coefficient of thermal expansion in 1/K"
+        },
+        "max_service_temperature_c": {
+          "type": "number",
+          "description": "Maximum continuous service temperature in °C"
+        },
+        "short_term_temperature_c": {
+          "type": "number",
+          "description": "Short-term temperature limit in °C"
+        }
+      }
+    },
+    "fatigue_properties": {
+      "type": "object",
+      "properties": {
+        "sn_curve": {
+          "type": "object",
+          "properties": {
+            "stress_ratio": {
+              "type": "number",
+              "description": "Stress ratio R (min stress / max stress)"
+            },
+            "data_points": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "cycles": {
+                    "type": "number",
+                    "description": "Number of cycles"
+                  },
+                  "stress_mpa": {
+                    "type": "number",
+                    "description": "Stress amplitude in MPa"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "endurance_limit_mpa": {
+          "type": "number",
+          "description": "Fatigue endurance limit in MPa (if applicable)"
+        }
+      }
+    },
+    "environmental_resistance": {
+      "type": "object",
+      "properties": {
+        "corrosion_resistance": {
+          "type": "string",
+          "enum": ["Excellent", "Good", "Fair", "Poor"],
+          "description": "Corrosion resistance rating"
+        },
+        "moisture_absorption_percent": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Moisture absorption (% by weight)"
+        },
+        "uv_resistance": {
+          "type": "string",
+          "enum": ["Excellent", "Good", "Fair", "Poor"],
+          "description": "UV resistance rating"
+        }
+      }
+    },
+    "manufacturing": {
+      "type": "object",
+      "properties": {
+        "processes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Compatible manufacturing processes"
+        },
+        "machinability": {
+          "type": "string",
+          "enum": ["Excellent", "Good", "Fair", "Difficult"],
+          "description": "Machinability rating"
+        },
+        "weldability": {
+          "type": "string",
+          "enum": ["Excellent", "Good", "Fair", "Not Recommended"],
+          "description": "Weldability rating"
+        }
+      }
+    },
+    "cost_availability": {
+      "type": "object",
+      "properties": {
+        "relative_cost": {
+          "type": "string",
+          "enum": ["Low", "Medium", "High", "Very High"],
+          "description": "Relative cost compared to baseline materials"
+        },
+        "availability": {
+          "type": "string",
+          "enum": ["Readily Available", "Limited", "Long Lead Time"],
+          "description": "Material availability"
+        }
+      }
+    },
+    "certification": {
+      "type": "object",
+      "properties": {
+        "approved_specifications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Approved material specifications"
+        },
+        "flammability_rating": {
+          "type": "string",
+          "description": "Flammability rating per FAR 25.853"
+        },
+        "smoke_toxicity": {
+          "type": "string",
+          "description": "Smoke and toxicity rating"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or special considerations"
+    },
+    "data_source": {
+      "type": "string",
+      "description": "Source of material data (e.g., MMPDS-01, supplier data sheet)"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last update (YYYY-MM-DD)"
+    }
+  }
+}

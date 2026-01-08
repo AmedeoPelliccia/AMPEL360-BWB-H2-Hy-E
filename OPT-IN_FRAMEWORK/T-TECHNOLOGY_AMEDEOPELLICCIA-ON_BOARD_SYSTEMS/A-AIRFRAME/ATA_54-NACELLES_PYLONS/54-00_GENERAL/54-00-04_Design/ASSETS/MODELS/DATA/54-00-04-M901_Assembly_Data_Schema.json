@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "54-00-04-M901_Assembly_Data_Schema",
+  "title": "ATA 54 Assembly Data Schema",
+  "description": "JSON schema for nacelle and pylon assembly data structure, metadata, and configuration",
+  "version": "0.1.0",
+  "type": "object",
+  "required": [
+    "assembly_metadata",
+    "components"
+  ],
+  "properties": {
+    "assembly_metadata": {
+      "type": "object",
+      "required": [
+        "assembly_id",
+        "assembly_name",
+        "ata_chapter",
+        "version"
+      ],
+      "properties": {
+        "assembly_id": {
+          "type": "string",
+          "pattern": "^ASM-54-[A-Z]{3}-[0-9]{3}$",
+          "description": "Unique assembly identifier following ATA 54 naming convention"
+        },
+        "assembly_name": {
+          "type": "string",
+          "description": "Human-readable assembly name"
+        },
+        "ata_chapter": {
+          "type": "string",
+          "enum": ["54"],
+          "description": "ATA chapter (54 for Nacelles & Pylons)"
+        },
+        "zone": {
+          "type": "string",
+          "description": "Aircraft zone(s) where assembly is located (e.g., 540-560)"
+        },
+        "parent_ci": {
+          "type": "string",
+          "description": "Parent Configuration Item (CI) identifier"
+        },
+        "related_cis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related Configuration Items"
+        },
+        "structure_classification": {
+          "type": "string",
+          "enum": ["Primary", "Secondary", "Tertiary"],
+          "description": "Structural classification"
+        },
+        "plm_item_id": {
+          "type": "string",
+          "description": "PLM (Product Lifecycle Management) system identifier"
+        },
+        "cad_master_drawing": {
+          "type": "string",
+          "description": "CAD master drawing number"
+        },
+        "version": {
+          "type": "object",
+          "required": ["design_version", "status", "last_update"],
+          "properties": {
+            "design_version": {
+              "type": "string",
+              "description": "Design version number"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["Conceptual", "Preliminary", "Detailed", "Released", "Obsolete"],
+              "description": "Design status"
+            },
+            "last_update": {
+              "type": "string",
+              "format": "date",
+              "description": "Last update date (YYYY-MM-DD)"
+            },
+            "author": {
+              "type": "string",
+              "description": "Design author or responsible engineer"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "part_number",
+          "description",
+          "quantity",
+          "material"
+        ],
+        "properties": {
+          "part_number": {
+            "type": "string",
+            "description": "Component part number"
+          },
+          "ci_number": {
+            "type": "string",
+            "description": "Configuration Item number"
+          },
+          "description": {
+            "type": "string",
+            "description": "Component description"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Quantity required per assembly"
+          },
+          "material": {
+            "type": "string",
+            "description": "Material specification (e.g., CFRP-Epoxy, Ti-6Al-4V)"
+          },
+          "primary_load_path": {
+            "type": "boolean",
+            "description": "Whether component is in primary load path"
+          },
+          "criticality": {
+            "type": "string",
+            "enum": ["Critical", "Essential", "Standard"],
+            "description": "Component criticality classification"
+          },
+          "mass_kg": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Component mass in kilograms"
+          },
+          "supplier": {
+            "type": "string",
+            "description": "Component supplier or manufacturer"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes or special requirements"
+          }
+        }
+      }
+    },
+    "manufacturing": {
+      "type": "object",
+      "properties": {
+        "process": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Manufacturing processes required"
+        },
+        "tooling": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special tooling required"
+        },
+        "assembly_sequence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Assembly sequence steps"
+        }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Linked requirement IDs"
+        },
+        "drawings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related drawing IDs"
+        },
+        "analysis": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related analysis model IDs"
+        },
+        "tests": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related test IDs"
+        }
+      }
+    }
+  }
+}
