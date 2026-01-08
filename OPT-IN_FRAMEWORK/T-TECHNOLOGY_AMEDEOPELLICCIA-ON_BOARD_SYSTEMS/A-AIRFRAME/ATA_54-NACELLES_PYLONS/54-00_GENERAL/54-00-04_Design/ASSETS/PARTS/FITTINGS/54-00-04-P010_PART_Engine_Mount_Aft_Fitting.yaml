@@ -1,0 +1,147 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# 54-00-04-P010 — Engine Mount Aft Fitting
+
+# Part Identification
+id: "54-00-04-P010"
+title: "Engine Mount Aft Fitting"
+category: "PART"
+part_type: "Fitting"
+ata_chapter: "54"
+description: "Aft engine mount fitting providing rear support and thrust reaction"
+status: "Draft"
+version: "0.1.0"
+owner: "Engine Interface"
+last_updated: "2026-01-02"
+
+# Traceability Links
+traceability:
+  parent_assembly:
+    id: "54-00-04-A005"
+    title: "Engine Mount Assembly"
+  requirements:
+    - id: "54-00-03-05-003"
+      title: "Engine Mount Interface Requirements"
+    - id: "71-00-03-01-001"
+      title: "Powerplant Installation Requirements"
+  drawings:
+    - id: "54-00-04-D007"
+      title: "Engine Mount Interface Drawing"
+
+# Material Specifications
+material:
+  primary: "Ti-10V-2Fe-3Al"
+  specification: "AMS 4986, Beta titanium alloy"
+  alternative_materials:
+    - "Steel 15-5PH for higher strength applications"
+
+# Physical Dimensions
+dimensions:
+  length_mm: 320
+  width_mm: 200
+  thickness_mm: 35.0
+  weight_kg: 5.9
+  tolerance: "±0.05mm critical interfaces, ±0.15kg mass"
+
+# Manufacturing Information
+manufacturing:
+  process: "Forging with CNC finish machining, solution treatment and aging"
+  tooling: "Forging die, 5-axis CNC mill, heat treatment furnace"
+  cycle_time_hours: 26
+  inspection_requirements:
+    - "100% dimensional inspection per drawing 54-00-04-D007"
+    - "NDT - Fluorescent penetrant inspection 100%"
+    - "Microstructure verification"
+    - "Thrust load test to 150% design ultimate load"
+
+# Mechanical Properties
+mechanical_properties:
+  tensile_strength_mpa: 1170
+  compressive_strength_mpa: 1100
+  elastic_modulus_gpa: 107
+  yield_strength_mpa: 1100
+  ultimate_strength_mpa: 1170
+
+# Environmental Limits
+environmental_limits:
+  operating_temp_min_c: -55
+  operating_temp_max_c: 300
+  humidity_max_percent: 100
+  salt_fog_resistance: "Per ASTM B117, 3000 hours minimum"
+
+# Design Features
+design_features:
+  - "Dual-lug clevis design for thrust reaction"
+  - "High-temperature capability for aft engine bay"
+  - "Vibration isolation provisions"
+  - "Thermal barrier coating on hot-side surfaces"
+  - "Maintenance access provisions"
+
+# Interfaces
+interfaces:
+  - interface_id: "IF-P010-ENGINE"
+    description: "Engine aft mount lug interface"
+    fastener_type: "Pin assembly (32mm dia)"
+    quantity: 1
+  - interface_id: "IF-P010-PYLON"
+    description: "Pylon aft nacelle frame attachment"
+    fastener_type: "Hi-Lok HL14"
+    quantity: 8
+  - interface_id: "IF-P010-THRUST"
+    description: "Thrust link attachment"
+    fastener_type: "Spherical bearing"
+    quantity: 1
+
+# Maintenance Information
+maintenance:
+  inspection_interval_fh: 2000
+  inspection_method: "Visual inspection, fluorescent penetrant inspection"
+  special_maintenance_requirements:
+    - "Pin bore inspection for wear every 4000 FH"
+    - "Thermal barrier coating condition check every 1000 FH"
+    - "Thrust link bearing inspection every 1000 FH"
+
+# Supply Chain
+supply_chain:
+  manufacturer: "TBD - Aerospace titanium forgings supplier"
+  supplier_part_number: "TBD"
+  lead_time_weeks: 22
+  minimum_order_quantity: 1
+
+# Certification
+certification:
+  critical_part: true
+  cert_basis: "CS-25.571, CS-25.613, CS-25.903 (engine installation)"
+  special_conditions:
+    - "Static and fatigue testing required"
+    - "Ultimate thrust load test to 150% limit load"
+    - "High-temperature endurance test"
+
+# Additional Notes
+notes: |
+  The engine mount aft fitting completes the three-point engine mounting system
+  (forward mount, aft mount, and thrust link). It primarily reacts thrust loads
+  during takeoff and reverse thrust operation, and must withstand the highest
+  temperatures in the engine bay.
+  
+  Design features:
+  - Optimized for thrust load reaction with minimal bending
+  - Higher temperature capability than forward mount
+  - Thermal barrier coating protects from exhaust heat
+  - Dual-lug design provides redundancy
+  - Must accommodate significant thermal expansion
+  - Interface with thrust link allows for thermal growth

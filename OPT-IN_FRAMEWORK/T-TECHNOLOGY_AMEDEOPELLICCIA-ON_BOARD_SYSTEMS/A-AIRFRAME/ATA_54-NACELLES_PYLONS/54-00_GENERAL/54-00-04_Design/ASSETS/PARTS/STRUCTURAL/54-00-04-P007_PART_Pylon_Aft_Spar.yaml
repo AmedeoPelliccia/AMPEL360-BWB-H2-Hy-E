@@ -1,0 +1,147 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# 54-00-04-P007 — Pylon Aft Spar
+
+# Part Identification
+id: "54-00-04-P007"
+title: "Pylon Aft Spar"
+category: "PART"
+part_type: "Structural"
+ata_chapter: "54"
+description: "Primary load-bearing aft spar of pylon structure, rear load path"
+status: "Draft"
+version: "0.1.0"
+owner: "Pylon Structures"
+last_updated: "2026-01-02"
+
+# Traceability Links
+traceability:
+  parent_assembly:
+    id: "54-00-04-A002"
+    title: "Pylon Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Pylon Structural Requirements"
+    - id: "54-00-03-04-002"
+      title: "Pylon Load Path Requirements"
+  drawings:
+    - id: "54-00-04-D003"
+      title: "Pylon General Arrangement"
+    - id: "54-00-04-D009"
+      title: "Pylon Load Path Diagram"
+
+# Material Specifications
+material:
+  primary: "CFRP-Epoxy"
+  specification: "AMS 3895, Prepreg IM7/977-3"
+  alternative_materials:
+    - "Hybrid CFRP/Titanium for attachment zones"
+
+# Physical Dimensions
+dimensions:
+  length_mm: 2600
+  width_mm: 300
+  thickness_mm: 22.0
+  weight_kg: 38.5
+  tolerance: "±1.0mm dimensional, ±1.2kg mass"
+
+# Manufacturing Information
+manufacturing:
+  process: "Autoclave cure, automated fiber placement with co-bonded inserts"
+  tooling: "Mandrel tool ASM-54-PYL-M002, autoclave cure fixture"
+  cycle_time_hours: 26
+  inspection_requirements:
+    - "Dimensional inspection per drawing 54-00-04-D003"
+    - "NDT - Ultrasonic C-scan 100% coverage"
+    - "Co-bonded insert pull test"
+    - "Static load test to 150% design limit load"
+
+# Mechanical Properties
+mechanical_properties:
+  tensile_strength_mpa: 2850
+  compressive_strength_mpa: 1480
+  elastic_modulus_gpa: 168
+  yield_strength_mpa: 2450
+  ultimate_strength_mpa: 2850
+
+# Environmental Limits
+environmental_limits:
+  operating_temp_min_c: -55
+  operating_temp_max_c: 130
+  humidity_max_percent: 100
+  salt_fog_resistance: "Per ASTM B117, 1000 hours minimum"
+
+# Design Features
+design_features:
+  - "C-channel cross-section for torsion resistance"
+  - "Co-bonded titanium inserts at high-load interfaces"
+  - "Lightning strike protection layer"
+  - "Systems routing channels integrated"
+  - "Damage tolerance features per AC 20-107B"
+
+# Interfaces
+interfaces:
+  - interface_id: "IF-P007-WING"
+    description: "Wing attachment interface (upper aft)"
+    fastener_type: "Hi-Lok HL19"
+    quantity: 10
+  - interface_id: "IF-P007-NACELLE"
+    description: "Nacelle attachment interface (lower aft)"
+    fastener_type: "Hi-Lok HL14"
+    quantity: 8
+  - interface_id: "IF-P007-FWD"
+    description: "Connection to forward spar"
+    fastener_type: "Hi-Lok HL14"
+    quantity: 16
+
+# Maintenance Information
+maintenance:
+  inspection_interval_fh: 3000
+  inspection_method: "Visual inspection, tap test for delamination"
+  special_maintenance_requirements:
+    - "Attachment insert inspection every 6000 FH"
+    - "Systems routing integrity check every 1500 FH"
+
+# Supply Chain
+supply_chain:
+  manufacturer: "TBD - Primary composite structures supplier"
+  supplier_part_number: "TBD"
+  lead_time_weeks: 18
+  minimum_order_quantity: 1
+
+# Certification
+certification:
+  critical_part: true
+  cert_basis: "CS-25.571, CS-25.613"
+  special_conditions:
+    - "Static and fatigue testing per AC 20-107B"
+    - "Ultimate load test to 150% limit load"
+    - "Lightning strike test required"
+
+# Additional Notes
+notes: |
+  The pylon aft spar works in conjunction with the forward spar to form the
+  primary structural load path of the pylon. It carries loads from the aft
+  engine mount point to the wing rear spar, and provides torsional stiffness
+  to the pylon structure.
+  
+  Key design features:
+  - Optimized for combined bending and torsion loads
+  - Co-bonded inserts reduce stress concentrations
+  - Lightning strike protection integrated into layup
+  - Lighter than forward spar due to reduced bending moment
+  - Systems integration provisions minimize interference

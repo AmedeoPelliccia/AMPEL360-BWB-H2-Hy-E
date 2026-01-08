@@ -1,0 +1,144 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# 54-00-04-P003 — Fan Cowl Aft Panel
+
+# Part Identification
+id: "54-00-04-P003"
+title: "Fan Cowl Aft Panel"
+category: "PART"
+part_type: "Structural"
+ata_chapter: "54"
+description: "Aft section of fan cowl with thrust reverser interface provisions"
+status: "Draft"
+version: "0.1.0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+# Traceability Links
+traceability:
+  parent_assembly:
+    id: "54-00-04-A001"
+    title: "Primary Nacelle Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Requirements"
+    - id: "78-00-03-01-001"
+      title: "Thrust Reverser Interface Requirements"
+  drawings:
+    - id: "54-00-04-D001"
+      title: "Nacelle Primary Structure - General Arrangement"
+    - id: "54-00-04-D006"
+      title: "Thrust Reverser Installation"
+
+# Material Specifications
+material:
+  primary: "CFRP-Epoxy"
+  specification: "AMS 3895, Prepreg T700/M21"
+  alternative_materials:
+    - "Carbon/BMI for higher temperature zones"
+
+# Physical Dimensions
+dimensions:
+  length_mm: 1100
+  width_mm: 980
+  thickness_mm: 4.0
+  weight_kg: 21.0
+  tolerance: "±0.8mm dimensional, ±0.6kg mass"
+
+# Manufacturing Information
+manufacturing:
+  process: "Autoclave cure, automated fiber placement with local reinforcement"
+  tooling: "Female mold ASM-54-NAC-M003, TR interface tooling"
+  cycle_time_hours: 20
+  inspection_requirements:
+    - "Dimensional inspection per drawing 54-00-04-D001"
+    - "NDT - Ultrasonic C-scan on reinforced zones"
+    - "Thrust reverser interface load test"
+    - "Seal integrity pressure test"
+
+# Mechanical Properties
+mechanical_properties:
+  tensile_strength_mpa: 2700
+  compressive_strength_mpa: 1400
+  elastic_modulus_gpa: 160
+  yield_strength_mpa: 2300
+  ultimate_strength_mpa: 2700
+
+# Environmental Limits
+environmental_limits:
+  operating_temp_min_c: -55
+  operating_temp_max_c: 130
+  humidity_max_percent: 100
+  salt_fog_resistance: "Per ASTM B117, 1000 hours minimum"
+
+# Design Features
+design_features:
+  - "Reinforced thrust reverser attachment zones"
+  - "Aerodynamic transition to core cowl"
+  - "Lightning strike protection integrated"
+  - "Acoustic treatment in forward sections"
+  - "Quick-release latch system for maintenance access"
+
+# Interfaces
+interfaces:
+  - interface_id: "IF-P003-FWD"
+    description: "Interface with fan cowl forward panel"
+    fastener_type: "Quick-release latches"
+    quantity: 24
+  - interface_id: "IF-P003-TR"
+    description: "Thrust reverser attachment interface"
+    fastener_type: "Hi-Lok HL14"
+    quantity: 32
+  - interface_id: "IF-P003-CORE"
+    description: "Interface with core cowl panel"
+    fastener_type: "Hi-Lok HL11"
+    quantity: 28
+
+# Maintenance Information
+maintenance:
+  inspection_interval_fh: 1000
+  inspection_method: "Visual inspection, tap test, TR interface check"
+  special_maintenance_requirements:
+    - "Thrust reverser interface alignment check every 2000 FH"
+    - "Seal condition inspection every 500 FH"
+
+# Supply Chain
+supply_chain:
+  manufacturer: "TBD - Composite aerostructures supplier"
+  supplier_part_number: "TBD"
+  lead_time_weeks: 14
+  minimum_order_quantity: 1
+
+# Certification
+certification:
+  critical_part: true
+  cert_basis: "CS-25.571, CS-25.933 (thrust reverser interface)"
+  special_conditions:
+    - "Thrust reverser interface load testing"
+    - "High-cycle fatigue testing"
+
+# Additional Notes
+notes: |
+  The fan cowl aft panel provides structural continuity between the fan section
+  and thrust reverser system. It must withstand operational loads from the thrust
+  reverser while maintaining aerodynamic efficiency.
+  
+  Critical design considerations:
+  - Reinforced zones for thrust reverser actuation loads
+  - Provisions for quick maintenance access
+  - Aerodynamic transition ensures smooth airflow
+  - Robust seal interfaces prevent air leakage
