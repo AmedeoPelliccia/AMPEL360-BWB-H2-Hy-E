@@ -54,7 +54,7 @@ jobs:
           sarif_file: doc_meta_results.sarif
           category: doc-metadata
 
-           - name: Add job summary
+      - name: Add job summary
         if: steps.check_doc_meta.outcome == 'failure'
         run: |
           echo "## 📋 Document Metadata Issues Found" >> $GITHUB_STEP_SUMMARY
