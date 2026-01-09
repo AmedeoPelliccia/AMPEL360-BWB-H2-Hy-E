@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pm PUBLIC "-//S1000D//DTD PM 5.0//EN" "pm.dtd">
+<!--
+S1000D Publication Module - ATA 23-10 Maintenance Procedures
+File: PMC-AMPEL360AT-23-10-00020_001_00_001-00.XML
+Purpose: Maintenance procedures including tests, removal and installation
+Project: AMPEL360-AIR-T
+Created: 2026-01-09
+-->
+<pm>
+  <identAndStatusSection>
+    <pmAddress>
+      <pmIdent>
+        <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00020" pmVolume="23-10"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </pmIdent>
+      <pmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <pmTitle>ATA 23-10 Speech Communications - Maintenance Procedures</pmTitle>
+      </pmAddressItems>
+    </pmAddress>
+    <pmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>Amedeo Pelliccia</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All aircraft configurations with Speech Communications systems (ATA 23-10)</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>BREX-AMPEL360AT-ATA23-v1-0</techName>
+              <infoName>Business Rules Exchange</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </pmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <pmEntry>
+      <pmEntryTitle>Maintenance Procedures</pmEntryTitle>
+      
+      <!-- Test Procedures Section -->
+      <pmEntry>
+        <pmEntryTitle>Test Procedures</pmEntryTitle>
+        
+        <!-- Reference to Test Procedure Data Module (Info Code 300A) -->
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="300" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Speech Communications System</techName>
+              <infoName>Test</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </pmEntry>
+      
+      <!-- Removal Procedures Section -->
+      <pmEntry>
+        <pmEntryTitle>Removal Procedures</pmEntryTitle>
+        
+        <!-- Reference to Removal Procedure Data Module (Info Code 520A) -->
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="520" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Speech Communications System</techName>
+              <infoName>Removal</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </pmEntry>
+      
+      <!-- Installation Procedures Section -->
+      <pmEntry>
+        <pmEntryTitle>Installation Procedures</pmEntryTitle>
+        
+        <!-- Reference to Installation Procedure Data Module (Info Code 620A) -->
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="620" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Speech Communications System</techName>
+              <infoName>Installation</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </pmEntry>
+      
+    </pmEntry>
+  </content>
+</pm>
