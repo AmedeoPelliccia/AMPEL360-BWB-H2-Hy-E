@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!-- Common Caution Information Set -->
+
+<commonInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <commonInfoIdent>
+    <commonInfoCode>CAUTION-0001</commonInfoCode>
+    <commonInfoType>caution</commonInfoType>
+  </commonInfoIdent>
+  
+  <warningAndCautionInfo>
+    <caution>
+      <cautionIdent>CAUT-FIRE-SYSTEM-001</cautionIdent>
+      <cautionText>
+        <para>Ensure all personnel are clear of discharge areas before testing
+              fire extinguishing system.</para>
+        <para>Fire extinguishing agent discharge may cause equipment damage or
+              personal injury.</para>
+      </cautionText>
+    </caution>
+  </warningAndCautionInfo>
+</commonInfo>

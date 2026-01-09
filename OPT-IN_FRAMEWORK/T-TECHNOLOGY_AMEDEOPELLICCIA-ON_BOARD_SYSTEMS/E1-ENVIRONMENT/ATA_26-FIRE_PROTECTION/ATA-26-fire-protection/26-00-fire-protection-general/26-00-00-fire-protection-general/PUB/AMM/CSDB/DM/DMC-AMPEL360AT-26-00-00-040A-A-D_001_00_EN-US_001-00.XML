@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Sample S1000D Data Module - Description and Operation (040A)
+  
+  This is a placeholder data module demonstrating the S1000D structure.
+  ATA 26-00-00 - Fire Protection General
+  
+  Model: AMPEL360AT
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="26" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="0" disassyCodeVariant="A"
+                infoCode="040" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Fire Protection System</techName>
+          <infoName>Description and Operation</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Fire Protection System Overview</title>
+        <para>
+          The fire protection system (ATA 26) provides fire detection, warning, and 
+          extinguishing capabilities for all critical aircraft zones.
+        </para>
+        <para>
+          The system is designed to meet certification requirements per CS-25 and 
+          operates in accordance with DO-160 environmental qualifications.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>System Architecture</title>
+        <para>
+          The fire protection system consists of three main subsystems:
+        </para>
+        <para>
+          - Detection (ATA 26-10): Fire and smoke detection in all protected zones
+        </para>
+        <para>
+          - Extinguishing (ATA 26-20): Fire suppression using approved agents
+        </para>
+        <para>
+          - Explosion Suppression (ATA 26-30): Inerting and ventilation for H2 and battery systems
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Protected Zones</title>
+        <para>
+          The following zones are equipped with fire protection:
+        </para>
+        <para>
+          1. Engine and propulsion bays
+        </para>
+        <para>
+          2. APU and fuel cell compartments
+        </para>
+        <para>
+          3. Cargo compartments
+        </para>
+        <para>
+          4. Lavatories
+        </para>
+        <para>
+          5. Avionics and electrical bays
+        </para>
+        <para>
+          6. Wheel wells and gear bays
+        </para>
+        <para>
+          7. Battery compartments
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Operation</title>
+        <para>
+          Upon fire detection, the system provides immediate visual and aural warnings
+          to the flight crew. Automatic or manual fire extinguishing can be initiated
+          through the fire protection control panel.
+        </para>
+        <para>
+          The system continuously monitors all protected zones and provides status
+          indications on the flight deck.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>References</title>
+        <para>
+          - CS-25.851: Fire extinguishers
+        </para>
+        <para>
+          - CS-25.865: Fire protection of flight controls, engine mounts, and other 
+            flight structure
+        </para>
+        <para>
+          - CS-25.1309: Equipment, systems, and installations
+        </para>
+        <para>
+          - DO-160: Environmental Conditions and Test Procedures for Airborne Equipment
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>
