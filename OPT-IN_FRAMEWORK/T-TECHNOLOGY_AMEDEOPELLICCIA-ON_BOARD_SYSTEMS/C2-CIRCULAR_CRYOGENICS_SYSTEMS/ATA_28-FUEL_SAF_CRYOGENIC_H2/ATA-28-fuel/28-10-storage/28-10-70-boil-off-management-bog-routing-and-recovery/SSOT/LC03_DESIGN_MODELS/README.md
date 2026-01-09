@@ -1,0 +1,3 @@
+# LC03_DESIGN_MODELS
+
+Placeholder for 28-10-70 LC03_DESIGN_MODELS content.

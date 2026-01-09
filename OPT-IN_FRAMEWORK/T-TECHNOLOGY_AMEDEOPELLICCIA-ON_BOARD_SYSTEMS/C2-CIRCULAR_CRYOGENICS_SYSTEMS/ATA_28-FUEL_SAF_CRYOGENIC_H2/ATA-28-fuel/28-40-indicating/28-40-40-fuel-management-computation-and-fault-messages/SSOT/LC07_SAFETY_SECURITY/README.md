@@ -1,0 +1,3 @@
+# LC07_SAFETY_SECURITY
+
+Placeholder for 28-40-40 LC07_SAFETY_SECURITY content.

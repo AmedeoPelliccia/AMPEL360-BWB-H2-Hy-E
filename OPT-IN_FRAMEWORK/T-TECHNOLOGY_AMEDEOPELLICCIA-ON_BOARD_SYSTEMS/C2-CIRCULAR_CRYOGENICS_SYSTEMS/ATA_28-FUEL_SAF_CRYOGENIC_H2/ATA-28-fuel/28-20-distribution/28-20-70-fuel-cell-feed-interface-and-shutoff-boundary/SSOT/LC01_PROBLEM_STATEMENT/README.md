@@ -1,0 +1,3 @@
+# LC01_PROBLEM_STATEMENT
+
+Placeholder for 28-20-70 LC01_PROBLEM_STATEMENT content.

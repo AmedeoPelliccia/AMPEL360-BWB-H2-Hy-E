@@ -1,0 +1,13 @@
+# CSDB Profile for 28-10-28-10-storage
+version: 1
+project: AMPEL360-AIR-T
+ata_chapter: 28
+section: "28-10-28-10-storage"
+brex_reference: "BREX-AMPEL360AT-AIR-T_001-00.XML"
+language: "EN-US"
+issue_info:
+  issue_number: "001"
+  in_work: "00"
+applicability:
+  model: "AMPEL360-AIR-T"
+  variant: "H2"

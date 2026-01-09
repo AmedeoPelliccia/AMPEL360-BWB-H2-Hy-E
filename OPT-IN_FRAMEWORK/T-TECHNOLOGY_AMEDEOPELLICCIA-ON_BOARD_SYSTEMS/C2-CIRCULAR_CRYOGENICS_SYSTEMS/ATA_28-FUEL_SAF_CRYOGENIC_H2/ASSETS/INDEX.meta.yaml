@@ -1,0 +1,50 @@
+# AMPEL360 ASSETS INDEX — ATA 28 Fuel System
+version: 1
+owner: "AMPEL360 Documentation Team"
+folder: "ATA_28-FUEL_SAF_CRYOGENIC_H2"
+ata_chapter: 28
+system: "Fuel SAF Cryogenic H2"
+
+assets:
+  - id: "28-A001"
+    category: "DIAG"
+    title: "28 System Context LH2"
+    source: "ASSETS/MODELS/28_system_context_lh2.drawio.svg"
+    description: "High-level context diagram showing LH2 fuel system boundaries and interfaces"
+    status: "Draft"
+    version: "1.0.0"
+
+  - id: "28-A002"
+    category: "DIAG"
+    title: "28 LH2 Storage and Boiloff"
+    source: "ASSETS/MODELS/28_lh2_storage_and_boiloff.drawio.svg"
+    description: "Storage tank assembly with boil-off gas management"
+    status: "Draft"
+    version: "1.0.0"
+
+  - id: "28-A003"
+    category: "DIAG"
+    title: "28 Feed and Distribution Architecture"
+    source: "ASSETS/MODELS/28_feed_and_distribution_arch.drawio.svg"
+    description: "Fuel distribution architecture including feed lines and manifolds"
+    status: "Draft"
+    version: "1.0.0"
+
+  - id: "28-A004"
+    category: "DIAG"
+    title: "28 Overboard Vent and Dump"
+    source: "ASSETS/MODELS/28_overboard_vent_dump.drawio.svg"
+    description: "Venting and dump system including flame arresting"
+    status: "Draft"
+    version: "1.0.0"
+
+  - id: "28-A005"
+    category: "DIAG"
+    title: "28 Indicating and Health"
+    source: "ASSETS/MODELS/28_indicating_and_health.drawio.svg"
+    description: "Fuel quantity, pressure, temperature indication and health monitoring"
+    status: "Draft"
+    version: "1.0.0"
+
+# Traceability matrices will be added here
+traceability_matrices: []
