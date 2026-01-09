@@ -171,6 +171,12 @@ Controlled placeholder for airline/customer options.
 | 25-70-01 | Allocation policy | What qualifies to live in 25-70 | `25-70-01-allocation-policy/` |
 | 25-70-02 | Airline option packages | Placeholders + governance | `25-70-02-airline-option-packages/` |
 | 25-70-03 | Customer configuration deltas | CSDB applicability linkage | `25-70-03-customer-configuration-deltas/` |
+| 25-70-04 | Reserved subject 04 | Reserved/available slot for airline/customer options | `25-70-04-reserved-subject-04/` |
+| 25-70-05 | Reserved subject 05 | Reserved/available slot for airline/customer options | `25-70-05-reserved-subject-05/` |
+| 25-70-06 | Reserved subject 06 | Reserved/available slot for airline/customer options | `25-70-06-reserved-subject-06/` |
+| 25-70-07 | Reserved subject 07 | Reserved/available slot for airline/customer options | `25-70-07-reserved-subject-07/` |
+| 25-70-08 | Reserved subject 08 | Reserved/available slot for airline/customer options | `25-70-08-reserved-subject-08/` |
+| 25-70-09 | Reserved subject 09 | Reserved/available slot for airline/customer options | `25-70-09-reserved-subject-09/` |
 | 25-70-10 | Verification | Configuration control checks | `25-70-10-verification/` |
 
 **Note:** Subject codes 25-70-04 through 25-70-09 are not used in this implementation. The range is non-contiguous.
