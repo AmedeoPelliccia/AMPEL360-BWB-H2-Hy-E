@@ -1,0 +1,58 @@
+name: PUB BREX Guard (SVG/XML)
+
+on:
+  pull_request:
+    paths:
+      - "**/PUB/**/*.xml"
+      - "**/PUB/**/*.XML"
+      - "**/PUB/**/*.svg"
+      - "**/PUB/**/*.SVG"
+  push:
+    paths:
+      - "**/PUB/**/*.xml"
+      - "**/PUB/**/*.XML"
+      - "**/PUB/**/*.svg"
+      - "**/PUB/**/*.SVG"
+
+permissions:
+  contents: read
+
+jobs:
+  pub-brex-guard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (full history for diffs)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run PUB BREX guard
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+          # Enforce modelIdentCode for DM/PM naming and DM dmCode checks
+          MODEL_ID: "AMPEL360AT"
+        run: |
+          python tools/ci/pub_brex_guard.py
+
+      - name: Guidance for Copilot / Authors
+        if: always()
+        run: |
+          {
+            echo "## PUB SVG/XML policy gate"
+            echo ""
+            echo "**When generating or updating any \`.SVG\` or \`.XML\` inside \`/PUB/\`:**"
+            echo ""
+            echo "1) Ensure a **BREX module exists** in the same CSDB root: \`.../PUB/*/CSDB/BREX/\`."
+            echo "2) Ensure every DM includes a **BREX reference** (brexDmRef / dmRefIdent) OR your project-approved equivalent."
+            echo "3) Ensure filenames are **deterministic and match identifiers** (DMC/PMC/DML/ICN patterns)."
+            echo "4) Ensure SVGs include a **header comment** containing the exact filename and model ID."
+            echo ""
+            echo "This job fails the PR if the above conditions are not met."
+          } >> "$GITHUB_STEP_SUMMARY"
