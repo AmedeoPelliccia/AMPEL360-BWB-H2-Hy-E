@@ -23,8 +23,8 @@ This tailoring is documented in the project BREX (Business Rules Exchange).
         <dmCode modelIdentCode="AMPEL360AT"
                 systemDiffCode="A"
                 systemCode="23"
-                subSystemCode="1"
-                subSubSystemCode="0"
+                subSystemCode="10"
+                subSubSystemCode="00"
                 assyCode="00"
                 disassyCode="00"
                 disassyCodeVariant="A"
@@ -80,7 +80,7 @@ This tailoring is documented in the project BREX (Business Rules Exchange).
         </reqCondGroup>
         <reqPersons>
           <person>
-            <personCategory personCategoryCode="tech02">
+            <personCategory personCategoryCode="AV">
               <manufacturerName>Licensed Aircraft Maintenance Technician with Avionics Certification</manufacturerName>
             </personCategory>
           </person>

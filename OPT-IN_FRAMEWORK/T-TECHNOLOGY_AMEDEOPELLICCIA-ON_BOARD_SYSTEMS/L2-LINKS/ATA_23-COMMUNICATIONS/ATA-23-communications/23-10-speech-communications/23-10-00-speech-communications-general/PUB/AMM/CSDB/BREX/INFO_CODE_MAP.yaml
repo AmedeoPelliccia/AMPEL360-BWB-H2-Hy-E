@@ -244,9 +244,10 @@ related_documentation:
 # ==============================================================================
 
 revision_history:
-  - version: "1.0"
+  - version: "0.1"
     date: "2026-01-09"
     author: "AMPEL360-AIR-T Project / GitHub Copilot (AI-assisted)"
+    status: "DRAFT"
     changes:
       - "Initial creation of INFO_CODE_MAP for ATA 23-10-00"
       - "Defined standard info codes: 040A, 300A, 421A, 520A, 620A"
