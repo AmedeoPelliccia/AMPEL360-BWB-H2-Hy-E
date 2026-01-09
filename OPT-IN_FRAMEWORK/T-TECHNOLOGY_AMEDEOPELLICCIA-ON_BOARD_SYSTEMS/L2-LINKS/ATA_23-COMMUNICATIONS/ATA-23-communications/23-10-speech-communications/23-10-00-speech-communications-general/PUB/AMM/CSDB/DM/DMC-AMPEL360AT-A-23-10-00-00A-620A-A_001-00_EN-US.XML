@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - Audio Panel Installation Procedure
+DMC: AMPEL360AT-A-23-10-00-00A-620A-A_001-00_EN-US
+Info Code: 620A - Installation Procedure
+ATA Chapter: 23-10-00 Speech Communications General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proced.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="23"
+                subSystemCode="10"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="620"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Audio Control Panel</techName>
+          <infoName>Installation Procedure</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Maintenance Procedure</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqPersons>
+          <person>
+            <personCategory personCategoryCode="tech01">
+              <manufacturerName>Licensed Aircraft Maintenance Technician</manufacturerName>
+            </personCategory>
+          </person>
+        </reqPersons>
+        <reqSupportEquips>
+          <supportEquip>
+            <name>Hand Tools (standard mechanic's tool set)</name>
+          </supportEquip>
+          <supportEquip>
+            <name>Torque wrench (0-50 in-lb range)</name>
+          </supportEquip>
+          <supportEquip>
+            <name>Anti-static wrist strap</name>
+          </supportEquip>
+          <supportEquip>
+            <name>Multimeter (for continuity and voltage checks)</name>
+          </supportEquip>
+        </reqSupportEquips>
+        <reqSupplies>
+          <supply>
+            <name>Contact lubricant (approved electrical contact treatment)</name>
+          </supply>
+          <supply>
+            <name>Cleaning materials (lint-free cloths, approved connector cleaner)</name>
+          </supply>
+        </reqSupplies>
+        <reqSpares>
+          <noSpares/>
+        </reqSpares>
+        <reqSafety>
+          <safety>
+            <warningRef/>
+            <cautionRef/>
+          </safety>
+        </reqSafety>
+      </preliminaryRqmts>
+      
+      <mainProcedure>
+        <proceduralStep>
+          <para>This procedure provides step-by-step instructions for installation of the audio control panel into the instrument panel or center console. Follow all steps in sequence to ensure proper installation and system functionality.</para>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Safety Precautions</title>
+          <warning>
+            <para>Verify aircraft battery is disconnected or master switch is OFF before beginning installation. Do not connect power until installation is complete and all connections are verified.</para>
+          </warning>
+          <caution>
+            <para>Audio control panel contains static-sensitive electronic components. Use anti-static wrist strap connected to aircraft ground throughout installation procedure. Electrostatic discharge (ESD) can cause immediate or latent component failure.</para>
+          </caution>
+          <caution>
+            <para>Verify correct panel part number and configuration before installation. Installing incorrect unit can result in system malfunction or incompatibility with aircraft systems.</para>
+          </caution>
+          <caution>
+            <para>Do not overtighten mounting fasteners. Excessive torque can damage panel case, mounting provisions, or internal circuit boards. Follow specified torque values.</para>
+          </caution>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Pre-Installation Preparation</title>
+          <proceduralStep>
+            <para>Verify aircraft electrical power is OFF:</para>
+            <proceduralStep>
+              <para>Confirm master switch is in OFF position.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify battery negative terminal is disconnected (if practical) or communications circuit breakers are pulled.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Use multimeter to confirm no voltage present at panel connectors.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Put on anti-static wrist strap and connect to aircraft ground point.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Remove panel from protective packaging (anti-static bag if applicable).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify panel part number matches aircraft configuration and approved installation data:</para>
+            <proceduralStep>
+              <para>Check panel data plate for part number, serial number, and software version.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Compare with work order or parts list to confirm correct unit.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify software/firmware version is compatible with aircraft systems.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Perform visual inspection of new/replacement panel:</para>
+            <proceduralStep>
+              <para>Check for any shipping damage, cracks, or defects.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Inspect connectors for bent pins, foreign material, or contamination.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify mounting holes and fastener provisions are intact.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Check that all controls (knobs, buttons, switches) operate smoothly.</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Mounting Area Preparation</title>
+          <proceduralStep>
+            <para>Remove protective covering from panel opening (if installed during removal).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Inspect instrument panel mounting area:</para>
+            <proceduralStep>
+              <para>Verify mounting surface is clean and free of debris, corrosion, or damage.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Check that mounting inserts or nut plates are secure and threads are undamaged.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify panel opening dimensions are correct and not deformed.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Prepare aircraft connectors for mating:</para>
+            <proceduralStep>
+              <para>Remove protective caps from connectors on aircraft side.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Inspect aircraft connector pins/sockets for damage, corrosion, or contamination.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Clean connectors if necessary using approved contact cleaner and lint-free cloth.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Allow cleaning solvent to fully evaporate before mating connectors (minimum 2 minutes).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Apply light coating of approved contact lubricant to connector pins if specified by maintenance manual.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify adequate slack in wiring harnesses for easy connector mating without strain.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Panel Positioning</title>
+          <proceduralStep>
+            <para>Hold panel with both hands, oriented for proper installation (top edge up, connectors facing rear).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Align panel with instrument panel opening.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Insert panel partially into opening (approximately 1 inch deep) to allow access to rear connectors.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify panel slides freely into opening without binding. Do not force - if resistance encountered, check for obstructions or misalignment.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Connector Mating</title>
+          <proceduralStep>
+            <para>Identify connectors using labels, photographs, or sketches from removal procedure:</para>
+            <proceduralStep>
+              <para>J1: Main power and audio bus connector</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>J2: Radio interface connector</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>J3: Intercom connector (if equipped)</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Additional connectors as applicable</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Connect electrical connectors in the following sequence:</para>
+            <proceduralStep>
+              <para>J1 (main power): Align connector carefully, verify correct orientation using key or alignment feature, push firmly until fully seated, engage locking mechanism (rotate locking ring or verify locking tab clicks).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>J2 (radio interface): Align and mate connector, ensure locking mechanism engages.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>J3 and additional connectors: Connect remaining connectors in order, ensuring each is properly seated and locked.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <caution>
+            <para>Ensure connectors are fully seated before engaging locking mechanisms. Partially mated connectors can cause intermittent faults, signal degradation, or connector damage. Verify no gaps between connector bodies.</para>
+          </caution>
+          <proceduralStep>
+            <para>After all connectors mated, gently tug on each connector to verify positive locking - connector should not separate with moderate pull force.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify wiring harness routing allows panel to fully seat in opening without wire stress or pinching.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Panel Seating and Fastener Installation</title>
+          <proceduralStep>
+            <para>Push panel fully into instrument panel opening until panel face is flush with surrounding panel surface.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify panel is properly aligned:</para>
+            <proceduralStep>
+              <para>Check that panel edges are parallel with adjacent panels and trim pieces.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Ensure mounting holes align with threaded inserts or nut plates.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify no gaps or misalignment at panel perimeter.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Install mounting fasteners:</para>
+            <proceduralStep>
+              <para>For screw-type mounting: Start all screws by hand (typically 4 ea. #6-32 or #8-32 screws) finger-tight before final tightening.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Tighten screws in cross pattern (opposite corners) to ensure even seating.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Torque screws to specified value: 7-10 in-lb for #6-32, 12-15 in-lb for #8-32 (unless different value specified in maintenance manual).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>For quick-release fasteners: Insert fasteners, push fully in, rotate 1/4 turn clockwise to lock.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>For rack-mount installations: Slide unit into rack until fully seated, tighten captive screws to secure.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify panel is securely mounted with no movement when moderate pressure applied.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Overlay/Cover Installation</title>
+          <proceduralStep>
+            <para>If panel has protective overlay or decorative cover:</para>
+            <proceduralStep>
+              <para>Position overlay over panel, ensuring proper alignment with panel controls.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify all controls (knobs, buttons) are accessible through overlay openings.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Install overlay fasteners and tighten to secure (do not overtighten - typically finger-tight plus 1/4 turn).</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Power-Up and Functional Test</title>
+          <proceduralStep>
+            <para>Before applying power, perform final visual inspection:</para>
+            <proceduralStep>
+              <para>Verify all connectors are properly mated and locked.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Check that no tools, hardware, or foreign objects left in work area.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Ensure panel is securely mounted.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Restore aircraft electrical power:</para>
+            <proceduralStep>
+              <para>Reconnect battery negative terminal if previously disconnected.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Reset communications system circuit breakers if pulled.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Turn master switch to ON position.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Observe panel during initial power-up:</para>
+            <proceduralStep>
+              <para>Display should illuminate normally with no error messages.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Listen for normal power-up sequence sounds (relay clicks, fan operation if equipped).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify no unusual odors (burning, electrical smell) indicating short circuit or overheating.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Perform operational test per DMC-AMPEL360AT-A-23-10-00-00A-300A (VHF Radio System Operational Test Procedure).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Test all panel functions:</para>
+            <proceduralStep>
+              <para>Volume controls - verify smooth adjustment with audio level change.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Transmitter selection - verify correct radio selected for transmission.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Audio source selection - verify all sources can be enabled/disabled.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Intercom function - verify crew-to-crew communication.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Any additional features specific to panel model.</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Configuration and Setup</title>
+          <proceduralStep>
+            <para>If panel was replaced (not just removed and reinstalled):</para>
+            <proceduralStep>
+              <para>Verify panel configuration settings match aircraft requirements.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Program panel parameters as necessary (audio levels, intercom settings, etc.) per aircraft customization requirements.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>If panel requires software configuration or initialization, refer to DMC-AMPEL360AT-A-23-10-00-00A-C40A (Communications Software Loading/Configuration).</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Documentation and Closeout</title>
+          <proceduralStep>
+            <para>Make entry in aircraft maintenance log:</para>
+            <proceduralStep>
+              <para>Date and time of installation.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Panel part number and serial number installed.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>If replacement: removed unit serial number and reason for replacement.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Operational test results - "Operational test satisfactory" or document any discrepancies.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Technician name and license/certificate number.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Return-to-service statement if applicable.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Update aircraft records with panel serial number and installation date for tracking purposes.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If old panel was removed due to failure, complete warranty or repair paperwork as required.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Clean work area and return all tools and equipment to proper storage.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Post-Installation Verification</title>
+          <proceduralStep>
+            <para>Perform final verification check before releasing aircraft to service:</para>
+            <proceduralStep>
+              <para>All panel functions tested and operating normally.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>No error messages or fault indications displayed.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Panel physically secure with no loose fasteners.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>All connectors properly mated and locked.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Maintenance documentation complete and accurate.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Work area clean and all tools accounted for.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Aircraft is now ready to return to service.</para>
+          </proceduralStep>
+        </proceduralStep>
+      </mainProcedure>
+      
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+  
+</dmodule>

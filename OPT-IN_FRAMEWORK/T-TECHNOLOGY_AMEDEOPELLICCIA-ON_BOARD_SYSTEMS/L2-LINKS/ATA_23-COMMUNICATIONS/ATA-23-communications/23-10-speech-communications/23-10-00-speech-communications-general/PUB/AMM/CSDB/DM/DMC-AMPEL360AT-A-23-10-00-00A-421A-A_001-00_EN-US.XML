@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - Communications Fault Isolation Procedure
+DMC: AMPEL360AT-A-23-10-00-00A-421A-A_001-00_EN-US
+Info Code: 421A - Fault Isolation
+ATA Chapter: 23-10-00 Speech Communications General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/fault.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="23"
+                subSystemCode="10"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="421"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Speech Communications System</techName>
+          <infoName>Fault Isolation and Troubleshooting</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Maintenance Procedure</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <fault>
+      <isolationProcedure>
+        <isolationMainProcedure>
+          <isolationStep>
+            <para>This data module provides systematic fault isolation procedures for the speech communications system (ATA 23-10). Use this procedure when system malfunctions are reported or detected during operational testing.</para>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Initial Fault Verification</title>
+            <para>Before proceeding with detailed troubleshooting, verify the fault condition:</para>
+            <isolationStep>
+              <para>Obtain detailed description of malfunction from flight crew or maintenance report.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Attempt to reproduce fault condition using normal system operation or test procedure (DMC-AMPEL360AT-A-23-10-00-00A-300A).</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Check maintenance history for recent work on communications system that may be related.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Verify aircraft power systems are operating normally (battery voltage, electrical bus status).</para>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Fault Category Determination</title>
+            <para>Classify the fault into one of the following categories to direct troubleshooting:</para>
+            <isolationStep>
+              <para>Category 1: No power / Complete system failure</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Category 2: No transmit capability</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Category 3: No receive capability</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Category 4: Degraded audio quality</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Category 5: Intermittent operation</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Category 6: Display or control malfunction</para>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Category 1: No Power / Complete System Failure</title>
+            <para>System completely inoperative, no display illumination, no audio.</para>
+            <isolationStep>
+              <para>Check circuit breakers for communications system:</para>
+              <isolationStep>
+                <para>Visually inspect circuit breakers - verify none are tripped (popped out).</para>
+              </isolationStep>
+              <isolationStep>
+                <para>If breaker tripped, investigate cause before resetting. Do not repeatedly reset tripped breaker.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>If breaker OK, proceed to next step.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Verify aircraft main electrical power:</para>
+              <isolationStep>
+                <para>Check battery voltage - must be minimum 24V DC for 28V system.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Verify electrical bus voltages using multimeter or system display.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>If power system fault found, resolve electrical issue first before continuing communications troubleshooting.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Check power connections at radio unit:</para>
+              <isolationStep>
+                <para>Access avionics bay and locate VHF radio unit.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Verify power connector is fully seated and locked.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Measure voltage at radio power pins (refer to wiring diagram for pin identification).</para>
+              </isolationStep>
+              <isolationStep>
+                <para>If no voltage present at radio connector, trace wiring back to source - check for open circuit, damaged wiring, or faulty connections.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>If power is present but radio does not operate:</para>
+              <isolationStep>
+                <para>Check radio unit master ON/OFF switch position.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Verify configuration pin settings (if applicable) match installation requirements.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Suspect radio unit internal failure - perform unit substitution test or send unit for bench test.</para>
+              </isolationStep>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Category 2: No Transmit Capability</title>
+            <para>Radio receives normally but cannot transmit.</para>
+            <isolationStep>
+              <para>Verify PTT (push-to-talk) circuit:</para>
+              <isolationStep>
+                <para>Test PTT button operation - verify button physically actuates with normal force.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Check PTT wiring from control yoke or microphone to radio unit.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Measure continuity of PTT circuit when button pressed (circuit should close to ground).</para>
+              </isolationStep>
+              <isolationStep>
+                <para>If PTT circuit OK, proceed to next step.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Check transmitter selection on audio control panel:</para>
+              <isolationStep>
+                <para>Verify correct radio (VHF-1 or VHF-2) is selected for transmission.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Confirm transmit indicator illuminates on audio panel when PTT pressed.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Test alternate transmitter selection to isolate audio panel vs. radio issue.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Verify microphone operation:</para>
+              <isolationStep>
+                <para>Test with alternate known-good microphone or headset.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Check microphone connector for damage or contamination.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Measure microphone impedance (typically 150-600 ohms depending on type).</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Check antenna system:</para>
+              <isolationStep>
+                <para>Visually inspect VHF antenna for physical damage.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Measure antenna VSWR (voltage standing wave ratio) with appropriate test equipment - should be &lt;2.0:1 across VHF band.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Verify antenna cable connections are tight and corrosion-free.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>If all external components check OK, suspect radio transmitter fault - replace radio unit.</para>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Category 3: No Receive Capability</title>
+            <para>Radio transmits normally but cannot receive.</para>
+            <isolationStep>
+              <para>Verify receiver audio path:</para>
+              <isolationStep>
+                <para>Check volume control setting - ensure not set to minimum.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Verify audio source selection on audio panel - ensure VHF radio is enabled for reception.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Test headset/speaker output with alternate audio source (marker beacon, intercom) to verify audio system functional.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Check squelch setting:</para>
+              <isolationStep>
+                <para>Rotate squelch control to minimum position.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Background noise should be audible if squelch is functioning correctly.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>If no noise audible even with squelch at minimum, suspect receiver fault.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Verify antenna system (same checks as transmit troubleshooting above).</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Test receiver sensitivity:</para>
+              <isolationStep>
+                <para>Tune to frequency with known strong signal (ATIS, tower at nearby airport).</para>
+              </isolationStep>
+              <isolationStep>
+                <para>If strong signals not received, suspect receiver fault - replace radio unit.</para>
+              </isolationStep>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Category 4: Degraded Audio Quality</title>
+            <para>Communications functional but audio is distorted, weak, or noisy.</para>
+            <isolationStep>
+              <para>Check all audio connections:</para>
+              <isolationStep>
+                <para>Verify headset connector fully seated and locked.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Inspect connectors for bent pins, corrosion, or foreign material.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Clean connectors with approved contact cleaner if contamination present.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Test with alternate headset to eliminate headset as cause.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Check for sources of electrical interference:</para>
+              <isolationStep>
+                <para>Note if noise is present during all flight phases or only when certain equipment operating.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Systematically disable other avionics to identify interference source.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Verify all equipment properly grounded and shielded.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Adjust audio levels and squelch for optimal clarity.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>If audio issues persist and are present on multiple frequencies with different ground stations, suspect radio internal audio circuitry fault.</para>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Category 5: Intermittent Operation</title>
+            <para>System operates normally at times but fails unpredictably.</para>
+            <isolationStep>
+              <para>Attempt to identify pattern or trigger:</para>
+              <isolationStep>
+                <para>Note environmental conditions when fault occurs (temperature, vibration, altitude).</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Check if fault correlates with operation of other equipment.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Record whether fault is consistent or truly random.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Inspect all connections for intermittent contact:</para>
+              <isolationStep>
+                <para>Exercise connectors by disconnecting and reconnecting while monitoring system.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Check connector locking mechanisms - verify positive retention.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Inspect wiring for chafing, stress, or movement that could cause intermittent opens.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Perform thermal stress test:</para>
+              <isolationStep>
+                <para>Operate system in both hot and cold conditions to provoke temperature-sensitive faults.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Use heat gun (carefully) or cold spray on suspect components while monitoring operation.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Vibration test:</para>
+              <isolationStep>
+                <para>Gently tap on radio unit and connectors while system operating to detect vibration-sensitive faults.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Intermittent faults are difficult to isolate. If fault cannot be consistently reproduced, consider operational monitoring and data logging to capture fault conditions for analysis.</para>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Category 6: Display or Control Malfunction</title>
+            <para>Radio operates but display or controls do not function properly.</para>
+            <isolationStep>
+              <para>Verify display illumination and readability:</para>
+              <isolationStep>
+                <para>Check panel lighting control setting - verify not set too dim.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Observe display from different viewing angles to detect LCD polarization issues.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Test control knobs and buttons:</para>
+              <isolationStep>
+                <para>Verify mechanical operation of each control - should rotate or actuate smoothly with proper tactile feedback.</para>
+              </isolationStep>
+              <isolationStep>
+                <para>Check if control inputs are recognized by observing system response.</para>
+              </isolationStep>
+            </isolationStep>
+            <isolationStep>
+              <para>Perform control head self-test if available (press and hold TEST button during power-up).</para>
+            </isolationStep>
+            <isolationStep>
+              <para>If display or controls malfunctioning, suspect control head unit failure - replace unit.</para>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>BITE (Built-In Test Equipment) Codes</title>
+            <para>If radio displays fault codes, refer to the following common BITE codes:</para>
+            <isolationStep>
+              <para>Code E01: Transmitter power output low - Check antenna system, if OK replace radio.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Code E02: Receiver sensitivity degraded - Replace radio unit.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Code E03: Frequency synthesizer fault - Replace radio unit.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Code E04: Internal power supply fault - Check input voltage, if OK replace radio.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Code E05: Memory/configuration error - Perform software reload (DMC-AMPEL360AT-A-23-10-00-00A-C40A), if fault persists replace radio.</para>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Component Replacement Procedures</title>
+            <para>When fault isolation determines component replacement necessary:</para>
+            <isolationStep>
+              <para>For audio panel removal: Refer to DMC-AMPEL360AT-A-23-10-00-00A-520A</para>
+            </isolationStep>
+            <isolationStep>
+              <para>For audio panel installation: Refer to DMC-AMPEL360AT-A-23-10-00-00A-620A</para>
+            </isolationStep>
+            <isolationStep>
+              <para>After component replacement, perform operational test per DMC-AMPEL360AT-A-23-10-00-00A-300A to verify fault resolution.</para>
+            </isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Documentation</title>
+            <isolationStep>
+              <para>Record all troubleshooting steps performed in aircraft maintenance log.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Document fault symptoms, tests performed, and corrective actions taken.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>If components replaced, record old unit serial number and new unit serial number.</para>
+            </isolationStep>
+            <isolationStep>
+              <para>Tag removed components with failure description for warranty or repair processing.</para>
+            </isolationStep>
+          </isolationStep>
+        </isolationMainProcedure>
+      </isolationProcedure>
+    </fault>
+  </content>
+  
+</dmodule>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - Speech Communications System Overview
+DMC: AMPEL360AT-A-23-10-00-00A-040A-A_001-00_EN-US
+Info Code: 040A - Description
+ATA Chapter: 23-10-00 Speech Communications General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="23"
+                subSystemCode="10"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="040"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Speech Communications System</techName>
+          <infoName>System Overview and Description</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Public Technical Documentation</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <description>
+      <levelledPara>
+        <title>Introduction</title>
+        <para>The AMPEL360 Speech Communications System (ATA 23-10) provides voice communication capabilities for the aircraft, enabling crew-to-crew, air-to-ground, and passenger address communications. This data module provides an overview of the system architecture, components, and operational characteristics.</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>System Description</title>
+        <para>The speech communications system comprises the following major subsystems:</para>
+        
+        <levelledPara>
+          <title>VHF Radio System</title>
+          <para>The VHF (Very High Frequency) radio system provides air-to-ground and air-to-air voice communications in the 118.0 to 136.975 MHz frequency range. The system includes dual independent transceivers for redundancy and operational flexibility.</para>
+          
+          <para>Key features include:</para>
+          <para>
+            - Dual VHF transceivers with automatic switching capability<br/>
+            - 25 kHz channel spacing (8.33 kHz capable)<br/>
+            - Digital signal processing for enhanced clarity<br/>
+            - Integration with Flight Management System (FMS) for automatic frequency tuning<br/>
+            - Emergency frequency (121.5 MHz) quick-access capability
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Audio Management System</title>
+          <para>The audio management system controls audio routing, volume levels, and mixing of multiple communication and alert sources. The system comprises audio control panels, audio management units, and interconnecting cabling.</para>
+          
+          <para>System capabilities include:</para>
+          <para>
+            - Individual volume control for each audio source<br/>
+            - Priority-based audio mixing and interrupt logic<br/>
+            - Crew interphone communications<br/>
+            - Hot microphone and push-to-talk modes<br/>
+            - Automatic level control to prevent audio clipping<br/>
+            - Integration with headset and cockpit speaker systems
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Passenger Address System</title>
+          <para>The passenger address (PA) system enables crew announcements to passengers through cabin speakers. The system includes microphone stations, amplifiers, and cabin speaker arrays distributed throughout the passenger cabin.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Interphone System</title>
+          <para>The interphone system provides voice communications between crew members and ground personnel during maintenance and servicing operations. The system operates independently of the VHF radios and includes multiple interphone jacks located throughout the aircraft.</para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>System Architecture</title>
+        <para>The speech communications system utilizes a distributed architecture with redundant components to ensure high availability and fault tolerance. Primary system components are installed in the avionics bay, with remote audio panels in the cockpit and cabin crew stations.</para>
+        
+        <para>Power is supplied from the aircraft 28V DC bus with independent circuit breaker protection. The system interfaces with the following aircraft systems:</para>
+        <para>
+          - Electrical power system (ATA 24)<br/>
+          - Navigation systems (ATA 34) for VOR audio<br/>
+          - Flight management system (ATA 22) for frequency management<br/>
+          - Warning systems (ATA 31) for audio alerts<br/>
+          - Cabin systems (ATA 44) for passenger entertainment integration
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Operational Characteristics</title>
+        <para>The system is designed to operate in the full aircraft environmental envelope including temperature extremes, altitude, vibration, and electromagnetic interference conditions. Audio quality meets or exceeds applicable civil aviation standards for intelligibility and signal-to-noise ratio.</para>
+        
+        <para>Key performance parameters:</para>
+        <para>
+          - VHF output power: 10W (minimum)<br/>
+          - Audio frequency response: 300 Hz to 3,400 Hz<br/>
+          - Total harmonic distortion: &lt;5%<br/>
+          - Operating temperature: -55°C to +70°C<br/>
+          - MTBF (Mean Time Between Failures): &gt;10,000 flight hours
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Maintenance Philosophy</title>
+        <para>The speech communications system is designed for line-replaceable unit (LRU) maintenance. Fault isolation is accomplished through built-in test equipment (BITE), system status displays, and procedural troubleshooting. Detailed maintenance procedures are provided in subsequent data modules.</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>References</title>
+        <para>Related technical documentation:</para>
+        <para>
+          - DMC-AMPEL360AT-A-23-10-00-00A-300A: VHF Radio System Operational Test Procedure<br/>
+          - DMC-AMPEL360AT-A-23-10-00-00A-421A: Communications Fault Isolation Procedure<br/>
+          - DMC-AMPEL360AT-A-23-10-00-00A-520A: Audio Panel Removal Procedure<br/>
+          - DMC-AMPEL360AT-A-23-10-00-00A-620A: Audio Panel Installation Procedure<br/>
+          - DMC-AMPEL360AT-A-23-10-00-00A-C40A: Communications Software Loading/Configuration
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+  
+</dmodule>
