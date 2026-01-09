@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dml PUBLIC "-//S1000D//DTD DML 5.0//EN" "dml.dtd">
+<!--
+  Data Module List: ATA 23-10 Speech Communications - Complete Data Module Set
+  
+  Purpose: Master list containing all Data Modules for ATA 23-10 section
+  Contents: All 6 DMs (040A, 300A, 421A, 520A, 620A, C40A)
+  
+  DML ↔ PM Alignment:
+  - PMC-AMPEL360AT-23-10-00001 (Complete AMM) → DML-AMPEL360AT-23-10-COMPLETE
+  - PMC-AMPEL360AT-23-10-00010 (Descriptions) → DML-AMPEL360AT-23-10-SYSDESC
+  - PMC-AMPEL360AT-23-10-00020 (Procedures) → DML-AMPEL360AT-23-10-MAINTPROC
+  - PMC-AMPEL360AT-23-10-00030 (Troubleshooting) → DML-AMPEL360AT-23-10-FLTISOL
+  - PMC-AMPEL360AT-23-10-00040 (Software) → DML-AMPEL360AT-23-10-SOFTWARE
+-->
+<dml>
+  <identAndStatusSection>
+    <dmlAddress>
+      <dmlIdent>
+        <dmlCode modelIdentCode="AMPEL360AT" senderIdent="AMPEL" dmlType="s" 
+                 yearOfDataIssue="2026" seqNumber="00001"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmlIdent>
+      <dmlAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmlTitle>ATA 23-10 Speech Communications - Complete Data Module Set</dmlTitle>
+      </dmlAddressItems>
+    </dmlAddress>
+    <dmlStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>Amedeo Pelliccia</enterpriseName>
+      </originator>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+    </dmlStatus>
+  </identAndStatusSection>
+  <dmlContent>
+    <!-- DM 1: System Description (040A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                  systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                  assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                  infoCode="040" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Speech Communications System</techName>
+            <infoName>Description</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryStatus>
+        <entryType entryTypeCode="new"/>
+      </dmlEntryStatus>
+    </dmlEntry>
+    
+    <!-- DM 2: VHF Radio Test Procedure (300A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                  systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                  assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                  infoCode="300" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>VHF Radio System</techName>
+            <infoName>Test Procedure</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryStatus>
+        <entryType entryTypeCode="new"/>
+      </dmlEntryStatus>
+    </dmlEntry>
+    
+    <!-- DM 3: Communications Fault Isolation (421A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                  systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                  assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                  infoCode="421" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Communications System</techName>
+            <infoName>Fault Isolation</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryStatus>
+        <entryType entryTypeCode="new"/>
+      </dmlEntryStatus>
+    </dmlEntry>
+    
+    <!-- DM 4: Audio Control Panel Removal (520A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                  systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                  assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                  infoCode="520" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Audio Control Panel</techName>
+            <infoName>Removal</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryStatus>
+        <entryType entryTypeCode="new"/>
+      </dmlEntryStatus>
+    </dmlEntry>
+    
+    <!-- DM 5: Audio Control Panel Installation (620A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                  systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                  assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                  infoCode="620" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Audio Control Panel</techName>
+            <infoName>Installation</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryStatus>
+        <entryType entryTypeCode="new"/>
+      </dmlEntryStatus>
+    </dmlEntry>
+    
+    <!-- DM 6: Communications Software Loading/Configuration (C40A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                  systemCode="23" subSystemCode="1" subSubSystemCode="0"
+                  assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                  infoCode="C40" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Communications Software</techName>
+            <infoName>Loading/Configuration</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryStatus>
+        <entryType entryTypeCode="new"/>
+      </dmlEntryStatus>
+    </dmlEntry>
+  </dmlContent>
+</dml>
