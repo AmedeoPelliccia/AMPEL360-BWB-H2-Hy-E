@@ -140,7 +140,7 @@
     <rect class="component-box" x="40" y="220" width="70" height="60"/>
     <text class="component-title" x="75" y="242">ACP1</text>
     <text class="component-detail" x="75" y="253">Audio Control Panel</text>
-    <text class="component-detail" x="75" y="263">Conn: J1 (placeholder)</text>
+    <text class="component-detail" x="75" y="263">Conn: J1</text>
   </g>
   
   <!-- ACP2 -->
@@ -148,7 +148,7 @@
     <rect class="component-box" x="130" y="220" width="70" height="60"/>
     <text class="component-title" x="165" y="242">ACP2</text>
     <text class="component-detail" x="165" y="253">Audio Control Panel</text>
-    <text class="component-detail" x="165" y="263">Conn: J1 (placeholder)</text>
+    <text class="component-detail" x="165" y="263">Conn: J1</text>
   </g>
   
   <!-- ZONE 400 - ESE Bay (top center zone) -->
@@ -163,7 +163,7 @@
     <text class="component-detail" x="277.5" y="177">Unit</text>
     <text class="component-detail" x="277.5" y="187">Mixing / routing /</text>
     <text class="component-detail" x="277.5" y="197">monitoring</text>
-    <text class="component-detail" x="277.5" y="205">Conn: J1/J3 (placeholder)</text>
+    <text class="component-detail" x="277.5" y="205">Conn: J1/J3</text>
   </g>
   
   <!-- AMU2 -->
@@ -173,7 +173,7 @@
     <text class="component-detail" x="362.5" y="257">Service / Jumper /</text>
     <text class="component-detail" x="362.5" y="267">Call</text>
     <text class="component-detail" x="362.5" y="277">Interphone / PA Cabin</text>
-    <text class="component-detail" x="362.5" y="285">Conn: J2/J4 (placeholder)</text>
+    <text class="component-detail" x="362.5" y="285">Conn: J2/J4</text>
   </g>
   
   <!-- Service Interphone Jacks -->
@@ -196,7 +196,7 @@
     <text class="component-title" x="495" y="150">PA Amplifier</text>
     <text class="component-title" x="495" y="163">(Zone 400)</text>
     <text class="component-detail" x="495" y="173">PA AMP 1</text>
-    <text class="component-detail" x="495" y="183">Connector: J1 (placeholder)</text>
+    <text class="component-detail" x="495" y="183">Connector: J1</text>
   </g>
   
   <!-- PA Amplifier (right side middle) -->
@@ -204,7 +204,7 @@
     <rect class="component-box" x="440" y="215" width="110" height="65"/>
     <text class="component-title" x="495" y="235">PA Amplifier</text>
     <text class="component-detail" x="495" y="247">PA AMP 2</text>
-    <text class="component-detail" x="495" y="257">Connector: J1 (placeholder)</text>
+    <text class="component-detail" x="495" y="257">Connector: J1</text>
   </g>
   
   <!-- Cockpit Speakers (right side bottom) -->
