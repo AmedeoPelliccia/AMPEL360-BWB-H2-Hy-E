@@ -46,8 +46,6 @@
         <toolName>Communications Test Set</toolName>
         <toolDescription>
           <para>Multi-function communications test equipment for VHF COM and NAV radio systems. Used for testing, troubleshooting, and alignment of aircraft communication and navigation radios.</para>
-        </toolDescription>
-        <toolSpec>
           <para>Frequency Range (VHF COM): 118.000 - 136.975 MHz</para>
           <para>Frequency Range (VHF NAV): 108.000 - 117.950 MHz</para>
           <para>Power Output: 0 - 25 Watts adjustable</para>
@@ -55,7 +53,7 @@
           <para>Frequency Accuracy: ±0.001%</para>
           <para>VSWR Measurement: 1.0:1 to 10:1</para>
           <para>Audio Output: 0-3V RMS adjustable</para>
-        </toolSpec>
+        </toolDescription>
       </toolSpec>
     </toolRepository>
   </commonRepositoryContent>
