@@ -103,7 +103,7 @@ def find_csdb_root(path: Path) -> Path | None:
 def parse_xml(path: Path) -> ET.ElementTree | None:
     try:
         return ET.parse(path)
-    except Exception:
+    except (ET.ParseError, FileNotFoundError, PermissionError, OSError):
         return None
 
 
@@ -145,6 +145,10 @@ def ensure_csdb_profile_mentions_brex(csdb_root: Path) -> tuple[bool, str]:
     prof = next((p for p in candidates if p.exists()), None)
     if not prof:
         return False, f"Missing csdb.profile.yaml (searched: {', '.join(str(c) for c in candidates)})"
+    # Limit read size to prevent memory exhaustion with large files
+    max_profile_size = 64 * 1024  # 64 KB should be plenty for profile files
+    if prof.stat().st_size > max_profile_size:
+        return False, f"{prof} is unexpectedly large (>{max_profile_size} bytes)."
     txt = prof.read_text(encoding="utf-8", errors="replace")
     if not any(k in txt for k in BREX_HINT_KEYS):
         return False, f"{prof} does not appear to mention BREX (expected a brex/brexDmRef/brex_dm key)."
@@ -220,13 +224,17 @@ def dm_has_brex_ref(tree: ET.ElementTree) -> bool:
     root = tree.getroot()
     # Accept any of these as "BREX is being checked/used"
     # You can tighten this later to ONLY accept brexDmRef.
-    # ElementTree does not support XPath functions like local-name() reliably.
-    # So: do a simple tag scan + text scan.
+    # First check element tags for brex (efficient)
     for e in root.iter():
         if "brex" in e.tag.lower():
             return True
-    xml_text = ET.tostring(root, encoding="unicode", method="xml")
-    return "BREX" in xml_text or "brex" in xml_text
+        # Also check element text and attribute values
+        if e.text and "brex" in e.text.lower():
+            return True
+        for attr_val in e.attrib.values():
+            if "brex" in str(attr_val).lower():
+                return True
+    return False
 
 
 def validate_svg(path: Path, model_id: str) -> list[Finding]:
@@ -353,6 +361,18 @@ def main() -> int:
     warns = [x for x in findings if x.level == "WARN"]
 
     summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        sp = Path(summary_path)
+        # Validate that GITHUB_STEP_SUMMARY path is under expected runner directories
+        try:
+            resolved = sp.resolve()
+            # GitHub Actions step summary is typically under /home/runner or /github
+            valid_prefixes = ("/home/runner", "/github", "/tmp")
+            if not any(str(resolved).startswith(prefix) for prefix in valid_prefixes):
+                print(f"WARNING: GITHUB_STEP_SUMMARY path '{resolved}' is outside expected directories", file=sys.stderr)
+                summary_path = None
+        except (OSError, ValueError):
+            summary_path = None
     if summary_path:
         sp = Path(summary_path)
         with sp.open("a", encoding="utf-8") as s:
