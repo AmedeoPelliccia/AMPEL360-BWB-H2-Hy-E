@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  ietp:
+    image: ampel360/ietp:placeholder
+    environment:
+      - LEAF={leaf_code}

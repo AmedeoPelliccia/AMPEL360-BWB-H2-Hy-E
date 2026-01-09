@@ -1,0 +1,5 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360'>
+  <rect width='640' height='360' fill='#f5f5f5' stroke='#0b3d91' stroke-width='2'/>
+  <text x='20' y='50' font-family='Arial' font-size='20' fill='#0b3d91'>Architecture Power Zones</text>
+  <text x='20' y='90' font-family='Arial' font-size='14' fill='#333'>Placeholder diagram for ATA 30 ice and rain protection.</text>
+</svg>
