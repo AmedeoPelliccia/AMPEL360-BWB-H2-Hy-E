@@ -55,6 +55,23 @@ This tailoring is documented in the project BREX (Business Rules Exchange).
           <simplePara>All AMPEL360 aircraft configurations</simplePara>
         </displayText>
       </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT"
+                    systemDiffCode="A"
+                    systemCode="00"
+                    subSystemCode="00"
+                    subSubSystemCode="00"
+                    assyCode="00"
+                    disassyCode="00"
+                    disassyCodeVariant="A"
+                    infoCode="022"
+                    infoCodeVariant="A"
+                    itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
       <qualityAssurance>
         <unverified/>
       </qualityAssurance>
