@@ -136,6 +136,11 @@ Crew rest modules, underfloor equipment spaces, and extra compartments treated a
 | 25-50-02 | Wardrobes/stowage monuments outside cabin core | External storage monuments | `25-50-02-wardrobes-and-external-stowage-monuments/` |
 | 25-50-03 | Cargo accessory equipment treated as furnishings | Restraints/latches/rollers boundary-managed | `25-50-03-cargo-accessory-equipment-boundary-managed/` |
 | 25-50-04 | Lifts/stairs | If applicable in multi-deck concepts | `25-50-04-lifts-stairs-multideck-provisions/` |
+| 25-50-05 | Reserved | Reserved for future additional-compartment subjects | `25-50-05-reserved/` |
+| 25-50-06 | Reserved | Reserved for future additional-compartment subjects | `25-50-06-reserved/` |
+| 25-50-07 | Reserved | Reserved for future additional-compartment subjects | `25-50-07-reserved/` |
+| 25-50-08 | Reserved | Reserved for future additional-compartment subjects | `25-50-08-reserved/` |
+| 25-50-09 | Reserved | Reserved for future additional-compartment subjects | `25-50-09-reserved/` |
 | 25-50-10 | Verification | Loads, restraint integrity, access/egress | `25-50-10-verification/` |
 
 **Note:** Subject codes 25-50-05 through 25-50-09 are not used in this implementation. The range is non-contiguous.
