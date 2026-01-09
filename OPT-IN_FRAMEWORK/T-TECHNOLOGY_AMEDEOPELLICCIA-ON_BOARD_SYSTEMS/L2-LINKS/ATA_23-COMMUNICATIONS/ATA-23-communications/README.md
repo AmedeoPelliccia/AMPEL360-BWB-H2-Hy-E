@@ -1,55 +1,110 @@
-# ATA 23 — Communications (ATA iSpec 2200 SNS Structure)
+# ATA 23 — COMMUNICATIONS
 
 ## Overview
 
-This directory contains the **ATA 23 Communications** system documentation structured according to the **ATA iSpec 2200 Standard Numbering System (SNS)** with S1000D CSDB publication management.
+This directory contains the complete **ATA 23 Communications** system documentation following the **AMPEL360 SBJ (Subject) Code Assignment** structure. The organization maps each Table of Contents (TOC) bullet to a specific **23-xx-yy** subject code for complete traceability and navigability.
 
-This structure complements the existing OPT-IN Framework organization and provides an alternative view aligned with industry-standard ATA numbering for certification and publication purposes.
+## Structure
 
-## Purpose
+The ATA 23 Communications chapter is organized into the following major sections:
 
-The ATA SNS structure enables:
-- Compliance with ATA iSpec 2200 standard
-- S1000D-based technical publication management
-- Industry-standard maintenance manual organization
-- Illustrated parts catalog structuring
-- Integration with existing aviation documentation systems
+### 23-00 — Communications General
+Foundation and cross-cutting concerns for the communications system.
+
+**Subject Codes (yy):** 00-10, 90-92
+- Scope, architecture, network segmentation
+- EMC/EMI considerations for BWB and electric propulsion
+- Antenna placement philosophy
+- Cyber security and compliance basis
+
+### 23-10 — Speech Communications
+Voice communication systems for flight crew and ATC.
+
+**Subject Codes (yy):** 00-07, 10, 90
+- VHF and HF voice radios
+- Audio endpoints and RF distribution
+- Recording/monitoring policy
+- EMC/EMI constraints
+
+### 23-15 — SATCOM
+Satellite communication systems for voice, data, and IP services.
+
+**Subject Codes (yy):** 00-07, 10
+- Antenna/radome/steering with BWB considerations
+- RF chain and network interfaces
+- Security policy and fault handling
+- Dispatch/MEL requirements
+
+### 23-20 — Data Transmission and Automatic Calling
+Datalink, ATSU/CMU, and automatic calling (SELCAL) systems.
+
+**Subject Codes (yy):** 00-08, 10
+- ATSU/CMU architecture
+- VDL/SATCOM bearer integration
+- Message security and integrity
+- Logging and traceability
+
+### 23-30 — Passenger Address, Entertainment and Comfort
+Cabin communication, PA systems, and IFE boundaries.
+
+**Subject Codes (yy):** 00-07, 10
+- PA architecture and zoning
+- Audio distribution and priority
+- Cabin segmentation and safety isolation
+- Emergency/fallback power
+
+### 23-40 — Interphone
+Flight, cabin, service, and maintenance interphone systems.
+
+**Subject Codes (yy):** 00-06, 10
+- Interphone types and station hardware
+- Routing and priority logic
+- Audio integration and emergency power
+- BITE/troubleshooting
+
+### 23-50 — Audio Integrating
+Audio Management Unit (AMU) and Audio Control Panel (ACP) systems.
+
+**Subject Codes (yy):** 00-06, 10, 90
+- AMU/ACP concept and I/O inventory
+- Mixing and priority rules
+- BITE and degradation management
+- EMC/EMI and noise management (electric propulsion environment)
+
+### 23-60 — Static Discharging
+Static discharge devices and RF performance interaction.
+
+**Subject Codes (yy):** 00-04, 10
+- Device inventory and placement
+- Bonding/grounding impacts on RF
+- Inspection and maintenance
+- Noise reduction evidence
+
+### 23-70 — Audio and Video Monitoring
+Cabin/door/service monitoring systems.
+
+**Subject Codes (yy):** 00-05, 10
+- Video chain and audio monitoring
+- Privacy/security policy
+- Failure/dispatch impacts
+- Latency and quality verification
+
+### 23-80 — Integrated Automatic Tuning
+Radio auto-tuning systems and database integration.
+
+**Subject Codes (yy):** 00-04, 10
+- Functional scope and limits
+- Interfaces to radios and databases (ATA 34)
+- HMI authority rules
+- Failure modes and prevention
 
 ## Directory Structure
 
-The structure follows the **ATA SNS subject-level (23-xx-yy)** format where:
-- `xx` = **Section** (3rd–4th digits)
-- `yy` = **Subject** (5th–6th digits)
+Each subject code folder (23-xx-yy) contains:
 
-### Sections
-
-```text
-ATA-23-communications/
-├── 23-00-communications-general/
-├── 23-10-speech-communications/
-├── 23-15-satcom/
-├── 23-20-data-transmission-and-automatic-calling/
-├── 23-30-passenger-address-entertainment-comfort/
-├── 23-40-interphone/
-├── 23-50-audio-integrating/
-├── 23-60-static-discharging/
-├── 23-70-audio-and-video-monitoring/
-└── 23-80-integrated-automatic-tuning/
 ```
-
-### Subject Structure
-
-Each section contains subjects following the pattern `23-xx-yy-<subject-name>/`:
-- `23-xx-00-<section-name>/` — General subject for each section
-- `23-xx-YY-<subject-name>/` — Additional subjects as defined by ATA SNS extract
-
-### SSOT and PUB Structure
-
-Each subject directory contains:
-
-```text
-23-xx-yy-<subject-name>/
-├── SSOT/                           # Single Source of Truth
+23-xx-yy-descriptive-name/
+├── SSOT/                              # Single Source of Truth
 │   ├── LC01_Requirements/
 │   ├── LC02_System_Requirements/
 │   ├── LC03_Design/
@@ -58,116 +113,105 @@ Each subject directory contains:
 │   ├── LC06_Quality/
 │   ├── LC07_Safety/
 │   └── LC08_Certification/
-└── PUB/                            # Publication views
-    ├── AMM/                        # Aircraft Maintenance Manual
-    │   ├── CSDB/                   # Common Source Database
-    │   │   ├── DM/                 # Data Modules
-    │   │   ├── PM/                 # Publication Modules
-    │   │   ├── DML/                # Data Module Lists
-    │   │   ├── ICN/                # Illustrations/Graphics
-    │   │   ├── BREX/               # Business Rules Exchange
-    │   │   ├── COMMON/             # Common information sets
-    │   │   └── APPLICABILITY/      # Applicability statements
-    │   ├── EXPORT/                 # Export outputs
-    │   ├── bindings.csv            # Publication bindings
-    │   └── csdb.profile.yaml       # CSDB profile configuration
-    └── IPC/                        # Illustrated Parts Catalog
-        └── (same structure as AMM)
+└── PUB/                               # Publications
+    ├── AMM/                           # Aircraft Maintenance Manual
+    │   ├── CSDB/                      # Common Source Database
+    │   │   ├── DM/                    # Data Modules
+    │   │   ├── PM/                    # Publication Modules
+    │   │   ├── DML/                   # Data Module Lists
+    │   │   ├── ICN/                   # Illustrations
+    │   │   ├── BREX/                  # Business Rules
+    │   │   ├── COMMON/                # Common information
+    │   │   └── APPLICABILITY/         # Applicability statements
+    │   ├── EXPORT/                    # Export/publication outputs
+    │   ├── bindings.csv
+    │   └── csdb.profile.yaml
+    └── IPC/                           # Illustrated Parts Catalog
+        ├── CSDB/                      # (same structure as AMM)
+        ├── EXPORT/
+        ├── bindings.csv
+        └── csdb.profile.yaml
 ```
 
-## Relationship to OPT-IN Framework
+## Governance Note
 
-This ATA SNS structure coexists with the OPT-IN Framework organization:
+This is an **AMPEL360 internal SBJ allocation for scaffolding**. If your licensed **SNS (System Numbering Standard) extract** already assigns official 5th–6th digit subjects for ATA 23, reconcile or rename to match it.
 
-- **OPT-IN Framework** (`23-00_GENERAL`, `23-10_Operations`, etc.): Project lifecycle and development structure
-- **ATA SNS** (`ATA-23-communications/`): Publication and certification structure
+**Reserved codes:** yy=90–99 are reserved for **program-specific deltas** (e.g., BWB antenna blockage, EMC/EMI considerations for electric propulsion).
 
-Both structures reference the same underlying systems and components but organize them for different purposes.
+## Key Features
 
-## S1000D CSDB Structure
+### BWB-Specific Considerations
+- **23-00-91**: BWB antenna blockage and shadowing analysis
+- **23-15-02**: SATCOM antenna pointing with BWB geometry constraints
+- Antenna placement philosophy across the blended wing body configuration
 
-The **CSDB (Common Source Database)** follows the S1000D standard and contains:
+### Electric Propulsion Environment
+- **23-00-90**: EMC/EMI program delta for HV switching and inverter noise
+- **23-10-90**: Speech communications EMC/EMI constraints
+- **23-50-90**: Audio integrating EMC/EMI and noise management
 
-- **DM** (Data Modules): Individual documentation units
-- **PM** (Publication Modules): Publication structure definitions
-- **DML** (Data Module Lists): Lists referencing data modules
-- **ICN** (Illustrations): Graphics, diagrams, and illustrations
-- **BREX** (Business Rules Exchange): Validation rules and constraints
-- **COMMON** (Common Information Sets): Reusable content
-- **APPLICABILITY** (Applicability Statements): Product/variant applicability
+### Safety and Security
+- **23-00-08**: Cyber/security cross-reference to B30/ATA-46 governance
+- **23-00-92**: Domain segregation (safety vs cabin vs maintenance isolation)
+- **23-20-05**: Message security and integrity controls
+- **23-30-03**: Cabin segmentation and safety-critical isolation
 
-## Publication Views
+## Standards and Compliance
 
-Each subject can have multiple publication views (SUB_ID):
-- **AMM**: Aircraft Maintenance Manual
-- **IPC**: Illustrated Parts Catalog
-- Additional publications can be added as needed (e.g., WDM, CMM, FIM, SRM)
+Communications systems must comply with:
+- **CS-25.1309**: Equipment, systems, and installations
+- **DO-160**: Environmental conditions and test procedures
+- **DO-178C**: Software considerations in airborne systems
+- **DO-254**: Design assurance for airborne electronic hardware
+- **RTCA DO-290C**: Air-ground datalink communications
+- **EUROCAE ED-120**: SATCOM safety and performance standards
+- **ATA iSpec 2200**: Maintenance information standards
+- **S1000D**: Technical publication specification
 
-## ATA 23 SNS Sections
+Refer to **23-00-09** (Compliance basis) for complete regulatory mapping.
 
-### 23-00 Communications — General
-Chapter-level scope, architecture, partitioning, standards, redundancy, dispatch philosophy, and cross-system dependencies for aircraft communications.
+## Cross-References
 
-### 23-10 Speech Communications
-Aircraft voice communications (VHF, HF where applicable), crew audio endpoints, and operational voice routing (ATC, company, inter-crew voice paths).
+### Related ATA Chapters
+- **ATA 21**: Air Conditioning (power/cooling interfaces)
+- **ATA 24**: Electrical Power (power distribution, emergency power)
+- **ATA 31**: Indicating/Recording Systems (HMI, annunciations)
+- **ATA 34**: Navigation (FMS integration, databases)
+- **ATA 42**: Integrated Modular Avionics (IMA hosting)
+- **ATA 46**: Information Systems (cyber security, data management)
 
-### 23-15 SATCOM
-Satellite communications terminals and services supporting voice and/or datalink, including antenna/steering constraints and service availability management.
-
-### 23-20 Data Transmission and Automatic Calling
-Aircraft datalink and "automatic calling" functions (ACARS/ATSU-related flows and SELCAL), message routing, and operational communications automation.
-
-### 23-30 Passenger Address, Entertainment and Comfort
-Cabin communications/services (PA, passenger information, IFE/comfort comms where included in ATA 23 scope).
-
-### 23-40 Interphone
-Interphone services (cockpit-to-cabin, maintenance/service interphone), call signaling, and station management.
-
-### 23-50 Audio Integrating
-Audio management/integration: selection, mixing, routing, recording feeds, sidetone, and crew audio control logic.
-
-### 23-60 Static Discharging
-Static discharge provisions (wicks, bonding/grounding practices as scoped to comms performance protection).
-
-### 23-70 Audio and Video Monitoring
-Monitoring/recording or surveillance-type functions where treated under ATA 23, including cabin monitoring feeds and audio/video distribution to crew stations.
-
-### 23-80 Integrated Automatic Tuning
-Automatic tuning/selection support (radio tuning integration, frequency management aids) where implemented.
-
-## BWB + H₂ Fuel-Cell/Electric Program Considerations
-
-- **EMC/EMI and conducted noise**: Higher-risk environment due to HV switching/inverters; make this a first-class requirement and verification stream.
-- **Antenna placement on BWB**: Different blockage/shadowing and structural integration constraints; treat as design drivers for 23-10/15.
-- **Domain segregation**: Keep ATA 23 functional scope clean; place cybersecurity controls under B30 governance (or ATA 46 if used), and cross-reference from ATA 23.
-
-## Usage Guidelines
-
-1. **For Certification Documentation**: Use this ATA SNS structure
-2. **For Development/Lifecycle**: Use the parent OPT-IN Framework structure
-3. **Cross-Reference**: Maintain traceability between both structures
-
-## References
-
-- [ATA iSpec 2200 Extract: ATA Standard Numbering System](https://publications.airlines.org/products/ispec-2200-extract-ata-standard-numbering-system-revision-2024-1)
-- [ATA Chapters and Sub-chapters Reference](https://itlims-zsis.meil.pw.edu.pl/pomoce/ESL/2016/ATA_Chapters.pdf)
-- [ATA Standard Numbering System](https://www.aviationhunt.com/ata-standard-numbering-system/)
-- S1000D Specification (International specification for technical publications)
-
-## Notes
-
-- Each `23-xx-00-*` directory serves as the "general" subject for its section
-- Additional subjects `23-xx-YY-*` should only be added when defined in your ATA SNS extract
-- The `PUB/<SUB_ID>/CSDB` structure is self-contained for S1000D publishing
-- Configuration files (`bindings.csv`, `csdb.profile.yaml`) should be populated according to project requirements
+### Internal Cross-References
+- **23-40-04** → **23-50**: Interphone audio integration
+- **23-10-06** → Recorder interfaces (if ATA 31 or dedicated recorder)
+- **23-80-02** → **ATA 34**: Navigation database interfaces
 
 ## Document Control
 
-- **ATA Chapter**: 23
-- **Structure Version**: 1.0
-- **Standard**: ATA iSpec 2200 SNS Extract (Revision 2024-1) / S1000D
+- **ATA Chapter**: 23 — Communications
+- **Structure Standard**: AMPEL360 SBJ Code Assignment
 - **Status**: Active
+- **Owner**: AMPEL360 Communications System WG
+- **Version**: 1.0
+- **Date**: 2026-01-09
 - **Repository**: AMPEL360-AIR-T
-- **Location**: Integrated with OPT-IN Framework
-- **Last Updated**: 2026-01-09
-- **Generated with AI assistance**: GitHub Copilot, prompted by Amedeo Pelliccia
+
+## Usage
+
+1. **For Requirements**: Navigate to `23-xx-yy-*/SSOT/LC01_Requirements/`
+2. **For Design**: Navigate to `23-xx-yy-*/SSOT/LC03_Design/`
+3. **For Maintenance**: Navigate to `23-xx-yy-*/PUB/AMM/`
+4. **For Parts**: Navigate to `23-xx-yy-*/PUB/IPC/`
+5. **For Verification**: Navigate to `23-xx-yy-*/SSOT/LC05_VnV/`
+
+## Contributing
+
+When adding documentation:
+1. Use the correct **23-xx-yy** subject code
+2. Place content in the appropriate lifecycle folder (LC01-LC08) or publication folder (AMM/IPC)
+3. Maintain traceability with clear cross-references
+4. Update this index when adding new subjects
+
+---
+
+**For detailed subject code mapping, see:** [00_INDEX.md](./00_INDEX.md)
