@@ -18,8 +18,9 @@
   Document Control:
   - Standard: S1000D Issue 5.0
   - Project: AMPEL360-AIR-T
-  - Status: Placeholder - Pending Final Artwork
+  - Status: Technical Artwork
   - Created: 2026-01-09
+  - Updated: 2026-01-09
   - Author: AMPEL360-AIR-T Project
 -->
 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -52,29 +53,208 @@
     <!-- Standard styles for AMPEL360 technical illustrations -->
     <style type="text/css">
       .border { fill: none; stroke: #333333; stroke-width: 2; }
-      .title-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #333333; }
-      .subtitle-text { font-family: Arial, sans-serif; font-size: 14px; fill: #666666; }
-      .placeholder-text { font-family: Arial, sans-serif; font-size: 18px; fill: #999999; font-style: italic; }
+      .title-text { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #333333; }
+      .subtitle-text { font-family: Arial, sans-serif; font-size: 12px; fill: #666666; }
       .icn-label { font-family: monospace; font-size: 12px; fill: #666666; }
-      .placeholder-box { fill: #f5f5f5; stroke: #cccccc; stroke-width: 1; stroke-dasharray: 5,5; }
+      
+      /* Flowchart elements */
+      .flow-box { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .flow-start-end { fill: #e6f3ff; stroke: #000000; stroke-width: 2; }
+      .flow-decision { fill: #fff9e6; stroke: #000000; stroke-width: 2; }
+      .flow-reference { fill: #f0f0f0; stroke: #666666; stroke-width: 1.5; stroke-dasharray: 5,3; }
+      .flow-failure { fill: #ffe6e6; stroke: #cc0000; stroke-width: 2; }
+      .flow-text { font-family: Arial, sans-serif; font-size: 10px; fill: #000000; text-anchor: middle; }
+      .flow-text-small { font-family: Arial, sans-serif; font-size: 8px; fill: #000000; text-anchor: middle; }
+      .flow-text-bold { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .flow-arrow { fill: none; stroke: #000000; stroke-width: 2; marker-end: url(#arrowhead); }
+      .flow-arrow-no { fill: none; stroke: #cc0000; stroke-width: 2; marker-end: url(#arrowhead-no); }
+      .flow-arrow-yes { fill: none; stroke: #00aa00; stroke-width: 2; marker-end: url(#arrowhead-yes); }
+      .label-text { font-family: Arial, sans-serif; font-size: 9px; fill: #666666; }
     </style>
+    
+    <!-- Arrow markers -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#000000" />
+    </marker>
+    <marker id="arrowhead-no" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#cc0000" />
+    </marker>
+    <marker id="arrowhead-yes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#00aa00" />
+    </marker>
   </defs>
   
   <!-- Border -->
   <rect class="border" x="10" y="10" width="780" height="580" rx="5" ry="5"/>
   
   <!-- Title Block -->
-  <text class="title-text" x="400" y="50" text-anchor="middle">VHF Radio System Test Procedure Flow</text>
-  <text class="subtitle-text" x="400" y="75" text-anchor="middle">ATA 23-10-00 Speech Communications</text>
+  <text class="title-text" x="400" y="35" text-anchor="middle">VHF Radio System Test Procedure Flow</text>
+  <text class="subtitle-text" x="400" y="50" text-anchor="middle">ATA 23-10-00 Speech Communications • Referenced by DM (InfoCode 300A) • AMM publication view</text>
   
-  <!-- Placeholder Content Area -->
-  <rect class="placeholder-box" x="50" y="100" width="700" height="400"/>
-  <text class="placeholder-text" x="400" y="300" text-anchor="middle">
-    [PLACEHOLDER - Flowchart]
-  </text>
-  <text class="placeholder-text" x="400" y="330" text-anchor="middle">
-    Pending Final Technical Artwork
-  </text>
+  <!-- Left side: Preconditions/Safety -->
+  <g id="preconditions">
+    <rect class="flow-reference" x="30" y="70" width="150" height="90" rx="5"/>
+    <text class="flow-text-bold" x="105" y="85">Preconditions / Safety</text>
+    <text class="flow-text-small" x="105" y="100">• Aircraft safe state: chocks/park brake</text>
+    <text class="flow-text-small" x="105" y="112">• Area clear, comply with RF rules</text>
+    <text class="flow-text-small" x="105" y="124">• Correct headset/hand mic available</text>
+    <text class="flow-text-small" x="105" y="136">• Any MEL/CDL constraints reviewed</text>
+  </g>
+  
+  <!-- Left side: References -->
+  <g id="references">
+    <rect class="flow-reference" x="30" y="175" width="150" height="75" rx="5"/>
+    <text class="flow-text-bold" x="105" y="190">References (placeholders)</text>
+    <text class="flow-text-small" x="105" y="205">• DM 23-10-00-300A: VHF Test Proc</text>
+    <text class="flow-text-small" x="105" y="217">• DM 23-10-00-4xxA: Fault Isolation</text>
+    <text class="flow-text-small" x="105" y="229">• Wiring/ICN: Audio dist schematic</text>
+    <text class="flow-text-small" x="105" y="241">(ICN-...-0002)</text>
+  </g>
+  
+  <!-- Right side: Pass/Fail Criteria -->
+  <g id="pass-fail">
+    <rect class="flow-reference" x="620" y="70" width="155" height="100" rx="5"/>
+    <text class="flow-text-bold" x="697.5" y="85">Pass/Fail Criteria</text>
+    <text class="flow-text-small" x="697.5" y="100">RX PASS: intelligible audio, stable</text>
+    <text class="flow-text-small" x="697.5" y="112">squelch, correct endpoint routing</text>
+    <text class="flow-text-small" x="697.5" y="124">TX PASS: sidetone present, ground</text>
+    <text class="flow-text-small" x="697.5" y="136">station receives readable transmission</text>
+    <text class="flow-text-small" x="697.5" y="148">Record: frequency, station/test set,</text>
+    <text class="flow-text-small" x="697.5" y="160">crew station, anomalies, corrective</text>
+  </g>
+  
+  <!-- Main flowchart -->
+  <!-- START -->
+  <g id="start">
+    <ellipse class="flow-start-end" cx="400" cy="100" rx="60" ry="25"/>
+    <text class="flow-text-bold" x="400" y="105">START</text>
+  </g>
+  
+  <!-- Arrow from START to Step 1 -->
+  <path class="flow-arrow" d="M 400 125 L 400 145"/>
+  
+  <!-- Step 1: Establish electrical power -->
+  <g id="step1">
+    <rect class="flow-box" x="300" y="145" width="200" height="50" rx="5"/>
+    <text class="flow-text-bold" x="400" y="162">Establish electrical power</text>
+    <text class="flow-text-bold" x="400" y="174">configuration</text>
+    <text class="flow-text-small" x="400" y="186">Select EXT PWR / APU / BAT as required by DM 300A</text>
+  </g>
+  
+  <!-- Arrow to Step 2 -->
+  <path class="flow-arrow" d="M 400 195 L 400 210"/>
+  
+  <!-- Step 2: Configure cockpit audio -->
+  <g id="step2">
+    <rect class="flow-box" x="300" y="210" width="200" height="50" rx="5"/>
+    <text class="flow-text-bold" x="400" y="227">Configure cockpit audio for test</text>
+    <text class="flow-text-small" x="400" y="239">ACP: select VHF1 (or VHF under test), set volume mid,</text>
+    <text class="flow-text-small" x="400" y="251">squelch as required. Select output: headset and/or speaker per procedure</text>
+  </g>
+  
+  <!-- Arrow to Step 3 -->
+  <path class="flow-arrow" d="M 400 260 L 400 280"/>
+  
+  <!-- Step 3: Set test frequency -->
+  <g id="step3">
+    <rect class="flow-box" x="300" y="280" width="200" height="40" rx="5"/>
+    <text class="flow-text-bold" x="400" y="295">Set test frequency / channel</text>
+    <text class="flow-text-small" x="400" y="307">Tune to assigned test frequency OR known station</text>
+    <text class="flow-text-small" x="400" y="315">(ATIS/ground check). Record frequency used in log</text>
+  </g>
+  
+  <!-- Arrow to RX check -->
+  <path class="flow-arrow" d="M 400 320 L 400 340"/>
+  
+  <!-- RX Check Decision Diamond -->
+  <g id="rx-decision">
+    <polygon class="flow-decision" points="400,340 460,375 400,410 340,375"/>
+    <text class="flow-text-bold" x="400" y="373">RX OK?</text>
+    <text class="label-text" x="470" y="378">YES</text>
+    <text class="label-text" x="320" y="378">NO</text>
+  </g>
+  
+  <!-- RX Check box (right of diamond) -->
+  <g id="rx-check">
+    <rect class="flow-box" x="480" y="350" width="120" height="50" rx="5"/>
+    <text class="flow-text-bold" x="540" y="365">RECEIVE check (RX)</text>
+    <text class="flow-text-small" x="540" y="377">Confirm readable audio: clarity,</text>
+    <text class="flow-text-small" x="540" y="389">level control, squelch behavior</text>
+    <text class="flow-text-small" x="540" y="397">If using speaker: verify selection</text>
+  </g>
+  
+  <!-- RX failure box (left of diamond) -->
+  <g id="rx-failure">
+    <rect class="flow-failure" x="190" y="350" width="130" height="80" rx="5"/>
+    <text class="flow-text-bold" x="255" y="365" fill="#cc0000">If NO (RX failed)</text>
+    <text class="flow-text-small" x="255" y="377">1) Verify headset/speaker</text>
+    <text class="flow-text-small" x="255" y="387">selection &amp; volume</text>
+    <text class="flow-text-small" x="255" y="397">2) Verify ACP selection (VHF1)</text>
+    <text class="flow-text-small" x="255" y="407">and squelch</text>
+    <text class="flow-text-small" x="255" y="417">3) Check CBs / power / audio</text>
+    <text class="flow-text-small" x="255" y="425">routing</text>
+  </g>
+  
+  <!-- Arrow from RX diamond to RX failure (NO path) -->
+  <path class="flow-arrow-no" d="M 340 375 L 320 375"/>
+  
+  <!-- Arrow from RX diamond to TX decision (YES path) -->
+  <path class="flow-arrow-yes" d="M 460 375 L 480 375 L 480 450 L 460 450"/>
+  
+  <!-- TX Check Decision Diamond -->
+  <g id="tx-decision">
+    <polygon class="flow-decision" points="400,430 460,465 400,500 340,465"/>
+    <text class="flow-text-bold" x="400" y="463">TX OK?</text>
+    <text class="label-text" x="470" y="468">YES</text>
+    <text class="label-text" x="320" y="468">NO</text>
+  </g>
+  
+  <!-- TX Check box (right of diamond) -->
+  <g id="tx-check">
+    <rect class="flow-box" x="480" y="435" width="120" height="60" rx="5"/>
+    <text class="flow-text-bold" x="540" y="450">TRANSMIT check (TX)</text>
+    <text class="flow-text-small" x="540" y="462">Key PTT (hand mic / boom).</text>
+    <text class="flow-text-small" x="540" y="472">Verify sidetone.</text>
+    <text class="flow-text-small" x="540" y="482">Request/readback with ground</text>
+    <text class="flow-text-small" x="540" y="490">station (or test set)</text>
+  </g>
+  
+  <!-- TX failure box (left of diamond) -->
+  <g id="tx-failure">
+    <rect class="flow-failure" x="190" y="440" width="130" height="70" rx="5"/>
+    <text class="flow-text-bold" x="255" y="455" fill="#cc0000">If NO (TX failed)</text>
+    <text class="flow-text-small" x="255" y="467">1) Verify PTT source, mic</text>
+    <text class="flow-text-small" x="255" y="477">selection, sidetone level</text>
+    <text class="flow-text-small" x="255" y="487">2) Verify freq/frequency and</text>
+    <text class="flow-text-small" x="255" y="497">radio selection</text>
+    <text class="flow-text-small" x="255" y="505">3) Check CBs / inhibits / routing</text>
+  </g>
+  
+  <!-- Arrow from TX diamond to TX failure (NO path) -->
+  <path class="flow-arrow-no" d="M 340 465 L 320 465"/>
+  
+  <!-- Arrow from TX diamond to END (YES path) -->
+  <path class="flow-arrow-yes" d="M 400 500 L 400 525"/>
+  
+  <!-- Arrows from failure boxes to Fault Isolation -->
+  <path class="flow-arrow" d="M 255 430 L 255 520 L 280 520"/>
+  <path class="flow-arrow" d="M 255 510 L 255 520"/>
+  
+  <!-- Fault Isolation reference -->
+  <g id="fault-isolation">
+    <rect class="flow-reference" x="280" y="510" width="100" height="30" rx="5"/>
+    <text class="flow-text-small" x="330" y="522">4) Go to Fault Isolation</text>
+    <text class="flow-text-small" x="330" y="532">DM (23-10-00-4xxA)</text>
+  </g>
+  
+  <!-- Arrow from Fault Isolation to END -->
+  <path class="flow-arrow" d="M 380 525 L 400 525"/>
+  
+  <!-- END -->
+  <g id="end">
+    <ellipse class="flow-start-end" cx="400" cy="545" rx="60" ry="25"/>
+    <text class="flow-text-bold" x="400" y="550">END</text>
+  </g>
   
   <!-- ICN Label -->
   <text class="icn-label" x="20" y="575">ICN-AMPEL360AT-23-10-0010-A_001</text>
