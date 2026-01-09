@@ -363,7 +363,7 @@ Software supporting common information:
 - **Standard**: S1000D Issue 5.0
 - **Project**: AMPEL360-AIR-T
 - **ATA Chapter**: 22 (Autoflight)
-- **Publication Type**: AMM (Aircraft Maintenance Manual)
+- **Publication Type**: IPC (Illustrated Parts Catalog)
 - **Status**: Active
 - **Last Updated**: 2026-01-09
 - **Generated with AI assistance**: GitHub Copilot, prompted by Amedeo Pelliccia
