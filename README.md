@@ -456,6 +456,34 @@ flowchart TB
 | **DO-178C** | Software development assurance |
 | **ARP4754A** | System development process |
 
+#### S1000D CSDB Structure
+
+Technical publications follow **S1000D Issue 5.0** with a standardized **Common Source Database (CSDB)** structure:
+
+```
+PUB/
+├── AMM/CSDB/           # Aircraft Maintenance Manual
+│   ├── DM/             # Data Modules - Individual documentation units (procedures, descriptions, etc.)
+│   ├── PM/             # Publication Modules - Define the structure of publications
+│   ├── DML/            # Data Module Lists - Organize and reference groups of data modules
+│   ├── ICN/            # Illustrations/Graphics - All graphical content (ICN = Illustration Control Number)
+│   ├── BREX/           # Business Rules Exchange - Validation rules and constraints
+│   ├── COMMON/         # Common Information Sets - Reusable content snippets
+│   └── APPLICABILITY/  # Applicability Statements - Product variant and configuration applicability
+│
+└── IPC/CSDB/           # Illustrated Parts Catalog
+    ├── DM/             # Data Modules - Individual documentation units (parts lists, descriptions, etc.)
+    ├── PM/             # Publication Modules - Define the structure of publications
+    ├── DML/            # Data Module Lists - Organize and reference groups of data modules
+    ├── ICN/            # Illustrations/Graphics - All graphical content (ICN = Illustration Control Number)
+    ├── BREX/           # Business Rules Exchange - Validation rules and constraints
+    ├── COMMON/         # Common Information Sets - Reusable content snippets
+    └── APPLICABILITY/  # Applicability Statements - Product variant and configuration applicability
+```
+
+**Example Path**: 
+`OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_22-AUTOFLIGHT/ATA-22-auto-flight/22-00-auto-flight-general/22-00-00-auto-flight-general/PUB/AMM/CSDB/`
+
 ### Certification Timeline
 
 > 📍 **Current Phase:** Preliminary Design / Detail Concept (December 2025)
