@@ -1,0 +1,6 @@
+Requirement_ID,Title,Description,Type,Priority,Verification_Method,Status,Trace_To
+REQ-27-50-10-high-lift-architecture-and-power-drive-001,TBD,TBD,Functional,High,Test,Draft,
+REQ-27-50-10-high-lift-architecture-and-power-drive-002,TBD,TBD,Functional,High,Test,Draft,
+REQ-27-50-10-high-lift-architecture-and-power-drive-003,TBD,TBD,Performance,Medium,Analysis,Draft,
+REQ-27-50-10-high-lift-architecture-and-power-drive-004,TBD,TBD,Safety,High,Inspection,Draft,
+REQ-27-50-10-high-lift-architecture-and-power-drive-005,TBD,TBD,Interface,Medium,Test,Draft,

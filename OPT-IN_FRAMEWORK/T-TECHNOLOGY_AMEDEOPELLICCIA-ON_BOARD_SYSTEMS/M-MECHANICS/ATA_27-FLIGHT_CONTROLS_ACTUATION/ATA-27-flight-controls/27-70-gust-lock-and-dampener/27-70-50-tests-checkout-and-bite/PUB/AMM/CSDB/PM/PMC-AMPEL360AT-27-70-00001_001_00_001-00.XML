@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SPDX-License-Identifier: Apache-2.0
+  SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+  
+  S1000D Publication Module Placeholder
+  Model: AMPEL360AT
+  ATA: 27-70
+-->
+<!DOCTYPE pm PUBLIC "-//S1000D//DTD S1000D Issue 5.0//EN" "s1000d_5-0.dtd">
+<pm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <identAndStatusSection>
+    <pmAddress>
+      <pmIdent>
+        <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00001" pmVolume="01"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </pmIdent>
+      <pmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <pmTitle>Aircraft Maintenance Manual - ATA 27-70</pmTitle>
+      </pmAddressItems>
+    </pmAddress>
+    <pmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applic/>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </pmStatus>
+  </identAndStatusSection>
+  <content>
+    <pmEntry>
+      <pmEntryTitle>ATA 27-70 Flight Controls</pmEntryTitle>
+      <!-- Data module references to be added -->
+    </pmEntry>
+  </content>
+</pm>
