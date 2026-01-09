@@ -204,6 +204,9 @@ Thermal/acoustic insulation as a furnishings-managed topic.
 | 25-80-04 | Materials & flammability constraints | Policy pointer | `25-80-04-materials-and-flammability-constraints/` |
 | 25-80-05 | Installation workmanship and sealing rules | Installation standards | `25-80-05-installation-workmanship-and-sealing/` |
 | 25-80-06 | Inspection/repair/replace rules | Maintenance procedures | `25-80-06-inspection-repair-replace/` |
+| 25-80-07 | Interfaces to ECS/structures/systems | Definition of insulation interfaces and responsibilities | `25-80-07-interfaces-ecs-structures-systems/` |
+| 25-80-08 | Special zones and limitations | Insulation rules in fire zones, wet areas, equipment bays | `25-80-08-special-zones-and-limitations/` |
+| 25-80-09 | Insulation configuration and documentation | Drawings, part lists, and change control for insulation | `25-80-09-configuration-and-documentation/` |
 | 25-80-10 | Verification | Thermal performance adjacency checks, moisture tests, durability | `25-80-10-verification/` |
 
 **Note:** Subject codes 25-80-07, 25-80-08, and 25-80-09 are not used in this implementation. The range is non-contiguous.
