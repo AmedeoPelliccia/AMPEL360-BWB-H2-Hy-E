@@ -204,9 +204,9 @@
           <valueAllowed>deleted</valueAllowed>
           <valueAllowed>revised</valueAllowed>
           <valueAllowed>status</valueAllowed>
-          <valueAllowed>rinstate-changed</valueAllowed>
-          <valueAllowed>rinstate-revised</valueAllowed>
-          <valueAllowed>rinstate-status</valueAllowed>
+          <valueAllowed>reinstate-changed</valueAllowed>
+          <valueAllowed>reinstate-revised</valueAllowed>
+          <valueAllowed>reinstate-status</valueAllowed>
         </objectValue>
         <message>Issue type must be one of the allowed S1000D values</message>
       </valueRule>
