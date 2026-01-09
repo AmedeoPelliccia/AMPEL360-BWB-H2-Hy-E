@@ -1,0 +1,5 @@
+publication_module,data_module,sequence,applicability
+# ATA 22-00-00 Auto Flight General Publication Bindings
+# PM-22-00-00-001,DM-22-00-00-001,1,ALL
+# PM-22-00-00-001,DM-22-00-00-002,2,ALL
+# Add additional bindings as data modules are created
