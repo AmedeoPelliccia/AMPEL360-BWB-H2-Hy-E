@@ -1,0 +1,29 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# CSDB Profile for 28-20-30
+version: 1
+project: AMPEL360-AIR-T
+ata_chapter: 28
+section: "28-20-30"
+brex_reference: "BREX-AMPEL360AT-AIR-T_001-00.XML"
+language: "EN-US"
+issue_info:
+  issue_number: "001"
+  in_work: "00"
+applicability:
+  model: "AMPEL360-AIR-T"
+  variant: "H2"

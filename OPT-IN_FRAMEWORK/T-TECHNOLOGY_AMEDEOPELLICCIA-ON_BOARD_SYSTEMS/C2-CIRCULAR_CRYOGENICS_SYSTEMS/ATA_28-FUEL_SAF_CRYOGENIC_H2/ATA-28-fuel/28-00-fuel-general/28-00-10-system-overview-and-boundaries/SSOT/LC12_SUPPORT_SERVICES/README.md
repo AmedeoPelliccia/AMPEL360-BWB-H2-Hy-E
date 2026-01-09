@@ -1,0 +1,3 @@
+# LC12_SUPPORT_SERVICES
+
+Placeholder for 28-00-10 LC12_SUPPORT_SERVICES content.

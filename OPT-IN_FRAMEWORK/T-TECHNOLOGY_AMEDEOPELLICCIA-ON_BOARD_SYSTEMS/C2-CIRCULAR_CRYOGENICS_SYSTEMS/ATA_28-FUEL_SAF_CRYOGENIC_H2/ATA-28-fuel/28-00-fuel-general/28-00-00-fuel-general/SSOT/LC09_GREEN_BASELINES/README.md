@@ -1,0 +1,3 @@
+# LC09_GREEN_BASELINES
+
+Placeholder for 28-00-00 LC09_GREEN_BASELINES content.

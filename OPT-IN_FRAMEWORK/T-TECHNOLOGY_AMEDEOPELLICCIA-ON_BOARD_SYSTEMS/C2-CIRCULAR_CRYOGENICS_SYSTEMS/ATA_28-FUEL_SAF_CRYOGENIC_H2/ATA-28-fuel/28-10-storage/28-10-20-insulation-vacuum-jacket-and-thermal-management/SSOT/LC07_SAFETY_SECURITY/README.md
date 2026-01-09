@@ -1,0 +1,3 @@
+# LC07_SAFETY_SECURITY
+
+Placeholder for 28-10-20 LC07_SAFETY_SECURITY content.
