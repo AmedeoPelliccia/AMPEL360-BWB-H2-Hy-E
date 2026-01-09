@@ -1,0 +1,12 @@
+SSOT_Path,Data_Module_Code,Transformation_Rule,Content_Type,Status,Notes
+# Example bindings for SSOT to S1000D IPC Data Module mapping
+# Adjust according to actual parts data and illustrated parts breakdown structure
+
+# Example Parts List Data Modules
+# (to be populated when parts data is available)
+
+# Placeholder entries - update with actual parts data
+# ../SSOT/parts_data/assembly_001_parts.csv,DMC-AMPEL360-A-23-00-01-00A-941A-A,csv_to_dm_parts_list,parts_list,draft,Assembly 001 parts list
+# ../SSOT/parts_data/assembly_001_ipb.svg,ICN-AMPEL360-A-23-00-01-00001-A,svg_to_icn,illustration,draft,Assembly 001 illustrated breakdown
+
+# Add additional bindings as parts data is created
