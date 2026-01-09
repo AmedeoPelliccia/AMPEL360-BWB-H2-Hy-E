@@ -188,7 +188,7 @@
     <rect class="flow-failure" x="190" y="350" width="130" height="80" rx="5"/>
     <text class="flow-text-bold" x="255" y="365" fill="#cc0000">If NO (RX failed)</text>
     <text class="flow-text-small" x="255" y="377">1) Verify headset/speaker</text>
-    <text class="flow-text-small" x="255" y="387">selection &amp; volume</text>
+    <text class="flow-text-small" x="255" y="387">selection / volume</text>
     <text class="flow-text-small" x="255" y="397">2) Verify ACP selection (VHF1)</text>
     <text class="flow-text-small" x="255" y="407">and squelch</text>
     <text class="flow-text-small" x="255" y="417">3) Check CBs / power / audio</text>
@@ -225,7 +225,7 @@
     <text class="flow-text-bold" x="255" y="455" fill="#cc0000">If NO (TX failed)</text>
     <text class="flow-text-small" x="255" y="467">1) Verify PTT source, mic</text>
     <text class="flow-text-small" x="255" y="477">selection, sidetone level</text>
-    <text class="flow-text-small" x="255" y="487">2) Verify freq/frequency and</text>
+    <text class="flow-text-small" x="255" y="487">2) Verify frequency and</text>
     <text class="flow-text-small" x="255" y="497">radio selection</text>
     <text class="flow-text-small" x="255" y="505">3) Check CBs / inhibits / routing</text>
   </g>
