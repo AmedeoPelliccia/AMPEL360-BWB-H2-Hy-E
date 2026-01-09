@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Common Information: COM-AMPEL360AT-DEF-00001
+  Type: Definitions
+  Description: Frequency band definitions
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: DEF
+  - ID: 00001
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-300A (Removal/Installation)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 23 (Communications)
+  - Created: 2026-01-09
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="def" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="09"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <definitionRepository>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D001"/>
+        <definitionTerm>VHF Band</definitionTerm>
+        <definitionContent>
+          <para>Very High Frequency band, 30-300 MHz. Used for primary aircraft voice communications (118-137 MHz)</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D002"/>
+        <definitionTerm>HF Band</definitionTerm>
+        <definitionContent>
+          <para>High Frequency band, 3-30 MHz. Used for long-range oceanic communications</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D003"/>
+        <definitionTerm>UHF Band</definitionTerm>
+        <definitionContent>
+          <para>Ultra High Frequency band, 300 MHz - 3 GHz. Used for military and satellite communications</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D004"/>
+        <definitionTerm>L-Band</definitionTerm>
+        <definitionContent>
+          <para>1-2 GHz frequency range. Used for SATCOM and GPS</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D005"/>
+        <definitionTerm>Guard Frequency</definitionTerm>
+        <definitionContent>
+          <para>Emergency frequency 121.5 MHz (VHF) or 243.0 MHz (UHF) monitored continuously</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D006"/>
+        <definitionTerm>Channel Spacing</definitionTerm>
+        <definitionContent>
+          <para>Frequency separation between adjacent channels, typically 8.33 kHz or 25 kHz for VHF COM</para>
+        </definitionContent>
+      </definitionSpec>
+    </definitionRepository>
+  </commonRepositoryContent>
+</commonRepository>

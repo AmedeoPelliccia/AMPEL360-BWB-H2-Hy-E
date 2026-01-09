@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Common Information: COM-AMPEL360AT-ABBR-00001
+  Type: Abbreviations
+  Description: Communications abbreviations list
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: ABBR
+  - ID: 00001
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-300A (Removal/Installation)
+  - DMC-...-421A (Operational Check)
+  - DMC-...-520A (Troubleshooting)
+  - DMC-...-620A (Repair)
+  - DMC-...-C40A (Circuit Diagrams)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 23 (Communications)
+  - Created: 2026-01-09
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="abbr" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="09"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <abbreviationRepository>
+      <acronymDefinition>
+        <acronymTerm>VHF</acronymTerm>
+        <acronymDefinition>
+          <para>Very High Frequency</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>HF</acronymTerm>
+        <acronymDefinition>
+          <para>High Frequency</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>UHF</acronymTerm>
+        <acronymDefinition>
+          <para>Ultra High Frequency</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>COM</acronymTerm>
+        <acronymDefinition>
+          <para>Communications</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>NAV</acronymTerm>
+        <acronymDefinition>
+          <para>Navigation</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>SATCOM</acronymTerm>
+        <acronymDefinition>
+          <para>Satellite Communications</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>PA</acronymTerm>
+        <acronymDefinition>
+          <para>Passenger Address</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>ICS</acronymTerm>
+        <acronymDefinition>
+          <para>Interphone/Intercom System</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>ACP</acronymTerm>
+        <acronymDefinition>
+          <para>Audio Control Panel</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>PTT</acronymTerm>
+        <acronymDefinition>
+          <para>Push-To-Talk</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>SELCAL</acronymTerm>
+        <acronymDefinition>
+          <para>Selective Calling</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>ACARS</acronymTerm>
+        <acronymDefinition>
+          <para>Aircraft Communications Addressing and Reporting System</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>RF</acronymTerm>
+        <acronymDefinition>
+          <para>Radio Frequency</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>AM</acronymTerm>
+        <acronymDefinition>
+          <para>Amplitude Modulation</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>VSWR</acronymTerm>
+        <acronymDefinition>
+          <para>Voltage Standing Wave Ratio</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>dB</acronymTerm>
+        <acronymDefinition>
+          <para>Decibel</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>MHz</acronymTerm>
+        <acronymDefinition>
+          <para>Megahertz</para>
+        </acronymDefinition>
+      </acronymDefinition>
+      <acronymDefinition>
+        <acronymTerm>kHz</acronymTerm>
+        <acronymDefinition>
+          <para>Kilohertz</para>
+        </acronymDefinition>
+      </acronymDefinition>
+    </abbreviationRepository>
+  </commonRepositoryContent>
+</commonRepository>
