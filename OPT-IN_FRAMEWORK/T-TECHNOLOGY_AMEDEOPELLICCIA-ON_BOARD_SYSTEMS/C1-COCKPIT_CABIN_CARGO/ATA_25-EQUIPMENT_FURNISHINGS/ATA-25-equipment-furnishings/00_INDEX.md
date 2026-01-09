@@ -40,6 +40,7 @@ Chapter boundary, governance, zoning, interfaces to owner systems, maintainabili
 | 25-00-06 | Maintainability & access philosophy | LRU vs furniture modules, access paths | `25-00-06-maintainability-and-access-philosophy/` |
 | 25-00-07 | Inspection & servicing concept | Cleaning, wear, cabin checks | `25-00-07-inspection-and-servicing-concept/` |
 | 25-00-08 | Safety & human factors | Evac, accessibility, injury prevention | `25-00-08-safety-and-human-factors/` |
+| 25-00-09 | Configuration & change control | Baselines, options, SB/retrofit impacts for furnishings | `25-00-09-configuration-and-change-control/` |
 | 25-00-10 | Verification strategy | Fit checks, loads, abuse, durability, evacuation support | `25-00-10-verification-strategy/` |
 
 **Note:** Subject code 25-00-09 is not used in this implementation. The range is non-contiguous.
