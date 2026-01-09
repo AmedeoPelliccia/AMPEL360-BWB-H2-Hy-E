@@ -6,7 +6,7 @@
 
 This directory contains the ATA 27 Flight Controls system documentation following the ATA iSpec 2200 chapter/section structure. The CSDB (Common Source Database) lives at the sub-subject (sys-sec-sbj) level with both PUB (S1000D) and SSOT (Single Source of Truth) alongside each other.
 
-> **Note (BWB mapping):** Even if the BWB uses elevons, split surfaces, or drag rudders, content is indexed into these ATA sections for maintainability and operator familiarity.
+> **Note (BWB mapping):** BWB (Blended Wing Body) aircraft configurations may use non-conventional control surfaces such as elevons, split surfaces, or drag rudders. Even with these alternative control surface arrangements, content is indexed into these standard ATA sections for maintainability and operator familiarity.
 
 ## Structure
 
