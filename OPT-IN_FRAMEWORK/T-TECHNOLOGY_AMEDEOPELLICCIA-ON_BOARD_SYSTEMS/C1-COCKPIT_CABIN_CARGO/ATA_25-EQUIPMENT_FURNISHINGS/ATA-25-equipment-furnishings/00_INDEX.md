@@ -160,6 +160,9 @@ Emergency equipment stowage, accessibility, and inspection.
 | 25-60-04 | First-aid and medical kits | Stowage/accessibility | `25-60-04-first-aid-and-medical-kits/` |
 | 25-60-05 | Emergency tools | Crash axe, flashlights, megaphones, etc. | `25-60-05-emergency-tools/` |
 | 25-60-06 | Inspection intervals and servicing checks | Maintenance intervals and procedures | `25-60-06-inspection-intervals-and-servicing-checks/` |
+| 25-60-07 | Reserved emergency subject | Placeholder for future emergency equipment subject | `25-60-07-reserved-emergency-subject/` |
+| 25-60-08 | Reserved emergency subject | Placeholder for future emergency equipment subject | `25-60-08-reserved-emergency-subject/` |
+| 25-60-09 | Reserved emergency subject | Placeholder for future emergency equipment subject | `25-60-09-reserved-emergency-subject/` |
 | 25-60-10 | Verification | Access time, retention loads, inspection repeatability | `25-60-10-verification/` |
 
 **Note:** Subject codes 25-60-07, 25-60-08, and 25-60-09 are not used in this implementation. The range is non-contiguous.
