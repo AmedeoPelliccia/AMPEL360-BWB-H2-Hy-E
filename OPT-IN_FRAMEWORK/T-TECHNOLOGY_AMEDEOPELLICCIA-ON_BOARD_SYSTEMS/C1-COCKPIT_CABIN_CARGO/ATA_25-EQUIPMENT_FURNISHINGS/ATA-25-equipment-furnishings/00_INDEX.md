@@ -120,6 +120,10 @@ Lavatory monuments and removable fittings.
 | 25-40-03 | Interfaces | 38 water/waste, 24 power, 21 ventilation | `25-40-03-interfaces/` |
 | 25-40-04 | Accessibility and safety constraints | PRM and safety considerations | `25-40-04-accessibility-and-safety/` |
 | 25-40-05 | Cleaning/maintenance access | Lavatory maintenance provisions | `25-40-05-cleaning-and-maintenance-access/` |
+| 25-40-06 | Not used (reserved) | Currently not allocated | - |
+| 25-40-07 | Not used (reserved) | Currently not allocated | - |
+| 25-40-08 | Not used (reserved) | Currently not allocated | - |
+| 25-40-09 | Not used (reserved) | Currently not allocated | - |
 | 25-40-10 | Verification | Fit, door clearances, latch integrity, abuse checks | `25-40-10-verification/` |
 
 **Note:** Subject codes 25-40-06 through 25-40-09 are not used in this implementation. The range is non-contiguous.
