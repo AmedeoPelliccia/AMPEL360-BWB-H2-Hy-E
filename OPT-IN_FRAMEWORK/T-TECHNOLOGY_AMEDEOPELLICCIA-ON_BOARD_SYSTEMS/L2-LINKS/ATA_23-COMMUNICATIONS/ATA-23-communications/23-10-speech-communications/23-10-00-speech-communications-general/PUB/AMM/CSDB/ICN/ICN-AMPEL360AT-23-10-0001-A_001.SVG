@@ -85,7 +85,8 @@
   <rect class="border" x="10" y="10" width="780" height="580" rx="5" ry="5"/>
   
   <!-- Title Block -->
-  <text class="title-text" x="400" y="40" text-anchor="middle">ATA 23-10 Speech Communications - General</text>
+  <text class="title-text" x="400" y="50" text-anchor="middle">Speech Communications System Block Diagram</text>
+  <text class="subtitle-text" x="400" y="75" text-anchor="middle">ATA 23-10-00 Speech Communications</text>
   
   <!-- Microphone (top left) -->
   <g id="microphone">
@@ -189,6 +190,9 @@
   <line class="arrow" x1="605" y1="380" x2="650" y2="230"/>
   
   <!-- ICN Label -->
-  <text class="icn-label" x="400" y="575" text-anchor="middle">ICN-AMPEL360AT-23-10-0001-A_001</text>
+  <text class="icn-label" x="20" y="575">ICN-AMPEL360AT-23-10-0001-A_001</text>
+  
+  <!-- Sheet/Page Info -->
+  <text class="icn-label" x="780" y="575" text-anchor="end">Sheet 1 of 1</text>
   
 </svg>
