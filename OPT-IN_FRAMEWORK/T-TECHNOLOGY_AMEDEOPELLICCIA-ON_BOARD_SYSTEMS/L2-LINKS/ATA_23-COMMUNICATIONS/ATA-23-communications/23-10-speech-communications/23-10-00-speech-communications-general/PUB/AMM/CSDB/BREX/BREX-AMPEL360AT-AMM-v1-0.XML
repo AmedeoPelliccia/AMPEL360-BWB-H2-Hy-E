@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE brex PUBLIC "-//S1000D//DTD BREX 5.0//EN" "brex.dtd">
+<!--
+  BREX-AMPEL360AT-AMM-v1-0
+  Business Rules Exchange (BREX) for AMPEL360 Project - Aircraft Maintenance Manual
+  
+  Scope: Rules specific to Aircraft Maintenance Manual format
+  Version: 1.0
+  Date: 2026-01-09
+  
+  Copyright (c) 2026 AMPEL360 Program
+  Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+-->
+<brex>
+  <identAndStatusSection>
+    <brexAddress>
+      <brexIdent>
+        <brexCode modelIdentCode="AMPEL360AT" brexLevelCode="AMM"/>
+        <brexVersion versionNumber="01" versionDate="2026-01-09"/>
+      </brexIdent>
+      <brexAddressItems>
+        <brexTitle>AMPEL360 Aircraft Maintenance Manual Business Rules</brexTitle>
+        <responsiblePartnerCompany enterpriseCode="AMPEL360">
+          <enterpriseName>AMPEL360 Program</enterpriseName>
+        </responsiblePartnerCompany>
+        <issueDate year="2026" month="01" day="09"/>
+      </brexAddressItems>
+    </brexAddress>
+    <brexStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL360">
+        <enterpriseName>AMPEL360 Program</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="AMPEL360">
+        <enterpriseName>AMPEL360 Program</enterpriseName>
+      </originator>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="PUBLICATION_TYPE" applicPropertyType="pubtype" applicPropertyValues="AMM"/>
+        </applic>
+      </applicability>
+      <brexRefs>
+        <!-- Parent BREX Reference -->
+        <brexRef>
+          <brexIdent>
+            <brexCode modelIdentCode="AMPEL360AT" brexLevelCode="GLOBAL"/>
+            <brexVersion versionNumber="01" versionDate="2026-01-09"/>
+          </brexIdent>
+        </brexRef>
+      </brexRefs>
+    </brexStatus>
+  </identAndStatusSection>
+  
+  <brexContent>
+    <!-- ============================================================ -->
+    <!-- STRUCTURE RULES -->
+    <!-- ============================================================ -->
+    <structureRules>
+      <!-- AMM-Specific Structure Requirements -->
+      
+      <!-- Procedure Safety Elements -->
+      <structureRule id="AMM-SR-001">
+        <objectPath>//proceduralStep[descendant::*[@warningLevel='critical']]</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Critical procedural steps must include warning elements</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-002">
+        <objectPath>//proceduralStep[contains(@stepType,'hazardous')]/warning</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Hazardous procedures must include explicit warning elements</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-003">
+        <objectPath>//proceduralStep[contains(@stepType,'caution')]/caution</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Caution-level procedures must include caution elements where applicable</message>
+      </structureRule>
+      
+      <!-- Figure Requirements -->
+      <structureRule id="AMM-SR-010">
+        <objectPath>//figure/title</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>All figures must have descriptive titles</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-011">
+        <objectPath>//figure/graphic</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>All figures must contain at least one graphic element</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-012">
+        <objectPath>//figure[@id]</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>All figures must have a unique identifier</message>
+      </structureRule>
+      
+      <!-- Part Number References -->
+      <structureRule id="AMM-SR-020">
+        <objectPath>//partRef/@partNumberValue</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Part references must include part number values</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-021">
+        <objectPath>//partRef/@manufacturerCodeValue</objectPath>
+        <objectUse>optional</objectUse>
+        <message>Part references should include manufacturer code when available</message>
+      </structureRule>
+      
+      <!-- Tool and Equipment References -->
+      <structureRule id="AMM-SR-030">
+        <objectPath>//toolRef/@toolNumber</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Tool references must include tool identification numbers</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-031">
+        <objectPath>//supplyRef/@supplyNumber</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Supply/material references must include supply identification numbers</message>
+      </structureRule>
+      
+      <!-- Procedural Step Structure -->
+      <structureRule id="AMM-SR-040">
+        <objectPath>//proceduralStep/@id</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>All procedural steps must have unique identifiers</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-041">
+        <objectPath>//proceduralStep/para</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Procedural steps must contain instruction paragraphs</message>
+      </structureRule>
+      
+      <!-- Maintenance Data Requirements -->
+      <structureRule id="AMM-SR-050">
+        <objectPath>//maintenanceTask/@taskType</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Maintenance tasks must specify task type</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-051">
+        <objectPath>//maintenanceTask/duration</objectPath>
+        <objectUse>optional</objectUse>
+        <message>Maintenance tasks should include estimated duration when known</message>
+      </structureRule>
+      
+      <structureRule id="AMM-SR-052">
+        <objectPath>//maintenanceTask/skill</objectPath>
+        <objectUse>optional</objectUse>
+        <message>Maintenance tasks should specify required skill level</message>
+      </structureRule>
+    </structureRules>
+    
+    <!-- ============================================================ -->
+    <!-- NOTATION RULES -->
+    <!-- ============================================================ -->
+    <notationRules>
+      <!-- Part Number Format Standards -->
+      <notationRule id="AMM-NR-001">
+        <objectPath>//partRef/@partNumberValue</objectPath>
+        <objectValue valuePattern="[A-Z0-9\-]+"/>
+        <message>Part numbers must consist of uppercase letters, digits, and hyphens</message>
+      </notationRule>
+      
+      <notationRule id="AMM-NR-002">
+        <objectPath>//partRef/@manufacturerCodeValue</objectPath>
+        <objectValue valuePattern="[A-Z0-9]{5}"/>
+        <message>Manufacturer codes must be 5-character alphanumeric (CAGE codes)</message>
+      </notationRule>
+      
+      <!-- Tool Number Format -->
+      <notationRule id="AMM-NR-010">
+        <objectPath>//toolRef/@toolNumber</objectPath>
+        <objectValue valuePattern="[A-Z]{2,4}-[0-9]{3,6}"/>
+        <message>Tool numbers must follow format: XX-999999 or XXXX-999999</message>
+      </notationRule>
+      
+      <!-- Supply/Material Number Format -->
+      <notationRule id="AMM-NR-020">
+        <objectPath>//supplyRef/@supplyNumber</objectPath>
+        <objectValue valuePattern="[A-Z0-9\-]+"/>
+        <message>Supply numbers must be alphanumeric with optional hyphens</message>
+      </notationRule>
+      
+      <!-- Procedural Step Identifier Format -->
+      <notationRule id="AMM-NR-030">
+        <objectPath>//proceduralStep/@id</objectPath>
+        <objectValue valuePattern="step-[0-9]{3,4}"/>
+        <message>Procedural step IDs should follow format: step-001, step-002, etc.</message>
+      </notationRule>
+      
+      <!-- Figure ID Format -->
+      <notationRule id="AMM-NR-040">
+        <objectPath>//figure/@id</objectPath>
+        <objectValue valuePattern="fig-[0-9]{3,4}[a-z]?"/>
+        <message>Figure IDs should follow format: fig-001, fig-002a, etc.</message>
+      </notationRule>
+    </notationRules>
+    
+    <!-- ============================================================ -->
+    <!-- VALUE RULES -->
+    <!-- ============================================================ -->
+    <valueRules>
+      <!-- Units of Measure - SI and Approved Alternatives -->
+      <valueRule id="AMM-VR-001">
+        <objectPath>//quantity/@uom</objectPath>
+        <objectValue>
+          <!-- Length -->
+          <valueAllowed>m</valueAllowed><!-- meter -->
+          <valueAllowed>cm</valueAllowed><!-- centimeter -->
+          <valueAllowed>mm</valueAllowed><!-- millimeter -->
+          <valueAllowed>in</valueAllowed><!-- inch (approved alternative) -->
+          <valueAllowed>ft</valueAllowed><!-- foot (approved alternative) -->
+          <!-- Mass -->
+          <valueAllowed>kg</valueAllowed><!-- kilogram -->
+          <valueAllowed>g</valueAllowed><!-- gram -->
+          <valueAllowed>lb</valueAllowed><!-- pound (approved alternative) -->
+          <!-- Force -->
+          <valueAllowed>N</valueAllowed><!-- newton -->
+          <valueAllowed>kN</valueAllowed><!-- kilonewton -->
+          <valueAllowed>lbf</valueAllowed><!-- pound-force (approved alternative) -->
+          <!-- Pressure -->
+          <valueAllowed>Pa</valueAllowed><!-- pascal -->
+          <valueAllowed>kPa</valueAllowed><!-- kilopascal -->
+          <valueAllowed>MPa</valueAllowed><!-- megapascal -->
+          <valueAllowed>bar</valueAllowed><!-- bar -->
+          <valueAllowed>psi</valueAllowed><!-- pounds per square inch (approved alternative) -->
+          <!-- Temperature -->
+          <valueAllowed>C</valueAllowed><!-- Celsius -->
+          <valueAllowed>K</valueAllowed><!-- Kelvin -->
+          <valueAllowed>F</valueAllowed><!-- Fahrenheit (approved alternative) -->
+          <!-- Volume -->
+          <valueAllowed>L</valueAllowed><!-- liter -->
+          <valueAllowed>mL</valueAllowed><!-- milliliter -->
+          <valueAllowed>gal</valueAllowed><!-- gallon (approved alternative) -->
+          <!-- Torque -->
+          <valueAllowed>Nm</valueAllowed><!-- newton-meter -->
+          <valueAllowed>lbf-ft</valueAllowed><!-- pound-force foot (approved alternative) -->
+          <valueAllowed>lbf-in</valueAllowed><!-- pound-force inch (approved alternative) -->
+          <!-- Time -->
+          <valueAllowed>s</valueAllowed><!-- second -->
+          <valueAllowed>min</valueAllowed><!-- minute -->
+          <valueAllowed>h</valueAllowed><!-- hour -->
+          <!-- Electrical -->
+          <valueAllowed>V</valueAllowed><!-- volt -->
+          <valueAllowed>A</valueAllowed><!-- ampere -->
+          <valueAllowed>W</valueAllowed><!-- watt -->
+          <valueAllowed>Ohm</valueAllowed><!-- ohm -->
+        </objectValue>
+        <message>Units of measure must be SI or approved alternatives</message>
+      </valueRule>
+      
+      <!-- Maintenance Task Types -->
+      <valueRule id="AMM-VR-010">
+        <objectPath>//maintenanceTask/@taskType</objectPath>
+        <objectValue>
+          <valueAllowed>inspection</valueAllowed>
+          <valueAllowed>service</valueAllowed>
+          <valueAllowed>test</valueAllowed>
+          <valueAllowed>check</valueAllowed>
+          <valueAllowed>lubrication</valueAllowed>
+          <valueAllowed>adjustment</valueAllowed>
+          <valueAllowed>replacement</valueAllowed>
+          <valueAllowed>removal</valueAllowed>
+          <valueAllowed>installation</valueAllowed>
+          <valueAllowed>repair</valueAllowed>
+          <valueAllowed>overhaul</valueAllowed>
+          <valueAllowed>troubleshooting</valueAllowed>
+        </objectValue>
+        <message>Maintenance task type must be one of the standard AMM task types</message>
+      </valueRule>
+      
+      <!-- Safety Warning Levels -->
+      <valueRule id="AMM-VR-020">
+        <objectPath>//*/@warningLevel</objectPath>
+        <objectValue>
+          <valueAllowed>danger</valueAllowed>
+          <valueAllowed>warning</valueAllowed>
+          <valueAllowed>caution</valueAllowed>
+          <valueAllowed>notice</valueAllowed>
+        </objectValue>
+        <message>Warning level must be danger, warning, caution, or notice</message>
+      </valueRule>
+      
+      <!-- Skill Level Values -->
+      <valueRule id="AMM-VR-030">
+        <objectPath>//skill/@level</objectPath>
+        <objectValue>
+          <valueAllowed>basic</valueAllowed>
+          <valueAllowed>intermediate</valueAllowed>
+          <valueAllowed>advanced</valueAllowed>
+          <valueAllowed>specialist</valueAllowed>
+        </objectValue>
+        <message>Skill level must be basic, intermediate, advanced, or specialist</message>
+      </valueRule>
+      
+      <!-- Access Panel Types -->
+      <valueRule id="AMM-VR-040">
+        <objectPath>//accessPanel/@type</objectPath>
+        <objectValue>
+          <valueAllowed>standard</valueAllowed>
+          <valueAllowed>quick-release</valueAllowed>
+          <valueAllowed>hinged</valueAllowed>
+          <valueAllowed>removable</valueAllowed>
+          <valueAllowed>inspection-panel</valueAllowed>
+        </objectValue>
+        <message>Access panel type must be one of the standard types</message>
+      </valueRule>
+    </valueRules>
+  </brexContent>
+</brex>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE brex PUBLIC "-//S1000D//DTD BREX 5.0//EN" "brex.dtd">
+<!--
+  BREX-AMPEL360AT-GLOBAL-v1-0
+  Business Rules Exchange (BREX) for AMPEL360 Project - Global Rules
+  
+  Scope: Project-wide rules for all AMPEL360 publications
+  Version: 1.0
+  Date: 2026-01-09
+  
+  Copyright (c) 2026 AMPEL360 Program
+  Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+-->
+<brex>
+  <identAndStatusSection>
+    <brexAddress>
+      <brexIdent>
+        <brexCode modelIdentCode="AMPEL360AT" brexLevelCode="GLOBAL"/>
+        <brexVersion versionNumber="01" versionDate="2026-01-09"/>
+      </brexIdent>
+      <brexAddressItems>
+        <brexTitle>AMPEL360 Global Business Rules</brexTitle>
+        <responsiblePartnerCompany enterpriseCode="AMPEL360">
+          <enterpriseName>AMPEL360 Program</enterpriseName>
+        </responsiblePartnerCompany>
+        <issueDate year="2026" month="01" day="09"/>
+      </brexAddressItems>
+    </brexAddress>
+    <brexStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL360">
+        <enterpriseName>AMPEL360 Program</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="AMPEL360">
+        <enterpriseName>AMPEL360 Program</enterpriseName>
+      </originator>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="AMPEL360_PROJECT" applicPropertyType="prodattr" applicPropertyValues="ALL"/>
+        </applic>
+      </applicability>
+      <brexRefs>
+        <!-- No parent BREX - this is the top-level global BREX -->
+      </brexRefs>
+    </brexStatus>
+  </identAndStatusSection>
+  
+  <brexContent>
+    <!-- ============================================================ -->
+    <!-- STRUCTURE RULES -->
+    <!-- ============================================================ -->
+    <structureRules>
+      <!-- Mandatory Metadata Elements -->
+      <structureRule id="GLOBAL-SR-001">
+        <objectPath>//identAndStatusSection/dmAddress/dmAddressItems/responsiblePartnerCompany</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Responsible Partner Company must be specified in all data modules</message>
+      </structureRule>
+      
+      <structureRule id="GLOBAL-SR-002">
+        <objectPath>//identAndStatusSection/dmAddress/dmAddressItems/issueDate</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Issue date must be present and valid in all data modules</message>
+      </structureRule>
+      
+      <structureRule id="GLOBAL-SR-003">
+        <objectPath>//identAndStatusSection/dmStatus/security</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Security classification is required for all data modules</message>
+      </structureRule>
+      
+      <!-- Required Elements for All Data Modules -->
+      <structureRule id="GLOBAL-SR-010">
+        <objectPath>//identAndStatusSection</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>All data modules must have an identification and status section</message>
+      </structureRule>
+      
+      <structureRule id="GLOBAL-SR-011">
+        <objectPath>//content</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>All data modules must have a content section</message>
+      </structureRule>
+      
+      <!-- Language Code Structure -->
+      <structureRule id="GLOBAL-SR-020">
+        <objectPath>//language/@languageIsoCode</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Language ISO code must be specified</message>
+      </structureRule>
+      
+      <structureRule id="GLOBAL-SR-021">
+        <objectPath>//language/@countryIsoCode</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Country ISO code must be specified</message>
+      </structureRule>
+    </structureRules>
+    
+    <!-- ============================================================ -->
+    <!-- NOTATION RULES -->
+    <!-- ============================================================ -->
+    <notationRules>
+      <!-- DMC Naming Pattern Enforcement -->
+      <notationRule id="GLOBAL-NR-001">
+        <objectPath>//dmCode/@modelIdentCode</objectPath>
+        <objectValue valuePattern="AMPEL360AT"/>
+        <message>Data Module Code must use model identifier: AMPEL360AT</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-002">
+        <objectPath>//dmCode/@systemDiffCode</objectPath>
+        <objectValue valuePattern="[A-Z]"/>
+        <message>System difference code must be a single uppercase letter A-Z</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-003">
+        <objectPath>//dmCode/@systemCode</objectPath>
+        <objectValue valuePattern="[0-9]{2}"/>
+        <message>System code must be a two-digit number</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-004">
+        <objectPath>//dmCode/@subSystemCode</objectPath>
+        <objectValue valuePattern="[0-9]{1}"/>
+        <message>Subsystem code must be a single digit</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-005">
+        <objectPath>//dmCode/@subSubSystemCode</objectPath>
+        <objectValue valuePattern="[0-9]{1}"/>
+        <message>Sub-subsystem code must be a single digit</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-006">
+        <objectPath>//dmCode/@assyCode</objectPath>
+        <objectValue valuePattern="[0-9]{2}"/>
+        <message>Assembly code must be a two-digit number</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-007">
+        <objectPath>//dmCode/@disassyCode</objectPath>
+        <objectValue valuePattern="[0-9]{2}"/>
+        <message>Disassembly code must be a two-digit number</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-008">
+        <objectPath>//dmCode/@disassyCodeVariant</objectPath>
+        <objectValue valuePattern="[A-Z0-9]"/>
+        <message>Disassembly code variant must be A-Z or 0-9</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-009">
+        <objectPath>//dmCode/@infoCode</objectPath>
+        <objectValue valuePattern="[0-9A-Z]{3}"/>
+        <message>Info code must be three characters (digits or uppercase letters)</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-010">
+        <objectPath>//dmCode/@infoCodeVariant</objectPath>
+        <objectValue valuePattern="[A-Z]"/>
+        <message>Info code variant must be a single uppercase letter</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-011">
+        <objectPath>//dmCode/@itemLocationCode</objectPath>
+        <objectValue valuePattern="[A-Z]"/>
+        <message>Item location code must be a single uppercase letter</message>
+      </notationRule>
+      
+      <!-- Language Code Validation (ISO 639-1 / ISO 3166-1) -->
+      <notationRule id="GLOBAL-NR-020">
+        <objectPath>//language/@languageIsoCode</objectPath>
+        <objectValue valuePattern="[a-z]{2,3}"/>
+        <message>Language ISO code must be valid ISO 639-1 or ISO 639-2 code (2-3 lowercase letters)</message>
+      </notationRule>
+      
+      <notationRule id="GLOBAL-NR-021">
+        <objectPath>//language/@countryIsoCode</objectPath>
+        <objectValue valuePattern="[A-Z]{2}"/>
+        <message>Country ISO code must be valid ISO 3166-1 alpha-2 code (2 uppercase letters)</message>
+      </notationRule>
+    </notationRules>
+    
+    <!-- ============================================================ -->
+    <!-- VALUE RULES -->
+    <!-- ============================================================ -->
+    <valueRules>
+      <!-- Security Classification Values -->
+      <valueRule id="GLOBAL-VR-001">
+        <objectPath>//security/@securityClassification</objectPath>
+        <objectValue>
+          <valueAllowed>01</valueAllowed><!-- Unclassified -->
+          <valueAllowed>02</valueAllowed><!-- Restricted -->
+        </objectValue>
+        <message>Security classification must be 01 (Unclassified) or 02 (Restricted)</message>
+      </valueRule>
+      
+      <!-- Issue Type Values -->
+      <valueRule id="GLOBAL-VR-010">
+        <objectPath>//issueType</objectPath>
+        <objectValue>
+          <valueAllowed>new</valueAllowed>
+          <valueAllowed>changed</valueAllowed>
+          <valueAllowed>deleted</valueAllowed>
+          <valueAllowed>revised</valueAllowed>
+          <valueAllowed>status</valueAllowed>
+          <valueAllowed>rinstate-changed</valueAllowed>
+          <valueAllowed>rinstate-revised</valueAllowed>
+          <valueAllowed>rinstate-status</valueAllowed>
+        </objectValue>
+        <message>Issue type must be one of the allowed S1000D values</message>
+      </valueRule>
+      
+      <!-- Quality Assurance Values -->
+      <valueRule id="GLOBAL-VR-020">
+        <objectPath>//qualityAssurance/@verification</objectPath>
+        <objectValue>
+          <valueAllowed>tabtop</valueAllowed>
+          <valueAllowed>onobject</valueAllowed>
+          <valueAllowed>ttandoo</valueAllowed>
+        </objectValue>
+        <message>Quality assurance verification must be tabtop, onobject, or ttandoo</message>
+      </valueRule>
+      
+      <!-- Responsible Partner Company Enterprise Code -->
+      <valueRule id="GLOBAL-VR-030">
+        <objectPath>//responsiblePartnerCompany/@enterpriseCode</objectPath>
+        <objectValue>
+          <valueAllowed>AMPEL360</valueAllowed>
+        </objectValue>
+        <message>Responsible Partner Company enterprise code must be AMPEL360</message>
+      </valueRule>
+      
+      <!-- Common Language Codes -->
+      <valueRule id="GLOBAL-VR-040">
+        <objectPath>//language/@languageIsoCode</objectPath>
+        <objectValue>
+          <valueAllowed>en</valueAllowed><!-- English -->
+          <valueAllowed>fr</valueAllowed><!-- French -->
+          <valueAllowed>de</valueAllowed><!-- German -->
+          <valueAllowed>es</valueAllowed><!-- Spanish -->
+          <valueAllowed>it</valueAllowed><!-- Italian -->
+          <valueAllowed>pt</valueAllowed><!-- Portuguese -->
+          <valueAllowed>zh</valueAllowed><!-- Chinese -->
+          <valueAllowed>ja</valueAllowed><!-- Japanese -->
+          <valueAllowed>ru</valueAllowed><!-- Russian -->
+          <valueAllowed>ar</valueAllowed><!-- Arabic -->
+        </objectValue>
+        <message>Language code should be one of the supported ISO 639-1 codes</message>
+      </valueRule>
+      
+      <!-- Common Country Codes -->
+      <valueRule id="GLOBAL-VR-041">
+        <objectPath>//language/@countryIsoCode</objectPath>
+        <objectValue>
+          <valueAllowed>US</valueAllowed><!-- United States -->
+          <valueAllowed>GB</valueAllowed><!-- United Kingdom -->
+          <valueAllowed>FR</valueAllowed><!-- France -->
+          <valueAllowed>DE</valueAllowed><!-- Germany -->
+          <valueAllowed>ES</valueAllowed><!-- Spain -->
+          <valueAllowed>IT</valueAllowed><!-- Italy -->
+          <valueAllowed>PT</valueAllowed><!-- Portugal -->
+          <valueAllowed>CN</valueAllowed><!-- China -->
+          <valueAllowed>JP</valueAllowed><!-- Japan -->
+          <valueAllowed>RU</valueAllowed><!-- Russia -->
+          <valueAllowed>SA</valueAllowed><!-- Saudi Arabia -->
+          <valueAllowed>EU</valueAllowed><!-- European Union -->
+        </objectValue>
+        <message>Country code should be one of the supported ISO 3166-1 alpha-2 codes</message>
+      </valueRule>
+    </valueRules>
+  </brexContent>
+</brex>

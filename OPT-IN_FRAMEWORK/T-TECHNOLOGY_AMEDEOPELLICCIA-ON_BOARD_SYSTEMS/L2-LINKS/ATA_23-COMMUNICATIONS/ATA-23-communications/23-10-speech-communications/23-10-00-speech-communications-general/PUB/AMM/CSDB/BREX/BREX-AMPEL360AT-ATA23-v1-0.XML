@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE brex PUBLIC "-//S1000D//DTD BREX 5.0//EN" "brex.dtd">
+<!--
+  BREX-AMPEL360AT-ATA23-v1-0
+  Business Rules Exchange (BREX) for AMPEL360 Project - ATA 23 Communications
+  
+  Scope: Rules specific to ATA 23 Communications system documentation
+  Version: 1.0
+  Date: 2026-01-09
+  
+  Copyright (c) 2026 AMPEL360 Program
+  Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+-->
+<brex>
+  <identAndStatusSection>
+    <brexAddress>
+      <brexIdent>
+        <brexCode modelIdentCode="AMPEL360AT" brexLevelCode="ATA23"/>
+        <brexVersion versionNumber="01" versionDate="2026-01-09"/>
+      </brexIdent>
+      <brexAddressItems>
+        <brexTitle>AMPEL360 ATA 23 Communications System Business Rules</brexTitle>
+        <responsiblePartnerCompany enterpriseCode="AMPEL360">
+          <enterpriseName>AMPEL360 Program</enterpriseName>
+        </responsiblePartnerCompany>
+        <issueDate year="2026" month="01" day="09"/>
+      </brexAddressItems>
+    </brexAddress>
+    <brexStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL360">
+        <enterpriseName>AMPEL360 Program</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="AMPEL360">
+        <enterpriseName>AMPEL360 Program</enterpriseName>
+      </originator>
+      <applicability>
+        <applic>
+          <assert applicPropertyIdent="ATA_CHAPTER" applicPropertyType="prodattr" applicPropertyValues="23"/>
+        </applic>
+      </applicability>
+      <brexRefs>
+        <!-- Parent BREX References -->
+        <brexRef>
+          <brexIdent>
+            <brexCode modelIdentCode="AMPEL360AT" brexLevelCode="GLOBAL"/>
+            <brexVersion versionNumber="01" versionDate="2026-01-09"/>
+          </brexIdent>
+        </brexRef>
+        <brexRef>
+          <brexIdent>
+            <brexCode modelIdentCode="AMPEL360AT" brexLevelCode="AMM"/>
+            <brexVersion versionNumber="01" versionDate="2026-01-09"/>
+          </brexIdent>
+        </brexRef>
+      </brexRefs>
+    </brexStatus>
+  </identAndStatusSection>
+  
+  <brexContent>
+    <!-- ============================================================ -->
+    <!-- STRUCTURE RULES -->
+    <!-- ============================================================ -->
+    <structureRules>
+      <!-- ATA Chapter Validation -->
+      <structureRule id="ATA23-SR-001">
+        <objectPath>//dmCode/@systemCode</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>System code must be specified and must be 23 for Communications system</message>
+      </structureRule>
+      
+      <!-- Communications-Specific Data Requirements -->
+      <structureRule id="ATA23-SR-010">
+        <objectPath>//commSystem/@type</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Communications systems must specify type (VHF, HF, SATCOM, etc.)</message>
+      </structureRule>
+      
+      <structureRule id="ATA23-SR-011">
+        <objectPath>//commSystem/frequency</objectPath>
+        <objectUse>optional</objectUse>
+        <message>Communications systems should specify operating frequencies</message>
+      </structureRule>
+      
+      <structureRule id="ATA23-SR-012">
+        <objectPath>//commSystem/antenna</objectPath>
+        <objectUse>optional</objectUse>
+        <message>Communications systems should reference antenna configuration</message>
+      </structureRule>
+      
+      <!-- Software Loading/Configuration Requirements (for C40A) -->
+      <structureRule id="ATA23-SR-020">
+        <objectPath>//softwareConfig/@partNumber</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Software configurations must include part numbers (required for info code C40A)</message>
+      </structureRule>
+      
+      <structureRule id="ATA23-SR-021">
+        <objectPath>//softwareConfig/@version</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Software configurations must include version information (required for info code C40A)</message>
+      </structureRule>
+      
+      <!-- Test and Check Procedures (for 300A) -->
+      <structureRule id="ATA23-SR-030">
+        <objectPath>//testProcedure/testEquipment</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Test procedures must specify required test equipment</message>
+      </structureRule>
+      
+      <structureRule id="ATA23-SR-031">
+        <objectPath>//testProcedure/expectedResult</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Test procedures must define expected results or pass criteria</message>
+      </structureRule>
+      
+      <!-- Fault Isolation Requirements (for 421A) -->
+      <structureRule id="ATA23-SR-040">
+        <objectPath>//faultIsolation/faultCode</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Fault isolation procedures must include fault codes or identifiers</message>
+      </structureRule>
+      
+      <structureRule id="ATA23-SR-041">
+        <objectPath>//faultIsolation/correctiveAction</objectPath>
+        <objectUse>mandatory</objectUse>
+        <message>Fault isolation procedures must include corrective actions</message>
+      </structureRule>
+    </structureRules>
+    
+    <!-- ============================================================ -->
+    <!-- NOTATION RULES -->
+    <!-- ============================================================ -->
+    <notationRules>
+      <!-- ATA 23 System Code Validation -->
+      <notationRule id="ATA23-NR-001">
+        <objectPath>//dmCode/@systemCode</objectPath>
+        <objectValue valuePattern="23"/>
+        <message>System code must be 23 for ATA Communications chapter</message>
+      </notationRule>
+      
+      <!-- Frequency Format Standards -->
+      <notationRule id="ATA23-NR-010">
+        <objectPath>//frequency[@type='VHF']/@value</objectPath>
+        <objectValue valuePattern="[1-9][0-9]{2}\.[0-9]{3}"/>
+        <message>VHF frequencies must be in format: 118.000-136.975 MHz</message>
+      </notationRule>
+      
+      <notationRule id="ATA23-NR-011">
+        <objectPath>//frequency[@type='HF']/@value</objectPath>
+        <objectValue valuePattern="[2-9][0-9]?\.[0-9]{3}"/>
+        <message>HF frequencies must be in format: 2.000-29.999 MHz</message>
+      </notationRule>
+      
+      <!-- Software Part Number Format (for C40A) -->
+      <notationRule id="ATA23-NR-020">
+        <objectPath>//softwareConfig/@partNumber</objectPath>
+        <objectValue valuePattern="[A-Z0-9]{3}-[0-9]{4,6}-[0-9]{2,4}"/>
+        <message>Software part numbers must follow format: XXX-9999-99 or XXX-999999-9999</message>
+      </notationRule>
+      
+      <notationRule id="ATA23-NR-021">
+        <objectPath>//softwareConfig/@version</objectPath>
+        <objectValue valuePattern="[0-9]+\.[0-9]+(\.[0-9]+)?"/>
+        <message>Software versions must follow semantic versioning: X.Y or X.Y.Z</message>
+      </notationRule>
+      
+      <!-- Fault Code Format -->
+      <notationRule id="ATA23-NR-030">
+        <objectPath>//faultCode/@value</objectPath>
+        <objectValue valuePattern="23-[0-9]{2}-[0-9]{2}"/>
+        <message>Fault codes must follow format: 23-XX-YY (ATA chapter-subsystem-fault)</message>
+      </notationRule>
+      
+      <!-- Test Equipment Identifier Format -->
+      <notationRule id="ATA23-NR-040">
+        <objectPath>//testEquipment/@identifier</objectPath>
+        <objectValue valuePattern="[A-Z]{2,4}-[0-9]{3,6}"/>
+        <message>Test equipment identifiers must follow format: XX-999 or XXXX-999999</message>
+      </notationRule>
+    </notationRules>
+    
+    <!-- ============================================================ -->
+    <!-- VALUE RULES -->
+    <!-- ============================================================ -->
+    <valueRules>
+      <!-- Info Code Validation - Standard S1000D Codes -->
+      <valueRule id="ATA23-VR-001">
+        <objectPath>//dmCode/@infoCode</objectPath>
+        <objectValue>
+          <!-- Allowed Standard S1000D Info Codes for Communications -->
+          <valueAllowed>040</valueAllowed><!-- Description / Overview -->
+          <valueAllowed>300</valueAllowed><!-- Test / Check procedures -->
+          <valueAllowed>421</valueAllowed><!-- Fault Isolation (420-430 family) -->
+          <valueAllowed>520</valueAllowed><!-- Remove procedures -->
+          <valueAllowed>620</valueAllowed><!-- Install procedures -->
+          <!-- Project-Tailored Info Codes -->
+          <valueAllowed>C40</valueAllowed><!-- Software Loading/Configuration (project-tailored) -->
+        </objectValue>
+        <message>Info code must be one of the allowed codes for ATA 23 Communications (040, 300, 421, 520, 620, C40). See INFO_CODE_MAP.yaml for definitions.</message>
+      </valueRule>
+      
+      <valueRule id="ATA23-VR-002">
+        <objectPath>//dmCode/@infoCodeVariant</objectPath>
+        <objectValue>
+          <valueAllowed>A</valueAllowed>
+        </objectValue>
+        <message>Info code variant must be 'A' for standard procedures</message>
+      </valueRule>
+      
+      <!-- Deprecated Info Codes - Must Not Be Used -->
+      <valueRule id="ATA23-VR-003">
+        <objectPath>//dmCode/@infoCode</objectPath>
+        <objectValue>
+          <!-- These codes are DEPRECATED and must trigger validation errors -->
+          <valueNotAllowed>730</valueNotAllowed><!-- DEPRECATED: Not standard for fault isolation - use 421A instead -->
+          <valueNotAllowed>940</valueNotAllowed><!-- DEPRECATED: Not valid S1000D base code - use C40A instead -->
+        </objectValue>
+        <message>DEPRECATED INFO CODE: Code 730A is not standard for fault isolation (use 421A). Code 940A is not a valid S1000D base code (use C40A for software loading/configuration).</message>
+      </valueRule>
+      
+      <!-- Communications System Types -->
+      <valueRule id="ATA23-VR-010">
+        <objectPath>//commSystem/@type</objectPath>
+        <objectValue>
+          <valueAllowed>VHF</valueAllowed><!-- VHF voice communications -->
+          <valueAllowed>HF</valueAllowed><!-- HF voice communications -->
+          <valueAllowed>SATCOM</valueAllowed><!-- Satellite communications -->
+          <valueAllowed>ACARS</valueAllowed><!-- Aircraft Communications Addressing and Reporting System -->
+          <valueAllowed>CPDLC</valueAllowed><!-- Controller-Pilot Data Link Communications -->
+          <valueAllowed>SELCAL</valueAllowed><!-- Selective Calling -->
+          <valueAllowed>PA</valueAllowed><!-- Passenger Address -->
+          <valueAllowed>INTERCOM</valueAllowed><!-- Interphone system -->
+          <valueAllowed>CVR</valueAllowed><!-- Cockpit Voice Recorder -->
+          <valueAllowed>DATALINK</valueAllowed><!-- General data link -->
+        </objectValue>
+        <message>Communications system type must be one of the standard ATA 23 types</message>
+      </valueRule>
+      
+      <!-- Frequency Bands -->
+      <valueRule id="ATA23-VR-020">
+        <objectPath>//frequency/@band</objectPath>
+        <objectValue>
+          <valueAllowed>VHF</valueAllowed><!-- 118-137 MHz -->
+          <valueAllowed>UHF</valueAllowed><!-- 225-400 MHz -->
+          <valueAllowed>HF</valueAllowed><!-- 2-30 MHz -->
+          <valueAllowed>L-Band</valueAllowed><!-- 1-2 GHz (SATCOM) -->
+          <valueAllowed>Ku-Band</valueAllowed><!-- 12-18 GHz (SATCOM) -->
+        </objectValue>
+        <message>Frequency band must be one of the standard communications bands</message>
+      </valueRule>
+      
+      <!-- Modulation Types -->
+      <valueRule id="ATA23-VR-030">
+        <objectPath>//commSystem/@modulation</objectPath>
+        <objectValue>
+          <valueAllowed>AM</valueAllowed><!-- Amplitude Modulation -->
+          <valueAllowed>FM</valueAllowed><!-- Frequency Modulation -->
+          <valueAllowed>SSB</valueAllowed><!-- Single Sideband -->
+          <valueAllowed>DSB</valueAllowed><!-- Double Sideband -->
+          <valueAllowed>PSK</valueAllowed><!-- Phase Shift Keying -->
+          <valueAllowed>QAM</valueAllowed><!-- Quadrature Amplitude Modulation -->
+        </objectValue>
+        <message>Modulation type must be one of the standard types</message>
+      </valueRule>
+      
+      <!-- Antenna Types -->
+      <valueRule id="ATA23-VR-040">
+        <objectPath>//antenna/@type</objectPath>
+        <objectValue>
+          <valueAllowed>blade</valueAllowed><!-- Blade antenna -->
+          <valueAllowed>probe</valueAllowed><!-- Probe antenna -->
+          <valueAllowed>wire</valueAllowed><!-- Wire antenna -->
+          <valueAllowed>patch</valueAllowed><!-- Patch antenna -->
+          <valueAllowed>dish</valueAllowed><!-- Dish antenna (SATCOM) -->
+          <valueAllowed>phased-array</valueAllowed><!-- Phased array antenna -->
+        </objectValue>
+        <message>Antenna type must be one of the standard types</message>
+      </valueRule>
+      
+      <!-- Communications-Specific Terminology Enforcement -->
+      <valueRule id="ATA23-VR-050">
+        <objectPath>//term[@context='communications']/@type</objectPath>
+        <objectValue>
+          <valueAllowed>transceiver</valueAllowed>
+          <valueAllowed>receiver</valueAllowed>
+          <valueAllowed>transmitter</valueAllowed>
+          <valueAllowed>antenna</valueAllowed>
+          <valueAllowed>coupler</valueAllowed>
+          <valueAllowed>amplifier</valueAllowed>
+          <valueAllowed>modulator</valueAllowed>
+          <valueAllowed>demodulator</valueAllowed>
+          <valueAllowed>codec</valueAllowed>
+          <valueAllowed>tuner</valueAllowed>
+        </objectValue>
+        <message>Communications terminology must use standard component names</message>
+      </valueRule>
+      
+      <!-- Software Configuration Status (for C40A) -->
+      <valueRule id="ATA23-VR-060">
+        <objectPath>//softwareConfig/@status</objectPath>
+        <objectValue>
+          <valueAllowed>operational</valueAllowed>
+          <valueAllowed>test</valueAllowed>
+          <valueAllowed>development</valueAllowed>
+          <valueAllowed>obsolete</valueAllowed>
+          <valueAllowed>superseded</valueAllowed>
+        </objectValue>
+        <message>Software configuration status must be one of the defined statuses</message>
+      </valueRule>
+      
+      <!-- Test Result Values (for 300A) -->
+      <valueRule id="ATA23-VR-070">
+        <objectPath>//testResult/@status</objectPath>
+        <objectValue>
+          <valueAllowed>pass</valueAllowed>
+          <valueAllowed>fail</valueAllowed>
+          <valueAllowed>inconclusive</valueAllowed>
+          <valueAllowed>not-applicable</valueAllowed>
+        </objectValue>
+        <message>Test result status must be pass, fail, inconclusive, or not-applicable</message>
+      </valueRule>
+      
+      <!-- Fault Severity Levels (for 421A) -->
+      <valueRule id="ATA23-VR-080">
+        <objectPath>//faultIsolation/@severity</objectPath>
+        <objectValue>
+          <valueAllowed>critical</valueAllowed>
+          <valueAllowed>major</valueAllowed>
+          <valueAllowed>minor</valueAllowed>
+          <valueAllowed>warning</valueAllowed>
+          <valueAllowed>advisory</valueAllowed>
+        </objectValue>
+        <message>Fault severity must be critical, major, minor, warning, or advisory</message>
+      </valueRule>
+    </valueRules>
+    
+    <!-- ============================================================ -->
+    <!-- CONTEXT RULES -->
+    <!-- ============================================================ -->
+    <!-- Context-specific validation for project-tailored info codes -->
+    
+    <contextRules>
+      <!-- C40A: Software Loading/Configuration Context Rules -->
+      <contextRule id="ATA23-CR-001">
+        <objectPath>//dmCode[@infoCode='C40']</objectPath>
+        <requiredElements>
+          <element>softwareConfig</element>
+          <element>softwareConfig/@partNumber</element>
+          <element>softwareConfig/@version</element>
+        </requiredElements>
+        <message>Info code C40A (Software Loading/Configuration) requires softwareConfig element with part number and version. This is a project-tailored code for AMPEL360. Reference: INFO_CODE_MAP.yaml</message>
+      </contextRule>
+      
+      <!-- 300A: Test/Check Procedures Context Rules -->
+      <contextRule id="ATA23-CR-010">
+        <objectPath>//dmCode[@infoCode='300']</objectPath>
+        <requiredElements>
+          <element>testProcedure</element>
+          <element>testEquipment</element>
+          <element>expectedResult</element>
+        </requiredElements>
+        <message>Info code 300A (Test/Check procedures) requires test procedure structure with equipment and expected results</message>
+      </contextRule>
+      
+      <!-- 421A: Fault Isolation Context Rules -->
+      <contextRule id="ATA23-CR-020">
+        <objectPath>//dmCode[@infoCode='421']</objectPath>
+        <requiredElements>
+          <element>faultIsolation</element>
+          <element>faultCode</element>
+          <element>correctiveAction</element>
+        </requiredElements>
+        <message>Info code 421A (Fault Isolation) requires fault isolation structure with codes and corrective actions</message>
+      </contextRule>
+    </contextRules>
+  </brexContent>
+  
+  <!-- ============================================================ -->
+  <!-- CROSS-REFERENCE TO INFO_CODE_MAP.YAML -->
+  <!-- ============================================================ -->
+  <!--
+    For complete definitions and usage guidelines of all info codes,
+    refer to: INFO_CODE_MAP.yaml in the same directory.
+    
+    The INFO_CODE_MAP.yaml provides:
+    - Detailed descriptions of each info code
+    - Usage examples and scenarios
+    - Relationships between info codes
+    - Mapping to maintenance task types
+    - Cross-references to S1000D specifications
+  -->
+</brex>
