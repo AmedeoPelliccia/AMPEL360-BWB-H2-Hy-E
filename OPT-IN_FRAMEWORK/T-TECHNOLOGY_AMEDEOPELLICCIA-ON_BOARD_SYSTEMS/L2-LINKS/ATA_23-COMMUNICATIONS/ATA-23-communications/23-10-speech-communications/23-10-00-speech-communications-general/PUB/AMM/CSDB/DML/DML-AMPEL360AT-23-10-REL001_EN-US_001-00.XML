@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dml PUBLIC "-//S1000D//DTD DML 5.0//EN" "dml.dtd">
+<!--
+  Data Module List: ATA 23-10 Speech Communications - Release 001 Set
+  
+  Purpose: Release management list for initial publication (v1.0)
+  
+  DML to PM Cross-Reference:
+  - Used for Release 001 tracking and configuration management
+  - Contains all Data Modules included in the initial v1.0 release
+  
+  This list includes all 6 Data Modules for Release 001:
+  - 040A: System Description
+  - 300A: Test Procedure
+  - 421A: Fault Isolation
+  - 520A: Removal
+  - 620A: Installation
+  - C40A: Software Configuration
+  
+  Use Case: Track DMs included in specific publication release for configuration
+            management, change control, and release documentation purposes.
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - Generated with AI assistance: GitHub Copilot, prompted by Amedeo Pelliccia
+  - Last Updated: 2026-01-09
+-->
+<dml>
+  <identAndStatusSection>
+    <dmlAddress>
+      <dmlIdent>
+        <dmlCode modelIdentCode="AMPEL360AT" senderIdent="AMPEL" dmlType="s" seqNumber="00006"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmlIdent>
+      <dmlAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmlTitle>ATA 23-10 Speech Communications - Release 001 Set</dmlTitle>
+      </dmlAddressItems>
+    </dmlAddress>
+    <dmlStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>Amedeo Pelliccia</enterpriseName>
+      </originator>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="00" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+    </dmlStatus>
+  </identAndStatusSection>
+  <dmlContent>
+    <!-- Data Module 1: Description (040A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="23" subSystemCode="1" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Speech Communications System</techName>
+            <infoName>Description</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryType type="new"/>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+    </dmlEntry>
+    
+    <!-- Data Module 2: Test Procedure (300A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="23" subSystemCode="1" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="300" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Speech Communications System</techName>
+            <infoName>Test Procedure</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryType type="new"/>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+    </dmlEntry>
+    
+    <!-- Data Module 3: Fault Isolation (421A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="23" subSystemCode="1" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="421" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Speech Communications System</techName>
+            <infoName>Fault Isolation</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryType type="new"/>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+    </dmlEntry>
+    
+    <!-- Data Module 4: Removal (520A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="23" subSystemCode="1" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="520" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Speech Communications System</techName>
+            <infoName>Removal</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryType type="new"/>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+    </dmlEntry>
+    
+    <!-- Data Module 5: Installation (620A) -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="23" subSystemCode="1" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="620" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Speech Communications System</techName>
+            <infoName>Installation</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryType type="new"/>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+    </dmlEntry>
+    
+    <!-- Data Module 6: Software Configuration (C40A) - Project-tailored info code -->
+    <dmlEntry>
+      <dmRef>
+        <dmRefIdent>
+          <!-- Note: C40A is a project-tailored information code for software configuration procedures.
+               Standard S1000D info codes for software are in the 9XX range, but C40A has been
+               adopted for this project to align with customer-specific documentation requirements. -->
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="23" subSystemCode="1" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="C40" infoCodeVariant="A" itemLocationCode="A"/>
+          <issueInfo issueNumber="001" inWork="00"/>
+          <language languageIsoCode="en" countryIsoCode="US"/>
+        </dmRefIdent>
+        <dmRefAddressItems>
+          <dmTitle>
+            <techName>Speech Communications System</techName>
+            <infoName>Software Configuration</infoName>
+          </dmTitle>
+        </dmRefAddressItems>
+      </dmRef>
+      <dmlEntryType type="new"/>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+    </dmlEntry>
+  </dmlContent>
+</dml>
