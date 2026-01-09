@@ -8,17 +8,20 @@
 
 ## Quick Reference
 
-| Section | Code Range | Description |
-|---------|------------|-------------|
-| 25-00 | 00-10 | Equipment/Furnishings General |
-| 25-10 | 00-10 | Flight Compartment |
-| 25-20 | 00-10, 90 | Passenger Compartment |
-| 25-30 | 00-10, 90 | Galley |
-| 25-40 | 00-10 | Lavatories |
-| 25-50 | 00-10 | Additional Compartments |
-| 25-60 | 00-10 | Emergency |
-| 25-70 | 00-10 | Available |
-| 25-80 | 00-10 | Insulation |
+| Section | Code Range | Actual Subjects | Description |
+|---------|------------|-----------------|-------------|
+| 25-00 | 00-08, 10 | 10 | Equipment/Furnishings General |
+| 25-10 | 00-07, 10 | 9 | Flight Compartment |
+| 25-20 | 00-07, 10, 90 | 10 | Passenger Compartment |
+| 25-30 | 00-06, 10, 90 | 9 | Galley |
+| 25-40 | 00-05, 10 | 7 | Lavatories |
+| 25-50 | 00-04, 10 | 6 | Additional Compartments |
+| 25-60 | 00-06, 10 | 8 | Emergency |
+| 25-70 | 00-03, 10 | 5 | Available |
+| 25-80 | 00-06, 10 | 8 | Insulation |
+| **Total** | | **72** | **All sections** |
+
+**Note:** Subject code ranges are non-contiguous. The codes listed above represent the actual implemented subjects, not all numbers in the range. For example, "00-08, 10" means subjects 00, 01, 02, 03, 04, 05, 06, 07, 08, and 10 (skipping 09).
 
 ---
 
@@ -39,6 +42,8 @@ Chapter boundary, governance, zoning, interfaces to owner systems, maintainabili
 | 25-00-08 | Safety & human factors | Evac, accessibility, injury prevention | `25-00-08-safety-and-human-factors/` |
 | 25-00-10 | Verification strategy | Fit checks, loads, abuse, durability, evacuation support | `25-00-10-verification-strategy/` |
 
+**Note:** Subject code 25-00-09 is not used in this implementation. The range is non-contiguous.
+
 ---
 
 ## 25-10 — Flight Compartment
@@ -56,6 +61,8 @@ Flight deck furnishings and removable equipment (seats, stowage, tables, partiti
 | 25-10-06 | Floor coverings and anti-skid provisions | Flight deck flooring | `25-10-06-floor-coverings-and-anti-skid/` |
 | 25-10-07 | Flight deck escape provisions | Interfaces to doors/exits procedures | `25-10-07-flight-deck-escape-provisions/` |
 | 25-10-10 | Verification | Static loads, endurance, ergonomics, maintainability checks | `25-10-10-verification/` |
+
+**Note:** Subject codes 25-10-08 and 25-10-09 are not used in this implementation. The range is non-contiguous.
 
 ---
 
@@ -76,6 +83,8 @@ Cabin interior architecture: seats, bins, lining, partitions, attendant stations
 | 25-20-10 | Verification | Loads, abuse, latch integrity, evacuation clearances | `25-20-10-verification/` |
 | 25-20-90 | BWB cabin layout modularity program delta | Monument zoning constraints for BWB configuration | `25-20-90-bwb-cabin-layout-modularity-program-delta/` |
 
+**Note:** Subject codes 25-20-08 and 25-20-09 are not used in this implementation. The range is non-contiguous.
+
 ---
 
 ## 25-30 — Galley
@@ -94,6 +103,8 @@ Galley monuments and removable equipment integration.
 | 25-30-10 | Verification | Restraint loads, abuse, thermal adjacency checks | `25-30-10-verification/` |
 | 25-30-90 | Galley load-shedding compatibility program delta | Compatibility with electric energy management | `25-30-90-galley-load-shedding-compatibility-program-delta/` |
 
+**Note:** Subject codes 25-30-07, 25-30-08, and 25-30-09 are not used in this implementation. The range is non-contiguous.
+
 ---
 
 ## 25-40 — Lavatories
@@ -110,6 +121,8 @@ Lavatory monuments and removable fittings.
 | 25-40-05 | Cleaning/maintenance access | Lavatory maintenance provisions | `25-40-05-cleaning-and-maintenance-access/` |
 | 25-40-10 | Verification | Fit, door clearances, latch integrity, abuse checks | `25-40-10-verification/` |
 
+**Note:** Subject codes 25-40-06 through 25-40-09 are not used in this implementation. The range is non-contiguous.
+
 ---
 
 ## 25-50 — Additional Compartments
@@ -124,6 +137,8 @@ Crew rest modules, underfloor equipment spaces, and extra compartments treated a
 | 25-50-03 | Cargo accessory equipment treated as furnishings | Restraints/latches/rollers boundary-managed | `25-50-03-cargo-accessory-equipment-boundary-managed/` |
 | 25-50-04 | Lifts/stairs | If applicable in multi-deck concepts | `25-50-04-lifts-stairs-multideck-provisions/` |
 | 25-50-10 | Verification | Loads, restraint integrity, access/egress | `25-50-10-verification/` |
+
+**Note:** Subject codes 25-50-05 through 25-50-09 are not used in this implementation. The range is non-contiguous.
 
 ---
 
@@ -142,6 +157,8 @@ Emergency equipment stowage, accessibility, and inspection.
 | 25-60-06 | Inspection intervals and servicing checks | Maintenance intervals and procedures | `25-60-06-inspection-intervals-and-servicing-checks/` |
 | 25-60-10 | Verification | Access time, retention loads, inspection repeatability | `25-60-10-verification/` |
 
+**Note:** Subject codes 25-60-07, 25-60-08, and 25-60-09 are not used in this implementation. The range is non-contiguous.
+
 ---
 
 ## 25-70 — Available
@@ -155,6 +172,8 @@ Controlled placeholder for airline/customer options.
 | 25-70-02 | Airline option packages | Placeholders + governance | `25-70-02-airline-option-packages/` |
 | 25-70-03 | Customer configuration deltas | CSDB applicability linkage | `25-70-03-customer-configuration-deltas/` |
 | 25-70-10 | Verification | Configuration control checks | `25-70-10-verification/` |
+
+**Note:** Subject codes 25-70-04 through 25-70-09 are not used in this implementation. The range is non-contiguous.
 
 ---
 
@@ -172,6 +191,8 @@ Thermal/acoustic insulation as a furnishings-managed topic.
 | 25-80-05 | Installation workmanship and sealing rules | Installation standards | `25-80-05-installation-workmanship-and-sealing/` |
 | 25-80-06 | Inspection/repair/replace rules | Maintenance procedures | `25-80-06-inspection-repair-replace/` |
 | 25-80-10 | Verification | Thermal performance adjacency checks, moisture tests, durability | `25-80-10-verification/` |
+
+**Note:** Subject codes 25-80-07, 25-80-08, and 25-80-09 are not used in this implementation. The range is non-contiguous.
 
 ---
 

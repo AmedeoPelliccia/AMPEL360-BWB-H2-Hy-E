@@ -16,19 +16,19 @@ This document summarizes the implementation of the complete **ATA 25 Equipment/F
 
 All 9 ATA 25 sections have been scaffolded with complete directory structures:
 
-1. **25-00 Equipment/Furnishings General** (11 subjects: 00-10)
-2. **25-10 Flight Compartment** (10 subjects: 00-10)
-3. **25-20 Passenger Compartment** (11 subjects: 00-10, 90)
-4. **25-30 Galley** (10 subjects: 00-10, 90)
-5. **25-40 Lavatories** (8 subjects: 00-10)
-6. **25-50 Additional Compartments** (7 subjects: 00-10)
-7. **25-60 Emergency** (9 subjects: 00-10)
-8. **25-70 Available** (6 subjects: 00-10)
-9. **25-80 Insulation** (9 subjects: 00-10)
+1. **25-00 Equipment/Furnishings General** (10 subjects: 00-08, 10)
+2. **25-10 Flight Compartment** (9 subjects: 00-07, 10)
+3. **25-20 Passenger Compartment** (10 subjects: 00-07, 10, 90)
+4. **25-30 Galley** (9 subjects: 00-06, 10, 90)
+5. **25-40 Lavatories** (7 subjects: 00-05, 10)
+6. **25-50 Additional Compartments** (6 subjects: 00-04, 10)
+7. **25-60 Emergency** (8 subjects: 00-06, 10)
+8. **25-70 Available** (5 subjects: 00-03, 10)
+9. **25-80 Insulation** (8 subjects: 00-06, 10)
 
 ### Directory Structure
 
-Each of the 81 subject folders contains:
+Each of the 72 subject folders contains:
 
 #### SSOT (Single Source of Truth)
 - `LC01_Requirements/` - Requirements documentation
@@ -60,12 +60,12 @@ Each of the 81 subject folders contains:
 ### Statistics
 
 - **Total Directories Created:** 2,242
-- **Subject Folders (25-xx-yy):** 81
+- **Subject Folders (25-xx-yy):** 72
 - **SSOT Directories:** 72 (with LC01-LC08 subdirectories)
 - **PUB/AMM/CSDB Directories:** 72
 - **PUB/IPC/CSDB Directories:** 72
 - **Placeholder Files:** 288 (bindings.csv + csdb.profile.yaml)
-- **Documentation Files:** 2 (README.md + 00_INDEX.md)
+- **Documentation Files:** 3 (README.md + 00_INDEX.md + IMPLEMENTATION_SUMMARY.md)
 
 ### Documentation Files
 
@@ -268,7 +268,7 @@ The scaffold is now ready for population with:
 ## Validation
 
 The structure has been validated against:
-- ✅ Issue requirements (all 9 sections, 81 subjects)
+- ✅ Issue requirements (all 9 sections, 72 subjects)
 - ✅ ATA 23 pattern (same SSOT/PUB structure)
 - ✅ Directory naming conventions
 - ✅ CSDB structure completeness
@@ -278,7 +278,7 @@ The structure has been validated against:
 
 Total directories created: **2,242**  
 Total placeholder files: **288**  
-Documentation files: **2**
+Documentation files: **3**
 
 ---
 

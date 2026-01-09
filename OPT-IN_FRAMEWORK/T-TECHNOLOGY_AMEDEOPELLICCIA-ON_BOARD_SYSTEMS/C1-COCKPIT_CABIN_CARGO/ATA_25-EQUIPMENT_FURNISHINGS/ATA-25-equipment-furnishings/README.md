@@ -13,7 +13,7 @@ The ATA 25 Equipment/Furnishings chapter is organized into the following major s
 ### 25-00 — Equipment/Furnishings General
 Foundation and cross-cutting concerns for equipment and furnishings systems.
 
-**Subject Codes (yy):** 00-10
+**Subject Codes (yy):** 00-08, 10 (10 subjects)
 - Chapter overview and scope boundaries
 - Architecture and zoning (flight deck / cabin / cargo / crew rest)
 - Interfaces to owner systems (ATA 21/23/24/33/35/38/44/50/52/26)
@@ -25,7 +25,7 @@ Foundation and cross-cutting concerns for equipment and furnishings systems.
 ### 25-10 — Flight Compartment
 Flight deck furnishings and removable equipment.
 
-**Subject Codes (yy):** 00-10
+**Subject Codes (yy):** 00-07, 10 (9 subjects)
 - Flight crew seats (installation, adjustment, restraints)
 - Observer/jump seats
 - Stowage, wardrobes, and manual storage
@@ -38,7 +38,7 @@ Flight deck furnishings and removable equipment.
 ### 25-20 — Passenger Compartment
 Cabin interior architecture: seats, bins, lining, partitions, attendant stations.
 
-**Subject Codes (yy):** 00-10, 90
+**Subject Codes (yy):** 00-07, 10, 90 (10 subjects)
 - Passenger seats (tracks, retention, IFE provisions boundary)
 - Cabin attendant seats and stations
 - Overhead stowage bins and latches
@@ -52,7 +52,7 @@ Cabin interior architecture: seats, bins, lining, partitions, attendant stations
 ### 25-30 — Galley
 Galley monuments and removable equipment integration.
 
-**Subject Codes (yy):** 00-10, 90
+**Subject Codes (yy):** 00-06, 10, 90 (9 subjects)
 - Galley structures/monuments and attach points
 - Inserts integration (ovens, chillers, coffee makers)
 - Trolleys, carts, and retention systems
@@ -65,7 +65,7 @@ Galley monuments and removable equipment integration.
 ### 25-40 — Lavatories
 Lavatory monuments and removable fittings.
 
-**Subject Codes (yy):** 00-10
+**Subject Codes (yy):** 00-05, 10 (7 subjects)
 - Lavatory monument/module installation and attach points
 - Furnishings (mirrors, cabinets, dispensers, seats)
 - Interfaces (38 water/waste, 24 power, 21 ventilation)
@@ -76,7 +76,7 @@ Lavatory monuments and removable fittings.
 ### 25-50 — Additional Compartments
 Crew rest modules, underfloor equipment spaces, and extra compartments treated as furnishings.
 
-**Subject Codes (yy):** 00-10
+**Subject Codes (yy):** 00-04, 10 (6 subjects)
 - Crew rest compartments (modules, bunks, privacy partitions)
 - Wardrobes/stowage monuments outside cabin core
 - Cargo accessory equipment treated as furnishings
@@ -86,7 +86,7 @@ Crew rest modules, underfloor equipment spaces, and extra compartments treated a
 ### 25-60 — Emergency
 Emergency equipment stowage, accessibility, and inspection.
 
-**Subject Codes (yy):** 00-10
+**Subject Codes (yy):** 00-06, 10 (8 subjects)
 - Evacuation equipment (slides/rafts integration and stowage)
 - Life vests / flotation devices (stowage, access, inspections)
 - ELT/locator devices stowage provisions
@@ -100,7 +100,7 @@ Emergency equipment stowage, accessibility, and inspection.
 ### 25-70 — Available
 Controlled placeholder for airline/customer options.
 
-**Subject Codes (yy):** 00-10
+**Subject Codes (yy):** 00-03, 10 (5 subjects)
 - Allocation policy (what qualifies to live in 25-70)
 - Airline option packages (placeholders + governance)
 - Customer configuration deltas (CSDB applicability linkage)
@@ -109,7 +109,7 @@ Controlled placeholder for airline/customer options.
 ### 25-80 — Insulation
 Thermal/acoustic insulation as a furnishings-managed topic.
 
-**Subject Codes (yy):** 00-10
+**Subject Codes (yy):** 00-06, 10 (8 subjects)
 - Thermal insulation (coverage, thickness classes, installation rules)
 - Acoustic insulation (noise reduction targets and placement logic)
 - Condensation control and moisture barriers
