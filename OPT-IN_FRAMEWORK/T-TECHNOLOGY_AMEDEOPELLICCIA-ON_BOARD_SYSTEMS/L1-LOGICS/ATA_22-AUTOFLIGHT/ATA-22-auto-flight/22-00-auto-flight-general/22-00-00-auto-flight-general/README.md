@@ -1,105 +1,68 @@
-# ATA 22-00-00 — Auto Flight General
+# 22-00-00-auto-flight-general
 
 ## Overview
 
-This is the general subject for ATA 22-00, containing common information applicable across all Auto Flight systems.
+This directory contains the publication-ready content for general autoflight system technical documentation.
 
-## Directory Structure
+## Purpose
+
+This level organizes content by publication type following S1000D standards:
+- **PUB/**: Publication content organized by manual type
+
+## Structure
 
 ```
 22-00-00-auto-flight-general/
-├── SSOT/                           # Single Source of Truth
-│   └── (Master content goes here)
-└── PUB/                            # Publication views
-    ├── AMM/                        # Aircraft Maintenance Manual
-    │   ├── CSDB/                   # S1000D Common Source Database
-    │   │   ├── DM/                 # Data Modules
-    │   │   ├── PM/                 # Publication Modules
-    │   │   ├── DML/                # Data Module Lists
-    │   │   ├── ICN/                # Illustrations/Graphics
-    │   │   ├── BREX/               # Business Rules Exchange
-    │   │   ├── COMMON/             # Common information sets
-    │   │   └── APPLICABILITY/      # Applicability statements
-    │   ├── EXPORT/                 # Export outputs (PDF, HTML, etc.)
-    │   ├── bindings.csv            # Publication bindings configuration
-    │   └── csdb.profile.yaml       # CSDB profile settings
-    └── IPC/                        # Illustrated Parts Catalog
-        └── (same structure as AMM)
+└── PUB/
+    ├── AMM/    # Aircraft Maintenance Manual
+    └── IPC/    # Illustrated Parts Catalog
 ```
 
-## SSOT (Single Source of Truth)
+## Publication Types
 
-The SSOT directory contains:
-- Master source files
-- Unprocessed content
-- Source data before publication transformation
-- Lifecycle documentation references
+### AMM - Aircraft Maintenance Manual
 
-## PUB (Publication Views)
+Complete maintenance documentation including:
+- System descriptions
+- Maintenance procedures
+- Troubleshooting guides
+- Test procedures
+- Component maintenance
 
-The PUB directory contains publication-specific views:
+### IPC - Illustrated Parts Catalog
 
-### AMM (Aircraft Maintenance Manual)
-Documentation for maintenance, inspection, troubleshooting procedures, and operational guidelines.
+Complete parts documentation including:
+- Illustrated parts breakdowns
+- Parts lists with nomenclature
+- Part numbers and quantities
+- Vendor information
+- Applicability data
 
-### IPC (Illustrated Parts Catalog)
-Illustrated parts breakdown and identification for Auto Flight components.
+## CSDB Structure
 
-### Adding More Publications
-Additional publication types can be added as needed:
-- **WDM**: Wiring Diagram Manual
-- **CMM**: Component Maintenance Manual
-- **FIM**: Fault Isolation Manual
-- **SRM**: Structural Repair Manual
+Each publication type contains a **Common Source Database (CSDB)** with:
+- **DM/**: Data Modules (content units)
+- **PM/**: Publication Modules (structure definitions)
+- **DML/**: Data Module Lists (content groupings)
+- **ICN/**: Illustrations and graphics
+- **BREX/**: Business rules (validation)
+- **COMMON/**: Reusable content
+- **APPLICABILITY/**: Product variant applicability
 
-## S1000D CSDB Organization
+## Navigation
 
-Each publication's CSDB follows the S1000D standard:
+Access publication content:
+- `PUB/AMM/CSDB/` - Maintenance manual content
+- `PUB/IPC/CSDB/` - Parts catalog content
 
-- **DM**: Data modules containing specific maintenance tasks or descriptions
-- **PM**: Publication modules defining the structure of publications
-- **DML**: Data module lists organizing groups of data modules
-- **ICN**: Illustrations, graphics, and multimedia content
-- **BREX**: Business rules for content validation
-- **COMMON**: Reusable content snippets and information sets
-- **APPLICABILITY**: Product variant and configuration applicability
-
-## Configuration Files
-
-### bindings.csv
-Defines the relationship between data modules and publication structure.
-
-Example format:
-```csv
-publication_module,data_module,sequence,applicability
-PM-22-00-00-001,DM-22-00-00-001,1,ALL
-PM-22-00-00-001,DM-22-00-00-002,2,ALL
-```
-
-### csdb.profile.yaml
-CSDB profile configuration for this subject.
-
-Example format:
-```yaml
-profile:
-  ata_chapter: "22-00"
-  subject: "00"
-  publication_type: "AMM"
-  language: "en-US"
-  issue_date: "2026-01-08"
-  
-validation:
-  s1000d_version: "5.0"
-  schema_location: "schemas/S1000D_5-0"
-  
-processing:
-  output_formats: ["pdf", "html5", "xml"]
-  stylesheet: "default"
-```
+Each CSDB directory contains a comprehensive README explaining its structure and purpose.
 
 ## Document Control
 
-- **Subject**: ATA 22-00-00
+- **Standard**: S1000D Issue 5.0
+- **Project**: AMPEL360-AIR-T
+- **ATA Chapter**: 22 (Autoflight)
+- **Section**: 00-00 (General)
 - **Status**: Active
-- **Standard**: ATA iSpec 2200 SNS / S1000D
-- **Last Updated**: 2026-01-08
+- **Last Updated**: 2026-01-09
+- **Generated with AI assistance**: GitHub Copilot, prompted by Amedeo Pelliccia

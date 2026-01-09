@@ -1,36 +1,65 @@
-# ATA 22-00 — Auto Flight General
+# 22-00-auto-flight-general
 
 ## Overview
 
-This section contains general information for ATA 22 Auto Flight systems, covering architecture, modes philosophy, redundancy concepts, integration boundaries, dispatch criteria, and maintenance overview.
+This directory contains general autoflight system documentation following the S1000D Common Source Database (CSDB) structure.
 
-## BWB + H₂ Fuel Cell Context
+## Purpose
 
-**BWB Deltas:**
-- Mode logic and limitations tied to BWB envelope (pitch-moment management, trim strategy, high-lift interactions)
-- Electrical power quality assumptions (ride-through, brownout behavior)
-- DAL (Design Assurance Level) allocation rationale for Auto Flight functions
-- Integration with distributed control effectors
-- Power system dependencies for H₂ fuel cell / electric propulsion architecture
+General (22-00) documentation covers:
+- System-level information
+- Cross-subsystem integration
+- Overall autoflight architecture
+- Common procedures and definitions
+- General troubleshooting
+- System-wide applicability
 
-## Scope
+## Structure
 
-This section includes:
-- Auto Flight system architecture overview
-- Mode philosophy and state management
-- Redundancy and fail-safe design
-- Interface boundaries with other ATA chapters (27, 34, 42, 24)
-- Dispatch and MEL criteria
-- General maintenance and troubleshooting approach
+```
+22-00-auto-flight-general/
+└── 22-00-00-auto-flight-general/
+    └── PUB/
+        ├── AMM/CSDB/    # Maintenance manual CSDB
+        └── IPC/CSDB/    # Parts catalog CSDB
+```
 
-## Subjects
+## Content Scope
 
-- **22-00-00**: Auto Flight General (base subject)
-- Additional subjects to be defined as needed per ATA SNS extract
+### General System Documentation
+
+- **System Overview**: Complete autoflight system description
+- **Integration**: Interface with other aircraft systems (flight controls, navigation, etc.)
+- **Architecture**: System-level block diagrams and data flow
+- **Common Procedures**: Procedures applicable to all subsystems
+- **General Warnings**: Safety information for entire autoflight system
+
+### Cross-Subsystem Information
+
+Documentation that applies across multiple autoflight subsystems:
+- Shared components and interfaces
+- Common test equipment and procedures
+- System-wide configuration management
+- General troubleshooting approach
+
+## Navigation
+
+Proceed to `22-00-00-auto-flight-general/PUB/` to access publication content.
+
+## Subsystem-Specific Documentation
+
+For subsystem-specific content, see:
+- `22-10-autopilot/` - Autopilot system
+- `22-20-flight-director/` - Flight director system
+- `22-30-yaw-damper/` - Yaw damper system
+- *[Other subsystem directories as they are created]*
 
 ## Document Control
 
-- **Section**: ATA 22-00
+- **Standard**: S1000D Issue 5.0
+- **Project**: AMPEL360-AIR-T
+- **ATA Chapter**: 22 (Autoflight)
+- **Section**: 00 (General)
 - **Status**: Active
-- **Standard**: ATA iSpec 2200 SNS / S1000D
-- **Last Updated**: 2026-01-08
+- **Last Updated**: 2026-01-09
+- **Generated with AI assistance**: GitHub Copilot, prompted by Amedeo Pelliccia

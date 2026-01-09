@@ -1,12 +1,12 @@
-# CSDB — Common Source Database
+# CSDB — Common Source Database (IPC)
 
 ## Overview
 
-This directory contains the **Common Source Database (CSDB)** following the **S1000D** international specification for technical publications.
+This directory contains the **Common Source Database (CSDB)** for the **Illustrated Parts Catalog (IPC)** following the **S1000D** international specification for technical publications.
 
 ## Purpose
 
-The CSDB is a structured repository of modular documentation components that can be:
+The IPC CSDB is a structured repository of parts catalog documentation components that can be:
 - Reused across multiple publications
 - Maintained independently
 - Version controlled
@@ -17,7 +17,7 @@ The CSDB is a structured repository of modular documentation components that can
 
 ```
 CSDB/
-├── DM/              # Data Modules - Individual documentation units (procedures, descriptions, etc.)
+├── DM/              # Data Modules - Individual documentation units (parts lists, descriptions, etc.)
 ├── PM/              # Publication Modules - Define the structure of publications
 ├── DML/             # Data Module Lists - Organize and reference groups of data modules
 ├── ICN/             # Illustrations/Graphics - All graphical content (ICN = Illustration Control Number)
@@ -29,11 +29,11 @@ CSDB/
 ## Component Descriptions
 
 ### DM — Data Modules
-Individual, self-contained units of documentation. Each data module covers a specific topic or task.
+Individual, self-contained units of documentation. Each data module covers a specific parts list or component description.
 
 **Naming Convention**: `DMC-AMPEL360-{ATA}-{SECTION}-{SUBJECT}-{INFO_CODE}-{VARIANT}-{ITEM_LOCATION}_XXX_00_{LANG}_{ISSUE}.XML`
 
-Example: `DMC-AMPEL360-22-00-00-00A-040A-A_001_00_EN-US_001-00.XML`
+Example: `DMC-AMPEL360-22-00-00-00A-041A-A_001_00_EN-US_001-00.XML`
 
 ### PM — Publication Modules
 Define the structure and organization of publications. PMs reference data modules and other PMs to create hierarchical documentation.
@@ -49,9 +49,9 @@ Lists that group related data modules together. Used for managing sets of module
 
 ### ICN — Illustrations/Graphics
 Multimedia objects including:
-- Technical illustrations
-- Photographs
-- Videos
+- Exploded view illustrations
+- Assembly drawings
+- Parts identification diagrams
 - 3D models
 - Interactive graphics
 
@@ -70,8 +70,8 @@ XML-based validation rules that enforce:
 
 ### COMMON — Common Information Sets
 Reusable content fragments that can be referenced from multiple data modules:
-- Standard warnings and cautions
-- Common procedures
+- Standard part descriptions
+- Common assembly procedures
 - Standard definitions
 - Reusable descriptions
 
@@ -91,8 +91,8 @@ This CSDB structure follows:
 
 ## Workflow
 
-1. **Create**: Author data modules for specific topics/tasks
-2. **Illustrate**: Create graphics and place in ICN/
+1. **Create**: Author data modules for specific parts/assemblies
+2. **Illustrate**: Create exploded view graphics and place in ICN/
 3. **Structure**: Define publication structure in PM/
 4. **Validate**: Apply BREX rules to ensure compliance
 5. **Publish**: Transform to output formats (PDF, HTML, XML)
@@ -106,7 +106,7 @@ Data modules use a standardized coding scheme:
 - **ATA Chapter**: 22 (Autoflight)
 - **Section**: 00-99 (per ATA SNS)
 - **Subject**: 00-99 (per ATA SNS)
-- **Info Code**: Standard S1000D information codes
+- **Info Code**: Standard S1000D information codes (041A for IPC)
 - **Language**: ISO language codes (e.g., EN-US)
 
 ## References
@@ -121,6 +121,7 @@ Data modules use a standardized coding scheme:
 - **Standard**: S1000D Issue 5.0
 - **Project**: AMPEL360-AIR-T
 - **ATA Chapter**: 22 (Autoflight)
+- **Publication Type**: IPC (Illustrated Parts Catalog)
 - **Status**: Active
 - **Last Updated**: 2026-01-09
 - **Generated with AI assistance**: GitHub Copilot, prompted by Amedeo Pelliccia
