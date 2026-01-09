@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - Audio Panel Removal Procedure
+DMC: AMPEL360AT-A-23-10-00-00A-520A-A_001-00_EN-US
+Info Code: 520A - Removal Procedure
+ATA Chapter: 23-10-00 Speech Communications General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proced.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="23"
+                subSystemCode="1"
+                subSubSystemCode="0"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="520"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Audio Control Panel</techName>
+          <infoName>Removal Procedure</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Maintenance Procedure</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqPersons>
+          <person>
+            <personCategory personCategoryCode="tech01">
+              <manufacturerName>Licensed Aircraft Maintenance Technician</manufacturerName>
+            </personCategory>
+          </person>
+        </reqPersons>
+        <reqSupportEquips>
+          <supportEquip>
+            <name>Hand Tools (standard mechanic's tool set)</name>
+          </supportEquip>
+          <supportEquip>
+            <name>Torque wrench (0-50 in-lb range)</name>
+          </supportEquip>
+          <supportEquip>
+            <name>Panel removal tools (plastic pry tools)</name>
+          </supportEquip>
+          <supportEquip>
+            <name>Anti-static wrist strap</name>
+          </supportEquip>
+        </reqSupportEquips>
+        <reqSupplies>
+          <supply>
+            <name>Protective caps for connector (as needed)</name>
+          </supply>
+          <supply>
+            <name>Anti-static bag (for component storage)</name>
+          </supply>
+          <supply>
+            <name>Equipment tag</name>
+          </supply>
+        </reqSupplies>
+        <reqSpares>
+          <noSpares/>
+        </reqSpares>
+        <reqSafety>
+          <safety>
+            <warningRef/>
+            <cautionRef/>
+          </safety>
+        </reqSafety>
+      </preliminaryRqmts>
+      
+      <mainProcedure>
+        <proceduralStep>
+          <para>This procedure provides step-by-step instructions for removal of the audio control panel from the instrument panel or center console. Follow all steps in sequence to ensure safe removal and prevent damage to aircraft or equipment.</para>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Safety Precautions</title>
+          <warning>
+            <para>Disconnect aircraft battery or ensure master switch is OFF before beginning work. Energized circuits present electrical shock hazard and risk of short circuit damage to avionics.</para>
+          </warning>
+          <caution>
+            <para>Audio control panel contains static-sensitive electronic components. Use anti-static wrist strap connected to aircraft ground when handling unit. Electrostatic discharge (ESD) can cause latent component damage.</para>
+          </caution>
+          <caution>
+            <para>Do not force connectors or fasteners. Excessive force can damage mounting provisions, connectors, or circuit boards. If resistance encountered, verify correct removal technique.</para>
+          </caution>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Pre-Removal Preparation</title>
+          <proceduralStep>
+            <para>Ensure aircraft electrical power is OFF:</para>
+            <proceduralStep>
+              <para>Set master switch to OFF position.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Disconnect aircraft battery negative terminal (if practical) or pull communications system circuit breakers.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify no voltage present at panel using multimeter or test light.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Allow cooling time if system was recently operating (minimum 5 minutes).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Photograph panel installation before removal to document connector orientations and wire routing.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Put on anti-static wrist strap and connect to aircraft ground point.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Prepare workspace with clean, static-free surface for placing removed components.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Panel Access</title>
+          <proceduralStep>
+            <para>Clear area around audio control panel of any loose items, checklists, or equipment.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If panel is behind overlay or protective cover:</para>
+            <proceduralStep>
+              <para>Remove overlay screws or fasteners (typically 2-4 screws).</para>
+            </proceduralStep>
+            <proceduralStep>
+                <para>Carefully lift overlay away from panel face.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Place overlay in secure location where it will not be damaged.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Identify audio control panel mounting hardware (panel is typically secured with 4 mounting screws or quick-release fasteners).</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Connector Identification and Labeling</title>
+          <proceduralStep>
+            <para>Identify all connectors on rear of audio control panel:</para>
+            <proceduralStep>
+              <para>J1: Main power and audio bus connector (typically 25-pin D-sub or circular connector)</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>J2: Radio interface connector (varies by installation)</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>J3: Intercom connector (if equipped)</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Additional connectors as applicable to specific installation</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If connectors are not already labeled, apply temporary labels to each connector and corresponding receptacle using tape and permanent marker.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Sketch or photograph connector positions for installation reference.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Mounting Fastener Removal</title>
+          <proceduralStep>
+            <para>Remove panel mounting fasteners:</para>
+            <proceduralStep>
+              <para>For screw-type mounting: Remove screws (typically 4 ea. #6-32 or #8-32 screws) using appropriate screwdriver. Store screws in container to prevent loss.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>For quick-release fasteners: Rotate fasteners 1/4 turn counterclockwise to release, then pull out. Store fasteners with screws.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>For rack-mount installations: Loosen captive screws and prepare to slide unit from rack after connector disconnection.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Support panel with one hand while removing final fastener to prevent panel from falling.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Panel Partial Extraction</title>
+          <proceduralStep>
+            <para>Gently pull panel forward approximately 2-3 inches from instrument panel.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Be careful not to stress connectors or wiring - pull only enough to access rear connectors.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify no hidden fasteners or clips are preventing movement. Do not force if panel does not move easily.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Inspect for adequate slack in wiring harness. If wiring is tight, trace back to identify any tie-downs or clamps that need adjustment.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Connector Disconnection</title>
+          <proceduralStep>
+            <para>Disconnect electrical connectors in the following sequence:</para>
+            <proceduralStep>
+              <para>J1 (main power): Depress locking tab or rotate locking ring, then pull connector straight back. Do not pull on wires.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>J2 (radio interface): Release locking mechanism and disconnect.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>J3 and additional connectors: Disconnect in order of accessibility.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <caution>
+            <para>Use proper connector removal technique. Most connectors have locking mechanisms (tabs, rings, or clips) that must be released before pulling. Forcing connectors can damage pins or sockets.</para>
+          </caution>
+          <proceduralStep>
+            <para>As each connector is removed, inspect pins/sockets for damage, corrosion, or contamination. Note any discrepancies for corrective action.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Install protective caps on disconnected connectors to prevent foreign object entry and contamination.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Panel Complete Removal</title>
+          <proceduralStep>
+            <para>With all connectors disconnected, grasp panel firmly with both hands.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Pull panel straight out from instrument panel opening.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify no wires or objects are caught on panel during removal.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Place removed panel on clean, static-free work surface or in anti-static bag.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Post-Removal Actions</title>
+          <proceduralStep>
+            <para>Inspect panel mounting area:</para>
+            <proceduralStep>
+              <para>Check for any loose hardware, wire clamps, or debris in mounting cavity.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify mounting inserts or nut plates are secure and not damaged.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Inspect surrounding structure for cracks or damage.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Cover panel opening with temporary cover or protective material to prevent foreign object entry into avionics bay.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Attach equipment tag to removed panel with following information:</para>
+            <proceduralStep>
+              <para>Date removed</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Aircraft registration/serial number</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Reason for removal</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Unit serial number (from data plate)</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Technician name/license number</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Store removed panel in secure location, protected from physical damage, ESD, temperature extremes, and moisture.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Make maintenance log entry documenting removal, including reason and condition of removed unit.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Next Steps</title>
+          <proceduralStep>
+            <para>For panel installation: Refer to DMC-AMPEL360AT-A-23-10-00-00A-620A (Audio Panel Installation Procedure)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>For troubleshooting: Refer to DMC-AMPEL360AT-A-23-10-00-00A-421A (Communications Fault Isolation Procedure)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If sending unit for repair, package appropriately with failure description and tag attached.</para>
+          </proceduralStep>
+        </proceduralStep>
+      </mainProcedure>
+      
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+  
+</dmodule>

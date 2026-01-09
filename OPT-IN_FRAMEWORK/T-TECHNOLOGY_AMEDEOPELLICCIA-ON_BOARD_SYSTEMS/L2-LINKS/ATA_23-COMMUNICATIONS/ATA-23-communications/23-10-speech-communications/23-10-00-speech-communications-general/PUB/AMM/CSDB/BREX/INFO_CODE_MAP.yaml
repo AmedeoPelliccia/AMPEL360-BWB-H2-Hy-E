@@ -1,0 +1,276 @@
+# INFO_CODE_MAP.yaml
+# S1000D Information Code Definitions for ATA 23-10-00 Speech Communications
+#
+# Purpose: Defines standard and project-tailored S1000D info codes used in the
+#          Speech Communications General (23-10-00) Data Module directory.
+#
+# Project: AMPEL360-AIR-T
+# ATA Chapter: 23-10-00 (Speech Communications - General)
+# Standard: S1000D Issue 5.0
+# Status: ACTIVE
+# Last Updated: 2026-01-09
+#
+# This file supports BREX validation by documenting the semantic purpose and
+# usage scope of each information code used in this directory.
+
+# ==============================================================================
+# STANDARD S1000D INFO CODES
+# ==============================================================================
+# These codes follow S1000D Issue 5.0 standard definitions (S1000D-M-06-01-01-00)
+
+standard_info_codes:
+  
+  - code: "040A"
+    variant: "A"
+    name: "Description"
+    category: "Descriptive"
+    purpose: "Descriptive information about systems, subsystems, or components"
+    typical_content:
+      - "System overview and architecture"
+      - "Theory of operation"
+      - "Component descriptions"
+      - "Functional descriptions"
+      - "General information"
+    schema: "descript.xsd"
+    applicable_publications:
+      - "AMM"
+      - "CMM"
+      - "IPC"
+    example_usage: "DMC-AMPEL360AT-A-23-10-00-00A-040A-A_001-00_EN-US.XML (Speech Communications System Overview)"
+    s1000d_reference: "S1000D Issue 5.0, Chapter 3.9.5.1.2 - Info Code 040"
+
+  - code: "300A"
+    variant: "A"
+    name: "Test/Check Procedure"
+    category: "Procedural - Test"
+    purpose: "Operational test procedures and functional checks"
+    typical_content:
+      - "System operational tests"
+      - "Built-in test (BIT) procedures"
+      - "Functional verification checks"
+      - "Performance validation tests"
+      - "Post-maintenance testing"
+    schema: "proced.xsd"
+    applicable_publications:
+      - "AMM"
+      - "CMM"
+    example_usage: "DMC-AMPEL360AT-A-23-10-00-00A-300A-A_001-00_EN-US.XML (VHF Radio System Operational Test)"
+    s1000d_reference: "S1000D Issue 5.0, Chapter 3.9.5.1.2 - Info Code 300"
+    notes: "Use for operational testing; not for diagnostic/troubleshooting (use 421A for fault isolation)"
+
+  - code: "421A"
+    variant: "A"
+    name: "Fault Isolation"
+    category: "Procedural - Diagnostics"
+    purpose: "Fault isolation and troubleshooting procedures"
+    typical_content:
+      - "Troubleshooting flowcharts"
+      - "Fault symptom analysis"
+      - "Diagnostic procedures"
+      - "Isolation to Line Replaceable Unit (LRU)"
+      - "BITE code interpretation"
+    schema: "fault.xsd"
+    applicable_publications:
+      - "AMM"
+      - "TSM"
+    example_usage: "DMC-AMPEL360AT-A-23-10-00-00A-421A-A_001-00_EN-US.XML (Communications Fault Isolation)"
+    s1000d_reference: "S1000D Issue 5.0, Chapter 3.9.5.1.2 - Info Code 421"
+    notes: "Part of 420-430 family for fault reporting, isolation, and reporting"
+
+  - code: "520A"
+    variant: "A"
+    name: "Remove Procedure"
+    category: "Procedural - Maintenance"
+    purpose: "Component or assembly removal procedures"
+    typical_content:
+      - "Step-by-step removal instructions"
+      - "Safety precautions"
+      - "Required tools and equipment"
+      - "Connector disconnection sequences"
+      - "Handling and storage requirements"
+    schema: "proced.xsd"
+    applicable_publications:
+      - "AMM"
+      - "CMM"
+    example_usage: "DMC-AMPEL360AT-A-23-10-00-00A-520A-A_001-00_EN-US.XML (Audio Panel Removal)"
+    s1000d_reference: "S1000D Issue 5.0, Chapter 3.9.5.1.2 - Info Code 520"
+    notes: "Part of 500-600 family for maintenance procedures"
+
+  - code: "620A"
+    variant: "A"
+    name: "Install Procedure"
+    category: "Procedural - Maintenance"
+    purpose: "Component or assembly installation procedures"
+    typical_content:
+      - "Step-by-step installation instructions"
+      - "Safety precautions and warnings"
+      - "Required tools and equipment"
+      - "Connector mating sequences"
+      - "Torque specifications"
+      - "Post-installation testing"
+    schema: "proced.xsd"
+    applicable_publications:
+      - "AMM"
+      - "CMM"
+    example_usage: "DMC-AMPEL360AT-A-23-10-00-00A-620A-A_001-00_EN-US.XML (Audio Panel Installation)"
+    s1000d_reference: "S1000D Issue 5.0, Chapter 3.9.5.1.2 - Info Code 620"
+    notes: "Part of 500-600 family for maintenance procedures; typically paired with 520A removal procedures"
+
+# ==============================================================================
+# PROJECT-TAILORED INFO CODES
+# ==============================================================================
+# These codes are specific to the AMPEL360-AIR-T project and extend S1000D
+# standard codes for project-specific requirements.
+
+project_tailored_info_codes:
+
+  - code: "C40A"
+    variant: "A"
+    name: "Software Loading/Configuration"
+    category: "Procedural - Software"
+    purpose: "Software loading, updates, and configuration procedures for communications systems"
+    tailoring_justification: |
+      Standard S1000D info codes 940A-series cover computer systems and software,
+      but are typically focused on mission computers and large integrated systems.
+      The C40A code is introduced for AMPEL360 project to specifically identify
+      software/configuration procedures for communications equipment (radios, audio
+      panels, etc.) to distinguish them from other software procedures and enable
+      easier filtering and management within the ATA 23 chapter scope.
+    typical_content:
+      - "Software version loading procedures"
+      - "Firmware update procedures"
+      - "Configuration parameter programming"
+      - "Software backup and restore"
+      - "Version verification"
+      - "Compatibility checking"
+    schema: "proced.xsd"
+    applicable_publications:
+      - "AMM"
+    example_usage: "DMC-AMPEL360AT-A-23-10-00-00A-C40A-A_001-00_EN-US.XML (Communications Software Loading)"
+    project_reference: "AMPEL360-AIR-T BREX v1.0, Section 4.3.2 - Tailored Info Codes"
+    scope_limitations:
+      - "Use only for ATA 23 Communications chapter"
+      - "Limited to communications system software (radios, audio systems, datalinks)"
+      - "Not for use in other ATA chapters (use standard 940A-series codes)"
+    approval_authority: "AMPEL360-AIR-T Configuration Control Board"
+    approval_date: "2026-01-09"
+    migration_path: |
+      Future versions may migrate to standard 940A-series codes if S1000D
+      Issue 6.0 or later provides better granularity for communications-specific
+      software procedures. This would require:
+      1. Update to standard info code in DMC filenames
+      2. CSDB-wide search and replace
+      3. Update of all cross-references
+      4. Republication of affected data modules
+    notes: |
+      - Always include comment in XML header noting C40A is project-tailored
+      - Reference this INFO_CODE_MAP.yaml in data module remarks section
+      - When exporting data modules to external organizations, include documentation
+        explaining C40A tailoring to avoid S1000D validation warnings
+
+# ==============================================================================
+# INFO CODE USAGE GUIDELINES
+# ==============================================================================
+
+usage_guidelines:
+  selection_criteria:
+    - "Select the most specific info code that accurately describes the data module content"
+    - "Prefer standard S1000D codes over project-tailored codes when appropriate"
+    - "Maintain consistency - use same info code for similar content types"
+    - "Consider the primary purpose of the data module, not incidental content"
+  
+  granularity:
+    - "One data module should address one discrete topic at the appropriate info code level"
+    - "Do not combine multiple procedures of different types in a single data module"
+    - "If content spans multiple info codes, split into separate data modules"
+  
+  variant_usage:
+    - "Variant 'A' is the standard/default variant for all info codes in this directory"
+    - "Additional variants (B, C, etc.) may be introduced if multiple procedure types exist for same base code"
+    - "Document any non-A variants in BREX and this INFO_CODE_MAP"
+
+  cross_referencing:
+    - "Use dmRef elements to reference related data modules with different info codes"
+    - "Fault isolation (421A) should reference test procedures (300A) and removal/installation (520A/620A)"
+    - "Installation procedures (620A) should reference test procedures (300A) for post-install verification"
+    - "Software procedures (C40A) should reference applicable test procedures (300A)"
+
+# ==============================================================================
+# VALIDATION AND COMPLIANCE
+# ==============================================================================
+
+validation:
+  brex_compliance:
+    - "All data modules must use info codes defined in this map"
+    - "Project-tailored codes must include justification comment in XML"
+    - "BREX validation rules enforce allowed info codes for this directory"
+  
+  schema_validation:
+    - "Each info code maps to specific S1000D XML schema (descript.xsd, proced.xsd, fault.xsd)"
+    - "Content must validate against schema specified for the info code"
+    - "Schema violations will cause BREX validation failure"
+  
+  publication_mapping:
+    - "Info codes have applicability restrictions based on publication type"
+    - "AMM (Aircraft Maintenance Manual) supports all codes in this map"
+    - "IPC (Illustrated Parts Catalog) typically uses only descriptive codes (040A)"
+    - "Crew Operating Manual (COM) would use different info codes not in this map"
+
+# ==============================================================================
+# RELATED DOCUMENTATION
+# ==============================================================================
+
+related_documentation:
+  - title: "S1000D Issue 5.0 Specification"
+    reference: "S1000D-M-06-01-01-00"
+    section: "Chapter 3.9.5 - Information Code"
+    url: "http://www.s1000d.org"
+  
+  - title: "AMPEL360-AIR-T BREX"
+    reference: "BREX-AMPEL360-GLOBAL-v1-0.XML"
+    location: "../BREX/BREX-AMPEL360-GLOBAL-v1-0.XML"
+    description: "Project business rules including info code tailoring rules"
+  
+  - title: "ATA iSpec 2200 Information Standards"
+    reference: "ATA iSpec 2200"
+    description: "Industry standard for technical publication information types"
+  
+  - title: "AMPEL360 Documentation Standard"
+    location: "../../../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md"
+    description: "Project-wide documentation standards and guidelines"
+
+# ==============================================================================
+# REVISION HISTORY
+# ==============================================================================
+
+revision_history:
+  - version: "1.0"
+    date: "2026-01-09"
+    author: "AMPEL360-AIR-T Project / GitHub Copilot (AI-assisted)"
+    changes:
+      - "Initial creation of INFO_CODE_MAP for ATA 23-10-00"
+      - "Defined standard info codes: 040A, 300A, 421A, 520A, 620A"
+      - "Defined project-tailored code: C40A"
+      - "Documented usage guidelines and validation criteria"
+    approval: "Pending Configuration Control Board review"
+
+# ==============================================================================
+# DOCUMENT CONTROL
+# ==============================================================================
+
+document_control:
+  project: "AMPEL360-AIR-T"
+  ata_chapter: "23-10-00"
+  publication_type: "AMM"
+  csdb_location: "PUB/AMM/CSDB/BREX/"
+  status: "DRAFT"
+  classification: "Unclassified"
+  generated_with_ai: true
+  ai_agent: "GitHub Copilot"
+  human_oversight: "Amedeo Pelliccia"
+  approval_required: true
+  approver: "[To be assigned by Configuration Control Board]"
+
+# ==============================================================================
+# END OF INFO_CODE_MAP.yaml
+# ==============================================================================
