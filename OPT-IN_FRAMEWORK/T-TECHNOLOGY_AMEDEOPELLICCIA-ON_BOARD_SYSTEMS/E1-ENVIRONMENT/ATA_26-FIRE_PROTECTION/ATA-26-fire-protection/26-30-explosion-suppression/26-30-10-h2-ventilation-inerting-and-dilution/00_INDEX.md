@@ -2,7 +2,7 @@
 
 ## Overview
 
-This sub-subject contains documentation for h2 ventilation, inerting and dilution.
+This sub-subject contains documentation for H2 ventilation, inerting and dilution.
 
 ## Directory Structure
 

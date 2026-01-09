@@ -4,6 +4,7 @@
 
 <!--
   Sample S1000D Data Module - Description and Operation (040A)
+  DMC: AMPEL360AT-A-26-00-00-00A-040A-A_001-00_EN-US
   
   This is a placeholder data module demonstrating the S1000D structure.
   ATA 26-00-00 - Fire Protection General
@@ -12,19 +13,23 @@
   Standard: S1000D Issue 5.0
 -->
 
-<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
-         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
   
   <identAndStatusSection>
     <dmAddress>
       <dmIdent>
-        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
-                systemCode="26" subSystemCode="0" subSubSystemCode="0"
-                assyCode="00" disassyCode="0" disassyCodeVariant="A"
-                infoCode="040" infoCodeVariant="A" itemLocationCode="D"/>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="26"
+                subSystemCode="00"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="040"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
         <language languageIsoCode="en" countryIsoCode="US"/>
         <issueInfo issueNumber="001" inWork="00"/>
       </dmIdent>
@@ -36,32 +41,29 @@
         </dmTitle>
       </dmAddressItems>
     </dmAddress>
-    <dmStatus issueType="new">
+    <dmStatus>
       <security securityClassification="01"/>
       <responsiblePartnerCompany>
-        <enterpriseName>AMPEL360</enterpriseName>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
       </responsiblePartnerCompany>
       <originator>
-        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
       </originator>
       <applic>
         <displayText>
-          <simplePara>All</simplePara>
+          <simplePara>All AMPEL360 aircraft configurations</simplePara>
         </displayText>
       </applic>
-      <brexDmRef>
-        <dmRef>
-          <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
-                    systemCode="00" subSystemCode="0" subSubSystemCode="0"
-                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
-                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
-          </dmRefIdent>
-        </dmRef>
-      </brexDmRef>
       <qualityAssurance>
         <unverified/>
       </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Public Technical Documentation</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
     </dmStatus>
   </identAndStatusSection>
   
