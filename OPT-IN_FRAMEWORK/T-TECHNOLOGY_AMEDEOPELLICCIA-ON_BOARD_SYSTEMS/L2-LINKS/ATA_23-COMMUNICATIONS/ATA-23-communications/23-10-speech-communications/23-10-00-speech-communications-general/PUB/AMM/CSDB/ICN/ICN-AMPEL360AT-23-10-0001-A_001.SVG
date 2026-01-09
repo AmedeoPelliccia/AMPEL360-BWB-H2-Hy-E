@@ -27,8 +27,9 @@
   Document Control:
   - Standard: S1000D Issue 5.0
   - Project: AMPEL360-AIR-T
-  - Status: Placeholder - Pending Final Artwork
+  - Status: Technical Artwork
   - Created: 2026-01-09
+  - Updated: 2026-01-09
   - Author: AMPEL360-AIR-T Project
 -->
 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -63,32 +64,131 @@
       .border { fill: none; stroke: #333333; stroke-width: 2; }
       .title-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #333333; }
       .subtitle-text { font-family: Arial, sans-serif; font-size: 14px; fill: #666666; }
-      .placeholder-text { font-family: Arial, sans-serif; font-size: 18px; fill: #999999; font-style: italic; }
       .icn-label { font-family: monospace; font-size: 12px; fill: #666666; }
-      .placeholder-box { fill: #f5f5f5; stroke: #cccccc; stroke-width: 1; stroke-dasharray: 5,5; }
+      .component-box { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .component-text { font-family: Arial, sans-serif; font-size: 16px; fill: #000000; text-anchor: middle; }
+      .component-label { font-family: Arial, sans-serif; font-size: 14px; fill: #000000; text-anchor: middle; }
+      .arrow { fill: none; stroke: #000000; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-bidirectional { fill: none; stroke: #000000; stroke-width: 2; marker-end: url(#arrowhead); marker-start: url(#arrowhead-start); }
     </style>
+    
+    <!-- Arrow markers -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#000000" />
+    </marker>
+    <marker id="arrowhead-start" markerWidth="10" markerHeight="10" refX="1" refY="3" orient="auto">
+      <polygon points="10 0, 0 3, 10 6" fill="#000000" />
+    </marker>
   </defs>
   
   <!-- Border -->
   <rect class="border" x="10" y="10" width="780" height="580" rx="5" ry="5"/>
   
   <!-- Title Block -->
-  <text class="title-text" x="400" y="50" text-anchor="middle">Speech Communications System Block Diagram</text>
-  <text class="subtitle-text" x="400" y="75" text-anchor="middle">ATA 23-10-00 Speech Communications</text>
+  <text class="title-text" x="400" y="40" text-anchor="middle">ATA 23-10 Speech Communications - General</text>
   
-  <!-- Placeholder Content Area -->
-  <rect class="placeholder-box" x="50" y="100" width="700" height="400"/>
-  <text class="placeholder-text" x="400" y="300" text-anchor="middle">
-    [PLACEHOLDER - System Diagram]
-  </text>
-  <text class="placeholder-text" x="400" y="330" text-anchor="middle">
-    Pending Final Technical Artwork
-  </text>
+  <!-- Microphone (top left) -->
+  <g id="microphone">
+    <!-- Microphone body -->
+    <ellipse cx="120" cy="140" rx="20" ry="30" fill="none" stroke="#000000" stroke-width="2"/>
+    <line x1="120" y1="110" x2="120" y2="100" stroke="#000000" stroke-width="2"/>
+    <line x1="105" y1="115" x2="135" y2="115" stroke="#000000" stroke-width="2"/>
+    <!-- Handle -->
+    <rect x="110" y="170" width="20" height="50" rx="3" fill="none" stroke="#000000" stroke-width="2"/>
+    <rect x="113" y="185" width="5" height="20" fill="none" stroke="#000000" stroke-width="1"/>
+    <text class="component-label" x="120" y="240">Microphone</text>
+  </g>
+  
+  <!-- Audio Control Panel (center) -->
+  <g id="audio-control-panel">
+    <rect class="component-box" x="300" y="140" width="200" height="100" rx="5"/>
+    <!-- Mounting holes -->
+    <circle cx="310" cy="150" r="4" fill="none" stroke="#000000" stroke-width="1"/>
+    <circle cx="490" cy="150" r="4" fill="none" stroke="#000000" stroke-width="1"/>
+    <circle cx="310" cy="230" r="4" fill="none" stroke="#000000" stroke-width="1"/>
+    <circle cx="490" cy="230" r="4" fill="none" stroke="#000000" stroke-width="1"/>
+    
+    <!-- VHF control -->
+    <circle cx="340" cy="180" r="8" fill="none" stroke="#000000" stroke-width="2"/>
+    <text x="340" y="165" font-family="Arial" font-size="10" text-anchor="middle">VHF</text>
+    <circle cx="340" cy="205" r="15" fill="none" stroke="#000000" stroke-width="2"/>
+    <circle cx="340" cy="205" r="10" fill="none" stroke="#000000" stroke-width="2"/>
+    
+    <!-- HF control -->
+    <circle cx="385" cy="180" r="8" fill="none" stroke="#000000" stroke-width="2"/>
+    <text x="385" y="165" font-family="Arial" font-size="10" text-anchor="middle">HF</text>
+    
+    <!-- MASK button -->
+    <circle cx="425" cy="190" r="12" fill="none" stroke="#000000" stroke-width="2"/>
+    <circle cx="425" cy="190" r="8" fill="none" stroke="#000000" stroke-width="2"/>
+    <text x="425" y="175" font-family="Arial" font-size="9" text-anchor="middle">MASK</text>
+    
+    <!-- CALL button -->
+    <circle cx="465" cy="180" r="8" fill="none" stroke="#000000" stroke-width="2"/>
+    <text x="465" y="165" font-family="Arial" font-size="9" text-anchor="middle">CALL</text>
+    
+    <!-- CAIS label -->
+    <text x="465" y="210" font-family="Arial" font-size="9" text-anchor="middle">CAIS</text>
+    
+    <text class="component-label" x="400" y="260">Audio control panel</text>
+  </g>
+  
+  <!-- Loudspeaker (top right) -->
+  <g id="loudspeaker">
+    <rect x="600" y="120" width="100" height="100" rx="5" fill="none" stroke="#000000" stroke-width="2"/>
+    <!-- Mounting holes -->
+    <circle cx="610" cy="130" r="3" fill="none" stroke="#000000" stroke-width="1"/>
+    <circle cx="690" cy="130" r="3" fill="none" stroke="#000000" stroke-width="1"/>
+    <circle cx="610" cy="210" r="3" fill="none" stroke="#000000" stroke-width="1"/>
+    <circle cx="690" cy="210" r="3" fill="none" stroke="#000000" stroke-width="1"/>
+    <!-- Speaker cone -->
+    <circle cx="650" cy="170" r="30" fill="none" stroke="#000000" stroke-width="2"/>
+    <circle cx="650" cy="170" r="20" fill="none" stroke="#000000" stroke-width="2"/>
+    <circle cx="650" cy="170" r="10" fill="none" stroke="#000000" stroke-width="2"/>
+    <text class="component-label" x="650" y="240">Loudspeaker</text>
+  </g>
+  
+  <!-- Headset (bottom left) -->
+  <g id="headset">
+    <!-- Headband -->
+    <path d="M 180 380 Q 240 340 300 380" fill="none" stroke="#000000" stroke-width="3"/>
+    <path d="M 185 380 Q 240 345 295 380" fill="none" stroke="#000000" stroke-width="2"/>
+    <!-- Left ear cup -->
+    <ellipse cx="180" cy="405" rx="20" ry="25" fill="none" stroke="#000000" stroke-width="2"/>
+    <ellipse cx="180" cy="405" rx="12" ry="17" fill="none" stroke="#000000" stroke-width="2"/>
+    <!-- Right ear cup -->
+    <ellipse cx="300" cy="405" rx="20" ry="25" fill="none" stroke="#000000" stroke-width="2"/>
+    <ellipse cx="300" cy="405" rx="12" ry="17" fill="none" stroke="#000000" stroke-width="2"/>
+    <!-- Microphone boom -->
+    <path d="M 180 430 L 180 450 L 200 450" fill="none" stroke="#000000" stroke-width="2"/>
+    <rect x="200" y="447" width="15" height="8" rx="2" fill="none" stroke="#000000" stroke-width="1"/>
+    <text class="component-label" x="240" y="475">Headset</text>
+  </g>
+  
+  <!-- Interphone (bottom right) -->
+  <g id="interphone">
+    <rect x="580" y="390" width="50" height="80" rx="8" fill="none" stroke="#000000" stroke-width="2"/>
+    <!-- Handset shape -->
+    <ellipse cx="605" cy="405" rx="18" ry="12" fill="none" stroke="#000000" stroke-width="2"/>
+    <rect x="595" y="417" width="20" height="36" rx="3" fill="none" stroke="#000000" stroke-width="2"/>
+    <ellipse cx="605" cy="455" rx="18" ry="12" fill="none" stroke="#000000" stroke-width="2"/>
+    <text class="component-label" x="605" y="490">Interphone</text>
+  </g>
+  
+  <!-- Arrows connecting components -->
+  <!-- Microphone to Audio Control Panel -->
+  <line class="arrow" x1="140" y1="180" x2="290" y2="180"/>
+  
+  <!-- Audio Control Panel to Loudspeaker -->
+  <line class="arrow" x1="510" y1="180" x2="590" y2="170"/>
+  
+  <!-- Audio Control Panel to Headset (bidirectional) -->
+  <line class="arrow-bidirectional" x1="350" y1="250" x2="270" y2="350"/>
+  
+  <!-- Interphone to Loudspeaker -->
+  <line class="arrow" x1="605" y1="380" x2="650" y2="230"/>
   
   <!-- ICN Label -->
-  <text class="icn-label" x="20" y="575">ICN-AMPEL360AT-23-10-0001-A_001</text>
-  
-  <!-- Sheet/Page Info -->
-  <text class="icn-label" x="780" y="575" text-anchor="end">Sheet 1 of 1</text>
+  <text class="icn-label" x="400" y="575" text-anchor="middle">ICN-AMPEL360AT-23-10-0001-A_001</text>
   
 </svg>
