@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SPDX-License-Identifier: Apache-2.0
+  SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+  
+  S1000D Business Rules Exchange (BREX) Placeholder
+  Model: AMPEL360AT
+-->
+<!DOCTYPE brex PUBLIC "-//S1000D//DTD S1000D Issue 5.0//EN" "s1000d_5-0.dtd">
+<brex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <identAndStatusSection>
+    <brexAddress>
+      <brexIdent>
+        <brexCode modelIdentCode="AMPEL360AT"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </brexIdent>
+      <brexAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <brexTitle>AMPEL360AT Business Rules Exchange</brexTitle>
+      </brexAddressItems>
+    </brexAddress>
+    <brexStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+    </brexStatus>
+  </identAndStatusSection>
+  <brexContent>
+    <structureRules>
+      <!-- Business rules to be defined -->
+    </structureRules>
+  </brexContent>
+</brex>

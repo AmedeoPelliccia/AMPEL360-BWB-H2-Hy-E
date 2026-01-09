@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SPDX-License-Identifier: Apache-2.0
+  SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+  
+  S1000D Data Module Placeholder
+  Model: AMPEL360AT
+  ATA: 27-30-30
+  Info Code: 520A (Test and Checkout)
+-->
+<!DOCTYPE dmodule PUBLIC "-//S1000D//DTD S1000D Issue 5.0//EN" "s1000d_5-0.dtd">
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                systemCode="27" subSystemCode="30" subSubSystemCode="30" 
+                assyCode="00" disassyCode="00" disassyCodeVariant="A" 
+                infoCode="520A" infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Flight Controls - 27-30-30-control-modes-limits-and-reversion</techName>
+          <infoName>Test and Checkout</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applic/>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="00" subSystemCode="0" subSubSystemCode="0" 
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A" 
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <!-- Placeholder - Content to be developed -->
+    <description>
+      <para>This data module is a placeholder for Test and Checkout content for 27-30-30-control-modes-limits-and-reversion.</para>
+      <para>Content to be developed according to S1000D Issue 5.0 guidelines.</para>
+    </description>
+  </content>
+</dmodule>

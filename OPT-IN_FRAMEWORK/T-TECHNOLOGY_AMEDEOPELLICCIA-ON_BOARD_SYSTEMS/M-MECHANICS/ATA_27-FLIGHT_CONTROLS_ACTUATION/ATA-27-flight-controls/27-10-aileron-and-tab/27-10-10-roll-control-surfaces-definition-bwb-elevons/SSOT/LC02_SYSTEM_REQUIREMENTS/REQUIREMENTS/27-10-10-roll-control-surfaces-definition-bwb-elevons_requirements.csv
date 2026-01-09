@@ -1,0 +1,6 @@
+Requirement_ID,Title,Description,Type,Priority,Verification_Method,Status,Trace_To
+REQ-27-10-10-roll-control-surfaces-definition-bwb-elevons-001,TBD,TBD,Functional,High,Test,Draft,
+REQ-27-10-10-roll-control-surfaces-definition-bwb-elevons-002,TBD,TBD,Functional,High,Test,Draft,
+REQ-27-10-10-roll-control-surfaces-definition-bwb-elevons-003,TBD,TBD,Performance,Medium,Analysis,Draft,
+REQ-27-10-10-roll-control-surfaces-definition-bwb-elevons-004,TBD,TBD,Safety,High,Inspection,Draft,
+REQ-27-10-10-roll-control-surfaces-definition-bwb-elevons-005,TBD,TBD,Interface,Medium,Test,Draft,
