@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Common Information: COM-AMPEL360AT-TOOL-00001
+  Type: Tool
+  Description: Communications test set description
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: TOOL
+  - ID: 00001
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-300A (Removal/Installation)
+  - DMC-...-421A (Operational Check)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 23 (Communications)
+  - Created: 2026-01-09
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="tool" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="09"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <toolRepository>
+      <toolSpec>
+        <toolIdent toolNumber="T-23-001"/>
+        <toolName>Communications Test Set</toolName>
+        <toolDescription>
+          <para>Multi-function communications test equipment for VHF COM and NAV radio systems. Used for testing, troubleshooting, and alignment of aircraft communication and navigation radios.</para>
+          <para>Frequency Range (VHF COM): 118.000 - 136.975 MHz</para>
+          <para>Frequency Range (VHF NAV): 108.000 - 117.950 MHz</para>
+          <para>Power Output: 0 - 25 Watts adjustable</para>
+          <para>Modulation: AM (Voice and data)</para>
+          <para>Frequency Accuracy: ±0.001%</para>
+          <para>VSWR Measurement: 1.0:1 to 10:1</para>
+          <para>Audio Output: 0-3V RMS adjustable</para>
+        </toolDescription>
+      </toolSpec>
+    </toolRepository>
+  </commonRepositoryContent>
+</commonRepository>

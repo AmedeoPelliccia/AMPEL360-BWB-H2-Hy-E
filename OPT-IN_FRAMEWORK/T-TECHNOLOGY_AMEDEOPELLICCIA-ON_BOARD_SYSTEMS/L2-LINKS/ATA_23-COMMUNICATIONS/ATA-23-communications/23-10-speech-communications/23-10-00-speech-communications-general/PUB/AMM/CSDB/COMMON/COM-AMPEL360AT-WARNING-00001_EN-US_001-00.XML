@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Common Information: COM-AMPEL360AT-WARNING-00001
+  Type: Warning
+  Description: High voltage warning
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: WARNING
+  - ID: 00001
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-300A (Removal/Installation)
+  - DMC-...-421A (Operational Check)
+  - DMC-...-520A (Troubleshooting)
+  - DMC-...-620A (Repair)
+  - DMC-...-C40A (Circuit Diagrams)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 23 (Communications)
+  - Created: 2026-01-09
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="warning" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="09"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <warningRepository>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W001"/>
+        <warningAndCautionPara>
+          WARNING: HIGH VOLTAGE - LETHAL POTENTIAL. Ensure all electrical power is disconnected and locked out before performing any maintenance on communications equipment. Verify zero energy state before proceeding. Failure to comply may result in serious injury or death.
+        </warningAndCautionPara>
+      </warningSpec>
+    </warningRepository>
+  </commonRepositoryContent>
+</commonRepository>
