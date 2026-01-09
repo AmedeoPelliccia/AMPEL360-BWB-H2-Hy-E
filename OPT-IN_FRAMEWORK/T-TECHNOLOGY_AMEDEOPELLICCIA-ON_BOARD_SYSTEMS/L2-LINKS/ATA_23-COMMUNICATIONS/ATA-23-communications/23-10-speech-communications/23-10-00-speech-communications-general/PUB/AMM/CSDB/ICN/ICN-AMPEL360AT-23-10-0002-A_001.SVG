@@ -18,8 +18,9 @@
   Document Control:
   - Standard: S1000D Issue 5.0
   - Project: AMPEL360-AIR-T
-  - Status: Placeholder - Pending Final Artwork
+  - Status: Technical Artwork
   - Created: 2026-01-09
+  - Updated: 2026-01-09
   - Author: AMPEL360-AIR-T Project
 -->
 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -54,27 +55,216 @@
       .border { fill: none; stroke: #333333; stroke-width: 2; }
       .title-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #333333; }
       .subtitle-text { font-family: Arial, sans-serif; font-size: 14px; fill: #666666; }
-      .placeholder-text { font-family: Arial, sans-serif; font-size: 18px; fill: #999999; font-style: italic; }
       .icn-label { font-family: monospace; font-size: 12px; fill: #666666; }
-      .placeholder-box { fill: #f5f5f5; stroke: #cccccc; stroke-width: 1; stroke-dasharray: 5,5; }
+      
+      /* Component boxes */
+      .component-box { fill: #ffffff; stroke: #000000; stroke-width: 2; rx: 5; }
+      .component-title { font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .component-subtitle { font-family: Arial, sans-serif; font-size: 10px; fill: #333333; text-anchor: middle; }
+      .component-detail { font-family: Arial, sans-serif; font-size: 9px; fill: #666666; text-anchor: middle; }
+      
+      /* Zone boxes */
+      .zone-box { fill: none; stroke: #666666; stroke-width: 1; stroke-dasharray: 5,3; }
+      .zone-label { font-family: Arial, sans-serif; font-size: 11px; fill: #666666; font-style: italic; }
+      
+      /* Buses - color coded */
+      .tx-bus { stroke: #CC0000; stroke-width: 3; fill: none; }
+      .rx-bus { stroke: #0066CC; stroke-width: 3; fill: none; }
+      .ics-bus { stroke: #00AA00; stroke-width: 3; fill: none; }
+      .pa-bus { stroke: #FF8800; stroke-width: 3; fill: none; }
+      .power-bus { stroke: #666666; stroke-width: 2; fill: none; }
+      
+      /* Arrows */
+      .arrow-tx { fill: none; stroke: #CC0000; stroke-width: 2.5; marker-end: url(#arrow-tx); }
+      .arrow-rx { fill: none; stroke: #0066CC; stroke-width: 2.5; marker-end: url(#arrow-rx); }
+      .arrow-ics { fill: none; stroke: #00AA00; stroke-width: 2.5; marker-end: url(#arrow-ics); }
+      .arrow-pa { fill: none; stroke: #FF8800; stroke-width: 2.5; marker-end: url(#arrow-pa); }
+      .arrow-power { fill: none; stroke: #666666; stroke-width: 2; marker-end: url(#arrow-power); }
+      
+      .legend-text { font-family: Arial, sans-serif; font-size: 9px; fill: #000000; }
+      .legend-line { stroke-width: 3; }
     </style>
+    
+    <!-- Arrow markers for different bus types -->
+    <marker id="arrow-tx" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#CC0000" />
+    </marker>
+    <marker id="arrow-rx" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0066CC" />
+    </marker>
+    <marker id="arrow-ics" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#00AA00" />
+    </marker>
+    <marker id="arrow-pa" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#FF8800" />
+    </marker>
+    <marker id="arrow-power" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666666" />
+    </marker>
   </defs>
   
   <!-- Border -->
   <rect class="border" x="10" y="10" width="780" height="580" rx="5" ry="5"/>
   
   <!-- Title Block -->
-  <text class="title-text" x="400" y="50" text-anchor="middle">Audio Distribution Wiring Schematic</text>
-  <text class="subtitle-text" x="400" y="75" text-anchor="middle">ATA 23-10-00 Speech Communications</text>
+  <text class="title-text" x="400" y="45" text-anchor="middle">Audio Distribution Wiring Schematic</text>
+  <text class="subtitle-text" x="400" y="65" text-anchor="middle">ATA 23-10-00 Speech Communications</text>
   
-  <!-- Placeholder Content Area -->
-  <rect class="placeholder-box" x="50" y="100" width="700" height="400"/>
-  <text class="placeholder-text" x="400" y="300" text-anchor="middle">
-    [PLACEHOLDER - Schematic Diagram]
-  </text>
-  <text class="placeholder-text" x="400" y="330" text-anchor="middle">
-    Pending Final Technical Artwork
-  </text>
+  <!-- System Context Note -->
+  <text class="component-detail" x="400" y="82" text-anchor="middle">Simplified topology for AMM publications</text>
+  
+  <!-- ZONE 200 - Flight Deck (top left zone) -->
+  <rect class="zone-box" x="30" y="100" width="180" height="200"/>
+  <text class="zone-label" x="120" y="115">ZONE 200</text>
+  <text class="zone-label" x="120" y="128">Flight Deck</text>
+  
+  <!-- Hand Microphone -->
+  <g id="hand-mic">
+    <rect class="component-box" x="40" y="140" width="80" height="45"/>
+    <text class="component-title" x="80" y="157">Hand</text>
+    <text class="component-title" x="80" y="170">Microphone</text>
+    <text class="component-detail" x="80" y="180">TX source</text>
+  </g>
+  
+  <!-- Headset -->
+  <g id="headset">
+    <rect class="component-box" x="130" y="140" width="70" height="60"/>
+    <text class="component-title" x="165" y="157">Headset</text>
+    <text class="component-title" x="165" y="170">L/R + Boom</text>
+    <text class="component-title" x="165" y="183">Mic</text>
+    <text class="component-detail" x="165" y="193">TX + RX endpoints</text>
+  </g>
+  
+  <!-- ACP1 -->
+  <g id="acp1">
+    <rect class="component-box" x="40" y="220" width="70" height="60"/>
+    <text class="component-title" x="75" y="242">ACP1</text>
+    <text class="component-detail" x="75" y="253">Audio Control Panel</text>
+    <text class="component-detail" x="75" y="263">Conn: J1 (placeholder)</text>
+  </g>
+  
+  <!-- ACP2 -->
+  <g id="acp2">
+    <rect class="component-box" x="130" y="220" width="70" height="60"/>
+    <text class="component-title" x="165" y="242">ACP2</text>
+    <text class="component-detail" x="165" y="253">Audio Control Panel</text>
+    <text class="component-detail" x="165" y="263">Conn: J1 (placeholder)</text>
+  </g>
+  
+  <!-- ZONE 400 - ESE Bay (top center zone) -->
+  <rect class="zone-box" x="230" y="100" width="180" height="240"/>
+  <text class="zone-label" x="320" y="115">ZONE 400 - ESE Bay</text>
+  
+  <!-- AMU1 -->
+  <g id="amu1">
+    <rect class="component-box" x="240" y="135" width="75" height="75"/>
+    <text class="component-title" x="277.5" y="155">AMU1</text>
+    <text class="component-detail" x="277.5" y="167">Audio Management</text>
+    <text class="component-detail" x="277.5" y="177">Unit</text>
+    <text class="component-detail" x="277.5" y="187">Mixing / routing /</text>
+    <text class="component-detail" x="277.5" y="197">monitoring</text>
+    <text class="component-detail" x="277.5" y="205">Conn: J1/J3 (placeholder)</text>
+  </g>
+  
+  <!-- AMU2 -->
+  <g id="amu2">
+    <rect class="component-box" x="325" y="225" width="75" height="65"/>
+    <text class="component-title" x="362.5" y="245">AMU2</text>
+    <text class="component-detail" x="362.5" y="257">Service / Jumper /</text>
+    <text class="component-detail" x="362.5" y="267">Call</text>
+    <text class="component-detail" x="362.5" y="277">Interphone / PA Cabin</text>
+    <text class="component-detail" x="362.5" y="285">Conn: J2/J4 (placeholder)</text>
+  </g>
+  
+  <!-- Service Interphone Jacks -->
+  <g id="service-jacks">
+    <rect class="component-box" x="240" y="300" width="70" height="30"/>
+    <text class="component-title" x="275" y="315">Service</text>
+    <text class="component-title" x="275" y="325">Interphone</text>
+  </g>
+  
+  <!-- 28V Power -->
+  <g id="power-supply">
+    <rect class="component-box" x="330" y="300" width="60" height="30"/>
+    <text class="component-title" x="360" y="315">28 V</text>
+    <text class="component-detail" x="360" y="324">Power</text>
+  </g>
+  
+  <!-- PA Amplifier Zone 400 (right side top) -->
+  <g id="pa-amp-400">
+    <rect class="component-box" x="440" y="130" width="110" height="65"/>
+    <text class="component-title" x="495" y="150">PA Amplifier</text>
+    <text class="component-title" x="495" y="163">(Zone 400)</text>
+    <text class="component-detail" x="495" y="173">PA AMP 1</text>
+    <text class="component-detail" x="495" y="183">Connector: J1 (placeholder)</text>
+  </g>
+  
+  <!-- PA Amplifier (right side middle) -->
+  <g id="pa-amp-2">
+    <rect class="component-box" x="440" y="215" width="110" height="65"/>
+    <text class="component-title" x="495" y="235">PA Amplifier</text>
+    <text class="component-detail" x="495" y="247">PA AMP 2</text>
+    <text class="component-detail" x="495" y="257">Connector: J1 (placeholder)</text>
+  </g>
+  
+  <!-- Cockpit Speakers (right side bottom) -->
+  <g id="cockpit-speakers">
+    <rect class="component-box" x="440" y="300" width="110" height="45"/>
+    <text class="component-title" x="495" y="317">Cockpit</text>
+    <text class="component-title" x="495" y="330">Speakers</text>
+    <text class="component-detail" x="495" y="339">Audio output (RX/PA)</text>
+  </g>
+  
+  <!-- TX Mic Bus (Red arrows) -->
+  <path class="arrow-tx" d="M 120 165 L 220 165"/>
+  <path class="arrow-tx" d="M 165 200 L 240 200 L 240 172"/>
+  <path class="arrow-tx" d="M 75 220 L 75 210 L 250 210 L 250 172"/>
+  <path class="arrow-tx" d="M 277.5 135 L 277.5 125 L 430 125 L 430 160 L 440 160"/>
+  
+  <!-- RX Audio Bus (Blue arrows) -->
+  <path class="arrow-rx" d="M 315 172 L 350 172 L 350 245 L 325 245"/>
+  <path class="arrow-rx" d="M 315 172 L 430 172 L 430 247 L 440 247"/>
+  <path class="arrow-rx" d="M 362.5 225 L 362.5 210 L 495 210 L 495 215"/>
+  <path class="arrow-rx" d="M 362.5 210 L 580 210 L 580 315 L 550 315"/>
+  
+  <!-- ICS/PA Bus (Green arrows) -->
+  <path class="arrow-ics" d="M 110 250 L 130 250"/>
+  <path class="arrow-ics" d="M 200 250 L 240 250"/>
+  <path class="arrow-ics" d="M 315 250 L 330 250"/>
+  <path class="arrow-ics" d="M 362.5 290 L 362.5 295 L 275 295 L 275 300"/>
+  <path class="arrow-ics" d="M 550 247 L 575 247 L 575 323 L 550 323"/>
+  
+  <!-- PA VDC Power (Orange arrows) -->
+  <path class="arrow-pa" d="M 390 315 L 410 315 L 410 160 L 440 160"/>
+  <path class="arrow-pa" d="M 410 247 L 440 247"/>
+  
+  <!-- Power wiring (Gray arrows) -->
+  <path class="arrow-power" d="M 360 300 L 360 290 L 362.5 290"/>
+  
+  <!-- Legend (bottom) -->
+  <g id="legend">
+    <rect x="50" y="360" width="330" height="75" fill="none" stroke="#666666" stroke-width="1"/>
+    <text class="component-title" x="60" y="375">Legend</text>
+    
+    <line class="legend-line tx-bus" x1="60" y1="390" x2="100" y2="390"/>
+    <text class="legend-text" x="105" y="393">Red: Transmit Microphone Bus (TX)</text>
+    
+    <line class="legend-line rx-bus" x1="60" y1="405" x2="100" y2="405"/>
+    <text class="legend-text" x="105" y="408">Blue: Receive Audio Bus (RX phones/speaker)</text>
+    
+    <line class="legend-line ics-bus" x1="60" y1="420" x2="100" y2="420"/>
+    <text class="legend-text" x="105" y="423">Green: ICS / PA Bus (interphone / PA audio)</text>
+    
+    <line class="legend-line pa-bus" x1="240" y1="390" x2="280" y2="390"/>
+    <text class="legend-text" x="285" y="393">Orange: PA power / PA box wiring</text>
+    
+    <line class="legend-line power-bus" x1="240" y1="405" x2="280" y2="405"/>
+    <text class="legend-text" x="285" y="408">Gray: 28VDC power wiring</text>
+  </g>
+  
+  <!-- Notes -->
+  <text class="component-detail" x="400" y="460" text-anchor="middle">Note: This is a publication-grade simplified topology. Pin-level netlists should live in SSOT/LC03 (design)</text>
+  <text class="component-detail" x="400" y="472" text-anchor="middle">and be referenced from DM wiring/procedures.</text>
   
   <!-- ICN Label -->
   <text class="icn-label" x="20" y="575">ICN-AMPEL360AT-23-10-0002-A_001</text>
