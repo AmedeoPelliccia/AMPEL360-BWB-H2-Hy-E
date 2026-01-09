@@ -14,11 +14,11 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-# CSDB Profile for 28-10-28-10-storage
+# CSDB Profile for 28-10-00
 version: 1
 project: AMPEL360-AIR-T
 ata_chapter: 28
-section: "28-10-28-10-storage"
+section: "28-10-00"
 brex_reference: "BREX-AMPEL360AT-AIR-T_001-00.XML"
 language: "EN-US"
 issue_info:

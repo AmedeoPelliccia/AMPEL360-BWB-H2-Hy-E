@@ -1,8 +1,8 @@
 # CSDB — Common Source Database
 
-## 28-10-28-10-storage
+## 28-10-00
 
-This directory contains S1000D-compliant data modules for ATA 28 sub-subject 28-10-28-10-storage.
+This directory contains S1000D-compliant data modules for ATA 28 sub-subject 28-10-00.
 
 ## Structure
 
@@ -19,7 +19,7 @@ This directory contains S1000D-compliant data modules for ATA 28 sub-subject 28-
 ## Data Module Naming Convention
 
 ```
-DMC-AMPEL360AT-28-10-28-10-storage-XXXA-A-A_XXX_00_EN-US_001-00.XML
+DMC-AMPEL360AT-28-10-00-XXXA-A-A_XXX_00_EN-US_001-00.XML
 ```
 
 Where XXX indicates the info code:

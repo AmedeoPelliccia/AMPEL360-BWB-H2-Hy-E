@@ -1,6 +1,6 @@
 # AMM — Aircraft Maintenance Manual
 
-## 28-10-28-10-storage
+## 28-10-00
 
 S1000D-compliant maintenance documentation for this sub-subject.
 

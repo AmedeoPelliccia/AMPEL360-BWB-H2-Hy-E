@@ -1,6 +1,6 @@
 # AMM — Aircraft Maintenance Manual
 
-## 28-00-28-00-fuel-general
+## 28-00-00
 
 S1000D-compliant maintenance documentation for this sub-subject.
 

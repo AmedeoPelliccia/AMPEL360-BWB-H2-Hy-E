@@ -1,8 +1,8 @@
 # CSDB — Common Source Database
 
-## 28-00-28-00-fuel-general
+## 28-00-00
 
-This directory contains S1000D-compliant data modules for ATA 28 sub-subject 28-00-28-00-fuel-general.
+This directory contains S1000D-compliant data modules for ATA 28 sub-subject 28-00-00.
 
 ## Structure
 
@@ -19,7 +19,7 @@ This directory contains S1000D-compliant data modules for ATA 28 sub-subject 28-
 ## Data Module Naming Convention
 
 ```
-DMC-AMPEL360AT-28-00-28-00-fuel-general-XXXA-A-A_XXX_00_EN-US_001-00.XML
+DMC-AMPEL360AT-28-00-00-XXXA-A-A_XXX_00_EN-US_001-00.XML
 ```
 
 Where XXX indicates the info code:
