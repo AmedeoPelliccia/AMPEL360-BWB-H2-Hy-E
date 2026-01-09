@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+#
+# Requirements Specification Template for ATA 26-00-00
+#
+Requirement_ID,Category,Description,Rationale,Verification_Method,Priority,Status,Parent_Requirement,Traced_To
+REQ-26-00-00-001,Functional,"Fire protection system shall detect fire in all protected zones",Safety requirement per CS-25.1309,Analysis + Test,Critical,Draft,,CS-25.851
+REQ-26-00-00-002,Functional,"System shall provide visual and aural warnings to flight crew upon fire detection",Crew awareness requirement,Test,Critical,Draft,REQ-26-00-00-001,CS-25.1309
+REQ-26-00-00-003,Performance,"Fire detection system shall respond within 5 seconds of fire event",Performance requirement,Test,High,Draft,REQ-26-00-00-001,DO-160
+REQ-26-00-00-004,Functional,"System shall provide means of fire extinguishing for each protected zone",Safety requirement,Analysis + Test,Critical,Draft,,CS-25.865
+REQ-26-00-00-005,Environmental,"Fire protection components shall operate in temperature range -55°C to +85°C",Environmental qualification,Test,High,Draft,,DO-160 Section 4

@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+#
+# Requirements Traceability Matrix for ATA 26-00-00
+#
+Requirement_ID,Regulatory_Reference,Design_Document,Test_Case,Verification_Status,Notes
+REQ-26-00-00-001,CS-25.851,ARCH-26-00-001,TEST-26-00-001,Planned,Fire detection in all zones
+REQ-26-00-00-002,CS-25.1309,ARCH-26-00-002,TEST-26-00-002,Planned,Crew alerting interface
+REQ-26-00-00-003,DO-160,SPEC-26-00-003,TEST-26-00-003,Planned,Response time requirement
+REQ-26-00-00-004,CS-25.865,ARCH-26-00-004,TEST-26-00-004,Planned,Extinguishing capability
+REQ-26-00-00-005,DO-160 Section 4,SPEC-26-00-005,TEST-26-00-005,Planned,Environmental qualification
