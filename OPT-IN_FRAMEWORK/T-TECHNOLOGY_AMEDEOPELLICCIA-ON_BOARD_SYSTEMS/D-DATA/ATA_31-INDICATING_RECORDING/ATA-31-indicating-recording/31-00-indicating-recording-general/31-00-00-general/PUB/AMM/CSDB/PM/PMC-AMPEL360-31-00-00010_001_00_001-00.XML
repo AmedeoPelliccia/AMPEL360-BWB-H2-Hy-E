@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pm PUBLIC "-//S1000D//DTD PM 5.0//EN" "pm.dtd">
+<!--
+S1000D Publication Module - ATA 31-00 Indicating/Recording General
+File: PMC-AMPEL360-31-00-00010_001_00_001-00.XML
+Purpose: Entry point for the General section of ATA 31 in AMM
+Project: AMPEL360-AIR-T
+Created: 2026-01-10
+Standard: ATA iSpec 2200 + S1000D Issue 5.0
+-->
+<pm>
+  <identAndStatusSection>
+    <pmAddress>
+      <pmIdent>
+        <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00010" pmVolume="31-00"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </pmIdent>
+      <pmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <pmTitle>31-00 Indicating / Recording – General</pmTitle>
+      </pmAddressItems>
+    </pmAddress>
+    <pmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>Amedeo Pelliccia</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All aircraft configurations with Indicating/Recording systems (ATA 31-00)</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>BREX-AMPEL360-ATA31-v1-0</techName>
+              <infoName>Business Rules Exchange</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </pmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <pmEntry>
+      <pmEntryTitle>31-00 Indicating / Recording – General</pmEntryTitle>
+      
+      <!-- Scope and Applicability -->
+      <pmEntry>
+        <pmEntryTitle>Scope and Applicability</pmEntryTitle>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="010" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Indicating/Recording System</techName>
+              <infoName>Scope and Applicability</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </pmEntry>
+      
+      <!-- System Architecture Overview -->
+      <pmEntry>
+        <pmEntryTitle>System Architecture Overview</pmEntryTitle>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="012" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Indicating/Recording System</techName>
+              <infoName>System Architecture Overview</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </pmEntry>
+      
+      <!-- Interfaces with ATA 22 / 23 / 34 -->
+      <pmEntry>
+        <pmEntryTitle>Interfaces with Related ATA Chapters</pmEntryTitle>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="018" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Indicating/Recording System</techName>
+              <infoName>Interfaces with ATA 22, 23, 34</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </pmEntry>
+      
+      <!-- Data Acquisition Principles -->
+      <pmEntry>
+        <pmEntryTitle>Data Acquisition Principles</pmEntryTitle>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="020" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Indicating/Recording System</techName>
+              <infoName>Data Acquisition Principles</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </pmEntry>
+      
+    </pmEntry>
+  </content>
+</pm>

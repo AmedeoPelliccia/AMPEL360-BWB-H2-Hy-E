@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+S1000D Data Module - Indicating and Recording Safety Precautions
+DMC: AMPEL360AT-A-31-00-00-00A-050A-A_001-00_EN-US
+Info Code: 050A - Safety Precautions and Operational Limitations
+ATA Chapter: 31-00-00 Indicating and Recording General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="31"
+                subSystemCode="00"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="050"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>Safety Precautions and Operational Limitations</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 Q100 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT"
+                    systemDiffCode="A"
+                    systemCode="00"
+                    subSystemCode="00"
+                    subSubSystemCode="00"
+                    assyCode="00"
+                    disassyCode="00"
+                    disassyCodeVariant="A"
+                    infoCode="022"
+                    infoCodeVariant="A"
+                    itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Public Technical Documentation</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <description>
+      <levelledPara>
+        <title>Introduction</title>
+        <para>This data module defines safety precautions, warnings, cautions, and operational limitations applicable to maintenance, operation, and handling of the AMPEL360 Q100 Indicating and Recording System (ATA 31). Strict adherence to these precautions is required to ensure personnel safety, prevent equipment damage, and maintain system airworthiness.</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>General Safety Precautions</title>
+        
+        <levelledPara>
+          <title>WARNING - Electrical Hazards</title>
+          <para>The Indicating and Recording System operates on 28V DC and 115V AC power supplies. Before performing any maintenance:</para>
+          <para>
+            - De-energize applicable circuit breakers and confirm power-off status<br/>
+            - Use appropriate personal protective equipment (PPE)<br/>
+            - Follow lockout/tagout procedures per aircraft maintenance manual<br/>
+            - Verify absence of voltage with calibrated test equipment<br/>
+            - Be aware of capacitors that may retain charge after power removal
+          </para>
+          <para>Failure to de-energize circuits before maintenance can result in electric shock, equipment damage, or aircraft fire.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>WARNING - Electrostatic Discharge (ESD)</title>
+          <para>Display units, recording modules, and avionics LRUs contain ESD-sensitive components. When handling these units:</para>
+          <para>
+            - Wear grounded wrist strap connected to aircraft ground<br/>
+            - Work on ESD-protective mats<br/>
+            - Store components in anti-static bags when not installed<br/>
+            - Avoid touching connector pins and circuit boards<br/>
+            - Maintain humidity levels above 30% if possible
+          </para>
+          <para>ESD damage may not be immediately apparent but can cause latent failures and reduced component life.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>CAUTION - Display Unit Handling</title>
+          <para>Display units contain fragile LCD panels and precision optical elements:</para>
+          <para>
+            - Do not apply pressure to display screen surface<br/>
+            - Protect screens from impacts, scratches, and solvents<br/>
+            - Clean screens only with approved cleaning solutions<br/>
+            - Support unit from mounting frame, not from display screen<br/>
+            - Store in protective packaging when removed from aircraft
+          </para>
+          <para>Improper handling can cause screen cracks, pixel defects, or optical degradation.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>CAUTION - Crash-Protected Recorder Handling</title>
+          <para>Flight Data Recorders (FDR) and Cockpit Voice Recorders (CVR) are crash-protected units with special handling requirements:</para>
+          <para>
+            - Do not drop or subject to impact forces<br/>
+            - Do not expose to temperatures exceeding storage limits (-55°C to +85°C)<br/>
+            - Do not immerse in water unless as part of approved testing<br/>
+            - If involved in accident/incident, treat as evidence and follow regulatory procedures<br/>
+            - Never attempt to open or repair crash-protected enclosure
+          </para>
+          <para>Damage to crash-protected recorders may compromise accident investigation capability.</para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Operational Limitations</title>
+        
+        <levelledPara>
+          <title>Minimum Equipment List (MEL) Considerations</title>
+          <para>The following system failures have MEL implications requiring operational restrictions or dispatch limitations:</para>
+          <para>
+            - Single Display Unit failure: May dispatch with restrictions (crew procedures, alternate indications)<br/>
+            - Multiple Display Unit failures: Typically no-go item, consult MEL<br/>
+            - Flight Data Recorder failure: Check regulatory requirements (may prohibit ETOPS, overwater)<br/>
+            - Cockpit Voice Recorder failure: Check regulatory requirements<br/>
+            - Crew Alerting Computer failure with backup operational: Dispatch with restrictions<br/>
+            - Master Warning/Caution light failure: No-go item
+          </para>
+          <para>Always consult the approved MEL and coordinate with flight operations before dispatch with indicating/recording system degradation.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Environmental Operating Limits</title>
+          <para>System operational envelopes:</para>
+          <para>
+            - Ambient temperature: -55°C to +70°C (operating), -55°C to +85°C (storage)<br/>
+            - Altitude: -1,000 ft to 45,000 ft<br/>
+            - Humidity: 0% to 95% relative humidity (non-condensing)<br/>
+            - Vibration: Per DO-160G Category U (standard aircraft vibration)<br/>
+            - EMI/Lightning: Certified to DO-160G Category A (severe lightning environment)
+          </para>
+          <para>Operation outside these limits may result in degraded performance, false indications, or equipment damage.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Data Recording Limitations</title>
+          <para>Recording system operational constraints:</para>
+          <para>
+            - FDR: Minimum 25-hour recording capacity (ED-112A), overwrites oldest data<br/>
+            - CVR: Minimum 2-hour recording capacity, overwrites oldest data<br/>
+            - QAR: Storage capacity varies by configuration, typically 100-500 flight hours<br/>
+            - Recording begins automatically when aircraft electrical power applied<br/>
+            - CVR recording may be manually erased on ground (crew-initiated, subject to regulations)<br/>
+            - FDR data cannot be erased in-flight or on ground without special equipment
+          </para>
+          <para>Recording limitations must be considered for flight test, training, and incident investigation scenarios.</para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Maintenance Safety Precautions</title>
+        
+        <levelledPara>
+          <title>Software Loading and Configuration</title>
+          <para>When loading software or configuration data:</para>
+          <para>
+            - Verify correct software part number and version for aircraft configuration<br/>
+            - Ensure compatibility with IMA platform and other avionics software versions<br/>
+            - Perform software loading only with approved tools and procedures<br/>
+            - Never interrupt power during software loading (may corrupt memory)<br/>
+            - Perform functional tests after software loading to verify correct operation<br/>
+            - Update aircraft configuration control documentation
+          </para>
+          <para>Incorrect software versions can cause loss of critical functions or invalid indications.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Connector Mating and De-Mating</title>
+          <para>Connector handling precautions:</para>
+          <para>
+            - Inspect connectors for damage, corrosion, or foreign objects before mating<br/>
+            - Align connector orientation marks before mating<br/>
+            - Do not force connectors; verify proper alignment if resistance encountered<br/>
+            - Tighten connector locking mechanisms to specified torque values<br/>
+            - Verify connector engagement with "feel" and visual inspection<br/>
+            - Support connector bodies, not cables, during mating/de-mating
+          </para>
+          <para>Damaged or improperly mated connectors can cause intermittent faults or system failures.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Built-In Test Equipment (BITE) Usage</title>
+          <para>When using BITE functions for troubleshooting:</para>
+          <para>
+            - Perform BITE tests only when authorized and following approved procedures<br/>
+            - Some BITE tests may command actuators or generate outputs; ensure safe conditions<br/>
+            - Do not perform continuous or extended BITE testing; may overheat components<br/>
+            - Record and interpret BITE fault codes according to maintenance manual<br/>
+            - Clear transient faults only after verifying fault cause was temporary<br/>
+            - Do not clear persistent faults without corrective action
+          </para>
+          <para>Inappropriate BITE usage can mask faults or cause uncommanded system actions.</para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Cybersecurity Precautions</title>
+        
+        <levelledPara>
+          <title>Data Download and Upload Security</title>
+          <para>When accessing recorded data or loading software:</para>
+          <para>
+            - Use only authorized laptops and data transfer equipment<br/>
+            - Verify data transfer equipment is free from malware<br/>
+            - Authenticate personnel access rights before data retrieval<br/>
+            - Maintain chain of custody for accident/incident data<br/>
+            - Encrypt sensitive data during transfer and storage<br/>
+            - Do not connect unauthorized USB devices or network connections
+          </para>
+          <para>Cybersecurity breaches can compromise flight safety, data integrity, and regulatory compliance.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>WARNING - Tamper Evidence</title>
+          <para>FDR and CVR units include tamper-evident seals and cryptographic hash chains:</para>
+          <para>
+            - Do not remove or defeat tamper-evident seals<br/>
+            - Seal removal may only be performed by authorized personnel<br/>
+            - Document any seal removal in aircraft maintenance records<br/>
+            - Cryptographic hashes are automatically calculated; do not attempt to modify<br/>
+            - Data tampering attempts are logged and may void data admissibility
+          </para>
+          <para>Tampering with recorded data may constitute a criminal offense under aviation regulations.</para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Related Documentation</title>
+        <para>
+          - Aircraft Maintenance Manual (AMM): Detailed maintenance procedures<br/>
+          - Minimum Equipment List (MEL): Dispatch requirements with system failures<br/>
+          - Component Maintenance Manuals (CMM): LRU-specific safety information<br/>
+          - DO-160G: Environmental qualification standards<br/>
+          - ED-112A: FDR/CVR crashworthiness requirements<br/>
+          - Regulatory guidance: EASA Part-M, FAA Part 43 (maintenance requirements)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</para>
+        <para>Status: DRAFT - Subject to technical review and certification authority approval.</para>
+        <para>Issue: 001-00 | Date: 2026-01-10</para>
+      </levelledPara>
+    </description>
+  </content>
+  
+</dmodule>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+S1000D Data Module - Fault Isolation and Troubleshooting
+DMC: AMPEL360AT-A-31-00-00-00A-730A-A_001-00_EN-US
+Info Code: 730A - Fault Isolation and Troubleshooting (Indications & Recordings)
+ATA Chapter: 31-00-00 Indicating and Recording General
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/fault.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31"
+                subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="730"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>Fault Isolation and Troubleshooting</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></originator>
+      <applic><displayText><simplePara>All AMPEL360 Q100 aircraft configurations</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef><dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="00"
+                  subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                  disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                  infoCodeVariant="A" itemLocationCode="A"/>
+        </dmRefIdent></dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <faultReporting>
+      <isolationProcedure>
+        <isolationProcedureGroup>
+          <title>General Troubleshooting Approach</title>
+          <isolationStep>
+            <para>This data module provides fault isolation procedures for common Indicating and Recording System failures. Use BITE fault codes as starting point for troubleshooting. If no BITE code available, use symptom-based troubleshooting trees.</para>
+          </isolationStep>
+        </isolationProcedureGroup>
+        
+        <isolationProcedureGroup>
+          <title>Display System Faults</title>
+          
+          <isolationStep>
+            <title>Symptom: Display Unit Blank or Dark</title>
+            <isolationStep><para>Check circuit breakers - verify display unit CB not tripped.</para></isolationStep>
+            <isolationStep><para>Check brightness setting - ensure not set to minimum.</para></isolationStep>
+            <isolationStep><para>Swap display with known-good unit from adjacent position. If fault follows display, replace display unit. If fault remains, suspect wiring or Display Management Computer.</para></isolationStep>
+            <isolationStep><para>Check BITE codes for Display Management Computer faults.</para></isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Symptom: Display Shows Incorrect or Frozen Data</title>
+            <isolationStep><para>Check data source selection - verify correct source selected for display.</para></isolationStep>
+            <isolationStep><para>Initiate display reversion test to verify switching logic operational.</para></isolationStep>
+            <isolationStep><para>Review AFDX network status - check for network faults or high utilization.</para></isolationStep>
+            <isolationStep><para>If data frozen, suspect Display Management Computer or IMA partition hosting display application.</para></isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Symptom: Display Has Dead Pixels or Discoloration</title>
+            <isolationStep><para>Minor pixel defects (&lt;5 pixels) may be within tolerance - refer to CMM.</para></isolationStep>
+            <isolationStep><para>Perform color calibration to rule out calibration drift.</para></isolationStep>
+            <isolationStep><para>If extensive pixel damage or physical screen cracks present, replace display unit.</para></isolationStep>
+          </isolationStep>
+        </isolationProcedureGroup>
+        
+        <isolationProcedureGroup>
+          <title>Crew Alerting System Faults</title>
+          
+          <isolationStep>
+            <title>Symptom: Master Warning Light Inoperative</title>
+            <isolationStep><para>Perform master warning test from maintenance menu.</para></isolationStep>
+            <isolationStep><para>If light does not illuminate during test, check lamp and wiring.</para></isolationStep>
+            <isolationStep><para>If light works during test but not during actual warnings, suspect Crew Alerting Computer logic or configuration.</para></isolationStep>
+            <isolationStep><para>Review BITE fault codes for Crew Alerting Computer.</para></isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Symptom: Spurious or Nuisance Alerts</title>
+            <isolationStep><para>Review alert history to identify pattern (specific alert, flight phase, environmental conditions).</para></isolationStep>
+            <isolationStep><para>Check signal source - suspect faulty sensor or transducer if alert corresponds to specific parameter.</para></isolationStep>
+            <isolationStep><para>Verify alert threshold settings in configuration data.</para></isolationStep>
+            <isolationStep><para>If intermittent, suspect wiring or connector issues. Perform wiggle test while monitoring parameter.</para></isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>Symptom: Aural Warnings Silent or Distorted</title>
+            <isolationStep><para>Perform aural warning test from maintenance menu.</para></isolationStep>
+            <isolationStep><para>Check crew headset connections and headset functionality.</para></isolationStep>
+            <isolationStep><para>If headset OK, check audio panel volume settings.</para></isolationStep>
+            <isolationStep><para>If aural warnings silent in all headsets/speakers, suspect audio management unit or Crew Alerting Computer audio output.</para></isolationStep>
+          </isolationStep>
+        </isolationProcedureGroup>
+        
+        <isolationProcedureGroup>
+          <title>Recording System Faults</title>
+          
+          <isolationStep>
+            <title>BITE Code: FDR-001 (Recording Fault)</title>
+            <isolationStep><para>Check FDR status on maintenance page - note specific fault description.</para></isolationStep>
+            <isolationStep><para>Power cycle FDR (remove and reapply power via CB).</para></isolationStep>
+            <isolationStep><para>If fault persists, check data inputs to FDR - verify FDAU is providing data stream.</para></isolationStep>
+            <isolationStep><para>If FDAU operational, suspect FDR internal fault - replace FDR unit.</para></isolationStep>
+            <isolationStep><para>After replacement, download data from removed FDR for data recovery if required.</para></isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>BITE Code: CVR-002 (Memory Full)</title>
+            <isolationStep><para>This is informational only - CVR automatically overwrites oldest data.</para></isolationStep>
+            <isolationStep><para>If data preservation required for incident investigation, remove CVR per regulatory procedures before further aircraft operation.</para></isolationStep>
+          </isolationStep>
+          
+          <isolationStep>
+            <title>BITE Code: QAR-010 (Media Not Present)</title>
+            <isolationStep><para>Check QAR removable memory module installed and seated correctly.</para></isolationStep>
+            <isolationStep><para>Remove and reseat module.</para></isolationStep>
+            <isolationStep><para>If fault persists, try known-good memory module.</para></isolationStep>
+            <isolationStep><para>If fault continues with good module, suspect QAR unit - replace QAR.</para></isolationStep>
+          </isolationStep>
+        </isolationProcedureGroup>
+        
+        <isolationProcedureGroup>
+          <title>Data Acquisition Faults</title>
+          
+          <isolationStep>
+            <title>BITE Code: DAU-xxx (Data Acquisition Unit Fault)</title>
+            <isolationStep><para>Identify faulted DAU from BITE message (DAU-1 through DAU-4).</para></isolationStep>
+            <isolationStep><para>Review detailed DAU status for specific channel or port fault.</para></isolationStep>
+            <isolationStep><para>If specific input channel faulted, check sensor/transducer and wiring for that parameter.</para></isolationStep>
+            <isolationStep><para>If multiple channels faulted or DAU shows communication loss, suspect DAU unit - replace DAU.</para></isolationStep>
+            <isolationStep><para>After DAU replacement, verify all parameters from that DAU appear valid on displays.</para></isolationStep>
+          </isolationStep>
+        </isolationProcedureGroup>
+      </isolationProcedure>
+    </faultReporting>
+  </content>
+  
+  <remarks>
+    <simplePara>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</simplePara>
+    <simplePara>Status: DRAFT | Issue: 001-00 | Date: 2026-01-10</simplePara>
+  </remarks>
+  
+</dmodule>

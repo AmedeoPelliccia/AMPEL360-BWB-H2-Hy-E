@@ -484,116 +484,32 @@ PUB/
 **Example Path**: 
 `OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_22-AUTOFLIGHT/ATA-22-auto-flight/22-00-auto-flight-general/22-00-00-auto-flight-general/PUB/AMM/CSDB/`
 
-#### S1000D BREX Breakdown for ATA 31-00-00
+#### S1000D-Aligned DMC Set — ATA 31-00-00 Indicating & Recording
 
-Below is a **clean, S1000D-compliant BREX breakdown** for:
+Below is a **suggested, S1000D-aligned DMC set** for:  
+`OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/ATA-31-indicating-recording/31-00-indicating-recording-general/31-00-00-general/PUB/AMM/CSDB/DM/`
 
-```
-OPT-IN_FRAMEWORK/
-└─ T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS
-   └─ D-DATA
-      └─ ATA_31-INDICATING_RECORDING
-         └─ ATA-31-indicating-recording
-            └─ 31-00-indicating-recording-general
-               └─ 31-00-00-general
-                  └─ PUB/AMM/CSDB/BREX
-```
+**Scope**: AMM / CSDB / DM (publishable maintenance content)  
+**Status**: Canonical, minimal, reusable — consistent with ATA 23 pattern
 
-**Scope**: BREX rules governing AMM DMs in ATA 31-00-00  
-**Model ID**: AMPEL360AT
+| DMC Filename                                                 | Info Code | Description                                                       |
+| ------------------------------------------------------------ | --------- | ----------------------------------------------------------------- |
+| **DMC-AMPEL360AT-A-31-00-00-00A-040A-A_001-00_EN-US.XML** | 040A      | Indicating and recording system – general description and purpose |
+| **DMC-AMPEL360AT-A-31-00-00-00A-040B-A_001-00_EN-US.XML** | 040B      | System architecture, interfaces, and data flows                   |
+| **DMC-AMPEL360AT-A-31-00-00-00A-050A-A_001-00_EN-US.XML** | 050A      | Safety precautions and operational limitations                    |
+| **DMC-AMPEL360AT-A-31-00-00-00A-520A-A_001-00_EN-US.XML** | 520A      | Built-in test (BIT/BITE) and system test procedures               |
+| **DMC-AMPEL360AT-A-31-00-00-00A-520B-A_001-00_EN-US.XML** | 520B      | Calibration and functional check procedures                       |
+| **DMC-AMPEL360AT-A-31-00-00-00A-720A-A_001-00_EN-US.XML** | 720A      | Scheduled maintenance and inspection requirements                 |
+| **DMC-AMPEL360AT-A-31-00-00-00A-730A-A_001-00_EN-US.XML** | 730A      | Fault isolation and troubleshooting (indications & recordings)    |
+| **DMC-AMPEL360AT-A-31-00-00-00A-740A-A_001-00_EN-US.XML** | 740A      | Removal and installation – display and recording units            |
+| **DMC-AMPEL360AT-A-31-00-00-00A-910A-A_001-00_EN-US.XML** | 910A      | Data recording, storage, and retrieval logic                      |
+| **DMC-AMPEL360AT-A-31-00-00-00A-940A-A_001-00_EN-US.XML** | 940A      | Software loading, configuration, and data integrity checks        |
 
-##### BREX Philosophy (Context)
-
-This BREX layer:
-* Constrains **how ATA 31 AMM DMs are authored**, not how they are rendered
-* Enforces **structure, semantics, info-code usage, and cross-ATA discipline**
-* Is **CSDB-local**, inheriting from higher-level program BREX
-
-Think of it as: **"What is allowed to be said, and how, in ATA 31 AMM data modules."**
-
-##### Suggested BREX Data Modules
-
-###### Master BREX (ATA 31 AMM – General)
-
-| File | Purpose |
-|------|---------|
-| **DMC-AMPEL360AT-31-00-00-022A-A-001_001_00_EN-US_001-00.XML** | Master BREX for ATA 31-00-00 AMM data modules |
-
-**Controls:**
-* Applicable info codes (040A, 050A, 520x, 72x, 73x, 74x, 91x, 94x)
-* Mandatory sectioning (description → operation → maintenance)
-* Allowed DM types in AMM context
-* Prohibited constructs (design claims, certification language)
-
-###### Structural Rules BREX
-
-| File | Purpose |
-|------|---------|
-| **DMC-AMPEL360AT-31-00-00-022B-A-001_001_00_EN-US_001-00.XML** | Structural and content model rules |
-
-**Enforces:**
-* Use of `<descr>`, `<proceduralStep>`, `<warning>`, `<caution>`
-* No mixed procedural / descriptive logic
-* One primary task per procedural DM
-* No embedded PM logic in DM content
-
-###### Safety & Operational Constraints BREX
-
-| File | Purpose |
-|------|---------|
-| **DMC-AMPEL360AT-31-00-00-022C-A-001_001_00_EN-US_001-00.XML** | Safety, warnings, and operational constraints |
-
-**Enforces:**
-* Mandatory warnings for:
-  * Live displays
-  * Data recording interference
-* Standardized safety phrasing
-* Prohibited ambiguity ("may", "should", "as required")
-
-###### Cross-ATA & Interface BREX
-
-| File | Purpose |
-|------|---------|
-| **DMC-AMPEL360AT-31-00-00-022D-A-001_001_00_EN-US_001-00.XML** | Cross-ATA interface constraints |
-
-**Controls references to:**
-* ATA 24 – Electrical Power
-* ATA 42 – Integrated Modular Avionics
-* ATA 45 – Maintenance Systems
-* ATA 23 – Communications (when displays share data)
-
-**Prevents:**
-* Redefinition of responsibilities owned by other ATA chapters
-
-###### Graphics & ICN Usage BREX
-
-| File | Purpose |
-|------|---------|
-| **DMC-AMPEL360AT-31-00-00-022E-A-001_001_00_EN-US_001-00.XML** | Rules for ICN/SVG usage in AMM |
-
-**Enforces:**
-* Referenced ICNs only (no inline graphics)
-* ICN naming alignment with DM subject
-* No "illustration-only" DMs
-* SVG scope: explanatory, not design-defining
-
-##### Minimal TOC (Logical View)
-
-```
-BREX/
-├─ 022A – Master ATA 31 AMM BREX
-├─ 022B – Structural & content rules
-├─ 022C – Safety & operational constraints
-├─ 022D – Cross-ATA & interface discipline
-└─ 022E – Graphics & ICN usage rules
-```
-
-##### Key Alignment Notes
-
-* BREX applies to **DM only**, never to PM
-* PDF/HTML/IETP are **downstream products**, not governed here
-* This BREX layer is **inheritance-safe**:
-  * Program BREX → ATA 31 BREX → sub-ATA BREX (31-xx-yy)
+**Notes**:
+- These **DMs are SSOT-clean**: no rendering assumptions, no IETP coupling
+- **PMs** will later assemble these into AMM chapters and HTML/PDF IETP outputs
+- Info codes are **ATA-consistent** and **BREX-friendly**
+- Subsystems (e.g. displays, DAUs, recorders) should branch at **31-xx-yy** level, not here
 
 ### Certification Timeline
 
