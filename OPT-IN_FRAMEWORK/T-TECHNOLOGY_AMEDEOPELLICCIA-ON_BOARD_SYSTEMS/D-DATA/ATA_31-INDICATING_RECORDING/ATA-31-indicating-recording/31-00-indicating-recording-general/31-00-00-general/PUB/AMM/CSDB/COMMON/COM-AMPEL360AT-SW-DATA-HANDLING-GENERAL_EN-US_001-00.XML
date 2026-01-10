@@ -55,7 +55,8 @@
           <para>- Maintain virus definition files current (updated within 7 days)</para>
           <para>- Use read-only USB devices when possible to prevent inadvertent data writes or malware transfer</para>
           <para>Software Package Verification:</para>
-          <para>- Verify software package integrity using manufacturer-provided checksums (CRC32, SHA-256, or equivalent)</para>
+          <para>- Verify software package integrity and authenticity using manufacturer-provided cryptographic hashes (SHA-256 or stronger) and, where available, digital signatures</para>
+          <para>- Use non-cryptographic checksums (for example, CRC32) only as supplementary checks for transmission or storage errors, not as a security control</para>
           <para>- Confirm software part number matches aircraft configuration database</para>
           <para>- Verify digital signature on software package if provided by manufacturer</para>
           <para>- Maintain chain of custody documentation from manufacturer to installation</para>
