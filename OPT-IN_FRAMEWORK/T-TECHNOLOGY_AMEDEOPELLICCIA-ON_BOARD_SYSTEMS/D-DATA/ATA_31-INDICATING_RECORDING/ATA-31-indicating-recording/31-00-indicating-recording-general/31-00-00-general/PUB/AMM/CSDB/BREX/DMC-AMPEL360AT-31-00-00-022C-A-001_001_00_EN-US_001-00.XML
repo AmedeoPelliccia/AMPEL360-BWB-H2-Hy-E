@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Business Rules Exchange (BREX) Data Module
+  Safety & Operational Constraints BREX for ATA 31-00-00 AMM Data Modules
+  
+  This BREX defines safety warnings, operational constraints, and
+  standardized safety phrasing for ATA 31 (Indicating/Recording) AMM data modules.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="C"
+                infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Business Rules Exchange (BREX) - Safety and Operational</techName>
+          <infoName>ATA 31-00-00 - Safety Constraints and Warnings</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All ATA 31 AMM Data Modules</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Safety and Operational Constraints BREX</title>
+        <para>
+          This BREX defines safety, warning, and operational constraint requirements for 
+          ATA 31 (Indicating/Recording) AMM data modules. It ensures consistent safety 
+          messaging and prevents ambiguous operational instructions.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Mandatory Warnings for Live Displays</title>
+        <para>
+          All procedures involving live cockpit displays must include the following warning:
+        </para>
+        <para>
+          WARNING: Live displays may present flight-critical information. Do not 
+          perform maintenance on display systems while aircraft is in operation or 
+          during critical flight phases. Ensure all display power is removed and 
+          locked out before beginning maintenance.
+        </para>
+        <para>
+          This warning must appear before any procedure involving:
+        </para>
+        <para>
+          - Primary Flight Display (PFD) maintenance
+        </para>
+        <para>
+          - Navigation Display (ND) maintenance
+        </para>
+        <para>
+          - Engine Indication and Crew Alerting System (EICAS) maintenance
+        </para>
+        <para>
+          - Multi-Function Display (MFD) maintenance
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Mandatory Warnings for Data Recording Systems</title>
+        <para>
+          All procedures involving data recording systems must include appropriate warnings:
+        </para>
+        <para>
+          WARNING (for FDR/CVR): Flight Data Recorder and Cockpit Voice Recorder are 
+          crash-protected equipment. Do not compromise crash protection features. 
+          Ensure proper installation and security of mounting hardware.
+        </para>
+        <para>
+          WARNING (for data interference): Do not interrupt data recording during 
+          aircraft operation. Loss of flight data may compromise accident investigation 
+          capabilities and violate regulatory requirements.
+        </para>
+        <para>
+          CAUTION (for data integrity): Ensure proper grounding and EMI protection 
+          for all recording equipment. Electromagnetic interference may corrupt 
+          recorded data.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Standardized Safety Phrasing</title>
+        <para>
+          All warnings and cautions must use standardized phrasing:
+        </para>
+        <para>
+          WARNING structure:
+        </para>
+        <para>
+          - Statement of hazard
+        </para>
+        <para>
+          - Potential consequence (injury/death)
+        </para>
+        <para>
+          - Required mitigation action
+        </para>
+        <para>
+          CAUTION structure:
+        </para>
+        <para>
+          - Statement of risk to equipment
+        </para>
+        <para>
+          - Potential damage consequence
+        </para>
+        <para>
+          - Preventive action
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Prohibited Ambiguous Language</title>
+        <para>
+          The following ambiguous terms are PROHIBITED in ATA 31 AMM procedures:
+        </para>
+        <para>
+          - "may" (implies optional action; use "can" for capability or "must"/"shall" 
+          for requirement)
+        </para>
+        <para>
+          - "should" (ambiguous requirement level; use "must" or "recommended")
+        </para>
+        <para>
+          - "as required" (too vague; specify conditions explicitly)
+        </para>
+        <para>
+          - "if necessary" (define necessity criteria explicitly)
+        </para>
+        <para>
+          - "approximately" without tolerance range (provide specific tolerance)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Required Safety Verifications</title>
+        <para>
+          All maintenance procedures must include verification steps:
+        </para>
+        <para>
+          - Power-off verification before beginning work
+        </para>
+        <para>
+          - Lock-out/tag-out confirmation for safety-critical systems
+        </para>
+        <para>
+          - Functional test after installation/repair
+        </para>
+        <para>
+          - Proper tool removal and FOD check
+        </para>
+        <para>
+          - Return-to-service inspection
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Electrical Safety Requirements</title>
+        <para>
+          All electrical work on indicating/recording systems must include:
+        </para>
+        <para>
+          WARNING: High voltage present. Ensure all power sources are disconnected 
+          and verified de-energized before beginning work. Follow lock-out/tag-out 
+          procedures per AMM Chapter 24.
+        </para>
+        <para>
+          CAUTION: Static-sensitive components. Use proper ESD protection. Ground 
+          yourself and use ESD-safe work surface before handling electronic components.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Environmental and Storage Constraints</title>
+        <para>
+          Documentation must specify environmental constraints:
+        </para>
+        <para>
+          - Operating temperature ranges
+        </para>
+        <para>
+          - Storage temperature and humidity limits
+        </para>
+        <para>
+          - Vibration and shock limitations
+        </para>
+        <para>
+          - Altitude restrictions during testing
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Regulatory Compliance Notices</title>
+        <para>
+          Where applicable, procedures must note regulatory requirements:
+        </para>
+        <para>
+          - CS-25.1309 (System design and analysis)
+        </para>
+        <para>
+          - CS-25.1322 (Flight data recorder requirements)
+        </para>
+        <para>
+          - CS-25.1457 (Cockpit voice recorder requirements)
+        </para>
+        <para>
+          - EASA Part-M (Continuing airworthiness requirements)
+        </para>
+        <para>
+          - FAA Part 43 (Maintenance, preventive maintenance, rebuilding, and alteration)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>
+          Model: AMPEL360AT
+        </para>
+        <para>
+          Project: AMPEL360-AIR-T
+        </para>
+        <para>
+          ATA Chapter: 31-00-00
+        </para>
+        <para>
+          BREX Type: Safety and Operational Constraints (022C)
+        </para>
+        <para>
+          Standard: S1000D Issue 5.0
+        </para>
+        <para>
+          Status: Active
+        </para>
+        <para>
+          Inherits from: Master BREX 022A, Structural BREX 022B
+        </para>
+        <para>
+          Generated with: AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+        </para>
+        <para>
+          Last Updated: 2026-01-10
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

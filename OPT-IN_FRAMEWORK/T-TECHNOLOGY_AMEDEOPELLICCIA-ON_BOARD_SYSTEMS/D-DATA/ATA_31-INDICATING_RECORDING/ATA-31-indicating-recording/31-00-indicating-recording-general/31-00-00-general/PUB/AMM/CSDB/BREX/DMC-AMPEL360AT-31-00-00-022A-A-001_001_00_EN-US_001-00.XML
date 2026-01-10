@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Business Rules Exchange (BREX) Data Module
+  Master BREX for ATA 31-00-00 AMM Data Modules
+  
+  This BREX defines the master validation rules for all ATA 31 (Indicating/Recording)
+  AMM data modules, constraining how content is authored.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Business Rules Exchange (BREX) - Master</techName>
+          <infoName>ATA 31-00-00 - Indicating/Recording General - AMM</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All ATA 31 AMM Data Modules</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="S1000D" systemDiffCode="A"
+                    systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Master BREX for ATA 31-00-00 AMM Data Modules</title>
+        <para>
+          This Business Rules Exchange (BREX) data module defines the master validation rules
+          for all ATA 31 (Indicating/Recording) Aircraft Maintenance Manual (AMM) data modules
+          within the AMPEL360AT model documentation.
+        </para>
+        <para>
+          This BREX constrains how ATA 31 AMM DMs are authored, not how they are rendered.
+          It enforces structure, semantics, info-code usage, and cross-ATA discipline.
+        </para>
+        <para>
+          This BREX is CSDB-local and inherits from higher-level program BREX.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Applicable Information Codes</title>
+        <para>
+          The following information codes are permitted in ATA 31 AMM data modules:
+        </para>
+        <para>
+          - 040A: Description
+        </para>
+        <para>
+          - 050A: Crew/Operating Data
+        </para>
+        <para>
+          - 520x: Maintenance Procedures
+        </para>
+        <para>
+          - 72x: Servicing
+        </para>
+        <para>
+          - 73x: Fault Isolation/Testing
+        </para>
+        <para>
+          - 74x: Removal/Installation
+        </para>
+        <para>
+          - 91x: Illustrated Parts Data
+        </para>
+        <para>
+          - 94x: Wiring Data
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Mandatory Sectioning</title>
+        <para>
+          All ATA 31 AMM procedural data modules must follow this sectioning:
+        </para>
+        <para>
+          1. Description - System/component overview
+        </para>
+        <para>
+          2. Operation - Normal and abnormal operating procedures
+        </para>
+        <para>
+          3. Maintenance - Servicing, inspection, and repair procedures
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Allowed Data Module Types</title>
+        <para>
+          In the AMM context, the following DM types are permitted:
+        </para>
+        <para>
+          - Descriptive data modules
+        </para>
+        <para>
+          - Procedural data modules
+        </para>
+        <para>
+          - Fault isolation/troubleshooting data modules
+        </para>
+        <para>
+          - Wiring data modules
+        </para>
+        <para>
+          - Illustrated parts data modules (IPD)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Prohibited Constructs</title>
+        <para>
+          The following content is prohibited in ATA 31 AMM data modules:
+        </para>
+        <para>
+          - Design claims and rationale (belongs in design documentation)
+        </para>
+        <para>
+          - Certification language and compliance statements (belongs in certification data)
+        </para>
+        <para>
+          - Test procedures for production/qualification (belongs in test procedures)
+        </para>
+        <para>
+          - Marketing or sales content
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Content Inheritance</title>
+        <para>
+          This BREX layer inherits from:
+        </para>
+        <para>
+          - Program-level BREX (AMPEL360AT general rules)
+        </para>
+        <para>
+          - S1000D Issue 5.0 base BREX
+        </para>
+        <para>
+          Sub-ATA BREX (31-xx-yy) may further constrain these rules.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Scope and Applicability</title>
+        <para>
+          Scope: ATA 31-00-00 (Indicating/Recording - General)
+        </para>
+        <para>
+          Applies to: Data Modules (DM) only
+        </para>
+        <para>
+          Does not apply to: Publication Modules (PM), rendered outputs (PDF/HTML/IETP)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>
+          Model: AMPEL360AT
+        </para>
+        <para>
+          Project: AMPEL360-AIR-T
+        </para>
+        <para>
+          ATA Chapter: 31-00-00
+        </para>
+        <para>
+          BREX Type: Master BREX (022A)
+        </para>
+        <para>
+          Standard: S1000D Issue 5.0
+        </para>
+        <para>
+          Status: Active
+        </para>
+        <para>
+          Generated with: AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+        </para>
+        <para>
+          Last Updated: 2026-01-10
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Business Rules Exchange (BREX) Data Module
+  Cross-ATA & Interface BREX for ATA 31-00-00 AMM Data Modules
+  
+  This BREX defines cross-ATA interface constraints and controls references
+  to other ATA chapters for ATA 31 (Indicating/Recording) AMM data modules.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="D"
+                infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Business Rules Exchange (BREX) - Cross-ATA Interface</techName>
+          <infoName>ATA 31-00-00 - Interface Discipline and References</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All ATA 31 AMM Data Modules</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Cross-ATA Interface and Discipline BREX</title>
+        <para>
+          This BREX defines rules for cross-ATA chapter references and interface 
+          constraints for ATA 31 (Indicating/Recording) AMM data modules. It ensures 
+          proper separation of responsibilities and prevents redefinition of content 
+          owned by other ATA chapters.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ATA 24 - Electrical Power Interface</title>
+        <para>
+          ATA 31 indicating/recording systems depend on ATA 24 for electrical power.
+        </para>
+        <para>
+          PERMITTED in ATA 31:
+        </para>
+        <para>
+          - Reference to ATA 24 power supply specifications
+        </para>
+        <para>
+          - Circuit breaker identification and location
+        </para>
+        <para>
+          - Power consumption specifications for ATA 31 equipment
+        </para>
+        <para>
+          - References to ATA 24 procedures for power system verification
+        </para>
+        <para>
+          PROHIBITED in ATA 31:
+        </para>
+        <para>
+          - Electrical power generation system descriptions
+        </para>
+        <para>
+          - Battery system maintenance procedures
+        </para>
+        <para>
+          - Bus tie logic and load shedding procedures
+        </para>
+        <para>
+          - Generator or inverter maintenance
+        </para>
+        <para>
+          REFERENCE FORMAT: Use "Refer to AMM 24-xx-xx" for power system procedures
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ATA 42 - Integrated Modular Avionics Interface</title>
+        <para>
+          ATA 31 display and recording systems often interface with ATA 42 IMA platforms.
+        </para>
+        <para>
+          PERMITTED in ATA 31:
+        </para>
+        <para>
+          - Data bus connection specifications (ARINC 429, AFDX, etc.)
+        </para>
+        <para>
+          - Signal interface requirements for ATA 31 equipment
+        </para>
+        <para>
+          - Software load part numbers for display applications
+        </para>
+        <para>
+          - References to ATA 42 data loading procedures
+        </para>
+        <para>
+          PROHIBITED in ATA 31:
+        </para>
+        <para>
+          - Core IMA module descriptions and maintenance
+        </para>
+        <para>
+          - Network configuration procedures
+        </para>
+        <para>
+          - Operating system updates or modifications
+        </para>
+        <para>
+          - Partition management procedures
+        </para>
+        <para>
+          REFERENCE FORMAT: Use "Refer to AMM 42-xx-xx" for IMA platform procedures
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ATA 45 - Maintenance Systems Interface</title>
+        <para>
+          ATA 31 recording systems interact with ATA 45 central maintenance systems.
+        </para>
+        <para>
+          PERMITTED in ATA 31:
+        </para>
+        <para>
+          - References to data download interfaces
+        </para>
+        <para>
+          - FDR/CVR/QAR data retrieval procedures specific to ATA 31 equipment
+        </para>
+        <para>
+          - BITE (Built-In Test Equipment) access for ATA 31 systems
+        </para>
+        <para>
+          - Fault code interpretation for ATA 31 faults
+        </para>
+        <para>
+          PROHIBITED in ATA 31:
+        </para>
+        <para>
+          - Central maintenance computer (CMC) hardware maintenance
+        </para>
+        <para>
+          - Overall system health monitoring architecture
+        </para>
+        <para>
+          - Cross-system fault correlation procedures
+        </para>
+        <para>
+          - Maintenance data upload/configuration management
+        </para>
+        <para>
+          REFERENCE FORMAT: Use "Refer to AMM 45-xx-xx" for CMC procedures
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ATA 23 - Communications Interface</title>
+        <para>
+          ATA 31 displays may show communications data from ATA 23 systems.
+        </para>
+        <para>
+          PERMITTED in ATA 31:
+        </para>
+        <para>
+          - Display symbology for communications status
+        </para>
+        <para>
+          - References to communications data sources
+        </para>
+        <para>
+          - Display configuration for communication page layouts
+        </para>
+        <para>
+          PROHIBITED in ATA 31:
+        </para>
+        <para>
+          - Radio equipment maintenance procedures
+        </para>
+        <para>
+          - Communication system functionality descriptions
+        </para>
+        <para>
+          - Antenna system maintenance
+        </para>
+        <para>
+          - SATCOM or HF radio troubleshooting
+        </para>
+        <para>
+          REFERENCE FORMAT: Use "Refer to AMM 23-xx-xx" for communications procedures
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ATA 22 - Auto Flight Interface</title>
+        <para>
+          ATA 31 displays show auto flight system status and modes.
+        </para>
+        <para>
+          PERMITTED in ATA 31:
+        </para>
+        <para>
+          - Display of autopilot/autothrottle status
+        </para>
+        <para>
+          - Flight director symbology
+        </para>
+        <para>
+          - Mode annunciations on PFD/ND
+        </para>
+        <para>
+          PROHIBITED in ATA 31:
+        </para>
+        <para>
+          - Autopilot servo maintenance
+        </para>
+        <para>
+          - Auto flight computer troubleshooting
+        </para>
+        <para>
+          - Flight control system procedures
+        </para>
+        <para>
+          REFERENCE FORMAT: Use "Refer to AMM 22-xx-xx" for auto flight procedures
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ATA 46 - Information Systems Interface</title>
+        <para>
+          ATA 31 may interface with cabin information and entertainment systems.
+        </para>
+        <para>
+          PERMITTED in ATA 31:
+        </para>
+        <para>
+          - Cockpit-to-cabin data interface specifications
+        </para>
+        <para>
+          - Display of cabin system status in cockpit
+        </para>
+        <para>
+          PROHIBITED in ATA 31:
+        </para>
+        <para>
+          - Cabin management system maintenance
+        </para>
+        <para>
+          - Passenger entertainment system procedures
+        </para>
+        <para>
+          REFERENCE FORMAT: Use "Refer to AMM 46-xx-xx" for cabin systems
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>General Cross-Reference Rules</title>
+        <para>
+          Rule 1: Reference, Don't Duplicate
+        </para>
+        <para>
+          Always reference other ATA chapters for their content. Never duplicate 
+          procedures or descriptions owned by another ATA chapter.
+        </para>
+        <para>
+          Rule 2: Use Proper Reference Format
+        </para>
+        <para>
+          Use &lt;dmRef&gt; elements with proper DMC codes when referencing other 
+          ATA chapters. Include sufficient context for the reader to understand 
+          why the reference is relevant.
+        </para>
+        <para>
+          Rule 3: Maintain Interface Documentation
+        </para>
+        <para>
+          Document all electrical, data, and physical interfaces to other systems, 
+          but limit the description to the interface point, not the connected system.
+        </para>
+        <para>
+          Rule 4: Respect System Boundaries
+        </para>
+        <para>
+          Do not include troubleshooting or maintenance for systems outside ATA 31 
+          responsibility, even if they affect indicating/recording functionality.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Interface Control Documents</title>
+        <para>
+          For complex interfaces, maintain separate Interface Control Documents (ICD):
+        </para>
+        <para>
+          - ATA 31 &lt;-&gt; ATA 24: Power interface ICD
+        </para>
+        <para>
+          - ATA 31 &lt;-&gt; ATA 42: Data bus interface ICD
+        </para>
+        <para>
+          - ATA 31 &lt;-&gt; ATA 45: Maintenance data interface ICD
+        </para>
+        <para>
+          These ICDs should be stored in the 31-00-40-interfaces directory.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>
+          Model: AMPEL360AT
+        </para>
+        <para>
+          Project: AMPEL360-AIR-T
+        </para>
+        <para>
+          ATA Chapter: 31-00-00
+        </para>
+        <para>
+          BREX Type: Cross-ATA Interface (022D)
+        </para>
+        <para>
+          Standard: S1000D Issue 5.0
+        </para>
+        <para>
+          Status: Active
+        </para>
+        <para>
+          Inherits from: Master BREX 022A
+        </para>
+        <para>
+          Generated with: AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+        </para>
+        <para>
+          Last Updated: 2026-01-10
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>
