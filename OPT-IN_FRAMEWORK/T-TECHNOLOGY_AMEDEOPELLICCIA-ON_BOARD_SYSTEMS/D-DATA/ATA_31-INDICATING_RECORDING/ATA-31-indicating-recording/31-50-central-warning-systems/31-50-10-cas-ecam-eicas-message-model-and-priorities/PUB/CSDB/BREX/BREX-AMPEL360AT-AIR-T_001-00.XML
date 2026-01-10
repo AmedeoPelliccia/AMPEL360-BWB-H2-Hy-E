@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Business Rules Exchange (BREX) Data Module
+  
+  This BREX file defines validation rules for AMPEL360AT S1000D content.
+  It ensures consistency and compliance with project-specific requirements.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Business Rules Exchange (BREX)</techName>
+          <infoName>AMPEL360AT - ATA 31 Central Warning System</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360-AIR-T aircraft S1000D data modules</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>BREX Overview</title>
+        <para>
+          This Business Rules Exchange (BREX) data module defines validation rules
+          for S1000D content in the AMPEL360-AIR-T project. It ensures consistency,
+          completeness, and compliance with project-specific requirements.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Scope</title>
+        <para>
+          This BREX applies to all S1000D data modules created for ATA Chapter 31
+          (Indicating and Recording Systems) and related subsystems.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Business Rules</title>
+        
+        <levelledPara>
+          <title>BR-001: Model Identifier</title>
+          <para>
+            All data modules shall use modelIdentCode "AMPEL360AT".
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-002: System Diff Code</title>
+          <para>
+            Standard configuration shall use systemDiffCode "A".
+            Variant configurations may use "B", "C", etc. as defined in configuration management plan.
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-003: Language and Country</title>
+          <para>
+            Primary language shall be English (US): languageIsoCode="en", countryIsoCode="US".
+            Additional language variants shall be created as separate data modules.
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-004: Security Classification</title>
+          <para>
+            Default security classification shall be "01" (Unclassified).
+            Sensitive data modules may use higher classifications as approved by security officer.
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-005: Responsible Partner Company</title>
+          <para>
+            All data modules shall list "AMPEL360-AIR-T Project" as responsiblePartnerCompany
+            and originator.
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-006: BREX Reference</title>
+          <para>
+            All data modules (except this BREX itself) shall reference this BREX
+            data module in the brexDmRef element.
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-007: Quality Assurance Status</title>
+          <para>
+            Data modules in development shall be marked as &lt;unverified/&gt;.
+            Released data modules shall be marked as &lt;firstVerification/&gt; or &lt;secondVerification/&gt;
+            as appropriate.
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-008: ATA Chapter Coding</title>
+          <para>
+            System codes shall follow ATA iSpec 2200 numbering:
+            - ATA 31 = systemCode "31"
+            - Subsystems follow subSystemCode and subSubSystemCode per ATA breakdown
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-009: Information Codes</title>
+          <para>
+            Standard information codes shall be used:
+            - 040A: Description and Operation
+            - 520A: Servicing
+            - 720A: Removal/Installation
+            - 730A: Testing and Fault Isolation
+            - 940A: Illustrated Parts Data
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>BR-010: Issue Information</title>
+          <para>
+            Issue numbers shall follow format: issueNumber (3 digits) - inWork (2 digits).
+            Initial issue shall be "001-00".
+            In-work updates increment inWork number.
+            Official releases increment issueNumber and reset inWork to "00".
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Validation</title>
+        <para>
+          All data modules shall be validated against this BREX using an S1000D-compliant
+          validation tool prior to release. Non-compliance shall be documented and approved
+          by the data module manager.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Maintenance</title>
+        <para>
+          This BREX shall be reviewed and updated as project requirements evolve.
+          Changes to BREX rules require approval from the technical publications manager
+          and configuration control board.
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

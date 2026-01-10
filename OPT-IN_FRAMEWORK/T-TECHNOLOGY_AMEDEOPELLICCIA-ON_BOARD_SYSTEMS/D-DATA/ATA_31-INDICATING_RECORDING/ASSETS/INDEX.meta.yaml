@@ -1,0 +1,79 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+
+# ATA 31 INDICATING RECORDING - ASSETS Metadata Index
+
+metadata:
+  ata_chapter: "31"
+  ata_title: "INDICATING RECORDING"
+  owner: "AMPEL360-AIR-T Documentation WG"
+  status: "Active Development"
+  last_updated: "2026-01-09"
+  generated_by: "GitHub Copilot, prompted by Amedeo Pelliccia"
+
+assets:
+  models:
+    - name: "31_system_context.drawio.svg"
+      description: "System context diagram showing ATA 31 interfaces with other systems"
+      type: "diagram"
+      format: "SVG (Draw.io)"
+      status: "Planned"
+      
+    - name: "31_display_warning_recording_dataflow.drawio.svg"
+      description: "Data flow from sensors through displays, warnings, and recorders"
+      type: "diagram"
+      format: "SVG (Draw.io)"
+      status: "Planned"
+      
+    - name: "31_data_buses_and_publish_subscribe.drawio.svg"
+      description: "Data bus architecture and publish-subscribe patterns"
+      type: "diagram"
+      format: "SVG (Draw.io)"
+      status: "Planned"
+      
+    - name: "31_message_taxonomy_cas_ecam_eicas.drawio.svg"
+      description: "Message taxonomy for CAS, ECAM, and EICAS systems"
+      type: "diagram"
+      format: "SVG (Draw.io)"
+      status: "Planned"
+      
+    - name: "31_interfaces_ata22_ata24_ata42_ata45_ata46.drawio.svg"
+      description: "Interface definitions with ATA 22, 24, 42, 45, and 46"
+      type: "diagram"
+      format: "SVG (Draw.io)"
+      status: "Planned"
+
+  datasets:
+    description: "Placeholder for datasets, test data, and validation data"
+    location: "DATASETS/"
+    status: "TBD"
+
+  documentation:
+    description: "Additional documentation assets"
+    location: "DOCS/"
+    status: "TBD"
+
+references:
+  standards:
+    - "ATA iSpec 2200 Chapter 31"
+    - "CS-25.1309 - Equipment, Systems and Installations"
+    - "DO-178C - Software Considerations"
+    - "DO-254 - Electronic Hardware Design Assurance"
+    - "DO-160 - Environmental Conditions and Test Procedures"
+    
+  related_atas:
+    - ata: "22"
+      title: "AUTOFLIGHT"
+      interface: "Alert inhibits, mode transitions"
+    - ata: "24"
+      title: "ELECTRICAL POWER"
+      interface: "Power quality, time synchronization"
+    - ata: "42"
+      title: "IMA GOVERNANCE"
+      interface: "Partitioning, hosting, resource budgets"
+    - ata: "45"
+      title: "CENTRAL MAINTENANCE SYSTEM"
+      interface: "Fault codes, BITE data"
+    - ata: "46"
+      title: "INFORMATION SYSTEMS"
+      interface: "Datalinks, reporting, connectivity"

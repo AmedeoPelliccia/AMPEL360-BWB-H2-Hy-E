@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  S1000D Data Module - Description and Operation (040A)
+  DMC: AMPEL360AT-A-31-50-10-00A-040A-A_001-00_EN-US
+  
+  ATA 31-50-10 - CAS/ECAM/EICAS Message Model and Priorities
+  Description and Operation of Central Warning Message System
+  
+  Model: AMPEL360AT
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="31"
+                subSystemCode="50"
+                subSubSystemCode="10"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="040"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Central Warning System - Message Model</techName>
+          <infoName>Description and Operation</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360-AIR-T aircraft</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>General</title>
+        <para>
+          The Central Warning System (CWS) provides crew alerting through a structured message model
+          supporting multiple priority levels. This data module describes the message taxonomy,
+          prioritization logic, and display characteristics for CAS/ECAM/EICAS systems.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Message Priority Levels</title>
+        <para>
+          The system supports five distinct alert priority levels:
+        </para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>
+                <emphasis emphasisType="em02">Level 1 - Warning (RED):</emphasis>
+                Requires immediate crew action. Indicates a potentially catastrophic condition.
+                Accompanied by continuous tone or voice aural alert and master warning light.
+              </para>
+            </listItem>
+            <listItem>
+              <para>
+                <emphasis emphasisType="em02">Level 2 - Caution (AMBER):</emphasis>
+                Requires timely crew awareness and action. Indicates abnormal condition that could
+                become hazardous. Accompanied by single chime and master caution light.
+              </para>
+            </listItem>
+            <listItem>
+              <para>
+                <emphasis emphasisType="em02">Level 3 - Advisory (WHITE/CYAN):</emphasis>
+                Crew awareness required for non-normal system configuration. No immediate action
+                required. No aural alert.
+              </para>
+            </listItem>
+            <listItem>
+              <para>
+                <emphasis emphasisType="em02">Level 4 - Status (WHITE/GREEN):</emphasis>
+                Informational messages about normal system status. No crew action required.
+              </para>
+            </listItem>
+            <listItem>
+              <para>
+                <emphasis emphasisType="em02">Level 5 - Memo (WHITE):</emphasis>
+                Procedural reminders and configuration information. No aural alert.
+              </para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Message Data Model</title>
+        <para>
+          Each alert message in the database contains the following elements:
+        </para>
+        <para>
+          <randomList>
+            <listItem><para>Unique Message Identifier (numeric ID)</para></listItem>
+            <listItem><para>Message Text (crew-facing description)</para></listItem>
+            <listItem><para>Priority Level (1-5)</para></listItem>
+            <listItem><para>Display Color (RGB specification)</para></listItem>
+            <listItem><para>Aural Alert Type (voice, tone, chime, none)</para></listItem>
+            <listItem><para>System Source (ATA chapter reference)</para></listItem>
+            <listItem><para>Triggering Condition(s)</para></listItem>
+            <listItem><para>Inhibit Logic Rules</para></listItem>
+            <listItem><para>Associated Crew Actions (if applicable)</para></listItem>
+            <listItem><para>Checklist References</para></listItem>
+            <listItem><para>BITE Data and Fault Codes</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Prioritization and Display Logic</title>
+        <para>
+          When multiple alerts are simultaneously active, the system applies the following rules:
+        </para>
+        <para>
+          <randomList>
+            <listItem><para>The highest priority alert is displayed prominently at the top of the alert list</para></listItem>
+            <listItem><para>Lower priority alerts may be suppressed or collapsed based on available display area</para></listItem>
+            <listItem><para>Alert lists are dynamically reordered as conditions change</para></listItem>
+            <listItem><para>Master warning/caution light state reflects highest active alert level</para></listItem>
+            <listItem><para>Only the highest priority aural alert is sounded (no stacking of aural alerts)</para></listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Alert Inhibit Logic</title>
+        <para>
+          Certain alerts are inhibited during critical flight phases to reduce crew workload.
+          Inhibit conditions are coordinated with the autoflight system (ATA 22) and include:
+        </para>
+        <para>
+          <randomList>
+            <listItem><para>Takeoff phase (thrust application to 1500' AGL)</para></listItem>
+            <listItem><para>Landing phase (below 200' AGL to touchdown)</para></listItem>
+            <listItem><para>Go-around mode (initial climb-out)</para></listItem>
+          </randomList>
+        </para>
+        <para>
+          Critical warnings (engine fire, flight control failures) are never inhibited.
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

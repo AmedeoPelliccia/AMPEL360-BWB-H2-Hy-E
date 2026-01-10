@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+#
+# Requirements Specification for ATA 31-50-10
+# CAS/ECAM/EICAS Message Model and Priorities
+#
+Requirement_ID,Category,Description,Rationale,Verification_Method,Priority,Status,Parent_Requirement,Traced_To
+REQ-31-50-10-001,Functional,"System shall support five alert priority levels: Warning (L1), Caution (L2), Advisory (L3), Status (L4), Memo (L5)",Standard alert taxonomy per industry practice,Analysis + Test,Critical,Draft,,CS-25.1309
+REQ-31-50-10-002,Functional,"Warning alerts (L1) shall be displayed in RED color with continuous or voice aural alert",Visual and aural coding for immediate crew action,Test,Critical,Draft,REQ-31-50-10-001,CS-25.1309
+REQ-31-50-10-003,Functional,"Caution alerts (L2) shall be displayed in AMBER color with single chime or intermittent aural alert",Visual and aural coding for timely crew awareness,Test,Critical,Draft,REQ-31-50-10-001,CS-25.1309
+REQ-31-50-10-004,Functional,"Advisory alerts (L3) shall be displayed in WHITE or CYAN color with no aural alert",Crew awareness without distraction,Test,High,Draft,REQ-31-50-10-001,ARINC 661
+REQ-31-50-10-005,Functional,"System shall suppress lower priority alerts when higher priority alerts are active",Priority-based alert management,Analysis + Test,High,Draft,REQ-31-50-10-001,DO-257
+REQ-31-50-10-006,Functional,"Each alert message shall have unique message identifier",Traceability and maintenance requirement,Analysis,High,Draft,,Internal
+REQ-31-50-10-007,Functional,"Alert messages shall be inhibited during critical flight phases per inhibit logic",Reduce crew workload during high-workload phases,Analysis + Test,Critical,Draft,,CS-25.1309
+REQ-31-50-10-008,Interface,"System shall interface with ATA 22 for alert inhibit signals",Coordination with autoflight modes,Analysis + Test,High,Draft,,ICD_ATA22
+REQ-31-50-10-009,Performance,"Alert latency from trigger condition to display shall be < 500ms",Timely crew notification requirement,Test,High,Draft,,DO-178C
+REQ-31-50-10-010,Data,"Alert message database shall contain minimum: message ID, text, priority, color, aural type, triggering condition",Complete message definition for implementation,Analysis,High,Draft,REQ-31-50-10-006,Internal
+REQ-31-50-10-011,Safety,"System shall maintain alert integrity with no loss or corruption of active alerts",Safety-critical data integrity,Test,Critical,Draft,,CS-25.1309
+REQ-31-50-10-012,Interface,"System shall provide alert data to FDR per recording parameter list",Recording requirement for accident investigation,Analysis + Test,Critical,Draft,,CS-25.1459
+REQ-31-50-10-013,Functional,"System shall support crew acknowledgment of caution alerts",Crew interaction requirement,Test,High,Draft,REQ-31-50-10-003,ARINC 661
+REQ-31-50-10-014,Functional,"System shall maintain master warning/caution light state consistent with active alerts",Visual crew alerting consistency,Test,Critical,Draft,,CS-25.1322
+REQ-31-50-10-015,Environmental,"Alert display shall be readable in all ambient lighting conditions",Display readability requirement,Test,High,Draft,,DO-160 Section 15

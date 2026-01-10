@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+#
+# Traceability Matrix for ATA 31-50-10
+# CAS/ECAM/EICAS Message Model and Priorities
+#
+Requirement_ID,Design_Element,Test_Case,Verification_Status,Implementation_Status,Certification_Evidence,Notes
+REQ-31-50-10-001,Alert_Priority_Taxonomy_v1.0,TC-31-50-10-001,Planned,Not Started,TBD,Core taxonomy definition
+REQ-31-50-10-002,Alert_Display_Renderer_v1.0,TC-31-50-10-002,Planned,Not Started,TBD,Warning level implementation
+REQ-31-50-10-003,Alert_Display_Renderer_v1.0,TC-31-50-10-003,Planned,Not Started,TBD,Caution level implementation
+REQ-31-50-10-004,Alert_Display_Renderer_v1.0,TC-31-50-10-004,Planned,Not Started,TBD,Advisory level implementation
+REQ-31-50-10-005,Alert_Prioritization_Engine_v1.0,TC-31-50-10-005,Planned,Not Started,TBD,Priority suppression logic
+REQ-31-50-10-006,Alert_Message_Database_v1.0,TC-31-50-10-006,Planned,Not Started,TBD,Message ID uniqueness
+REQ-31-50-10-007,Alert_Inhibit_Logic_v1.0,TC-31-50-10-007,Planned,Not Started,TBD,Flight phase inhibits
+REQ-31-50-10-008,ATA22_Interface_Module_v1.0,TC-31-50-10-008,Planned,Not Started,ICD-31-50-ATA22,Autoflight interface
+REQ-31-50-10-009,Alert_Processing_Module_v1.0,TC-31-50-10-009,Planned,Not Started,TBD,Latency performance test
+REQ-31-50-10-010,Alert_Message_Database_v1.0,TC-31-50-10-010,Planned,Not Started,TBD,Database schema validation
+REQ-31-50-10-011,Alert_Data_Manager_v1.0,TC-31-50-10-011,Planned,Not Started,TBD,Data integrity test
+REQ-31-50-10-012,FDR_Interface_Module_v1.0,TC-31-50-10-012,Planned,Not Started,ICD-31-50-FDR,Recorder interface
+REQ-31-50-10-013,Crew_Interface_Module_v1.0,TC-31-50-10-013,Planned,Not Started,TBD,Acknowledgment logic
+REQ-31-50-10-014,Master_Light_Controller_v1.0,TC-31-50-10-014,Planned,Not Started,TBD,Master light consistency
+REQ-31-50-10-015,Display_Unit_Hardware_v1.0,TC-31-50-10-015,Planned,Not Started,DO-160-ENV-TEST,Environmental qualification

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+     width="800" height="600" viewBox="0 0 800 600">
+  <title>ATA 31 - System Context Diagram</title>
+  <desc>System context showing ATA 31 INDICATING RECORDING interfaces with other aircraft systems</desc>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#212529">
+    ATA 31 - System Context Diagram
+  </text>
+  
+  <!-- Central ATA 31 System -->
+  <rect x="300" y="250" width="200" height="100" rx="10" fill="#0d6efd" stroke="#0a58ca" stroke-width="2"/>
+  <text x="400" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+    ATA 31
+  </text>
+  <text x="400" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    INDICATING
+  </text>
+  <text x="400" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    RECORDING
+  </text>
+  
+  <!-- External Systems -->
+  
+  <!-- ATA 22 - AUTOFLIGHT -->
+  <rect x="50" y="100" width="120" height="60" rx="5" fill="#6c757d" stroke="#495057" stroke-width="2"/>
+  <text x="110" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    ATA 22
+  </text>
+  <text x="110" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">
+    AUTOFLIGHT
+  </text>
+  <line x1="170" y1="130" x2="300" y2="280" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- ATA 24 - ELECTRICAL -->
+  <rect x="50" y="200" width="120" height="60" rx="5" fill="#6c757d" stroke="#495057" stroke-width="2"/>
+  <text x="110" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    ATA 24
+  </text>
+  <text x="110" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">
+    ELECTRICAL
+  </text>
+  <line x1="170" y1="230" x2="300" y2="290" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- ATA 42 - IMA -->
+  <rect x="630" y="100" width="120" height="60" rx="5" fill="#6c757d" stroke="#495057" stroke-width="2"/>
+  <text x="690" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    ATA 42
+  </text>
+  <text x="690" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">
+    IMA
+  </text>
+  <line x1="500" y1="280" x2="630" y2="130" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- ATA 45 - CMS -->
+  <rect x="630" y="200" width="120" height="60" rx="5" fill="#6c757d" stroke="#495057" stroke-width="2"/>
+  <text x="690" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    ATA 45
+  </text>
+  <text x="690" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">
+    CMS
+  </text>
+  <line x1="500" y1="290" x2="630" y2="230" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- ATA 46 - INFO SYSTEMS -->
+  <rect x="340" y="450" width="120" height="60" rx="5" fill="#6c757d" stroke="#495057" stroke-width="2"/>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    ATA 46
+  </text>
+  <text x="400" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">
+    INFO SYSTEMS
+  </text>
+  <line x1="400" y1="350" x2="400" y2="450" stroke="#495057" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#495057"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <text x="50" y="560" font-family="Arial, sans-serif" font-size="10" fill="#6c757d">
+    Placeholder diagram - To be developed with detailed interface specifications
+  </text>
+</svg>
