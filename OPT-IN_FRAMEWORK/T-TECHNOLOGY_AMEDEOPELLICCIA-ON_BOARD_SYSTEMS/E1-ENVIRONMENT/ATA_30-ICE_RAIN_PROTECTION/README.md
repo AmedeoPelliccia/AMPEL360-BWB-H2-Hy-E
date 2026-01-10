@@ -4,6 +4,8 @@
 
 This is ATA Chapter 30: ICE RAIN PROTECTION, part of the T — TECHNOLOGY AMEDEOPELLICCIA — ON BOARD SYSTEMS axis.
 
+Refer to the consolidated [00_INDEX](./00_INDEX.md) for the full ATA 30 breakdown by section and sub-subject. Regulatory context aligns with the applicable [EASA Certification Specifications for ice and rain protection](https://www.easa.europa.eu/en/downloads/120838/en).
+
 ## Structure
 
 This chapter follows the mandatory OPT-IN Framework structure:
@@ -41,10 +43,17 @@ The following buckets are mandatory in every ATA chapter:
 - **30-80_Energy**: Energy management and distribution
 - **30-90_Tables_Schemas_Diagrams**: Data tables and documentation
 
+---
+
 ## Document Control
 
 - **ATA Chapter**: 30
 - **Status**: Active
 - **Owner**: AMPEL360 Documentation WG
 - **Standard**: OPT-IN Framework v1.1
-- **Last Updated**: 2025-11-13
+- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- Human approver: _[to be completed]_
+- Repository: `AMPEL360-BWB-H2-Hy-E`
+- Last AI update: 2026-01-09.
+
+---

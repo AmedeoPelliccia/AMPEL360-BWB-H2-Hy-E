@@ -1,0 +1,7 @@
+brex: ./BREX/BREX-AMPEL360AT-AIR-T_001-00.XML
+dm_root: ./DM
+pm_root: ./PM
+icn_root: ./ICN
+issue: '001-00'
+section: '30-00'
+subject: '30-00-10'
