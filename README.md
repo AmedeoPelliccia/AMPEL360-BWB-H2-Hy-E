@@ -719,19 +719,209 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
+## 📋 S1000D Data Module List (DML) Structure
+
+### ATA 31-00-00 – Indicating & Recording, General (AMM)
+
+Below is a **clean, S1000D-compliant DML breakdown** for:
+
+```
+OPT-IN_FRAMEWORK/
+└─ T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS
+   └─ D-DATA
+      └─ ATA_31-INDICATING_RECORDING
+         └─ ATA-31-indicating-recording
+            └─ 31-00-indicating-recording-general
+               └─ 31-00-00-general
+                  └─ PUB/AMM/CSDB/DML
+```
+
+**Scope:** ATA 31-00-00 – Indicating & Recording, General  
+**Publication context:** AMM  
+**Role:** Authoritative grouping & control of DMs referenced by PMs / IETP
+
+---
+
+### 1. Role of DML in SSOT/PUB Model
+
+DMLs act as the **contract layer** between:
+
+* **Back (SSOT / structured DMs, ICNs, BREX)**
+* **Front (AMM PMs, IETP builds, actor-to-actor delivery)**
+
+They:
+
+* Define *what exists*
+* Control *what is published*
+* Enable *variant/applicability filtering*
+* Are **mandatory for certification-grade traceability**
+
+---
+
+### 2. Recommended DML Set for ATA 31-00-00 (General)
+
+#### 2.1 Master DML (authoritative)
+
+**Purpose:** Single source of truth for all AMM DMs under 31-00-00
+
+**File:**
+```
+DML-AMPEL360AT-31-00-00001_EN-US_001-00.XML
+```
+
+**Contains:**
+* All 040A / 52xx / 72xx / 73xx / 94xx DMs
+* References only (no structure logic)
+
+**Used by:**
+* Top-level AMM PM
+* IETP build pipeline
+
+---
+
+#### 2.2 Descriptive DML (system knowledge)
+
+**Purpose:** Conceptual understanding & training views
+
+**File:**
+```
+DML-AMPEL360AT-31-00-040A_EN-US_001-00.XML
+```
+
+**Includes:**
+* General system description
+* Architecture
+* Signal flow
+* HMI concepts
+
+**Typical DM types:**
+* 040A – Description
+* 012A – Functional explanation (if used)
+
+---
+
+#### 2.3 Maintenance task DML
+
+**Purpose:** Operational maintenance filtering
+
+**File:**
+```
+DML-AMPEL360AT-31-00-520X_EN-US_001-00.XML
+```
+
+**Includes:**
+* Removal / installation
+* Operational tests
+* Servicing actions
+
+**Info codes:**
+* 520A / 520B / 520C
+* 720A (if applicable)
+
+---
+
+#### 2.4 Fault isolation DML
+
+**Purpose:** Troubleshooting & diagnostics
+
+**File:**
+```
+DML-AMPEL360AT-31-00-730A_EN-US_001-00.XML
+```
+
+**Includes:**
+* Fault isolation procedures
+* Built-in test references
+* Decision logic descriptions
+
+---
+
+#### 2.5 Software & configuration DML
+
+**Purpose:** Controlled exposure of software actions (no authority leakage)
+
+**File:**
+```
+DML-AMPEL360AT-31-00-940A_EN-US_001-00.XML
+```
+
+**Includes:**
+* Software loading
+* Configuration data handling
+* Post-load verification
+
+**Important:**
+* No binary ownership
+* No parameter definition
+* Procedure-only
+
+---
+
+#### 2.6 Illustration cross-reference DML (optional but recommended)
+
+**Purpose:** IETP optimization and validation
+
+**File:**
+```
+DML-AMPEL360AT-31-00-ICN_EN-US_001-00.XML
+```
+
+**Includes:**
+* All DMs that reference ICNs
+* Enables:
+  * Broken graphic detection
+  * Graphic reuse analysis
+
+---
+
+### 3. Minimal TOC (logical view)
+
+```
+DML – ATA 31-00-00 (AMM)
+├─ Master (all DMs)
+├─ Descriptive (system understanding)
+├─ Maintenance tasks
+├─ Fault isolation
+├─ Software/configuration
+└─ Graphic cross-reference (optional)
+```
+
+---
+
+### 4. Naming & Compliance Notes
+
+* **Model ID:** AMPEL360AT
+* **Standard:** S1000D Issue 5.0
+* **Numbering:** ATA iSpec 2200
+* Language split via DML (not PM)
+* Applicability handled via:
+  * `<applicRef>` in DM
+  * Cross-DML filtering in PM/IETP
+
+---
+
+### 5. Relationship to PM and IETP
+
+* **PM** = structure / navigation
+* **DML** = controlled content set
+* **IETP** = rendered, filtered, interactive view
+
+Key insight:
+
+* PDF / HTML = **IETP outputs**
+* The "IETP image" is effectively the **runtime front-liner**
+* DMLs are the **gatekeepers** between back and front
+
+For the complete structure, see:  
+[`OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/ATA-31-indicating-recording/31-00-indicating-recording-general/31-00-00-general/PUB/AMM/CSDB/DML/`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/ATA-31-indicating-recording/31-00-indicating-recording-general/31-00-00-general/PUB/AMM/CSDB/DML/)
+
+---
+
 <p align="center">
-  <i>Document control: Version 2.1 · Status: ACTIVE · Last update: 2025-12-04</i><br/>
-  <i>Current Phase: Preliminary Design / Detail Concept</i><br/>
-  <i>Generated with AI assistance, prompted by Amedeo Pelliccia. </i>
-</p>
-
-
-
-<p align="center">
-  <i>Document control: Version 2.2 · Status: ACTIVE · Last update: 2025-12-10</i><br/>
+  <i>Document control: Version 2.3 · Status: ACTIVE · Last update: 2026-01-10</i><br/>
   <i>Current Phase: Preliminary Design / Detail Concept</i><br/>
   <i>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</i><br/>
-  <i>Last AI update: Hyperlink additions - 2025-12-10</i>
+  <i>Last AI update: Added S1000D DML breakdown for ATA 31-00-00 - 2026-01-10</i>
 </p>
 
 
