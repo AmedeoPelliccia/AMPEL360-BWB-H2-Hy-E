@@ -1,0 +1,63 @@
+# ATA 31 — Indicating/Recording Assets Index
+
+asset_collection:
+  ata_chapter: 31
+  title: "Indicating/Recording Systems"
+  project: AMPEL360-AIR-T
+  model: BWB-H2-Hy-E
+  version: "1.0"
+  created: "2026-01-10"
+  status: active
+
+models:
+  - id: 31_system_context
+    file: MODELS/31_system_context.drawio.svg
+    type: context_diagram
+    description: "ATA 31 system context showing integration with aircraft systems"
+    status: placeholder
+
+  - id: 31_display_warning_recording_dataflow
+    file: MODELS/31_display_warning_recording_dataflow.drawio.svg
+    type: dataflow_diagram
+    description: "Dataflow from sensors through displays, warnings, and recorders"
+    status: placeholder
+
+  - id: 31_data_buses_and_publish_subscribe
+    file: MODELS/31_data_buses_and_publish_subscribe.drawio.svg
+    type: architecture_diagram
+    description: "Data bus architecture and publish/subscribe patterns"
+    status: placeholder
+
+  - id: 31_message_taxonomy_cas_ecam_eicas
+    file: MODELS/31_message_taxonomy_cas_ecam_eicas.drawio.svg
+    type: taxonomy_diagram
+    description: "Message taxonomy for CAS/ECAM/EICAS alerting systems"
+    status: placeholder
+
+  - id: 31_interfaces_ata22_ata24_ata42_ata45_ata46
+    file: MODELS/31_interfaces_ata22_ata24_ata42_ata45_ata46.drawio.svg
+    type: interface_diagram
+    description: "Interface diagram showing connections to related ATA chapters"
+    status: placeholder
+
+categories:
+  - name: Context Diagrams
+    purpose: "High-level system context and boundaries"
+    models:
+      - 31_system_context
+
+  - name: Dataflow Diagrams
+    purpose: "Data and signal flow through the indicating/recording system"
+    models:
+      - 31_display_warning_recording_dataflow
+      - 31_data_buses_and_publish_subscribe
+
+  - name: Architecture Diagrams
+    purpose: "System architecture and component relationships"
+    models:
+      - 31_message_taxonomy_cas_ecam_eicas
+      - 31_interfaces_ata22_ata24_ata42_ata45_ata46
+
+document_control:
+  generated_with: "AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia"
+  last_updated: "2026-01-10"
