@@ -29,8 +29,8 @@
       <dmIdent>
         <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
                 systemCode="31" subSystemCode="0" subSubSystemCode="0"
-                assyCode="00" disassyCode="00" disassyCodeVariant="3"
-                infoCode="0A" infoCodeVariant="A" itemLocationCode="A"/>
+                assyCode="00" disassyCode="00" disassyCodeVariant="00"
+                infoCode="0A3" infoCodeVariant="A" itemLocationCode="A"/>
         <language languageIsoCode="en" countryIsoCode="US"/>
         <issueInfo issueNumber="001" inWork="00"/>
       </dmIdent>
