@@ -52,13 +52,13 @@ This directory contains the following S1000D-compliant Data Module Lists for ATA
 
 ## Naming Convention
 
-Data Module List format: `DML-AMPEL360AT-31-xx-NNNN_EN-US_001-00.XML`
+Data Module List format: `DML-AMPEL360AT-31-00-NNNN_EN-US_001-00.XML`
 
 Where:
 * `AMPEL360AT` = Model ID
 * `31` = ATA Chapter
-* `xx` = Sub-chapter or info code identifier
-* `NNNN` = Sequence number or info code
+* `00` = General sub-chapter for ATA 31-00-00
+* `NNNN` = Either a sequence number (`00001`–`00006`) or an info code (`040A`, `520X`, `730A`, `940A`, `ICN`)
 * `EN-US` = Language code (English-US)
 * `001-00` = Issue number and in-work status
 
