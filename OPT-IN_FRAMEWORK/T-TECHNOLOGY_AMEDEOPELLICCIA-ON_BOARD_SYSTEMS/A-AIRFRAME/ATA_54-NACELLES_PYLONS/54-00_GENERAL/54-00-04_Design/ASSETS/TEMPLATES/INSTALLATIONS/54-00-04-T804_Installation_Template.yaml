@@ -1,0 +1,269 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# =============================================================================
+# ATA 54 INSTALLATION TEMPLATE
+# =============================================================================
+# Instructions:
+# 1. Copy this template and rename: 54-00-04-I<NNN>_INST_<Name>.yaml
+# 2. Replace all <PLACEHOLDER> values with actual data
+# 3. Remove sections marked [OPTIONAL] if not applicable
+# 4. Ensure traceability links are correct
+# 5. Update ASSETS/INDEX.meta.yaml with the new installation entry
+# =============================================================================
+
+id: "54-00-04-I<NNN>"
+title: "<Installation Name>"
+category: "INST"
+ata_chapter: "54"
+
+# Installation Identification
+installation_metadata:
+  installation_id: "INST-54-<AREA>-<NNN>"
+  nomenclature: "<Official Installation Name>"
+  zone: "<ZZZ-ZZZ>"  # e.g., 540-560
+  location: "<Location Description>"  # e.g., "Left inboard pylon"
+  drawing_reference: "54-<XX>-<NNNN>"
+  status: "<Preliminary|Released|Obsolete>"
+  plm_item_id: "TC-INST-54-<AREA>-<NNN>"
+
+# Installation Scope
+scope:
+  primary_assembly: "ASM-54-<AREA>-<NNN>"
+  affected_systems:
+    - ata_chapter: "54"
+      system: "<System Name>"
+    - ata_chapter: "<XX>"
+      system: "<Interfacing System>"  # [OPTIONAL]
+  components_installed:
+    - part_id: "54-00-04-P<NNN>"
+      description: "<Component Description>"
+      quantity: <N>
+    # Add more components as needed
+
+# Installation Location
+location_details:
+  aircraft_station: "<STA XXX to STA YYY>"
+  buttline: "<BL XXX to BL YYY>"
+  waterline: "<WL XXX to WL YYY>"
+  zone_reference: "<ZZZ-ZZZ>"
+  access_requirements:
+    - "<Access panel required>"
+    - "<Special access considerations>"
+  adjacencies:
+    forward: "<Adjacent component or structure>"
+    aft: "<Adjacent component or structure>"
+    left: "<Adjacent component or structure>"  # [OPTIONAL]
+    right: "<Adjacent component or structure>"  # [OPTIONAL]
+
+# Installation Procedure
+procedure:
+  prerequisites:
+    - step: "<Prerequisite step 1>"
+      verification: "<How to verify>"
+    - step: "<Prerequisite step 2>"
+      verification: "<How to verify>"
+  installation_sequence:
+    - step_number: 1
+      description: "<Step description>"
+      duration_minutes: <NN>
+      technicians_required: <N>
+      special_tooling:
+        - "<Tool ID or Description>"
+      safety_precautions:
+        - "<Safety note>"
+      quality_checkpoints:
+        - "<QC checkpoint>"
+    - step_number: 2
+      description: "<Step description>"
+      duration_minutes: <NN>
+      technicians_required: <N>
+      special_tooling: []
+      safety_precautions: []
+      quality_checkpoints: []
+    # Add more steps as needed
+  total_duration_hours: <X.X>
+  skill_level_required: "<A&P|Engineer|Specialist>"
+
+# Mounting & Attachment
+mounting:
+  mounting_method: "<Bolted|Bonded|Welded|Combination>"
+  attachment_points:
+    - location: "<Location Description>"
+      interface: "<Interface Type>"
+      fasteners:
+        type: "<Fastener Type>"
+        specification: "<Fastener Spec>"
+        quantity: <N>
+        torque_nm: <NNN>
+        torque_sequence: "<Sequence pattern>"  # e.g., "Star pattern"
+      load_path: "<Load path description>"
+    # Add more attachment points as needed
+  clearances:
+    - feature: "<Feature name>"
+      clearance_mm: <X.X>
+      critical: <true|false>
+  alignment_requirements:
+    - parameter: "<Alignment parameter>"
+      tolerance: "±<X.X> mm"
+      measurement_method: "<How to measure>"
+
+# Routing & Connections
+routing:  # [OPTIONAL] If applicable
+  electrical:
+    - harness_id: "<Harness ID>"
+      routing_path: "<Path description>"
+      connector_type: "<Connector Type>"
+      pin_count: <NN>
+      wire_size_awg: <NN>
+  hydraulic:  # [OPTIONAL]
+    - line_id: "<Line ID>"
+      routing_path: "<Path description>"
+      line_size_dash: <-NN>
+      pressure_rating_psi: <NNNN>
+  pneumatic:  # [OPTIONAL]
+    - line_id: "<Line ID>"
+      routing_path: "<Path description>"
+      line_size_dash: <-NN>
+      pressure_rating_psi: <NNN>
+  fuel:  # [OPTIONAL]
+    - line_id: "<Line ID>"
+      routing_path: "<Path description>"
+      line_size_dash: <-NN>
+      pressure_rating_psi: <NNN>
+
+# Interface Requirements
+interfaces:
+  structural:
+    - interface_id: "54-00-05-<XX>-<NNN>"
+      mating_component: "<Component Name>"
+      interface_type: "<Bolted|Bonded|Pinned>"
+      load_transfer: "<Load description>"
+  electrical:  # [OPTIONAL]
+    - interface_id: "24-XX-XX-XXX"
+      voltage: "<Voltage>"
+      current_amp: <X.X>
+      connector: "<Connector P/N>"
+  hydraulic:  # [OPTIONAL]
+    - interface_id: "29-XX-XX-XXX"
+      pressure_psi: <NNNN>
+      flow_rate_gpm: <X.X>
+      fluid_type: "<Fluid Spec>"
+  pneumatic:  # [OPTIONAL]
+    - interface_id: "36-XX-XX-XXX"
+      pressure_psi: <NNN>
+      flow_rate_scfm: <X.X>
+
+# Tooling & Equipment
+tooling:
+  special_tools:
+    - tool_id: "<Tool ID>"
+      description: "<Tool description>"
+      quantity: <N>
+      calibration_required: <true|false>
+  standard_tools:
+    - "<Tool description>"
+  lifting_equipment:  # [OPTIONAL]
+    - equipment: "<Equipment type>"
+      capacity_kg: <NNNN>
+      certification: "<Cert required>"
+  test_equipment:
+    - equipment_id: "<Equipment ID>"
+      purpose: "<Test purpose>"
+      calibration_due: "<YYYY-MM-DD>"
+
+# Inspection & Testing
+inspection:
+  dimensional_checks:
+    - parameter: "<Parameter to check>"
+      tolerance: "±<X.X> mm"
+      method: "<Measurement method>"
+      acceptance_criteria: "<Criteria>"
+  functional_tests:
+    - test_id: "<Test ID>"
+      description: "<Test description>"
+      procedure_ref: "54-00-07-<XX>-<NNN>"
+      acceptance_criteria: "<Criteria>"
+  ndt_requirements:  # [OPTIONAL]
+    - method: "<NDT Method>"
+      coverage: "<Coverage %>"
+      acceptance_standard: "<Standard>"
+  final_inspection:
+    checklist_id: "<Checklist ID>"
+    signoff_required: <true|false>
+
+# Traceability
+traceability:
+  requirements:
+    - "54-00-03-<XX>-<NNN>"
+  safety_items:
+    - "54-00-02-<XX>-<NNN>"  # [OPTIONAL]
+  drawings:
+    - "54-00-04-D<NNN>"
+  procedures:
+    - "54-00-06-<XX>-<NNN>"  # Engineering procedures [OPTIONAL]
+  test_procedures:
+    - "54-00-07-<XX>-<NNN>"
+  maintenance_manual:
+    - "AMM-54-<XX>-<XX>"
+
+# Safety & Compliance
+safety:
+  hazards:
+    - hazard: "<Hazard description>"
+      mitigation: "<Mitigation measure>"
+      ppe_required: "<PPE type>"
+  lockout_tagout: <true|false>
+  confined_space: <true|false>
+  hot_work: <true|false>
+  electrical_safety: <true|false>
+  certification_basis:
+    - "<CS-25.xxx>"
+
+# Notes & Special Instructions
+notes: |
+  <Free-form notes about the installation>
+  
+  Critical installation considerations:
+  - <Consideration 1>
+  - <Consideration 2>
+  
+  Common installation errors to avoid:
+  - <Error 1>
+  - <Error 2>
+  
+  Post-installation verification:
+  - <Verification 1>
+  - <Verification 2>
+  
+  Maintenance access considerations:
+  - <Access consideration 1>
+
+# Document Control
+document_control:
+  version: "1.0"
+  status: "<Draft|Released|Obsolete>"
+  created_date: "<YYYY-MM-DD>"
+  last_updated: "<YYYY-MM-DD>"
+  author: "<Name or Team>"
+  technical_review: "<Name>"  # [OPTIONAL]
+  approver: "<Name or Role>"
+  change_history:
+    - version: "1.0"
+      date: "<YYYY-MM-DD>"
+      author: "<Name>"
+      changes: "<Initial release>"
+    # Add more change records as needed

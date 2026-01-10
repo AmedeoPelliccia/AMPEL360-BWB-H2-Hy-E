@@ -1,0 +1,282 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# =============================================================================
+# ATA 54 PRODUCT TEMPLATE
+# =============================================================================
+# Instructions:
+# 1. Copy this template and rename: 54-00-04-PR<NNN>_PROD_<Name>.yaml
+# 2. Replace all <PLACEHOLDER> values with actual data
+# 3. Remove sections marked [OPTIONAL] if not applicable
+# 4. Ensure traceability links are correct
+# 5. Update ASSETS/INDEX.meta.yaml with the new product entry
+# =============================================================================
+
+id: "54-00-04-PR<NNN>"
+title: "<Product Name>"
+category: "PROD"
+ata_chapter: "54"
+
+# Product Identification
+product_metadata:
+  product_id: "PROD-54-<AREA>-<NNN>"
+  nomenclature: "<Official Product Name>"
+  product_type: "<Nacelle|Pylon|Cowling|System>"
+  variant: "<Variant designation>"  # e.g., "Standard", "Extended", "High-Thrust"
+  ci_number: "CI-54-<CI>"
+  zone: "<ZZZ-ZZZ>"
+  configuration: "<Configuration identifier>"
+  status: "<Concept|Development|Production|Certified|Legacy>"
+  plm_item_id: "TC-PROD-54-<AREA>-<NNN>"
+
+# Product Description
+description:
+  purpose: "<What the product does and why it exists>"
+  key_features:
+    - "<Feature 1>"
+    - "<Feature 2>"
+    - "<Feature 3>"
+  capabilities:
+    - "<Capability 1>"
+    - "<Capability 2>"
+  intended_use: "<Normal operating conditions and use cases>"
+  operational_envelope:
+    max_altitude_ft: <XXXXX>
+    max_speed_ktas: <XXX>
+    temperature_range_c: "<-XX to +XX>"
+    pressure_range_psi: "<XX to YYY>"
+
+# Product Structure
+structure:
+  top_level_assemblies:
+    - assembly_id: "ASM-54-<AREA>-<NNN>"
+      nomenclature: "<Assembly name>"
+      quantity: <N>
+      criticality: "<Primary|Secondary|Non-structural>"
+    # Add more assemblies as needed
+  major_components:
+    - part_id: "54-00-04-P<NNN>"
+      nomenclature: "<Component name>"
+      quantity: <N>
+      function: "<Component function>"
+    # Add more components as needed
+  total_part_count: <NNNN>  # Approximate total parts
+  total_mass_kg: <XXXX.X>
+
+# Product Specifications
+specifications:
+  physical:
+    length_mm: <XXXX.X>
+    width_mm: <XXXX.X>
+    height_mm: <XXXX.X>
+    mass_kg: <XXXX.X>
+    center_of_gravity:
+      x_mm: <XXX.X>  # From datum
+      y_mm: <XXX.X>
+      z_mm: <XXX.X>
+    moment_of_inertia:  # [OPTIONAL]
+      ixx_kg_m2: <XXX.X>
+      iyy_kg_m2: <XXX.X>
+      izz_kg_m2: <XXX.X>
+  performance:
+    thrust_capacity_n: <XXXXXX>  # [OPTIONAL] For propulsion-related
+    drag_coefficient: <X.XXX>  # [OPTIONAL] For aerodynamic components
+    thermal_rating_c: <+XXX>
+    pressure_rating_psi: <XXXX>  # [OPTIONAL]
+    vibration_rating_g: <XX.X>
+    service_life_fh: <XXXXX>  # Flight hours
+    service_life_fc: <XXXXX>  # Flight cycles
+  environmental:
+    operating_temp_c:
+      min: <-XX>
+      max: <+XXX>
+    storage_temp_c:
+      min: <-XX>
+      max: <+XX>
+    humidity_max_percent: <XX>
+    altitude_max_ft: <XXXXX>
+    corrosion_protection: "<Protection method>"
+    lightning_protection: "<Required|Not-Required>"
+    emi_shielding: "<Required|Not-Required>"  # [OPTIONAL]
+
+# Interfaces
+interfaces:
+  structural:
+    - interface_id: "54-00-05-<XX>-<NNN>"
+      mating_product: "<Product name>"
+      interface_type: "<Bolted|Bonded|Integrated>"
+      load_capacity_n: <XXXXXX>
+    # Add more structural interfaces as needed
+  electrical:  # [OPTIONAL]
+    - interface_id: "24-XX-XX-XXX"
+      voltage_v: <XXX>
+      current_amp: <XX.X>
+      power_w: <XXXX>
+      connector_type: "<Connector P/N>"
+  hydraulic:  # [OPTIONAL]
+    - interface_id: "29-XX-XX-XXX"
+      pressure_psi: <XXXX>
+      flow_rate_gpm: <XX.X>
+      fluid_type: "<Fluid spec>"
+  pneumatic:  # [OPTIONAL]
+    - interface_id: "36-XX-XX-XXX"
+      pressure_psi: <XXX>
+      flow_rate_scfm: <XX.X>
+  fuel:  # [OPTIONAL]
+    - interface_id: "28-XX-XX-XXX"
+      pressure_psi: <XXX>
+      flow_rate_lbh: <XXXX>
+      fuel_type: "<Fuel spec>"
+  data:  # [OPTIONAL]
+    - interface_id: "42-XX-XX-XXX"
+      protocol: "<ARINC-429|AFDX|MIL-STD-1553|CAN>"
+      data_rate_mbps: <XX>
+
+# Materials & Manufacturing
+materials:
+  primary_materials:
+    - material: "<Material name>"
+      specification: "<Material spec>"
+      percentage: <XX>  # Percentage by mass
+      application: "<Where used>"
+  manufacturing_processes:
+    - process: "<Manufacturing process>"
+      components: "<Which components use this process>"
+  surface_treatments:
+    - treatment: "<Treatment type>"
+      purpose: "<Corrosion protection|Wear resistance|etc.>"
+
+# Quality & Certification
+quality:
+  quality_level: "<Level A|Level B|Level C|Level D>"  # Per DO-178C/DO-254
+  inspection_requirements:
+    - stage: "<Manufacturing stage>"
+      inspection_type: "<Inspection method>"
+      acceptance_criteria: "<Criteria>"
+  test_requirements:
+    - test_type: "<Structural|Environmental|Functional|Integration>"
+      procedure_ref: "54-00-07-<XX>-<NNN>"
+      acceptance_criteria: "<Criteria>"
+  certification_basis:
+    - regulation: "<CS-25.xxx>"
+      compliance_method: "<Analysis|Test|Similarity|Service>"
+      status: "<Planned|In-Progress|Compliant>"
+
+# Traceability
+traceability:
+  requirements:
+    - "54-00-03-<XX>-<NNN>"
+  safety_items:
+    - "54-00-02-<XX>-<NNN>"
+  design_documentation:
+    - "54-00-04-D<NNN>"  # Drawings
+    - "54-00-04-M<NNN>"  # Models
+  interface_documents:
+    - "54-00-05-<XX>-<NNN>"
+  test_procedures:
+    - "54-00-07-<XX>-<NNN>"
+  certification_documents:
+    - "54-00-10-<XX>-<NNN>"
+
+# Maintenance & Support
+maintenance:
+  scheduled_maintenance:
+    - interval_fh: <XXXX>
+      interval_fc: <XXX>
+      task_description: "<Maintenance task>"
+      reference: "AMM-54-<XX>-<XX>"
+  unscheduled_maintenance:
+    mtbf_fh: <XXXXX>  # Mean time between failures [OPTIONAL]
+    mtbur_fh: <XXXXX>  # Mean time between unscheduled removals [OPTIONAL]
+  spares_philosophy: "<Spare parts strategy>"
+  special_tooling_required:
+    - "<Tool description>"
+
+# Configuration Management
+configuration:
+  baseline: "<Configuration baseline identifier>"
+  variants:
+    - variant_name: "<Variant name>"
+      differences: "<Key differences from baseline>"
+      applicable_aircraft: "<Aircraft models>"
+  optional_equipment:
+    - item: "<Optional item>"
+      description: "<Description>"
+      weight_impact_kg: <XX.X>
+  configuration_control: "<Change control process>"
+
+# Supply Chain
+supply_chain:
+  manufacturer: "<Primary manufacturer>"
+  oem_partners:
+    - partner: "<Partner name>"
+      supplies: "<What they supply>"
+      lead_time_weeks: <XX>
+  critical_suppliers:
+    - supplier: "<Supplier name>"
+      component: "<Critical component>"
+      single_source: <true|false>
+  production_rate_per_month: <NN>  # [OPTIONAL]
+
+# Lifecycle & Sustainability
+lifecycle:
+  design_life_years: <XX>
+  expected_production_quantity: <NNNN>
+  recyclability_percent: <XX>  # [OPTIONAL]
+  hazardous_materials:
+    - material: "<Material name>"
+      regulation: "<Regulation>"
+      handling: "<Special handling required>"
+  end_of_life_plan: "<Disposal or recycling plan>"
+
+# Notes & Design Rationale
+notes: |
+  <Free-form notes about the product>
+  
+  Key design decisions:
+  - <Decision 1>
+  - <Decision 2>
+  
+  Product evolution:
+  - <Evolution from previous versions>
+  
+  Lessons learned:
+  - <Lesson 1>
+  - <Lesson 2>
+  
+  Future enhancements:
+  - <Enhancement 1>
+  - <Enhancement 2>
+  
+  Market differentiation:
+  - <Differentiator 1>
+
+# Document Control
+document_control:
+  version: "1.0"
+  status: "<Draft|Released|Obsolete>"
+  created_date: "<YYYY-MM-DD>"
+  last_updated: "<YYYY-MM-DD>"
+  author: "<Name or Team>"
+  product_manager: "<Name>"
+  technical_lead: "<Name>"
+  approver: "<Name or Role>"
+  change_history:
+    - version: "1.0"
+      date: "<YYYY-MM-DD>"
+      author: "<Name>"
+      changes: "<Initial release>"
+    # Add more change records as needed

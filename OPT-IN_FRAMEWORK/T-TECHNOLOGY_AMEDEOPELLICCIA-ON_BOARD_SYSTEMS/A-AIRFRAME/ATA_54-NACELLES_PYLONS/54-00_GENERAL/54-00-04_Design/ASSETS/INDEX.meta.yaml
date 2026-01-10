@@ -9,7 +9,155 @@ folder: "54-00-04_Design"
 # generation guidelines and quality standards.
 
 assets:
-  # Drawing Template
+  # ============================================================================
+  # TEMPLATES — Master templates for all asset categories
+  # ============================================================================
+  
+  # T801: Assembly Template
+  - id: "54-00-04-T801"
+    category: "TMPL"
+    title: "Assembly Template"
+    source: "ASSETS/TEMPLATES/ASSEMBLIES/54-00-04-T801_Assembly_Template.md"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T802: Part Template
+  - id: "54-00-04-T802"
+    category: "TMPL"
+    title: "Part Template"
+    source: "ASSETS/TEMPLATES/PARTS/54-00-04-T802_Part_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T803: Drawing Template
+  - id: "54-00-04-T803"
+    category: "TMPL"
+    title: "Drawing Template"
+    source: "ASSETS/TEMPLATES/DRAWINGS/54-00-04-T803_Drawing_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T804: Installation Template
+  - id: "54-00-04-T804"
+    category: "TMPL"
+    title: "Installation Template"
+    source: "ASSETS/TEMPLATES/INSTALLATIONS/54-00-04-T804_Installation_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T805: Model Template
+  - id: "54-00-04-T805"
+    category: "TMPL"
+    title: "Model Template"
+    source: "ASSETS/TEMPLATES/MODELS/54-00-04-T805_Model_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T806: Product Template
+  - id: "54-00-04-T806"
+    category: "TMPL"
+    title: "Product Template"
+    source: "ASSETS/TEMPLATES/PRODUCTS/54-00-04-T806_Product_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T807: Data Schema Template
+  - id: "54-00-04-T807"
+    category: "TMPL"
+    title: "Data Schema Template"
+    source: "ASSETS/TEMPLATES/DATA/54-00-04-T807_Data_Schema_Template.json"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T808: Requirements Traceability Template
+  - id: "54-00-04-T808"
+    category: "TMPL"
+    title: "Requirements Traceability Template"
+    source: "ASSETS/TEMPLATES/DATA/54-00-04-T808_Requirements_Traceability_Template.csv"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T809: Interface Control Template
+  - id: "54-00-04-T809"
+    category: "TMPL"
+    title: "Interface Control Template"
+    source: "ASSETS/TEMPLATES/INTERFACES/54-00-04-T809_Interface_Control_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T810: Test Procedure Template
+  - id: "54-00-04-T810"
+    category: "TMPL"
+    title: "Test Procedure Template"
+    source: "ASSETS/TEMPLATES/TEST/54-00-04-T810_Test_Procedure_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # ============================================================================
+  # DRAWINGS
+  # ============================================================================
+  
+  # Drawing Template (Legacy - kept for reference)
   - id: "54-00-04-D000"
     category: "TMPL"
     title: "Drawing Metadata Template"

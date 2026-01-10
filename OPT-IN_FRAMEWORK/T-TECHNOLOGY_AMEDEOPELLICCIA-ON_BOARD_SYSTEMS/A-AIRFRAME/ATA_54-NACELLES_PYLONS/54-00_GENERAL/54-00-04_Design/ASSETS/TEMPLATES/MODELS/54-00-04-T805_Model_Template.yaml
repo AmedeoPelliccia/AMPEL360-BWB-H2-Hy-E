@@ -1,0 +1,266 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# =============================================================================
+# ATA 54 MODEL TEMPLATE
+# =============================================================================
+# Instructions:
+# 1. Copy this template and rename: 54-00-04-M<NNN>_MODL_<Name>.yaml
+# 2. Replace all <PLACEHOLDER> values with actual data
+# 3. Remove sections marked [OPTIONAL] if not applicable
+# 4. Ensure traceability links are correct
+# 5. Update ASSETS/INDEX.meta.yaml with the new model entry
+# =============================================================================
+
+id: "54-00-04-M<NNN>"
+title: "<Model Name>"
+category: "MODL"
+ata_chapter: "54"
+
+# Model Identification
+model_metadata:
+  model_id: "MDL-54-<AREA>-<NNN>"
+  model_type: "<Structural|Thermal|Aerodynamic|Dynamics|System|Data>"
+  nomenclature: "<Official Model Name>"
+  subject: "<What the model represents>"
+  analysis_type: "<FEA|CFD|Analytical|Statistical|Logical>"
+  status: "<Development|Validated|Released|Superseded>"
+  plm_item_id: "TC-MODL-54-<AREA>-<NNN>"
+
+# Model Scope
+scope:
+  purpose: "<Why this model exists and what it analyzes>"
+  components_modeled:
+    - id: "54-00-04-P<NNN>"
+      description: "<Component name>"
+    - id: "ASM-54-<AREA>-<NNN>"
+      description: "<Assembly name>"
+    # Add more components as needed
+  analysis_domain: "<Physical domain being analyzed>"
+  fidelity_level: "<High|Medium|Low>"
+  intended_use:
+    - "<Use case 1>"
+    - "<Use case 2>"
+
+# Model Description
+description:
+  governing_equations: "<Mathematical basis>"  # e.g., "Navier-Stokes", "Linear elasticity"
+  assumptions:
+    - "<Assumption 1>"
+    - "<Assumption 2>"
+  limitations:
+    - "<Limitation 1>"
+    - "<Limitation 2>"
+  simplifications:
+    - "<Simplification 1>"
+    - "<Simplification 2>"
+  applicability_range:
+    parameter: "<Parameter name>"
+    min_value: <X.X>
+    max_value: <X.X>
+    units: "<Units>"
+
+# Model Geometry [For FEA/CFD models]
+geometry:  # [OPTIONAL]
+  cad_source: "<CAD file reference>"
+  geometry_idealization: "<Solid|Shell|Beam|Mixed>"
+  coordinate_system: "<Global CS definition>"
+  dimensions:
+    characteristic_length_mm: <X.X>
+    volume_m3: <X.XXX>  # [OPTIONAL]
+    surface_area_m2: <X.XX>  # [OPTIONAL]
+
+# Mesh/Discretization [For FEA/CFD models]
+mesh:  # [OPTIONAL]
+  mesh_type: "<Structured|Unstructured|Hybrid>"
+  element_types:
+    - "<Tet4|Tet10|Hex8|Hex20|Shell|Beam>"
+  total_nodes: <NNNNN>
+  total_elements: <NNNNN>
+  element_size_mm:
+    min: <X.X>
+    max: <X.X>
+    average: <X.X>
+  mesh_quality:
+    min_angle_deg: <XX>
+    max_aspect_ratio: <X.X>
+    min_jacobian: <X.XX>
+  refinement_regions:
+    - location: "<Location>"
+      element_size_mm: <X.X>
+      reason: "<Why refined>"
+
+# Material Properties
+materials:
+  - material_id: "<Material name>"
+    specification: "<Material spec>"
+    properties:
+      density_kg_m3: <XXXX>
+      youngs_modulus_gpa: <XXX>  # [OPTIONAL] For structural
+      poissons_ratio: <X.XX>  # [OPTIONAL] For structural
+      yield_strength_mpa: <XXX>  # [OPTIONAL] For structural
+      ultimate_strength_mpa: <XXX>  # [OPTIONAL] For structural
+      thermal_conductivity_w_mk: <XX.X>  # [OPTIONAL] For thermal
+      specific_heat_j_kgk: <XXX>  # [OPTIONAL] For thermal
+    source: "<Material database or test report>"
+  # Add more materials as needed
+
+# Boundary Conditions
+boundary_conditions:
+  loads:  # [OPTIONAL] For structural models
+    - load_case: "<Load case name>"
+      load_type: "<Force|Pressure|Acceleration|Thermal>"
+      magnitude: <X.X>
+      units: "<Units>"
+      location: "<Application location>"
+      direction: "<Direction vector>"
+  constraints:  # [OPTIONAL] For structural models
+    - constraint_type: "<Fixed|Pinned|Sliding|Symmetry>"
+      location: "<Application location>"
+      dof_constrained: "<DOF description>"
+  thermal_conditions:  # [OPTIONAL] For thermal models
+    - boundary: "<Boundary name>"
+      condition_type: "<Temperature|Heat-Flux|Convection|Radiation>"
+      value: <X.X>
+      units: "<Units>"
+  flow_conditions:  # [OPTIONAL] For CFD models
+    - boundary: "<Boundary name>"
+      condition_type: "<Velocity-Inlet|Pressure-Outlet|Wall|Symmetry>"
+      value: <X.X>
+      units: "<Units>"
+
+# Analysis Settings
+analysis_settings:
+  solver: "<Solver name and version>"  # e.g., "ANSYS Mechanical 2023R1"
+  analysis_type: "<Static|Modal|Transient|Steady-State|Transient>"
+  solution_method: "<Direct|Iterative|Implicit|Explicit>"
+  convergence_criteria:
+    residual_tolerance: <1.0e-X>
+    max_iterations: <NNN>
+  time_settings:  # [OPTIONAL] For transient analyses
+    total_time_s: <X.X>
+    time_step_s: <X.XXX>
+    adaptive_stepping: <true|false>
+
+# Results & Outputs
+results:
+  primary_outputs:
+    - output_name: "<Output name>"
+      output_type: "<Stress|Displacement|Temperature|Velocity|Pressure>"
+      units: "<Units>"
+      location: "<Where output is extracted>"
+  postprocessing:
+    - plot_type: "<Contour|Vector|Graph>"
+      description: "<What is plotted>"
+  margins:  # [OPTIONAL]
+    - parameter: "<Parameter name>"
+      allowable: <X.X>
+      calculated: <X.X>
+      margin_of_safety: <X.XX>
+      status: "<Pass|Fail>"
+
+# Validation & Verification
+validation:
+  validation_method: "<Test|Benchmark|Analytical|Code-to-Code>"
+  validation_data_source: "<Source of validation data>"
+  validation_results:
+    - parameter: "<Parameter>"
+      model_result: <X.X>
+      reference_result: <X.X>
+      difference_percent: <X.X>
+      acceptable: <true|false>
+  verification_checks:
+    - check: "<Verification check performed>"
+      status: "<Pass|Fail>"
+      notes: "<Details>"
+
+# Sensitivity Analysis [OPTIONAL]
+sensitivity:
+  parameters_varied:
+    - parameter: "<Parameter name>"
+      nominal_value: <X.X>
+      variation_range: "±<XX>%"
+      impact_on_results: "<Impact description>"
+
+# Traceability
+traceability:
+  requirements:
+    - "54-00-03-<XX>-<NNN>"
+  safety_items:
+    - "54-00-02-<XX>-<NNN>"  # [OPTIONAL]
+  drawings:
+    - "54-00-04-D<NNN>"
+  test_procedures:
+    - "54-00-07-<XX>-<NNN>"  # [OPTIONAL]
+  validation_reports:
+    - "54-00-07-<XX>-<NNN>"  # [OPTIONAL]
+  certification_basis:
+    - "<CS-25.xxx>"
+
+# Model Files
+files:
+  model_file: "<Filename and path>"
+  input_files:
+    - "<Input file 1>"
+    - "<Input file 2>"
+  output_files:
+    - "<Output file 1>"
+    - "<Output file 2>"
+  documentation: "<Report or documentation file>"
+
+# Computational Resources [OPTIONAL]
+computational:
+  runtime_hours: <X.X>
+  memory_gb: <XX>
+  cpu_cores: <NN>
+  software_licenses:
+    - "<License type>"
+
+# Notes & Recommendations
+notes: |
+  <Free-form notes about the model>
+  
+  Key modeling decisions:
+  - <Decision 1>
+  - <Decision 2>
+  
+  Areas of uncertainty:
+  - <Uncertainty 1>
+  - <Uncertainty 2>
+  
+  Recommendations for future work:
+  - <Recommendation 1>
+  - <Recommendation 2>
+  
+  Known issues or limitations:
+  - <Issue 1>
+  - <Issue 2>
+
+# Document Control
+document_control:
+  version: "1.0"
+  status: "<Draft|Released|Obsolete>"
+  created_date: "<YYYY-MM-DD>"
+  last_updated: "<YYYY-MM-DD>"
+  author: "<Name or Team>"
+  technical_reviewer: "<Name>"
+  approver: "<Name or Role>"
+  change_history:
+    - version: "1.0"
+      date: "<YYYY-MM-DD>"
+      author: "<Name>"
+      changes: "<Initial release>"
+    # Add more change records as needed

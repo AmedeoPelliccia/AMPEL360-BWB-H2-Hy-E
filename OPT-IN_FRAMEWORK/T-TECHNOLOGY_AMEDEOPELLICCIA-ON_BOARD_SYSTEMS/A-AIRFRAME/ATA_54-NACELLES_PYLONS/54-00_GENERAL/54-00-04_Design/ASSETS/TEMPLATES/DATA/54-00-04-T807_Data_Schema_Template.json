@@ -1,0 +1,317 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "54-00-04-T807",
+  "title": "ATA 54 Data Schema Template",
+  "description": "Template for defining data schemas in ATA Chapter 54 (Nacelles & Pylons)",
+  "type": "object",
+  
+  "instructions": [
+    "1. Copy this template and rename: 54-00-04-DS<NNN>_DATA_<Name>.json",
+    "2. Replace all <PLACEHOLDER> values with actual data",
+    "3. Remove optional fields if not applicable",
+    "4. Define all required properties with appropriate types and constraints",
+    "5. Update ASSETS/INDEX.meta.yaml with the new schema entry"
+  ],
+
+  "metadata": {
+    "schema_id": "54-00-04-DS<NNN>",
+    "schema_name": "<Schema Name>",
+    "category": "DATA",
+    "ata_chapter": "54",
+    "version": "1.0",
+    "status": "<Draft|Released|Obsolete>",
+    "created_date": "<YYYY-MM-DD>",
+    "last_updated": "<YYYY-MM-DD>",
+    "author": "<Name or Team>",
+    "description": "<What this schema defines>",
+    "purpose": "<Why this schema exists>",
+    "applies_to": [
+      "<Component or system 1>",
+      "<Component or system 2>"
+    ]
+  },
+
+  "traceability": {
+    "requirements": [
+      "54-00-03-<XX>-<NNN>"
+    ],
+    "safety_items": [
+      "54-00-02-<XX>-<NNN>"
+    ],
+    "related_schemas": [
+      "54-00-04-DS<NNN>"
+    ],
+    "interface_documents": [
+      "54-00-05-<XX>-<NNN>"
+    ]
+  },
+
+  "definitions": {
+    "comment": "Define reusable schema components here",
+    
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{2}-[A-Z0-9]{2}-[A-Z0-9]{4}$",
+      "description": "Standard identifier pattern: XX-YY-NNNN",
+      "examples": ["54-00-0001", "54-NAC-1001"]
+    },
+    
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+      "description": "Semantic version: major.minor or major.minor.patch",
+      "examples": ["1.0", "2.1.3"]
+    },
+    
+    "status": {
+      "type": "string",
+      "enum": ["Preliminary", "Released", "Superseded", "Obsolete"],
+      "description": "Document or item status"
+    },
+    
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO 8601 date: YYYY-MM-DD",
+      "examples": ["2026-01-07"]
+    },
+    
+    "coordinate": {
+      "type": "object",
+      "properties": {
+        "x_mm": {
+          "type": "number",
+          "description": "X coordinate in millimeters"
+        },
+        "y_mm": {
+          "type": "number",
+          "description": "Y coordinate in millimeters"
+        },
+        "z_mm": {
+          "type": "number",
+          "description": "Z coordinate in millimeters"
+        }
+      },
+      "required": ["x_mm", "y_mm", "z_mm"]
+    },
+    
+    "material": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Material name"
+        },
+        "specification": {
+          "type": "string",
+          "description": "Material specification (e.g., AMS, ASTM)"
+        },
+        "density_kg_m3": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Material density in kg/m³"
+        }
+      },
+      "required": ["name", "specification"]
+    }
+  },
+
+  "properties": {
+    "comment": "Define the main schema structure here - customize based on data type",
+    
+    "id": {
+      "$ref": "#/definitions/identifier",
+      "description": "Unique identifier for this data item"
+    },
+    
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Human-readable title"
+    },
+    
+    "version": {
+      "$ref": "#/definitions/version"
+    },
+    
+    "status": {
+      "$ref": "#/definitions/status"
+    },
+    
+    "created_date": {
+      "$ref": "#/definitions/date"
+    },
+    
+    "last_updated": {
+      "$ref": "#/definitions/date"
+    },
+    
+    "example_nested_object": {
+      "type": "object",
+      "description": "Example of a nested object structure",
+      "properties": {
+        "property_1": {
+          "type": "string",
+          "description": "<Description of property>"
+        },
+        "property_2": {
+          "type": "number",
+          "minimum": 0,
+          "description": "<Description of property>"
+        },
+        "property_3": {
+          "type": "boolean",
+          "description": "<Description of property>"
+        }
+      },
+      "required": ["property_1"]
+    },
+    
+    "example_array": {
+      "type": "array",
+      "description": "Example of an array structure",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item_id": {
+            "type": "string"
+          },
+          "item_value": {
+            "type": "number"
+          }
+        },
+        "required": ["item_id"]
+      },
+      "minItems": 1
+    },
+    
+    "dimensions": {
+      "type": "object",
+      "description": "Physical dimensions",
+      "properties": {
+        "length_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Length in millimeters"
+        },
+        "width_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Width in millimeters"
+        },
+        "height_mm": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Height in millimeters"
+        },
+        "mass_kg": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Mass in kilograms"
+        }
+      }
+    },
+    
+    "material": {
+      "$ref": "#/definitions/material",
+      "description": "Material specification"
+    },
+    
+    "location": {
+      "$ref": "#/definitions/coordinate",
+      "description": "3D location coordinates"
+    },
+    
+    "traceability": {
+      "type": "object",
+      "description": "Traceability to other documents",
+      "properties": {
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^54-00-03-\\d{2}-\\d{3}$"
+          },
+          "description": "Related requirements"
+        },
+        "drawings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^54-00-04-D\\d{3}$"
+          },
+          "description": "Related drawings"
+        }
+      }
+    },
+    
+    "notes": {
+      "type": "string",
+      "description": "Free-form notes and additional information"
+    }
+  },
+
+  "required": [
+    "id",
+    "title",
+    "version",
+    "status"
+  ],
+
+  "additionalProperties": false,
+
+  "examples": [
+    {
+      "comment": "Example 1: Minimal valid instance",
+      "id": "54-00-0001",
+      "title": "Example Component",
+      "version": "1.0",
+      "status": "Released",
+      "created_date": "2026-01-07",
+      "last_updated": "2026-01-07"
+    },
+    {
+      "comment": "Example 2: Full instance with all fields",
+      "id": "54-NAC-1001",
+      "title": "Example Nacelle Component",
+      "version": "2.1.0",
+      "status": "Released",
+      "created_date": "2026-01-01",
+      "last_updated": "2026-01-07",
+      "dimensions": {
+        "length_mm": 1500.0,
+        "width_mm": 800.0,
+        "height_mm": 600.0,
+        "mass_kg": 125.5
+      },
+      "material": {
+        "name": "CFRP-Epoxy",
+        "specification": "AMS-3850",
+        "density_kg_m3": 1600
+      },
+      "location": {
+        "x_mm": 1000.0,
+        "y_mm": 500.0,
+        "z_mm": 200.0
+      },
+      "notes": "This is an example with all fields populated"
+    }
+  ],
+
+  "document_control": {
+    "template_version": "1.0",
+    "template_status": "Active",
+    "created_date": "2026-01-07",
+    "author": "AMPEL360 ATA 54 Design Team",
+    "standard": "JSON Schema Draft 07",
+    "usage_notes": [
+      "This is a template - customize the properties section for your specific data needs",
+      "Remove the 'comment' fields when creating actual schemas",
+      "Ensure all $ref references point to valid definitions",
+      "Validate your schema using a JSON Schema validator before use",
+      "Update the examples section with realistic data for your schema"
+    ]
+  }
+}
