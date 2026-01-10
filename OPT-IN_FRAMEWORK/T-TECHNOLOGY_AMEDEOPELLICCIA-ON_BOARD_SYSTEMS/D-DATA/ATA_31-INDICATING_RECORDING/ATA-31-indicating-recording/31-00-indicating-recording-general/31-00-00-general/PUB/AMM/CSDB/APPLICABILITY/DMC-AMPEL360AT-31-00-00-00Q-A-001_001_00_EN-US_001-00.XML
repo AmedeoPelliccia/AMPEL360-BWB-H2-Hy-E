@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Conditions Cross-reference Table (CCT)
+  ATA 31-00-00 - Indicating/Recording - General
+  
+  This CCT defines operational, technical, and environmental conditions that
+  affect content applicability in AMPEL360AT AMM data modules.
+  
+  Referenced by the ACT (Applicability Cross-reference Table).
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/condcrossreftable.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="Q"
+                infoCode="00" infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Conditions Cross-reference Table (CCT)</techName>
+          <infoName>ATA 31-00-00 - Operational Conditions</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360AT Q100 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <reasonForUpdate>
+        <simplePara>Initial release of CCT for ATA 31-00-00</simplePara>
+      </reasonForUpdate>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <condCrossRefTable>
+      
+      <!-- Condition 1: Ground/Air Phase -->
+      <cond id="cond-groundAir">
+        <name>Ground/Air Phase</name>
+        <descr>
+          <simplePara>Flight phase - whether aircraft is on ground or in air</simplePara>
+        </descr>
+        <condTypeRefId>ground-air-flight-phase</condTypeRefId>
+        <enumeration>
+          <enumerationValue value="GROUND">
+            <valueDoc>
+              <simplePara>Aircraft is on ground (parked, taxiing, or not airborne)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="AIR">
+            <valueDoc>
+              <simplePara>Aircraft is airborne (in flight)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+        </enumeration>
+      </cond>
+
+      <!-- Condition 2: Maintenance Mode -->
+      <cond id="cond-maintenanceMode">
+        <name>Maintenance Mode</name>
+        <descr>
+          <simplePara>Indicates whether aircraft is in maintenance mode</simplePara>
+        </descr>
+        <condTypeRefId>maintenance-status</condTypeRefId>
+        <enumeration>
+          <enumerationValue value="TRUE">
+            <valueDoc>
+              <simplePara>Aircraft is in maintenance mode</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="FALSE">
+            <valueDoc>
+              <simplePara>Aircraft is not in maintenance mode (normal operations)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+        </enumeration>
+      </cond>
+
+      <!-- Condition 3: Temperature Band -->
+      <cond id="cond-temperatureBand">
+        <name>Temperature Band</name>
+        <descr>
+          <simplePara>Operational temperature range affecting system behavior</simplePara>
+        </descr>
+        <condTypeRefId>environmental-temperature</condTypeRefId>
+        <enumeration>
+          <enumerationValue value="LOW">
+            <valueDoc>
+              <simplePara>Low temperature operations (below -20°C / -4°F)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="NOM">
+            <valueDoc>
+              <simplePara>Nominal temperature operations (-20°C to +45°C / -4°F to +113°F)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="HIGH">
+            <valueDoc>
+              <simplePara>High temperature operations (above +45°C / +113°F)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+        </enumeration>
+      </cond>
+
+      <!-- Condition 4: Dispatch Degraded Mode -->
+      <cond id="cond-dispatchDegraded">
+        <name>Dispatch Degraded Mode</name>
+        <descr>
+          <simplePara>Indicates whether aircraft is operating in degraded dispatch configuration</simplePara>
+        </descr>
+        <condTypeRefId>dispatch-status</condTypeRefId>
+        <enumeration>
+          <enumerationValue value="TRUE">
+            <valueDoc>
+              <simplePara>Aircraft is dispatched with degraded systems (MEL/CDL applicable)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="FALSE">
+            <valueDoc>
+              <simplePara>Aircraft is fully operational (no MEL/CDL items)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+        </enumeration>
+      </cond>
+
+      <!-- Condition 5: Power Source -->
+      <cond id="cond-powerSource">
+        <name>Power Source</name>
+        <descr>
+          <simplePara>Primary power source for aircraft systems</simplePara>
+        </descr>
+        <condTypeRefId>power-configuration</condTypeRefId>
+        <enumeration>
+          <enumerationValue value="FUEL_CELL">
+            <valueDoc>
+              <simplePara>Hydrogen fuel cell power (primary flight power)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="BATTERY">
+            <valueDoc>
+              <simplePara>Battery power only (ground operations or emergency)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="EXTERNAL">
+            <valueDoc>
+              <simplePara>External GPU (Ground Power Unit) connected</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="SAF_BACKUP">
+            <valueDoc>
+              <simplePara>SAF backup generator (emergency only)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+        </enumeration>
+      </cond>
+
+      <!-- Condition 6: Recording Mode -->
+      <cond id="cond-recordingMode">
+        <name>Recording Mode</name>
+        <descr>
+          <simplePara>Data recording system operational mode (specific to ATA 31)</simplePara>
+        </descr>
+        <condTypeRefId>recording-configuration</condTypeRefId>
+        <enumeration>
+          <enumerationValue value="FULL">
+            <valueDoc>
+              <simplePara>Full recording mode - all parameters recorded</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="REDUCED">
+            <valueDoc>
+              <simplePara>Reduced recording mode - critical parameters only</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="MAINTENANCE">
+            <valueDoc>
+              <simplePara>Maintenance recording mode - extended diagnostic data</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="DISABLED">
+            <valueDoc>
+              <simplePara>Recording disabled (ground maintenance only)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+        </enumeration>
+      </cond>
+
+      <!-- Condition 7: Hydrogen System Status -->
+      <cond id="cond-hydrogenSystemStatus">
+        <name>Hydrogen System Status</name>
+        <descr>
+          <simplePara>Operational status of the hydrogen fuel system</simplePara>
+        </descr>
+        <condTypeRefId>hydrogen-configuration</condTypeRefId>
+        <enumeration>
+          <enumerationValue value="ACTIVE">
+            <valueDoc>
+              <simplePara>Hydrogen system active and fueled</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="STANDBY">
+            <valueDoc>
+              <simplePara>Hydrogen system on standby (fueled but not active)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+          <enumerationValue value="SAFED">
+            <valueDoc>
+              <simplePara>Hydrogen system safed (defueled, maintenance safe)</simplePara>
+            </valueDoc>
+          </enumerationValue>
+        </enumeration>
+      </cond>
+
+    </condCrossRefTable>
+  </content>
+
+</dmodule>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Product Cross-reference Table (PCT)
+  ATA 31-00-00 - Indicating/Recording - General
+  
+  This PCT defines product instances with real attribute values for AMPEL360AT
+  aircraft. It specifies MSN/Effectivity, installed options, configurations, etc.
+  
+  Referenced by the ACT (Applicability Cross-reference Table).
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/prodcrossreftable.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="P"
+                infoCode="00" infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Product Cross-reference Table (PCT)</techName>
+          <infoName>ATA 31-00-00 - Product Instances</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360AT Q100 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <reasonForUpdate>
+        <simplePara>Initial release of PCT for ATA 31-00-00</simplePara>
+      </reasonForUpdate>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <productCrossRefTable>
+      
+      <!-- Product Instance 1: Baseline Q100 -->
+      <product id="prod-baseline-001">
+        <productIdent>
+          <descrForPart>
+            <simplePara>AMPEL360AT Q100 - Baseline Configuration - MSN001</simplePara>
+          </descrForPart>
+        </productIdent>
+        <productType>Aircraft</productType>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-aircraftFamily</productAttributeIdent>
+          <productAttributeValue>Q100</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-variant</productAttributeIdent>
+          <productAttributeValue>BASELINE</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-configuration</productAttributeIdent>
+          <productAttributeValue>STANDARD</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-msn</productAttributeIdent>
+          <productAttributeValue>MSN001</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-softwareLoad</productAttributeIdent>
+          <productAttributeValue>SW-V1.0</productAttributeValue>
+        </assignedProductAttribute>
+      </product>
+
+      <!-- Product Instance 2: Baseline Q100 Extended Range -->
+      <product id="prod-baseline-002">
+        <productIdent>
+          <descrForPart>
+            <simplePara>AMPEL360AT Q100 - Baseline Configuration Extended Range - MSN002</simplePara>
+          </descrForPart>
+        </productIdent>
+        <productType>Aircraft</productType>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-aircraftFamily</productAttributeIdent>
+          <productAttributeValue>Q100</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-variant</productAttributeIdent>
+          <productAttributeValue>BASELINE</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-configuration</productAttributeIdent>
+          <productAttributeValue>EXTENDED</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-msn</productAttributeIdent>
+          <productAttributeValue>MSN002</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-softwareLoad</productAttributeIdent>
+          <productAttributeValue>SW-V1.0</productAttributeValue>
+        </assignedProductAttribute>
+      </product>
+
+      <!-- Product Instance 3: Gen2 Q100 -->
+      <product id="prod-gen2-003">
+        <productIdent>
+          <descrForPart>
+            <simplePara>AMPEL360AT Q100 - Gen2 Configuration - MSN003</simplePara>
+          </descrForPart>
+        </productIdent>
+        <productType>Aircraft</productType>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-aircraftFamily</productAttributeIdent>
+          <productAttributeValue>Q100</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-variant</productAttributeIdent>
+          <productAttributeValue>GEN2</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-configuration</productAttributeIdent>
+          <productAttributeValue>STANDARD</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-msn</productAttributeIdent>
+          <productAttributeValue>MSN003</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-softwareLoad</productAttributeIdent>
+          <productAttributeValue>SW-V2.0</productAttributeValue>
+        </assignedProductAttribute>
+      </product>
+
+      <!-- Product Instance 4: Gen2 Q100 Extended Range -->
+      <product id="prod-gen2-004">
+        <productIdent>
+          <descrForPart>
+            <simplePara>AMPEL360AT Q100 - Gen2 Configuration Extended Range - MSN004</simplePara>
+          </descrForPart>
+        </productIdent>
+        <productType>Aircraft</productType>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-aircraftFamily</productAttributeIdent>
+          <productAttributeValue>Q100</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-variant</productAttributeIdent>
+          <productAttributeValue>GEN2</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-configuration</productAttributeIdent>
+          <productAttributeValue>EXTENDED</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-msn</productAttributeIdent>
+          <productAttributeValue>MSN004</productAttributeValue>
+        </assignedProductAttribute>
+        <assignedProductAttribute>
+          <productAttributeIdent>attr-softwareLoad</productAttributeIdent>
+          <productAttributeValue>SW-V2.0</productAttributeValue>
+        </assignedProductAttribute>
+      </product>
+
+      <!-- Placeholder for Future Product Instances -->
+      <!-- Additional MSN entries can be added as aircraft are manufactured -->
+
+    </productCrossRefTable>
+  </content>
+
+</dmodule>

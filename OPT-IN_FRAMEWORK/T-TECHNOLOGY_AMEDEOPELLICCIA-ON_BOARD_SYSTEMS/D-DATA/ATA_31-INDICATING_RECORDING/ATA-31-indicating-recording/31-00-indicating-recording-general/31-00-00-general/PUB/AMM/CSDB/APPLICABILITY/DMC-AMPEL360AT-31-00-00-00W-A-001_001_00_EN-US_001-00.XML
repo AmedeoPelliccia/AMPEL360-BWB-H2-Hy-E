@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Applicability Cross-reference Table (ACT)
+  ATA 31-00-00 - Indicating/Recording - General
+  
+  This ACT serves as the central hub for applicability management in the AMM.
+  It declares product attributes and links to the PCT (Product Cross-reference Table)
+  and CCT (Conditions Cross-reference Table).
+  
+  All Data Modules in the AMM reference this ACT in their dmStatus section.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/appliccrossreftable.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="W"
+                infoCode="00" infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Applicability Cross-reference Table (ACT)</techName>
+          <infoName>ATA 31-00-00 - Product Attributes and Conditions</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360AT Q100 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <reasonForUpdate>
+        <simplePara>Initial release of ACT for ATA 31-00-00</simplePara>
+      </reasonForUpdate>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <applicCrossRefTable>
+      
+      <!-- Product Attributes Declaration -->
+      <productAttributeList>
+        
+        <productAttribute id="attr-aircraftFamily">
+          <name>Aircraft Family</name>
+          <descr>
+            <simplePara>Aircraft family designation (e.g., Q100)</simplePara>
+          </descr>
+          <valueDataType>string</valueDataType>
+          <enumeration>
+            <enumerationValue value="Q100">
+              <valueDoc>
+                <simplePara>AMPEL360 Q100 - 100 passenger BWB aircraft</simplePara>
+              </valueDoc>
+            </enumerationValue>
+          </enumeration>
+        </productAttribute>
+
+        <productAttribute id="attr-variant">
+          <name>Variant</name>
+          <descr>
+            <simplePara>Aircraft variant designation</simplePara>
+          </descr>
+          <valueDataType>string</valueDataType>
+          <enumeration>
+            <enumerationValue value="BASELINE">
+              <valueDoc>
+                <simplePara>Baseline configuration</simplePara>
+              </valueDoc>
+            </enumerationValue>
+            <enumerationValue value="GEN2">
+              <valueDoc>
+                <simplePara>Second generation configuration with enhanced systems</simplePara>
+              </valueDoc>
+            </enumerationValue>
+          </enumeration>
+        </productAttribute>
+
+        <productAttribute id="attr-configuration">
+          <name>Configuration</name>
+          <descr>
+            <simplePara>Installed configuration options</simplePara>
+          </descr>
+          <valueDataType>string</valueDataType>
+          <enumeration>
+            <enumerationValue value="STANDARD">
+              <valueDoc>
+                <simplePara>Standard configuration</simplePara>
+              </valueDoc>
+            </enumerationValue>
+            <enumerationValue value="EXTENDED">
+              <valueDoc>
+                <simplePara>Extended range configuration</simplePara>
+              </valueDoc>
+            </enumerationValue>
+          </enumeration>
+        </productAttribute>
+
+        <productAttribute id="attr-msn">
+          <name>Manufacturer Serial Number</name>
+          <descr>
+            <simplePara>Unique aircraft serial number</simplePara>
+          </descr>
+          <valueDataType>string</valueDataType>
+        </productAttribute>
+
+        <productAttribute id="attr-softwareLoad">
+          <name>Software Load</name>
+          <descr>
+            <simplePara>Software load version for system filtering</simplePara>
+          </descr>
+          <valueDataType>string</valueDataType>
+          <enumeration>
+            <enumerationValue value="SW-V1.0">
+              <valueDoc>
+                <simplePara>Software version 1.0</simplePara>
+              </valueDoc>
+            </enumerationValue>
+            <enumerationValue value="SW-V2.0">
+              <valueDoc>
+                <simplePara>Software version 2.0</simplePara>
+              </valueDoc>
+            </enumerationValue>
+          </enumeration>
+        </productAttribute>
+
+      </productAttributeList>
+
+      <!-- Reference to Product Cross-reference Table (PCT) -->
+      <prodCrossRefTableRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="P"
+                    infoCode="00" infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Product Cross-reference Table (PCT)</techName>
+              <infoName>ATA 31-00-00 - Product Instances</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </prodCrossRefTableRef>
+
+      <!-- Reference to Conditions Cross-reference Table (CCT) -->
+      <condCrossRefTableRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="Q"
+                    infoCode="00" infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Conditions Cross-reference Table (CCT)</techName>
+              <infoName>ATA 31-00-00 - Operational Conditions</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </condCrossRefTableRef>
+
+      <!-- Base Applicability (Default: ALL) -->
+      <applic id="appl-all">
+        <displayText>
+          <simplePara>All configurations when no specific filter applies</simplePara>
+        </displayText>
+        <assert applicPropertyIdent="ALL" applicPropertyType="prodattr" applicPropertyValues="ALL"/>
+      </applic>
+
+    </applicCrossRefTable>
+  </content>
+
+</dmodule>

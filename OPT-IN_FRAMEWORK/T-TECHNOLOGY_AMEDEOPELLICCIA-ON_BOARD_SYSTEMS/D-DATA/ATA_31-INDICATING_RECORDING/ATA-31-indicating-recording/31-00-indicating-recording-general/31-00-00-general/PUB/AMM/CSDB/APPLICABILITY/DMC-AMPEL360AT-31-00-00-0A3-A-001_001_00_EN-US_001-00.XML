@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Applicability Cross-reference Table Catalog (ACT Catalog)
+  ATA 31-00-00 - Indicating/Recording - General
+  
+  This ACT Catalog provides a catalog structure for managing multiple ACT/PCT/CCT
+  sets across different programs, variants, or partners. Currently defines a single
+  set for the baseline AMPEL360AT Q100 program.
+  
+  Optional module - some S1000D toolchains use this for multi-program scenarios.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/appliccrossreftable.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="3"
+                infoCode="0A" infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Applicability Cross-reference Table Catalog</techName>
+          <infoName>ATA 31-00-00 - ACT/PCT/CCT Set Management</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360AT Q100 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <reasonForUpdate>
+        <simplePara>Initial release of ACT Catalog for ATA 31-00-00</simplePara>
+      </reasonForUpdate>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <applicCrossRefTableCatalog>
+      
+      <catalogIdent>
+        <name>AMPEL360AT ATA 31-00-00 ACT Catalog</name>
+        <descr>
+          <simplePara>
+            Catalog of Applicability Cross-reference Table sets for AMPEL360AT
+            Indicating/Recording Systems (ATA 31-00-00). Currently manages a single
+            baseline set; additional sets can be added for future programs, variants,
+            or partner-specific configurations.
+          </simplePara>
+        </descr>
+      </catalogIdent>
+
+      <!-- ACT/PCT/CCT Set 1: Baseline AMPEL360AT Q100 -->
+      <applicCrossRefTableSet id="actset-baseline-q100">
+        <setIdent>
+          <name>AMPEL360AT Q100 Baseline Set</name>
+          <descr>
+            <simplePara>
+              Primary ACT/PCT/CCT set for AMPEL360AT Q100 aircraft family.
+              Covers all baseline and Gen2 variants with standard and extended
+              configurations.
+            </simplePara>
+          </descr>
+        </setIdent>
+        
+        <program>
+          <name>AMPEL360AT Q100</name>
+          <descr>
+            <simplePara>
+              100-passenger blended-wing-body aircraft with hydrogen-electric propulsion
+            </simplePara>
+          </descr>
+        </program>
+
+        <applicCrossRefTableRef>
+          <dmRef>
+            <dmRefIdent>
+              <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                      systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                      assyCode="00" disassyCode="00" disassyCodeVariant="W"
+                      infoCode="00" infoCodeVariant="A" itemLocationCode="A"/>
+            </dmRefIdent>
+            <dmRefAddressItems>
+              <dmTitle>
+                <techName>Applicability Cross-reference Table (ACT)</techName>
+                <infoName>ATA 31-00-00 - Product Attributes and Conditions</infoName>
+              </dmTitle>
+            </dmRefAddressItems>
+          </dmRef>
+        </applicCrossRefTableRef>
+
+        <applicability>
+          <assert applicPropertyIdent="attr-aircraftFamily" 
+                  applicPropertyType="prodattr" 
+                  applicPropertyValues="Q100"/>
+        </applicability>
+
+        <effectivity>
+          <serialNumberRange>
+            <serialNumberStart>MSN001</serialNumberStart>
+            <serialNumberEnd>MSN999</serialNumberEnd>
+          </serialNumberRange>
+        </effectivity>
+
+      </applicCrossRefTableSet>
+
+      <!-- Placeholder for Future Sets -->
+      <!-- 
+      Future ACT/PCT/CCT sets can be added here for:
+      - Different aircraft families (e.g., Q150, Q200)
+      - Partner-specific configurations
+      - Special mission variants
+      - Technology demonstrators
+      -->
+
+      <defaultSet>
+        <applicCrossRefTableSetRef>
+          <applicCrossRefTableSetRefIdent>actset-baseline-q100</applicCrossRefTableSetRefIdent>
+        </applicCrossRefTableSetRef>
+      </defaultSet>
+
+    </applicCrossRefTableCatalog>
+  </content>
+
+</dmodule>
