@@ -12,7 +12,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
   <identAndStatusSection>
     <pmAddress>
       <pmIdent>
-        <pmCode modelIdentCode="AMPEL360" pmIssuer="AMPEL" pmNumber="00020" pmVolume="31-00"/>
+        <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00020" pmVolume="31-00"/>
         <language languageIsoCode="en" countryIsoCode="US"/>
         <issueInfo issueNumber="001" inWork="00"/>
       </pmIdent>
@@ -37,7 +37,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
       <brexDmRef>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="022" infoCodeVariant="A" itemLocationCode="A"/>
@@ -67,7 +67,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Flight Deck Indications Philosophy</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="030" infoCodeVariant="A" itemLocationCode="A"/>
@@ -88,7 +88,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Recording vs Indicating Separation</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="031" infoCodeVariant="A" itemLocationCode="A"/>
@@ -109,7 +109,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Failure Annunciation Logic</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="032" infoCodeVariant="A" itemLocationCode="A"/>
@@ -130,7 +130,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Redundancy and Data Integrity</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="033" infoCodeVariant="A" itemLocationCode="A"/>

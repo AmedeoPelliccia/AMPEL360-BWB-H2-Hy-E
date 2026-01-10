@@ -12,7 +12,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
   <identAndStatusSection>
     <pmAddress>
       <pmIdent>
-        <pmCode modelIdentCode="AMPEL360" pmIssuer="AMPEL" pmNumber="00030" pmVolume="31-00"/>
+        <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00030" pmVolume="31-00"/>
         <language languageIsoCode="en" countryIsoCode="US"/>
         <issueInfo issueNumber="001" inWork="00"/>
       </pmIdent>
@@ -37,7 +37,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
       <brexDmRef>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="022" infoCodeVariant="A" itemLocationCode="A"/>
@@ -67,7 +67,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Built-In Test (BIT) Overview</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="050" infoCodeVariant="A" itemLocationCode="A"/>
@@ -88,7 +88,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Data Validity Checks</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="051" infoCodeVariant="A" itemLocationCode="A"/>
@@ -109,7 +109,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Fault Reporting Principles</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="052" infoCodeVariant="A" itemLocationCode="A"/>
@@ -130,7 +130,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>References to Task-Level Data Modules</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="053" infoCodeVariant="A" itemLocationCode="A"/>

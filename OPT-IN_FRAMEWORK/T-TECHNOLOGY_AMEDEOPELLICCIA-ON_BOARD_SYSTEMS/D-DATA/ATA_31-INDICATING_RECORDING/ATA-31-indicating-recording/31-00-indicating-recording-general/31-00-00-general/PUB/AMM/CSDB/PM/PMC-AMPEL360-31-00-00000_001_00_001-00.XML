@@ -12,7 +12,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
   <identAndStatusSection>
     <pmAddress>
       <pmIdent>
-        <pmCode modelIdentCode="AMPEL360" pmIssuer="AMPEL" pmNumber="00000" pmVolume="31-00"/>
+        <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00000" pmVolume="31-00"/>
         <language languageIsoCode="en" countryIsoCode="US"/>
         <issueInfo issueNumber="001" inWork="00"/>
       </pmIdent>
@@ -37,7 +37,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
       <brexDmRef>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="022" infoCodeVariant="A" itemLocationCode="A"/>
@@ -67,7 +67,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>ATA 31 General</pmEntryTitle>
         <pmRef>
           <pmRefIdent>
-            <pmCode modelIdentCode="AMPEL360" pmIssuer="AMPEL" pmNumber="00010" pmVolume="31-00"/>
+            <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00010" pmVolume="31-00"/>
             <issueInfo issueNumber="001" inWork="00"/>
             <language languageIsoCode="en" countryIsoCode="US"/>
           </pmRefIdent>
@@ -82,7 +82,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>System Description</pmEntryTitle>
         <pmRef>
           <pmRefIdent>
-            <pmCode modelIdentCode="AMPEL360" pmIssuer="AMPEL" pmNumber="00020" pmVolume="31-00"/>
+            <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00020" pmVolume="31-00"/>
             <issueInfo issueNumber="001" inWork="00"/>
             <language languageIsoCode="en" countryIsoCode="US"/>
           </pmRefIdent>
@@ -97,7 +97,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Controls and Indications</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="040" infoCodeVariant="A" itemLocationCode="A"/>
@@ -118,7 +118,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Built-In Test &amp; Monitoring</pmEntryTitle>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" 
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
                     systemCode="31" subSystemCode="0" subSubSystemCode="0"
                     assyCode="00" disassyCode="00" disassyCodeVariant="A"
                     infoCode="050" infoCodeVariant="A" itemLocationCode="A"/>
@@ -139,7 +139,7 @@ Standard: ATA iSpec 2200 + S1000D Issue 5.0
         <pmEntryTitle>Maintenance &amp; Troubleshooting</pmEntryTitle>
         <pmRef>
           <pmRefIdent>
-            <pmCode modelIdentCode="AMPEL360" pmIssuer="AMPEL" pmNumber="00030" pmVolume="31-00"/>
+            <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00030" pmVolume="31-00"/>
             <issueInfo issueNumber="001" inWork="00"/>
             <language languageIsoCode="en" countryIsoCode="US"/>
           </pmRefIdent>
