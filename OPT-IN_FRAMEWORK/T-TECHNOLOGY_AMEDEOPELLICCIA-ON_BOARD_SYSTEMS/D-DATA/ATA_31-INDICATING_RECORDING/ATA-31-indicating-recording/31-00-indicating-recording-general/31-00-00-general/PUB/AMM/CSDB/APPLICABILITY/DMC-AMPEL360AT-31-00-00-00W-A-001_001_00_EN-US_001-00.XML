@@ -206,7 +206,6 @@
         <displayText>
           <simplePara>All configurations when no specific filter applies</simplePara>
         </displayText>
-        <assert applicPropertyIdent="ALL" applicPropertyType="prodattr" applicPropertyValues="ALL"/>
       </applic>
 
     </applicCrossRefTable>
