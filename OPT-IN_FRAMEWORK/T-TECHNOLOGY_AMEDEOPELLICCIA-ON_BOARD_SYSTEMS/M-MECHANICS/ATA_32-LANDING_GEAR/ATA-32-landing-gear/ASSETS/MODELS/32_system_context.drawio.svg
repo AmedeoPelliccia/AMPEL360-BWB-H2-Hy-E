@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia -->
+<!-- Placeholder: ATA 32 Landing Gear System Context Diagram -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect fill="#f5f5f5" width="800" height="600"/>
+  <rect fill="#e0e0e0" x="50" y="50" width="700" height="500" rx="10"/>
+  <text x="400" y="100" text-anchor="middle" font-size="24" font-family="Arial" fill="#333">ATA 32 — Landing Gear System Context</text>
+  <text x="400" y="150" text-anchor="middle" font-size="14" font-family="Arial" fill="#666">(Placeholder — Replace with actual diagram)</text>
+  <rect fill="#fff" stroke="#333" x="300" y="200" width="200" height="100" rx="5"/>
+  <text x="400" y="255" text-anchor="middle" font-size="16" font-family="Arial" fill="#333">ATA 32</text>
+  <text x="400" y="280" text-anchor="middle" font-size="12" font-family="Arial" fill="#666">Landing Gear</text>
+  <rect fill="#e3f2fd" stroke="#1976d2" x="50" y="350" width="120" height="60" rx="5"/>
+  <text x="110" y="385" text-anchor="middle" font-size="10" font-family="Arial" fill="#1976d2">ATA 24</text>
+  <rect fill="#e8f5e9" stroke="#388e3c" x="200" y="350" width="120" height="60" rx="5"/>
+  <text x="260" y="385" text-anchor="middle" font-size="10" font-family="Arial" fill="#388e3c">ATA 29</text>
+  <rect fill="#fff3e0" stroke="#f57c00" x="480" y="350" width="120" height="60" rx="5"/>
+  <text x="540" y="385" text-anchor="middle" font-size="10" font-family="Arial" fill="#f57c00">ATA 31</text>
+  <rect fill="#fce4ec" stroke="#c2185b" x="630" y="350" width="120" height="60" rx="5"/>
+  <text x="690" y="385" text-anchor="middle" font-size="10" font-family="Arial" fill="#c2185b">ATA 45</text>
+  <text x="400" y="500" text-anchor="middle" font-size="10" font-family="Arial" fill="#999">Option B: Distributed Electro-Hydraulic (EHPU/EHA/EHB)</text>
+</svg>
