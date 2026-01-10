@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Business Rules Exchange (BREX) Data Module
+  Graphics & ICN Usage BREX for ATA 31-00-00 AMM Data Modules
+  
+  This BREX defines rules for ICN (Illustration Control Number) usage and
+  SVG graphics in ATA 31 (Indicating/Recording) AMM data modules.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="E"
+                infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Business Rules Exchange (BREX) - Graphics and ICN</techName>
+          <infoName>ATA 31-00-00 - ICN Usage and SVG Rules</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All ATA 31 AMM Data Modules</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Graphics and ICN Usage BREX</title>
+        <para>
+          This BREX defines rules for ICN (Illustration Control Number) management and 
+          SVG graphics usage in ATA 31 (Indicating/Recording) AMM data modules. It ensures 
+          consistent, reusable, and maintainable graphics across the documentation.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Referenced ICNs Only</title>
+        <para>
+          Rule: All graphics must be referenced via ICN, not embedded inline.
+        </para>
+        <para>
+          REQUIRED approach:
+        </para>
+        <para>
+          - Create ICN file in ../ICN/ directory
+        </para>
+        <para>
+          - Use &lt;graphic&gt; element with @infoEntityIdent to reference ICN
+        </para>
+        <para>
+          - Maintain ICN metadata in separate file
+        </para>
+        <para>
+          PROHIBITED approach:
+        </para>
+        <para>
+          - Inline SVG or raster graphics within DM content
+        </para>
+        <para>
+          - Base64-encoded graphics in XML
+        </para>
+        <para>
+          - Direct file path references without ICN management
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ICN Naming Convention</title>
+        <para>
+          All ICN files must follow this naming pattern:
+        </para>
+        <para>
+          ICN-AMPEL360AT-31-[subsystem]-[component]-[view]-[sequence]_[issue]-[inwork].[format]
+        </para>
+        <para>
+          Example: ICN-AMPEL360AT-31-00-00-FDR-LOCATION-001_001-00.SVG
+        </para>
+        <para>
+          Components:
+        </para>
+        <para>
+          - [subsystem]: Two-digit ATA subsystem (00, 10, 20, 30, etc.)
+        </para>
+        <para>
+          - [component]: Component abbreviation (FDR, CVR, PFD, ND, EICAS, etc.)
+        </para>
+        <para>
+          - [view]: View type (LOCATION, DETAIL, INSTALL, REMOVE, SCHEMATIC, etc.)
+        </para>
+        <para>
+          - [sequence]: Three-digit sequence number (001, 002, 003, etc.)
+        </para>
+        <para>
+          - [issue]: Issue number (001, 002, etc.)
+        </para>
+        <para>
+          - [inwork]: In-work number (00, 01, etc.)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ICN Alignment with DM Subject</title>
+        <para>
+          Rule: ICN naming must align with the DM that uses it.
+        </para>
+        <para>
+          If a DM covers "31-30-10 Flight Data Recorder Installation", its ICNs must:
+        </para>
+        <para>
+          - Include "31-30" in the ICN name
+        </para>
+        <para>
+          - Include "FDR" or equivalent component identifier
+        </para>
+        <para>
+          - Reflect the procedure type (INSTALL, REMOVE, TEST, etc.)
+        </para>
+        <para>
+          This ensures ICN reusability and prevents naming conflicts.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>No Illustration-Only Data Modules</title>
+        <para>
+          Rule: Data modules must not exist solely to contain illustrations.
+        </para>
+        <para>
+          PROHIBITED pattern:
+        </para>
+        <para>
+          - Creating a DM with only graphics and no procedural or descriptive content
+        </para>
+        <para>
+          REQUIRED pattern:
+        </para>
+        <para>
+          - ICNs stored in ICN/ directory
+        </para>
+        <para>
+          - Referenced from procedural or descriptive DMs
+        </para>
+        <para>
+          - DMs contain substantive technical content, not just graphic callouts
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>SVG Scope: Explanatory, Not Design-Defining</title>
+        <para>
+          Rule: SVG graphics are for explanation and maintenance guidance only.
+        </para>
+        <para>
+          PERMITTED uses:
+        </para>
+        <para>
+          - Location diagrams showing where equipment is installed
+        </para>
+        <para>
+          - Exploded views for disassembly/assembly procedures
+        </para>
+        <para>
+          - Connector pinout diagrams
+        </para>
+        <para>
+          - Display symbology examples
+        </para>
+        <para>
+          - Functional block diagrams (high-level)
+        </para>
+        <para>
+          PROHIBITED uses:
+        </para>
+        <para>
+          - Detailed engineering drawings (use CAD files and link via ICN metadata)
+        </para>
+        <para>
+          - Wiring harness routing (use ATA 20 drawings)
+        </para>
+        <para>
+          - Structural load paths (use ATA 53 drawings)
+        </para>
+        <para>
+          - Certification test setups (use test procedure documents)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>SVG Technical Requirements</title>
+        <para>
+          All SVG graphics must meet these technical standards:
+        </para>
+        <para>
+          - SVG 1.1 or SVG 2.0 format
+        </para>
+        <para>
+          - Viewbox attribute defined for proper scaling
+        </para>
+        <para>
+          - Layer structure for complex illustrations (background, parts, callouts, hotspots)
+        </para>
+        <para>
+          - Embedded fonts or text converted to paths for portability
+        </para>
+        <para>
+          - Maximum file size: 5 MB per ICN
+        </para>
+        <para>
+          - Color palette: AMPEL360 standard colors or grayscale for printing
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Hotspot and Interactive Elements</title>
+        <para>
+          For IETP (Interactive Electronic Technical Publication) use:
+        </para>
+        <para>
+          - Hotspots must use standard S1000D hotspot markup
+        </para>
+        <para>
+          - Each hotspot must link to a valid DM or internalRef
+        </para>
+        <para>
+          - Hotspot tooltips must provide meaningful preview text
+        </para>
+        <para>
+          - Interactive elements must degrade gracefully for print output
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Graphic Callouts and References</title>
+        <para>
+          When referencing graphics in text:
+        </para>
+        <para>
+          - Use proper S1000D &lt;graphic&gt; element
+        </para>
+        <para>
+          - Include descriptive caption in &lt;title&gt;
+        </para>
+        <para>
+          - Use callout numbers or letters consistently
+        </para>
+        <para>
+          - Provide legend/key for symbols when first used
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ICN Reuse and Version Control</title>
+        <para>
+          Rule: Maximize ICN reuse across data modules.
+        </para>
+        <para>
+          When multiple DMs need the same illustration:
+        </para>
+        <para>
+          - Use the same ICN file (do not duplicate)
+        </para>
+        <para>
+          - Update ICN metadata to list all referencing DMs
+        </para>
+        <para>
+          - When ICN is updated, review all referencing DMs for impact
+        </para>
+        <para>
+          Version control:
+        </para>
+        <para>
+          - ICN issue number must increment with changes
+        </para>
+        <para>
+          - DMs must reference correct ICN issue
+        </para>
+        <para>
+          - Maintain change history in ICN metadata
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Accessibility Requirements</title>
+        <para>
+          All graphics must be accessible:
+        </para>
+        <para>
+          - Provide alt text for screen readers
+        </para>
+        <para>
+          - Use sufficient color contrast (WCAG 2.1 AA minimum)
+        </para>
+        <para>
+          - Avoid relying solely on color to convey information
+        </para>
+        <para>
+          - Use patterns or labels in addition to colors
+        </para>
+        <para>
+          - Ensure graphics are legible when printed in grayscale
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>File Format Restrictions</title>
+        <para>
+          PERMITTED formats for ICN:
+        </para>
+        <para>
+          - SVG (preferred for diagrams and technical illustrations)
+        </para>
+        <para>
+          - PNG (for photographs and raster images, 300 DPI minimum)
+        </para>
+        <para>
+          - JPEG (for photographs only, high quality setting)
+        </para>
+        <para>
+          PROHIBITED formats:
+        </para>
+        <para>
+          - BMP (inefficient file size)
+        </para>
+        <para>
+          - GIF (limited color palette)
+        </para>
+        <para>
+          - TIFF (not web-compatible)
+        </para>
+        <para>
+          - Proprietary formats (AI, PSD, CDR, etc.)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>
+          Model: AMPEL360AT
+        </para>
+        <para>
+          Project: AMPEL360-AIR-T
+        </para>
+        <para>
+          ATA Chapter: 31-00-00
+        </para>
+        <para>
+          BREX Type: Graphics and ICN Usage (022E)
+        </para>
+        <para>
+          Standard: S1000D Issue 5.0
+        </para>
+        <para>
+          Status: Active
+        </para>
+        <para>
+          Inherits from: Master BREX 022A, Structural BREX 022B
+        </para>
+        <para>
+          Generated with: AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+        </para>
+        <para>
+          Last Updated: 2026-01-10
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

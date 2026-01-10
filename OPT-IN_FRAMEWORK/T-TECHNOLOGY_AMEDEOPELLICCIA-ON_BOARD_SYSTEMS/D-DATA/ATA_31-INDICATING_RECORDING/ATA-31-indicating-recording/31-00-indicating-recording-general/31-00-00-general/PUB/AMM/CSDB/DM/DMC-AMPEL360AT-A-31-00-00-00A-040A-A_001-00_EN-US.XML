@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - Indicating and Recording System Overview
+DMC: AMPEL360AT-A-31-00-00-00A-040A-A_001-00_EN-US
+Info Code: 040A - General Description and Purpose
+ATA Chapter: 31-00-00 Indicating and Recording General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="31"
+                subSystemCode="00"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="040"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>General Description and Purpose</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 Q100 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT"
+                    systemDiffCode="A"
+                    systemCode="00"
+                    subSystemCode="00"
+                    subSubSystemCode="00"
+                    assyCode="00"
+                    disassyCode="00"
+                    disassyCodeVariant="A"
+                    infoCode="022"
+                    infoCodeVariant="A"
+                    itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Public Technical Documentation</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <description>
+      <levelledPara>
+        <title>Introduction</title>
+        <para>The AMPEL360 Q100 Indicating and Recording System (ATA 31) provides comprehensive flight data acquisition, crew alerting, system status indication, and data recording capabilities. This system is essential for flight operations, maintenance diagnostics, accident investigation, and continuous operational improvement.</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>System Purpose and Scope</title>
+        <para>The Indicating and Recording System serves multiple critical functions:</para>
+        
+        <levelledPara>
+          <title>Flight Crew Interface</title>
+          <para>Provides real-time indication of aircraft system status, alerts, warnings, and cautions through integrated display units including Primary Flight Displays (PFD), Navigation Displays (ND), and Multifunction Displays (MFD). The system implements a hierarchical alert prioritization scheme consistent with CS-25.1322 and related certification requirements.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Data Recording</title>
+          <para>Records flight parameters, system events, and crew actions to support:</para>
+          <para>
+            - Flight Data Recorder (FDR) compliance with CS-25.1459 and ED-112A<br/>
+            - Cockpit Voice Recorder (CVR) compliance with CS-25.1457<br/>
+            - Quick Access Recorder (QAR) for Flight Operations Quality Assurance (FOQA)<br/>
+            - Aircraft Condition Monitoring System (ACMS) for predictive maintenance
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>System Monitoring and Health Management</title>
+          <para>Continuously monitors aircraft systems, collecting data from sensors, line-replaceable units (LRUs), and subsystems across all ATA chapters. Data is processed through Built-In Test Equipment (BITE) logic, enabling:</para>
+          <para>
+            - Real-time fault detection and isolation<br/>
+            - Trending analysis for predictive maintenance<br/>
+            - Automatic reporting to ground maintenance systems<br/>
+            - Integration with the Aircraft Digital Product Passport (ATA 95)
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>System Architecture Overview</title>
+        <para>The Indicating and Recording System employs a distributed, highly integrated architecture:</para>
+        
+        <levelledPara>
+          <title>Display Management</title>
+          <para>Central Display System (CDS) manages multiple display units with source-switching and reversion capabilities. Display units are ARINC 661-compliant with local rendering and remote data sourcing from display management computers.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Central Warning and Alerting</title>
+          <para>Crew Alerting System (CAS) processes alerts from all aircraft systems, applying priority logic, filtering, and suppression rules. Alerts are presented through visual messages (CAS/ECAM/EICAS), master warning/caution lights, and aural warnings.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Data Acquisition and Recording</title>
+          <para>Data Acquisition Units (DAU) collect analog and discrete signals, converting them to digital format for distribution via ARINC 429, AFDX (ARINC 664), and other data buses. Recorded data flows to crash-protected recorders and non-volatile storage for maintenance access.</para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Computational Hosting</title>
+          <para>Core indicating and recording functions are hosted on Integrated Modular Avionics (IMA) platforms (ATA 42), providing partitioned execution environments compliant with DO-178C DAL A/B requirements and ARINC 653 resource management.</para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Integration with Aircraft Systems</title>
+        <para>The Indicating and Recording System interfaces extensively with other aircraft systems:</para>
+        <para>
+          - Flight Control System (ATA 22) - autopilot status, control surface positions<br/>
+          - Navigation Systems (ATA 34) - position, altitude, airspeed<br/>
+          - Electrical System (ATA 24) - power distribution monitoring<br/>
+          - Hydraulic System (ATA 29) - pressure, temperature, flow<br/>
+          - Propulsion Systems (ATA 71-80) - fuel cell and electric motor parameters<br/>
+          - Environmental Control (ATA 21) - cabin pressure, temperature<br/>
+          - IMA Core (ATA 42) - computational hosting and data routing<br/>
+          - Maintenance System (ATA 45) - fault reporting and health trends<br/>
+          - Digital Product Passport (ATA 95) - lifecycle data integration
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Operational Philosophy</title>
+        <para>The system is designed following these principles:</para>
+        <para>
+          - Single Source of Truth (SSOT): Data is acquired once at the source and distributed digitally<br/>
+          - Fault Tolerance: Redundant paths for critical indications and recording<br/>
+          - Graceful Degradation: System continues operation with reduced capability if failures occur<br/>
+          - Open Architecture: Modular design supports technology insertion and upgrades<br/>
+          - Cybersecurity: Data integrity, authentication, and tamper-evidence for recorded data<br/>
+          - Human-Centered Design: Display symbology, color schemes, and alert prioritization optimize crew workload
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Regulatory Compliance</title>
+        <para>The Indicating and Recording System is designed to comply with:</para>
+        <para>
+          - CS-25 / FAR Part 25 certification specifications<br/>
+          - CS-25.1322 (Flight crew alerting)<br/>
+          - CS-25.1457 (Cockpit voice recorders)<br/>
+          - CS-25.1459 (Flight data recorders)<br/>
+          - DO-178C (Software considerations in airborne systems)<br/>
+          - DO-254 (Hardware considerations in airborne systems)<br/>
+          - ED-112A (Crash Protected Airborne Recorder Systems)<br/>
+          - ARINC 429, ARINC 661, ARINC 664 (Data bus and display standards)<br/>
+          - DO-326A / ED-202A (Cybersecurity)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Related Documentation</title>
+        <para>This data module is part of a comprehensive documentation set:</para>
+        <para>
+          - DMC-AMPEL360-31-00-00-040B: System Architecture, Interfaces, and Data Flows<br/>
+          - DMC-AMPEL360-31-00-00-050A: Safety Precautions and Operational Limitations<br/>
+          - DMC-AMPEL360-31-00-00-520A: Built-In Test and System Test Procedures<br/>
+          - DMC-AMPEL360-31-00-00-520B: Calibration and Functional Check Procedures<br/>
+          - DMC-AMPEL360-31-00-00-720A: Scheduled Maintenance and Inspection Requirements<br/>
+          - DMC-AMPEL360-31-00-00-730A: Fault Isolation and Troubleshooting<br/>
+          - DMC-AMPEL360-31-00-00-740A: Removal and Installation Procedures<br/>
+          - DMC-AMPEL360-31-00-00-910A: Data Recording, Storage, and Retrieval Logic<br/>
+          - DMC-AMPEL360-31-00-00-940A: Software Loading, Configuration, and Data Integrity Checks
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</para>
+        <para>Status: DRAFT - Subject to technical review and certification authority approval.</para>
+        <para>Issue: 001-00 | Date: 2026-01-10</para>
+      </levelledPara>
+    </description>
+  </content>
+  
+</dmodule>
