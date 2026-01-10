@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- 
+  ATA 29 Interfaces - ATA 24 (Electrical), ATA 26 (Fire Protection), ATA 31 (Indicating)
+  Placeholder for diagram showing hydraulic power interfaces with electrical, fire protection, and indicating systems.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 14px; fill: #666; }
+      .box { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .box-interface { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; }
+      .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; }
+      .arrow { stroke: #333; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <text x="400" y="40" text-anchor="middle" class="title">ATA 29 Interfaces</text>
+  <text x="400" y="60" text-anchor="middle" class="subtitle">AMPEL360AT - Interface with ATA 24, ATA 26, ATA 31</text>
+  
+  <!-- ATA 29 Central Box -->
+  <rect x="300" y="250" width="200" height="100" class="box" rx="10"/>
+  <text x="400" y="300" text-anchor="middle" class="label">ATA 29</text>
+  <text x="400" y="320" text-anchor="middle" class="label">HYDRAULIC POWER</text>
+  
+  <!-- ATA 24 Box -->
+  <rect x="50" y="100" width="180" height="80" class="box-interface" rx="10"/>
+  <text x="140" y="140" text-anchor="middle" class="label">ATA 24</text>
+  <text x="140" y="160" text-anchor="middle" class="label">ELECTRICAL POWER</text>
+  
+  <!-- ATA 26 Box -->
+  <rect x="570" y="100" width="180" height="80" class="box-interface" rx="10"/>
+  <text x="660" y="140" text-anchor="middle" class="label">ATA 26</text>
+  <text x="660" y="160" text-anchor="middle" class="label">FIRE PROTECTION</text>
+  
+  <!-- ATA 31 Box -->
+  <rect x="300" y="450" width="200" height="80" class="box-interface" rx="10"/>
+  <text x="400" y="490" text-anchor="middle" class="label">ATA 31</text>
+  <text x="400" y="510" text-anchor="middle" class="label">INDICATING/RECORDING</text>
+  
+  <!-- Connection lines -->
+  <line x1="230" y1="180" x2="300" y2="250" class="arrow"/>
+  <line x1="570" y1="180" x2="500" y2="250" class="arrow"/>
+  <line x1="400" y1="350" x2="400" y2="450" class="arrow"/>
+  
+  <!-- Placeholder note -->
+  <text x="400" y="570" text-anchor="middle" class="subtitle">Placeholder - To be replaced with detailed interfaces diagram</text>
+</svg>
