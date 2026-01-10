@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  DML: Software & Configuration Data Module List for ATA 31-00-00
+  Purpose: Controlled exposure of software actions (no authority leakage)
+  Standard: S1000D Issue 5.0
+  Model: AMPEL360AT
+  ATA: 31-00-00 - Indicating & Recording, General
+  Publication: AMM
+  
+  This DML contains references to software and configuration Data Modules (DMs) for:
+  - Software loading
+  - Configuration data handling
+  - Post-load verification
+  
+  Important: No binary ownership, no parameter definition, procedure-only
+  Info code: 940A
+  
+  Document Control:
+  - Version: 001-00
+  - Status: Draft
+  - Language: EN-US
+  - Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+  - Date: 2026-01-10
+-->
+<dml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/dml.xsd">
+  
+  <identAndStatusSection>
+    <dmlAddress>
+      <dmlIdent>
+        <dmlCode modelIdentCode="AMPEL360AT" senderIdent="AMPEL" dmlType="l" yearOfDataIssue="2026" seqNumber="00005"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+      </dmlIdent>
+      <dmlAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+      </dmlAddressItems>
+    </dmlAddress>
+    <dmlStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applic>
+        <displayText>
+          <simplePara>Applicable to: AMPEL360 Q100 - All aircraft</simplePara>
+        </displayText>
+      </applic>
+      <remarks>
+        <simplePara>Software and Configuration DML for ATA 31-00-00</simplePara>
+        <simplePara>Contains software loading and configuration procedures only</simplePara>
+        <simplePara>No binary ownership or parameter definitions</simplePara>
+      </remarks>
+    </dmlStatus>
+  </identAndStatusSection>
+  
+  <dmlContent>
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="940" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Display Unit Software Loading Procedure</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>Procedure for loading software into display units</simplePara>
+      </remarks>
+    </dmlEntry>
+    
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="01" disassyCodeVariant="A" infoCode="940" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Configuration Data Management Procedure</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>Procedure for managing configuration data</simplePara>
+      </remarks>
+    </dmlEntry>
+    
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="02" disassyCodeVariant="A" infoCode="940" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Post-Load Verification and Testing</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>Verification procedure after software loading</simplePara>
+      </remarks>
+    </dmlEntry>
+    
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="03" disassyCodeVariant="A" infoCode="940" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Software Version Verification and Documentation</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>Procedure for verifying and documenting software versions</simplePara>
+      </remarks>
+    </dmlEntry>
+    
+  </dmlContent>
+  
+</dml>

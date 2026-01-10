@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-DEFINITION-INDICATIONS
+  Type: Definitions
+  Description: Standard terminology for indications, alerts, and messages
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: DEF
+  - Subtype: INDICATIONS
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-520A (Maintenance Tasks)
+  - DMC-...-730A (Fault Isolation)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="def" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <definitionRepository>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D001"/>
+        <definitionTerm>Indication</definitionTerm>
+        <definitionContent>
+          <para>A visual or aural presentation of system status, parameter values, or operational data to the flight crew. Indications are continuously or periodically displayed and do not require immediate crew action.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D002"/>
+        <definitionTerm>Alert</definitionTerm>
+        <definitionContent>
+          <para>A notification to the flight crew that a system parameter has exceeded normal limits or a system fault has been detected. Alerts are classified as warnings, cautions, or advisories based on severity and required crew response time.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D003"/>
+        <definitionTerm>Message</definitionTerm>
+        <definitionContent>
+          <para>A text-based notification displayed on a multifunction display or Engine Indicating and Crew Alerting System (EICAS) screen. Messages provide detailed information about system status, alerts, or crew procedures.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D004"/>
+        <definitionTerm>Warning</definitionTerm>
+        <definitionContent>
+          <para>The highest level alert requiring immediate crew awareness and action. Warnings indicate conditions that could result in catastrophic failure, loss of aircraft control, or immediate danger to occupants. Typically displayed in RED with aural alert.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D005"/>
+        <definitionTerm>Caution</definitionTerm>
+        <definitionContent>
+          <para>A medium-level alert requiring prompt crew awareness and action. Cautions indicate abnormal conditions that could degrade aircraft performance or result in system failure if not addressed. Typically displayed in AMBER/YELLOW with aural chime.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D006"/>
+        <definitionTerm>Advisory</definitionTerm>
+        <definitionContent>
+          <para>A low-level alert requiring crew awareness but not immediate action. Advisories provide information about system status changes or minor abnormalities. Typically displayed in CYAN or WHITE with no aural alert.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D007"/>
+        <definitionTerm>Master Caution</definitionTerm>
+        <definitionContent>
+          <para>A centralized annunciation that one or more caution-level alerts are active. The master caution light illuminates AMBER and is located in a prominent position for immediate crew visibility. Pressing the master caution light acknowledges the alert.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D008"/>
+        <definitionTerm>Master Warning</definitionTerm>
+        <definitionContent>
+          <para>A centralized annunciation that one or more warning-level alerts are active. The master warning light illuminates RED and is accompanied by continuous aural alert until acknowledged by the crew.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D009"/>
+        <definitionTerm>Primary Flight Display (PFD)</definitionTerm>
+        <definitionContent>
+          <para>An electronic display that presents essential flight information including attitude, airspeed, altitude, heading, vertical speed, and flight director guidance. The PFD is the primary instrument for aircraft control.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D010"/>
+        <definitionTerm>Multifunction Display (MFD)</definitionTerm>
+        <definitionContent>
+          <para>An electronic display that presents navigation, system synoptic, engine parameters, and other secondary flight information. MFDs are configurable to show different pages based on flight phase and crew selection.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D011"/>
+        <definitionTerm>Engine Indicating and Crew Alerting System (EICAS)</definitionTerm>
+        <definitionContent>
+          <para>An integrated system that displays engine parameters, system status indications, and crew alerting messages. EICAS consolidates alerts from multiple aircraft systems into a prioritized message list.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D012"/>
+        <definitionTerm>Electronic Centralized Aircraft Monitor (ECAM)</definitionTerm>
+        <definitionContent>
+          <para>An integrated monitoring and alerting system similar to EICAS, typically used in Airbus aircraft. ECAM provides system diagrams, corrective actions, and status information.</para>
+        </definitionContent>
+      </definitionSpec>
+    </definitionRepository>
+  </commonRepositoryContent>
+</commonRepository>

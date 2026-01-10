@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-DEFINITION-BIT-STATUS
+  Type: Definitions
+  Description: Built-In Test (BIT) status definitions and terminology
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: DEF
+  - Subtype: BIT-STATUS
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-520A (Maintenance Tasks)
+  - DMC-...-730A (Fault Isolation)
+  - DMC-...-940A (Software/Configuration)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="def" commonRepositoryNumber="00003"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <definitionRepository>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D201"/>
+        <definitionTerm>Built-In Test (BIT)</definitionTerm>
+        <definitionContent>
+          <para>An automated self-diagnostic capability integrated into avionics Line Replaceable Units (LRUs) that continuously or periodically tests system functionality, detects faults, and reports status to maintenance systems. BIT reduces troubleshooting time and improves system reliability.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D202"/>
+        <definitionTerm>Continuous Built-In Test (CBIT)</definitionTerm>
+        <definitionContent>
+          <para>BIT functions that execute continuously during system operation without interrupting normal functions. CBIT monitors critical parameters in real-time and detects intermittent faults that may not be present during initiated BIT.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D203"/>
+        <definitionTerm>Power-On Built-In Test (PBIT)</definitionTerm>
+        <definitionContent>
+          <para>BIT functions that execute automatically during system power-up sequence. PBIT verifies basic system functionality, memory integrity, and interface connectivity before the system becomes operational.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D204"/>
+        <definitionTerm>Initiated Built-In Test (IBIT)</definitionTerm>
+        <definitionContent>
+          <para>BIT functions manually triggered by maintenance personnel through a test switch, maintenance panel, or diagnostic software. IBIT performs comprehensive system testing and may interrupt normal operation.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D205"/>
+        <definitionTerm>Fault Code</definitionTerm>
+        <definitionContent>
+          <para>A numeric or alphanumeric identifier assigned to a specific system fault detected by BIT. Fault codes are stored in non-volatile memory and reference maintenance manual troubleshooting procedures. Format typically follows ATA iSpec 2200 standards.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D206"/>
+        <definitionTerm>Fault Isolation</definitionTerm>
+        <definitionContent>
+          <para>The process of identifying the specific failed component or Line Replaceable Unit (LRU) causing a system fault. Modern BIT systems provide fault isolation to LRU level (Shop Replaceable Unit level in some cases) to minimize unnecessary component removals.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D207"/>
+        <definitionTerm>False Alarm Rate</definitionTerm>
+        <definitionContent>
+          <para>The frequency at which BIT incorrectly reports a fault when no actual failure exists. High false alarm rates lead to unnecessary maintenance actions and reduced confidence in BIT systems. Target false alarm rate is typically less than 1%.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D208"/>
+        <definitionTerm>Fault Detection Coverage</definitionTerm>
+        <definitionContent>
+          <para>The percentage of possible system faults that can be detected by BIT. Modern avionics systems target 95% or greater fault detection coverage for critical functions. Undetected faults may require manual troubleshooting.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D209"/>
+        <definitionTerm>Latent Fault</definitionTerm>
+        <definitionContent>
+          <para>A fault present in the system but not yet detected by BIT or not yet affecting system performance. Latent faults may become active under specific operating conditions or when combined with other failures.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D210"/>
+        <definitionTerm>Intermittent Fault</definitionTerm>
+        <definitionContent>
+          <para>A fault that appears and disappears unpredictably, making it difficult to isolate. Intermittent faults are often caused by loose connections, marginal components, or environmental factors. CBIT and snapshot recording help capture intermittent fault conditions.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D211"/>
+        <definitionTerm>No Fault Found (NFF)</definitionTerm>
+        <definitionContent>
+          <para>A condition where a component removed due to BIT fault indication tests normally in the shop and no defect is identified. High NFF rates indicate BIT tuning issues, intermittent faults, or installation problems. Industry target is less than 10% NFF rate.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D212"/>
+        <definitionTerm>Built-In Test Equipment (BITE)</definitionTerm>
+        <definitionContent>
+          <para>Hardware and software integrated into avionics LRUs specifically for the purpose of fault detection, isolation, and status reporting. BITE may include dedicated test processors, data acquisition circuitry, and maintenance data interfaces.</para>
+        </definitionContent>
+      </definitionSpec>
+    </definitionRepository>
+  </commonRepositoryContent>
+</commonRepository>
