@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  DML: Illustration Cross-Reference Data Module List for ATA 31-00-00
+  Purpose: IETP optimization and validation
+  Standard: S1000D Issue 5.0
+  Model: AMPEL360AT
+  ATA: 31-00-00 - Indicating & Recording, General
+  Publication: AMM
+  
+  This DML contains references to all Data Modules (DMs) that reference ICNs for:
+  - Broken graphic detection
+  - Graphic reuse analysis
+  - IETP build optimization
+  
+  Document Control:
+  - Version: 001-00
+  - Status: Draft
+  - Language: EN-US
+  - Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+  - Date: 2026-01-10
+-->
+<dml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/dml.xsd">
+  
+  <identAndStatusSection>
+    <dmlAddress>
+      <dmlIdent>
+        <dmlCode modelIdentCode="AMPEL360AT" senderIdent="AMPEL" dmlType="l" yearOfDataIssue="2026" seqNumber="00006"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+      </dmlIdent>
+      <dmlAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+      </dmlAddressItems>
+    </dmlAddress>
+    <dmlStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="AMPEL"/>
+      <originator enterpriseCode="AMPEL"/>
+      <applic>
+        <displayText>
+          <simplePara>Applicable to: AMPEL360 Q100 - All aircraft</simplePara>
+        </displayText>
+      </applic>
+      <remarks>
+        <simplePara>Illustration Cross-Reference DML for ATA 31-00-00</simplePara>
+        <simplePara>Contains all DMs that reference ICNs (Illustration Control Numbers)</simplePara>
+        <simplePara>Used for graphic validation and IETP optimization</simplePara>
+      </remarks>
+    </dmlStatus>
+  </identAndStatusSection>
+  
+  <dmlContent>
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Indicating and Recording System - General Description</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>References system architecture diagrams (ICN-31-00-001, ICN-31-00-002)</simplePara>
+      </remarks>
+    </dmlEntry>
+    
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="520" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Display Unit - Removal and Installation</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>References installation diagrams (ICN-31-00-010, ICN-31-00-011)</simplePara>
+      </remarks>
+    </dmlEntry>
+    
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="02" disassyCodeVariant="A" infoCode="520" infoCodeVariant="C" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Display System - Operational Test</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>References test setup diagrams (ICN-31-00-020, ICN-31-00-021)</simplePara>
+      </remarks>
+    </dmlEntry>
+    
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="02" disassyCodeVariant="A" infoCode="730" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Built-In Test (BIT) Procedures and Fault Codes</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>References fault isolation flowcharts (ICN-31-00-030, ICN-31-00-031)</simplePara>
+      </remarks>
+    </dmlEntry>
+    
+  </dmlContent>
+  
+</dml>
