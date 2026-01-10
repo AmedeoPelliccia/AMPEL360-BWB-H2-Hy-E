@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-MAINT-DATA-BUS-CONNECTION
+  Type: Procedure
+  Description: Standard procedures for aircraft data bus connection and maintenance
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: PROC
+  - Subtype: MAINT-DATABUS
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-520A (Maintenance Tasks)
+  - DMC-...-520B (Maintenance Tasks)
+  - DMC-...-730A (Fault Isolation)
+  - DMC-...-940A (Software/Configuration)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+  - Reference: ARINC 429, ARINC 664 (AFDX), MIL-STD-1553
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="proc" commonRepositoryNumber="00002"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <proceduralRepository>
+      <proceduralSpec>
+        <proceduralIdent proceduralIdentNumber="P101"/>
+        <proceduralTitle>Data Bus Connector Inspection and Cleaning</proceduralTitle>
+        <proceduralContent>
+          <proceduralStep>
+            <para>Ensure aircraft power is OFF before disconnecting any data bus connectors</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Wear ESD wrist strap connected to aircraft ground before handling avionics connectors</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Remove connector by grasping connector body, not cable. Pull straight out, do not twist</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Inspect connector pins for damage, corrosion, or foreign material using magnification if necessary</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If cleaning required, use approved electronic contact cleaner (isopropyl alcohol 99% or approved equivalent)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Allow connector to air dry completely before reconnection (minimum 5 minutes)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Inspect connector receptacle on LRU for damage or foreign material</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Align connector carefully and push firmly until fully seated with audible click if applicable</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Secure connector locking mechanism (safety wire, locking ring, or retaining clip as applicable)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify connector security by gently pulling on cable near connector body</para>
+          </proceduralStep>
+        </proceduralContent>
+      </proceduralSpec>
+      <proceduralSpec>
+        <proceduralIdent proceduralIdentNumber="P102"/>
+        <proceduralTitle>ARINC 429 Data Bus Testing and Verification</proceduralTitle>
+        <proceduralContent>
+          <proceduralStep>
+            <para>Connect ARINC 429 bus analyzer or test equipment to the data bus under test</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Power up aircraft systems and allow minimum 60 seconds for system initialization</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify transmitter is sending data at correct bit rate (12.5 kbps, 100 kbps, or as specified)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify receiver is properly decoding labels and data words</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Check signal amplitude: High state 10V ±1V, Low state 0V ±1V (differential measurement)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify word parity is correct (odd parity for ARINC 429)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Monitor bus for intermittent errors or missing labels over minimum 5-minute observation period</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Document any errors, unexpected labels, or signal quality issues</para>
+          </proceduralStep>
+        </proceduralContent>
+      </proceduralSpec>
+      <proceduralSpec>
+        <proceduralIdent proceduralIdentNumber="P103"/>
+        <proceduralTitle>ARINC 664 (AFDX) Network Verification</proceduralTitle>
+        <proceduralContent>
+          <proceduralStep>
+            <para>Connect AFDX test equipment or network analyzer to aircraft Ethernet switch test port</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Power up aircraft systems and verify AFDX network initialization</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify all end systems are present on network using ARP or ICMP ping</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Monitor virtual links (VLs) for correct bandwidth allocation groups (BAGs)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify no excessive network errors: CRC errors, runt frames, or jabber frames</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Check for correct VLAN tagging and priority (QoS) settings on critical data frames</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify network redundancy by monitoring both Network A and Network B simultaneously</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Document network statistics including bandwidth utilization, frame counts, and any anomalies</para>
+          </proceduralStep>
+        </proceduralContent>
+      </proceduralSpec>
+      <proceduralSpec>
+        <proceduralIdent proceduralIdentNumber="P104"/>
+        <proceduralTitle>Data Bus Troubleshooting - No Communication</proceduralTitle>
+        <proceduralContent>
+          <proceduralStep>
+            <para>Verify aircraft power is applied and all relevant circuit breakers are closed</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Check data bus connectors are fully seated and locking mechanisms engaged</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify correct cable routing and no physical damage to cable assemblies</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Use bus analyzer to determine if transmitter is sending data</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If no transmitter activity, suspect transmitting LRU or upstream power/configuration issue</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If transmitter active but receiver not responding, check receiver LRU and downstream wiring</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Measure bus termination resistance if applicable (ARINC 429: 75Ω per receiver in parallel)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Isolate fault to cable assembly, connector, or LRU using systematic substitution if necessary</para>
+          </proceduralStep>
+        </proceduralContent>
+      </proceduralSpec>
+    </proceduralRepository>
+  </commonRepositoryContent>
+</commonRepository>

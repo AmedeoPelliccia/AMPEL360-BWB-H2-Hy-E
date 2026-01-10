@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-SW-DATA-HANDLING-GENERAL
+  Type: Standards
+  Description: General software and data handling practices for avionics systems
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: SW
+  - Subtype: DATA-HANDLING
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-520A (Maintenance Tasks)
+  - DMC-...-940A (Software/Configuration)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+  - Reference: DO-178C, DO-326A, ED-202A
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="spec" commonRepositoryNumber="00004"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <specificationRepository>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="SW-DH-001"/>
+        <specificationTitle>Software Loading and Data Transfer Security</specificationTitle>
+        <specificationContent>
+          <para>All software uploads and data transfers to aircraft avionics systems shall follow these security practices per DO-326A / ED-202A cybersecurity requirements:</para>
+          <para>Data Transfer Device Requirements:</para>
+          <para>- Use only approved portable maintenance aids (PMAs) or laptops designated for aircraft software loading</para>
+          <para>- Ensure all data transfer devices are scanned for malware before connecting to aircraft systems</para>
+          <para>- Maintain virus definition files current (updated within 7 days)</para>
+          <para>- Use read-only USB devices when possible to prevent inadvertent data writes or malware transfer</para>
+          <para>Software Package Verification:</para>
+          <para>- Verify software package integrity and authenticity using manufacturer-provided cryptographic hashes (SHA-256 or stronger) and, where available, digital signatures</para>
+          <para>- Use non-cryptographic checksums (for example, CRC32) only as supplementary checks for transmission or storage errors, not as a security control</para>
+          <para>- Confirm software part number matches aircraft configuration database</para>
+          <para>- Verify digital signature on software package if provided by manufacturer</para>
+          <para>- Maintain chain of custody documentation from manufacturer to installation</para>
+          <para>Data Security During Transfer:</para>
+          <para>- Use encrypted data transfer when loading sensitive configuration data or navigation databases</para>
+          <para>- Do not load software or data over unsecured wireless connections</para>
+          <para>- Physically secure data transfer equipment during upload/download operations</para>
+          <para>- Log all software loading events with timestamp, operator ID, software version, and result</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="SW-DH-002"/>
+        <specificationTitle>Flight Data Download and Handling</specificationTitle>
+        <specificationContent>
+          <para>Procedures for downloading and handling flight data from FDR, CVR, QAR, and maintenance systems:</para>
+          <para>Quick Access Recorder (QAR) Data:</para>
+          <para>- Download QAR data routinely (daily or after each flight as required by operator)</para>
+          <para>- Use approved QAR reader device or connect via aircraft Ethernet maintenance port</para>
+          <para>- Transfer data to secure flight operations quality assurance (FOQA) database</para>
+          <para>- Encrypt data files during transfer and storage per data protection regulations (GDPR, local laws)</para>
+          <para>- Limit access to authorized personnel only (flight operations, maintenance, safety departments)</para>
+          <para>Flight Data Recorder (FDR) Data:</para>
+          <para>- Download FDR only when required for incident investigation or routine inspection</para>
+          <para>- Use certified FDR readout equipment from original equipment manufacturer (OEM)</para>
+          <para>- Maintain strict chain of custody for all FDR data downloads</para>
+          <para>- Report FDR data downloads to regulatory authority if required by incident/accident investigation</para>
+          <para>- Never delete or modify FDR data. Original data must be preserved for investigation</para>
+          <para>Cockpit Voice Recorder (CVR) Data:</para>
+          <para>- CVR data is protected by aviation privacy regulations. Access is restricted to accident investigators</para>
+          <para>- Do not download CVR data for routine maintenance purposes</para>
+          <para>- If download is required for incident investigation, follow regulatory authority procedures</para>
+          <para>- CVR data must be secured and protected from unauthorized access or disclosure</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="SW-DH-003"/>
+        <specificationTitle>Data Integrity and Validation</specificationTitle>
+        <specificationContent>
+          <para>Ensuring data integrity throughout the data lifecycle:</para>
+          <para>Pre-Load Validation:</para>
+          <para>- Verify data format matches LRU requirements (file format, encoding, structure)</para>
+          <para>- Validate navigation database effective dates and expiration dates</para>
+          <para>- Check configuration data against aircraft-specific parameters and limitations</para>
+          <para>- Perform data sanity checks (range checks, format validation) before loading</para>
+          <para>Post-Load Verification:</para>
+          <para>- Verify successful data load completion using LRU status indication or test mode</para>
+          <para>- Compare loaded data checksum against expected value from data package</para>
+          <para>- Perform functional test of system with new data/software installed</para>
+          <para>- Document data/software version loaded in aircraft maintenance logbook and configuration database</para>
+          <para>Data Backup and Retention:</para>
+          <para>- Maintain backup copies of all loaded software and data packages</para>
+          <para>- Retain previous software versions for minimum 2 years or per regulatory requirements</para>
+          <para>- Store backup data in geographically separate location from primary systems</para>
+          <para>- Test data restore procedures periodically to ensure backup integrity</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="SW-DH-004"/>
+        <specificationTitle>Software and Data Traceability</specificationTitle>
+        <specificationContent>
+          <para>Maintaining complete traceability of all software and data loaded on aircraft systems:</para>
+          <para>Configuration Management:</para>
+          <para>- Maintain master configuration database listing all software part numbers and versions installed</para>
+          <para>- Update database immediately after any software or data load operation</para>
+          <para>- Include installation date, installer name, reason for change, and test results</para>
+          <para>- Cross-reference with aircraft configuration change documents and service bulletins</para>
+          <para>Version Control:</para>
+          <para>- Use manufacturer-provided software version numbering scheme</para>
+          <para>- Document software compatibility matrix (which software versions work together)</para>
+          <para>- Identify software baseline for aircraft type certificate and supplemental type certificates</para>
+          <para>- Track deviations from baseline and maintain approval documentation</para>
+          <para>Audit Trail:</para>
+          <para>- Create permanent audit log of all software loading operations</para>
+          <para>- Include failed load attempts and reason for failure</para>
+          <para>- Maintain log accessible for regulatory audits and safety investigations</para>
+          <para>- Ensure audit log integrity using tamper-evident or cryptographic methods where required</para>
+        </specificationContent>
+      </specificationSpec>
+    </specificationRepository>
+  </commonRepositoryContent>
+</commonRepository>

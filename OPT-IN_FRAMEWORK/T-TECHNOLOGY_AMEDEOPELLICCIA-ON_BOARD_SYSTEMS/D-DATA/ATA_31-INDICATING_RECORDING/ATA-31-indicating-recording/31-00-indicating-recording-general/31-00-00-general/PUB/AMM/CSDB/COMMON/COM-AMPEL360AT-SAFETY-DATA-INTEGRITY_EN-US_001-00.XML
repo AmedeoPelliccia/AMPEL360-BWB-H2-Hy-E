@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-SAFETY-DATA-INTEGRITY
+  Type: Safety Warnings
+  Description: Data integrity and cybersecurity warnings for recording systems
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: SAFETY
+  - Subtype: DATA-INTEGRITY
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-520A (Maintenance Tasks)
+  - DMC-...-730A (Fault Isolation)
+  - DMC-...-940A (Software/Configuration)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="warning" commonRepositoryNumber="00003"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <warningRepository>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W201"/>
+        <warningTitle>Flight Data Recorder Integrity</warningTitle>
+        <warningContent>
+          <para>WARNING: Flight data recorders contain flight-critical accident investigation data. Never attempt to erase, modify, or tamper with FDR data.</para>
+          <para>Unauthorized manipulation of FDR data is prohibited by aviation regulations and may result in criminal prosecution. Only authorized personnel using certified equipment may download FDR data.</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W202"/>
+        <warningTitle>Cockpit Voice Recorder Privacy</warningTitle>
+        <warningContent>
+          <para>Cockpit voice recorder (CVR) data is protected by privacy regulations. Access to CVR recordings is restricted to authorized accident investigators and regulatory authorities.</para>
+          <para>Unauthorized access, downloading, or dissemination of CVR data may violate privacy laws and aviation security regulations.</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W203"/>
+        <warningTitle>Software Configuration Control</warningTitle>
+        <warningContent>
+          <para>Only certified software versions approved by the aircraft manufacturer and regulatory authority may be installed on indicating and recording systems.</para>
+          <para>Installation of unapproved software may result in system malfunction, loss of certification, and airworthiness violations.</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W204"/>
+        <warningTitle>Data Bus Security</warningTitle>
+        <warningContent>
+          <para>Aircraft data buses (ARINC 429, AFDX) transmit flight-critical information. Do not connect unauthorized devices to aircraft data buses.</para>
+          <para>Unauthorized data bus connections may introduce malicious code, corrupt flight data, or compromise aircraft cybersecurity (DO-326A / ED-202A requirements).</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W205"/>
+        <warningTitle>Maintenance Data Transfer</warningTitle>
+        <warningContent>
+          <para>Use only approved, virus-scanned data transfer devices when loading software or configuration data into avionics systems.</para>
+          <para>Infected USB drives or laptops may introduce malware into aircraft systems, potentially compromising flight safety and data integrity.</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W206"/>
+        <warningTitle>Quick Access Recorder (QAR) Data Handling</warningTitle>
+        <warningContent>
+          <para>QAR data contains sensitive operational information including flight parameters, crew actions, and aircraft performance data.</para>
+          <para>Ensure proper data protection measures are in place when transferring QAR data to prevent unauthorized access or data breaches. Follow applicable GDPR and data privacy regulations.</para>
+        </warningContent>
+      </warningSpec>
+    </warningRepository>
+  </commonRepositoryContent>
+</commonRepository>

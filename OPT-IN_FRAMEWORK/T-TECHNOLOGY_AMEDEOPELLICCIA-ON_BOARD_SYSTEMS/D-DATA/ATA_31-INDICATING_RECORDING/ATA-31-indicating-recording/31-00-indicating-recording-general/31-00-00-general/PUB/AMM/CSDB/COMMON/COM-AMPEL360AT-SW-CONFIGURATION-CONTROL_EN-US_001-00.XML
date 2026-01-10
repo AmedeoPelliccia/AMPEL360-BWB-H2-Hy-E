@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-SW-CONFIGURATION-CONTROL
+  Type: Standards
+  Description: Software configuration control and change management procedures
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: SW
+  - Subtype: CONFIG-CONTROL
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-940A (Software/Configuration)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+  - Reference: DO-178C, DO-254, DO-200B, RTCA/EUROCAE standards
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="spec" commonRepositoryNumber="00005"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <specificationRepository>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="SW-CC-001"/>
+        <specificationTitle>Software Configuration Identification</specificationTitle>
+        <specificationContent>
+          <para>All avionics software shall be uniquely identified and documented according to these standards:</para>
+          <para>Software Part Numbering:</para>
+          <para>- Each software load shall have unique part number assigned by LRU manufacturer</para>
+          <para>- Part number format: [MFR_PREFIX]-[SYSTEM_CODE]-[SW_TYPE]-[VERSION]</para>
+          <para>- Example: AMPEL-31-OS-001A (AMPEL360 ATA 31 Operating System version 001A)</para>
+          <para>- Part number shall be readable from LRU without disassembly (via maintenance port, display, or label)</para>
+          <para>Software Version Documentation:</para>
+          <para>- Maintain Software Accomplishment Summary (SAS) per DO-178C for each software version</para>
+          <para>- Document design assurance level (DAL A through E) based on failure condition severity</para>
+          <para>- Include software requirements, design description, verification results, and configuration index</para>
+          <para>- Obtain regulatory authority approval for DAL A and B software changes</para>
+          <para>Software Compatibility Matrix:</para>
+          <para>- Document which software versions are compatible with specific hardware revisions</para>
+          <para>- Identify software interdependencies (e.g., display software requires specific database version)</para>
+          <para>- List approved software combinations for aircraft type certificate compliance</para>
+          <para>- Update compatibility matrix with each new software release</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="SW-CC-002"/>
+        <specificationTitle>Configuration Change Management</specificationTitle>
+        <specificationContent>
+          <para>All software configuration changes shall follow formal change management process:</para>
+          <para>Change Request Initiation:</para>
+          <para>- Submit formal change request documenting reason for change (bug fix, enhancement, regulatory compliance)</para>
+          <para>- Include safety impact assessment and preliminary hazard analysis if applicable</para>
+          <para>- Identify affected aircraft systems and potential ripple effects</para>
+          <para>- Obtain approval from aircraft engineering authority before proceeding</para>
+          <para>Change Impact Analysis:</para>
+          <para>- Assess impact on aircraft certification basis and type certificate</para>
+          <para>- Determine if change requires supplemental type certificate (STC) or amended type certificate</para>
+          <para>- Evaluate impact on other installed systems and software versions</para>
+          <para>- Identify regression testing requirements and verification activities</para>
+          <para>Change Implementation:</para>
+          <para>- Follow DO-178C software development and verification processes for safety-critical software</para>
+          <para>- Perform requirements analysis, design, coding, and testing per approved software development plan</para>
+          <para>- Conduct software verification per Software Verification Plan (SVP)</para>
+          <para>- Document all changes in Software Configuration Management (SCM) system</para>
+          <para>Change Validation and Release:</para>
+          <para>- Complete integration testing on representative aircraft configuration</para>
+          <para>- Perform regression testing to ensure no unintended impacts</para>
+          <para>- Update Software Accomplishment Summary (SAS) with change details</para>
+          <para>- Obtain regulatory authority approval if required based on DAL and change classification</para>
+          <para>- Release software with updated part number and configuration index</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="SW-CC-003"/>
+        <specificationTitle>Configuration Status Accounting</specificationTitle>
+        <specificationContent>
+          <para>Maintaining accurate records of software configuration status across aircraft fleet:</para>
+          <para>Aircraft Configuration Database:</para>
+          <para>- Maintain centralized database of software installed on each aircraft tail number</para>
+          <para>- Include LRU serial numbers, software part numbers, load dates, and installed by information</para>
+          <para>- Update database within 24 hours of any software change</para>
+          <para>- Make database accessible to maintenance planning, flight operations, and regulatory authorities</para>
+          <para>Configuration Audits:</para>
+          <para>- Conduct periodic configuration audits (quarterly or per operator requirements)</para>
+          <para>- Verify physical aircraft configuration matches database records</para>
+          <para>- Identify and correct any discrepancies found during audit</para>
+          <para>- Document audit results and corrective actions taken</para>
+          <para>Fleet Software Status Reporting:</para>
+          <para>- Generate fleet-wide software status reports showing distribution of software versions</para>
+          <para>- Identify aircraft requiring mandatory software updates per service bulletins</para>
+          <para>- Track software reliability data including fault rates and NFF rates by software version</para>
+          <para>- Provide reports to regulatory authorities as required for continued airworthiness monitoring</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="SW-CC-004"/>
+        <specificationTitle>Configuration Control Board (CCB) Procedures</specificationTitle>
+        <specificationContent>
+          <para>Formal review and approval process for software configuration changes:</para>
+          <para>CCB Membership:</para>
+          <para>- Aircraft chief engineer (chairperson)</para>
+          <para>- Software engineering representative</para>
+          <para>- Systems engineering representative</para>
+          <para>- Flight test or operations representative</para>
+          <para>- Quality assurance representative</para>
+          <para>- Certification/regulatory affairs representative</para>
+          <para>CCB Review Process:</para>
+          <para>- Review all proposed software changes for safety impact and certification compliance</para>
+          <para>- Evaluate change against aircraft design requirements and operational needs</para>
+          <para>- Assess resource requirements and schedule impact</para>
+          <para>- Approve, defer, or reject change request with documented rationale</para>
+          <para>- Assign priority and classification (critical, high, medium, low) to approved changes</para>
+          <para>CCB Meeting Frequency:</para>
+          <para>- Regular meetings: Monthly or as required by change volume</para>
+          <para>- Emergency meetings: As needed for critical safety issues or AOG situations</para>
+          <para>- Meeting minutes: Documented and archived for audit trail and regulatory compliance</para>
+        </specificationContent>
+      </specificationSpec>
+    </specificationRepository>
+  </commonRepositoryContent>
+</commonRepository>

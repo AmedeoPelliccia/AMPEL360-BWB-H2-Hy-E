@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-HMI-COLOR-CODING
+  Type: Standards
+  Description: HMI color coding conventions for displays and indications
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: HMI
+  - Subtype: COLOR-CODING
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-730A (Fault Isolation)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+  - Reference: SAE ARP4102/6, ARINC 661
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="spec" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <specificationRepository>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-COLOR-001"/>
+        <specificationTitle>Display Color Coding Standards</specificationTitle>
+        <specificationContent>
+          <para>All electronic flight displays shall follow standardized color coding per SAE ARP4102/6 and ARINC 661 specifications to ensure consistent crew interpretation of indications across all display types.</para>
+          <table>
+            <tgroup cols="4">
+              <thead>
+                <row>
+                  <entry>Color</entry>
+                  <entry>RGB Value</entry>
+                  <entry>Usage</entry>
+                  <entry>Meaning</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>RED</entry>
+                  <entry>RGB(255, 0, 0)</entry>
+                  <entry>Warnings, Master Warning, Critical Alerts</entry>
+                  <entry>Immediate crew action required. Flight safety critical condition.</entry>
+                </row>
+                <row>
+                  <entry>AMBER/YELLOW</entry>
+                  <entry>RGB(255, 191, 0)</entry>
+                  <entry>Cautions, Master Caution, Abnormal Conditions</entry>
+                  <entry>Prompt crew awareness required. Potential system degradation.</entry>
+                </row>
+                <row>
+                  <entry>GREEN</entry>
+                  <entry>RGB(0, 255, 0)</entry>
+                  <entry>Normal Operation, Safe Conditions, Active Systems</entry>
+                  <entry>System operating within normal parameters. No action required.</entry>
+                </row>
+                <row>
+                  <entry>CYAN</entry>
+                  <entry>RGB(0, 255, 255)</entry>
+                  <entry>Advisories, Operational Information</entry>
+                  <entry>Informational only. Crew awareness without immediate action.</entry>
+                </row>
+                <row>
+                  <entry>WHITE</entry>
+                  <entry>RGB(255, 255, 255)</entry>
+                  <entry>Primary Flight Data, Scales, Labels</entry>
+                  <entry>Essential flight information requiring continuous monitoring.</entry>
+                </row>
+                <row>
+                  <entry>MAGENTA</entry>
+                  <entry>RGB(255, 0, 255)</entry>
+                  <entry>Flight Director, Active Navigation, Selected Parameters</entry>
+                  <entry>Crew-selected or autopilot-commanded values and guidance.</entry>
+                </row>
+                <row>
+                  <entry>BLUE</entry>
+                  <entry>RGB(0, 128, 255)</entry>
+                  <entry>Constraints, Limits, Predicted Path</entry>
+                  <entry>System limits, constraint boundaries, predicted trajectories.</entry>
+                </row>
+                <row>
+                  <entry>GRAY</entry>
+                  <entry>RGB(128, 128, 128)</entry>
+                  <entry>Inactive Systems, Unavailable Data</entry>
+                  <entry>System not available or data not valid for current mode.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-COLOR-002"/>
+        <specificationTitle>Color Contrast and Visibility Requirements</specificationTitle>
+        <specificationContent>
+          <para>Minimum contrast ratios shall be maintained for all text and symbology under all ambient lighting conditions:</para>
+          <para>- Day mode (high ambient): Contrast ratio minimum 3:1</para>
+          <para>- Night mode (low ambient): Contrast ratio minimum 5:1</para>
+          <para>- Display brightness shall be adjustable from 2 cd/m² (night) to 400 cd/m² (bright sunlight)</para>
+          <para>- All colors shall remain distinguishable under night vision goggle (NVG) operation if required</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-COLOR-003"/>
+        <specificationTitle>Color Accessibility for Color Vision Deficiency</specificationTitle>
+        <specificationContent>
+          <para>Display designs shall accommodate crew members with color vision deficiency (CVD):</para>
+          <para>- Critical information shall not rely solely on color differentiation</para>
+          <para>- Shape, position, text labels, or flash coding shall supplement color coding</para>
+          <para>- Red-green color pairs shall not be used for essential information</para>
+          <para>- Compliance with DO-178C and DO-254 human factors requirements</para>
+        </specificationContent>
+      </specificationSpec>
+    </specificationRepository>
+  </commonRepositoryContent>
+</commonRepository>
