@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Business Rules Exchange (BREX) Data Module
+  Structural Rules BREX for ATA 31-00-00 AMM Data Modules
+  
+  This BREX defines structural and content model rules for ATA 31
+  (Indicating/Recording) AMM data modules.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  ATA Chapter: 31-00-00 (Indicating/Recording - General)
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="B"
+                infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Business Rules Exchange (BREX) - Structural Rules</techName>
+          <infoName>ATA 31-00-00 - Content Model and Structure</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All ATA 31 AMM Data Modules</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                    systemCode="31" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Structural and Content Model Rules BREX</title>
+        <para>
+          This BREX defines structural and content model validation rules for ATA 31 
+          (Indicating/Recording) AMM data modules. It enforces proper use of S1000D 
+          structural elements and content modeling conventions.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Mandatory Structural Elements</title>
+        <para>
+          All ATA 31 AMM data modules must use the following structural elements 
+          appropriately:
+        </para>
+        <para>
+          - &lt;descr&gt; for descriptive content
+        </para>
+        <para>
+          - &lt;proceduralStep&gt; for step-by-step procedures
+        </para>
+        <para>
+          - &lt;warning&gt; for safety warnings
+        </para>
+        <para>
+          - &lt;caution&gt; for equipment protection notices
+        </para>
+        <para>
+          - &lt;note&gt; for supplementary information
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Content Separation Rules</title>
+        <para>
+          Rule 1: No Mixed Procedural/Descriptive Logic
+        </para>
+        <para>
+          Descriptive and procedural content must be in separate data modules.
+          A single DM cannot contain both description and procedures.
+        </para>
+        <para>
+          Rule 2: One Primary Task Per Procedural DM
+        </para>
+        <para>
+          Each procedural data module must focus on a single primary maintenance task
+          (e.g., "Remove Flight Data Recorder" or "Test Cockpit Voice Recorder").
+        </para>
+        <para>
+          Rule 3: No Embedded Publication Module Logic
+        </para>
+        <para>
+          Data modules must not contain PM-level logic such as TOC generation,
+          cross-references to other publications, or publication-specific formatting.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Procedural Step Requirements</title>
+        <para>
+          Each procedural step must:
+        </para>
+        <para>
+          - Have a clear action verb (e.g., "Remove", "Install", "Test", "Inspect")
+        </para>
+        <para>
+          - Include necessary conditions and prerequisites
+        </para>
+        <para>
+          - Specify required tools and materials
+        </para>
+        <para>
+          - Include verification steps where applicable
+        </para>
+        <para>
+          - Be numbered sequentially within the procedure
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Warning and Caution Placement</title>
+        <para>
+          Warnings and cautions must:
+        </para>
+        <para>
+          - Be placed BEFORE the step they apply to
+        </para>
+        <para>
+          - Use standard AMPEL360 warning/caution templates
+        </para>
+        <para>
+          - Reference specific hazards or risks
+        </para>
+        <para>
+          - Include mitigation actions
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Content Reuse and Common Information</title>
+        <para>
+          Rule: Use Common Information Repositories
+        </para>
+        <para>
+          Frequently used warnings, cautions, and standard procedures must be
+          defined in the COMMON directory and referenced via &lt;dmRef&gt; or
+          entity references, not duplicated in each DM.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Cross-Reference Rules</title>
+        <para>
+          Internal references within ATA 31 must use:
+        </para>
+        <para>
+          - &lt;dmRef&gt; for references to other data modules
+        </para>
+        <para>
+          - &lt;internalRef&gt; for references within the same DM
+        </para>
+        <para>
+          - Proper applicability statements for conditional references
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Metadata Requirements</title>
+        <para>
+          All data modules must include:
+        </para>
+        <para>
+          - Complete identAndStatusSection
+        </para>
+        <para>
+          - Proper security classification
+        </para>
+        <para>
+          - Responsible partner company identification
+        </para>
+        <para>
+          - Applicability statement (even if "All")
+        </para>
+        <para>
+          - Quality assurance status
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Prohibited Constructs</title>
+        <para>
+          The following structural patterns are prohibited:
+        </para>
+        <para>
+          - Empty levelledPara elements
+        </para>
+        <para>
+          - Procedural steps without action verbs
+        </para>
+        <para>
+          - Warnings/cautions placed after the hazardous step
+        </para>
+        <para>
+          - Multiple unrelated procedures in a single DM
+        </para>
+        <para>
+          - Inline graphics without proper ICN references
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>
+          Model: AMPEL360AT
+        </para>
+        <para>
+          Project: AMPEL360-AIR-T
+        </para>
+        <para>
+          ATA Chapter: 31-00-00
+        </para>
+        <para>
+          BREX Type: Structural Rules (022B)
+        </para>
+        <para>
+          Standard: S1000D Issue 5.0
+        </para>
+        <para>
+          Status: Active
+        </para>
+        <para>
+          Inherits from: Master BREX 022A
+        </para>
+        <para>
+          Generated with: AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
+        </para>
+        <para>
+          Last Updated: 2026-01-10
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>
