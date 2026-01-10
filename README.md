@@ -484,6 +484,132 @@ PUB/
 **Example Path**: 
 `OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_22-AUTOFLIGHT/ATA-22-auto-flight/22-00-auto-flight-general/22-00-00-auto-flight-general/PUB/AMM/CSDB/`
 
+---
+
+### S1000D ICN Scaffold for ATA 31-00-00
+
+Below is a **clean, S1000D-compliant ICN scaffold and suggested ICN set** for:
+
+```
+OPT-IN_FRAMEWORK/
+└─ T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS
+   └─ D-DATA
+      └─ ATA_31-INDICATING_RECORDING
+         └─ ATA-31-indicating-recording
+            └─ 31-00-indicating-recording-general
+               └─ 31-00-00-general
+                  └─ PUB/AMM/CSDB/ICN
+```
+
+**Scope**: ATA 31-00-00 (Indicating & Recording – General), AMM context  
+**Role**: Illustrative support only (no design authority, no software definition)
+
+#### ICN Role in ATA 31 AMM
+
+ICNs in this folder:
+
+* Visually **support DM content** (040A, 520x, 72x, 73x, 94x)
+* Explain **system architecture, signal flow, HMI layout**
+* Never introduce requirements, logic, or configuration authority
+* Are always **referenced by DMs**, never standalone
+
+#### Folder Structure (Recommended)
+
+```
+ICN/
+├─ SYSTEM_OVERVIEW/
+├─ SIGNAL_FLOW/
+├─ DISPLAY_LAYOUTS/
+├─ MAINTENANCE_SUPPORT/
+└─ FAULT_ISOLATION/
+```
+
+This grouping is **logical only** (optional); filenames remain authoritative.
+
+#### Suggested ICN File List (ATA 31-00-00)
+
+##### System Overview
+
+| ICN File                                | Description                                                                 |
+| --------------------------------------- | --------------------------------------------------------------------------- |
+| **ICN-AMPEL360AT-31-00-0001-A_001.SVG** | Indicating & recording system global architecture                           |
+| **ICN-AMPEL360AT-31-00-0002-A_001.SVG** | ATA 31 system context within avionics architecture (ATA 24 / 42 / 45 links) |
+
+**Used by**: DM 040A – General system description
+
+##### Signal & Data Flow
+
+| ICN File                                | Description                                           |
+| --------------------------------------- | ----------------------------------------------------- |
+| **ICN-AMPEL360AT-31-00-0101-A_001.SVG** | Sensor → acquisition → processing → display data flow |
+| **ICN-AMPEL360AT-31-00-0102-A_001.SVG** | Recording vs real-time indication data paths          |
+
+**Used by**: DM 040A, DM 730A (fault isolation overview)
+
+##### Display & HMI Layouts (Illustrative)
+
+| ICN File                                | Description                                                         |
+| --------------------------------------- | ------------------------------------------------------------------- |
+| **ICN-AMPEL360AT-31-00-0201-A_001.SVG** | Generic cockpit display zones (PFD/MFD/EICAS – non-config specific) |
+| **ICN-AMPEL360AT-31-00-0202-A_001.SVG** | Typical indication symbology grouping (example only)                |
+
+**Rules**:
+* No pixel-exact UI
+* No software versioning
+* No configuration claims
+
+##### Maintenance Support Visuals
+
+| ICN File                                | Description                                             |
+| --------------------------------------- | ------------------------------------------------------- |
+| **ICN-AMPEL360AT-31-00-0301-A_001.SVG** | Typical LRU location for indicating/recording equipment |
+| **ICN-AMPEL360AT-31-00-0302-A_001.SVG** | Connector identification schematic (illustrative)       |
+
+**Used by**: DM 520x (removal/installation), DM 72x (servicing)
+
+##### Fault Isolation Support
+
+| ICN File                                | Description                                 |
+| --------------------------------------- | ------------------------------------------- |
+| **ICN-AMPEL360AT-31-00-0401-A_001.SVG** | Fault isolation decision tree (high-level)  |
+| **ICN-AMPEL360AT-31-00-0402-A_001.SVG** | Data validity / failure propagation concept |
+
+**Used by**: DM 730A – Fault isolation
+
+#### Minimal TOC (Logical View)
+
+```
+ICN – ATA 31-00-00
+├─ System architecture
+├─ Signal & data flow
+├─ Display layout (generic)
+├─ Maintenance support
+└─ Fault isolation aids
+```
+
+#### BREX-Alignment Reminders
+
+These ICNs **must comply with**:
+
+* ATA 31 BREX (022E – Graphics rules)
+* No embedded text contradicting DM wording
+* Referenced only via `<graphicRef>`
+* SVG only (preferred), no raster unless justified
+
+#### Relationship to IETP
+
+* These ICNs are **backend SSOT assets**
+* IETP (HTML/PDF/runtime) **consumes**, does not redefine them
+* Same ICN can serve:
+  * AMM (maintainers)
+  * Training views
+  * Diagnostic IETP layers
+
+For detailed specifications and DM ↔ ICN mapping tables, see:  
+[`ATA_31-INDICATING_RECORDING/ATA-31-indicating-recording/31-00-indicating-recording-general/31-00-00-general/PUB/AMM/CSDB/ICN/ICN_SCAFFOLD.md`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/ATA-31-indicating-recording/31-00-indicating-recording-general/31-00-00-general/PUB/AMM/CSDB/ICN/ICN_SCAFFOLD.md)
+
+---
+
 ### Certification Timeline
 
 > 📍 **Current Phase:** Preliminary Design / Detail Concept (December 2025)
@@ -720,18 +846,10 @@ See [LICENSE](LICENSE) for full terms.
 ---
 
 <p align="center">
-  <i>Document control: Version 2.1 · Status: ACTIVE · Last update: 2025-12-04</i><br/>
-  <i>Current Phase: Preliminary Design / Detail Concept</i><br/>
-  <i>Generated with AI assistance, prompted by Amedeo Pelliccia. </i>
-</p>
-
-
-
-<p align="center">
-  <i>Document control: Version 2.2 · Status: ACTIVE · Last update: 2025-12-10</i><br/>
+  <i>Document control: Version 2.3 · Status: ACTIVE · Last update: 2026-01-10</i><br/>
   <i>Current Phase: Preliminary Design / Detail Concept</i><br/>
   <i>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</i><br/>
-  <i>Last AI update: Hyperlink additions - 2025-12-10</i>
+  <i>Last AI update: ATA 31-00-00 ICN Scaffold documentation - 2026-01-10</i>
 </p>
 
 
