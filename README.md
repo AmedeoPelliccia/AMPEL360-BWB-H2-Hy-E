@@ -484,6 +484,104 @@ PUB/
 **Example Path**: 
 `OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_22-AUTOFLIGHT/ATA-22-auto-flight/22-00-auto-flight-general/22-00-00-auto-flight-general/PUB/AMM/CSDB/`
 
+#### S1000D COMMON Directory — Reusable Content Primitives
+
+The **COMMON/** directory within each CSDB contains **atomic, reusable information objects** that ensure consistency and avoid duplication across Data Modules (DMs). This is a complete, S1000D-compliant implementation for **ATA 31 – Indicating & Recording**.
+
+**Location**: 
+`OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/ATA-31-indicating-recording/31-00-indicating-recording-general/31-00-00-general/PUB/AMM/CSDB/COMMON/`
+
+##### COMMON Content Categories
+
+The ATA 31-00-00 COMMON directory includes 13 S1000D-compliant XML files organized into 5 categories:
+
+**1. Safety & Operational Statements** (3 files)
+```
+COM-AMPEL360AT-SAFETY-GENERAL-WARNINGS_EN-US_001-00.XML
+COM-AMPEL360AT-SAFETY-ELECTRICAL-HAZARDS_EN-US_001-00.XML
+COM-AMPEL360AT-SAFETY-DATA-INTEGRITY_EN-US_001-00.XML
+```
+- Critical safety warnings for flight instruments, FDR/CVR integrity, electrical hazards
+- Referenced by: Maintenance tasks (520A/520B), fault isolation (730A), software config (940A)
+
+**2. Standard Definitions & Terminology** (3 files)
+```
+COM-AMPEL360AT-DEFINITION-INDICATIONS_EN-US_001-00.XML
+COM-AMPEL360AT-DEFINITION-RECORDING-LOGIC_EN-US_001-00.XML
+COM-AMPEL360AT-DEFINITION-BIT-STATUS_EN-US_001-00.XML
+```
+- Single source of truth for cockpit indication language
+- Definitions: Indication vs Alert vs Message, Warning vs Caution vs Advisory
+- Recording terminology: FDR, CVR, QAR, snapshots, logging, data frames
+- BIT definitions: CBIT, PBIT, IBIT, fault codes, NFF, latent faults
+
+**3. HMI Conventions** (3 files) — *per SAE ARP4102, ARINC 661*
+```
+COM-AMPEL360AT-HMI-COLOR-CODING_EN-US_001-00.XML
+COM-AMPEL360AT-HMI-SYMBOLS-LEGEND_EN-US_001-00.XML
+COM-AMPEL360AT-HMI-PRIORITY-LEVELS_EN-US_001-00.XML
+```
+- Display color standards: RED=warning, AMBER=caution, GREEN=normal, CYAN=advisory
+- Standard symbology and iconography for PFD, MFD, EICAS displays
+- Alert priority classification, suppression logic, aural alert standards
+
+**4. Standard Maintenance Practices** (2 files)
+```
+COM-AMPEL360AT-MAINT-POWER-ON-OFF_EN-US_001-00.XML
+COM-AMPEL360AT-MAINT-DATA-BUS-CONNECTION_EN-US_001-00.XML
+```
+- Aircraft power-up/power-down procedures for maintenance
+- Data bus connector inspection, ARINC 429/664 (AFDX) testing, troubleshooting
+
+**5. Software & Data Handling** (2 files) — *per DO-178C, DO-326A*
+```
+COM-AMPEL360AT-SW-DATA-HANDLING-GENERAL_EN-US_001-00.XML
+COM-AMPEL360AT-SW-CONFIGURATION-CONTROL_EN-US_001-00.XML
+```
+- Software loading security, data download/handling, integrity validation
+- Configuration management, change control, CCB procedures, traceability
+
+##### Usage Pattern
+
+Data Modules reference COMMON files via `<commonInfoRef>`:
+
+```xml
+<commonInfoRef>
+  <infoEntityIdent>
+    <infoEntityCode>COM-AMPEL360AT-SAFETY-GENERAL-WARNINGS_EN-US_001-00</infoEntityCode>
+  </infoEntityIdent>
+</commonInfoRef>
+```
+
+This ensures:
+- ✅ No content duplication across DMs
+- ✅ Single source of truth for warnings, definitions, procedures
+- ✅ Consistent terminology across all technical publications
+- ✅ Simplified maintenance (update once, applies everywhere)
+
+##### Cross-ATA Reuse
+
+COMMON files are designed for reuse across multiple ATA chapters:
+
+| ATA Chapter | Reuses From ATA 31 COMMON |
+|-------------|---------------------------|
+| **ATA 22** (Auto Flight) | HMI conventions, BIT definitions |
+| **ATA 23** (Communications) | Data bus procedures, electrical hazards |
+| **ATA 34** (Navigation) | Software configuration control, HMI standards |
+
+##### Governance & BREX Compliance
+
+COMMON modules comply with Business Rules Exchange (BREX) constraints:
+
+- ✅ Must be language-scoped (EN-US, FR-FR, etc.)
+- ✅ Must be referenced, never embedded
+- ✅ Must include S1000D metadata and document control
+- ❌ Must NOT contain ATA-specific task sequences
+- ❌ Must NOT include procedural steps with task logic
+- 📝 Must include `<reasonForUpdate>` on every change
+
+For complete documentation, see: [`COMMON/README.md`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/ATA-31-indicating-recording/31-00-indicating-recording-general/31-00-00-general/PUB/AMM/CSDB/COMMON/README.md)
+
 ### Certification Timeline
 
 > 📍 **Current Phase:** Preliminary Design / Detail Concept (December 2025)
