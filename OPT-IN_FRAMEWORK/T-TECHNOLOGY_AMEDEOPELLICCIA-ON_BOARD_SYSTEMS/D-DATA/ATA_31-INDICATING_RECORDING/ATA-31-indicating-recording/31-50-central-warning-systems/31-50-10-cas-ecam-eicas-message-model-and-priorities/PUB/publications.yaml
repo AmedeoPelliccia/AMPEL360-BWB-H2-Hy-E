@@ -1,0 +1,146 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+
+# Publication Configuration for ATA 31-50-10
+# CAS/ECAM/EICAS Message Model and Priorities
+
+metadata:
+  ata_section: "31-50-10"
+  title: "CAS/ECAM/EICAS Message Model and Priorities"
+  model_ident_code: "AMPEL360AT"
+  system_diff_code: "A"
+  owner: "AMPEL360 Technical Publications"
+  standard: "S1000D Issue 5.0"
+  last_updated: "2026-01-09"
+
+publications:
+  AMM:
+    name: "Aircraft Maintenance Manual"
+    pub_code: "AMM"
+    description: "Maintenance procedures for Central Warning System message model"
+    formats:
+      - PDF
+      - HTML
+    status: "Planned"
+    publication_modules:
+      - "PMC-AMPEL360AT-31-50-AMM-00001_001-00_EN-US.XML"
+    
+  IPC:
+    name: "Illustrated Parts Catalog"
+    pub_code: "IPC"
+    description: "Parts catalog for Central Warning System components"
+    formats:
+      - PDF
+      - HTML
+    status: "Planned"
+    publication_modules:
+      - "PMC-AMPEL360AT-31-50-IPC-00001_001-00_EN-US.XML"
+    
+  WDM:
+    name: "Wiring Diagram Manual"
+    pub_code: "WDM"
+    description: "Wiring diagrams for Central Warning System"
+    formats:
+      - PDF
+      - HTML
+    status: "Planned"
+    publication_modules:
+      - "PMC-AMPEL360AT-31-50-WDM-00001_001-00_EN-US.XML"
+    
+  TSM:
+    name: "Troubleshooting Manual"
+    pub_code: "TSM"
+    description: "Fault isolation and troubleshooting for Central Warning System"
+    formats:
+      - PDF
+      - HTML
+    status: "Planned"
+    publication_modules:
+      - "PMC-AMPEL360AT-31-50-TSM-00001_001-00_EN-US.XML"
+
+data_modules:
+  - dmc: "DMC-AMPEL360AT-A-31-50-10-00A-040A-A_001-00_EN-US"
+    info_code: "040A"
+    title: "Description and Operation"
+    status: "Draft"
+    file: "CSDB/DM/DMC-AMPEL360AT-A-31-50-10-00A-040A-A_001-00_EN-US.XML"
+    
+  - dmc: "DMC-AMPEL360AT-A-31-50-10-00A-520A-A_001-00_EN-US"
+    info_code: "520A"
+    title: "Servicing"
+    status: "Planned"
+    file: "CSDB/DM/DMC-AMPEL360AT-A-31-50-10-00A-520A-A_001-00_EN-US.XML"
+    
+  - dmc: "DMC-AMPEL360AT-A-31-50-10-00A-720A-A_001-00_EN-US"
+    info_code: "720A"
+    title: "Removal/Installation"
+    status: "Planned"
+    file: "CSDB/DM/DMC-AMPEL360AT-A-31-50-10-00A-720A-A_001-00_EN-US.XML"
+    
+  - dmc: "DMC-AMPEL360AT-A-31-50-10-00A-730A-A_001-00_EN-US"
+    info_code: "730A"
+    title: "Testing and Fault Isolation"
+    status: "Planned"
+    file: "CSDB/DM/DMC-AMPEL360AT-A-31-50-10-00A-730A-A_001-00_EN-US.XML"
+    
+  - dmc: "DMC-AMPEL360AT-A-31-50-10-00A-940A-A_001-00_EN-US"
+    info_code: "940A"
+    title: "Illustrated Parts Data"
+    status: "Planned"
+    file: "CSDB/DM/DMC-AMPEL360AT-A-31-50-10-00A-940A-A_001-00_EN-US.XML"
+
+brex:
+  file: "CSDB/BREX/BREX-AMPEL360AT-AIR-T_001-00.XML"
+  issue: "001-00"
+  status: "Active"
+
+ietp:
+  runtime:
+    viewer: "S1000D IETP Viewer v2.0"
+    platform: "Web-based (HTML5/JavaScript)"
+    requirements:
+      - "Modern web browser (Chrome, Firefox, Edge, Safari)"
+      - "JavaScript enabled"
+      - "Minimum 1024x768 resolution"
+  
+  packages:
+    format: "ZIP with manifest and SBOM"
+    versioning: "Semantic versioning (MAJOR.MINOR.PATCH)"
+    signing: "Digital signature with SHA-256 checksums"
+  
+  deployment:
+    targets:
+      - "On-aircraft tablet systems"
+      - "Ground maintenance workstations"
+      - "Cloud-based documentation portal"
+    methods:
+      - "Docker container"
+      - "Kubernetes deployment"
+      - "Standalone installer"
+
+export_settings:
+  pdf:
+    page_size: "A4"
+    orientation: "Portrait"
+    fonts:
+      - "Arial"
+      - "Courier New"
+    color_profile: "sRGB"
+    
+  html:
+    css_framework: "Bootstrap 5"
+    responsive: true
+    offline_capable: true
+    search_enabled: true
+
+validation:
+  schema: "S1000D Issue 5.0 XML Schema"
+  brex_validation: true
+  cross_reference_check: true
+  spelling_grammar: false  # Manual review required
+  
+workflow:
+  authoring_tool: "Oxygen XML Editor with S1000D Framework"
+  version_control: "Git repository"
+  review_process: "Pull request with technical approval"
+  release_approval: "Technical Publications Manager + QA"

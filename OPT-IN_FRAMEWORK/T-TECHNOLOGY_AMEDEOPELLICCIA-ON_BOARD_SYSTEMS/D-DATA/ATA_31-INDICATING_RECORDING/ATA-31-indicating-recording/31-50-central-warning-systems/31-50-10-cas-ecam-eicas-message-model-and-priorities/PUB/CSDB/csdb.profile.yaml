@@ -1,0 +1,143 @@
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com>
+
+# S1000D CSDB Profile for ATA 31-50-10
+
+profile:
+  name: "AMPEL360AT ATA 31-50-10 CSDB"
+  version: "1.0"
+  description: "Common Source Database profile for Central Warning System message model"
+  standard: "S1000D Issue 5.0"
+  date: "2026-01-09"
+
+project:
+  model_ident_code: "AMPEL360AT"
+  project_name: "AMPEL360-AIR-T"
+  ata_chapter: "31"
+  ata_section: "31-50-10"
+  responsible_company: "AMPEL360-AIR-T Project"
+
+settings:
+  system_diff_code:
+    default: "A"
+    allowed: ["A", "B", "C"]
+    description: "Standard configuration uses 'A', variants use 'B', 'C', etc."
+  
+  language:
+    primary:
+      iso_code: "en"
+      country_code: "US"
+    supported:
+      - iso_code: "en"
+        country_code: "GB"
+      - iso_code: "es"
+        country_code: "ES"
+      - iso_code: "fr"
+        country_code: "FR"
+  
+  security_classification:
+    default: "01"
+    levels:
+      "01": "Unclassified"
+      "02": "Restricted"
+      "03": "Confidential"
+      "04": "Secret"
+  
+  issue_info:
+    format: "NNN-NN"
+    initial: "001-00"
+    description: "Issue number (3 digits) - In-work number (2 digits)"
+
+validation:
+  brex:
+    file: "BREX/BREX-AMPEL360AT-AIR-T_001-00.XML"
+    enforce: true
+  
+  schema:
+    version: "S1000D Issue 5.0"
+    files:
+      - "descript.xsd"
+      - "procedu.xsd"
+      - "fault.xsd"
+      - "ipd.xsd"
+  
+  cross_references:
+    check_dm_refs: true
+    check_icn_refs: true
+    check_applicability: true
+
+naming_conventions:
+  data_module:
+    pattern: "DMC-{ModelIdentCode}-{SystemDiffCode}-{SystemCode}-{SubSystemCode}-{SubSubSystemCode}-{AssyCode}-{DisassyCode}{DisassyCodeVariant}-{InfoCode}{InfoCodeVariant}-{ItemLocationCode}_{IssueNumber}-{InWork}_{LanguageIsoCode}-{CountryIsoCode}.XML"
+    example: "DMC-AMPEL360AT-A-31-50-10-00A-040A-A_001-00_EN-US.XML"
+  
+  publication_module:
+    pattern: "PMC-{ModelIdentCode}-{PubCode}-{SequenceNumber}_{IssueNumber}-{InWork}_{LanguageIsoCode}-{CountryIsoCode}.XML"
+    example: "PMC-AMPEL360AT-31-50-AMM-00001_001-00_EN-US.XML"
+  
+  illustration:
+    pattern: "ICN-{ModelIdentCode}-{SystemCode}-{SubSystemCode}-{FigureNumber}-{Variant}_{IssueNumber}.{Extension}"
+    example: "ICN-AMPEL360AT-31-50-0001-A_001.SVG"
+
+info_codes:
+  descriptive:
+    "040A": "Description and Operation"
+    "041A": "Theory of Operation"
+    "042A": "Maintenance Practices"
+  
+  procedural:
+    "520A": "Servicing"
+    "720A": "Removal/Installation"
+    "730A": "Testing and Fault Isolation"
+  
+  illustrated_parts:
+    "940A": "Illustrated Parts Data"
+
+system_codes:
+  "31": "Indicating/Recording Systems"
+  "31-50": "Central Warning Systems"
+  "31-50-10": "CAS/ECAM/EICAS Message Model and Priorities"
+
+quality_assurance:
+  review_required: true
+  approval_required: true
+  reviewers:
+    - role: "Technical Author"
+    - role: "Subject Matter Expert"
+    - role: "Quality Assurance"
+  approvers:
+    - role: "Technical Publications Manager"
+    - role: "Configuration Manager"
+
+workflow:
+  states:
+    - "Draft"
+    - "In Review"
+    - "Approved"
+    - "Released"
+    - "Obsolete"
+  
+  transitions:
+    - from: "Draft"
+      to: "In Review"
+      condition: "Content complete, self-review done"
+    - from: "In Review"
+      to: "Approved"
+      condition: "All reviews completed, no open issues"
+    - from: "Approved"
+      to: "Released"
+      condition: "Final approval by manager"
+
+tools:
+  authoring:
+    - name: "Oxygen XML Editor"
+      version: "25.0+"
+      framework: "S1000D"
+  
+  validation:
+    - name: "S1000D Validator"
+      version: "5.0"
+  
+  management:
+    - name: "Git"
+      version: "2.0+"
