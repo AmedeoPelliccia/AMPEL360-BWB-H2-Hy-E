@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+S1000D Data Module - Calibration and Functional Checks
+DMC: AMPEL360-31-00-00-520B-A-001_001_00_EN-US_001-00
+Info Code: 520B - Calibration and Functional Check Procedures
+ATA Chapter: 31-00-00 Indicating and Recording General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proced.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="31"
+                subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="520"
+                infoCodeVariant="B" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>Calibration and Functional Check Procedures</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></originator>
+      <applic><displayText><simplePara>All AMPEL360 Q100 aircraft configurations</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="00"
+                    subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                    disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                    infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup><noConds/></reqCondGroup>
+        <reqPersons><personnel man="1" trade="Avionics Technician"/></reqPersons>
+        <reqSupportEquips>
+          <supportEquipDescrGroup>
+            <supportEquipDescr><name>Display Color Calibration Tool</name></supportEquipDescr>
+            <supportEquipDescr><name>Data Bus Analyzer (ARINC 429/664)</name></supportEquipDescr>
+            <supportEquipDescr><name>Maintenance Laptop with Calibration Software</name></supportEquipDescr>
+          </supportEquipDescrGroup>
+        </reqSupportEquips>
+      </preliminaryRqmts>
+      
+      <mainProcedure>
+        <proceduralStep>
+          <para>This data module provides calibration and functional check procedures for the AMPEL360 Q100 Indicating and Recording System. Calibrations maintain system accuracy and consistency. Functional checks verify correct operation after maintenance actions.</para>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Display Color Calibration</title>
+          <para>Perform display color calibration annually or after display unit replacement.</para>
+          <proceduralStep><para>Position colorimeter sensor on display center and secure with suction mount.</para></proceduralStep>
+          <proceduralStep><para>Connect calibration tool to maintenance laptop and display unit USB port.</para></proceduralStep>
+          <proceduralStep><para>Launch display calibration software and select unit serial number.</para></proceduralStep>
+          <proceduralStep><para>Initiate automatic calibration sequence (approximately 15 minutes).</para></proceduralStep>
+          <proceduralStep><para>Software measures color gamut, gamma curve, and uniformity.</para></proceduralStep>
+          <proceduralStep><para>Upon completion, verify calibration parameters within tolerance (ΔE &lt; 2.0).</para></proceduralStep>
+          <proceduralStep><para>Save calibration profile to display unit non-volatile memory.</para></proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Touchscreen Calibration</title>
+          <proceduralStep><para>Access display maintenance menu: MFD → MAINTENANCE → TOUCH CALIBRATION.</para></proceduralStep>
+          <proceduralStep><para>Follow on-screen prompts to touch calibration targets (typically 5 or 9 points).</para></proceduralStep>
+          <proceduralStep><para>System calculates touch offset correction matrix.</para></proceduralStep>
+          <proceduralStep><para>Test calibration accuracy by touching known screen locations and verifying cursor position.</para></proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Data Bus Timing Verification</title>
+          <para>Verify AFDX and ARINC 429 data bus timing after LRU replacement or wiring changes.</para>
+          <proceduralStep><para>Connect data bus analyzer to test point connectors.</para></proceduralStep>
+          <proceduralStep><para>Monitor critical parameters (airspeed, altitude, attitude) on analyzer.</para></proceduralStep>
+          <proceduralStep><para>Verify data refresh rates meet specifications (typically 1-50 Hz depending on parameter).</para></proceduralStep>
+          <proceduralStep><para>Check for data dropouts, sequence errors, or timing jitter.</para></proceduralStep>
+          <proceduralStep><para>Verify AFDX Virtual Link latency within allocated budgets (&lt;10 ms for critical parameters).</para></proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Recorder Time Synchronization Check</title>
+          <proceduralStep><para>Verify FDR/CVR time stamps match aircraft UTC time source within ±1 second.</para></proceduralStep>
+          <proceduralStep><para>Access recorder status page: MFD → MAINTENANCE → RECORDER STATUS.</para></proceduralStep>
+          <proceduralStep><para>Compare displayed time with GPS-derived UTC time.</para></proceduralStep>
+          <proceduralStep><para>If discrepancy exceeds tolerance, initiate time synchronization from maintenance menu.</para></proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>End-to-End Functional Check</title>
+          <para>Perform after major system maintenance to verify complete data path integrity.</para>
+          <proceduralStep><para>Apply power and allow system to complete initialization.</para></proceduralStep>
+          <proceduralStep><para>Verify all display units showing valid flight and system indications.</para></proceduralStep>
+          <proceduralStep><para>Inject test alert via maintenance menu and verify correct presentation (message, color, priority).</para></proceduralStep>
+          <proceduralStep><para>Verify recording systems (FDR/CVR/QAR) show ACTIVE status.</para></proceduralStep>
+          <proceduralStep><para>Cycle through display pages and verify all system synoptics populate with data.</para></proceduralStep>
+          <proceduralStep><para>If all checks pass, system functional check complete. Document results in maintenance record.</para></proceduralStep>
+        </proceduralStep>
+      </mainProcedure>
+      
+      <closeRqmts><reqCondGroup><noConds/></reqCondGroup></closeRqmts>
+    </procedure>
+  </content>
+  
+  <remarks>
+    <simplePara>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</simplePara>
+    <simplePara>Status: DRAFT | Issue: 001-00 | Date: 2026-01-10</simplePara>
+  </remarks>
+  
+</dmodule>

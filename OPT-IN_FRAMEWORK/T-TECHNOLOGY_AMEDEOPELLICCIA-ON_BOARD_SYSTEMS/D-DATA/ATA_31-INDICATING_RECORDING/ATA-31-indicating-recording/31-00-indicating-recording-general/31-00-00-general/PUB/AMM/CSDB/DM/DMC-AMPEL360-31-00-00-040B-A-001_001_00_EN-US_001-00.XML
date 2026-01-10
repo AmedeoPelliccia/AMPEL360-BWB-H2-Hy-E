@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - Indicating and Recording System Architecture
+DMC: AMPEL360-31-00-00-040B-A-001_001_00_EN-US_001-00
+Info Code: 040B - System Architecture, Interfaces, and Data Flows
+ATA Chapter: 31-00-00 Indicating and Recording General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000d_5-0/xml_schema_flat/descript.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360"
+                systemDiffCode="A"
+                systemCode="31"
+                subSystemCode="00"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="040"
+                infoCodeVariant="B"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>System Architecture, Interfaces, and Data Flows</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 Q100 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360"
+                    systemDiffCode="A"
+                    systemCode="00"
+                    subSystemCode="00"
+                    subSubSystemCode="00"
+                    assyCode="00"
+                    disassyCode="00"
+                    disassyCodeVariant="A"
+                    infoCode="022"
+                    infoCodeVariant="A"
+                    itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Public Technical Documentation</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <description>
+      <levelledPara>
+        <title>Introduction</title>
+        <para>This data module describes the detailed architecture, component layout, interface definitions, and data flow paths for the AMPEL360 Q100 Indicating and Recording System (ATA 31). The system employs a distributed, networked architecture leveraging Integrated Modular Avionics (IMA) principles and multiple data bus standards.</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>System Architecture</title>
+        
+        <levelledPara>
+          <title>Functional Architecture</title>
+          <para>The Indicating and Recording System is organized into five primary functional domains:</para>
+          <para>
+            1. Display Management - Controls all cockpit displays and rendering<br/>
+            2. Crew Alerting - Processes and presents warnings, cautions, and advisories<br/>
+            3. Data Acquisition - Collects parameters from aircraft sensors and systems<br/>
+            4. Data Recording - Stores flight data in crash-protected and maintenance recorders<br/>
+            5. System Hosting - Provides computational resources via IMA modules
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Physical Architecture</title>
+          <para>Major line-replaceable units (LRUs) and their installation locations:</para>
+          <para>
+            - Display Units (4x): Cockpit instrument panel (2 PFD, 2 ND/MFD)<br/>
+            - Display Management Computer (2x): Avionics bay (redundant)<br/>
+            - Crew Alerting Computer (2x): Avionics bay (redundant)<br/>
+            - Data Acquisition Units (4x): Distributed locations for sensor proximity<br/>
+            - Flight Data Recorder (1x): Aft pressure bulkhead (crash-protected)<br/>
+            - Cockpit Voice Recorder (1x): Aft pressure bulkhead (crash-protected)<br/>
+            - Quick Access Recorder (1x): Forward electronics bay<br/>
+            - ACMS Gateway (2x): Avionics bay (redundant)<br/>
+            - IMA Cabinets (4x): Avionics bay (provides hosting for applications)
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Data Buses and Networks</title>
+        
+        <levelledPara>
+          <title>AFDX (ARINC 664) Network</title>
+          <para>Primary high-speed data network for system-to-system communication. Configuration:</para>
+          <para>
+            - Dual redundant switched Ethernet networks (A and B)<br/>
+            - 100 Mbps full-duplex per end system<br/>
+            - Deterministic traffic shaping via Virtual Links (VLs)<br/>
+            - Used for: Display data, alert messages, FMS data, navigation data<br/>
+            - Segregation: Flight-critical traffic on separate VLs from non-critical
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>ARINC 429 Buses</title>
+          <para>Point-to-point digital data buses for sensor interfaces and legacy system integration:</para>
+          <para>
+            - Approximately 60 ARINC 429 buses throughout the aircraft<br/>
+            - Data rates: High-speed (100 kbps) and low-speed (12.5 kbps)<br/>
+            - Used for: Air data, inertial reference, GPS, discrete signals<br/>
+            - Routed through Data Acquisition Units for aggregation to AFDX
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Discrete and Analog Interfaces</title>
+          <para>Direct wired connections for time-critical or simple signals:</para>
+          <para>
+            - Discrete inputs: Switch positions, circuit breaker status, landing gear position<br/>
+            - Analog inputs: Temperature probes, pressure transducers, flow sensors<br/>
+            - Analog-to-digital conversion performed at Data Acquisition Units<br/>
+            - Signal conditioning: Filtering, scaling, fault detection
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>MIL-STD-1553 Buses</title>
+          <para>Dual redundant buses for flight-critical systems requiring deterministic timing:</para>
+          <para>
+            - Used for: Flight control computers, air data computers, inertial reference<br/>
+            - 1 Mbps data rate<br/>
+            - Bus controller hosted on primary flight control computer<br/>
+            - Remote terminals at indicating and recording interfaces
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Interface Definitions</title>
+        
+        <levelledPara>
+          <title>Cross-ATA System Interfaces</title>
+          <para>The Indicating and Recording System interfaces with the following aircraft systems:</para>
+          <para>
+            ATA 21 (Environmental Control):<br/>
+            - Cabin pressure, temperature, humidity sensors<br/>
+            - ECS fault alerts and system status<br/>
+            <br/>
+            ATA 22 (Auto Flight):<br/>
+            - Autopilot engagement status and modes<br/>
+            - Flight director commands and deviations<br/>
+            - Autothrottle status<br/>
+            <br/>
+            ATA 24 (Electrical Power):<br/>
+            - Bus voltages, currents, frequencies<br/>
+            - Generator status, battery state-of-charge<br/>
+            - Circuit breaker trip indications<br/>
+            <br/>
+            ATA 27 (Flight Controls):<br/>
+            - Control surface positions<br/>
+            - Actuator pressures and temperatures<br/>
+            - Flight control computer status<br/>
+            <br/>
+            ATA 29 (Hydraulic Power):<br/>
+            - System pressures, reservoir levels<br/>
+            - Pump status and temperatures<br/>
+            <br/>
+            ATA 32 (Landing Gear):<br/>
+            - Gear position (up/down/transit)<br/>
+            - Brake temperatures and pressures<br/>
+            - Tire pressure monitoring<br/>
+            <br/>
+            ATA 34 (Navigation):<br/>
+            - GPS position, altitude, groundspeed<br/>
+            - Inertial reference data<br/>
+            - Radio navigation signal quality<br/>
+            <br/>
+            ATA 42 (IMA):<br/>
+            - Computational hosting for display and alert applications<br/>
+            - AFDX switching and routing<br/>
+            - Partitioned execution environments<br/>
+            <br/>
+            ATA 45 (Maintenance System):<br/>
+            - BITE results from all LRUs<br/>
+            - Fault codes and maintenance messages<br/>
+            - Trend data for predictive maintenance<br/>
+            <br/>
+            ATA 71-80 (Propulsion):<br/>
+            - Fuel cell stack voltages, currents, temperatures<br/>
+            - Electric motor speeds, torques, temperatures<br/>
+            - Hydrogen pressure and flow<br/>
+            - Battery pack state-of-charge and cell voltages
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>External Interfaces</title>
+          <para>Connections to systems outside the aircraft boundary:</para>
+          <para>
+            - Maintenance Laptop Port: Ethernet connection for data download and software loading<br/>
+            - Wireless Data Link (ATA 23): Automatic data reporting to ground systems<br/>
+            - USB Ports: Quick Access Recorder data extraction<br/>
+            - Emergency Locator Transmitter (ELT): Activation signaling
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Data Flow Architecture</title>
+        
+        <levelledPara>
+          <title>Sensor-to-Display Flow</title>
+          <para>Typical data path from sensor acquisition to cockpit indication:</para>
+          <para>
+            1. Sensor (e.g., temperature probe) generates analog signal<br/>
+            2. Signal routed to nearest Data Acquisition Unit (DAU)<br/>
+            3. DAU performs A/D conversion, scaling, and validity checks<br/>
+            4. Digital data transmitted via ARINC 429 to IMA module<br/>
+            5. IMA application processes data (averaging, filtering, limit checks)<br/>
+            6. Processed data published on AFDX virtual link<br/>
+            7. Display Management Computer subscribes to AFDX data<br/>
+            8. Display computer renders indication according to ARINC 661 format<br/>
+            9. Rendered display data sent to Display Unit for presentation<br/>
+            <br/>
+            Total latency (sensor to display): Typically &lt;100 ms for non-critical parameters
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Alert Generation and Presentation Flow</title>
+          <para>Alert processing from fault detection to crew notification:</para>
+          <para>
+            1. Fault condition detected by monitored system (e.g., hydraulic pressure low)<br/>
+            2. System publishes fault message on AFDX network<br/>
+            3. Crew Alerting Computer subscribes to all system fault messages<br/>
+            4. Alert logic applies priority, filtering, and suppression rules<br/>
+            5. Active alerts compiled into prioritized list<br/>
+            6. Alert messages sent to Display Management Computer via AFDX<br/>
+            7. Visual alerts displayed on CAS/ECAM/EICAS display page<br/>
+            8. Master warning/caution lights illuminated (discrete outputs)<br/>
+            9. Aural warning triggered if applicable (audio synthesis)<br/>
+            <br/>
+            Total latency (fault to alert): Typically &lt;50 ms for critical warnings
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Recording Data Flow</title>
+          <para>Flight data path to crash-protected recorders:</para>
+          <para>
+            1. Parameters acquired from all aircraft systems via AFDX and ARINC 429<br/>
+            2. Data aggregated at Flight Data Acquisition Unit (FDAU)<br/>
+            3. FDAU performs encoding per ED-112A requirements<br/>
+            4. Encoded frame transmitted to Flight Data Recorder (FDR)<br/>
+            5. FDR stores data in crash-protected solid-state memory<br/>
+            6. Parallel data stream sent to Quick Access Recorder (QAR)<br/>
+            7. QAR stores data in removable memory module for ground analysis<br/>
+            8. ACMS Gateway archives subset of data for maintenance and DPP<br/>
+            <br/>
+            Recording rate: Typically 1-64 Hz depending on parameter criticality
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Redundancy and Fault Tolerance</title>
+        <para>The system architecture incorporates multiple levels of redundancy:</para>
+        <para>
+          - Dual Display Management Computers with automatic failover<br/>
+          - Dual Crew Alerting Computers with cross-monitoring<br/>
+          - Redundant AFDX networks (A and B sides)<br/>
+          - Multiple Data Acquisition Units with overlapping coverage<br/>
+          - Display units capable of presenting combined PFD/ND information if one fails<br/>
+          - Standby flight instruments as ultimate backup for critical parameters<br/>
+          - Independent power supplies for each redundant channel
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Related Documentation</title>
+        <para>
+          - DMC-AMPEL360-31-00-00-040A: General System Description<br/>
+          - Aircraft Wiring Diagrams: Interface pin assignments and cable routing<br/>
+          - ICD-AMPEL360-31-AFDX: AFDX Virtual Link definitions and message formats<br/>
+          - ICD-AMPEL360-31-A429: ARINC 429 label and format specifications<br/>
+          - ATA 42 Documentation: IMA module allocation and partition configuration
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</para>
+        <para>Status: DRAFT - Subject to technical review and certification authority approval.</para>
+        <para>Issue: 001-00 | Date: 2026-01-10</para>
+      </levelledPara>
+    </description>
+  </content>
+  
+</dmodule>

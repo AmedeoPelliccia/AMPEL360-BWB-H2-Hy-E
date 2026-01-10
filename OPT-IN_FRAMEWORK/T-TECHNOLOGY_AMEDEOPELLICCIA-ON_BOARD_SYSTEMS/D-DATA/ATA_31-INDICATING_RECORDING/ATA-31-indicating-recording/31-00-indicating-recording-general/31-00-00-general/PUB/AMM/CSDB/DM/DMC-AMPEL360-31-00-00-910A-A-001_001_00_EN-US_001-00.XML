@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+S1000D Data Module - Data Recording, Storage, and Retrieval Logic
+DMC: AMPEL360-31-00-00-910A-A-001_001_00_EN-US_001-00
+Info Code: 910A - Data Recording, Storage, and Retrieval Logic
+ATA Chapter: 31-00-00 Indicating and Recording General
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="31"
+                subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="910"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>Data Recording, Storage, and Retrieval Logic</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></originator>
+      <applic><displayText><simplePara>All AMPEL360 Q100 aircraft configurations</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef><dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="00"
+                  subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                  disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                  infoCodeVariant="A" itemLocationCode="A"/>
+        </dmRefIdent></dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Introduction</title>
+        <para>This data module describes the data recording, storage, and retrieval mechanisms for the AMPEL360 Q100 Indicating and Recording System. The system implements multiple recording strategies to support regulatory compliance (FDR/CVR), operational quality (QAR/FOQA), predictive maintenance (ACMS), and digital product lifecycle management (DPP integration).</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Flight Data Recorder (FDR) Logic</title>
+        
+        <levelledPara>
+          <title>Recording Parameters</title>
+          <para>FDR records minimum 88 parameters per ED-112A requirements, including:</para>
+          <para>
+            - Flight control positions (elevator, aileron, rudder, trim)<br/>
+            - Engine/propulsion parameters (fuel cell voltage/current, motor speed/torque)<br/>
+            - Air data (airspeed, altitude, angle-of-attack, vertical speed)<br/>
+            - Navigation (position, heading, track)<br/>
+            - System status (gear position, flap position, warnings/alerts)<br/>
+            - Time stamps (UTC synchronized)
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Recording Logic</title>
+          <para>FDR recording initiated when:</para>
+          <para>
+            - Aircraft electrical power applied (any power source)<br/>
+            - Recording continues until power removed<br/>
+            - Minimum 25-hour capacity with circular buffer (oldest data overwritten)<br/>
+            - Recording rate: 1 Hz (slow parameters) to 64 Hz (flight controls)<br/>
+            - Data encoding: ARINC 647 or binary as appropriate<br/>
+            - Crash survivability: Memory module survives 3,400g impact, 1,100°C for 1 hour, 20,000 ft seawater immersion
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Data Integrity</title>
+          <para>FDR implements multiple data integrity mechanisms:</para>
+          <para>
+            - Cyclic redundancy check (CRC) on each data frame<br/>
+            - Cryptographic hash chain for tamper detection<br/>
+            - Error correction coding on memory storage<br/>
+            - Dual redundant memory banks with cross-checking<br/>
+            - Write verification after each commit<br/>
+            - Independent clock/timing verification
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Data Retrieval</title>
+          <para>FDR data retrieved by:</para>
+          <para>
+            - Direct readout via maintenance port (requires specialized equipment)<br/>
+            - Memory module removal for laboratory analysis (accident investigation)<br/>
+            - Wireless download via secure datalink (if equipped, requires authorization)<br/>
+            - Data format: Standardized per ED-112A for readability by NTSB/BEA analysis tools
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Cockpit Voice Recorder (CVR) Logic</title>
+        
+        <levelledPara>
+          <title>Audio Sources</title>
+          <para>CVR records four independent audio channels:</para>
+          <para>
+            - Channel 1: Captain microphone<br/>
+            - Channel 2: First Officer microphone<br/>
+            - Channel 3: Cockpit area microphone (ambient sounds)<br/>
+            - Channel 4: Spare / Third crew position (if applicable)
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Recording Logic</title>
+          <para>CVR recording initiated when:</para>
+          <para>
+            - Aircraft electrical power applied OR<br/>
+            - Engines/motors running (via discrete input)<br/>
+            - Minimum 2-hour capacity with circular buffer<br/>
+            - Audio encoding: Digital compression (typically ADPCM or similar)<br/>
+            - Recording quality: Sufficient intelligibility for accident investigation
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Erase Function</title>
+          <para>CVR includes crew-initiated erase function (regulatory requirement):</para>
+          <para>
+            - Erase switch located in cockpit (typically overhead panel)<br/>
+            - Erase enabled only when aircraft on ground AND parking brake set<br/>
+            - Erase requires sustained switch actuation (5 seconds) to prevent inadvertent activation<br/>
+            - Erase operation overwrites all audio with zeros/silence<br/>
+            - Erase event logged in FDR and ACMS<br/>
+            - WARNING: Erase function disabled during accident/incident investigation per regulatory lock-out
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Quick Access Recorder (QAR) Logic</title>
+        
+        <levelledPara>
+          <title>Purpose and Scope</title>
+          <para>QAR provides easily accessible flight data for operational quality monitoring:</para>
+          <para>
+            - Superset of FDR parameters (typically 200-500 parameters)<br/>
+            - Higher recording rates (up to 8 Hz) for engineering analysis<br/>
+            - Removable memory module for ground data transfer<br/>
+            - Storage capacity: 100-500 flight hours (depends on parameter count)<br/>
+            - Data used for FOQA, pilot training, fuel efficiency analysis
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Data Download Process</title>
+          <para>QAR data downloaded by:</para>
+          <para>
+            1. Remove QAR memory module from aircraft<br/>
+            2. Insert module into ground station reader<br/>
+            3. Transfer data to FOQA analysis system<br/>
+            4. Return module to aircraft or install fresh module<br/>
+            5. Data typically downloaded weekly or after each flight (airline operational practice)
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Aircraft Condition Monitoring System (ACMS) Logic</title>
+        
+        <levelledPara>
+          <title>ACMS Data Collection</title>
+          <para>ACMS aggregates maintenance-relevant data from all aircraft systems:</para>
+          <para>
+            - Fault codes and BITE results from all LRUs<br/>
+            - System usage statistics (cycles, hours, actuations)<br/>
+            - Trending data (temperatures, pressures, vibration levels)<br/>
+            - Configuration changes and software updates<br/>
+            - Maintenance actions and part replacements
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Automatic Reporting</title>
+          <para>ACMS automatically generates and transmits reports:</para>
+          <para>
+            - Post-flight report: Generated at engine/motor shutdown, transmitted via datalink<br/>
+            - Event-triggered reports: Sent immediately when critical fault detected<br/>
+            - Scheduled reports: Daily or weekly summaries of fleet health<br/>
+            - Integration with airline maintenance systems and OEM support<br/>
+            - Reports formatted per ARINC 624 or proprietary airline standards
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Digital Product Passport (DPP) Integration</title>
+        
+        <levelledPara>
+          <title>Lifecycle Data Recording</title>
+          <para>Recording system contributes data to aircraft Digital Product Passport (ATA 95):</para>
+          <para>
+            - Component installation dates and serial numbers<br/>
+            - Cumulative usage (flight hours, cycles, landings)<br/>
+            - Maintenance events and corrective actions<br/>
+            - Environmental exposure (temperature extremes, lightning strikes)<br/>
+            - Software and configuration baseline history<br/>
+            - Data archived for aircraft lifetime (30+ years)
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Data Archival Strategy</title>
+          <para>Long-term data storage architecture:</para>
+          <para>
+            - On-aircraft: Rolling 90-day cache in non-volatile memory<br/>
+            - Ground systems: Complete flight-by-flight archive in airline/OEM databases<br/>
+            - Cloud storage: Encrypted, redundant, geographically distributed<br/>
+            - Blockchain anchoring: Cryptographic proofs of data existence and integrity<br/>
+            - Access control: Role-based permissions for data retrieval and analysis
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Cybersecurity and Data Protection</title>
+        <para>All recording systems implement cybersecurity controls:</para>
+        <para>
+          - Data encryption at rest (AES-256) and in transit (TLS 1.3)<br/>
+          - Authentication of data sources (digital signatures)<br/>
+          - Tamper-evident seals and intrusion detection<br/>
+          - Audit logging of all data access and modifications<br/>
+          - Compliance with DO-326A cybersecurity requirements<br/>
+          - Regular security assessments and penetration testing
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Related Documentation</title>
+        <para>
+          - ED-112A: Minimum Operational Performance Standards for Crash Protected Airborne Recorder Systems<br/>
+          - ARINC 647: Flight Data Recorder Systems<br/>
+          - ARINC 624: ACMS Data Reporting<br/>
+          - ATA 95 Documentation: Digital Product Passport architecture and data schemas
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</para>
+        <para>Status: DRAFT | Issue: 001-00 | Date: 2026-01-10</para>
+      </levelledPara>
+    </description>
+  </content>
+  
+</dmodule>

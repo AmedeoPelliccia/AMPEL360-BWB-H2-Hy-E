@@ -484,6 +484,33 @@ PUB/
 **Example Path**: 
 `OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_22-AUTOFLIGHT/ATA-22-auto-flight/22-00-auto-flight-general/22-00-00-auto-flight-general/PUB/AMM/CSDB/`
 
+#### S1000D-Aligned DMC Set — ATA 31-00-00 Indicating & Recording
+
+Below is a **suggested, S1000D-aligned DMC set** for:  
+`OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING/ATA-31-indicating-recording/31-00-indicating-recording-general/31-00-00-general/PUB/AMM/CSDB/DM/`
+
+**Scope**: AMM / CSDB / DM (publishable maintenance content)  
+**Status**: Canonical, minimal, reusable — consistent with ATA 23 pattern
+
+| DMC Filename                                                 | Info Code | Description                                                       |
+| ------------------------------------------------------------ | --------- | ----------------------------------------------------------------- |
+| **DMC-AMPEL360-31-00-00-040A-A-001_001_00_EN-US_001-00.XML** | 040A      | Indicating and recording system – general description and purpose |
+| **DMC-AMPEL360-31-00-00-040B-A-001_001_00_EN-US_001-00.XML** | 040B      | System architecture, interfaces, and data flows                   |
+| **DMC-AMPEL360-31-00-00-050A-A-001_001_00_EN-US_001-00.XML** | 050A      | Safety precautions and operational limitations                    |
+| **DMC-AMPEL360-31-00-00-520A-A-001_001_00_EN-US_001-00.XML** | 520A      | Built-in test (BIT/BITE) and system test procedures               |
+| **DMC-AMPEL360-31-00-00-520B-A-001_001_00_EN-US_001-00.XML** | 520B      | Calibration and functional check procedures                       |
+| **DMC-AMPEL360-31-00-00-720A-A-001_001_00_EN-US_001-00.XML** | 720A      | Scheduled maintenance and inspection requirements                 |
+| **DMC-AMPEL360-31-00-00-730A-A-001_001_00_EN-US_001-00.XML** | 730A      | Fault isolation and troubleshooting (indications & recordings)    |
+| **DMC-AMPEL360-31-00-00-740A-A-001_001_00_EN-US_001-00.XML** | 740A      | Removal and installation – display and recording units            |
+| **DMC-AMPEL360-31-00-00-910A-A-001_001_00_EN-US_001-00.XML** | 910A      | Data recording, storage, and retrieval logic                      |
+| **DMC-AMPEL360-31-00-00-940A-A-001_001_00_EN-US_001-00.XML** | 940A      | Software loading, configuration, and data integrity checks        |
+
+**Notes**:
+- These **DMs are SSOT-clean**: no rendering assumptions, no IETP coupling
+- **PMs** will later assemble these into AMM chapters and HTML/PDF IETP outputs
+- Info codes are **ATA-consistent** and **BREX-friendly**
+- Subsystems (e.g. displays, DAUs, recorders) should branch at **31-xx-yy** level, not here
+
 ### Certification Timeline
 
 > 📍 **Current Phase:** Preliminary Design / Detail Concept (December 2025)

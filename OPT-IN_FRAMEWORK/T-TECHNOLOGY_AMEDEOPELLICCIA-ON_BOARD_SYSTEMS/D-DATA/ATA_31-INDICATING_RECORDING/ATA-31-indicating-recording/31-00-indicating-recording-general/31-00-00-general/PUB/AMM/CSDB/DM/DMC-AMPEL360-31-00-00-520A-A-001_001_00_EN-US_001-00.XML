@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - BIT/BITE Test Procedures
+DMC: AMPEL360-31-00-00-520A-A-001_001_00_EN-US_001-00
+Info Code: 520A - Built-in Test (BIT/BITE) and System Test Procedures
+ATA Chapter: 31-00-00 Indicating and Recording General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proc ed.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360"
+                systemDiffCode="A"
+                systemCode="31"
+                subSystemCode="00"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="520"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>Built-in Test (BIT/BITE) and System Test Procedures</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 Q100 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360"
+                    systemDiffCode="A"
+                    systemCode="00"
+                    subSystemCode="00"
+                    subSubSystemCode="00"
+                    assyCode="00"
+                    disassyCode="00"
+                    disassyCodeVariant="A"
+                    infoCode="022"
+                    infoCodeVariant="A"
+                    itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqPersons>
+          <personnel man="1" trade="Aircraft Maintenance Technician"/>
+        </reqPersons>
+      </preliminaryRqmts>
+      
+      <mainProcedure>
+        <proceduralStep>
+          <para>This data module provides procedures for executing Built-In Test (BIT) and Built-In Test Equipment (BITE) functions for the AMPEL360 Q100 Indicating and Recording System. BITE tests verify system functionality, isolate faults to line-replaceable units (LRUs), and validate interfaces.</para>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Power-Up BIT (Continuous BIT)</title>
+          <para>Continuous BIT runs automatically whenever power is applied to the system. It monitors critical functions in real-time and generates fault codes if anomalies detected.</para>
+          <proceduralStep>
+            <para>Apply aircraft power (BAT or external power).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Observe display units during power-up sequence. All displays should illuminate and show initialization screens within 10 seconds.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Monitor for BITE fault messages on maintenance pages. Navigate to: MFD → MENU → MAINTENANCE → BITE STATUS.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If fault codes present, record fault code numbers and refer to fault isolation procedures (DMC-AMPEL360-31-00-00-730A).</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Initiated BIT (On-Demand BITE)</title>
+          <para>Initiated BITE tests are manually triggered to perform comprehensive system checks, including functions not continuously monitored.</para>
+          <proceduralStep>
+            <para>Ensure aircraft is on ground with parking brake set and engines/motors secured.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Access BITE menu: MFD → MENU → MAINTENANCE → BITE TESTS.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select test category:
+              - Display System Tests
+              - Alerting System Tests
+              - Recording System Tests
+              - Data Acquisition Tests
+              - Interface Tests</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select specific test from list and press INITIATE button.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Observe test progress indicator. Tests typically complete in 30-120 seconds.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Review test results:
+              - PASS: System function verified, no action required
+              - FAIL: Fault detected, refer to fault code for corrective action
+              - INCOMPLETE: Test could not complete, check prerequisites</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Display Unit BITE Tests</title>
+          <proceduralStep>
+            <para>Access display test menu: MFD → MENU → MAINTENANCE → DISPLAY TESTS.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "Color Bar Test" to verify display color rendering. Full-screen color bars (red, green, blue, white, black) should be clearly visible with no dead pixels or discoloration.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "Pixel Test" to check for stuck or dead pixels. Display shows white, black, and checkerboard patterns.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "Touch Screen Test" (if applicable) and touch indicated target points to verify touchscreen calibration and responsiveness.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "Brightness Test" and adjust brightness slider to verify backlight control through full range.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Crew Alerting System BITE Tests</title>
+          <proceduralStep>
+            <para>Access alerting test menu: MFD → MENU → MAINTENANCE → ALERT TESTS.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "Master Warning Test". Master Warning light should illuminate and aural warning tone should sound.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "Master Caution Test". Master Caution light should illuminate.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "Alert Display Test". Sample warning, caution, and advisory messages should appear on CAS display with correct color coding (red, amber, white).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "Aural Warning Test". System cycles through all aural warning types (gong, chime, voice alerts). Verify clear audio output.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Recording System BITE Tests</title>
+          <proceduralStep>
+            <para>Access recording test menu: MFD → MENU → MAINTENANCE → RECORDER TESTS.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "FDR Status Test". Display shows:
+              - Recording status (RECORDING / FAULT)
+              - Memory usage percentage
+              - Last write time
+              - BITE fault codes (if any)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "CVR Status Test". Display shows recording status, memory usage, and erase protection status.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "QAR Status Test". Display shows recording status and removable memory module presence.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>WARNING: Do not initiate recorder write tests during normal operations. These tests are for ground maintenance only.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Data Acquisition BITE Tests</title>
+          <proceduralStep>
+            <para>Access data acquisition test menu: MFD → MENU → MAINTENANCE → DATA ACQ TESTS.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select "DAU Status Test". Display lists all Data Acquisition Units with status:
+              - DAU-1 through DAU-4
+              - Communication status (ACTIVE / FAIL)
+              - Parameter count
+              - Built-in test results</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select specific DAU for detailed status including:
+              - ARINC 429 port status
+              - Analog input channel status
+              - Discrete input status
+              - Internal temperature and voltages</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>BITE Fault Code Retrieval</title>
+          <proceduralStep>
+            <para>Access fault code history: MFD → MENU → MAINTENANCE → FAULT HISTORY.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Review active faults (currently detected) and logged faults (historical).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>For each fault, note:
+              - Fault code number
+              - LRU identifier
+              - Detection time/date
+              - Flight phase when detected
+              - Occurrence count</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Record fault codes in aircraft maintenance log.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Refer to fault isolation manual (DMC-AMPEL360-31-00-00-730A) for corrective actions.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Clearing Fault Codes</title>
+          <proceduralStep>
+            <para>CAUTION: Clear fault codes only after verifying fault cause and performing corrective action.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Access fault code menu and select fault to clear.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Press CLEAR FAULT button.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Confirm clear operation when prompted.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If fault immediately recurs, fault condition still present. Do not repeatedly clear without resolving root cause.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Document fault clearing action in aircraft maintenance records.</para>
+          </proceduralStep>
+        </proceduralStep>
+      </mainProcedure>
+      
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+  
+  <!-- Document Control Note -->
+  <remarks>
+    <simplePara>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</simplePara>
+    <simplePara>Status: DRAFT - Subject to technical review and certification authority approval.</simplePara>
+    <simplePara>Issue: 001-00 | Date: 2026-01-10</simplePara>
+  </remarks>
+  
+</dmodule>

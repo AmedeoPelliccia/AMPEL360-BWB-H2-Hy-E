@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+S1000D Data Module - Software Loading, Configuration, and Data Integrity Checks
+DMC: AMPEL360-31-00-00-940A-A-001_001_00_EN-US_001-00
+Info Code: 940A - Software Loading, Configuration, and Data Integrity Checks
+ATA Chapter: 31-00-00 Indicating and Recording General
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proced.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="31"
+                subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="940"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>Software Loading, Configuration, and Data Integrity Checks</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></originator>
+      <applic><displayText><simplePara>All AMPEL360 Q100 aircraft configurations</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef><dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="00"
+                  subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                  disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                  infoCodeVariant="A" itemLocationCode="A"/>
+        </dmRefIdent></dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqPersons>
+          <personnel man="1" trade="Avionics Software Specialist"/>
+        </reqPersons>
+        <reqSupportEquips>
+          <supportEquipDescrGroup>
+            <supportEquipDescr><name>Maintenance Laptop with Software Loading Tool</name></supportEquipDescr>
+            <supportEquipDescr><name>Ethernet Cable (Aircraft to Laptop)</name></supportEquipDescr>
+            <supportEquipDescr><name>Software Load Media (USB or downloaded from OEM portal)</name></supportEquipDescr>
+          </supportEquipDescrGroup>
+        </reqSupportEquips>
+        <reqSupplies>
+          <supplyDescrGroup>
+            <supplyDescr><name>Software Release Package with Digital Signature</name></supplyDescr>
+          </supplyDescrGroup>
+        </reqSupplies>
+      </preliminaryRqmts>
+      
+      <mainProcedure>
+        <proceduralStep>
+          <title>Software Loading Overview</title>
+          <para>Indicating and Recording System software resides in multiple locations:</para>
+          <para>
+            - Display Management Computers (DMC): Display rendering and formatting applications<br/>
+            - Crew Alerting Computers (CAC): Alert logic and prioritization<br/>
+            - IMA Modules: Hosted applications for data processing and routing<br/>
+            - Data Acquisition Units (DAU): Firmware for signal conditioning and encoding<br/>
+            - Recorders (FDR/CVR/QAR): Embedded recorder firmware
+          </para>
+          <para>Software loading procedures vary by LRU type. This data module provides general methodology.</para>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Pre-Loading Verification</title>
+          <para>WARNING: Loading incorrect software can cause system failure or loss of critical functions.</para>
+          <proceduralStep>
+            <para>Verify software part number matches aircraft configuration. Check Software Configuration Management (SCM) database for compatibility matrix.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify digital signature of software package using OEM-provided public key certificate. Loading tool will validate signature automatically.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Record current software version from each target LRU for rollback capability.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Ensure aircraft on ground, parking brake set, and non-essential electrical loads OFF.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Connect maintenance laptop to aircraft Ethernet port (typically in avionics bay or cockpit).</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Display Management Computer Software Loading</title>
+          <proceduralStep>
+            <para>Launch software loading tool on maintenance laptop.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select target LRU: Display Management Computer (identify by serial number/position).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify network connectivity to target LRU. Tool will display CONNECTED or OFFLINE status.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select software load file (.lod or .zip format) from USB or downloaded location.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Initiate software transfer. Progress bar shows upload percentage. DO NOT interrupt power during this phase.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>After transfer complete, LRU will automatically verify checksum and initiate installation.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>LRU will reboot automatically (takes 30-60 seconds). Monitor for successful restart.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Tool displays LOAD SUCCESSFUL or LOAD FAILED status.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If load failed, LRU automatically reverts to previous software version. Review error log and retry.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Repeat process for redundant DMC (DMC-2) to maintain software version consistency.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Configuration Data Loading</title>
+          <para>Configuration data defines system parameters, alert thresholds, display formats, and operational modes. Configuration loading follows similar process to software loading but typically faster.</para>
+          <proceduralStep>
+            <para>Select target LRU and choose LOAD CONFIGURATION option in loading tool.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select configuration file (.cfg or .xml format) specific to aircraft tail number and configuration.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Tool transfers and verifies configuration data.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>LRU validates configuration against software version compatibility matrix.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If validation passes, configuration activated immediately (no reboot required unless specified).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify configuration loaded correctly by reviewing system setup pages on maintenance display.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Post-Loading Verification</title>
+          <proceduralStep>
+            <para>Power-cycle entire indicating and recording system (de-energize and re-energize master CBs).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify all LRUs complete power-up self-test with no faults.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Access software version page on maintenance display and confirm new software versions displayed.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Perform functional test per DMC-AMPEL360-31-00-00-520B (calibration and functional checks).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Execute BITE test suite per DMC-AMPEL360-31-00-00-520A. All tests should PASS.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Perform operational check: Cycle through display pages, inject test alerts, verify recording system status.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If any test fails, investigate fault and repeat software loading if necessary.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Data Integrity Verification</title>
+          <para>After software/configuration loading, verify data integrity of critical parameters:</para>
+          <proceduralStep>
+            <para>Access data integrity check menu: MFD → MAINTENANCE → DATA INTEGRITY.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>System performs automatic checksums on:</para>
+            <para>
+              - Executable code (CRC-32 or SHA-256)<br/>
+              - Configuration databases<br/>
+              - Alert logic tables<br/>
+              - Display format definitions<br/>
+              - Calibration coefficients
+            </para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Compare checksums against expected values documented in software release notes.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If any checksum mismatch detected, reload affected data and re-verify.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>System continuously monitors data integrity during operation. Any corruption detected generates BITE fault code.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Configuration Management Documentation</title>
+          <proceduralStep>
+            <para>Update aircraft configuration control records with new software versions and load dates.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Record software part numbers, revision levels, and checksums in aircraft maintenance log.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Update Digital Product Passport (DPP) with software baseline change.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If software change affects operational limitations or procedures, notify flight operations and update Flight Manual Supplements if required.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Archive previous software versions and configuration files for rollback capability (minimum 2 previous versions retained).</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Software Rollback Procedure</title>
+          <para>If new software causes operational issues, rollback to previous version:</para>
+          <proceduralStep>
+            <para>Locate archived previous software version and configuration files.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Follow standard software loading procedure using previous version files.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>After rollback, perform complete functional and BITE testing.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Document rollback reason and notify OEM of software issue for investigation.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Cybersecurity Considerations</title>
+          <para>WARNING: Software loading process includes multiple cybersecurity controls. Do not attempt to bypass:</para>
+          <para>
+            - Digital signature verification (prevents unauthorized or malicious software)<br/>
+            - Secure boot (ensures only authenticated software executes)<br/>
+            - Version compatibility checks (prevents incompatible software combinations)<br/>
+            - Audit logging (all software changes logged with timestamp and user ID)<br/>
+            - Access control (only authorized personnel can load software)
+          </para>
+          <para>Any cybersecurity control violation will generate BITE fault and prevent software installation.</para>
+        </proceduralStep>
+      </mainProcedure>
+      
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+  
+  <remarks>
+    <simplePara>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</simplePara>
+    <simplePara>Status: DRAFT | Issue: 001-00 | Date: 2026-01-10</simplePara>
+  </remarks>
+  
+</dmodule>

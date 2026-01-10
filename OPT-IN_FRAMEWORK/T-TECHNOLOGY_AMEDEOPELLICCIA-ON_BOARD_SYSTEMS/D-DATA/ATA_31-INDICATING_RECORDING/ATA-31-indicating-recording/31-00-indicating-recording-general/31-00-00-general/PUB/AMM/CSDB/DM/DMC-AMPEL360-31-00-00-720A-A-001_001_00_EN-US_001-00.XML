@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+S1000D Data Module - Scheduled Maintenance
+DMC: AMPEL360-31-00-00-720A-A-001_001_00_EN-US_001-00
+Info Code: 720A - Scheduled Maintenance and Inspection Requirements
+ATA Chapter: 31-00-00 Indicating and Recording General
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="31"
+                subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="720"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>Scheduled Maintenance and Inspection Requirements</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></originator>
+      <applic><displayText><simplePara>All AMPEL360 Q100 aircraft configurations</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef><dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="00"
+                  subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                  disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                  infoCodeVariant="A" itemLocationCode="A"/>
+        </dmRefIdent></dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Introduction</title>
+        <para>This data module defines scheduled maintenance and inspection tasks for the AMPEL360 Q100 Indicating and Recording System. Tasks are organized by interval (flight hours, calendar time, or cycles) and aligned with the Aircraft Maintenance Program (AMP).</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Daily/Pre-Flight Inspections</title>
+        <para>Perform before first flight of each day or after extended ground time:</para>
+        <para>
+          - Visual inspection of display units for cracks, discoloration, or physical damage<br/>
+          - Verify all displays illuminate during power-up and show valid indications<br/>
+          - Check master warning/caution lights functional<br/>
+          - Verify recorder status indicators show ACTIVE (green) not FAULT (amber)<br/>
+          - Review maintenance pages for active fault codes
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>500 Flight Hour / 3 Month Inspection</title>
+        <para>
+          - Download and archive QAR data for FOQA analysis<br/>
+          - Review BITE fault log history for recurring faults<br/>
+          - Inspect connector backshells for security and corrosion<br/>
+          - Verify display brightness and color uniformity<br/>
+          - Test aural warning system (all tones and voice alerts)<br/>
+          - Perform functional check of display source-switching logic
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>1000 Flight Hour / 6 Month Inspection</title>
+        <para>
+          - Execute comprehensive BITE test suite (all subsystems)<br/>
+          - Inspect wiring harnesses in high-vibration areas<br/>
+          - Clean display screens per approved procedure<br/>
+          - Verify data bus signal integrity (AFDX and ARINC 429)<br/>
+          - Test FDR/CVR underwater locator beacon (functional test only, not immersion)
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>2000 Flight Hour / 12 Month Inspection</title>
+        <para>
+          - Perform display color calibration (all units)<br/>
+          - Download FDR/CVR data for archival and data quality analysis<br/>
+          - Inspect crash-protected recorder mounting for security<br/>
+          - Test emergency power supply for recorders<br/>
+          - Update system software if new releases available<br/>
+          - Review and update alert inhibit logic if operational experience warrants changes
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>4000 Flight Hour / 24 Month Inspection</title>
+        <para>
+          - Detailed inspection of all LRU connectors and wiring<br/>
+          - Perform end-to-end latency testing of critical data paths<br/>
+          - Verify cryptographic hash chain integrity on recorders<br/>
+          - Inspect cooling airflow for IMA modules hosting display/recording applications<br/>
+          - Review system reliability data and identify components approaching MTBF limits
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>10-Year Calendar Inspection</title>
+        <para>
+          - Replace crash-protected recorder batteries (FDR/CVR underwater locator beacons)<br/>
+          - Overhaul or replace Data Acquisition Units per component CMM<br/>
+          - Conduct comprehensive system audit including hardware, software versions, and configuration<br/>
+          - Update Digital Product Passport with lifecycle maintenance history
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>On-Condition Maintenance</title>
+        <para>Perform when BITE detects faults or when crew reports anomalies:</para>
+        <para>
+          - Troubleshoot per fault isolation manual (DMC-AMPEL360-31-00-00-730A)<br/>
+          - Replace faulty LRUs and perform operational check<br/>
+          - Clear fault codes only after verifying corrective action effectiveness<br/>
+          - Document maintenance actions in aircraft log
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</para>
+        <para>Status: DRAFT | Issue: 001-00 | Date: 2026-01-10</para>
+      </levelledPara>
+    </description>
+  </content>
+  
+</dmodule>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+S1000D Data Module - Removal and Installation
+DMC: AMPEL360-31-00-00-740A-A-001_001_00_EN-US_001-00
+Info Code: 740A - Removal and Installation – Display and Recording Units
+ATA Chapter: 31-00-00 Indicating and Recording General
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proced.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="31"
+                subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="740"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="10"/>
+        <dmTitle>
+          <techName>Indicating and Recording System</techName>
+          <infoName>Removal and Installation – Display and Recording Units</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>AMPEL360-AIR-T Project</enterpriseName></originator>
+      <applic><displayText><simplePara>All AMPEL360 Q100 aircraft configurations</simplePara></displayText></applic>
+      <brexDmRef>
+        <dmRef><dmRefIdent>
+          <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="00"
+                  subSystemCode="00" subSubSystemCode="00" assyCode="00"
+                  disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                  infoCodeVariant="A" itemLocationCode="A"/>
+        </dmRefIdent></dmRef>
+      </brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqPersons>
+          <personnel man="1" trade="Avionics Technician"/>
+        </reqPersons>
+        <reqSupportEquips>
+          <supportEquipDescrGroup>
+            <supportEquipDescr><name>Torque Wrench (5-50 in-lb range)</name></supportEquipDescr>
+            <supportEquipDescr><name>ESD Wrist Strap and Mat</name></supportEquipDescr>
+            <supportEquipDescr><name>Anti-Static Bags</name></supportEquipDescr>
+          </supportEquipDescrGroup>
+        </reqSupportEquips>
+      </preliminaryRqmts>
+      
+      <mainProcedure>
+        <proceduralStep>
+          <title>Display Unit Removal</title>
+          <para>WARNING: Observe ESD precautions. Wear grounded wrist strap throughout procedure.</para>
+          <proceduralStep><para>De-energize aircraft electrical system. Verify power OFF at display unit.</para></proceduralStep>
+          <proceduralStep><para>Remove bezels or covers providing access to display unit mounting screws.</para></proceduralStep>
+          <proceduralStep><para>Disconnect electrical connectors from rear of display unit. Support connector bodies, not cables.</para></proceduralStep>
+          <proceduralStep><para>Remove mounting screws (typically 4-6 screws). Retain hardware for installation.</para></proceduralStep>
+          <proceduralStep><para>Carefully withdraw display unit from instrument panel. Support unit weight; do not allow to drop or swing.</para></proceduralStep>
+          <proceduralStep><para>Place removed display unit in anti-static bag. Store in protective packaging.</para></proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Display Unit Installation</title>
+          <proceduralStep><para>Remove replacement display unit from protective packaging. Inspect for shipping damage.</para></proceduralStep>
+          <proceduralStep><para>Inspect mounting tray and connectors in aircraft for cleanliness and damage.</para></proceduralStep>
+          <proceduralStep><para>Carefully insert display unit into mounting tray. Align mounting holes.</para></proceduralStep>
+          <proceduralStep><para>Connect electrical connectors. Verify positive engagement (should hear/feel click).</para></proceduralStep>
+          <proceduralStep><para>Install and torque mounting screws to 25-30 in-lb. Use cross-pattern tightening sequence.</para></proceduralStep>
+          <proceduralStep><para>Install bezels and covers.</para></proceduralStep>
+          <proceduralStep><para>Apply aircraft power and verify display unit powers up and passes self-test.</para></proceduralStep>
+          <proceduralStep><para>Perform functional check per DMC-AMPEL360-31-00-00-520B.</para></proceduralStep>
+          <proceduralStep><para>Update aircraft configuration records with new display unit serial number and software version.</para></proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Flight Data Recorder (FDR) Removal</title>
+          <para>CAUTION: FDR contains crash-protected data. Handle as evidence if aircraft involved in accident/incident.</para>
+          <proceduralStep><para>De-energize FDR circuit breaker.</para></proceduralStep>
+          <proceduralStep><para>Access FDR mounting location (aft pressure bulkhead).</para></proceduralStep>
+          <proceduralStep><para>Disconnect electrical connector and RF connector (underwater locator beacon antenna).</para></proceduralStep>
+          <proceduralStep><para>Remove mounting fasteners (typically 4 bolts). Note orientation of unit for installation reference.</para></proceduralStep>
+          <proceduralStep><para>Remove FDR unit. CAUTION: Unit weighs approximately 15-20 lbs.</para></proceduralStep>
+          <proceduralStep><para>If data preservation required, store FDR in temperature-controlled environment and maintain chain of custody.</para></proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Flight Data Recorder (FDR) Installation</title>
+          <proceduralStep><para>Inspect replacement FDR for shipping damage and verify correct part number.</para></proceduralStep>
+          <proceduralStep><para>Verify tamper-evident seals intact on FDR.</para></proceduralStep>
+          <proceduralStep><para>Position FDR in mounting tray with correct orientation.</para></proceduralStep>
+          <proceduralStep><para>Install mounting fasteners and torque to 150-180 in-lb.</para></proceduralStep>
+          <proceduralStep><para>Connect electrical connector and RF connector.</para></proceduralStep>
+          <proceduralStep><para>Close access panels.</para></proceduralStep>
+          <proceduralStep><para>Apply power and verify FDR status shows ACTIVE with no fault codes.</para></proceduralStep>
+          <proceduralStep><para>Perform FDR functional test per DMC-AMPEL360-31-00-00-520A.</para></proceduralStep>
+          <proceduralStep><para>Update aircraft records with new FDR serial number and installation date.</para></proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Quick Access Recorder (QAR) Memory Module Replacement</title>
+          <para>NOTE: This is a simple task performable by flight crew or line maintenance.</para>
+          <proceduralStep><para>Access QAR unit (typically forward electronics bay or cockpit overhead panel).</para></proceduralStep>
+          <proceduralStep><para>Open QAR access door.</para></proceduralStep>
+          <proceduralStep><para>Depress release latch and withdraw memory module.</para></proceduralStep>
+          <proceduralStep><para>Insert replacement memory module. Push firmly until latch engages (audible click).</para></proceduralStep>
+          <proceduralStep><para>Close access door.</para></proceduralStep>
+          <proceduralStep><para>Verify QAR status shows ACTIVE and recording in progress.</para></proceduralStep>
+        </proceduralStep>
+      </mainProcedure>
+      
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+  
+  <remarks>
+    <simplePara>Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia.</simplePara>
+    <simplePara>Status: DRAFT | Issue: 001-00 | Date: 2026-01-10</simplePara>
+  </remarks>
+  
+</dmodule>
