@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-MAINT-POWER-ON-OFF
+  Type: Procedure
+  Description: Standard power-on and power-off procedures for avionics systems
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: PROC
+  - Subtype: MAINT-POWER
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-520A (Maintenance Tasks)
+  - DMC-...-520B (Maintenance Tasks)
+  - DMC-...-940A (Software/Configuration)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="proc" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <proceduralRepository>
+      <proceduralSpec>
+        <proceduralIdent proceduralIdentNumber="P001"/>
+        <proceduralTitle>Aircraft Power-Up Procedure for Maintenance</proceduralTitle>
+        <proceduralContent>
+          <proceduralStep>
+            <para>Ensure aircraft is properly grounded with grounding strap connected</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify all personnel are clear of propeller/rotor areas and engine intakes</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Connect external ground power unit (GPU) if available, or ensure aircraft battery has adequate charge (minimum 24V for 28V systems, 110V for 115V systems)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Set battery master switch to ON position</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify BAT BUS voltage indication on electrical synoptic or multifunction display</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Select external power if connected and verify EXT PWR AVAIL indication</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Close generator control breakers or switches as required for ground maintenance power configuration</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify all essential buses are powered and avionics systems complete power-on BIT</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Wait minimum 60 seconds for all systems to complete initialization before proceeding with maintenance tasks</para>
+          </proceduralStep>
+        </proceduralContent>
+      </proceduralSpec>
+      <proceduralSpec>
+        <proceduralIdent proceduralIdentNumber="P002"/>
+        <proceduralTitle>Aircraft Power-Down Procedure After Maintenance</proceduralTitle>
+        <proceduralContent>
+          <proceduralStep>
+            <para>Ensure all maintenance tasks are complete and all test equipment is disconnected</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Close all access panels and doors unless further work is planned</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Record all fault codes, test results, and maintenance actions in aircraft logbook and maintenance tracking system</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Allow avionics systems to complete any ongoing data recording or memory writes (minimum 30 seconds)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Set all avionics master switches and display controls to OFF position</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Open generator control breakers or switches</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Disconnect external power if connected</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Set battery master switch to OFF position</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify all displays and indicators are dark (no power present)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Disconnect aircraft grounding strap and stow properly</para>
+          </proceduralStep>
+        </proceduralContent>
+      </proceduralSpec>
+      <proceduralSpec>
+        <proceduralIdent proceduralIdentNumber="P003"/>
+        <proceduralTitle>Selective Power Application for Specific Systems</proceduralTitle>
+        <proceduralContent>
+          <proceduralStep>
+            <para>When maintenance requires power to specific systems only, use the following selective power procedure</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Complete steps 1-6 of Aircraft Power-Up Procedure (P001)</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Identify circuit breaker panel or power distribution panel controlling target system</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Close only the circuit breakers required for the system under maintenance</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Leave all non-essential system breakers OPEN to minimize power consumption and reduce potential for inadvertent system activation</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Apply power and verify only intended systems are energized</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>After maintenance, open all selective breakers and follow complete power-down procedure (P002)</para>
+          </proceduralStep>
+        </proceduralContent>
+      </proceduralSpec>
+    </proceduralRepository>
+  </commonRepositoryContent>
+</commonRepository>

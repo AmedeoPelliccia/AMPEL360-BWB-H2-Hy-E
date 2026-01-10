@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-HMI-SYMBOLS-LEGEND
+  Type: Standards
+  Description: Standard symbology and iconography for cockpit displays
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: HMI
+  - Subtype: SYMBOLS-LEGEND
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-730A (Fault Isolation)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+  - Reference: SAE ARP4102/7, ARINC 661, ICAO Annex 6
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="spec" commonRepositoryNumber="00002"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <specificationRepository>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-SYM-001"/>
+        <specificationTitle>Standard Display Symbols</specificationTitle>
+        <specificationContent>
+          <para>Standard symbology shall be used across all display types to ensure crew familiarity and reduce interpretation errors.</para>
+          <table>
+            <tgroup cols="3">
+              <thead>
+                <row>
+                  <entry>Symbol</entry>
+                  <entry>Description</entry>
+                  <entry>Usage</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>⚠ (Triangle with exclamation)</entry>
+                  <entry>Warning Symbol</entry>
+                  <entry>Precedes all warning-level messages and caution-level alerts</entry>
+                </row>
+                <row>
+                  <entry>✓ (Check mark)</entry>
+                  <entry>Normal/Complete Status</entry>
+                  <entry>Indicates system is operating normally or task is complete</entry>
+                </row>
+                <row>
+                  <entry>✗ (X mark)</entry>
+                  <entry>Failed/Unavailable</entry>
+                  <entry>Indicates system failure or data unavailable</entry>
+                </row>
+                <row>
+                  <entry>⬆ ⬇ ⬅ ➡</entry>
+                  <entry>Directional Arrows</entry>
+                  <entry>Indicate trend, required action direction, or data flow</entry>
+                </row>
+                <row>
+                  <entry>⊕ (Circle with plus)</entry>
+                  <entry>Selected/Active</entry>
+                  <entry>Indicates crew-selected item or active autopilot mode</entry>
+                </row>
+                <row>
+                  <entry>⊗ (Circle with X)</entry>
+                  <entry>Inhibited/Disabled</entry>
+                  <entry>Indicates system intentionally disabled or function inhibited</entry>
+                </row>
+                <row>
+                  <entry>◆ (Diamond)</entry>
+                  <entry>Advisory Information</entry>
+                  <entry>Precedes advisory-level messages</entry>
+                </row>
+                <row>
+                  <entry>● (Solid circle)</entry>
+                  <entry>Active State</entry>
+                  <entry>Indicates discrete switch position or active mode</entry>
+                </row>
+                <row>
+                  <entry>○ (Open circle)</entry>
+                  <entry>Inactive State</entry>
+                  <entry>Indicates discrete switch off or inactive mode</entry>
+                </row>
+                <row>
+                  <entry>⚡ (Lightning bolt)</entry>
+                  <entry>Electrical System</entry>
+                  <entry>Represents electrical power or electrical system status</entry>
+                </row>
+                <row>
+                  <entry>🔥 (Flame)</entry>
+                  <entry>Fire Warning</entry>
+                  <entry>Indicates fire detection or overheat condition</entry>
+                </row>
+                <row>
+                  <entry>⛽ (Fuel pump)</entry>
+                  <entry>Fuel System</entry>
+                  <entry>Represents fuel system components or status</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-SYM-002"/>
+        <specificationTitle>Alert Symbology Hierarchy</specificationTitle>
+        <specificationContent>
+          <para>Alert symbols shall be displayed in hierarchical order of priority:</para>
+          <para>1. Master Warning (RED box with WARNING text) - Highest priority</para>
+          <para>2. Master Caution (AMBER box with CAUTION text) - Medium priority</para>
+          <para>3. Advisory messages (CYAN diamond) - Lowest priority</para>
+          <para>When multiple alerts are active simultaneously, the highest priority alert shall be displayed most prominently with supplementary alerts shown in chronological order.</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-SYM-003"/>
+        <specificationTitle>System Status Icons</specificationTitle>
+        <specificationContent>
+          <para>Standard icons shall represent aircraft systems on synoptic pages:</para>
+          <para>- Hydraulics: Stylized pump and actuator symbols</para>
+          <para>- Electrical: Generator, bus, and battery symbols</para>
+          <para>- Fuel: Tank, pump, and valve symbols with flow direction arrows</para>
+          <para>- Environmental: Pack, valve, and fan symbols with temperature indication</para>
+          <para>- Flight Controls: Surface position indicators with control deflection</para>
+          <para>- Propulsion: Engine parameters with limit markers and trend indicators</para>
+          <para>All synoptic pages shall use consistent symbology and color coding per HMI-COLOR-001 specification.</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-SYM-004"/>
+        <specificationTitle>Text and Font Standards</specificationTitle>
+        <specificationContent>
+          <para>Text presentation shall follow these guidelines:</para>
+          <para>- Font: Sans-serif proportional font optimized for display readability</para>
+          <para>- Minimum character height: 3.0 mm for primary information, 2.5 mm for secondary</para>
+          <para>- Stroke width to height ratio: 1:6 to 1:8 for optimal legibility</para>
+          <para>- Character spacing: Minimum 1 pixel between characters</para>
+          <para>- Anti-aliasing: Enabled for all text except at smallest font sizes</para>
+          <para>- All-caps usage: Reserved for alerts, warnings, and annunciations</para>
+          <para>- Mixed case: Used for normal operational information and labels</para>
+        </specificationContent>
+      </specificationSpec>
+    </specificationRepository>
+  </commonRepositoryContent>
+</commonRepository>
