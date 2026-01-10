@@ -1,0 +1,228 @@
+# Right Nacelle System - Product Definition
+# Complete right engine nacelle including inlet, cowlings, and thrust reverser integration
+
+id: "54-00-04-PR002"
+title: "Right Nacelle System"
+category: "PROD"
+product_type: "Ship Set"
+ata_chapter: "54"
+description: "Complete right nacelle system including inlet structure, fan cowl, core cowl, exhaust nozzle, acoustic treatment, and thrust reverser integration points. Provides aerodynamic shaping, acoustic suppression, engine access, and thrust reverser mounting. Symmetrical design to left nacelle."
+status: "Draft"
+version: "0.1.0"
+owner: "Product Engineering"
+last_updated: "2026-01-02"
+
+product_classification:
+  level: "Top Assembly"
+  delivery_state: "Fully Integrated"
+  customer_deliverable: true
+  certification_item: true
+
+traceability:
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Requirements"
+      description: "Primary structural requirements for nacelle assembly"
+    - id: "54-00-03-02-001"
+      title: "Thermal Protection Requirements"
+      description: "High-temperature capability requirements"
+    - id: "54-00-03-03-001"
+      title: "Aerodynamic Performance Requirements"
+      description: "Drag and flow requirements"
+  type_certificate: "EASA TC (pending)"
+  aircraft_applicability:
+    - "AMPEL360-AIR-T"
+  regulatory_basis:
+    - "CS-25.1309"
+    - "CS-25.571"
+    - "CS-25.581"
+
+product_structure:
+  child_assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+      quantity: 1
+      description: "Main structural assembly including inlet, cowls, and frames"
+    - id: "ASM-54-TR-001"
+      title: "Thrust Reverser Assembly"
+      quantity: 1
+      description: "Thrust reverser doors and actuation integration"
+    - id: "ASM-54-COW-001"
+      title: "Fan Cowl Door Assembly"
+      quantity: 2
+      description: "Access doors for fan section maintenance"
+  interfaces:
+    - interface_id: "IF-PR002-PYL"
+      description: "Interface with pylon system for mounting"
+      mating_product: "54-00-04-PR004"
+      interface_control_document: "54-00-05-ICD-001"
+    - interface_id: "IF-PR002-ENG"
+      description: "Interface with engine mounting and systems"
+      mating_product: "ATA 71 - Powerplant"
+      interface_control_document: "54-00-05-ICD-002"
+    - interface_id: "IF-PR002-ICE"
+      description: "Interface with ice protection system"
+      mating_product: "ATA 30 - Ice Protection"
+      interface_control_document: "54-00-05-ICD-005"
+
+mass_properties:
+  target_mass_kg: 450
+  current_estimate_kg: 465
+  mass_margin_percent: 3.3
+  cg_location:
+    x_mm: 2850  # Forward of wing spar
+    y_mm: 4200  # Right side of aircraft centerline
+    z_mm: -1800  # Below wing reference line
+  moment_of_inertia:
+    ixx_kg_m2: 125.0
+    iyy_kg_m2: 280.0
+    izz_kg_m2: 310.0
+
+dimensions:
+  length_mm: 3800
+  max_diameter_mm: 2400
+  max_width_mm: 2400
+  max_height_mm: 2600
+  envelope_reference_drawing: "54-00-04-D001"
+
+performance_specs:
+  operating_temperature_range_c: "-55 to +85"
+  maximum_altitude_ft: 45000
+  design_life_fh: 90000
+  design_life_fc: 60000
+  key_parameters:
+    - parameter: "Acoustic Suppression"
+      value: "≥15"
+      unit: "dB reduction"
+      requirement: "54-00-03-04-001"
+    - parameter: "Drag Coefficient"
+      value: "≤0.015"
+      unit: "Cd"
+      requirement: "54-00-03-03-002"
+    - parameter: "Structural Margin"
+      value: "≥1.5"
+      unit: "Safety Factor"
+      requirement: "54-00-03-01-004"
+
+environmental_qualification:
+  temperature_range_c: "-55 to +85"
+  altitude_max_ft: 45000
+  humidity: "Up to 95% RH"
+  lightning_protection: "Yes - per CS-25.581"
+  bird_strike_capability: "Yes - per CS-25.571"
+  icing_conditions: "Per CS-25 Appendix C"
+
+manufacturing:
+  final_assembly_location: "TBD"
+  assembly_time_hours: 240
+  cycle_time_days: 15
+  production_rate_per_month: 2
+  tooling_required:
+    - "FAF-54-NAC-001 - Nacelle Assembly Fixture"
+    - "ALIGN-NAC-01 - Laser alignment system"
+    - "PRESS-TEST-NAC - Pressure test rig"
+  make_buy_decision: "Make"
+
+quality_requirements:
+  inspection_level: "100% functional test"
+  acceptance_test_procedure: "ATP-54-PR002"
+  quality_plan: "54-00-08-QP-002"
+  critical_characteristics:
+    - "Inlet diameter and alignment"
+    - "Cowl seal pressure integrity"
+    - "Acoustic performance verification"
+    - "Thrust reverser interface fit-up"
+  conformity_inspection: "As per 54-00-08-CI-002"
+
+delivery:
+  packaging: "Custom shipping fixture with protective covers"
+  lead_time_weeks: 26
+  storage_requirements: "Environmentally controlled storage, 15-25°C, <65% RH"
+  shelf_life_months: 24
+  documentation_package:
+    - "Certificate of Conformity"
+    - "Test records (dimensional, pressure, acoustic)"
+    - "Maintenance manual extract (AMM 54-10)"
+    - "Illustrated parts catalog extract"
+    - "Installation instructions"
+
+maintenance:
+  maintenance_level: "Line"
+  mtbf_hours: 25000
+  mttr_hours: 4.5
+  scheduled_inspection_intervals_fh: 1000
+  major_overhaul_interval_fh: 30000
+  maintenance_manual_reference: "AMM 54-10-00"
+
+certification:
+  applicable_regulations:
+    - "CS-25.571 - Damage tolerance"
+    - "CS-25.581 - Lightning protection"
+    - "CS-25.1309 - Equipment systems"
+  compliance_method: "Test and Analysis"
+  compliance_status: "In Progress"
+  certification_basis: "CS-25 Amendment 27"
+  certification_plan: "54-00-10-CP-002"
+
+lifecycle:
+  design_service_goal_fh: 90000
+  design_service_goal_fc: 60000
+  design_service_goal_years: 30
+  retirement_strategy: "Remanufacture"
+  circularity_rating: "TBD"
+
+sustainability:
+  recyclable_content_percent: 65
+  end_of_life_disposal_method: "Remanufacture"
+  carbon_footprint_kg_co2: 1850
+  environmental_impact_assessment: "54-00-EIA-002"
+
+supply_chain:
+  suppliers:
+    - supplier_name: "Composite Structures Inc."
+      part_number: "CSI-NAC-CFRP-002"
+      description: "CFRP composite panels and structures"
+      criticality: "Critical"
+    - supplier_name: "Titanium Aerospace"
+      part_number: "TA-NAC-TI-002"
+      description: "Titanium core and exhaust components"
+      criticality: "Critical"
+  long_lead_items:
+    - item: "CFRP inlet lip structure"
+      lead_time_weeks: 18
+    - item: "Titanium core cowl structure"
+      lead_time_weeks: 16
+
+configuration_management:
+  baseline: "Baseline A"
+  configuration_control_board: "ATA 54 CCB"
+  change_control_procedure: "54-00-CM-001"
+  effectivity: "All AMPEL360-AIR-T aircraft"
+
+links:
+  design_documents:
+    - "54-00-04-D001_DRWG_Nacelle_Primary_Structure_GA"
+    - "54-00-04-D002_DRWG_Nacelle_Primary_Structure_Dimensions"
+  analysis_reports:
+    - "54-00-04-M701_Nacelle_Stress_Analysis"
+    - "54-00-04-M710_Nacelle_Thermal_Analysis"
+    - "54-00-04-M720_Nacelle_Drag_Analysis"
+  test_reports:
+    - "54-00-07-TR-002_Nacelle_Structural_Test"
+  procedures:
+    - "54-00-09-MP-002_Nacelle_Assembly_Procedure"
+
+notes: |
+  Right nacelle system is a complete ship set including all structural components,
+  acoustic treatment, and interfaces for thrust reverser integration. This product
+  is delivered fully assembled and tested, ready for installation on the aircraft.
+  
+  Key considerations:
+  - Symmetrical design to left nacelle (PR001) with mirrored geometry
+  - Acoustic performance critical for noise certification
+  - High-temperature capability required in core and exhaust regions
+  - Bird strike and lightning protection integrated
+  - Maintenance access via fan cowl doors
+  
+  The nacelle interfaces with the pylon for mounting and with the engine for
+  operational systems integration.

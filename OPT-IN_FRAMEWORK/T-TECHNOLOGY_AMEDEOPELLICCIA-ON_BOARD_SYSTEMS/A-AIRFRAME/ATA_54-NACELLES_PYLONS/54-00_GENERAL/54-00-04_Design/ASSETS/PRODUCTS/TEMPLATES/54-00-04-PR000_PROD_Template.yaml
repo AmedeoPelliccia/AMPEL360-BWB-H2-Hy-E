@@ -1,0 +1,178 @@
+# AMPEL360 Product Definition Template
+# This template defines the structure for top-level product definitions in ATA 54
+# Products are the highest-level deliverable items (complete nacelle/pylon systems)
+
+id: "54-00-04-PR00X"
+title: "Product Title"
+category: "PROD"
+product_type: "Ship Set|LRU"  # Ship Set for complete systems, LRU for Line Replaceable Units
+ata_chapter: "54"
+description: "Brief description of the product and its purpose"
+status: "Draft"  # Draft | In Review | Approved | Released
+version: "0.1.0"
+owner: "Product Engineering"
+last_updated: "YYYY-MM-DD"
+
+product_classification:
+  level: "Top Assembly"  # Highest level product classification
+  delivery_state: "Fully Integrated"  # How the product is delivered
+  customer_deliverable: true  # Whether this is a customer-facing deliverable
+  certification_item: true  # Whether this requires individual certification
+
+traceability:
+  requirements:
+    - id: "54-00-03-01-00X"
+      title: "Requirement Title"
+      description: "Brief requirement description"
+  type_certificate: "EASA TC (pending)"
+  aircraft_applicability:
+    - "AMPEL360-AIR-T"
+  regulatory_basis:
+    - "CS-25.1309"
+    - "CS-25.XXX"
+
+product_structure:
+  child_assemblies:
+    - id: "54-00-04-A00X"
+      title: "Assembly Title"
+      quantity: 1
+      description: "Brief description of child assembly"
+    - id: "54-00-04-A00Y"
+      title: "Another Assembly"
+      quantity: 2
+      description: "Brief description"
+  interfaces:
+    - interface_id: "IF-PR00X-001"
+      description: "Interface with [other system/product]"
+      mating_product: "Product ID or System"
+      interface_control_document: "54-00-05-ICD-00X"
+
+mass_properties:
+  target_mass_kg: XXX
+  current_estimate_kg: XXX
+  mass_margin_percent: X.X
+  cg_location:
+    x_mm: XXX  # Longitudinal position
+    y_mm: XXX  # Lateral position
+    z_mm: XXX  # Vertical position
+  moment_of_inertia:
+    ixx_kg_m2: X.XX
+    iyy_kg_m2: X.XX
+    izz_kg_m2: X.XX
+
+dimensions:
+  length_mm: XXX
+  max_diameter_mm: XXX
+  max_width_mm: XXX
+  max_height_mm: XXX
+  envelope_reference_drawing: "54-00-04-D00X"
+
+performance_specs:
+  operating_temperature_range_c: "-55 to +85"
+  maximum_altitude_ft: 45000
+  design_life_fh: 90000
+  design_life_fc: 60000
+  key_parameters:
+    - parameter: "Parameter Name"
+      value: "Value"
+      unit: "Unit"
+      requirement: "54-00-03-XX-00X"
+
+environmental_qualification:
+  temperature_range_c: "-55 to +85"
+  altitude_max_ft: 45000
+  humidity: "Up to 95% RH"
+  lightning_protection: "Yes - per CS-25.581"
+  bird_strike_capability: "Yes - per CS-25.571"
+  icing_conditions: "Per CS-25 Appendix C"
+
+manufacturing:
+  final_assembly_location: "TBD"
+  assembly_time_hours: XX
+  cycle_time_days: XX
+  production_rate_per_month: X
+  tooling_required:
+    - "Tooling ID - Description"
+  make_buy_decision: "Make|Buy|TBD"
+
+quality_requirements:
+  inspection_level: "100% functional test"
+  acceptance_test_procedure: "ATP-54-PR00X"
+  quality_plan: "54-00-08-QP-00X"
+  critical_characteristics:
+    - "Characteristic description"
+  conformity_inspection: "As per 54-00-08-CI-00X"
+
+delivery:
+  packaging: "Custom shipping fixture"
+  lead_time_weeks: XX
+  storage_requirements: "Environmentally controlled storage"
+  shelf_life_months: XX
+  documentation_package:
+    - "Certificate of Conformity"
+    - "Test records"
+    - "Maintenance manual extract"
+    - "Illustrated parts catalog extract"
+
+maintenance:
+  maintenance_level: "Line|Base|Depot"
+  mtbf_hours: XXXXX
+  mttr_hours: X.X
+  scheduled_inspection_intervals_fh: XXXX
+  major_overhaul_interval_fh: XXXXX
+  maintenance_manual_reference: "AMM 54-XX-XX"
+
+certification:
+  applicable_regulations:
+    - "CS-25.XXX"
+    - "FAR 25.XXX"
+  compliance_method: "Analysis|Test|Similarity|Service Experience"
+  compliance_status: "Not Started|In Progress|Complete"
+  certification_basis: "CS-25 Amendment XX"
+  certification_plan: "54-00-10-CP-00X"
+
+lifecycle:
+  design_service_goal_fh: 90000
+  design_service_goal_fc: 60000
+  design_service_goal_years: 30
+  retirement_strategy: "Remanufacture|Recycle|Dispose"
+  circularity_rating: "TBD"
+
+sustainability:
+  recyclable_content_percent: XX
+  end_of_life_disposal_method: "Recycle|Remanufacture|Dispose"
+  carbon_footprint_kg_co2: XXX
+  environmental_impact_assessment: "54-00-EIA-00X"
+
+supply_chain:
+  suppliers:
+    - supplier_name: "Supplier Name"
+      part_number: "Supplier Part Number"
+      description: "What they supply"
+      criticality: "Critical|Standard"
+  long_lead_items:
+    - item: "Item description"
+      lead_time_weeks: XX
+
+configuration_management:
+  baseline: "TBD"
+  configuration_control_board: "ATA 54 CCB"
+  change_control_procedure: "54-00-CM-001"
+  effectivity: "All aircraft"
+
+links:
+  design_documents:
+    - "54-00-04-D00X_Drawing_Title"
+  analysis_reports:
+    - "54-00-04-M70X_Analysis_Title"
+  test_reports:
+    - "54-00-07-TR-00X_Test_Report"
+  procedures:
+    - "54-00-09-MP-00X_Manufacturing_Procedure"
+
+notes: |
+  Additional notes and comments about the product.
+  
+  Include any special considerations, limitations, or key design decisions.
+  
+  Document any assumptions or dependencies.
