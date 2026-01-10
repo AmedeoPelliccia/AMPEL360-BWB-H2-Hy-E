@@ -494,16 +494,16 @@ Below is a **suggested, S1000D-aligned DMC set** for:
 
 | DMC Filename                                                 | Info Code | Description                                                       |
 | ------------------------------------------------------------ | --------- | ----------------------------------------------------------------- |
-| **DMC-AMPEL360-31-00-00-040A-A-001_001_00_EN-US_001-00.XML** | 040A      | Indicating and recording system – general description and purpose |
-| **DMC-AMPEL360-31-00-00-040B-A-001_001_00_EN-US_001-00.XML** | 040B      | System architecture, interfaces, and data flows                   |
-| **DMC-AMPEL360-31-00-00-050A-A-001_001_00_EN-US_001-00.XML** | 050A      | Safety precautions and operational limitations                    |
-| **DMC-AMPEL360-31-00-00-520A-A-001_001_00_EN-US_001-00.XML** | 520A      | Built-in test (BIT/BITE) and system test procedures               |
-| **DMC-AMPEL360-31-00-00-520B-A-001_001_00_EN-US_001-00.XML** | 520B      | Calibration and functional check procedures                       |
-| **DMC-AMPEL360-31-00-00-720A-A-001_001_00_EN-US_001-00.XML** | 720A      | Scheduled maintenance and inspection requirements                 |
-| **DMC-AMPEL360-31-00-00-730A-A-001_001_00_EN-US_001-00.XML** | 730A      | Fault isolation and troubleshooting (indications & recordings)    |
-| **DMC-AMPEL360-31-00-00-740A-A-001_001_00_EN-US_001-00.XML** | 740A      | Removal and installation – display and recording units            |
-| **DMC-AMPEL360-31-00-00-910A-A-001_001_00_EN-US_001-00.XML** | 910A      | Data recording, storage, and retrieval logic                      |
-| **DMC-AMPEL360-31-00-00-940A-A-001_001_00_EN-US_001-00.XML** | 940A      | Software loading, configuration, and data integrity checks        |
+| **DMC-AMPEL360AT-A-31-00-00-00A-040A-A_001-00_EN-US.XML** | 040A      | Indicating and recording system – general description and purpose |
+| **DMC-AMPEL360AT-A-31-00-00-00A-040B-A_001-00_EN-US.XML** | 040B      | System architecture, interfaces, and data flows                   |
+| **DMC-AMPEL360AT-A-31-00-00-00A-050A-A_001-00_EN-US.XML** | 050A      | Safety precautions and operational limitations                    |
+| **DMC-AMPEL360AT-A-31-00-00-00A-520A-A_001-00_EN-US.XML** | 520A      | Built-in test (BIT/BITE) and system test procedures               |
+| **DMC-AMPEL360AT-A-31-00-00-00A-520B-A_001-00_EN-US.XML** | 520B      | Calibration and functional check procedures                       |
+| **DMC-AMPEL360AT-A-31-00-00-00A-720A-A_001-00_EN-US.XML** | 720A      | Scheduled maintenance and inspection requirements                 |
+| **DMC-AMPEL360AT-A-31-00-00-00A-730A-A_001-00_EN-US.XML** | 730A      | Fault isolation and troubleshooting (indications & recordings)    |
+| **DMC-AMPEL360AT-A-31-00-00-00A-740A-A_001-00_EN-US.XML** | 740A      | Removal and installation – display and recording units            |
+| **DMC-AMPEL360AT-A-31-00-00-00A-910A-A_001-00_EN-US.XML** | 910A      | Data recording, storage, and retrieval logic                      |
+| **DMC-AMPEL360AT-A-31-00-00-00A-940A-A_001-00_EN-US.XML** | 940A      | Software loading, configuration, and data integrity checks        |
 
 **Notes**:
 - These **DMs are SSOT-clean**: no rendering assumptions, no IETP coupling

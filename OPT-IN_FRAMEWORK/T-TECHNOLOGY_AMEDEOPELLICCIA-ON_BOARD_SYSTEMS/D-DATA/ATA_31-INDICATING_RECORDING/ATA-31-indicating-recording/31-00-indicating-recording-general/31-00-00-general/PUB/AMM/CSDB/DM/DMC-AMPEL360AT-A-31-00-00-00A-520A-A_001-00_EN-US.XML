@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
 S1000D Data Module - BIT/BITE Test Procedures
-DMC: AMPEL360-31-00-00-520A-A-001_001_00_EN-US_001-00
+DMC: AMPEL360AT-A-31-00-00-00A-520A-A_001-00_EN-US
 Info Code: 520A - Built-in Test (BIT/BITE) and System Test Procedures
 ATA Chapter: 31-00-00 Indicating and Recording General
 Status: DRAFT
@@ -15,7 +15,7 @@ Project: AMPEL360-AIR-T
   <identAndStatusSection>
     <dmAddress>
       <dmIdent>
-        <dmCode modelIdentCode="AMPEL360"
+        <dmCode modelIdentCode="AMPEL360AT"
                 systemDiffCode="A"
                 systemCode="31"
                 subSystemCode="00"
@@ -53,7 +53,7 @@ Project: AMPEL360-AIR-T
       <brexDmRef>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360"
+            <dmCode modelIdentCode="AMPEL360AT"
                     systemDiffCode="A"
                     systemCode="00"
                     subSystemCode="00"

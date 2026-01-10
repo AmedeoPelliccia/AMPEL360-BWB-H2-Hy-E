@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 S1000D Data Module - Software Loading, Configuration, and Data Integrity Checks
-DMC: AMPEL360-31-00-00-940A-A-001_001_00_EN-US_001-00
+DMC: AMPEL360AT-A-31-00-00-00A-940A-A_001-00_EN-US
 Info Code: 940A - Software Loading, Configuration, and Data Integrity Checks
 ATA Chapter: 31-00-00 Indicating and Recording General
 -->
@@ -12,7 +12,7 @@ ATA Chapter: 31-00-00 Indicating and Recording General
   <identAndStatusSection>
     <dmAddress>
       <dmIdent>
-        <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="31"
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31"
                 subSystemCode="00" subSubSystemCode="00" assyCode="00"
                 disassyCode="00" disassyCodeVariant="A" infoCode="940"
                 infoCodeVariant="A" itemLocationCode="A"/>
@@ -34,7 +34,7 @@ ATA Chapter: 31-00-00 Indicating and Recording General
       <applic><displayText><simplePara>All AMPEL360 Q100 aircraft configurations</simplePara></displayText></applic>
       <brexDmRef>
         <dmRef><dmRefIdent>
-          <dmCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="00"
+          <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="00"
                   subSystemCode="00" subSubSystemCode="00" assyCode="00"
                   disassyCode="00" disassyCodeVariant="A" infoCode="022"
                   infoCodeVariant="A" itemLocationCode="A"/>
