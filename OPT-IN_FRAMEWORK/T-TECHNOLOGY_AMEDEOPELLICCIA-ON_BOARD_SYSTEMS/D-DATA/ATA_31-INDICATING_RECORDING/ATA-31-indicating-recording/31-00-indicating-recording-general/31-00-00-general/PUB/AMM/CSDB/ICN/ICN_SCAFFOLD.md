@@ -745,7 +745,7 @@ For questions or support regarding this ICN scaffold:
 For technical questions:
 - Review the [S1000D Issue 5.0 specification](http://www.s1000d.org)
 - Consult the [ATA iSpec 2200 documentation](https://www.ataspec2200.org)
-- Refer to project documentation standards in [`AMPEL360_DOCUMENTATION_STANDARD.md`](../../../../../../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md)
+- Refer to project documentation standards in [`AMPEL360_DOCUMENTATION_STANDARD.md`](../../../../../../../../../../AMPEL360_DOCUMENTATION_STANDARD.md)
 
 ---
 
