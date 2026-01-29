@@ -7,7 +7,7 @@ This module provides the structural model for the BWB airframe, covering
 ATA chapters 51-57 (Structures, Doors, Fuselage, Nacelles, Stabilizers, Windows, Wings).
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Optional
 import logging

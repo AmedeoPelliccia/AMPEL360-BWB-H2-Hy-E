@@ -10,6 +10,7 @@ and data visualization.
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any, Optional
+import html
 import json
 import logging
 
@@ -219,19 +220,20 @@ class Dashboard:
         panels_html = ""
         for panel in self._panels.values():
             panels_html += f"""
-            <div class="panel" id="{panel.panel_id}">
-                <h3>{panel.title}</h3>
-                <div class="panel-content" data-type="{panel.panel_type}">
+            <div class="panel" id="{html.escape(panel.panel_id)}">
+                <h3>{html.escape(panel.title)}</h3>
+                <div class="panel-content" data-type="{html.escape(panel.panel_type)}">
                     <!-- Panel content rendered by JavaScript -->
                 </div>
             </div>
             """
 
+        escaped_title = html.escape(self.title)
         return f"""
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{self.title}</title>
+    <title>{escaped_title}</title>
     <style>
         body {{ font-family: Arial, sans-serif; background: {"#1a1a2e" if self.theme == "dark" else "#fff"}; color: {"#fff" if self.theme == "dark" else "#000"}; }}
         .dashboard {{ display: grid; gap: 10px; padding: 20px; }}
@@ -240,7 +242,7 @@ class Dashboard:
     </style>
 </head>
 <body>
-    <h1>{self.title}</h1>
+    <h1>{escaped_title}</h1>
     <div class="dashboard">
         {panels_html}
     </div>

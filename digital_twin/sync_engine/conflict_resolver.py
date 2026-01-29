@@ -7,11 +7,12 @@ This module provides conflict resolution strategies for handling
 concurrent updates to the digital twin.
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from enum import Enum
 from typing import Any, Callable, Optional
 import logging
+import threading
 
 logger = logging.getLogger(__name__)
 
@@ -98,6 +99,7 @@ class ConflictResolver:
         self._pending_conflicts: list[Conflict] = []
         self._resolved_conflicts: list[Conflict] = []
         self._field_strategies: dict[str, str] = {}
+        self._lock = threading.Lock()
 
         logger.info("Initialized ConflictResolver with strategy: %s", default_strategy)
 
@@ -142,7 +144,8 @@ class ConflictResolver:
             target_timestamp=target_timestamp,
         )
 
-        self._pending_conflicts.append(conflict)
+        with self._lock:
+            self._pending_conflicts.append(conflict)
         logger.debug("Conflict detected: %s (%s)", field, conflict_type.value)
 
         return conflict
@@ -193,8 +196,9 @@ class ConflictResolver:
         conflict.resolution = final_value
         conflict.resolution_strategy = strategy
 
-        self._pending_conflicts.remove(conflict)
-        self._resolved_conflicts.append(conflict)
+        with self._lock:
+            self._pending_conflicts.remove(conflict)
+            self._resolved_conflicts.append(conflict)
 
         logger.debug(
             "Resolved conflict for %s using %s: %s",
@@ -224,7 +228,8 @@ class ConflictResolver:
         """
         results = []
         # Create copy since resolve() modifies the list
-        conflicts = self._pending_conflicts.copy()
+        with self._lock:
+            conflicts = self._pending_conflicts.copy()
 
         for conflict in conflicts:
             result = self.resolve(conflict, strategy)
@@ -247,21 +252,25 @@ class ConflictResolver:
             logger.warning("Invalid strategy: %s", strategy)
             return False
 
-        self._field_strategies[field] = strategy
+        with self._lock:
+            self._field_strategies[field] = strategy
         logger.info("Set strategy for %s: %s", field, strategy)
         return True
 
     def get_pending_conflicts(self) -> list[Conflict]:
         """Get list of pending (unresolved) conflicts."""
-        return self._pending_conflicts.copy()
+        with self._lock:
+            return self._pending_conflicts.copy()
 
     def get_resolved_conflicts(self) -> list[Conflict]:
         """Get list of resolved conflicts."""
-        return self._resolved_conflicts.copy()
+        with self._lock:
+            return self._resolved_conflicts.copy()
 
     def clear_resolved(self) -> None:
         """Clear resolved conflicts history."""
-        self._resolved_conflicts.clear()
+        with self._lock:
+            self._resolved_conflicts.clear()
 
     def get_statistics(self) -> dict[str, Any]:
         """
@@ -270,24 +279,26 @@ class ConflictResolver:
         Returns:
             Dictionary of statistics
         """
-        total_resolved = len(self._resolved_conflicts)
-        strategies_used: dict[str, int] = {}
+        with self._lock:
+            total_resolved = len(self._resolved_conflicts)
+            strategies_used: dict[str, int] = {}
 
-        for conflict in self._resolved_conflicts:
-            strategy = conflict.resolution_strategy
-            strategies_used[strategy] = strategies_used.get(strategy, 0) + 1
+            for conflict in self._resolved_conflicts:
+                strategy = conflict.resolution_strategy
+                strategies_used[strategy] = strategies_used.get(strategy, 0) + 1
 
-        return {
-            "pending_conflicts": len(self._pending_conflicts),
-            "total_resolved": total_resolved,
-            "strategies_used": strategies_used,
-            "default_strategy": self.default_strategy,
-            "field_strategies": self._field_strategies.copy(),
-        }
+            return {
+                "pending_conflicts": len(self._pending_conflicts),
+                "total_resolved": total_resolved,
+                "strategies_used": strategies_used,
+                "default_strategy": self.default_strategy,
+                "field_strategies": self._field_strategies.copy(),
+            }
 
     def _get_strategy_for_field(self, field: str) -> str:
         """Get the appropriate strategy for a field."""
-        return self._field_strategies.get(field, self.default_strategy)
+        with self._lock:
+            return self._field_strategies.get(field, self.default_strategy)
 
     def _last_write_wins(self, conflict: Conflict) -> Any:
         """Resolve using last write wins strategy."""

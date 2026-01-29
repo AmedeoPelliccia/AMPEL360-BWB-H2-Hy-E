@@ -7,7 +7,7 @@ This module provides the systems model for aircraft subsystems,
 covering ATA chapters 21-49 (ECS, Electrical, Hydraulics, etc.).
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Optional
 import logging

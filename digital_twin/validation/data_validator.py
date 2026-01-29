@@ -10,7 +10,7 @@ data integrity and consistency.
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from typing import Any, Optional
+from typing import Any, Callable, Optional
 import logging
 import re
 

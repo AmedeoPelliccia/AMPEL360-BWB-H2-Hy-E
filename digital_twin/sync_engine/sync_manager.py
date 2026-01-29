@@ -7,7 +7,7 @@ This module provides the main synchronization manager that coordinates
 real-time updates between physical sensors and digital twin models.
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from enum import Enum
 from typing import Any, Callable, Optional
@@ -316,6 +316,7 @@ class SyncManager:
                 raise ValueError(f"Model not found: {model_id}")
 
             # Apply update
+            logger.debug("Applying update to model %s with timestamp %s", model_id, timestamp)
             if hasattr(model, "update"):
                 success = model.update(state_data)
             else:

@@ -7,7 +7,7 @@ This module provides the propulsion system model for the hydrogen-electric
 hybrid propulsion, covering ATA chapters 70-80 (Power Plant, Engine, Fuel).
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Optional
 import logging

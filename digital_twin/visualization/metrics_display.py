@@ -10,6 +10,7 @@ monitoring aircraft parameters.
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any, Optional
+import html
 import logging
 
 logger = logging.getLogger(__name__)
@@ -266,26 +267,29 @@ class MetricsDisplay:
 
     def _render_html(self) -> str:
         """Render as HTML."""
+        # Define safe color values to prevent XSS via status_color
+        safe_colors = {"normal": "green", "warning": "orange", "critical": "red"}
+        
         metrics_html = ""
         for name, metric in self._metrics.items():
             status = self.get_status(name)
-            status_color = {"normal": "green", "warning": "orange", "critical": "red"}.get(
-                status, "gray"
-            )
-            formatted_value = metric.format_string.format(metric.value)
+            status_color = safe_colors.get(status, "gray")
+            formatted_value = html.escape(metric.format_string.format(metric.value))
 
             metrics_html += f"""
-            <div class="metric" data-status="{status}">
-                <span class="metric-name">{metric.name}</span>
+            <div class="metric" data-status="{html.escape(status)}">
+                <span class="metric-name">{html.escape(metric.name)}</span>
                 <span class="metric-value" style="color: {status_color};">{formatted_value}</span>
-                <span class="metric-unit">{metric.unit}</span>
+                <span class="metric-unit">{html.escape(metric.unit)}</span>
             </div>
             """
 
+        escaped_title = html.escape(self.title)
+        escaped_layout = html.escape(self.layout)
         return f"""
         <div class="metrics-display">
-            <h3>{self.title}</h3>
-            <div class="metrics-{self.layout}">
+            <h3>{escaped_title}</h3>
+            <div class="metrics-{escaped_layout}">
                 {metrics_html}
             </div>
         </div>
