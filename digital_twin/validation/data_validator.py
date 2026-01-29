@@ -10,7 +10,7 @@ data integrity and consistency.
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from typing import Any, Callable, Optional
+from typing import Any, Optional
 import logging
 import re
 
@@ -113,7 +113,7 @@ class DataValidator:
             rule_type = RuleType.ENUM
         elif "validator" in constraints:
             rule_type = RuleType.CUSTOM
-            if isinstance(constraints["validator"], Callable):
+            if callable(constraints["validator"]):
                 self._custom_validators[field] = constraints["validator"]
         else:
             rule_type = RuleType.REQUIRED
