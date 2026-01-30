@@ -1,0 +1,214 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2025-12-13T10:30:00Z",
+    "creators": [
+      "Tool: AMPEL360-SBOM-Generator-1.0",
+      "Organization: AMPEL360 Software Engineering"
+    ],
+    "licenseListVersion": "3.19"
+  },
+  "name": "SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://ampel360.com/sbom/image-34-20-camctl01-swpn4455-v2.0",
+  "documentDescribes": [
+    "SPDXRef-IMAGE-CAMCTL01"
+  ],
+  
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-IMAGE-CAMCTL01",
+      "name": "IMAGE_34-20_CAMCTL01_SWPN4455",
+      "versionInfo": "2.0.1",
+      "packageFileName": "IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.bin",
+      "supplier": "Organization: AMPEL360",
+      "downloadLocation": "https://ampel360.com/software/images/IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.bin",
+      "filesAnalyzed": true,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d4e5f67890abcdef123456789012345678abcdef1234567890abcdef456789"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "Copyright 2025 AMPEL360",
+      "description": "Wingtip Camera Control Unit Software - Visual Navigation and Ground Awareness System",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "aircraft-model",
+          "referenceLocator": "AM_Q100"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "ata-chapter",
+          "referenceLocator": "34-20"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "dal-level",
+          "referenceLocator": "DO-178C-Level-D"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-VXWORKS",
+      "name": "VxWorks-RTOS",
+      "versionInfo": "7.0.1",
+      "supplier": "Organization: Wind River Systems",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Commercial",
+      "copyrightText": "Copyright Wind River Systems",
+      "description": "Real-Time Operating System kernel and libraries"
+    },
+    {
+      "SPDXID": "SPDXRef-OPENCV",
+      "name": "OpenCV-Embedded",
+      "versionInfo": "4.5.3",
+      "supplier": "Organization: OpenCV Community",
+      "downloadLocation": "https://github.com/opencv/opencv/releases/tag/4.5.3",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b0c1b2c3d4e5f67890123456789012345678901234567890abcdef12345"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright OpenCV Contributors",
+      "description": "Computer vision and image processing library - embedded subset",
+      "homepage": "https://opencv.org"
+    },
+    {
+      "SPDXID": "SPDXRef-H264-CODEC",
+      "name": "H264-Video-Codec",
+      "versionInfo": "1.2.0",
+      "supplier": "Organization: VideoCore Ltd",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Proprietary",
+      "copyrightText": "Copyright VideoCore Ltd",
+      "description": "H.264 video compression codec optimized for real-time streaming"
+    },
+    {
+      "SPDXID": "SPDXRef-ARINC429-DRIVER",
+      "name": "ARINC-429-Driver",
+      "versionInfo": "3.1.5",
+      "supplier": "Organization: DDC-I Inc",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Proprietary",
+      "copyrightText": "Copyright DDC-I Inc",
+      "description": "ARINC 429 avionics bus communication driver"
+    },
+    {
+      "SPDXID": "SPDXRef-LIBPNG",
+      "name": "libpng",
+      "versionInfo": "1.6.37",
+      "supplier": "Organization: PNG Development Group",
+      "downloadLocation": "http://www.libpng.org/pub/png/libpng.html",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c1c2c3d4e5f67890123456789012345678901234567890abcdef23456789"
+        }
+      ],
+      "licenseConcluded": "Libpng",
+      "licenseDeclared": "Libpng",
+      "copyrightText": "Copyright PNG Development Group",
+      "description": "PNG image format library"
+    },
+    {
+      "SPDXID": "SPDXRef-ZLIB",
+      "name": "zlib",
+      "versionInfo": "1.2.11",
+      "supplier": "Organization: Jean-loup Gailly and Mark Adler",
+      "downloadLocation": "https://zlib.net/",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d2d3d4e5f67890123456789012345678901234567890abcdef34567890ab"
+        }
+      ],
+      "licenseConcluded": "Zlib",
+      "licenseDeclared": "Zlib",
+      "copyrightText": "Copyright Jean-loup Gailly and Mark Adler",
+      "description": "Lossless data compression library"
+    },
+    {
+      "SPDXID": "SPDXRef-JSON-PARSER",
+      "name": "cJSON",
+      "versionInfo": "1.7.15",
+      "supplier": "Organization: Dave Gamble",
+      "downloadLocation": "https://github.com/DaveGamble/cJSON",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e3e4e5f67890123456789012345678901234567890abcdef4567890abcd"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "Copyright Dave Gamble",
+      "description": "Lightweight JSON parser in C"
+    }
+  ],
+  
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-IMAGE-CAMCTL01"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-CAMCTL01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-VXWORKS"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-CAMCTL01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-OPENCV"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-CAMCTL01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-H264-CODEC"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-CAMCTL01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ARINC429-DRIVER"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-CAMCTL01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-LIBPNG"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-CAMCTL01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ZLIB"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-CAMCTL01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-JSON-PARSER"
+    },
+    {
+      "spdxElementId": "SPDXRef-OPENCV",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-ZLIB"
+    }
+  ]
+}

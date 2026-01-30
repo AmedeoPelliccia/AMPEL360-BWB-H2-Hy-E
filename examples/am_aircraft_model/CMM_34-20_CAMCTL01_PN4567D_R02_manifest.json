@@ -1,0 +1,145 @@
+{
+  "cmm_id": "CMM_34-20_CAMCTL01_PN4567D_R02",
+  "document_type": "component_maintenance_manual",
+  "ata_chapter": "34-20",
+  "lru_id": "CAMCTL01",
+  "lru_name": "Wingtip Camera Control Unit",
+  "part_number": "PN4567D",
+  "revision": "02",
+  "issue_date": "2025-12-13",
+  "status": "draft",
+  
+  "am_applicability": ["AM_Q100", "AM_Q80"],
+  
+  "component_description": {
+    "title": "Wingtip Camera Control Unit - Component Maintenance Manual",
+    "function": "Provides visual navigation assistance and ground awareness through high-resolution cameras mounted at wingtips",
+    "criticality": "Non-essential",
+    "dal_level": "DAL-D"
+  },
+  
+  "physical_characteristics": {
+    "dimensions": {
+      "length_mm": 250,
+      "width_mm": 180,
+      "height_mm": 120
+    },
+    "weight_kg": 3.2,
+    "mounting_type": "rack_mount_ARINC_600",
+    "cooling": "forced_air",
+    "operating_temperature_celsius": {
+      "min": -40,
+      "max": 70
+    }
+  },
+  
+  "interfaces": {
+    "power": {
+      "type": "28VDC",
+      "current_max_amps": 8.5,
+      "power_consumption_watts": 230
+    },
+    "data": [
+      {
+        "type": "ARINC_429",
+        "speed": "100kbps",
+        "channels": 2,
+        "purpose": "Command and status interface"
+      },
+      {
+        "type": "Ethernet",
+        "speed": "1Gbps",
+        "standard": "ARINC_664",
+        "purpose": "Video streaming"
+      }
+    ],
+    "cameras": [
+      {
+        "location": "left_wingtip",
+        "cable_type": "CoaXPress",
+        "cable_length_m": 25
+      },
+      {
+        "location": "right_wingtip",
+        "cable_type": "CoaXPress",
+        "cable_length_m": 25
+      }
+    ]
+  },
+  
+  "maintenance_data": {
+    "removal_installation_time_hrs": 0.5,
+    "functional_test_time_hrs": 1.0,
+    "calibration_required": true,
+    "calibration_interval_fh": 2000,
+    "shelf_life_months": 120,
+    "special_tools_required": [
+      "TOOL-34-001 - ARINC 600 Extraction Tool",
+      "TOOL-34-002 - Camera Alignment Fixture"
+    ]
+  },
+  
+  "bom_reference": "BOM_34-20_CAMCTL01_PN4567D_R02.csv",
+  
+  "software": {
+    "image_id": "IMAGE_34-20_CAMCTL01_SWPN4455_v2.0",
+    "image_version": "2.0.1",
+    "sbom_file": "SBOM_IMAGE_34-20_CAMCTL01_SWPN4455_v2.0.spdx.json",
+    "loading_procedure": "CMM Section 5.3 - Software Loading Procedure"
+  },
+  
+  "manual_sections": [
+    {
+      "section": "1.0",
+      "title": "Description and Operation",
+      "pages": "1-1 to 1-15"
+    },
+    {
+      "section": "2.0",
+      "title": "Testing and Fault Isolation",
+      "pages": "2-1 to 2-30"
+    },
+    {
+      "section": "3.0",
+      "title": "Removal and Installation",
+      "pages": "3-1 to 3-10"
+    },
+    {
+      "section": "4.0",
+      "title": "Adjustment and Test",
+      "pages": "4-1 to 4-20"
+    },
+    {
+      "section": "5.0",
+      "title": "Practices and Procedures",
+      "pages": "5-1 to 5-25"
+    },
+    {
+      "section": "6.0",
+      "title": "Illustrated Parts Breakdown",
+      "pages": "6-1 to 6-40"
+    }
+  ],
+  
+  "certification": {
+    "environmental_qualification": "DO-160G",
+    "software_level": "DO-178C Level D",
+    "emc_compliance": "DO-160G Category M",
+    "safety_assessment": "ARP4754A, ARP4761"
+  },
+  
+  "references": {
+    "aircraft_master": "AM_Q100.json",
+    "amm_reference": "AMM_AM_Q100_R01_EN.pdf Chapter 34-20",
+    "swcfg_reference": "SWCFG_AM_Q100_Loadable_Software_Index_v1.0.json",
+    "dpp_reference": "DPP_34-20_CAMCTL01_PN4567D_v1.0.json"
+  },
+  
+  "metadata": {
+    "created_date": "2025-12-13",
+    "last_modified_date": "2025-12-13",
+    "document_owner": "AMPEL360 Component Engineering",
+    "document_status": "draft",
+    "schema_version": "1.0"
+  }
+}

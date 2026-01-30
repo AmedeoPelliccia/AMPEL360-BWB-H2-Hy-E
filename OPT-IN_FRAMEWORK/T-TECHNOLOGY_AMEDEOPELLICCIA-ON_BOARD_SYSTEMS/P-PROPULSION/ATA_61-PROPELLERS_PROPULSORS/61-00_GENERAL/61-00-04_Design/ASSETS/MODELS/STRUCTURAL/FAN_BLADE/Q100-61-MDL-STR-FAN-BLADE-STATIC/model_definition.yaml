@@ -1,0 +1,131 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Model Definition: Q100-61-MDL-STR-FAN-BLADE-STATIC
+# Fan Blade Static Structural FEA Model
+
+model_id: Q100-61-MDL-STR-FAN-BLADE-STATIC
+model_name: Fan Blade Static Structural Model
+version: 1.0.0
+status: Draft
+
+domain: STR
+component: FAN_BLADE
+model_type: FEA
+
+description: |
+  Static finite element analysis of the composite fan blade under
+  centrifugal and aerodynamic loads. Predicts stress, strain, and
+  deflection for structural integrity assessment.
+
+software:
+  name: ANSYS Mechanical
+  version: "2024 R1"
+  alternatives:
+    - Abaqus 2024
+    - Nastran 2024
+  license: Commercial
+
+geometry:
+  source: ASSETS/PARTS/Q100-61-PART-FAN-BLADE
+  format: STEP
+  revision: A
+
+mesh:
+  type: SOLID186 hexahedral with SHELL181 skin
+  elements: TBD
+  quality_criteria:
+    - aspect_ratio: max 10
+    - jacobian: min 0.3
+  files: mesh/
+
+materials:
+  primary:
+    ref: Q100-61-MAT-COMPOSITE-CFRP
+    layup: Defined per blade zone
+  leading_edge:
+    ref: Q100-61-MAT-TITANIUM-TI6AL4V
+    protection: Erosion shield
+  files: materials/
+
+physics:
+  analysis_type: Static structural
+  nonlinearity: Geometric (large deflection)
+  contact: Bonded interfaces
+  temperature: Uniform (ambient)
+
+loads:
+  - name: centrifugal
+    type: Rotational body force
+    rpm: 0 to 2500 (parametric)
+  - name: aerodynamic
+    type: Pressure from CFD
+    source: Q100-61-MDL-AERO-FAN-BLADE-CFD
+  - name: thermal
+    type: Uniform temperature (future)
+  files: loads/
+
+constraints:
+  - name: root_attachment
+    type: Fixed at blade root interface
+    dof: All
+  files: constraints/
+
+load_cases:
+  - id: LC01
+    name: Max continuous
+    rpm: 2200
+    aero: Cruise conditions
+  - id: LC02
+    name: Max transient
+    rpm: 2500
+    aero: Takeoff conditions
+  - id: LC03
+    name: Cold day overspeed
+    rpm: 2625
+    aero: Reduced
+
+outputs:
+  - name: von_mises_stress_MPa
+    description: Maximum VM stress
+    target: Less than allowable
+  - name: principal_stress_1_MPa
+    description: Max principal for composite
+  - name: tip_deflection_mm
+    description: Blade tip displacement
+  - name: margin_of_safety
+    description: MS per load case
+  files: results/
+
+validation:
+  method: Strain gauge testing, modal correlation
+  data_source: Component test rig
+  metrics:
+    - stress_accuracy_percent: 10
+    - deflection_accuracy_mm: 1
+
+traceability:
+  requirements:
+    - REQ-61-STR-001
+    - REQ-61-STR-002
+  certification:
+    - CS-25.571
+    - CS-25.613
+
+document_control:
+  created_by: AMPEL360 Structures Team
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

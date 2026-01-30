@@ -1,0 +1,18 @@
+{
+  "series": "DWG-10-100",
+  "title": "General Arrangement",
+  "description": "General arrangement drawings for parking zones, H₂/HV exclusion zones, and GSE positioning",
+  "ata_chapter": "10",
+  "h2_related": true,
+  "hv_related": true,
+  "safety_critical": true,
+  "drawings": [],
+  "revision_history": [
+    {
+      "revision": "0",
+      "date": "2025-12-09",
+      "description": "Initial directory structure creation",
+      "author": "AI Assistant (GitHub Copilot)"
+    }
+  ]
+}

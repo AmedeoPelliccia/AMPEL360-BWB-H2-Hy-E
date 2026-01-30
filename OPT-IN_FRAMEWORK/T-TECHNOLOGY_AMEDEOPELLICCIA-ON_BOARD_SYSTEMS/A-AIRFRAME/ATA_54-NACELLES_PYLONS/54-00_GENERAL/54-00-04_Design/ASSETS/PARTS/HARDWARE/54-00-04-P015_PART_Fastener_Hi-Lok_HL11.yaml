@@ -1,0 +1,140 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# 54-00-04-P015 — Fastener - Hi-Lok HL11
+
+# Part Identification
+id: "54-00-04-P015"
+title: "Fastener - Hi-Lok HL11"
+category: "PART"
+part_type: "Hardware"
+ata_chapter: "54"
+description: "Standard Hi-Lok HL11 fastener for structural connections"
+status: "Draft"
+version: "0.1.0"
+owner: "Hardware Standards"
+last_updated: "2026-01-02"
+
+# Traceability Links
+traceability:
+  parent_assembly:
+    id: "All"
+    title: "Used across all assemblies"
+  requirements:
+    - id: "54-00-03-04-001"
+      title: "Fastener Requirements"
+  drawings:
+    - id: "54-00-04-D000"
+      title: "Standard Hardware Reference"
+
+# Material Specifications
+material:
+  primary: "Steel"
+  specification: "HL11 per supplier spec, Alloy steel or stainless steel"
+  alternative_materials:
+    - "Titanium Hi-Lok for weight-critical applications"
+
+# Physical Dimensions
+dimensions:
+  length_mm: "Varies (8-50mm grip length)"
+  width_mm: 6.35
+  thickness_mm: 6.35
+  weight_kg: 0.015
+  tolerance: "Per Hi-Lok specification"
+
+# Manufacturing Information
+manufacturing:
+  process: "Standard production Hi-Lok fastener - vendor supplied"
+  tooling: "Standard installation tooling"
+  cycle_time_hours: "N/A - purchased item"
+  inspection_requirements:
+    - "Receiving inspection per vendor certification"
+    - "Visual inspection for damage"
+    - "Batch traceability verification"
+
+# Mechanical Properties
+mechanical_properties:
+  tensile_strength_mpa: 1100
+  compressive_strength_mpa: "N/A"
+  elastic_modulus_gpa: 200
+  yield_strength_mpa: 930
+  ultimate_strength_mpa: 1100
+
+# Environmental Limits
+environmental_limits:
+  operating_temp_min_c: -55
+  operating_temp_max_c: 250
+  humidity_max_percent: 100
+  salt_fog_resistance: "Per Hi-Lok specification, cadmium or other coating"
+
+# Design Features
+design_features:
+  - "Self-locking collar design prevents loosening"
+  - "Precision shear break-off collar for consistent preload"
+  - "Available in various grip lengths"
+  - "Corrosion-resistant coating (cadmium or alternative)"
+  - "Tension/shear fastener suitable for structural joints"
+
+# Interfaces
+interfaces:
+  - interface_id: "IF-P015-HOLE"
+    description: "Clearance hole in structure"
+    fastener_type: "6.5mm nominal hole diameter"
+    quantity: 1
+
+# Maintenance Information
+maintenance:
+  inspection_interval_fh: 2000
+  inspection_method: "Visual inspection for damage, looseness"
+  special_maintenance_requirements:
+    - "Replace if collar is missing or damaged"
+    - "Replace if corrosion is evident"
+    - "Torque verification on critical joints during heavy maintenance"
+
+# Supply Chain
+supply_chain:
+  manufacturer: "Hi-Shear Corporation or approved equivalent"
+  supplier_part_number: "HL11-X-Y (where X=grip, Y=material)"
+  lead_time_weeks: 2
+  minimum_order_quantity: 100
+
+# Certification
+certification:
+  critical_part: false
+  cert_basis: "CS-25 (general hardware requirements)"
+  special_conditions:
+    - "Must meet vendor specifications"
+    - "Batch traceability required"
+
+# Additional Notes
+notes: |
+  Hi-Lok HL11 is a standard aerospace structural fastener used throughout
+  nacelle and pylon assemblies. The HL11 series has a 1/4 inch (6.35mm) diameter
+  and is suitable for both tension and shear applications.
+  
+  Usage considerations:
+  - Widely used in composite-to-metal and metal-to-metal joints
+  - Self-locking collar eliminates need for separate locknut
+  - Break-off collar provides consistent installation torque
+  - Available in various grip lengths to suit material thickness
+  - Corrosion protection coating must be appropriate for application
+  - Installation requires specific Hi-Lok installation tooling
+  - Material selection (steel vs titanium) depends on application
+  - Large quantities used per nacelle/pylon assembly (hundreds to thousands)
+  
+  Standard part number format: HL11-X-Y
+  - X = Grip length code
+  - Y = Material/finish code

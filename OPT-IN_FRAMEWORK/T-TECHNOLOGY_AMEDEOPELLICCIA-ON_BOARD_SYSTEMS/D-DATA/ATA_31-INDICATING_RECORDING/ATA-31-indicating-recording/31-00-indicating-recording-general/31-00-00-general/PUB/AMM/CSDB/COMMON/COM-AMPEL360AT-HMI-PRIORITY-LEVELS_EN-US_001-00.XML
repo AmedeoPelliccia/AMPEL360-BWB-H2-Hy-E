@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-HMI-PRIORITY-LEVELS
+  Type: Standards
+  Description: Alert priority levels and message hierarchy
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: HMI
+  - Subtype: PRIORITY-LEVELS
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-730A (Fault Isolation)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+  - Reference: SAE ARP4102, ARP4761, CS-25.1322
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="spec" commonRepositoryNumber="00003"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <specificationRepository>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-PRI-001"/>
+        <specificationTitle>Alert Priority Classification</specificationTitle>
+        <specificationContent>
+          <para>Alerts are classified into three priority levels based on severity and required crew response time per CS-25.1322 and SAE ARP4102 guidelines.</para>
+          <table>
+            <tgroup cols="6">
+              <thead>
+                <row>
+                  <entry>Priority Level</entry>
+                  <entry>Color</entry>
+                  <entry>Aural</entry>
+                  <entry>Response Time</entry>
+                  <entry>Crew Action</entry>
+                  <entry>Examples</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>Level 1: WARNING</entry>
+                  <entry>RED</entry>
+                  <entry>Continuous tone or voice</entry>
+                  <entry>Immediate (seconds)</entry>
+                  <entry>Immediate corrective action required</entry>
+                  <entry>Fire, engine failure, flight control malfunction, terrain alert</entry>
+                </row>
+                <row>
+                  <entry>Level 2: CAUTION</entry>
+                  <entry>AMBER</entry>
+                  <entry>Single chime</entry>
+                  <entry>Prompt (minutes)</entry>
+                  <entry>Crew awareness and timely action needed</entry>
+                  <entry>Low fuel, hydraulic pressure low, door not locked, cabin altitude</entry>
+                </row>
+                <row>
+                  <entry>Level 3: ADVISORY</entry>
+                  <entry>CYAN or WHITE</entry>
+                  <entry>None</entry>
+                  <entry>Awareness only</entry>
+                  <entry>Crew awareness, no immediate action</entry>
+                  <entry>System mode change, configuration status, operational reminders</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-PRI-002"/>
+        <specificationTitle>Alert Suppression and Inhibit Logic</specificationTitle>
+        <specificationContent>
+          <para>Certain alerts may be suppressed or inhibited during specific flight phases to reduce crew workload and prevent nuisance alerts:</para>
+          <para>Takeoff Phase (Power application to 400 ft AGL or 60 seconds):</para>
+          <para>- Suppress: Low-priority configuration advisories, non-essential system messages</para>
+          <para>- Allow: All warnings, essential cautions related to flight safety</para>
+          <para>Landing Phase (Below 800 ft AGL to touchdown):</para>
+          <para>- Suppress: Non-essential cautions, maintenance advisories</para>
+          <para>- Allow: Terrain alerts, landing configuration warnings, critical system failures</para>
+          <para>Ground Operations:</para>
+          <para>- Allow: All alerts including maintenance-related messages</para>
+          <para>- Special handling: Master caution/warning lights remain illuminated until acknowledged</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-PRI-003"/>
+        <specificationTitle>Alert Message Queuing and Display Priority</specificationTitle>
+        <specificationContent>
+          <para>When multiple alerts are active simultaneously, display priority follows these rules:</para>
+          <para>1. Level 1 (WARNING) messages shall always be displayed first and in full view</para>
+          <para>2. Level 2 (CAUTION) messages displayed after warnings, in chronological order</para>
+          <para>3. Level 3 (ADVISORY) messages displayed last, may be abbreviated if space limited</para>
+          <para>4. Maximum simultaneous messages displayed: 12 (configurable per aircraft type)</para>
+          <para>5. Overflow messages accessible via scrolling with overflow indicator present</para>
+          <para>6. Acknowledged messages move to secondary list but remain accessible for review</para>
+          <para>7. Repeated messages increment occurrence counter rather than creating duplicate entries</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-PRI-004"/>
+        <specificationTitle>Aural Alert Standards</specificationTitle>
+        <specificationContent>
+          <para>Aural alerts shall meet the following requirements:</para>
+          <para>Warning Level Aural Alerts:</para>
+          <para>- Continuous tone: 400-800 Hz, modulated if appropriate to alert type</para>
+          <para>- Voice alerts: Clear synthetic or recorded voice stating emergency condition</para>
+          <para>- Volume: Minimum 75 dB, adjustable up to 90 dB at pilot ear position</para>
+          <para>- Duration: Continuous until crew acknowledgement or condition cleared</para>
+          <para>Caution Level Aural Alerts:</para>
+          <para>- Single chime: 500-1000 Hz, duration 0.5-1.0 seconds</para>
+          <para>- Volume: Minimum 70 dB at pilot ear position</para>
+          <para>- Repetition: Single chime on initial alert, no repeat unless new caution occurs</para>
+          <para>Advisory Level:</para>
+          <para>- No aural alert required</para>
+          <para>- Optional: Soft click or low-volume tone if desired for specific advisories</para>
+        </specificationContent>
+      </specificationSpec>
+      <specificationSpec>
+        <specificationIdent specificationIdentNumber="HMI-PRI-005"/>
+        <specificationTitle>Alert Acknowledgement and Cancellation</specificationTitle>
+        <specificationContent>
+          <para>Alert acknowledgement shall follow these procedures:</para>
+          <para>1. Master Warning Light: Press to acknowledge, silences aural, transfers alerts to message list</para>
+          <para>2. Master Caution Light: Press to acknowledge, silences aural if active, clears light when all cautions addressed</para>
+          <para>3. Individual Message Cancel: Not permitted for active warnings or cautions</para>
+          <para>4. Message Review: Acknowledged messages remain in history for flight duration</para>
+          <para>5. Persistent Alerts: Reappear if condition persists after initial acknowledgement</para>
+          <para>6. Post-Flight Review: All alerts logged to QAR and maintenance system for analysis</para>
+        </specificationContent>
+      </specificationSpec>
+    </specificationRepository>
+  </commonRepositoryContent>
+</commonRepository>

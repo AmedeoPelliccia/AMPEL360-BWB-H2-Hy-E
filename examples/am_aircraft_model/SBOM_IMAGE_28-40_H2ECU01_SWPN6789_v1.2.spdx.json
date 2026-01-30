@@ -1,0 +1,269 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2025-12-13T12:00:00Z",
+    "creators": [
+      "Tool: AMPEL360-SBOM-Generator-1.0",
+      "Organization: AMPEL360 Software Engineering - Propulsion Control"
+    ],
+    "licenseListVersion": "3.19"
+  },
+  "name": "SBOM_IMAGE_28-40_H2ECU01_SWPN6789_v1.2",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://ampel360.com/sbom/image-28-40-h2ecu01-swpn6789-v1.2",
+  "documentDescribes": [
+    "SPDXRef-IMAGE-H2ECU01"
+  ],
+  
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-IMAGE-H2ECU01",
+      "name": "IMAGE_28-40_H2ECU01_SWPN6789",
+      "versionInfo": "1.2.0",
+      "packageFileName": "IMAGE_28-40_H2ECU01_SWPN6789_v1.2.bin",
+      "supplier": "Organization: AMPEL360",
+      "downloadLocation": "https://ampel360.com/software/images/IMAGE_28-40_H2ECU01_SWPN6789_v1.2.bin",
+      "filesAnalyzed": true,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1a2b3c4d5e6f7890123456789012345678901234567890abcdef1234567890"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "Copyright 2025 AMPEL360",
+      "description": "Hydrogen Energy Control Unit - Fuel Cell Control and Energy Management System (Safety Critical DAL-A)",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "aircraft-model",
+          "referenceLocator": "AM_Q100"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "ata-chapter",
+          "referenceLocator": "28-40"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "dal-level",
+          "referenceLocator": "DO-178C-Level-A"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "advisory",
+          "referenceLocator": "Safety-Critical-Hydrogen-System"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-VXWORKS-SAFETY",
+      "name": "VxWorks-7-Safety-Profile",
+      "versionInfo": "7.0.1",
+      "supplier": "Organization: Wind River Systems",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Commercial",
+      "copyrightText": "Copyright Wind River Systems",
+      "description": "Real-Time Operating System - Safety Profile IEC 61508 SIL 3 certified",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "certification",
+          "referenceLocator": "IEC-61508-SIL-3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-SAFERTOS",
+      "name": "SafeRTOS",
+      "versionInfo": "11.1.1",
+      "supplier": "Organization: WITTENSTEIN high integrity systems",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Commercial",
+      "copyrightText": "Copyright WITTENSTEIN high integrity systems",
+      "description": "Safety-certified RTOS for critical applications",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "certification",
+          "referenceLocator": "DO-178C-DAL-A,IEC-61508-SIL-3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-GNAT-PRO",
+      "name": "GNAT-Pro-Safety-Critical-Runtime",
+      "versionInfo": "23.2",
+      "supplier": "Organization: AdaCore",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Commercial",
+      "copyrightText": "Copyright AdaCore",
+      "description": "Ada runtime library certified for safety-critical applications",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "certification",
+          "referenceLocator": "DO-178C-DAL-A"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-AURIX-LIBS",
+      "name": "AURIX-TriCore-Safety-Libraries",
+      "versionInfo": "2.8.0",
+      "supplier": "Organization: Infineon Technologies",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Commercial",
+      "copyrightText": "Copyright Infineon Technologies",
+      "description": "Microcontroller safety libraries for lockstep CPUs",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceType": "certification",
+          "referenceLocator": "ISO-26262-ASIL-D"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-CRYO-PHYSICS",
+      "name": "Cryogenic-Physics-Model-Library",
+      "versionInfo": "1.0.3",
+      "supplier": "Organization: AMPEL360 Advanced Physics",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Proprietary",
+      "copyrightText": "Copyright AMPEL360",
+      "description": "Liquid hydrogen thermodynamic and heat transfer models"
+    },
+    {
+      "SPDXID": "SPDXRef-FC-CONTROL",
+      "name": "Fuel-Cell-Control-Library",
+      "versionInfo": "2.1.0",
+      "supplier": "Organization: H2 PowerTech GmbH",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "Proprietary",
+      "copyrightText": "Copyright H2 PowerTech GmbH",
+      "description": "PEM fuel cell stack control algorithms and diagnostics"
+    },
+    {
+      "SPDXID": "SPDXRef-MODBUS",
+      "name": "libmodbus",
+      "versionInfo": "3.1.7",
+      "supplier": "Organization: Stéphane Raimbault",
+      "downloadLocation": "https://libmodbus.org/",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a1b1b2c3d4e5f67890123456789012345678901234567890abcdef1234567890"
+        }
+      ],
+      "licenseConcluded": "LGPL-2.1-or-later",
+      "licenseDeclared": "LGPL-2.1-or-later",
+      "copyrightText": "Copyright Stéphane Raimbault",
+      "description": "Modbus protocol library for industrial sensor communication"
+    },
+    {
+      "SPDXID": "SPDXRef-CANOPEN",
+      "name": "CANopen-Stack",
+      "versionInfo": "4.0.1",
+      "supplier": "Organization: CANopenNode",
+      "downloadLocation": "https://github.com/CANopenNode/CANopenNode",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2c2c3d4e5f67890123456789012345678901234567890abcdef23456789ab"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright CANopenNode Contributors",
+      "description": "CANopen communication stack for fuel cell interface"
+    },
+    {
+      "SPDXID": "SPDXRef-MATHLIB",
+      "name": "ARM-CMSIS-DSP",
+      "versionInfo": "1.10.0",
+      "supplier": "Organization: ARM Ltd",
+      "downloadLocation": "https://github.com/ARM-software/CMSIS_5",
+      "filesAnalyzed": false,
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c3d3d4e5f67890123456789012345678901234567890abcdef34567890abcd"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright ARM Ltd",
+      "description": "Digital signal processing library for control loops"
+    }
+  ],
+  
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-IMAGE-H2ECU01"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-VXWORKS-SAFETY"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-SAFERTOS"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-GNAT-PRO"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-AURIX-LIBS"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-CRYO-PHYSICS"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-FC-CONTROL"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-MODBUS"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-CANOPEN"
+    },
+    {
+      "spdxElementId": "SPDXRef-IMAGE-H2ECU01",
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef-MATHLIB"
+    }
+  ]
+}

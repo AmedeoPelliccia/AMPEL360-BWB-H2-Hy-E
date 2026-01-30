@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - Communications Software Loading and Configuration
+DMC: AMPEL360AT-A-23-10-00-00A-C40A-A_001-00_EN-US
+Info Code: C40A - Software Procedures (Project-Tailored Info Code)
+ATA Chapter: 23-10-00 Speech Communications General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+
+NOTE: Info code C40A is a project-tailored extension for software/configuration procedures.
+Standard S1000D software codes are 940A-series, but C40A is used to distinguish
+communications-specific software procedures within the AMPEL360 project structure.
+This tailoring is documented in the project BREX (Business Rules Exchange).
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proced.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="23"
+                subSystemCode="10"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="C40"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Communications System Software</techName>
+          <infoName>Software Loading and Configuration Procedure</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT"
+                    systemDiffCode="A"
+                    systemCode="00"
+                    subSystemCode="00"
+                    subSubSystemCode="00"
+                    assyCode="00"
+                    disassyCode="00"
+                    disassyCodeVariant="A"
+                    infoCode="022"
+                    infoCodeVariant="A"
+                    itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Maintenance Procedure</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+      <remarks>
+        <simplePara>Project-tailored info code C40A used for communications-specific software procedures. See project BREX for tailoring justification and scope.</simplePara>
+      </remarks>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqPersons>
+          <person>
+            <personCategory personCategoryCode="AV">
+              <manufacturerName>Licensed Aircraft Maintenance Technician with Avionics Certification</manufacturerName>
+            </personCategory>
+          </person>
+        </reqPersons>
+        <reqSupportEquips>
+          <supportEquip>
+            <name>Laptop computer with software loading application installed</name>
+          </supportEquip>
+          <supportEquip>
+            <name>USB-to-RS232 adapter (if required for legacy equipment)</name>
+          </supportEquip>
+          <supportEquip>
+            <name>Data loading cable (specific to radio/panel model)</name>
+          </supportEquip>
+          <supportEquip>
+            <name>Software media (USB drive, CD, or network download as applicable)</name>
+          </supportEquip>
+        </reqSupportEquips>
+        <reqSupplies>
+          <noSupplies/>
+        </reqSupplies>
+        <reqSpares>
+          <noSpares/>
+        </reqSpares>
+        <reqSafety>
+          <safety>
+            <warningRef/>
+            <cautionRef/>
+          </safety>
+        </reqSafety>
+      </preliminaryRqmts>
+      
+      <mainProcedure>
+        <proceduralStep>
+          <para>This procedure provides instructions for loading software and configuring parameters in speech communications system components including VHF radios, audio panels, and audio management units. Use this procedure when installing new equipment, updating software versions, or restoring configuration after component replacement.</para>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Important Information</title>
+          <warning>
+            <para>Software loading and configuration procedures are equipment-specific. Ensure you have correct software version and loading instructions for the specific make and model of equipment being serviced. Loading incorrect software can render equipment inoperative and may void warranty.</para>
+          </warning>
+          <warning>
+            <para>Do not interrupt software loading process once started. Loss of power or disconnection during loading can corrupt software and require factory repair. Ensure stable aircraft power or use external power source during loading procedure.</para>
+          </warning>
+          <caution>
+            <para>Back up existing configuration before loading new software or making configuration changes. Configuration backup allows restoration if new settings cause problems or are incompatible with aircraft systems.</para>
+          </caution>
+          <caution>
+            <para>Verify software version compatibility with other aircraft systems before loading. Some software versions have minimum version requirements for interfacing equipment.</para>
+          </caution>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Pre-Loading Preparation</title>
+          <proceduralStep>
+            <para>Obtain and verify software package:</para>
+            <proceduralStep>
+              <para>Obtain approved software version from manufacturer, authorized distributor, or aircraft OEM.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify software version is approved for installation on aircraft (check STC, supplemental instructions, or aircraft configuration management).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify software media integrity (checksum, hash verification, or virus scan as applicable).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Review software release notes for known issues, installation requirements, and configuration changes.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Identify target equipment:</para>
+            <proceduralStep>
+              <para>Record current software version from equipment display or configuration menu.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Record equipment part number and serial number from data plate.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Confirm equipment is the correct model for the software being loaded.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Back up current configuration:</para>
+            <proceduralStep>
+              <para>Connect laptop to equipment using appropriate data cable and interface.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Launch configuration management software on laptop.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Read current configuration from equipment and save to file with descriptive name (include date, aircraft registration, and equipment serial number).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify backup file integrity by reviewing saved parameters.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Store backup file in secure location (aircraft technical records or maintenance tracking system).</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Prepare loading equipment:</para>
+            <proceduralStep>
+              <para>Ensure laptop battery is fully charged or laptop is connected to AC power.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Copy software files to laptop hard drive or USB drive as required.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify loading software application is properly installed and licensed.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Test data cable and connections before beginning loading procedure.</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Aircraft Power Configuration</title>
+          <proceduralStep>
+            <para>Configure aircraft for software loading:</para>
+            <proceduralStep>
+              <para>If using aircraft power: Ensure battery is fully charged (minimum 24V for 28V system).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Preferred: Connect external power source to maintain stable voltage during loading.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify no other high-current systems are operating that could cause voltage fluctuation.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Set master switch to ON position.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify communications system circuit breakers are in (closed).</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Power up target equipment and verify normal operation before loading.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Software Loading Procedure - VHF Radio</title>
+          <proceduralStep>
+            <para>This section applies to software loading for VHF communication transceivers:</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Connect data cable:</para>
+            <proceduralStep>
+              <para>Locate data port on rear of VHF radio (typically DB-9 or USB connector).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Connect data cable from laptop to radio data port.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify solid connection - cable should lock or seat firmly.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Launch loading software on laptop:</para>
+            <proceduralStep>
+              <para>Start manufacturer's software loading application.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Select correct COM port or USB device for data connection.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Configure communication parameters (baud rate, parity, etc.) per equipment manual - typical: 9600 baud, 8 data bits, 1 stop bit, no parity.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Test communication link - application should detect radio and display model/serial information.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Put radio in software loading mode:</para>
+            <proceduralStep>
+              <para>Method varies by manufacturer - typical methods:</para>
+              <proceduralStep>
+                <para>Option 1: Press and hold specific button combination on radio front panel during power-up (e.g., hold TEST + VOLUME for 5 seconds).</para>
+              </proceduralStep>
+              <proceduralStep>
+                <para>Option 2: Select "Software Update" from radio configuration menu.</para>
+              </proceduralStep>
+              <proceduralStep>
+                <para>Option 3: Radio automatically enters loading mode when loading application sends specific command sequence.</para>
+              </proceduralStep>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify radio display shows "LOAD MODE" or similar indication confirming ready to receive software.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Load software:</para>
+            <proceduralStep>
+              <para>Select software file to be loaded (ensure correct file for radio model).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Initiate software transfer using loading application "Load" or "Program" button.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Monitor progress indicator on laptop - loading typically takes 2-10 minutes depending on file size and interface speed.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Do not interrupt loading process - do not disconnect cables, turn off power, or close application.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>When loading completes, loading application will display "Complete" or "Success" message.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify software loading:</para>
+            <proceduralStep>
+              <para>Radio will automatically restart with new software.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify radio displays normally (not stuck in load mode or error state).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Access software version display (typically through menu or by holding TEST button).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Confirm displayed version matches software version just loaded.</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Software Loading Procedure - Audio Control Panel</title>
+          <proceduralStep>
+            <para>Similar to VHF radio loading with following differences:</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Audio panel data port may be accessible only after partial removal of panel (refer to DMC-AMPEL360AT-A-23-10-00-00A-520A if rear access required).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Some audio panels support over-the-air (OTA) software loading through connected radios - refer to equipment manual for OTA procedure if available.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Audio panel loading typically faster than radio (1-3 minutes) due to smaller software package.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Configuration Parameter Programming</title>
+          <proceduralStep>
+            <para>After software loading (or for configuration-only changes without software update):</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Determine required configuration parameters:</para>
+            <proceduralStep>
+              <para>Refer to aircraft configuration specification or installation manual for required parameter values.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Common configuration parameters include:</para>
+              <proceduralStep>
+                <para>Audio levels (transmit mic gain, receive volume limits)</para>
+              </proceduralStep>
+              <proceduralStep>
+                <para>Squelch threshold settings</para>
+              </proceduralStep>
+              <proceduralStep>
+                <para>Intercom mode (VOX vs. push-to-talk)</para>
+              </proceduralStep>
+              <proceduralStep>
+                <para>Sidetone enable/level</para>
+              </proceduralStep>
+              <proceduralStep>
+                <para>Emergency frequency preset (121.5 MHz)</para>
+              </proceduralStep>
+              <proceduralStep>
+                <para>Interface parameters for connected systems (FMS, transponder, etc.)</para>
+              </proceduralStep>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Access configuration mode:</para>
+            <proceduralStep>
+              <para>Method varies by equipment - typical methods:</para>
+              <proceduralStep>
+                <para>Option 1: Use laptop with configuration management software (preferred for complex configurations).</para>
+              </proceduralStep>
+              <proceduralStep>
+                <para>Option 2: Access built-in configuration menu using front panel controls (hold specific button for 5+ seconds to enter config mode).</para>
+              </proceduralStep>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Program configuration parameters:</para>
+            <proceduralStep>
+              <para>If using laptop: Load configuration file or manually enter parameters in software interface, then write configuration to equipment.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>If using front panel: Navigate menu structure and set each parameter according to configuration specification. Refer to equipment manual for menu navigation instructions.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>After all parameters entered, save configuration (select "Save" or "Write" option) to make changes permanent.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify configuration:</para>
+            <proceduralStep>
+              <para>Read back configuration from equipment and compare to specification.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Verify all critical parameters are correctly set.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Create configuration report or printout for maintenance records.</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Post-Loading Operational Test</title>
+          <proceduralStep>
+            <para>Disconnect data cables and restore normal equipment access.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Perform complete operational test per DMC-AMPEL360AT-A-23-10-00-00A-300A (VHF Radio System Operational Test Procedure).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Specifically verify:</para>
+            <proceduralStep>
+              <para>All basic functions operate normally (transmit, receive, frequency selection).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Audio quality meets standards (clear, no distortion).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Interface functions with other aircraft systems (FMS frequency sync, audio panel integration, etc.).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Configuration parameters produce expected behavior (audio levels appropriate, squelch functions correctly, etc.).</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If any operational test fails:</para>
+            <proceduralStep>
+              <para>Review configuration parameters - verify correct values entered.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Check software version compatibility with interfacing equipment.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>If problems persist, consider restoring previous software version and configuration from backup.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Contact equipment manufacturer technical support if needed.</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Documentation</title>
+          <proceduralStep>
+            <para>Record software loading in aircraft maintenance log:</para>
+            <proceduralStep>
+              <para>Date and time of software loading.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Equipment identification (part number, serial number).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Previous software version and new software version.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Configuration changes made (if any).</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Operational test results.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Technician name and license/certificate number.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Update aircraft configuration management records:</para>
+            <proceduralStep>
+              <para>Update software version in master equipment list.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>File configuration backup and post-loading configuration report.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Note any airworthiness directives, service bulletins, or STCs related to software change.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If software change is required by service bulletin or airworthiness directive, ensure compliance documentation is complete and filed appropriately.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Troubleshooting Software Loading Issues</title>
+          <proceduralStep>
+            <para>If software loading fails or equipment does not function after loading:</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Communication error during loading:</para>
+            <proceduralStep>
+              <para>Verify data cable connections are secure.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Check COM port selection and communication parameters in loading software.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Try alternate USB port or cable if available.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Restart laptop and equipment, then retry loading.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Equipment does not enter loading mode:</para>
+            <proceduralStep>
+              <para>Verify correct button combination or menu selection for specific equipment model.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Some equipment requires specific software version to enable loading mode - verify compatibility.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Check equipment manual for alternate loading mode access methods.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Equipment stuck in loading mode after failed load:</para>
+            <proceduralStep>
+              <para>Power cycle equipment - turn off, wait 30 seconds, power on.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Retry software loading from beginning.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>If equipment does not recover, may require factory repair or specialized recovery procedure - contact manufacturer.</para>
+            </proceduralStep>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Equipment operates but new features/fixes not present:</para>
+            <proceduralStep>
+              <para>Verify software version displayed on equipment matches version intended to be loaded.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Some changes require configuration parameter changes in addition to software loading.</para>
+            </proceduralStep>
+            <proceduralStep>
+              <para>Review software release notes to understand what changes are included and how to activate them.</para>
+            </proceduralStep>
+          </proceduralStep>
+        </proceduralStep>
+      </mainProcedure>
+      
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+  
+</dmodule>

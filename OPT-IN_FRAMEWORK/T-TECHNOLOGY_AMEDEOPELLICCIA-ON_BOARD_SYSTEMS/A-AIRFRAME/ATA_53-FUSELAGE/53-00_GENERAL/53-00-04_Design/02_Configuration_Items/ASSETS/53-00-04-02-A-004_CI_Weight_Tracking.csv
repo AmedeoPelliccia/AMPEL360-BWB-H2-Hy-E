@@ -1,0 +1,17 @@
+CI_Number,CI_Name,Zone,Weight_Target_kg,Weight_Actual_kg,Weight_Margin_kg,Weight_Margin_Percent,Status,Trend,Last_Update
+CI-53-000,ATA 53 Fuselage,ALL,45000,46200,-1200,-2.7,Over Target,Stable,2025-11-20
+CI-53-100,Nose Section,100,3500,3580,-80,-2.3,Over Target,Improving,2025-11-18
+CI-53-100-BHD-FWD,Forward Pressure Bulkhead,100,450,462,-12,-2.7,Over Target,Stable,2025-11-15
+CI-53-100-FR-100A,Frame 100A,100,25,24.5,0.5,2.0,Under Target,Stable,2025-11-10
+CI-53-100-SKN-U01,Upper Skin Panel 01,100,180,185,-5,-2.8,Over Target,Stable,2025-11-12
+CI-53-200,Forward Cabin,200,8500,8720,-220,-2.6,Over Target,Improving,2025-11-18
+CI-53-200-DOOR-1L-FR,Door Frame 1L,200,180,182,-2,-1.1,Over Target,Stable,2025-11-14
+CI-53-200-FLR-BEAM-S-L,Secondary Floor Beams Left,200,180,178,2,1.1,Under Target,Stable,2025-11-10
+CI-53-300,Mid Cabin,300,10500,TBD,TBD,TBD,Preliminary,TBD,2025-10-28
+CI-53-400,Center Wing Box,400,12000,12285,-285,-2.4,Over Target,Stable,2025-11-20
+CI-53-400-SPAR-FWD,Forward Wing Spar,400,2200,2285,-85,-3.9,Over Target,Stable,2025-11-18
+CI-53-400-SPAR-REAR,Rear Wing Spar,400,2000,2050,-50,-2.5,Over Target,Stable,2025-11-18
+CI-53-400-BAY-MLG-L,Left Main Landing Gear Bay,400,850,865,-15,-1.8,Over Target,Improving,2025-11-16
+CI-53-500,Aft Cabin,500,7000,TBD,TBD,TBD,Preliminary,TBD,2025-10-25
+CI-53-600,Tail Section,600,3500,TBD,TBD,TBD,Preliminary,TBD,2025-10-20
+CI-53-600-BHD-AFT,Aft Pressure Bulkhead,600,420,432,-12,-2.9,Over Target,Stable,2025-11-05

@@ -1,0 +1,127 @@
+id: "54-00-04-M711"
+title: "Engine Heat Transfer Model"
+category: "MODL"
+model_type: "Thermal"
+analysis_domain: "Engine-Nacelle Thermal Interface"
+ata_chapter: "54"
+description: |
+  Thermal model for heat transfer between engine and nacelle structure:
+  - Engine external surface temperatures
+  - Heat flux to nacelle inner surfaces
+  - Cooling air flow paths and effectiveness
+  - Radiation exchange in engine bay
+  - Ventilation system thermal performance
+  This model provides boundary conditions for M710 nacelle thermal analysis.
+status: "Planned"
+version: "0.1.0"
+owner: "Thermal Systems Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+  requirements:
+    - id: "54-00-03-02-001"
+      title: "Thermal Environment Requirements"
+    - id: "71-00-03-01-001"
+      title: "Engine Installation Requirements"
+  parent_models: []
+  related_models:
+    - id: "54-00-04-M710"
+      title: "Nacelle Thermal Analysis"
+    - id: "54-00-04-M721"
+      title: "Inlet Flow Analysis"
+
+analysis_parameters:
+  method: "CFD-based thermal analysis with radiation modeling"
+  solver: "TBD (STAR-CCM+, Fluent, or engine OEM thermal model)"
+  key_parameters: |
+    - Engine power settings: idle to maximum thrust
+    - Engine external surface temperatures (from OEM data)
+    - Cooling air mass flow rates
+    - Radiation view factors between engine and nacelle
+    - Natural and forced convection correlations
+  boundary_conditions: "Engine surface temperatures from OEM, external air flow"
+  assumptions: |
+    - Engine OEM data provides surface temperature distributions
+    - Nacelle ventilation system operates per design
+    - Steady-state at each operating point
+    - Conservative engine surface temperatures in degraded modes
+
+software_tools:
+  primary: "TBD (STAR-CCM+ for coupled flow-thermal-radiation)"
+  preprocessing: "TBD - engine bay geometry and ventilation paths"
+  postprocessing: "TBD - heat flux maps and temperature distributions"
+  version: "TBD"
+
+input_requirements:
+  geometry: "Engine external geometry, nacelle inner surface, cooling ducts"
+  loads: "Engine surface temperatures from OEM, external flow conditions"
+  material_properties: "Surface emissivity for radiation calculations"
+  environmental_conditions: "Ambient temperature, altitude, flight speed"
+
+results_summary:
+  status: "Pending analysis"
+  key_outputs: []
+  validation_status: "Not validated"
+  notes: |
+    Key outputs used as boundary conditions for M710:
+    - Heat flux distribution on nacelle inner surface
+    - Cooling air temperatures and flow rates
+    - Maximum temperature zones requiring thermal barriers
+    - Fire zone thermal loads
+
+verification:
+  - method: "Comparison with engine OEM thermal data"
+    status: "Planned"
+  - method: "Validation against similar installations"
+    status: "Planned"
+  - method: "CFD mesh independence study"
+    status: "Planned"
+
+validation:
+  test_correlation: "Ground test with thermal instrumentation"
+  uncertainty_quantification: "Sensitivity to engine OEM data uncertainty"
+  confidence_level: "Conservative for safety-critical thermal limits"
+
+outputs:
+  - "Heat flux maps for nacelle inner surfaces"
+  - "Cooling air flow rates and temperatures"
+  - "Radiation exchange factors"
+  - "Engine bay ventilation effectiveness"
+  - "Boundary conditions for M710 nacelle thermal analysis"
+
+documentation:
+  technical_report: "TBD - Engine Heat Transfer Analysis Report"
+  presentation: "TBD"
+  raw_data: "TBD - CFD model and heat flux database"
+
+quality_assurance:
+  peer_review: "Required"
+  checker: "TBD - Senior Thermal Engineer"
+  approver: "TBD - Chief Thermal Systems Engineer"
+  review_date: "TBD"
+
+notes: |
+  This model interfaces with:
+  - Engine OEM thermal data package (ATA 71)
+  - Nacelle ventilation system design (ATA 54)
+  - Fire protection system (ATA 26)
+  
+  Critical considerations:
+  - Engine heat shield effectiveness
+  - Ventilation system failure modes
+  - Thermal protection of critical systems and wiring
+  - Fire zone thermal barriers
+  
+  Coordinate with engine OEM for:
+  - Surface temperature data at all power settings
+  - Emergency and degraded mode thermal data
+  - Accessory heat sources (gearbox, pumps, etc.)
+
+document_control:
+  created_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  repository: "AMPEL360-AIR-T"
+  status: "DRAFT - Planned"
+  last_ai_update: "2026-01-02"

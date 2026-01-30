@@ -190,11 +190,66 @@ ATA_XX-DESCRIPTION/
     └── XX-00-14_Ops_Std_Sustain/
 ```
 
-### 3.1 Source Pattern
+### 3.1 A-LIVE-GP – 14-Folder Lifecycle Skeleton
+
+The standard 14-folder structure used in all `XX-00-00_GENERAL` layers implements the:
+
+**A-LIVE-GP — Aircraft Lifecycle Industrialization and Validation Executive General Plan**
+
+A-LIVE-GP is the canonical lifecycle skeleton for every ATA chapter in the OPT-IN Framework.
+It ensures that all systems, subsystems and interfaces are engineered, validated and industrialized under a consistent, certification-grade plan.
+
+#### A-LIVE-GP Folder Mapping
+
+Each `XX-00-00_GENERAL` chapter uses the following 14 folders to implement A-LIVE-GP:
+
+1. **01_OVERVIEW**
+   Program / chapter mission, scope, architecture context, stakeholders and governance.
+
+2. **02_SAFETY**
+   Safety objectives, FHA/PSSA allocation, risks, mitigations and safety governance.
+
+3. **03_REQUIREMENTS**
+   Structured requirements set (functional, performance, safety, regulatory) with IDs and traceability hooks.
+
+4. **04_DESIGN**
+   Logical and physical architecture, models, design decisions, trades and baselines.
+
+5. **05_INTERFACES**
+   Internal and external interfaces, ICDs, data contracts, infra standards (e.g. ATA 85), and change control.
+
+6. **06_ENGINEERING**
+   Detailed engineering work: analyses, simulations, dimensioning, models, calculations, algorithms.
+
+7. **07_V_AND_V**
+   Verification & Validation strategy, plans, procedures, coverage and results mapping to requirements.
+
+8. **08_PROTOTYPING**
+   Breadboards, rigs, mock-ups, PoCs, pilots, and digital/physical prototyping campaigns (ground + flight where applicable).
+
+9. **09_PRODUCTION_PLANNING**
+   Industrialization, supply chain, producibility, process design, production tooling and ramp-up planning.
+
+10. **10_CERTIFICATION**
+    Certification basis, means of compliance, evidence structure (DO-178C, DO-254, DO-160, CS-25, etc.) and authority interactions.
+
+11. **11_EIS_VERSIONS_TAGS**
+    Entry-Into-Service strategy, versioning model, tags, release notes, in-service modifications and configuration records.
+
+12. **12_SERVICES**
+    In-service support: operations support, maintenance program hooks, digital services, customer services integration.
+
+13. **13_SUBSYSTEMS_COMPONENTS**
+    Breakdown of subsystems and components under the chapter, with allocation to responsible teams and cross-ATA links.
+
+14. **14_OPS_STD_SUSTAIN**
+    Operations standards, procedures, performance standards and sustainability/circularity hooks (integration with ATA 02/99).
+
+### 3.2 Source Pattern
 - **Source**: ATA 95-00-00_GENERAL (canonical template)
 - **Purpose**: This folder owns governance, requirements, safety, certification, config/change management for the chapter
 
-### 3.2 Lifecycle Folder Descriptions
+### 3.3 Lifecycle Folder Descriptions
 
 1. **XX-00-01_Overview**: ATA domain description and global architecture
 2. **XX-00-02_Safety**: Safety framework and analysis methods
@@ -222,7 +277,7 @@ ATA_XX-DESCRIPTION/
 ├── XX-00_GENERAL/              # (14 lifecycle folders as above)
 ├── XX-10_Operations/           # Ops use, turnarounds, procedures
 ├── XX-20_Subsystems/           # Functional subsystems (design-driven)
-├── XX-30_Circularity/          # Sustainability, LCA, reuse/recycle, DPP links
+├── XX-30_ANCHORS/              # Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems
 ├── XX-40_Software/             # SW, control logic, diagnostics, ML/NN
 ├── XX-50_Structures/           # Frames, housings, mounts, structural routes
 ├── XX-60_Storages/             # Tanks, reservoirs, accumulators, cryo vessels
@@ -244,12 +299,18 @@ ATA_XX-DESCRIPTION/
 - Internal structure is free-form
 - Must be navigable and traceable
 
-#### XX-30_Circularity
+#### XX-30_ANCHORS — Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems
 - Sustainability metrics
 - Life Cycle Assessment (LCA)
 - Reuse/recycle strategies
 - Digital Product Passport links
 - Carbon accounting
+- Renewable energy generation and harvesting
+- CO₂ capture & synthesis units
+- Water and waste recovery cycles
+- Fast-rechargeable battery continuous loops
+- Thermal recovery / regenerative systems
+- Resource networks connecting aircraft ↔ ground ↔ infrastructure
 
 #### XX-40_Software
 - Software components
@@ -296,7 +357,7 @@ ATA_XX-DESCRIPTION/
 - **00 General** — General ATA information, audience-based instructions, regulations, governance, standards, configuration & change management.
 - **10 Operations** — Operational use, turnaround, ground/flight ops specifics for the ATA domain.
 - **20 Subsystems** — Functional systems of the domain; main engineering artefacts live here.
-- **30 Circularity** — Sustainability, repairability, reuse/recycle, LCA, carbon accounting.
+- **30 ANCHOR'S** — Aircraft Networks, Circular, Harvesting, Operating & Renewable Systems; sustainability, repairability, reuse/recycle, LCA, carbon accounting, energy harvesting, thermal/water loops, battery logistics.
 - **40 Software** — Embedded apps, controllers, diagnostics, analytics, ML/NN for the domain.
 - **50 Structures** — Frames, housings, supports, structural routes.
 - **60 Storages** — Tanks, reservoirs, accumulators, cryogenic storages (H₂, oils, etc.).
@@ -330,7 +391,7 @@ ATA_79-OIL/
 ├── 79-20_Subsystems/
 │   ├── 79-20-01_Engine_Oil_System/
 │   └── 79-20-02_Oil_Condition_Monitoring/
-├── 79-30_Circularity/
+├── 79-30_ANCHORS/
 │   └── 79-30-01_Waste_Oil_Recovery_LCA/
 ├── 79-40_Software/
 │   └── 79-40-01_Oil_Controller_SW/

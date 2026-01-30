@@ -1,0 +1,108 @@
+%% 57-30-03 — DPP Anchor Map
+%% ATA Chapter: 57 – Wings
+%% Bucket: 57-30_ANCHORS
+
+flowchart TB
+    subgraph AIRCRAFT["Aircraft Level DPP"]
+        AC_DPP["Aircraft DPP<br/>DPP-AMPEL360-001"]
+    end
+
+    subgraph WING_ASM["Wing Assembly DPPs"]
+        direction LR
+        LW["Left Wing<br/>DPP-57-WING-L-001"]
+        RW["Right Wing<br/>DPP-57-WING-R-001"]
+    end
+
+    subgraph COMPONENTS["Component DPPs"]
+        direction TB
+        subgraph STRUCT["Primary Structure"]
+            SPAR_L["Spar Left<br/>DPP-57-SPAR-L001"]
+            SPAR_R["Spar Right<br/>DPP-57-SPAR-R001"]
+            RIB1["Rib #1<br/>DPP-57-RIB-001"]
+            RIB2["Rib #2<br/>DPP-57-RIB-002"]
+            SKIN_U["Upper Skin<br/>DPP-57-SKIN-U01"]
+            SKIN_L["Lower Skin<br/>DPP-57-SKIN-L01"]
+        end
+        subgraph CTRL["Control Surfaces"]
+            FLAP["Flap Asm<br/>DPP-57-FLP-001"]
+            SLAT["Slat Asm<br/>DPP-57-SLT-001"]
+            AIL["Aileron<br/>DPP-57-AIL-001"]
+        end
+        subgraph ACT["Actuators"]
+            ACT1["Flap Actuator<br/>DPP-57-ACT-FLP01"]
+            ACT2["Slat Actuator<br/>DPP-57-ACT-SLT01"]
+        end
+    end
+
+    subgraph MMIP["MMIP Capsules"]
+        direction TB
+        CAP_MFG["MANUFACTURE<br/>Events"]
+        CAP_INST["INSTALL<br/>Events"]
+        CAP_INSP["INSPECT<br/>Events"]
+        CAP_REP["REPAIR<br/>Events"]
+        CAP_REM["REMOVE<br/>Events"]
+    end
+
+    subgraph EXTERNAL["External Registries"]
+        direction TB
+        EU_DPP["EU DPP<br/>Registry"]
+        BLOCK["AMPEL360<br/>Blockchain"]
+        SUPPLY["Supplier<br/>Registries"]
+    end
+
+    subgraph ATA_LINKS["Cross-ATA Links"]
+        direction TB
+        ATA85["ATA 85<br/>Circularity"]
+        ATA97["ATA 97<br/>Analytics"]
+        ATA99["ATA 99<br/>DPP Central"]
+        ATA02["ATA 02<br/>Operations"]
+    end
+
+    %% Hierarchy connections
+    AC_DPP --> LW
+    AC_DPP --> RW
+    
+    LW --> SPAR_L
+    LW --> RIB1
+    LW --> SKIN_U
+    LW --> FLAP
+    LW --> ACT1
+    
+    RW --> SPAR_R
+    RW --> RIB2
+    RW --> SKIN_L
+    RW --> SLAT
+    RW --> AIL
+    RW --> ACT2
+
+    %% MMIP connections
+    SPAR_L -.-> CAP_MFG
+    SPAR_L -.-> CAP_INST
+    FLAP -.-> CAP_INSP
+    ACT1 -.-> CAP_REP
+    RIB1 -.-> CAP_REM
+
+    %% External registry links
+    CAP_MFG --> BLOCK
+    CAP_INST --> EU_DPP
+    CAP_REM --> SUPPLY
+    
+    AC_DPP --> ATA99
+    SPAR_L --> ATA85
+    FLAP --> ATA97
+    ACT1 --> ATA02
+
+    %% Styling
+    classDef aircraft fill:#FFD700,stroke:#DAA520
+    classDef assembly fill:#87CEEB,stroke:#4682B4
+    classDef component fill:#98FB98,stroke:#32CD32
+    classDef capsule fill:#DDA0DD,stroke:#8B008B
+    classDef external fill:#FFA07A,stroke:#FF6347
+    classDef atalink fill:#E6E6FA,stroke:#9370DB
+
+    class AC_DPP aircraft
+    class LW,RW assembly
+    class SPAR_L,SPAR_R,RIB1,RIB2,SKIN_U,SKIN_L,FLAP,SLAT,AIL,ACT1,ACT2 component
+    class CAP_MFG,CAP_INST,CAP_INSP,CAP_REP,CAP_REM capsule
+    class EU_DPP,BLOCK,SUPPLY external
+    class ATA85,ATA97,ATA99,ATA02 atalink

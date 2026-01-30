@@ -1,0 +1,111 @@
+assembly_metadata:
+  assembly_id: "ASM-53-200-001"
+  assembly_name: "Upper Shell Module"
+  ata_chapter: "53"
+  zone: "200"
+  parent_ci: "CI-53-200-SHELL-UPPER"
+  related_cis:
+    - "CI-53-200-SHELL-UPPER-SKIN"
+    - "CI-53-200-SHELL-UPPER-STRINGER"
+    - "CI-53-200-SHELL-UPPER-FRAME"
+    - "CI-53-200-SHELL-UPPER-CLIP"
+  structure_classification: "Primary"
+  plm_item_id: "TC-ASM-53-200-001"
+  cad_master_drawing: "53-20-1000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2025-11-22"
+    author: "Pressure Shell Design Team"
+
+components:
+  - part_number: "53-200-1001-01"
+    ci_number: "CI-53-200-SHELL-UPPER-SKIN"
+    description: "Upper Shell Skin Panels"
+    quantity: 8
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-200-1002-01"
+    ci_number: "CI-53-200-SHELL-UPPER-STRINGER"
+    description: "Longitudinal Stringer Set"
+    quantity: 24
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-200-1003-01"
+    ci_number: "CI-53-200-SHELL-UPPER-FRAME"
+    description: "Circumferential Frame Set"
+    quantity: 16
+    material: "CFRP"
+    primary_load_path: true
+
+  - part_number: "53-200-1004-01"
+    ci_number: "CI-53-200-SHELL-UPPER-CLIP"
+    description: "Frame-to-Stringer Clips"
+    quantity: 384
+    material: "Al-7075-T6"
+    primary_load_path: false
+
+  - part_number: "FAST-TI-M6-200"
+    ci_number: null
+    description: "Titanium Fasteners M6x16"
+    quantity: 1536
+    material: "Ti-6Al-4V"
+    primary_load_path: false
+
+  - part_number: "SEAL-FLUORO-200-01"
+    ci_number: null
+    description: "Pressurization Seal Material"
+    quantity: 48
+    material: "Fluorosilicone"
+    primary_load_path: false
+
+assembly_sequence:
+  step_001: "Lay up upper shell skin panels on assembly tool AT-53-200-001"
+  step_002: "Cure skin panels per autoclave cycle AC-CFRP-01"
+  step_003: "Position stringers on skin panels using laser alignment"
+  step_004: "Bond stringers with adhesive AF-163-2K and co-cure"
+  step_005: "Install circumferential frames with splice joints"
+  step_006: "Install frame-to-stringer clips at all intersections"
+  step_007: "Install permanent fasteners per Fastener_Schedules.csv"
+  step_008: "Torque all fasteners to specification (30 Nm ±5%)"
+  step_009: "Install pressurization seals at panel joints"
+  step_010: "Perform dimensional inspection and NDT"
+  step_011: "Conduct pressure test at 1.5× cabin differential"
+
+tooling_required:
+  - tooling_id: "AT-53-200-001"
+    description: "Upper Shell Assembly Tool (Full-Scale)"
+  - tooling_id: "LASER-ALIGN-02"
+    description: "Multi-axis laser alignment system"
+  - tooling_id: "TW-0-50NM"
+    description: "Torque wrench 0–50 Nm"
+  - tooling_id: "PRESS-TEST-01"
+    description: "Pressure test fixture with monitoring"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.8
+    reference_drawing: "53-20-1000"
+  ndt:
+    method: "Ultrasonic C-scan and thermography"
+    coverage: "100% of bond lines and critical areas"
+    report_ref: "53-50-02-01-001_Upper_Shell_Structural_Analysis.md"
+  fasteners:
+    torque_spec_nm: 30
+    torque_tolerance_percent: 5
+    inspection_coverage: "Sample 10% per zone, 100% critical joints"
+  acceptance_criteria:
+    - "All critical dimensions within ±0.8 mm"
+    - "No NDT indications above Level 2 per ST-53-NDT-001"
+    - "Pressure test holds 1.5× cabin differential for 10 minutes"
+    - "All seal integrity verified"
+    - "Frame-to-stringer connections verified per sample plan"
+
+links:
+  requirements_traceability_file: "../../02_Configuration_Items/Zone_200_Upper_Shell/CI-53-200-SHELL-UPPER_Upper_Shell/Requirements_Traceability.csv"
+  stress_report: "../../02_Configuration_Items/Zone_200_Upper_Shell/CI-53-200-SHELL-UPPER_Upper_Shell/ASSETS/Analysis/Stress_Analysis_Report.md"
+  fea_model_description: "../../02_Configuration_Items/Zone_200_Upper_Shell/CI-53-200-SHELL-UPPER_Upper_Shell/ASSETS/Analysis/FEA_Model_Description.md"
+  manufacturing_plan: "../../02_Configuration_Items/Zone_200_Upper_Shell/CI-53-200-SHELL-UPPER_Upper_Shell/Manufacturing_Plan.md"
+  qc_plan: "../ASSETS/QC_Inspection_Points.csv"

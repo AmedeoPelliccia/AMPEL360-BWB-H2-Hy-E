@@ -49,7 +49,7 @@ ATA_XX-DESCRIPTION/
 ├── XX-00_GENERAL/           # 14 lifecycle folders (start here!)
 ├── XX-10_Operations/        # Operational procedures
 ├── XX-20_Subsystems/        # Functional subsystems
-├── XX-30_Circularity/       # Sustainability & LCA
+├── XX-30_ANCHORS/       # Sustainability & LCA
 ├── XX-40_Software/          # Software & control logic
 ├── XX-50_Structures/        # Physical structures
 ├── XX-60_Storages/          # Tanks & storage

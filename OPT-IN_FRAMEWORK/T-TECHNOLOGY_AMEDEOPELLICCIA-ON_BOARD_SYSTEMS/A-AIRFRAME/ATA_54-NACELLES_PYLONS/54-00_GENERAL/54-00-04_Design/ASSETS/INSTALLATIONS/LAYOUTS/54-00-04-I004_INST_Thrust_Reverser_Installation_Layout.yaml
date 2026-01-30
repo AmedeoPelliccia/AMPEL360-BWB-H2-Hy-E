@@ -1,0 +1,151 @@
+id: "54-00-04-I004"
+title: "Thrust Reverser Installation Layout"
+category: "INST"
+installation_type: "Layout"
+ata_chapter: "54"
+description: |
+  Installation layout for thrust reverser system including cascade assemblies,
+  blocker doors, actuation system mounting, and integration with nacelle
+  structure. Defines spatial arrangement and interface requirements for
+  thrust reverser components per ATA 78 requirements.
+status: "Planned"
+version: "0.1.0"
+owner: "Installation Engineering"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-REV-001"
+      title: "Cascade Assembly"
+  requirements:
+    - id: "54-00-03-01-004"
+      title: "Thrust Reverser Integration Requirements"
+  drawings:
+    - id: "54-00-04-D006"
+      title: "Thrust Reverser Installation"
+
+installation_parameters:
+  mounting_points: 12
+  primary_structure: "Aft nacelle structure with integrated reverser frames"
+  installation_sequence: |
+    1. Prepare nacelle aft structure for reverser installation
+    2. Install reverser structural frames at specified stations
+    3. Install cascade assemblies (left and right) with alignment pins
+    4. Verify cascade alignment and position per drawing
+    5. Install blocker door assemblies and hinge mechanisms
+    6. Install actuation system components (hydraulic actuators)
+    7. Install translating cowl guide rails and rollers
+    8. Connect actuation linkages to blocker doors
+    9. Install hydraulic lines and electrical harnesses
+    10. Perform functional check of actuation system
+    11. Verify all clearances and deploy/stow operations
+    12. Install access panels and protective covers
+  torque_requirements:
+    - location: "Cascade attachment bolts (24x M12)"
+      value: "95 Nm"
+      tolerance: "±5 Nm"
+    - location: "Blocker door hinge bolts (16x M10)"
+      value: "65 Nm"
+      tolerance: "±5 Nm"
+    - location: "Actuator mount bolts (8x M16)"
+      value: "180 Nm"
+      tolerance: "±8 Nm"
+    - location: "Guide rail attachment bolts (20x M10)"
+      value: "65 Nm"
+      tolerance: "±5 Nm"
+
+clearances:
+  - description: "Blocker door to cascade clearance (stowed)"
+    value: "5 mm min"
+    condition: "Reverser stowed position"
+  - description: "Blocker door to core cowl clearance (deployed)"
+    value: "8 mm min"
+    condition: "Reverser deployed position"
+  - description: "Cascade to fan duct clearance"
+    value: "12 mm min"
+    condition: "All positions"
+  - description: "Translating cowl travel"
+    value: "450 mm"
+    condition: "Stow to deploy stroke"
+
+tooling:
+  - tool_id: "FAF-54-REV-INST"
+    description: "Thrust reverser installation fixture with alignment system"
+    capacity: "2000 kg"
+  - tool_id: "TW-0-200NM"
+    description: "Torque wrench 0-200 Nm, calibrated"
+    capacity: "0-200 Nm"
+  - tool_id: "RIGGING-REV-KIT"
+    description: "Reverser rigging and adjustment tool kit"
+    capacity: "N/A"
+  - tool_id: "GAUGE-REV-CLEAR"
+    description: "Clearance measurement gauge set for reverser"
+    capacity: "0-20 mm range"
+  - tool_id: "HYD-TEST-CART"
+    description: "Hydraulic test cart for functional testing"
+    capacity: "3000 psi"
+
+safety_notes:
+  - "Hydraulic system depressurized and locked out before installation"
+  - "Blocker door restraints required during installation"
+  - "Personnel clear of deployment path during functional tests"
+  - "Use proper lifting equipment for cascade assemblies (approx 180 kg each)"
+  - "FOD prevention critical in cascade and duct areas"
+  - "Hydraulic line installation requires certified personnel"
+  - "Lock-out/tag-out procedures for actuation system testing"
+
+cross_references:
+  ata_chapters:
+    - chapter: "78"
+      description: "Thrust reverser system design and operation"
+    - chapter: "29"
+      description: "Hydraulic system interface and requirements"
+    - chapter: "24"
+      description: "Electrical power for actuation system"
+    - chapter: "31"
+      description: "Indicating and warning system integration"
+
+verification:
+  - method: "Dimensional inspection per drawing 54-00-04-D006"
+    status: "Planned"
+  - method: "Clearance verification at stowed and deployed positions"
+    status: "Planned"
+  - method: "Functional test of deployment/stow cycles (10 cycles min)"
+    status: "Planned"
+  - method: "Hydraulic system pressure and leak test"
+    status: "Planned"
+  - method: "Electrical system continuity and function test"
+    status: "Planned"
+  - method: "Visual inspection of all interfaces and safety devices"
+    status: "Planned"
+
+notes: |
+  Thrust reverser installation is critical for safe landing performance and
+  requires precise alignment and functional verification. System must operate
+  reliably throughout service life.
+  
+  Key considerations:
+  - Cascade alignment critical for effective thrust reversal
+  - Clearances must be maintained throughout deployment cycle
+  - Actuation system must be rigged per specifications
+  - Hydraulic system integration with ATA 29 requirements
+  - Electrical system integration with ATA 24/31 requirements
+  
+  Installation sequence critical:
+  - Structural components first (frames, cascades)
+  - Mechanical components second (doors, hinges, guides)
+  - Actuation system third (actuators, linkages)
+  - Systems last (hydraulic, electrical)
+  
+  Functional testing requirements:
+  - Minimum 10 deployment/stow cycles
+  - Verify symmetric operation of left/right systems
+  - Confirm proper sequencing of blocker doors and cowl translation
+  - Validate hydraulic pressure and flow requirements
+  - Check electrical indications and warnings
+  
+  Future enhancements:
+  - Advanced cascade design for improved efficiency
+  - Weight reduction in structural components
+  - Enhanced actuation system for faster deployment
+  - Improved maintenance accessibility

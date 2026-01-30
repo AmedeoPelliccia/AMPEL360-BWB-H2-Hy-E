@@ -1,0 +1,28 @@
+# Placeholder for 85-00-01-A-001_BWB_Infrastructure_Context.drawio
+
+This file is a placeholder for the Draw.io diagram showing the BWB aircraft on a stand with all major infrastructure interfaces.
+
+## Expected Content
+
+- BWB aircraft profile on stand
+- Jetways/passenger boarding bridges (forward doors)
+- H₂ refuelling unit (port/starboard locations)
+- CO₂ battery docking positions (ventral bays)
+- Ground power unit (GPU) connection points
+- Pre-conditioned air (PCA) carts
+- Cargo loaders (forward and aft)
+- Catering highloaders
+- Rescue vehicle access lanes
+- Emergency evacuation slide deployment zones
+- Passenger flow paths to assembly points
+
+## File Format
+
+- Primary: .drawio (editable source)
+- Export: .svg (for embedding in documentation)
+
+## Status
+
+- **To be created by**: Design team / technical illustrator
+- **Target completion**: [TBD]
+- **Required for**: Overview documentation, airport planning, training materials

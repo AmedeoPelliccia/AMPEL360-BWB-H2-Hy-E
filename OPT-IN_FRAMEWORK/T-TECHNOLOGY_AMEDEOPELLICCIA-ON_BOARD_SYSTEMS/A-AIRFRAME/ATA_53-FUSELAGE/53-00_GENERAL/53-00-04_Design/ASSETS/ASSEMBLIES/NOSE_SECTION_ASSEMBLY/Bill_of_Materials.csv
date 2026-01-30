@@ -1,0 +1,19 @@
+Item,Part_Number,CI_Number,Description,Quantity,Material,Unit_Weight_kg,Total_Weight_kg,Primary_Structure
+1,53-100-1001-01,CI-53-100-BHD-FWD-WEB,Forward Bulkhead Web Panel,1,CFRP,38.5,38.5,Yes
+2,53-100-1002-01,CI-53-100-BHD-FWD-CAP-U,Forward Bulkhead Upper Cap,1,CFRP,12.3,12.3,Yes
+3,53-100-1003-01,CI-53-100-BHD-FWD-CAP-L,Forward Bulkhead Lower Cap,1,CFRP,12.3,12.3,Yes
+4,53-100-1004-01,CI-53-100-BHD-FWD-STIFFEN,Bulkhead Stiffener Set,12,CFRP,1.2,14.4,Yes
+5,FAST-TI-M8-100,,Titanium Fasteners M8x25,48,Ti-6Al-4V,0.015,0.72,No
+6,SEAL-EPDM-100-01,,Bulkhead Seal,2,EPDM,0.3,0.6,No
+7,53-100-2001-01,CI-53-100-NLG-BAY-FRAME,NLG Bay Main Frame,1,Al-7075-T6,32.8,32.8,Yes
+8,53-100-2002-01,CI-53-100-NLG-BAY-FLOOR,NLG Bay Floor Panel,1,CFRP,18.5,18.5,Yes
+9,53-100-2003-01,CI-53-100-NLG-BAY-DOORS,NLG Bay Door Assembly,2,CFRP,8.2,16.4,No
+10,53-100-2004-01,CI-53-100-NLG-BAY-ATTACH,NLG Attachment Fittings,4,Ti-6Al-4V,6.5,26.0,Yes
+11,FAST-STEEL-M10-100,,High-Strength Steel Fasteners M10x30,64,300M Steel,0.025,1.6,Yes
+12,SEAL-SILICON-100-02,,Bay Seal Kit,1,Silicone,0.8,0.8,No
+13,53-100-3001-01,CI-53-100-CKPT-FLOOR,Cockpit Floor Structure,1,CFRP,28.6,28.6,Yes
+14,53-100-3002-01,CI-53-100-CKPT-FRAME,Cockpit Main Frame Assembly,1,CFRP,42.5,42.5,Yes
+15,53-100-3003-01,CI-53-100-CKPT-WIND-FRAME,Windshield Frame Structure,1,Al-7075-T6,15.8,15.8,Yes
+16,53-100-3004-01,CI-53-100-CKPT-PANELS,Cockpit Side Panel Set,2,CFRP,7.2,14.4,No
+17,FAST-TI-M6-100,,Titanium Fasteners M6x20,120,Ti-6Al-4V,0.008,0.96,No
+18,SEAL-POLY-100-03,,Cockpit Environmental Seal Kit,1,Polyurethane,1.2,1.2,No

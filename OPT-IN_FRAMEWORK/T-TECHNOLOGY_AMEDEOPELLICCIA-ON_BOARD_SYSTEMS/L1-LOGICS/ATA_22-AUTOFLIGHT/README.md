@@ -33,7 +33,7 @@ The following buckets are mandatory in every ATA chapter:
 
 - **22-10_Operations**: Operational procedures and use cases
 - **22-20_Subsystems**: Functional subsystems (design-driven internal structure)
-- **22-30_Circularity**: Sustainability, LCA, and circular economy
+- **22-30_ANCHORS**: Sustainability, LCA, and circular economy
 - **22-40_Software**: Software, control logic, and AI/ML
 - **22-50_Structures**: Physical structures and frames
 - **22-60_Storages**: Tanks, reservoirs, and storage
@@ -41,10 +41,49 @@ The following buckets are mandatory in every ATA chapter:
 - **22-80_Energy**: Energy management and distribution
 - **22-90_Tables_Schemas_Diagrams**: Data tables and documentation
 
+### ATA iSpec 2200 Standard Numbering System (SNS) Structure
+
+In addition to the OPT-IN Framework structure, this chapter includes an **ATA iSpec 2200 compliant SNS breakdown** for certification and publication purposes:
+
+- **[ATA-22-auto-flight/](./ATA-22-auto-flight/)**: Root directory for SNS structure with S1000D CSDB
+
+The SNS structure provides:
+- Industry-standard ATA numbering for maintenance manuals
+- S1000D-based technical publication management
+- Integration with existing aviation documentation systems
+- Aircraft Maintenance Manual (AMM) and Illustrated Parts Catalog (IPC) views
+
+#### SNS Sections (ATA 22-xx)
+
+- **22-00**: Auto Flight, General — Architecture, modes philosophy, redundancy, integration boundaries
+- **22-10**: Autopilot — Automatic control laws, engagement/disengagement logic
+- **22-20**: Speed–Attitude Correction — Speed/attitude capture and correction functions
+- **22-30**: Auto Throttle — Autothrottle/autothrust computation and mode logic
+- **22-40**: System Monitor — Monitoring, BIT, fault detection, mode inhibition
+- **22-50**: Aerodynamic Load Alleviating — Gust/load alleviation functions
+
+See [ATA-22-auto-flight/README.md](./ATA-22-auto-flight/README.md) for complete SNS structure documentation.
+
+## Scope and Boundaries
+
+**ATA 22** is scoped to **flight guidance/automatic flight functions** including:
+- Autopilot and automatic flight control
+- Autothrottle/autothrust systems
+- System monitoring and fault management
+- Load alleviation functions
+
+**Not included in ATA 22** (belong to other chapters):
+- Flight controls/actuators (ATA 27)
+- Navigation sensors (ATA 34)
+- Communications (ATA 23)
+- Electrical power (ATA 24)
+- Displays/indicating (ATA 31)
+- IMA computing platform (ATA 42)
+
 ## Document Control
 
 - **ATA Chapter**: 22
 - **Status**: Active
 - **Owner**: AMPEL360 Documentation WG
-- **Standard**: OPT-IN Framework v1.1
-- **Last Updated**: 2025-11-13
+- **Standard**: OPT-IN Framework v1.1 + ATA iSpec 2200 SNS
+- **Last Updated**: 2026-01-08

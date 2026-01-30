@@ -1,0 +1,18 @@
+Signal_ID,Test_Case_ID,Test_Type,Coverage_Aspects,Test_Procedure,Expected_Result,Status
+ANCH_BAT_T_CELL_MAX,TC-BAT-001,HIL,Range/Rate/Fault,Apply temp stimulus -40 to 80°C,Signal tracks within 0.5°C,Verified
+ANCH_BAT_T_CELL_MIN,TC-BAT-001,HIL,Range/Rate/Fault,Apply temp stimulus -40 to 80°C,Signal tracks within 0.5°C,Verified
+ANCH_BAT_V_PACK,TC-BAT-005,HIL,Range/Accuracy,Apply voltage 0 to 900V,Signal accurate within 1%,Verified
+ANCH_BAT_I_PACK,TC-BAT-006,HIL,Range/Polarity,Apply current -500 to 500A,Correct polarity and magnitude,Pending
+ANCH_BAT_SOC,TC-BAT-010,Integration,Calculation,Charge/discharge cycle,SOC accurate within 3%,Pending
+ANCH_BAT_D_FAULT,TC-BAT-050,HIL,All fault codes,Inject each fault condition,Correct flag and code,Verified
+ANCH_CO2_P_INLET,TC-CO2-001,HIL,Range/Response,Apply pressure 0 to 5 bar,Signal tracks within 0.05 bar,Pending
+ANCH_CO2_L_CART_1,TC-CO2-010,Integration,Level tracking,Fill cartridge 0 to 100%,Level accurate within 2%,Pending
+ANCH_TH_T_HT_SUP,TC-TH-001,HIL,Range/Rate,Apply temp 40 to 100°C,Signal tracks within 0.5°C,Pending
+ANCH_TH_F_HT,TC-TH-005,HIL,Range/Accuracy,Apply flow 0 to 200 L/min,Flow accurate within 2%,Pending
+ANCH_EMS_X_MODE,TC-EMS-010,Integration,All modes,Transition through all modes,Correct mode reported,Pending
+ANCH_EMS_W_TOTAL,TC-EMS-015,Integration,Calculation,Operate all subsystems,Power sum accurate within 5%,Pending
+ANCH_SS_D_ISO_CMD,TC-SS-001,HIL,Timing/Response,Trigger isolation condition,Command within 50ms,Verified
+ANCH_SS_X_STATUS,TC-SS-002,HIL,All states,Force each SS state,Correct status reported,Verified
+ANCH_MM_X_STATE,TC-MM-001,Integration,All states,Transition through modes,Correct state reported,Pending
+ANCH_NN_V_CONFIDENCE,TC-NN-001,HIL,Range/Validity,Vary NN inputs,Confidence in range 0-1,Pending
+ANCH_NN_D_FALLBACK,TC-NN-010,HIL,Trigger conditions,Force fallback conditions,Fallback flag set correctly,Pending

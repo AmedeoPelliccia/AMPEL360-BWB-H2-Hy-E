@@ -1,0 +1,18 @@
+flowchart LR
+    subgraph Flight Envelope
+        direction TB
+        A[Speed Axis<br/>KIAS/Mach] --> B[VMO/MMO<br/>Mach 0.78]
+        C[Altitude Axis<br/>feet] --> D[Max Certified<br/>TBD ft]
+        E[Load Factor<br/>G] --> F[+2.5 G / -1.0 G<br/>Clean Config]
+    end
+
+    subgraph Configurations
+        G[Clean] --> H[Flaps 1]
+        H --> I[Flaps 2]
+        I --> J[Full Flaps]
+    end
+
+    subgraph Limits Reduction
+        G -.-> |Full Envelope| K[Normal Ops]
+        J -.-> |Reduced Envelope| L[Landing Only]
+    end

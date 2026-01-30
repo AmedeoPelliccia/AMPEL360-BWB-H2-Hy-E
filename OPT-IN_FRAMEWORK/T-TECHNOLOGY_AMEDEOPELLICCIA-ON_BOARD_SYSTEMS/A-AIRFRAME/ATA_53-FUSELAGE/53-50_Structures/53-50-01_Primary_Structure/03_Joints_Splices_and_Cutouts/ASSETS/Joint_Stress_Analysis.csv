@@ -1,0 +1,5 @@
+JointID,JointType,Location_Station_m,MaxStress_MPa,Allowable_MPa,MS,Status
+J-001,Longitudinal Splice,12.5,450,550,0.22,PASS
+J-002,Circumferential Splice,20.0,380,500,0.32,PASS
+J-003,Door Cutout,8.0,520,600,0.15,PASS
+J-004,Window Cutout,15.0,420,550,0.31,PASS

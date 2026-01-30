@@ -1,0 +1,22 @@
+# Placeholder for 53-00-01-A003_Coordinate_System.svg
+
+**Purpose**: Illustrate the fuselage coordinate system (Fuselage Station, Buttock Line, Water Line).
+
+**Content to be created**:
+- 3D isometric view of BWB fuselage showing coordinate axes
+- FS (Fuselage Station) - longitudinal axis, datum at nose
+- BL (Buttock Line) - lateral axis, datum at centerline
+- WL (Water Line) - vertical axis, datum at keel beam
+- Example coordinates of key features (e.g., FS 2500, BL 0, WL 1500 = cabin floor at mid-fuselage)
+- Sign conventions (positive directions)
+
+**Format**: SVG (Scalable Vector Graphics)
+
+**Creation**: To be developed by technical illustrator following AMPEL360 documentation standards.
+
+**Referenced in**: 
+- `53-00-01-002_Structural_Segmentation_and_Nomenclature.md`
+
+---
+
+**Note**: This is a placeholder file. The actual diagram will be created during detailed design phase and will replace this placeholder.

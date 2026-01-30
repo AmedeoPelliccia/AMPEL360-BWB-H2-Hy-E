@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>ATA 26 Fire Protection System Context Diagram</title>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" 
+        text-anchor="middle" fill="#212529">
+    ATA 26 Fire Protection System Context
+  </text>
+  
+  <!-- Central System Box -->
+  <rect x="300" y="250" width="200" height="100" fill="#0d6efd" stroke="#000" stroke-width="2" rx="10"/>
+  <text x="400" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" 
+        text-anchor="middle" fill="#fff">
+    Fire Protection
+  </text>
+  <text x="400" y="315" font-family="Arial, sans-serif" font-size="14" 
+        text-anchor="middle" fill="#fff">
+    System (ATA 26)
+  </text>
+  
+  <!-- Detection Subsystem -->
+  <rect x="50" y="100" width="150" height="80" fill="#198754" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="125" y="135" font-family="Arial, sans-serif" font-size="14" font-weight="bold" 
+        text-anchor="middle" fill="#fff">
+    Detection
+  </text>
+  <text x="125" y="155" font-family="Arial, sans-serif" font-size="12" 
+        text-anchor="middle" fill="#fff">
+    (26-10)
+  </text>
+  
+  <!-- Extinguishing Subsystem -->
+  <rect x="600" y="100" width="150" height="80" fill="#dc3545" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="675" y="135" font-family="Arial, sans-serif" font-size="14" font-weight="bold" 
+        text-anchor="middle" fill="#fff">
+    Extinguishing
+  </text>
+  <text x="675" y="155" font-family="Arial, sans-serif" font-size="12" 
+        text-anchor="middle" fill="#fff">
+    (26-20)
+  </text>
+  
+  <!-- Explosion Suppression -->
+  <rect x="325" y="450" width="150" height="80" fill="#ffc107" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="14" font-weight="bold" 
+        text-anchor="middle" fill="#000">
+    Explosion
+  </text>
+  <text x="400" y="505" font-family="Arial, sans-serif" font-size="14" font-weight="bold" 
+        text-anchor="middle" fill="#000">
+    Suppression (26-30)
+  </text>
+  
+  <!-- Connections -->
+  <line x1="200" y1="140" x2="300" y2="280" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="140" x2="500" y2="280" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="350" x2="400" y2="450" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#000"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <text x="50" y="580" font-family="Arial, sans-serif" font-size="12" fill="#6c757d">
+    ATA 26 Fire Protection System - High-Level Context Diagram
+  </text>
+  <text x="700" y="580" font-family="Arial, sans-serif" font-size="10" fill="#6c757d" text-anchor="end">
+    AMPEL360AT
+  </text>
+</svg>

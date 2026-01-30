@@ -125,7 +125,7 @@ This checklist should be used during:
 ### 5.3 Residual Risk
 
 - [ ] **Residual_Class** (residual risk after mitigations) is assigned and documented in the hazard CSV.
-- [ ] Residual risk is **acceptable** according to program-specific criteria (see [Program Tailoring Template](../02-00-10_Certification/Program_Tailoring_Template.md)).
+- [ ] Residual risk is **acceptable** according to program-specific criteria (see [Program Tailoring Template](../02-00-[[10_Certification/Program_Tailoring_Template.md](10_Certification/Program_Tailoring_Template.md)](10_Certification/Program_Tailoring_Template.md))).
 - [ ] If residual risk is **not acceptable**, additional mitigations are planned and documented.
 
 ---
@@ -223,6 +223,6 @@ This checklist should be used during:
 - [Emergency Response Procedures — ATA 02](./AMPEL360-02-00-02-003A_Emergency_Response_Procedures.md)
 - [Runtime Safety Monitoring — ATA 02](./AMPEL360-02-00-02-010A_Runtime_Safety_Monitoring.md)
 - [02-00-02-015A_Hazard_Log.csv](./02-00-02-015A_Hazard_Log.csv)
-- [Program Tailoring Template](../02-00-10_Certification/Program_Tailoring_Template.md)
+- [Program Tailoring Template](../02-00-[[10_Certification/Program_Tailoring_Template.md](10_Certification/Program_Tailoring_Template.md)](10_Certification/Program_Tailoring_Template.md))
 
 ---

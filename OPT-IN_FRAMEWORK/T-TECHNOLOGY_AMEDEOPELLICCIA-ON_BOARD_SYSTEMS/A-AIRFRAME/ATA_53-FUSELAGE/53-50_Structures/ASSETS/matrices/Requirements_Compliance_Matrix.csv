@@ -1,0 +1,6 @@
+RequirementID,RequirementText,ComplianceMethod,VerificationStatus,Evidence
+CS-25.301,Structure must withstand limit loads,Analysis + Test,Verified,Static Test Reports
+CS-25.303,Factor of safety 1.5,Analysis,Verified,Stress Reports
+CS-25.305,Deflection limits,Analysis,Verified,FEA Reports
+CS-25.561,Emergency landing,Analysis + Test,In Progress,Seat Track Tests
+CS-25.571,Damage tolerance,Analysis,In Progress,Crack Growth Analysis

@@ -1,0 +1,86 @@
+assembly_metadata:
+  assembly_id: "ASM-53-FLOOR-002"
+  assembly_name: "Floor Panel Assembly"
+  ata_chapter: "53"
+  zone: "200-300"
+  parent_ci: "CI-53-FLOOR-PANELS"
+  related_cis:
+    - "CI-53-FLOOR-PANEL-FWD"
+    - "CI-53-FLOOR-PANEL-MID"
+    - "CI-53-FLOOR-PANEL-AFT"
+  structure_classification: "Secondary"
+  plm_item_id: "TC-ASM-53-FLOOR-002"
+  cad_master_drawing: "53-25-2000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2025-11-22"
+    author: "Floor Structures Team"
+
+components:
+  - part_number: "53-FLOOR-2001-01"
+    ci_number: "CI-53-FLOOR-PANEL-FWD"
+    description: "Forward Floor Panels"
+    quantity: 24
+    material: "Aluminum Honeycomb"
+    primary_load_path: false
+
+  - part_number: "53-FLOOR-2002-01"
+    ci_number: "CI-53-FLOOR-PANEL-MID"
+    description: "Mid Floor Panels"
+    quantity: 36
+    material: "Aluminum Honeycomb"
+    primary_load_path: false
+
+  - part_number: "53-FLOOR-2003-01"
+    ci_number: "CI-53-FLOOR-PANEL-AFT"
+    description: "Aft Floor Panels"
+    quantity: 24
+    material: "Aluminum Honeycomb"
+    primary_load_path: false
+
+  - part_number: "FAST-AL-M5-FLOOR"
+    ci_number: null
+    description: "Aluminum Fasteners M5x12"
+    quantity: 1680
+    material: "Al-7075-T6"
+    primary_load_path: false
+
+assembly_sequence:
+  step_001: "Verify beam grid installation complete"
+  step_002: "Position forward floor panels on beam grid"
+  step_003: "Install mid floor panels with edge seals"
+  step_004: "Install aft floor panels"
+  step_005: "Install fasteners at 200 mm spacing"
+  step_006: "Torque fasteners to 15 Nm ±5%"
+  step_007: "Seal all panel joints"
+  step_008: "Perform walking load test"
+
+tooling_required:
+  - tooling_id: "PANEL-LIFT-01"
+    description: "Vacuum panel lifting system"
+  - tooling_id: "TW-0-50NM"
+    description: "Torque wrench 0–50 Nm"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 1.0
+    reference_drawing: "53-25-2000"
+  ndt:
+    method: "Visual inspection"
+    coverage: "100% of panels"
+    report_ref: "53-50-04-02-001_Floor_Panel_Spec.md"
+  fasteners:
+    torque_spec_nm: 15
+    torque_tolerance_percent: 5
+    inspection_coverage: "Sample 20%"
+  acceptance_criteria:
+    - "Panel gaps within ±1.0 mm"
+    - "Walking load test passed"
+    - "All seals properly installed"
+
+links:
+  requirements_traceability_file: "../../02_Configuration_Items/Floor_Structure/CI-53-FLOOR-PANELS_Floor_Panels/Requirements_Traceability.csv"
+  stress_report: "../../02_Configuration_Items/Floor_Structure/CI-53-FLOOR-PANELS_Floor_Panels/ASSETS/Analysis/Stress_Analysis_Report.md"
+  manufacturing_plan: "../../02_Configuration_Items/Floor_Structure/CI-53-FLOOR-PANELS_Floor_Panels/Manufacturing_Plan.md"
+  qc_plan: "../ASSETS/QC_Inspection_Points.csv"

@@ -1,0 +1,209 @@
+assembly_metadata:
+  assembly_id: "ASM-54-PYL-001"
+  assembly_name: "Forward Pylon Structure"
+  ata_chapter: "54"
+  zone: "520-530"
+  parent_ci: "CI-54-PYL-PRIMARY"
+  related_cis:
+    - "CI-54-PYL-FORWARD"
+    - "CI-54-PYL-AFT"
+    - "CI-54-PYL-FAIRING"
+    - "CI-54-ENGINE-MOUNT"
+  structure_classification: "Primary"
+  plm_item_id: "TC-ASM-54-PYL-001"
+  cad_master_drawing: "54-20-1000"
+  version:
+    design_version: "1.0"
+    status: "Preliminary"
+    last_update: "2026-01-02"
+    author: "Pylon Structures Team"
+
+components:
+  - part_number: "54-PYL-2001-01"
+    ci_number: "CI-54-PYL-FORWARD"
+    description: "Forward Pylon Box Structure"
+    quantity: 1
+    material: "CFRP-Epoxy"
+    primary_load_path: true
+    notes: "Primary thrust transfer structure"
+
+  - part_number: "54-PYL-2002-01"
+    ci_number: "CI-54-PYL-FORWARD"
+    description: "Forward Pylon Ribs"
+    quantity: 8
+    material: "Al-7075-T73"
+    primary_load_path: true
+    notes: "Internal stiffening structure"
+
+  - part_number: "54-PYL-2003-01"
+    ci_number: "CI-54-PYL-FORWARD"
+    description: "Forward Pylon Spars"
+    quantity: 4
+    material: "CFRP-Epoxy"
+    primary_load_path: true
+    notes: "Longitudinal load members"
+
+  - part_number: "54-PYL-2004-01"
+    ci_number: "CI-54-ENGINE-MOUNT"
+    description: "Engine Mount Interface Fitting Forward"
+    quantity: 2
+    material: "Titanium-Alloy-Ti-10V-2Fe-3Al"
+    primary_load_path: true
+    notes: "High strength, critical fitting"
+
+  - part_number: "54-PYL-2005-01"
+    ci_number: "CI-54-ENGINE-MOUNT"
+    description: "Engine Mount Interface Fitting Aft"
+    quantity: 2
+    material: "Titanium-Alloy-Ti-10V-2Fe-3Al"
+    primary_load_path: true
+    notes: "High strength, critical fitting"
+
+  - part_number: "54-PYL-2006-01"
+    ci_number: "CI-54-PYL-ATTACH"
+    description: "Wing Attachment Upper Fitting"
+    quantity: 4
+    material: "Steel-15-5PH"
+    primary_load_path: true
+    notes: "Wing interface, high strength"
+
+  - part_number: "54-PYL-2007-01"
+    ci_number: "CI-54-PYL-ATTACH"
+    description: "Wing Attachment Lower Fitting"
+    quantity: 4
+    material: "Steel-15-5PH"
+    primary_load_path: true
+    notes: "Wing interface, high strength"
+
+  - part_number: "54-PYL-2008-01"
+    ci_number: "CI-54-PYL-FAIRING"
+    description: "Pylon Fairing Panels"
+    quantity: 6
+    material: "CFRP-Epoxy"
+    primary_load_path: false
+    notes: "Aerodynamic fairings, non-structural"
+
+  - part_number: "FAST-TI-M12-PYL"
+    ci_number: null
+    description: "Titanium Fasteners M12x50"
+    quantity: 320
+    material: "Ti-6Al-4V"
+    primary_load_path: false
+    notes: "Primary structure fasteners"
+
+  - part_number: "FAST-HUCK-PYL"
+    ci_number: null
+    description: "Huck Lockbolts for Wing Interface"
+    quantity: 64
+    material: "Alloy-Steel"
+    primary_load_path: true
+    notes: "Critical wing attachment bolts"
+
+  - part_number: "54-PYL-2009-01"
+    ci_number: "CI-54-PYL-SYSTEMS"
+    description: "Systems Routing Brackets"
+    quantity: 24
+    material: "Al-2024-T3"
+    primary_load_path: false
+    notes: "For fuel, hydraulic, and electrical routing"
+
+assembly_sequence:
+  step_001: "Position forward pylon box structure on assembly fixture FAF-54-PYL-001"
+  step_002: "Verify datum alignment with wing interface fixtures"
+  step_003: "Install internal ribs and verify positioning to drawing"
+  step_004: "Bond and fasten forward pylon spars"
+  step_005: "Install engine mount interface fittings (forward pair)"
+  step_006: "Install engine mount interface fittings (aft pair)"
+  step_007: "Verify engine mount fitting alignment within 0.2mm"
+  step_008: "Install wing attachment upper fittings"
+  step_009: "Install wing attachment lower fittings"
+  step_010: "Install temporary alignment pins for wing interface verification"
+  step_011: "Install systems routing brackets per routing diagram"
+  step_012: "Install all primary structure fasteners"
+  step_013: "Torque critical wing attachment bolts to 280 Nm ±3%"
+  step_014: "Torque engine mount fasteners to 350 Nm ±3%"
+  step_015: "Perform dimensional inspection per drawing 54-20-1000"
+  step_016: "Conduct load path verification test"
+  step_017: "Install pylon fairing panels (non-structural)"
+  step_018: "Final visual inspection"
+
+tooling_required:
+  - tooling_id: "FAF-54-PYL-001"
+    description: "Forward Pylon Assembly Fixture with wing interface simulation"
+  - tooling_id: "TW-0-500NM"
+    description: "Torque wrench 0–500 Nm, calibrated"
+  - tooling_id: "ALIGN-PYL-01"
+    description: "Laser alignment system for engine mount fitting positioning"
+  - tooling_id: "LOAD-FRAME-PYL"
+    description: "Load test frame for ultimate load verification"
+  - tooling_id: "PIN-ALIGN-WING"
+    description: "Wing interface alignment pins"
+
+quality_control:
+  dimensional:
+    tolerance_mm: 0.2
+    reference_drawing: "54-20-1000"
+    critical_dimensions:
+      - "Engine mount fitting centerlines: ±0.2mm"
+      - "Wing attachment hole positions: ±0.15mm"
+      - "Pylon box alignment: ±0.3mm"
+  ndt:
+    method: "Ultrasonic, X-ray, and eddy current inspection"
+    coverage: "100% of primary load path and critical fittings"
+    report_ref: "54-00-07-PYL-001_NDT_Report.md"
+  fasteners:
+    torque_spec_nm:
+      wing_attachment: 280
+      engine_mount: 350
+      primary_structure: 75
+    torque_tolerance_percent: 3
+    inspection_coverage: "100% critical fasteners"
+  load_testing:
+    method: "Static load test to limit load"
+    test_report: "54-00-07-PYL-001_Load_Test_Report.md"
+  acceptance_criteria:
+    - "All dimensions within tolerance per drawing 54-20-1000"
+    - "Engine mount fittings aligned within ±0.2mm"
+    - "Wing attachment holes within ±0.15mm positional tolerance"
+    - "All critical fasteners properly torqued and verified"
+    - "No defects detected in NDT inspection of primary load path"
+    - "Load test passed without permanent deformation"
+    - "Fairing fit-up acceptable with <2mm gaps"
+
+links:
+  requirements_traceability_file: "../../54-00-03_Requirements/54-00-03-PYL-001_Pylon_Requirements.csv"
+  stress_report: "../MODELS/54-00-04-M705_Pylon_Stress_Analysis.md"
+  fea_model_description: "../MODELS/54-00-04-M706_Pylon_FEA_Model.md"
+  manufacturing_plan: "../../54-00-09_Production_Planning/54-00-09-PYL-001_Manufacturing_Plan.md"
+  qc_plan: "../DATA/54-00-04-D803_QC_Inspection_Points_Pylon.csv"
+  load_test_plan: "../../54-00-07_V_AND_V/54-00-07-PYL-001_Load_Test_Plan.md"
+  wing_interface_control: "../../54-00-05_Interfaces/54-00-05-ICD-001_Wing_Pylon_Interface.md"
+  engine_interface_control: "../../54-00-05_Interfaces/54-00-05-ICD-002_Engine_Pylon_Interface.md"
+  material_specs: "../DATA/54-00-04-D802_Material_Specifications.csv"
+
+notes: |
+  The forward pylon structure is the primary load-carrying structure connecting
+  the engine to the wing. It must transfer thrust, weight, gyroscopic loads, and
+  inertial loads between the engine and wing while maintaining precise alignment.
+  
+  Key design considerations:
+  - Primary load path for thrust and vertical loads
+  - High stiffness requirements for engine alignment
+  - Fatigue life requirements exceed 90,000 flight cycles
+  - Wing attachment interface critical for aircraft structural integrity
+  - Engine mount interface must accommodate engine thermal growth
+  - Systems routing provisions for fuel, hydraulic, electrical
+  - Lightning strike protection required
+  - Crashworthiness requirements per CS-25.561
+  
+  Critical inspection points:
+  - Engine mount fitting alignment (most critical)
+  - Wing attachment hole quality and position
+  - Primary structure bond quality
+  - Fastener installation quality
+  
+  Future enhancements:
+  - Advanced composite design optimization
+  - Weight reduction through topology optimization
+  - Integrated health monitoring sensors
+  - Enhanced systems integration

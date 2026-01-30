@@ -1,0 +1,12 @@
+CI_Number,CI_Name,Parent_CI,Zone,Type,Material,Weight_kg,Criticality,Structural_Role,Status,Subsystem,Drawing_Number,Specification
+CI-53-400,Center Wing Box,CI-53-000,400,Assembly,CFRP,12000,Critical,Primary,Detailed,53-20-04_Centerbody_Landing_Gear_Bays,53-40-0000,53-40-A-001
+CI-53-400-SPAR-FWD,Forward Wing Spar,CI-53-400,400,Spar,CFRP,2200,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-1000,53-40-S-001
+CI-53-400-SPAR-REAR,Rear Wing Spar,CI-53-400,400,Spar,CFRP,2000,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-1010,53-40-S-002
+CI-53-400-BAY-MLG-L,Left Main Landing Gear Bay,CI-53-400,400,Bay,CFRP/Ti,850,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-2000,53-40-S-010
+CI-53-400-BAY-MLG-R,Right Main Landing Gear Bay,CI-53-400,400,Bay,CFRP/Ti,850,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-2001,53-40-S-011
+CI-53-400-RIB-001,Wing Rib 001,CI-53-400,400,Rib,CFRP,120,High,Primary,Detailed,53-20-04_Centerbody_Landing_Gear_Bays,53-40-3001,53-40-S-015
+CI-53-400-SKN-U-001,Upper Skin Panel 001,CI-53-400,400,Skin,CFRP,450,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-4001,53-40-S-020
+CI-53-400-SKN-L-001,Lower Skin Panel 001,CI-53-400,400,Skin,CFRP,420,Critical,Primary,Released,53-20-04_Centerbody_Landing_Gear_Bays,53-40-4002,53-40-S-021
+CI-53-400-FLR-CARGO,Cargo Floor Structure,CI-53-400,400,Panel,CFRP,380,High,Primary,Released,53-20-03_Cabin_Floor_and_Supports,53-40-5001,53-40-S-025
+CI-53-400-FIT-SPAR-FWD,Forward Spar Fittings,CI-53-400,400,Fitting,Titanium,85,Critical,Primary,Detailed,53-20-04_Centerbody_Landing_Gear_Bays,53-40-6001,53-40-S-030
+CI-53-400-FIT-SPAR-REAR,Rear Spar Fittings,CI-53-400,400,Fitting,Titanium,78,Critical,Primary,Detailed,53-20-04_Centerbody_Landing_Gear_Bays,53-40-6002,53-40-S-031

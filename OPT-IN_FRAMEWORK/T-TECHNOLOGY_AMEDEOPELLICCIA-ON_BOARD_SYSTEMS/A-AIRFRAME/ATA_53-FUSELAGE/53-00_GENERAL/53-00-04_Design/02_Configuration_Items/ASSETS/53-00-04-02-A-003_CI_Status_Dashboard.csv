@@ -1,0 +1,8 @@
+CI_Number,CI_Name,Zone,Status,Design_Maturity_Percent,Weight_Target_kg,Weight_Actual_kg,Weight_Margin_Percent,Open_Issues,Last_Review_Date
+CI-53-000,ATA 53 Fuselage,ALL,Detailed,75,45000,46200,-2.7,12,2025-11-15
+CI-53-100,Nose Section,100,Detailed,85,3500,3580,-2.3,2,2025-11-10
+CI-53-200,Forward Cabin,200,Detailed,80,8500,8720,-2.6,3,2025-11-12
+CI-53-300,Mid Cabin,300,Preliminary,55,10500,TBD,TBD,5,2025-10-28
+CI-53-400,Center Wing Box,400,Detailed,90,12000,12285,-2.4,4,2025-11-18
+CI-53-500,Aft Cabin,500,Preliminary,50,7000,TBD,TBD,4,2025-10-25
+CI-53-600,Tail Section,600,Preliminary,45,3500,TBD,TBD,3,2025-10-20

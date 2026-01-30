@@ -23,8 +23,8 @@ Links:
     - "../02-00-07_V_AND_V/"
     - "../02-00-10_Certification/"
   CrossRefs:
-    Applicability: "../02-00-01_Overview/02-00-01-002A_Applicability_Matrix.md"
-    HazardLog: "../02-00-02_Safety/AMPEL360-02-00-02_Hazards.csv"
+    Applicability: "../02-00-[[01_Overview/02-00-01-002A_Applicability_Matrix.md](01_Overview/02-00-01-002A_Applicability_Matrix.md)](01_Overview/02-00-01-002A_Applicability_Matrix.md)"
+    HazardLog: "../02-00-[[02_Safety/AMPEL360-02-00-02_Hazards.csv](02_Safety/AMPEL360-02-00-02_Hazards.csv)](02_Safety/AMPEL360-02-00-02_Hazards.csv)"
 ChangeLog:
   - { version: "1.0.0", date: "2025-11-14", author: "AMPEL360 Documentation Team", change: "Initial structure and templates" }
 ---

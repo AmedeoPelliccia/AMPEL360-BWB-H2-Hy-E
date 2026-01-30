@@ -1,0 +1,215 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/safety/hazard-register.schema.json",
+  "title": "Hazard Register Entry",
+  "description": "Schema for hazard identification and tracking in ATA 10-00-02 Safety framework",
+  "type": "object",
+  "required": [
+    "hazard_id",
+    "description",
+    "category",
+    "severity",
+    "likelihood",
+    "status"
+  ],
+  "properties": {
+    "hazard_id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9]*-[0-9]{3}$",
+      "description": "Unique hazard identifier (e.g., H2-001, HV-002, CRY-003, FIRE-001, MECH-001)"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500,
+      "description": "Clear description of the hazard"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "H2_SPECIFIC",
+        "HIGH_VOLTAGE",
+        "CRYOGENIC",
+        "FIRE",
+        "MECHANICAL",
+        "ENVIRONMENTAL",
+        "HUMAN_FACTORS",
+        "OTHER"
+      ],
+      "description": "Hazard category classification"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "CATASTROPHIC",
+        "HAZARDOUS",
+        "MAJOR",
+        "MINOR",
+        "NEGLIGIBLE"
+      ],
+      "description": "Severity classification of worst-case consequence"
+    },
+    "likelihood": {
+      "type": "string",
+      "enum": [
+        "FREQUENT",
+        "PROBABLE",
+        "OCCASIONAL",
+        "REMOTE",
+        "EXTREMELY_REMOTE"
+      ],
+      "description": "Likelihood of occurrence"
+    },
+    "initial_risk_level": {
+      "type": "string",
+      "enum": [
+        "CRITICAL",
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ],
+      "description": "Initial risk level before mitigations"
+    },
+    "affected_systems": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of affected systems or operations"
+    },
+    "potential_consequences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "List of potential consequences"
+    },
+    "existing_controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["control_type", "description"],
+        "properties": {
+          "control_type": {
+            "type": "string",
+            "enum": [
+              "ELIMINATION",
+              "SUBSTITUTION",
+              "ENGINEERING",
+              "ADMINISTRATIVE",
+              "PPE"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "effectiveness": {
+            "type": "string",
+            "enum": ["HIGH", "MEDIUM", "LOW"]
+          }
+        }
+      },
+      "description": "Existing control measures"
+    },
+    "mitigation_measures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "measure_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "target_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["PLANNED", "IN_PROGRESS", "COMPLETED", "DEFERRED"]
+          }
+        }
+      },
+      "description": "Additional mitigation measures to be implemented"
+    },
+    "residual_severity": {
+      "type": "string",
+      "enum": [
+        "CATASTROPHIC",
+        "HAZARDOUS",
+        "MAJOR",
+        "MINOR",
+        "NEGLIGIBLE"
+      ],
+      "description": "Severity after mitigations"
+    },
+    "residual_likelihood": {
+      "type": "string",
+      "enum": [
+        "FREQUENT",
+        "PROBABLE",
+        "OCCASIONAL",
+        "REMOTE",
+        "EXTREMELY_REMOTE"
+      ],
+      "description": "Likelihood after mitigations"
+    },
+    "residual_risk_level": {
+      "type": "string",
+      "enum": [
+        "CRITICAL",
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ],
+      "description": "Residual risk level after mitigations"
+    },
+    "risk_owner": {
+      "type": "string",
+      "description": "Person or role responsible for managing this risk"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "IN_REVIEW",
+        "MITIGATED",
+        "ACCEPTED",
+        "CLOSED"
+      ],
+      "description": "Current status of hazard management"
+    },
+    "identified_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date hazard was first identified"
+    },
+    "last_review_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last review"
+    },
+    "next_review_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date for next scheduled review"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "References to related documents, incidents, or regulations"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments"
+    }
+  }
+}

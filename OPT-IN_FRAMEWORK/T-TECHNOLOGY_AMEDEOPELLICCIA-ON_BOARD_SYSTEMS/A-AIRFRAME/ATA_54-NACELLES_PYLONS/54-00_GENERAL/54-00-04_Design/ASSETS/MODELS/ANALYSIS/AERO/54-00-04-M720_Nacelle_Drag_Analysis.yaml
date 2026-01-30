@@ -1,0 +1,135 @@
+id: "54-00-04-M720"
+title: "Nacelle Drag Analysis Model"
+category: "MODL"
+model_type: "Aero"
+analysis_domain: "Aerodynamics - Drag and Performance"
+ata_chapter: "54"
+description: |
+  Comprehensive aerodynamic drag analysis of the nacelle installation:
+  - Nacelle profile drag (internal and external)
+  - Pylon interference drag
+  - Inlet spillage and additive drag
+  - Nozzle boattail drag
+  - Installation effects on wing-body drag
+  - Trade studies for drag reduction
+  Supports aircraft performance and fuel efficiency optimization.
+status: "Planned"
+version: "0.1.0"
+owner: "Aerodynamics - External Flow"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+  requirements:
+    - id: "54-00-03-03-001"
+      title: "Aerodynamic Performance Requirements"
+    - id: "54-00-03-03-002"
+      title: "Drag Target Requirements"
+  parent_models: []
+  related_models:
+    - id: "54-00-04-M721"
+      title: "Inlet Flow Analysis"
+    - id: "54-00-04-M710"
+      title: "Nacelle Thermal Analysis"
+
+analysis_parameters:
+  method: "CFD - RANS for cruise, URANS/DES for high-lift configurations"
+  solver: "TBD (STAR-CCM+, Fluent, or SU2)"
+  key_parameters: |
+    - Flight conditions: M0.78-0.85, cruise altitude 35,000-41,000 ft
+    - Reynolds number: based on nacelle diameter
+    - Turbulence model: k-omega SST or Spalart-Allmaras
+    - Grid resolution: y+ < 1 at walls for accurate drag prediction
+  boundary_conditions: "Far-field, engine mass flow, symmetry at centerline"
+  assumptions: |
+    - Fully turbulent flow (conservative for drag)
+    - Steady-state cruise conditions
+    - Engine mass flow from thrust setting
+    - No separation in cruise (validated in analysis)
+
+software_tools:
+  primary: "TBD (STAR-CCM+ or Fluent for RANS CFD)"
+  preprocessing: "TBD - unstructured hex mesh with prism layers"
+  postprocessing: "TBD - drag decomposition, surface pressure visualization"
+  version: "TBD"
+
+input_requirements:
+  geometry: "Full nacelle-pylon-wing configuration from CAD"
+  loads: "Engine mass flow schedule from ATA 71"
+  material_properties: "Surface roughness for skin friction"
+  environmental_conditions: "ISA conditions, cruise Mach and altitude"
+
+results_summary:
+  status: "Pending analysis"
+  key_outputs: []
+  validation_status: "Not validated"
+  notes: |
+    Drag breakdown to be computed:
+    - Nacelle skin friction drag
+    - Nacelle pressure drag (form drag)
+    - Inlet spillage drag (off-design)
+    - Pylon drag (profile + interference)
+    - Boattail drag (nozzle closure)
+    - Interference effects on wing drag
+    
+    Target: Nacelle drag coefficient Cd_nac < TBD (per requirements)
+
+verification:
+  - method: "Grid convergence study (coarse, medium, fine meshes)"
+    status: "Planned"
+  - method: "Comparison with wind tunnel data"
+    status: "Planned"
+  - method: "Benchmarking against published nacelle data"
+    status: "Planned"
+
+validation:
+  test_correlation: "Wind tunnel test at scale required"
+  uncertainty_quantification: "Turbulence model and grid sensitivity"
+  confidence_level: "±2-3% drag accuracy target"
+
+outputs:
+  - "Total nacelle drag and drag breakdown"
+  - "Surface pressure distributions"
+  - "Skin friction contours"
+  - "Drag polar (drag vs. angle of attack, Mach)"
+  - "Pylon interference effects"
+  - "Performance report for aircraft performance group"
+
+documentation:
+  technical_report: "TBD - Nacelle Drag Analysis Report"
+  presentation: "TBD - Aerodynamic design review"
+  raw_data: "TBD - CFD mesh and solution database"
+
+quality_assurance:
+  peer_review: "Required"
+  checker: "TBD - Senior Aerodynamicist"
+  approver: "TBD - Chief Aerodynamicist"
+  review_date: "TBD"
+
+notes: |
+  Drag optimization is critical for fuel efficiency and range.
+  Key design variables for trade studies:
+  - Nacelle length and diameter
+  - Pylon shape and location
+  - Boattail angle and nozzle closure
+  - Inlet lip radius
+  
+  Coordinate with:
+  - Performance group for fuel burn impact
+  - Engine OEM for mass flow schedule
+  - Flight test for validation
+  
+  Consider:
+  - Off-design conditions (low-speed, climb, descent)
+  - Reynolds number effects (wind tunnel to flight)
+  - Surface finish and manufacturing tolerances
+
+document_control:
+  created_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  repository: "AMPEL360-AIR-T"
+  status: "DRAFT - Planned"
+  last_ai_update: "2026-01-02"

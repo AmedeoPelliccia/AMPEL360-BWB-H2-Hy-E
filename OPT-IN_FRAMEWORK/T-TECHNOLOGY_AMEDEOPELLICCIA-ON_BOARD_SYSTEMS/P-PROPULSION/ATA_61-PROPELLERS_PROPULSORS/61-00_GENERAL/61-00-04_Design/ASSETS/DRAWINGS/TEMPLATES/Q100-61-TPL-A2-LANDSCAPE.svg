@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-TPL-A2-LANDSCAPE — A2 Landscape Drawing Template
+  Size: 594mm x 420mm
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="594mm"
+     height="420mm"
+     viewBox="0 0 594 420">
+  
+  <title>Q100-61-TPL-A2-LANDSCAPE — AMPEL360 Drawing Template</title>
+  <desc>A2 Landscape drawing template for ATA 61 Propellers/Propulsors</desc>
+  
+  <defs>
+    <style>
+      .border { stroke: #000000; stroke-width: 0.7; fill: none; }
+      .thin { stroke: #000000; stroke-width: 0.18; fill: none; }
+      .text-title { font-family: Arial, Helvetica, sans-serif; font-size: 4; fill: #000000; }
+      .text-normal { font-family: Arial, Helvetica, sans-serif; font-size: 2.5; fill: #000000; }
+    </style>
+  </defs>
+  
+  <!-- Drawing Border -->
+  <rect x="20" y="10" width="564" height="400" class="border"/>
+  
+  <!-- Inner Border -->
+  <rect x="25" y="15" width="554" height="390" class="thin"/>
+  
+  <!-- Title Block Area (bottom right) -->
+  <rect x="384" y="330" width="200" height="80" class="border"/>
+  
+  <!-- Title Block Content -->
+  <g transform="translate(389,335)">
+    <text x="0" y="10" class="text-title">AMPEL360-BWB-H2-Hy-E</text>
+    <text x="0" y="20" class="text-normal">Q100 Program — ATA 61</text>
+    <line x1="0" y1="25" x2="190" y2="25" class="thin"/>
+    <text x="0" y="35" class="text-normal">TITLE:</text>
+    <text x="0" y="47" class="text-normal">DRAWING NO:</text>
+    <text x="0" y="59" class="text-normal">REV:</text>
+    <text x="50" y="59" class="text-normal">SHEET:</text>
+    <text x="0" y="71" class="text-normal">SCALE:</text>
+    <text x="50" y="71" class="text-normal">DATE:</text>
+  </g>
+  
+  <!-- Revision Block Area -->
+  <rect x="384" y="260" width="200" height="65" class="border"/>
+  <text x="389" y="273" class="text-normal">REVISION HISTORY</text>
+  
+  <!-- Zone Markers -->
+  <g class="text-normal">
+    <text x="5" y="60">A</text>
+    <text x="5" y="160">B</text>
+    <text x="5" y="260">C</text>
+    <text x="5" y="360">D</text>
+    
+    <text x="70" y="416">1</text>
+    <text x="170" y="416">2</text>
+    <text x="270" y="416">3</text>
+    <text x="370" y="416">4</text>
+    <text x="470" y="416">5</text>
+    <text x="550" y="416">6</text>
+  </g>
+  
+  <!-- Template Placeholder Text -->
+  <text x="297" y="210" text-anchor="middle" class="text-title" style="fill: #cccccc;">
+    A2 LANDSCAPE TEMPLATE — PLACE DRAWING CONTENT HERE
+  </text>
+  
+</svg>

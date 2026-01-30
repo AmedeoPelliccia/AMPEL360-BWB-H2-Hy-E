@@ -1,0 +1,394 @@
+---
+document_id: DPP_<bb_id>
+title: Digital Product Passport for <bb_id>
+subtitle: Authoritative Identity Record
+version: 1.0
+date: YYYY-MM-DD
+status: TEMPLATE
+owner: AMPEL360 / ATA 95 Governance
+classification: INTERNAL
+primary_ata: "95"
+related_ata: ["<Body_ATA>", "<Brain_ATA>"]
+---
+
+# DPP_<bb_id> — Digital Product Passport
+
+## 1. Purpose
+
+This document is the **Digital Product Passport (DPP)** for `<bb_id>` — `<Artifact_Name>`.
+
+The DPP is the **authoritative, versioned identity record** that:
+- Locks the artifact identity and configuration baseline
+- Makes predictive claims about operational behavior (OM)
+- Serves as the governance anchor for certification continuity
+- Provides traceability to all lifecycle evidence
+
+**DPP Governance**: ATA 95 (Brain) / `<Body_ATA>` (Body, if applicable)
+
+---
+
+## 2. Passport Identity
+
+| Field | Value |
+|---|---|
+| **DPP ID** | `DPP-<bb_id>-v<version>` |
+| **BB ID** | `<bb_id>` |
+| **Artifact Name** | `<Artifact_Name>` |
+| **DPP Version** | `<version>` |
+| **Issuance Date** | `<date>` |
+| **Issuing Authority** | `<authority>` |
+| **Passport Status** | `[ISSUED | UPDATED | FROZEN | REVOKED]` |
+
+---
+
+## 3. Artifact Identity
+
+### 3.1 Core Identity
+| Field | Value |
+|---|---|
+| **Body ATA** | `<Body_ATA>` (functional/physical ownership) |
+| **Brain ATA** | `<Brain_ATA>` (executing logic ownership) |
+| **DAL** | `<DAL>` (Design Assurance Level) |
+| **Brain Type** | `<BrainType>` |
+| **Certification Basis** | `<cert_basis>` (e.g., CS-25, FAR Part 25, etc.) |
+
+### 3.2 ATA Sovereignty
+- **Body Sovereignty**: ATA `<Body_ATA>` (functional/physical ownership)
+- **Brain Sovereignty**: ATA `<Brain_ATA>` (executing logic ownership)
+- **DPP Governance**: ATA 95 (Digital Product Passport authority)
+- **Interface Contract**: `<interface_spec_ref>` (how Body and Brain interface)
+
+---
+
+## 4. Configuration Baseline (Locked)
+
+### 4.1 Body Baseline
+- **Body Baseline ID**: `<body_baseline_id>`
+- **Body Version**: `<body_version>`
+- **BOM Reference**: `<bom_ref>`
+- **Drawing Package**: `<drawing_refs>`
+- **Physical Configuration Hash**: `<hash>` (if applicable)
+
+### 4.2 Brain Baseline
+- **Brain Baseline ID**: `<brain_baseline_id>`
+- **Brain Version**: `<brain_version>`
+- **Image ID**: `<image_id>` (if software loadable)
+- **SBOM Reference**: `<sbom_ref>`
+- **Model Files**: `<model_refs>` (if ML/NN)
+- **Configuration Hash**: `<hash>`
+- **Training Data Lineage** (if ML/NN): `<dataset_refs>`
+
+### 4.3 Immutable Claims
+```
+<Define immutable identity claims: what cannot change without creating new DPP version>
+Examples:
+- Core functional purpose
+- Safety classification (DAL)
+- Certification basis
+- Interface specifications (physical/logical)
+```
+
+---
+
+## 5. Predictive Claims (OM Linkage)
+
+### 5.1 Operational Mission (OM) Prediction
+The DPP predicts the following **Operational Mission (OM)**:
+
+- **OM Class**: `<om_class>`
+- **OM Reference**: `<om_ref>`
+- **Predicted Operational Behavior**:
+  ```
+  <High-level description of what the artifact will do operationally,
+  as predicted by design and validated by DV>
+  ```
+
+### 5.2 Performance Claims
+| Performance Parameter | Claimed Value | Units | Confidence | Evidence |
+|---|---|---|---|---|
+| `<param>` | `<value>` | `<units>` | `<confidence>` | `<evidence_ref>` |
+
+### 5.3 Operational Constraints
+```
+<Define operational constraints and limitations:
+- Environmental envelope
+- Operational modes
+- Prohibited uses
+- Degraded mode behaviors
+```
+
+---
+
+## 6. Lifecycle Evidence Pointers
+
+### 6.1 AM (At-Rest Model)
+- **AM Reference**: `<am_ref>`
+- **AM Version**: `<version>`
+- **AM Baseline**: `<baseline_id>`
+
+### 6.2 DV (Design Validation)
+- **DV Reference**: `<dv_ref>`
+- **DV Status**: `<status>`
+- **DV Gate Passed**: `[YES | NO]`
+- **DV Date**: `<date>`
+- **DV Authority**: `<authority>`
+
+### 6.3 OM (Operational Mission)
+- **OM Reference**: `<om_ref>`
+- **OM Class**: `<om_class>`
+- **OM Status**: `<status>`
+
+### 6.4 OAV (On-Asset Validation)
+- **OAV Reference**: `<oav_ref>`
+- **OAV Status**: `<status>`
+- **OAV Gate Passed**: `[YES | NO | PENDING]`
+
+### 6.5 DT (Digital Twin)
+- **DT Reference**: `<dt_ref>`
+- **DT Snapshot Count**: `<count>`
+- **Last DT Snapshot**: `<last_snapshot_id>`
+
+---
+
+## 7. Certification Evidence
+
+### 7.1 Certification Status
+- **Certification Type**: `<type_cert | STC | major_change>`
+- **Certification Authority**: `<EASA | FAA | other>`
+- **Certification Basis**: `<CS-25 | FAR Part 25 | etc.>`
+- **Certification Status**: `<IN_PROGRESS | CERTIFIED | UPDATED>`
+- **Certificate Number**: `<cert_number>` (if issued)
+- **Certification Date**: `<date>`
+
+### 7.2 Compliance Evidence Index
+| Standard/Regulation | Section | Compliance Method | Evidence Reference |
+|---|---|---|---|
+| `<standard>` | `<section>` | `<method>` | `<evidence_ref>` |
+
+### 7.3 Safety Case
+- **Safety Case Reference**: `<safety_case_ref>`
+- **FHA Reference**: `<fha_ref>` (Functional Hazard Assessment)
+- **PSSA Reference**: `<pssa_ref>` (Preliminary System Safety Assessment)
+- **SSA Reference**: `<ssa_ref>` (System Safety Assessment)
+
+---
+
+## 8. ML/NN Specific Claims (if applicable)
+
+### 8.1 ML/NN Model Identity
+- **Model Type**: `<model_type>`
+- **Model Architecture**: `<architecture>`
+- **Model Version**: `<version>`
+- **Model Hash**: `<hash>`
+
+### 8.2 Training Data Provenance
+- **Training Dataset ID**: `<dataset_id>`
+- **Training Dataset Version**: `<version>`
+- **Training Dataset Hash**: `<hash>`
+- **Data Lineage**: `<lineage_ref>`
+
+### 8.3 ML/NN Performance Claims
+| Metric | Claimed Value | Validation Evidence |
+|---|---|---|
+| `<metric>` | `<value>` | `<evidence_ref>` |
+
+### 8.4 ML/NN Operational Domain Definition (ODD)
+```
+<Define the operational domain where ML/NN is valid:
+- Input ranges
+- Environmental conditions
+- Operational modes
+- Out-of-distribution detection mechanisms>
+```
+
+### 8.5 DS-AI Conformity (if in-scope)
+- **DS-AI Assessment Status**: `<status>`
+- **Assurance Level (AL)**: `<AL>`
+- **Trust Quality Level (TQL)**: `<TQL>`
+- **DS-AI Conformity Reference**: `<ds_ai_ref>`
+
+---
+
+## 9. Provenance and Chain of Custody
+
+### 9.1 Creation Provenance
+- **Created By**: `<creator>`
+- **Creation Date**: `<date>`
+- **Creation Tool**: `<tool>`
+- **Creation Method**: `<method>`
+
+### 9.2 Manufacturing/Assembly Provenance (Body)
+- **Manufacturer**: `<manufacturer>`
+- **Manufacturing Date**: `<date>`
+- **Serial Number**: `<serial_number>`
+- **Lot/Batch**: `<lot_batch>`
+
+### 9.3 Build Provenance (Brain)
+- **Build ID**: `<build_id>`
+- **Build Date**: `<date>`
+- **Build Tool Chain**: `<toolchain>`
+- **Build Hash**: `<hash>`
+- **Repository Commit**: `<commit_hash>`
+
+---
+
+## 10. Deployment and Operational Records
+
+### 10.1 Fleet Deployment
+- **Deployed on Aircraft**: `<aircraft_serial_numbers>` (if known)
+- **Deployment Date**: `<date>`
+- **Operational Status**: `<IN_SERVICE | STORED | RETIRED>`
+
+### 10.2 Operational History Summary
+- **Total Flight Hours**: `<hours>` (if applicable)
+- **Total Flight Cycles**: `<cycles>` (if applicable)
+- **Operational Events**: `<event_count>` (link to DT)
+
+---
+
+## 11. Change Control and Update Policy
+
+### 11.1 DPP Update Rules
+```
+<Define when and how DPP can be updated:
+- Minor updates (metadata, evidence pointers) vs Major updates (baseline change)
+- Authority required for updates
+- Versioning scheme
+```
+
+### 11.2 AM → AM′ Policy
+```
+<Define policy for updating AM under change control:
+- What changes trigger AM′ (and new DPP version)
+- CCB authority required
+- Impact assessment requirements
+```
+
+### 11.3 DPP Version History
+| Version | Date | Change Description | Authority | AM Baseline |
+|---|---|---|---|---|
+| 1.0 | YYYY-MM-DD | Initial DPP issuance | `<authority>` | `<am_baseline>` |
+
+---
+
+## 12. Interoperability and Interfaces
+
+### 12.1 Physical Interfaces
+| Interface ID | Type | Standard | Mate | ICD Reference |
+|---|---|---|---|---|
+| `<if_id>` | `<physical>` | `<standard>` | `<mate>` | `<icd_ref>` |
+
+### 12.2 Logical Interfaces
+| Interface ID | Protocol | Data Format | Direction | ICD Reference |
+|---|---|---|---|---|
+| `<if_id>` | `<protocol>` | `<format>` | `<in/out/bi>` | `<icd_ref>` |
+
+---
+
+## 13. Maintenance and Support
+
+### 13.1 Maintenance Policy
+- **Maintenance Strategy**: `<preventive | corrective | predictive>`
+- **Maintenance Intervals**: `<intervals>`
+- **Maintenance Procedures**: `<procedure_refs>`
+
+### 13.2 Support Infrastructure
+- **Required Support Equipment**: `<equipment_list>`
+- **Required Tools**: `<tool_list>`
+- **Required Skills/Training**: `<training_refs>`
+
+---
+
+## 14. End-of-Life and Disposal
+
+### 14.1 End-of-Life Policy
+```
+<Define end-of-life criteria, retirement procedures, data retention requirements>
+```
+
+### 14.2 Circular Economy
+- **Recyclability Assessment**: `<assessment>`
+- **Material Recovery**: `<recovery_plan>`
+- **Hazardous Materials**: `<hazmat_list>`
+
+---
+
+## 15. Digital Signature and Authenticity
+
+### 15.1 Digital Signature
+- **Signature Algorithm**: `<algorithm>`
+- **Signature Value**: `<signature_hash>`
+- **Signing Authority**: `<authority>`
+- **Signature Date**: `<date>`
+
+### 15.2 Authenticity Verification
+```
+<Instructions for verifying DPP authenticity and integrity>
+```
+
+---
+
+## 16. Document Control
+
+| Version | Date | Author | Changes |
+|---|---|---|---|
+| 1.0 | YYYY-MM-DD | AMPEL360/ATA 95 Governance | Template creation |
+
+---
+
+**End of DPP_<bb_id>**
+
+---
+
+## JSON Payload (Machine-Readable)
+
+```json
+{
+  "dpp_id": "DPP-<bb_id>-v<version>",
+  "bb_id": "<bb_id>",
+  "artifact_name": "<Artifact_Name>",
+  "version": "<version>",
+  "issuance_date": "<date>",
+  "status": "<status>",
+  "identity": {
+    "body_ata": "<Body_ATA>",
+    "brain_ata": "<Brain_ATA>",
+    "dal": "<DAL>",
+    "brain_type": "<BrainType>"
+  },
+  "baseline": {
+    "body": {
+      "baseline_id": "<body_baseline_id>",
+      "version": "<body_version>",
+      "bom_ref": "<bom_ref>",
+      "hash": "<hash>"
+    },
+    "brain": {
+      "baseline_id": "<brain_baseline_id>",
+      "version": "<brain_version>",
+      "image_id": "<image_id>",
+      "sbom_ref": "<sbom_ref>",
+      "hash": "<hash>"
+    }
+  },
+  "lifecycle_evidence": {
+    "am_ref": "<am_ref>",
+    "dv_ref": "<dv_ref>",
+    "om_ref": "<om_ref>",
+    "oav_ref": "<oav_ref>",
+    "dt_ref": "<dt_ref>"
+  },
+  "certification": {
+    "type": "<type>",
+    "authority": "<authority>",
+    "basis": "<basis>",
+    "status": "<status>"
+  },
+  "provenance": {
+    "created_by": "<creator>",
+    "creation_date": "<date>",
+    "build_id": "<build_id>",
+    "repository_commit": "<commit_hash>"
+  }
+}
+```

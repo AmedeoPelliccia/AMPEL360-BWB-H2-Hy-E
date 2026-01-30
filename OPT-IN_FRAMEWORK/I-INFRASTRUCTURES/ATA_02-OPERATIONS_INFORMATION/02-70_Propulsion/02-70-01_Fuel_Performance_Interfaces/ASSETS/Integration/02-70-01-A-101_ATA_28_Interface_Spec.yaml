@@ -1,0 +1,13 @@
+# ATA 28 interface
+# Generic template - No proprietary data
+
+name: ATA 28 interface
+version: "1.0"
+status: DRAFT
+date: 2025-11-21
+
+description: >
+  This is a template specification for ATA 28 interface.
+  No proprietary or confidential data included.
+
+# TODO: Add technical specification

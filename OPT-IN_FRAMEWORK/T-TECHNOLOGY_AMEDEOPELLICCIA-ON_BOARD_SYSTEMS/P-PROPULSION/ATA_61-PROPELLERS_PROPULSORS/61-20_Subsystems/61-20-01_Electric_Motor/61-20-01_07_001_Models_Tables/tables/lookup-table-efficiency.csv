@@ -1,0 +1,15 @@
+# 61-20-01 Electric Motor — Lookup Table: Efficiency Map
+# AMPEL360 BWB H₂ Hy-E Q100 Programme
+# OPT-IN Framework v1.2
+#
+# 2D efficiency map for motor simulation
+# Row: Speed (rpm), Column headers: Torque (Nm)
+# Values: Efficiency (%)
+#
+Speed_rpm,T_2000,T_4000,T_6000,T_8000,T_10000,T_12000
+1200,91.5,93.2,94.1,94.5,94.8,94.9
+1800,92.8,94.2,95.0,95.4,95.6,95.7
+2400,93.5,95.0,95.7,96.1,96.3,96.4
+3000,94.0,95.5,96.2,96.5,96.7,96.7
+3600,94.2,95.8,96.4,96.7,96.5,96.3
+4200,94.0,95.5,96.1,96.3,96.0,95.5

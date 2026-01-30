@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/safety/training-record.schema.json",
+  "title": "Training Record",
+  "description": "Schema for safety training records in ATA 10-00-02 Safety framework",
+  "type": "object",
+  "required": ["record_id", "employee_id", "training_type", "completion_date", "status"],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "description": "Unique training record identifier"
+    },
+    "employee_id": {
+      "type": "string",
+      "description": "Employee identifier"
+    },
+    "employee_name": {
+      "type": "string"
+    },
+    "training_type": {
+      "type": "string",
+      "enum": [
+        "H2_SAFETY_AWARENESS",
+        "H2_OPERATIONS",
+        "HV_CERTIFICATION",
+        "CRYOGENIC_HANDLING",
+        "FIRE_RESPONSE",
+        "EMERGENCY_PROCEDURES",
+        "PPE_TRAINING",
+        "LOTO",
+        "CONFINED_SPACE",
+        "FIRST_AID"
+      ]
+    },
+    "training_level": {
+      "type": "string",
+      "enum": ["AWARENESS", "OPERATIONS", "MAINTENANCE", "EMERGENCY_RESPONSE", "INSTRUCTOR"]
+    },
+    "training_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "completion_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "expiry_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when recurrency training is required"
+    },
+    "instructor": {
+      "type": "string"
+    },
+    "assessment_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "pass_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 80
+    },
+    "status": {
+      "type": "string",
+      "enum": ["SCHEDULED", "IN_PROGRESS", "PASSED", "FAILED", "EXPIRED"]
+    },
+    "competencies_achieved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "certification_number": {
+      "type": "string",
+      "description": "Certification number if applicable"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,475 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/engineering-metadata.schema.json",
+  "title": "Engineering Analysis Metadata Schema",
+  "description": "JSON Schema for metadata of engineering analysis documents in ATA 10-00-06 Engineering directory for AMPEL360-BWB-H2 aircraft",
+  "type": "object",
+  "required": [
+    "analysis_id",
+    "document_number",
+    "title",
+    "analysis_type",
+    "verification_status"
+  ],
+  "properties": {
+    "analysis_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the analysis (UUID format)"
+    },
+    "document_number": {
+      "type": "string",
+      "pattern": "^10-ENG-(STR|H2|THM|CFD|FEA|RSK|TRD|CAL|RPT)-\\d{3}$",
+      "description": "Engineering document number following ATA 10 naming convention",
+      "examples": [
+        "10-ENG-H2-001",
+        "10-ENG-STR-004",
+        "10-ENG-CFD-003"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 200,
+      "description": "Full title of the engineering analysis"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the analysis purpose and scope"
+    },
+    "analysis_type": {
+      "type": "string",
+      "enum": [
+        "structural",
+        "thermal",
+        "cfd",
+        "fea",
+        "risk",
+        "trade-study",
+        "calculation",
+        "report"
+      ],
+      "description": "Category of engineering analysis"
+    },
+    "sub_type": {
+      "type": "string",
+      "description": "Specific sub-category within the analysis type",
+      "examples": [
+        "h2-safety",
+        "cryogenic",
+        "wind-load",
+        "dispersion",
+        "structural-integrity"
+      ]
+    },
+    "software_tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tool_name", "version"],
+        "properties": {
+          "tool_name": {
+            "type": "string",
+            "description": "Name of analysis software or tool",
+            "examples": [
+              "ANSYS Fluent",
+              "NASTRAN",
+              "FLACS",
+              "MATLAB",
+              "Excel"
+            ]
+          },
+          "version": {
+            "type": "string",
+            "description": "Version number of the software tool"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "Purpose of this tool in the analysis"
+          }
+        }
+      },
+      "description": "List of software tools used in the analysis"
+    },
+    "input_data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["parameter", "value", "unit"],
+        "properties": {
+          "parameter": {
+            "type": "string",
+            "description": "Name of input parameter"
+          },
+          "value": {
+            "type": ["string", "number"],
+            "description": "Value of the parameter"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source document or reference for the value"
+          },
+          "uncertainty": {
+            "type": "string",
+            "description": "Uncertainty or tolerance associated with the value"
+          }
+        }
+      },
+      "description": "Key input data and parameters used in the analysis"
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["assumption", "justification"],
+        "properties": {
+          "assumption": {
+            "type": "string",
+            "description": "Statement of the assumption"
+          },
+          "justification": {
+            "type": "string",
+            "description": "Rationale or basis for the assumption"
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"],
+            "description": "Impact level if assumption is invalid"
+          }
+        }
+      },
+      "description": "List of assumptions made in the analysis"
+    },
+    "results_summary": {
+      "type": "object",
+      "properties": {
+        "key_findings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Main findings from the analysis"
+        },
+        "conclusions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Conclusions drawn from the analysis"
+        },
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Recommendations based on analysis results"
+        },
+        "margins_of_safety": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parameter": {
+                "type": "string"
+              },
+              "calculated_value": {
+                "type": "number"
+              },
+              "allowable_value": {
+                "type": "number"
+              },
+              "margin": {
+                "type": "number",
+                "description": "Margin of safety (typically as percentage or ratio)"
+              },
+              "unit": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Calculated margins of safety for critical parameters"
+        }
+      },
+      "description": "Summary of analysis results"
+    },
+    "h2_related": {
+      "type": "boolean",
+      "description": "Indicates if analysis is related to hydrogen fuel systems",
+      "default": false
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "description": "Indicates if analysis involves cryogenic systems or temperatures",
+      "default": false
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Indicates if analysis is specific to Blended Wing Body configuration",
+      "default": false
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "in-review",
+        "verified",
+        "validated",
+        "approved"
+      ],
+      "description": "Current verification status of the analysis"
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": [
+        "independent-check",
+        "peer-review",
+        "test-correlation",
+        "benchmark-comparison",
+        "multi-method-correlation"
+      ],
+      "description": "Method used for verification of analysis results"
+    },
+    "approval_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "conditional"
+      ],
+      "description": "Approval status by responsible engineer"
+    },
+    "approver": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "signature_reference": {
+          "type": "string",
+          "description": "Reference to electronic signature or approval record"
+        }
+      },
+      "description": "Information about the approving authority"
+    },
+    "related_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^REQ-10-\\d{2}-\\d{3}$"
+      },
+      "description": "List of requirement IDs that this analysis addresses",
+      "examples": [
+        "REQ-10-00-001",
+        "REQ-10-03-042"
+      ]
+    },
+    "related_drawings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of drawing numbers or references related to this analysis"
+    },
+    "related_documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "document_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "relationship": {
+            "type": "string",
+            "enum": [
+              "input",
+              "output",
+              "reference",
+              "supersedes",
+              "superseded-by"
+            ]
+          }
+        }
+      },
+      "description": "Related documents and their relationship to this analysis"
+    },
+    "applicable_standards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "standard_id": {
+            "type": "string",
+            "examples": [
+              "CS-25.1309",
+              "SAE AS6968",
+              "NFPA 2",
+              "ISO 13984"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "clause": {
+            "type": "string",
+            "description": "Specific clause or section applicable"
+          }
+        }
+      },
+      "description": "Applicable standards and regulations"
+    },
+    "safety_classification": {
+      "type": "string",
+      "enum": [
+        "catastrophic",
+        "hazardous",
+        "major",
+        "minor",
+        "no-safety-effect"
+      ],
+      "description": "Safety classification per SAE ARP4761"
+    },
+    "dal_level": {
+      "type": "string",
+      "enum": [
+        "DAL-A",
+        "DAL-B",
+        "DAL-C",
+        "DAL-D",
+        "DAL-E",
+        "N/A"
+      ],
+      "description": "Design Assurance Level per DO-178C (if applicable)"
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "author", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "pattern": "^[A-Z]$|^\\d+\\.\\d+$",
+            "examples": ["A", "B", "C", "1.0", "1.1"]
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "author": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of changes in this revision"
+          }
+        }
+      },
+      "description": "Complete revision history of the analysis document"
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when analysis was originally created"
+    },
+    "last_modified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time of last modification"
+    },
+    "expiration_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when analysis expires and requires review/update"
+    },
+    "author": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "organization": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "description": "Primary author of the analysis"
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "examples": [
+              "analyst",
+              "reviewer",
+              "checker",
+              "approver"
+            ]
+          }
+        }
+      },
+      "description": "Additional contributors to the analysis"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keywords for searchability and categorization"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "calculation-sheet",
+              "plot",
+              "cad-model",
+              "simulation-results",
+              "report",
+              "spreadsheet",
+              "other"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "description": "Relative path to the attachment file"
+          }
+        }
+      },
+      "description": "Attachments and supporting files"
+    }
+  }
+}

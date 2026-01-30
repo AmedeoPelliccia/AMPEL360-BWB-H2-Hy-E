@@ -1,41 +1,136 @@
 # 57-20_Subsystems
 
+**Version:** 1.1  
+**Date:** 2025-11-28  
+**Status:** Active
+
+---
+
 ## Purpose
 
-Functional subsystems (design-driven)
+This layer contains the **physical wing subsystems**, each with a complete 14-step lifecycle documentation structure. Unlike 57-00_GENERAL (which covers the wing globally) or 57-10_Operations (which is a lean operational chapter), 57-20_Subsystems replicates the lifecycle per subsystem.
+
+---
 
 ## Scope
 
-This is a **cross-ATA root bucket** present in every ATA chapter. It provides a consistent location for functional subsystems (design-driven).
+This is a **cross-ATA root bucket** for ATA 57 (Wings). It provides dedicated lifecycle documentation for each physically distinct wing subsystem.
 
-## Internal Structure
+---
 
-The internal structure of this bucket is **design-driven** and flexible:
-- Organize contents based on how systems are conceived, designed, and implemented
-- No mandatory 01-14 lifecycle duplication within buckets
-- Maintain traceability to lifecycle phases via metadata or index files
+## Structure
+
+```
+57-20_Subsystems/
+├── 57-20-00_Subsystems_Overview/
+│   ├── 57-20-00-01_Overview.md
+│   ├── 57-20-00-02_Scope_and_Methodology.md
+│   └── 57-20-00-03_Subsystems_Index.md
+│
+├── 57-21_FLAPS/
+├── 57-22_SPOILERS/
+├── 57-23_AILERONS/
+├── 57-24_SLATS/
+├── 57-25_WING_STRUCTURE/
+├── 57-26_FUEL_TANKS/
+├── 57-27_H2_WING_INTEGRATION/
+├── 57-28_WING_ICE_PROTECTION/
+└── 57-29_WING_SENSORS_ACTUATION/
+```
+
+Each subsystem folder (`57-2x_<NAME>`) contains:
+- `57-2x_GENERAL-<NAME>/` — 14 lifecycle files (01-14)
+- `ASSETS/` — Diagrams, installations, and exports
+
+---
+
+## Subsystems
+
+| ID | Subsystem | Description |
+|----|-----------|-------------|
+| [57-21](57-21_FLAPS/README.md) | FLAPS | Trailing edge high-lift devices |
+| [57-22](57-22_SPOILERS/README.md) | SPOILERS | Lift-dump and speed brake devices |
+| [57-23](57-23_AILERONS/README.md) | AILERONS | Roll control surfaces |
+| [57-24](57-24_SLATS/README.md) | SLATS | Leading edge high-lift devices |
+| [57-25](57-25_WING_STRUCTURE/README.md) | WING_STRUCTURE | Primary wing structure |
+| [57-26](57-26_FUEL_TANKS/README.md) | FUEL_TANKS | Wing fuel storage |
+| [57-27](57-27_H2_WING_INTEGRATION/README.md) | H2_WING_INTEGRATION | Hydrogen integration |
+| [57-28](57-28_WING_ICE_PROTECTION/README.md) | WING_ICE_PROTECTION | Ice protection systems |
+| [57-29](57-29_WING_SENSORS_ACTUATION/README.md) | WING_SENSORS_ACTUATION | Sensors and actuation |
+
+---
+
+## 14-Step Lifecycle (per subsystem)
+
+Each subsystem follows the canonical lifecycle:
+
+| Phase | Name | Purpose |
+|-------|------|---------|
+| 01 | Overview | ATA domain description and architecture |
+| 02 | Safety | Safety framework and analysis |
+| 03 | Requirements | Requirements and traceability |
+| 04 | Design | Design specifications |
+| 05 | Interfaces | Interface control documents |
+| 06 | Engineering | Analysis, models, simulation |
+| 07 | V_AND_V | Verification and validation |
+| 08 | Prototyping | Prototype development |
+| 09 | Production_Planning | Manufacturing planning |
+| 10 | Certification | Certification evidence |
+| 11 | EIS_Versions_Tags | Configuration management |
+| 12 | Services | Maintenance and service |
+| 13 | Subsystems_Components | Component breakdown |
+| 14 | Ops_Std_Sustain | Operational standards |
+
+---
+
+## Relationship to Other 57-XX Layers
+
+| Layer | Purpose | Lifecycle |
+|-------|---------|-----------|
+| [57-00_GENERAL](../57-00_GENERAL/) | Global wing governance | Full 14-folder lifecycle |
+| [57-10_Operations](../57-10_Operations/) | Operational chapter | Lean (no lifecycle repetition) |
+| **57-20_Subsystems** | Physical subsystems | Full 14-folder lifecycle per subsystem |
+
+---
 
 ## Naming Convention
 
-Items within this bucket follow the pattern:
-- **57-20-XX_DESCRIPTION**
-  - 57 = ATA chapter
-  - 20 = Bucket number
-  - XX = Sequential number (00, 01, 02, etc.)
-  - DESCRIPTION = Descriptive name
+| Element | Pattern | Example |
+|---------|---------|---------|
+| Subsystem folder | `57-2x_<NAME>` | `57-21_FLAPS` |
+| GENERAL folder | `57-2x_GENERAL-<NAME>` | `57-21_GENERAL-FLAPS` |
+| Lifecycle file | `57-2x-YY_<Phase>.md` | `57-21-01_Overview.md` |
+
+---
 
 ## Status
 
 - **Bucket**: 20_Subsystems
 - **Status**: Active
-- **Applicability**: Universal (all ATA chapters)
-- **Last Updated**: 2025-11-13
-
-## Document Control
-
-- **Standard**: OPT-IN Framework v1.1
-- **Owner**: AMPEL360 Documentation WG
+- **Applicability**: ATA 57 (Wings)
+- **Last Updated**: 2025-11-28
 
 ---
 
-**Note**: If this bucket is not applicable to ATA 57, document the reason here. Do not remove the bucket.
+
+## Applicable Standards and Regulations
+
+| Standard | Description | Authority |
+|----------|-------------|-----------|
+| [CS-25](https://www.easa.europa.eu/en/document-library/certification-specifications/cs-25-amendment-27) | Certification Specifications for Large Aeroplanes | EASA |
+| [14 CFR Part 25](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-25) | Airworthiness Standards: Transport Category Airplanes | FAA |
+| [DO-178C](https://www.rtca.org/products/do-178c-software-considerations-in-airborne-systems-and-equipment-certification/) | Software Considerations in Airborne Systems | RTCA |
+| [ARP4754A](https://www.sae.org/standards/content/arp4754a/) | Guidelines for Development of Civil Aircraft and Systems | SAE |
+| [ARP4761](https://www.sae.org/standards/content/arp4761/) | Guidelines for Safety Assessment | SAE |
+
+## Document Control
+
+- **Standard**: OPT-IN Framework v1.2
+- **Owner**: AMPEL360 Documentation WG
+- Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
+- Status: **ACTIVE** – Subject to human review and approval.
+- Human approver: _[to be completed]_.
+- Repository: `AMPEL360-BWB-H2-Hy-E`
+- Last AI update: 2025-11-28.
+
+---

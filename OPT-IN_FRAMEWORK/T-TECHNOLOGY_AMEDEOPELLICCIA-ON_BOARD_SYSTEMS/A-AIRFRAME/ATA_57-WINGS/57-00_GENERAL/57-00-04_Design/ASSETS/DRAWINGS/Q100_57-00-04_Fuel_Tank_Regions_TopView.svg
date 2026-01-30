@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="400"
+  viewBox="0 0 1200 400">
+
+  <!-- Title -->
+  <text x="40" y="40"
+        font-family="Arial"
+        font-size="20"
+        font-weight="bold">
+    Q100 57-00-04 Fuel Tank Regions — Top View
+  </text>
+
+  <text x="40" y="60"
+        font-family="Arial"
+        font-size="12">
+    Units: mm | View: Wing planform (reference only) | ATA 57 Wings
+  </text>
+
+  <!-- Wing box outline -->
+  <!-- Origin approx. at inboard corner of wing box -->
+  <rect x="80" y="100" width="1000" height="160"
+        fill="none"
+        stroke="black"
+        stroke-width="1.5" />
+  <text x="85" y="95"
+        font-family="Arial"
+        font-size="11">
+    Wing box region (plan view, not to scale)
+  </text>
+
+  <!-- Front spar line -->
+  <line x1="80" y1="130" x2="1080" y2="130"
+        stroke="gray"
+        stroke-width="1"
+        stroke-dasharray="5,4" />
+  <text x="70" y="133"
+        font-family="Arial"
+        font-size="10"
+        text-anchor="end">
+    Front spar ref.
+  </text>
+
+  <!-- Rear spar line -->
+  <line x1="80" y1="230" x2="1080" y2="230"
+        stroke="gray"
+        stroke-width="1"
+        stroke-dasharray="5,4" />
+  <text x="70" y="233"
+        font-family="Arial"
+        font-size="10"
+        text-anchor="end">
+    Rear spar ref.
+  </text>
+
+  <!-- Inboard rib -->
+  <line x1="140" y1="100" x2="140" y2="260"
+        stroke="gray"
+        stroke-width="1"
+        stroke-dasharray="5,4" />
+  <text x="140" y="95"
+        font-family="Arial"
+        font-size="10"
+        text-anchor="middle">
+    Rib RIB-INB
+  </text>
+
+  <!-- Outboard rib -->
+  <line x1="1040" y1="100" x2="1040" y2="260"
+        stroke="gray"
+        stroke-width="1"
+        stroke-dasharray="5,4" />
+  <text x="1040" y="95"
+        font-family="Arial"
+        font-size="10"
+        text-anchor="middle">
+    Rib RIB-OUT
+  </text>
+
+  <!-- Inner main tank -->
+  <rect x="180" y="140" width="340" height="80"
+        fill="#b3d9ff"
+        stroke="#1f4e79"
+        stroke-width="1" />
+  <text x="350" y="175"
+        font-family="Arial"
+        font-size="11"
+        text-anchor="middle">
+    Inner main tank (Tank-01)
+  </text>
+
+  <!-- Center tank -->
+  <rect x="520" y="140" width="240" height="80"
+        fill="#c7f0c2"
+        stroke="#2f6b3a"
+        stroke-width="1" />
+  <text x="640" y="175"
+        font-family="Arial"
+        font-size="11"
+        text-anchor="middle">
+    Center tank (Tank-02)
+  </text>
+
+  <!-- Outer / tip tank -->
+  <rect x="760" y="140" width="200" height="80"
+        fill="#ffd7b3"
+        stroke="#a64b00"
+        stroke-width="1" />
+  <text x="860" y="175"
+        font-family="Arial"
+        font-size="11"
+        text-anchor="middle">
+    Outer / tip tank (Tank-03)
+  </text>
+
+  <!-- Surge / vent bay -->
+  <rect x="960" y="140" width="60" height="80"
+        fill="#fbe8ff"
+        stroke="#7a297a"
+        stroke-width="1"
+        stroke-dasharray="4,3" />
+  <text x="990" y="175"
+        font-family="Arial"
+        font-size="11"
+        text-anchor="middle">
+    Surge / vent (Tank-04)
+  </text>
+
+  <!-- TE reference (to relate with flap well envelope) -->
+  <line x1="80" y1="255" x2="1080" y2="255"
+        stroke="gray"
+        stroke-width="1"
+        stroke-dasharray="5,4" />
+  <text x="1080" y="270"
+        font-family="Arial"
+        font-size="10"
+        text-anchor="end">
+    Wing trailing edge ref. (57-00-04 flap well)
+  </text>
+
+  <!-- Simple coordinate axes -->
+  <line x1="1000" y1="320" x2="1120" y2="320"
+        stroke="black"
+        stroke-width="1" />
+  <text x="1125" y="323"
+        font-family="Arial"
+        font-size="10">
+    +X span (outboard)
+  </text>
+
+  <line x1="1000" y1="320" x2="1000" y2="260"
+        stroke="black"
+        stroke-width="1" />
+  <text x="995" y="255"
+        font-family="Arial"
+        font-size="10"
+        text-anchor="end">
+    +Y chord (aft)
+  </text>
+
+  <!-- Short note -->
+  <text x="40" y="340"
+        font-family="Arial"
+        font-size="11">
+    Note: Spanwise stations and tank volumes to be validated against Q100 wing design data and ATA 28 integration.
+  </text>
+
+</svg>

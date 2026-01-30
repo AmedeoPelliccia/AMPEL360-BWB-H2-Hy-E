@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.io/schemas/57-10-90_shm_alert.schema.json",
+  "title": "SHM Alert",
+  "description": "Schema for Structural Health Monitoring alert messages",
+  "type": "object",
+  "properties": {
+    "alert_id": {
+      "type": "string",
+      "pattern": "^SHM-57-[0-9]{8}-[0-9]{6}$",
+      "description": "Unique alert identifier"
+    },
+    "aircraft_id": {
+      "type": "string",
+      "pattern": "^Q100-[0-9]{3}$",
+      "description": "Aircraft identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Alert timestamp (ISO 8601)"
+    },
+    "sensor_id": {
+      "type": "string",
+      "pattern": "^SHM-57-[0-9]{3}$",
+      "description": "Source sensor identifier"
+    },
+    "alert_level": {
+      "type": "string",
+      "enum": ["advisory", "caution", "warning"],
+      "description": "Alert severity level"
+    },
+    "alert_type": {
+      "type": "string",
+      "enum": ["strain_threshold", "damage_detection", "sensor_fault", "trend_alert"],
+      "description": "Type of alert"
+    },
+    "zone": {
+      "type": "string",
+      "enum": ["root", "inboard", "midspan", "outboard", "tip"],
+      "description": "Wing zone"
+    },
+    "measurements": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "Measured value"
+        },
+        "units": {
+          "type": "string",
+          "description": "Units of measurement"
+        },
+        "threshold": {
+          "type": "number",
+          "description": "Threshold that was exceeded"
+        },
+        "pct_of_limit": {
+          "type": "number",
+          "description": "Percentage of structural limit"
+        }
+      },
+      "required": ["value", "units"]
+    },
+    "recommended_action": {
+      "type": "string",
+      "description": "Recommended action for crew/maintenance"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "acknowledged", "resolved"],
+      "description": "Alert status"
+    }
+  },
+  "required": ["alert_id", "aircraft_id", "timestamp", "sensor_id", "alert_level", "alert_type", "zone"]
+}

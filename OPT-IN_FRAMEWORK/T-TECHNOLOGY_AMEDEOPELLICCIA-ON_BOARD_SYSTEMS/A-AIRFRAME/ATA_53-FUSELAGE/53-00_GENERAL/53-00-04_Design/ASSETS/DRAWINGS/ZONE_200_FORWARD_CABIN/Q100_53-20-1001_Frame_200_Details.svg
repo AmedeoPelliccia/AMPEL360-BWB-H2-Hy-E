@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1200 850" 
+     width="1200" 
+     height="850">
+  
+  <defs>
+    <style>
+      .title-text { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #000; }
+      .subtitle-text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+      .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #000; }
+      .dimension-text { font-family: Arial, sans-serif; font-size: 10px; fill: #0066cc; }
+      .drawing-line { stroke: #000; stroke-width: 2; fill: none; }
+      .dimension-line { stroke: #0066cc; stroke-width: 1; fill: none; }
+      .dashed-line { stroke: #666; stroke-width: 1; stroke-dasharray: 5,5; fill: none; }
+      .hidden-line { stroke: #999; stroke-width: 1; stroke-dasharray: 3,3; fill: none; }
+      .center-line { stroke: #cc0000; stroke-width: 1; stroke-dasharray: 10,5,2,5; fill: none; }
+    </style>
+    
+    <!-- Arrow marker for dimensions -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0066cc"/>
+    </marker>
+  </defs>
+  
+  <!-- Drawing Border -->
+  <rect x="10" y="10" width="1180" height="830" 
+        fill="#ffffff" stroke="#000" stroke-width="3"/>
+  
+  <!-- Title Block -->
+  <g id="title-block">
+    <rect x="700" y="720" width="480" height="110" fill="#f5f5f5" stroke="#000" stroke-width="2"/>
+    
+    <!-- Company Logo Area -->
+    <rect x="710" y="730" width="100" height="40" fill="#e0e0e0" stroke="#000" stroke-width="1"/>
+    <text x="760" y="755" class="label-text" text-anchor="middle">AMPEL360</text>
+    
+    <!-- Drawing Title -->
+    <text x="820" y="745" class="title-text">Frame 200 Details</text>
+    
+    <!-- Drawing Number and Info -->
+    <line x1="700" y1="770" x2="1180" y2="770" stroke="#000" stroke-width="1"/>
+    <text x="710" y="790" class="label-text">Drawing No: 53-20-1001</text>
+    <text x="710" y="805" class="label-text">Zone: Zone 200</text>
+    <text x="710" y="820" class="label-text">Model: Q100</text>
+    <text x="850" y="820" class="label-text">Type: Frame Details</text>
+    
+    <text x="950" y="790" class="label-text">Scale: NTS</text>
+    <text x="950" y="805" class="label-text">Rev: A</text>
+    <text x="950" y="820" class="label-text">Date: 2025-11-24</text>
+    
+    <text x="1090" y="790" class="label-text">Status: Draft</text>
+    <text x="1090" y="805" class="label-text">Sheet: 1 of 1</text>
+    <text x="1090" y="820" class="label-text">Units: mm</text>
+  </g>
+  
+  <!-- Main Drawing Area -->
+  <g id="main-drawing">
+    <!-- Placeholder technical drawing elements -->
+    
+    <!-- Frame/Bulkhead View -->
+    <ellipse cx="600" cy="350" rx="400" ry="250" class="drawing-line"/>
+    <line x1="200" y1="350" x2="1000" y2="350" class="center-line"/>
+    <line x1="600" y1="100" x2="600" y2="600" class="center-line"/>
+    
+    <!-- Stringer locations -->
+    <circle cx="400" cy="250" r="10" fill="#000"/>
+    <circle cx="600" cy="200" r="10" fill="#000"/>
+    <circle cx="800" cy="250" r="10" fill="#000"/>
+    <circle cx="400" cy="450" r="10" fill="#000"/>
+    <circle cx="800" cy="450" r="10" fill="#000"/>
+    
+    <!-- Dimensions -->
+    <line x1="200" y1="650" x2="1000" y2="650" class="dimension-line" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="600" y="670" class="dimension-text" text-anchor="middle">800</text>
+    
+    <text x="600" y="80" class="subtitle-text" text-anchor="middle">FRAME ASSEMBLY</text>
+    
+  </g>
+  
+  <!-- Notes Section -->
+  <g id="notes">
+    <text x="30" y="740" class="subtitle-text" font-weight="bold">NOTES:</text>
+    <text x="30" y="760" class="label-text">1. All dimensions in millimeters unless noted</text>
+    <text x="30" y="775" class="label-text">2. Material specifications per AMPEL360-MAT-001</text>
+    <text x="30" y="790" class="label-text">3. Manufacturing tolerances per ISO 2768-mK</text>
+    <text x="30" y="805" class="label-text">4. This is a PLACEHOLDER drawing for structure setup</text>
+  </g>
+  
+</svg>

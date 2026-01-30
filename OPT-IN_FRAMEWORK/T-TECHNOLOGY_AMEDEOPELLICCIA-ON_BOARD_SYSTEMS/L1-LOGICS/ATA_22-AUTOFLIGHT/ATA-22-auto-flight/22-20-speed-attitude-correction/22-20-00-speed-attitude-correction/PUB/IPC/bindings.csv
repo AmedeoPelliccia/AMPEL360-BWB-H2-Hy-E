@@ -1,0 +1,4 @@
+publication_module,data_module,sequence,applicability
+# ATA 22-20-00 Speed-Attitude Correction IPC Bindings
+# PM-22-20-00-IPC-001,DM-22-20-00-IPC-001,1,ALL
+# Add additional bindings as data modules are created

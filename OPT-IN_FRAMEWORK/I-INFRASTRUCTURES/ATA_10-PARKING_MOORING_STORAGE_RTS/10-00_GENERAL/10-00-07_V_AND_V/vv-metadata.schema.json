@@ -1,0 +1,242 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/ata-10-vv-metadata.json",
+  "title": "ATA 10 V&V Metadata Schema",
+  "description": "Metadata schema for Verification and Validation documents in ATA 10 - Parking, Mooring, Storage & RTS",
+  "type": "object",
+  "required": [
+    "vv_id",
+    "document_number",
+    "title",
+    "vv_type",
+    "verification_method",
+    "status"
+  ],
+  "properties": {
+    "vv_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the V&V document"
+    },
+    "document_number": {
+      "type": "string",
+      "pattern": "^10-VV-(VPL|TST|RPT|VAL|INS|ANL|CMP|RTM)-\\d{3}$",
+      "description": "Standard document number format for ATA 10 V&V documents",
+      "examples": [
+        "10-VV-VPL-001",
+        "10-VV-TST-005",
+        "10-VV-RPT-003"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Document title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the V&V activity"
+    },
+    "vv_type": {
+      "type": "string",
+      "enum": [
+        "verification-plan",
+        "test-procedure",
+        "test-report",
+        "validation",
+        "inspection",
+        "analysis-verification",
+        "compliance",
+        "traceability"
+      ],
+      "description": "Type of V&V document"
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": [
+        "Test",
+        "Analysis",
+        "Inspection",
+        "Demonstration"
+      ],
+      "description": "Primary verification method per ARP4754A"
+    },
+    "requirements_verified": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^REQ-10-\\d{2}-\\d{3}$"
+      },
+      "description": "Array of requirement IDs verified by this document"
+    },
+    "test_conditions": {
+      "type": "object",
+      "properties": {
+        "temperature_range": {
+          "type": "string",
+          "description": "Temperature range for test (e.g., '-253°C to +50°C')"
+        },
+        "pressure_range": {
+          "type": "string",
+          "description": "Pressure range for test"
+        },
+        "environmental_conditions": {
+          "type": "string",
+          "description": "Environmental conditions for test"
+        },
+        "special_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Special conditions or constraints"
+        }
+      },
+      "description": "Test conditions and environment"
+    },
+    "pass_fail_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "parameter",
+          "criteria",
+          "tolerance"
+        ],
+        "properties": {
+          "parameter": {
+            "type": "string",
+            "description": "Parameter being measured"
+          },
+          "criteria": {
+            "type": "string",
+            "description": "Pass/fail criteria"
+          },
+          "tolerance": {
+            "type": "string",
+            "description": "Acceptable tolerance"
+          }
+        }
+      },
+      "description": "Pass/fail criteria for verification"
+    },
+    "h2_related": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indicates if this V&V activity is related to H2 systems"
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indicates if this V&V activity is related to cryogenic systems"
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indicates if this V&V activity is specific to BWB configuration"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "in-progress",
+        "completed",
+        "approved",
+        "superseded"
+      ],
+      "description": "Current status of the V&V activity"
+    },
+    "test_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when test was or will be conducted"
+    },
+    "test_location": {
+      "type": "string",
+      "description": "Location where test was or will be conducted"
+    },
+    "test_personnel": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "Test Engineer",
+              "QA",
+              "Safety Engineer",
+              "H2 Specialist",
+              "BWB Specialist",
+              "Witness"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Personnel involved in the V&V activity"
+    },
+    "related_engineering_docs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "References to related engineering documents"
+    },
+    "applicable_standards": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "CS-25",
+          "FAR 25",
+          "SAE ARP4754A",
+          "SAE ARP4761",
+          "SAE AS6968",
+          "NFPA 2",
+          "ISO 13984",
+          "DO-178C",
+          "DO-254",
+          "ATA iSpec 2200"
+        ]
+      },
+      "description": "Applicable standards and regulations"
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "revision",
+          "date",
+          "author",
+          "description"
+        ],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "pattern": "^[A-Z]$",
+            "description": "Revision letter"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of revision"
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of revision"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of changes"
+          }
+        }
+      },
+      "description": "Revision history of the document"
+    }
+  }
+}

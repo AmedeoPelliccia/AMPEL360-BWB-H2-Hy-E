@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-TPL-TITLE-BLOCK — Standard Title Block Template
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="180mm"
+     height="50mm"
+     viewBox="0 0 180 50">
+  
+  <title>Q100-61-TPL-TITLE-BLOCK — AMPEL360 Title Block</title>
+  <desc>Standard title block template for ATA 61 drawings</desc>
+  
+  <defs>
+    <style>
+      .border { stroke: #000000; stroke-width: 0.5; fill: none; }
+      .thin { stroke: #000000; stroke-width: 0.18; fill: none; }
+      .text-header { font-family: Arial, Helvetica, sans-serif; font-size: 4; font-weight: bold; fill: #000000; }
+      .text-label { font-family: Arial, Helvetica, sans-serif; font-size: 2; fill: #000000; }
+      .text-field { font-family: Arial, Helvetica, sans-serif; font-size: 2.5; fill: #000000; }
+    </style>
+  </defs>
+  
+  <!-- Outer Border -->
+  <rect x="0" y="0" width="180" height="50" class="border"/>
+  
+  <!-- Header Section -->
+  <rect x="0" y="0" width="180" height="12" class="border"/>
+  <text x="90" y="8" text-anchor="middle" class="text-header">AMPEL360-BWB-H2-Hy-E</text>
+  
+  <!-- Logo Area (placeholder) -->
+  <rect x="2" y="2" width="20" height="8" class="thin"/>
+  <text x="12" y="7" text-anchor="middle" class="text-label">LOGO</text>
+  
+  <!-- Program Info -->
+  <text x="158" y="8" text-anchor="middle" class="text-label">Q100 PROGRAM</text>
+  
+  <!-- Title Row -->
+  <rect x="0" y="12" width="180" height="12" class="border"/>
+  <text x="5" y="17" class="text-label">TITLE:</text>
+  <line x1="25" y1="22" x2="175" y2="22" class="thin"/>
+  
+  <!-- Drawing Number Row -->
+  <rect x="0" y="24" width="120" height="12" class="border"/>
+  <text x="5" y="30" class="text-label">DRAWING NO:</text>
+  
+  <!-- Revision Cell -->
+  <rect x="120" y="24" width="30" height="12" class="border"/>
+  <text x="123" y="30" class="text-label">REV:</text>
+  
+  <!-- Sheet Cell -->
+  <rect x="150" y="24" width="30" height="12" class="border"/>
+  <text x="153" y="30" class="text-label">SHEET:</text>
+  
+  <!-- Bottom Row -->
+  <rect x="0" y="36" width="45" height="14" class="border"/>
+  <text x="5" y="42" class="text-label">SCALE:</text>
+  
+  <rect x="45" y="36" width="45" height="14" class="border"/>
+  <text x="50" y="42" class="text-label">DATE:</text>
+  
+  <rect x="90" y="36" width="45" height="14" class="border"/>
+  <text x="95" y="42" class="text-label">DRAWN:</text>
+  
+  <rect x="135" y="36" width="45" height="14" class="border"/>
+  <text x="140" y="42" class="text-label">APPROVED:</text>
+  
+</svg>

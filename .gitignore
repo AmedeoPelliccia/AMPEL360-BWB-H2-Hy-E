@@ -34,4 +34,20 @@ share/python-wheels/
 Thumbs.db
 
 # Generated artifacts (CI reports, publications, releases)
-/cd/
+# Exclude most cd/ content but keep structure documentation, costs, and cgen_docs
+/cd/*
+!/cd/README.md
+!/cd/costs/
+!/cd/cgen_docs/
+
+# Gate 0 metadata screening artifacts
+.genccc/
+
+# Binary document formats
+# These should not be committed to the repository
+*.pdf
+*.xlsx
+*.docx
+*.pptx
+_codeql_detected_source_root
+actionlint

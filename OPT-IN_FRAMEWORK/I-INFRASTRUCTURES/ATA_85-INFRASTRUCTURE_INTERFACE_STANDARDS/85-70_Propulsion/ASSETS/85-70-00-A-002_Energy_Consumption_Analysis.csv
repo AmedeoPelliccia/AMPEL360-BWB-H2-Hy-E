@@ -1,0 +1,7 @@
+Equipment Type,Daily Energy (kWh),Annual Energy (MWh),Energy Cost (EUR/day),Diesel Equivalent (L/day),CO2 Saved (kg/day),Operational Days/Year
+Battery Electric Tug,800,240,96,250,660,300
+H2 Fuel Cell Tug,1200,360,144,280,740,300
+Electric Belt Loader,300,90,36,90,238,300
+Electric Baggage Tractor,120,36,14,35,92,300
+Electric Cargo Loader,1000,300,120,300,792,300
+Fleet Total (per hub),TBD,1026,410,955,2522,300

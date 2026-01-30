@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-DEFINITION-RECORDING-LOGIC
+  Type: Definitions
+  Description: Standard terminology for recording logic and data capture
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: DEF
+  - Subtype: RECORDING-LOGIC
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-520A (Maintenance Tasks)
+  - DMC-...-940A (Software/Configuration)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="def" commonRepositoryNumber="00002"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <definitionRepository>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D101"/>
+        <definitionTerm>Recording</definitionTerm>
+        <definitionContent>
+          <para>The continuous or event-triggered capture of aircraft parameters, flight data, voice communications, or system status information for storage in non-volatile memory for post-flight analysis, maintenance, or accident investigation.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D102"/>
+        <definitionTerm>Logging</definitionTerm>
+        <definitionContent>
+          <para>The systematic recording of discrete events, faults, or system state changes with associated timestamps. Logging is typically used for maintenance troubleshooting and trend monitoring.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D103"/>
+        <definitionTerm>Snapshot</definitionTerm>
+        <definitionContent>
+          <para>A time-synchronized capture of multiple aircraft parameters at a specific instant, typically triggered by a fault condition, crew action, or specific flight event. Snapshots preserve system state for diagnostic analysis.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D104"/>
+        <definitionTerm>Flight Data Recorder (FDR)</definitionTerm>
+        <definitionContent>
+          <para>A crash-protected recording device that continuously captures mandatory flight parameters as required by regulatory authorities (EASA CS-25, FAA 14 CFR Part 25). FDRs must retain data for minimum 25 hours and survive extreme crash impacts and fire.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D105"/>
+        <definitionTerm>Cockpit Voice Recorder (CVR)</definitionTerm>
+        <definitionContent>
+          <para>A crash-protected recording device that captures flight crew voice communications, cockpit area microphone audio, and selected radio transmissions. CVRs must retain minimum 2 hours of audio and meet crash survivability requirements.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D106"/>
+        <definitionTerm>Quick Access Recorder (QAR)</definitionTerm>
+        <definitionContent>
+          <para>A non-crash-protected recording device that captures extensive flight data parameters (typically 1000+ parameters) for flight operations quality assurance (FOQA), performance monitoring, and maintenance analysis. QAR data is easily accessible for routine download.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D107"/>
+        <definitionTerm>Data Frame</definitionTerm>
+        <definitionContent>
+          <para>A structured data packet containing multiple recorded parameters, timestamps, and validation information. FDR and QAR systems organize recorded data into fixed or variable length frames transmitted at defined intervals (typically 1 Hz, 4 Hz, or 8 Hz).</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D108"/>
+        <definitionTerm>Parameter</definitionTerm>
+        <definitionContent>
+          <para>An individual measurable aircraft or system value that is recorded by flight data recorders. Parameters include flight control positions, engine parameters, aircraft attitudes, speeds, altitudes, and discrete system states.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D109"/>
+        <definitionTerm>Subframe</definitionTerm>
+        <definitionContent>
+          <para>A subdivision of a data frame used to organize parameters with different recording rates. High-priority parameters may be recorded in every subframe while lower-priority parameters are recorded less frequently.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D110"/>
+        <definitionTerm>Ring Buffer</definitionTerm>
+        <definitionContent>
+          <para>A circular memory storage technique where new data continuously overwrites oldest data when storage capacity is reached. Ring buffers ensure recorders capture the most recent operational data without requiring manual memory management.</para>
+        </definitionContent>
+      </definitionSpec>
+      <definitionSpec>
+        <definitionIdent definitionIdentNumber="D111"/>
+        <definitionTerm>Trigger Event</definitionTerm>
+        <definitionContent>
+          <para>A specific condition or threshold exceedance that initiates snapshot recording, event logging, or special data capture. Trigger events may include hard landings, over-G conditions, system faults, or manual crew activation.</para>
+        </definitionContent>
+      </definitionSpec>
+    </definitionRepository>
+  </commonRepositoryContent>
+</commonRepository>

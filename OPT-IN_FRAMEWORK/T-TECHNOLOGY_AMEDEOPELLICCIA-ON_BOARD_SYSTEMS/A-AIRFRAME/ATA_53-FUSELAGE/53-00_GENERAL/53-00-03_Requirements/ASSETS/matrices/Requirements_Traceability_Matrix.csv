@@ -1,0 +1,34 @@
+Requirement_ID,Requirement_Title,Category,Parent_Regulatory_Ref,Related_Design_Doc,Related_Test_Doc,Related_Analysis_Doc,Verification_Status,Notes
+53-00-03-01-001,Ultimate Load Capability,01_Structural_Integrity,"CS-25.303, CS-25.305",53-00-04-STR-001,53-00-07-TEST-001,53-00-06-FEA-001,PLANNED,Full-scale static test required
+53-00-03-01-002,Limit Load Elastic Behavior,01_Structural_Integrity,"CS-25.305, CS-25.301",53-00-04-STR-001,53-00-07-TEST-002,53-00-06-FEA-001,PLANNED,Strain measurement critical
+53-00-03-01-003,Stiffness and Deflection Control,01_Structural_Integrity,"CS-25.305, CS-25.629",53-00-04-STR-002,53-00-07-TEST-003,53-00-06-FEA-002,PLANNED,GVT required for validation
+53-00-03-01-004,Environmental Durability,01_Structural_Integrity,"CS-25.307, CS-25.603, CS-25.609",53-00-04-MAT-001,53-00-07-TEST-004,53-00-06-LIFE-001,PLANNED,Accelerated aging tests
+53-00-03-01-005,Compatibility with SHM Assumptions,01_Structural_Integrity,Internal SHM Strategy,53-00-04-SHM-001,53-00-07-TEST-005,53-00-06-WAVE-001,PLANNED,Wave propagation modeling
+53-00-03-02-001,Maximum Differential Pressure,02_Pressurization_and_Decompression,"CS-25.365, CS-25.841",53-00-04-PRESS-001,53-00-07-TEST-006,53-00-06-FEA-003,PLANNED,Proof test at 1.33× max pressure
+53-00-03-02-002,Pressure Cycle Endurance,02_Pressurization_and_Decompression,"CS-25.571, CS-25.365",53-00-04-PRESS-001,53-00-07-TEST-007,53-00-06-FAT-001,PLANNED,120000 cycle fatigue test
+53-00-03-02-003,Emergency Decompression Resistance,02_Pressurization_and_Decompression,"CS-25.365(e), CS-25.841",53-00-04-PRESS-002,53-00-07-TEST-008,53-00-06-CFD-001,PLANNED,Dynamic analysis required
+53-00-03-02-004,Pressure Relief Systems,02_Pressurization_and_Decompression,"CS-25.841(b), CS-25.1309",53-00-04-SYS-001,53-00-07-TEST-009,53-00-06-FMEA-001,PLANNED,Dual redundancy verified
+53-00-03-02-005,Fuselage Skin Fatigue Pressurization,02_Pressurization_and_Decompression,"CS-25.571, CS-25.603",53-00-04-PRESS-003,53-00-07-TEST-010,53-00-06-FAT-002,PLANNED,Lap joint critical area
+53-00-03-03-001,Damage Growth Prediction,03_Damage_Tolerance_and_Inspection,"CS-25.571, AC 25.571-1D",53-00-04-DT-001,53-00-07-TEST-011,53-00-06-CRACK-001,PLANNED,Paris Law validation required
+53-00-03-03-002,Crack Arrest Features,03_Damage_Tolerance_and_Inspection,CS-25.571(b),53-00-04-DT-002,53-00-07-TEST-012,53-00-06-FEA-004,PLANNED,Tear strap effectiveness
+53-00-03-03-003,Inspectability Requirements,03_Damage_Tolerance_and_Inspection,"CS-25.571, CS-25.1529",53-00-04-MAINT-001,53-00-07-POD-001,53-00-06-ACCESS-001,PLANNED,POD study for NDI methods
+53-00-03-03-004,SHM for Damage Detection,03_Damage_Tolerance_and_Inspection,"CS-25.1309, Internal SHM",53-00-04-SHM-002,53-00-07-TEST-013,53-00-06-POD-002,PLANNED,Flight test validation
+53-00-03-03-005,Composite Damage Tolerance,03_Damage_Tolerance_and_Inspection,"CS-25.571, AC 20-107B",53-00-04-COMP-001,53-00-07-TEST-014,53-00-06-CAI-001,PLANNED,CAI testing required
+53-00-03-04-001,Emergency Landing Loads,04_Crashworthiness,"CS-25.561, CS-25.562",53-00-04-CRASH-001,53-00-07-TEST-015,53-00-06-CRASH-001,PLANNED,Dynamic sled testing
+53-00-03-04-002,Occupant Protection,04_Crashworthiness,"CS-25.562, CS-25.785",53-00-04-CRASH-002,53-00-07-TEST-016,53-00-06-INJURY-001,PLANNED,HIC analysis required
+53-00-03-04-003,Energy Absorption Structures,04_Crashworthiness,"CS-25.562, CS-25.561",53-00-04-CRASH-003,53-00-07-TEST-017,53-00-06-EXPLICIT-001,PLANNED,Crush testing of absorbers
+53-00-03-04-004,Post Crash Egress,04_Crashworthiness,"CS-25.803, CS-25.807",53-00-04-EVAC-001,53-00-07-TEST-018,53-00-06-EGRESS-001,PLANNED,90-second evacuation demo
+53-00-03-05-001,Fire Resistance Materials,05_Fire_Smoke_Toxicity,"CS-25.853, CS-25.856",53-00-04-FIRE-001,53-00-07-TEST-019,53-00-06-FIRE-001,PLANNED,Flammability per FAR 25 App F
+53-00-03-05-002,Burn Through Resistance,05_Fire_Smoke_Toxicity,CS-25.856(b),53-00-04-FIRE-002,53-00-07-TEST-020,53-00-06-THERMAL-001,PLANNED,4-minute burn-through test
+53-00-03-05-003,Smoke and Toxicity Limits,05_Fire_Smoke_Toxicity,"CS-25.853, AMC 25.853",53-00-04-FIRE-003,53-00-07-TEST-021,53-00-06-SMOKE-001,PLANNED,ASTM E662 testing
+53-00-03-05-004,Fire Containment Barriers,05_Fire_Smoke_Toxicity,"CS-25.855, CS-25.869",53-00-04-FIRE-004,53-00-07-TEST-022,53-00-06-BARRIER-001,PLANNED,Fire seal qualification
+53-00-03-06-001,Door Frame Integration,06_Interfaces_and_Installations,"CS-25.783, CS-25.807",53-00-04-DOOR-001,53-00-07-TEST-023,53-00-06-FEA-005,PLANNED,Frame distortion limits
+53-00-03-06-002,Window Integration,06_Interfaces_and_Installations,"CS-25.773, CS-25.775",53-00-04-WIN-001,53-00-07-TEST-024,53-00-06-FEA-006,PLANNED,Stress concentration analysis
+53-00-03-06-003,Systems Penetrations,06_Interfaces_and_Installations,"CS-25.869, CS-25.954",53-00-04-SYS-002,53-00-07-TEST-025,53-00-06-SEAL-001,PLANNED,Pressure seal testing
+53-00-03-06-004,Cargo Floor Integration,06_Interfaces_and_Installations,"CS-25.561, CS-25.787",53-00-04-FLOOR-001,53-00-07-TEST-026,53-00-06-FEA-007,PLANNED,Floor load distribution
+53-00-03-06-005,Landing Gear Attachments,06_Interfaces_and_Installations,"CS-25.721, CS-25.723",53-00-04-LG-001,53-00-07-TEST-027,53-00-06-FEA-008,PLANNED,Attachment fatigue life
+53-00-03-07-001,Sensor Network Coverage,07_SHM_and_Monitoring,"CS-25.1309, Internal SHM",53-00-04-SHM-003,53-00-07-TEST-028,53-00-06-COVER-001,PLANNED,Coverage map validation
+53-00-03-07-002,Data Acquisition Requirements,07_SHM_and_Monitoring,CS-25.1309,53-00-04-SHM-004,53-00-07-TEST-029,53-00-06-DATA-001,PLANNED,SNR requirements
+53-00-03-07-003,Damage Detection Sensitivity,07_SHM_and_Monitoring,CS-25.571,53-00-04-SHM-005,53-00-07-POD-002,53-00-06-POD-003,PLANNED,POD validation
+53-00-03-07-004,Predictive Analytics Integration,07_SHM_and_Monitoring,CS-25.1529,53-00-04-SHM-006,53-00-07-TEST-030,53-00-06-PREDICT-001,PLANNED,RUL algorithm validation
+53-00-03-07-005,False Alarm Rate Limits,07_SHM_and_Monitoring,CS-25.1309,53-00-04-SHM-007,53-00-07-TEST-031,53-00-06-FAR-001,PLANNED,False positive tracking

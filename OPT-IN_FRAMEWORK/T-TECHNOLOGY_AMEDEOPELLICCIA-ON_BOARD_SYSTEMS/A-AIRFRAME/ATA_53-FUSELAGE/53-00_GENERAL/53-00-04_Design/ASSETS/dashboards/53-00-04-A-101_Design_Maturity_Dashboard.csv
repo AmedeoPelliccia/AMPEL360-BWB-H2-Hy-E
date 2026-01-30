@@ -1,0 +1,7 @@
+Zone,Zone_Name,Design_Maturity_Percent,CIs_Total,CIs_Released,CIs_Detailed,CIs_Preliminary,CIs_Concept,Drawings_Total,Drawings_Released,Analysis_Complete_Percent,Last_Update
+100,Nose Section,85,7,4,2,1,0,15,12,80,2025-11-22
+200,Forward Cabin,80,9,6,2,1,0,22,16,75,2025-11-22
+300,Mid Cabin,55,8,0,2,4,2,18,4,45,2025-11-20
+400,Center Wing Box,90,11,8,2,1,0,28,24,88,2025-11-22
+500,Aft Cabin,50,8,0,1,5,2,16,2,35,2025-11-18
+600,Tail Section,45,8,0,1,4,3,14,1,30,2025-11-15

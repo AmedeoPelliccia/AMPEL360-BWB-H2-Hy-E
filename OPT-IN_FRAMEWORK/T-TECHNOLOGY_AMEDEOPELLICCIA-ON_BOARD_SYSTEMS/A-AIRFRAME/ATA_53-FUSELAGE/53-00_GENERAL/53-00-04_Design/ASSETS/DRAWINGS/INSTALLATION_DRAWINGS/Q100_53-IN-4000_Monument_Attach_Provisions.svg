@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#1a3a5c" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Fine Grid -->
+    <pattern id="fineGrid" width="125" height="125" patternUnits="userSpaceOnUse">
+      <rect width="125" height="125" fill="url(#grid)"/>
+      <path d="M 125 0 L 0 0 0 125" fill="none" stroke="#1e4a6e" stroke-width="0.5"/>
+    </pattern>
+    
+    <!-- Insulation Hatch Pattern -->
+    <pattern id="insulationHatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#f72585" stroke-width="0.6" opacity="0.3"/>
+    </pattern>
+
+    <!-- Galley Pattern -->
+    <pattern id="galleyPattern" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+       <line x1="0" y1="5" x2="10" y2="5" stroke="#ffd60a" stroke-width="1"/>
+    </pattern>
+
+    <!-- Lavatory Pattern -->
+    <pattern id="lavPattern" patternUnits="userSpaceOnUse" width="10" height="10">
+       <circle cx="5" cy="5" r="2" fill="#4361ee" opacity="0.5"/>
+    </pattern>
+
+    <!-- Stowage Pattern -->
+    <pattern id="stowPattern" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(-45)">
+       <line x1="0" y1="4" x2="8" y2="4" stroke="#06d6a0" stroke-width="1"/>
+    </pattern>
+
+    <!-- Maintenance Access Panel Pattern -->
+    <pattern id="maintenancePattern" patternUnits="userSpaceOnUse" width="6" height="6">
+       <rect width="6" height="6" fill="none" stroke="#ff9f1c" stroke-width="0.5" stroke-dasharray="2,1"/>
+    </pattern>
+
+    <!-- Standardized Symbol Definitions for Attachment Points -->
+    <!-- Primary: Square 12x12 - Floor Hardpoints -->
+    <symbol id="sym-primary" viewBox="0 0 12 12">
+      <rect x="0" y="0" width="12" height="12" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="12" y2="12" stroke="#333333" stroke-width="1"/>
+      <line x1="12" y1="0" x2="0" y2="12" stroke="#333333" stroke-width="1"/>
+    </symbol>
+    
+    <!-- Secondary: Circle r=6 - Overhead Tie-Rods -->
+    <symbol id="sym-secondary" viewBox="0 0 14 14">
+      <circle cx="7" cy="7" r="6" fill="none" stroke="#ffd60a" stroke-width="2"/>
+      <circle cx="7" cy="7" r="2" fill="#ffd60a"/>
+    </symbol>
+    
+    <!-- Structural: Triangle - Wall Brackets -->
+    <symbol id="sym-structural" viewBox="0 0 14 14">
+      <polygon points="7,1 13,13 1,13" fill="none" stroke="#06d6a0" stroke-width="2"/>
+    </symbol>
+
+    <!-- Maintenance Access Icon -->
+    <symbol id="sym-maintenance" viewBox="0 0 16 16">
+      <rect x="2" y="2" width="12" height="12" fill="none" stroke="#ff9f1c" stroke-width="1.5" rx="2"/>
+      <text x="8" y="12" text-anchor="middle" fill="#ff9f1c" font-family="Arial" font-size="10" font-weight="bold">M</text>
+    </symbol>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="1000" fill="#0a1628"/>
+  <rect width="1400" height="1000" fill="url(#fineGrid)"/>
+  
+  <!-- Main Drawing Area Border -->
+  <rect x="20" y="60" width="1360" height="800" fill="none" stroke="#4cc9f0" stroke-width="1.5"/>
+  
+  <!-- Drawing Title -->
+  <text x="700" y="35" text-anchor="middle" fill="#4cc9f0" font-family="Arial, sans-serif" font-size="22" font-weight="bold">
+    ATA 53 – FUSELAGE ZONE 100 MONUMENT ATTACHMENT PROVISIONS
+  </text>
+  <text x="700" y="52" text-anchor="middle" fill="#88c0d0" font-family="Arial, sans-serif" font-size="12">
+    BWB Forward Fuselage • Plan View • Galley, Lavatory, Crew Rest Interfaces
+  </text>
+  
+  <!-- ========== BWB GEOMETRY ========== -->
+  <path d="M 140,480 
+           Q 95,480 115,400 
+           C 160,310 240,230 400,175
+           C 580,115 820,80 1100,65
+           C 1220,58 1300,70 1330,100
+           L 1350,480
+           L 1330,860
+           C 1300,890 1220,902 1100,895
+           C 820,880 580,845 400,785
+           C 240,730 160,650 115,560
+           Q 95,480 140,480"
+        fill="none" stroke="#4cc9f0" stroke-width="3"/>
+
+  <!-- ========== ZONE 100 BOUNDARY ANNOTATION (ATA COMPLIANCE) ========== -->
+  <path d="M 140,480 
+           Q 95,480 115,400 
+           C 160,310 240,230 400,175
+           C 580,115 820,80 1100,65
+           C 1220,58 1300,70 1330,100
+           L 1350,480
+           L 1330,860
+           C 1300,890 1220,902 1100,895
+           C 820,880 580,845 400,785
+           C 240,730 160,650 115,560
+           Q 95,480 140,480"
+        fill="none" stroke="#00ff88" stroke-width="2" stroke-dasharray="15,5,5,5" opacity="0.7"/>
+  <rect x="1180" y="430" width="160" height="50" fill="#0d1f38" stroke="#00ff88" stroke-width="1.5" rx="5"/>
+  <text x="1260" y="450" text-anchor="middle" fill="#00ff88" font-family="Arial" font-size="11" font-weight="bold">ZONE 100 BOUNDARY</text>
+  <text x="1260" y="468" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="9">ATA 53 FUSELAGE FWD</text>
+        
+  <!-- Wing Contours -->
+  <path d="M 220,450 C 350,390 600,330 950,295" fill="none" stroke="#2a5a7a" stroke-width="0.8" stroke-dasharray="12,6"/>
+  <path d="M 220,510 C 350,570 600,630 950,665" fill="none" stroke="#2a5a7a" stroke-width="0.8" stroke-dasharray="12,6"/>
+
+  <!-- ========== FRAME STATIONS ========== -->
+  <line x1="200" y1="340" x2="200" y2="620" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="10,5"/>
+  <line x1="350" y1="250" x2="350" y2="710" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="10,5"/>
+  <line x1="500" y1="200" x2="500" y2="760" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="10,5"/>
+  <line x1="650" y1="160" x2="650" y2="800" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="10,5"/>
+  <line x1="800" y1="130" x2="800" y2="830" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="10,5"/>
+  <line x1="950" y1="110" x2="950" y2="850" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="10,5"/>
+  <line x1="1100" y1="95" x2="1100" y2="865" stroke="#ffd60a" stroke-width="1.5" stroke-dasharray="10,5"/>
+
+  <!-- Frame Station Labels -->
+  <text x="200" y="330" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="11" font-weight="bold">FS 0</text>
+  <text x="350" y="240" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="11" font-weight="bold">FS 150</text>
+  <text x="500" y="190" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="11" font-weight="bold">FS 300</text>
+  <text x="650" y="150" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="11" font-weight="bold">FS 450</text>
+  <text x="800" y="120" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="11" font-weight="bold">FS 600</text>
+  <text x="950" y="100" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="11" font-weight="bold">FS 750</text>
+  <text x="1100" y="85" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="11" font-weight="bold">FS 900</text>
+
+  <!-- ========== COCKPIT ZONE ========== -->
+  <path d="M 140,480 Q 115,480 130,420 C 160,360 200,310 260,280 
+           L 310,280 L 330,330 L 330,630 L 310,680 L 260,680 
+           C 200,650 160,600 130,540 Q 115,480 140,480"
+        fill="#7209b7" fill-opacity="0.25" stroke="#7209b7" stroke-width="2"/>
+  <text x="220" y="475" text-anchor="middle" fill="#d4a5ff" font-family="Arial" font-size="14" font-weight="bold">COCKPIT</text>
+  <text x="220" y="495" text-anchor="middle" fill="#d4a5ff" font-family="monospace" font-size="9">ZONE 100A</text>
+
+  <!-- ========== H2 TANK REFERENCE ========== -->
+  <rect x="480" y="380" width="620" height="200" rx="100" ry="100" 
+        fill="url(#insulationHatch)" stroke="#f72585" stroke-width="2.5" stroke-dasharray="18,6"/>
+  <text x="790" y="470" text-anchor="middle" fill="#f72585" font-family="Arial" font-size="16" font-weight="bold">CRYOGENIC LH₂ TANK ZONE</text>
+  <text x="790" y="495" text-anchor="middle" fill="#ffb3d9" font-family="monospace" font-size="11">NO MONUMENT ATTACHMENT PERMITTED</text>
+  <text x="790" y="515" text-anchor="middle" fill="#ffb3d9" font-family="monospace" font-size="9">THERMAL ISOLATION REQUIRED</text>
+
+  <!-- ========== BIFURCATION BULKHEADS ========== -->
+  <line x1="350" y1="365" x2="1100" y2="360" stroke="#ff6b35" stroke-width="3"/>
+  <text x="725" y="352" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">PORT BIFURCATION BULKHEAD</text>
+  
+  <line x1="350" y1="595" x2="1100" y2="600" stroke="#ff6b35" stroke-width="3"/>
+  <text x="725" y="618" text-anchor="middle" fill="#ff6b35" font-family="monospace" font-size="8">STBD BIFURCATION BULKHEAD</text>
+
+  <!-- ========== PORT PASSENGER LOBE ========== -->
+  <path d="M 340,280 C 450,220 650,180 900,160 L 1050,155 L 1100,180 
+           L 1100,355 L 900,350 C 650,345 450,340 340,360 Z"
+        fill="#4361ee" fill-opacity="0.1" stroke="#4361ee" stroke-width="1.5"/>
+  <text x="700" y="260" text-anchor="middle" fill="#4361ee" font-family="Arial" font-size="12" font-weight="bold">PORT PASSENGER LOBE</text>
+  <text x="700" y="278" text-anchor="middle" fill="#7b9ff5" font-family="monospace" font-size="9">ZONE 100B-P</text>
+
+  <!-- ========== STARBOARD PASSENGER LOBE ========== -->
+  <path d="M 340,680 C 450,740 650,780 900,800 L 1050,805 L 1100,780 
+           L 1100,605 L 900,610 C 650,615 450,620 340,600 Z"
+        fill="#4361ee" fill-opacity="0.1" stroke="#4361ee" stroke-width="1.5"/>
+  <text x="700" y="700" text-anchor="middle" fill="#4361ee" font-family="Arial" font-size="12" font-weight="bold">STARBOARD PASSENGER LOBE</text>
+  <text x="700" y="718" text-anchor="middle" fill="#7b9ff5" font-family="monospace" font-size="9">ZONE 100B-S</text>
+
+  <!-- ========== MONUMENTS - PORT SIDE ========== -->
+
+  <!-- G1: Forward Port Galley -->
+  <rect x="400" y="185" width="150" height="80" fill="url(#galleyPattern)" fill-opacity="0.6" stroke="#ffd60a" stroke-width="2" rx="5"/>
+  <text x="475" y="220" text-anchor="middle" fill="#ffd60a" font-family="Arial" font-size="12" font-weight="bold">G1</text>
+  <text x="475" y="238" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="9">FWD GALLEY</text>
+  <text x="475" y="255" text-anchor="middle" fill="#ccaa00" font-family="monospace" font-size="8">FS 200-350</text>
+  <!-- G1 Monument Dimension Callout -->
+  <text x="475" y="178" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="7">3000 × 1600 mm</text>
+  
+  <!-- Maintenance Access Panel - G1 -->
+  <use href="#sym-maintenance" x="548" y="178" width="16" height="16"/>
+  <text x="565" y="175" fill="#ff9f1c" font-family="monospace" font-size="6">MA-G1</text>
+  
+  <!-- G1 Floor Hardpoints -->
+  <rect x="408" y="193" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="408" y1="193" x2="418" y2="203" stroke="#333333" stroke-width="1"/>
+  <line x1="418" y1="193" x2="408" y2="203" stroke="#333333" stroke-width="1"/>
+  <text x="413" y="188" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">FP1</text>
+  
+  <rect x="538" y="193" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="538" y1="193" x2="548" y2="203" stroke="#333333" stroke-width="1"/>
+  <line x1="548" y1="193" x2="538" y2="203" stroke="#333333" stroke-width="1"/>
+  <text x="543" y="188" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">FP2</text>
+  
+  <rect x="408" y="253" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="408" y1="253" x2="418" y2="263" stroke="#333333" stroke-width="1"/>
+  <line x1="418" y1="253" x2="408" y2="263" stroke="#333333" stroke-width="1"/>
+  <text x="413" y="275" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">FP3</text>
+  
+  <rect x="538" y="253" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="538" y1="253" x2="548" y2="263" stroke="#333333" stroke-width="1"/>
+  <line x1="548" y1="253" x2="538" y2="263" stroke="#333333" stroke-width="1"/>
+  <text x="543" y="275" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">FP4</text>
+  
+  <!-- G1 Overhead Tie-Rods -->
+  <circle cx="430" cy="225" r="6" fill="none" stroke="#ffd60a" stroke-width="2"/>
+  <circle cx="430" cy="225" r="2" fill="#ffd60a"/>
+  <text x="430" y="215" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">TR1</text>
+  
+  <circle cx="520" cy="225" r="6" fill="none" stroke="#ffd60a" stroke-width="2"/>
+  <circle cx="520" cy="225" r="2" fill="#ffd60a"/>
+  <text x="520" y="215" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">TR2</text>
+
+  <!-- L1: Forward Port Lavatory -->
+  <rect x="600" y="175" width="90" height="90" fill="url(#lavPattern)" fill-opacity="0.6" stroke="#4361ee" stroke-width="2" rx="5"/>
+  <text x="645" y="215" text-anchor="middle" fill="#4361ee" font-family="Arial" font-size="14" font-weight="bold">L1</text>
+  <text x="645" y="235" text-anchor="middle" fill="#4361ee" font-family="monospace" font-size="9">LAVATORY</text>
+  <text x="645" y="252" text-anchor="middle" fill="#6b8ccc" font-family="monospace" font-size="8">FS 350-450</text>
+  <!-- L1 Monument Dimension Callout -->
+  <text x="645" y="168" text-anchor="middle" fill="#4361ee" font-family="monospace" font-size="7">1800 × 1800 mm</text>
+  
+  <!-- Maintenance Access Panel - L1 -->
+  <use href="#sym-maintenance" x="682" y="170" width="16" height="16"/>
+  <text x="698" y="168" fill="#ff9f1c" font-family="monospace" font-size="6">MA-L1</text>
+  
+  <!-- L1 Floor Hardpoints -->
+  <rect x="608" y="183" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="608" y1="183" x2="618" y2="193" stroke="#333333" stroke-width="1"/>
+  <line x1="618" y1="183" x2="608" y2="193" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="672" y="183" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="672" y1="183" x2="682" y2="193" stroke="#333333" stroke-width="1"/>
+  <line x1="682" y1="183" x2="672" y2="193" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="608" y="253" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="608" y1="253" x2="618" y2="263" stroke="#333333" stroke-width="1"/>
+  <line x1="618" y1="253" x2="608" y2="263" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="672" y="253" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="672" y1="253" x2="682" y2="263" stroke="#333333" stroke-width="1"/>
+  <line x1="682" y1="253" x2="672" y2="263" stroke="#333333" stroke-width="1"/>
+  
+  <!-- L1 Wall Bracket -->
+  <polygon points="645,175 652,162 638,162" fill="none" stroke="#06d6a0" stroke-width="2"/>
+  <text x="645" y="158" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="6">WB1</text>
+
+  <!-- S1: Port Stowage -->
+  <rect x="750" y="185" width="70" height="65" fill="url(#stowPattern)" fill-opacity="0.6" stroke="#06d6a0" stroke-width="2" rx="5"/>
+  <text x="785" y="215" text-anchor="middle" fill="#06d6a0" font-family="Arial" font-size="12" font-weight="bold">S1</text>
+  <text x="785" y="232" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="8">STOWAGE</text>
+  <!-- S1 Monument Dimension Callout -->
+  <text x="785" y="178" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="7">1400 × 1300 mm</text>
+  
+  <!-- S1 Floor Hardpoints -->
+  <rect x="758" y="193" width="8" height="8" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="758" y1="193" x2="766" y2="201" stroke="#333333" stroke-width="1"/>
+  <line x1="766" y1="193" x2="758" y2="201" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="804" y="193" width="8" height="8" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="804" y1="193" x2="812" y2="201" stroke="#333333" stroke-width="1"/>
+  <line x1="812" y1="193" x2="804" y2="201" stroke="#333333" stroke-width="1"/>
+
+  <!-- ========== MONUMENTS - STARBOARD SIDE ========== -->
+
+  <!-- G2: Forward Starboard Galley -->
+  <rect x="400" y="695" width="150" height="80" fill="url(#galleyPattern)" fill-opacity="0.6" stroke="#ffd60a" stroke-width="2" rx="5"/>
+  <text x="475" y="730" text-anchor="middle" fill="#ffd60a" font-family="Arial" font-size="12" font-weight="bold">G2</text>
+  <text x="475" y="748" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="9">FWD GALLEY</text>
+  <text x="475" y="765" text-anchor="middle" fill="#ccaa00" font-family="monospace" font-size="8">FS 200-350</text>
+  <!-- G2 Monument Dimension Callout -->
+  <text x="475" y="785" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="7">3000 × 1600 mm</text>
+  
+  <!-- Maintenance Access Panel - G2 -->
+  <use href="#sym-maintenance" x="548" y="770" width="16" height="16"/>
+  <text x="565" y="792" fill="#ff9f1c" font-family="monospace" font-size="6">MA-G2</text>
+  
+  <!-- G2 Floor Hardpoints -->
+  <rect x="408" y="703" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="408" y1="703" x2="418" y2="713" stroke="#333333" stroke-width="1"/>
+  <line x1="418" y1="703" x2="408" y2="713" stroke="#333333" stroke-width="1"/>
+  <text x="413" y="698" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">FP5</text>
+  
+  <rect x="538" y="703" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="538" y1="703" x2="548" y2="713" stroke="#333333" stroke-width="1"/>
+  <line x1="548" y1="703" x2="538" y2="713" stroke="#333333" stroke-width="1"/>
+  <text x="543" y="698" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">FP6</text>
+  
+  <rect x="408" y="763" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="408" y1="763" x2="418" y2="773" stroke="#333333" stroke-width="1"/>
+  <line x1="418" y1="763" x2="408" y2="773" stroke="#333333" stroke-width="1"/>
+  <text x="413" y="785" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">FP7</text>
+  
+  <rect x="538" y="763" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="538" y1="763" x2="548" y2="773" stroke="#333333" stroke-width="1"/>
+  <line x1="548" y1="763" x2="538" y2="773" stroke="#333333" stroke-width="1"/>
+  <text x="543" y="785" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="7">FP8</text>
+  
+  <!-- G2 Overhead Tie-Rods -->
+  <circle cx="430" cy="735" r="6" fill="none" stroke="#ffd60a" stroke-width="2"/>
+  <circle cx="430" cy="735" r="2" fill="#ffd60a"/>
+  <text x="430" y="750" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">TR3</text>
+  
+  <circle cx="520" cy="735" r="6" fill="none" stroke="#ffd60a" stroke-width="2"/>
+  <circle cx="520" cy="735" r="2" fill="#ffd60a"/>
+  <text x="520" y="750" text-anchor="middle" fill="#ffd60a" font-family="monospace" font-size="6">TR4</text>
+
+  <!-- L2: Forward Starboard Lavatory -->
+  <rect x="600" y="695" width="90" height="90" fill="url(#lavPattern)" fill-opacity="0.6" stroke="#4361ee" stroke-width="2" rx="5"/>
+  <text x="645" y="735" text-anchor="middle" fill="#4361ee" font-family="Arial" font-size="14" font-weight="bold">L2</text>
+  <text x="645" y="755" text-anchor="middle" fill="#4361ee" font-family="monospace" font-size="9">LAVATORY</text>
+  <text x="645" y="772" text-anchor="middle" fill="#6b8ccc" font-family="monospace" font-size="8">FS 350-450</text>
+  <!-- L2 Monument Dimension Callout -->
+  <text x="645" y="795" text-anchor="middle" fill="#4361ee" font-family="monospace" font-size="7">1800 × 1800 mm</text>
+  
+  <!-- Maintenance Access Panel - L2 -->
+  <use href="#sym-maintenance" x="682" y="778" width="16" height="16"/>
+  <text x="698" y="800" fill="#ff9f1c" font-family="monospace" font-size="6">MA-L2</text>
+  
+  <!-- L2 Floor Hardpoints -->
+  <rect x="608" y="703" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="608" y1="703" x2="618" y2="713" stroke="#333333" stroke-width="1"/>
+  <line x1="618" y1="703" x2="608" y2="713" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="672" y="703" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="672" y1="703" x2="682" y2="713" stroke="#333333" stroke-width="1"/>
+  <line x1="682" y1="703" x2="672" y2="713" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="608" y="773" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="608" y1="773" x2="618" y2="783" stroke="#333333" stroke-width="1"/>
+  <line x1="618" y1="773" x2="608" y2="783" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="672" y="773" width="10" height="10" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="672" y1="773" x2="682" y2="783" stroke="#333333" stroke-width="1"/>
+  <line x1="682" y1="773" x2="672" y2="783" stroke="#333333" stroke-width="1"/>
+  
+  <!-- L2 Wall Bracket -->
+  <polygon points="645,785 652,798 638,798" fill="none" stroke="#06d6a0" stroke-width="2"/>
+  <text x="645" y="808" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="6">WB2</text>
+
+  <!-- S2: Starboard Stowage -->
+  <rect x="750" y="710" width="70" height="65" fill="url(#stowPattern)" fill-opacity="0.6" stroke="#06d6a0" stroke-width="2" rx="5"/>
+  <text x="785" y="740" text-anchor="middle" fill="#06d6a0" font-family="Arial" font-size="12" font-weight="bold">S2</text>
+  <text x="785" y="757" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="8">STOWAGE</text>
+  <!-- S2 Monument Dimension Callout -->
+  <text x="785" y="783" text-anchor="middle" fill="#06d6a0" font-family="monospace" font-size="7">1400 × 1300 mm</text>
+
+  <!-- ========== CREW REST MODULE (Optional) ========== -->
+  <rect x="950" y="280" width="130" height="100" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="8,4" rx="8"/>
+  <text x="1015" y="325" text-anchor="middle" fill="#8b5cf6" font-family="Arial" font-size="12" font-weight="bold">CR1</text>
+  <text x="1015" y="345" text-anchor="middle" fill="#8b5cf6" font-family="monospace" font-size="9">CREW REST</text>
+  <text x="1015" y="362" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="8">(OPTIONAL)</text>
+  <!-- CR1 Monument Dimension Callout -->
+  <text x="1015" y="273" text-anchor="middle" fill="#8b5cf6" font-family="monospace" font-size="7">2600 × 2000 mm</text>
+  
+  <!-- CR1 Attachments -->
+  <rect x="958" y="288" width="8" height="8" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="958" y1="288" x2="966" y2="296" stroke="#333333" stroke-width="1"/>
+  <line x1="966" y1="288" x2="958" y2="296" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="1064" y="288" width="8" height="8" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="1064" y1="288" x2="1072" y2="296" stroke="#333333" stroke-width="1"/>
+  <line x1="1072" y1="288" x2="1064" y2="296" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="958" y="370" width="8" height="8" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="958" y1="370" x2="966" y2="378" stroke="#333333" stroke-width="1"/>
+  <line x1="966" y1="370" x2="958" y2="378" stroke="#333333" stroke-width="1"/>
+  
+  <rect x="1064" y="370" width="8" height="8" fill="#ffffff" stroke="#333333" stroke-width="1"/>
+  <line x1="1064" y1="370" x2="1072" y2="378" stroke="#333333" stroke-width="1"/>
+  <line x1="1072" y1="370" x2="1064" y2="378" stroke="#333333" stroke-width="1"/>
+
+  <!-- CR2: Starboard Crew Rest -->
+  <rect x="950" y="580" width="130" height="100" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="8,4" rx="8"/>
+  <text x="1015" y="625" text-anchor="middle" fill="#8b5cf6" font-family="Arial" font-size="12" font-weight="bold">CR2</text>
+  <text x="1015" y="645" text-anchor="middle" fill="#8b5cf6" font-family="monospace" font-size="9">CREW REST</text>
+  <text x="1015" y="662" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="8">(OPTIONAL)</text>
+  <!-- CR2 Monument Dimension Callout -->
+  <text x="1015" y="690" text-anchor="middle" fill="#8b5cf6" font-family="monospace" font-size="7">2600 × 2000 mm</text>
+
+  <!-- ========== CENTERLINE ========== -->
+  <line x1="100" y1="480" x2="1350" y2="480" stroke="#88c0d0" stroke-width="1" stroke-dasharray="20,6,4,6"/>
+  <text x="1360" y="483" fill="#88c0d0" font-family="monospace" font-size="10">℄</text>
+
+  <!-- ========== ATTACHMENT SUMMARY TABLE ========== -->
+  <rect x="35" y="75" width="200" height="220" fill="#0d1f38" fill-opacity="0.95" stroke="#4cc9f0" stroke-width="1"/>
+  <text x="135" y="95" text-anchor="middle" fill="#4cc9f0" font-family="Arial" font-size="11" font-weight="bold">MONUMENT SCHEDULE</text>
+  <line x1="35" y1="102" x2="235" y2="102" stroke="#4cc9f0" stroke-width="0.5"/>
+  
+  <!-- Table Headers -->
+  <text x="55" y="118" fill="#88c0d0" font-family="monospace" font-size="8" font-weight="bold">ID</text>
+  <text x="85" y="118" fill="#88c0d0" font-family="monospace" font-size="8" font-weight="bold">TYPE</text>
+  <text x="140" y="118" fill="#88c0d0" font-family="monospace" font-size="8" font-weight="bold">FS</text>
+  <text x="185" y="118" fill="#88c0d0" font-family="monospace" font-size="8" font-weight="bold">SIDE</text>
+  <line x1="35" y1="123" x2="235" y2="123" stroke="#4cc9f0" stroke-width="0.3"/>
+  
+  <!-- Table Data -->
+  <text x="55" y="138" fill="white" font-family="monospace" font-size="8">G1</text>
+  <text x="85" y="138" fill="#ffd60a" font-family="monospace" font-size="8">GALLEY</text>
+  <text x="140" y="138" fill="white" font-family="monospace" font-size="8">200-350</text>
+  <text x="185" y="138" fill="white" font-family="monospace" font-size="8">PORT</text>
+  
+  <text x="55" y="153" fill="white" font-family="monospace" font-size="8">G2</text>
+  <text x="85" y="153" fill="#ffd60a" font-family="monospace" font-size="8">GALLEY</text>
+  <text x="140" y="153" fill="white" font-family="monospace" font-size="8">200-350</text>
+  <text x="185" y="153" fill="white" font-family="monospace" font-size="8">STBD</text>
+  
+  <text x="55" y="168" fill="white" font-family="monospace" font-size="8">L1</text>
+  <text x="85" y="168" fill="#4361ee" font-family="monospace" font-size="8">LAV</text>
+  <text x="140" y="168" fill="white" font-family="monospace" font-size="8">350-450</text>
+  <text x="185" y="168" fill="white" font-family="monospace" font-size="8">PORT</text>
+  
+  <text x="55" y="183" fill="white" font-family="monospace" font-size="8">L2</text>
+  <text x="85" y="183" fill="#4361ee" font-family="monospace" font-size="8">LAV</text>
+  <text x="140" y="183" fill="white" font-family="monospace" font-size="8">350-450</text>
+  <text x="185" y="183" fill="white" font-family="monospace" font-size="8">STBD</text>
+  
+  <text x="55" y="198" fill="white" font-family="monospace" font-size="8">S1</text>
+  <text x="85" y="198" fill="#06d6a0" font-family="monospace" font-size="8">STOW</text>
+  <text x="140" y="198" fill="white" font-family="monospace" font-size="8">450-550</text>
+  <text x="185" y="198" fill="white" font-family="monospace" font-size="8">PORT</text>
+  
+  <text x="55" y="213" fill="white" font-family="monospace" font-size="8">S2</text>
+  <text x="85" y="213" fill="#06d6a0" font-family="monospace" font-size="8">STOW</text>
+  <text x="140" y="213" fill="white" font-family="monospace" font-size="8">450-550</text>
+  <text x="185" y="213" fill="white" font-family="monospace" font-size="8">STBD</text>
+  
+  <text x="55" y="228" fill="white" font-family="monospace" font-size="8">CR1</text>
+  <text x="85" y="228" fill="#8b5cf6" font-family="monospace" font-size="8">CREW</text>
+  <text x="140" y="228" fill="white" font-family="monospace" font-size="8">700-850</text>
+  <text x="185" y="228" fill="white" font-family="monospace" font-size="8">PORT</text>
+  
+  <text x="55" y="243" fill="white" font-family="monospace" font-size="8">CR2</text>
+  <text x="85" y="243" fill="#8b5cf6" font-family="monospace" font-size="8">CREW</text>
+  <text x="140" y="243" fill="white" font-family="monospace" font-size="8">700-850</text>
+  <text x="185" y="243" fill="white" font-family="monospace" font-size="8">STBD</text>
+  
+  <line x1="35" y1="268" x2="235" y2="268" stroke="#4cc9f0" stroke-width="0.3"/>
+  <text x="135" y="283" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="8">TOTAL: 8 MONUMENTS</text>
+
+  <!-- ========== ATTACHMENT POINT QUANTITIES SUMMARY ========== -->
+  <rect x="35" y="310" width="200" height="95" fill="#0d1f38" fill-opacity="0.95" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="135" y="328" text-anchor="middle" fill="#00ff88" font-family="Arial" font-size="11" font-weight="bold">ATTACHMENT POINT SUMMARY</text>
+  <line x1="35" y1="335" x2="235" y2="335" stroke="#00ff88" stroke-width="0.5"/>
+  
+  <!-- Summary by Type -->
+  <use href="#sym-primary" x="45" y="345" width="12" height="12"/>
+  <text x="65" y="355" fill="white" font-family="monospace" font-size="9">PRIMARY (Floor):</text>
+  <text x="195" y="355" fill="#ffffff" font-family="monospace" font-size="10" font-weight="bold">24</text>
+  
+  <use href="#sym-secondary" x="44" y="362" width="14" height="14"/>
+  <text x="65" y="375" fill="white" font-family="monospace" font-size="9">SECONDARY (Tie-Rod):</text>
+  <text x="195" y="375" fill="#ffd60a" font-family="monospace" font-size="10" font-weight="bold">4</text>
+  
+  <use href="#sym-structural" x="44" y="382" width="14" height="14"/>
+  <text x="65" y="395" fill="white" font-family="monospace" font-size="9">STRUCTURAL (Bracket):</text>
+  <text x="195" y="395" fill="#06d6a0" font-family="monospace" font-size="10" font-weight="bold">2</text>
+  
+  <line x1="45" y1="398" x2="225" y2="398" stroke="#00ff88" stroke-width="0.3"/>
+  <text x="65" y="410" fill="#00ff88" font-family="monospace" font-size="9" font-weight="bold">TOTAL ATTACH POINTS:</text>
+  <text x="195" y="410" fill="#00ff88" font-family="monospace" font-size="11" font-weight="bold">30</text>
+
+  <!-- ========== LEGEND BOX - REPOSITIONED FOR BETTER VISUAL FLOW ========== -->
+  <rect x="35" y="430" width="200" height="140" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
+  <text x="135" y="448" text-anchor="middle" fill="#4cc9f0" font-family="Arial" font-size="11" font-weight="bold">LEGEND – ATTACHMENT TYPES</text>
+  <line x1="35" y1="455" x2="235" y2="455" stroke="#4cc9f0" stroke-width="0.5"/>
+  
+  <!-- Type 1: Floor Hardpoint - Square Symbol (12x12) -->
+  <use href="#sym-primary" x="45" y="465" width="12" height="12"/>
+  <text x="65" y="476" fill="white" font-family="monospace" font-size="8">TYPE 1: FLOOR HARDPOINT</text>
+  <text x="65" y="488" fill="#88c0d0" font-family="monospace" font-size="7">(Seat Track/Beam) 22kN</text>
+
+  <!-- Type 2: Overhead Tie-Rod - Circle Symbol -->
+  <use href="#sym-secondary" x="44" y="495" width="14" height="14"/>
+  <text x="65" y="508" fill="white" font-family="monospace" font-size="8">TYPE 2: OVERHEAD TIE-ROD</text>
+  <text x="65" y="520" fill="#88c0d0" font-family="monospace" font-size="7">(Frame Mounted) 10kN</text>
+
+  <!-- Type 3: Wall Bracket - Triangle Symbol -->
+  <use href="#sym-structural" x="44" y="527" width="14" height="14"/>
+  <text x="65" y="540" fill="white" font-family="monospace" font-size="8">TYPE 3: WALL BRACKET</text>
+  <text x="65" y="552" fill="#88c0d0" font-family="monospace" font-size="7">(Intercostal) 15kN</text>
+
+  <!-- Type 4: Maintenance Access -->
+  <use href="#sym-maintenance" x="44" y="555" width="16" height="16"/>
+  <text x="68" y="568" fill="white" font-family="monospace" font-size="8">MAINTENANCE ACCESS</text>
+  <text x="68" y="580" fill="#ff9f1c" font-family="monospace" font-size="7">Liner Removal Panel</text>
+
+  <!-- ========== BOTTOM LEGEND - QUICK REFERENCE ========== -->
+  <rect x="20" y="875" width="480" height="110" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
+  <text x="35" y="895" fill="#4cc9f0" font-family="Arial" font-size="12" font-weight="bold">QUICK REFERENCE – SYMBOLS</text>
+  <line x1="20" y1="903" x2="500" y2="903" stroke="#4cc9f0" stroke-width="0.5"/>
+  
+  <!-- Type 1: Floor Hardpoint -->
+  <use href="#sym-primary" x="35" y="912" width="12" height="12"/>
+  <text x="60" y="926" fill="white" font-family="monospace" font-size="9">FLOOR HARDPOINT (22kN Ultimate)</text>
+
+  <!-- Type 2: Overhead Tie-Rod -->
+  <use href="#sym-secondary" x="34" y="936" width="14" height="14"/>
+  <text x="60" y="954" fill="white" font-family="monospace" font-size="9">OVERHEAD TIE-ROD (10kN Ultimate)</text>
+
+  <!-- Type 3: Wall Bracket -->
+  <use href="#sym-structural" x="34" y="958" width="14" height="14"/>
+  <text x="60" y="976" fill="white" font-family="monospace" font-size="9">WALL BRACKET (15kN Ultimate)</text>
+
+  <!-- ========== MONUMENT ZONES LEGEND ========== -->
+  <rect x="510" y="875" width="280" height="110" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
+  <text x="525" y="895" fill="#4cc9f0" font-family="Arial" font-size="12" font-weight="bold">MONUMENT ZONES</text>
+  <line x1="510" y1="903" x2="790" y2="903" stroke="#4cc9f0" stroke-width="0.5"/>
+  
+  <rect x="525" y="915" width="20" height="12" fill="url(#galleyPattern)" stroke="#ffd60a" stroke-width="1"/>
+  <text x="555" y="925" fill="white" font-family="monospace" font-size="9">GALLEY (G) – ATA 25-30</text>
+
+  <rect x="525" y="935" width="20" height="12" fill="url(#lavPattern)" stroke="#4361ee" stroke-width="1"/>
+  <text x="555" y="945" fill="white" font-family="monospace" font-size="9">LAVATORY (L) – ATA 25-40</text>
+
+  <rect x="525" y="955" width="20" height="12" fill="url(#stowPattern)" stroke="#06d6a0" stroke-width="1"/>
+  <text x="555" y="965" fill="white" font-family="monospace" font-size="9">STOWAGE (S) – ATA 25-20</text>
+
+  <rect x="525" y="975" width="20" height="12" fill="#8b5cf6" fill-opacity="0.3" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="555" y="985" fill="white" font-family="monospace" font-size="9">CREW REST (CR) – ATA 25-60</text>
+
+  <!-- ========== NOTES ========== -->
+  <rect x="800" y="875" width="270" height="110" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1"/>
+  <text x="815" y="895" fill="#4cc9f0" font-family="Arial" font-size="11" font-weight="bold">NOTES</text>
+  <line x1="800" y1="903" x2="1070" y2="903" stroke="#4cc9f0" stroke-width="0.5"/>
+  <text x="810" y="920" fill="white" font-family="monospace" font-size="8">1. ALL DIMENSIONS IN MM</text>
+  <text x="810" y="935" fill="white" font-family="monospace" font-size="8">2. FS = FUSELAGE STATION</text>
+  <text x="810" y="950" fill="white" font-family="monospace" font-size="8">3. FLOOR HARDPOINTS: 22kN ULTIMATE</text>
+  <text x="810" y="965" fill="white" font-family="monospace" font-size="8">4. TIE-RODS: 10kN ULTIMATE</text>
+  <text x="810" y="980" fill="white" font-family="monospace" font-size="8">5. SEE SRM 25-00-00 FOR DETAILS</text>
+
+  <!-- ========== TITLE BLOCK ========== -->
+  <rect x="1080" y="875" width="300" height="110" fill="#0d1f38" stroke="#4cc9f0" stroke-width="1.5"/>
+  
+  <line x1="1080" y1="905" x2="1380" y2="905" stroke="#4cc9f0" stroke-width="0.5"/>
+  <line x1="1080" y1="930" x2="1380" y2="930" stroke="#4cc9f0" stroke-width="0.5"/>
+  <line x1="1080" y1="955" x2="1380" y2="955" stroke="#4cc9f0" stroke-width="0.5"/>
+  <line x1="1200" y1="930" x2="1200" y2="985" stroke="#4cc9f0" stroke-width="0.5"/>
+  <line x1="1280" y1="955" x2="1280" y2="985" stroke="#4cc9f0" stroke-width="0.5"/>
+  
+  <text x="1090" y="898" fill="#4cc9f0" font-family="monospace" font-size="9">GAIA AIR – AMPEL360 BWB AIRCRAFT</text>
+  <text x="1300" y="898" fill="#88c0d0" font-family="monospace" font-size="8">PLAN VIEW</text>
+  
+  <text x="1090" y="922" fill="white" font-family="monospace" font-size="8">TITLE: ZONE 100 MONUMENT PROVISIONS</text>
+  
+  <text x="1090" y="948" fill="white" font-family="monospace" font-size="8">DWG NO:</text>
+  <text x="1150" y="948" fill="#ffd60a" font-family="monospace" font-size="11" font-weight="bold">53-IN-4000</text>
+  
+  <text x="1090" y="972" fill="white" font-family="monospace" font-size="8">SCALE:</text>
+  <text x="1130" y="972" fill="white" font-family="monospace" font-size="9">1:50</text>
+  <text x="1210" y="972" fill="white" font-family="monospace" font-size="8">REV:</text>
+  <text x="1240" y="972" fill="#06d6a0" font-family="monospace" font-size="10" font-weight="bold">B</text>
+  <text x="1290" y="972" fill="white" font-family="monospace" font-size="8">DATE:</text>
+  <text x="1330" y="972" fill="white" font-family="monospace" font-size="9">2025-11-25</text>
+  
+  <text x="1090" y="982" fill="#88c0d0" font-family="monospace" font-size="7">SHEET 1 OF 1</text>
+
+  <!-- ========== SCALE BAR ========== -->
+  <rect x="1150" y="810" width="130" height="35" fill="#0d1f38" fill-opacity="0.8"/>
+  <text x="1215" y="822" text-anchor="middle" fill="#4cc9f0" font-family="monospace" font-size="9">SCALE 1:50 (METERS)</text>
+  <rect x="1160" y="828" width="25" height="6" fill="white"/>
+  <rect x="1185" y="828" width="25" height="6" fill="#0a1628" stroke="white" stroke-width="0.5"/>
+  <rect x="1210" y="828" width="25" height="6" fill="white"/>
+  <rect x="1235" y="828" width="25" height="6" fill="#0a1628" stroke="white" stroke-width="0.5"/>
+  <text x="1160" y="845" text-anchor="middle" fill="white" font-family="monospace" font-size="7">0</text>
+  <text x="1185" y="845" text-anchor="middle" fill="white" font-family="monospace" font-size="7">1.5</text>
+  <text x="1210" y="845" text-anchor="middle" fill="white" font-family="monospace" font-size="7">3</text>
+  <text x="1235" y="845" text-anchor="middle" fill="white" font-family="monospace" font-size="7">4.5</text>
+  <text x="1260" y="845" text-anchor="middle" fill="white" font-family="monospace" font-size="7">6m</text>
+
+  <!-- ========== DIRECTIONAL INDICATOR ========== -->
+  <circle cx="1300" cy="780" r="40" fill="none" stroke="#4cc9f0" stroke-width="1"/>
+  <polygon points="1300,745 1305,760 1295,760" fill="#4cc9f0"/>
+  <text x="1300" y="738" text-anchor="middle" fill="#4cc9f0" font-family="Arial" font-size="12" font-weight="bold">FWD</text>
+  <text x="1300" y="788" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="7">LOOKING</text>
+  <text x="1300" y="798" text-anchor="middle" fill="#88c0d0" font-family="monospace" font-size="7">DOWN</text>
+
+</svg>

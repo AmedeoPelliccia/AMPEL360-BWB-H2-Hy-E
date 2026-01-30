@@ -22,6 +22,7 @@ tools/
 ├── package_geometry_data.py
 ├── create_release_bundle.py
 ├── generate_summary_tables.py
+├── count_repo_stats.py
 └── README.md
 
 /cd/ (at repo root)
@@ -670,6 +671,55 @@ Converts to:
 * Creating summary tables for design reviews
 * Consolidating analysis data for reports
 * Maintaining consistency between source data and documentation
+
+---
+
+## Repository Statistics Counter
+
+**Script:** `tools/count_repo_stats.py`
+
+Counts the total number of files and folders in the repository, providing a quick overview of repository size and structure.
+
+#### Usage
+
+```bash
+# Count files and folders in current directory
+python3 tools/count_repo_stats.py
+
+# Count with verbose output
+python3 tools/count_repo_stats.py --verbose
+
+# Count files and folders in a specific path
+python3 tools/count_repo_stats.py --path /path/to/directory
+```
+
+#### Output
+
+Displays a formatted summary with:
+
+* Total number of files
+* Total number of folders
+* Total number of items (files + folders)
+
+Example output:
+
+```text
+============================================================
+AMPEL360 Repository Statistics
+============================================================
+Total Files:   14,711
+Total Folders: 6,282
+Total Items:   20,993
+============================================================
+```
+
+#### Use Cases
+
+* Quick repository size assessment
+* Monitoring repository growth over time
+* Generating statistics for project documentation
+* Baseline data for repository organization
+* Documentation and reporting purposes
 
 ---
 

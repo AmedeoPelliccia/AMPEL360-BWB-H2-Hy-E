@@ -1,0 +1,6 @@
+Timestamp,User,Organization,Action,Document ID,IP Address,Authorization Level,Result,Notes
+2025-11-22 10:15:23,jsmith@suppliera.com,Supplier A Corporation,Download,53-00-04-SPLR-A-001,192.168.1.100,Supplier Access,Success,Authorized download
+2025-11-22 11:30:45,jdoe@airlinexyz.com,Airline Customer XYZ,View,53-00-04-CUST-001,203.0.113.45,Customer Portal,Success,Customer portal access
+2025-11-22 13:45:12,bjohnson@testfac.com,Test Facility ABC,Download,53-00-04-ANLS-001,198.51.100.78,Contractor Access,Success,NDA verified
+2025-11-22 14:20:33,unauthorized@example.com,Unknown,Download Attempt,53-00-04-CERT-001,203.0.113.200,None,Denied,No authorization on file
+2025-11-22 15:10:08,awilliams@supplierb.com,Supplier B Ltd,Download,53-00-04-SPLR-B-001,198.51.100.92,Supplier Access,Success,Authorized download

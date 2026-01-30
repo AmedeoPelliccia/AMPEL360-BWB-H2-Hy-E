@@ -1,0 +1,65 @@
+# S1000D CSDB Profile Configuration
+
+## Project Information
+project:
+  name: "AMPEL360-AIR-T"
+  model_identification_code: "AMPEL360"
+  system_code: "23"  # ATA 23 - Communications
+
+## S1000D Specification
+s1000d:
+  issue: "5.0"
+  schema_location: "http://www.s1000d.org/S1000D_5-0/xml_schema_flat"
+
+## Publication Configuration
+publication:
+  type: "IPC"  # Illustrated Parts Catalog
+  language: "en-US"
+  security_classification: "01"  # Unclassified
+
+## Data Module Code Schema
+dmc_schema:
+  model_ident_code: "AMPEL360"
+  system_diff_code: "A"
+  standard_numbering_system: "23"  # ATA 23
+  
+## Validation Rules
+validation:
+  brex_data_module: "DMC-AMPEL360-A-00-00-00-00A-022A-A"
+  strict_validation: true
+  check_cross_references: true
+
+## Export Settings
+export:
+  formats:
+    - "PDF"
+    - "HTML5"
+    - "XML"
+  output_directory: "../EXPORT"
+
+## Common Information Sets
+common_info:
+  standard_notes: "DMC-AMPEL360-A-00-00-00-00A-001B-A"
+  vendor_info: "DMC-AMPEL360-A-00-00-00-00A-001C-A"
+
+## Applicability Configuration
+applicability:
+  product_attribute_defs: "APPLICABILITY/product_attributes.xml"
+  
+## Parts Data Configuration
+parts_data:
+  cage_code_source: "COMMON/cage_codes.xml"
+  nomenclature_standard: "MIL-STD-130"
+
+## Document Control
+document_control:
+  status: "Active"
+  version: "1.0"
+  last_updated: "2026-01-09"
+  generated_by: "GitHub Copilot"
+  prompted_by: "Amedeo Pelliccia"
+
+## Notes
+# This is a template configuration file.
+# Adjust settings according to project-specific requirements.
+# Refer to S1000D specification for detailed schema information.

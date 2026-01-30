@@ -1,0 +1,9 @@
+REQ_ID,REQ_Title,DO178C_Level,Design_ID,Code_Module,Code_Function,Test_ID,Test_Result,Hazard_ID,CERT_Evidence,AI_Assisted,Verification_Status,Last_Updated
+REQ-42-MAINT-001,Maintenance Data Recording,D,DES-42-MAINT-001,maint_recorder.c,record_data(),TEST-42-MAINT-001,Pass,N/A,CERT-MAINT-001,Yes,Verified,2025-12-04
+REQ-42-MAINT-002,Fault Log Management,D,DES-42-MAINT-002,maint_faults.c,log_fault(),TEST-42-MAINT-002,Pass,N/A,CERT-MAINT-001,Yes,Verified,2025-12-04
+REQ-42-MAINT-003,Ground Interface Protocol,D,DES-42-MAINT-003,maint_ground.c,ground_comm(),TEST-42-MAINT-003,Pass,N/A,CERT-MAINT-002,No,Verified,2025-12-04
+REQ-42-MAINT-004,System Health Reporting,D,DES-42-MAINT-004,maint_health.c,report_health(),TEST-42-MAINT-004,Pending,N/A,TBD,Yes,In_Review,2025-12-04
+REQ-42-MAINT-005,Predictive Maintenance Interface,D,DES-42-MAINT-005,maint_predict.c,get_predictions(),TEST-42-MAINT-005,TBD,N/A,TBD,Yes,Planned,2025-12-04
+REQ-42-MAINT-006,Configuration Download,D,DES-42-MAINT-006,maint_config.c,download_config(),TEST-42-MAINT-006,TBD,N/A,TBD,No,Planned,2025-12-04
+REQ-42-MAINT-007,Software Update Interface,D,DES-42-MAINT-007,maint_update.c,apply_update(),TEST-42-MAINT-007,TBD,N/A,TBD,No,Planned,2025-12-04
+REQ-42-MAINT-008,ARINC 653 Partition Health,D,DES-42-MAINT-008,maint_arinc653.c,get_partition_status(),TEST-42-MAINT-008,TBD,N/A,TBD,No,Planned,2025-12-04

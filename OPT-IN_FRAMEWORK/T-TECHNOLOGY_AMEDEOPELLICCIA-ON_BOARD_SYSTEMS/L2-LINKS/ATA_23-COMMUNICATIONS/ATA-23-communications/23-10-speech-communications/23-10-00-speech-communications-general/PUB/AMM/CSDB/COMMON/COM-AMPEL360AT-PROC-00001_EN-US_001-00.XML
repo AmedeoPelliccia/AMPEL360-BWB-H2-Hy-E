@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Common Information: COM-AMPEL360AT-PROC-00001
+  Type: Procedure
+  Description: RF energy safety procedure
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: PROC
+  - ID: 00001
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-300A (Removal/Installation)
+  - DMC-...-520A (Troubleshooting)
+  - DMC-...-620A (Repair)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 23 (Communications)
+  - Created: 2026-01-09
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="proc" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="09"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <proceduralRepository>
+      <proceduralSpec>
+        <proceduralIdent proceduralIdentNumber="P001"/>
+        <proceduralTitle>RF Energy Safety Procedure</proceduralTitle>
+        <proceduralContent>
+          <proceduralStep>
+            <para>Ensure all aircraft transmitters are set to OFF or STANDBY</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify no active transmissions on communication frequencies</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If applicable, disconnect antenna feedlines from transmitters</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Post RF HAZARD warning signs near antenna locations</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Maintain minimum safe distance from antennas during testing</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Use RF power meter to verify zero output before antenna work</para>
+          </proceduralStep>
+        </proceduralContent>
+      </proceduralSpec>
+    </proceduralRepository>
+  </commonRepositoryContent>
+</commonRepository>

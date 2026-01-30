@@ -3,17 +3,876 @@ version: 1
 owner: "AMPEL360 Documentation Team"
 folder: "54-00-04_Design"
 
-assets: []
-# Add asset entries here following the pattern:
-#  - id: "54-00-04-Annn"
-#    category: "DIAG|DRWG|PROD|ASSY|PART|INST|MODL|DATA|TMPL|EXPT"
-#    title: "Asset Title"
-#    source: "ASSETS/CATEGORY/filename.ext"
-#    exports: []
-#    links:
-#      reqs: []
-#      odd: []
-#      safety: []
-#    status: "Draft|Review|Approved|Obsolete"
-#    version: "1.0.0"
-#    checksum: "<filled-by-CI>"
+# NOTE: This index tracks SOURCE files only. Rendered outputs (PDF/PNG) are stored in
+# ASSETS/EXPORTS/ and tracked in ASSETS/EXPORTS/00_INDEX.md. Individual export files
+# are NOT listed here as they are derived outputs. See EXPORTS/README.md for export
+# generation guidelines and quality standards.
+
+assets:
+  # ============================================================================
+  # TEMPLATES — Master templates for all asset categories
+  # ============================================================================
+  
+  # T801: Assembly Template
+  - id: "54-00-04-T801"
+    category: "TMPL"
+    title: "Assembly Template"
+    source: "ASSETS/TEMPLATES/ASSEMBLIES/54-00-04-T801_Assembly_Template.md"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T802: Part Template
+  - id: "54-00-04-T802"
+    category: "TMPL"
+    title: "Part Template"
+    source: "ASSETS/TEMPLATES/PARTS/54-00-04-T802_Part_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T803: Drawing Template
+  - id: "54-00-04-T803"
+    category: "TMPL"
+    title: "Drawing Template"
+    source: "ASSETS/TEMPLATES/DRAWINGS/54-00-04-T803_Drawing_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T804: Installation Template
+  - id: "54-00-04-T804"
+    category: "TMPL"
+    title: "Installation Template"
+    source: "ASSETS/TEMPLATES/INSTALLATIONS/54-00-04-T804_Installation_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T805: Model Template
+  - id: "54-00-04-T805"
+    category: "TMPL"
+    title: "Model Template"
+    source: "ASSETS/TEMPLATES/MODELS/54-00-04-T805_Model_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T806: Product Template
+  - id: "54-00-04-T806"
+    category: "TMPL"
+    title: "Product Template"
+    source: "ASSETS/TEMPLATES/PRODUCTS/54-00-04-T806_Product_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T807: Data Schema Template
+  - id: "54-00-04-T807"
+    category: "TMPL"
+    title: "Data Schema Template"
+    source: "ASSETS/TEMPLATES/DATA/54-00-04-T807_Data_Schema_Template.json"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T808: Requirements Traceability Template
+  - id: "54-00-04-T808"
+    category: "TMPL"
+    title: "Requirements Traceability Template"
+    source: "ASSETS/TEMPLATES/DATA/54-00-04-T808_Requirements_Traceability_Template.csv"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T809: Interface Control Template
+  - id: "54-00-04-T809"
+    category: "TMPL"
+    title: "Interface Control Template"
+    source: "ASSETS/TEMPLATES/INTERFACES/54-00-04-T809_Interface_Control_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # T810: Test Procedure Template
+  - id: "54-00-04-T810"
+    category: "TMPL"
+    title: "Test Procedure Template"
+    source: "ASSETS/TEMPLATES/TEST/54-00-04-T810_Test_Procedure_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Active"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+  
+  # ============================================================================
+  # DRAWINGS
+  # ============================================================================
+  
+  # Drawing Template (Legacy - kept for reference)
+  - id: "54-00-04-D000"
+    category: "TMPL"
+    title: "Drawing Metadata Template"
+    source: "ASSETS/DRAWINGS/TEMPLATES/54-00-04-D000_DRWG_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # GA Drawings
+  - id: "54-00-04-D001"
+    category: "DRWG"
+    title: "Nacelle Primary Structure - General Arrangement"
+    source: "ASSETS/DRAWINGS/GA/54-00-04-D001_DRWG_Nacelle_Primary_Structure_GA.yaml"
+    exports: []
+    links:
+      reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D003"
+    category: "DRWG"
+    title: "Pylon General Arrangement"
+    source: "ASSETS/DRAWINGS/GA/54-00-04-D003_DRWG_Pylon_General_Arrangement.yaml"
+    exports: []
+    links:
+      reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Detail Drawings
+  - id: "54-00-04-D002"
+    category: "DRWG"
+    title: "Nacelle Primary Structure - Dimensions"
+    source: "ASSETS/DRAWINGS/DETAIL/54-00-04-D002_DRWG_Nacelle_Primary_Structure_Dimensions.yaml"
+    exports: []
+    links:
+      reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D004"
+    category: "DRWG"
+    title: "Pylon-Wing Attachment Details"
+    source: "ASSETS/DRAWINGS/DETAIL/54-00-04-D004_DRWG_Pylon_Wing_Attachment_Details.yaml"
+    exports: []
+    links:
+      reqs:
+        # TODO: Add traceability to requirements once they are created in 54-00-03_Requirements
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Interface Drawings
+  - id: "54-00-04-D005"
+    category: "DRWG"
+    title: "Nacelle-Pylon Interface Drawing"
+    source: "ASSETS/DRAWINGS/INTERFACE/54-00-04-D005_DRWG_Nacelle_Pylon_Interface.yaml"
+    exports: []
+    links:
+      # TODO: Link to requirement "54-00-03-05-002" once it is created in 54-00-03_Requirements
+      reqs:
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D007"
+    category: "DRWG"
+    title: "Engine Mount Interface Drawing"
+    source: "ASSETS/DRAWINGS/INTERFACE/54-00-04-D007_DRWG_Engine_Mount_Interface.yaml"
+    exports: []
+    links:
+      # TODO: Link to requirement "54-00-03-05-003" once it is created in 54-00-03_Requirements
+      reqs:
+        - "54-00-03-05-003"
+        - "71-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Installation Drawings
+  - id: "54-00-04-D006"
+    category: "DRWG"
+    title: "Thrust Reverser Installation"
+    source: "ASSETS/DRAWINGS/INSTALLATION/54-00-04-D006_DRWG_Thrust_Reverser_Installation.yaml"
+    exports: []
+    links:
+      reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
+        - "54-00-03-01-001"
+        - "78-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D010"
+    category: "DRWG"
+    title: "SHM Sensor Locations"
+    source: "ASSETS/DRAWINGS/INSTALLATION/54-00-04-D010_DRWG_SHM_Sensor_Locations.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-07-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Section Drawings
+  - id: "54-00-04-D008"
+    category: "DRWG"
+    title: "Nacelle Cross-Sections"
+    source: "ASSETS/DRAWINGS/SECTION/54-00-04-D008_DRWG_Nacelle_Cross_Sections.yaml"
+    exports: []
+    links:
+      reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-D009"
+    category: "DRWG"
+    title: "Pylon Load Path Diagram"
+    source: "ASSETS/DRAWINGS/SECTION/54-00-04-D009_DRWG_Pylon_Load_Path_Diagram.yaml"
+    exports: []
+    links:
+      reqs:
+        # TODO: Add traceability to requirement "54-00-03-01-001" once it is created in 54-00-03_Requirements
+        - "54-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Structural
+  - id: "54-00-04-P001"
+    category: "PART"
+    title: "Nacelle Inlet Lip"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P001_PART_Nacelle_Inlet_Lip.yaml"
+  # Model Template
+  - id: "54-00-04-M000"
+    category: "MODL"
+    title: "Model Template"
+    source: "ASSETS/MODELS/TEMPLATES/CARDS/54-00-04-M000_Model_Template.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-02-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+
+- id: "54-00-04-P002"
+    category: "PART"
+    title: "Fan Cowl Forward Panel"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P002_PART_Fan_Cowl_Forward_Panel.yaml"
+  # Structural Analysis Models
+  - id: "54-00-04-M701"
+    category: "MODL"
+    title: "Nacelle Stress Analysis"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M701_Nacelle_Stress_Analysis.md"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-08-001"
+        - "54-00-03-01-004"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M702"
+    category: "MODL"
+    title: "Nacelle Fatigue Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M702_Nacelle_Fatigue_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-01-004"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P003"
+    category: "PART"
+    title: "Fan Cowl Aft Panel"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P003_PART_Fan_Cowl_Aft_Panel.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+  - id: "54-00-04-M703"
+    category: "MODL"
+    title: "Thrust Reverser Loads Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M703_Thrust_Reverser_Loads_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-005"
+        - "78-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P004"
+    category: "PART"
+    title: "Core Cowl Panel"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P004_PART_Core_Cowl_Panel.yaml"
+  - id: "54-00-04-M705"
+    category: "MODL"
+    title: "Pylon Stress Analysis"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M705_Pylon_Stress_Analysis.md"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M706"
+    category: "MODL"
+    title: "Pylon Attachment Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/STRUCTURAL/54-00-04-M706_Pylon_Attachment_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P005"
+    category: "PART"
+    title: "Nacelle Structural Frame"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P005_PART_Nacelle_Structural_Frame.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-04-001"
+  # Thermal Analysis Models
+  - id: "54-00-04-M710"
+    category: "MODL"
+    title: "Nacelle Thermal Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/THERMAL/54-00-04-M710_Nacelle_Thermal_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-02-001"
+        - "54-00-03-02-002"
+        - "30-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P006"
+    category: "PART"
+    title: "Pylon Forward Spar"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P006_PART_Pylon_Forward_Spar.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-04-002"
+  - id: "54-00-04-M711"
+    category: "MODL"
+    title: "Engine Heat Transfer Model"
+    source: "ASSETS/MODELS/ANALYSIS/THERMAL/54-00-04-M711_Engine_Heat_Transfer_Model.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-02-001"
+        - "71-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P007"
+    category: "PART"
+    title: "Pylon Aft Spar"
+    source: "ASSETS/PARTS/STRUCTURAL/54-00-04-P007_PART_Pylon_Aft_Spar.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-04-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Fittings
+  - id: "54-00-04-P008"
+    category: "PART"
+    title: "Pylon Wing Attachment Fitting"
+    source: "ASSETS/PARTS/FITTINGS/54-00-04-P008_PART_Pylon_Wing_Attachment_Fitting.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-001"
+        - "54-00-03-04-002"
+  # Aerodynamic Analysis Models
+  - id: "54-00-04-M720"
+    category: "MODL"
+    title: "Nacelle Drag Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/AERO/54-00-04-M720_Nacelle_Drag_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-03-001"
+        - "54-00-03-03-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P009"
+    category: "PART"
+    title: "Engine Mount Forward Fitting"
+    source: "ASSETS/PARTS/FITTINGS/54-00-04-P009_PART_Engine_Mount_Forward_Fitting.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-003"
+        - "71-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P010"
+    category: "PART"
+    title: "Engine Mount Aft Fitting"
+    source: "ASSETS/PARTS/FITTINGS/54-00-04-P010_PART_Engine_Mount_Aft_Fitting.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-003"
+        - "71-00-03-01-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P011"
+    category: "PART"
+    title: "Nacelle-Pylon Interface Bracket"
+    source: "ASSETS/PARTS/FITTINGS/54-00-04-P011_PART_Nacelle_Pylon_Interface_Bracket.yaml"
+  - id: "54-00-04-M721"
+    category: "MODL"
+    title: "Inlet Flow Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/AERO/54-00-04-M721_Inlet_Flow_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-03-003"
+        - "71-00-03-02-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Movable
+  - id: "54-00-04-P012"
+    category: "PART"
+    title: "Thrust Reverser Blocker Door"
+    source: "ASSETS/PARTS/MOVABLE/54-00-04-P012_PART_Thrust_Reverser_Blocker_Door.yaml"
+    exports: []
+    links:
+      reqs:
+        - "78-00-03-01-001"
+        - "54-00-03-06-002"
+  # Dynamics Analysis Models
+  - id: "54-00-04-M730"
+    category: "MODL"
+    title: "Flutter Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/DYNAMICS/54-00-04-M730_Flutter_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-006"
+        - "54-00-03-03-004"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-P013"
+    category: "PART"
+    title: "TR Actuation Link"
+    source: "ASSETS/PARTS/MOVABLE/54-00-04-P013_PART_TR_Actuation_Link.yaml"
+    exports: []
+    links:
+      reqs:
+        - "78-00-03-01-001"
+        - "54-00-03-06-002"
+  - id: "54-00-04-M731"
+    category: "MODL"
+    title: "Vibration Analysis Model"
+    source: "ASSETS/MODELS/ANALYSIS/DYNAMICS/54-00-04-M731_Vibration_Analysis.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-007"
+        - "71-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Secondary
+  - id: "54-00-04-P014"
+    category: "PART"
+    title: "Access Panel - Fan Cowl"
+    source: "ASSETS/PARTS/SECONDARY/54-00-04-P014_PART_Access_Panel_Fan_Cowl.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-06-001"
+        - "54-00-03-01-001"
+  # System Models
+  - id: "54-00-04-M801"
+    category: "MODL"
+    title: "Nacelle System Architecture Model"
+    source: "ASSETS/MODELS/SYSTEM/54-00-04-M801_Nacelle_System_Architecture.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Parts - Hardware
+  - id: "54-00-04-P015"
+    category: "PART"
+    title: "Fastener - Hi-Lok HL11"
+    source: "ASSETS/PARTS/HARDWARE/54-00-04-P015_PART_Fastener_Hi-Lok_HL11.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-04-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M802"
+    category: "MODL"
+    title: "Requirements Model"
+    source: "ASSETS/MODELS/SYSTEM/54-00-04-M802_Requirements_Model.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-02-001"
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M803"
+    category: "MODL"
+    title: "Interface Definition Model"
+    source: "ASSETS/MODELS/SYSTEM/54-00-04-M803_Interface_Definition_Model.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+        - "54-00-03-05-003"
+      odd: []
+      safety: []
+    status: "Planned"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Data Schemas
+  - id: "54-00-04-M901"
+    category: "MODL"
+    title: "Assembly Data Schema"
+    source: "ASSETS/MODELS/DATA/54-00-04-M901_Assembly_Data_Schema.json"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M902"
+    category: "MODL"
+    title: "Installation Data Schema"
+    source: "ASSETS/MODELS/DATA/54-00-04-M902_Installation_Data_Schema.json"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-M903"
+    category: "MODL"
+    title: "Material Properties Schema"
+    source: "ASSETS/MODELS/DATA/54-00-04-M903_Material_Properties_Schema.json"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Product Template
+  - id: "54-00-04-PR000"
+    category: "TMPL"
+    title: "Product Definition Template"
+    source: "ASSETS/PRODUCTS/TEMPLATES/54-00-04-PR000_PROD_Template.yaml"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Nacelle Products
+  - id: "54-00-04-PR001"
+    category: "PROD"
+    title: "Left Nacelle System"
+    source: "ASSETS/PRODUCTS/NACELLE/54-00-04-PR001_PROD_Left_Nacelle_System.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-02-001"
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-PR002"
+    category: "PROD"
+    title: "Right Nacelle System"
+    source: "ASSETS/PRODUCTS/NACELLE/54-00-04-PR002_PROD_Right_Nacelle_System.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-02-001"
+        - "54-00-03-03-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Pylon Products
+  - id: "54-00-04-PR003"
+    category: "PROD"
+    title: "Left Pylon Assembly"
+    source: "ASSETS/PRODUCTS/PYLON/54-00-04-PR003_PROD_Left_Pylon_Assembly.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-PR004"
+    category: "PROD"
+    title: "Right Pylon Assembly"
+    source: "ASSETS/PRODUCTS/PYLON/54-00-04-PR004_PROD_Right_Pylon_Assembly.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-001"
+        - "54-00-03-05-001"
+        - "54-00-03-05-002"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # Integration Products
+  - id: "54-00-04-PR005"
+    category: "PROD"
+    title: "Nacelle-Pylon Integration Kit"
+    source: "ASSETS/PRODUCTS/INTEGRATION/54-00-04-PR005_PROD_Nacelle_Pylon_Integration_Kit.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-05-002"
+        - "54-00-03-09-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # LRU Products
+  - id: "54-00-04-PR006"
+    category: "PROD"
+    title: "Thrust Reverser System - Left"
+    source: "ASSETS/PRODUCTS/LRU/54-00-04-PR006_PROD_Thrust_Reverser_System_Left.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-005"
+        - "78-00-03-01-001"
+        - "54-00-03-08-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "54-00-04-PR007"
+    category: "PROD"
+    title: "Thrust Reverser System - Right"
+    source: "ASSETS/PRODUCTS/LRU/54-00-04-PR007_PROD_Thrust_Reverser_System_Right.yaml"
+    exports: []
+    links:
+      reqs:
+        - "54-00-03-01-005"
+        - "78-00-03-01-001"
+        - "54-00-03-08-001"
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"

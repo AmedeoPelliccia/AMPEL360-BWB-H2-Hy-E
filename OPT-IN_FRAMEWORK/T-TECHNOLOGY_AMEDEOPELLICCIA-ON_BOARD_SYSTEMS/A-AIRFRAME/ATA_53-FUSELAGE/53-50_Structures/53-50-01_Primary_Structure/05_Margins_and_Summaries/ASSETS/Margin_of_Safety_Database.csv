@@ -1,0 +1,6 @@
+ComponentID,ComponentName,LoadCase,AppliedStress_MPa,AllowableStress_MPa,MS,Status
+C-001,Upper Panel Sta 10-15,2.5g Maneuver,620,700,0.13,PASS
+C-002,Lower Panel Sta 10-15,2.5g Maneuver,580,750,0.29,PASS
+C-003,Frame Sta 12.5,Pressure+Flight,450,500,0.11,PASS
+C-004,Stringer Type A,Compression,680,820,0.21,PASS
+C-005,Landing Gear Fitting,Landing Impact,850,950,0.12,PASS

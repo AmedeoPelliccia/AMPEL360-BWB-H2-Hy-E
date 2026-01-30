@@ -1,0 +1,50 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Standard Conditions: Q100-61-COND-CRUISE-FL350
+# Cruise Conditions at Flight Level 350
+
+condition_id: Q100-61-COND-CRUISE-FL350
+condition_name: Cruise at FL350 (35,000 ft)
+standard: ISA
+isa_deviation_C: 0
+
+atmosphere:
+  altitude_m: 10668
+  altitude_ft: 35000
+  pressure_Pa: 23842
+  pressure_psi: 3.458
+  temperature_K: 218.81
+  temperature_C: -54.34
+  temperature_F: -65.81
+  density_kg_m3: 0.3796
+  speed_of_sound_m_s: 296.5
+  viscosity_Pa_s: 1.422e-5
+
+flight:
+  mach: 0.82
+  true_airspeed_m_s: 243.1
+  true_airspeed_kt: 472.5
+
+application: |
+  Design cruise point for long-range operation
+
+source: ICAO Standard Atmosphere
+status: Approved
+
+document_control:
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

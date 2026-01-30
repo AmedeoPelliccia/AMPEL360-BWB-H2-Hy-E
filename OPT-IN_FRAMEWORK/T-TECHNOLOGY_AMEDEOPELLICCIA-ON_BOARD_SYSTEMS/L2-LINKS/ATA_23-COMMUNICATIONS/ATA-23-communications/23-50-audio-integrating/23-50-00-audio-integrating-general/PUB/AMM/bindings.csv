@@ -1,0 +1,16 @@
+SSOT_Path,Data_Module_Code,Transformation_Rule,Content_Type,Status,Notes
+# Example bindings for SSOT to S1000D Data Module mapping
+# Adjust according to actual SSOT content and data module structure
+
+# Requirements
+../SSOT/LC01_Requirements/system_requirements.md,DMC-AMPEL360-A-23-00-00-00A-040A-A,markdown_to_dm_descriptive,requirements,draft,System requirements
+../SSOT/LC01_Requirements/functional_requirements.md,DMC-AMPEL360-A-23-00-00-00A-040B-A,markdown_to_dm_descriptive,requirements,draft,Functional requirements
+
+# Design
+../SSOT/LC03_Design/system_architecture.md,DMC-AMPEL360-A-23-00-00-00A-520A-A,markdown_to_dm_descriptive,design,draft,System architecture
+../SSOT/LC03_Design/interface_design.md,DMC-AMPEL360-A-23-00-00-00A-520B-A,markdown_to_dm_descriptive,design,draft,Interface design
+
+# Procedures (to be populated with actual procedures)
+# ../SSOT/procedures/maintenance_proc_001.md,DMC-AMPEL360-A-23-00-00-00A-540A-A,markdown_to_dm_procedural,procedure,draft,Maintenance procedure
+
+# Add additional bindings as SSOT content is created

@@ -1,0 +1,70 @@
+%% 57-30-01 — Wing Energy Harvesting Flows
+%% ATA Chapter: 57 – Wings
+%% Bucket: 57-30_ANCHORS
+
+flowchart TB
+    subgraph WING["Wing Structure"]
+        direction TB
+        PV["Structural PV Cells<br/>Upper Wing Skin"]
+        PIEZO["Piezoelectric<br/>Trailing Edge"]
+        TEG["Thermoelectric<br/>Leading Edge"]
+        VIB["Vibration Harvesters<br/>Sensor Nodes"]
+    end
+
+    subgraph CONDITION["Conditioning"]
+        direction TB
+        MPPT["MPPT Controllers"]
+        RECT["Rectifiers"]
+        REG["Voltage Regulators"]
+    end
+
+    subgraph STORAGE["Energy Storage"]
+        direction TB
+        BATT["Local Batteries"]
+        CAP["Supercapacitors"]
+    end
+
+    subgraph LOADS["Wing Loads"]
+        direction TB
+        SENSOR["Structural Health<br/>Sensors"]
+        ICE["Ice Detection<br/>Systems"]
+        LIGHT["LED Lighting"]
+        COMM["Local Data<br/>Acquisition"]
+    end
+
+    subgraph AIRCRAFT["Aircraft Systems"]
+        ATA24["ATA 24<br/>Electrical Power Bus"]
+        ATA97["ATA 97<br/>Analytics Monitoring"]
+    end
+
+    %% Energy flows
+    PV --> MPPT
+    PIEZO --> RECT
+    TEG --> REG
+    VIB --> RECT
+
+    MPPT --> BATT
+    RECT --> CAP
+    REG --> BATT
+
+    BATT --> SENSOR
+    BATT --> ICE
+    CAP --> LIGHT
+    BATT --> COMM
+
+    BATT --> ATA24
+    SENSOR --> ATA97
+    COMM --> ATA97
+
+    %% Styling
+    classDef harvest fill:#90EE90,stroke:#228B22
+    classDef condition fill:#87CEEB,stroke:#4682B4
+    classDef store fill:#FFD700,stroke:#DAA520
+    classDef load fill:#FFA07A,stroke:#FF6347
+    classDef aircraft fill:#DDA0DD,stroke:#8B008B
+
+    class PV,PIEZO,TEG,VIB harvest
+    class MPPT,RECT,REG condition
+    class BATT,CAP store
+    class SENSOR,ICE,LIGHT,COMM load
+    class ATA24,ATA97 aircraft

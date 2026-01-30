@@ -1,0 +1,7 @@
+Storage_Material,H2_Compatible,SAF_Compatible,Battery_Electrolyte_Compatible,Deicing_Fluid_Compatible,Notes
+SS_304L,Yes,Yes,Yes,Yes,General_purpose_stainless
+SS_316L,Yes,Yes,Yes,Yes,Marine_grade_corrosion_resistant
+Aluminum_5083,Yes,Caution,No,Yes,Good_for_cryogenic_LH2
+Carbon_Steel,No,Yes,No,Caution,Not_for_H2_cryogenic
+HDPE,Yes,Yes,Yes,Yes,Plastic_liner_for_composite_vessels
+PTFE,Yes,Yes,Yes,Yes,Seals_and_gaskets

@@ -1,0 +1,16 @@
+Check ID,Category,Check Description,Pass Criteria,Failure Action,Priority
+QC-001,Geometry,Dimensional accuracy,Within ±0.001 mm tolerance,Review and re-export,Critical
+QC-002,Geometry,Surface continuity,Minimum G1 at all edges,Document exceptions,High
+QC-003,Geometry,Missing faces,Zero missing surfaces,Fix source model,Critical
+QC-004,Geometry,Invalid entities,Zero invalid entities,Fix source model,Critical
+QC-005,Metadata,Part number present,Matches source file,Add metadata,High
+QC-006,Metadata,Revision identifier,Correctly formatted (RevX),Correct and re-export,High
+QC-007,Metadata,Material properties,All materials defined,Add material data,Medium
+QC-008,Validation,Format validation,Passes format-specific validator,Review and fix,Critical
+QC-009,Validation,File integrity,SHA-256 checksum generated,Generate checksum,High
+QC-010,Validation,Assembly structure,All components present,Review structure,Critical
+QC-011,Security,Export control marking,Classification verified,Add markings,Critical
+QC-012,Security,Watermark applied,Watermark present (if required),Apply watermark,Medium
+QC-013,Traceability,Export log updated,Entry created in log,Update log,High
+QC-014,Traceability,Source file reference,Link to source documented,Add reference,Medium
+QC-015,Distribution,NDA verified,NDA on file for recipient,Obtain NDA,Critical

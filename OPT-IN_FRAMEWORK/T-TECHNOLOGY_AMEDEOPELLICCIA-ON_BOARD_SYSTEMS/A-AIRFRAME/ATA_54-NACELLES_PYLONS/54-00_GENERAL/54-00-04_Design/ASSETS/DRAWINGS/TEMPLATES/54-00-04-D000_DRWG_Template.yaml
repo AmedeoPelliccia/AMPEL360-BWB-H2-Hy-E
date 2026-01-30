@@ -1,0 +1,40 @@
+id: "54-00-04-D000"
+title: "Drawing Title Template"
+category: "DRWG"
+drawing_type: "GA|Detail|Interface|Installation|Section"
+ata_chapter: "54"
+description: "Template for new drawing metadata files. Replace all placeholder values with actual drawing information."
+status: "Template"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:20"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A00X"
+      title: "Assembly Title - replace with actual assembly"
+  requirements:
+    - id: "54-00-03-XX-00X"
+      title: "Requirement Title - replace with actual requirement"
+  parent_drawings: []
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  This is a template file. When creating a new drawing:
+  1. Copy this template to the appropriate subfolder (GA, DETAIL, INTERFACE, INSTALLATION, or SECTION)
+  2. Rename the file following the pattern: 54-00-04-Dnnn_DRWG_ShortName.yaml
+  3. Update all placeholder values with actual drawing information
+  4. Update traceability links to reference actual assemblies and requirements
+  5. Set status to "Planned", "In Progress", "Review", or "Approved" as appropriate
+  6. Add the drawing to the 00_INDEX.md register
+  7. Update ASSETS/INDEX.meta.yaml with the new drawing entry

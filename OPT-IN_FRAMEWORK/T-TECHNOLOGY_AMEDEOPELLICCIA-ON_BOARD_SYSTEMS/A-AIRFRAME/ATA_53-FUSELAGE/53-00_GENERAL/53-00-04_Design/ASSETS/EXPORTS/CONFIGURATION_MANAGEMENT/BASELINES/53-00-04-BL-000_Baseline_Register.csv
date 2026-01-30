@@ -1,0 +1,4 @@
+Baseline ID,Name,Date,Milestone,Status,Approver,Artifacts Count,Requirements Total,Requirements Verified,Notes
+53-00-04-BL-001,PDR Baseline,2025-06-15,Preliminary Design Review,Approved,Chief Engineer - Airframe,2,245,198,Initial PDR baseline
+53-00-04-BL-002,CDR Baseline,2025-10-20,Critical Design Review,Approved,Chief Engineer - Airframe,3,278,276,CDR baseline ready for production prep
+53-00-04-BL-003,Production Release,2026-03-01,Production Release,Released to Manufacturing,VP Engineering & Manufacturing,2,285,285,Final production release with certifications

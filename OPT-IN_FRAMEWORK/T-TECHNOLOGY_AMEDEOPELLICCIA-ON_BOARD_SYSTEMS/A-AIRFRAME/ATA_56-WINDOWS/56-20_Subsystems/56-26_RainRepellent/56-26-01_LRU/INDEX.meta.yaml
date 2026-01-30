@@ -1,0 +1,39 @@
+# INDEX.meta.yaml — LRU_56-26-01 Rain Repellent System
+# ATA 56 – Windows | Subsystem 26 – Rain Repellent
+
+metadata:
+  document_id: LRU_56-26-01
+  title: Rain Repellent System
+  ata_chapter: 56
+  ata_subsystem: 26
+  sequence: 01
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+
+lru:
+  part_number: PN-56-26-01-001
+  nomenclature: Rain Repellent System
+  manufacturer: TBD
+
+lri_components:
+  - id: LRI_01
+    name: FluidReservoir
+    folder: ./LRI/LRI_01_FluidReservoir/
+
+  - id: LRI_02
+    name: PumpAssembly
+    folder: ./LRI/LRI_02_PumpAssembly/
+
+  - id: LRI_03
+    name: SprayNozzles
+    folder: ./LRI/LRI_03_SprayNozzles/
+
+  - id: LRI_04
+    name: ControlValve
+    folder: ./LRI/LRI_04_ControlValve/
+
+  - id: LRI_05
+    name: FluidLevelSensor
+    folder: ./LRI/LRI_05_FluidLevelSensor/

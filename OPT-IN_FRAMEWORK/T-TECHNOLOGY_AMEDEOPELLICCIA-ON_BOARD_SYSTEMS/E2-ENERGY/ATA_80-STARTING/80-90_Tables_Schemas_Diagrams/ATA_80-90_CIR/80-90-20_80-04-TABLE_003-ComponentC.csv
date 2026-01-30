@@ -1,0 +1,14 @@
+Parameter,Value,Unit,Min,Max,Tolerance,Notes
+Part_Number,PN-80-20-XX-03C,,,,,ComponentC main part number
+Weight,TBD,kg,,,±5%,Dry weight
+Length,TBD,mm,,,±1.0,Overall length
+Width,TBD,mm,,,±1.0,Overall width
+Height,TBD,mm,,,±1.0,Overall height
+Supply_Voltage,28,VDC,22,32,,Nominal operating voltage
+Current_Normal,TBD,A,,,±10%,Normal operating current
+Power_Consumption,TBD,W,,TBD,,Maximum power consumption
+Operating_Temp_Min,TBD,°C,,,DO-160G,Minimum operating temperature
+Operating_Temp_Max,TBD,°C,,,DO-160G,Maximum operating temperature
+MTBF,TBD,hours,,,,Mean Time Between Failures
+MTTR,TBD,minutes,,,,Mean Time To Replace
+Environmental_Standard,DO-160G,,,,,Qualification standard

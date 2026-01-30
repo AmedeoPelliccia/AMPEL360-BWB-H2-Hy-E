@@ -1,0 +1,144 @@
+id: "54-00-04-M731"
+title: "Vibration Analysis Model"
+category: "MODL"
+model_type: "Dynamics"
+analysis_domain: "Structural Dynamics - Forced Vibration"
+ata_chapter: "54"
+description: |
+  Vibration analysis of nacelle and pylon structure under operational loads:
+  - Engine-induced vibration (rotor imbalance, blade passing)
+  - Ground and flight vibration environments
+  - Resonance identification and avoidance
+  - Equipment mounting and isolation requirements
+  - Fatigue damage from vibration
+  - Acoustic-induced vibration in high-noise areas
+status: "Planned"
+version: "0.1.0"
+owner: "Structural Dynamics & Acoustics"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+    - id: "ASM-54-PYL-001"
+      title: "Forward Pylon Structure"
+  requirements:
+    - id: "54-00-03-01-007"
+      title: "Vibration and Acoustic Requirements"
+    - id: "71-00-03-03-001"
+      title: "Engine Vibration Limits"
+  parent_models:
+    - id: "54-00-04-M705"
+      title: "Pylon Stress Analysis"
+  related_models:
+    - id: "54-00-04-M730"
+      title: "Flutter Analysis"
+    - id: "54-00-04-M702"
+      title: "Nacelle Fatigue Analysis"
+
+analysis_parameters:
+  method: "Frequency response analysis (harmonic excitation)"
+  solver: "TBD (NASTRAN SOL 108/111 for frequency response)"
+  key_parameters: |
+    - Structural modal analysis (0-500 Hz range)
+    - Engine excitation frequencies: N1, N2, blade passing (BPF)
+    - Damping: 2-5% critical (structure), higher for acoustic panels
+    - Random vibration: power spectral density from test data
+  boundary_conditions: "Wing/engine attachment points, excitation at engine mounts"
+  assumptions: |
+    - Linear structural response (acceptable for vibration levels)
+    - Modal superposition for frequency response
+    - Engine vibration levels from OEM specifications
+    - Structural damping includes material and joint damping
+
+software_tools:
+  primary: "TBD (NASTRAN SOL 111 for frequency response, SOL 103 for modal)"
+  preprocessing: "TBD - modal analysis and frequency sweep setup"
+  postprocessing: "TBD - response plots, acceleration levels, stress response"
+  version: "TBD"
+
+input_requirements:
+  geometry: "Structural FEM from M705 with mass and stiffness"
+  loads: "Engine vibration spectra from ATA 71 (N1, N2, BPF)"
+  material_properties: "Material damping, mass, stiffness"
+  environmental_conditions: "Flight and ground vibration environments"
+
+results_summary:
+  status: "Pending analysis"
+  key_outputs: []
+  validation_status: "Not validated"
+  notes: |
+    Critical vibration concerns:
+    - Resonance with engine orders (1×N1, 2×N1, 1×N2, BPF)
+    - High-cycle fatigue from sustained vibration
+    - Equipment mounting locations (avoid high vibration)
+    - Acoustic panel response to high SPL (sound pressure level)
+    
+    Target vibration levels:
+    - Structure: < 1g RMS at critical locations
+    - Equipment mounts: per MIL-STD-810 or equivalent
+    - Avoidance of resonances within ±10% of operating speeds
+
+verification:
+  - method: "Ground Vibration Test (GVT) for modal validation"
+    status: "Planned"
+  - method: "Engine run-up test with accelerometers"
+    status: "Planned"
+  - method: "Flight test vibration survey"
+    status: "Planned"
+
+validation:
+  test_correlation: "Accelerometer data from flight test and ground test"
+  uncertainty_quantification: "Damping and excitation amplitude uncertainties"
+  confidence_level: "Conservative for fatigue-critical locations"
+
+outputs:
+  - "Natural frequencies and mode shapes (0-500 Hz)"
+  - "Frequency response functions (FRF) at critical points"
+  - "Acceleration and stress response to engine excitation"
+  - "Campbell diagram (critical speeds vs. structural modes)"
+  - "Vibration fatigue input for M702"
+  - "Equipment mounting zone qualification"
+
+documentation:
+  technical_report: "TBD - Vibration Analysis Report"
+  presentation: "TBD - Vibration design review"
+  raw_data: "TBD - FEM modal database and frequency response results"
+
+quality_assurance:
+  peer_review: "Required"
+  checker: "TBD - Senior Dynamics Engineer"
+  approver: "TBD - Chief Structures Engineer"
+  review_date: "TBD"
+
+notes: |
+  Vibration is a key driver for:
+  - Structural fatigue life (high-cycle fatigue)
+  - Equipment reliability (avionics, sensors, actuators)
+  - Passenger comfort (cabin noise and vibration)
+  - Maintenance costs (wear and tear)
+  
+  Design guidelines:
+  - Avoid resonances with engine orders (N1, N2, BPF)
+  - Provide adequate damping (viscoelastic treatments if needed)
+  - Isolate sensitive equipment from high-vibration zones
+  - Acoustic panels designed for high SPL environment
+  
+  Coordinate with:
+  - Engine OEM for vibration spectra and limits
+  - Equipment suppliers for mounting requirements
+  - Flight test for vibration survey instrumentation
+  - Maintenance for inspection of vibration-critical areas
+  
+  Special considerations:
+  - Blade-off event (extreme transient vibration)
+  - Ground vibration during engine runup
+  - Acoustic fatigue in fan duct and exhaust areas
+  - Long-term degradation of damping materials
+
+document_control:
+  created_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  repository: "AMPEL360-AIR-T"
+  status: "DRAFT - Planned"
+  last_ai_update: "2026-01-02"

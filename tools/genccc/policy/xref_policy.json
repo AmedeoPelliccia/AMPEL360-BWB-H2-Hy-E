@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "description": "Cross-reference policy for GenCCC concatenal gate chain",
+  "allowed_link_types": [
+    "parent",
+    "sibling",
+    "depends_on",
+    "evidence",
+    "implements",
+    "derived_from",
+    "reference",
+    "context"
+  ],
+  "axis_rules": {
+    "comment": "Define which axes can reference which other axes",
+    "O": ["O", "P", "T", "I", "N"],
+    "P": ["O", "P", "T", "I", "N"],
+    "T": ["O", "P", "T", "I", "N"],
+    "I": ["O", "P", "T", "I", "N"],
+    "N": ["O", "P", "T", "I", "N"]
+  },
+  "ata_rules": {
+    "comment": "Define ATA chapter cross-reference rules",
+    "default": {
+      "allow_cross_ata": true,
+      "comment": "By default, cross-ATA references are allowed"
+    },
+    "restrict": [
+      {
+        "comment": "ATA 95 (DPP/NN) should primarily reference itself and foundational ATAs",
+        "from": "95",
+        "allow_to": ["95", "02", "10", "21", "28"]
+      }
+    ]
+  },
+  "require_evidence_for": [
+    "implements",
+    "derived_from"
+  ],
+  "loop_policy": {
+    "disallow_cycles": true,
+    "allowlist": [],
+    "comment": "Detect circular dependencies; allowlist can exempt specific pairs"
+  },
+  "severity_policy": {
+    "axis_violation": "ERROR",
+    "ata_violation": "WARN",
+    "link_type_violation": "WARN",
+    "missing_evidence": "ERROR",
+    "cycle_detected": "ERROR"
+  }
+}

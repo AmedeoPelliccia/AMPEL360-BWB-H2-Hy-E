@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+S1000D Data Module - VHF Radio System Operational Test Procedure
+DMC: AMPEL360AT-A-23-10-00-00A-300A-A_001-00_EN-US
+Info Code: 300A - Test/Check Procedure
+ATA Chapter: 23-10-00 Speech Communications General
+Status: DRAFT
+Project: AMPEL360-AIR-T
+-->
+
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proced.xsd">
+  
+  <!-- Identification and Status Section -->
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT"
+                systemDiffCode="A"
+                systemCode="23"
+                subSystemCode="10"
+                subSubSystemCode="00"
+                assyCode="00"
+                disassyCode="00"
+                disassyCodeVariant="A"
+                infoCode="300"
+                infoCodeVariant="A"
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>VHF Radio System</techName>
+          <infoName>Operational Test Procedure</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All AMPEL360 aircraft configurations</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT"
+                    systemDiffCode="A"
+                    systemCode="00"
+                    subSystemCode="00"
+                    subSubSystemCode="00"
+                    assyCode="00"
+                    disassyCode="00"
+                    disassyCodeVariant="A"
+                    infoCode="022"
+                    infoCodeVariant="A"
+                    itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+      <dataRestrictions>
+        <restrictionInfo>
+          <security securityClassification="01">
+            <simplePara>Unclassified - Maintenance Procedure</simplePara>
+          </security>
+        </restrictionInfo>
+      </dataRestrictions>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <!-- Content Section -->
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqPersons>
+          <person>
+            <personCategory personCategoryCode="tech01">
+              <manufacturerName>Licensed Aircraft Maintenance Technician</manufacturerName>
+            </personCategory>
+          </person>
+        </reqPersons>
+        <reqSupportEquips>
+          <noSupportEquips/>
+        </reqSupportEquips>
+        <reqSupplies>
+          <noSupplies/>
+        </reqSupplies>
+        <reqSpares>
+          <noSpares/>
+        </reqSpares>
+        <reqSafety>
+          <noSafety/>
+        </reqSafety>
+      </preliminaryRqmts>
+      
+      <mainProcedure>
+        <proceduralStep>
+          <para>This procedure verifies the operational status and performance of the VHF radio communication system. Perform this test after maintenance, installation, or as part of scheduled functional checks.</para>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Pre-Test Configuration</title>
+          <para>Configure the aircraft for the test:</para>
+          <proceduralStep>
+            <para>Ensure aircraft main battery switch is ON.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify all circuit breakers for communications system are in (closed position).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Set VHF radio master switch to ON position.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Allow system warm-up time of minimum 2 minutes.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>VHF Transceiver Self-Test</title>
+          <para>Execute built-in test (BIT) sequence:</para>
+          <proceduralStep>
+            <para>Press and hold TEST button on VHF control head for 3 seconds.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Observe display sequences through all segment positions.</para>
+            <para>Expected result: All display segments illuminate in sequence, no error codes displayed.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify audio test tone is audible in headset or cockpit speaker.</para>
+            <para>Expected result: Clear 1 kHz test tone at nominal volume level.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Release TEST button. System returns to normal operational mode.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Frequency Selection Test</title>
+          <para>Verify frequency tuning and display functions:</para>
+          <proceduralStep>
+            <para>Select frequency 118.000 MHz using control knobs or keypad.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify display shows "118.000" clearly without flickering.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Tune through full frequency range (118.000 to 136.975 MHz) using coarse and fine adjustment.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify each frequency increment responds correctly (25 kHz steps).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Test memory channel recall (if equipped) by storing and recalling test frequencies.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Transmit Function Test</title>
+          <warning>
+            <para>Coordinate with Air Traffic Control or use authorized test frequency before transmitting. Unauthorized transmissions on operational frequencies are prohibited by regulations.</para>
+          </warning>
+          <proceduralStep>
+            <para>Select authorized test frequency or coordinate with ATC for brief radio check.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Depress push-to-talk (PTT) button on control yoke or microphone.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify TX (transmit) indicator illuminates on VHF control head.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Speak test message: "Radio check, [callsign]".</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Release PTT and listen for acknowledgment or request readability report.</para>
+            <para>Expected result: Acknowledgment received with readability rating "five by five" or equivalent.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify sidetone (own voice monitoring) is audible during transmission if sidetone feature is enabled.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Receive Function Test</title>
+          <proceduralStep>
+            <para>Monitor active ATC frequency or ATIS (Automatic Terminal Information Service) broadcast.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify received audio is clear and intelligible.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Adjust volume control and verify audio level changes smoothly without distortion.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Test squelch function by rotating squelch control from minimum to maximum:</para>
+            <para>- Minimum squelch: Background noise audible between transmissions</para>
+            <para>- Maximum squelch: Only strong signals break squelch, weak signals suppressed</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Audio Panel Integration Test</title>
+          <proceduralStep>
+            <para>Using audio control panel, select VHF-1 radio for transmission.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify VHF-1 transmit indication on audio panel when PTT pressed.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Switch transmitter selection to VHF-2 (if dual radios installed).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify VHF-2 transmit indication and correct radio transmits.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Test simultaneous monitoring of both VHF receivers (if applicable).</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Emergency Frequency Test</title>
+          <proceduralStep>
+            <para>Press emergency frequency button (if equipped).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Verify frequency automatically switches to 121.5 MHz (emergency frequency).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Monitor frequency for any active emergency traffic (do not transmit unless actual emergency).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Return to normal frequency by pressing emergency button again or selecting desired frequency.</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Performance Verification</title>
+          <para>Verify system meets performance criteria:</para>
+          <proceduralStep>
+            <para>Audio quality: Clear and intelligible with no distortion or excessive noise.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Frequency accuracy: Displayed frequency matches actual transmission/reception frequency (verify with ground station if available).</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Response time: Frequency changes and mode selections occur within 1 second.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Transmit power: Adequate signal strength reported by receiving station (full quieting at normal distances).</para>
+          </proceduralStep>
+        </proceduralStep>
+        
+        <proceduralStep>
+          <title>Test Completion</title>
+          <proceduralStep>
+            <para>If all tests pass, system is operational and ready for service.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Record test results in aircraft maintenance log with date, time, and technician signature.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>If any test fails, refer to DMC-AMPEL360AT-A-23-10-00-00A-421A (Communications Fault Isolation Procedure) for troubleshooting.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Return aircraft systems to normal configuration.</para>
+          </proceduralStep>
+        </proceduralStep>
+      </mainProcedure>
+      
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+  
+</dmodule>

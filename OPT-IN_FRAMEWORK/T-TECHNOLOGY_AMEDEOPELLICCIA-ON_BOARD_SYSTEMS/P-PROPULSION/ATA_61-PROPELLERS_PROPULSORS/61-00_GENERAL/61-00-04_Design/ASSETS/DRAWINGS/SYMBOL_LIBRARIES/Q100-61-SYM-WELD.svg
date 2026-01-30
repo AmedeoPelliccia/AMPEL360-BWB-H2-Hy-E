@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2025 AMPEL360 Project Contributors
+  Licensed under the Apache License, Version 2.0
+  
+  Q100-61-SYM-WELD — Welding Symbol Library
+  Reference: AWS A2.4 / ISO 2553
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200mm"
+     height="150mm"
+     viewBox="0 0 200 150">
+  
+  <title>Q100-61-SYM-WELD — Welding Symbol Library</title>
+  <desc>Welding symbols for ATA 61 propulsion drawings</desc>
+  
+  <defs>
+    <style>
+      .symbol { stroke: #000000; stroke-width: 0.35; fill: none; }
+      .filled { stroke: #000000; stroke-width: 0.35; fill: #000000; }
+      .text { font-family: Arial, sans-serif; font-size: 3; fill: #000000; }
+    </style>
+    
+    <!-- Fillet Weld Symbol -->
+    <symbol id="weld-fillet" viewBox="0 0 12 12">
+      <polygon points="0,12 12,12 0,0" class="symbol"/>
+    </symbol>
+    
+    <!-- Groove Weld Symbol (V) -->
+    <symbol id="weld-groove-v" viewBox="0 0 12 12">
+      <polygon points="0,0 6,12 12,0" class="symbol"/>
+    </symbol>
+    
+    <!-- Butt Weld Symbol -->
+    <symbol id="weld-butt" viewBox="0 0 12 8">
+      <rect x="0" y="0" width="12" height="8" class="symbol"/>
+    </symbol>
+    
+    <!-- Spot Weld Symbol -->
+    <symbol id="weld-spot" viewBox="0 0 12 12">
+      <circle cx="6" cy="6" r="5" class="symbol"/>
+    </symbol>
+    
+    <!-- Seam Weld Symbol -->
+    <symbol id="weld-seam" viewBox="0 0 16 12">
+      <ellipse cx="8" cy="6" rx="7" ry="5" class="symbol"/>
+    </symbol>
+    
+    <!-- Weld All Around Symbol -->
+    <symbol id="weld-all-around" viewBox="0 0 12 12">
+      <circle cx="6" cy="6" r="5" class="symbol"/>
+    </symbol>
+    
+    <!-- Field Weld Symbol -->
+    <symbol id="weld-field" viewBox="0 0 12 16">
+      <polygon points="6,0 0,10 12,10" class="filled"/>
+      <line x1="6" y1="10" x2="6" y2="16" class="symbol"/>
+    </symbol>
+    
+    <!-- Reference Line -->
+    <symbol id="weld-ref-line" viewBox="0 0 40 16">
+      <line x1="0" y1="8" x2="40" y2="8" class="symbol"/>
+      <line x1="30" y1="8" x2="40" y2="0" class="symbol"/>
+    </symbol>
+    
+  </defs>
+  
+  <!-- Symbol Display Grid -->
+  <text x="100" y="10" text-anchor="middle" class="text" style="font-size: 5; font-weight: bold;">
+    WELDING SYMBOLS — Q100-61-SYM-WELD
+  </text>
+  
+  <g transform="translate(20,25)">
+    <use xlink:href="#weld-fillet" x="0" y="0" width="12" height="12"/>
+    <text x="6" y="22" text-anchor="middle" class="text">Fillet</text>
+  </g>
+  
+  <g transform="translate(50,25)">
+    <use xlink:href="#weld-groove-v" x="0" y="0" width="12" height="12"/>
+    <text x="6" y="22" text-anchor="middle" class="text">V-Groove</text>
+  </g>
+  
+  <g transform="translate(80,27)">
+    <use xlink:href="#weld-butt" x="0" y="0" width="12" height="8"/>
+    <text x="6" y="20" text-anchor="middle" class="text">Butt</text>
+  </g>
+  
+  <g transform="translate(110,25)">
+    <use xlink:href="#weld-spot" x="0" y="0" width="12" height="12"/>
+    <text x="6" y="22" text-anchor="middle" class="text">Spot</text>
+  </g>
+  
+  <g transform="translate(140,25)">
+    <use xlink:href="#weld-seam" x="0" y="0" width="16" height="12"/>
+    <text x="8" y="22" text-anchor="middle" class="text">Seam</text>
+  </g>
+  
+  <g transform="translate(20,60)">
+    <use xlink:href="#weld-all-around" x="0" y="0" width="12" height="12"/>
+    <text x="6" y="22" text-anchor="middle" class="text">All Around</text>
+  </g>
+  
+  <g transform="translate(50,55)">
+    <use xlink:href="#weld-field" x="0" y="0" width="12" height="16"/>
+    <text x="6" y="28" text-anchor="middle" class="text">Field Weld</text>
+  </g>
+  
+  <g transform="translate(80,60)">
+    <use xlink:href="#weld-ref-line" x="0" y="0" width="40" height="16"/>
+    <text x="20" y="26" text-anchor="middle" class="text">Reference Line</text>
+  </g>
+  
+</svg>

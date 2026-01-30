@@ -1,0 +1,6 @@
+FloorZone,Station_Start_m,Station_End_m,LoadType,Load_kN_m2,DesignCase
+Forward_Cabin,5.0,15.0,Passenger+Seats,5.0,9g Forward Emergency
+Mid_Cabin,15.0,25.0,Passenger+Seats,5.0,9g Forward Emergency
+Aft_Cabin,25.0,35.0,Passenger+Seats,5.0,9g Forward Emergency
+Cargo_Fwd,5.0,10.0,Cargo,8.0,Limit Load
+Cargo_Aft,28.0,35.0,Cargo,8.0,Limit Load

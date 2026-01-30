@@ -1,0 +1,41 @@
+# INDEX.meta.yaml — LRI_03 Center Windshield Panel
+# ATA 56-21-01 Forward Windshield Assembly (BWB-Specific)
+
+metadata:
+  lri_id: LRI_03
+  name: CenterWindshieldPanel
+  parent_lru: LRU_56-21-01
+  ata_chapter: 56
+  version: "1.0"
+  status: DRAFT
+  created: 2025-12-01
+  last_updated: 2025-12-01
+  bwb_specific: true
+
+component:
+  nomenclature: Center Windshield Panel
+  description: BWB-specific center view panel for extended cockpit FOV
+  quantity: 1
+  location: Center cockpit frame
+  part_number: PN-56-21-01-03-001
+
+documents:
+  - id: 56-21-01_03_001
+    title: Center Panel Design
+    file: 56-21-01_03_001_CenterPanel_Design.md
+    type: Design
+
+  - id: 56-21-01_03_002
+    title: Center Panel Requirements
+    file: 56-21-01_03_002_CenterPanel_Requirements.md
+    type: Requirements
+
+  - id: 56-21-01_03_003
+    title: Center Panel Interfaces
+    file: 56-21-01_03_003_CenterPanel_Interfaces.md
+    type: Interfaces
+
+  - id: 56-21-01_03_004
+    title: Center Panel Materials
+    file: 56-21-01_03_004_CenterPanel_Materials.md
+    type: Materials

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- 
+  ATA 29 Power Users Map - ATA 27 (Flight Controls) and ATA 32 (Landing Gear)
+  Placeholder for diagram showing hydraulic power users from flight controls and landing gear systems.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 14px; fill: #666; }
+      .box { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .box-user { fill: #fce4ec; stroke: #c2185b; stroke-width: 2; }
+      .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; }
+      .arrow { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <text x="400" y="40" text-anchor="middle" class="title">ATA 29 Power Users Map</text>
+  <text x="400" y="60" text-anchor="middle" class="subtitle">AMPEL360AT - Interface with ATA 27 and ATA 32</text>
+  
+  <!-- ATA 29 Central Box -->
+  <rect x="300" y="200" width="200" height="100" class="box" rx="10"/>
+  <text x="400" y="250" text-anchor="middle" class="label">ATA 29</text>
+  <text x="400" y="270" text-anchor="middle" class="label">HYDRAULIC POWER</text>
+  
+  <!-- ATA 27 User Box -->
+  <rect x="50" y="350" width="200" height="100" class="box-user" rx="10"/>
+  <text x="150" y="400" text-anchor="middle" class="label">ATA 27</text>
+  <text x="150" y="420" text-anchor="middle" class="label">FLIGHT CONTROLS</text>
+  
+  <!-- ATA 32 User Box -->
+  <rect x="550" y="350" width="200" height="100" class="box-user" rx="10"/>
+  <text x="650" y="400" text-anchor="middle" class="label">ATA 32</text>
+  <text x="650" y="420" text-anchor="middle" class="label">LANDING GEAR</text>
+  
+  <!-- Connection arrows -->
+  <line x1="350" y1="300" x2="150" y2="350" class="arrow"/>
+  <line x1="450" y1="300" x2="650" y2="350" class="arrow"/>
+  
+  <!-- Placeholder note -->
+  <text x="400" y="550" text-anchor="middle" class="subtitle">Placeholder - To be replaced with detailed power users map</text>
+</svg>

@@ -1,0 +1,11 @@
+Load_Case_ID,Load_Case_Name,Maneuver_Type,Nz_Limit,Nz_Ultimate,Nx_g,Ny_g,Speed,Mach,Altitude_ft,Weight,Reference
+LC-MAN-001,2.5g Symmetric Pull-up,Symmetric,2.5,3.75,0,0,VD,0.92,25000,MTOW,CS-25.331
+LC-MAN-002,-1.0g Symmetric Push-over,Symmetric,-1.0,-1.5,0,0,VD,0.92,25000,MTOW,CS-25.331
+LC-MAN-003,2.0g @ VC,Symmetric,2.0,3.0,0,0,VC,0.85,35000,MTOW,CS-25.331
+LC-MAN-004,Balanced Maneuver VA,Symmetric,2.5,3.75,0,0,VA,0.55,10000,MTOW,CS-25.331
+LC-MAN-005,Checked Maneuver - Roll,Asymmetric,1.67,2.5,0,0.25,VA,0.55,10000,MTOW,CS-25.349
+LC-MAN-006,Yaw Maneuver,Asymmetric,1.0,1.5,0,0.15,VA,0.55,10000,MTOW,CS-25.351
+LC-MAN-007,Engine Out Yaw,Asymmetric,1.0,1.5,0,0.08,V2,0.35,0,MTOW,CS-25.367
+LC-MAN-008,Abrupt Pitch - Nose Up,Symmetric,1.5,2.25,0,0,VD,0.92,25000,MTOW,CS-25.331
+LC-MAN-009,Abrupt Pitch - Nose Down,Symmetric,0,0,0,0,VD,0.92,25000,MTOW,CS-25.331
+LC-MAN-010,Lateral Gust Equivalent,Asymmetric,1.0,1.5,0,TBD,VC,0.85,35000,MTOW,CS-25.341

@@ -1,0 +1,37 @@
+id: "54-00-04-D006"
+title: "Thrust Reverser Installation"
+category: "DRWG"
+drawing_type: "Installation"
+ata_chapter: "54"
+description: "Installation drawing showing thrust reverser system mounting provisions, actuation system routing, and structural support interfaces within the nacelle."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:15"
+size: "A0"
+owner: "Nacelle Structures"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A004"
+      title: "Thrust Reverser Structure Assembly"
+  requirements:
+    - id: "54-00-03-01-001"
+      title: "Nacelle Structural Integrity"
+    - id: "78-00-03-01-001"
+      title: "Thrust Reverser Requirements"
+  parent_drawings: []
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  Shows structural provisions for thrust reverser mounting and actuation.
+  Coordinates with ATA 78 Thrust Reverser system requirements.

@@ -1,0 +1,60 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# CSDB Profile Configuration for ATA 29-30-10
+
+profile:
+  model: "AMPEL360AT"
+  ata_chapter: "29"
+  section: "30"
+  subject: "10"
+  subject_name: "Pressure Indication and Switching"
+  publication_type: "AMM"
+  language: "en-US"
+  country: "US"
+  issue_date: "2026-01-09"
+  
+validation:
+  s1000d_version: "5.0"
+  schema_location: "schemas/S1000D_5-0"
+  brex: "BREX-AMPEL360AT-AIR-T_001-00.XML"
+  validate_on_save: true
+  
+processing:
+  output_formats:
+    - "pdf"
+    - "html5"
+    - "xml"
+  stylesheet: "default"
+  include_warnings: true
+  include_cautions: true
+  include_notes: true
+  
+data_module_codes:
+  model_ident_code: "AMPEL360AT"
+  system_diff_code: "A"
+  standard_numbering_system: "29"
+  
+applicability:
+  default: "ALL"
+  product_variants:
+    - "AMPEL360AT-BASE"
+    - "AMPEL360AT-EXTENDED"
+  
+metadata:
+  originator: "AMPEL360"
+  security_classification: "01"  # Unclassified
+  responsible_partner_company: "AMPEL"

@@ -1,0 +1,17 @@
+Signal_ID,Signal_Name,Type,Unit,Min,Max,Rate_Hz,Protocol,Source,Destination,Description
+SIG-PROP-001,FC1_PWR_OUT,Float32,kW,0,550,10,AFDX,FC_Controller_1,Mode_Manager,Fuel cell 1 power output
+SIG-PROP-002,FC2_PWR_OUT,Float32,kW,0,550,10,AFDX,FC_Controller_2,Mode_Manager,Fuel cell 2 power output
+SIG-PROP-003,FC1_H2O_RATE,Float32,L/hr,0,45,1,CAN,FC_Controller_1,Water_Manager,FC1 water production rate
+SIG-PROP-004,FC2_H2O_RATE,Float32,L/hr,0,45,1,CAN,FC_Controller_2,Water_Manager,FC2 water production rate
+SIG-PROP-005,FC1_WASTE_HEAT,Float32,kW,0,250,1,CAN,FC_Controller_1,Thermal_Manager,FC1 waste heat
+SIG-PROP-006,FC2_WASTE_HEAT,Float32,kW,0,250,1,CAN,FC_Controller_2,Thermal_Manager,FC2 waste heat
+SIG-PROP-007,TG1_PWR_OUT,Float32,kW,0,850,10,AFDX,TG_Controller_1,Mode_Manager,Turbo-gen 1 power output
+SIG-PROP-008,TG2_PWR_OUT,Float32,kW,0,850,10,AFDX,TG_Controller_2,Mode_Manager,Turbo-gen 2 power output
+SIG-PROP-009,FAN1_REGEN_PWR,Float32,kW,0,200,100,CAN,MCU_1,Mode_Manager,Fan 1 regeneration power
+SIG-PROP-010,FAN2_REGEN_PWR,Float32,kW,0,200,100,CAN,MCU_2,Mode_Manager,Fan 2 regeneration power
+SIG-PROP-011,FAN3_REGEN_PWR,Float32,kW,0,200,100,CAN,MCU_3,Mode_Manager,Fan 3 regeneration power
+SIG-PROP-012,FAN4_REGEN_PWR,Float32,kW,0,200,100,CAN,MCU_4,Mode_Manager,Fan 4 regeneration power
+SIG-PROP-013,REGEN_ENABLE,Boolean,-,0,1,10,AFDX,Mode_Manager,MCU_All,Regeneration enable command
+SIG-PROP-014,REGEN_POWER_CMD,Float32,kW,0,800,100,AFDX,Mode_Manager,MCU_All,Regeneration power command
+SIG-PROP-015,BATTERY_ACCEPT,Boolean,-,0,1,10,CAN,BMS,Mode_Manager,Battery acceptance flag
+SIG-PROP-016,EMERGENCY_ISOLATION,Boolean,-,0,1,Async,Discrete,Safety_Supervisor,All,Emergency isolation command

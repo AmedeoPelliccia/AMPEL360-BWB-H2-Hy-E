@@ -1,0 +1,79 @@
+# Advisory Rules Configuration
+# OFEC-97-40-40-20 Advisory Logic
+# Version: 1.0
+
+# Advisory level thresholds (percentage of envelope margin)
+thresholds:
+  normal: 50.0      # > 50% = NORMAL
+  caution: 25.0     # 25-50% = CAUTION
+  warning: 10.0     # 10-25% = WARNING
+  # < 10% = CRITICAL
+
+# Hysteresis values to prevent oscillation
+hysteresis:
+  # Percentage points above threshold needed to return to lower level
+  normal_return: 5.0
+  caution_return: 3.0
+  warning_return: 2.0
+
+# Priority weights for different margin types
+priority_weights:
+  alpha: 1.0        # Highest priority - stall risk
+  speed_low: 0.9    # High priority - underspeed
+  speed_high: 0.8   # High priority - overspeed
+  load_factor: 0.85 # High priority - structural
+  bank_angle: 0.7   # Medium priority
+  altitude: 0.5     # Lower priority
+
+# Advisory message templates
+messages:
+  alpha:
+    caution: "AOA margin reduced - monitor airspeed"
+    warning: "Low AOA margin - increase airspeed"
+    critical: "AOA critical - take immediate action"
+  
+  speed_low:
+    caution: "Approaching minimum speed"
+    warning: "Low speed margin - increase thrust"
+    critical: "Underspeed - push nose down, add thrust"
+  
+  speed_high:
+    caution: "Approaching maximum speed"
+    warning: "High speed margin reduced - reduce thrust"
+    critical: "Overspeed - reduce thrust, deploy speedbrakes"
+  
+  load_factor:
+    caution: "Elevated G-load"
+    warning: "High G-load - reduce bank/pitch"
+    critical: "G-limit approached - unload immediately"
+  
+  bank_angle:
+    caution: "Steep bank angle"
+    warning: "Bank approaching limit"
+    critical: "Bank limit - reduce roll"
+  
+  altitude:
+    caution: "Approaching service ceiling"
+    warning: "Near altitude limit"
+    critical: "At ceiling - begin descent"
+
+# Trend detection settings
+trend:
+  window_samples: 50        # Samples for trend calculation
+  improving_threshold: -0.5  # Margin rate (pct/sec) for improving
+  degrading_threshold: 0.5   # Margin rate (pct/sec) for degrading
+  
+# Exceedance logging
+exceedance:
+  log_threshold: 0.0        # Log when margin < this value
+  debounce_ms: 100          # Minimum time between logged events
+  severity_levels:
+    minor: 0                # At limit
+    moderate: -5            # 5% beyond limit
+    severe: -10             # 10% beyond limit
+
+# Recovery advisor settings
+recovery:
+  enabled: true
+  suggestion_delay_ms: 500  # Delay before showing suggestion
+  auto_clear_ms: 5000       # Clear suggestion when margin recovers

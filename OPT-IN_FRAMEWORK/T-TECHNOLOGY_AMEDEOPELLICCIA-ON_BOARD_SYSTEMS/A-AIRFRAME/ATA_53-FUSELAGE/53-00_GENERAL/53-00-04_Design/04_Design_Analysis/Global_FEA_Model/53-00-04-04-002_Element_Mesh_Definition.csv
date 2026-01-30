@@ -1,0 +1,16 @@
+Element_ID_Range,Zone,Component,Element_Type,Avg_Size_mm,Material_ID,Property_ID,Notes
+1-10000,100,Nose Section Skins,CQUAD4,75,MAT-001,PSHELL-100,Pressure shell
+10001-15000,100,Nose Section Frames,CBAR,50,MAT-001,PBAR-101,Primary frames
+15001-20000,100,Forward Bulkhead,CQUAD4,50,MAT-001,PSHELL-102,Pressure critical
+20001-50000,200,Forward Cabin Skins,CQUAD4,75,MAT-001,PSHELL-200,Pressure shell
+50001-60000,200,Forward Cabin Frames,CBAR,50,MAT-001,PBAR-201,Primary frames
+60001-65000,200,Door Frames,CQUAD4,40,MAT-003,PSHELL-202,Titanium reinforced
+65001-100000,300,Mid Cabin Skins,CQUAD4,75,MAT-001,PSHELL-300,Pressure shell + blend
+100001-150000,400,Center Wing Box Skins,CQUAD4,60,MAT-002,PSHELL-400,High load region
+150001-160000,400,Wing Spars,CQUAD4,50,MAT-002,PSHELL-401,Primary load path
+160001-170000,400,Wing Ribs,CQUAD4,50,MAT-002,PSHELL-402,Load distribution
+170001-180000,400,Gear Bay Structure,CQUAD4,40,MAT-003,PSHELL-403,Titanium hybrid
+180001-200000,500,Aft Cabin Skins,CQUAD4,75,MAT-001,PSHELL-500,Pressure shell
+200001-220000,600,Tail Section Skins,CQUAD4,75,MAT-001,PSHELL-600,Pressure shell
+220001-225000,600,Aft Bulkhead,CQUAD4,50,MAT-001,PSHELL-601,Pressure critical
+225001-230000,600,Empennage Attach,CQUAD4,40,MAT-003,PSHELL-602,Titanium fittings

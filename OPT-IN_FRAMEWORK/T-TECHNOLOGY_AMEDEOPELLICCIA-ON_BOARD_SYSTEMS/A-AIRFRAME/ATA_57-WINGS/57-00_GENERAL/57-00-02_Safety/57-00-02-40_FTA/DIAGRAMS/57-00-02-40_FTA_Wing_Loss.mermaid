@@ -1,0 +1,55 @@
+%% 57-00-02-40 — FTA Wing Loss Diagram
+%% ATA Chapter: 57 — Wings
+%% Top Event: Loss of Wing Structural Integrity
+
+flowchart TD
+    TOP[Loss of Wing<br/>Structural Integrity<br/>H-57-STR-01]
+
+    TOP --> OR1{OR}
+
+    OR1 --> BE1[Primary Structure<br/>Failure]
+    OR1 --> BE2[Secondary Structure<br/>Failure Leading to<br/>Primary Failure]
+    OR1 --> BE3[Attachment<br/>Failure]
+
+    BE1 --> OR2{OR}
+    OR2 --> BE1A[Spar Failure]
+    OR2 --> BE1B[Skin Panel Failure]
+    OR2 --> BE1C[Rib Failure]
+
+    BE1A --> AND1{AND}
+    AND1 --> BE1A1[Fatigue Crack<br/>Initiation]
+    AND1 --> BE1A2[Undetected<br/>Crack Growth]
+    AND1 --> BE1A3[Crack Reaches<br/>Critical Size]
+
+    BE1A1 --> OR3{OR}
+    OR3 --> BE1A1a[Manufacturing<br/>Defect]
+    OR3 --> BE1A1b[Service<br/>Damage]
+    OR3 --> BE1A1c[Corrosion]
+
+    BE1A2 --> AND2{AND}
+    AND2 --> BE1A2a[Inspection<br/>Missed]
+    AND2 --> BE1A2b[SHM Not<br/>Triggered]
+
+    BE2 --> OR4{OR}
+    OR4 --> BE2A[Leading Edge<br/>Failure]
+    OR4 --> BE2B[Trailing Edge<br/>Failure]
+    OR4 --> BE2C[Fairing<br/>Departure]
+
+    BE3 --> OR5{OR}
+    OR5 --> BE3A[Wing-Fuselage<br/>Attachment Failure]
+    OR5 --> BE3B[Pylon Attachment<br/>Failure]
+
+    BE3A --> AND3{AND}
+    AND3 --> BE3A1[Attachment<br/>Overload]
+    AND3 --> BE3A2[Redundant Path<br/>Failure]
+
+    %% Styling
+    classDef topEvent fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    classDef orGate fill:#ffd93d,stroke:#333,stroke-width:2px
+    classDef andGate fill:#6bcb77,stroke:#333,stroke-width:2px
+    classDef basicEvent fill:#4d96ff,stroke:#333,stroke-width:2px,color:#fff
+
+    class TOP topEvent
+    class OR1,OR2,OR3,OR4,OR5 orGate
+    class AND1,AND2,AND3 andGate
+    class BE1,BE2,BE3,BE1A,BE1B,BE1C,BE1A1,BE1A2,BE1A3,BE1A1a,BE1A1b,BE1A1c,BE1A2a,BE1A2b,BE2A,BE2B,BE2C,BE3A,BE3B,BE3A1,BE3A2 basicEvent

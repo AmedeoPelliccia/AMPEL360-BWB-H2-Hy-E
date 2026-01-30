@@ -1,0 +1,8 @@
+MaterialID,MaterialName,Form,Specification,Density(g/cm³),E(GPa),Ftu(MPa),Fty(MPa),Elongation(%),TempRange(°C)
+MAT-001,CFRP IM7/8552,Laminate,Quasi-Isotropic,1.58,160,820,680,1.5,-55 to 120
+MAT-002,Al 2024-T3,Sheet,AMS 4037,2.78,73.1,470,345,12,-55 to 120
+MAT-003,Al 7075-T6,Plate,AMS 4045,2.81,71.7,570,505,8,-55 to 120
+MAT-004,Al 7050-T7451,Plate,AMS 4050,2.83,71.7,525,455,10,-55 to 120
+MAT-005,Ti-6Al-4V,Forging,AMS 4928,4.43,114,930,860,12,-55 to 300
+MAT-006,Steel 4340,Bar,AMS 6414,7.85,205,1790,1655,10,-55 to 150
+MAT-007,CFRP T800/M21,Laminate,0-Dominated,1.60,165,2800,620,1.8,-55 to 120

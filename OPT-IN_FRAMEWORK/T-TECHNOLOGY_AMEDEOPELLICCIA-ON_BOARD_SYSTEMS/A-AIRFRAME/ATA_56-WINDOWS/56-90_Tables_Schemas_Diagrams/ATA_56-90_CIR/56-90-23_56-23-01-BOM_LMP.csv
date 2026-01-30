@@ -1,0 +1,15 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-23-01-001,LRI_01,PN-56-23-01-01-001,5340-XX-XXX-XXXX,XXXXX,Outer Pane Assembly,1,EA,1,N,90,Critical,14,Make,FAR 25.775,UNL,R1-Glass recovery,Structural pressure pane
+2,PN-56-23-01-001,LRI_01,PN-56-23-01-01-010,5340-XX-XXX-XXXX,XXXXX,Outer Glass Pane,1,EA,1,N,90,Critical,10,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,Chemically strengthened glass
+3,PN-56-23-01-001,LRI_02,PN-56-23-01-02-001,5340-XX-XXX-XXXX,XXXXX,Middle Pane Assembly,1,EA,1,N,90,Critical,14,Make,FAR 25.775,UNL,R1-Glass recovery,Fail-safe backup pane
+4,PN-56-23-01-001,LRI_02,PN-56-23-01-02-010,5340-XX-XXX-XXXX,XXXXX,Middle Glass Pane,1,EA,1,N,90,Critical,10,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,Laminated safety glass
+5,PN-56-23-01-001,LRI_03,PN-56-23-01-03-001,5340-XX-XXX-XXXX,XXXXX,Inner Pane Assembly,1,EA,1,Y,30,Standard,7,Make,MIL-P-25690,60,R2-PMMA chemical recycling,Scratch pane passenger side
+6,PN-56-23-01-001,LRI_03,PN-56-23-01-03-010,5340-XX-XXX-XXXX,XXXXX,Inner Acrylic Pane,1,EA,1,Y,30,Standard,5,Buy,MIL-P-25690,60,R2-PMMA chemical recycling,Clear PMMA scratch panel
+7,PN-56-23-01-001,LRI_04,PN-56-23-01-04-001,5340-XX-XXX-XXXX,XXXXX,Breathing Hole Assembly,1,EA,1,N,20,Standard,5,Make,SAE ARP1795,UNL,R1-Metal recycling,Pressure equalization port
+8,PN-56-23-01-001,LRI_04,PN-56-23-01-04-010,5340-XX-XXX-XXXX,XXXXX,Moisture Trap,1,EA,1,Y,10,Standard,3,Buy,SAE ARP1795,24,R4-Desiccant replacement,Desiccant cartridge - moisture sensitive
+9,PN-56-23-01-001,LRI_05,PN-56-23-01-05-001,5340-XX-XXX-XXXX,XXXXX,Retaining Ring Assembly,1,EA,1,N,60,Critical,10,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Pane retention assembly
+10,PN-56-23-01-001,LRI_05,PN-56-23-01-05-010,5340-XX-XXX-XXXX,XXXXX,Aluminum Ring,1,EA,1,N,45,Standard,7,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Anodized aluminum ring
+11,PN-56-23-01-001,LRI_05,PN-56-23-01-05-020,5330-XX-XXX-XXXX,XXXXX,Seal Set,1,KIT,1,Y,20,Standard,3,Buy,MIL-R-25897,36,R4-Silicone thermal recovery,Silicone sealing kit
+12,PN-56-23-01-001,LRI_06,PN-56-23-01-06-001,5340-XX-XXX-XXXX,XXXXX,Window Shade Assembly,1,EA,1,Y,15,Standard,7,Make,FAR 25.853,UNL,R2-Composite recycling,Manual or electrochromic shade
+13,PN-56-23-01-001,LRI_06,PN-56-23-01-06-010,5340-XX-XXX-XXXX,XXXXX,Shade Panel,1,EA,1,Y,10,Standard,5,Buy,FAR 25.853,UNL,R4-Fire-resistant disposal,Fire-resistant material
+14,PN-56-23-01-001,LRI_06,PN-56-23-01-06-020,5340-XX-XXX-XXXX,XXXXX,Shade Mechanism,1,EA,1,Y,10,Standard,3,Buy,MIL-STD-1472,UNL,R1-Metal/plastic recycling,Slide mechanism

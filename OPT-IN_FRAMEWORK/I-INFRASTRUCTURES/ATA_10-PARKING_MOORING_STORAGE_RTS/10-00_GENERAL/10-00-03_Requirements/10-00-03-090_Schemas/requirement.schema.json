@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "requirement.schema.json",
+  "title": "AMPEL360 Requirement",
+  "type": "object",
+  "description": "Schema for individual requirements in ATA Chapter 10 — Parking, Mooring, Storage & RTS",
+  "required": ["id", "title", "description", "category", "priority", "verification"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^REQ-10-[A-Z]{3}-[0-9]{3}-[FPIRC]$",
+      "description": "Unique requirement identifier following pattern REQ-10-[CAT]-[SEQ]-[TYPE] where TYPE is: F=Functional, P=Performance, I=Interface, R=Regulatory-derived, C=Constraint",
+      "examples": [
+        "REQ-10-REG-001-C",
+        "REQ-10-FUN-023-F",
+        "REQ-10-SAF-005-F"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "Short descriptive title for the requirement"
+    },
+    "description": {
+      "type": "string",
+      "description": "Full requirement statement"
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Explanation of why this requirement exists"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["REG", "FUN", "PER", "ENV", "INT", "SAF", "SEC", "SUS"],
+      "description": "Requirement category: REG=Regulatory, FUN=Functional, PER=Performance, ENV=Environmental, INT=Interface, SAF=Safety, SEC=Security, SUS=Sustainability"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["Essential", "Desirable", "Optional"],
+      "description": "Priority level of the requirement"
+    },
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["A", "D", "I", "T", "R", "C"]
+      },
+      "minItems": 1,
+      "description": "Verification methods: A=Analysis, D=Demonstration, I=Inspection, T=Test, R=Review, C=Certification"
+    },
+    "source": {
+      "type": "string",
+      "description": "Source of the requirement (regulation, standard, stakeholder need)"
+    },
+    "allocation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Systems, subsystems, or components to which the requirement is allocated"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "Approved", "Verified", "Closed"],
+      "description": "Current status of the requirement"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Requirement version number",
+      "default": "1.0"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Last modification date"
+    },
+    "author": {
+      "type": "string",
+      "description": "Author or responsible party for the requirement"
+    },
+    "relatedRequirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^REQ-10-[A-Z]{3}-[0-9]{3}-[FPIRC]$"
+      },
+      "description": "Related or dependent requirement IDs"
+    },
+    "verificationEvidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "enum": ["A", "D", "I", "T", "R", "C"]
+          },
+          "evidenceId": {
+            "type": "string"
+          },
+          "evidencePath": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Planned", "In Progress", "Complete", "Failed"]
+          }
+        }
+      },
+      "description": "Links to verification evidence"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments"
+    }
+  },
+  "additionalProperties": false
+}

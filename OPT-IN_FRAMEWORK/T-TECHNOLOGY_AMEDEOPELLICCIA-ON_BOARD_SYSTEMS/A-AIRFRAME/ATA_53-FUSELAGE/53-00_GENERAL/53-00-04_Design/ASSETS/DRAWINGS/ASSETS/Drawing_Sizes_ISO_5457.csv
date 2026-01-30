@@ -1,0 +1,6 @@
+Size,Width_mm,Height_mm,Margin_mm,Title_Block_Height_mm,Use_Case
+A0,841,1189,20,180,Large assembly drawings
+A1,594,841,20,150,Assembly drawings
+A2,420,594,10,120,Detail drawings
+A3,297,420,10,110,Component drawings
+A4,210,297,10,90,Simple details and notes

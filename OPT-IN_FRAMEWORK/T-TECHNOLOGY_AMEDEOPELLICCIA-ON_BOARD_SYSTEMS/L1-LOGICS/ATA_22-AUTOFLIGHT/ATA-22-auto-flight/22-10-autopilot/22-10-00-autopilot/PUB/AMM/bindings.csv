@@ -1,0 +1,4 @@
+publication_module,data_module,sequence,applicability
+# ATA 22-10-00 Autopilot AMM Bindings
+# PM-22-10-00-001,DM-22-10-00-001,1,ALL
+# Add additional bindings as data modules are created

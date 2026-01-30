@@ -1,0 +1,381 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/production-metadata.schema.json",
+  "title": "Production Planning Metadata Schema",
+  "description": "Metadata schema for ATA 10-00-09 Production Planning documentation",
+  "type": "object",
+  "required": [
+    "document_id",
+    "document_number",
+    "title",
+    "revision",
+    "document_type",
+    "approval_status"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "description": "Unique document identifier following pattern 10-00-09-NNA",
+      "pattern": "^10-00-09-[0-9]{2}[A-Z]$",
+      "examples": ["10-00-09-01A", "10-00-09-13B", "10-00-09-52A"]
+    },
+    "document_number": {
+      "type": "string",
+      "description": "Sequential number within category (01-79)",
+      "pattern": "^[0-7][0-9]$",
+      "examples": ["01", "13", "52"]
+    },
+    "title": {
+      "type": "string",
+      "description": "Full document title",
+      "minLength": 5,
+      "maxLength": 200,
+      "examples": [
+        "Master Manufacturing Plan",
+        "H2 Compatible Welding Process Specification",
+        "H2 Valve Assembly Work Instruction"
+      ]
+    },
+    "revision": {
+      "type": "string",
+      "description": "Document revision level (A, B, C, etc.)",
+      "pattern": "^[A-Z]$",
+      "examples": ["A", "B", "C"]
+    },
+    "document_type": {
+      "type": "string",
+      "description": "Category of production document",
+      "enum": [
+        "manufacturing-plan",
+        "process-specification",
+        "quality-control",
+        "tooling-equipment",
+        "supplier-management",
+        "work-instruction",
+        "production-schedule",
+        "logistics",
+        "template"
+      ]
+    },
+    "category_range": {
+      "type": "object",
+      "description": "Numbering range for the document category",
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 79
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 79
+        }
+      }
+    },
+    "h2_related": {
+      "type": "boolean",
+      "description": "Document applies to hydrogen system components",
+      "default": false
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "description": "Document applies to cryogenic system components",
+      "default": false
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Document is specific to BWB aircraft configuration",
+      "default": false
+    },
+    "approval_status": {
+      "type": "string",
+      "description": "Current approval status of the document",
+      "enum": [
+        "draft",
+        "in-review",
+        "approved",
+        "released",
+        "obsolete",
+        "superseded"
+      ]
+    },
+    "effective_date": {
+      "type": "string",
+      "description": "Date when document becomes effective (ISO 8601 format)",
+      "format": "date",
+      "examples": ["2025-12-10", "2026-03-15"]
+    },
+    "approved_by": {
+      "type": "string",
+      "description": "Name or role of approver",
+      "examples": ["Manufacturing Engineer", "Quality Manager", "Chief Engineer"]
+    },
+    "approval_date": {
+      "type": "string",
+      "description": "Date of approval (ISO 8601 format)",
+      "format": "date"
+    },
+    "related_parts": {
+      "type": "array",
+      "description": "Part numbers or component identifiers this document applies to",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z0-9-]+$"
+      },
+      "examples": [
+        ["10-10-001", "10-10-002"],
+        ["H2-VALVE-01", "H2-DETECTOR-03"]
+      ]
+    },
+    "related_drawings": {
+      "type": "array",
+      "description": "Drawing numbers referenced by this document",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        ["DWG-10-001-A", "DWG-10-002-B"],
+        ["ASM-10-H2-001"]
+      ]
+    },
+    "related_specifications": {
+      "type": "array",
+      "description": "External specifications or standards referenced",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        ["AWS D17.1", "ASME B31.12", "SAE AS6968"],
+        ["AS9100D", "NADCAP AC7114"]
+      ]
+    },
+    "special_processes": {
+      "type": "array",
+      "description": "NADCAP or special processes covered",
+      "items": {
+        "type": "string",
+        "enum": [
+          "welding",
+          "heat-treatment",
+          "non-destructive-testing",
+          "chemical-processing",
+          "coatings",
+          "composites",
+          "electronics",
+          "measurement"
+        ]
+      }
+    },
+    "nadcap_codes": {
+      "type": "array",
+      "description": "Applicable NADCAP commodity codes",
+      "items": {
+        "type": "string",
+        "pattern": "^AC[0-9]{4}(/[0-9]+)?$"
+      },
+      "examples": [
+        ["AC7114/1", "AC7114/2"],
+        ["AC7102", "AC7108"]
+      ]
+    },
+    "material_specifications": {
+      "type": "array",
+      "description": "AMS or other material specifications referenced",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        ["AMS 5510", "AMS 5662"],
+        ["ASTM A276", "ASTM B574"]
+      ]
+    },
+    "quality_level": {
+      "type": "string",
+      "description": "Quality assurance level for the process/component",
+      "enum": [
+        "critical",
+        "major",
+        "minor",
+        "standard"
+      ]
+    },
+    "inspection_requirements": {
+      "type": "object",
+      "description": "Inspection and testing requirements",
+      "properties": {
+        "first_article_inspection": {
+          "type": "boolean",
+          "description": "AS9102 First Article Inspection required"
+        },
+        "in_process_inspection": {
+          "type": "boolean",
+          "description": "In-process inspection points defined"
+        },
+        "final_inspection": {
+          "type": "boolean",
+          "description": "Final inspection required"
+        },
+        "ndt_required": {
+          "type": "boolean",
+          "description": "Non-destructive testing required"
+        },
+        "ndt_methods": {
+          "type": "array",
+          "description": "NDT methods to be applied",
+          "items": {
+            "type": "string",
+            "enum": [
+              "radiographic",
+              "ultrasonic",
+              "magnetic-particle",
+              "liquid-penetrant",
+              "eddy-current",
+              "visual"
+            ]
+          }
+        },
+        "leak_test_required": {
+          "type": "boolean",
+          "description": "Leak testing required (for H2/pressure components)"
+        },
+        "leak_test_sensitivity": {
+          "type": "string",
+          "description": "Required leak test sensitivity",
+          "examples": ["1e-9 std cc/sec", "1e-6 mbar·L/s"]
+        }
+      }
+    },
+    "environmental_conditions": {
+      "type": "object",
+      "description": "Environmental requirements for manufacturing",
+      "properties": {
+        "cleanroom_class": {
+          "type": "string",
+          "description": "ISO cleanroom classification if applicable",
+          "enum": ["ISO-3", "ISO-4", "ISO-5", "ISO-6", "ISO-7", "ISO-8", "none"]
+        },
+        "temperature_range": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number",
+              "description": "Minimum temperature in Celsius"
+            },
+            "max": {
+              "type": "number",
+              "description": "Maximum temperature in Celsius"
+            }
+          }
+        },
+        "humidity_range": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number",
+              "description": "Minimum relative humidity percentage"
+            },
+            "max": {
+              "type": "number",
+              "description": "Maximum relative humidity percentage"
+            }
+          }
+        }
+      }
+    },
+    "safety_requirements": {
+      "type": "object",
+      "description": "Safety requirements and hazards",
+      "properties": {
+        "h2_safety_zone": {
+          "type": "boolean",
+          "description": "Hydrogen safety zone requirements apply"
+        },
+        "cryo_safety": {
+          "type": "boolean",
+          "description": "Cryogenic safety requirements apply"
+        },
+        "ppe_required": {
+          "type": "array",
+          "description": "Personal protective equipment required",
+          "items": {
+            "type": "string"
+          },
+          "examples": [["cryo-gloves", "face-shield", "safety-glasses"]]
+        },
+        "training_required": {
+          "type": "array",
+          "description": "Required training or certifications",
+          "items": {
+            "type": "string"
+          },
+          "examples": [["H2-safety-awareness", "cryo-handling", "NADCAP-welding"]]
+        }
+      }
+    },
+    "traceability_requirements": {
+      "type": "object",
+      "description": "Material and process traceability requirements",
+      "properties": {
+        "material_cert_required": {
+          "type": "boolean",
+          "description": "Material certification (mill certs) required"
+        },
+        "heat_lot_traceability": {
+          "type": "boolean",
+          "description": "Heat lot traceability required"
+        },
+        "serialization_required": {
+          "type": "boolean",
+          "description": "Component serialization required"
+        },
+        "process_traveler": {
+          "type": "boolean",
+          "description": "Manufacturing traveler/router required"
+        }
+      }
+    },
+    "revision_history": {
+      "type": "array",
+      "description": "Document revision history",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "pattern": "^[A-Z]$"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "author": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "approved_by": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "supersedes": {
+      "type": "string",
+      "description": "Document ID that this revision supersedes",
+      "pattern": "^10-00-09-[0-9]{2}[A-Z]$"
+    },
+    "superseded_by": {
+      "type": "string",
+      "description": "Document ID that supersedes this document",
+      "pattern": "^10-00-09-[0-9]{2}[A-Z]$"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments",
+      "maxLength": 1000
+    }
+  }
+}

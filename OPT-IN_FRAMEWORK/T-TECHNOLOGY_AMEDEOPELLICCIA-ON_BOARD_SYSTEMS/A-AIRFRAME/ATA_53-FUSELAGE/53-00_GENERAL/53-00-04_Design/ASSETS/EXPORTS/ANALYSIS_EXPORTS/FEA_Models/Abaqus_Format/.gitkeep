@@ -1,0 +1,43 @@
+# Abaqus FEA Model Exports
+
+This folder contains **Abaqus-format FEA models** for ATA 53-00-04 (Design).
+
+## Naming convention
+
+Files MUST follow:
+
+`53-00-04-ANLS-02x_RevX_*`
+
+- `53-00-04` – ATA / design section identifier.
+- `ANLS` – Analysis artifact.
+- `02x` – FEA model code **(see mapping below)**.
+- `RevX` – Model revision (e.g. `RevA`, `RevB`, or `Rev01`).
+- `*` – Suffix describing content and/or format (e.g. `_Model.inp`, `_BC.inp`, `_Materials.inp`).
+
+### Example
+
+- `53-00-04-ANLS-020_RevA_Model.inp`
+- `53-00-04-ANLS-020_RevA_BC.inp`
+- `53-00-04-ANLS-021_RevB_Model.inp`
+
+## 02x Code Mapping (example – adapt to your convention)
+
+- `020` – Global fuselage FEA model.
+- `021` – Door surround local model.
+- `022` – Frame + skin local model.
+
+Extend this list as needed and keep it in sync with your overall analysis coding scheme.
+
+## Recommended file set per FEA model
+
+For each `02x` and revision `RevX`, the recommended Abaqus files are:
+
+- Primary model:
+  - `53-00-04-ANLS-02x_RevX_Model.inp`
+- Optional:
+  - `53-00-04-ANLS-02x_RevX_Materials.inp`
+  - `53-00-04-ANLS-02x_RevX_BC.inp`
+  - `53-00-04-ANLS-02x_RevX_Output.inp`
+  - `53-00-04-ANLS-02x_RevX_Solution.odb` *(if tracked under Git LFS or referenced here)*
+
+The **input decks** (`.inp`) are the authoritative, version-controlled artifacts in this folder.

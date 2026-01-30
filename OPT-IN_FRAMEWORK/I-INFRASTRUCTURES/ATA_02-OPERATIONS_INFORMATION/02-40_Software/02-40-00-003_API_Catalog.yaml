@@ -1,0 +1,563 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# AMPEL360 API Catalog
+# Machine-readable catalog of all APIs in the 02-40 Software ecosystem
+# Version: 1.0.0
+# Last Updated: 2025-11-21
+
+version: "1.0.0"
+catalog:
+  name: "AMPEL360 Operations Software API Catalog"
+  description: "Comprehensive catalog of APIs, endpoints, and integrations for AMPEL360 operations software"
+  owner: "AMPEL360 Software Architecture Team"
+  contact: "architecture@ampel360.aero"
+
+# API Services
+services:
+  # Core Applications (02-40-01)
+  - id: "api-core-apps"
+    name: "Core Applications API"
+    subsystem: "02-40-01_Core_Applications"
+    version: "v1"
+    status: "active"
+    owner: "Core Apps Team"
+    base_url: "https://api.ampel360.aero/core/v1"
+    protocol: "REST/HTTPS"
+    authentication: "OAuth2 + JWT"
+    openapi_spec: "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-40_Software/02-40-01_Core_Applications/ASSETS/openapi-spec.yaml"
+    endpoints:
+      - path: "/applications"
+        method: "GET"
+        description: "List all core applications"
+        rate_limit: "1000 req/min"
+      - path: "/applications/{app_id}"
+        method: "GET"
+        description: "Get application details"
+        rate_limit: "1000 req/min"
+      - path: "/applications/{app_id}/health"
+        method: "GET"
+        description: "Get application health status"
+        rate_limit: "10000 req/min"
+
+  # Backend Services - API Gateway (02-40-12)
+  - id: "api-gateway"
+    name: "API Gateway"
+    subsystem: "02-40-12_Backend_Services"
+    version: "v1"
+    status: "active"
+    owner: "Platform Team"
+    base_url: "https://api.ampel360.aero"
+    protocol: "REST/HTTPS"
+    authentication: "OAuth2 + JWT"
+    description: "Unified entry point for all AMPEL360 APIs"
+    openapi_spec: "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-40_Software/02-40-12_Backend_Services/ASSETS/OpenAPI/02-40-12-A-101_API_Specification.yaml"
+    endpoints:
+      - path: "/health"
+        method: "GET"
+        description: "Gateway health check"
+        rate_limit: "unlimited"
+      - path: "/auth/token"
+        method: "POST"
+        description: "Obtain access token"
+        rate_limit: "100 req/min"
+
+  # Authentication Service (02-40-12)
+  - id: "api-auth"
+    name: "Authentication Service"
+    subsystem: "02-40-12_Backend_Services"
+    version: "v1"
+    status: "active"
+    owner: "Security Team"
+    base_url: "https://auth.ampel360.aero/v1"
+    protocol: "REST/HTTPS"
+    authentication: "Basic Auth (for token endpoint), JWT (for others)"
+    openapi_spec: "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-40_Software/02-40-12_Backend_Services/ASSETS/Source_Code/auth_service/openapi.yaml"
+    endpoints:
+      - path: "/token"
+        method: "POST"
+        description: "OAuth2 token endpoint"
+        rate_limit: "100 req/min per user"
+      - path: "/token/refresh"
+        method: "POST"
+        description: "Refresh access token"
+        rate_limit: "100 req/min per user"
+      - path: "/token/revoke"
+        method: "POST"
+        description: "Revoke access or refresh token"
+        rate_limit: "100 req/min per user"
+      - path: "/users/{user_id}"
+        method: "GET"
+        description: "Get user information"
+        rate_limit: "1000 req/min"
+
+  # Data Service (02-40-12)
+  - id: "api-data"
+    name: "Data Service"
+    subsystem: "02-40-12_Backend_Services"
+    version: "v1"
+    status: "active"
+    owner: "Data Platform Team"
+    base_url: "https://data.ampel360.aero/v1"
+    protocol: "REST/HTTPS, GraphQL"
+    authentication: "JWT"
+    openapi_spec: "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-40_Software/02-40-12_Backend_Services/ASSETS/OpenAPI/02-40-12-A-101_API_Specification.yaml"
+    graphql_schema: "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-40_Software/02-40-12_Backend_Services/ASSETS/OpenAPI/02-40-12-A-102_GraphQL_Schema.graphql"
+    endpoints:
+      - path: "/graphql"
+        method: "POST"
+        description: "GraphQL query endpoint"
+        rate_limit: "1000 req/min"
+      - path: "/flights"
+        method: "GET"
+        description: "List flights"
+        rate_limit: "1000 req/min"
+      - path: "/flights/{flight_id}"
+        method: "GET"
+        description: "Get flight details"
+        rate_limit: "1000 req/min"
+      - path: "/aircraft"
+        method: "GET"
+        description: "List aircraft"
+        rate_limit: "1000 req/min"
+
+  # Notification Service (02-40-12)
+  - id: "api-notifications"
+    name: "Notification Service"
+    subsystem: "02-40-12_Backend_Services"
+    version: "v1"
+    status: "active"
+    owner: "Platform Team"
+    base_url: "https://notifications.ampel360.aero/v1"
+    protocol: "REST/HTTPS, WebSocket"
+    authentication: "JWT"
+    endpoints:
+      - path: "/subscribe"
+        method: "GET"
+        description: "WebSocket subscription endpoint"
+        rate_limit: "10 connections per user"
+      - path: "/notifications"
+        method: "POST"
+        description: "Send notification"
+        rate_limit: "100 req/min"
+      - path: "/preferences"
+        method: "GET"
+        description: "Get notification preferences"
+        rate_limit: "100 req/min"
+
+  # Performance Calculator (02-40-13)
+  - id: "api-performance"
+    name: "Performance Calculator API"
+    subsystem: "02-40-13_Performance_Calculator"
+    version: "v2"
+    status: "active"
+    owner: "Flight Performance Team"
+    base_url: "https://performance.ampel360.aero/v2"
+    protocol: "REST/HTTPS"
+    authentication: "JWT"
+    certification: "DO-178C Level C"
+    openapi_spec: "OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-40_Software/02-40-13_Performance_Calculator/ASSETS/openapi.yaml"
+    endpoints:
+      - path: "/calculate/takeoff"
+        method: "POST"
+        description: "Calculate takeoff performance"
+        rate_limit: "500 req/min"
+      - path: "/calculate/landing"
+        method: "POST"
+        description: "Calculate landing performance"
+        rate_limit: "500 req/min"
+      - path: "/calculate/cruise"
+        method: "POST"
+        description: "Calculate cruise optimization"
+        rate_limit: "500 req/min"
+      - path: "/models"
+        method: "GET"
+        description: "List available aircraft performance models"
+        rate_limit: "100 req/min"
+
+  # Weight & Balance System (02-40-14)
+  - id: "api-weight-balance"
+    name: "Weight & Balance API"
+    subsystem: "02-40-14_Weight_Balance_System"
+    version: "v1"
+    status: "active"
+    owner: "W&B Team"
+    base_url: "https://wb.ampel360.aero/v1"
+    protocol: "REST/HTTPS"
+    authentication: "JWT"
+    certification: "DO-178C Level C"
+    endpoints:
+      - path: "/calculate"
+        method: "POST"
+        description: "Calculate weight and balance"
+        rate_limit: "500 req/min"
+      - path: "/envelope/check"
+        method: "POST"
+        description: "Check CG envelope limits"
+        rate_limit: "1000 req/min"
+      - path: "/h2-fuel/properties"
+        method: "GET"
+        description: "Get H2 fuel mass properties"
+        rate_limit: "1000 req/min"
+
+  # Flight Planning Software (02-40-15)
+  - id: "api-flight-planning"
+    name: "Flight Planning API"
+    subsystem: "02-40-15_Flight_Planning_Software"
+    version: "v1"
+    status: "active"
+    owner: "Flight Planning Team"
+    base_url: "https://flightplan.ampel360.aero/v1"
+    protocol: "REST/HTTPS"
+    authentication: "JWT"
+    endpoints:
+      - path: "/plans"
+        method: "POST"
+        description: "Create new flight plan"
+        rate_limit: "100 req/min"
+      - path: "/plans/{plan_id}"
+        method: "GET"
+        description: "Get flight plan details"
+        rate_limit: "1000 req/min"
+      - path: "/plans/{plan_id}/optimize"
+        method: "POST"
+        description: "Optimize existing flight plan"
+        rate_limit: "50 req/min"
+      - path: "/routes/search"
+        method: "POST"
+        description: "Search for optimal routes"
+        rate_limit: "100 req/min"
+
+  # Weather Data Processor (02-40-17)
+  - id: "api-weather"
+    name: "Weather Data API"
+    subsystem: "02-40-17_Weather_Data_Processor"
+    version: "v1"
+    status: "active"
+    owner: "Weather Services Team"
+    base_url: "https://weather.ampel360.aero/v1"
+    protocol: "REST/HTTPS"
+    authentication: "JWT"
+    endpoints:
+      - path: "/metar/{icao}"
+        method: "GET"
+        description: "Get METAR for airport"
+        rate_limit: "1000 req/min"
+      - path: "/taf/{icao}"
+        method: "GET"
+        description: "Get TAF for airport"
+        rate_limit: "1000 req/min"
+      - path: "/graphical/tiles/{layer}/{z}/{x}/{y}"
+        method: "GET"
+        description: "Get weather map tiles"
+        rate_limit: "5000 req/min"
+      - path: "/winds-aloft"
+        method: "POST"
+        description: "Get winds aloft for route"
+        rate_limit: "500 req/min"
+
+  # Data Recording Service (02-40-18)
+  - id: "api-data-recording"
+    name: "Data Recording API"
+    subsystem: "02-40-18_Data_Recording_Service"
+    version: "v1"
+    status: "active"
+    owner: "Data Platform Team"
+    base_url: "https://recording.ampel360.aero/v1"
+    protocol: "REST/HTTPS"
+    authentication: "JWT, API Key (for internal services)"
+    endpoints:
+      - path: "/events"
+        method: "POST"
+        description: "Log operational event"
+        rate_limit: "10000 req/min"
+      - path: "/events/query"
+        method: "POST"
+        description: "Query historical events"
+        rate_limit: "100 req/min"
+      - path: "/timeseries/write"
+        method: "POST"
+        description: "Write time-series data"
+        rate_limit: "50000 req/min"
+      - path: "/timeseries/query"
+        method: "POST"
+        description: "Query time-series data"
+        rate_limit: "500 req/min"
+
+  # Analytics Engine (02-40-19)
+  - id: "api-analytics"
+    name: "Analytics API"
+    subsystem: "02-40-19_Analytics_Engine"
+    version: "v1"
+    status: "active"
+    owner: "Analytics Team"
+    base_url: "https://analytics.ampel360.aero/v1"
+    protocol: "REST/HTTPS"
+    authentication: "JWT"
+    endpoints:
+      - path: "/dashboards"
+        method: "GET"
+        description: "List available dashboards"
+        rate_limit: "100 req/min"
+      - path: "/dashboards/{dashboard_id}/data"
+        method: "POST"
+        description: "Get dashboard data"
+        rate_limit: "500 req/min"
+      - path: "/reports"
+        method: "POST"
+        description: "Generate ad-hoc report"
+        rate_limit: "50 req/min"
+      - path: "/kpis"
+        method: "GET"
+        description: "Get operational KPIs"
+        rate_limit: "1000 req/min"
+
+  # H2 Operations Software (02-40-21)
+  - id: "api-h2-ops"
+    name: "H2 Operations API"
+    subsystem: "02-40-21_H2_Operations_Software"
+    version: "v1"
+    status: "active"
+    owner: "H2 Systems Team"
+    base_url: "https://h2ops.ampel360.aero/v1"
+    protocol: "REST/HTTPS"
+    authentication: "JWT, mTLS (for safety-critical endpoints)"
+    endpoints:
+      - path: "/refuel/sessions"
+        method: "POST"
+        description: "Initiate refueling session"
+        rate_limit: "10 req/min"
+      - path: "/refuel/sessions/{session_id}"
+        method: "GET"
+        description: "Get refueling session status"
+        rate_limit: "1000 req/min"
+      - path: "/safety/monitors"
+        method: "GET"
+        description: "Get safety monitor status"
+        rate_limit: "1000 req/min"
+      - path: "/infrastructure/stations"
+        method: "GET"
+        description: "List H2 refueling stations"
+        rate_limit: "100 req/min"
+
+  # Predictive Ops Software (02-40-23)
+  - id: "api-predictive"
+    name: "Predictive Operations API"
+    subsystem: "02-40-23_Predictive_Ops_Software"
+    version: "v1"
+    status: "active"
+    owner: "ML Platform Team"
+    base_url: "https://predictive.ampel360.aero/v1"
+    protocol: "gRPC, REST/HTTPS"
+    authentication: "JWT"
+    endpoints:
+      - path: "/predict/maintenance"
+        method: "POST"
+        description: "Predict maintenance needs"
+        rate_limit: "100 req/min"
+      - path: "/predict/fuel-efficiency"
+        method: "POST"
+        description: "Predict fuel efficiency optimization"
+        rate_limit: "100 req/min"
+      - path: "/models/{model_id}/inference"
+        method: "POST"
+        description: "Run model inference"
+        rate_limit: "1000 req/min"
+      - path: "/features"
+        method: "POST"
+        description: "Retrieve features from feature store"
+        rate_limit: "5000 req/min"
+
+# Message Queues and Streaming
+messaging:
+  - id: "kafka-ops-events"
+    name: "Operational Events Stream"
+    platform: "Apache Kafka"
+    cluster: "prod-kafka-01.ampel360.internal"
+    topics:
+      - name: "ops.events.flight"
+        partitions: 12
+        replication: 3
+        retention: "7 days"
+        description: "Flight operational events"
+      - name: "ops.events.maintenance"
+        partitions: 6
+        replication: 3
+        retention: "30 days"
+        description: "Maintenance events"
+      - name: "ops.telemetry"
+        partitions: 24
+        replication: 3
+        retention: "1 day"
+        description: "Real-time telemetry data"
+      - name: "ops.h2.safety"
+        partitions: 3
+        replication: 5
+        retention: "90 days"
+        description: "H2 safety events (high durability)"
+
+  - id: "rabbitmq-dispatch"
+    name: "Dispatch Message Queue"
+    platform: "RabbitMQ"
+    cluster: "prod-rmq-01.ampel360.internal"
+    queues:
+      - name: "dispatch.uplink"
+        durable: true
+        ttl: "1 hour"
+        description: "Messages to aircraft"
+      - name: "dispatch.downlink"
+        durable: true
+        ttl: "1 hour"
+        description: "Messages from aircraft"
+      - name: "dispatch.dlq"
+        durable: true
+        ttl: "7 days"
+        description: "Dead letter queue"
+
+# Data Stores
+datastores:
+  - id: "postgres-main"
+    name: "Main Operational Database"
+    type: "PostgreSQL"
+    version: "15"
+    cluster: "prod-pg-01.ampel360.internal"
+    schemas:
+      - name: "flights"
+        description: "Flight planning and execution data"
+      - name: "aircraft"
+        description: "Aircraft registration and configuration"
+      - name: "users"
+        description: "User accounts and permissions"
+      - name: "notifications"
+        description: "Notification history and preferences"
+
+  - id: "mongodb-docs"
+    name: "Document Store"
+    type: "MongoDB"
+    version: "6.0"
+    cluster: "prod-mongo-01.ampel360.internal"
+    databases:
+      - name: "efb_sync"
+        description: "EFB synchronization data"
+      - name: "weather_cache"
+        description: "Cached weather products"
+
+  - id: "influxdb-timeseries"
+    name: "Time-Series Database"
+    type: "InfluxDB"
+    version: "2.7"
+    cluster: "prod-influx-01.ampel360.internal"
+    buckets:
+      - name: "telemetry"
+        retention: "30 days"
+        description: "Aircraft telemetry data"
+      - name: "ops_metrics"
+        retention: "90 days"
+        description: "Operational metrics"
+
+  - id: "redis-cache"
+    name: "Cache and Session Store"
+    type: "Redis"
+    version: "7.0"
+    cluster: "prod-redis-01.ampel360.internal"
+    databases:
+      - name: "cache"
+        description: "Application cache"
+      - name: "sessions"
+        description: "User sessions"
+
+# External Integrations
+external_apis:
+  - id: "ext-weather-noaa"
+    name: "NOAA Weather Service"
+    provider: "NOAA"
+    base_url: "https://api.weather.gov"
+    protocol: "REST/HTTPS"
+    authentication: "API Key"
+    rate_limit: "1000 req/hour"
+    documentation: "https://www.weather.gov/documentation/services-web-api"
+
+  - id: "ext-notam-faa"
+    name: "FAA NOTAM Service"
+    provider: "FAA"
+    base_url: "https://external-api.faa.gov/notamapi/v1"
+    protocol: "REST/HTTPS"
+    authentication: "API Key"
+    rate_limit: "500 req/hour"
+    documentation: "https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/NOTAM_API/"
+
+  - id: "ext-acars-sita"
+    name: "SITA ACARS Network"
+    provider: "SITA"
+    protocol: "ACARS over SATCOM/VHF"
+    authentication: "Certificate-based"
+    documentation: "https://www.sita.aero/solutions/communications/acars/"
+
+  - id: "ext-dpp-blockchain"
+    name: "Digital Product Passport Service"
+    provider: "Internal (ATA 95)"
+    base_url: "https://dpp.ampel360.aero/v1"
+    protocol: "REST/HTTPS, Web3"
+    authentication: "JWT + Blockchain Wallet"
+    reference: "OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/"
+
+# SLAs and Performance Targets
+sla_targets:
+  - service: "api-gateway"
+    availability: "99.95%"
+    latency_p50: "50ms"
+    latency_p95: "200ms"
+    latency_p99: "500ms"
+
+  - service: "api-performance"
+    availability: "99.99%"
+    latency_p50: "50ms"
+    latency_p95: "100ms"
+    latency_p99: "150ms"
+
+  - service: "api-weight-balance"
+    availability: "99.99%"
+    latency_p50: "30ms"
+    latency_p95: "80ms"
+    latency_p99: "120ms"
+
+  - service: "api-flight-planning"
+    availability: "99.9%"
+    latency_p50: "200ms"
+    latency_p95: "1000ms"
+    latency_p99: "2000ms"
+
+# Document Control
+document_control:
+  version: "1.0.0"
+  status: "DRAFT"
+  generated_by: "AI (GitHub Copilot)"
+  prompted_by: "Amedeo Pelliccia"
+  repository: "AMPEL360-BWB-H2-Hy-E"
+  last_update: "2025-11-21"
+  human_approver: "[to be completed]"

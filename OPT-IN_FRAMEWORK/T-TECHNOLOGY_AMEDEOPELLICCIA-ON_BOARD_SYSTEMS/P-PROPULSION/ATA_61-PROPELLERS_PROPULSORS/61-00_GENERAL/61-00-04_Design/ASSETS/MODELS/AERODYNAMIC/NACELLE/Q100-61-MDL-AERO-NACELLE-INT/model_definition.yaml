@@ -1,0 +1,67 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Model Definition: Q100-61-MDL-AERO-NACELLE-INT
+# Internal Nacelle Duct Flow CFD Model
+
+model_id: Q100-61-MDL-AERO-NACELLE-INT
+model_name: Internal Nacelle Duct Flow Model
+version: 1.0.0
+status: Draft
+
+domain: AERO
+component: NACELLE
+model_type: CFD
+
+description: |
+  CFD model for internal nacelle duct flow including inlet pressure
+  recovery, flow distortion, and cooling air extraction.
+
+software:
+  name: ANSYS Fluent
+  version: "2024 R1"
+  license: Commercial
+
+geometry:
+  source: ASSETS/ASSEMBLIES/Q100-61-ASSY-NACELLE
+  format: STEP
+  domain: Internal duct
+
+mesh:
+  type: Unstructured polyhedral
+  files: mesh/
+
+physics:
+  equations: RANS
+  turbulence_model: k-ω SST
+
+outputs:
+  - name: pressure_recovery
+    description: Total pressure recovery
+  - name: distortion_DC60
+    description: DC60 distortion coefficient
+  - name: cooling_flow_kg_s
+    description: Cooling air mass flow
+
+traceability:
+  requirements:
+    - REQ-61-AERO-021
+    - REQ-61-THM-001
+
+document_control:
+  created_by: AMPEL360 Propulsion Analysis Team
+  created_date: 2025-12-05
+  ai_assistance: Generated with AI (GitHub Copilot), prompted by Amedeo Pelliccia

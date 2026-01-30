@@ -1,0 +1,162 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# EIS Package Tags for ATA 85 Infrastructure Interface Standards
+# This file defines semantic tagging for EIS packages to support automated configuration management
+
+packages:
+  - package_id: PKG-85-ARCH-A-001
+    tags:
+      airport_category: ARCHETYPE_A
+      h2_infrastructure: STANDARD_350BAR
+      co2_battery: NOT_APPLICABLE
+      gse_automation: AUTOMATED
+      pax_boarding: TRIPLE_AISLE_JETWAY
+      regions:
+        - EUROPE
+        - NORTH_AMERICA
+    baseline_id: BL-85-00-11-001
+    git_tag: v02.00.00-85-ARCHA-H2STD
+    
+  - package_id: PKG-85-ARCH-A-002
+    tags:
+      airport_category: ARCHETYPE_A
+      h2_infrastructure: STANDARD_350BAR
+      co2_battery: FAST_CHARGE_350KW
+      gse_automation: AUTOMATED
+      pax_boarding: TRIPLE_AISLE_JETWAY
+      regions:
+        - EUROPE
+        - NORTH_AMERICA
+    baseline_id: BL-85-00-11-006
+    git_tag: v02.02.00-85-ARCHA-H2CO2
+    
+  - package_id: PKG-85-ARCH-B-001
+    tags:
+      airport_category: ARCHETYPE_B
+      h2_infrastructure: REDUCED_250BAR
+      co2_battery: NOT_APPLICABLE
+      gse_automation: SEMI_AUTOMATED
+      pax_boarding: DUAL_AISLE_JETWAY
+      regions:
+        - EUROPE
+        - NORTH_AMERICA
+        - ASIA_PACIFIC
+    baseline_id: BL-85-00-11-005
+    git_tag: v02.01.00-85-ARCHB-H2STD
+    
+  - package_id: PKG-85-ARCH-C-001
+    tags:
+      airport_category: ARCHETYPE_C
+      h2_infrastructure: MINIMAL_100BAR
+      co2_battery: NOT_APPLICABLE
+      gse_automation: MANUAL
+      pax_boarding: BASIC_JETWAY_OR_GROUND
+      regions:
+        - EUROPE
+        - NORTH_AMERICA
+        - ASIA_PACIFIC
+    baseline_id: BL-85-00-11-007
+    git_tag: v03.01.00-85-ARCHC-H2MIN
+    
+  - package_id: PKG-85-H2-002
+    tags:
+      airport_category: ARCHETYPE_A
+      h2_infrastructure: HIGH_PRESSURE_700BAR
+      co2_battery: OPTIONAL
+      gse_automation: AUTOMATED
+      pax_boarding: TRIPLE_AISLE_JETWAY
+      regions:
+        - EUROPE
+        - NORTH_AMERICA
+    baseline_id: BL-85-00-11-011
+    git_tag: v03.00.00-85-ARCHA-H2HP
+    
+  - package_id: PKG-85-GSE-002
+    tags:
+      airport_category: ARCHETYPE_A
+      h2_infrastructure: ANY
+      co2_battery: ANY
+      gse_automation: ADVANCED_ROBOTIC
+      pax_boarding: ANY
+      regions:
+        - EUROPE
+        - NORTH_AMERICA
+        - ASIA_PACIFIC
+    baseline_id: BL-85-00-11-031
+    git_tag: v03.02.00-85-ARCHA-GSE2
+
+# Tag definitions
+tag_definitions:
+  airport_category:
+    - ARCHETYPE_A  # Large international hubs (>50M PAX/year)
+    - ARCHETYPE_B  # Medium regional hubs (10-50M PAX/year)
+    - ARCHETYPE_C  # Small regional airports (<10M PAX/year)
+    
+  h2_infrastructure:
+    - STANDARD_350BAR      # Standard pressure H2 refuelling
+    - REDUCED_250BAR       # Reduced flow rate for smaller airports
+    - MINIMAL_100BAR       # Minimal infrastructure for low-frequency operations
+    - HIGH_PRESSURE_700BAR # High-pressure H2 for extended-range aircraft
+    - LIQUID_H2            # Future: Cryogenic liquid H2 (not yet available)
+    
+  co2_battery:
+    - NOT_APPLICABLE       # No CO2 battery infrastructure
+    - FAST_CHARGE_350KW    # DC fast charging at 350 kW
+    - HIGH_POWER_800KW     # Ultra-fast charging at 800 kW
+    - OPTIONAL             # CO2 battery infrastructure available but not mandatory
+    
+  gse_automation:
+    - MANUAL               # Manual GSE operations
+    - SEMI_AUTOMATED       # Partial automation
+    - AUTOMATED            # Fully automated connection/disconnection
+    - ADVANCED_ROBOTIC     # Robotic alignment and predictive maintenance
+    
+  pax_boarding:
+    - BASIC_JETWAY_OR_GROUND  # Single jetway or ground boarding
+    - DUAL_AISLE_JETWAY       # Standard dual-aisle jetways
+    - TRIPLE_AISLE_JETWAY     # Advanced multi-aisle jetways for BWB cabin
+    
+  regions:
+    - EUROPE
+    - NORTH_AMERICA
+    - ASIA_PACIFIC
+    - MIDDLE_EAST
+    - LATIN_AMERICA
+    - AFRICA
+
+# Document Control
+metadata:
+  document_id: 85-00-11-A-102
+  version: 1.0
+  last_updated: 2025-11-21
+  standard: OPT-IN Framework v1.1
+  repository: AMPEL360-BWB-H2-Hy-E
+  generated_by: AI (GitHub Copilot)
+  prompted_by: Amedeo Pelliccia
+  status: DRAFT

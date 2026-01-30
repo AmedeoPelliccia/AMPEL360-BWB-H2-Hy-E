@@ -1,0 +1,8 @@
+criterion_id,metric_id,case_category,limit_type,limit_value,unit,reference,notes
+ACC-001,OASPL,Takeoff/Climb,max,TBD,dB(A),Internal (derived from CS-36 / Part 36),"Internal OASPL target at lateral-equivalent point; chosen to ensure ≥ X dB margin versus Annex 16 Vol I Ch.3/Ch.4 EPNL limits."
+ACC-002,OASPL,Approach/Landing,max,TBD,dB(A),Internal (derived from CS-36 / Part 36),"Internal approach OASPL target; chosen to ensure ≥ X dB margin versus Annex 16 Vol I Ch.3/Ch.4 EPNL limits."
+ACC-003,EPNL,Sideline,max,L_lat_lim(MTOM),EPNdB,"ICAO Annex 16 Vol I Ch.3 + CS-36 / 14 CFR Part 36","Lateral full-power noise (EPNL) at 650 m sideline shall not exceed the mass-dependent Annex 16 Ch.3 limit curve; certification must also satisfy Ch.4/Ch.14 cumulative margin requirements."
+ACC-004,CABIN_OASPL,Cruise Cabin,max,65,dB(A),Internal target,"Cabin comfort target at design cruise; internal criterion, not directly regulated by CS-36/Part 36."
+ACC-005,TONAL_BPF,Takeoff/Climb,advisory,TBD,dB,Internal,"Advisory limit on BPF tone prominence (e.g. tone level vs 1/3-octave background); used for annoyance control and design trades."
+ACC-006,VIB_MOUNT_RMS,Cruise Cabin,max,TBD,m/s²,Internal,"Mount vibration isolation target for limiting structural-borne noise into cabin; linked to 004A structural mounts FEM results."
+

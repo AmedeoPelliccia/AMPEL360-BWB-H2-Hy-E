@@ -1,0 +1,13 @@
+Schematic_ID,Title,Type,Bucket,Format,Sheet_Count,Status,Tool,Description
+SCH-53-40-001,Software Architecture,UML,53-40,PNG,1,Complete,Enterprise Architect,SW component diagram
+SCH-53-40-002,Class Diagram TMS,UML,53-40,PNG,1,Pending,Enterprise Architect,TMS software classes
+SCH-53-40-003,Sequence Diagram Init,UML,53-40,PNG,1,Pending,Enterprise Architect,Initialization sequence
+SCH-53-80-001,Electrical Single Line,EE,53-80,PDF,2,Pending,EPLAN,Main electrical SLD
+SCH-53-80-002,Thermal P&ID,PID,53-80,PDF,3,Pending,AutoCAD,Thermal system P&ID
+SCH-53-80-003,Control Logic,Logic,53-80,PDF,2,Pending,EPLAN,Control system logic diagram
+SCH-53-80-004,Battery SLD,EE,53-80,PDF,1,Pending,EPLAN,Battery pack single line
+SCH-53-80-005,Power Electronics,EE,53-80,PDF,2,Pending,EPLAN,Converter/inverter schematics
+SCH-53-30-001,CAN Network Topology,Network,53-30,PDF,1,Pending,Visio,CAN bus network diagram
+SCH-53-30-002,AFDX Network Topology,Network,53-30,PDF,1,Pending,Visio,AFDX switch topology
+SCH-53-20-001,BMS Architecture,Block,53-20,PDF,1,Pending,Visio,Battery management block diagram
+SCH-53-20-002,CO2C Architecture,Block,53-20,PDF,1,Pending,Visio,CO2 controller architecture

@@ -85,8 +85,8 @@ The following root buckets are located at the ATA 02 chapter root and contain th
   → `../../02-20_Subsystems/`  
   Subsystem breakdown, behavior, and subsystem-level responsibilities.
 
-- **02-30_Circularity**  
-  → `../../02-30_Circularity/`  
+- **02-30_ANCHORS**  
+  → `../../02-30_ANCHORS/`  
   Circularity strategies, re-use, recycling, and end-of-life concepts.
 
 - **02-40_Software**  

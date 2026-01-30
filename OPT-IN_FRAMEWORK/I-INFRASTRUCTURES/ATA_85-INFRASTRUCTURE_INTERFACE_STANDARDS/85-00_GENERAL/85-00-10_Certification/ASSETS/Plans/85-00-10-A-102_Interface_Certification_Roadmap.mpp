@@ -1,0 +1,30 @@
+# 85-00-10-A-102_Interface_Certification_Roadmap.mpp
+
+## Placeholder for Interface Certification Roadmap
+
+This file will contain a Gantt chart roadmap showing:
+- H₂ interface certification timeline
+- CO₂ battery interface certification timeline
+- GSE interface certification timeline
+- PAX boarding/evacuation interface certification timeline
+- Dependencies and critical path
+- Authority engagement milestones
+- Test campaign schedule
+
+**Status**: To be developed in Microsoft Project format
+
+**Key Milestones**:
+- Pre-application meeting
+- Design freezes
+- Test campaigns (lab, ground, operational)
+- Authority witness events
+- Compliance documentation submission
+- Type Certificate issuance
+
+**Duration**: 36-48 month certification program
+
+**Reference**: See 85-00-10-004_Conformity_Demonstration_Plan.md for detailed schedule
+
+---
+
+**Note**: This is a placeholder file. The actual roadmap will be created as a Microsoft Project file (.mpp) with detailed tasks, resources, and dependencies.

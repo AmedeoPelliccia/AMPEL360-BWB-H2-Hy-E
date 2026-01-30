@@ -1,0 +1,32 @@
+Equipment Type,Performance Metric,Minimum Requirement,Target Value,Measurement Method,Verification Standard
+Battery Electric Tug,Pushback Force (kN),150,180,Load cell measurement,ISO 8855
+Battery Electric Tug,Towing Cycles per Charge,10,15,Operational test,Internal standard
+Battery Electric Tug,MTBF (hours),2000,3000,Reliability testing,MIL-HDBK-217
+Battery Electric Tug,Energy Efficiency (kWh/tow),35,28,Energy meter logging,ISO 50001
+Battery Electric Tug,Availability (%),95,98,Uptime tracking,ISO 14224
+Electric Belt Loader,Loading Rate (bags/hour),600,800,Operational test,IATA AHM
+Electric Belt Loader,Positioning Accuracy (mm),±50,±30,Laser measurement,ISO 9283
+Electric Belt Loader,Setup Time (minutes),2,1.5,Time study,Internal standard
+Electric Belt Loader,Energy Efficiency (kWh/1000 bags),8,6,Energy meter logging,ISO 50001
+Electric Belt Loader,Reliability MTBF (hours),3000,4500,Reliability testing,MIL-HDBK-217
+Electric Baggage Tractor,Daily Range (km),150,200,GPS tracking,ISO 12405-4
+Electric Baggage Tractor,Cart-km per Charge,1500,2000,Operational logging,Internal standard
+Electric Baggage Tractor,Energy Efficiency (kWh/km),0.6,0.5,Energy meter logging,ISO 50001
+Electric Baggage Tractor,MTBF (hours),4000,6000,Reliability testing,MIL-HDBK-217
+Electric Baggage Tractor,Acceleration 0-40 km/h (s),10,8,Accelerometer test,ISO 15037-1
+Electric Cargo Loader,Loading Rate (ULD/hour),20,25,Time-motion study,IATA ULD
+Electric Cargo Loader,Positioning Accuracy (mm),±30,±20,Laser measurement,ISO 9283
+Electric Cargo Loader,Energy Efficiency (kWh/ULD),12,9,Energy meter logging,ISO 50001
+Electric Cargo Loader,Availability (%),96,99,Uptime tracking,ISO 14224
+Electric Cargo Loader,MTBF (hours),2500,3500,Reliability testing,MIL-HDBK-217
+Power Electronics,Inverter Efficiency (%),97,98.5,Calorimetric test,IEC 60034-2-1
+Power Electronics,BMS Voltage Accuracy (mV),±5,±3,Calibrated meter,ISO 16750-2
+Power Electronics,Thermal Derating Onset (°C),80,90,Thermal chamber test,IEC 60068-2-2
+Battery System,Cycle Life (cycles at 80% DoD),3000,5000,Accelerated aging test,IEC 61960
+Battery System,Specific Energy (Wh/kg),150,180,Gravimetric measurement,UN 38.3
+Battery System,Thermal Runaway Prevention,Pass,Pass,Abuse testing,UL 2580
+Charging System,Fast Charge Time to 80% (minutes),60,45,Controlled charge test,IEC 61851-1
+Charging System,Charging Efficiency (%),94,96,Power meter logging,ISO 15118-1
+Charging System,Power Factor,0.99,1.0,Power analyzer,IEC 61000-3-2
+All Equipment,Safety Incident Rate (per 1000 hours),0,0,Safety audit,OSHA standards
+All Equipment,Carbon Footprint (kg CO2e/year),Target varies,20% reduction,LCA per ISO 14040,ISO 14067

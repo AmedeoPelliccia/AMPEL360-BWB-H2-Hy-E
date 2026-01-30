@@ -1,0 +1,140 @@
+# Git LFS Configuration Template for EXPORTS Folder
+#
+# This file provides recommended Git LFS tracking patterns for the EXPORTS/ folder
+# in the AMPEL360 ASSETS structure.
+#
+# USAGE:
+# ------
+# To apply these patterns to your repository:
+#
+# 1. Ensure Git LFS is installed:
+#    git lfs install
+#
+# 2. Append these patterns to your repository's .gitattributes file:
+#    cat .gitattributes-EXPORTS-TEMPLATE >> .gitattributes
+#
+#    OR manually add the patterns below to your .gitattributes file.
+#
+# 3. Track existing files (if any):
+#    git add .gitattributes
+#    git commit -m "Configure Git LFS for EXPORTS folder"
+#
+# 4. For already-committed large files, migrate them to LFS:
+#    git lfs migrate import --include="OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.pdf"
+#    git lfs migrate import --include="OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.png"
+#
+# WHY USE GIT LFS FOR EXPORTS:
+# ----------------------------
+# - Exported files (PDF/PNG) are binary and can be large (>1 MB common, >10 MB possible)
+# - These files change infrequently but take up significant repository space
+# - Git LFS stores them externally while keeping repository clone fast
+# - Ideal for distribution-ready outputs that are regenerated from sources
+#
+# PATTERNS:
+# ---------
+# This template shows two approaches:
+# 1. General patterns (lines 37-40): Apply LFS tracking to ALL EXPORTS folders
+# 2. Specific patterns (lines 62-74): Apply LFS tracking only to specific ATA chapters
+#
+# RECOMMENDATION: Use EITHER general patterns OR specific patterns, not both.
+# - For most repositories: Use general patterns (simpler, covers all ATA chapters)
+# - For granular control: Comment out general patterns and use specific patterns only
+
+# OPTION 1: General patterns (RECOMMENDED for simplicity)
+# Track all PDF files in any EXPORTS folder (across all ATA chapters)
+OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Track all PNG files in any EXPORTS folder
+OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.png filter=lfs diff=lfs merge=lfs -text
+
+# Optional: Track JPG files if used (less common for technical drawings)
+# OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+
+# Optional: Track SVG exports if large (typically SVG is text-based and small)
+# Only enable if SVG exports exceed 1 MB
+# OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.svg filter=lfs diff=lfs merge=lfs -text
+
+# Optional: Track other binary formats if used
+# OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.bmp filter=lfs diff=lfs merge=lfs -text
+
+#
+# OPTION 2: Specific ATA 54 patterns (for granular control)
+# ---------------------------------------------------------
+# If you need different LFS policies per ATA chapter, comment out the general
+# patterns above and uncomment these specific patterns.
+# NOTE: These are redundant if general patterns are active.
+#
+
+# ATA 54 Assembly Exports
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/ASSEMBLIES/*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# ATA 54 Drawing Exports
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DRAWINGS/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DRAWINGS/**/*.png filter=lfs diff=lfs merge=lfs -text
+
+# ATA 54 Model Exports
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/MODELS/*.pdf filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/MODELS/*.png filter=lfs diff=lfs merge=lfs -text
+
+# ATA 54 Diagram Exports
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DIAGRAMS/*.pdf filter=lfs diff=lfs merge=lfs -text
+# OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/**/ASSETS/EXPORTS/DIAGRAMS/*.png filter=lfs diff=lfs merge=lfs -text
+
+#
+# NOTES:
+# ------
+# - Git applies .gitattributes patterns in order from top to bottom
+# - Later patterns can override earlier patterns for the same file
+# - More specific patterns take precedence when they match the same file
+# - Use /** for recursive matching across all subdirectories
+# - The -text flag tells Git to treat these as binary (no line ending conversion)
+# - filter=lfs: Use LFS to store the file content
+# - diff=lfs: Use LFS diff driver (shows file size changes instead of content diff)
+# - merge=lfs: Use LFS merge driver (handles conflicts by file version)
+#
+# VERIFICATION:
+# -------------
+# After applying, verify LFS is tracking your files:
+#   git lfs ls-files
+#
+# Check which files will be tracked by LFS:
+#   git lfs track
+#
+# Verify a specific file is tracked:
+#   git check-attr filter -- EXPORTS/ASSEMBLIES/54-00-04-A001_ASSY_Nacelle_Primary_Structure.pdf
+#   # Expected output: filter: lfs
+#
+# MIGRATION OF EXISTING FILES:
+# ----------------------------
+# If you already committed large files to Git before setting up LFS:
+#   git lfs migrate import --include="OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.pdf,OPT-IN_FRAMEWORK/**/ASSETS/EXPORTS/**/*.png" --everything
+#
+# WARNING: This rewrites history. Coordinate with team before running.
+#
+# PERFORMANCE TIPS:
+# -----------------
+# - Set LFS transfer concurrency for faster uploads/downloads:
+#   git config lfs.concurrenttransfers 8
+#
+# - Use LFS prune to clean up old LFS objects locally:
+#   git lfs prune
+#
+# - Skip LFS downloads for a faster clone (fetch LFS files on demand):
+#   GIT_LFS_SKIP_SMUDGE=1 git clone <repo-url>
+#   git lfs pull  # When you need the files
+#
+# STORAGE CONSIDERATIONS:
+# -----------------------
+# - GitHub LFS: 1 GB storage, 1 GB/month bandwidth included (free tier)
+# - GitHub LFS: Paid tiers available for larger projects
+# - Self-hosted: Consider using a self-hosted LFS server for unlimited storage
+#
+# MORE INFORMATION:
+# -----------------
+# - Git LFS documentation: https://git-lfs.github.com/
+# - GitHub LFS billing: https://docs.github.com/en/billing/managing-billing-for-git-large-file-storage
+# - Atlassian Git LFS tutorial: https://www.atlassian.com/git/tutorials/git-lfs
+#
+# END OF TEMPLATE

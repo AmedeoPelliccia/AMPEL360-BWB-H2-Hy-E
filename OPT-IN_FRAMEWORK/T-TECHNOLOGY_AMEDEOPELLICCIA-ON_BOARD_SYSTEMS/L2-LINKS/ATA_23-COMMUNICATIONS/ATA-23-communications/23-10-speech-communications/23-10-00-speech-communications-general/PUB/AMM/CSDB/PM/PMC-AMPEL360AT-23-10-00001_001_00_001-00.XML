@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pm PUBLIC "-//S1000D//DTD PM 5.0//EN" "pm.dtd">
+<!--
+S1000D Publication Module - ATA 23-10 Complete AMM
+File: PMC-AMPEL360AT-23-10-00001_001_00_001-00.XML
+Purpose: Root publication module that assembles all ATA 23-10 Speech Communications sections
+Project: AMPEL360-AIR-T
+Created: 2026-01-09
+-->
+<pm>
+  <identAndStatusSection>
+    <pmAddress>
+      <pmIdent>
+        <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00001" pmVolume="23-10"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </pmIdent>
+      <pmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <pmTitle>ATA 23-10 Speech Communications - Aircraft Maintenance Manual</pmTitle>
+      </pmAddressItems>
+    </pmAddress>
+    <pmStatus>
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>Amedeo Pelliccia</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All aircraft configurations with Speech Communications systems (ATA 23-10)</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" 
+                    systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>BREX-AMPEL360AT-ATA23-v1-0</techName>
+              <infoName>Business Rules Exchange</infoName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </pmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <pmEntry>
+      <pmEntryTitle>ATA 23-10 Speech Communications - Complete AMM</pmEntryTitle>
+      
+      <!-- Reference to System Description Publication Module -->
+      <pmEntry>
+        <pmEntryTitle>Description and Operation</pmEntryTitle>
+        <pmRef>
+          <pmRefIdent>
+            <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00010" pmVolume="23-10"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </pmRefIdent>
+          <pmRefAddressItems>
+            <pmTitle>ATA 23-10 Speech Communications - Description and Operation</pmTitle>
+          </pmRefAddressItems>
+        </pmRef>
+      </pmEntry>
+      
+      <!-- Reference to Maintenance Procedures Publication Module -->
+      <pmEntry>
+        <pmEntryTitle>Maintenance Procedures</pmEntryTitle>
+        <pmRef>
+          <pmRefIdent>
+            <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00020" pmVolume="23-10"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </pmRefIdent>
+          <pmRefAddressItems>
+            <pmTitle>ATA 23-10 Speech Communications - Maintenance Procedures</pmTitle>
+          </pmRefAddressItems>
+        </pmRef>
+      </pmEntry>
+      
+      <!-- Reference to Troubleshooting Publication Module -->
+      <pmEntry>
+        <pmEntryTitle>Troubleshooting</pmEntryTitle>
+        <pmRef>
+          <pmRefIdent>
+            <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00030" pmVolume="23-10"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </pmRefIdent>
+          <pmRefAddressItems>
+            <pmTitle>ATA 23-10 Speech Communications - Troubleshooting</pmTitle>
+          </pmRefAddressItems>
+        </pmRef>
+      </pmEntry>
+      
+      <!-- Reference to Software Configuration Publication Module -->
+      <pmEntry>
+        <pmEntryTitle>Software Configuration</pmEntryTitle>
+        <pmRef>
+          <pmRefIdent>
+            <pmCode modelIdentCode="AMPEL360AT" pmIssuer="AMPEL" pmNumber="00040" pmVolume="23-10"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </pmRefIdent>
+          <pmRefAddressItems>
+            <pmTitle>ATA 23-10 Speech Communications - Software Configuration</pmTitle>
+          </pmRefAddressItems>
+        </pmRef>
+      </pmEntry>
+      
+    </pmEntry>
+  </content>
+</pm>

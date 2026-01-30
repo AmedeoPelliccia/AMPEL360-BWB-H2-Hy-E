@@ -61,7 +61,7 @@ This folder is part of the **95-00_GENERAL** layer (14 of 14 in the canonical li
 │   ├── 95-00-14-04-002_Carbon_and_Energy_KPIs_for_Ops.md
 │   ├── 95-00-14-04-003_Circularity_Principles_in_DPP_and_NN.md
 │   ├── 95-00-14-04-004_End_to_End_Lifecycle_Impact_Assessment.md
-│   ├── 95-00-14-04-005_Links_to_30_Circularity_and_09_Production.md
+│   ├── 95-00-14-04-005_Links_to_30_ANCHORS_and_09_Production.md
 │   └── ASSETS/ (4 files: dashboards, diagrams, templates)
 │
 ├── 05_CONTINUOUS_IMPROVEMENT/
@@ -168,7 +168,7 @@ This folder is part of the **95-00_GENERAL** layer (14 of 14 in the canonical li
 | [ATA 02](../../../../../../../I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/) | Operations Information | [95-00-14-01-004](./01_OPERATIONAL_STANDARDS/95-00-14-01-004_Ops_Interfaces_with_ATA_02_31_45.md) |
 | [ATA 31](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/) | Data Recording | [95-00-14-11-004](./11_OPERATIONAL_ANALYTICS_AND_KPIS/95-00-14-11-004_Link_to_Monitoring_and_DPP_Insights.md) |
 | [ATA 45](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/) | Maintenance Systems | [95-00-14-05-002](./05_CONTINUOUS_IMPROVEMENT/95-00-14-05-002_Learnings_from_Incidents_and_Events.md) |
-| [ATA 92](../../../../../../../N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/) | Model-Based Maintenance | [95-00-14-08-005](./08_KNOWLEDGE_MANAGEMENT_AND_DOCUMENTATION/95-00-14-08-005_Use_of_CAOS_and_MCP_for_Knowledge_Flow.md) |
+| [ATA 92](../../../../../../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_92-ELECTRICAL_INSTALLATION/) | Electrical Installation | [95-00-14-08-005](./08_KNOWLEDGE_MANAGEMENT_AND_DOCUMENTATION/95-00-14-08-005_Use_of_CAOS_and_MCP_for_Knowledge_Flow.md) |
 | [ATA 95-00-07](../../95-00-07_V_and_V/) | V&V | [95-00-14-01-005](./01_OPERATIONAL_STANDARDS/95-00-14-01-005_Links_to_95-00-07_VV_and_10_Certification.md) |
 | [ATA 95-00-10](../../95-00-10_Certification/) | Certification | [95-00-14-03-003](./03_RISK_AND_COMPLIANCE/95-00-14-03-003_Compliance_Controls_in_Ops.md) |
 

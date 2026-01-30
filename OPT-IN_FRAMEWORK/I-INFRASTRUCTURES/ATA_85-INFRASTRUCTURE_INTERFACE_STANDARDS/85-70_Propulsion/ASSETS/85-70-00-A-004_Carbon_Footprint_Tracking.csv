@@ -1,0 +1,7 @@
+Lifecycle Stage,Battery Electric (kg CO2e),H2 Fuel Cell (Green H2) (kg CO2e),Diesel (kg CO2e),Notes
+Manufacturing,25000,35000,15000,Includes battery/FC production
+Operation (15 years),5000,8000,150000,Assumes renewable energy
+Maintenance,2000,3000,5000,Spare parts and consumables
+End-of-Life,1000,2000,1000,Recycling and disposal
+Total Lifecycle,33000,48000,171000,Per vehicle over 15 years
+Annual Average,2200,3200,11400,Per vehicle per year

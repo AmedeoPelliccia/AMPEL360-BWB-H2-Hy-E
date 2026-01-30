@@ -1,0 +1,52 @@
+Signal_ID,Name,Type,Range_Min,Range_Max,Units,Source,Destination,Rate_Hz,DAL,Description
+ANCH_BAT_T_CELL_MAX,Battery Cell Temp Max,T,-40,80,°C,BMS,TMS,10,B,Maximum temperature across all battery cells
+ANCH_BAT_T_CELL_MIN,Battery Cell Temp Min,T,-40,80,°C,BMS,TMS,10,B,Minimum temperature across all battery cells
+ANCH_BAT_T_COOLANT_IN,Coolant Inlet Temp,T,-20,70,°C,RTD,TMS,10,B,Battery cooling loop inlet temperature
+ANCH_BAT_T_COOLANT_OUT,Coolant Outlet Temp,T,-20,70,°C,RTD,TMS,10,B,Battery cooling loop outlet temperature
+ANCH_BAT_V_PACK,Battery Pack Voltage,V,0,900,V,BMS,EMS,10,B,Total battery pack terminal voltage
+ANCH_BAT_I_PACK,Battery Pack Current,I,-500,500,A,BMS,EMS,10,B,Battery pack current (positive=discharge)
+ANCH_BAT_W_PACK,Battery Pack Power,W,-400,400,kW,Calc,EMS,10,C,Calculated battery pack power
+ANCH_BAT_SOC,State of Charge,L,0,100,%,BMS,HMI,1,C,Battery state of charge percentage
+ANCH_BAT_SOH,State of Health,L,0,100,%,BMS,HMI,0.1,D,Battery state of health percentage
+ANCH_BAT_D_FAULT,Battery Fault Flag,D,0,1,bool,BMS,SS,10,B,Battery fault detection flag
+ANCH_BAT_X_STATUS,Battery Status,X,0,7,enum,BMS,HMI,1,C,Battery system status enumeration
+ANCH_CO2_P_INLET,CO2 Inlet Pressure,P,0,5,bar,PT,CO2C,1,C,CO2 capture system inlet pressure
+ANCH_CO2_P_OUTLET,CO2 Outlet Pressure,P,0,3,bar,PT,CO2C,1,C,CO2 capture system outlet pressure
+ANCH_CO2_F_CAPTURE,CO2 Capture Flow,F,0,50,L/min,FM,CO2C,1,C,CO2 capture volumetric flow rate
+ANCH_CO2_L_CART_1,Cartridge 1 Fill Level,L,0,100,%,LS,HMI,0.1,D,CO2 cartridge 1 fill level
+ANCH_CO2_L_CART_2,Cartridge 2 Fill Level,L,0,100,%,LS,HMI,0.1,D,CO2 cartridge 2 fill level
+ANCH_CO2_L_CART_3,Cartridge 3 Fill Level,L,0,100,%,LS,HMI,0.1,D,CO2 cartridge 3 fill level
+ANCH_CO2_L_CART_4,Cartridge 4 Fill Level,L,0,100,%,LS,HMI,0.1,D,CO2 cartridge 4 fill level
+ANCH_CO2_T_REACTOR,Reactor Temperature,T,0,200,°C,RTD,CO2C,1,C,CO2 mineralization reactor temperature
+ANCH_CO2_D_ACTIVE,CO2 System Active,D,0,1,bool,CO2C,MM,1,C,CO2 capture system active flag
+ANCH_H2O_L_TANK,Water Tank Level,L,0,100,%,Cap,WTC,1,D,Potable water tank fill level
+ANCH_H2O_T_TANK,Water Tank Temp,T,0,50,°C,RTD,WTC,1,D,Potable water tank temperature
+ANCH_H2O_F_INLET,Water Inlet Flow,F,0,10,L/min,FM,WTC,1,D,Water inlet volumetric flow rate
+ANCH_H2O_P_TANK,Water Tank Pressure,P,0,3,bar,PT,WTC,1,D,Water tank pressure
+ANCH_H2O_D_QUALITY,Water Quality OK,D,0,1,bool,WTC,HMI,0.1,D,Water quality acceptable flag
+ANCH_TH_T_HT_SUP,HT Bus Supply Temp,T,40,100,°C,RTD,THC,10,C,High-temp thermal bus supply temperature
+ANCH_TH_T_HT_RET,HT Bus Return Temp,T,40,100,°C,RTD,THC,10,C,High-temp thermal bus return temperature
+ANCH_TH_T_LT_SUP,LT Bus Supply Temp,T,20,70,°C,RTD,THC,10,C,Low-temp thermal bus supply temperature
+ANCH_TH_T_LT_RET,LT Bus Return Temp,T,20,70,°C,RTD,THC,10,C,Low-temp thermal bus return temperature
+ANCH_TH_F_HT,HT Bus Flow Rate,F,0,200,L/min,US,THC,1,C,High-temp thermal bus flow rate
+ANCH_TH_F_LT,LT Bus Flow Rate,F,0,250,L/min,US,THC,1,C,Low-temp thermal bus flow rate
+ANCH_TH_P_HT,HT Bus Pressure,P,0,5,bar,PT,THC,1,C,High-temp thermal bus pressure
+ANCH_TH_P_LT,LT Bus Pressure,P,0,4,bar,PT,THC,1,C,Low-temp thermal bus pressure
+ANCH_TH_D_HT_PUMP,HT Pump Running,D,0,1,bool,THC,HMI,1,C,HT bus pump running status
+ANCH_TH_D_LT_PUMP,LT Pump Running,D,0,1,bool,THC,HMI,1,C,LT bus pump running status
+ANCH_EMS_W_TOTAL,Total Power Consumption,W,0,200,kW,Calc,HMI,1,C,Total ANCHORS power consumption
+ANCH_EMS_W_REGEN,Regeneration Power,W,0,800,kW,Motor,EMS,10,C,Power being regenerated from motors
+ANCH_EMS_X_MODE,System Operating Mode,X,0,15,enum,MM,All,10,C,Current system operating mode
+ANCH_EMS_W_AVAILABLE,Available Power,W,0,500,kW,EMS,MM,1,C,Power available for ANCHORS
+ANCH_EMS_D_LOAD_SHED,Load Shedding Active,D,0,1,bool,EMS,HMI,1,B,Load shedding mode active
+ANCH_SS_D_ISO_CMD,Safety Isolation Cmd,D,0,1,bool,SS,All,100,B,Safety supervisor isolation command
+ANCH_SS_X_STATUS,Safety Supervisor Status,X,0,7,enum,SS,HMI,10,B,Safety supervisor system status
+ANCH_SS_D_WD_OK,Watchdog OK,D,0,1,bool,SS,All,10,B,Safety watchdog healthy status
+ANCH_SS_D_INTERLOCK,Interlock Status,D,0,1,bool,SS,HMI,10,B,Safety interlock engaged status
+ANCH_SS_W_FAULT_CODE,Active Fault Code,W,0,65535,code,SS,HMI,1,B,Currently active fault code
+ANCH_MM_X_STATE,Mode Manager State,X,0,15,enum,MM,All,10,C,Current mode manager state
+ANCH_MM_D_INIT_OK,Initialization Complete,D,0,1,bool,MM,SS,1,C,System initialization complete flag
+ANCH_MM_D_AUTO_MODE,Automatic Mode Active,D,0,1,bool,MM,HMI,1,C,Automatic control mode active
+ANCH_NN_D_ACTIVE,Neural Network Active,D,0,1,bool,NN,MM,1,C,Neural network inference active
+ANCH_NN_V_CONFIDENCE,NN Confidence Level,V,0,1,ratio,NN,MM,1,C,Neural network output confidence
+ANCH_NN_D_FALLBACK,NN Fallback Mode,D,0,1,bool,NN,SS,1,B,Neural network in fallback mode

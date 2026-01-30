@@ -1,0 +1,5 @@
+Storage_Type,Capacity_Unit,Daily_Throughput,Peak_Hourly_Rate,Storage_Days_Reserve,Total_Capacity_Required,Physical_Footprint_m2,Estimated_Cost_USD
+LH2_Storage,kg_H2,7500,1125,5,45000,500,325000000
+GH2_Cascade,kg_H2,7500,360,0.5,10000,500,357000000
+Battery_BESS,MWh,80,20,0.25,20,120,40000000
+SAF_Fuel,liters,50000,10000,7,350000,2000,5000000

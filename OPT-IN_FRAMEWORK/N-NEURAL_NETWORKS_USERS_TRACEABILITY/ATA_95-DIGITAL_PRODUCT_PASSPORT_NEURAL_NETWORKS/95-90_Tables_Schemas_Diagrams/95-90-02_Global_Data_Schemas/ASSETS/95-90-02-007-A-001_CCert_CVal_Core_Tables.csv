@@ -1,0 +1,103 @@
+Entity,Field,Type,Constraints,Description,Notes
+SYSTEM_PRODUCT,id,UUID,PRIMARY KEY,Identificador interno único,Auto-generado
+SYSTEM_PRODUCT,code,VARCHAR(64),UNIQUE NOT NULL,Código humano legible,"Ejemplos: Q100, WTCU01, FCC01, FC_PitchStab_NN"
+SYSTEM_PRODUCT,name,VARCHAR(256),NOT NULL,Nombre descriptivo del sistema,
+SYSTEM_PRODUCT,type,VARCHAR(64),NOT NULL,"Tipo de sistema: aircraft, lru, nn_model, dataset, subsystem, component, software, hardware, document",
+SYSTEM_PRODUCT,primary_ata,VARCHAR(16),,Capítulo ATA principal,"Formato: 95-20-27, 27, etc."
+SYSTEM_PRODUCT,description,TEXT,,Descripción detallada del sistema,
+SYSTEM_PRODUCT,parent_system_id,UUID,FK → SYSTEM_PRODUCT,Sistema padre en jerarquía,Permite estructura jerárquica
+SYSTEM_PRODUCT,metadata,JSONB,,Datos adicionales flexibles,Campos extendidos según necesidad
+SYSTEM_PRODUCT,created_at,TIMESTAMP,NOT NULL,Fecha/hora de creación,Auto-generado
+SYSTEM_PRODUCT,updated_at,TIMESTAMP,NOT NULL,Fecha/hora de última actualización,Auto-actualizado
+SYSTEM_PRODUCT,created_by,VARCHAR(128),,Usuario/sistema creador,
+AM_BASELINE,id,UUID,PRIMARY KEY,Identificador único de baseline,
+AM_BASELINE,system_id,UUID,NOT NULL FK → SYSTEM_PRODUCT,Sistema al que pertenece este AM,
+AM_BASELINE,version,VARCHAR(32),NOT NULL,Versión del AM,"Ejemplo: v1.0, AM_Q100_R01"
+AM_BASELINE,status,VARCHAR(32),NOT NULL,"Estado: Draft, Approved, InReview, Retired, Deprecated",
+AM_BASELINE,document_ref,TEXT,,Referencia al documento (path repo/URL/DMRef),
+AM_BASELINE,document_hash,VARCHAR(64),,Hash del documento para integridad,SHA256 o similar
+AM_BASELINE,baseline_date,DATE,,Fecha oficial del baseline,
+AM_BASELINE,metadata,JSONB,,Metadatos adicionales (autor, LC, etc.),
+AM_BASELINE,notes,TEXT,,Notas adicionales,
+AM_BASELINE,created_at,TIMESTAMP,NOT NULL,Fecha/hora de creación,
+AM_BASELINE,created_by,VARCHAR(128),,Usuario creador,
+DESIGN_VALIDATION,id,UUID,PRIMARY KEY,Identificador único de DV,
+DESIGN_VALIDATION,am_id,UUID,NOT NULL FK → AM_BASELINE,AM que se valida,
+DESIGN_VALIDATION,dv_status,VARCHAR(32),NOT NULL,"Estado: InProgress, Passed, ConditionallyPassed, Failed, Waived",
+DESIGN_VALIDATION,dv_report_ref,TEXT,,Referencia al informe de DV,
+DESIGN_VALIDATION,dv_metrics,JSONB,,Métricas de validación,"Ejemplo: {coverage: 98, completeness: 100, checks_passed: 245}"
+DESIGN_VALIDATION,findings,TEXT,,Hallazgos y observaciones,
+DESIGN_VALIDATION,performed_at,TIMESTAMP,NOT NULL,Fecha/hora de ejecución de DV,
+DESIGN_VALIDATION,performed_by,VARCHAR(128),,Responsable de la validación,
+DESIGN_VALIDATION,approved_by,VARCHAR(128),,Aprobador de la validación,
+DESIGN_VALIDATION,approval_date,DATE,,Fecha de aprobación,
+DPP_RECORD,id,UUID,PRIMARY KEY,Identificador interno del DPP,
+DPP_RECORD,dpp_id,VARCHAR(128),UNIQUE NOT NULL,Identificador humano del DPP,"Ejemplo: DPP_95-20_FC_PitchStability_v1.2"
+DPP_RECORD,system_id,UUID,NOT NULL FK → SYSTEM_PRODUCT,Sistema al que pertenece,
+DPP_RECORD,am_id,UUID,FK → AM_BASELINE,AM base del DPP,
+DPP_RECORD,dv_id,UUID,FK → DESIGN_VALIDATION,DV que valida el DPP,
+DPP_RECORD,primary_ata,VARCHAR(16),,Capítulo ATA principal,
+DPP_RECORD,related_ata_chapters,TEXT[],,Array de capítulos ATA relacionados,"Ejemplo: ['27', '31', '70']"
+DPP_RECORD,status,VARCHAR(32),NOT NULL,"Estado: Draft, UnderReview, Certified, InService, Suspended, Retired",
+DPP_RECORD,lifecycle_stage,VARCHAR(32),,"Etapa: Design, Testing, InService, Deprecated",
+DPP_RECORD,dpp_json,JSONB,NOT NULL,Payload completo del DPP,Envelope + payload según estándar DPP
+DPP_RECORD,odd_conditions,JSONB,,Operational Design Domain,Condiciones y restricciones operacionales
+DPP_RECORD,sbom,JSONB,,Software Bill of Materials,
+DPP_RECORD,capabilities,TEXT[],,Capacidades declaradas del sistema,
+DPP_RECORD,limitations,TEXT[],,Limitaciones conocidas,
+DPP_RECORD,certification_basis,TEXT,,Base de certificación,"Ejemplo: CS-25, DO-178C DAL B"
+DPP_RECORD,created_at,TIMESTAMP,NOT NULL,Fecha/hora de creación,
+DPP_RECORD,updated_at,TIMESTAMP,NOT NULL,Fecha/hora de última actualización,
+DPP_RECORD,created_by,VARCHAR(128),,Usuario creador,
+DPP_RECORD,approved_by,VARCHAR(128),,Aprobador,
+DPP_RECORD,approval_date,DATE,,Fecha de aprobación,
+OM_EVENT,id,UUID,PRIMARY KEY,Identificador único del evento,
+OM_EVENT,system_id,UUID,NOT NULL FK → SYSTEM_PRODUCT,Sistema operando,
+OM_EVENT,dpp_id,UUID,FK → DPP_RECORD,DPP que predice este OM,
+OM_EVENT,context_id,UUID,FK → OPERATIONAL_CONTEXT,Contexto operacional (tabla opcional),
+OM_EVENT,flight_id,VARCHAR(64),,Identificador de vuelo/misión,"Ejemplo: Q100-001-FLT-042"
+OM_EVENT,mission_type,VARCHAR(64),,"Tipo: test_flight, revenue_service, validation",
+OM_EVENT,timestamp_start,TIMESTAMP,NOT NULL,Inicio de la operación,
+OM_EVENT,timestamp_end,TIMESTAMP,,Fin de la operación,
+OM_EVENT,duration_seconds,INTEGER,,Duración en segundos,Calculado o directo
+OM_EVENT,om_data,JSONB,,Datos operacionales resumidos,"KPIs, métricas, logs"
+OM_EVENT,anomalies,JSONB,,Anomalías detectadas,
+OM_EVENT,environment,JSONB,,Condiciones ambientales,"Meteo, altitud, configuración"
+OM_EVENT,notes,TEXT,,Notas adicionales,
+OM_EVENT,created_at,TIMESTAMP,NOT NULL,Fecha/hora de creación del registro,
+OAV_CAMPAIGN,id,UUID,PRIMARY KEY,Identificador único de campaña,
+OAV_CAMPAIGN,dpp_id,UUID,NOT NULL FK → DPP_RECORD,DPP siendo validado,
+OAV_CAMPAIGN,name,VARCHAR(256),NOT NULL,Nombre de la campaña,"Ejemplo: OAV_FC_Pitch_Q100_Phase2"
+OAV_CAMPAIGN,status,VARCHAR(32),NOT NULL,"Estado: Planned, Running, Paused, Completed, Closed, Cancelled",
+OAV_CAMPAIGN,objectives,TEXT,,Objetivos de la campaña,
+OAV_CAMPAIGN,criteria,JSONB,,Criterios de validación,"Umbrales, KPIs, escenarios"
+OAV_CAMPAIGN,result,JSONB,,Resultado agregado,"Ejemplo: {passed: true, findings: [...], metrics: {...}}"
+OAV_CAMPAIGN,findings,TEXT,,Hallazgos detallados,
+OAV_CAMPAIGN,recommendation,TEXT,,Recomendaciones y acciones,
+OAV_CAMPAIGN,planned_start_date,DATE,,Fecha planificada de inicio,
+OAV_CAMPAIGN,actual_start_date,DATE,,Fecha real de inicio,
+OAV_CAMPAIGN,planned_end_date,DATE,,Fecha planificada de fin,
+OAV_CAMPAIGN,completed_at,TIMESTAMP,,Fecha/hora de completado,
+OAV_CAMPAIGN,created_at,TIMESTAMP,NOT NULL,Fecha/hora de creación,
+OAV_CAMPAIGN,created_by,VARCHAR(128),,Creador de la campaña,
+OAV_CAMPAIGN,lead_engineer,VARCHAR(128),,Ingeniero responsable,
+OAV_EVENT_LINK,oav_id,UUID,NOT NULL FK → OAV_CAMPAIGN,Campaña OAV,Clave primaria compuesta
+OAV_EVENT_LINK,om_event_id,UUID,NOT NULL FK → OM_EVENT,Evento OM incluido,Clave primaria compuesta
+OAV_EVENT_LINK,relevance_score,NUMERIC(3,2),,Puntuación de relevancia (0.00-1.00),
+OAV_EVENT_LINK,notes,TEXT,,Notas sobre la relación,
+OAV_EVENT_LINK,added_at,TIMESTAMP,NOT NULL,Fecha/hora de vinculación,
+DT_SNAPSHOT,id,UUID,PRIMARY KEY,Identificador único del snapshot,
+DT_SNAPSHOT,system_id,UUID,NOT NULL FK → SYSTEM_PRODUCT,Sistema gemelo digital,
+DT_SNAPSHOT,dpp_id,UUID,FK → DPP_RECORD,DPP asociado,
+DT_SNAPSHOT,source_oav_id,UUID,FK → OAV_CAMPAIGN,OAV fuente de este DT,
+DT_SNAPSHOT,version_tag,VARCHAR(64),,Etiqueta de versión,"Ejemplo: DT_v1.3, snapshot_20250115"
+DT_SNAPSHOT,dt_state,JSONB,NOT NULL,Estado condensado del gemelo,"Modelos, parámetros, curvas, anomalías"
+DT_SNAPSHOT,performance_metrics,JSONB,,Métricas de rendimiento agregadas,
+DT_SNAPSHOT,health_indicators,JSONB,,Indicadores de salud del sistema,
+DT_SNAPSHOT,predictive_models,JSONB,,Modelos predictivos entrenados,
+DT_SNAPSHOT,accumulated_hours,NUMERIC(10,2),,Horas operacionales acumuladas,
+DT_SNAPSHOT,accumulated_cycles,INTEGER,,Ciclos operacionales acumulados,
+DT_SNAPSHOT,confidence_level,NUMERIC(3,2),,Nivel de confianza (0.00-1.00),
+DT_SNAPSHOT,notes,TEXT,,Notas adicionales,
+DT_SNAPSHOT,created_at,TIMESTAMP,NOT NULL,Fecha/hora de creación del snapshot,
+DT_SNAPSHOT,created_by,VARCHAR(128),,Creador del snapshot,

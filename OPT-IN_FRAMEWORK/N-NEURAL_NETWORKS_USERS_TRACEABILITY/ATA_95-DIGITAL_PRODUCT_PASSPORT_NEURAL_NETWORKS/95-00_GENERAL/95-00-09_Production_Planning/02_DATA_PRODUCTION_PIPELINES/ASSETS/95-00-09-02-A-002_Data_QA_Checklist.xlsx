@@ -1,2 +1,0 @@
-pipeline_name,source,destination,schedule,status
-data_source,validation_rule,threshold,status

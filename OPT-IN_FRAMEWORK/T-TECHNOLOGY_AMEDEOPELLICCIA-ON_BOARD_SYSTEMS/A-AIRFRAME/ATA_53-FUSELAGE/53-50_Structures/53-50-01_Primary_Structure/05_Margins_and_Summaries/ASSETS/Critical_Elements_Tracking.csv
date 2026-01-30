@@ -1,0 +1,5 @@
+ElementID,Description,CurrentMS,Target MS,RiskLevel,DesignAction
+E-001,Upper Panel Sta 12-14,0.08,0.10,Medium,Monitor
+E-002,Door Frame Reinforcement,0.06,0.10,High,Redesign Planned
+E-003,Wing Attachment Bolt,0.15,0.10,Low,Acceptable
+E-004,Pressure Bulkhead,0.12,0.15,Medium,Optimization Study

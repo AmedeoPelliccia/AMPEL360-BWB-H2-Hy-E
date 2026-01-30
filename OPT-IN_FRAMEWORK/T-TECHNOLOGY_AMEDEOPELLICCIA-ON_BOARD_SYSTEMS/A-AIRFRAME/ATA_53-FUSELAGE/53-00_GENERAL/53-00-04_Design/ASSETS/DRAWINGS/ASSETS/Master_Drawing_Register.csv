@@ -1,0 +1,88 @@
+Drawing_Number,Title,Zone,Folder,Type,CI_Reference,Assembly_ID,Revision,Status,CAD_File
+53-10-0000,Zone 100 General Arrangement,100,ZONE_100_NOSE_SECTION,GA,CI-53-100-00,,A,Draft,Q100_53-10-0000_Zone_100_General_Arrangement.svg
+53-10-1000,Forward Bulkhead Assembly,100,ZONE_100_NOSE_SECTION,Assembly,CI-53-100-10,ASM-53-100-100,A,Draft,Q100_53-10-1000_Forward_Bulkhead_Assembly.svg
+53-10-1001,Forward Bulkhead Details,100,ZONE_100_NOSE_SECTION,Detail,CI-53-100-10,,A,Draft,Q100_53-10-1001_Forward_Bulkhead_Details.svg
+53-10-2000,NLG Bay Structure,100,ZONE_100_NOSE_SECTION,Assembly,CI-53-100-20,ASM-53-100-200,A,Draft,Q100_53-10-2000_NLG_Bay_Structure.svg
+53-10-2001,NLG Bay Details,100,ZONE_100_NOSE_SECTION,Detail,CI-53-100-20,,A,Draft,Q100_53-10-2001_NLG_Bay_Details.svg
+53-10-3000,Cockpit Structure Assembly,100,ZONE_100_NOSE_SECTION,Assembly,CI-53-100-30,ASM-53-100-300,A,Draft,Q100_53-10-3000_Cockpit_Structure_Assembly.svg
+53-10-3001,Windshield Frame Details,100,ZONE_100_NOSE_SECTION,Detail,CI-53-100-30,,A,Draft,Q100_53-10-3001_Windshield_Frame_Details.svg
+53-10-4000,Avionics Bay Structure,100,ZONE_100_NOSE_SECTION,Assembly,CI-53-100-40,ASM-53-100-400,A,Draft,Q100_53-10-4000_Avionics_Bay_Structure.svg
+53-20-0000,Zone 200 General Arrangement,200,ZONE_200_FORWARD_CABIN,GA,CI-53-200-00,,A,Draft,Q100_53-20-0000_Zone_200_General_Arrangement.svg
+53-20-1000,Frame 200 Assembly,200,ZONE_200_FORWARD_CABIN,Assembly,CI-53-200-10,ASM-53-200-100,A,Draft,Q100_53-20-1000_Frame_200_Assembly.svg
+53-20-1001,Frame 200 Details,200,ZONE_200_FORWARD_CABIN,Detail,CI-53-200-10,,A,Draft,Q100_53-20-1001_Frame_200_Details.svg
+53-20-2000,Upper Shell Panel U01,200,ZONE_200_FORWARD_CABIN,Panel,CI-53-200-20,,A,Draft,Q100_53-20-2000_Upper_Shell_Panel_U01.svg
+53-20-2001,Upper Shell Panel U02,200,ZONE_200_FORWARD_CABIN,Panel,CI-53-200-20,,A,Draft,Q100_53-20-2001_Upper_Shell_Panel_U02.svg
+53-20-2100,Lower Shell Panel L01,200,ZONE_200_FORWARD_CABIN,Panel,CI-53-200-21,,A,Draft,Q100_53-20-2100_Lower_Shell_Panel_L01.svg
+53-20-2101,Lower Shell Panel L02,200,ZONE_200_FORWARD_CABIN,Panel,CI-53-200-21,,A,Draft,Q100_53-20-2101_Lower_Shell_Panel_L02.svg
+53-20-3000,Side Shell Left,200,ZONE_200_FORWARD_CABIN,Panel,CI-53-200-30,,A,Draft,Q100_53-20-3000_Side_Shell_Left.svg
+53-20-3100,Side Shell Right,200,ZONE_200_FORWARD_CABIN,Panel,CI-53-200-31,,A,Draft,Q100_53-20-3100_Side_Shell_Right.svg
+53-20-4000,Passenger Door 1L Frame,200,ZONE_200_FORWARD_CABIN,Assembly,CI-53-200-40,ASM-53-200-400,A,Draft,Q100_53-20-4000_Passenger_Door_1L_Frame.svg
+53-20-4001,Door 1L Frame Details,200,ZONE_200_FORWARD_CABIN,Detail,CI-53-200-40,,A,Draft,Q100_53-20-4001_Door_1L_Frame_Details.svg
+53-20-4002,Door 1L Corner Fittings,200,ZONE_200_FORWARD_CABIN,Detail,CI-53-200-40,,A,Draft,Q100_53-20-4002_Door_1L_Corner_Fittings.svg
+53-20-4010,Passenger Door 1R Frame,200,ZONE_200_FORWARD_CABIN,Assembly,CI-53-200-40,ASM-53-200-401,A,Draft,Q100_53-20-4010_Passenger_Door_1R_Frame.svg
+53-20-4020,Passenger Door 2L Frame,200,ZONE_200_FORWARD_CABIN,Assembly,CI-53-200-40,ASM-53-200-402,A,Draft,Q100_53-20-4020_Passenger_Door_2L_Frame.svg
+53-20-4030,Passenger Door 2R Frame,200,ZONE_200_FORWARD_CABIN,Assembly,CI-53-200-40,ASM-53-200-403,A,Draft,Q100_53-20-4030_Passenger_Door_2R_Frame.svg
+53-20-5000,Floor Beam Grid Assembly,200,ZONE_200_FORWARD_CABIN,Assembly,CI-53-200-50,ASM-53-200-500,A,Draft,Q100_53-20-5000_Floor_Beam_Grid_Assembly.svg
+53-20-5001,Primary Floor Beam Details,200,ZONE_200_FORWARD_CABIN,Detail,CI-53-200-50,,A,Draft,Q100_53-20-5001_Primary_Floor_Beam_Details.svg
+53-20-5100,Floor Panel Assembly,200,ZONE_200_FORWARD_CABIN,Assembly,CI-53-200-51,ASM-53-200-510,A,Draft,Q100_53-20-5100_Floor_Panel_Assembly.svg
+53-20-5200,Seat Track Installation,200,ZONE_200_FORWARD_CABIN,Installation,CI-53-200-52,,A,Draft,Q100_53-20-5200_Seat_Track_Installation.svg
+53-30-0000,Zone 300 General Arrangement,300,ZONE_300_MID_CABIN,GA,CI-53-300-00,,A,Draft,Q100_53-30-0000_Zone_300_General_Arrangement.svg
+53-30-1000,Frame 300 Assembly,300,ZONE_300_MID_CABIN,Assembly,CI-53-300-10,ASM-53-300-100,A,Draft,Q100_53-30-1000_Frame_300_Assembly.svg
+53-30-2000,Upper Shell Panels,300,ZONE_300_MID_CABIN,Panel,CI-53-300-20,,A,Draft,Q100_53-30-2000_Upper_Shell_Panels.svg
+53-30-3000,Side Shell Panels,300,ZONE_300_MID_CABIN,Panel,CI-53-300-30,,A,Draft,Q100_53-30-3000_Side_Shell_Panels.svg
+53-30-4000,Passenger Door 3L Frame,300,ZONE_300_MID_CABIN,Assembly,CI-53-300-40,ASM-53-300-400,A,Draft,Q100_53-30-4000_Passenger_Door_3L_Frame.svg
+53-30-4010,Passenger Door 3R Frame,300,ZONE_300_MID_CABIN,Assembly,CI-53-300-40,ASM-53-300-401,A,Draft,Q100_53-30-4010_Passenger_Door_3R_Frame.svg
+53-30-4020,Passenger Door 4L Frame,300,ZONE_300_MID_CABIN,Assembly,CI-53-300-40,ASM-53-300-402,A,Draft,Q100_53-30-4020_Passenger_Door_4L_Frame.svg
+53-30-4030,Passenger Door 4R Frame,300,ZONE_300_MID_CABIN,Assembly,CI-53-300-40,ASM-53-300-403,A,Draft,Q100_53-30-4030_Passenger_Door_4R_Frame.svg
+53-30-4100,Overwing Exit Left 1,300,ZONE_300_MID_CABIN,Assembly,CI-53-300-41,ASM-53-300-410,A,Draft,Q100_53-30-4100_Overwing_Exit_Left_1.svg
+53-30-4110,Overwing Exit Right 1,300,ZONE_300_MID_CABIN,Assembly,CI-53-300-41,ASM-53-300-411,A,Draft,Q100_53-30-4110_Overwing_Exit_Right_1.svg
+53-30-5000,Wing Body Blend Transition,300,ZONE_300_MID_CABIN,Assembly,CI-53-300-50,ASM-53-300-500,A,Draft,Q100_53-30-5000_Wing_Body_Blend_Transition.svg
+53-40-0000,Zone 400 General Arrangement,400,ZONE_400_CENTER_WING_BOX,GA,CI-53-400-00,,A,Draft,Q100_53-40-0000_Zone_400_General_Arrangement.svg
+53-40-1000,Forward Wing Spar Assembly,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-10,ASM-53-400-100,A,Draft,Q100_53-40-1000_Forward_Wing_Spar_Assembly.svg
+53-40-1001,Forward Spar Web Details,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-10,,A,Draft,Q100_53-40-1001_Forward_Spar_Web_Details.svg
+53-40-1002,Forward Spar Upper Cap Details,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-10,,A,Draft,Q100_53-40-1002_Forward_Spar_Upper_Cap_Details.svg
+53-40-1003,Forward Spar Lower Cap Details,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-10,,A,Draft,Q100_53-40-1003_Forward_Spar_Lower_Cap_Details.svg
+53-40-1004,Wing Attachment Fitting 01,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-10,,A,Draft,Q100_53-40-1004_Wing_Attachment_Fitting_01.svg
+53-40-1005,Wing Attachment Fitting 02,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-10,,A,Draft,Q100_53-40-1005_Wing_Attachment_Fitting_02.svg
+53-40-1100,Rear Wing Spar Assembly,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-11,ASM-53-400-110,A,Draft,Q100_53-40-1100_Rear_Wing_Spar_Assembly.svg
+53-40-2000,Wing Rib 01 Assembly,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-20,ASM-53-400-200,A,Draft,Q100_53-40-2000_Wing_Rib_01_Assembly.svg
+53-40-3000,MLG Bay Left Assembly,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-30,ASM-53-400-300,A,Draft,Q100_53-40-3000_MLG_Bay_Left_Assembly.svg
+53-40-3001,MLG Beam Left Details,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-30,,A,Draft,Q100_53-40-3001_MLG_Beam_Left_Details.svg
+53-40-3002,MLG Bay Left Bulkhead Forward,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-30,,A,Draft,Q100_53-40-3002_MLG_Bay_Left_Bulkhead_Forward.svg
+53-40-3003,MLG Bay Left Bulkhead Aft,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-30,,A,Draft,Q100_53-40-3003_MLG_Bay_Left_Bulkhead_Aft.svg
+53-40-3004,MLG Attachment Fitting L1,400,ZONE_400_CENTER_WING_BOX,Detail,CI-53-400-30,,A,Draft,Q100_53-40-3004_MLG_Attachment_Fitting_L1.svg
+53-40-3100,MLG Bay Right Assembly,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-31,ASM-53-400-310,A,Draft,Q100_53-40-3100_MLG_Bay_Right_Assembly.svg
+53-40-4000,Cargo Door Forward Left Frame,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-40,ASM-53-400-400,A,Draft,Q100_53-40-4000_Cargo_Door_Forward_Left_Frame.svg
+53-40-4010,Cargo Door Forward Right Frame,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-40,ASM-53-400-401,A,Draft,Q100_53-40-4010_Cargo_Door_Forward_Right_Frame.svg
+53-40-4020,Cargo Door Aft Left Frame,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-40,ASM-53-400-402,A,Draft,Q100_53-40-4020_Cargo_Door_Aft_Left_Frame.svg
+53-40-4030,Cargo Door Aft Right Frame,400,ZONE_400_CENTER_WING_BOX,Assembly,CI-53-400-40,ASM-53-400-403,A,Draft,Q100_53-40-4030_Cargo_Door_Aft_Right_Frame.svg
+53-40-5000,Wing Box Splice Forward,400,ZONE_400_CENTER_WING_BOX,Joint,CI-53-400-50,,A,Draft,Q100_53-40-5000_Wing_Box_Splice_Forward.svg
+53-40-5100,Wing Box Splice Aft,400,ZONE_400_CENTER_WING_BOX,Joint,CI-53-400-51,,A,Draft,Q100_53-40-5100_Wing_Box_Splice_Aft.svg
+53-50-0000,Zone 500 General Arrangement,500,ZONE_500_AFT_CABIN,GA,CI-53-500-00,,A,Draft,Q100_53-50-0000_Zone_500_General_Arrangement.svg
+53-50-1000,Frame 500 Assembly,500,ZONE_500_AFT_CABIN,Assembly,CI-53-500-10,ASM-53-500-100,A,Draft,Q100_53-50-1000_Frame_500_Assembly.svg
+53-50-2000,Upper Shell Panels,500,ZONE_500_AFT_CABIN,Panel,CI-53-500-20,,A,Draft,Q100_53-50-2000_Upper_Shell_Panels.svg
+53-50-3000,Empennage Attachment Structure,500,ZONE_500_AFT_CABIN,Assembly,CI-53-500-30,ASM-53-500-300,A,Draft,Q100_53-50-3000_Empennage_Attachment_Structure.svg
+53-50-3001,Vertical Stabilizer Fitting Forward,500,ZONE_500_AFT_CABIN,Detail,CI-53-500-30,,A,Draft,Q100_53-50-3001_Vertical_Stabilizer_Fitting_Forward.svg
+53-50-3002,Vertical Stabilizer Fitting Mid,500,ZONE_500_AFT_CABIN,Detail,CI-53-500-30,,A,Draft,Q100_53-50-3002_Vertical_Stabilizer_Fitting_Mid.svg
+53-50-3003,Vertical Stabilizer Fitting Aft,500,ZONE_500_AFT_CABIN,Detail,CI-53-500-30,,A,Draft,Q100_53-50-3003_Vertical_Stabilizer_Fitting_Aft.svg
+53-50-3100,Horizontal Stabilizer Fitting Left,500,ZONE_500_AFT_CABIN,Detail,CI-53-500-31,,A,Draft,Q100_53-50-3100_Horizontal_Stabilizer_Fitting_Left.svg
+53-50-3200,Horizontal Stabilizer Fitting Right,500,ZONE_500_AFT_CABIN,Detail,CI-53-500-32,,A,Draft,Q100_53-50-3200_Horizontal_Stabilizer_Fitting_Right.svg
+53-60-0000,Zone 600 General Arrangement,600,ZONE_600_TAIL_SECTION,GA,CI-53-600-00,,A,Draft,Q100_53-60-0000_Zone_600_General_Arrangement.svg
+53-60-1000,Aft Pressure Bulkhead Assembly,600,ZONE_600_TAIL_SECTION,Assembly,CI-53-600-10,ASM-53-600-100,A,Draft,Q100_53-60-1000_Aft_Pressure_Bulkhead_Assembly.svg
+53-60-1001,Aft Bulkhead Details,600,ZONE_600_TAIL_SECTION,Detail,CI-53-600-10,,A,Draft,Q100_53-60-1001_Aft_Bulkhead_Details.svg
+53-60-2000,Tail Cone Structure,600,ZONE_600_TAIL_SECTION,Assembly,CI-53-600-20,ASM-53-600-200,A,Draft,Q100_53-60-2000_Tail_Cone_Structure.svg
+53-60-3000,APU Bay Structure,600,ZONE_600_TAIL_SECTION,Assembly,CI-53-600-30,ASM-53-600-300,A,Draft,Q100_53-60-3000_APU_Bay_Structure.svg
+53-JS-1000,Longitudinal Splice Upper Lower,ALL,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-1000_Longitudinal_Splice_Upper_Lower.svg
+53-JS-1001,Longitudinal Splice Fastener Pattern,ALL,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-1001_Longitudinal_Splice_Fastener_Pattern.svg
+53-JS-2000,Circumferential Splice Zone 100-200,100-200,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-2000_Circumferential_Splice_Zone_100-200.svg
+53-JS-2001,Circumferential Splice Zone 200-300,200-300,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-2001_Circumferential_Splice_Zone_200-300.svg
+53-JS-2002,Circumferential Splice Zone 300-400,300-400,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-2002_Circumferential_Splice_Zone_300-400.svg
+53-JS-2003,Circumferential Splice Zone 400-500,400-500,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-2003_Circumferential_Splice_Zone_400-500.svg
+53-JS-2004,Circumferential Splice Zone 500-600,500-600,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-2004_Circumferential_Splice_Zone_500-600.svg
+53-JS-3000,Door Frame to Shell Interface,ALL,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-3000_Door_Frame_to_Shell_Interface.svg
+53-JS-4000,Floor Beam to Shell Attachment,ALL,JOINTS_AND_SPLICES,Joint,,,A,Draft,Q100_53-JS-4000_Floor_Beam_to_Shell_Attachment.svg
+53-IN-1000,Systems Routing Upper Shell,ALL,INSTALLATION_DRAWINGS,Installation,,,A,Draft,Q100_53-IN-1000_Systems_Routing_Upper_Shell.svg
+53-IN-2000,Systems Routing Lower Shell,ALL,INSTALLATION_DRAWINGS,Installation,,,A,Draft,Q100_53-IN-2000_Systems_Routing_Lower_Shell.svg
+53-IN-3000,Liner Attachment Points,ALL,INSTALLATION_DRAWINGS,Installation,,,A,Draft,Q100_53-IN-3000_Liner_Attachment_Points.svg
+53-IN-4000,Monument Attach Provisions,ALL,INSTALLATION_DRAWINGS,Installation,,,A,Draft,Q100_53-IN-4000_Monument_Attach_Provisions.svg
+53-IN-5000,Overhead Bin Support Layout,200-500,INSTALLATION_DRAWINGS,Installation,,,A,Draft,Q100_53-IN-5000_Overhead_Bin_Support_Layout.svg

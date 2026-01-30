@@ -1,0 +1,11 @@
+Tank_ID,Tank_Type,Capacity_L,Capacity_kg_H2,Material_Inner,Material_Outer,Design_Pressure_bar,Operating_Pressure_bar,Insulation_Type,Boil_Off_Rate_percent_day,Orientation,Manufacturer_Spec,Certification
+LH2-01,Liquid_H2_Cryogenic,50000,3550,SS304L,Carbon_Steel,16,1-10,MLI_Vacuum,0.25,Vertical,EN_13458,PED_2014/68/EU
+LH2-02,Liquid_H2_Cryogenic,150000,10650,SS316L,SS304,16,1-10,Perlite_Vacuum,0.30,Horizontal,EN_13458,PED_2014/68/EU
+LH2-03,Liquid_H2_Cryogenic,500000,35500,AL5083,Carbon_Steel,10,1-8,MLI_Vacuum,0.20,Horizontal,ISO_21009,ASME_VIII
+GH2-T3-01,Type_III_COPV,500,0.875,AL6061-T6,Carbon_Fiber_Epoxy,525,350,None,0,Horizontal,ISO_11119-3,DOT_FMVSS_304
+GH2-T3-02,Type_III_COPV,1000,1.75,AL6061-T6,Carbon_Fiber_Epoxy,525,350,None,0,Horizontal,ISO_11119-3,DOT_FMVSS_304
+GH2-T3-03,Type_III_COPV,500,2.19,AL6061-T6,Carbon_Fiber_Epoxy,1050,700,None,0,Horizontal,ISO_11119-3,UN_ECE_R134
+GH2-T4-01,Type_IV_COPV,500,0.875,HDPE,Carbon_Fiber_Epoxy,525,350,None,0,Horizontal,ISO_11119-3,UN_ECE_R134
+GH2-T4-02,Type_IV_COPV,1000,1.75,HDPE,Carbon_Fiber_Epoxy,525,350,None,0,Horizontal,ISO_11119-3,UN_ECE_R134
+GH2-T4-03,Type_IV_COPV,500,2.19,HDPE,Carbon_Fiber_Epoxy,1050,700,None,0,Horizontal,ISO_11119-3,UN_ECE_R134
+GH2-T1-01,Type_I_Metal,5000,4.38,Carbon_Steel,None,200,150,None,0,Horizontal,ASME_VIII,PED_2014/68/EU

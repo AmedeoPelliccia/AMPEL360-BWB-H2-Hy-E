@@ -1,0 +1,9 @@
+Part_Number,Description,Criticality,QTY,Inspection_Level,Special_Process,Status
+53-20-01-001,Upper Shell Assembly,Flight Critical,4,Level 1,AFP/NDT,Active
+53-20-01-002,Lower Shell Assembly,Flight Critical,5,Level 1,AFP/NDT,Active
+53-20-01-003,Fwd Pressure Bulkhead,Flight Critical,1,Level 1,NDT,Active
+53-20-01-004,Aft Pressure Bulkhead,Flight Critical,1,Level 1,NDT,Active
+53-20-02-001,L1 Door Frame,Flight Critical,2,Level 1,Forging/NDT,Active
+53-20-03-001,Main Floor Beam,Flight Critical,38,Level 1,Machining,Active
+53-20-04-001,Main Gear Attach Fitting,Flight Critical,8,Level 1,Forging/NDT,Active
+53-20-04-002,Nose Gear Attach Fitting,Flight Critical,4,Level 1,Forging/NDT,Active

@@ -1,0 +1,18 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-22-01-001,LRI_01,PN-56-22-01-01-001,5340-XX-XXX-XXXX,XXXXX,Fixed Panel Assembly,1,EA,1,N,180,Critical,21,Make,FAR 25.775,UNL,R1-Glass recovery,Non-opening side window section
+2,PN-56-22-01-001,LRI_01,PN-56-22-01-01-010,5340-XX-XXX-XXXX,XXXXX,Fixed Glass Pane,1,EA,1,N,180,Critical,14,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,Laminated safety glass
+3,PN-56-22-01-001,LRI_01,PN-56-22-01-01-020,5330-XX-XXX-XXXX,XXXXX,Fixed Panel Frame,1,EA,1,N,90,Standard,10,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Aluminum frame structure
+4,PN-56-22-01-001,LRI_02,PN-56-22-01-02-001,5340-XX-XXX-XXXX,XXXXX,Sliding Panel Assembly,1,EA,1,N,180,Critical,21,Make,FAR 25.775,UNL,R1-Glass recovery,Openable window for ground ops
+5,PN-56-22-01-001,LRI_02,PN-56-22-01-02-010,5340-XX-XXX-XXXX,XXXXX,Sliding Glass Pane,1,EA,1,N,180,Critical,14,Buy,MIL-G-25871,UNL,R1-Glass cullet recycling,Tempered safety glass
+6,PN-56-22-01-001,LRI_02,PN-56-22-01-02-020,5330-XX-XXX-XXXX,XXXXX,Sliding Panel Frame,1,EA,1,N,90,Standard,10,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Aluminum frame structure
+7,PN-56-22-01-001,LRI_03,PN-56-22-01-03-001,3040-XX-XXX-XXXX,XXXXX,Sliding Mechanism Assembly,1,EA,1,N,120,Critical,14,Make,MIL-STD-810G,UNL,R1-Metal recycling,Track and latch system
+8,PN-56-22-01-001,LRI_03,PN-56-22-01-03-010,3020-XX-XXX-XXXX,XXXXX,Slide Rail,2,EA,1,Y,60,Standard,7,Buy,AMS 4045,UNL,R1-Aluminum recycling 100%,Aluminum 7075-T6 rail
+9,PN-56-22-01-001,LRI_03,PN-56-22-01-03-020,5340-XX-XXX-XXXX,XXXXX,Latch Assembly,2,EA,1,Y,30,Standard,5,Buy,MIL-STD-1472,UNL,R1-Steel/aluminum recovery,Ergonomic latch
+10,PN-56-22-01-001,LRI_03,PN-56-22-01-03-030,3110-XX-XXX-XXXX,XXXXX,Roller Bearing Set,4,EA,1,Y,20,Standard,3,Buy,ABEC-5,60,R1-Steel recycling,Precision bearings - grease limited life
+11,PN-56-22-01-001,LRI_04,PN-56-22-01-04-001,5330-XX-XXX-XXXX,XXXXX,Seal Kit Complete,1,KIT,1,Y,45,Standard,5,Buy,MIL-R-25897,36,R4-Silicone thermal recovery,Pressure and weather sealing
+12,PN-56-22-01-001,LRI_04,PN-56-22-01-04-010,5330-XX-XXX-XXXX,XXXXX,Primary Seal,2,EA,1,Y,30,Standard,3,Buy,MIL-R-25897,36,R4-Silicone thermal recovery,Silicone perimeter seal
+13,PN-56-22-01-001,LRI_04,PN-56-22-01-04-020,5330-XX-XXX-XXXX,XXXXX,Weather Seal Strip,2,EA,1,Y,20,Standard,3,Buy,AMS 3303,48,R4-EPDM recycling,EPDM rubber strip
+14,PN-56-22-01-001,LRI_05,PN-56-22-01-05-001,1680-XX-XXX-XXXX,XXXXX,Emergency Release Assembly,1,EA,1,N,60,Critical,10,Make,FAR 25.807,UNL,R1-Metal recycling,Quick-release mechanism
+15,PN-56-22-01-001,LRI_05,PN-56-22-01-05-010,5315-XX-XXX-XXXX,XXXXX,Release Handle,1,EA,1,Y,15,Critical,5,Buy,MIL-STD-1472,UNL,R1-Aluminum recycling 100%,Red anodized aluminum
+16,PN-56-22-01-001,LRI_05,PN-56-22-01-05-020,5340-XX-XXX-XXXX,XXXXX,Release Pin Assembly,2,EA,1,Y,20,Standard,3,Buy,AMS 4911,UNL,R1-Titanium recycling 100%,Titanium release pins
+17,PN-56-22-01-001,LRI_05,PN-56-22-01-05-030,5315-XX-XXX-XXXX,XXXXX,Spring Mechanism,2,EA,1,Y,15,Standard,3,Buy,AMS 5678,UNL,R1-Stainless steel recycling,Stainless steel spring

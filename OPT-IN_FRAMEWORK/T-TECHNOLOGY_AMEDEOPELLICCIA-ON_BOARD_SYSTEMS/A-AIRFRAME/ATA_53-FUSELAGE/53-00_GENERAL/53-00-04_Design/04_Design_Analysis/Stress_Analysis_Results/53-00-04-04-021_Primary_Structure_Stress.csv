@@ -1,0 +1,12 @@
+CI_Number,CI_Name,Zone,Component,Load_Case,Stress_Type,Applied_Stress_MPa,Allowable_Stress_MPa,Margin_of_Safety,Status,Report_Reference
+CI-53-100-BHD-FWD,Forward Pressure Bulkhead,100,Crown,LC-PRES-003,Tensile,TBD,TBD,TBD,In Progress,53-50-STR-100-001
+CI-53-100-BHD-FWD,Forward Pressure Bulkhead,100,Edge,LC-COMB-001,Combined,TBD,TBD,TBD,In Progress,53-50-STR-100-001
+CI-53-100-SKN-U01,Upper Skin Panel 01,100,Panel Center,LC-PRES-001,Hoop Tension,TBD,TBD,TBD,Complete,53-50-STR-100-010
+CI-53-200-DOOR-1L-FR,Door Frame 1L,200,Hinge Corner,LC-COMB-001,Combined,TBD,TBD,TBD,Complete,53-50-STR-200-005
+CI-53-200-FLR-BEAM-P-L,Primary Floor Beams Left,200,Mid-Span,LC-MAN-001,Bending,TBD,TBD,TBD,Complete,53-50-STR-200-015
+CI-53-400-SPAR-FWD,Forward Wing Spar,400,Web Center,LC-COMB-001,Shear,TBD,TBD,TBD,Complete,53-50-STR-400-001
+CI-53-400-SPAR-FWD,Forward Wing Spar,400,Upper Cap,LC-COMB-001,Compression,TBD,TBD,TBD,Complete,53-50-STR-400-001
+CI-53-400-SPAR-FWD,Forward Wing Spar,400,Lower Cap,LC-COMB-001,Tension,TBD,TBD,TBD,Complete,53-50-STR-400-001
+CI-53-400-SPAR-REAR,Rear Wing Spar,400,Web Center,LC-COMB-001,Shear,TBD,TBD,TBD,Complete,53-50-STR-400-002
+CI-53-400-BAY-MLG-L,Left Main Landing Gear Bay,400,Trunnion Area,LC-LND-001,Bearing,TBD,TBD,TBD,Complete,53-50-STR-400-010
+CI-53-600-BHD-AFT,Aft Pressure Bulkhead,600,Crown,LC-PRES-003,Tensile,TBD,TBD,TBD,In Progress,53-50-STR-600-001

@@ -1,0 +1,18 @@
+Line,LRU_PN,LRI_ID,Part_Number,NSN,CAGE,Nomenclature,Qty,UoM,ICC,LMP,MTTR_min,Criticality,Lead_Time_Days,Make_Buy,Spec_Std,Shelf_Life_Months,Recyclability,Notes
+1,PN-56-26-01-001,LRI_01,PN-56-26-01-01-001,4930-XX-XXX-XXXX,XXXXX,Fluid Reservoir Assembly,1,EA,1,N,60,Standard,14,Make,MIL-STD-810G,UNL,R2-Polyethylene recycling,Rain repellent fluid storage
+2,PN-56-26-01-001,LRI_01,PN-56-26-01-01-010,4930-XX-XXX-XXXX,XXXXX,Reservoir Tank,1,EA,1,N,45,Standard,10,Make,FAR 25.1195,UNL,R2-HDPE recycling,1.0L polyethylene tank
+3,PN-56-26-01-001,LRI_01,PN-56-26-01-01-020,4730-XX-XXX-XXXX,XXXXX,Filler Cap,1,EA,1,Y,10,Standard,3,Buy,MIL-C-18372,UNL,R1-Metal recycling,Vented filler cap
+4,PN-56-26-01-001,LRI_01,PN-56-26-01-01-030,4720-XX-XXX-XXXX,XXXXX,Outlet Fitting,1,EA,1,Y,15,Standard,3,Buy,MS33656,UNL,R1-Aluminum recycling,Quick-connect fitting
+5,PN-56-26-01-001,LRI_02,PN-56-26-01-02-001,4320-XX-XXX-XXXX,XXXXX,Pump Assembly,1,EA,1,Y,45,Critical,14,Make,MIL-P-8564,UNL,R2-Motor/housing separation,Pressurized fluid delivery
+6,PN-56-26-01-001,LRI_02,PN-56-26-01-02-010,4320-XX-XXX-XXXX,XXXXX,Electric Pump Motor,1,EA,1,Y,30,Standard,10,Buy,MIL-M-7969,UNL,R2-Copper/magnet recovery,28VDC gear pump
+7,PN-56-26-01-001,LRI_02,PN-56-26-01-02-020,4810-XX-XXX-XXXX,XXXXX,Check Valve,2,EA,1,Y,15,Standard,3,Buy,MS28889,UNL,R1-Stainless steel recycling,Fluid check valve
+8,PN-56-26-01-001,LRI_02,PN-56-26-01-02-030,4820-XX-XXX-XXXX,XXXXX,Pressure Relief Valve,1,EA,1,Y,20,Standard,5,Buy,MS28893,UNL,R1-Brass/steel recycling,35 psi relief
+9,PN-56-26-01-001,LRI_03,PN-56-26-01-03-001,4930-XX-XXX-XXXX,XXXXX,Spray Nozzle Set,2,SET,1,Y,30,Standard,7,Buy,SAE AS4615,UNL,R1-Stainless steel recycling,Windshield application nozzles
+10,PN-56-26-01-001,LRI_03,PN-56-26-01-03-010,4930-XX-XXX-XXXX,XXXXX,Fan Spray Nozzle,2,EA,1,Y,20,Standard,5,Buy,SAE AS4615,UNL,R1-Steel recycling,60 deg spray pattern
+11,PN-56-26-01-001,LRI_03,PN-56-26-01-03-020,4930-XX-XXX-XXXX,XXXXX,Nozzle Mount,2,EA,1,Y,15,Standard,3,Make,AMS 4045,UNL,R1-Aluminum recycling 100%,Aluminum mounting bracket
+12,PN-56-26-01-001,LRI_04,PN-56-26-01-04-001,4820-XX-XXX-XXXX,XXXXX,Control Valve,1,EA,1,Y,30,Standard,10,Make,MIL-V-25675,UNL,R2-Valve body/coil separation,Fluid flow control
+13,PN-56-26-01-001,LRI_04,PN-56-26-01-04-010,4820-XX-XXX-XXXX,XXXXX,Solenoid Valve,1,EA,1,Y,20,Standard,7,Buy,MIL-V-25675,UNL,R2-Copper coil recovery,28VDC solenoid actuated
+14,PN-56-26-01-001,LRI_04,PN-56-26-01-04-020,5935-XX-XXX-XXXX,XXXXX,Valve Connector,1,EA,1,Y,10,Standard,3,Buy,MIL-DTL-38999,UNL,R2-Copper recovery,2-pin power connector
+15,PN-56-26-01-001,LRI_05,PN-56-26-01-05-001,6685-XX-XXX-XXXX,XXXXX,Fluid Level Sensor,1,EA,1,Y,20,Standard,7,Buy,MIL-STD-810G,UNL,R2-Electronics recycling,Quantity indication
+16,PN-56-26-01-001,LRI_05,PN-56-26-01-05-010,6685-XX-XXX-XXXX,XXXXX,Level Probe,1,EA,1,Y,15,Standard,5,Buy,MIL-STD-810G,UNL,R2-Steel/electronics separation,Capacitive level sensor
+17,PN-56-26-01-001,LRI_05,PN-56-26-01-05-020,5935-XX-XXX-XXXX,XXXXX,Sensor Connector,1,EA,1,Y,10,Standard,3,Buy,MIL-DTL-38999,UNL,R2-Copper recovery,3-pin signal connector

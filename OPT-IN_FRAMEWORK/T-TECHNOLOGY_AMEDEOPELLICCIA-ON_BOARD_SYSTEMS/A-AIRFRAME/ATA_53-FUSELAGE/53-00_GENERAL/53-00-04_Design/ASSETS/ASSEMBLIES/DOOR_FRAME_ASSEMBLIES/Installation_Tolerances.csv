@@ -1,0 +1,49 @@
+Door_ID,Door_Type,Parameter,Nominal_mm,Tolerance_Plus_mm,Tolerance_Minus_mm,Measurement_Method,Critical,Reference
+ASM-53-200-DOOR-1L,Passenger,Frame Width,914.4,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-200-DOOR-1L,Passenger,Frame Height,1828.8,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-200-DOOR-1L,Passenger,Hinge Centerline Spacing,1600.0,0.1,0.1,Laser Tracker,Yes,CS-25.783
+ASM-53-200-DOOR-1L,Passenger,Seal Compression,6.0,1.0,0.5,Feeler Gauge,Yes,Internal
+ASM-53-200-DOOR-1R,Passenger,Frame Width,914.4,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-200-DOOR-1R,Passenger,Frame Height,1828.8,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-200-DOOR-1R,Passenger,Hinge Centerline Spacing,1600.0,0.1,0.1,Laser Tracker,Yes,CS-25.783
+ASM-53-200-DOOR-1R,Passenger,Seal Compression,6.0,1.0,0.5,Feeler Gauge,Yes,Internal
+ASM-53-200-DOOR-2L,Passenger,Frame Width,914.4,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-200-DOOR-2L,Passenger,Frame Height,1828.8,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-200-DOOR-2L,Passenger,Hinge Centerline Spacing,1600.0,0.1,0.1,Laser Tracker,Yes,CS-25.783
+ASM-53-200-DOOR-2L,Passenger,Seal Compression,6.0,1.0,0.5,Feeler Gauge,Yes,Internal
+ASM-53-200-DOOR-2R,Passenger,Frame Width,914.4,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-200-DOOR-2R,Passenger,Frame Height,1828.8,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-200-DOOR-2R,Passenger,Hinge Centerline Spacing,1600.0,0.1,0.1,Laser Tracker,Yes,CS-25.783
+ASM-53-200-DOOR-2R,Passenger,Seal Compression,6.0,1.0,0.5,Feeler Gauge,Yes,Internal
+ASM-53-300-DOOR-3L,Passenger,Frame Width,914.4,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-300-DOOR-3L,Passenger,Frame Height,1828.8,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-300-DOOR-3L,Passenger,Hinge Centerline Spacing,1600.0,0.1,0.1,Laser Tracker,Yes,CS-25.783
+ASM-53-300-DOOR-3L,Passenger,Seal Compression,6.0,1.0,0.5,Feeler Gauge,Yes,Internal
+ASM-53-300-DOOR-3R,Passenger,Frame Width,914.4,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-300-DOOR-3R,Passenger,Frame Height,1828.8,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-300-DOOR-3R,Passenger,Hinge Centerline Spacing,1600.0,0.1,0.1,Laser Tracker,Yes,CS-25.783
+ASM-53-300-DOOR-3R,Passenger,Seal Compression,6.0,1.0,0.5,Feeler Gauge,Yes,Internal
+ASM-53-300-DOOR-4L,Passenger,Frame Width,914.4,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-300-DOOR-4L,Passenger,Frame Height,1828.8,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-300-DOOR-4L,Passenger,Hinge Centerline Spacing,1600.0,0.1,0.1,Laser Tracker,Yes,CS-25.783
+ASM-53-300-DOOR-4L,Passenger,Seal Compression,6.0,1.0,0.5,Feeler Gauge,Yes,Internal
+ASM-53-300-DOOR-4R,Passenger,Frame Width,914.4,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-300-DOOR-4R,Passenger,Frame Height,1828.8,0.2,0.2,CMM,Yes,CS-25.783
+ASM-53-300-DOOR-4R,Passenger,Hinge Centerline Spacing,1600.0,0.1,0.1,Laser Tracker,Yes,CS-25.783
+ASM-53-300-DOOR-4R,Passenger,Seal Compression,6.0,1.0,0.5,Feeler Gauge,Yes,Internal
+ASM-53-400-DOOR-CRG-FL,Cargo,Frame Width,1524.0,0.3,0.3,CMM,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-FL,Cargo,Frame Height,2438.4,0.3,0.3,CMM,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-FL,Cargo,Hinge Centerline Spacing,2200.0,0.2,0.2,Laser Tracker,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-FL,Cargo,Seal Compression,8.0,1.5,0.5,Feeler Gauge,No,Internal
+ASM-53-400-DOOR-CRG-FR,Cargo,Frame Width,1524.0,0.3,0.3,CMM,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-FR,Cargo,Frame Height,2438.4,0.3,0.3,CMM,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-FR,Cargo,Hinge Centerline Spacing,2200.0,0.2,0.2,Laser Tracker,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-FR,Cargo,Seal Compression,8.0,1.5,0.5,Feeler Gauge,No,Internal
+ASM-53-400-DOOR-CRG-AL,Cargo,Frame Width,1524.0,0.3,0.3,CMM,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-AL,Cargo,Frame Height,2438.4,0.3,0.3,CMM,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-AL,Cargo,Hinge Centerline Spacing,2200.0,0.2,0.2,Laser Tracker,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-AL,Cargo,Seal Compression,8.0,1.5,0.5,Feeler Gauge,No,Internal
+ASM-53-400-DOOR-CRG-AR,Cargo,Frame Width,1524.0,0.3,0.3,CMM,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-AR,Cargo,Frame Height,2438.4,0.3,0.3,CMM,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-AR,Cargo,Hinge Centerline Spacing,2200.0,0.2,0.2,Laser Tracker,Yes,CS-25.787
+ASM-53-400-DOOR-CRG-AR,Cargo,Seal Compression,8.0,1.5,0.5,Feeler Gauge,No,Internal

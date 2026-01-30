@@ -15,7 +15,7 @@ Each ATA chapter within this axis follows the mandatory structure:
 - **XX-00_GENERAL/**: 14 lifecycle folders (canonical template from ATA 95)
 - **XX-10_Operations/**: Operational use and procedures
 - **XX-20_Subsystems/**: Functional subsystems
-- **XX-30_Circularity/**: Sustainability and life cycle
+- **XX-30_ANCHORS/**: Sustainability and life cycle
 - **XX-40_Software/**: Software and control logic
 - **XX-50_Structures/**: Physical structures
 - **XX-60_Storages/**: Storage systems

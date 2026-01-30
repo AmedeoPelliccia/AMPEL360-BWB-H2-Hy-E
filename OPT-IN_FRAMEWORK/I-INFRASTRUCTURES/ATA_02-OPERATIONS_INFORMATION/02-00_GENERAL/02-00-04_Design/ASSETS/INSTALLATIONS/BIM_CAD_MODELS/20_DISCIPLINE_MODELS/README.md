@@ -80,7 +80,7 @@ Architectural models including:
 - Casework and millwork
 - Ceilings
 
-**See:** [ARCH/00_ADMIN/README.md](ARCH/00_ADMIN/README.md)
+**See:** [ARCH/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md)](ARCH/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 
 ### STR/ (Structural)
 
@@ -105,7 +105,7 @@ MEP systems including:
 - Fire protection systems
 - Control systems
 
-**See:** [MEP/00_ADMIN/README.md](MEP/00_ADMIN/README.md)
+**See:** [MEP/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md)](MEP/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 
 **Special considerations for H2ROOM:**
 - H2 detection and ventilation
@@ -122,7 +122,7 @@ IT and communications infrastructure:
 - Fiber optic routing
 - Data cabling
 
-**See:** [IT/00_ADMIN/README.md](IT/00_ADMIN/README.md)
+**See:** [IT/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md)](IT/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 
 **Focus areas:**
 - OPSCTR: Console connectivity, control systems
@@ -319,12 +319,12 @@ Each discipline model should have:
 
 ## Related Documentation
 
-- [BIM_CAD_MODELS 00_ADMIN README](../00_ADMIN/README.md)
-- [05_TEMPLATES README](../05_TEMPLATES/README.md)
-- [10_MASTER_MODELS README](../10_MASTER_MODELS/README.md)
-- [ARCH/00_ADMIN/README.md](ARCH/00_ADMIN/README.md)
-- [MEP/00_ADMIN/README.md](MEP/00_ADMIN/README.md)
-- [IT/00_ADMIN/README.md](IT/00_ADMIN/README.md)
+- [BIM_CAD_MODELS 00_ADMIN README](../[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
+- [05_TEMPLATES README](../[[05_TEMPLATES/README.md](05_TEMPLATES/README.md)](05_TEMPLATES/README.md))
+- [10_MASTER_MODELS README](../[[10_MASTER_MODELS/README.md](10_MASTER_MODELS/README.md)](10_MASTER_MODELS/README.md))
+- [ARCH/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md)](ARCH/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
+- [MEP/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md)](MEP/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
+- [IT/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md)](IT/[[00_ADMIN/README.md](00_ADMIN/README.md)](00_ADMIN/README.md))
 - [INSTALLATIONS README](../../README.md)
 - [AMPEL360_ASSETS_STANDARD.md](/AMPEL360_ASSETS_STANDARD.md)
 

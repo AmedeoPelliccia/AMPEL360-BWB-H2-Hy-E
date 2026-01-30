@@ -1,0 +1,103 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-VAR-PROPULSOR-EXTENDED-RANGE — Delta from Baseline
+# Differences from Q100-61-PROD-PROPULSOR-SYSTEM baseline
+
+delta:
+  variant: Q100-61-VAR-PROPULSOR-EXTENDED-RANGE
+  baseline: Q100-61-PROD-PROPULSOR-SYSTEM
+  baseline_config: Q100-61-CFG-PROPULSOR-BASELINE
+
+changes:
+  mechanical:
+    - component: Pitch Actuator
+      change: Extended travel range
+      baseline: 35° total range
+      variant: 40° total range
+      affected_parts:
+        - Q100-61-P-PITCH-ACT-ER
+        
+    - component: Acoustic Liners
+      change: Enhanced absorption
+      baseline: Standard broadband
+      variant: Broadband Plus
+      affected_parts:
+        - Q100-61-P-NAC-ACO-IN-ER
+        - Q100-61-P-NAC-ACO-FC-ER
+        
+  electrical:
+    - component: Motor Control Parameters
+      change: Efficiency-optimized tuning
+      baseline: Standard parameters
+      variant: Cruise-optimized parameters
+      
+  software:
+    - component: Control Algorithms
+      change: Efficiency-optimized control laws
+      baseline: Standard control
+      variant: Extended range mode
+      features:
+        - Lower cruise RPM targeting
+        - Pitch schedule optimization
+        - Power distribution optimization
+        
+    - component: Cruise Mode
+      change: Added extended range mode
+      baseline: Single cruise mode
+      variant: Standard + Extended Range modes
+
+performance_improvements:
+  - parameter: Propulsive Efficiency
+    baseline_percent: 92
+    variant_percent: 94.8
+    improvement: +3%
+    
+  - parameter: Cruise Fuel Flow
+    baseline: 100%
+    variant: 95%
+    improvement: -5%
+    
+  - parameter: Noise at Cruise
+    baseline_dB: 0
+    variant_dB: -2
+    improvement: -2 dB
+
+unchanged:
+  - Electric motors (hardware)
+  - Gearbox
+  - Inverters
+  - FADEC hardware
+  - Basic nacelle structure
+  - Mounting interface
+
+part_number_mapping:
+  - baseline: Q100-61-P-PITCH-ACT
+    variant: Q100-61-P-PITCH-ACT-ER
+  - baseline: Q100-61-P-NAC-ACO-IN
+    variant: Q100-61-P-NAC-ACO-IN-ER
+  - baseline: Q100-61-P-NAC-ACO-FC
+    variant: Q100-61-P-NAC-ACO-FC-ER
+
+interchangeability:
+  with_baseline: partial
+  notes: Can retrofit extended range kit to baseline units
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

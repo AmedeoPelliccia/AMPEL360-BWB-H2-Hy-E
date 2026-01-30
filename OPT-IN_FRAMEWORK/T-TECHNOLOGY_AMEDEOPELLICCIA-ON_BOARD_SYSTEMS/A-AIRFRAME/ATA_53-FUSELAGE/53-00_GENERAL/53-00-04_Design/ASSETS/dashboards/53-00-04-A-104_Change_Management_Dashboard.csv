@@ -1,0 +1,7 @@
+Change_ID,Description,Zone,CI_Number,Change_Type,Priority,Requestor,Status,Submitted_Date,Target_Date,Closed_Date,Impact
+CHG-53-001,IM7 fiber in spar high-load region,400,CI-53-400-SPAR-FWD,Material,High,Stress Team,Closed,2025-09-15,2025-10-05,2025-10-05,Weight +15kg
+CHG-53-002,Bulkhead crown thickness increase,100,CI-53-100-BHD-FWD,Geometry,Medium,Stress Team,Closed,2025-09-20,2025-10-10,2025-10-10,Weight +8kg
+CHG-53-003,Titanium door hinge reinforcement,200,CI-53-200-DOOR-1L-FR,Material,Medium,Doors Team,Approved,2025-10-01,2025-11-30,TBD,Weight +2kg
+CHG-53-004,Gear bay aft bulkhead redesign,400,CI-53-400-BAY-MLG-L,Geometry,High,Gear Team,Under Review,2025-10-10,2025-12-15,TBD,Weight TBD
+CHG-53-005,Aft bulkhead drain provisions,600,CI-53-600-BHD-AFT,Design,Low,Maintenance,Approved,2025-10-20,2025-12-30,TBD,No weight impact
+CHG-53-006,Wing-body blend angle modification,300,CI-53-300,Geometry,High,Aero Team,Under Review,2025-11-01,2026-01-15,TBD,Weight TBD

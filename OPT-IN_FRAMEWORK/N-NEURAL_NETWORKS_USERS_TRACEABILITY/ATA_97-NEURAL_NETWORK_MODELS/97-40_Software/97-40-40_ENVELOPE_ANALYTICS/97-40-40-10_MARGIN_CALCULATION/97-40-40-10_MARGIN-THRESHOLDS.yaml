@@ -1,0 +1,138 @@
+# Margin Calculation Thresholds
+# OFEC-97-40-40-10 Configuration
+# Version: 1.0
+
+# Alpha (Angle of Attack) Thresholds
+alpha:
+  # Protection margin before stall
+  protection_margin_deg: 2.0
+  
+  # Advisory thresholds (percentage of limit)
+  advisory:
+    normal: 50.0      # > 50% margin = NORMAL
+    caution: 25.0     # 25-50% margin = CAUTION
+    warning: 10.0     # 10-25% margin = WARNING
+    # < 10% margin = CRITICAL
+  
+  # Hysteresis for state transitions
+  hysteresis_deg: 0.5
+  
+  # Reference values
+  reference:
+    stall_alpha_clean_deg: 14.0
+    flap_effect_per_deg: 0.15
+    slat_effect_per_deg: 0.20
+
+# Speed Thresholds
+speed:
+  # Reference speeds
+  reference:
+    vmo_kts: 350
+    mmo: 0.85
+    vs_reference_kts: 120
+    weight_reference_kg: 80000
+  
+  # Margin factors
+  factors:
+    takeoff_margin: 1.23    # Vmin = 1.23 * Vs
+    landing_margin: 1.13    # Vmin = 1.13 * Vs
+  
+  # Advisory thresholds (knots from limit)
+  advisory:
+    normal_kts: 30
+    caution_kts: 15
+    warning_kts: 5
+  
+  # Hysteresis
+  hysteresis_kts: 2
+
+# Load Factor (G-Load) Thresholds
+load_factor:
+  # Structural limits (clean configuration)
+  limits:
+    positive_g_clean: 2.5
+    negative_g_clean: -1.0
+    positive_g_flaps: 2.0
+    negative_g_flaps: 0.0
+  
+  # Advisory thresholds (percentage of limit)
+  advisory:
+    normal: 60.0
+    caution: 30.0
+    warning: 10.0
+  
+  # Hysteresis
+  hysteresis_g: 0.05
+
+# Altitude Thresholds
+altitude:
+  # Certified limits
+  limits:
+    max_altitude_ft: 43000
+    min_altitude_ft: -1000
+  
+  # Advisory thresholds (feet from ceiling)
+  advisory:
+    normal_ft: 5000
+    caution_ft: 2000
+    warning_ft: 500
+  
+  # Hysteresis
+  hysteresis_ft: 100
+
+# Bank Angle Thresholds
+bank_angle:
+  # Limits by configuration
+  limits:
+    clean_deg: 67
+    flaps_deg: 30
+  
+  # Advisory thresholds (percentage of limit)
+  advisory:
+    normal: 70.0
+    caution: 50.0
+    warning: 20.0
+  
+  # Hysteresis
+  hysteresis_deg: 2.0
+
+# H2-Specific Thresholds
+h2_specific:
+  # Fuel temperature limits
+  fuel_temperature:
+    min_k: 20.0
+    max_k: 30.0
+    warning_margin_k: 2.0
+  
+  # Tank pressure limits
+  tank_pressure:
+    min_bar: 1.0
+    max_bar: 8.0
+    warning_margin_pct: 10.0
+  
+  # Boil-off rate limits
+  boil_off:
+    normal_kg_hr: 2.0
+    max_kg_hr: 5.0
+    warning_margin_pct: 20.0
+
+# Trend Detection
+trend:
+  # Window sizes (samples)
+  short_term_samples: 50     # 5 seconds at 10 Hz
+  medium_term_samples: 300   # 30 seconds at 10 Hz
+  long_term_samples: 600     # 60 seconds at 10 Hz
+  
+  # Trend thresholds
+  improving_rate: -0.1       # Negative = margin increasing
+  degrading_rate: 0.1        # Positive = margin decreasing
+  stable_band: 0.05          # Within this = STABLE
+
+# Update Rates
+update_rates:
+  alpha_hz: 50
+  speed_hz: 50
+  load_factor_hz: 50
+  altitude_hz: 1
+  bank_angle_hz: 10
+  h2_specific_hz: 1

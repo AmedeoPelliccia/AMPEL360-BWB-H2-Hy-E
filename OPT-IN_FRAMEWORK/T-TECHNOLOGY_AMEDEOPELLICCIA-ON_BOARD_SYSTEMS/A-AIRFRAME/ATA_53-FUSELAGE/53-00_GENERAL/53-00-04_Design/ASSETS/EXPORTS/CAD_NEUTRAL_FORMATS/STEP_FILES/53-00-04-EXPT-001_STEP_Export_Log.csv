@@ -1,0 +1,4 @@
+Export ID,File Name,Zone,Assembly,Source File,Export Date,Export Time,Exporter,CAD System,CAD Version,STEP Version,File Size (MB),Checksum (SHA256),Status,Notes
+53-00-04-EXPT-001-001,53-10-1000_Forward_Bulkhead_Assembly.step,Zone_100_Nose_Section,Forward Bulkhead,CAD/Zone_100/Forward_Bulkhead_Assembly.sldasm,2025-11-22,14:30:00,Engineering Team,CATIA,V5R28,AP214,15.2,[To be calculated],Pending,Initial export for PDR
+53-00-04-EXPT-001-002,53-10-2000_NLG_Bay_Structure.step,Zone_100_Nose_Section,NLG Bay Structure,CAD/Zone_100/NLG_Bay_Structure.sldasm,2025-11-22,14:35:00,Engineering Team,CATIA,V5R28,AP214,12.8,[To be calculated],Pending,Initial export for PDR
+53-00-04-EXPT-001-003,53-10-9000_Zone_100_Complete_Assembly.step,Zone_100_Nose_Section,Complete Zone 100,CAD/Zone_100/Zone_100_Complete.sldasm,2025-11-22,14:40:00,Engineering Team,CATIA,V5R28,AP214,28.5,[To be calculated],Pending,Initial export for PDR

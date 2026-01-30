@@ -1,0 +1,6 @@
+# Placeholder index for ATA 30 assets
+models:
+  - 30_system_context.drawio.svg
+  - 30_architecture_power_zones.drawio.svg
+  - 30_interfaces_ata21_ata24_ata31_ata26.drawio.svg
+  - 30_hazards_zoning_ice_shed.drawio.svg

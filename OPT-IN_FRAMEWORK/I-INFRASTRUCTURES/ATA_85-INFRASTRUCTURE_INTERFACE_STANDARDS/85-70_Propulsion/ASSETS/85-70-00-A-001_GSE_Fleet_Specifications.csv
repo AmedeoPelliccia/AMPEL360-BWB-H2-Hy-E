@@ -1,0 +1,7 @@
+Equipment Category,Quantity per Airport,Primary Power Source,Backup Power,Total Fleet Cost (M EUR),Annual OpEx (k EUR),CO2 Emissions (tons/year),Estimated Deployment
+Aircraft Tugs,8-12,Battery-Electric / H2 FC,Hybrid,15-25,800-1200,0-50 (renewable),2025-2027
+Belt Loaders,20-30,Battery-Electric,N/A,3-5,400-600,0-20,2025-2026
+Baggage Tractors,30-50,Battery-Electric,N/A,3-6,500-800,0-30,2024-2026
+Cargo Loaders,10-15,Battery-Electric / H2 FC,Hybrid,25-40,1200-1800,0-80,2026-2028
+Ground Power Units,15-20,Battery-Electric,Diesel Backup,8-12,600-900,0-40,2025-2027
+Total Fleet (Large Hub),83-127,Mixed,Various,54-88,3500-5300,0-220,2024-2028

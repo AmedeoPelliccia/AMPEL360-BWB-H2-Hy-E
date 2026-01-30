@@ -327,7 +327,7 @@ Part of the canonical 14-folder lifecycle:
 - **ATA 28**: Fuel System (H₂ configuration management)
 - **ATA 40**: AI Integration (CAOS neural networks)
 - **ATA 52**: Doors (hardware configuration examples)
-- **ATA 92**: Model-Based Maintenance (CAOS integration)
+- **ATA 92**: Electrical Installation (wiring practices, electrical integration)
 
 ---
 

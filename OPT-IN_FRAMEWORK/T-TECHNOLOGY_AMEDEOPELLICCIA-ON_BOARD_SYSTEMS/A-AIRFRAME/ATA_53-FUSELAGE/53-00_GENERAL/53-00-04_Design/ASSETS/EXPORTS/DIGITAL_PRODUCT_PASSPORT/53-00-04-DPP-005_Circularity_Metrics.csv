@@ -1,0 +1,11 @@
+Metric,Value,Unit,Benchmark,Target,Status,Notes
+Material Circularity Indicator (MCI),0.72,dimensionless,0.50,0.85,On Track,Ellen MacArthur Foundation methodology
+Recycled Content Input,12.5,%,8.0,20.0,On Track,Percentage by weight of recycled materials
+End-of-Life Recyclability,85.0,%,70.0,90.0,Exceeds Target,Metals fully recyclable; composites challenging
+Design for Disassembly Score,78,/100,65,85,On Track,Modular design facilitates component separation
+Virgin Material Usage,2487.2,kg,3000,2400,Exceeds Target,Lightweighting initiatives successful
+Remanufacturing Potential,45.0,%,30.0,60.0,On Track,Fittings and frames suitable for remanufacturing
+Material Reutilization Rate,38.0,%,25.0,50.0,On Track,Aluminum and titanium components
+Product Lifespan,30,years,25,35,On Track,Design life with scheduled maintenance
+Maintenance Material Footprint,125.5,kg/year,150,100,On Track,Reduced through predictive maintenance
+Packaging Recyclability,95.0,%,80.0,100.0,On Track,Minimal non-recyclable packaging materials

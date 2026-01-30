@@ -1,0 +1,33 @@
+{
+  "baseline_id": "53-00-04-BL-001",
+  "baseline_name": "PDR Baseline",
+  "baseline_date": "2025-06-15",
+  "milestone": "Preliminary Design Review",
+  "status": "Approved",
+  "approver": "Chief Engineer - Airframe",
+  "description": "Configuration baseline established at PDR for ATA 53 Fuselage design",
+  "artifacts": [
+    {
+      "artifact_id": "53-10-1000",
+      "name": "Forward_Bulkhead_Assembly",
+      "revision": "RevA",
+      "file": "53-10-1000_RevA_Forward_Bulkhead_Assembly.step",
+      "checksum": "sha256:[to be calculated]",
+      "status": "Released"
+    },
+    {
+      "artifact_id": "53-10-2000",
+      "name": "NLG_Bay_Structure",
+      "revision": "RevA",
+      "file": "53-10-2000_RevA_NLG_Bay_Structure.step",
+      "checksum": "sha256:[to be calculated]",
+      "status": "Released"
+    }
+  ],
+  "requirements_snapshot": {
+    "total_requirements": 245,
+    "verified_requirements": 198,
+    "validation_status": "In Progress"
+  },
+  "notes": "Initial baseline for preliminary design review. All Zone 100 structures at RevA."
+}

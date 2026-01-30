@@ -1,0 +1,10 @@
+title: 'ATA 30-10-10 Publications'
+leaf: '30-10-10'
+default_language: 'en-US'
+publishings:
+  - code: AMM
+    description: Maintenance manual content for 30 10 10 Wing Leading Edge Anti Ice Thermal Or Electrothermal
+    status: draft
+  - code: IPC
+    description: Illustrated parts catalog content for 30 10 10 Wing Leading Edge Anti Ice Thermal Or Electrothermal
+    status: draft

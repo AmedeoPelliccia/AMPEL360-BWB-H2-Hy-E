@@ -1,0 +1,349 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.amedeopelliccia.it/schemas/services-metadata.schema.json",
+  "title": "AMPEL360 Services Metadata Schema",
+  "description": "JSON schema for services metadata in ATA 10-00-12 Services",
+  "version": "1.0.0",
+  "type": "object",
+  "required": [
+    "document_id",
+    "document_number",
+    "title",
+    "revision",
+    "service_type"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "description": "Unique document identifier in format 10-00-12-NNA",
+      "pattern": "^10-00-12-[0-9]{2}[A-Z]$",
+      "examples": ["10-00-12-01A", "10-00-12-14A", "10-00-12-33A"]
+    },
+    "document_number": {
+      "type": "string",
+      "description": "Human-readable document number",
+      "minLength": 1,
+      "examples": ["AMPEL-SVC-10-001", "SERVICE-10-00-12-014"]
+    },
+    "title": {
+      "type": "string",
+      "description": "Full service document title",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "revision": {
+      "type": "string",
+      "description": "Document revision identifier",
+      "pattern": "^[A-Z0-9]+$",
+      "examples": ["A", "B", "C", "1.0"]
+    },
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "maintenance",
+        "ground",
+        "technical",
+        "training",
+        "spares",
+        "fleet",
+        "customer"
+      ],
+      "description": "Primary service category"
+    },
+    "service_subtype": {
+      "type": "string",
+      "description": "Specific service subtype within category",
+      "examples": ["scheduled_maintenance", "AOG_support", "h2_safety_training"]
+    },
+    "h2_related": {
+      "type": "boolean",
+      "description": "Indicates if service is hydrogen system related",
+      "default": false
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "description": "Indicates if service is cryogenic system related",
+      "default": false
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Indicates if service is BWB-configuration specific",
+      "default": false
+    },
+    "safety_critical": {
+      "type": "boolean",
+      "description": "Indicates if service is safety-critical",
+      "default": false
+    },
+    "service_level": {
+      "type": "string",
+      "enum": ["standard", "premium", "AOG", "emergency", "custom"],
+      "description": "Service level agreement tier",
+      "default": "standard"
+    },
+    "availability": {
+      "type": "string",
+      "enum": ["24/7", "business_hours", "on_demand", "scheduled"],
+      "description": "Service availability pattern"
+    },
+    "response_time": {
+      "type": "object",
+      "description": "Service response time commitments",
+      "properties": {
+        "standard": {
+          "type": "string",
+          "description": "Standard response time",
+          "examples": ["4 hours", "24 hours", "5 business days"]
+        },
+        "premium": {
+          "type": "string",
+          "description": "Premium service response time",
+          "examples": ["1 hour", "2 hours", "same day"]
+        },
+        "aog": {
+          "type": "string",
+          "description": "Aircraft on Ground response time",
+          "examples": ["immediate", "30 minutes", "1 hour"]
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["minutes", "hours", "days", "weeks"],
+          "description": "Time unit for response"
+        }
+      }
+    },
+    "applicable_operators": {
+      "type": "array",
+      "description": "Operators or airline types this service applies to",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["All AMPEL360 operators", "Launch customers", "Hydrogen-certified operators"]]
+    },
+    "geographic_coverage": {
+      "type": "array",
+      "description": "Geographic regions where service is available",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["Global", "Europe", "North America", "Asia-Pacific"]]
+    },
+    "certification_required": {
+      "type": "boolean",
+      "description": "Indicates if personnel certification is required for this service",
+      "default": false
+    },
+    "special_tooling_required": {
+      "type": "boolean",
+      "description": "Indicates if special tools or equipment are required",
+      "default": false
+    },
+    "h2_certification_level": {
+      "type": "string",
+      "enum": ["basic", "intermediate", "advanced", "specialist", "not_applicable"],
+      "description": "Required hydrogen safety certification level",
+      "default": "not_applicable"
+    },
+    "cryo_certification_level": {
+      "type": "string",
+      "enum": ["basic", "intermediate", "advanced", "specialist", "not_applicable"],
+      "description": "Required cryogenic handling certification level",
+      "default": "not_applicable"
+    },
+    "service_description": {
+      "type": "string",
+      "description": "Brief description of service offering",
+      "maxLength": 500
+    },
+    "service_scope": {
+      "type": "string",
+      "description": "Detailed scope of service",
+      "maxLength": 1000
+    },
+    "service_deliverables": {
+      "type": "array",
+      "description": "Key deliverables provided by this service",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["Inspection report", "Calibration certificate", "Training certification"]]
+    },
+    "prerequisites": {
+      "type": "array",
+      "description": "Prerequisites or dependencies for service delivery",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["Aircraft in safe state", "H2 system purged", "Ground power connected"]]
+    },
+    "associated_ata_chapters": {
+      "type": "array",
+      "description": "Related ATA chapters for this service",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]{2}$"
+      },
+      "examples": [["10", "28", "73", "85"]]
+    },
+    "regulatory_compliance": {
+      "type": "array",
+      "description": "Regulatory standards this service complies with",
+      "items": {
+        "type": "object",
+        "required": ["standard_id", "title"],
+        "properties": {
+          "standard_id": {
+            "type": "string",
+            "description": "Standard identifier",
+            "examples": ["NFPA 2", "SAE AS6968", "Part 145", "MSG-3"]
+          },
+          "title": {
+            "type": "string",
+            "description": "Standard title"
+          },
+          "section": {
+            "type": "string",
+            "description": "Specific section or clause"
+          }
+        }
+      }
+    },
+    "service_provider": {
+      "type": "object",
+      "description": "Information about service provider",
+      "properties": {
+        "organization": {
+          "type": "string",
+          "description": "Provider organization name"
+        },
+        "contact": {
+          "type": "string",
+          "description": "Contact information"
+        },
+        "approval_reference": {
+          "type": "string",
+          "description": "Regulatory approval reference (e.g., Part 145 certificate)"
+        }
+      }
+    },
+    "pricing_model": {
+      "type": "string",
+      "enum": ["fixed_price", "hourly_rate", "subscription", "per_incident", "custom"],
+      "description": "Service pricing model"
+    },
+    "estimated_duration": {
+      "type": "object",
+      "description": "Estimated service duration",
+      "properties": {
+        "minimum": {
+          "type": "number",
+          "description": "Minimum duration"
+        },
+        "typical": {
+          "type": "number",
+          "description": "Typical duration"
+        },
+        "maximum": {
+          "type": "number",
+          "description": "Maximum duration"
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["minutes", "hours", "days", "weeks"],
+          "description": "Time unit"
+        }
+      }
+    },
+    "environmental_conditions": {
+      "type": "object",
+      "description": "Required environmental conditions for service",
+      "properties": {
+        "temperature_range": {
+          "type": "object",
+          "properties": {
+            "min": {"type": "number"},
+            "max": {"type": "number"},
+            "unit": {"type": "string", "enum": ["C", "F", "K"]}
+          }
+        },
+        "indoor_required": {
+          "type": "boolean",
+          "description": "Must be performed indoors"
+        },
+        "h2_safety_zone": {
+          "type": "boolean",
+          "description": "Must be performed in H2 safety zone"
+        }
+      }
+    },
+    "quality_metrics": {
+      "type": "array",
+      "description": "Quality metrics tracked for this service",
+      "items": {
+        "type": "object",
+        "required": ["metric_name", "target"],
+        "properties": {
+          "metric_name": {
+            "type": "string",
+            "examples": ["First-time fix rate", "Response time compliance", "Customer satisfaction"]
+          },
+          "target": {
+            "type": "string",
+            "examples": [">95%", "<2 hours", "4.5/5.0"]
+          },
+          "measurement_method": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "related_services": {
+      "type": "array",
+      "description": "Related or complementary services",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["10-00-12-04A", "10-00-12-14A", "10-00-12-33A"]]
+    },
+    "revision_history": {
+      "type": "array",
+      "description": "Document revision history",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "description"],
+        "properties": {
+          "revision": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "author": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "In Review", "Released", "Superseded", "Cancelled"],
+      "description": "Current document status",
+      "default": "Draft"
+    },
+    "ai_generated": {
+      "type": "boolean",
+      "description": "Indicates if document was AI-assisted",
+      "default": false
+    },
+    "ai_prompt_author": {
+      "type": "string",
+      "description": "Name of person who prompted AI",
+      "examples": ["Amedeo Pelliccia"]
+    }
+  },
+  "additionalProperties": false
+}

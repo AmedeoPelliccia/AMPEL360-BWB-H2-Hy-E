@@ -1,0 +1,100 @@
+# Alert Thresholds Configuration
+# OFEC-97-40-40-20 Advisory Logic
+# Version: 1.0
+
+# Alpha (AOA) alert thresholds
+alpha:
+  caution_margin_deg: 5.0
+  warning_margin_deg: 3.0
+  critical_margin_deg: 1.5
+  
+  # Rate-based alerts
+  rate_caution_deg_per_sec: 1.0
+  rate_warning_deg_per_sec: 2.0
+
+# Speed alert thresholds
+speed:
+  # Low speed (Vmin) alerts
+  low:
+    caution_margin_kts: 20
+    warning_margin_kts: 10
+    critical_margin_kts: 5
+  
+  # High speed (Vmax) alerts
+  high:
+    caution_margin_kts: 30
+    warning_margin_kts: 15
+    critical_margin_kts: 5
+  
+  # Rate-based alerts
+  rate_caution_kts_per_sec: 5
+  rate_warning_kts_per_sec: 10
+
+# Load factor alert thresholds
+load_factor:
+  # Positive G alerts
+  positive:
+    caution_margin_g: 0.8
+    warning_margin_g: 0.4
+    critical_margin_g: 0.1
+  
+  # Negative G alerts
+  negative:
+    caution_margin_g: 0.5
+    warning_margin_g: 0.3
+    critical_margin_g: 0.1
+
+# Bank angle alert thresholds
+bank_angle:
+  caution_margin_deg: 20
+  warning_margin_deg: 10
+  critical_margin_deg: 5
+
+# Altitude alert thresholds
+altitude:
+  caution_margin_ft: 3000
+  warning_margin_ft: 1000
+  critical_margin_ft: 500
+
+# H2-specific thresholds
+h2_specific:
+  fuel_temperature:
+    caution_margin_k: 3.0
+    warning_margin_k: 1.5
+    critical_margin_k: 0.5
+  
+  tank_pressure:
+    caution_margin_pct: 15
+    warning_margin_pct: 8
+    critical_margin_pct: 3
+  
+  boil_off:
+    caution_margin_pct: 30
+    warning_margin_pct: 15
+    critical_margin_pct: 5
+
+# Combined envelope alerts
+combined:
+  # Multiple margin degradation
+  multi_caution_count: 2    # CAUTION if this many params at caution
+  multi_warning_count: 2    # WARNING if this many params at warning
+  
+  # Rapid deterioration
+  rapid_rate_multiplier: 2  # Alert one level higher if rate exceeds this
+
+# Audio/visual alert mapping
+alerts:
+  caution:
+    audio: "single_chime"
+    visual: "amber"
+    priority: "low"
+  
+  warning:
+    audio: "triple_chime"
+    visual: "amber_flash"
+    priority: "medium"
+  
+  critical:
+    audio: "continuous_tone"
+    visual: "red_flash"
+    priority: "high"

@@ -1,774 +1,788 @@
-# AMPEL360 BWB H₂ Hy-E Q100 
-## World's First Carbon-Negative Commercial Aircraft
+# AMPEL360 Q100 (AMPEL360-AIR-T) — Hydrogen-Hybrid Electric BWB Aircraft
 
-[digital twin demo here](https://ampel360-bwb-h-aircr--AmedeoPelliccia.github.app) 
+<p align="center">
+  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License">
+  <img src="https://img.shields.io/badge/Status-Active%20Development-brightgreen" alt="Status">
+  <img src="https://img.shields.io/badge/ATA%20Chapters-79-orange" alt="ATA Chapters">
+  <img src="https://img.shields.io/badge/Framework-OPT--IN-purple" alt="Framework">
+  <img src="https://img.shields.io/badge/Publications-S1000D-teal" alt="S1000D">
+</p>
 
-<div align="center">
+<p align="center">
+  <strong>Digital engineering baseline and publication-grade CSDB for a next-generation hydrogen-electric BWB aircraft.</strong>
+</p>
 
-[![Project Status](https://img.shields.io/badge/Status-Conceptual_Design-yellow?style=for-the-badge)](https://github.com/Robbbo-T/AMPEL360-XWLRGA)
-[![Documentation](https://img.shields.io/badge/Documentation-73%25-green?style=for-the-badge)](docs)
-[![ATA Compliance](https://img.shields.io/badge/ATA_iSpec2200-100%25-brightgreen?style=for-the-badge)](docs/compliance)
-[![S1000D Ready](https://img.shields.io/badge/S1000D_v6.0-Ready-blue?style=for-the-badge)](docs/s1000d)
-
-### 🚀 Blended Wing Body • Hydrogen Fuel Cells • CO₂ Capture • AI Operations
-
-**Not just zero-emission. Carbon-negative.**
-
-[📖 Documentation](#-documentation-hub) • [🤖 CAOS System](#-caos-ai-powered-operations) • [💰 Invest](#-investment-opportunity) • [🤝 Join Us](#-get-involved)
-
-> **🆕 NEW: [OPT-IN Framework](OPT-IN_FRAMEWORK/) — Complete documentation topology now available!**  
-> 79 ATA chapters • 14 lifecycle folders • 9 cross-ATA buckets • [Quick Start Guide](OPT-IN_FRAMEWORK/QUICK_START.md) • [Full Standard](OPT-IN_FRAMEWORK_STANDARD.md)
-> 
-> **📦 NEW: [ASSETS Standard](AMPEL360_ASSETS_STANDARD.md) — Standardized design artifact structure for all Design folders!**  
-> Consistent naming • Category organization • Authoritative catalog (INDEX.meta.yaml) • CI validation
-
----
-
-### **Key Metrics**
-
-| Metric | AMPEL360 | Conventional | Advantage |
-|:---:|:---:|:---:|:---:|
-| **CO₂ per Flight** | **-5 kg** ✨ | +2,500 kg | **Net Negative** |
-| **Fuel Efficiency** | 0.8 kg H₂ | 2.5 kg Jet-A | **68% Better** |
-| **Noise Level** | 65 dB | 85 dB | **75% Quieter** |
-| **Operating Cost** | $0.04/ASK | $0.06/ASK | **33% Cheaper** |
-
-</div>
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#how-this-repo-is-organized">Repo Organization</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#publishing-model-csdb--ietp">Publishing Model</a> •
+  <a href="#standards--compliance">Standards</a> •
+  <a href="#contributing">Contributing</a>
+</p>
 
 ---
 
-## 🎯 Mission Statement
+## Overview
 
-> **Revolutionize aviation by making flight not just sustainable, but actively carbon-negative through breakthrough integration of hydrogen fuel cells, CO₂ capture, and blended wing body design.**
+**AMPEL360 Q100** is a next-generation **~100 passenger regional aircraft concept** featuring: 
 
-We're not building another incremental improvement. We're creating the **aviation industry's answer to climate change**.
+| Technology | Description |
+|------------|-------------|
+| **Blended Wing Body (BWB)** | High aerodynamic efficiency and integrated volume |
+| **H₂ PEM Fuel Cells** | Primary electrical power generation from hydrogen |
+| **Distributed / Open-Fan Propulsors** | Distributed propulsion architecture for efficiency and noise reduction |
+| **Peak-Power Buffering** | Buffer strategy for transients (energy management and load leveling) |
+| **Circularity + DPP** | Digital Product Passport foundations for lifecycle traceability |
 
----
+This repository contains a **certification-grade digital baseline** organized under the **OPT-IN Framework** and structured for **SSOT + PUB** workflows.
 
-## ✨ Revolutionary Technologies
-
-<table>
-<tr>
-<td width="25%" align="center">
-<h3>🔷 Blended Wing Body</h3>
-<strong>30% More Efficient</strong><br/>
-Entire fuselage generates lift<br/>
-Reduced drag, better fuel economy<br/>
-220 passengers, 4,000 km range
-</td>
-<td width="25%" align="center">
-<h3>⚡ Hydrogen Propulsion</h3>
-<strong>Zero Emissions</strong><br/>
-PEM fuel cell stacks<br/>
-3× energy density vs Jet-A<br/>
-Only byproduct: pure water
-</td>
-<td width="25%" align="center">
-<h3>🌍 CO₂ Capture</h3>
-<strong>Carbon Negative</strong><br/>
-Solid-state battery system<br/>
-Captures atmospheric CO₂<br/>
-Removes 5kg net per flight
-</td>
-<td width="25%" align="center">
-<h3>🧠 CAOS AI</h3>
-<strong>Fourth Pillar</strong><br/>
-Beyond CAD/CAE/CAM<br/>
-Predictive maintenance<br/>
-Digital twin operations
-</td>
-</tr>
-</table>
+**Live Spec (demo):** [v0-ampel-360-aircraft-specification.vercel.app](https://v0-ampel-360-aircraft-specification.vercel.app)
 
 ---
 
-## 📊 Development Roadmap
+## How This Repo Is Organized
 
-```mermaid
-timeline
-    title AMPEL360 Path to First Flight
-    2024-2025 : Conceptual Design
-              : AI Analysis Complete
-              : ATA Documentation 73%
-    2026 Q1-Q2 : FEA Validation
-               : Prototype Development
-    2026 Q3-Q4 : Ground Vibration Testing
-               : Component Testing
-    2027 : Test Campaign
-         : Systems Integration
-    2028 : Certification Process
-         : Type Certificate
-    2029 : First Flight
-         : Entry Into Service
-```
-
-### Current Phase: **CONCEPTUAL DESIGN**
-- ✅ Requirements defined (137 items)
-- ✅ AI preliminary analysis complete
-- ✅ **ATA 02 RESTRUCTURED** per AMPEL360_DOCUMENTATION_STANDARD v1.4
-- ⚠️ FEA validation required ($150k)
-- ⚠️ Mode 1 resonance risk (25Hz)
-- ❌ No physical prototype yet
-
-| Component | Status | Progress | Next Milestone |
-|-----------|--------|----------|----------------|
-| **ATA 52 - Doors** | ✅ Complete | 100% | GVT Preparation |
-| **ATA 02 - Operations** | ✅ Restructured | 80% | Content Migration Complete |
-| **ATA 28 - H₂ System** | 🔄 Active | 85% | Tank Certification |
-| **ATA 71 - Fuel Cells** | 📋 Design | 60% | Power Integration |
-| **CAOS Integration** | 🔄 Development | 70% | Fleet Testing |
-
----
-
-## 🏗️ OPT-IN Framework: Our Secret Weapon
-
-Every component documented with **14-folder SKELETON methodology** ensuring complete lifecycle traceability:
+At a high level, the repo separates **engineering truth** from **publishable deliverables**:
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                   14-FOLDER SKELETON                        │
-├─────────────────────────────────────────────────────────────┤
-│ 01_OVERVIEW              │ Concept, purpose, scope          │
-│ 02_SAFETY                │ FMEA, FHA, hazard analysis       │
-│ 03_REQUIREMENTS          │ Functional & performance specs   │
-│ 04_DESIGN                │ CAD models, specifications       │
-│ 05_INTERFACES            │ System integration points        │
-│ 06_ENGINEERING           │ FEA, CFD, simulations           │
-│ 07_V_AND_V              │ Verification & validation        │
-│ 08_PROTOTYPING          │ Development hardware             │
-│ 09_PRODUCTION_PLANNING  │ Manufacturing processes          │
-│ 10_CERTIFICATION        │ Regulatory compliance            │
-│ 11_OPERATIONS_MAINT     │ CAOS integration, procedures     │
-│ 12_ASSETS_MANAGEMENT    │ Digital product passport         │
-│ 13_SUBSYSTEMS_COMPONENTS│ Part breakdown structure         │
-│ 14_META_GOVERNANCE      │ Documentation control            │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                         AMPEL360-AIR-T                          │
+├─────────────────────────────┬───────────────────────────────────┤
+│          SSOT (Back)        │           PUB (Front)             │
+│   Lifecycle Engineering     │    Controlled Deliverables        │
+│   • Requirements            │    • CSDB (S1000D)                │
+│   • Safety Evidence         │    • EXPORT (PDF/HTML)            │
+│   • Design/ICDs             │    • IETP (Runtime)               │
+│   • V&V Artifacts           │                                   │
+└─────────────────────────────┴───────────────────────────────────┘
 ```
 
-### Framework Axes: **O-P-T-I-N**
+### SSOT (Single Source of Truth)
 
-| Axis | Domain | ATA Chapters | Key Focus |
-|:----:|:-------|:-------------|:----------|
-| **O** | Organization | 00, 01, 04, 05 | Governance, maintenance policy, airworthiness |
-| **P** | Program | 06-12 | Configuration, geometry, ground operations |
-| **T** | Technology | 20-80 | On-board systems (AMEDEOPELLICCIA taxonomy) |
-| **I** | Infrastructures | 02, 03, 10, 13, 85-90, 115-116 | Airports, GSE, operations support |
-| **N** | Neural Networks | 40, 92, 95 | AI/ML, digital passport, CAOS |
+**SSOT** is the *system of record* for lifecycle engineering artifacts (LC01–LC14):
+
+| Folder | Content |
+|--------|---------|
+| `LC01_PROBLEM_STATEMENT` | Problem definition, scope, constraints |
+| `LC02_SYSTEM_REQUIREMENTS` | Requirements and traceability |
+| `LC03_SAFETY_RELIABILITY` | Safety analysis, hazard logs, FMEA |
+| `LC04_DESIGN_DEFINITION` | Design specs, ICDs, architecture |
+| `LC05_ANALYSIS_MODELS` | FEA, CFD, thermal, performance models |
+| `LC06_VERIFICATION` | Test procedures, evidence, compliance |
+| `LC07_VALIDATION` | Integration and validation artifacts |
+| `LC08_CONFIGURATION` | Baselines, effectivity, change control |
+| `LC09_PRODUCTION` | Manufacturing specs, tooling |
+| `LC10_OPERATIONS` | Operational documentation sources |
+| `LC11_MAINTENANCE` | Maintenance program sources |
+| `LC12_CUSTOMER_CARE` | Customer support, technical services, post-delivery care |
+| `LC13_TRAINING` | Training content sources |
+| `LC14_RETIREMENT_CIRCULARITY` | End-of-life, recycling, DPP |
+
+### PUB (Publications)
+
+**PUB** is the controlled *delivery surface*:
+
+| Component | Purpose |
+|-----------|---------|
+| **CSDB** | S1000D Common Source Database (DM/PM/DML/BREX/ICN/APPLICABILITY) |
+| **EXPORT** | Rendered deliverables (PDF, HTML, other outputs) per publication |
+| **IETP** | Runtime "image" (viewer/config/index + packaging) for interactive delivery |
+
+### Rule of Thumb
+
+| If artifact is... | Place in... |
+|-------------------|-------------|
+| Authoritative engineering evidence | `SSOT/` |
+| Publishable or deliverable | `PUB/` |
 
 ---
 
-## 🤖 CAOS: AI-Powered Operations
+## OPT-IN Framework (5-Axis Topology)
 
-**Computer Aided Operations & Services** — The fourth pillar of digital engineering
+The OPT-IN Framework organizes all 79 ATA chapters across five axes:
 
-```mermaid
-graph LR
-    CAD[🎨 CAD<br/>Design] --> CAE[🔬 CAE<br/>Analysis]
-    CAE --> CAM[🏭 CAM<br/>Manufacturing]
-    CAM --> CAOS[🤖 CAOS<br/>Operations]
-    CAOS --> |Fleet Learning| CAD
-    
-    style CAOS fill:#ff69b4,stroke:#333,stroke-width:4px
+```
+OPT-IN_FRAMEWORK/
+├── O-ORGANIZATIONS/                                       # ATA 00–05 (governance / limits / checks)
+│   ├── ATA_00-GENERAL/
+│   │   └── ATA-00-general/
+│   │       └── 00-00-general/
+│   ├── ATA_01-MAINTENANCE_POLICY/
+│   │   └── ATA-01-maintenance-policy/
+│   │       └── 01-00-general/
+│   ├── ATA_02-OPERATIONS_ORG/
+│   │   └── ATA-02-operations-organization/
+│   │       └── 02-00-general/
+│   ├── ATA_03-SUPPORT_INFORMATION/
+│   │   └── ATA-03-support-information/
+│   │       └── 03-00-general/
+│   ├── ATA_04-AIRWORTHINESS_LIMITATIONS/
+│   │   └── ATA-04-airworthiness-limitations/
+│   │       └── 04-00-general/
+│   └── ATA_05-TIME_LIMITS_MAINT_CHECKS/
+│       └── ATA-05-time-limits-maintenance-checks/
+│           └── 05-00-general/
+│
+├── P-PROGRAMS/                                            # ATA 06–12 (geometry/handling/servicing)
+│   ├── ATA_06-DIMENSIONS_AND_AREAS/
+│   │   └── ATA-06-dimensions-areas/
+│   │       └── 06-00-general/
+│   ├── ATA_07-LIFTING_AND_SHORING/
+│   │   └── ATA-07-lifting-shoring/
+│   │       ├── 07-00-general/
+│   │       ├── 07-10-jacking/
+│   │       └── 07-20-shoring/
+│   ├── ATA_08-LEVELING_AND_WEIGHING/
+│   │   └── ATA-08-leveling-weighing/
+│   │       ├── 08-00-general/
+│   │       ├── 08-10-weighing-balancing/
+│   │       └── 08-20-leveling/
+│   ├── ATA_09-TOWING_AND_TAXIING/
+│   │   └── ATA-09-towing-taxiing/
+│   │       ├── 09-00-general/
+│   │       ├── 09-10-towing/
+│   │       └── 09-20-taxiing/
+│   ├── ATA_10-PARKING_MOORING_STORAGE_RETURN_TO_SERVICE/
+│   │   └── ATA-10-parking-mooring-storage-rts/
+│   │       └── 10-00-general/
+│   ├── ATA_11-PLACARDS_AND_MARKINGS/
+│   │   └── ATA-11-placards-markings/
+│   │       ├── 11-00-general/
+│   │       ├── 11-10-exterior-color-schemes-markings/
+│   │       ├── 11-20-exterior-placards-markings/
+│   │       └── 11-30-interior-placards/
+│   └── ATA_12-SERVICING/
+│       └── ATA-12-servicing/
+│           ├── 12-00-general/
+│           ├── 12-10-replenishing/
+│           ├── 12-20-scheduled-servicing/
+│           └── 12-30-unscheduled-servicing/
+│
+├── T-TECHNOLOGIES_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/
+│   ├── A-AIRFRAME_CABINS/
+│   │   ├── ATA_20-STANDARD_PRACTICES_AIRFRAME/            :contentReference[oaicite:2]{index=2}
+│   │   │   └── ATA-20-standard-practices-airframe/
+│   │   │       ├── 20-00-general/
+│   │   │       └── 20-90-reserved-airline-use/
+│   │   ├── ATA_25-EQUIPMENT_FURNISHINGS/                  :contentReference[oaicite:3]{index=3}
+│   │   │   └── ATA-25-equipment-furnishings/
+│   │   │       ├── 25-00-general/
+│   │   │       ├── 25-10-flight-compartment/
+│   │   │       ├── 25-20-passenger-compartment/
+│   │   │       ├── 25-30-galley/
+│   │   │       ├── 25-40-lavatories/
+│   │   │       ├── 25-50-additional-compartments/
+│   │   │       ├── 25-60-emergency/
+│   │   │       ├── 25-70-available/
+│   │   │       └── 25-80-insulation/
+│   │   ├── ATA_44-CABIN_SYSTEMS/                          :contentReference[oaicite:4]{index=4}
+│   │   │   └── ATA-44-cabin-systems/
+│   │   │       ├── 44-00-general/
+│   │   │       ├── 44-10-cabin-core-system/
+│   │   │       ├── 44-20-in-flight-entertainment-system/
+│   │   │       ├── 44-30-external-communication-system/
+│   │   │       ├── 44-40-cabin-mass-memory-system/
+│   │   │       ├── 44-50-cabin-monitoring-system/
+│   │   │       └── 44-60-miscellaneous-cabin-system/
+│   │   ├── ATA_50-CARGO_AND_ACCESSORY_COMPARTMENTS/       :contentReference[oaicite:5]{index=5}
+│   │   │   └── ATA-50-cargo-accessory-compartments/
+│   │   │       ├── 50-00-general/
+│   │   │       ├── 50-10-cargo-compartments/
+│   │   │       ├── 50-20-cargo-loading-systems/
+│   │   │       ├── 50-30-cargo-related-systems/
+│   │   │       ├── 50-40-available/
+│   │   │       ├── 50-50-accessory-compartments/
+│   │   │       └── 50-60-insulation/
+│   │   ├── ATA_51-STANDARD_PRACTICES_GENERAL/             :contentReference[oaicite:6]{index=6}
+│   │   │   └── ATA-51-standard-practices-general/
+│   │   │       ├── 51-00-general/
+│   │   │       ├── 51-10-investigation-cleanup-aero-smoothness/
+│   │   │       ├── 51-20-processes/
+│   │   │       ├── 51-30-materials/
+│   │   │       ├── 51-40-fasteners/
+│   │   │       ├── 51-50-support-for-repair-alignment-check/
+│   │   │       ├── 51-60-control-surface-balancing/
+│   │   │       ├── 51-70-repairs/
+│   │   │       └── 51-80-electrical-bonding/
+│   │   ├── ATA_52-DOORS/                                  :contentReference[oaicite:7]{index=7}
+│   │   │   └── ATA-52-doors/
+│   │   │       ├── 52-00-general/
+│   │   │       ├── 52-10-passenger-crew/
+│   │   │       ├── 52-20-emergency-exit/
+│   │   │       ├── 52-30-cargo/
+│   │   │       ├── 52-40-service/
+│   │   │       ├── 52-50-fixed-interior/
+│   │   │       ├── 52-60-entrance-stairs/
+│   │   │       ├── 52-70-door-warning-monitoring-operation/
+│   │   │       └── 52-80-landing-gear/
+│   │   ├── ATA_53-FUSELAGE/
+│   │   │   └── ATA-53-fuselage/
+│   │   │       ├── 53-00-general/
+│   │   │       └── 53-10-thru-90-fuselage-sections-as-required/
+│   │   ├── ATA_54-NACELLES_PYLONS/                        :contentReference[oaicite:8]{index=8}
+│   │   │   └── ATA-54-nacelles-pylons/
+│   │   │       ├── 54-00-general/
+│   │   │       ├── 54-10-thru-40-nacelle-sections-as-required/
+│   │   │       └── 54-50-thru-80-pylon-as-required/
+│   │   ├── ATA_55-STABILIZERS/
+│   │   │   └── ATA-55-stabilizers/
+│   │   │       ├── 55-00-general/
+│   │   │       ├── 55-10-horizontal-stabilizer-or-canard/
+│   │   │       ├── 55-20-elevator/
+│   │   │       ├── 55-30-vertical-stabilizer/
+│   │   │       └── 55-40-rudder/
+│   │   ├── ATA_56-WINDOWS/                                :contentReference[oaicite:9]{index=9}
+│   │   │   └── ATA-56-windows/
+│   │   │       ├── 56-00-general/
+│   │   │       ├── 56-10-flight-compartment/
+│   │   │       ├── 56-20-passenger-compartment/
+│   │   │       ├── 56-30-door/
+│   │   │       └── 56-40-inspection-observation/
+│   │   └── ATA_57-WINGS/
+│   │       └── ATA-57-wings/
+│   │           ├── 57-00-general/
+│   │           ├── 57-10-center-wing/
+│   │           ├── 57-20-outer-wing/
+│   │           ├── 57-30-wing-tip/
+│   │           ├── 57-40-leading-edge-and-devices/
+│   │           ├── 57-50-trailing-edge-and-devices/
+│   │           ├── 57-60-ailerons-and-elevons/
+│   │           ├── 57-70-spoilers/
+│   │           ├── 57-80-as-required/
+│   │           └── 57-90-wing-folding-system/
+│   │
+│   ├── M-MECHANICS/
+│   │   ├── ATA_27-FLIGHT_CONTROLS/                         :contentReference[oaicite:10]{index=10}
+│   │   │   └── ATA-27-flight-controls/
+│   │   │       ├── 27-00-general/
+│   │   │       ├── 27-10-aileron-tab/
+│   │   │       ├── 27-20-rudder-tab/
+│   │   │       ├── 27-30-elevator-tab/
+│   │   │       ├── 27-40-horizontal-stabilizer/
+│   │   │       ├── 27-50-flaps/
+│   │   │       ├── 27-60-spoiler-drag-devices-variable-fairings/
+│   │   │       ├── 27-70-gust-lock-dampener/
+│   │   │       └── 27-80-lift-augmenting/
+│   │   ├── ATA_29-HYDRAULIC_POWER/                         :contentReference[oaicite:11]{index=11}
+│   │   │   └── ATA-29-hydraulic-power/
+│   │   │       ├── 29-00-general/
+│   │   │       ├── 29-10-main/
+│   │   │       ├── 29-20-auxiliary/
+│   │   │       └── 29-30-indicating/
+│   │   └── ATA_32-LANDING_GEAR/                            :contentReference[oaicite:12]{index=12}
+│   │       └── ATA-32-landing-gear/
+│   │           ├── 32-00-general/
+│   │           ├── 32-10-main-gear-and-doors/
+│   │           ├── 32-20-nose-gear-and-doors/
+│   │           ├── 32-30-extension-and-retraction/
+│   │           ├── 32-40-wheels-and-brakes/
+│   │           ├── 32-50-steering/
+│   │           ├── 32-60-position-and-warning/
+│   │           └── 32-70-supplementary-gear/
+│   │
+│   ├── E1-ENVIRONMENT/
+│   │   ├── ATA_21-AIR_CONDITIONING_PRESSURIZATION/         :contentReference[oaicite:13]{index=13}
+│   │   │   └── ATA-21-air-conditioning/
+│   │   │       ├── 21-00-general/
+│   │   │       ├── 21-10-compression/
+│   │   │       ├── 21-20-distribution/
+│   │   │       ├── 21-30-pressurization-control/
+│   │   │       ├── 21-40-heating/
+│   │   │       ├── 21-50-cooling/
+│   │   │       ├── 21-60-temperature-control/
+│   │   │       └── 21-70-moisture-air-contaminant-control/
+│   │   ├── ATA_26-FIRE_PROTECTION/                         :contentReference[oaicite:14]{index=14}
+│   │   │   └── ATA-26-fire-protection/
+│   │   │       ├── 26-00-general/
+│   │   │       ├── 26-10-detection/
+│   │   │       ├── 26-20-extinguishing/
+│   │   │       └── 26-30-explosion-suppression/
+│   │   ├── ATA_30-ICE_RAIN_PROTECTION/                     :contentReference[oaicite:15]{index=15}
+│   │   │   └── ATA-30-ice-rain-protection/
+│   │   │       ├── 30-00-general/
+│   │   │       ├── 30-10-airfoil/
+│   │   │       ├── 30-20-air-intakes/
+│   │   │       ├── 30-30-pitot-and-static/
+│   │   │       ├── 30-40-windows-windshields-and-doors/
+│   │   │       ├── 30-50-antennas-and-radomes/
+│   │   │       ├── 30-60-propellers-rotors/
+│   │   │       ├── 30-70-water-lines/
+│   │   │       └── 30-80-detection/
+│   │   ├── ATA_35-OXYGEN/
+│   │   │   └── ATA-35-oxygen/
+│   │   │       ├── 35-00-general/
+│   │   │       ├── 35-10-crew/
+│   │   │       ├── 35-20-passenger/
+│   │   │       └── 35-30-portable/
+│   │   ├── ATA_36-PNEUMATIC/
+│   │   │   └── ATA-36-pneumatic/
+│   │   │       ├── 36-00-general/
+│   │   │       ├── 36-10-distribution/
+│   │   │       └── 36-20-indicating/
+│   │   ├── ATA_37-VACUUM/
+│   │   │   └── ATA-37-vacuum/
+│   │   │       ├── 37-00-general/
+│   │   │       ├── 37-10-distribution/
+│   │   │       └── 37-20-indicating/
+│   │   ├── ATA_38-WATER_WASTE/
+│   │   │   └── ATA-38-water-waste/
+│   │   │       ├── 38-00-general/
+│   │   │       ├── 38-10-potable/
+│   │   │       ├── 38-20-wash/
+│   │   │       ├── 38-30-waste-disposal/
+│   │   │       └── 38-40-air-supply/
+│   │   └── ATA_47-NITROGEN_GENERATION_SYSTEM/
+│   │       └── ATA-47-nitrogen-generation/
+│   │           └── 47-00-general/
+│   │
+│   ├── D-DATA/
+│   │   ├── ATA_31-INDICATING_RECORDING/                    :contentReference[oaicite:16]{index=16}
+│   │   │   └── ATA-31-indicating-recording/
+│   │   │       ├── 31-00-general/
+│   │   │       ├── 31-10-instrument-control-panels/
+│   │   │       ├── 31-20-independent-instruments/
+│   │   │       ├── 31-30-recorders/
+│   │   │       ├── 31-40-central-computers/
+│   │   │       ├── 31-50-central-warning-systems/
+│   │   │       ├── 31-60-central-display-systems/
+│   │   │       └── 31-70-automatic-data-reporting-systems/
+│   │   ├── ATA_45-CENTRAL_MAINTENANCE_SYSTEM_CMS/
+│   │   │   └── ATA-45-central-maintenance-system/
+│   │   │       ├── 45-00-general/
+│   │   │       ├── 45-05-cms-aircraft-general/
+│   │   │       ├── 45-20-cms-airframe-systems/
+│   │   │       ├── 45-45-central-maintenance-system/
+│   │   │       ├── 45-50-cms-structures/
+│   │   │       ├── 45-60-cms-propellers/
+│   │   │       └── 45-70-cms-power-plant/
+│   │   └── ATA_46-INFORMATION_SYSTEMS/
+│   │       └── ATA-46-information-systems/
+│   │           ├── 46-00-general/
+│   │           ├── 46-10-airplane-general-information-systems/
+│   │           ├── 46-20-flight-deck-information-systems/
+│   │           ├── 46-30-maintenance-information-systems/
+│   │           ├── 46-40-passenger-cabin-information-systems/
+│   │           └── 46-50-miscellaneous-information-systems/
+│   │
+│   ├── E2-ENERGY/
+│   │   ├── ATA_24-ELECTRICAL_POWER/                        :contentReference[oaicite:17]{index=17}
+│   │   │   └── ATA-24-electrical-power/
+│   │   │       ├── 24-00-general/
+│   │   │       ├── 24-10-generator-drive/
+│   │   │       ├── 24-20-ac-generation/
+│   │   │       ├── 24-30-dc-generation/
+│   │   │       ├── 24-40-external-power/
+│   │   │       ├── 24-50-ac-load-distribution/
+│   │   │       └── 24-60-dc-load-distribution/
+│   │   └── ATA_49-AIRBORNE_AUXILIARY_POWER_APU/
+│   │       └── ATA-49-airborne-auxiliary-power/
+│   │           ├── 49-00-general/
+│   │           ├── 49-10-power-plant/
+│   │           ├── 49-20-engine/
+│   │           ├── 49-30-engine-fuel-and-control/
+│   │           ├── 49-40-ignition-starting/
+│   │           ├── 49-50-air/
+│   │           ├── 49-60-engine-controls/
+│   │           ├── 49-70-indicating/
+│   │           ├── 49-80-exhaust/
+│   │           └── 49-90-oil/
+│   │
+│   ├── E3-ELECTRICS/
+│   │   ├── ATA_33-LIGHTS/                                  :contentReference[oaicite:18]{index=18}
+│   │   │   └── ATA-33-lights/
+│   │   │       ├── 33-00-general/
+│   │   │       ├── 33-10-flight-compartment/
+│   │   │       ├── 33-20-passenger-compartment/
+│   │   │       ├── 33-30-cargo-and-service-compartments/
+│   │   │       ├── 33-40-exterior/
+│   │   │       └── 33-50-emergency-lighting/
+│   │   └── ATA_39-ELECTRICAL_ELECTRONIC_PANELS_MULTIPURPOSE_COMPONENTS/
+│   │       └── ATA-39-electrical-electronic-panels-components/
+│   │           └── 39-00-general/
+│   │
+│   ├── L2-LINKS/
+│   │   └── ATA_34-NAVIGATION/                               :contentReference[oaicite:19]{index=19}
+│   │       └── ATA-34-navigation/
+│   │           ├── 34-00-general/
+│   │           ├── 34-10-flight-environment-data/
+│   │           ├── 34-20-attitude-and-direction/
+│   │           ├── 34-30-landing-and-taxiing-aids/
+│   │           ├── 34-40-independent-position-determining/
+│   │           ├── 34-50-dependent-position-determining/
+│   │           └── 34-60-flight-management-computing/
+│   │
+│   ├── C1-COMMS/
+│   │   └── ATA_23-COMMUNICATIONS/                           :contentReference[oaicite:20]{index=20}
+│   │       └── ATA-23-communications/
+│   │           ├── 23-00-general/
+│   │           ├── 23-10-speech-communications/
+│   │           ├── 23-15-satcom/
+│   │           ├── 23-20-data-transmission-auto-calling/
+│   │           ├── 23-30-comfort/
+│   │           ├── 23-40-interphone/
+│   │           ├── 23-50-audio-integrating/
+│   │           ├── 23-60-static-discharging/
+│   │           ├── 23-70-audio-video-monitoring/
+│   │           └── 23-80-integrated-automatic/
+│   │
+│   ├── C2-CIRCULAR_CRYOGENIC_CELLS/
+│   │   └── ATA_28-FUEL/                                     :contentReference[oaicite:21]{index=21}
+│   │       └── ATA-28-fuel/
+│   │           ├── 28-00-general/
+│   │           ├── 28-10-storage/
+│   │           ├── 28-20-distribution/
+│   │           ├── 28-30-dump/
+│   │           └── 28-40-indicating/
+│   │
+│   ├── A2-AVIONICS/
+│   │   ├── ATA_22-AUTO_FLIGHT/                              :contentReference[oaicite:22]{index=22}
+│   │   │   └── ATA-22-auto-flight/
+│   │   │       ├── 22-00-general/
+│   │   │       ├── 22-10-autopilot/
+│   │   │       ├── 22-20-speed-attitude-correction/
+│   │   │       ├── 22-30-auto-throttle/
+│   │   │       ├── 22-40-system-monitors/
+│   │   │       └── 22-50-aerodynamic-load-alleviating/
+│   │   └── ATA_42-INTEGRATED_MODULAR_AVIONICS/
+│   │       └── ATA-42-integrated-modular-avionics/
+│   │           └── 42-00-general/
+│   │
+│   ├── O-OPERATING_SYSTEMS/
+│   │   └── ATA_40-MULTISYSTEM/
+│   │       └── ATA-40-multisystem/
+│   │           └── 40-00-general/
+│   │
+│   └── P-PROPULSION/
+│       ├── ATA_60-STANDARD_PRACTICES_PROPELLER_ROTOR/
+│       │   └── ATA-60-standard-practices-prop-rotor/
+│       │       └── 60-00-general/
+│       ├── ATA_61-PROPELLERS_PROPULSORS/                    :contentReference[oaicite:23]{index=23}
+│       │   └── ATA-61-propellers-propulsors/
+│       │       ├── 61-00-general/
+│       │       ├── 61-10-propeller-assembly/
+│       │       ├── 61-20-controlling/
+│       │       ├── 61-30-braking/
+│       │       ├── 61-40-indicating/
+│       │       └── 61-50-propulsor-duct/
+│       ├── ATA_71-POWER_PLANT/                               :contentReference[oaicite:24]{index=24}
+│       │   └── ATA-71-power-plant/
+│       │       ├── 71-00-general/
+│       │       ├── 71-10-cowling/
+│       │       ├── 71-20-mounts/
+│       │       ├── 71-30-fire-seals/
+│       │       ├── 71-40-attach-fittings/
+│       │       ├── 71-50-electrical-harness/
+│       │       ├── 71-60-air-intakes/
+│       │       └── 71-70-engine-drains/
+│       ├── ATA_72-ENGINE_TURBINE_TURBOPROP_DUCTED_UNDUCTED_FAN/
+│       │   └── ATA-72-engine/
+│       │       ├── 72-00-general/
+│       │       ├── 72-10-reduction-gear-shaft-section/
+│       │       ├── 72-20-air-inlet-section/
+│       │       ├── 72-30-compressor-section/
+│       │       ├── 72-40-combustion-section/
+│       │       ├── 72-50-turbine-section/
+│       │       ├── 72-60-accessory-drives/
+│       │       ├── 72-70-by-pass-section/
+│       │       └── 72-80-propulsor-section-rear-mounted/
+│       ├── ATA_73-ENGINE_FUEL_AND_CONTROL/                   :contentReference[oaicite:25]{index=25}
+│       │   └── ATA-73-engine-fuel-control/
+│       │       ├── 73-00-general/
+│       │       ├── 73-10-distribution/
+│       │       ├── 73-20-controlling/
+│       │       └── 73-30-indicating/
+│       ├── ATA_74-IGNITION/                                  :contentReference[oaicite:26]{index=26}
+│       │   └── ATA-74-ignition/
+│       │       ├── 74-00-general/
+│       │       ├── 74-10-electrical-power-supply/
+│       │       ├── 74-20-distribution/
+│       │       └── 74-30-switching/
+│       ├── ATA_75-AIR/                                       :contentReference[oaicite:27]{index=27}
+│       │   └── ATA-75-air/
+│       │       ├── 75-00-general/
+│       │       ├── 75-10-engine-anti-icing/
+│       │       ├── 75-20-cooling/
+│       │       ├── 75-30-compressor-control/
+│       │       └── 75-40-indicating/
+│       ├── ATA_76-ENGINE_CONTROLS/                           :contentReference[oaicite:28]{index=28}
+│       │   └── ATA-76-engine-controls/
+│       │       ├── 76-00-general/
+│       │       ├── 76-10-power-control/
+│       │       └── 76-20-emergency-shutdown/
+│       ├── ATA_77-ENGINE_INDICATING/                         :contentReference[oaicite:29]{index=29}
+│       │   └── ATA-77-engine-indicating/
+│       │       ├── 77-00-general/
+│       │       ├── 77-10-power/
+│       │       ├── 77-20-temperature/
+│       │       ├── 77-30-analyzers/
+│       │       └── 77-40-integrated-engine-instrument-systems/
+│       ├── ATA_78-EXHAUST/                                   :contentReference[oaicite:30]{index=30}
+│       │   └── ATA-78-exhaust/
+│       │       ├── 78-00-general/
+│       │       ├── 78-10-collector-nozzle/
+│       │       ├── 78-20-noise-suppressor/
+│       │       ├── 78-30-thrust-reverser/
+│       │       └── 78-40-supplementary-air/
+│       ├── ATA_79-OIL/                                       :contentReference[oaicite:31]{index=31}
+│       │   └── ATA-79-oil/
+│       │       ├── 79-00-general/
+│       │       ├── 79-10-storage/
+│       │       └── 79-30-indicating/
+│       └── ATA_80-STARTING/
+│           └── ATA-80-starting/
+│               ├── 80-00-general/
+│               └── 80-10-cranking/
+│
+├── I-INFRASTRUCTURES/                                       # Ground support / H₂ logistics / facilities (program-defined)
+│   ├── ATA_02-WEIGHT_BALANCE_INFRA/
+│   │   └── ATA-02-weight-balance-infra/
+│   │       └── 02-00-general/
+│   ├── ATA_03-SUPPORT_INFRA/
+│   │   └── ATA-03-support-infra/
+│   │       └── 03-00-general/
+│   ├── ATA_10-PARKING_MOORING_STORAGE_RTS_INFRA/
+│   │   └── ATA-10-parking-infra/
+│   │       └── 10-00-general/
+│   ├── ATA_12-SERVICING_INFRA/
+│   │   └── ATA-12-servicing-infra/
+│   │       └── 12-00-general/
+│   └── ATA_85-H2_GSE_AND_SUPPLY_CHAIN_INFRA/                # program slot (define your own sectioning)
+│       └── ATA-85-h2-gse-supply-chain-infra/
+│           └── 85-00-general/
+│
+└── N-NEURAL_NETWORKS/                                       # Program extension (ATA 95–98 in your OPT-IN)
+    ├── ATA_95-AI_ML_MODELS/
+    │   └── ATA-95-ai-ml-models/
+    │       └── 95-00-general/
+    ├── ATA_96-TRACEABILITY_DPP_LEDGER/
+    │   └── ATA-96-traceability-dpp-ledger/
+    │       └── 96-00-general/
+    ├── ATA_97-SYNTHETIC_DATA_VALIDATION/
+    │   └── ATA-97-synthetic-data-validation/
+    │       └── 97-00-general/
+    └── ATA_98-RESERVED_AIRLINE_USE_OR_PROGRAM_SLOT/          :contentReference[oaicite:32]{index=32}
+        └── ATA-98-program-slot/
+            └── 98-00-general/
+
 ```
 
-### CAOS Capabilities
+---
 
-- **🔮 Predictive Maintenance**: AI predicts failures 500 flight hours ahead (85% accuracy)
-- **🎯 Digital Twin**: Real-time physics simulation with <100ms latency
-- **⚡ Energy Optimization**: H₂ fuel cell and battery management (8-15% efficiency gain)
-- **🌐 Fleet Intelligence**: Cross-aircraft learning improves entire fleet
-- **🤝 Human-AI Collaboration**: Advisory system with crew override authority
+## Canonical ATA Content Pattern (Sub-Subject Level)
 
-📖 **[Read the Full CAOS Manifesto →](CAOS_MANIFESTO.md)**
+**CSDB lives at sub-subject (subproduct) level.** Each sub-subject carries both SSOT and PUB: 
+
+```
+ATA_XX-<SYSTEM>/
+└── xx-yy-zz-<sub-subject>/
+    ├── SSOT/
+    │   ├── LC01_PROBLEM_STATEMENT/
+    │   ├── LC02_SYSTEM_REQUIREMENTS/
+    │   ├── LC03_SAFETY_RELIABILITY/
+    │   ├── ... 
+    │   └── LC14_RETIREMENT_CIRCULARITY/
+    │
+    └── PUB/
+        └── <SUB_ID>/                    # AMM / IPC / WDM / TSM / etc.
+            ├── CSDB/
+            │   ├── DM/                  # Data Modules
+            │   ├── PM/                  # Publication Modules
+            │   ├── DML/                 # Data Module Lists
+            │   ├── BREX/                # Business Rules Exchange
+            │   ├── ICN/                 # Illustrations (SVG preferred)
+            │   ├── COMMON/              # Reusable primitives
+            │   └── APPLICABILITY/       # ACT/PCT/CCT filtering
+            ├── EXPORT/                  # Rendered outputs
+            └── IETP/
+                ├── RUNTIME/             # Viewer application
+                ├── PKG/                 # Package manifests
+                └── DEPLOY/              # Deployment artifacts
+```
 
 ---
 
-## 📂 Complete OPT-IN_FRAMEWORK Index
+## Quick Start
 
-<details open>
-<summary><b>🗂️ Full Directory Structure (Click to Navigate)</b></summary>
+### Prerequisites
+- Python 3.9+
+- Git
 
-### [I - INFRASTRUCTURES](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/)
-- [`ATA 02 - OPERATIONS INFORMATION`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/) ✅ **RESTRUCTURED per AMPEL360_DOCUMENTATION_STANDARD v1.4**
-  - [`02-00-00 GENERAL`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/) - **14-Folder Skeleton Structure**
-    - ✅ [01_OVERVIEW](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/01_OVERVIEW/)
-    - ✅ [02_SAFETY](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/02_SAFETY/)
-    - ✅ [03_REQUIREMENTS](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/03_REQUIREMENTS/)
-    - ✅ [04_DESIGN](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/04_DESIGN/)
-    - ✅ [05_INTERFACES](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/05_INTERFACES/)
-    - ✅ [06-14_ENGINEERING through META_GOVERNANCE](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/)
-  - [`02-20-00 SYSTEMS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-20-00_SYSTEMS/) - **Functional Operations Systems**
-    - Aircraft General Data, Dimensions, BWB Configuration (02-20-01 to 02-20-03)
-    - Weight & Balance Systems (02-20-10 to 02-20-19)
-    - Performance Data (02-20-20 to 02-20-29)
-    - Operating Limitations (02-20-30 to 02-20-39)
-    - Flight Planning (02-20-40 to 02-20-46)
-    - Emergency Procedures (02-20-50 to 02-20-59)
-    - Operational Procedures (02-20-60 to 02-20-69)
-  - [`02-40-00 PROGRAMMING_ALGORITHMS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-40-00_PROGRAMMING_ALGORITHMS/) - **CAOS & AI Operations**
-    - Neural Network Flight Optimization (02-40-01, 02-40-10, 02-40-15)
-    - CAOS Enhanced Operations (02-40-20, 02-40-30, 02-40-40)
-    - Predictive Analytics (02-40-50, 02-40-60, 02-40-70)
-    - NN Operations Support (02-40-80 to 02-40-99)
-  - [`02-50-00 STRUCTURES`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-50-00_STRUCTURES/) - **Infrastructure & GSE**
-    - Reference Systems (02-50-10, 02-50-20)
-    - Dimensions & Clearances (02-50-30, 02-50-40)
-    - Doors & Layouts (02-50-50, 02-50-60, 02-50-70)
-  - [`02-70-00 PROPULSION`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-70-00_PROPULSION/) - **H₂ Fuel Operations**
-    - H₂ Fuel Data & Capacity (02-70-10, 02-70-11)
-    - H₂ Refueling Procedures (02-70-30)
-    - Weight/CG Effects & Limitations (02-70-12 to 02-70-15)
-    - Emergency & Ground Operations (02-70-17, 02-70-18)
-  - [`02-90-00 TABLES_SCHEMAS_DIAGRAMS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-90-00_TABLES_SCHEMAS_DIAGRAMS/) - **Reference Data**
-    - Data Schemas (02-90-10)
-    - Operations Data Recording (02-90-20)
-- [`ATA 03 - SUPPORT INFORMATION & GSE`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/)
-- [`ATA 10 - PARKING, MOORING, STORAGE, RTS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS/)
-- [`ATA 13 - HARDWARE AND GENERAL TOOLS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/)
-- [`ATA 85-90 - INFRASTRUCTURE INTERFACE STANDARDS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_85-90-INFRASTRUCTURE_INTERFACE_STANDARDS/)
-- [`ATA 115 - FLIGHT SIMULATOR SYSTEMS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS/)
-- [`ATA 116 - FLIGHT SIMULATOR CUING SYSTEM`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_116-FLIGHT_SIMULATOR_CUING_SYSTEM/)
+### Clone and Setup
+
+```bash
+git clone https://github.com/AmedeoPelliccia/AMPEL360-AIR-T.git
+cd AMPEL360-AIR-T
+
+pip install -r requirements. txt
+bash . github/hooks/setup-hooks. sh
+```
+
+### Validate Structure
+
+```bash
+python tools/ci/optin_structure_validator. py --check
+python tools/ci/optin_structure_validator.py --check --chapter 31
+```
+
+### Navigate
+
+```bash
+cd OPT-IN_FRAMEWORK/
+ls
+```
+
+### Entry Points by Role
+
+| Role | Start Here |
+|------|------------|
+| **Engineers** | [`OPT-IN_FRAMEWORK/README.md`](./OPT-IN_FRAMEWORK/README.md) |
+| **Publication Authors** | Example: `.../PUB/AMM/CSDB/README.md` (pattern at each sub-subject) |
+| **Program Managers** | [`IMPLEMENTATION_SUMMARY.md`](./IMPLEMENTATION_SUMMARY.md) |
+| **CAOS / Airworthiness** | [`CAOS/CAOS_INDEX. md`](./CAOS/CAOS_INDEX.md) |
+| **Certification** | `XX-00-10_Certification/` folders |
 
 ---
 
-### [N - NEURAL NETWORKS, USERS, TRACEABILITY](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/)
-- [`ATA 95 - NEURAL NETWORKS & DIGITAL PASSPORT`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95_NEURAL_NETWORKS/) 📱
-  - [`95-00-00 GENERAL`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95_NEURAL_NETWORKS/95-00-00_GENERAL/)
-    - [`02_SAFETY/ASSETS/FTA_Templates`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95_NEURAL_NETWORKS/95-00-00_GENERAL/02_SAFETY/ASSETS/FTA_Templates/) ⭐ **NEW**
-      - ✅ README.md
-      - ✅ 95-00-02-A004_FTA_Template_Generic_NN.xlsx
-      - ✅ 95-00-02-A005_FTA_Template_Flight_Control_NN.xlsx
-      - ✅ 95-00-02-A006_FTA_Template_Collision_Avoidance_NN.xlsx
-      - ✅ 95-00-02-A007_FTA_Template_Propulsion_NN.xlsx
-    - [`03_REQUIREMENTS/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/) 🆕 **CATEGORY-BASED STRUCTURE**
-      - ✅ [95-00-03-README.md](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/95-00-03-README.md) — Taxonomy + ID scheme
-      - ✅ [`00_INDEX/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/00_INDEX/) — Overview, CSV list (46 reqs), RTM placeholder
-      - ✅ [`01_Functional/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/01_Functional/) — Core DPP functionality (3 sample reqs)
-      - ✅ [`02_NonFunctional/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/02_NonFunctional/) — Performance, availability (2 sample reqs)
-      - ✅ [`03_Safety_and_AAI/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/03_Safety_and_AAI/) — ODD, runtime monitoring (2 sample reqs)
-      - ✅ [`04_Regulatory_Compliance/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/04_Regulatory_Compliance/) — EU AI Act, EU DPP (2 sample reqs)
-      - ✅ [`05_Data_and_Metadata/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/05_Data_and_Metadata/) — Data lineage, CO₂e metrics (2 sample reqs)
-      - ✅ [`06_Toolchain_and_Automation/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/06_Toolchain_and_Automation/) — JSON schema, CI/CD, MCP (3 sample reqs)
-      - ✅ [`07_Governance_and_Audit/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/07_Governance_and_Audit/) — CCB, audit trail (2 sample reqs)
-      - ✅ [`ASSETS/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/ASSETS/) — Diagrams, reference materials
-    - [`05_INTERFACES/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/) 🆕 **STRICT ASSET NAMING CONVENTION**
-      - ✅ [README.md](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/README.md) — Complete structure documentation
-      - ✅ **102 files** with strict naming: `95-00-05-{DD}-{T}-{NNN}_{Name}.ext`
-      - ✅ [`00_META/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/00_META/) — Interface taxonomy, cross-ATA map, traceability matrix, registry, CAOS hooks
-      - ✅ [`01_DATA_INTERFACES/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/01_DATA_INTERFACES/) — Data sources/sinks, feature schemas, contracts, lineage, ICD, ARINC 664
-      - ✅ [`02_MODEL_INTERFACES/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/02_MODEL_INTERFACES/) — NN I/O specs, pipelines, embedding space, model API, ONNX runtime
-      - ✅ [`03_SYSTEM_INTERFACES/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/03_SYSTEM_INTERFACES/) — Aircraft systems, avionics bus, edge compute, ground systems, cross-ATA interfaces
-      - ✅ [`04_CERTIFICATION_INTERFACES/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/04_CERTIFICATION_INTERFACES/) — EASA/FAA, AI compliance, explainability, human factors, audit trails, DO-178C
-      - ✅ [`05_SECURITY_PRIVACY_INTERFACES/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/05_SECURITY_PRIVACY_INTERFACES/) — Cybersecurity, privacy, access control, key management, blockchain anchor
-      - ✅ [`06_DPP_BLOCKCHAIN_INTERFACES/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-05_Interfaces/06_DPP_BLOCKCHAIN_INTERFACES/) — DPP data model, blockchain R/W, smart contracts, supply chain
-      - ✅ **MCP Link Rules**: Auto-hyperlink interface references in documentation
+## CAOS — Continuous Airworthiness for Operational Sustainment
+
+**CAOS** is the framework for maintaining airworthiness throughout the operational lifecycle: 
+
+| Domain | Scope |
+|--------|-------|
+| **Continued Airworthiness** | AD compliance, SB tracking, modification status |
+| **Reliability Programs** | MSG-3, condition monitoring, fleet trends |
+| **Operational Feedback** | In-service data, SDR/MOR analysis, operator liaison |
+| **Technical Services** | Field support, AOG response, technical bulletins |
+| **Configuration Control** | As-maintained vs. as-designed reconciliation |
+
+CAOS artifacts reside primarily in: 
+- `LC11_MAINTENANCE` — maintenance program sources
+- `LC12_CUSTOMER_CARE` — technical services and post-delivery support
+- `CAOS/` — cross-cutting CAOS documentation and dashboards
+
+See:  [`CAOS/CAOS_INDEX. md`](./CAOS/CAOS_INDEX.md) • [`CAOS/CAOS_ARCHITECTURE.md`](./CAOS/CAOS_ARCHITECTURE.md) • [`CAOS/CAOS_OPERATIONS_FRAMEWORK. md`](./CAOS/CAOS_OPERATIONS_FRAMEWORK.md)
 
 ---
 
-### [O - ORGANIZATION](OPT-IN_FRAMEWORK/O-ORGANIZATION/)
-- [`ATA 00 - GENERAL`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_00-GENERAL/)
-- [`ATA 01 - MAINTENANCE POLICY INFORMATION`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_01-MAINTENANCE_POLICY_INFORMATION/)
-- [`ATA 04 - AIRWORTHINESS LIMITATIONS`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_04-AIRWORTHINESS_LIMITATIONS/)
-- [`ATA 05 - TIME LIMITS & MAINTENANCE CHECKS`](OPT-IN_FRAMEWORK/O-ORGANIZATION/ATA_05-TIME_LIMITS_MAINTENANCE_CHECKS/)
+## Publishing Model (CSDB + IETP)
+
+### CSDB (S1000D Common Source Database)
+
+The CSDB is the **single source for modular publications**:
+
+| Component | Purpose |
+|-----------|---------|
+| **DM** | Atomic content modules (descriptive, procedural, fault isolation, IPD, etc.) |
+| **PM** | Publication structures that assemble DMs into deliverables |
+| **DML** | Controlled lists of DMs with status and applicability |
+| **BREX** | Business rules for validation and compliance checking |
+| **ICN** | Graphics (SVG preferred) referenced by DMs |
+| **APPLICABILITY** | ACT/PCT/CCT for product/condition filtering |
+| **COMMON** | Reusable content primitives (warnings, cautions, notes) |
+
+### IETP (Interactive Electronic Technical Publication)
+
+HTML/PDF are outputs; the **IETP runtime** is the deliverable software "image" that: 
+- Consumes PM/DM sets from CSDB
+- Applies applicability rules (ACT/PCT/CCT)
+- Provides interactive navigation, search, and filtering
+- Is packaged and versioned in `PUB/<SUB_ID>/IETP/`
 
 ---
 
-### [P - PROGRAM](OPT-IN_FRAMEWORK/P-PROGRAM/)
-- [`ATA 06 - DIMENSIONS AND AREAS`](OPT-IN_FRAMEWORK/P-PROGRAM/ATA_06-DIMENSIONS_AND_AREAS/)
-- [`ATA 07 - LIFTING AND SHORING`](OPT-IN_FRAMEWORK/P-PROGRAM/ATA_07-LIFTING_AND_SHORING/)
-- [`ATA 08 - LEVELING AND WEIGHING`](OPT-IN_FRAMEWORK/P-PROGRAM/ATA_08-LEVELING_AND_WEIGHING/)
-- [`ATA 09 - TOWING AND TAXIING`](OPT-IN_FRAMEWORK/P-PROGRAM/ATA_09-TOWING_AND_TAXIING/)
-- [`ATA 12 - SERVICING`](OPT-IN_FRAMEWORK/P-PROGRAM/ATA_12-SERVICING/)
+## KNOT → KNU (Controlled Uncertainty Handling)
+
+Work in this repository is managed through **KNOTs** and **KNUs**:
+
+| Concept | Definition |
+|---------|------------|
+| **KNOT** | A *known unknown* — an identified uncertainty or problem node requiring resolution |
+| **KNU** | A *Knowledge Unit* — a concrete artifact that addresses a KNOT |
+
+### How It Works
+
+1. **KNOT Identification**: An uncertainty is logged (e.g., "H₂ tank thermal cycling limits undefined")
+2. **KNU Production**: Work produces artifacts in SSOT and/or PUB (requirements, ICDs, analyses, DMs, ICNs, etc.)
+3. **KNOT Closure**: The KNOT is "done" when required KNUs exist, are linked, and reduce residual uncertainty to acceptable levels
+
+This provides **traceability from uncertainty to evidence** across the engineering and publication lifecycle.
 
 ---
 
-### [T - TECHNOLOGY (AMEDEOPELLICCIA ON-BOARD SYSTEMS)](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/)
+## Standards & Compliance
 
-#### [A - AIRFRAME](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/)
-- [`ATA 20 - STANDARD PRACTICES - AIRFRAME`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_20-STANDARD_PRACTICES_AIRFRAME/)
-- [`ATA 50 - CARGO AND ACCESSORY COMPARTMENTS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_50-CARGO_AND_ACCESSORY_COMPARTMENTS/)
-- [`ATA 51 - STANDARD PRACTICES AND STRUCTURES - GENERAL`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_51-STANDARD_PRACTICES_AND_STRUCTURES_GENERAL/)
-- [`ATA 52 - DOORS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/) ⭐ **FULLY DEVELOPED**
-  - [`52-10 - Passenger Entry Doors`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-10_PASSENGER_ENTRY_DOORS/)
-    - [`52-10-01 Door L1 Forward`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-10_PASSENGER_ENTRY_DOORS/52-10-01_Door_L1_Forward/) ✅ **100% COMPLETE** (All 14 folders)
-  - [`52-20 - Emergency Exits`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/)
-    - [`52-20-01 Door L3 Aft`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_52-DOORS/52-20_EMERGENCY_EXITS/52-20-01_Door_L3_Aft/) 🆕 **EMERGENCY EXIT**
-- [`ATA 53 - FUSELAGE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_53-FUSELAGE/)
-- [`ATA 54 - NACELLES/PYLONS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_54-NACELLES_PYLONS/)
-- [`ATA 55 - STABILIZERS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_55-STABILIZERS/)
-- [`ATA 56 - WINDOWS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_56-WINDOWS/)
-- [`ATA 57 - WINGS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_57-WINGS/)
-
-#### [A2 - AERODYNAMICS](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A2-AERODYNAMICS/)
-- [`ATA 27 - FLIGHT CONTROLS - AERODYNAMIC MANIPULATION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A2-AERODYNAMICS/ATA_27-FLIGHT_CONTROLS_AERODYNAMIC_MANIPULATION/)
-
-#### [C1 - COCKPIT, CABIN, CARGO](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/)
-- [`ATA 11 - PLACARDS AND MARKINGS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_11-PLACARDS_AND_MARKINGS/)
-- [`ATA 15 - AIRCREW INFORMATION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_15-AIRCREW_INFORMATION/)
-- [`ATA 16 - CHANGE OF ROLE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_16-CHANGE_OF_ROLE/)
-- [`ATA 25 - EQUIPMENT/FURNISHINGS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)
-- [`ATA 33 - LIGHTS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_33-LIGHTS/)
-- [`ATA 35 - OXYGEN`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_35-OXYGEN/)
-- [`ATA 44 - CABIN SYSTEMS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_44-CABIN_SYSTEMS/)
-
-#### [C2 - CIRCULAR, CRYOGENIC SYSTEMS](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/)
-- [`ATA 21-80 - CO₂ CAPTURE AND PROCESSING`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_21-80-CO2_CAPTURE_SYSTEM/) 🌍 **UNIQUE SYSTEM**
-- [`ATA 28 - FUEL (SAF AND CRYOGENIC)`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/) 🔥 **H₂ SYSTEM**
-  - [`28-10 - H₂ Storage Tanks`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-10-00_H2_STORAGE_TANKS/)
-  - [`28-20 - Fuel Feed and Manifolds`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-20-00_FUEL_FEED_AND_MANIFOLDS/)
-  - [`28-30 - Fuel Pumps and Valves`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-30-00_FUEL_PUMPS_AND_VALVES/)
-  - [`28-40 - SAF Interface System`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-40-00_SAF_INTERFACE_SYSTEM/)
-  - [`28-50 - CO₂ Battery Loop`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-50-00_CO2_BATTERY_LOOP/)
-
-#### [D - DATA](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/)
-- [`ATA 31 - INDICATING/RECORDING SYSTEMS - RECORDING FUNCTION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/D-DATA/ATA_31-INDICATING_RECORDING_SYSTEMS_RECORDING_FUNCTION/)
-
-#### [E1 - ENVIRONMENT](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/)
-- [`ATA 18 - VIBRATION AND NOISE ANALYSIS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_18-VIBRATION_AND_NOISE_ANALYSIS/)
-- [`ATA 21 - AIR CONDITIONING AND PRESSURIZATION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_21-AIR_CONDITIONING_AND_PRESSURIZATION/)
-- [`ATA 26 - FIRE PROTECTION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_26-FIRE_PROTECTION/)
-- [`ATA 30 - ICE AND RAIN PROTECTION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_30-ICE_AND_RAIN_PROTECTION/)
-- [`ATA 36 - PNEUMATIC`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_36-PNEUMATIC/)
-- [`ATA 38 - WATER/WASTE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E1-ENVIRONMENT/ATA_38-WATER_WASTE/)
-
-#### [E2 - ENERGY](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/)
-- [`ATA 24 - ELECTRICAL POWER`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_24-ELECTRICAL_POWER/) ⚡ **FUEL CELLS**
-- [`ATA 47 - INERTING SYSTEM`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_47-INERTING_SYSTEM/)
-- [`ATA 49 - AIRBORNE AUXILIARY POWER`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_49-AIRBORNE_AUXILIARY_POWER/)
-- [`ATA 80 - STARTING`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E2-ENERGY/ATA_80-STARTING/)
-
-#### [E3 - ELECTRONICS](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E3-ELECTRONICS/)
-- [`ATA 34 - NAVIGATION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E3-ELECTRONICS/ATA_34-NAVIGATION/)
-- [`ATA 39 - ELECTRICAL/ELECTRONIC PANELS AND COMPONENTS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E3-ELECTRONICS/ATA_39-ELECTRICAL_ELECTRONIC_PANELS_AND_COMPONENTS/)
-- [`ATA 42 - INTEGRATED MODULAR AVIONICS - HARDWARE MODULES`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E3-ELECTRONICS/ATA_42-INTEGRATED_MODULAR_AVIONICS_HARDWARE_MODULES/)
-
-#### [I - INFORMATION, INTELLIGENCE, INTERFACES](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION/)
-- [`ATA 31 - INDICATING/RECORDING SYSTEMS - INDICATING FUNCTION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION/ATA_31-INDICATING_RECORDING_SYSTEMS_INDICATING_FUNCTION/)
-- [`ATA 42 - INTEGRATED MODULAR AVIONICS - CORE OS AND SERVICES`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION/ATA_42-INTEGRATED_MODULAR_AVIONICS_CORE_OS_AND_SERVICES/)
-- [`ATA 45 - ONBOARD MAINTENANCE SYSTEMS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
-- [`ATA 46 - INFORMATION SYSTEMS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION/ATA_46-INFORMATION_SYSTEMS/)
-- [`ATA 77 - ENGINE INDICATING`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION/ATA_77-ENGINE_INDICATING/)
-- [`ATA 93 - ONBOARD DATA LOAD`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION/ATA_93-ONBOARD_DATA_LOAD/)
-
-#### [I2 - I+D (RESEARCH & DEVELOPMENT)](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-R_AND_D/)
-- [`ATA 40 - AI INTEGRATION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-R_AND_D/ATA_40-AI_INTEGRATION/)
-- [`ATA 42-55 - POWERTRAIN ENERGY ORCHESTRATION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-R_AND_D/ATA_42-55-POWERTRAIN_ORCHESTRATION/)
-- [`ATA 42-60 - QUANTUM-INSPIRED SCHEDULER`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-R_AND_D/ATA_42-60-QUANTUM_SCHEDULER/)
-- [`ATA 48 - IN-FLIGHT MAINTENANCE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-R_AND_D/ATA_48-IN_FLIGHT_MAINTENANCE/)
-- [`ATA 92 - MODEL-BASED MAINTENANCE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-R_AND_D/ATA_92-MODEL_BASED_MAINTENANCE/)
-
-#### [L1 - LOGICS](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/)
-- [`ATA 22 - AUTOFLIGHT`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_22-AUTOFLIGHT/)
-- [`ATA 27 - FLIGHT CONTROLS - SOFTWARE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_27-FLIGHT_CONTROLS_SOFTWARE/)
-- [`ATA 42 - INTEGRATED MODULAR AVIONICS - HOSTED APPLICATIONS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_42-INTEGRATED_MODULAR_AVIONICS_HOSTED_APPLICATIONS/)
-
-#### [L2 - LINKS](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/)
-- [`ATA 23 - COMMUNICATIONS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/)
-- [`ATA 42 - INTEGRATED MODULAR AVIONICS - NETWORK FABRIC`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_42-INTEGRATED_MODULAR_AVIONICS_NETWORK_FABRIC/)
-- [`ATA 91 - CHARTS - FLIGHT OPERATIONS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_91-CHARTS_FLIGHT_OPERATIONS/)
-
-#### [M - MECHANICS](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/)
-- [`ATA 27 - FLIGHT CONTROLS - ACTUATION SYSTEMS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_27-FLIGHT_CONTROLS_ACTUATION_SYSTEMS/)
-- [`ATA 29 - HYDRAULIC POWER`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_29-HYDRAULIC_POWER/)
-- [`ATA 32 - LANDING GEAR`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_32-LANDING_GEAR/)
-- [`ATA 37 - VACUUM/WASTE DISPOSAL`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_37-VACUUM_WASTE_DISPOSAL/)
-- [`ATA 41 - WATER BALLAST`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/M-MECHANICS/ATA_41-WATER_BALLAST/)
-
-#### [O - OPERATING SYSTEMS](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/O-OPERATING_SYSTEMS/)
-- [`ATA 42 - INTEGRATED MODULAR AVIONICS - ARCHITECTURAL GOVERNANCE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/O-OPERATING_SYSTEMS/ATA_42-INTEGRATED_MODULAR_AVIONICS_ARCHITECTURAL_GOVERNANCE/)
-
-#### [P - PROPULSION](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/)
-- [`ATA 60 - STANDARD PRACTICES - PROPELLER/ROTOR`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_60-STANDARD_PRACTICES_PROP_ROTOR/)
-- [`ATA 61 - PROPELLERS/PROPULSORS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_61-PROPELLERS_PROPULSORS/)
-- [`ATA 70 - STANDARD PRACTICES - ENGINE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_70-STANDARD_PRACTICES_ENGINE/)
-- [`ATA 71 - POWER PLANT`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_71-POWER_PLANT/)
-- [`ATA 72 - ENGINE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_72-ENGINE/)
-- [`ATA 73 - ENGINE FUEL AND CONTROL`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_73-ENGINE_FUEL_AND_CONTROL/)
-- [`ATA 74 - IGNITION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_74-IGNITION/)
-- [`ATA 75 - AIR`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_75-AIR/)
-- [`ATA 76 - ENGINE CONTROLS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_76-ENGINE_CONTROLS/)
-- [`ATA 78 - EXHAUST`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_78-EXHAUST/)
-- [`ATA 79 - OIL`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/P-PROPULSION/ATA_79-OIL/)
-
-#### E3 - ELECTRONICS
-- [`ATA 34 - NAVIGATION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E3-ELECTRONICS/ATA_34-NAVIGATION/)
-- [`ATA 39 - ELECTRICAL PANELS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E3-ELECTRONICS/ATA_39-ELECTRICAL_ELECTRONIC_PANELS_AND_COMPONENTS/)
-- [`ATA 42 - IMA HARDWARE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/E3-ELECTRONICS/ATA_42-INTEGRATED_MODULAR_AVIONICS_HARDWARE_MODULES/)
-
-#### L1 - LOGICS
-- [`ATA 22 - AUTOFLIGHT`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_22-AUTOFLIGHT/)
-- [`ATA 27 - FLIGHT CONTROL SW`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_27-FLIGHT_CONTROLS_SOFTWARE/)
-- [`ATA 42 - IMA APPLICATIONS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L1-LOGICS/ATA_42-INTEGRATED_MODULAR_AVIONICS_HOSTED_APPLICATIONS/)
-
-#### L2 - LINKS
-- [`ATA 23 - COMMUNICATIONS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_23-COMMUNICATIONS/)
-- [`ATA 42 - IMA NETWORK`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_42-INTEGRATED_MODULAR_AVIONICS_NETWORK_FABRIC/)
-- [`ATA 91 - CHARTS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/L2-LINKS/ATA_91-CHARTS_FLIGHT_OPERATIONS/)
-
-#### I - INFORMATION, INTELLIGENCE, INTERFACES
-- [`ATA 31 - INDICATING SYSTEMS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_31-INDICATING_RECORDING_SYSTEMS_INDICATING_FUNCTION/)
-- [`ATA 42 - IMA CORE OS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_42-INTEGRATED_MODULAR_AVIONICS_CORE_OS_AND_SERVICES/)
-- [`ATA 45 - MAINTENANCE SYSTEMS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_45-ONBOARD_MAINTENANCE_SYSTEMS/)
-- [`ATA 46 - INFORMATION SYSTEMS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_46-INFORMATION_SYSTEMS/)
-- [`ATA 77 - ENGINE INDICATING`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_77-ENGINE_INDICATING/)
-- [`ATA 93 - ONBOARD DATA LOAD`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I-INFORMATION_INTELLIGENCE_INTERFACES/ATA_93-ONBOARD_DATA_LOAD/)
-
-#### C1 - COCKPIT, CABIN, CARGO
-- [`ATA 11 - PLACARDS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_11-PLACARDS_AND_MARKINGS/)
-- [`ATA 15 - AIRCREW INFO`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_15-AIRCREW_INFORMATION/)
-- [`ATA 16 - CHANGE OF ROLE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_16-CHANGE_OF_ROLE/)
-- [`ATA 25 - EQUIPMENT`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_25-EQUIPMENT_FURNISHINGS/)
-- [`ATA 33 - LIGHTS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_33-LIGHTS/)
-- [`ATA 35 - OXYGEN`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_35-OXYGEN/)
-- [`ATA 44 - CABIN SYSTEMS`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C1-COCKPIT_CABIN_CARGO/ATA_44-CABIN_SYSTEMS/)
-
-#### C2 - CIRCULAR, CRYOGENIC SYSTEMS
-- [`ATA 28 - FUEL (H₂/SAF)`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/) 🔥 **H₂ SYSTEM**
-  - [`28-10 - H₂ Storage Tanks`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-10-00_H2_STORAGE_TANKS/)
-  - [`28-20 - Fuel Feed`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-20-00_FUEL_FEED_AND_MANIFOLDS/)
-  - [`28-30 - Pumps & Valves`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-30-00_FUEL_PUMPS_AND_VALVES/)
-  - [`28-40 - SAF Interface`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-40-00_SAF_INTERFACE_SYSTEM/)
-  - [`28-50 - CO₂ Battery`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_28-FUEL_SAF_AND_CRYOGENIC/28-50-00_CO2_BATTERY_LOOP/)
-- [`ATA 21-80 - CO₂ CAPTURE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/C2-CIRCULAR_CRYOGENIC_SYSTEMS/ATA_21-80-CO2_CAPTURE_AND_PROCESSING/) 🌍 **UNIQUE**
-
-#### I2 - I+D (Research & Development)
-- [`ATA 40 - AI INTEGRATION`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-ID/ATA_40-AI_INTEGRATION/)
-- [`ATA 42-55 - POWERTRAIN`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-ID/ATA_42-55-POWERTRAIN_ENERGY_ORCHESTRATION/)
-- [`ATA 42-60 - QUANTUM SCHEDULER`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-ID/ATA_42-60-QUANTUM_INSPIRED_SCHEDULER/)
-- [`ATA 48 - IN-FLIGHT MAINTENANCE`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-ID/ATA_48-IN_FLIGHT_MAINTENANCE/)
-- [`ATA 92 - MODEL BASED MAINT`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/I2-ID/ATA_92-MODEL_BASED_MAINTENANCE/)
-
-#### A2 - AERODYNAMICS
-- [`ATA 27 - FLIGHT CONTROLS AERO`](OPT-IN_FRAMEWORK/T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A2-AERODYNAMICS/ATA_27-FLIGHT_CONTROLS_AERODYNAMIC_MANIPULATION/)
-
-### I - INFRASTRUCTURES
-- [`ATA 02 - OPERATIONS INFO`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/)
-  - [`02-00-00 GENERAL / 04_DESIGN`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-00-00_GENERAL/04_DESIGN/) ⭐ **COMPLETE OPERATIONS DESIGN**
-    - Operations Concept Design
-    - Procedures Design Philosophy
-    - Checklist Design Standards
-    - Flight Deck Operations Design
-    - Ground Operations Design (H₂ refueling)
-    - Emergency Procedures Design
-    - CAOS Integration Design
-  - [`02-20-02 AIRCRAFT DIMENSIONS GEOMETRY / 03_REQUIREMENTS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/02-20-00_SYSTEMS/02-20-02_AIRCRAFT_DIMENSIONS_GEOMETRY/03_REQUIREMENTS/) ⭐ **47 REQUIREMENTS COMPLETE**
-    - 6 Dimensional Requirements (Wingspan, Length, Height, Wing Area, ICAO Code E, Tolerances)
-    - 7 BWB Geometry Requirements (Center Body, Aspect Ratio, Sweep, Continuity, Cross-Section, Thickness)
-    - 6 Ground Clearance Requirements (Wingtip, Belly, Tail, Engine Intake, Attitude Limits, Pavement)
-    - 6 Reference System Requirements (Body Axis, Station, Waterline, Buttline, Datum, Measurement Standards)
-    - 6 Airport Compatibility Requirements (Taxiway, Turning Radius, Gate, Runway, Pavement Strength, Parking)
-    - 5 Tolerance Requirements (Manufacturing, Assembly, Deflections, Thermal Expansion, Measurement Accuracy)
-    - Human-Machine Interface Design
-    - Crew Workload Analysis (NASA-TLX)
-    - Documentation Design Standards ([S1000D](http://www.s1000d.org/), [ATA iSpec 2200](https://www.ata.org/resources/specifications))
-    - Training Program Design
-    - Safety By Design Operations
-- [`ATA 03 - SUPPORT/GSE`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_03-SUPPORT_INFORMATION_GSE/)
-- [`ATA 10 - PARKING/STORAGE`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-PARKING_MOORING_STORAGE_RTS/)
-- [`ATA 13 - HARDWARE/TOOLS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_13-HARDWARE_AND_GENERAL_TOOLS/)
-- [`ATA 85-90 - INTERFACE STANDARDS`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_85-90-INFRASTRUCTURE_INTERFACE_STANDARDS/)
-- [`ATA 115 - FLIGHT SIMULATOR`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_115-FLIGHT_SIMULATOR_SYSTEMS/)
-- [`ATA 116 - SIM CUING`](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_116-FLIGHT_SIMULATOR_CUING_SYSTEM/)
-
-### N - NEURAL NETWORKS, USERS, TRACEABILITY
-- [`N-AXIS OVERVIEW`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/)
-- [`ATA 95 - NEURAL NETWORKS & DIGITAL PASSPORT`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95_NEURAL_NETWORKS/) 📱 **NN SAFETY & REQUIREMENTS**
-  - [`95-00-00 GENERAL / 02_SAFETY`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95_NEURAL_NETWORKS/95-00-00_GENERAL/02_SAFETY/) ⭐ **SAFETY FRAMEWORK**
-    - ─ [`FTA_Templates/`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95_NEURAL_NETWORKS/95-00-00_GENERAL/02_SAFETY/ASSETS/FTA_Templates/)
-                        ├── README.md
-                        ├── 95-00-02-A004_FTA_Template_Generic_NN.xlsx
-                        ├── 95-00-02-A005_FTA_Template_Flight_Control_NN.xlsx
-                        ├── 95-00-02-A006_FTA_Template_Collision_Avoidance_NN.xlsx
-                        └── 95-00-02-A007_FTA_Template_Propulsion_NN.xlsx
-  - [`95-00-00 GENERAL / 03_REQUIREMENTS`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_95-DIGITAL_PRODUCT_PASSPORT_NEURAL_NETWORKS/95-00_GENERAL/95-00-03_Requirements/) 🆕 **REQUIREMENTS FRAMEWORK**
-    - **One file per requirement** for granular version control
-    - **7 category folders**: Functional, NonFunctional, Safety/AAI, Regulatory, Data/Metadata, Toolchain, Governance
-    - **46 requirements planned** (16 detailed samples created)
-    - **ID ranges by category**: 001-099 (Functional), 100-199 (NonFunctional), 200-299 (Safety), etc.
-    - **INDEX folder** with overview, CSV list, and RTM documentation
-    - **ASSETS folder** for diagrams and reference materials
-- [`ATA 40 - AI/CAOS COGNITIVE OPS`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_40-AI_INTEGRATION/)
-- [`ATA 92 - CAOS-ENABLED MAINTENANCE`](OPT-IN_FRAMEWORK/N-NEURAL_NETWORKS_USERS_TRACEABILITY/ATA_92-MODEL_BASED_MAINTENANCE/)
-
-</details>
+| Standard | Application |
+|----------|-------------|
+| **EASA CS-25 / FAA Part 25** | Airworthiness requirements framing |
+| **ATA iSpec 2200** | Chapter/section/subject scaffolding for system breakdown |
+| **S1000D (+ project BREX)** | Technical publications CSDB (DM/PM/DML/ICN/APPLICABILITY) |
+| **DO-178C** | Software considerations in airborne systems |
+| **DO-254** | Hardware design assurance |
+| **DO-160** | Environmental qualification |
+| **ISO 15926** | Industrial data standards |
 
 ---
 
-## 📊 Documentation Progress by Axis
+## Key Documentation
 
-| Axis | Chapters | Completion | Status |
-|:----:|:--------:|:----------:|:------:|
-| **I** - Infrastructures | 7 chapters | 45% | 🔄 Active |
-| **N** - Neural Networks | 1 chapter | 60% | 🔄 Active |
-| **O** - Organization | 4 chapters | 30% | 📋 Planned |
-| **P** - Program | 5 chapters | 25% | 📋 Planned |
-| **T** - Technology | 60+ chapters | 35% | 🔄 Active |
-| **Overall Project** | **~80 chapters** | **40%** | 🚀 **On Track** |
-
-## 🎯 Critical Technical Achievements & Challenges
-
-### ✅ **Completed Milestones**
-
-| **Operations Manual 75%** | Flight procedures defined | [ATA 02](OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_02-OPERATIONS_INFORMATION/) |
-
-### 🔍 **Active Challenges**
-
-| Challenge | Status | Risk | Mitigation | Investment Needed |
-|-----------|--------|------|------------|-------------------|
-| **Mode 1 Resonance (25Hz)** | 🔴 Critical | High | Enhanced damping, GVT validation | $150k FEA + $350k GVT |
-| **H₂ Tank Certification** | 🟡 Active | Medium | EASA engagement, test campaign | $200k testing |
-| **BWB Certification Precedent** | 🟡 Planning | Medium | Early authority collaboration | $100k regulatory |
-| **CO₂ Capture Weight** | 🟢 Designed | Low | Solid-state optimization | $50k prototype |
-
-**Total Phase 2 Investment Needed: $850k** to reach prototype validation
+| Document | Description |
+|----------|-------------|
+| [OPT-IN Framework Standard](./OPT-IN_FRAMEWORK_STANDARD.md) | Complete framework specification |
+| [Documentation Standard](./AMPEL360_DOCUMENTATION_STANDARD.md) | Formatting and structure guidelines |
+| [AI→ASI Transition Proposal](./AI-ASI-TP.md) | AI→ASI transition roadmap:  governance, assurance, and certification-grade adoption across SSOT+PUB |
+| [Digital Twin Control Loop](./DIGITAL_TWIN_CONTROL_LOOP. md) | Digital twin architecture and data flows |
+| [CAOS Index](./CAOS/CAOS_INDEX.md) | Continuous Airworthiness for Operational Sustainment |
+| [CAOS Architecture](./CAOS/CAOS_ARCHITECTURE.md) | CAOS system architecture |
+| [CAOS Operations Framework](./CAOS/CAOS_OPERATIONS_FRAMEWORK.md) | CAOS operational playbook |
 
 ---
 
-## 💰 Investment Opportunity
+## Contributing
 
-### 📊 Market Opportunity
+1. **Fork** the repository
+2. **Setup hooks**:  `bash .github/hooks/setup-hooks.sh`
+3. **Follow** the SSOT + PUB pattern and OPT-IN structure
+4. **Validate**: `python tools/ci/optin_structure_validator.py --check`
+5. **Submit** a pull request
 
-- **$450B** Total Addressable Market by 2040 (zero-emission aviation)
-- **$85B** Serviceable Market by 2035 (regional hydrogen aircraft)
-- **First Mover** advantage in carbon-negative flight
-- **IP Portfolio** including CAOS system (separately licensable)
+### Contribution Rules
 
-### 💵 Funding Stages
-
-<table>
-<tr>
-<th>Phase</th>
-<th>Amount</th>
-<th>Use of Funds</th>
-<th>Milestones</th>
-<th>Timeline</th>
-</tr>
-<tr>
-<td><strong>Phase 2A</strong><br/>(Current)</td>
-<td><strong>$850k</strong></td>
-<td>
-• FEA validation ($150k)<br/>
-• GVT testing ($350k)<br/>
-• H₂ tank testing ($200k)<br/>
-• Regulatory prep ($100k)<br/>
-• Team expansion ($50k)
-</td>
-<td>
-✅ Design validated<br/>
-✅ Resonance resolved<br/>
-✅ Regulatory path clear
-</td>
-<td><strong>6 months</strong></td>
-</tr>
-<tr>
-<td><strong>Phase 2B</strong></td>
-<td><strong>$4M</strong></td>
-<td>
-• Full-scale prototype<br/>
-• Systems integration<br/>
-• Ground testing<br/>
-• Facilities
-</td>
-<td>
-✅ Flying prototype<br/>
-✅ Systems validated<br/>
-✅ Flight test ready
-</td>
-<td><strong>18 months</strong></td>
-</tr>
-<tr>
-<td><strong>Phase 3</strong><br/>(Series A)</td>
-<td><strong>$25M</strong></td>
-<td>
-• Flight test campaign<br/>
-• Certification process<br/>
-• Pre-production setup<br/>
-• Launch customer
-</td>
-<td>
-✅ Type Certificate<br/>
-✅ First flight<br/>
-✅ Entry into service
-</td>
-<td><strong>36 months</strong></td>
-</tr>
-</table>
-
-### 🎯 Investor Value Proposition
-
-✅ **Revolutionary Technology**: 3 patent-pending innovations  
-✅ **Proven Team**: 73% documentation complete shows execution capability  
-✅ **Market Timing**: Aviation industry committed to 2050 net-zero  
-✅ **Multiple Revenue Streams**: Aircraft sales + CAOS licensing + H₂ infrastructure  
-✅ **Government Support**: Aligned with EU Green Deal, US IRA incentives  
-
-📧 **[Request Investment Deck](mailto:amedeo.pelliccia@ampel360.aero?subject=Investment%20Inquiry)**
+| Rule | Guidance |
+|------|----------|
+| **Narrative docs** | Use Markdown (`.md`) — not `.pdf`, `.docx` |
+| **Matrices/logs** | Use CSV (`.csv`) — not `.xlsx` |
+| **Graphics** | Prefer SVG for illustrations (ICN) |
+| **S1000D content** | Keep XML/BREX compliant under `PUB/**/CSDB/**` |
+| **References** | Ensure DM ↔ ICN ↔ PM ↔ DML ↔ APPLICABILITY resolve correctly |
+| **Safety-critical** | Include DO-178C compliance tags where applicable |
 
 ---
 
-## 🤝 Get Involved
+## License
 
-### 👨‍💼 **For Investors**
-- 📈 **ROI Potential**: First-mover in $450B market
-- 💼 **Strategic Partnerships**: Seeking H₂ infrastructure partners
-- 🌍 **Impact Investment**: ESG-aligned, carbon-negative technology
-
-➡️ **[Schedule a Call](mailto:amedeo.pelliccia@ampel360.aero?subject=Investment%20Meeting)**
+Apache 2.0 — see [LICENSE](./LICENSE).
 
 ---
 
-### 👨‍🔬 **For Engineers & Researchers**
+## Acknowledgments
 
-We're actively recruiting:
-
-| Role | Focus | Requirements |
-|------|-------|-------------|
-| **Senior FEA Engineer** | Structural dynamics, resonance | ANSYS/NASTRAN, composites |
-| **H₂ Systems Engineer** | Cryogenic storage, safety | Aerospace fluids, ISO 19881 |
-| **AI/ML Engineer** | CAOS development | Python, TensorFlow, aviation domain |
-| **Flight Test Engineer** | Certification testing | DO-178C, test campaign management |
-| **Certification Specialist** | EASA/FAA compliance | CS-25, novel aircraft experience |
-
-➡️ **[View Open Positions](mailto:careers@ampel360.aero?subject=Engineering%20Position%20Inquiry)**
+- **Concept & Direction**:  Amedeo Pelliccia
+- **AI Assistance**: GitHub Copilot (documentation generation)
+- **Framework Design**: OPT-IN Framework
 
 ---
 
-### 🏭 **For Industry Partners**
+<p align="center">
+  <strong>AMPEL360 Q100</strong> — Digital engineering, traceability, and publication-grade CSDB for sustainable aviation. 
+</p>
 
-**Seeking collaborations in:**
-- ⚡ Fuel cell manufacturers (PEM, 2.5 MW class)
-- 🧊 Cryogenic tank suppliers (composite, vacuum-insulated)
-- 🔋 Battery systems (CO₂ capture integration)
-- ✈️ Launch customers (airlines, cargo operators)
-- 🏗️ Manufacturing partners (composite BWB structures)
-
-➡️ **[Partnership Inquiry](mailto:partnerships@ampel360.aero?subject=Industry%20Partnership)**
-
----
-
-### 🎓 **For Academic Institutions**
-
-**Research collaboration opportunities:**
-- BWB aerodynamics optimization
-- H₂ safety protocols
-- CO₂ solid-state battery chemistry
-- AI-driven predictive maintenance
-- Composite manufacturing processes
-
-➡️ **[Research Collaboration](mailto:research@ampel360.aero?subject=Academic%20Collaboration)**
-
----
-
-## 📈 Recent Updates
-
-<details>
-<summary><b>📅 November 2025 Progress</b></summary>
-
-### ✅ **Completed This Month**
-- ✨ **ATA 02 COMPLETE RESTRUCTURING** per AMPEL360_DOCUMENTATION_STANDARD v1.4
-  - ✅ Reorganized into standard origin blocks: GENERAL / SYSTEMS / PROGRAMMING_ALGORITHMS / STRUCTURES / PROPULSION / TABLES_SCHEMAS_DIAGRAMS
-  - ✅ 02-00-00_GENERAL: 14-folder skeleton structure maintained
-  - ✅ 02-20-00_SYSTEMS: 69 functional operations systems organized
-  - ✅ 02-40-00_PROGRAMMING_ALGORITHMS: 13 CAOS/AI systems consolidated
-  - ✅ 02-50-00_STRUCTURES: 7 infrastructure/GSE systems organized
-  - ✅ 02-70-00_PROPULSION: 10 H₂ fuel operations systems consolidated
-  - ✅ 02-90-00_TABLES_SCHEMAS_DIAGRAMS: Reference data and schemas organized
-  - ✅ Created comprehensive README documentation for each origin block
-  - ✅ Updated main repository README with new structure
-- 📖 Established design-driven structure for concrete systems
-- 🔗 Clarified traceability through metadata and RTM approach
-
-### 🔄 **In Progress**
-- Content validation within new structure
-- Cross-reference verification
-- Documentation quality checks
-- Training material updates
-
-### 📅 **Next Month Focus**
-- Validate restructured content integrity
-- Update cross-references in other ATA chapters
-- Ensure all stakeholders understand new structure
-- Apply standard to additional ATA chapters
-
-</details>
-
----
-
-## 🏆 Why AMPEL360 Will Succeed
-
-### ✅ **Technical Superiority**
-- **30% better aerodynamics** (BWB vs conventional)
-- **68% fuel efficiency gain** (H₂ vs Jet-A)
-- **Net carbon-negative** (only aircraft in development)
-- **25% lower maintenance** (CAOS predictive system)
-
-### ✅ **Documentation Excellence**
-- **73% complete** comprehensive ATA documentation
-- **14-folder SKELETON** ensures nothing overlooked
-- **S1000D compliant** technical publications
-- **Digital twin** from day one
-
-### ✅ **Market Position**
-- **First mover** in carbon-negative aviation
-- **Patent portfolio** protecting key innovations
-- **Government alignment** with climate goals
-- **Scalable** manufacturing approach
-
-### ✅ **Team Execution**
-- **Systematic approach** proven by documentation quality
-- **Industry standards** (ATA, S1000D, EASA/FAA)
-- **AI integration** throughout lifecycle
-- **Transparent** progress tracking
-
----
-
-## 📜 License & IP
-
-**Proprietary Information** - This project contains:
-- 🔒 **Patent-Pending**: CAOS system, H₂-BWB integration, CO₂ capture
-- 📚 **Trade Secrets**: BWB manufacturing processes, AI algorithms
-- ⚖️ **Open Source Potential**: Framework methodology, documentation standards
-
-See [LICENSE](LICENSE) for complete terms.
-
----
-
-## 🙏 Acknowledgments
-
-This project stands on the shoulders of:
-- The **open-source aerospace community** for foundational knowledge
-- **Early advisors** who shaped our technical approach
-- **Domain experts** who validated our assumptions
-- **Future generations** who deserve sustainable aviation
-
----
-
-<div align="center">
-
-## 🌍 Building the Future of Flight
-
-**Aviation contributed 2.5% of global CO₂ in 2019.  
-AMPEL360 will make aviation carbon-negative by 2035.**
+<p align="center">
+  <em>By Amedeo Pelliccia • AI-Assisted Development</em>
+</p>
 
 
----
+  <i>Last AI update: Added S1000D DML breakdown for ATA 31-00-00 - 2026-01-10</i>
+</p>
 
-### 🔗 **Follow Our Journey**
-
-[![Website](https://img.shields.io/badge/Website-ampel360.aero-blue?style=for-the-badge&logo=google-chrome)](https://ampel360.aero)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-AMPEL360-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/company/ampel360)
-[![Twitter](https://img.shields.io/badge/Twitter-@AMPEL360-1DA1F2?style=for-the-badge&logo=twitter)](https://twitter.com/ampel360)
-[![GitHub](https://img.shields.io/badge/GitHub-Documentation-181717?style=for-the-badge&logo=github)](https://github.com/Robbbo-T/AMPEL360-XWLRGA)
-
----
-
-### 💡 **"The best time to invent the future was yesterday. The second best time is now."**
-
----
-
-**© 2024-2025 AMPEL360 Project | All Rights Reserved**
-
-[⬆️ Back to Top](#ampel360-bwb-h-hy-e-q100-integra)
-
-</div>
 

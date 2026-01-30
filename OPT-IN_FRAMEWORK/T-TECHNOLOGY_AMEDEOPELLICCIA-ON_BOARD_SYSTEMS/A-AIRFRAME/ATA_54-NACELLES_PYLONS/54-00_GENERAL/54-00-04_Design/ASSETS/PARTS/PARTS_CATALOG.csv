@@ -1,0 +1,16 @@
+Part_ID,Title,Type,Parent_Assembly,Material,Mass_kg,Status,Owner,Operating_Temp_Max_C,Lead_Time_Weeks,Critical_Part
+54-00-04-P001,Nacelle Inlet Lip,Structural,54-00-04-A001,CFRP-Epoxy,12.5,Draft,Nacelle Structures,120,12,Yes
+54-00-04-P002,Fan Cowl Forward Panel,Structural,54-00-04-A001,CFRP-Epoxy,18.5,Draft,Nacelle Structures,110,14,Yes
+54-00-04-P003,Fan Cowl Aft Panel,Structural,54-00-04-A001,CFRP-Epoxy,21.0,Draft,Nacelle Structures,130,14,Yes
+54-00-04-P004,Core Cowl Panel,Structural,54-00-04-A001,CFRP-Epoxy,16.5,Draft,Nacelle Structures,350,16,Yes
+54-00-04-P005,Nacelle Structural Frame,Structural,54-00-04-A001,Ti-6Al-4V,9.5,Draft,Nacelle Structures,200,10,Yes
+54-00-04-P006,Pylon Forward Spar,Structural,54-00-04-A002,CFRP-Epoxy,45.0,Draft,Pylon Structures,120,18,Yes
+54-00-04-P007,Pylon Aft Spar,Structural,54-00-04-A002,CFRP-Epoxy,38.5,Draft,Pylon Structures,130,18,Yes
+54-00-04-P008,Pylon Wing Attachment Fitting,Fitting,54-00-04-A002,Steel 15-5PH,8.5,Draft,Pylon Structures,150,20,Yes
+54-00-04-P009,Engine Mount Forward Fitting,Fitting,54-00-04-A005,Ti-10V-2Fe-3Al,6.8,Draft,Engine Interface,250,22,Yes
+54-00-04-P010,Engine Mount Aft Fitting,Fitting,54-00-04-A005,Ti-10V-2Fe-3Al,5.9,Draft,Engine Interface,300,22,Yes
+54-00-04-P011,Nacelle-Pylon Interface Bracket,Fitting,54-00-04-A003,Ti-6Al-4V,1.8,Draft,Nacelle Structures,180,8,No
+54-00-04-P012,Thrust Reverser Blocker Door,Movable,54-00-04-A004,CFRP-Epoxy,14.5,Draft,Thrust Reverser Systems,220,16,Yes
+54-00-04-P013,TR Actuation Link,Movable,54-00-04-A004,Ti-6Al-4V,1.2,Draft,Thrust Reverser Systems,150,10,Yes
+54-00-04-P014,Access Panel - Fan Cowl,Secondary,54-00-04-A001,Al 7075-T73,1.8,Draft,Nacelle Structures,100,4,No
+54-00-04-P015,Fastener - Hi-Lok HL11,Hardware,All,Steel,0.015,Draft,Hardware Standards,250,2,No

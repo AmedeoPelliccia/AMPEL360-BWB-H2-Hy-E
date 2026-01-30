@@ -1,0 +1,13 @@
+# Boiloff API spec
+# Generic template - No proprietary data
+
+name: Boiloff API spec
+version: "1.0"
+status: DRAFT
+date: 2025-11-21
+
+description: >
+  This is a template specification for Boiloff API spec.
+  No proprietary or confidential data included.
+
+# TODO: Add technical specification

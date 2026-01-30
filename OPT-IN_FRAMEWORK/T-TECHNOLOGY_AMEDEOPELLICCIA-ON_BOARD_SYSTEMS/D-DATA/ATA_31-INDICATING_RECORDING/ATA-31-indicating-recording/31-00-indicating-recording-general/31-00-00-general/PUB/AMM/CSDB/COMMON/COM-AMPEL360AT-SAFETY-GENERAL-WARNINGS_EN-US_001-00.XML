@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!--
+  Common Information: COM-AMPEL360AT-SAFETY-GENERAL-WARNINGS
+  Type: Safety Warnings
+  Description: General safety warnings for indicating and recording systems
+  
+  S1000D Metadata:
+  - Model Identification Code: AMPEL360AT
+  - Type: SAFETY
+  - Subtype: GENERAL-WARNINGS
+  - Language: EN-US
+  - Issue: 001-00
+  
+  Referenced By Data Modules:
+  - DMC-...-040A (Description and Operation)
+  - DMC-...-520A (Maintenance Tasks)
+  - DMC-...-520B (Maintenance Tasks)
+  - DMC-...-730A (Fault Isolation)
+  - DMC-...-940A (Software/Configuration)
+  
+  Document Control:
+  - Standard: S1000D Issue 5.0
+  - Project: AMPEL360-AIR-T
+  - ATA Chapter: 31 (Indicating & Recording)
+  - Created: 2026-01-10
+  - Author: AMPEL360-AIR-T Project
+-->
+<commonRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/comrep.xsd">
+  <commonRepositoryIdent>
+    <commonRepositoryCode modelIdentCode="AMPEL360AT" commonRepositoryType="warning" commonRepositoryNumber="00001"/>
+    <issueInfo issueNumber="001" inWork="00"/>
+    <language languageIsoCode="en" countryIsoCode="US"/>
+  </commonRepositoryIdent>
+  <commonRepositoryStatus>
+    <security securityClassification="01"/>
+    <responsiblePartnerCompany>
+      <enterpriseName>AMPEL360-AIR-T Project</enterpriseName>
+    </responsiblePartnerCompany>
+    <originator>
+      <enterpriseName>Amedeo Pelliccia</enterpriseName>
+    </originator>
+    <issueDate year="2026" month="01" day="10"/>
+  </commonRepositoryStatus>
+  <commonRepositoryContent>
+    <warningRepository>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W001"/>
+        <warningTitle>Critical Flight Instruments</warningTitle>
+        <warningContent>
+          <para>Flight-critical indication systems must be operational before takeoff. Operating aircraft with inoperative flight instruments may result in spatial disorientation, loss of situational awareness, and catastrophic failure.</para>
+          <para>Verify all primary flight displays, standby instruments, and backup systems are functional before flight.</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W002"/>
+        <warningTitle>Recording System Integrity</warningTitle>
+        <warningContent>
+          <para>Do not operate aircraft with inoperative flight data recorders (FDR) or cockpit voice recorders (CVR) unless authorized by regulatory authority and MEL.</para>
+          <para>Recording systems are required for accident investigation and safety analysis. Failure to maintain these systems may violate regulatory requirements.</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W003"/>
+        <warningTitle>Master Caution and Warning Systems</warningTitle>
+        <warningContent>
+          <para>Master caution and warning systems must annunciate properly. Failure to respond to caution/warning indications may result in system failure, fire, structural damage, or loss of aircraft.</para>
+          <para>Test all caution and warning lights during preflight inspection. Any malfunctions must be corrected before flight.</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W004"/>
+        <warningTitle>Display System Brightness</warningTitle>
+        <warningContent>
+          <para>Ensure display brightness is adjusted appropriately for ambient lighting conditions. Displays set too dim may be unreadable in bright sunlight. Displays set too bright may cause crew discomfort and fatigue.</para>
+          <para>Adjust display brightness before takeoff and as needed during flight operations.</para>
+        </warningContent>
+      </warningSpec>
+      <warningSpec>
+        <warningIdent warningIdentNumber="W005"/>
+        <warningTitle>Alert Priority System</warningTitle>
+        <warningContent>
+          <para>Do not disable or override alert priority systems without proper authorization. The alert priority system ensures critical warnings are presented to crew in the correct order.</para>
+          <para>Improper alert prioritization may result in crew missing critical system failures.</para>
+        </warningContent>
+      </warningSpec>
+    </warningRepository>
+  </commonRepositoryContent>
+</commonRepository>

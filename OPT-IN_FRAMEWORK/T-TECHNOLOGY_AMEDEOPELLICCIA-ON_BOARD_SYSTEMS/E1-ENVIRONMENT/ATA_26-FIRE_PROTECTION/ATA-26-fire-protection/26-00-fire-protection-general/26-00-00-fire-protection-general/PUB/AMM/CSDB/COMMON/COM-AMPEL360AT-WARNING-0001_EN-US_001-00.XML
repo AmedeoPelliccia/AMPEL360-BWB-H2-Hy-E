@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!-- Common Warning Information Set -->
+
+<commonInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <commonInfoIdent>
+    <commonInfoCode>WARNING-0001</commonInfoCode>
+    <commonInfoType>warning</commonInfoType>
+  </commonInfoIdent>
+  
+  <warningAndCautionInfo>
+    <warning>
+      <warningIdent>WARN-FIRE-SYSTEM-001</warningIdent>
+      <warningText>
+        <para>Fire protection system must be operational before flight.</para>
+        <para>Operating aircraft with inoperative fire protection system may result in
+              catastrophic fire damage and loss of aircraft.</para>
+      </warningText>
+    </warning>
+  </warningAndCautionInfo>
+</commonInfo>

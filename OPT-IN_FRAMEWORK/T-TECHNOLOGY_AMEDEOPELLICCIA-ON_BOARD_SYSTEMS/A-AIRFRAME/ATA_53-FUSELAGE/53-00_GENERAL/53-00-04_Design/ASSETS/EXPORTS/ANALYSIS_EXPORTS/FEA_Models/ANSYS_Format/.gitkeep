@@ -1,0 +1,43 @@
+# ANSYS FEA Model Exports
+
+This folder contains **ANSYS-format FEA models** for ATA 53-00-04 (Design).
+
+## Naming convention
+
+Files MUST follow:
+
+`53-00-04-ANLS-01x_RevX_*`
+
+- `53-00-04` – ATA / design section identifier.
+- `ANLS` – Analysis artifact.
+- `01x` – FEA model code **(see mapping below)**.
+- `RevX` – Model revision (e.g. `RevA`, `RevB`, or `Rev01`).
+- `*` – Suffix describing content and/or format (e.g. `_Model.db`, `_Setup.wbpj`, `_Results.rst`).
+
+### Example
+
+- `53-00-04-ANLS-010_RevA_Model.db`
+- `53-00-04-ANLS-010_RevA_Setup.wbpj`
+- `53-00-04-ANLS-011_RevB_Model.db`
+
+## 01x Code Mapping (example – adapt to your convention)
+
+- `010` – Global fuselage FEA model.
+- `011` – Door surround local model.
+- `012` – Frame + skin local model.
+
+Extend this list as needed and keep it in sync with your overall analysis coding scheme.
+
+## Recommended file set per FEA model
+
+For each `01x` and revision `RevX`, the recommended ANSYS files are:
+
+- Primary model:
+  - `53-00-04-ANLS-01x_RevX_Model.db`
+- Optional:
+  - `53-00-04-ANLS-01x_RevX_Setup.wbpj`
+  - `53-00-04-ANLS-01x_RevX_Materials.xml`
+  - `53-00-04-ANLS-01x_RevX_BC.xml`
+  - `53-00-04-ANLS-01x_RevX_Results.rst` *(if tracked under Git LFS or referenced here)*
+
+The **model database** (`.db`) and **workbench project** (`.wbpj`) are the authoritative, version-controlled artifacts in this folder.

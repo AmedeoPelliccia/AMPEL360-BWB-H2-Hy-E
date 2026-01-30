@@ -1,0 +1,21 @@
+Equipment_ID,Equipment_Name,ATA_Chapter,System_Category,Manufacturer,Model,Capacity,Power_Rating_kW,Voltage_V,Location,Status,Certification_Ref,Notes
+EQ-85-001,H2 Refueling Dispenser,85-10,H2 Ground Operations,TBD,TBD,1000 kg/h,50,400V 3-phase,Apron Station A1,Active,CS-25.1309,Primary H2 fueling interface
+EQ-85-002,Electrical Ground Power Unit,85-80,Energy Distribution,TBD,TBD,400 kVA,400,115/230V AC,Apron Station A1,Active,DO-160G,Main ground power supply
+EQ-85-003,H2 Storage Tank (Ground),85-60,H2 Storage,TBD,TBD,10000 kg,N/A,N/A,H2 Farm Zone 1,Active,EN 13458,Cryogenic LH2 storage
+EQ-85-004,Air Start Unit,85-80,Starting Systems,TBD,TBD,1.5 kg/s,150,400V 3-phase,Apron Station A1,Active,ISO 6858,Engine starting compressed air
+EQ-85-005,Hydraulic Test Cart,85-50,Hydraulic Support,TBD,TBD,5000 psi,75,400V 3-phase,Maintenance Hangar,Active,ARP 1899,Ground hydraulic service
+EQ-85-006,Pre-Conditioned Air Unit,85-10,Ground HVAC,TBD,TBD,200 kg/min,250,400V 3-phase,Apron Station A2,Active,SAE AS 4073,Cabin pre-conditioning
+EQ-85-007,Nitrogen Service Cart,85-30,Gases Supply,TBD,TBD,300 bar,30,230V AC,Maintenance Area,Active,ISO 9809,Landing gear nitrogen service
+EQ-85-008,Potable Water Service Truck,85-10,Water Services,TBD,TBD,1000 L,15,24V DC,Turnaround Zone,Active,NSF/ANSI 61,Potable water supply
+EQ-85-009,Waste Water Service Truck,85-10,Waste Services,TBD,TBD,1200 L,20,24V DC,Turnaround Zone,Active,EPA Standards,Lavatory waste removal
+EQ-85-010,Fire Suppression System,85-20,Safety Systems,TBD,TBD,10000 L foam,200,400V 3-phase,H2 Farm Zone 1,Active,NFPA 409,H2 facility fire protection
+EQ-85-011,H2 Vaporizer Unit,85-60,H2 Conditioning,TBD,TBD,500 kg/h,300,400V 3-phase,H2 Farm Zone 1,Active,ASME B31.3,LH2 to GH2 conversion
+EQ-85-012,Compressor Station,85-80,Compressed Air,TBD,TBD,300 m³/h,450,400V 3-phase,Utility Building,Active,ISO 8573,Instrument air supply
+EQ-85-013,De-Icing Fluid Truck,85-30,De-Icing Services,TBD,TBD,4000 L,50,24V DC,De-Ice Pad,Active,SAE AS 5900,Type I/IV de-icing fluids
+EQ-85-014,Battery Charging Station,85-80,Energy Storage,TBD,TBD,500 kWh,250,400V 3-phase,Electrical Building,Active,UL 9540,Energy storage system
+EQ-85-015,Oxygen Service Cart,85-30,Gases Supply,TBD,TBD,200 bar,20,230V AC,Maintenance Area,Active,FAA AC 00-34A,Emergency oxygen service
+EQ-85-016,Fuel Quality Test Kit,85-70,Fuel Quality Control,TBD,TBD,N/A,5,230V AC,Fuel Lab,Active,ASTM D4814,Fuel sampling and testing
+EQ-85-017,Tow Tractor,85-10,Ground Handling,TBD,TBD,150 kN DBP,200,Electric,Apron Area,Active,SAE AS 755,Aircraft towing vehicle
+EQ-85-018,Passenger Boarding Bridge,85-10,Passenger Services,TBD,TBD,N/A,50,400V 3-phase,Gate A1,Active,ISO 16004,Automated jetway
+EQ-85-019,Baggage Loader,85-10,Cargo Services,TBD,TBD,3000 kg,75,Electric,Apron Station A1,Active,ISO 8097,Container loading system
+EQ-85-020,H2 Leak Detection System,85-20,Safety Monitoring,TBD,TBD,N/A,10,230V AC,H2 Farm Zone 1,Active,IEC 60079-29-1,H2 gas sensors array

@@ -1,0 +1,11 @@
+Component,Type,Surface_Area_m2,Insulation_Type,Vacuum_Quality_mbar,Heat_Ingress_W_per_m2,Total_Heat_Ingress_W,Boil_Off_Rate_kg_per_day,Design_Boil_Off_percent,Ambient_Temp_C,Notes
+LH2_Tank_50000L,Cryogenic_Vessel,45,MLI_Vacuum,1.0E-04,0.4,18,3.5,0.25,20,Well-designed MLI with good vacuum
+LH2_Tank_150000L,Cryogenic_Vessel,95,Perlite_Vacuum,5.0E-04,0.5,47.5,9.2,0.30,20,Perlite insulation slightly higher heat ingress
+LH2_Tank_500000L,Cryogenic_Vessel,210,MLI_Vacuum,5.0E-05,0.3,63,12.2,0.20,20,Excellent insulation performance (larger tank better ratio)
+Transfer_Line_Vacuum_Insulated,Piping,2.5,MLI_Vacuum,1.0E-04,5,12.5,2.4,N/A,20,Per meter of transfer line (100m total = 240 W)
+Vaporizer_AAV,Heat_Exchanger,24,None,N/A,10000,240000,N/A,N/A,15,Heat transfer from ambient air to LH2 (capacity 200 kg/h)
+Vaporizer_Electric,Heat_Exchanger,1.5,Foam_Insulation,N/A,N/A,240000,N/A,N/A,20,Electric heating elements 240 kW capacity
+Compressor_Intercooler_Stage1,Heat_Exchanger,3,None,N/A,-25000,-75000,N/A,N/A,20,Remove compression heat (negative = heat removal)
+Compressor_Intercooler_Stage2,Heat_Exchanger,3.5,None,N/A,-30000,-105000,N/A,N/A,20,Remove compression heat stage 2
+Compressor_Intercooler_Stage3,Heat_Exchanger,4,None,N/A,-35000,-140000,N/A,N/A,20,Remove compression heat stage 3
+Compressor_Aftercooler,Heat_Exchanger,5,None,N/A,-40000,-200000,N/A,N/A,20,Final cooling before GH2 storage

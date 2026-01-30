@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- 
+  ATA 29 Architecture Diagram - Main, Auxiliary, Indicating
+  Placeholder for architecture diagram showing main, auxiliary, and indicating system relationships.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 14px; fill: #666; }
+      .box { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+      .box-aux { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .box-ind { fill: #e8f5e9; stroke: #388e3c; stroke-width: 2; }
+      .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <text x="400" y="40" text-anchor="middle" class="title">ATA 29 Architecture - Main/Auxiliary/Indicating</text>
+  <text x="400" y="60" text-anchor="middle" class="subtitle">AMPEL360AT - System Architecture Overview</text>
+  
+  <!-- Main System Box -->
+  <rect x="50" y="150" width="200" height="150" class="box" rx="10"/>
+  <text x="150" y="225" text-anchor="middle" class="label">29-10 MAIN</text>
+  <text x="150" y="245" text-anchor="middle" class="label">Hydraulic Power</text>
+  
+  <!-- Auxiliary System Box -->
+  <rect x="300" y="150" width="200" height="150" class="box-aux" rx="10"/>
+  <text x="400" y="225" text-anchor="middle" class="label">29-20 AUXILIARY</text>
+  <text x="400" y="245" text-anchor="middle" class="label">Backup Systems</text>
+  
+  <!-- Indicating System Box -->
+  <rect x="550" y="150" width="200" height="150" class="box-ind" rx="10"/>
+  <text x="650" y="225" text-anchor="middle" class="label">29-30 INDICATING</text>
+  <text x="650" y="245" text-anchor="middle" class="label">Monitoring/BITE</text>
+  
+  <!-- Placeholder note -->
+  <text x="400" y="550" text-anchor="middle" class="subtitle">Placeholder - To be replaced with detailed architecture diagram</text>
+</svg>

@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.com/schemas/drawing.schema.json",
+  "title": "AMPEL360 Drawing Metadata",
+  "description": "Schema for drawing metadata and references",
+  "type": "object",
+  "required": ["drawing_number", "title", "format", "status"],
+  "properties": {
+    "drawing_number": {
+      "type": "string",
+      "pattern": "^Q100-10-[0-9]{3}-[0-9]{3}-DWG-[0-9]{3}$",
+      "description": "Drawing number following Q100 convention"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "Drawing title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed drawing description"
+    },
+    "assembly_id": {
+      "type": "string",
+      "pattern": "^ASM-10-[0-9]{3}$",
+      "description": "Parent assembly identifier"
+    },
+    "format": {
+      "type": "string",
+      "enum": ["SVG", "PDF", "DWG", "DXF"],
+      "description": "Drawing file format"
+    },
+    "sheet_size": {
+      "type": "string",
+      "enum": ["A0", "A1", "A2", "A3", "A4", "ANSI A", "ANSI B", "ANSI C", "ANSI D", "ANSI E"],
+      "description": "Drawing sheet size"
+    },
+    "scale": {
+      "type": "string",
+      "description": "Drawing scale (e.g., '1:1', '1:2', '1:10', 'NTS')"
+    },
+    "views": {
+      "type": "array",
+      "description": "List of views included in the drawing",
+      "items": {
+        "type": "string",
+        "enum": ["Front", "Top", "Side", "Isometric", "Section", "Detail", "Exploded"]
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "For Review", "For Approval", "Released", "Superseded", "Obsolete"],
+      "description": "Drawing status"
+    },
+    "revision": {
+      "type": "string",
+      "description": "Current drawing revision (e.g., 'A', 'B', '01', '02')"
+    },
+    "related_drawings": {
+      "type": "array",
+      "description": "Related or referenced drawings",
+      "items": {
+        "type": "string",
+        "pattern": "^Q100-10-[0-9]{3}-[0-9]{3}-DWG-[0-9]{3}$"
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Overall dimensions shown in drawing",
+      "properties": {
+        "length_mm": {
+          "type": "number",
+          "description": "Length in millimeters"
+        },
+        "width_mm": {
+          "type": "number",
+          "description": "Width in millimeters"
+        },
+        "height_mm": {
+          "type": "number",
+          "description": "Height in millimeters"
+        }
+      }
+    },
+    "materials": {
+      "type": "array",
+      "description": "Materials specified in drawing",
+      "items": {
+        "type": "object",
+        "properties": {
+          "part": {
+            "type": "string",
+            "description": "Part identifier"
+          },
+          "material": {
+            "type": "string",
+            "description": "Material specification (e.g., 'AL 7075-T6', 'Ti-6Al-4V')"
+          },
+          "finish": {
+            "type": "string",
+            "description": "Surface finish specification"
+          }
+        }
+      }
+    },
+    "tolerances": {
+      "type": "object",
+      "description": "General tolerances",
+      "properties": {
+        "linear": {
+          "type": "string",
+          "description": "Linear dimension tolerance (e.g., '±0.1 mm')"
+        },
+        "angular": {
+          "type": "string",
+          "description": "Angular tolerance (e.g., '±0.5°')"
+        },
+        "standard": {
+          "type": "string",
+          "description": "Tolerance standard reference (e.g., 'ISO 2768-m')"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Document metadata",
+      "properties": {
+        "created_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date (ISO 8601)"
+        },
+        "approved_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Approval date (ISO 8601)"
+        },
+        "drafter": {
+          "type": "string",
+          "description": "Person who created the drawing"
+        },
+        "checker": {
+          "type": "string",
+          "description": "Person who checked the drawing"
+        },
+        "approver": {
+          "type": "string",
+          "description": "Person who approved the drawing"
+        }
+      }
+    }
+  }
+}

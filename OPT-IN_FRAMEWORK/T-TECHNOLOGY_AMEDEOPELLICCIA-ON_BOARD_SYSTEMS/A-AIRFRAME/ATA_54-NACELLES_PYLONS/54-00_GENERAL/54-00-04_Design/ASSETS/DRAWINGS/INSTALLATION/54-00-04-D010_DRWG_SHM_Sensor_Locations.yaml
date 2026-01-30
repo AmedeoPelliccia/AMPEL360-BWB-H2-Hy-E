@@ -1,0 +1,37 @@
+id: "54-00-04-D010"
+title: "SHM Sensor Locations"
+category: "DRWG"
+drawing_type: "Installation"
+ata_chapter: "54"
+description: "Installation drawing showing Structural Health Monitoring (SHM) sensor locations, mounting provisions, and wiring routes for nacelle and pylon structure monitoring."
+status: "Planned"
+version: "0.1.0"
+sheet: "1 of 1"
+scale: "1:15"
+size: "A0"
+owner: "Nacelle Structures / SHM Systems"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "54-00-04-A001"
+      title: "Nacelle Primary Structure Assembly"
+    - id: "54-00-04-A002"
+      title: "Pylon Structure Assembly"
+  requirements:
+    - id: "54-00-03-07-001"
+      title: "Nacelle Structure SHM Compatibility"
+  parent_drawings: []
+  child_drawings: []
+
+revisions:
+  - rev: "A"
+    date: "2026-01-02"
+    author: "TBD"
+    description: "Initial release"
+    approved_by: null
+
+notes: |
+  Placeholder - pending CAD model completion.
+  Shows SHM sensor placement for monitoring engine mount, pylon attachments, and thrust reverser structures.
+  Critical for structural integrity monitoring and predictive maintenance.

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+
+<!--
+  Business Rules Exchange (BREX) Data Module
+  
+  This is a placeholder BREX file for AMPEL360AT model.
+  It defines validation rules for S1000D content.
+  
+  Model: AMPEL360AT
+  Project: AMPEL360-AIR-T
+  Standard: S1000D Issue 5.0
+-->
+
+<dmodule xmlns:dc="http://www.purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A"
+                systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="01" day="09"/>
+        <dmTitle>
+          <techName>Business Rules Exchange (BREX)</techName>
+          <infoName>AMPEL360AT - Fire Protection System</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany>
+        <enterpriseName>AMPEL360</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator>
+        <enterpriseName>AMPEL360 Engineering</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>All</simplePara>
+        </displayText>
+      </applic>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="S1000D" systemDiffCode="A"
+                    systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                    assyCode="00" disassyCode="00" disassyCodeVariant="A"
+                    infoCode="022" infoCodeVariant="A" itemLocationCode="D"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>BREX Data Module</title>
+        <para>
+          This Business Rules Exchange (BREX) data module defines the validation rules
+          for S1000D content in the AMPEL360AT Fire Protection System documentation.
+        </para>
+        <para>
+          This is a placeholder BREX that should be extended with project-specific
+          business rules as the documentation matures.
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Validation Rules</title>
+        <para>
+          Content must conform to:
+        </para>
+        <para>
+          - S1000D Issue 5.0 schema
+        </para>
+        <para>
+          - ATA iSpec 2200 numbering conventions
+        </para>
+        <para>
+          - AMPEL360 documentation standards
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Document Control</title>
+        <para>
+          Model: AMPEL360AT
+        </para>
+        <para>
+          Project: AMPEL360-AIR-T
+        </para>
+        <para>
+          Standard: S1000D Issue 5.0
+        </para>
+        <para>
+          Status: Development
+        </para>
+        <para>
+          Last Updated: 2026-01-09
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

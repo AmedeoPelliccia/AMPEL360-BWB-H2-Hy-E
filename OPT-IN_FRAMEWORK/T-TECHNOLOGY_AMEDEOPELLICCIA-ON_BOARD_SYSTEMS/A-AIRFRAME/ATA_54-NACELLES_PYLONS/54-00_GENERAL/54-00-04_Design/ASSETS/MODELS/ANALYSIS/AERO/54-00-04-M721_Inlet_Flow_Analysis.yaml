@@ -1,0 +1,141 @@
+id: "54-00-04-M721"
+title: "Inlet Flow Analysis Model"
+category: "MODL"
+model_type: "Aero"
+analysis_domain: "Aerodynamics - Inlet Performance"
+ata_chapter: "54"
+description: |
+  Detailed aerodynamic analysis of the nacelle inlet system:
+  - Inlet total pressure recovery
+  - Flow distortion at engine face (DC60, DPCPavg)
+  - Inlet spillage drag at off-design conditions
+  - Separation and flow quality assessment
+  - Crosswind and angle of attack effects
+  - Compatibility with engine requirements
+status: "Planned"
+version: "0.1.0"
+owner: "Aerodynamics - Inlet Design"
+last_updated: "2026-01-02"
+
+traceability:
+  assemblies:
+    - id: "ASM-54-NAC-001"
+      title: "Primary Nacelle Structure"
+  requirements:
+    - id: "54-00-03-03-003"
+      title: "Inlet Performance Requirements"
+    - id: "71-00-03-02-001"
+      title: "Engine Inlet Requirements"
+  parent_models: []
+  related_models:
+    - id: "54-00-04-M720"
+      title: "Nacelle Drag Analysis"
+    - id: "54-00-04-M710"
+      title: "Nacelle Thermal Analysis"
+
+analysis_parameters:
+  method: "CFD - RANS/URANS for steady and unsteady flow"
+  solver: "TBD (STAR-CCM+, Fluent)"
+  key_parameters: |
+    - Flight envelope: M0 to M0.85, sea level to 41,000 ft
+    - Engine mass flow ratio: capture area / throat area
+    - Angle of attack: -5° to +15°
+    - Crosswind: up to 40 knots
+    - Distortion indices: DC60, DPCPavg per ARP1420
+  boundary_conditions: "Far-field, engine mass flow boundary at AIP, symmetry/periodic"
+  assumptions: |
+    - Fully turbulent inlet flow
+    - Steady-state for most conditions, URANS for crosswind cases
+    - No ice accretion (separate analysis for icing conditions)
+    - Anti-icing bleed air effects included
+
+software_tools:
+  primary: "TBD (STAR-CCM+ for CFD, in-house distortion post-processing)"
+  preprocessing: "TBD - hex-dominant mesh with prism layers"
+  postprocessing: "TBD - AIP distortion analysis per SAE ARP1420"
+  version: "TBD"
+
+input_requirements:
+  geometry: "Inlet lip, diffuser, and AIP (Aerodynamic Interface Plane) from CAD"
+  loads: "Engine mass flow schedule from ATA 71 powerplant"
+  material_properties: "Surface roughness"
+  environmental_conditions: "ISA, crosswind profiles, angle of attack variations"
+
+results_summary:
+  status: "Pending analysis"
+  key_outputs: []
+  validation_status: "Not validated"
+  notes: |
+    Key performance metrics:
+    - Total pressure recovery: > 98% at cruise (per requirements)
+    - DC60 distortion: < 0.10 (engine limit TBD from OEM)
+    - DPCPavg: < 5% (engine compatibility)
+    - No separation at AIP for all operating conditions
+    
+    Critical conditions to analyze:
+    - High angle of attack takeoff
+    - Crosswind takeoff and landing
+    - Maximum climb power at altitude
+    - Windmilling descent (low mass flow)
+
+verification:
+  - method: "Grid convergence on distortion metrics"
+    status: "Planned"
+  - method: "Comparison with wind tunnel AIP measurements"
+    status: "Planned"
+  - method: "Validation against engine OEM inlet requirements"
+    status: "Planned"
+
+validation:
+  test_correlation: "Wind tunnel test with AIP rake instrumentation"
+  uncertainty_quantification: "CFD uncertainty on distortion ±0.01-0.02 DC60"
+  confidence_level: "High confidence required for engine compatibility"
+
+outputs:
+  - "Total pressure recovery map (Mach, altitude, mass flow)"
+  - "Distortion indices (DC60, DPCPavg, radial, circumferential)"
+  - "AIP pressure and velocity contours"
+  - "Inlet spillage drag at off-design"
+  - "Separation and stall characteristics"
+  - "Engine compatibility assessment report"
+
+documentation:
+  technical_report: "TBD - Inlet Performance Analysis Report"
+  presentation: "TBD - Inlet design review with engine OEM"
+  raw_data: "TBD - CFD database and AIP data files"
+
+quality_assurance:
+  peer_review: "Required"
+  checker: "TBD - Senior Inlet Aerodynamicist"
+  approver: "TBD - Chief Aerodynamicist and Engine OEM concurrence"
+  review_date: "TBD"
+
+notes: |
+  Inlet performance is critical for engine operation and thrust.
+  Poor inlet quality can cause:
+  - Engine surge and stall
+  - Reduced thrust and efficiency
+  - Increased engine maintenance costs
+  - Unacceptable vibration and noise
+  
+  Design considerations:
+  - Inlet lip radius (performance vs. drag trade)
+  - Diffuser area ratio (length constraint vs. pressure recovery)
+  - AIP location and engine face matching
+  - Anti-icing bleed air effects on performance
+  
+  Coordinate with:
+  - Engine OEM for compatibility limits
+  - ATA 30 Ice Protection for anti-icing requirements
+  - Flight test for inlet instrumentation plan
+  
+  Certification requirements:
+  - Demonstrate no adverse inlet effects per CS-25
+  - Validate distortion levels across flight envelope
+  - Show adequate stall margin at all conditions
+
+document_control:
+  created_by: "AI (GitHub Copilot), prompted by Amedeo Pelliccia"
+  repository: "AMPEL360-AIR-T"
+  status: "DRAFT - Planned"
+  last_ai_update: "2026-01-02"

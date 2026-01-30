@@ -1,0 +1,346 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.amedeopelliccia.it/schemas/document-metadata.schema.json",
+  "title": "AMPEL360 Document Metadata Schema",
+  "description": "JSON schema for document metadata in ATA 10 Parking, Mooring, Storage & RTS",
+  "version": "1.0.0",
+  "type": "object",
+  "required": [
+    "document_id",
+    "document_number",
+    "title",
+    "revision",
+    "date",
+    "status",
+    "ata_chapter"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "description": "Unique document identifier in format XX-YY-ZZ-NNN",
+      "pattern": "^[0-9]{2}-[0-9]{2}-[0-9]{2}-[A-Z0-9]{3,}$",
+      "examples": ["10-00-04-001", "10-10-01-A001"]
+    },
+    "document_number": {
+      "type": "string",
+      "description": "Human-readable document number",
+      "minLength": 1,
+      "examples": ["AMPEL-DOC-10-001", "SPEC-10-00-04-001"]
+    },
+    "title": {
+      "type": "string",
+      "description": "Full document title",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "Optional document subtitle",
+      "maxLength": 200
+    },
+    "revision": {
+      "type": "string",
+      "description": "Document revision identifier",
+      "pattern": "^[A-Z0-9]+$",
+      "examples": ["A", "B", "1.0", "2.1"]
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Document date in ISO 8601 format (YYYY-MM-DD)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Draft", "In Review", "Released", "Superseded", "Cancelled"],
+      "description": "Current document status"
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["Public", "Internal", "Confidential", "Restricted"],
+      "description": "Document classification level",
+      "default": "Internal"
+    },
+    "ata_chapter": {
+      "type": "string",
+      "pattern": "^[0-9]{2}$",
+      "description": "ATA chapter number (e.g., '10' for ATA Chapter 10)",
+      "examples": ["10"]
+    },
+    "ata_section": {
+      "type": "string",
+      "description": "ATA section identifier",
+      "examples": ["10-00", "10-10", "10-20"]
+    },
+    "author": {
+      "type": "object",
+      "description": "Document author information",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Author name"
+        },
+        "role": {
+          "type": "string",
+          "description": "Author role or title"
+        },
+        "organization": {
+          "type": "string",
+          "description": "Author organization"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Author email address"
+        }
+      }
+    },
+    "reviewers": {
+      "type": "array",
+      "description": "List of document reviewers",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Reviewer name"
+          },
+          "role": {
+            "type": "string",
+            "description": "Reviewer role"
+          },
+          "review_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of review"
+          },
+          "comments": {
+            "type": "string",
+            "description": "Reviewer comments"
+          }
+        }
+      }
+    },
+    "approver": {
+      "type": "object",
+      "description": "Document approver information",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Approver name"
+        },
+        "role": {
+          "type": "string",
+          "description": "Approver role or title"
+        },
+        "approval_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of approval"
+        }
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "description": "Keywords for document searchability",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "examples": [["parking", "hydrogen", "safety", "BWB", "ground operations"]]
+    },
+    "abstract": {
+      "type": "string",
+      "description": "Brief abstract or summary of document content",
+      "maxLength": 500
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Statement of document purpose",
+      "maxLength": 500
+    },
+    "scope": {
+      "type": "string",
+      "description": "Document scope description",
+      "maxLength": 500
+    },
+    "applicable_to": {
+      "type": "array",
+      "description": "Aircraft configurations or serial numbers to which this document applies",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["AMPEL360-BWB-H2", "All aircraft", "S/N 001-100"]]
+    },
+    "supersedes": {
+      "type": "array",
+      "description": "List of document IDs that this document supersedes",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_documents": {
+      "type": "array",
+      "description": "Related documents",
+      "items": {
+        "type": "object",
+        "required": ["document_id", "relationship"],
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "description": "Related document ID"
+          },
+          "title": {
+            "type": "string",
+            "description": "Related document title"
+          },
+          "relationship": {
+            "type": "string",
+            "enum": ["Parent", "Child", "Related", "Reference", "Supersedes", "Superseded By"],
+            "description": "Type of relationship"
+          }
+        }
+      }
+    },
+    "requirements_traced": {
+      "type": "array",
+      "description": "Requirements traced by this document",
+      "items": {
+        "type": "string"
+      }
+    },
+    "h2_specific": {
+      "type": "boolean",
+      "description": "Indicates if document is H2-system specific",
+      "default": false
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Indicates if document is BWB-configuration specific",
+      "default": false
+    },
+    "cryo_specific": {
+      "type": "boolean",
+      "description": "Indicates if document addresses cryogenic systems",
+      "default": false
+    },
+    "safety_critical": {
+      "type": "boolean",
+      "description": "Indicates if document is safety-critical",
+      "default": false
+    },
+    "certification_evidence": {
+      "type": "boolean",
+      "description": "Indicates if document is certification evidence",
+      "default": false
+    },
+    "regulatory_references": {
+      "type": "array",
+      "description": "Regulatory documents referenced",
+      "items": {
+        "type": "object",
+        "required": ["reference_id", "title"],
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "description": "Regulatory document identifier (e.g., CS-25, FAR 25)"
+          },
+          "title": {
+            "type": "string",
+            "description": "Regulatory document title"
+          },
+          "section": {
+            "type": "string",
+            "description": "Specific section referenced"
+          },
+          "revision": {
+            "type": "string",
+            "description": "Revision of regulatory document"
+          }
+        }
+      }
+    },
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "Specification",
+        "Procedure",
+        "Technical Note",
+        "Engineering Change",
+        "Design Review",
+        "Test Report",
+        "Analysis Report",
+        "Validation Report",
+        "Incident Report",
+        "Manual",
+        "Checklist",
+        "Drawing",
+        "Other"
+      ],
+      "description": "Type of document"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+      "description": "Document language (ISO 639-1 code)",
+      "default": "en",
+      "examples": ["en", "en-US", "es", "fr"]
+    },
+    "page_count": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of pages in document"
+    },
+    "file_path": {
+      "type": "string",
+      "description": "Relative file path within repository",
+      "examples": ["OPT-IN_FRAMEWORK/I-INFRASTRUCTURES/ATA_10-.../document.md"]
+    },
+    "file_format": {
+      "type": "string",
+      "enum": ["markdown", "pdf", "docx", "xlsx", "csv", "json", "yaml", "xml"],
+      "description": "File format",
+      "default": "markdown"
+    },
+    "version_control": {
+      "type": "object",
+      "description": "Version control information",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "description": "Repository name"
+        },
+        "branch": {
+          "type": "string",
+          "description": "Git branch"
+        },
+        "commit_hash": {
+          "type": "string",
+          "description": "Git commit hash"
+        },
+        "last_modified_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last modification timestamp"
+        }
+      }
+    },
+    "ai_generated": {
+      "type": "boolean",
+      "description": "Indicates if document was AI-assisted or AI-generated",
+      "default": false
+    },
+    "ai_prompt_author": {
+      "type": "string",
+      "description": "Name of person who prompted AI (if AI-generated)",
+      "examples": ["Amedeo Pelliccia"]
+    },
+    "custom_fields": {
+      "type": "object",
+      "description": "Additional custom metadata fields",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

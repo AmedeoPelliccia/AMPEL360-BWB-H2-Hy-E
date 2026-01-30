@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ampel360.aero/schemas/eis/eis-metadata.schema.json",
+  "title": "EIS Metadata",
+  "description": "Metadata schema for EIS (Entry Into Service) versions, baselines, and configuration management",
+  "type": "object",
+  "required": ["document_id", "document_number", "title", "revision", "document_type", "version"],
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "pattern": "^10-00-11-[0-9]{2}[A-Z]$",
+      "description": "Document identifier following pattern: 10-00-11-NNA where NN is sequential number and A is revision"
+    },
+    "document_number": {
+      "type": "string",
+      "description": "Full document number with description"
+    },
+    "title": {
+      "type": "string",
+      "description": "Document title"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[A-Z]$",
+      "description": "Revision letter (A, B, C, etc.)"
+    },
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "version-plan",
+        "baseline",
+        "release",
+        "ci",
+        "effectivity",
+        "changelog",
+        "policy",
+        "roadmap",
+        "template"
+      ],
+      "description": "Type of document"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$",
+      "description": "Semantic version (MAJOR.MINOR.PATCH)"
+    },
+    "baseline_type": {
+      "type": "string",
+      "enum": ["FBL", "ABL", "PBL", "H2BL", "BWBBL", "EISBL"],
+      "description": "Baseline type: FBL=Functional, ABL=Allocated, PBL=Product, H2BL=H2 System, BWBBL=BWB Config, EISBL=EIS"
+    },
+    "milestone": {
+      "type": "string",
+      "enum": ["PDR", "CDR", "TRR", "FAI", "EIS"],
+      "description": "Engineering milestone"
+    },
+    "h2_related": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this document relates to H2 systems"
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this document relates to cryogenic systems"
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this document is specific to BWB (Blended Wing Body) configuration"
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when this version becomes effective"
+    },
+    "supersedes_version": {
+      "type": "string",
+      "description": "Previous version that this document supersedes"
+    },
+    "configuration_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ci_id", "description", "version"],
+        "properties": {
+          "ci_id": {
+            "type": "string",
+            "description": "Configuration Item identifier"
+          },
+          "description": {
+            "type": "string",
+            "description": "CI description"
+          },
+          "version": {
+            "type": "string",
+            "description": "CI version"
+          },
+          "effectivity": {
+            "type": "string",
+            "description": "Effectivity (MSN, operator, etc.)"
+          }
+        }
+      },
+      "description": "Array of configuration items"
+    },
+    "change_summary": {
+      "type": "string",
+      "description": "Summary of changes in this version"
+    },
+    "approval_status": {
+      "type": "string",
+      "enum": ["DRAFT", "IN_REVIEW", "APPROVED", "RELEASED", "SUPERSEDED", "OBSOLETE"],
+      "default": "DRAFT",
+      "description": "Approval status of the document"
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "author", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "description": "Revision identifier"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Revision date"
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of revision"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of changes"
+          }
+        }
+      },
+      "description": "Revision history entries"
+    }
+  }
+}

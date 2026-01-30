@@ -1,0 +1,103 @@
+# Copyright 2025 AMPEL360 Project Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Q100-61-OPT-SAF-OPTIMIZED — SAF Optimized Option
+# AMPEL360 BWB H2 Hy-E Propulsion System
+
+option:
+  id: Q100-61-OPT-SAF-OPTIMIZED
+  name: SAF Optimized Option
+  version: "1.0"
+  status: DRAFT
+  program: Q100
+
+description:
+  short: Optimized for Sustainable Aviation Fuel operation
+  long: >-
+    The SAF Optimized Option provides system optimization for aircraft
+    operating primarily with Sustainable Aviation Fuel (SAF), including
+    APU mode and backup power generation compatibility.
+
+performance_delta:
+  saf_compatibility:
+    blend_percent: 100  # Capable of 100% SAF
+  apu_mode:
+    power_kW: 200
+    duration_min: 30
+  emissions:
+    co2_lifecycle_reduction_percent: 80
+
+changes:
+  hardware:
+    - component: Fuel System Interface
+      baseline: Standard
+      option: SAF-optimized
+      change: Enhanced material compatibility
+      
+    - component: Power Electronics
+      baseline: Standard
+      option: APU-capable
+      change: Ground power generation mode
+      
+  software:
+    - component: Fuel Management
+      change: SAF-specific operating parameters
+      
+    - component: APU Mode
+      change: Added auxiliary power generation capability
+      
+    - component: Emissions Monitoring
+      change: Enhanced CO2 tracking and reporting
+
+weight_impact:
+  delta_kg: +3
+  reason: Enhanced fuel system components
+
+cost_impact:
+  category: low
+  reason: Primarily software changes
+
+compatibility:
+  products:
+    - Q100-61-PROD-PROPULSOR-SYSTEM
+  variants:
+    - Q100-61-VAR-PROPULSOR-LH
+    - Q100-61-VAR-PROPULSOR-RH
+    - Q100-61-VAR-PROPULSOR-CENTER
+  combines_with:
+    - Q100-61-OPT-EXTENDED-RANGE
+    - Q100-61-OPT-REDUCED-NOISE
+    - Q100-61-OPT-HIGH-POWER
+
+certification:
+  impact: SAF compatibility demonstration
+  additional_testing: SAF endurance testing
+
+saf_specifications:
+  fuel_types:
+    - HEFA (Hydroprocessed Esters and Fatty Acids)
+    - FT-SPK (Fischer-Tropsch Synthetic Paraffinic Kerosene)
+    - ATJ (Alcohol-to-Jet)
+  blend_approval: 100%
+  standards:
+    - ASTM D7566
+    - DEF STAN 91-091
+
+metadata:
+  created: 2025-12-05
+  modified: 2025-12-05
+  author: AI (GitHub Copilot), prompted by Amedeo Pelliccia
+  approver: TBD

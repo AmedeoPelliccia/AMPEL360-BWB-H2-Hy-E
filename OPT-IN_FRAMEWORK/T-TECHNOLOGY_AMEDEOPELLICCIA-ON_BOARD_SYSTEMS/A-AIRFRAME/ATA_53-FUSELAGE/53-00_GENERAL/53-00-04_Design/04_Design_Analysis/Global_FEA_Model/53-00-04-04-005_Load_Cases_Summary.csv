@@ -1,0 +1,14 @@
+Load_Case_ID,Load_Case_Name,Category,Description,Nz_g,Nx_g,Ny_g,Cabin_Pressure_psi,Speed,Altitude_ft,Weight_Condition,BC_Set,Status
+LC-001,1g Level Flight,Symmetric,Cruise condition,1.0,0,0,8.6,M0.85,35000,MTOW,BC-001,Active
+LC-002,2.5g Pull-up,Symmetric,Max positive maneuver,2.5,0,0,8.6,M0.78,25000,MTOW,BC-001,Active
+LC-003,-1.0g Push-over,Symmetric,Max negative maneuver,-1.0,0,0,8.6,M0.78,25000,MTOW,BC-001,Active
+LC-004,Gust 30 fps up,Gust,FAR 25.341 gust,TBD,0,0,8.6,M0.85,35000,MTOW,BC-001,Active
+LC-005,Gust 30 fps down,Gust,FAR 25.341 gust,TBD,0,0,8.6,M0.85,35000,MTOW,BC-001,Active
+LC-006,Max Roll Rate,Asymmetric,Rolling maneuver,1.0,0,0.3,8.6,M0.78,25000,MTOW,BC-001,Active
+LC-007,Landing 2-pt,Landing,Main gear touchdown,TBD,0,0,0,Vref,0,MLW,BC-010,Active
+LC-008,Landing 3-pt,Landing,Simultaneous touchdown,TBD,0,0,0,Vref,0,MLW,BC-010,Active
+LC-009,Brake Roll,Ground,Max braking,1.0,0.45,0,0,Vref,0,MLW,BC-010,Active
+LC-010,Max Cabin Pressure,Pressure,Proof pressure,1.0,0,0,9.5,0,0,ZFW,BC-020,Active
+LC-011,Fatigue Baseline,Fatigue,Typical flight cycle,1.0,0,0,8.6,M0.85,35000,Avg,BC-001,Active
+LC-012,Emergency Landing 16g,Emergency,Forward crash,1.0,16,0,0,0,0,MTOW,BC-010,Active
+LC-013,Emergency Landing 9g,Emergency,Downward crash,9.0,0,0,0,0,0,MTOW,BC-010,Active

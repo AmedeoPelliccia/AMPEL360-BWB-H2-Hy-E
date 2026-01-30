@@ -1,0 +1,6 @@
+Export ID,Artifact ID,File Name,Revision,Export Date,Export Time,Exporter,Format,Baseline,Change Description,ECO Number
+53-00-04-CM-001-001,53-10-1000,53-10-1000_RevA_Forward_Bulkhead_Assembly.step,RevA,2025-06-10,10:30:00,J. Smith,STEP,BL-001,Initial release for PDR,
+53-00-04-CM-001-002,53-10-1000,53-10-1000_RevB_Forward_Bulkhead_Assembly.step,RevB,2025-08-15,14:20:00,J. Smith,STEP,,Lightweighting optimization,ECO-2025-042
+53-00-04-CM-001-003,53-10-1000,53-10-1000_RevC_Forward_Bulkhead_Assembly.step,RevC,2025-10-15,09:45:00,J. Smith,STEP,BL-002,Stress analysis updates,ECO-2025-087
+53-00-04-CM-001-004,53-10-2000,53-10-2000_RevA_NLG_Bay_Structure.step,RevA,2025-06-10,11:00:00,M. Johnson,STEP,BL-001,Initial release for PDR,
+53-00-04-CM-001-005,53-10-2000,53-10-2000_RevB_NLG_Bay_Structure.step,RevB,2025-10-15,10:15:00,M. Johnson,STEP,BL-002,NLG attachment reinforcement,ECO-2025-089

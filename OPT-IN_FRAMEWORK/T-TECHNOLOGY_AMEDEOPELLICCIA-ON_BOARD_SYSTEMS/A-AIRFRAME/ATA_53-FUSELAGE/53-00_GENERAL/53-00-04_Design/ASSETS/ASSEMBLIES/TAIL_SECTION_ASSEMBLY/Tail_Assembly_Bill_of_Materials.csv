@@ -1,0 +1,13 @@
+Item,Part_Number,CI_Number,Description,Quantity,Material,Unit_Weight_kg,Total_Weight_kg,Primary_Structure
+1,53-600-1001-01,CI-53-600-BHD-AFT-WEB,Aft Bulkhead Web Structure,1,CFRP,42.5,42.5,Yes
+2,53-600-1002-01,CI-53-600-BHD-AFT-FRAME,Aft Bulkhead Frame Ring,1,CFRP,18.7,18.7,Yes
+3,53-600-1003-01,CI-53-600-BHD-AFT-STIFFEN,Bulkhead Stiffener Set,8,CFRP,1.5,12.0,Yes
+4,FAST-TI-M8-600,,Titanium Fasteners M8x30,64,Ti-6Al-4V,0.018,1.15,No
+5,53-600-2001-01,CI-53-600-EMP-ATTACH-FRAME,Empennage Attachment Frame,1,Ti-6Al-4V,28.3,28.3,Yes
+6,53-600-2002-01,CI-53-600-EMP-ATTACH-FIT,Vertical Stabilizer Attach Fittings,4,Steel 300M,8.5,34.0,Yes
+7,53-600-2003-01,CI-53-600-EMP-ATTACH-BEAM,Empennage Support Beams,2,CFRP,12.8,25.6,Yes
+8,FAST-STEEL-M14-EMP,,High-Strength Steel Fasteners M14x45,32,300M Steel,0.032,1.02,Yes
+9,53-600-3001-01,CI-53-600-TAIL-CONE-SKIN,Tail Cone Skin Panels,6,CFRP,8.5,51.0,No
+10,53-600-3002-01,CI-53-600-TAIL-CONE-FRAME,Tail Cone Frame Set,8,CFRP,3.2,25.6,No
+11,53-600-3003-01,CI-53-600-TAIL-CONE-STRINGER,Tail Cone Longitudinal Stringers,12,CFRP,2.1,25.2,No
+12,FAST-TI-M6-600,,Titanium Fasteners M6x16,288,Ti-6Al-4V,0.008,2.30,No

@@ -1,0 +1,10 @@
+CI_Number,CI_Name,Parent_CI,Zone,Type,Material,Weight_kg,Criticality,Structural_Role,Status,Subsystem,Drawing_Number,Specification
+CI-53-200,Forward Cabin,CI-53-000,200,Assembly,CFRP,8500,Critical,Primary,Detailed,53-20-02_Door_Surround_Structure,53-20-0000,53-20-A-001
+CI-53-200-DOOR-1L-FR,Door Frame 1L,CI-53-200,200,Frame,CFRP/Ti,180,Critical,Primary,Released,53-20-02_Door_Surround_Structure,53-20-2010,53-20-S-005
+CI-53-200-DOOR-1R-FR,Door Frame 1R,CI-53-200,200,Frame,CFRP/Ti,180,Critical,Primary,Released,53-20-02_Door_Surround_Structure,53-20-2011,53-20-S-006
+CI-53-200-SKN-U01,Upper Shell Panel 01,CI-53-200,200,Skin,CFRP,420,Critical,Primary,Released,53-20-01_Pressure_Shell_Modules,53-20-1001,53-20-S-010
+CI-53-200-SKN-L01,Lower Shell Panel 01,CI-53-200,200,Skin,CFRP,380,Critical,Primary,Released,53-20-01_Pressure_Shell_Modules,53-20-1002,53-20-S-011
+CI-53-200-FLR-BEAM-P-L,Primary Floor Beams Left,CI-53-200,200,Beam,CFRP,220,Critical,Primary,Released,53-20-03_Cabin_Floor_and_Supports,53-20-3001,53-20-S-015
+CI-53-200-FLR-BEAM-S-L,Secondary Floor Beams Left,CI-53-200,200,Beam,Aluminum,180,High,Secondary,Released,53-20-03_Cabin_Floor_and_Supports,53-20-3002,53-20-S-020
+CI-53-200-FR-200A,Frame 200A,CI-53-200,200,Frame,CFRP,28,High,Primary,Released,53-20-01_Pressure_Shell_Modules,53-20-1010,53-20-S-025
+CI-53-200-STR-FWD,Forward Stringers,CI-53-200,200,Stringer,CFRP,95,High,Primary,Released,53-20-01_Pressure_Shell_Modules,53-20-1020,53-20-S-030

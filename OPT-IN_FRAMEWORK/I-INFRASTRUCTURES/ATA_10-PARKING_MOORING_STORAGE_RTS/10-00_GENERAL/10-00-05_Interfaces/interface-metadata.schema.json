@@ -1,0 +1,287 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.com/schemas/interface-metadata.schema.json",
+  "title": "Interface Metadata Schema",
+  "description": "JSON Schema for interface metadata in ATA 10 Parking, Mooring, Storage & RTS system interfaces",
+  "type": "object",
+  "required": [
+    "interface_id",
+    "interface_number",
+    "title",
+    "description",
+    "interface_type",
+    "system_a",
+    "system_b",
+    "status"
+  ],
+  "properties": {
+    "interface_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the interface (UUID format)"
+    },
+    "interface_number": {
+      "type": "string",
+      "pattern": "^10-INT-(AC|GSE|H2|INF|ATA|DATA)-\\d{3}$",
+      "description": "Interface number following ATA 10 naming convention (e.g., 10-INT-H2-001)",
+      "examples": [
+        "10-INT-AC-001",
+        "10-INT-GSE-002",
+        "10-INT-H2-003"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 200,
+      "description": "Human-readable title of the interface"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Detailed description of the interface and its purpose"
+    },
+    "interface_type": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "mechanical",
+          "electrical",
+          "data",
+          "fluid",
+          "thermal",
+          "pneumatic",
+          "hydraulic",
+          "cryogenic",
+          "structural"
+        ]
+      },
+      "minItems": 1,
+      "description": "Type(s) of interface - can be multiple types"
+    },
+    "system_a": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the source system"
+        },
+        "subsystem": {
+          "type": "string",
+          "description": "Specific subsystem if applicable"
+        }
+      },
+      "description": "Source system information"
+    },
+    "system_b": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the destination system"
+        },
+        "subsystem": {
+          "type": "string",
+          "description": "Specific subsystem if applicable"
+        }
+      },
+      "description": "Destination system information"
+    },
+    "ata_chapter_a": {
+      "type": "string",
+      "pattern": "^ATA-\\d{2}$",
+      "description": "ATA chapter for system A (e.g., ATA-10, ATA-28)",
+      "examples": ["ATA-10", "ATA-28", "ATA-32"]
+    },
+    "ata_chapter_b": {
+      "type": "string",
+      "pattern": "^ATA-\\d{2}$",
+      "description": "ATA chapter for system B (e.g., ATA-03, ATA-24)",
+      "examples": ["ATA-03", "ATA-24", "ATA-73"]
+    },
+    "h2_related": {
+      "type": "boolean",
+      "description": "Indicates if interface involves hydrogen systems",
+      "default": false
+    },
+    "cryo_related": {
+      "type": "boolean",
+      "description": "Indicates if interface involves cryogenic systems",
+      "default": false
+    },
+    "bwb_specific": {
+      "type": "boolean",
+      "description": "Indicates if interface is specific to BWB (Blended Wing Body) configuration",
+      "default": false
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "value", "unit"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Parameter name"
+          },
+          "value": {
+            "type": ["string", "number"],
+            "description": "Parameter value or range"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement"
+          },
+          "tolerance": {
+            "type": "string",
+            "description": "Acceptable tolerance range"
+          },
+          "conditions": {
+            "type": "string",
+            "description": "Operating conditions for this parameter"
+          }
+        }
+      },
+      "description": "Array of interface parameters with specifications"
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "operational": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Operational constraints and limitations"
+        },
+        "environmental": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Environmental constraints (temperature, pressure, humidity, etc.)"
+        },
+        "safety": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Safety-related constraints and requirements"
+        },
+        "certification": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Certification constraints and requirements"
+        }
+      },
+      "description": "Interface constraints organized by category"
+    },
+    "verification_method": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["method", "criteria"],
+        "properties": {
+          "method": {
+            "type": "string",
+            "enum": [
+              "inspection",
+              "analysis",
+              "test",
+              "demonstration",
+              "simulation"
+            ],
+            "description": "Verification method type"
+          },
+          "criteria": {
+            "type": "string",
+            "description": "Acceptance criteria for verification"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["planned", "in-progress", "completed", "not-applicable"],
+            "description": "Current status of verification"
+          },
+          "reference": {
+            "type": "string",
+            "description": "Reference to verification document or test report"
+          }
+        }
+      },
+      "description": "Verification methods and criteria"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "in-review", "baselined", "released", "obsolete"],
+      "description": "Current status of the interface definition"
+    },
+    "icd_reference": {
+      "type": "string",
+      "description": "Reference to Interface Control Document (ICD) number"
+    },
+    "related_drawings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of related drawing numbers"
+    },
+    "related_specifications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of related specification document numbers"
+    },
+    "related_standards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of applicable standards (ISO, SAE, CS-25, etc.)"
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["revision", "date", "author", "description"],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "pattern": "^[A-Z]$|^\\d+\\.\\d+$",
+            "description": "Revision identifier (A, B, C... or 1.0, 1.1...)"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of revision (YYYY-MM-DD)"
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of the revision"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of changes in this revision"
+          }
+        }
+      },
+      "description": "Revision history tracking all changes"
+    },
+    "safety_classification": {
+      "type": "string",
+      "enum": ["safety-critical", "safety-related", "non-safety"],
+      "description": "Safety classification of the interface"
+    },
+    "dal_level": {
+      "type": "string",
+      "enum": ["DAL-A", "DAL-B", "DAL-C", "DAL-D", "DAL-E", "N/A"],
+      "description": "Design Assurance Level per DO-178C/DO-254"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+Requirement_ID,Title,Description,Type,Priority,Verification_Method,Status,Trace_To
+REQ-27-80-30-asymmetry-protection-and-load-limiting-001,TBD,TBD,Functional,High,Test,Draft,
+REQ-27-80-30-asymmetry-protection-and-load-limiting-002,TBD,TBD,Functional,High,Test,Draft,
+REQ-27-80-30-asymmetry-protection-and-load-limiting-003,TBD,TBD,Performance,Medium,Analysis,Draft,
+REQ-27-80-30-asymmetry-protection-and-load-limiting-004,TBD,TBD,Safety,High,Inspection,Draft,
+REQ-27-80-30-asymmetry-protection-and-load-limiting-005,TBD,TBD,Interface,Medium,Test,Draft,

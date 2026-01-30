@@ -1,0 +1,51 @@
+graph TD
+    subgraph Aircraft["Aircraft (FAirCCC-A)"]
+        EA[Envelope Analytics<br/>97-40-40]
+        SAMP[Envelope Sampler]
+        BUILD[Message Builder]
+        PUB[Phase-Aware Publisher]
+        
+        EA --> SAMP
+        SAMP --> BUILD
+        BUILD --> PUB
+    end
+
+    subgraph Transport["Transport Layer"]
+        MTLS[mTLS 1.3]
+        CBOR[CBOR Encoding]
+        
+        PUB --> CBOR
+        CBOR --> MTLS
+    end
+
+    subgraph Ground["Ground (FAirCCC-G)"]
+        DEC[Message Decoder]
+        VAL[Validator]
+        STORE[Telemetry Store]
+        ALERT[Alert Processor]
+        
+        MTLS --> DEC
+        DEC --> VAL
+        VAL --> STORE
+        VAL --> ALERT
+    end
+
+    subgraph Regional["Regional (FAirCCC-R)"]
+        AGG[Multi-Aircraft Aggregator]
+        FLEET[Fleet Analytics]
+        UPLINK[Fleet Core Uplink]
+        
+        STORE --> AGG
+        AGG --> FLEET
+        FLEET --> UPLINK
+    end
+
+    subgraph FleetCore["Fleet Core (FAirCCC-F)"]
+        ANALYTICS[Fleet Analytics]
+        DPP[DPP Logger]
+        CAOS[CAOS Integration]
+        
+        UPLINK --> ANALYTICS
+        ANALYTICS --> DPP
+        ANALYTICS --> CAOS
+    end

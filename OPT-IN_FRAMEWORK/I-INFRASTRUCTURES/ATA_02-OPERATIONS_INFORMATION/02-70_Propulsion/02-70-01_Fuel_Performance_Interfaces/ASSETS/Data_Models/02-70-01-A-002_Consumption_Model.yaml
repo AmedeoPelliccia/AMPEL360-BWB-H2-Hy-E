@@ -1,0 +1,13 @@
+# Fuel consumption model
+# Generic template - No proprietary data
+
+name: Fuel consumption model
+version: "1.0"
+status: DRAFT
+date: 2025-11-21
+
+description: >
+  This is a template specification for Fuel consumption model.
+  No proprietary or confidential data included.
+
+# TODO: Add technical specification

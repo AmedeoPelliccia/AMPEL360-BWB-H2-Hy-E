@@ -1,0 +1,4 @@
+# Placeholder YAML for data flow capacity models
+links:
+  - name: default
+    throughput_mbps: 0

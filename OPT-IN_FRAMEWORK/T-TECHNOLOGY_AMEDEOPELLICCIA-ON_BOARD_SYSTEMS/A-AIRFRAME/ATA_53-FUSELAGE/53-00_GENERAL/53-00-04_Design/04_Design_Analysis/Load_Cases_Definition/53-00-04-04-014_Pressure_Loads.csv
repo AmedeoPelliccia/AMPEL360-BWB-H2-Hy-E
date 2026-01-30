@@ -1,0 +1,9 @@
+Load_Case_ID,Load_Case_Name,Pressure_Type,Cabin_Pressure_psi,External_Pressure_psi,Delta_P_psi,Altitude_ft,Temperature_C,Notes,Reference
+LC-PRES-001,Normal Operation,Operating,8.6,3.46,5.14,35000,-56,Standard cruise,CS-25.365
+LC-PRES-002,Maximum Relief Valve,Relief,9.5,3.46,6.04,35000,-56,Relief valve open,CS-25.365
+LC-PRES-003,Proof Pressure,Proof,9.5,0,9.5,0,ISA,Ground test condition,CS-25.365
+LC-PRES-004,Ultimate Pressure,Ultimate,14.25,0,14.25,0,ISA,1.5 x Proof,CS-25.365
+LC-PRES-005,Rapid Decompression,Emergency,8.6,3.46,Rapid,35000,-56,Structural failure case,CS-25.365
+LC-PRES-006,Ground Pressure Check,Test,8.6,14.7,-6.1,0,ISA,Ground test,CS-25.365
+LC-PRES-007,Negative Pressure,Negative,0,9.0,-9.0,25000,-40,Descent with failed pressurization,CS-25.365
+LC-PRES-008,Pressure Cycle Fatigue,Fatigue,8.6,3.46,5.14,35000,-56,Repeated cycle,CS-25.571

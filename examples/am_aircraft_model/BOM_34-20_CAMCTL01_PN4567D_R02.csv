@@ -1,0 +1,26 @@
+Part_Number,Description,Quantity,Unit,Manufacturer,Supplier,Weight_kg,Criticality,Lead_Time_Weeks,Cost_USD,Notes
+PN4567D-001,Main PCB Assembly,1,ea,AMPEL360 Electronics,AMPEL360 Manufacturing,0.450,critical,12,2500,Multilayer PCB with embedded components
+PN4567D-002,Processor Module - ARM Cortex-A72,1,ea,ARM Ltd,Authorized Distributor,0.025,critical,8,450,Quad-core 1.8GHz processor
+PN4567D-003,FPGA - Image Processing,1,ea,Xilinx Inc,Authorized Distributor,0.035,critical,10,890,Kintex-7 FPGA for real-time processing
+PN4567D-004,DDR4 RAM - 8GB,2,ea,Micron Technology,Authorized Distributor,0.015,critical,6,125,ECC memory for reliability
+PN4567D-005,Flash Storage - 128GB,1,ea,Samsung Electronics,Authorized Distributor,0.020,critical,6,180,Industrial-grade SSD
+PN4567D-006,Power Supply Module,1,ea,Vicor Corporation,Authorized Distributor,0.320,critical,10,675,28VDC to multi-rail DC/DC converter
+PN4567D-007,ARINC 429 Interface Card,1,ea,DDC-I Inc,Authorized Distributor,0.045,critical,8,550,Dual-channel ARINC 429 transceiver
+PN4567D-008,Ethernet Switch - ARINC 664,1,ea,Astronics Corporation,Authorized Distributor,0.075,critical,12,1250,Managed Ethernet switch for avionics
+PN4567D-009,CoaXPress Interface Module,2,ea,Euresys SA,Authorized Distributor,0.060,critical,10,720,High-speed camera interface
+PN4567D-010,Chassis - ARINC 600,1,ea,AMPEL360 Structures,AMPEL360 Manufacturing,1.200,critical,8,890,Aluminum alloy with EMI shielding
+PN4567D-011,Front Panel Assembly,1,ea,AMPEL360 Electronics,AMPEL360 Manufacturing,0.150,normal,6,220,Includes connectors and indicators
+PN4567D-012,Rear Panel Assembly,1,ea,AMPEL360 Electronics,AMPEL360 Manufacturing,0.180,normal,6,245,Power and data connectors
+PN4567D-013,Cooling Fan Assembly,2,ea,ebm-papst Inc,Authorized Distributor,0.095,critical,6,125,High-reliability axial fans
+PN4567D-014,Temperature Sensor,4,ea,Texas Instruments,Authorized Distributor,0.005,normal,4,15,Digital temperature monitoring
+PN4567D-015,EMI Gasket Set,1,set,Chomerics Parker,Authorized Distributor,0.025,normal,4,45,Conductive elastomer gaskets
+PN4567D-016,Mounting Hardware Kit,1,kit,Various,AMPEL360 Supply,0.120,normal,2,35,Screws bolts washers per ARINC 600
+PN4567D-017,Cable Assembly - Power,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.180,critical,8,165,28VDC power input cable
+PN4567D-018,Cable Assembly - ARINC 429,2,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.095,critical,8,135,Twisted shielded pair per ARINC 429
+PN4567D-019,Cable Assembly - Ethernet,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.110,critical,8,145,Cat6A shielded for ARINC 664
+PN4567D-020,Cable Assembly - CoaXPress Left,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.450,critical,10,680,25m high-speed camera cable
+PN4567D-021,Cable Assembly - CoaXPress Right,1,ea,AMPEL360 Harnesses,AMPEL360 Manufacturing,0.450,critical,10,680,25m high-speed camera cable
+PN4567D-022,Firmware Package v2.0.1,1,ea,AMPEL360 Software,Internal,0.000,critical,0,0,Embedded in IMAGE_34-20_CAMCTL01_SWPN4455_v2.0
+PN4567D-023,Conformal Coating,1,lot,HumiSeal,Authorized Distributor,0.015,normal,4,25,Protective coating for PCB
+PN4567D-024,Thermal Interface Material,1,lot,Bergquist Company,Authorized Distributor,0.010,normal,4,35,Between heatsink and components
+PN4567D-025,Serialized Data Plate,1,ea,AMPEL360 Manufacturing,Internal,0.005,normal,2,5,Laser-engraved identification plate

@@ -1,0 +1,51 @@
+Safety_Zone_ID,From_Hazard,To_Protected_Item,Minimum_Distance_m,Recommended_Distance_m,Regulatory_Basis,Hazard_Type,Risk_Category,Mitigation_Measures,Verification_Method,Compliance_Status,Notes
+SD-85-001,LH2 Storage Tank,Property Line,50,75,NFPA 2 Section 7.3.3,Fire/Explosion,High,Fire walls; blast barriers,Site survey + drawing review,TBD,Public safety separation
+SD-85-002,LH2 Storage Tank,Buildings (Non-H2),25,40,NFPA 2 Section 7.3.3,Fire/Explosion,High,Fire-rated construction,Site survey + drawing review,TBD,Occupied structure protection
+SD-85-003,LH2 Storage Tank,Other LH2 Tanks,15,25,NFPA 2 Section 7.3.3,Fire/Explosion,High,Fire suppression system,Site survey + drawing review,TBD,Tank-to-tank spacing
+SD-85-004,LH2 Storage Tank,Air Intakes (HVAC),25,35,NFPA 2 Section 7.3.3,Gas Migration,Medium,Leak detection; ventilation,Site survey + drawing review,TBD,Prevent gas ingestion
+SD-85-005,LH2 Storage Tank,Ignition Sources,8,15,NFPA 2 Section 7.3.3,Fire/Explosion,High,Bonding and grounding,Site survey + drawing review,TBD,Electrical isolation
+SD-85-006,H2 Dispenser,Aircraft Parking Position,5,8,SAE AS 6858,Fire/Explosion,High,Breakaway coupling; ESD,Operational procedure,TBD,Safe fueling distance
+SD-85-007,H2 Dispenser,Ignition Sources,8,12,NFPA 2 Section 8.4,Fire/Explosion,High,Explosion-proof equipment,Electrical inspection,TBD,Zone classification
+SD-85-008,H2 Dispenser,Buildings (Occupied),15,25,NFPA 2 Section 8.4,Fire/Explosion,Medium,Fire walls; leak detection,Site survey,TBD,Personnel safety
+SD-85-009,H2 Dispenser,Public Access Areas,25,40,NFPA 2 Section 8.4,Fire/Explosion,High,Physical barriers; signage,Site survey,TBD,Public exclusion zone
+SD-85-010,H2 Vent Stack,Ground Level,5,8,NFPA 2 Section 10.2.3,Asphyxiation,Medium,Stack height design,Engineering calc,TBD,Dispersion modeling
+SD-85-011,H2 Vent Stack,Air Intakes,15,25,NFPA 2 Section 10.2.3,Gas Migration,Medium,Stack orientation; prevailing wind,CFD analysis,TBD,Prevent gas ingestion
+SD-85-012,H2 Vent Stack,Property Line,25,40,NFPA 2 Section 10.2.3,Gas Migration,Low,Atmospheric dispersion,Dispersion modeling,TBD,Off-site safety
+SD-85-013,H2 Pipeline (Above Ground),Buildings,3,5,ASME B31.12 Section 7.6,Fire/Explosion,Medium,Pipe supports; fire protection,Installation inspection,TBD,Pipeline routing clearance
+SD-85-014,H2 Pipeline (Above Ground),Electrical Equipment,1,2,ASME B31.12 Section 7.6,Fire/Explosion,Medium,Insulation; separation,Installation inspection,TBD,Electrical isolation
+SD-85-015,H2 Pipeline (Above Ground),Other Pipelines,3,5,ASME B31.12 Section 7.6,Interference,Low,Proper supports,Installation inspection,TBD,Maintenance access (per ASME B31.12 Sec 7.6)
+SD-85-016,H2 Compressor,Control Room,10,15,NFPA 2 Section 8.6,Noise/Vibration,Low,Acoustic enclosure; isolation,Noise survey,TBD,Operator comfort
+SD-85-017,H2 Compressor,Property Line,25,40,Local Noise Ordinance,Noise,Low,Sound barriers,Noise survey,TBD,Community noise limit
+SD-85-018,H2 Vaporizer,Buildings,10,15,ASME B31.3,Cryogenic Hazard,Medium,Thermal insulation; drainage,Engineering review,TBD,Cold burn protection
+SD-85-019,Emergency Generator,Buildings (Occupied),10,15,Local Code,Noise/Exhaust,Low,Acoustic treatment; exhaust stack,Installation inspection,TBD,Noise and emissions
+SD-85-020,Emergency Generator,Air Intakes,15,20,NFPA 110,Exhaust Gas,Low,Stack orientation,Engineering review,TBD,Prevent exhaust ingestion
+SD-85-021,Electrical Substation,Property Line,10,15,NESC Section 124,Electrical Hazard,Medium,Fencing; warning signs,Site survey,TBD,Public electrical safety
+SD-85-022,Electrical Substation,Buildings (Occupied),5,10,NESC Section 124,Electrical/EMF,Low,Shielding if needed,EMF survey,TBD,Electromagnetic fields
+SD-85-023,Fire Hydrant,Building Entrance,15,20,NFPA 1 Section 18.5.3,Accessibility,Low,Clear access path,Fire marshal inspection,TBD,Fire department access
+SD-85-024,Fire Hydrant,Fire Hydrant,30,45,NFPA 1 Section 18.5.3,Coverage,Low,Adequate spacing,Fire marshal inspection,TBD,Firefighting coverage
+SD-85-025,Fire Lane,Parked Vehicles,7.5,10,NFPA 1 Section 18.2.3,Accessibility,Medium,Clear zone markings,Fire marshal inspection,TBD,Emergency vehicle access
+SD-85-026,Fire Lane,Buildings,5,8,NFPA 1 Section 18.2.3,Accessibility,Medium,Adequate clearance,Fire marshal inspection,TBD,Aerial apparatus operation
+SD-85-027,Aircraft Parking Stand,Terminal Building,50,75,ICAO Annex 14,Wingtip Clearance,Medium,Stand markings; guidance,Operational trial,TBD,Aircraft maneuvering safety
+SD-85-028,Aircraft Parking Stand,Other Aircraft Stand,50,75,ICAO Annex 14,Wingtip Clearance,Medium,Stand spacing design,Geometric analysis,TBD,Multi-aircraft operations
+SD-85-029,Aircraft Parking Stand,Obstacles (Fixed),7.5,10,ICAO Annex 14,Clearance,Medium,Obstacle-free zone,Survey + markings,TBD,Wing and engine clearance
+SD-85-030,Jet Blast Area,Personnel,60,100,ICAO Airport Services Manual,Jet Blast,High,Blast fence; exclusion zone,Jet blast study,TBD,Engine run-up safety
+SD-85-031,Jet Blast Area,Vehicles,30,50,ICAO Airport Services Manual,Jet Blast,Medium,Warning signs; barriers,Operational procedures,TBD,Ground equipment protection
+SD-85-032,Jet Blast Area,Buildings (Glazed),100,150,ICAO Airport Services Manual,Jet Blast,Medium,Blast-resistant design,Engineering analysis,TBD,Structural protection
+SD-85-033,Propeller/Rotor Arc,Personnel,10,15,ICAO Airport Services Manual,Strike Hazard,High,Barriers; warning lights,Operational procedures,TBD,Personnel injury prevention
+SD-85-034,De-Icing Pad,Storm Drains,20,30,EPA Regulations,Environmental,Medium,Containment system; treatment,Environmental permit,TBD,Glycol containment
+SD-85-035,Fuel Storage (if applicable),Water Wells,100,150,EPA 40 CFR 280,Contamination,High,Secondary containment; monitoring,Environmental survey,TBD,Groundwater protection
+SD-85-036,Fuel Storage (if applicable),Surface Water,30,50,EPA 40 CFR 112,Contamination,High,Spill containment; SPCC plan,Environmental permit,TBD,Surface water protection
+SD-85-037,High Voltage Overhead Lines,Buildings,5,8,NESC Section 234,Electrical Hazard,Medium,Adequate clearance,Survey + inspection,TBD,Electrical safety clearance
+SD-85-038,High Voltage Overhead Lines,Ground Level,8,10,NESC Section 232,Electrical Hazard,High,Conductor height,Survey + inspection,TBD,Public safety clearance
+SD-85-039,Lightning Protection Mast,Protected Structure,Calculated per design,Calculated per design,IEC 62305-3,Lightning Strike,High,Mast height per rolling sphere,Lightning study,TBD,Protection zone radius calculated
+SD-85-040,Perimeter Fence,Buildings,3,5,Local Security Code,Security/Access,Low,Clear zone for patrol,Security assessment,TBD,Perimeter surveillance
+SD-85-041,Security Gate,Roadway,10,15,Local Traffic Code,Vehicle Queue,Low,Adequate queuing space,Traffic study,TBD,Vehicle stacking length
+SD-85-042,H2 Safety Exclusion Zone,Public Access,50,75,NFPA 2 (composite),Fire/Explosion,High,Fencing; signage; monitoring,Composite of SD-85-001 to 009,TBD,Overall H2 facility safety perimeter
+SD-85-043,Cargo Loading Area,Passenger Areas,30,50,ICAO Annex 17,Security Separation,Medium,Physical barriers; access control,Security plan,TBD,Secure/non-secure separation
+SD-85-044,Maintenance Hangar Door,Aircraft Tail,10,15,Operational Practice,Clearance,Low,Door operation procedures,Operational trial,TBD,Door swing clearance
+SD-85-045,Taxiway,Apron Objects,25,30,ICAO Annex 14,Wingtip Clearance,Medium,Object-free area,Survey + markings,TBD,Taxiway safety area
+SD-85-046,Compressed Air Station,Occupied Areas,10,15,OSHA 1910.169,Noise,Low,Acoustic enclosure,Noise assessment,TBD,Operator safety
+SD-85-047,Battery Energy Storage,Buildings (Occupied),10,15,NFPA 855,Fire/Explosion,Medium,Fire suppression; ventilation,Fire safety review,TBD,ESS fire safety
+SD-85-048,Waste Storage Area,Food Service,30,50,Health Code,Contamination,Low,Separate storage location,Health inspection,TBD,Hygiene separation
+SD-85-049,Chemical Storage,Storm Drains,10,15,EPA Regulations,Environmental,Medium,Secondary containment; spill kit,Environmental compliance,TBD,Spill prevention
+SD-85-050,Control Room Windows,H2 Equipment,15,25,NFPA 2,Blast Hazard,Medium,Blast-resistant glazing,Engineering calculation,TBD,Control room protection

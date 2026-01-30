@@ -1,0 +1,11 @@
+Load_Case,Description,Applied_Load_kN,Transfer_Path,Critical_Component,Safety_Factor,Status
+LC-01,9g Ultimate Landing,450.5,Floor Beams → Frame Attachments → Fuselage Frames,CI-53-FLOOR-BEAM-ATTACH,1.5,Verified
+LC-02,Emergency Landing Lateral,285.3,Seat Tracks → Floor Beams → Side Frames,CI-53-FLOOR-SEAT-TRACK,1.8,Verified
+LC-03,16g Forward Emergency Landing,720.8,Floor Beams → Fwd Bulkhead,CI-53-FLOOR-BEAM-LONG,1.5,Verified
+LC-04,Cabin Pressurization Differential,125.2,Floor Panels → Floor Beams → Pressure Shell,CI-53-FLOOR-PANELS,2.0,Verified
+LC-05,Cargo Compartment Load,380.6,Floor Panels → Floor Beams → Keel Beam,CI-53-FLOOR-BEAM-TRANS,1.5,Verified
+LC-06,Maximum Passenger Load (Full),168.4,Seat Tracks → Floor Beams,CI-53-FLOOR-SEAT-TRACK,2.5,Verified
+LC-07,Asymmetric Loading (One Side),195.7,Floor Beams → Side Frames (Left/Right),CI-53-FLOOR-BEAM-ATTACH,1.6,Verified
+LC-08,Turbulence (2.5g),112.5,Floor Structure → All Attachments,CI-53-FLOOR-BEAMS,2.2,Verified
+LC-09,Hard Landing with Bounce,520.3,Floor Beams → Landing Gear Attach Points,CI-53-FLOOR-BEAM-TRANS,1.5,Verified
+LC-10,Seat Occupant Head Impact,45.8,Seat Track Local → Floor Beam,CI-53-FLOOR-TRACK-ATTACH,1.8,Verified

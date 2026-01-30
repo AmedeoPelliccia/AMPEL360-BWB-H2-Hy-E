@@ -1,0 +1,71 @@
+# 26-20-XX Subsystem Metadata Schema
+# ATA Chapter 26 – Fire Protection
+# Template for LRU/LRI configuration
+
+schema_version: "1.0.0"
+template_version: "1.0.0"
+
+subsystem:
+  id: "26-20-XX"
+  ata_chapter: 26
+  ata_section: 20
+  sequence: "XX"
+  name: "[Subsystem Name]"
+  description: "[Brief description]"
+  status: "WIP"
+
+lru:
+  part_number: "PN-26-20-XX-001"
+  nomenclature: "[Subsystem Name] Unit"
+  manufacturer: "[TBD]"
+  cage_code: "[TBD]"
+
+lri:
+  - id: "LRI_01"
+    name: "ComponentA"
+    part_number: "PN-26-20-XX-01A"
+    quantity: 1
+    criticality: "Critical"
+    documentation:
+      design: "LRI/LRI_01_ComponentA/26-20-XX_Design.md"
+      cir_links: "LRI/LRI_01_ComponentA/CIR_LINKS.md"
+      bom_lmp: "LRI/LRI_01_ComponentA/BOM_LMP.md"
+    cir_references:
+      figure: "26-90-20_26-02-FIG_001-ComponentA.svg"
+      table: "26-90-20_26-02-TABLE_001-ComponentA.csv"
+
+  - id: "LRI_02"
+    name: "ComponentB"
+    part_number: "PN-26-20-XX-02B"
+    quantity: 1
+    criticality: "Major"
+    documentation:
+      design: "LRI/LRI_02_ComponentB/26-20-XX_Design.md"
+      cir_links: "LRI/LRI_02_ComponentB/CIR_LINKS.md"
+      bom_lmp: "LRI/LRI_02_ComponentB/BOM_LMP.md"
+    cir_references:
+      figure: "26-90-20_26-03-FIG_002-ComponentB.svg"
+      table: "26-90-20_26-03-TABLE_002-ComponentB.csv"
+
+  - id: "LRI_03"
+    name: "ComponentC"
+    part_number: "PN-26-20-XX-03C"
+    quantity: 1
+    criticality: "Minor"
+    documentation:
+      design: "LRI/LRI_03_ComponentC/26-20-XX_Design.md"
+      cir_links: "LRI/LRI_03_ComponentC/CIR_LINKS.md"
+      bom_lmp: "LRI/LRI_03_ComponentC/BOM_LMP.md"
+    cir_references:
+      figure: "26-90-20_26-04-FIG_003-ComponentC.svg"
+      table: "26-90-20_26-04-TABLE_003-ComponentC.csv"
+
+cir:
+  base_path: "../../../26-90_Tables_Schemas_Diagrams/ATA_26-90_CIR/"
+
+document_control:
+  created_date: "2025-12-01"
+  last_updated: "2025-12-01"
+  author: "AMPEL360 Documentation WG"
+  ai_assisted: true
+  status: "DRAFT"

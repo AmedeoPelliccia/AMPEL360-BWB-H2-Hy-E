@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/dpp_export/v0.1/manifest.json",
+  "title": "Aircraft Baseline DPP Export Manifest",
+  "description": "Manifest file describing the complete Digital Product Passport export package for an aircraft baseline configuration",
+  "type": "object",
+  "required": [
+    "export_id",
+    "export_version",
+    "created_at",
+    "aircraft_model",
+    "baseline_id",
+    "files"
+  ],
+  "properties": {
+    "export_id": {
+      "type": "string",
+      "description": "Unique identifier for this DPP export package",
+      "minLength": 1,
+      "examples": ["DPP-AMPEL360-Q100-2025-001"]
+    },
+    "export_version": {
+      "type": "string",
+      "description": "Version of the DPP export format (semantic versioning)",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+      "examples": ["0.1", "0.1.0"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when this export was created (ISO 8601)"
+    },
+    "created_by": {
+      "type": "string",
+      "description": "Person or system that created this export",
+      "examples": ["DPP Export Tool v1.0", "Engineering Team"]
+    },
+    "aircraft_model": {
+      "type": "string",
+      "description": "Aircraft model designation",
+      "minLength": 1,
+      "examples": ["AMPEL360-Q100", "BWB-H2-Hy-E"]
+    },
+    "baseline_id": {
+      "type": "string",
+      "description": "Baseline configuration identifier",
+      "minLength": 1,
+      "examples": ["Q100-BASELINE-001", "PRODUCTION-CONFIG-A"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of this export package"
+    },
+    "files": {
+      "type": "array",
+      "description": "List of files included in this DPP export package",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "type", "checksum"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Relative path to the file within the export package (no absolute paths allowed)",
+            "minLength": 1,
+            "pattern": "^[^/\\\\].*$",
+            "examples": ["baseline.json", "data/effectivity.json"]
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of file content",
+            "enum": [
+              "baseline",
+              "effectivity",
+              "software_bom",
+              "sbom_aircraft",
+              "documentation",
+              "drawing",
+              "model",
+              "other"
+            ]
+          },
+          "checksum": {
+            "type": "string",
+            "description": "SHA-256 checksum of the file content (hex format)",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "size_bytes": {
+            "type": "integer",
+            "description": "File size in bytes",
+            "minimum": 0
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the file"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata about the export package",
+      "properties": {
+        "regulatory_basis": {
+          "type": "array",
+          "description": "Regulatory standards this export addresses",
+          "items": {
+            "type": "string",
+            "examples": ["EASA Part 21", "CS-25", "EU AI Act"]
+          }
+        },
+        "export_scope": {
+          "type": "string",
+          "description": "Scope of the export (e.g., complete aircraft, subsystem)",
+          "examples": ["complete_aircraft", "propulsion_system", "fuselage"]
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Validation status of the export package",
+          "enum": ["draft", "validated", "certified", "archived"]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

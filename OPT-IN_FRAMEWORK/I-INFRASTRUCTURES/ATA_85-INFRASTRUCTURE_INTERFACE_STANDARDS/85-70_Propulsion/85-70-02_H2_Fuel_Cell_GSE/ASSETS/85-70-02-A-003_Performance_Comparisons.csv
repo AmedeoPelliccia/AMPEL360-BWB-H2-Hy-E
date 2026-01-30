@@ -1,0 +1,12 @@
+Metric,Battery Electric,H2 Fuel Cell,Hybrid (Battery-H2),Diesel (Baseline),Unit
+Refueling/Charging Time,60-120,5-10,10-30 (H2) + 60-120 (battery),5,minutes
+Operating Range,150-200,300-400,250-350,400-500,km
+Energy Efficiency (Well-to-Wheel),70-80,40-50,55-65,25-35,%
+Upfront Cost (Index),100,180-220,140-160,80,Index (Battery = 100)
+Operating Cost per km,0.15,0.20,0.17,0.25,EUR/km
+Maintenance Cost (Annual),Low,Medium,Medium-High,High,Qualitative
+Carbon Footprint (Green H2/Renewable),0-5,0-10,0-8,150-200,g CO2e/km
+Local Emissions,Zero,Zero,Zero,High NOx/PM,Qualitative
+Cold Weather Performance,Reduced (needs heating),Good,Good,Excellent,Qualitative
+High Utilization Suitability,Medium,High,High,High,Qualitative
+Infrastructure Readiness,High,Low-Medium,Medium,High,Qualitative

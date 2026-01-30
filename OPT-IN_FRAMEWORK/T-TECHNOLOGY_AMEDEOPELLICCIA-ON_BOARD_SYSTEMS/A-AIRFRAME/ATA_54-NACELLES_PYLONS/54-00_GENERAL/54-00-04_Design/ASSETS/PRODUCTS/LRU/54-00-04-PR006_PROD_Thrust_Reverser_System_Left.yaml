@@ -1,0 +1,249 @@
+# Thrust Reverser System - Left - Product Definition
+# Complete left thrust reverser LRU including doors, actuation, and control
+
+id: "54-00-04-PR006"
+title: "Thrust Reverser System - Left"
+category: "PROD"
+product_type: "LRU"
+ata_chapter: "54"
+description: "Line Replaceable Unit containing complete left thrust reverser system including reverser doors, actuation system, hydraulic controls, position sensors, and control electronics. Provides thrust reversal capability for landing deceleration."
+status: "Draft"
+version: "0.1.0"
+owner: "Product Engineering"
+last_updated: "2026-01-02"
+
+product_classification:
+  level: "Top Assembly"
+  delivery_state: "Fully Integrated and Tested"
+  customer_deliverable: true
+  certification_item: true
+
+traceability:
+  requirements:
+    - id: "54-00-03-01-005"
+      title: "Thrust Reverser Structural Requirements"
+      description: "Structural requirements for thrust reverser assembly"
+    - id: "78-00-03-01-001"
+      title: "Thrust Reverser Functional Requirements"
+      description: "Functional requirements from ATA 78"
+    - id: "54-00-03-08-001"
+      title: "Actuation System Requirements"
+      description: "Hydraulic actuation requirements"
+  type_certificate: "EASA TC (pending)"
+  aircraft_applicability:
+    - "AMPEL360-AIR-T"
+  regulatory_basis:
+    - "CS-25.933"
+    - "CS-25.1309"
+
+product_structure:
+  child_assemblies:
+    - id: "ASM-54-TR-001"
+      title: "Thrust Reverser Door Assembly"
+      quantity: 2
+      description: "Reverser door structures (cascades type)"
+    - id: "ASM-54-TR-ACT-001"
+      title: "Hydraulic Actuation Assembly"
+      quantity: 2
+      description: "Hydraulic actuators and mechanical linkages"
+    - id: "ASM-54-TR-CTRL-001"
+      title: "Control and Sensor Assembly"
+      quantity: 1
+      description: "Position sensors, control valves, and electronics"
+  interfaces:
+    - interface_id: "IF-PR006-NAC"
+      description: "Structural mounting to nacelle structure"
+      mating_product: "54-00-04-PR001"
+      interface_control_document: "54-00-05-ICD-006"
+    - interface_id: "IF-PR006-HYD"
+      description: "Hydraulic system interface"
+      mating_product: "ATA 29 - Hydraulic System"
+      interface_control_document: "54-00-05-ICD-007"
+    - interface_id: "IF-PR006-FADEC"
+      description: "Control interface with FADEC"
+      mating_product: "ATA 76 - Engine Controls"
+      interface_control_document: "54-00-05-ICD-008"
+
+mass_properties:
+  target_mass_kg: 120
+  current_estimate_kg: 125
+  mass_margin_percent: 4.2
+  cg_location:
+    x_mm: 3400  # Aft section of nacelle
+    y_mm: -4200  # Left side
+    z_mm: -1900
+  moment_of_inertia:
+    ixx_kg_m2: 22.0
+    iyy_kg_m2: 35.0
+    izz_kg_m2: 40.0
+
+dimensions:
+  length_mm: 1200
+  max_diameter_mm: 2200
+  max_width_mm: 2200
+  max_height_mm: 800
+  envelope_reference_drawing: "54-00-04-D006"
+
+performance_specs:
+  operating_temperature_range_c: "-55 to +85"
+  maximum_altitude_ft: 45000
+  design_life_fh: 90000
+  design_life_fc: 60000
+  key_parameters:
+    - parameter: "Deployment Time"
+      value: "≤1.5"
+      unit: "seconds"
+      requirement: "78-00-03-01-002"
+    - parameter: "Stowing Time"
+      value: "≤2.0"
+      unit: "seconds"
+      requirement: "78-00-03-01-003"
+    - parameter: "Thrust Reversal Efficiency"
+      value: "≥45"
+      unit: "percent"
+      requirement: "78-00-03-01-004"
+    - parameter: "Hydraulic Pressure"
+      value: "3000"
+      unit: "psi"
+      requirement: "54-00-03-08-001"
+
+environmental_qualification:
+  temperature_range_c: "-55 to +85"
+  altitude_max_ft: 45000
+  humidity: "Up to 95% RH"
+  lightning_protection: "Yes - per CS-25.581"
+  bird_strike_capability: "Yes - per CS-25.571"
+  icing_conditions: "Per CS-25 Appendix C"
+
+manufacturing:
+  final_assembly_location: "TBD"
+  assembly_time_hours: 96
+  cycle_time_days: 8
+  production_rate_per_month: 3
+  tooling_required:
+    - "FAF-54-TR-001 - Thrust reverser assembly fixture"
+    - "HYD-TEST-TR - Hydraulic test stand"
+    - "FUNC-TEST-TR - Functional test rig"
+  make_buy_decision: "Make"
+
+quality_requirements:
+  inspection_level: "100% functional and endurance test"
+  acceptance_test_procedure: "ATP-54-PR006"
+  quality_plan: "54-00-08-QP-006"
+  critical_characteristics:
+    - "Deployment and stowing time verification"
+    - "Hydraulic system leak test (zero leaks)"
+    - "Position sensor calibration and accuracy"
+    - "Structural integrity under limit loads"
+    - "Fail-safe operation verification"
+  conformity_inspection: "As per 54-00-08-CI-006"
+
+delivery:
+  packaging: "Protective shipping container with vibration isolation"
+  lead_time_weeks: 22
+  storage_requirements: "Environmentally controlled storage, 15-25°C, <65% RH"
+  shelf_life_months: 48
+  documentation_package:
+    - "Certificate of Conformity"
+    - "Test records (functional, endurance, structural)"
+    - "Maintenance manual extract (AMM 78-10)"
+    - "Illustrated parts catalog extract"
+    - "Rigging and installation instructions"
+    - "Hydraulic system interface documentation"
+
+maintenance:
+  maintenance_level: "Line"
+  mtbf_hours: 15000
+  mttr_hours: 3.5
+  scheduled_inspection_intervals_fh: 500
+  major_overhaul_interval_fh: 20000
+  maintenance_manual_reference: "AMM 78-10-00"
+
+certification:
+  applicable_regulations:
+    - "CS-25.933 - Reversing systems"
+    - "CS-25.1309 - Equipment systems"
+    - "CS-25.1322 - Warning, caution, and advisory lights"
+  compliance_method: "Test and Analysis"
+  compliance_status: "In Progress"
+  certification_basis: "CS-25 Amendment 27"
+  certification_plan: "54-00-10-CP-006"
+
+lifecycle:
+  design_service_goal_fh: 90000
+  design_service_goal_fc: 60000
+  design_service_goal_years: 30
+  retirement_strategy: "Remanufacture"
+  circularity_rating: "TBD"
+
+sustainability:
+  recyclable_content_percent: 60
+  end_of_life_disposal_method: "Remanufacture"
+  carbon_footprint_kg_co2: 650
+  environmental_impact_assessment: "54-00-EIA-006"
+
+supply_chain:
+  suppliers:
+    - supplier_name: "Hydraulic Systems Inc."
+      part_number: "HSI-ACT-TR-001"
+      description: "Hydraulic actuators"
+      criticality: "Critical"
+    - supplier_name: "Composite Structures Inc."
+      part_number: "CSI-TR-DOOR-001"
+      description: "CFRP thrust reverser door structures"
+      criticality: "Critical"
+    - supplier_name: "Sensor Tech Ltd."
+      part_number: "STL-POS-TR-001"
+      description: "Position sensors and electronics"
+      criticality: "Critical"
+  long_lead_items:
+    - item: "Hydraulic actuators (qualification required)"
+      lead_time_weeks: 18
+    - item: "CFRP door structures"
+      lead_time_weeks: 16
+
+configuration_management:
+  baseline: "Baseline A"
+  configuration_control_board: "ATA 54 CCB"
+  change_control_procedure: "54-00-CM-001"
+  effectivity: "All AMPEL360-AIR-T aircraft"
+
+links:
+  design_documents:
+    - "54-00-04-D006_DRWG_Thrust_Reverser_Installation"
+    - "78-00-04-D001_DRWG_Thrust_Reverser_System"
+  analysis_reports:
+    - "54-00-04-M703_Thrust_Reverser_Loads_Analysis"
+    - "78-00-04-A001_Thrust_Reverser_Performance_Analysis"
+  test_reports:
+    - "54-00-07-TR-006_Thrust_Reverser_Test"
+    - "78-00-07-TR-001_Functional_Test"
+  procedures:
+    - "54-00-09-MP-006_Thrust_Reverser_Assembly"
+    - "78-00-09-IP-001_Installation_Procedure"
+
+notes: |
+  Thrust Reverser System - Left is a complete Line Replaceable Unit designed for
+  rapid removal and replacement during maintenance operations. The system provides
+  thrust reversal capability for landing deceleration and rejected takeoffs.
+  
+  Key features:
+  - Cascade-type thrust reverser with translating cowl
+  - Dual hydraulic actuators for redundancy
+  - Position sensing and monitoring for flight deck indication
+  - Fail-safe design with automatic stowing capability
+  - Integration with FADEC for engine interlock protection
+  
+  Safety considerations:
+  - Deployment prevented during flight (weight-on-wheels interlock)
+  - Asymmetric reverser deployment protection
+  - Uncommanded deployment protection
+  - Fail-safe stowing (loss of hydraulic pressure)
+  
+  The LRU is designed for quick removal (approx. 3.5 hours) to support line
+  maintenance operations. The system undergoes extensive functional and endurance
+  testing before delivery to ensure reliability and safety.
+  
+  Maintenance: Regular inspection of hydraulic seals, position sensors, and
+  mechanical linkages required. Major overhaul includes complete disassembly,
+  inspection, and replacement of wear items.

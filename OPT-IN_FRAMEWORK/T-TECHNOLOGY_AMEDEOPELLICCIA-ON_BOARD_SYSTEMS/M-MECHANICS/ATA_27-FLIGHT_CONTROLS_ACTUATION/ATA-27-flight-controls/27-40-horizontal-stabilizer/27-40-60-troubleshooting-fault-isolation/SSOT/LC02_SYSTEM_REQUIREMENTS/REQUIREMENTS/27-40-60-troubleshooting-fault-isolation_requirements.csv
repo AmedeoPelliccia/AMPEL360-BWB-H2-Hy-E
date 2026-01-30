@@ -1,0 +1,6 @@
+Requirement_ID,Title,Description,Type,Priority,Verification_Method,Status,Trace_To
+REQ-27-40-60-troubleshooting-fault-isolation-001,TBD,TBD,Functional,High,Test,Draft,
+REQ-27-40-60-troubleshooting-fault-isolation-002,TBD,TBD,Functional,High,Test,Draft,
+REQ-27-40-60-troubleshooting-fault-isolation-003,TBD,TBD,Performance,Medium,Analysis,Draft,
+REQ-27-40-60-troubleshooting-fault-isolation-004,TBD,TBD,Safety,High,Inspection,Draft,
+REQ-27-40-60-troubleshooting-fault-isolation-005,TBD,TBD,Interface,Medium,Test,Draft,

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataModule>
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>Placeholder for 30-80-30</dmIdent>
+    </dmAddress>
+  </identAndStatusSection>
+  <content>
+    <note><para>Test and checkout placeholder for 30 80 30 Interfaces To Ata31 Ata22 And Maintenance Messages.</para></note>
+  </content>
+</dataModule>

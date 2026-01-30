@@ -1,0 +1,7 @@
+Level,Item_Number,Part_Number,Description,Quantity,UOM,Make_Buy
+0,1,Q100-61-PROD-GEARBOX-UNIT,Gearbox Unit,1,EA,MAKE
+1,1.1,Q100-61-P-GB-CASE,Gearbox Case,1,EA,MAKE
+1,1.2,Q100-61-P-GB-SUN,Sun Gear,1,EA,MAKE
+1,1.3,Q100-61-P-GB-PLANET,Planet Gear,4,EA,MAKE
+1,1.4,Q100-61-P-GB-RING,Ring Gear,1,EA,MAKE
+1,1.5,Q100-61-P-GB-PUMP,Oil Pump,1,EA,BUY

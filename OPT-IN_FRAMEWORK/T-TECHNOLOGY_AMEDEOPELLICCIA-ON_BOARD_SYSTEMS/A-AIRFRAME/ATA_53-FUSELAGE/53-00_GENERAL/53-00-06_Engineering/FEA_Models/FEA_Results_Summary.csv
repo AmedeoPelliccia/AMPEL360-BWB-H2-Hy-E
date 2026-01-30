@@ -1,0 +1,11 @@
+# AI-INFERRED DATA - NOT ACTUAL ANALYSIS RESULTS
+# All values below are projected/estimated based on typical aerospace structures
+# NO ACTUAL FEA HAS BEEN PERFORMED - These are placeholder values for planning purposes
+Model_ID,Component,Max_Stress_MPa,Allowable_MPa,Margin,Max_Deflection_mm,Buckling_Margin,Status
+PSM-001,Upper Shell,385 (AI-inferred),450,0.17 (projected),127 (projected),1.45 (projected),NOT PERFORMED
+PSM-002,Lower Shell,412 (AI-inferred),480,0.17 (projected),89 (projected),1.32 (projected),NOT PERFORMED
+PSM-003,Side Shell,368 (AI-inferred),450,0.22 (projected),89 (projected),1.32 (projected),NOT PERFORMED
+PSM-004,Fwd Bulkhead,285 (AI-inferred),350,0.23 (projected),42 (projected),1.58 (projected),NOT PERFORMED
+PSM-005,Aft Bulkhead,312 (AI-inferred),400,0.28 (projected),38 (projected),1.42 (projected),NOT PERFORMED
+PSM-006,Long Splice,620 (AI-inferred),830,0.34 (projected),N/A,N/A,NOT PERFORMED
+PSM-007,Circ Splice,740 (AI-inferred),830,0.12 (projected),N/A,N/A,NOT PERFORMED

@@ -1,0 +1,6 @@
+AttachmentID,AttachmentType,MaxLoad_kN,Direction,LoadCase,CriticalFitting
+ATT-001,Wing Root LH,2500,Vertical,2.5g Maneuver,Main Fitting 1
+ATT-002,Wing Root RH,2500,Vertical,2.5g Maneuver,Main Fitting 2
+ATT-003,MLG LH,1800,Vertical,Landing,Gear Fitting LH
+ATT-004,MLG RH,1800,Vertical,Landing,Gear Fitting RH
+ATT-005,Tail Attach,450,Pitch Moment,Gust,Tail Fitting

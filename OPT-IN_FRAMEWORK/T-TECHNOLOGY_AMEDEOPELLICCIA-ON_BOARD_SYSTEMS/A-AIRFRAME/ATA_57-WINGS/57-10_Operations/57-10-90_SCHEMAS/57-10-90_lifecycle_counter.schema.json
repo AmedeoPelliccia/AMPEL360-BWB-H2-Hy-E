@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.io/schemas/57-10-90_lifecycle_counter.schema.json",
+  "title": "Lifecycle Counter",
+  "description": "Schema for wing lifecycle usage counters",
+  "type": "object",
+  "properties": {
+    "aircraft_id": {
+      "type": "string",
+      "pattern": "^Q100-[0-9]{3}$",
+      "description": "Aircraft identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Counter update timestamp (ISO 8601)"
+    },
+    "counters": {
+      "type": "object",
+      "properties": {
+        "flight_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total flight cycles"
+        },
+        "flight_hours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total flight hours"
+        },
+        "fatigue_index": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Cumulative fatigue index"
+        },
+        "severity_index": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Cumulative severity index"
+        },
+        "exceedance_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total limit exceedances"
+        }
+      },
+      "required": ["flight_cycles", "flight_hours", "fatigue_index"]
+    },
+    "component_counters": {
+      "type": "object",
+      "properties": {
+        "flap_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Flap extension cycles"
+        },
+        "slat_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Slat extension cycles"
+        },
+        "spoiler_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Spoiler deployment cycles"
+        },
+        "aileron_degrees": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Cumulative aileron deflection"
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "design_life_cycles": {
+          "type": "integer",
+          "description": "Design life in cycles"
+        },
+        "design_life_hours": {
+          "type": "number",
+          "description": "Design life in hours"
+        },
+        "remaining_life_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Remaining life percentage"
+        }
+      }
+    },
+    "last_flight": {
+      "type": "object",
+      "properties": {
+        "flight_id": {
+          "type": "string",
+          "description": "Last flight identifier"
+        },
+        "fi_increment": {
+          "type": "number",
+          "description": "Fatigue index increment"
+        },
+        "si_increment": {
+          "type": "number",
+          "description": "Severity index increment"
+        }
+      }
+    }
+  },
+  "required": ["aircraft_id", "timestamp", "counters"]
+}
