@@ -15,7 +15,7 @@ import json
 import sys
 import yaml
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 
 
 class ConstitutionalValidator:
@@ -43,7 +43,7 @@ class ConstitutionalValidator:
         hash_obj = hashlib.sha256(content)
         return hash_obj.hexdigest()
     
-    def validate_labor_reabsorption(self, labor_data: Dict) -> Dict[str, any]:
+    def validate_labor_reabsorption(self, labor_data: Dict) -> Dict[str, Any]:
         """
         Validate labor reabsorption data structure and calculations
         
@@ -123,7 +123,7 @@ class ConstitutionalValidator:
         
         return result
     
-    def validate_harm_precedence(self, harm_data: Dict) -> Dict[str, any]:
+    def validate_harm_precedence(self, harm_data: Dict) -> Dict[str, Any]:
         """
         Validate harm precedence configuration
         

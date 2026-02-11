@@ -39,6 +39,7 @@ jobs:
           python3 << 'EOF'
           import yaml
           import json
+          import os
           
           with open('.constitution.yaml', 'r') as f:
               config = yaml.safe_load(f)
@@ -46,10 +47,12 @@ jobs:
           # Extract key enforcement flags
           enforcement = config.get('enforcement', {})
           
-          print(f"::set-output name=version::{config['constitution']['version']}")
-          print(f"::set-output name=labor_reabsorption_enabled::{enforcement.get('labor_reabsorption', {}).get('enabled', True)}")
-          print(f"::set-output name=harm_precedence_enabled::{enforcement.get('harm_precedence', {}).get('enabled', True)}")
-          print(f"::set-output name=metrics_enabled::{enforcement.get('metrics_tracking', {}).get('enabled', True)}")
+          # Use GITHUB_OUTPUT instead of deprecated set-output
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output_file:
+              output_file.write(f"version={config['constitution']['version']}\n")
+              output_file.write(f"labor_reabsorption_enabled={enforcement.get('labor_reabsorption', {}).get('enabled', True)}\n")
+              output_file.write(f"harm_precedence_enabled={enforcement.get('harm_precedence', {}).get('enabled', True)}\n")
+              output_file.write(f"metrics_enabled={enforcement.get('metrics_tracking', {}).get('enabled', True)}\n")
           EOF
       
       - name: Validate PR Template Compliance
@@ -151,13 +154,13 @@ jobs:
           CONST_FILES=$(git diff --name-only origin/${{ github.base_ref }}..HEAD | grep -E "(GOVERNANCE|constitution|constitutional)" || true)
           
           if [ -n "$CONST_FILES" ]; then
-            echo "::set-output name=modified::true"
+            echo "modified=true" >> $GITHUB_OUTPUT
             echo "::warning::Constitutional files modified. Ensure 14-day review period and steward approval."
             echo ""
             echo "Modified files:"
             echo "$CONST_FILES"
           else
-            echo "::set-output name=modified::false"
+            echo "modified=false" >> $GITHUB_OUTPUT
             echo "No constitutional files modified"
           fi
       
