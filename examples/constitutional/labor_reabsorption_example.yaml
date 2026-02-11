@@ -1,0 +1,28 @@
+# Example: Labor Reabsorption - Valid Case (Net Zero Displacement)
+
+applicable: yes
+
+roles_displaced:
+  - role: "Manual Data Entry Operator"
+    fte_equivalent: 2.0
+    description: "Manual entry of flight test data into spreadsheets automated via CSV import pipeline"
+  
+  - role: "Report Formatter"
+    fte_equivalent: 1.0
+    description: "Manual formatting of weekly status reports automated via template generation"
+
+reabsorption_pathway:
+  - new_role: "Data Quality Analyst"
+    fte_equivalent: 2.0
+    description: "Validate automated data imports, develop data quality rules, investigate anomalies"
+    transition_plan: "2-week training on data validation tools and quality metrics. Operators with domain knowledge are ideal candidates."
+  
+  - new_role: "Report Analytics Developer"
+    fte_equivalent: 1.0
+    description: "Enhance report templates, create custom visualizations, integrate business intelligence"
+    transition_plan: "4-week training on BI tools (PowerBI/Tableau) and report customization. Existing formatter knowledge of report content is valuable."
+
+net_displacement: 0.0  # 3.0 displaced - 3.0 reabsorbed = 0
+
+governance_override:
+  required: no  # Not required because net_displacement is 0

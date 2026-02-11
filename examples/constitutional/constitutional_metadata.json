@@ -1,0 +1,21 @@
+{
+  "constitutional_compliance": {
+    "version": "1.0",
+    "hash": "3a915362ee2b0708c4329b12ec8dc530ee933292b112a5dcbe72dfd8e3bf7021",
+    "hash_algorithm": "SHA-256",
+    "document_path": "GOVERNANCE.md",
+    "effective_date": "2026-02-11",
+    "steward": "Amedeo Pelliccia",
+    "enforcement_enabled": {
+      "labor_reabsorption": true,
+      "harm_precedence": true,
+      "reversibility": true,
+      "metrics_tracking": true
+    },
+    "compliance_attestation": {
+      "required": true,
+      "format": "DCO-style signed attestation",
+      "template": "I affirm this derivative work complies with AMPEL360 Digital Constitution v1.0"
+    }
+  }
+}

@@ -730,8 +730,9 @@ This provides **traceability from uncertainty to evidence** across the engineeri
 |----------|-------------|
 | [OPT-IN Framework Standard](./OPT-IN_FRAMEWORK_STANDARD.md) | Complete framework specification |
 | [Documentation Standard](./AMPEL360_DOCUMENTATION_STANDARD.md) | Formatting and structure guidelines |
+| [**Digital Constitution (GOVERNANCE.md)**](./GOVERNANCE.md) | **Constitutional governance framework for human-centered AI development** |
 | [AI→ASI Transition Proposal](./AI-ASI-TP.md) | AI→ASI transition roadmap:  governance, assurance, and certification-grade adoption across SSOT+PUB |
-| [Digital Twin Control Loop](./DIGITAL_TWIN_CONTROL_LOOP. md) | Digital twin architecture and data flows |
+| [Digital Twin Control Loop](./DIGITAL_TWIN_CONTROL_LOOP.md) | Digital twin architecture and data flows |
 | [CAOS Index](./CAOS/CAOS_INDEX.md) | Continuous Airworthiness for Operational Sustainment |
 | [CAOS Architecture](./CAOS/CAOS_ARCHITECTURE.md) | CAOS system architecture |
 | [CAOS Operations Framework](./CAOS/CAOS_OPERATIONS_FRAMEWORK.md) | CAOS operational playbook |
@@ -741,10 +742,11 @@ This provides **traceability from uncertainty to evidence** across the engineeri
 ## Contributing
 
 1. **Fork** the repository
-2. **Setup hooks**:  `bash .github/hooks/setup-hooks.sh`
-3. **Follow** the SSOT + PUB pattern and OPT-IN structure
-4. **Validate**: `python tools/ci/optin_structure_validator.py --check`
-5. **Submit** a pull request
+2. **Read governance**: Review [GOVERNANCE.md](./GOVERNANCE.md) (Digital Constitution) for constitutional requirements
+3. **Setup hooks**:  `bash .github/hooks/setup-hooks.sh`
+4. **Follow** the SSOT + PUB pattern and OPT-IN structure
+5. **Validate**: `python tools/ci/optin_structure_validator.py --check`
+6. **Submit** a pull request (use the PR template with constitutional compliance sections)
 
 ### Contribution Rules
 
@@ -756,6 +758,7 @@ This provides **traceability from uncertainty to evidence** across the engineeri
 | **S1000D content** | Keep XML/BREX compliant under `PUB/**/CSDB/**` |
 | **References** | Ensure DM ↔ ICN ↔ PM ↔ DML ↔ APPLICABILITY resolve correctly |
 | **Safety-critical** | Include DO-178C compliance tags where applicable |
+| **Constitutional compliance** | Follow labor reabsorption, harm precedence, and reversibility requirements |
 
 ---
 

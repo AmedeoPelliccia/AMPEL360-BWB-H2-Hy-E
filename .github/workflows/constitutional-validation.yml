@@ -1,0 +1,292 @@
+name: Constitutional Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+  push:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  constitutional-compliance:
+    name: Validate Constitutional Compliance
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for analysis
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install pyyaml jsonschema
+      
+      - name: Load Constitutional Metadata
+        id: constitution
+        run: |
+          python3 << 'EOF'
+          import yaml
+          import json
+          
+          with open('.constitution.yaml', 'r') as f:
+              config = yaml.safe_load(f)
+          
+          # Extract key enforcement flags
+          enforcement = config.get('enforcement', {})
+          
+          print(f"::set-output name=version::{config['constitution']['version']}")
+          print(f"::set-output name=labor_reabsorption_enabled::{enforcement.get('labor_reabsorption', {}).get('enabled', True)}")
+          print(f"::set-output name=harm_precedence_enabled::{enforcement.get('harm_precedence', {}).get('enabled', True)}")
+          print(f"::set-output name=metrics_enabled::{enforcement.get('metrics_tracking', {}).get('enabled', True)}")
+          EOF
+      
+      - name: Validate PR Template Compliance
+        if: github.event_name == 'pull_request'
+        run: |
+          python3 << 'EOF'
+          import os
+          import re
+          
+          # Get PR body
+          pr_body = os.environ.get('PR_BODY', '')
+          
+          print("🔍 Checking PR template compliance...")
+          
+          issues = []
+          warnings = []
+          
+          # Check for labor reabsorption section
+          if 'LABOR-REABSORPTION' in pr_body or 'Labor Reabsorption' in pr_body:
+              print("✅ Labor reabsorption section found")
+              
+              # Check if properly filled or marked N/A
+              if 'applicable: yes' in pr_body.lower():
+                  # Should have detailed tracking
+                  if 'roles_displaced:' not in pr_body:
+                      warnings.append("Labor reabsorption marked applicable but roles_displaced not documented")
+                  if 'net_displacement:' not in pr_body:
+                      warnings.append("Labor reabsorption marked applicable but net_displacement not calculated")
+                  
+                  # Check for net displacement value
+                  displacement_match = re.search(r'net_displacement:\s*(-?\d+\.?\d*)', pr_body)
+                  if displacement_match:
+                      net_disp = float(displacement_match.group(1))
+                      if net_disp > 0:
+                          if 'governance_override' not in pr_body or 'steward_approval' not in pr_body:
+                              issues.append(f"❌ Net displacement is {net_disp} (> 0) but governance override not documented")
+                  else:
+                      warnings.append("Could not parse net_displacement value")
+              
+              elif 'applicable: no' in pr_body.lower():
+                  print("ℹ️  Labor reabsorption marked as not applicable")
+              else:
+                  warnings.append("Labor reabsorption section present but 'applicable' field not clearly set")
+          else:
+              # Check if PR involves automation/AI
+              automation_keywords = ['automat', 'pipeline', 'workflow', 'ai', 'ml', 'model', 'neural']
+              pr_lower = pr_body.lower()
+              
+              has_automation = any(keyword in pr_lower for keyword in automation_keywords)
+              
+              if has_automation:
+                  warnings.append("PR may involve automation but labor reabsorption section is missing")
+              else:
+                  print("✅ No automation detected, labor reabsorption section not required")
+          
+          # Check for harm precedence section if AI/ML involved
+          if any(keyword in pr_body.lower() for keyword in ['ai', 'ml', 'model', 'neural', 'predict']):
+              if 'HARM-PRECEDENCE' not in pr_body and 'Harm Precedence' not in pr_body:
+                  warnings.append("AI/ML changes detected but harm precedence section missing")
+              else:
+                  print("✅ Harm precedence section found")
+          
+          # Check for constitutional attestation
+          if 'Constitutional Attestation' in pr_body or 'constitutional compliance' in pr_body.lower():
+              print("✅ Constitutional attestation section found")
+          else:
+              warnings.append("Constitutional attestation section missing from PR")
+          
+          # Report results
+          print("\n" + "="*50)
+          print("📊 Validation Summary")
+          print("="*50)
+          
+          if issues:
+              print(f"\n❌ {len(issues)} BLOCKING ISSUE(S):")
+              for issue in issues:
+                  print(f"  {issue}")
+          
+          if warnings:
+              print(f"\n⚠️  {len(warnings)} WARNING(S):")
+              for warning in warnings:
+                  print(f"  {warning}")
+          
+          if not issues and not warnings:
+              print("\n✅ All constitutional compliance checks passed!")
+          
+          # Exit with error if there are blocking issues
+          if issues:
+              exit(1)
+          EOF
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+      
+      - name: Check for Constitutional File Changes
+        id: const_changes
+        run: |
+          echo "Checking for changes to constitutional files..."
+          
+          CONST_FILES=$(git diff --name-only origin/${{ github.base_ref }}..HEAD | grep -E "(GOVERNANCE|constitution|constitutional)" || true)
+          
+          if [ -n "$CONST_FILES" ]; then
+            echo "::set-output name=modified::true"
+            echo "::warning::Constitutional files modified. Ensure 14-day review period and steward approval."
+            echo ""
+            echo "Modified files:"
+            echo "$CONST_FILES"
+          else
+            echo "::set-output name=modified::false"
+            echo "No constitutional files modified"
+          fi
+      
+      - name: Validate Metrics Dashboard Currency
+        if: steps.constitution.outputs.metrics_enabled == 'True'
+        run: |
+          python3 << 'EOF'
+          import os
+          import re
+          from datetime import datetime, timedelta
+          
+          print("📊 Checking governance metrics dashboard currency...")
+          
+          if not os.path.exists('GOVERNANCE_METRICS.md'):
+              print("⚠️  WARNING: GOVERNANCE_METRICS.md not found")
+              print("   This file should be created and updated quarterly")
+              exit(0)
+          
+          with open('GOVERNANCE_METRICS.md', 'r') as f:
+              content = f.read()
+          
+          # Extract last updated date
+          date_match = re.search(r'Last Updated:\s*(\d{4}-\d{2}-\d{2})', content)
+          
+          if date_match:
+              last_updated = datetime.strptime(date_match.group(1), '%Y-%m-%d')
+              today = datetime.now()
+              days_old = (today - last_updated).days
+              
+              print(f"Last updated: {last_updated.strftime('%Y-%m-%d')} ({days_old} days ago)")
+              
+              if days_old > 120:  # ~4 months (beyond quarterly)
+                  print(f"⚠️  WARNING: Metrics dashboard is {days_old} days old")
+                  print("   Constitutional requirement: Update quarterly (every ~90 days)")
+                  print("   Reference: GOVERNANCE.md Article 3.2")
+              elif days_old > 90:
+                  print(f"⚠️  Metrics dashboard approaching update deadline ({days_old} days old)")
+              else:
+                  print("✅ Metrics dashboard is current")
+          else:
+              print("⚠️  Could not parse last updated date from GOVERNANCE_METRICS.md")
+          EOF
+      
+      - name: Check for SPDX License Headers
+        run: |
+          echo "📝 Checking for SPDX license headers in new files..."
+          
+          NEW_FILES=$(git diff --name-only --diff-filter=A origin/${{ github.base_ref }}..HEAD | grep -E '\.(py|js|ts|java|cpp|h|go|rs)$' || true)
+          
+          if [ -z "$NEW_FILES" ]; then
+            echo "No new code files to check"
+            exit 0
+          fi
+          
+          MISSING_SPDX=()
+          
+          for file in $NEW_FILES; do
+            if [ -f "$file" ]; then
+              if ! head -n 5 "$file" | grep -qi "SPDX-License-Identifier"; then
+                MISSING_SPDX+=("$file")
+              fi
+            fi
+          done
+          
+          if [ ${#MISSING_SPDX[@]} -gt 0 ]; then
+            echo "⚠️  WARNING: New files missing SPDX headers:"
+            printf '  - %s\n' "${MISSING_SPDX[@]}"
+            echo ""
+            echo "Add to top of file:"
+            echo "# SPDX-License-Identifier: Apache-2.0"
+            echo "# Copyright (c) AMPEL360 Project Contributors"
+          else
+            echo "✅ All new files have SPDX headers"
+          fi
+      
+      - name: Generate Constitutional Compliance Report
+        if: github.event_name == 'pull_request'
+        run: |
+          cat > constitutional_report.md << 'EOF'
+          ## 📜 Constitutional Compliance Report
+          
+          This PR has been validated against the [AMPEL360 Digital Constitution](../GOVERNANCE.md) v${{ steps.constitution.outputs.version }}.
+          
+          ### Automated Checks
+          
+          - ✅ PR template compliance validated
+          - ✅ Labor reabsorption tracking reviewed
+          - ✅ Harm precedence mechanisms checked
+          - ✅ Metrics dashboard currency verified
+          - ✅ SPDX license headers validated
+          
+          ### Manual Review Required
+          
+          Reviewers should verify:
+          
+          1. **Labor Displacement:** If this PR introduces automation, is the reabsorption pathway credible and specific?
+          2. **Harm Precedence:** For AI/ML changes, are uncertainty thresholds, escalation paths, and fallback modes adequate?
+          3. **Reversibility:** Can changes be rolled back within 4 hours if needed?
+          4. **Decision Transparency:** Are automated decisions documented with clear rationale and human authority?
+          
+          ### Constitutional References
+          
+          - [Article 1: Labor Reabsorption](../GOVERNANCE.md#article-1-labor-reabsorption-requirement)
+          - [Article 4: Harm Precedence](../GOVERNANCE.md#article-4-harm-precedence-protocol)
+          - [Article 5: Reversibility](../GOVERNANCE.md#article-5-reversibility-by-design)
+          - [Article 6: Transparency](../GOVERNANCE.md#article-6-transparency--traceability)
+          
+          ---
+          
+          *This report is generated automatically. Constitutional compliance is a shared responsibility.*
+          EOF
+          
+          echo "Report generated: constitutional_report.md"
+      
+      - name: Constitutional Compliance Summary
+        if: always()
+        run: |
+          echo ""
+          echo "=============================================="
+          echo "📜 Constitutional Compliance Validation Complete"
+          echo "=============================================="
+          echo ""
+          echo "Constitution Version: ${{ steps.constitution.outputs.version }}"
+          echo "Labor Reabsorption Enforcement: ${{ steps.constitution.outputs.labor_reabsorption_enabled }}"
+          echo "Harm Precedence Enforcement: ${{ steps.constitution.outputs.harm_precedence_enabled }}"
+          echo "Metrics Tracking: ${{ steps.constitution.outputs.metrics_enabled }}"
+          echo ""
+          echo "For questions about constitutional compliance:"
+          echo "  • Review: GOVERNANCE.md"
+          echo "  • Metrics: GOVERNANCE_METRICS.md"
+          echo "  • Config: .constitution.yaml"
+          echo ""

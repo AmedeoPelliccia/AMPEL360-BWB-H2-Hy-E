@@ -1,6 +1,6 @@
 # AMPEL360 Q100 Git Hooks
 
-This directory contains Git hooks for the AMPEL360 Q100 project to ensure code quality, compliance, and strategic mission alignment.
+This directory contains Git hooks for the AMPEL360 Q100 project to ensure code quality, compliance, constitutional governance, and strategic mission alignment.
 
 ## Available Hooks
 
@@ -13,6 +13,16 @@ Validates changes before they are committed:
 - **Strategic Mission Scope**: Warns if mission-related files lack appropriate commit scope
 - **Safety-Critical Code**: Validates DO-178C compliance tags on safety-critical code
 - **Python Syntax**: Basic syntax validation for Python files
+
+### constitutional-check
+
+Enforces Digital Constitution compliance (GOVERNANCE.md):
+
+- **Labor Reabsorption**: Detects automation changes that may displace labor
+- **Constitutional Hash**: Verifies constitutional metadata in model/config files
+- **Silent Override Detection**: Flags unauthorized constitutional modifications
+- **Harm Precedence**: Validates AI/ML code for safety mechanisms (uncertainty thresholds, escalation, fallback)
+- **Decision Transparency**: Checks for documented rationale in decision-making code
 
 ## Installation
 

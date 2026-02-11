@@ -1,0 +1,47 @@
+# Example: Harm Precedence Configuration for Flight Performance Predictor
+
+applicable: yes
+
+model_outputs:
+  - output_type: "Takeoff Performance Prediction"
+    confidence_threshold: 0.96
+    escalation_type: "safety_critical"
+    responsible_role: "Flight Performance Engineer (On-Call)"
+    response_sla_hours: 2
+    fallback_chain:
+      - "Senior Flight Test Engineer"
+      - "Chief Engineer (Propulsion & Performance)"
+      - "Director of Engineering"
+  
+  - output_type: "Fuel Consumption Estimate"
+    confidence_threshold: 0.92
+    escalation_type: "operational"
+    responsible_role: "Flight Operations Analyst"
+    response_sla_hours: 8
+    fallback_chain:
+      - "Lead Flight Operations Engineer"
+      - "Manager, Flight Operations"
+  
+  - output_type: "Maintenance Interval Recommendation"
+    confidence_threshold: 0.88
+    escalation_type: "informational"
+    responsible_role: "Maintenance Planning Lead"
+    response_sla_hours: 24
+    fallback_chain:
+      - "Maintenance Engineering Manager"
+
+graceful_degradation:
+  implemented: yes
+  safe_mode_description: |
+    When model confidence falls below threshold:
+    1. System automatically reverts to conservative baseline values from flight manual
+    2. Warning displayed to operator: "AI prediction unavailable - using conservative baseline"
+    3. Escalation triggered to responsible role with full context
+    4. Manual calculation worksheet presented as alternative
+
+reversibility:
+  rollback_procedure: "docs/operations/ai_rollback_procedures.md"
+  estimated_rollback_hours: 0.5
+  tested: yes
+  last_test_date: "2026-02-01"
+  test_notes: "Rollback drill performed in staging environment; baseline reversion completed in 22 minutes"

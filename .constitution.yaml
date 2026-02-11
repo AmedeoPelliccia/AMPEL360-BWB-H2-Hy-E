@@ -1,0 +1,177 @@
+constitution:
+  version: '1.0'
+  effective_date: '2026-02-11'
+  status: ACTIVE
+  document_path: GOVERNANCE.md
+  hash_algorithm: SHA-256
+  hash: 658b530574be557bcbf0a07907f9d4bde56e665f11aa5b364c0005acff6e09a0
+  steward: Amedeo Pelliccia
+foundational_axiom:
+  statement: Labor is the creative and operational foundation of this system.
+  enforcement: MANDATORY
+  override_allowed: false
+enforcement:
+  labor_reabsorption:
+    enabled: true
+    require_tracking: true
+    block_net_displacement: true
+    governance_override_required: true
+  harm_precedence:
+    enabled: true
+    uncertainty_thresholds:
+      safety_critical: 0.95
+      operational: 0.92
+      informational: 0.85
+    escalation_sla_hours: 4
+  reversibility:
+    enabled: true
+    max_rollback_hours: 4
+    audit_trail_required: true
+  metrics_tracking:
+    enabled: true
+    update_frequency: quarterly
+    dashboard_path: GOVERNANCE_METRICS.md
+metrics:
+  mean_time_to_human_intervention:
+    unit: hours
+    target_direction: decreasing
+    warning_threshold: increasing_trend
+  contributor_role_diversity:
+    unit: index
+    target_direction: increasing
+    categories:
+    - cognitive
+    - creative
+    - maintenance
+    - oversight
+    - governance
+  reversibility_latency:
+    unit: hours
+    target_max: 4
+    measurement: p95_rollback_time
+  decision_transparency:
+    unit: percentage
+    target_min: 100
+    measurement: decisions_with_documented_rationale
+pr_template:
+  labor_reabsorption_section:
+    required: true
+    required_when:
+    - automation introduced
+    - process changed
+    - ai system added
+    fields:
+    - roles_displaced
+    - reabsorption_pathway
+    - net_displacement
+    - governance_override
+pre_commit_hooks:
+- name: constitutional_compliance
+  script: .github/hooks/constitutional-check
+  validations:
+  - labor_reabsorption_tracking
+  - constitutional_hash_present
+  - forbidden_silent_overrides
+ci_cd_integration:
+  workflows:
+  - name: constitutional_validation
+    path: .github/workflows/constitutional-validation.yml
+    triggers:
+    - pull_request
+    - push
+    validations:
+    - pr_template_completeness
+    - labor_displacement_calculation
+    - metrics_dashboard_updated
+regulatory_alignment:
+  eu_ai_act:
+    articles_addressed:
+    - '13'
+    - '14'
+    compliance_mechanism: commit_as_contract
+  easa_ai_roadmap:
+    requirement: traceability_to_design_intent
+    implementation: decision_audit_trail
+  do_178c:
+    integration: safety_critical_tag_validation
+    existing_hook: .github/hooks/pre-commit
+fork_compliance:
+  dco_attestation_required: true
+  constitutional_hash_in_sbom: true
+  quarterly_reports: true
+  designation_protected: AMPEL360 Constitutional
+amendment_process:
+  proposal: documented_pr
+  review_period_days: 14
+  approval: explicit_signed_commit
+  version_increment: required
+  foundational_axiom_immutable: true
+conflict_resolution:
+  capital_vs_labor:
+    options:
+    - explicit_steward_override_with_documentation
+    - capital_withdrawal
+    silent_override: false
+  technical_vs_constitutional:
+    precedence: constitutional
+    efficiency_subordinate: true
+schemas:
+  labor_reabsorption:
+    type: object
+    required:
+    - roles_displaced
+    - reabsorption_pathway
+    - net_displacement
+    properties:
+      roles_displaced:
+        type: array
+        items:
+          type: object
+          required:
+          - role
+          - fte_equivalent
+          - description
+      reabsorption_pathway:
+        type: array
+        items:
+          type: object
+          required:
+          - new_role
+          - fte_equivalent
+          - description
+          - transition_plan
+      net_displacement:
+        type: number
+        maximum: 0
+      governance_override:
+        type: object
+        required:
+        - justification
+        - risk_assessment
+        - mitigation_plan
+        - review_date
+  harm_escalation:
+    type: object
+    required:
+    - escalation_type
+    - responsible_role
+    - response_sla_hours
+    - fallback_chain
+    properties:
+      escalation_type:
+        enum:
+        - safety_critical
+        - operational
+        - informational
+      responsible_role:
+        type: string
+        pattern: ^[A-Za-z ]+$
+      response_sla_hours:
+        type: number
+        minimum: 1
+        maximum: 24
+      fallback_chain:
+        type: array
+        minItems: 1
+        items:
+          type: string
