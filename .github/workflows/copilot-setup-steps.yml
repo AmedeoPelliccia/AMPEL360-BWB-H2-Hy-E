@@ -39,7 +39,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
       - name: Install Python dependencies
         run: |
@@ -61,7 +61,7 @@ jobs:
         run: |
           if [ -f "tools/doc-meta-enforcer-mcp/package.json" ]; then
             cd tools/doc-meta-enforcer-mcp
-            npm ci
+            npm install
           fi
 
       - name: Confirm environment
