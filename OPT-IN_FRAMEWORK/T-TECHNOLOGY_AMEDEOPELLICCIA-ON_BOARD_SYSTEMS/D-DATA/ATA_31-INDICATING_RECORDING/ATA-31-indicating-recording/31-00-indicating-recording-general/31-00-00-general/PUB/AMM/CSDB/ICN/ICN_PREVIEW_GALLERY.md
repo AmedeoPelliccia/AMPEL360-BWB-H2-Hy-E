@@ -2,7 +2,7 @@
 
 > **Note**: GitHub renders PNG images inline but cannot render SVG files stored in CSDB folders.
 > This companion file provides raster previews of all 10 ICN assets defined in
-> [`ICN_SCAFFOLD.md`](../ICN_SCAFFOLD.md).  
+> [`ICN_SCAFFOLD.md`](./ICN_SCAFFOLD.md).  
 > The authoritative source files are the `.SVG` files in each sub-folder; the PNGs in `PREVIEWS/`
 > are derived, read-only exports.
 
