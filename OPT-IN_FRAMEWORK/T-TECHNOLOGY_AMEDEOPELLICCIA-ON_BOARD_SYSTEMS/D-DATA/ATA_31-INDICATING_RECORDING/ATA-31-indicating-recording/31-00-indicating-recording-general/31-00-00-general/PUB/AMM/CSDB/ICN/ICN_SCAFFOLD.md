@@ -2,14 +2,28 @@
 
 ## Document Information
 
-- **Document ID**: ICN-SCAFFOLD-31-00-00
-- **ATA Chapter**: 31-00-00 (Indicating & Recording – General)
-- **Publication**: AMM (Aircraft Maintenance Manual)
-- **Standard**: S1000D Issue 5.0
-- **Scope**: Illustrative support for ATA 31-00-00 Data Modules
-- **Status**: DRAFT
-- **Version**: 1.0
-- **Date**: 2026-01-10
+| Field              | Value                                                    |
+| ------------------ | -------------------------------------------------------- |
+| **Document ID**    | ICN-SCAFFOLD-31-00-00                                    |
+| **ATA Chapter**    | 31-00-00 (Indicating & Recording – General)              |
+| **Publication**    | AMM (Aircraft Maintenance Manual)                        |
+| **Standard**       | S1000D Issue 5.0                                         |
+| **Scope**          | Illustrative support for ATA 31-00-00 Data Modules       |
+| **Status**         | DRAFT                                                    |
+| **Version**        | 1.1                                                      |
+| **Issue**          | B                                                        |
+| **Date of Issue**  | 2026-02-27                                               |
+| **Previous Issue** | A (2026-01-10)                                           |
+
+### Change Summary (Issue B)
+
+- Added physical folder structure under `ICN/` (SYSTEM_OVERVIEW, SIGNAL_FLOW,
+  DISPLAY_LAYOUTS, MAINTENANCE_SUPPORT, FAULT_ISOLATION).
+- Created ten placeholder SVG files (ICN-0001 through ICN-0402) per scaffold specification.
+- Added `PREVIEWS/` subfolder containing ten PNG raster exports for quick visual validation of ICNs.
+- Introduced `ICN_PREVIEW_GALLERY.md` companion file documenting preview usage and linking raster exports.
+- Updated `README.md` with full folder map and naming convention guide.
+- Aligned document metadata table with cascade schema from issue requirement.
 
 ---
 
@@ -566,7 +580,7 @@ To implement this ICN scaffold:
 - **Status**: DRAFT – Subject to human review and approval
 - **Human approver**: _[to be completed]_
 - **Repository**: `AMPEL360-AIR-T`
-- **Last AI update**: 2026-01-10
+- **Last AI update**: 2026-02-27
 - **Standard**: S1000D Issue 5.0, ATA iSpec 2200
 - **BREX**: ATA 31-00-00 BREX (022E)
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0201-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: Generic Cockpit Display Zones (PFD/MFD/EICAS)        -->
+<!-- Purpose: Illustrative cockpit layout zones – no config spec -->
+<!-- Referenced by: DM-040A, DM-053A                             -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 300 400"
+     width="300"
+     height="400">
+
+  <title>ICN-AMPEL360AT-31-00-0201 - Generic Cockpit Display Zones</title>
+
+  <defs>
+    <style type="text/css">
+      .pfd      { fill: #D1ECF1; stroke: #17A2B8; stroke-width: 1.5; }
+      .mfd      { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1.5; }
+      .eicas    { fill: #F8D7DA; stroke: #DC3545; stroke-width: 1.5; }
+      .label    { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; fill: #000; }
+      .label-sm { font-family: Arial, sans-serif; font-size: 7.5px; text-anchor: middle; fill: #333; }
+      .title    { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+      .warn-box { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="150" y="20" class="title">Generic Cockpit Display Zones</text>
+  <text x="150" y="32" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0201-A_001 | Illustrative Only</text>
+
+  <!-- PFD Left (Capt) -->
+  <rect x="20" y="55" width="100" height="120" class="pfd" rx="4"/>
+  <text x="70" y="110" class="label" font-weight="bold">PFD</text>
+  <text x="70" y="124" class="label">(Primary Flight</text>
+  <text x="70" y="136" class="label">Display)</text>
+  <text x="70" y="152" class="label-sm">Capt side</text>
+
+  <!-- MFD Centre -->
+  <rect x="100" y="55" width="100" height="120" class="mfd" rx="4"/>
+  <text x="150" y="110" class="label" font-weight="bold">MFD</text>
+  <text x="150" y="124" class="label">(Multi-Function</text>
+  <text x="150" y="136" class="label">Display)</text>
+  <text x="150" y="152" class="label-sm">Centre console</text>
+
+  <!-- PFD Right (FO) -->
+  <rect x="180" y="55" width="100" height="120" class="pfd" rx="4"/>
+  <text x="230" y="110" class="label" font-weight="bold">PFD</text>
+  <text x="230" y="124" class="label">(Primary Flight</text>
+  <text x="230" y="136" class="label">Display)</text>
+  <text x="230" y="152" class="label-sm">F/O side</text>
+
+  <!-- EICAS Upper -->
+  <rect x="60" y="195" width="180" height="80" class="eicas" rx="4"/>
+  <text x="150" y="228" class="label" font-weight="bold">EICAS</text>
+  <text x="150" y="242" class="label">(Engine Indication &amp;</text>
+  <text x="150" y="255" class="label">Crew Alerting)</text>
+  <text x="150" y="268" class="label-sm">Upper / Lower panels</text>
+
+  <!-- Warning note -->
+  <rect x="20" y="300" width="260" height="40" class="warn-box" rx="3"/>
+  <text x="150" y="315" class="label-sm" font-style="italic">Note: Layout is illustrative – not config-specific.</text>
+  <text x="150" y="328" class="label-sm" font-style="italic">No pixel-exact reproduction. Refer to DM-053A.</text>
+
+  <!-- Document Control -->
+  <text x="5" y="393" class="note">ICN-AMPEL360AT-31-00-0201-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+
+</svg>
