@@ -77,7 +77,7 @@
   <text x="200" y="223" class="label">Information Sys.</text>
 
   <!-- Connections ATA 24 → ATA 31 (power) -->
-  <line x1="110" y1="75" x2="143" y2="125" class="barrow"/>
+  <line x1="110" y1="75" x2="143" y2="125" class="arrow"/>
   <text x="118" y="105" class="label-sm">Power</text>
 
   <!-- Connections ATA 42 ↔ ATA 31 (data bus) -->
