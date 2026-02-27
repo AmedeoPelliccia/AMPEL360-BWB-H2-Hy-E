@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-02-27",
+  "coordinate_system": {
+    "origin": "nose_tip",
+    "x_axis": "aft",
+    "y_axis": "starboard",
+    "z_axis": "up"
+  },
+  "wingspan_m": 52.0,
+  "wing_area_m2": 845.0,
+  "aspect_ratio": 3.2,
+  "cruise_sweep_deg": 35.0,
+  "overall_length_m": 35.0,
+  "center_body_depth_m": 3.5,
+  "pressure_vessel_equiv_radius_m": 3.0,
+  "mlg_height_m": 1.5,
+  "nlg_height_m": 1.2,
+  "wheelbase_m": 15.0,
+  "mlg_track_m": 8.0
+}
