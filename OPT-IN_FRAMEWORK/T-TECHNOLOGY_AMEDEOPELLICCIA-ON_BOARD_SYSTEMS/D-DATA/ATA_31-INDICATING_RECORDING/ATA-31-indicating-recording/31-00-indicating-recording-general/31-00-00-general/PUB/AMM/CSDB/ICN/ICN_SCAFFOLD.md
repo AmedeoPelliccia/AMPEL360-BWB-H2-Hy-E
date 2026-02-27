@@ -20,6 +20,8 @@
 - Added physical folder structure under `ICN/` (SYSTEM_OVERVIEW, SIGNAL_FLOW,
   DISPLAY_LAYOUTS, MAINTENANCE_SUPPORT, FAULT_ISOLATION).
 - Created ten placeholder SVG files (ICN-0001 through ICN-0402) per scaffold specification.
+- Added `PREVIEWS/` subfolder containing ten PNG raster exports for quick visual validation of ICNs.
+- Introduced `ICN_PREVIEW_GALLERY.md` companion file documenting preview usage and linking raster exports.
 - Updated `README.md` with full folder map and naming convention guide.
 - Aligned document metadata table with cascade schema from issue requirement.
 
