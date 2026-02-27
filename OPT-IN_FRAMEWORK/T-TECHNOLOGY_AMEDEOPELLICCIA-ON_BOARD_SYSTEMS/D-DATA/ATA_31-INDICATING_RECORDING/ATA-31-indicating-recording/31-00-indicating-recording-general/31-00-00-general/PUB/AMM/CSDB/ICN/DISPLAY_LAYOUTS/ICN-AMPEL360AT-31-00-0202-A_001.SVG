@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0202-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: Typical Indication Symbology Grouping (Example Only) -->
+<!-- Purpose: Generic symbol types, colour coding, priority      -->
+<!-- Referenced by: DM-040A, DM-054A                             -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 400 300"
+     width="400"
+     height="300">
+
+  <title>ICN-AMPEL360AT-31-00-0202 - Typical Indication Symbology Grouping</title>
+
+  <defs>
+    <style type="text/css">
+      .warning  { fill: #FF0000; }
+      .caution  { fill: #FFA500; }
+      .advisory { fill: #FFFF00; stroke: #CCC; }
+      .normal   { fill: #00CC00; }
+      .info     { fill: #00BFFF; }
+      .label    { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; fill: #000; }
+      .label-sm { font-family: Arial, sans-serif; font-size: 7.5px; fill: #333; }
+      .title    { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+      .row-bg-w { fill: #FFF5F5; }
+      .row-bg-c { fill: #FFF9EC; }
+      .row-bg-a { fill: #FFFDE7; }
+      .row-bg-n { fill: #F0FFF4; }
+      .row-bg-i { fill: #E8F8FF; }
+      .border   { fill: none; stroke: #CED4DA; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="200" y="20" class="title">Typical Indication Symbology Grouping</text>
+  <text x="200" y="32" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0202-A_001 | Illustrative – Conceptual Only</text>
+
+  <!-- Table headers -->
+  <rect x="20" y="45" width="360" height="20" fill="#E9ECEF" stroke="#CED4DA" stroke-width="1"/>
+  <text x="50"  y="58" class="label-sm" font-weight="bold">Symbol</text>
+  <text x="130" y="58" class="label-sm" font-weight="bold">Type</text>
+  <text x="230" y="58" class="label-sm" font-weight="bold">Colour</text>
+  <text x="330" y="58" class="label-sm" font-weight="bold">Priority</text>
+
+  <!-- Row 1: Warning -->
+  <rect x="20" y="65" width="360" height="30" class="row-bg-w" stroke="#CED4DA" stroke-width="0.5"/>
+  <circle cx="50" cy="80" r="10" class="warning"/>
+  <text x="50" y="84" font-family="Arial" font-size="10" text-anchor="middle" fill="#FFF" font-weight="bold">!</text>
+  <text x="130" y="84" class="label-sm">Warning</text>
+  <text x="230" y="84" class="label-sm">Red (#FF0000)</text>
+  <text x="330" y="84" class="label-sm">1 – Highest</text>
+
+  <!-- Row 2: Caution -->
+  <rect x="20" y="95" width="360" height="30" class="row-bg-c" stroke="#CED4DA" stroke-width="0.5"/>
+  <polygon points="50,108 40,123 60,123" class="caution"/>
+  <text x="130" y="114" class="label-sm">Caution</text>
+  <text x="230" y="114" class="label-sm">Amber (#FFA500)</text>
+  <text x="330" y="114" class="label-sm">2</text>
+
+  <!-- Row 3: Advisory -->
+  <rect x="20" y="125" width="360" height="30" class="row-bg-a" stroke="#CED4DA" stroke-width="0.5"/>
+  <rect x="40" y="130" width="20" height="16" class="advisory"/>
+  <text x="130" y="144" class="label-sm">Advisory</text>
+  <text x="230" y="144" class="label-sm">Yellow (#FFFF00)</text>
+  <text x="330" y="144" class="label-sm">3</text>
+
+  <!-- Row 4: Normal -->
+  <rect x="20" y="155" width="360" height="30" class="row-bg-n" stroke="#CED4DA" stroke-width="0.5"/>
+  <rect x="40" y="160" width="20" height="16" rx="2" class="normal"/>
+  <text x="130" y="174" class="label-sm">Normal</text>
+  <text x="230" y="174" class="label-sm">Green (#00CC00)</text>
+  <text x="330" y="174" class="label-sm">4</text>
+
+  <!-- Row 5: Information -->
+  <rect x="20" y="185" width="360" height="30" class="row-bg-i" stroke="#CED4DA" stroke-width="0.5"/>
+  <circle cx="50" cy="200" r="10" class="info"/>
+  <text x="50" y="204" font-family="Arial" font-size="10" text-anchor="middle" fill="#FFF">i</text>
+  <text x="130" y="204" class="label-sm">Information</text>
+  <text x="230" y="204" class="label-sm">Cyan (#00BFFF)</text>
+  <text x="330" y="204" class="label-sm">5 – Lowest</text>
+
+  <!-- Table border -->
+  <rect x="20" y="45" width="360" height="170" class="border"/>
+
+  <!-- Note -->
+  <rect x="20" y="225" width="360" height="35" fill="#FFF3CD" stroke="#FFC107" stroke-width="0.8" rx="3"/>
+  <text x="30" y="239" class="label-sm" font-style="italic">Note: Colours are conceptual only. Do not reproduce exact software</text>
+  <text x="30" y="252" class="label-sm" font-style="italic">symbology. Refer to DM-054A for normative definitions.</text>
+
+  <!-- Document Control -->
+  <text x="5" y="292" class="note">ICN-AMPEL360AT-31-00-0202-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+
+</svg>
