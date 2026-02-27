@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0102-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: Recording vs Real-Time Indication Data Paths         -->
+<!-- Purpose: Bifurcation of real-time and recorded data paths   -->
+<!-- Referenced by: DM-040A, DM-730A, DM-052A                   -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 500 300"
+     width="500"
+     height="300">
+
+  <title>ICN-AMPEL360AT-31-00-0102 - Recording vs Real-Time Indication Data Paths</title>
+
+  <defs>
+    <style type="text/css">
+      .source   { fill: #D4EDDA; stroke: #28A745; stroke-width: 1.5; }
+      .buffer   { fill: #D1ECF1; stroke: #17A2B8; stroke-width: 1.5; }
+      .realtime { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1.5; }
+      .record   { fill: #F8D7DA; stroke: #DC3545; stroke-width: 1.5; }
+      .retrieve { fill: #E2D9F3; stroke: #6F42C1; stroke-width: 1.5; }
+      .label    { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; fill: #000; }
+      .label-sm { font-family: Arial, sans-serif; font-size: 7.5px; text-anchor: middle; fill: #333; }
+      .title    { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .arrow    { fill: none; stroke: #444; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+    </style>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="300" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="250" y="20" class="title">Recording vs Real-Time Indication Data Paths</text>
+  <text x="250" y="32" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0102-A_001 | Illustrative Only</text>
+
+  <!-- Source: Validated Data -->
+  <rect x="190" y="50" width="120" height="45" class="source" rx="4"/>
+  <text x="250" y="68" class="label" font-weight="bold">Validated Data</text>
+  <text x="250" y="81" class="label">(from Processing)</text>
+
+  <!-- Bifurcation arrows -->
+  <line x1="250" y1="95" x2="120" y2="130" class="arrow"/>
+  <line x1="250" y1="95" x2="380" y2="130" class="arrow"/>
+
+  <!-- Real-time path label -->
+  <text x="165" y="120" class="label-sm">Real-time</text>
+
+  <!-- Recording path label -->
+  <text x="335" y="120" class="label-sm">Recording</text>
+
+  <!-- Real-time display block -->
+  <rect x="50" y="130" width="140" height="55" class="realtime" rx="4"/>
+  <text x="120" y="150" class="label" font-weight="bold">Real-Time Path</text>
+  <text x="120" y="163" class="label">Cockpit Displays</text>
+  <text x="120" y="175" class="label">(PFD / MFD / EICAS)</text>
+
+  <!-- Recording block -->
+  <rect x="310" y="130" width="140" height="55" class="record" rx="4"/>
+  <text x="380" y="150" class="label" font-weight="bold">Recording Path</text>
+  <text x="380" y="163" class="label">FDR / CVR / QAR</text>
+  <text x="380" y="175" class="label">(Buffered + Timestamped)</text>
+
+  <!-- Retrieval block -->
+  <rect x="310" y="220" width="140" height="40" class="retrieve" rx="4"/>
+  <text x="380" y="238" class="label" font-weight="bold">Data Retrieval</text>
+  <text x="380" y="250" class="label">(Post-flight / Maintenance)</text>
+
+  <!-- Arrow: Recording → Retrieval -->
+  <line x1="380" y1="185" x2="380" y2="218" class="arrow"/>
+
+  <!-- Document Control -->
+  <text x="5" y="292" class="note">ICN-AMPEL360AT-31-00-0102-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+
+</svg>

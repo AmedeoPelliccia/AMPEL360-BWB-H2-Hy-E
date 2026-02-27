@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0401-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: Fault Isolation Decision Tree (High-Level)           -->
+<!-- Purpose: High-level troubleshooting flow for ATA 31         -->
+<!-- Referenced by: DM-730A, DM-731A                             -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 300 500"
+     width="300"
+     height="500">
+
+  <title>ICN-AMPEL360AT-31-00-0401 - Fault Isolation Decision Tree (High-Level)</title>
+
+  <defs>
+    <style type="text/css">
+      .start    { fill: #2C3E50; }
+      .decision { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1.5; }
+      .action   { fill: #D4EDDA; stroke: #28A745; stroke-width: 1.5; }
+      .end-ok   { fill: #D4EDDA; stroke: #28A745; stroke-width: 2; }
+      .end-esc  { fill: #F8D7DA; stroke: #DC3545; stroke-width: 2; }
+      .label    { font-family: Arial, sans-serif; font-size: 8.5px; text-anchor: middle; fill: #000; }
+      .label-w  { font-family: Arial, sans-serif; font-size: 8.5px; text-anchor: middle; fill: #FFF; }
+      .label-sm { font-family: Arial, sans-serif; font-size: 7.5px; text-anchor: middle; fill: #555; }
+      .title    { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .arrow    { fill: none; stroke: #444; stroke-width: 1.2; marker-end: url(#arrowhead); }
+      .yesno    { font-family: Arial, sans-serif; font-size: 7.5px; fill: #555; }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+    </style>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="150" y="18" class="title">Fault Isolation Decision Tree</text>
+  <text x="150" y="30" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0401-A_001 | Illustrative Only</text>
+
+  <!-- START -->
+  <ellipse cx="150" cy="60" rx="55" ry="18" class="start"/>
+  <text x="150" y="64" class="label-w" font-weight="bold">FAULT DETECTED</text>
+
+  <!-- Arrow down -->
+  <line x1="150" y1="78" x2="150" y2="100" class="arrow"/>
+
+  <!-- Decision 1: CMS message? -->
+  <polygon points="150,100 220,128 150,156 80,128" class="decision"/>
+  <text x="150" y="123" class="label">CMS / BITE</text>
+  <text x="150" y="134" class="label">message present?</text>
+
+  <!-- Yes branch down -->
+  <line x1="150" y1="156" x2="150" y2="185" class="arrow"/>
+  <text x="158" y="172" class="yesno">YES</text>
+
+  <!-- Action: Consult CMS fault code -->
+  <rect x="90" y="185" width="120" height="35" class="action" rx="4"/>
+  <text x="150" y="199" class="label" font-weight="bold">Consult CMS</text>
+  <text x="150" y="212" class="label">Fault Code Table</text>
+
+  <!-- No branch right -->
+  <line x1="220" y1="128" x2="260" y2="128" class="arrow"/>
+  <text x="242" y="122" class="yesno">NO</text>
+
+  <!-- Action: Manual check -->
+  <rect x="230" y="115" width="55" height="35" class="action" rx="4"/>
+  <text x="257" y="129" class="label" font-weight="bold">Manual</text>
+  <text x="257" y="141" class="label">System Check</text>
+
+  <!-- Arrow from CMS consult down -->
+  <line x1="150" y1="220" x2="150" y2="248" class="arrow"/>
+
+  <!-- Decision 2: Fault isolated? -->
+  <polygon points="150,248 220,276 150,304 80,276" class="decision"/>
+  <text x="150" y="271" class="label">Fault</text>
+  <text x="150" y="283" class="label">isolated?</text>
+
+  <!-- Yes → resolve -->
+  <line x1="150" y1="304" x2="150" y2="330" class="arrow"/>
+  <text x="158" y="318" class="yesno">YES</text>
+
+  <rect x="90" y="330" width="120" height="35" class="end-ok" rx="4"/>
+  <text x="150" y="344" class="label" font-weight="bold">Apply Corrective</text>
+  <text x="150" y="357" class="label">Action → Close</text>
+
+  <!-- No → escalate -->
+  <line x1="80" y1="276" x2="40" y2="276" class="arrow"/>
+  <text x="58" y="270" class="yesno">NO</text>
+
+  <rect x="10" y="263" width="55" height="35" class="end-esc" rx="4"/>
+  <text x="37" y="278" class="label" font-weight="bold">Escalate</text>
+  <text x="37" y="291" class="label">to Eng.</text>
+
+  <!-- Document Control -->
+  <text x="5" y="493" class="note">ICN-AMPEL360AT-31-00-0401-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+
+</svg>

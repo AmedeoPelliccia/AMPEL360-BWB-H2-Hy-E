@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0402-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: Data Validity / Failure Propagation Concept          -->
+<!-- Purpose: How invalid data is detected and failure flags     -->
+<!-- Referenced by: DM-730A, DM-055A                             -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 500 300"
+     width="500"
+     height="300">
+
+  <title>ICN-AMPEL360AT-31-00-0402 - Data Validity and Failure Propagation Concept</title>
+
+  <defs>
+    <style type="text/css">
+      .valid    { fill: #D4EDDA; stroke: #28A745; stroke-width: 1.5; }
+      .invalid  { fill: #F8D7DA; stroke: #DC3545; stroke-width: 1.5; }
+      .check    { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1.5; }
+      .redund   { fill: #E2D9F3; stroke: #6F42C1; stroke-width: 1.5; }
+      .flag     { fill: #FF0000; }
+      .label    { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; fill: #000; }
+      .label-sm { font-family: Arial, sans-serif; font-size: 7.5px; text-anchor: middle; fill: #333; }
+      .label-r  { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #DC3545; font-weight: bold; }
+      .title    { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .arrow    { fill: none; stroke: #444; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .arrow-r  { fill: none; stroke: #DC3545; stroke-width: 1.5; stroke-dasharray: 4,2; marker-end: url(#arrowhead-r); }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+    </style>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#444"/>
+    </marker>
+    <marker id="arrowhead-r" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#DC3545"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="300" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="250" y="20" class="title">Data Validity / Failure Propagation Concept</text>
+  <text x="250" y="32" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0402-A_001 | Illustrative Only</text>
+
+  <!-- Source A – valid -->
+  <rect x="20" y="60" width="75" height="35" class="valid" rx="4"/>
+  <text x="57" y="74" class="label">Source A</text>
+  <text x="57" y="86" class="label">(Valid)</text>
+
+  <!-- Source B – failed -->
+  <rect x="20" y="120" width="75" height="35" class="invalid" rx="4"/>
+  <text x="57" y="134" class="label">Source B</text>
+  <text x="57" y="146" class="label">(FAIL)</text>
+
+  <!-- Failure flag icon on Source B -->
+  <polygon points="57,115 53,108 61,108" class="flag"/>
+  <text x="57" y="107" class="label-r">!</text>
+
+  <!-- Validity Check block -->
+  <rect x="140" y="85" width="90" height="45" class="check" rx="4"/>
+  <text x="185" y="104" class="label" font-weight="bold">Validity</text>
+  <text x="185" y="117" class="label">Check / Monitor</text>
+
+  <!-- Arrows Sources → Validity Check -->
+  <line x1="95" y1="77" x2="138" y2="100" class="arrow"/>
+  <line x1="95" y1="137" x2="138" y2="115" class="arrow-r"/>
+
+  <!-- Failure flag propagation arrow -->
+  <text x="112" y="128" class="label-r" font-size="7">FAIL flag</text>
+
+  <!-- Redundancy / Voting block -->
+  <rect x="140" y="165" width="90" height="40" class="redund" rx="4"/>
+  <text x="185" y="181" class="label" font-weight="bold">Redundancy /</text>
+  <text x="185" y="194" class="label">Voting Logic</text>
+
+  <!-- Arrow Validity Check → Redundancy -->
+  <line x1="185" y1="130" x2="185" y2="163" class="arrow"/>
+
+  <!-- Displayed Value block -->
+  <rect x="285" y="85" width="90" height="45" class="valid" rx="4"/>
+  <text x="330" y="104" class="label" font-weight="bold">Displayed</text>
+  <text x="330" y="117" class="label">Value (Source A)</text>
+
+  <!-- Flagged / Annunciation block -->
+  <rect x="285" y="165" width="90" height="40" class="invalid" rx="4"/>
+  <text x="330" y="181" class="label" font-weight="bold">Annunciation</text>
+  <text x="330" y="194" class="label">(Source B FAIL)</text>
+
+  <!-- Arrows Validity → Displayed -->
+  <line x1="230" y1="100" x2="283" y2="100" class="arrow"/>
+  <line x1="230" y1="130" x2="260" y2="130" class="arrow-r"/>
+  <line x1="260" y1="130" x2="260" y2="185" class="arrow-r"/>
+  <line x1="260" y1="185" x2="283" y2="185" class="arrow-r"/>
+
+  <!-- Redundancy → impact note -->
+  <text x="185" y="235" class="label-sm">Redundancy ensures continued operation</text>
+  <text x="185" y="247" class="label-sm">on valid source while flagging failed source</text>
+
+  <!-- Document Control -->
+  <text x="5" y="292" class="note">ICN-AMPEL360AT-31-00-0402-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+
+</svg>

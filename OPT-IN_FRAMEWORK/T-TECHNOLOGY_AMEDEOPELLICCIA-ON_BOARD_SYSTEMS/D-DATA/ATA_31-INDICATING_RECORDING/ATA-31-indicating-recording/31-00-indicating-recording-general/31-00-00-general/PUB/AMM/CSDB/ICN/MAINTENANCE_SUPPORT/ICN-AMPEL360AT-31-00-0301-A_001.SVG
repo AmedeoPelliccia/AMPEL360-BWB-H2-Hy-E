@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0301-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: Typical LRU Location for Indicating/Recording Equip  -->
+<!-- Purpose: Aircraft zones where indicating/recording LRUs are -->
+<!-- Referenced by: DM-520x, DM-350A                             -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 300 400"
+     width="300"
+     height="400">
+
+  <title>ICN-AMPEL360AT-31-00-0301 - Typical LRU Location for Indicating/Recording Equipment</title>
+
+  <defs>
+    <style type="text/css">
+      .aircraft { fill: #E8F4FD; stroke: #2980B9; stroke-width: 1.5; }
+      .lru      { fill: #D4EDDA; stroke: #28A745; stroke-width: 1.5; }
+      .access   { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1.5; stroke-dasharray: 4,2; }
+      .label    { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; fill: #000; }
+      .label-sm { font-family: Arial, sans-serif; font-size: 7.5px; text-anchor: middle; fill: #333; }
+      .title    { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+      .zone-lbl { font-family: Arial, sans-serif; font-size: 8px; fill: #2980B9; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="150" y="20" class="title">Typical LRU Location Overview</text>
+  <text x="150" y="32" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0301-A_001 | Illustrative Only</text>
+
+  <!-- Aircraft fuselage outline (side view concept) -->
+  <ellipse cx="150" cy="170" rx="120" ry="55" class="aircraft"/>
+  <text x="150" y="175" class="zone-lbl">Aircraft Fuselage</text>
+  <text x="150" y="187" class="zone-lbl">(Side View – Conceptual)</text>
+
+  <!-- Zone A: Cockpit/Avionics Bay -->
+  <rect x="35" y="120" width="65" height="35" class="lru" rx="3"/>
+  <text x="67" y="135" class="label" font-weight="bold">Zone A</text>
+  <text x="67" y="147" class="label">Avionics Bay</text>
+
+  <!-- Zone B: EE Bay -->
+  <rect x="115" y="215" width="70" height="35" class="lru" rx="3"/>
+  <text x="150" y="230" class="label" font-weight="bold">Zone B</text>
+  <text x="150" y="242" class="label">EE Bay</text>
+
+  <!-- Zone C: Tail / Recorder Area -->
+  <rect x="200" y="120" width="60" height="35" class="lru" rx="3"/>
+  <text x="230" y="135" class="label" font-weight="bold">Zone C</text>
+  <text x="230" y="147" class="label">Recorder Vault</text>
+
+  <!-- Access panel indicators -->
+  <rect x="40" y="165" width="55" height="18" class="access" rx="2"/>
+  <text x="67" y="177" class="label-sm">Access Panel</text>
+
+  <rect x="205" y="165" width="50" height="18" class="access" rx="2"/>
+  <text x="230" y="177" class="label-sm">Access Panel</text>
+
+  <!-- Legend -->
+  <rect x="20" y="265" width="260" height="90" fill="#F8F9FA" stroke="#CED4DA" stroke-width="0.5" rx="3"/>
+  <text x="150" y="280" class="label" font-weight="bold">Legend</text>
+  <rect x="30" y="288" width="14" height="10" class="lru" rx="1"/>
+  <text x="50" y="297" class="label-sm" text-anchor="start">LRU Location Zone</text>
+  <rect x="30" y="304" width="14" height="10" class="access" rx="1"/>
+  <text x="50" y="313" class="label-sm" text-anchor="start">Access Panel (typical)</text>
+  <text x="30" y="330" class="label-sm" text-anchor="start" font-style="italic">Note: Zones are indicative. Refer to DM-350A</text>
+  <text x="30" y="342" class="label-sm" text-anchor="start" font-style="italic">for normative LRU location data.</text>
+
+  <!-- Document Control -->
+  <text x="5" y="393" class="note">ICN-AMPEL360AT-31-00-0301-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+
+</svg>

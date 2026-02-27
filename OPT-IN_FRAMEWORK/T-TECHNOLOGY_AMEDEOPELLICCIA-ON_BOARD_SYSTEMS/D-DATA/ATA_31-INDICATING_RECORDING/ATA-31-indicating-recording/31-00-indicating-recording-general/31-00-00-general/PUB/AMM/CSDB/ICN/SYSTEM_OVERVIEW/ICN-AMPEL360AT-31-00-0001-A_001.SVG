@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0001-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: Indicating & Recording System Global Architecture    -->
+<!-- Purpose: Overall system block diagram with major subsystems -->
+<!-- Referenced by: DM-040A, DM-010A                             -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 400 300"
+     width="400"
+     height="300">
+
+  <title>ICN-AMPEL360AT-31-00-0001 - Indicating &amp; Recording System Global Architecture</title>
+
+  <defs>
+    <style type="text/css">
+      .system   { fill: #D4EDDA; stroke: #28A745; stroke-width: 1.5; }
+      .control  { fill: #D1ECF1; stroke: #17A2B8; stroke-width: 1.5; }
+      .data     { fill: #F8D7DA; stroke: #DC3545; stroke-width: 1.5; }
+      .hmi      { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1.5; }
+      .struct   { fill: #E0E0E0; stroke: #6C757D; stroke-width: 1.5; }
+      .label    { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; fill: #000; }
+      .title    { font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .arrow    { fill: none; stroke: #444; stroke-width: 1.2; marker-end: url(#arrowhead); }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+    </style>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="200" y="20" class="title">Indicating &amp; Recording – Global Architecture</text>
+  <text x="200" y="32" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0001-A_001 | Illustrative Only</text>
+
+  <!-- Sensors block -->
+  <rect x="20" y="55" width="80" height="40" class="system" rx="4"/>
+  <text x="60" y="72" class="label">Sensors /</text>
+  <text x="60" y="83" class="label">Transducers</text>
+
+  <!-- DAU block -->
+  <rect x="155" y="55" width="90" height="40" class="control" rx="4"/>
+  <text x="200" y="72" class="label">Data Acquisition</text>
+  <text x="200" y="83" class="label">Units (DAU)</text>
+
+  <!-- Processing block -->
+  <rect x="155" y="130" width="90" height="40" class="control" rx="4"/>
+  <text x="200" y="147" class="label">Processing /</text>
+  <text x="200" y="158" class="label">Consolidation</text>
+
+  <!-- Displays block -->
+  <rect x="300" y="55" width="80" height="40" class="hmi" rx="4"/>
+  <text x="340" y="72" class="label">Cockpit</text>
+  <text x="340" y="83" class="label">Displays</text>
+
+  <!-- Recorders block -->
+  <rect x="300" y="130" width="80" height="40" class="data" rx="4"/>
+  <text x="340" y="147" class="label">Recorders</text>
+  <text x="340" y="158" class="label">(FDR/CVR/QAR)</text>
+
+  <!-- ATA Interfaces block -->
+  <rect x="140" y="210" width="120" height="50" class="struct" rx="4"/>
+  <text x="200" y="228" class="label">ATA Interfaces</text>
+  <text x="200" y="240" class="label">ATA 24 | ATA 42</text>
+  <text x="200" y="252" class="label">ATA 45 | ATA 46</text>
+
+  <!-- Arrows: Sensors → DAU -->
+  <line x1="100" y1="75" x2="153" y2="75" class="arrow"/>
+
+  <!-- Arrows: DAU → Displays -->
+  <line x1="245" y1="68" x2="298" y2="68" class="arrow"/>
+
+  <!-- Arrows: DAU → Processing -->
+  <line x1="200" y1="95" x2="200" y2="128" class="arrow"/>
+
+  <!-- Arrows: Processing → Recorders -->
+  <line x1="245" y1="150" x2="298" y2="150" class="arrow"/>
+
+  <!-- Arrows: Processing ↔ ATA Interfaces -->
+  <line x1="200" y1="170" x2="200" y2="208" class="arrow"/>
+
+  <!-- Document Control -->
+  <g id="doc-control">
+    <text x="5" y="292" class="note">ICN-AMPEL360AT-31-00-0001-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+  </g>
+
+</svg>

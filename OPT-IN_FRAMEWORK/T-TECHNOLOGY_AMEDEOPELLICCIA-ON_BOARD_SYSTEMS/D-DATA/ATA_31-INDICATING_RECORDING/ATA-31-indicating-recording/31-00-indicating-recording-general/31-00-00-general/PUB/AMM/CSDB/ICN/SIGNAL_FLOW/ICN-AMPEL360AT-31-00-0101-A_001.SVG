@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0101-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: Sensor → Acquisition → Processing → Display Data Flow -->
+<!-- Purpose: Signal acquisition and distribution chain          -->
+<!-- Referenced by: DM-040A, DM-730A, DM-051A                   -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 500 300"
+     width="500"
+     height="300">
+
+  <title>ICN-AMPEL360AT-31-00-0101 - Sensor to Display Data Flow</title>
+
+  <defs>
+    <style type="text/css">
+      .sensor   { fill: #D4EDDA; stroke: #28A745; stroke-width: 1.5; }
+      .acq      { fill: #D1ECF1; stroke: #17A2B8; stroke-width: 1.5; }
+      .proc     { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1.5; }
+      .dist     { fill: #E2D9F3; stroke: #6F42C1; stroke-width: 1.5; }
+      .display  { fill: #F8D7DA; stroke: #DC3545; stroke-width: 1.5; }
+      .label    { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; fill: #000; }
+      .label-sm { font-family: Arial, sans-serif; font-size: 7.5px; text-anchor: middle; fill: #333; }
+      .title    { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .arrow    { fill: none; stroke: #444; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+    </style>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="300" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="250" y="20" class="title">Sensor → Acquisition → Processing → Display Data Flow</text>
+  <text x="250" y="32" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0101-A_001 | Illustrative Only</text>
+
+  <!-- Step 1: Sensors -->
+  <rect x="20" y="110" width="75" height="55" class="sensor" rx="4"/>
+  <text x="57" y="130" class="label" font-weight="bold">Step 1</text>
+  <text x="57" y="143" class="label">Sensors /</text>
+  <text x="57" y="155" class="label">Transducers</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="95" y1="137" x2="118" y2="137" class="arrow"/>
+  <text x="106" y="132" class="label-sm">Raw</text>
+
+  <!-- Step 2: Acquisition -->
+  <rect x="120" y="110" width="75" height="55" class="acq" rx="4"/>
+  <text x="157" y="130" class="label" font-weight="bold">Step 2</text>
+  <text x="157" y="143" class="label">Data Acq.</text>
+  <text x="157" y="155" class="label">Units (DAU)</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="195" y1="137" x2="218" y2="137" class="arrow"/>
+  <text x="206" y="132" class="label-sm">Digital</text>
+
+  <!-- Step 3: Processing -->
+  <rect x="220" y="110" width="75" height="55" class="proc" rx="4"/>
+  <text x="257" y="130" class="label" font-weight="bold">Step 3</text>
+  <text x="257" y="143" class="label">Processing /</text>
+  <text x="257" y="155" class="label">Validation</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="295" y1="137" x2="318" y2="137" class="arrow"/>
+  <text x="306" y="132" class="label-sm">Formatted</text>
+
+  <!-- Step 4: Distribution -->
+  <rect x="320" y="110" width="75" height="55" class="dist" rx="4"/>
+  <text x="357" y="130" class="label" font-weight="bold">Step 4</text>
+  <text x="357" y="143" class="label">Data</text>
+  <text x="357" y="155" class="label">Distribution</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="395" y1="137" x2="418" y2="137" class="arrow"/>
+  <text x="406" y="132" class="label-sm">Routed</text>
+
+  <!-- Step 5: Display -->
+  <rect x="420" y="110" width="60" height="55" class="display" rx="4"/>
+  <text x="450" y="130" class="label" font-weight="bold">Step 5</text>
+  <text x="450" y="143" class="label">Cockpit</text>
+  <text x="450" y="155" class="label">Displays</text>
+
+  <!-- Timing block below -->
+  <rect x="160" y="200" width="180" height="35" fill="#F8F9FA" stroke="#CED4DA" stroke-width="1" rx="3"/>
+  <text x="250" y="215" class="label" font-weight="bold">Timing &amp; Sync</text>
+  <text x="250" y="228" class="label-sm">All steps synchronised to system clock</text>
+
+  <!-- Arrow from Processing to Timing -->
+  <line x1="257" y1="165" x2="257" y2="198" class="arrow" stroke-dasharray="3,2"/>
+
+  <!-- Document Control -->
+  <text x="5" y="292" class="note">ICN-AMPEL360AT-31-00-0101-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+
+</svg>

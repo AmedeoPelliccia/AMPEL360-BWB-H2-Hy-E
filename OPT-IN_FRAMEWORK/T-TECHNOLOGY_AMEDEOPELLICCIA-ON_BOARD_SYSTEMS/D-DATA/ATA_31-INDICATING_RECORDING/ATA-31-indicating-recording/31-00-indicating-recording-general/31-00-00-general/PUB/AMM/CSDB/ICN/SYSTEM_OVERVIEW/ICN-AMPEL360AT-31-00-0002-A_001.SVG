@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- SPDX-FileCopyrightText: 2026 Amedeo Pelliccia <amedeo.pelliccia@icloud.com> -->
+<!-- ============================================================ -->
+<!-- ICN: AMPEL360AT-31-00-0002-A_001                            -->
+<!-- ATA: 31-00-00 Indicating & Recording – General              -->
+<!-- Title: ATA 31 Context within Avionics Architecture          -->
+<!-- Purpose: Interface boundaries with ATA 24/42/45/46          -->
+<!-- Referenced by: DM-040A, DM-042A                             -->
+<!-- Status: Draft                                               -->
+<!-- Date: 2026-02-27                                            -->
+<!-- ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 400 300"
+     width="400"
+     height="300">
+
+  <title>ICN-AMPEL360AT-31-00-0002 - ATA 31 Context within Avionics Architecture</title>
+
+  <defs>
+    <style type="text/css">
+      .ata31    { fill: #D4EDDA; stroke: #28A745; stroke-width: 2; }
+      .ata24    { fill: #D1ECF1; stroke: #17A2B8; stroke-width: 1.5; }
+      .ata42    { fill: #FFF3CD; stroke: #FFC107; stroke-width: 1.5; }
+      .ata45    { fill: #F8D7DA; stroke: #DC3545; stroke-width: 1.5; }
+      .ata46    { fill: #E2D9F3; stroke: #6F42C1; stroke-width: 1.5; }
+      .label    { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; fill: #000; }
+      .label-sm { font-family: Arial, sans-serif; font-size: 7.5px; text-anchor: middle; fill: #333; }
+      .title    { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #000; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 8px; text-anchor: middle; fill: #555; }
+      .bus      { fill: none; stroke: #444; stroke-width: 1.2; stroke-dasharray: 4,2; }
+      .arrow    { fill: none; stroke: #444; stroke-width: 1.2; marker-end: url(#arrowhead); }
+      .barrow   { fill: none; stroke: #444; stroke-width: 1.2;
+                  marker-start: url(#arrowhead-r); marker-end: url(#arrowhead); }
+      .note     { font-family: Arial, sans-serif; font-size: 7px; fill: #888; }
+    </style>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#444"/>
+    </marker>
+    <marker id="arrowhead-r" markerWidth="6" markerHeight="4" refX="1" refY="2" orient="auto">
+      <polygon points="6 0, 0 2, 6 4" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="200" y="20" class="title">ATA 31 – Avionics Architecture Context</text>
+  <text x="200" y="32" class="subtitle">ATA 31-00-00 | ICN-AMPEL360AT-31-00-0002-A_001 | Illustrative Only</text>
+
+  <!-- ATA 31 – central -->
+  <rect x="145" y="105" width="110" height="55" class="ata31" rx="5"/>
+  <text x="200" y="126" class="label" font-weight="bold">ATA 31</text>
+  <text x="200" y="139" class="label">Indicating &amp;</text>
+  <text x="200" y="150" class="label">Recording</text>
+
+  <!-- ATA 24 – left -->
+  <rect x="20" y="55" width="90" height="40" class="ata24" rx="4"/>
+  <text x="65" y="72" class="label">ATA 24</text>
+  <text x="65" y="83" class="label">Electrical Power</text>
+
+  <!-- ATA 42 – top -->
+  <rect x="145" y="42" width="110" height="40" class="ata42" rx="4"/>
+  <text x="200" y="59" class="label">ATA 42</text>
+  <text x="200" y="70" class="label">Integrated Modular</text>
+
+  <!-- ATA 45 – right -->
+  <rect x="290" y="55" width="90" height="40" class="ata45" rx="4"/>
+  <text x="335" y="72" class="label">ATA 45</text>
+  <text x="335" y="83" class="label">Central Maint.</text>
+
+  <!-- ATA 46 – bottom -->
+  <rect x="145" y="195" width="110" height="40" class="ata46" rx="4"/>
+  <text x="200" y="212" class="label">ATA 46</text>
+  <text x="200" y="223" class="label">Information Sys.</text>
+
+  <!-- Connections ATA 24 → ATA 31 (power) -->
+  <line x1="110" y1="75" x2="143" y2="125" class="barrow"/>
+  <text x="118" y="105" class="label-sm">Power</text>
+
+  <!-- Connections ATA 42 ↔ ATA 31 (data bus) -->
+  <line x1="200" y1="82" x2="200" y2="103" class="barrow"/>
+  <text x="215" y="96" class="label-sm">ARINC 664</text>
+
+  <!-- Connections ATA 45 ↔ ATA 31 (maint data) -->
+  <line x1="290" y1="75" x2="257" y2="125" class="barrow"/>
+  <text x="283" y="105" class="label-sm">Maint. Bus</text>
+
+  <!-- Connections ATA 31 ↔ ATA 46 -->
+  <line x1="200" y1="160" x2="200" y2="193" class="barrow"/>
+  <text x="215" y="180" class="label-sm">Data Net.</text>
+
+  <!-- Legend -->
+  <rect x="20" y="240" width="360" height="45" fill="#F8F9FA" stroke="#CED4DA" stroke-width="0.5" rx="3"/>
+  <text x="30" y="253" class="label-sm" text-anchor="start">Legend:</text>
+  <rect x="75" y="244" width="12" height="8" class="ata31" rx="1"/>
+  <text x="90" y="252" class="label-sm" text-anchor="start">ATA 31</text>
+  <rect x="130" y="244" width="12" height="8" class="ata24" rx="1"/>
+  <text x="145" y="252" class="label-sm" text-anchor="start">ATA 24</text>
+  <rect x="185" y="244" width="12" height="8" class="ata42" rx="1"/>
+  <text x="200" y="252" class="label-sm" text-anchor="start">ATA 42</text>
+  <rect x="245" y="244" width="12" height="8" class="ata45" rx="1"/>
+  <text x="260" y="252" class="label-sm" text-anchor="start">ATA 45</text>
+  <rect x="305" y="244" width="12" height="8" class="ata46" rx="1"/>
+  <text x="320" y="252" class="label-sm" text-anchor="start">ATA 46</text>
+  <text x="30" y="278" class="note">Interfaces are illustrative. Refer to DM-042A for normative interface definitions.</text>
+
+  <!-- Document Control -->
+  <text x="5" y="295" class="note">ICN-AMPEL360AT-31-00-0002-A_001 | Issue A | 2026-02-27 | DRAFT – Illustrative Only | S1000D Issue 5.0</text>
+
+</svg>
