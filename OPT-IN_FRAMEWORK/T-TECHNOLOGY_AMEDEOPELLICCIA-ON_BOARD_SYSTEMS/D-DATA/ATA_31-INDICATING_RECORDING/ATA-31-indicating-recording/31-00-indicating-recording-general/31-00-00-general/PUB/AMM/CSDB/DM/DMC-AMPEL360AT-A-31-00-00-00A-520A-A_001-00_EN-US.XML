@@ -88,6 +88,16 @@ Project: AMPEL360-AIR-T
       <mainProcedure>
         <proceduralStep>
           <para>This data module provides procedures for executing Built-In Test (BIT) and Built-In Test Equipment (BITE) functions for the AMPEL360 Q100 Indicating and Recording System. BITE tests verify system functionality, isolate faults to line-replaceable units (LRUs), and validate interfaces.</para>
+
+          <figure id="fig-520A-0301">
+            <title>LRU Location Overview — Avionics Bay, EE Bay, and Recorder Vault Zones</title>
+            <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0301-A_001"/>
+          </figure>
+
+          <figure id="fig-520A-0302">
+            <title>Connector Identification Schematic — Receptacle / Cable / Plug Labelling Concept</title>
+            <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0302-A_001"/>
+          </figure>
         </proceduralStep>
         
         <proceduralStep>

@@ -90,6 +90,16 @@ Project: AMPEL360-AIR-T
       
       <levelledPara>
         <title>System Architecture</title>
+
+        <figure id="fig-040B-0001">
+          <title>Indicating and Recording System — Global Architecture Block Diagram</title>
+          <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0001-A_001"/>
+        </figure>
+
+        <figure id="fig-040B-0002">
+          <title>ATA 31 Position within the Avionics Architecture — Interface Boundaries with ATA 24 / 42 / 45 / 46</title>
+          <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0002-A_001"/>
+        </figure>
         
         <levelledPara>
           <title>Functional Architecture</title>
@@ -258,6 +268,11 @@ Project: AMPEL360-AIR-T
             <br/>
             Total latency (sensor to display): Typically &lt;100 ms for non-critical parameters
           </para>
+
+          <figure id="fig-040B-0101">
+            <title>Sensor to Display Data Flow — Five-Step Acquisition and Presentation Chain</title>
+            <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0101-A_001"/>
+          </figure>
         </levelledPara>
         
         <levelledPara>
@@ -293,6 +308,11 @@ Project: AMPEL360-AIR-T
             <br/>
             Recording rate: Typically 1-64 Hz depending on parameter criticality
           </para>
+
+          <figure id="fig-040B-0102">
+            <title>Recording vs Real-Time Data Paths — FDR/CVR/QAR Buffered Path vs Cockpit Display Path</title>
+            <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0102-A_001"/>
+          </figure>
         </levelledPara>
       </levelledPara>
       

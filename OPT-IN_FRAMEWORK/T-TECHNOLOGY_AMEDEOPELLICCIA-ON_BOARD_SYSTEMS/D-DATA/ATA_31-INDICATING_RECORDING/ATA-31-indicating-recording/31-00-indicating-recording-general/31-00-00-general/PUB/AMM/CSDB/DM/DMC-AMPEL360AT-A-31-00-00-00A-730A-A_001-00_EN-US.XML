@@ -52,7 +52,31 @@ ATA Chapter: 31-00-00 Indicating and Recording General
           <isolationStep>
             <para>This data module provides fault isolation procedures for common Indicating and Recording System failures. Use BITE fault codes as starting point for troubleshooting. If no BITE code available, use symptom-based troubleshooting trees.</para>
           </isolationStep>
+
+          <isolationStep>
+            <para>Refer to the figures below for an overview of system data flow and the high-level fault isolation decision tree.</para>
+          </isolationStep>
         </isolationProcedureGroup>
+
+        <figure id="fig-730A-0101">
+          <title>Sensor to Display Data Flow — Signal Path Reference for Fault Isolation</title>
+          <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0101-A_001"/>
+        </figure>
+
+        <figure id="fig-730A-0102">
+          <title>Recording vs Real-Time Data Paths — FDR/CVR/QAR Bifurcation Reference</title>
+          <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0102-A_001"/>
+        </figure>
+
+        <figure id="fig-730A-0401">
+          <title>Fault Isolation Decision Tree — High-Level Troubleshooting Flow</title>
+          <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0401-A_001"/>
+        </figure>
+
+        <figure id="fig-730A-0402">
+          <title>Data Validity / Failure Propagation — Redundancy and Annunciation Logic</title>
+          <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0402-A_001"/>
+        </figure>
         
         <isolationProcedureGroup>
           <title>Display System Faults</title>
