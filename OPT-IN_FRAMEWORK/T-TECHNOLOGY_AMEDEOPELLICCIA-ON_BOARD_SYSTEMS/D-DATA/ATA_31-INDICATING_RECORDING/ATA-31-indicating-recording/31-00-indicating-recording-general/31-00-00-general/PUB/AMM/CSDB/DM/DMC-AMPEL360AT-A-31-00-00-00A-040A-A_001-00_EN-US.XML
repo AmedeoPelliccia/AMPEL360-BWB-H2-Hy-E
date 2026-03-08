@@ -123,10 +123,30 @@ Project: AMPEL360-AIR-T
       <levelledPara>
         <title>System Architecture Overview</title>
         <para>The Indicating and Recording System employs a distributed, highly integrated architecture:</para>
+
+        <figure id="fig-040A-0001">
+          <title>Indicating and Recording System — Global Architecture</title>
+          <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0001-A_001"/>
+        </figure>
+
+        <figure id="fig-040A-0002">
+          <title>ATA 31 Position within the Avionics Architecture (ATA 24 / 42 / 45 / 46 Interfaces)</title>
+          <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0002-A_001"/>
+        </figure>
         
         <levelledPara>
           <title>Display Management</title>
           <para>Central Display System (CDS) manages multiple display units with source-switching and reversion capabilities. Display units are ARINC 661-compliant with local rendering and remote data sourcing from display management computers.</para>
+
+          <figure id="fig-040A-0201">
+            <title>Generic Cockpit Display Zones (Illustrative)</title>
+            <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0201-A_001"/>
+          </figure>
+
+          <figure id="fig-040A-0202">
+            <title>Typical Indication Symbology Grouping — Colour Coding and Priority Levels</title>
+            <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0202-A_001"/>
+          </figure>
         </levelledPara>
         
         <levelledPara>
@@ -137,6 +157,16 @@ Project: AMPEL360-AIR-T
         <levelledPara>
           <title>Data Acquisition and Recording</title>
           <para>Data Acquisition Units (DAU) collect analog and discrete signals, converting them to digital format for distribution via ARINC 429, AFDX (ARINC 664), and other data buses. Recorded data flows to crash-protected recorders and non-volatile storage for maintenance access.</para>
+
+          <figure id="fig-040A-0101">
+            <title>Sensor to Display Data Flow — Five-Step Acquisition and Presentation Chain</title>
+            <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0101-A_001"/>
+          </figure>
+
+          <figure id="fig-040A-0102">
+            <title>Recording vs Real-Time Data Paths — FDR/CVR/QAR Buffered Path vs Cockpit Display Path</title>
+            <graphic infoEntityIdent="ICN-AMPEL360AT-31-00-0102-A_001"/>
+          </figure>
         </levelledPara>
         
         <levelledPara>

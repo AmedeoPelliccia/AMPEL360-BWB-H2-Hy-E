@@ -12,12 +12,16 @@
   - Graphic reuse analysis
   - IETP build optimization
   
+  ICN assets are located in: ../ICN/
+  ICN scaffold specification: ../ICN/ICN_SCAFFOLD.md
+  ICN visual preview gallery: ../ICN/ICN_PREVIEW_GALLERY.md
+
   Document Control:
-  - Version: 001-00
+  - Version: 002-00
   - Status: Draft
   - Language: EN-US
   - Generated with AI assistance (GitHub Copilot), prompted by Amedeo Pelliccia
-  - Date: 2026-01-10
+  - Date: 2026-02-27
 -->
 <dml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/dml.xsd">
@@ -26,11 +30,11 @@
     <dmlAddress>
       <dmlIdent>
         <dmlCode modelIdentCode="AMPEL360AT" senderIdent="AMPEL" dmlType="l" yearOfDataIssue="2026" seqNumber="00006"/>
-        <issueInfo issueNumber="001" inWork="00"/>
+        <issueInfo issueNumber="002" inWork="00"/>
         <language languageIsoCode="en" countryIsoCode="US"/>
       </dmlIdent>
       <dmlAddressItems>
-        <issueDate year="2026" month="01" day="10"/>
+        <issueDate year="2026" month="02" day="27"/>
       </dmlAddressItems>
     </dmlAddress>
     <dmlStatus>
@@ -46,11 +50,17 @@
         <simplePara>Illustration Cross-Reference DML for ATA 31-00-00</simplePara>
         <simplePara>Contains all DMs that reference ICNs (Illustration Control Numbers)</simplePara>
         <simplePara>Used for graphic validation and IETP optimization</simplePara>
+        <simplePara>Updated to reference actual ICN assets from ICN scaffold (Issue B, 2026-02-27)</simplePara>
       </remarks>
     </dmlStatus>
   </identAndStatusSection>
   
   <dmlContent>
+
+    <!-- ================================================================
+         DM 040A: General Description and Purpose
+         ICNs referenced: 0001, 0002, 0101, 0102, 0201, 0202
+         ================================================================ -->
     <dmlEntry>
       <dmlRef>
         <dmRef>
@@ -61,16 +71,52 @@
           </dmRefIdent>
           <dmRefAddressItems>
             <dmTitle>
-              <techName>Indicating and Recording System - General Description</techName>
+              <techName>Indicating and Recording System — General Description and Purpose</techName>
             </dmTitle>
           </dmRefAddressItems>
         </dmRef>
       </dmlRef>
       <remarks>
-        <simplePara>References system architecture diagrams (ICN-31-00-001, ICN-31-00-002)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0001-A_001 (Global Architecture)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0002-A_001 (Avionics Architecture Context)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0101-A_001 (Sensor to Display Data Flow)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0102-A_001 (Recording vs Real-Time Data Paths)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0201-A_001 (Generic Cockpit Display Zones)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0202-A_001 (Indication Symbology Grouping)</simplePara>
       </remarks>
     </dmlEntry>
-    
+
+    <!-- ================================================================
+         DM 040B: System Architecture, Interfaces, and Data Flows
+         ICNs referenced: 0001, 0002, 0101, 0102
+         ================================================================ -->
+    <dmlEntry>
+      <dmlRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="B" itemLocationCode="A"/>
+            <issueInfo issueNumber="001" inWork="00"/>
+            <language languageIsoCode="en" countryIsoCode="US"/>
+          </dmRefIdent>
+          <dmRefAddressItems>
+            <dmTitle>
+              <techName>Indicating and Recording System — System Architecture, Interfaces, and Data Flows</techName>
+            </dmTitle>
+          </dmRefAddressItems>
+        </dmRef>
+      </dmlRef>
+      <remarks>
+        <simplePara>References ICN-AMPEL360AT-31-00-0001-A_001 (Global Architecture)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0002-A_001 (Avionics Architecture Context)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0101-A_001 (Sensor to Display Data Flow)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0102-A_001 (Recording vs Real-Time Data Paths)</simplePara>
+      </remarks>
+    </dmlEntry>
+
+    <!-- ================================================================
+         DM 520A: Built-in Test (BIT/BITE) and System Test Procedures
+         ICNs referenced: 0301, 0302
+         ================================================================ -->
     <dmlEntry>
       <dmlRef>
         <dmRef>
@@ -81,53 +127,41 @@
           </dmRefIdent>
           <dmRefAddressItems>
             <dmTitle>
-              <techName>Display Unit - Removal and Installation</techName>
+              <techName>Indicating and Recording System — Built-in Test (BIT/BITE) and System Test Procedures</techName>
             </dmTitle>
           </dmRefAddressItems>
         </dmRef>
       </dmlRef>
       <remarks>
-        <simplePara>References installation diagrams (ICN-31-00-010, ICN-31-00-011)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0301-A_001 (LRU Location Overview)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0302-A_001 (Connector Identification Schematic)</simplePara>
       </remarks>
     </dmlEntry>
-    
+
+    <!-- ================================================================
+         DM 730A: Fault Isolation and Troubleshooting
+         ICNs referenced: 0101, 0102, 0401, 0402
+         ================================================================ -->
     <dmlEntry>
       <dmlRef>
         <dmRef>
           <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="02" disassyCodeVariant="A" infoCode="520" infoCodeVariant="C" itemLocationCode="A"/>
+            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="730" infoCodeVariant="A" itemLocationCode="A"/>
             <issueInfo issueNumber="001" inWork="00"/>
             <language languageIsoCode="en" countryIsoCode="US"/>
           </dmRefIdent>
           <dmRefAddressItems>
             <dmTitle>
-              <techName>Display System - Operational Test</techName>
+              <techName>Indicating and Recording System — Fault Isolation and Troubleshooting</techName>
             </dmTitle>
           </dmRefAddressItems>
         </dmRef>
       </dmlRef>
       <remarks>
-        <simplePara>References test setup diagrams (ICN-31-00-020, ICN-31-00-021)</simplePara>
-      </remarks>
-    </dmlEntry>
-    
-    <dmlEntry>
-      <dmlRef>
-        <dmRef>
-          <dmRefIdent>
-            <dmCode modelIdentCode="AMPEL360AT" systemDiffCode="A" systemCode="31" subSystemCode="0" subSubSystemCode="0" assyCode="00" disassyCode="02" disassyCodeVariant="A" infoCode="730" infoCodeVariant="A" itemLocationCode="A"/>
-            <issueInfo issueNumber="001" inWork="00"/>
-            <language languageIsoCode="en" countryIsoCode="US"/>
-          </dmRefIdent>
-          <dmRefAddressItems>
-            <dmTitle>
-              <techName>Built-In Test (BIT) Procedures and Fault Codes</techName>
-            </dmTitle>
-          </dmRefAddressItems>
-        </dmRef>
-      </dmlRef>
-      <remarks>
-        <simplePara>References fault isolation flowcharts (ICN-31-00-030, ICN-31-00-031)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0101-A_001 (Sensor to Display Data Flow)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0102-A_001 (Recording vs Real-Time Data Paths)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0401-A_001 (Fault Isolation Decision Tree)</simplePara>
+        <simplePara>References ICN-AMPEL360AT-31-00-0402-A_001 (Data Validity / Failure Propagation)</simplePara>
       </remarks>
     </dmlEntry>
     
