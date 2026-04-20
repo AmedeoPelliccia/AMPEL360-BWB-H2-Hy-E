@@ -362,6 +362,13 @@ This folder should contain:
 - Traceability matrices linking to other lifecycle stages
 - Evidence and artifacts supporting this lifecycle phase
 
+### Hyperlink Endpoints
+
+- Design overview endpoint: [57-00-04_Design_Overview.md](./57-00-04_Design_Overview.md)
+- Asset catalog endpoint: [ASSETS/INDEX.meta.yaml](./ASSETS/INDEX.meta.yaml)
+- Asset usage guide endpoint: [ASSETS/README.md](./ASSETS/README.md)
+- Engineering endpoint for FEM/CFD assets: [../57-00-06_Engineering/](../57-00-06_Engineering/)
+
 ## Asset Categories
 
 | Category | Description | File Types |

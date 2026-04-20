@@ -44,7 +44,7 @@ Design assets are organized in the `ASSETS/` folder following the AMPEL360 stand
 - **DRAWINGS/** — Engineering drawings (DWG, DXF)
 - **EXPORTS/** — Rendered outputs (PNG, PDF, EXPT)
 - **INSTALLATIONS/** — Installation layouts and diagrams
-- **MODELS/** — Geometry models (FEM and CFD models are in Engineering folder)
+- **MODELS/** — Geometry models (FEM and CFD models are in [57-00-06_Engineering](../57-00-06_Engineering/))
 - **PARTS/** — Individual component models
 - **PRODUCTS/** — Product-level documentation
 - **TEMPLATES/** — CAD and documentation templates
@@ -55,17 +55,17 @@ See [ASSETS/README.md](ASSETS/README.md) for detailed structure and naming conve
 
 ### Related Requirements
 
-- See `../57-00-03_Requirements/` for wing structural requirements
+- See [57-00-03_Requirements](../57-00-03_Requirements/) for wing structural requirements
 - Requirements IDs: `REQ-57-00-XXX`
 
 ### Related Safety Items
 
-- See `../57-00-02_Safety/` for safety assessment documentation
+- See [57-00-02_Safety](../57-00-02_Safety/) for safety assessment documentation
 - Hazard IDs: `HAZ-57-XXX`
 
 ### Interface Documents
 
-- See `../57-00-05_Interfaces/` for wing interfaces specification
+- See [57-00-05_Interfaces](../57-00-05_Interfaces/) for wing interfaces specification
 - ICD IDs: `ICD-57-XXX`
 
 ## Status
