@@ -1,0 +1,219 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ampel360.aero/schemas/ampel_system/v0.1/ampel_system.json",
+  "title": "AMPELSystem",
+  "description": "Canonical data model describing an AMPELSystem instance: project information, mapping, detection, capture capsules, technologies, metrics, financial benefits, stakeholders and potential clients.",
+  "type": "object",
+  "required": [
+    "ProjectInfo",
+    "Mapping",
+    "Detection",
+    "CaptureCapsules",
+    "Technologies",
+    "Metrics",
+    "FinancialBenefits",
+    "Stakeholders",
+    "PotentialClients"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "ProjectInfo": { "$ref": "#/definitions/ProjectInfo" },
+    "Mapping": { "$ref": "#/definitions/Mapping" },
+    "Detection": { "$ref": "#/definitions/Detection" },
+    "CaptureCapsules": {
+      "type": "array",
+      "description": "Collection of capture capsules.",
+      "items": { "$ref": "#/definitions/Capsule" }
+    },
+    "Technologies": {
+      "type": "array",
+      "description": "Collection of enabling technologies.",
+      "items": { "$ref": "#/definitions/Technology" }
+    },
+    "Metrics": {
+      "type": "array",
+      "description": "Collection of system metrics.",
+      "items": { "$ref": "#/definitions/Metric" }
+    },
+    "FinancialBenefits": {
+      "type": "array",
+      "description": "Collection of financial benefits.",
+      "items": { "$ref": "#/definitions/Benefit" }
+    },
+    "Stakeholders": {
+      "type": "array",
+      "description": "Collection of stakeholders.",
+      "items": { "$ref": "#/definitions/Stakeholder" }
+    },
+    "PotentialClients": {
+      "type": "array",
+      "description": "Collection of potential clients.",
+      "items": { "$ref": "#/definitions/Client" }
+    }
+  },
+  "definitions": {
+    "Property": {
+      "type": "object",
+      "description": "Generic name/value property pair.",
+      "required": ["PropertyName", "PropertyValue"],
+      "additionalProperties": false,
+      "properties": {
+        "PropertyName": { "type": "string", "minLength": 1 },
+        "PropertyValue": {
+          "description": "Property value. Free-form scalar or structured value.",
+          "type": ["string", "number", "boolean", "integer", "null", "object", "array"]
+        }
+      }
+    },
+    "Algorithm": {
+      "type": "object",
+      "description": "Named algorithm with a free-text description.",
+      "required": ["AlgorithmName"],
+      "additionalProperties": false,
+      "properties": {
+        "AlgorithmName": { "type": "string", "minLength": 1 },
+        "AlgorithmDescription": { "type": "string" }
+      }
+    },
+    "ProjectInfo": {
+      "type": "object",
+      "description": "Top-level project metadata for the AMPELSystem instance.",
+      "required": ["ProjectName"],
+      "additionalProperties": false,
+      "properties": {
+        "ProjectName": { "type": "string", "minLength": 1 },
+        "Description": { "type": "string" },
+        "StartDate": { "type": "string", "format": "date" },
+        "EndDate": { "type": "string", "format": "date" }
+      }
+    },
+    "Mapping": {
+      "type": "object",
+      "description": "Mapping definition for the AMPELSystem (industry context, properties and algorithms).",
+      "required": ["MapID", "MapName"],
+      "additionalProperties": false,
+      "properties": {
+        "MapID": { "type": "string", "minLength": 1 },
+        "MapName": { "type": "string", "minLength": 1 },
+        "Industry": { "type": "string" },
+        "MapProperties": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Property" }
+        },
+        "MappingAlgorithms": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Algorithm" }
+        }
+      }
+    },
+    "Detection": {
+      "type": "object",
+      "description": "Detection definition for the AMPELSystem.",
+      "required": ["DetectionID", "DetectionName"],
+      "additionalProperties": false,
+      "properties": {
+        "DetectionID": { "type": "string", "minLength": 1 },
+        "DetectionName": { "type": "string", "minLength": 1 },
+        "DetectionProperties": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Property" }
+        },
+        "DetectionAlgorithms": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Algorithm" }
+        }
+      }
+    },
+    "Capsule": {
+      "type": "object",
+      "description": "Capture capsule grouping properties and capture mechanisms.",
+      "required": ["CapsuleID", "CapsuleName"],
+      "additionalProperties": false,
+      "properties": {
+        "CapsuleID": { "type": "string", "minLength": 1 },
+        "CapsuleName": { "type": "string", "minLength": 1 },
+        "CapsuleProperties": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Property" }
+        },
+        "CaptureMechanisms": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Mechanism" }
+        }
+      }
+    },
+    "Mechanism": {
+      "type": "object",
+      "description": "Capture mechanism with a free-text description.",
+      "required": ["MechanismName"],
+      "additionalProperties": false,
+      "properties": {
+        "MechanismName": { "type": "string", "minLength": 1 },
+        "MechanismDescription": { "type": "string" }
+      }
+    },
+    "Technology": {
+      "type": "object",
+      "description": "Enabling technology and its integration level.",
+      "required": ["TechnologyName"],
+      "additionalProperties": false,
+      "properties": {
+        "TechnologyName": { "type": "string", "minLength": 1 },
+        "Description": { "type": "string" },
+        "IntegrationLevel": {
+          "description": "Numeric (e.g. TRL/IRL 1-9) or string label of integration maturity.",
+          "type": ["string", "integer", "number"]
+        }
+      }
+    },
+    "Metric": {
+      "type": "object",
+      "description": "Named metric with its current value.",
+      "required": ["MetricName", "MetricValue"],
+      "additionalProperties": false,
+      "properties": {
+        "MetricName": { "type": "string", "minLength": 1 },
+        "MetricValue": {
+          "type": ["string", "number", "integer", "boolean"]
+        }
+      }
+    },
+    "Benefit": {
+      "type": "object",
+      "description": "Financial benefit linked to a stakeholder and/or client.",
+      "required": ["BenefitName", "BenefitValue"],
+      "additionalProperties": false,
+      "properties": {
+        "BenefitName": { "type": "string", "minLength": 1 },
+        "BenefitValue": {
+          "type": ["string", "number", "integer"],
+          "description": "Monetary or qualitative value of the benefit."
+        },
+        "StakeholderID": { "type": "string" },
+        "ClientID": { "type": "string" }
+      }
+    },
+    "Stakeholder": {
+      "type": "object",
+      "description": "Stakeholder participating in the AMPELSystem.",
+      "required": ["StakeholderID", "StakeholderName"],
+      "additionalProperties": false,
+      "properties": {
+        "StakeholderID": { "type": "string", "minLength": 1 },
+        "StakeholderName": { "type": "string", "minLength": 1 },
+        "StakeholderType": { "type": "string" },
+        "Contribution": { "type": "string" }
+      }
+    },
+    "Client": {
+      "type": "object",
+      "description": "Potential client for the AMPELSystem.",
+      "required": ["ClientID", "ClientName"],
+      "additionalProperties": false,
+      "properties": {
+        "ClientID": { "type": "string", "minLength": 1 },
+        "ClientName": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

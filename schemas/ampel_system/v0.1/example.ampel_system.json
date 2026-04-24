@@ -1,0 +1,89 @@
+{
+  "ProjectInfo": {
+    "ProjectName": "AMPEL360 BWB H2 Hy-E Reference",
+    "Description": "Reference AMPELSystem instance illustrating the canonical structure.",
+    "StartDate": "2025-01-01",
+    "EndDate": "2030-12-31"
+  },
+  "Mapping": {
+    "MapID": "MAP-001",
+    "MapName": "Aerospace Sustainability Map",
+    "Industry": "Aerospace",
+    "MapProperties": [
+      { "PropertyName": "Region", "PropertyValue": "EU" },
+      { "PropertyName": "Scope", "PropertyValue": "Civil large aeroplanes" }
+    ],
+    "MappingAlgorithms": [
+      {
+        "AlgorithmName": "GeoIndustryClustering",
+        "AlgorithmDescription": "Clusters mapping data by geography and industry sector."
+      }
+    ]
+  },
+  "Detection": {
+    "DetectionID": "DET-001",
+    "DetectionName": "Emissions Anomaly Detection",
+    "DetectionProperties": [
+      { "PropertyName": "Sensitivity", "PropertyValue": "high" }
+    ],
+    "DetectionAlgorithms": [
+      {
+        "AlgorithmName": "IsolationForest",
+        "AlgorithmDescription": "Unsupervised anomaly detection on emissions telemetry."
+      }
+    ]
+  },
+  "CaptureCapsules": [
+    {
+      "CapsuleID": "CAP-001",
+      "CapsuleName": "H2 Boil-off Capture",
+      "CapsuleProperties": [
+        { "PropertyName": "Capacity_kg", "PropertyValue": 25 }
+      ],
+      "CaptureMechanisms": [
+        {
+          "MechanismName": "Cryogenic Recompression",
+          "MechanismDescription": "Recompresses boil-off hydrogen for re-liquefaction."
+        }
+      ]
+    }
+  ],
+  "Technologies": [
+    {
+      "TechnologyName": "Liquid Hydrogen Tank",
+      "Description": "Cryogenic LH2 storage tank for the BWB platform.",
+      "IntegrationLevel": 6
+    },
+    {
+      "TechnologyName": "Hybrid-Electric Propulsion",
+      "Description": "Distributed hybrid-electric propulsion architecture.",
+      "IntegrationLevel": 5
+    }
+  ],
+  "Metrics": [
+    { "MetricName": "CO2_reduction_pct", "MetricValue": 75 },
+    { "MetricName": "NOx_reduction_pct", "MetricValue": 60 }
+  ],
+  "FinancialBenefits": [
+    {
+      "BenefitName": "Fuel cost savings",
+      "BenefitValue": 1200000,
+      "StakeholderID": "STK-001",
+      "ClientID": "CLI-001"
+    }
+  ],
+  "Stakeholders": [
+    {
+      "StakeholderID": "STK-001",
+      "StakeholderName": "AMPEL360 Consortium",
+      "StakeholderType": "Industrial consortium",
+      "Contribution": "Programme leadership and integration"
+    }
+  ],
+  "PotentialClients": [
+    {
+      "ClientID": "CLI-001",
+      "ClientName": "Reference Launch Operator"
+    }
+  ]
+}
