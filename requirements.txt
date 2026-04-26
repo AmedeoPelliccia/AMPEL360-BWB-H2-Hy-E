@@ -2,7 +2,7 @@
 # CI/CGen Pipeline Requirements
 
 # Testing
-pytest>=7.4.0
+pytest>=9.0.3
 
 # Documentation & Reports
 markdown>=3.5.0
