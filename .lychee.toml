@@ -1,0 +1,26 @@
+# .lychee.toml — Lychee link-checker configuration for AMPEL360-AIR-T
+# https://lychee.cli.rs/usage/configuration/
+
+# Internal link policy
+exclude_path = ["node_modules", ".git"]
+require_https = false
+max_redirects = 5
+timeout = 20
+retry_wait_time = 2
+
+# Treat external 4xx/5xx as warnings, not errors.
+# Accept 2xx success codes plus 403 (Forbidden — common on EASA/FAA/SAE portals)
+# and 429 (Too Many Requests — rate-limit, not a content error).
+accept = ["200..=299", "403", "429"]
+
+# Exclude commonly unreachable or rate-limited authority sites from hard failures.
+# These are treated as warnings by the "accept" list above.
+exclude = [
+  # EASA, EUROCAE, RTCA, SAE frequently return 403 to bots
+  "https://www.easa.europa.eu",
+  "https://www.rtca.org",
+  "https://www.sae.org",
+  "https://www.eurocae.net",
+  # DOI handles sometimes redirect indefinitely
+  "https://doi.org",
+]
