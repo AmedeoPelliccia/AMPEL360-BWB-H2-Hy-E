@@ -9,8 +9,9 @@ timeout = 20
 retry_wait_time = 2
 
 # Treat external 4xx/5xx as warnings, not errors.
-# Accept 2xx success codes plus 403 (Forbidden — common on EASA/FAA/SAE portals)
-# and 429 (Too Many Requests — rate-limit, not a content error).
+# Accept 2xx success codes plus:
+#   403 — Forbidden: common on EASA/FAA/EUROCAE/SAE portals that block bots
+#   429 — Too Many Requests: rate-limiting, not a content error
 accept = ["200..=299", "403", "429"]
 
 # Exclude commonly unreachable or rate-limited authority sites from hard failures.

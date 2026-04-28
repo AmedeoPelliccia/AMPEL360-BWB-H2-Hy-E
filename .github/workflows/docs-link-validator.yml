@@ -126,7 +126,9 @@ jobs:
 
       - name: Run autoreferentiality scan
         id: autoref
+        shell: bash
         run: |
+          set -o pipefail
           python scripts/check_autoreferentiality.py --root OPT-IN_FRAMEWORK \
             2>&1 | tee autoref-report.txt
           echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"

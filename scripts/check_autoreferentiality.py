@@ -210,7 +210,7 @@ def _build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def main(argv: list[str] | None = None) -> int:  # noqa: D401
+def main(argv: list[str] | None = None) -> int:
     """Entry point. Returns exit code."""
     parser = _build_parser()
     args = parser.parse_args(argv)

@@ -153,7 +153,7 @@ Ensure all checks pass before requesting a review.
 - Generated with the assistance of AI (GitHub Copilot), prompted by **Amedeo Pelliccia**.
 - Status: **DRAFT** – Subject to human review and approval.
 - Human approver: _[to be completed]_.
-- Repository: `AMPEL360-AIR-T`
+- Repository: `AMPEL360-BWB-H2-Hy-E` / `AMPEL360-AIR-T`
 - Last AI update: _2026-04-28_.
 
 ---
