@@ -17,6 +17,53 @@ This standard applies to:
 - Certification and continued airworthiness
 - Operational procedures
 
+## Glossary of Acronyms and Terms
+
+### Acronyms
+
+| Acronym / Term | Definition |
+|----------------|------------|
+| AMM | Aircraft Maintenance Manual |
+| AMPEL360 BWB | AMPEL360 Blended Wing Body (aircraft program) |
+| ARP4754A | SAE Aerospace Recommended Practice 4754A: Guidelines for Development of Civil Aircraft and Systems |
+| AS9100 | Aerospace Quality Management System Standard |
+| ATP | Acceptance Test Procedure |
+| CCB | Configuration Control Board |
+| CDR | Critical Design Review |
+| DO-160G | RTCA DO-160G: Environmental Conditions and Test Procedures for Airborne Equipment |
+| DO-178C | RTCA DO-178C: Software Considerations in Airborne Systems and Equipment Certification |
+| DO-254 | RTCA DO-254: Design Assurance Guidance for Airborne Electronic Hardware |
+| DOC | Documentation (control identifier) |
+| EASA | European Union Aviation Safety Agency |
+| EASA CM-S-012 | EASA Certification Memorandum on Structural Health Monitoring |
+| FCA | First Article Complete (in this document); also used in aerospace for Functional Configuration Audit |
+| ICD | Interface Control Document |
+| IT | Information Technology |
+| MFG | Manufacturing (control identifier) |
+| MIL-HDBK-1823A | US Department of Defense Handbook: Nondestructive Evaluation System Reliability Assessment (POD) |
+| MRO | Maintenance, Repair and Overhaul |
+| OEM | Original Equipment Manufacturer |
+| OPT-IN | Organizational/Operational, Procedural, Technical – Integrated Network framework (project glossary; refer to repo glossary for canonical definition) |
+| PDR | Preliminary Design Review |
+| POD | Probability of Detection |
+| QA | Quality Assurance |
+| SAE ARP6461 | SAE Aerospace Recommended Practice 6461: Guidelines for Implementation of Structural Health Monitoring on Fixed Wing Aircraft |
+| SHM | Structural Health Monitoring |
+| TRR | Test Readiness Review |
+
+### Terms
+
+| Term | Definition |
+|------|------------|
+| Allocated Baseline | Set of approved technical requirements derived from the functional baseline and allocated to system elements. |
+| Concurrence | Stakeholder agreement required before an approval authority can act. |
+| Detection Rate | Probability that the SHM system correctly identifies a target structural condition. |
+| False Alarm Rate | Fraction of detection events that do not correspond to a real structural condition. |
+| Functional Baseline | Initial approved set of system-level requirements. |
+| Operational Baseline | Approved configuration of the system as deployed and maintained in service. |
+| Product Baseline | Approved as-built configuration of the system at delivery. |
+| Sensor Availability | Percentage of time sensors are operational and producing valid data. |
+
 ## Governance Structure
 
 ### Organizational Responsibilities
@@ -132,56 +179,9 @@ This standard applies to:
 - Update governance documents as needed
 
 ## References
-- [53-00-03-01-005](../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM_Assumptions.md) - SHM Compatibility Requirement
+- [53-00-03-01-005](../../T-TECHNOLOGY_AMEDEOPELLICCIA-ON_BOARD_SYSTEMS/A-AIRFRAME/ATA_53-FUSELAGE/53-00_GENERAL/53-00-03_Requirements/01_Structural_Integrity/53-00-03-01-005_Compatibility_with_SHM.md)
 - EASA CM-S-012 - SHM Certification Memorandum
 - SAE ARP6461 - SHM Implementation Guidelines
-
-## Glossary of Acronyms and Terms
-
-### Acronyms
-
-| Acronym / Term | Definition |
-|----------------|------------|
-| AMM | Aircraft Maintenance Manual |
-| AMPEL360 BWB | AMPEL360 Blended Wing Body (aircraft program) |
-| ARP4754A | SAE Aerospace Recommended Practice 4754A: Guidelines for Development of Civil Aircraft and Systems |
-| AS9100 | Aerospace Quality Management System Standard |
-| ATP | Acceptance Test Procedure |
-| CCB | Configuration Control Board |
-| CDR | Critical Design Review |
-| DO-160G | RTCA DO-160G: Environmental Conditions and Test Procedures for Airborne Equipment |
-| DO-178C | RTCA DO-178C: Software Considerations in Airborne Systems and Equipment Certification |
-| DO-254 | RTCA DO-254: Design Assurance Guidance for Airborne Electronic Hardware |
-| DOC | Documentation (control identifier) |
-| EASA | European Union Aviation Safety Agency |
-| EASA CM-S-012 | EASA Certification Memorandum on Structural Health Monitoring |
-| FCA | First Article Complete (in this document); also used in aerospace for Functional Configuration Audit |
-| ICD | Interface Control Document |
-| IT | Information Technology |
-| MFG | Manufacturing (control identifier) |
-| MIL-HDBK-1823A | US Department of Defense Handbook: Nondestructive Evaluation System Reliability Assessment (POD) |
-| MRO | Maintenance, Repair and Overhaul |
-| OEM | Original Equipment Manufacturer |
-| OPT-IN | Organizational/Operational, Procedural, Technical – Integrated Network framework (project glossary; refer to repo glossary for canonical definition) |
-| PDR | Preliminary Design Review |
-| POD | Probability of Detection |
-| QA | Quality Assurance |
-| SAE ARP6461 | SAE Aerospace Recommended Practice 6461: Guidelines for Implementation of Structural Health Monitoring on Fixed Wing Aircraft |
-| SHM | Structural Health Monitoring |
-| TRR | Test Readiness Review |
-
-### Terms
-
-| Term | Definition |
-|------|------------|
-| Allocated Baseline | Set of approved technical requirements derived from the functional baseline and allocated to system elements. |
-| Concurrence | Stakeholder agreement required before an approval authority can act. |
-| Detection Rate | Probability that the SHM system correctly identifies a target structural condition. |
-| False Alarm Rate | Fraction of detection events that do not correspond to a real structural condition. |
-| Functional Baseline | Initial approved set of system-level requirements. |
-| Operational Baseline | Approved configuration of the system as deployed and maintained in service. |
-| Product Baseline | Approved as-built configuration of the system at delivery. |
-| Sensor Availability | Percentage of time sensors are operational and producing valid data. |
 
 ---
 
@@ -195,5 +195,3 @@ This standard applies to:
 | Human Approver | _[to be completed]_ |
 | Repository | `AMPEL360-BWB-H2-Hy-E` |
 | Last AI Update | 2026-04-28 |
-
----
