@@ -1,4 +1,4 @@
-# [53-00-03-02-004](./53-00-03-02-004_Pressure_Relief_Systems.md): Pressure Relief Systems
+# 53-00-03-02-004 — Pressure Relief Systems
 
 ## Requirement ID
 **[53-00-03-02-004](./53-00-03-02-004_Pressure_Relief_Systems. md)**

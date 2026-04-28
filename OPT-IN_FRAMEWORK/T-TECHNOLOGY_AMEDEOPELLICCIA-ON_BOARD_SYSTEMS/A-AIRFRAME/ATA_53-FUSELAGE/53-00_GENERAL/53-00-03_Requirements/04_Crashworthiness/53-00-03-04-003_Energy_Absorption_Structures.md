@@ -1,4 +1,4 @@
-# [53-00-03-04-003](./53-00-03-04-003_Energy_Absorption_Structures.md): Energy Absorption Structures
+# 53-00-03-04-003 — Energy Absorption Structures
 
 ## Requirement ID
 **[53-00-03-04-003](./53-00-03-04-003_Energy_Absorption_Structures.md)**

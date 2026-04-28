@@ -1,4 +1,4 @@
-# [53-00-03-01-002](./53-00-03-01-002_Limit_Load_Elastic_Behavior.md): Limit Load Elastic Behavior
+# 53-00-03-01-002 — Limit Load Elastic Behavior
 
 ## Requirement ID
 **53-00-03-01-002**

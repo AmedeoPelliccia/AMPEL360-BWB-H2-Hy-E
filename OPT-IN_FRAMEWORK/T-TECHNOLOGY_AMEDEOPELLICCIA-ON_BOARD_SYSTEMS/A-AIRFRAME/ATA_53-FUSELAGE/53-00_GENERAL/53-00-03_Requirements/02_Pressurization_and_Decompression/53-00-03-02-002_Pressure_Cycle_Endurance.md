@@ -1,4 +1,4 @@
-# [53-00-03-02-002](./53-00-03-02-002_Pressure_Cycle_Endurance.md): Pressure Cycle Endurance
+# 53-00-03-02-002 — Pressure Cycle Endurance
 
 ## Requirement ID
 **[53-00-03-02-002](./53-00-03-02-002_Pressure_Cycle_Endurance.md)**

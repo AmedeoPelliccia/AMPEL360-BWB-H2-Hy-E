@@ -1,4 +1,4 @@
-# [53-00-03-04-001](./53-00-03-04-001_Emergency_Landing_Loads.md): Emergency Landing Loads
+# 53-00-03-04-001 — Emergency Landing Loads
 
 ## Requirement ID
 **[53-00-03-04-001](./53-00-03-04-001_Emergency_Landing_Loads. md)**

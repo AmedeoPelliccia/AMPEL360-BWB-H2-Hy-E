@@ -1,4 +1,4 @@
-# [53-00-03-02-005](./53-00-03-02-005_Fuselage_Skin_Fatigue_Pressurization.md): Fuselage Skin Fatigue (Pressurization)
+# 53-00-03-02-005 — Fuselage Skin Fatigue (Pressurization)
 
 ## Requirement ID
 **[53-00-03-02-005](./53-00-03-02-005_Fuselage_Skin_Fatigue_Pressurization.md)**

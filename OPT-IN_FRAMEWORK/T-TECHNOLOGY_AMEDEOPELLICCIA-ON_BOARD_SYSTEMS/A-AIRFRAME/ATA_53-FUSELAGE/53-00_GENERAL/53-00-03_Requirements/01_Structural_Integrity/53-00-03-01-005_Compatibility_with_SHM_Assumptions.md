@@ -1,4 +1,4 @@
-# [53-00-03-01-005](./53-00-03-01-005_Compatibility_with_SHM_Assumptions.md): Compatibility with SHM Assumptions
+# 53-00-03-01-005 — Compatibility with SHM Assumptions
 
 ## Requirement ID
 **53-00-03-01-005**

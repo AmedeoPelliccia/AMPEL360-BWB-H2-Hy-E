@@ -1,4 +1,4 @@
-# [53-00-03-01-004](./53-00-03-01-004_Environmental_Durability.md): Environmental Durability
+# 53-00-03-01-004 — Environmental Durability
 
 ## Requirement ID
 **53-00-03-01-004**

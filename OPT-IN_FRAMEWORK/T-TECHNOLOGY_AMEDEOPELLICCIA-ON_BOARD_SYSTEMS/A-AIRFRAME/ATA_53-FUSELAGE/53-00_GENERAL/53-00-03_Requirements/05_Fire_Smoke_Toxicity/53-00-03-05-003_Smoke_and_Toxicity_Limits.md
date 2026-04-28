@@ -1,4 +1,4 @@
-# [53-00-03-05-003](./53-00-03-05-003_Smoke_and_Toxicity_Limits.md): Smoke and Toxicity Limits
+# 53-00-03-05-003 — Smoke and Toxicity Limits
 
 ## Requirement ID
 **[53-00-03-05-003](./53-00-03-05-003_Smoke_and_Toxicity_Limits.md)**

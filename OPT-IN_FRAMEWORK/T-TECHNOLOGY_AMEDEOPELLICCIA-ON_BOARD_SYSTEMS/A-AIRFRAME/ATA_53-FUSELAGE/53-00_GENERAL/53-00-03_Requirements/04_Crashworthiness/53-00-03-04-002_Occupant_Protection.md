@@ -1,4 +1,4 @@
-# [53-00-03-04-002](./53-00-03-04-002_Occupant_Protection.md): Occupant Protection
+# 53-00-03-04-002 — Occupant Protection
 
 ## Requirement ID
 **[53-00-03-04-002](./53-00-03-04-002_Occupant_Protection.md)**

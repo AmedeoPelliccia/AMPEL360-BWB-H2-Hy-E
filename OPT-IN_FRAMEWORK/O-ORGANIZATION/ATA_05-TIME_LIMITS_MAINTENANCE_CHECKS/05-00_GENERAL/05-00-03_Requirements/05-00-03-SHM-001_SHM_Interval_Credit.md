@@ -1,4 +1,4 @@
-# [05-00-03-SHM-001](./05-00-03-SHM-001_SHM_Interval_Credit.md): SHM Interval Credit Requirements
+# 05-00-03-SHM-001 — SHM Interval Credit Requirements
 
 ## Requirement ID
 **05-00-03-SHM-001**

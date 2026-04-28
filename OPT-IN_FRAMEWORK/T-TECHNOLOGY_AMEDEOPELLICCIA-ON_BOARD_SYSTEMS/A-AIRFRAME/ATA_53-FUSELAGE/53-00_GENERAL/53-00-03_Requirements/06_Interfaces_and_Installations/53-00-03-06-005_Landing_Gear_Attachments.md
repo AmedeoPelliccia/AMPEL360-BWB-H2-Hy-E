@@ -1,4 +1,4 @@
-# [53-00-03-06-005](./53-00-03-06-005_Landing_Gear_Attachments.md): Landing Gear Attachments
+# 53-00-03-06-005 — Landing Gear Attachments
 
 ## Requirement ID
 **[53-00-03-06-005](./53-00-03-06-005_Landing_Gear_Attachments.md)**

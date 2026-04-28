@@ -1,4 +1,4 @@
-# [53-00-03-05-004](./53-00-03-05-004_Fire_Containment_Barriers.md): Fire Containment Barriers
+# 53-00-03-05-004 — Fire Containment Barriers
 
 ## Requirement ID
 **[53-00-03-05-004](./53-00-03-05-004_Fire_Containment_Barriers.md)**

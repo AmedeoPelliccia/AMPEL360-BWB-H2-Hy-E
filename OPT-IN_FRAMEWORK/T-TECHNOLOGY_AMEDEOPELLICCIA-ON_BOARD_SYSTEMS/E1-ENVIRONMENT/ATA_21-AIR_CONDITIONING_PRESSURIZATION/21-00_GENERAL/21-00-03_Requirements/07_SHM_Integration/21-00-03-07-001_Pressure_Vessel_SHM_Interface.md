@@ -1,4 +1,4 @@
-# [21-00-03-07-001](./21-00-03-07-001_Pressure_Vessel_SHM_Interface.md): Pressure Vessel SHM Interface
+# 21-00-03-07-001 — Pressure Vessel SHM Interface
 
 ## Requirement ID
 **21-00-03-07-001**
