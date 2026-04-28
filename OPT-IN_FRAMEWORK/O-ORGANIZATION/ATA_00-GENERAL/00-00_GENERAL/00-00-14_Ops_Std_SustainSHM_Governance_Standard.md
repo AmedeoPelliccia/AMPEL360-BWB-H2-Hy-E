@@ -155,7 +155,7 @@ This standard applies to:
 | DOC | Documentation (control identifier) |
 | EASA | European Union Aviation Safety Agency |
 | EASA CM-S-012 | EASA Certification Memorandum on Structural Health Monitoring |
-| FCA | First Article Complete (Functional Configuration Audit) |
+| FCA | First Article Complete (in this document); also used in aerospace for Functional Configuration Audit |
 | ICD | Interface Control Document |
 | IT | Information Technology |
 | MFG | Manufacturing (control identifier) |
