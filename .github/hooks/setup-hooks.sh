@@ -50,6 +50,19 @@ else
     echo "  ⚠️  pre-commit hook not found"
 fi
 
+if [ -f "$HOOKS_SOURCE/constitutional-check" ]; then
+    # Create symlink (preferred) or copy
+    if ln -sf "../../.github/hooks/constitutional-check" "$HOOKS_TARGET/constitutional-check" 2>/dev/null; then
+        echo "  ✅ constitutional-check hook symlinked"
+    else
+        cp "$HOOKS_SOURCE/constitutional-check" "$HOOKS_TARGET/constitutional-check"
+        chmod +x "$HOOKS_TARGET/constitutional-check"
+        echo "  ✅ constitutional-check hook copied"
+    fi
+else
+    echo "  ⚠️  constitutional-check hook not found"
+fi
+
 echo ""
 echo "✅ Git hooks setup complete!"
 echo ""
@@ -57,6 +70,7 @@ echo "The following validations will run on every commit:"
 echo "  • Q100 model code in drawing filenames"
 echo "  • Forbidden file extension checks"
 echo "  • Strategic mission scope validation"
+echo "  • Constitutional compliance (labor reabsorption, harm precedence)"
 echo ""
 echo "To bypass hooks (not recommended):"
 echo "  git commit --no-verify"
