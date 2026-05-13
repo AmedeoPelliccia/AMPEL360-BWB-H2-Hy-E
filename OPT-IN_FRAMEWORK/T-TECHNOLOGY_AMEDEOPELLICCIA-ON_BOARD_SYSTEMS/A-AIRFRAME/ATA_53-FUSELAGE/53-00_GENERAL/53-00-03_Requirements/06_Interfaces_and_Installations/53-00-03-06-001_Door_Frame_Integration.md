@@ -1,4 +1,4 @@
-# [53-00-03-06-001](./53-00-03-06-001_Door_Frame_Integration.md): Door Frame Integration
+# 53-00-03-06-001 — Door Frame Integration
 
 ## Requirement ID
 **[53-00-03-06-001](./53-00-03-06-001_Door_Frame_Integration.md)**

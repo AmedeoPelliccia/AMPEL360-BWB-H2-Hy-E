@@ -1,4 +1,4 @@
-# [53-00-03-06-003](./53-00-03-06-003_Systems_Penetrations.md): Systems Penetrations
+# 53-00-03-06-003 — Systems Penetrations
 
 ## Requirement ID
 **[53-00-03-06-003](./53-00-03-06-003_Systems_Penetrations.md)**

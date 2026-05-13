@@ -1,4 +1,4 @@
-# [57-00-03-07-001](./57-00-03-07-001_Wing_SHM_Compatibility.md): Wing SHM Compatibility
+# 57-00-03-07-001 — Wing SHM Compatibility
 
 ## Requirement ID
 **57-00-03-07-001**

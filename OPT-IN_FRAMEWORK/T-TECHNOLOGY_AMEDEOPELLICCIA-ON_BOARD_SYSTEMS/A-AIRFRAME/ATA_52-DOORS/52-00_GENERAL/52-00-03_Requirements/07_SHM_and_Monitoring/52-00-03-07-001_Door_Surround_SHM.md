@@ -1,4 +1,4 @@
-# [52-00-03-07-001](./52-00-03-07-001_Door_Surround_SHM.md): Door Surround SHM Requirements
+# 52-00-03-07-001 — Door Surround SHM Requirements
 
 ## Requirement ID
 **52-00-03-07-001**

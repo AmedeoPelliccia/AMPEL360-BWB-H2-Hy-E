@@ -1,4 +1,4 @@
-# [24-00-03-SHM-001](./24-00-03-SHM-001_SHM_Power_Requirements.md): SHM Power Requirements
+# 24-00-03-SHM-001 — SHM Power Requirements
 
 ## Requirement ID
 **24-00-03-SHM-001**

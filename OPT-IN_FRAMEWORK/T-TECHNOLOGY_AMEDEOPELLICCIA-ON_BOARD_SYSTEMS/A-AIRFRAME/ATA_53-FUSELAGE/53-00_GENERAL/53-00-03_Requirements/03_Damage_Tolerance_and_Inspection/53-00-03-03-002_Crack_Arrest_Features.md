@@ -1,4 +1,4 @@
-# [53-00-03-03-002](./53-00-03-03-002_Crack_Arrest_Features.md): Crack Arrest Features
+# 53-00-03-03-002 — Crack Arrest Features
 
 ## Requirement ID
 **[53-00-03-03-002](./53-00-03-03-002_Crack_Arrest_Features.md)**

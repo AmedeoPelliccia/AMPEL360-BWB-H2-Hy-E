@@ -1,4 +1,4 @@
-# [53-00-03-07-002](./53-00-03-07-002_Data_Acquisition_Requirements.md): Data Acquisition Requirements
+# 53-00-03-07-002 — Data Acquisition Requirements
 
 ## Requirement ID
 **[53-00-03-07-002](./53-00-03-07-002_Data_Acquisition_Requirements.md)**

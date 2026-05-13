@@ -1,4 +1,4 @@
-# [53-00-03-06-002](./53-00-03-06-002_Window_Integration.md): Window Integration
+# 53-00-03-06-002 — Window Integration
 
 ## Requirement ID
 **[53-00-03-06-002](./53-00-03-06-002_Window_Integration.md)**

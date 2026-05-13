@@ -1,4 +1,4 @@
-# [53-00-03-07-004](./53-00-03-07-004_Predictive_Analytics_Integration.md): Predictive Analytics Integration
+# 53-00-03-07-004 — Predictive Analytics Integration
 
 ## Requirement ID
 **[53-00-03-07-004](./53-00-03-07-004_Predictive_Analytics_Integration.md)**

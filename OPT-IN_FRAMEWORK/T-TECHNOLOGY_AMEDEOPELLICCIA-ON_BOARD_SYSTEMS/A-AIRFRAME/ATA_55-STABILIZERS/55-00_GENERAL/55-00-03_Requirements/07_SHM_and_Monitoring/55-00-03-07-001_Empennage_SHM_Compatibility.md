@@ -1,4 +1,4 @@
-# [55-00-03-07-001](./55-00-03-07-001_Empennage_SHM_Compatibility.md): Empennage SHM Compatibility
+# 55-00-03-07-001 — Empennage SHM Compatibility
 
 ## Requirement ID
 **55-00-03-07-001**

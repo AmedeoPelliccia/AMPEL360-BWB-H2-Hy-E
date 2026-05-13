@@ -1,4 +1,4 @@
-# [53-00-03-07-003](./53-00-03-07-003_Damage_Detection_Sensitivity.md): Damage Detection Sensitivity
+# 53-00-03-07-003 — Damage Detection Sensitivity
 
 ## Requirement ID
 **[53-00-03-07-003](./53-00-03-07-003_Damage_Detection_Sensitivity.md)**

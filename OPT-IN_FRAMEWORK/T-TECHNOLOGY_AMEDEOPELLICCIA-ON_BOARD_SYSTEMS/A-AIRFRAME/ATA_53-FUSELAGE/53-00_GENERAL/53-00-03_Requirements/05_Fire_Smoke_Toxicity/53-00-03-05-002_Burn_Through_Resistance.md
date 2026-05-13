@@ -1,4 +1,4 @@
-# [53-00-03-05-002](./53-00-03-05-002_Burn_Through_Resistance.md): Burn Through Resistance
+# 53-00-03-05-002 — Burn Through Resistance
 
 ## Requirement ID
 **[53-00-03-05-002](./53-00-03-05-002_Burn_Through_Resistance.md)**

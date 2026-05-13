@@ -1,4 +1,4 @@
-# [45-00-03-SHM-001](./45-00-03-SHM-001_SHM_CMS_Integration.md): SHM CMS Integration Requirements
+# 45-00-03-SHM-001 — SHM CMS Integration Requirements
 
 ## Requirement ID
 **45-00-03-SHM-001**

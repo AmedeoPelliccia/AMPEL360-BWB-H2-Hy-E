@@ -1,4 +1,4 @@
-# [53-00-03-07-005](./53-00-03-07-005_False_Alarm_Rate_Limits.md): False Alarm Rate Limits
+# 53-00-03-07-005 — False Alarm Rate Limits
 
 ## Requirement ID
 **[53-00-03-07-005](./53-00-03-07-005_False_Alarm_Rate_Limits.md)**

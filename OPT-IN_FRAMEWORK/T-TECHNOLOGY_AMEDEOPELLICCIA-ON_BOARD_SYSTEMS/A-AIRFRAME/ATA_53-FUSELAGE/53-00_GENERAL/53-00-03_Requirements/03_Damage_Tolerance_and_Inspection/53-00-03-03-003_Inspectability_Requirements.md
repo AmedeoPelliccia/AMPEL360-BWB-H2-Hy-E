@@ -1,4 +1,4 @@
-# [53-00-03-03-003](./53-00-03-03-003_Inspectability_Requirements.md): Inspectability Requirements
+# 53-00-03-03-003 — Inspectability Requirements
 
 ## Requirement ID
 **[53-00-03-03-003](./53-00-03-03-003_Inspectability_Requirements.md)**

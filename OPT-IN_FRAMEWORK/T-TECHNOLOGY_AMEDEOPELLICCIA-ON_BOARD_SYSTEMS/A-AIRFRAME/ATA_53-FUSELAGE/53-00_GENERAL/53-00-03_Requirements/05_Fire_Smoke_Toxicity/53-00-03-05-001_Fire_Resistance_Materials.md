@@ -1,4 +1,4 @@
-# [53-00-03-05-001](./53-00-03-05-001_Fire_Resistance_Materials.md): Fire Resistance Materials
+# 53-00-03-05-001 — Fire Resistance Materials
 
 ## Requirement ID
 **[53-00-03-05-001](./53-00-03-05-001_Fire_Resistance_Materials.md)**

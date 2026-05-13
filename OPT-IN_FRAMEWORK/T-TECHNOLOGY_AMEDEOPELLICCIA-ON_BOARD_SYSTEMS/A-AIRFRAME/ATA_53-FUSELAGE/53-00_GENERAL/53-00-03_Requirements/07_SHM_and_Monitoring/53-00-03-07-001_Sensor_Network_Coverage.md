@@ -1,4 +1,4 @@
-# [53-00-03-07-001](./53-00-03-07-001_Sensor_Network_Coverage.md): Sensor Network Coverage
+# 53-00-03-07-001 — Sensor Network Coverage
 
 ## Requirement ID
 **[53-00-03-07-001](./53-00-03-07-001_Sensor_Network_Coverage.md)**

@@ -1,4 +1,4 @@
-# [28-00-03-SHM-001](./28-00-03-SHM-001_H2_Tank_Structure_Monitoring.md): H2 Tank Structure Monitoring Requirements
+# 28-00-03-SHM-001 — H2 Tank Structure Monitoring Requirements
 
 ## Requirement ID
 **28-00-03-SHM-001**

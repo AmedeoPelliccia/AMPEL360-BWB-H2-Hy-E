@@ -1,4 +1,4 @@
-# [46-00-03-07-001](./46-00-03-07-001_SHM_Data_Transmission.md): SHM Data Transmission Requirements
+# 46-00-03-07-001 — SHM Data Transmission Requirements
 
 ## Requirement ID
 **46-00-03-07-001**

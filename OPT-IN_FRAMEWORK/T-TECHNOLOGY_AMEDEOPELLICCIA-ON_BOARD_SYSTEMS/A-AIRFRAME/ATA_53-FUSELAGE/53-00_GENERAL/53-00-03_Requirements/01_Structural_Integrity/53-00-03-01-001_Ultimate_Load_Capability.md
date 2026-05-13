@@ -1,4 +1,4 @@
-# [53-00-03-01-001](./53-00-03-01-001_Ultimate_Load_Capability.md): Ultimate Load Capability
+# 53-00-03-01-001 — Ultimate Load Capability
 
 ## Requirement ID
 **53-00-03-01-001**
