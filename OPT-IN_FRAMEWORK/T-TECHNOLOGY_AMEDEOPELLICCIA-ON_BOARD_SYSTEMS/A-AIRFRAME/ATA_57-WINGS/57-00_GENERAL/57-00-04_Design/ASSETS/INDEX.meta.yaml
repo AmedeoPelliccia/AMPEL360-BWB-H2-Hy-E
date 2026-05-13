@@ -3,17 +3,273 @@ version: 1
 owner: "AMPEL360 Documentation Team"
 folder: "57-00-04_Design"
 
-assets: []
-# Add asset entries here following the pattern:
-#  - id: "57-00-04-Annn"
-#    category: "DIAG|DRWG|PROD|ASSY|PART|INST|MODL|DATA|TMPL|EXPT"
-#    title: "Asset Title"
-#    source: "ASSETS/CATEGORY/filename.ext"
-#    exports: []
-#    links:
-#      reqs: []
-#      odd: []
-#      safety: []
-#    status: "Draft|Review|Approved|Obsolete"
-#    version: "1.0.0"
-#    checksum: "<filled-by-CI>"
+assets:
+  # ASSEMBLIES
+  - id: "57-00-04-ASSY-001"
+    category: "ASSY"
+    title: "Wing Primary Structure Assembly"
+    source: "ASSETS/ASSEMBLIES/wing_primary_structure.step"
+    exports: []
+    links:
+      reqs: ["REQ-57-00-001"]
+      odd: []
+      safety: ["HAZ-57-001"]
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-ASSY-002"
+    category: "ASSY"
+    title: "Flap System Assembly"
+    source: "ASSETS/ASSEMBLIES/flap_system_assembly.step"
+    exports: []
+    links:
+      reqs: ["REQ-57-21-001"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # DRAWINGS
+  - id: "57-00-04-D001"
+    category: "DRWG"
+    title: "Wing Planform Drawing"
+    source: "ASSETS/DRAWINGS/57-00-04-D001_Wing_Planform.dwg"
+    exports: []
+    links:
+      reqs: ["REQ-57-00-002"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-D002"
+    category: "DRWG"
+    title: "Spar Section AA Drawing"
+    source: "ASSETS/DRAWINGS/57-00-04-D002_Spar_Section_AA.dxf"
+    exports: []
+    links:
+      reqs: ["REQ-57-25-001"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-D003"
+    category: "DRWG"
+    title: "Rib Layout BB Drawing"
+    source: "ASSETS/DRAWINGS/57-00-04-D003_Rib_Layout_BB.dxf"
+    exports: []
+    links:
+      reqs: ["REQ-57-25-002"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # EXPORTS
+  - id: "57-00-04-A001"
+    category: "EXPT"
+    title: "Wing Exploded View"
+    source: "ASSETS/EXPORTS/57-00-04-A001_Wing_Exploded_View.png"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-A002"
+    category: "EXPT"
+    title: "CFD Surface Mesh Export"
+    source: "ASSETS/EXPORTS/57-00-04-A002_CFD_Surface_Mesh.expt"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-A003"
+    category: "EXPT"
+    title: "Loads Heatmap Export"
+    source: "ASSETS/EXPORTS/57-00-04-A003_Loads_Heatmap.expt"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # INSTALLATIONS - LAYOUTS
+  - id: "57-00-04-I001"
+    category: "INST"
+    title: "Fuel Tank Installation Layout"
+    source: "ASSETS/INSTALLATIONS/LAYOUTS/57-00-04-I001_Fuel_Tank_Installation.png"
+    exports: []
+    links:
+      reqs: ["REQ-57-26-001"]
+      odd: []
+      safety: ["HAZ-57-002"]
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # INSTALLATIONS - DIAGRAMS
+  - id: "57-00-04-I010"
+    category: "DIAG"
+    title: "Structural Attachments Diagram"
+    source: "ASSETS/INSTALLATIONS/DIAGRAMS/57-00-04-I010_Structural_Attachments.mermaid"
+    exports: []
+    links:
+      reqs: ["REQ-57-25-003"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # INSTALLATIONS - BIM/CAD
+  - id: "57-00-04-B001"
+    category: "MODL"
+    title: "Wing Structure BIM Model"
+    source: "ASSETS/INSTALLATIONS/BIM_CAD_MODELS/57-00-04-B001_Wing_Structure.bim"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # MODELS - GEOMETRY
+  - id: "57-00-04-M001"
+    category: "MODL"
+    title: "Wing Geometry Model"
+    source: "ASSETS/MODELS/GEOMETRY/57-00-04-M001_Wing_Geometry.step"
+    exports: []
+    links:
+      reqs: ["REQ-57-00-003"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # PARTS
+  - id: "57-00-04-P001"
+    category: "PART"
+    title: "Main Spar Part Model"
+    source: "ASSETS/PARTS/57-00-04-P001_Main_Spar.step"
+    exports: []
+    links:
+      reqs: ["REQ-57-25-004"]
+      odd: []
+      safety: ["HAZ-57-001"]
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-P002"
+    category: "PART"
+    title: "Rib 12 Part Model"
+    source: "ASSETS/PARTS/57-00-04-P002_Rib_12.step"
+    exports: []
+    links:
+      reqs: ["REQ-57-25-005"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-P003"
+    category: "PART"
+    title: "Aileron Hinge Part Model"
+    source: "ASSETS/PARTS/57-00-04-P003_Aileron_Hinge.step"
+    exports: []
+    links:
+      reqs: ["REQ-57-23-001"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # PRODUCTS
+  - id: "57-00-04-PRD-001"
+    category: "PROD"
+    title: "Wing Assembly Baseline Product Document"
+    source: "ASSETS/PRODUCTS/57-00-04-PRD_Wing_Assembly_Baseline.pdf"
+    exports: []
+    links:
+      reqs: ["REQ-57-00-001"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-PRD-002"
+    category: "PROD"
+    title: "Wing Interface Map Product Document"
+    source: "ASSETS/PRODUCTS/57-00-04-PRD_Interface_Map.pdf"
+    exports: []
+    links:
+      reqs: ["REQ-57-05-001"]
+      odd: []
+      safety: []
+    status: "Draft"
+    version: "0.1.0"
+    checksum: "<filled-by-CI>"
+
+  # TEMPLATES
+  - id: "57-00-04-T001"
+    category: "TMPL"
+    title: "CAD Template for Wing Design"
+    source: "ASSETS/TEMPLATES/57-00-04-T001_CAD_Template.dwt"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-T002"
+    category: "TMPL"
+    title: "Model Card Template for Wing Components"
+    source: "ASSETS/TEMPLATES/57-00-04-T002_ModelCard_Wing.md"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
+
+  - id: "57-00-04-T003"
+    category: "TMPL"
+    title: "ICD Template for Wing Interfaces"
+    source: "ASSETS/TEMPLATES/57-00-04-T003_ICD_Template.md"
+    exports: []
+    links:
+      reqs: []
+      odd: []
+      safety: []
+    status: "Approved"
+    version: "1.0.0"
+    checksum: "<filled-by-CI>"
