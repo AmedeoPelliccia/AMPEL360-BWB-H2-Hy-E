@@ -1,0 +1,404 @@
+# Copyright 2025 AMPEL360 Project Contributors
+# Licensed under the Apache License, Version 2.0.
+#
+# CGen · Baseline Generation & Publication
+# ----------------------------------------
+# Replaces the legacy MVP CGen workflow with a proper pipeline:
+#   1. validate           → structure + LC01 schemas + S1000D BREX + link graph
+#   2. generate (matrix)  → parallel lanes (indexes, tables, traceability, report, skeletons)
+#   3. assemble-baseline  → merge, path + mass-deletion guards, SHA-256 manifest,
+#                           CSDB exports (PDF/HTML) + IETP runtime bundle
+#   4a. open-ssot-pr      → draft PR on normal runs
+#   4b. publish-baseline  → tag + GitHub Release + ATA_96 ledger anchor on explicit publish
+#   5. tokenomics-quote   → TT reward preview for closed KNOTs (LC01 hook)
+#
+# Design principles:
+#   - Fail loudly (no "|| echo warnings")
+#   - Parallel lanes via matrix
+#   - One concurrency group per ref (no races between nightly + manual)
+#   - Everything anchored by a manifest SHA-256 compatible with ATA_96
+#   - SSOT changes go through PR; publishable baselines go through tag + Release
+
+name: CGen · Baseline Generation & Publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'OPT-IN_FRAMEWORK/**'
+      - 'PUB/**'
+      - 'tools/**'
+      - '.github/workflows/cgen-baseline.yml'
+  schedule:
+    - cron: '0 3 * * *'       # nightly 03:00 UTC
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Pipeline mode
+        type: choice
+        default: generate-draft
+        options:
+          - validate-only       # only job 1
+          - generate-draft      # 1 → 2 → 3 → 4a (PR)
+          - publish-baseline    # 1 → 2 → 3 → 4b (tag + Release)
+      scope:
+        description: "ATA scope (ATA_03, ATA_25, all)"
+        default: ATA_03
+      baseline_tag:
+        description: "Baseline tag, e.g. baseline-2026.04.22-rc1 (only for publish-baseline)"
+        required: false
+
+concurrency:
+  group: cgen-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write          # reserved for future OIDC-based signing / attestations
+
+env:
+  PYTHON_VERSION: '3.11'
+  CGEN_SCOPE: ${{ inputs.scope || 'ATA_03' }}
+  # Path allow-list enforced before any PR or Release
+  ALLOWED_PATHS_REGEX: '^(OPT-IN_FRAMEWORK/|PUB/|cd/reports/|evidence/)'
+  MAX_DELETIONS: '10000'
+
+jobs:
+
+  # =========================================================================
+  # 1. VALIDATE — structure, LC01 schemas, S1000D BREX, link graph
+  # =========================================================================
+  validate:
+    name: Validate structure & schemas
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      brex_pass: ${{ steps.brex.outputs.pass }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          [ -f requirements.txt ] && pip install -r requirements.txt
+          pip install jsonschema pyyaml lxml
+
+      - name: OPT-IN structure check
+        run: python tools/ci/optin_structure_validator.py --check --scope "$CGEN_SCOPE"
+
+      - name: Validate LC01 schemas (KNOTS, KNU_PLAN, RACI, TOKENOMICS)
+        run: python tools/ci/validate_lc01_schemas.py --scope "$CGEN_SCOPE"
+
+      - name: S1000D BREX validation
+        id: brex
+        run: |
+          set -euo pipefail
+          if command -v s1kd-brexcheck >/dev/null 2>&1; then
+            s1kd-brexcheck -d PUB -l -v
+          else
+            python tools/ci/brex_check.py --pub-root PUB
+          fi
+          echo "pass=true" >> "$GITHUB_OUTPUT"
+
+      - name: Resolve trace links (KNU↔KNOT, DM↔ICN↔PM↔DML)
+        run: python tools/ci/link_resolver.py --strict
+
+  # =========================================================================
+  # 2. GENERATE — parallel lanes
+  # =========================================================================
+  generate:
+    name: Generate · ${{ matrix.lane }}
+    needs: validate
+    if: inputs.mode != 'validate-only'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        lane: [indexes, summary-tables, traceability, genccc-report, knu-skeletons]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          [ -f requirements.txt ] && pip install -r requirements.txt
+
+      - name: Run lane · ${{ matrix.lane }}
+        run: |
+          set -euo pipefail
+          case "${{ matrix.lane }}" in
+            indexes)         python tools/ci/auto_index_generator.py --root OPT-IN_FRAMEWORK --scope "$CGEN_SCOPE" --write ;;
+            summary-tables)  python tools/generate_summary_tables.py --scope "$CGEN_SCOPE" ;;
+            traceability)    python tools/genccc/traceability.py --scope "$CGEN_SCOPE" ;;
+            genccc-report)   python tools/genccc/report.py --scope "$CGEN_SCOPE" ;;
+            knu-skeletons)   python tools/genccc/generate.py --scope "$CGEN_SCOPE" ;;
+          esac
+
+      - name: Upload lane artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cgen-lane-${{ matrix.lane }}
+          path: |
+            OPT-IN_FRAMEWORK/
+            PUB/
+            cd/reports/
+          retention-days: 7
+          if-no-files-found: ignore
+
+  # =========================================================================
+  # 3. ASSEMBLE BASELINE — merge, guards, manifest, exports, IETP bundle
+  # =========================================================================
+  assemble-baseline:
+    name: Assemble baseline bundle
+    needs: generate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      changed:       ${{ steps.diff.outputs.changed }}
+      manifest_sha:  ${{ steps.manifest.outputs.sha }}
+      baseline_tag:  ${{ steps.tag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: cgen-lane-*
+          merge-multiple: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Guard · enforce allowed paths
+        run: |
+          set -euo pipefail
+          git add -A
+          git diff --cached --name-only > /tmp/changed.txt
+          echo "--- changed files ---" && cat /tmp/changed.txt
+          if grep -Ev "$ALLOWED_PATHS_REGEX" /tmp/changed.txt | grep -q .; then
+            echo "::error::CGen touched files outside the allow-list"
+            grep -Ev "$ALLOWED_PATHS_REGEX" /tmp/changed.txt || true
+            exit 1
+          fi
+
+      - name: Guard · prevent mass deletions
+        run: |
+          set -euo pipefail
+          read -r ADD DEL <<< "$(git diff --cached --numstat | awk 'BEGIN{a=0;d=0} {a+=$1;d+=$2} END{print a+0, d+0}')"
+          echo "add=$ADD del=$DEL max_del=$MAX_DELETIONS"
+          if [ "$DEL" -gt "$MAX_DELETIONS" ] && [ "$DEL" -gt "$ADD" ]; then
+            echo "::error::Mass deletion detected (del=$DEL, add=$ADD)"
+            exit 1
+          fi
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true"  >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Compute baseline tag
+        id: tag
+        run: |
+          set -euo pipefail
+          T="${{ inputs.baseline_tag }}"
+          if [ -z "$T" ]; then
+            T="baseline-$(date -u +%Y.%m.%d)-r${{ github.run_number }}"
+          fi
+          echo "tag=$T" >> "$GITHUB_OUTPUT"
+
+      - name: Build SHA-256 manifest (ATA_96 ledger anchor)
+        id: manifest
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          python tools/ci/build_manifest.py \
+            --scope "$CGEN_SCOPE" \
+            --tag "${{ steps.tag.outputs.tag }}" \
+            --out "evidence/MANIFEST-${{ steps.tag.outputs.tag }}.json"
+          SHA=$(sha256sum "evidence/MANIFEST-${{ steps.tag.outputs.tag }}.json" | cut -d' ' -f1)
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          echo "$SHA  MANIFEST-${{ steps.tag.outputs.tag }}.json" \
+            > "evidence/MANIFEST-${{ steps.tag.outputs.tag }}.sha256"
+
+      - name: Render CSDB exports (PDF + HTML) and IETP runtime
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          python tools/pub/render_exports.py --scope "$CGEN_SCOPE" --out PUB/EXPORT --formats pdf,html
+          python tools/pub/build_ietp.py     --scope "$CGEN_SCOPE" --out PUB/IETP
+          ( cd PUB && zip -qr "../evidence/EXPORT-${{ steps.tag.outputs.tag }}.zip" EXPORT/ )
+          ( cd PUB && zip -qr "../evidence/IETP-${{ steps.tag.outputs.tag }}.zip"   IETP/ )
+
+      - name: Upload baseline bundle
+        if: steps.diff.outputs.changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: baseline-${{ steps.tag.outputs.tag }}
+          path: evidence/
+          retention-days: 90
+
+  # =========================================================================
+  # 4a. DRAFT PR — normal lane (SSOT updates)
+  # =========================================================================
+  open-ssot-pr:
+    name: Open draft PR to SSOT
+    needs: assemble-baseline
+    if: needs.assemble-baseline.outputs.changed == 'true' && inputs.mode != 'publish-baseline'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: baseline-${{ needs.assemble-baseline.outputs.baseline_tag }}
+          path: evidence
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: cgen/${{ needs.assemble-baseline.outputs.baseline_tag }}
+          delete-branch: true
+          title: "CGen · ${{ needs.assemble-baseline.outputs.baseline_tag }} (scope: ${{ env.CGEN_SCOPE }})"
+          commit-message: |
+            CGen: ${{ needs.assemble-baseline.outputs.baseline_tag }}
+            Scope: ${{ env.CGEN_SCOPE }}
+            Manifest SHA-256: ${{ needs.assemble-baseline.outputs.manifest_sha }}
+          body: |
+            ## CGen Baseline Draft · `${{ needs.assemble-baseline.outputs.baseline_tag }}`
+
+            | Field | Value |
+            |---|---|
+            | **Scope** | `${{ env.CGEN_SCOPE }}` |
+            | **Manifest SHA-256** | `${{ needs.assemble-baseline.outputs.manifest_sha }}` |
+            | **Anchored to** | ATA_96 ledger (pending merge) |
+
+            ### Validation results
+            - ✅ OPT-IN structure
+            - ✅ LC01 schemas (KNOTS, KNU_PLAN, RACI, TOKENOMICS)
+            - ✅ S1000D BREX
+            - ✅ Link graph resolved (KNU↔KNOT, DM↔ICN↔PM↔DML)
+            - ✅ Allowed-paths guard
+            - ✅ Mass-deletion guard
+
+            ### Evidence pack
+            Attached as workflow artefact `baseline-${{ needs.assemble-baseline.outputs.baseline_tag }}`
+            (manifest JSON, SHA256, EXPORT.zip, IETP.zip).
+
+            ### Promotion
+            To promote to a published baseline: re-run with
+            `mode=publish-baseline` and `baseline_tag=${{ needs.assemble-baseline.outputs.baseline_tag }}`.
+
+            ---
+            _Generated with AI assistance, prompted by Amedeo Pelliccia. Status: **DRAFT**._
+          labels: cgen, documentation, automated, draft
+          draft: true
+
+  # =========================================================================
+  # 4b. PUBLISH — tag + GitHub Release + ATA_96 anchor
+  # =========================================================================
+  publish-baseline:
+    name: Publish baseline release
+    needs: assemble-baseline
+    if: inputs.mode == 'publish-baseline' && needs.assemble-baseline.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: baseline-${{ needs.assemble-baseline.outputs.baseline_tag }}
+          path: evidence
+
+      - name: Tag baseline
+        run: |
+          set -euo pipefail
+          git config user.name  "ampel360-cgen-bot"
+          git config user.email "ampel360-cgen-bot@users.noreply.github.com"
+          git tag -a "${{ needs.assemble-baseline.outputs.baseline_tag }}" \
+            -m "Baseline ${{ needs.assemble-baseline.outputs.baseline_tag }} · manifest ${{ needs.assemble-baseline.outputs.manifest_sha }}"
+          git push origin "${{ needs.assemble-baseline.outputs.baseline_tag }}"
+
+      - name: Create GitHub Release with CSDB assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.assemble-baseline.outputs.baseline_tag }}
+          name: "AMPEL360 Q100 · ${{ needs.assemble-baseline.outputs.baseline_tag }}"
+          body: |
+            **Scope:** `${{ env.CGEN_SCOPE }}`
+            **Manifest SHA-256:** `${{ needs.assemble-baseline.outputs.manifest_sha }}`
+            **Anchored to:** ATA_96 traceability ledger
+
+            Assets:
+            - `MANIFEST-*.json` — canonical manifest
+            - `MANIFEST-*.sha256` — integrity check
+            - `EXPORT-*.zip` — PDF + HTML renders from CSDB
+            - `IETP-*.zip` — IETP runtime bundle (viewer + config + indices)
+          files: |
+            evidence/MANIFEST-*.json
+            evidence/MANIFEST-*.sha256
+            evidence/EXPORT-*.zip
+            evidence/IETP-*.zip
+
+      - name: Anchor to ATA_96 ledger
+        run: |
+          python tools/ledger/anchor.py \
+            --tag "${{ needs.assemble-baseline.outputs.baseline_tag }}" \
+            --sha "${{ needs.assemble-baseline.outputs.manifest_sha }}" \
+            --ledger finance/ledger.json
+
+      - name: Commit ledger update
+        run: |
+          set -euo pipefail
+          git add finance/ledger.json
+          git commit -m "ATA_96: anchor baseline ${{ needs.assemble-baseline.outputs.baseline_tag }}"
+          git push origin HEAD:main
+
+  # =========================================================================
+  # 5. TOKENOMICS QUOTE — TT reward preview for closed KNOTs (LC01 hook)
+  # =========================================================================
+  tokenomics-quote:
+    name: TT reward quote
+    needs: assemble-baseline
+    if: always() && needs.assemble-baseline.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Quote TT rewards for closed KNOTs
+        run: |
+          set -euo pipefail
+          {
+            echo "# TT Reward Quote · ${{ needs.assemble-baseline.outputs.baseline_tag }}"
+            echo ""
+            python tools/tek_tokens.py quote \
+              --scope "$CGEN_SCOPE" \
+              --baseline "${{ needs.assemble-baseline.outputs.baseline_tag }}"
+          } >> "$GITHUB_STEP_SUMMARY"
