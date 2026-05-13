@@ -25,8 +25,8 @@ Each ATA chapter:
 
 Folders:
 
-- `00-00-01_Overview` — Program and organizational overview  
-- `00-00-02_Safety` — Safety governance and high-level safety principles  
+- `00-00-01_Safety` — Safety governance and high-level safety principles  
+- `00-00-02_Overview` — Program and organizational overview  
 - `00-00-03_Requirements` — Organizational and program-level requirements  
 - `00-00-04_Design` — Design philosophy at program/organization level  
 - `00-00-05_Interfaces` — High-level organizational interfaces (internal/external)  

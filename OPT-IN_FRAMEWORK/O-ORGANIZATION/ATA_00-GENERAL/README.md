@@ -12,8 +12,8 @@ This chapter follows the mandatory OPT-IN Framework structure:
 
 The GENERAL layer contains 14 mandatory lifecycle folders covering the complete development cycle:
 
-1. **00-00-01_Overview**: System overview and global architecture
-2. **00-00-02_Safety**: Safety framework and analysis
+1. **00-00-01_Safety**: Safety framework and analysis
+2. **00-00-02_Overview**: System overview and global architecture
 3. **00-00-03_Requirements**: Requirements and traceability
 4. **00-00-04_Design**: Design specifications and patterns
 5. **00-00-05_Interfaces**: Interface control documents

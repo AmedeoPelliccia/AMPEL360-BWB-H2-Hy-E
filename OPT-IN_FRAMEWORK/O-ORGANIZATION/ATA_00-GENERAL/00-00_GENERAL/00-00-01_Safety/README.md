@@ -1,8 +1,8 @@
-# 00-00-01_Overview
+# 00-00-01_Safety
 
 ## Purpose
 
-ATA domain description and global architecture
+Safety framework and analysis methods
 
 ## Scope
 
@@ -11,13 +11,13 @@ This folder is part of the **00-00_GENERAL** layer, which provides governance an
 ## Contents
 
 This folder should contain:
-- Documentation related to ata domain description and global architecture
+- Documentation related to safety framework and analysis methods
 - Traceability matrices linking to other lifecycle stages
 - Evidence and artifacts supporting this lifecycle phase
 
 ## Status
 
-- **Phase**: Overview
+- **Phase**: Safety
 - **Lifecycle Position**: 01 of 14
 - **Status**: Active
 - **Last Updated**: 2025-11-13
@@ -25,7 +25,7 @@ This folder should contain:
 ## Related Folders
 
 Part of the canonical 14-folder lifecycle:
-1. Overview → 2. Safety → 3. Requirements → 4. Design → 5. Interfaces → 6. Engineering → 7. V&V → 8. Prototyping → 9. Production Planning → 10. Certification → 11. EIS/Versions/Tags → 12. Services → 13. Subsystems/Components → 14. Ops/Std/Sustain
+1. Safety → 2. Overview → 3. Requirements → 4. Design → 5. Interfaces → 6. Engineering → 7. V&V → 8. Prototyping → 9. Production Planning → 10. Certification → 11. EIS/Versions/Tags → 12. Services → 13. Subsystems/Components → 14. Ops/Std/Sustain
 
 ## Document Control
 
